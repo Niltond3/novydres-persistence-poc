@@ -23,3 +23,11 @@ Classificação: **MIGRATION_IN_PROGRESS**. Cutover operacional: **NÃO**.
 - Conflitos de autoridade editorial/POI e de completude da ficha e conhecimentos dos NPCs ainda exigem evidência.
 - Nenhuma migração do ledger técnico vazio para eventos supostamente auditados, nenhum retcon, nenhuma edição de CANÔNICO/FECHADO ou APROVADO/CONGELADO.
 - O Drive permanece fonte operacional e acervo original; GitHub é arquivo migrado e projeção candidata.
+
+## Validação adicional da retomada em 02/11/2026
+
+- Conhecimentos de 9 entidades e 11 pendências extraídos como projeções com âncora de origem. Não transformam alegações de NPCs em fatos.
+- Teste de recuperação **somente GitHub** em script isolado **dentro desta mesma conversa**: **15/15 verificações, quatro leituras**. Não equivale a teste em conversa realmente nova; `FRESH_CHAT_RECOVERY_TEST_V1.md` registra roteiro pendente.
+- Motor V5 V1.0 determina uso de ficha-alvo **provisória para rolagens no modo guiado**, distinta dos 170 XP efetivamente comprados. A rolagem M2.03.072 de quatro dados é transcrição aceita, sem origem RNG verificada; não rerrolar.
+- Matriz dos capítulos 01–06 comprova `status: candidate` em todos os seis frontmatters, contrastando com relato de fechamento editorial. Nenhuma promoção foi aplicada.
+- Registry visual detalha **19** ativos da Biblioteca não transferidos: 11 com aprovação/congelamento **relatados** no handoff, 5 sem autoridade verificada e 3 candidatos. Os vereditos originais não foram reabertos para prova direta.

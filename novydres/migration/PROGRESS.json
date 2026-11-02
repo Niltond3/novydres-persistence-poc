@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "ETAPAS_2_3_COPY_ARCHIVED_AND_SEMANTIC_INDEX_PARTIAL",
+  "phase": "GITHUB_ONLY_RECOVERY_15_OF_15_AND_EVIDENCE_CLASSIFIED_FRESH_CHAT_PENDING",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -8,19 +8,19 @@
   "operational_cutover": false,
   "chronicle_checkpoint_candidate": "M2.03.073",
   "blocked_issues": [
-    "19 visual assets cited in 2026-09-28 Library inventory lack an authorized original-byte transfer path (including MasterMap PNG, tiles ZIP and approved POIs)",
-    "Original native Google Docs formatting, embedded objects, comments and raw-byte integrity not preserved by extracted-text copies",
-    "Global world sources are partial beyond audited historical Library catalogue; approval/closure of candidate frontmatters and POI verdict links unresolved",
-    "CHR-001 current mechanical allocations 170 XP validated but unallocated V5 traits and historical NPC knowledge/causal relationships require complete operational audit",
-    "Legacy technical ledger is not backfilled; past RNG provenance for M2.03.072 unverified",
-    "Real new-chat GitHub-only recovery not tested; operational cutover decision MIG-DEC-002 not issued"
+    "Original bytes unavailable for 19 Library visual assets, including MasterMap and tiles ZIP",
+    "Six world chapters are explicitly candidate in frontmatter; closure is only reported in historical handoff; original editorial verdict review outstanding",
+    "Character mechanical purchases 170 XP verified; other V5 fields, consequences and wider NPC graph not exhaustively reconciled",
+    "Technical RNG origin and COMMITTED ledgers not historically verified; must not rewrite accepted roll",
+    "New-chat independent GitHub-only recovery not executed",
+    "Native Google Docs formatting, media and comments not preserved by textual extraction"
   ],
   "next_steps": [
-    "Resolve original Library visual transfer via authorized raw-byte access or register permanent blocker; never substitute preview",
-    "Reconcile remaining character fields and M2 NPC knowledge, consequences and memories against originals and explicit corrections",
-    "Audit authority and POI canon from direct verdicts, maintaining candidate/frozen distinction",
-    "Test fresh-chat bootstrap using GitHub only and verify scene/resource/knowledge fidelity",
-    "Issue MIG-DEC-002 formal operational cutover only after all relevant gates; do not advance M2.03 now"
+    "Run independent fresh-chat recovery using read-only prompt and evaluate against stored rubric",
+    "Locate an authorized route to original Library visual bytes or record an explicit artifact-preservation exception decision",
+    "Verify editorial verdicts/source status and map POI asset to final approved conversation",
+    "Finish NPC and sheet audit using source indexed crosslinks and preserved history",
+    "Complete formal MIG-DEC-002 only after gates, then exercise copy-on-write GitHub persistence before narration"
   ],
   "catalogue_legacy_references": 76,
   "inventory_records": 190,
@@ -65,7 +65,10 @@
     "b52879f69ad72f5659bb41ab55e1ec2ae0df31e2",
     "7d8146c5925948c50a05220ccd06d64fdcfc8e52",
     "82882b74b3ce5401a6c502cc4a95904b6811da44",
-    "b05fb29a600089c5670a2a1533837297c7508a87"
+    "b05fb29a600089c5670a2a1533837297c7508a87",
+    "300ed40197ad0a91994dc7de58c09e47e0e2b46e",
+    "1c285634a7a1ea94e12888b5bed11c16b16c56c6",
+    "3da14a559101f10362ed07d92a810dbf97db7def"
   ],
   "required_gate": "MIG-DEC-002_NOT_YET_AUTHORIZED_FOR_EXECUTION",
   "candidate_operational_status": "INACTIVE_PENDING_VALIDATION",
@@ -101,7 +104,7 @@
     "raw_git_blob_sha_matches_source": true
   },
   "recovery_test_001": {
-    "status": "15_OF_15_PASS_GITHUB_ONLY_SAME_CHAT",
+    "status": "PASS_15_OF_15_SAME_CHAT_ONLY",
     "reads": 4,
     "real_fresh_chat": false,
     "path": "novydres/migration/RECOVERY_TEST_GITHUB_ONLY_001.json"
@@ -115,5 +118,16 @@
     "APPROVED_FROZEN_REPORTED": 11,
     "AUTHORITY_UNVERIFIED": 5,
     "CANDIDATE_REPORTED": 3
+  },
+  "fresh_chat_test_ref": "novydres/migration/FRESH_CHAT_RECOVERY_TEST_V1.md",
+  "fresh_chat_test_rubric_ref": "novydres/migration/FRESH_CHAT_ACCEPTANCE_RUBRIC_V1.json",
+  "migration_gates": {
+    "source_text_and_raw_drive_archives": "PASS_FOR_ENUMERATED_SOURCE_RECORDS",
+    "visual_asset_original_bytes": "BLOCKED_19_LIBRARY_FILES",
+    "world_editorial_authority": "PENDING_CANDIDATE_VS_HISTORICAL_CLOSURE",
+    "npc_knowledge": "PARTIAL_9_ENTITIES_11_THREADS",
+    "mechanical_state": "PARTIAL_PROVISIONAL_ROLL_POLICY_VERIFIED",
+    "independent_new_chat_recovery": "NOT_RUN",
+    "formal_cutover_decision": "NOT_ISSUED"
   }
 }
