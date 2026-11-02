@@ -1,15 +1,18 @@
-# SCENE_CONTEXT — SC-LOAD-HOME-02
+# SCENE_CONTEXT — SC-LOAD-WORKSHOP-03
 
-POC sintética, projeção renovada após compromisso relevante em **SIM-LOAD-001-E013**. Source events no LIVE; fatos anteriores no arquivo inicial `poc/memory-v1/episodes/M0.01/events-001-004.json`.
+**Memória contextual recuperada do índice e de eventos; POC sintética.** Scene anchor: SIM-LOAD-001-E021.
 
-## Cena atual
-Íris em casa com Leta. Em turno 12, Leta perguntou genericamente sobre o trabalho, sem conhecimento confirmado de Vale, do relatório ou da causa do alarme.
+## Cena
+Íris retornou ao galpão, onde está Ivo. O relatório de Vale ainda não foi verificado. O alarme ocorreu (SIM-M001-E003), causa desconhecida. Não declarar concluída a inspeção nem realizada a assinatura.
 
-## Compromisso confirmado
-Íris declarou literalmente: "Eu prometo a você: não vou assinar antes de conferir tudo." (evento SIM-LOAD-001-E013; ouvida por Leta). Isso é promessa verbal, **não** confirmação da futura inspeção, de assinatura ou de qualquer consequência. Repercussões ainda abertas.
+## Memória causal recuperada após oito eventos
+Íris fez em casa a Leta a promessa: "Eu prometo a você: não vou assinar antes de conferir tudo." (evento **SIM-LOAD-001-E013**; indexado em `HISTORY_INDEX.json > arcs.arc-promise.event_refs` e presente em `LIVE.json > event_buffer`). Compromisso continua ativo.
 
-## Memória causal
-Alarme ocorreu (SIM-M001-E003), causa desconhecida. Vale alegou segurança do relatório (SIM-M001-E002, NPC_CLAIM não confirmada). Íris declarou antes que verificaria a bomba (SIM-M001-E001). Sem retcon.
+## Conhecimento compartimentado
+- Íris: sabe que fez a promessa.
+- Leta: ouviu a promessa (SIM-LOAD-001-E013); não foi automaticamente informada dos acontecimentos posteriores.
+- Ivo: NÃO ouviu a promessa na cena doméstica; nenhuma notícia dela foi comunicada a Ivo.
+- Vale: suas afirmações permanecem NPC_CLAIM, sem garantia de verdade.
 
 ## Limites
-Leta ouviu a promessa, mas não sabe por fonte confirmada os fatos do galpão nem o teor do relatório. Nenhuma ação voluntária de Íris fora dos eventos de teste.
+O passado restringe contradição, não determina fala da PJ nem reação do NPC. Em conflito, abrir eventos originais por refs.
