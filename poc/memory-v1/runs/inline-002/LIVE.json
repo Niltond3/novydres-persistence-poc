@@ -11,9 +11,9 @@
       "pc-iris",
       "npc-leta"
     ],
-    "last_event_seq": 31,
-    "last_event_id": "SIM-INLINE-002-E31",
-    "awaiting": "SYNTHETIC_NEXT_EVENT",
+    "last_event_seq": 32,
+    "last_event_id": "SIM-INLINE-002-E32",
+    "awaiting": "PLAYER_RESPONSE",
     "context_ref": null,
     "context_anchor_event_id": "SIM-INLINE-002-E31",
     "context_packet": {
@@ -120,7 +120,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E022",
     "SIM-LOAD-001-E023",
     "SIM-LOAD-001-E024",
     "SIM-LOAD-001-E025",
@@ -129,7 +128,8 @@
     "SIM-LOAD-001-E028",
     "SIM-LOAD-001-E029",
     "SIM-LOAD-001-E030",
-    "SIM-INLINE-002-E31"
+    "SIM-INLINE-002-E31",
+    "SIM-INLINE-002-E32"
   ],
   "event_buffer": [
     {
@@ -321,6 +321,19 @@
         "origin": "SYNTHETIC_TEST_VECTOR",
         "status": "RESOLVED"
       }
+    },
+    {
+      "event_id": "SIM-INLINE-002-E32",
+      "seq": 32,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "NPC_ACTION",
+      "observable_payload": "Leta pergunta a Íris se continua sem intenção de assinar.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_INLINE_SCRIPT",
+      "actor_id": "npc-leta",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN"
     }
   ],
   "last_archived_seq": 19,
