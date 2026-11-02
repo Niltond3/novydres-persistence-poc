@@ -1755,7 +1755,7 @@
       "source_url": "https://docs.google.com/document/d/12td4XtDnvxiODDcCWvmNEB0ROdTnFW2Hgvhu4eUDKrw/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/12td4XtDnvxiODDcCWvmNEB0ROdTnFW2Hgvhu4eUDKrw.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -1766,7 +1766,8 @@
       ],
       "source_revision": "AHj4eMS_I88JDa3RkJDuOUoF79XLNxBY1I8ODFZXFP2P3fWr2jsyD5ZhsRRXDUKJxTfYmUXPoO9yEmAnjD82bSFAZSo0kH0nlL8kBLfD9Q",
       "source_characters": 3235,
-      "source_paragraphs": 42
+      "source_paragraphs": 42,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1GapbQJUChQni11fUSSNh9HLCo1lMLcNi4J1M9UG4PIY",
@@ -1922,7 +1923,7 @@
       "source_url": "https://docs.google.com/document/d/1wmZf4wlKHMTx7EK1Zot_6TCzhiKSrDTQHJrSoFfLG3k/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1wmZf4wlKHMTx7EK1Zot_6TCzhiKSrDTQHJrSoFfLG3k.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -1933,37 +1934,48 @@
       ],
       "source_revision": "AHj4eMQ25QENBVNYqn68qSeUdZODHxV4nx2nxL57fQJ8gf9pPIQqPvvTXoCSFUFBGd4u90IVkEytXBsJk-obxva2X42c8u-nVhccjQGzAg",
       "source_characters": 8740,
-      "source_paragraphs": 124
+      "source_paragraphs": 124,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1jU_9RwgVmDqtanASkj5psTs4Q2Ut3XT2S-wjKzug8ww",
       "title": "NOVYDRES V0.3 — TEST ONLY — ACTIVE_LOG_SANDBOX",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1jU_9RwgVmDqtanASkj5psTs4Q2Ut3XT2S-wjKzug8ww/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1jU_9RwgVmDqtanASkj5psTs4Q2Ut3XT2S-wjKzug8ww.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMRo79R-W3-ouQ5qukntewneg-4O8aNKlexSTtN_Mt6wDn8NNERzDnBJlW5Dtk66hBBBBHrPlhIywybtnfyOAyJnvMMcW1tpRgBE9w",
+      "source_characters": 540,
+      "source_paragraphs": 1
     },
     {
       "id": "1Zsl-4VJM_29LCSCF0fqGOknHF7Sx9BeN_nVzBi-Tpbw",
       "title": "NOVYDRES V0.3 — TEST ONLY — ARCHIVE_SEGMENT_SANDBOX",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1Zsl-4VJM_29LCSCF0fqGOknHF7Sx9BeN_nVzBi-Tpbw/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1Zsl-4VJM_29LCSCF0fqGOknHF7Sx9BeN_nVzBi-Tpbw.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMTKx7P2FNcswxzp_3HOLJdrInAYT7rojLLeL13qCSiI-UvmUvNJ6monmsdFeoodOMbCr5zN9dots_ia-pA3guKbAxtMXOZjSCGIcw",
+      "source_characters": 582,
+      "source_paragraphs": 1
     },
     {
       "id": "file_000000002dc881f58f4c0d646e4fe8ec",
@@ -3130,7 +3142,7 @@
       "source_url": "https://docs.google.com/document/d/1Q8rEu6fwXN4SgtEui1DwCWA3Ntl-uTIxWHAGpHyPjKI/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1Q8rEu6fwXN4SgtEui1DwCWA3Ntl-uTIxWHAGpHyPjKI.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3141,7 +3153,8 @@
       ],
       "source_revision": "AHj4eMQ7uy92X-Szy80sS9RJ86jdP2RFnGauoyviQVIIcqmoIJWkdV_mYwfxuN1VUxMMI3629GUWfQ7I8aRQryB0G-MJ3-XuGDC0igHJzg",
       "source_characters": 1233,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1Lxod9XUWt-Rhnk3GFwPJefaxWVrRSZMr0aPw69rcO0w",
@@ -3150,7 +3163,7 @@
       "source_url": "https://docs.google.com/document/d/1Lxod9XUWt-Rhnk3GFwPJefaxWVrRSZMr0aPw69rcO0w/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1Lxod9XUWt-Rhnk3GFwPJefaxWVrRSZMr0aPw69rcO0w.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3161,7 +3174,8 @@
       ],
       "source_revision": "AHj4eMQU0OTiXbOR0GtAPrLj_CQqx46LmpXxiEppAxfsgDXq2ww9yyadb6BHgDsVVFnBdc38yX6EgyzwaDOg2Fd3fnCSwbfjs-8-Bb3ccA",
       "source_characters": 1681,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1jUd32601l0vb2QL11NgvFKY85jkiUVOeRbiVi9Cria4",
@@ -3170,7 +3184,7 @@
       "source_url": "https://docs.google.com/document/d/1jUd32601l0vb2QL11NgvFKY85jkiUVOeRbiVi9Cria4/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1jUd32601l0vb2QL11NgvFKY85jkiUVOeRbiVi9Cria4.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3181,7 +3195,8 @@
       ],
       "source_revision": "AHj4eMQ68lBmjXEkxlL2RrqziD8A2PPkXa1AQhpEpqykakZ96HNExKDeKJ6e1EUORpOvvCPMN-3I3gr4UqhuGPD4gUYpTLi3qMy6g3KEKw",
       "source_characters": 2170,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1u-Q0XLEdKSn3d0QuGWQAmkZOVfO4EndElgZEsKH7IIg",
@@ -3190,7 +3205,7 @@
       "source_url": "https://docs.google.com/document/d/1u-Q0XLEdKSn3d0QuGWQAmkZOVfO4EndElgZEsKH7IIg/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1u-Q0XLEdKSn3d0QuGWQAmkZOVfO4EndElgZEsKH7IIg.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3201,7 +3216,8 @@
       ],
       "source_revision": "AHj4eMRO_l-nI1S1EvOagMpBGMXNzek3dn5ISuFjkhSs8xN_MsGsCVy2dGnESH6CielILeRlHbQB7KxdeK7RGANNdO-r4R8qK6Nh0wyyag",
       "source_characters": 2590,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1U6wVumwJ2hpm_c_xQvk0pDIBWbdcXvTeSCGCj6JHdYY",
@@ -3210,7 +3226,7 @@
       "source_url": "https://docs.google.com/document/d/1U6wVumwJ2hpm_c_xQvk0pDIBWbdcXvTeSCGCj6JHdYY/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1U6wVumwJ2hpm_c_xQvk0pDIBWbdcXvTeSCGCj6JHdYY.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3221,7 +3237,8 @@
       ],
       "source_revision": "AHj4eMQBZoKoIN7qaUQ0egYwAawZcKPWQifc3UgsrRRNJOT3ok0BIQkOB4m1f-kUGCoBzl8Eot7WC_AX8FFYI9VtZnXekd8uQ2FjnkdBnw",
       "source_characters": 2224,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1XEadaFHFBmbQeas8CGcX7AQomMYncDvMa0Ye06bmyes",
@@ -3230,7 +3247,7 @@
       "source_url": "https://docs.google.com/document/d/1XEadaFHFBmbQeas8CGcX7AQomMYncDvMa0Ye06bmyes/edit?usp=drivesdk",
       "scope": "HISTORICAL_SYNTHETIC_TESTS",
       "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1XEadaFHFBmbQeas8CGcX7AQomMYncDvMa0Ye06bmyes.source.txt",
       "version": null,
       "provenance": "GOOGLE_DRIVE_TEXT_EXTRACT",
@@ -3241,82 +3258,108 @@
       ],
       "source_revision": "AHj4eMTcnAVdlV7Vsgf_gPvwUCN7WT30XunjAG4_2CgQ5ygGb9JgdYlpH6Bxdjt7ZVnPcxv_oOFQciBKWcJUDmkM_Yi6QgNczH5OwxpRwA",
       "source_characters": 2543,
-      "source_paragraphs": 1
+      "source_paragraphs": 1,
+      "verification_method": "SOURCE_EQUALS_GITHUB_READBACK"
     },
     {
       "id": "1ZnO7VAGyi-QjzIbJGlrHOsgbjUyHgh99nSJa1qKZC6k",
       "title": "TEST_EXPECTED_ACTIVE7_V32_GATE_NO_PRODUCTION",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1ZnO7VAGyi-QjzIbJGlrHOsgbjUyHgh99nSJa1qKZC6k/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1ZnO7VAGyi-QjzIbJGlrHOsgbjUyHgh99nSJa1qKZC6k.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMRdJVsKiVo7xqT8YqcXUQP4yUtatqVq55mxL-JfCuE_mXAwbwRT5xnDgS0cMWja_SJ5GjVUUEYgFt6fhTBuGMztyxqeB1Rtd9RMcg",
+      "source_characters": 2865,
+      "source_paragraphs": 1
     },
     {
       "id": "1lGLAzJl3aCn9jz77oWleeZXL7ACXE4Ebmk10I0n_7TQ",
       "title": "TEST_ONLY_V3_ACTIVE_SANDBOX",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1lGLAzJl3aCn9jz77oWleeZXL7ACXE4Ebmk10I0n_7TQ/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1lGLAzJl3aCn9jz77oWleeZXL7ACXE4Ebmk10I0n_7TQ.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMSnpXhS7q_F1P05KTKa5tDmi1r_TP44G6fnoNFfbBwR4vnDKNrITOPiBEYcucsXWg6bvfOHH30VTgoiHA5Wx_2D8q2-TGTM4n3n0Q",
+      "source_characters": 2865,
+      "source_paragraphs": 1
     },
     {
       "id": "1_dLmz9Wb-F9MqDoNZNmkKTPj7tJWHQlhQ0mMw8pooxg",
       "title": "TEST_ONLY_V3_ARCHIVE1_SANDBOX",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1_dLmz9Wb-F9MqDoNZNmkKTPj7tJWHQlhQ0mMw8pooxg/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1_dLmz9Wb-F9MqDoNZNmkKTPj7tJWHQlhQ0mMw8pooxg.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMTPhvbEdA00-gGIl9WzKv339vrCvI8e5h2pAuNLGkzq-2YpE95SMQdhrsWGRXgpYYPELsfK8mFmhvUmgkt6qnIOdYOOV58XnotkIw",
+      "source_characters": 913,
+      "source_paragraphs": 1
     },
     {
       "id": "1JSXYBKTDvnGd17UuLCcTJMlzaIiFT8_UvN9-d3LB54g",
       "title": "TEST_ONLY_V3_ARCHIVE2_SANDBOX",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1JSXYBKTDvnGd17UuLCcTJMlzaIiFT8_UvN9-d3LB54g/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1JSXYBKTDvnGd17UuLCcTJMlzaIiFT8_UvN9-d3LB54g.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMShSxlvOwqdENH16oOI9XyI5jnest_x-LH_qrInL2NE8LV2Zy5X9n6xgcClwfbACOZ3ejnMr9fFztwtycxiMYp-O8DaYpXrhTH4BA",
+      "source_characters": 1518,
+      "source_paragraphs": 1
     },
     {
       "id": "1JCjEcLvp3egi9IVlpv5GNFbXq0zZIhpkOGRdVNrbmk4",
       "title": "TESTE_TRANSACAO_V0_2 — FICCAO ISOLADA",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1JCjEcLvp3egi9IVlpv5GNFbXq0zZIhpkOGRdVNrbmk4/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
-      "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "scope": "HISTORICAL_SYNTHETIC_TESTS",
+      "governance_status": "NON_OPERATIONAL_TEST_SOURCE",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1JCjEcLvp3egi9IVlpv5GNFbXq0zZIhpkOGRdVNrbmk4.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Synthetic test source, must not be imported as real history; Docs text only"
+      ],
+      "source_revision": "AHj4eMSJA09Si8oSICH39w1TodV7v2kyG02TRluxGJXhUK7QVd6kKfUYJ8A1aCwZxdV34DxbzIO8s7mcaL8LlLBLo3lDOMJ_iVd04_8THA",
+      "source_characters": 843,
+      "source_paragraphs": 1
     },
     {
       "id": "file_00000000f8a4820e8a5cf76420129c8f",
