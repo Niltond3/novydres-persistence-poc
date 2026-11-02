@@ -11,8 +11,8 @@
       "pc-iris",
       "npc-leta"
     ],
-    "last_event_seq": 11,
-    "last_event_id": "SIM-LOAD-001-E011",
+    "last_event_seq": 12,
+    "last_event_id": "SIM-LOAD-001-E012",
     "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E011"
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-M001-E002",
     "SIM-M001-E003",
     "SIM-M001-E004",
     "SIM-LOAD-001-E005",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E008",
     "SIM-LOAD-001-E009",
     "SIM-LOAD-001-E010",
-    "SIM-LOAD-001-E011"
+    "SIM-LOAD-001-E011",
+    "SIM-LOAD-001-E012"
   ],
   "event_buffer": [
     {
@@ -142,6 +142,20 @@
         "outcome": "Corte sintético de viagem: Íris chegou em casa.",
         "status": "RESOLVED"
       }
+    },
+    {
+      "event_id": "SIM-LOAD-001-E012",
+      "seq": 12,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "NPC_ACTION",
+      "observable_payload": "Leta pergunta a Íris como foi o trabalho, sem demonstrar saber do relatório.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "npc-leta",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN",
+      "knowledge_constraint": "Não sabe do relatório/ Vale por fonte verificada"
     }
   ],
   "last_archived_seq": 4,
