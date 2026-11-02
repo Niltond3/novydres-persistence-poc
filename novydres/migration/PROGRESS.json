@@ -84,7 +84,7 @@
     "relationships": 12,
     "locations": 10
   },
-  "character_allocations_audited": "PARTIAL_VERIFIED_170_XP_AND_TWO_HISTORICAL_TOUCHSTONES",
+  "character_allocations_audited": "PARTIAL_170_XP_VERIFIED_TARGET_ROLL_CONVENTION_VERIFIED",
   "folder_count_scanned": 14,
   "new_unknown_child_source_count": 0,
   "direct_drive_pending_documents": 0,
@@ -99,5 +99,12 @@
     "source_shas_match_m2_locator": true,
     "current_scene_last_event_agrees": true,
     "raw_git_blob_sha_matches_source": true
-  }
+  },
+  "recovery_test_001": {
+    "status": "15_OF_15_PASS_GITHUB_ONLY_SAME_CHAT",
+    "reads": 4,
+    "real_fresh_chat": false,
+    "path": "novydres/migration/RECOVERY_TEST_GITHUB_ONLY_001.json"
+  },
+  "mechanical_guided_roll_convention": "SOURCE_VERIFIED_TARGET_PROVISIONAL_NOT_ALLOCATED"
 }
