@@ -2228,16 +2228,22 @@
       "id": "libfile_a914395df4f08191802aa193a16d1dca",
       "title": "novydres_editorial_map_v0_9_4.json",
       "source_kind": "HISTORICAL_LIBRARY_REFERENCE",
-      "scope": "NOVYDRES",
-      "governance_status": "AUTHORITY_UNVERIFIED",
-      "migration_state": "REFERENCED_ONLY_NOT_COPIED",
-      "target": null,
-      "provenance": "CANON_INVENTORY_20260928",
+      "scope": "GLOBAL_GOVERNANCE",
+      "governance_status": "AS_SOURCE_EDITORIAL_MAP",
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/governance/sources/novydres_editorial_map_v0_9_4.json",
+      "provenance": "LIBRARY_FILES_READ_LEGACY_ID",
       "dependencies": [],
-      "conflicts": [],
+      "conflicts": [
+        "Historical inventory reports external filename v0.9.4 but internal schema_version 0.9.3; verify and retain"
+      ],
       "limitations": [
         "Original source pending retrieval"
-      ]
+      ],
+      "mime_type": "application/json",
+      "source_characters": 529162,
+      "source_lines": 11457,
+      "source_file_id": "file_00000000d750820ebe9772369a8090f1"
     },
     {
       "id": "libfile_d8a0ed8313c48191bd876953ec8efc37",
