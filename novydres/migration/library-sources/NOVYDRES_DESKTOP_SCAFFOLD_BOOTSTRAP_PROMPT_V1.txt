@@ -1,0 +1,112 @@
+# PROMPT — BOOTSTRAP DO SCAFFOLD NOVYDRES NO CHATGPT DESKTOP
+
+Você está trabalhando no Project NOVYDRES pelo ChatGPT Desktop. Execute o bootstrap modular descrito abaixo; não responda apenas com um plano.
+
+## Objetivo
+
+Transformar o MASTER HANDOFF V1 em um scaffold modular, persistente e rastreável, usando os dois documentos de auditoria como mapa de arquivos e overlay do estado mais recente. O resultado deve permitir que um agente trabalhe por capítulo sem carregar todo o handoff.
+
+## Fontes obrigatórias
+
+Localize e leia integralmente, usando os anexos desta conversa ou a Library quando estiver disponível:
+
+1. NOVYDRES_MASTER_HANDOFF_V1.md — snapshot histórico global e fonte primária da migração. Prefira a cópia sem sufixo. A cópia (1) foi comparada e é idêntica; preserve-a como duplicata histórica se ela estiver no destino.
+2. NOVYDRES_CANON_FILE_INVENTORY_2026-09-28.md — índice de arquivos, versões, funções, vínculos e destinos. A versão atual da auditoria é a versão 2.
+3. NOVYDRES_MASTER_HANDOFF_AUDIT_ADDENDUM_2026-09-28.md — overlay append-only de estados posteriores, achados e lacunas. A versão atual da auditoria é a versão 2.
+
+Os dois documentos de auditoria não substituem o handoff nem contêm, por si sós, todo o texto canônico. Se o handoff V1 ou qualquer um dos dois documentos não estiver disponível, procure pelo título exato na Library. Se ainda faltar uma fonte obrigatória, pare a migração, registre qual arquivo falta e não reconstrua seu conteúdo de memória.
+
+Considere também os arquivos fonte listados no inventário. Use nome, versão, Library ID e localização como referências de proveniência; não presuma que um ID da Library seja caminho local nem escolha uma cópia apenas pela semelhança de nomes.
+
+Este prompt é a instrução específica para a execução no Desktop. Se NOVYDRES_PROJECT_BOOTSTRAP_PROMPT_WEB_V2.txt estiver disponível, use apenas suas etapas estruturais e critérios de QA compatíveis; este prompt define a execução no Desktop. Preserve a versão Web como arquivo histórico, sem substituí-la ou editá-la.
+
+## Ambiente e destino obrigatório
+
+Este prompt é executado no ChatGPT Desktop. O scaffold físico tem um único destino permitido:
+
+/home/nilton_neto/Documentos/Backup/Notas/Personal Stuffs/RPG stuffs/NOVYDRES
+
+Verifique primeiro se o Desktop consegue acessar o caminho e seu diretório pai. Não presuma que o filesystem do Desktop seja o mesmo do Web, do Project, da Library ou de um sandbox. Se o caminho não existir e o diretório pai não permitir criá-lo, pare antes de gravar. Não use diretório alternativo, pasta temporária, Library, workspace interno ou uma nova raiz NOVYDRES dentro da raiz definida. Não declare o bootstrap concluído se não gravar nesse destino.
+
+Se a raiz já existir, liste seu conteúdo e leia primeiro os .AGENT.md e .CONTEXTG.md aplicáveis. Preserve todo arquivo existente. Não sobrescreva, mova, renomeie ou apague arquivos. Se um arquivo de destino já existir com conteúdo diferente, pare naquela operação, preserve ambas as versões e registre o conflito; só prossiga com as partes não conflitantes.
+
+## Autoridade e proteção do cânone
+
+- Mantenha o MASTER HANDOFF V1 byte a byte intacto. Copie-o para 00_SOURCE somente quando o destino não existir; se já existir, compare antes de decidir. Nunca o reescreva como parte do bootstrap.
+- O inventário serve para localizar fontes e propor destinos. O adendo registra continuidade e estado posterior; nenhum dos dois cria decisões de lore, regras, mapa ou POIs.
+- Preserve as classificações CANÔNICO / FECHADO, APROVADO / CONGELADO, PENDENTE, SUPERADO e REJEITADO / DESCARTADO.
+- Preserve conflitos documentais explicitamente, com as fontes de cada sinal. Não harmonize versões, frontmatter, posições do Atlas, Master Map e camada visual, nem escolha autoridade por nome, data ou número de versão sem evidência.
+- Não altere material CANÔNICO/FECHADO ou APROVADO/CONGELADO. Não transforme candidate em aprovado, prompt em veredito, proposta em decisão ou asset gerado em asset aprovado.
+- Preserve duplicatas, versões superadas, prompts, patches, relatórios e renders alternativos. Classifique-os como proveniência ou histórico; não apague nem promova ao contexto canônico por estarem na Library.
+- Não crie lore, regra, veredito, data, hash ou vínculo de arquivo ausente. Registre a lacuna como OPEN ou MISSING_SOURCE e mantenha a evidência disponível.
+
+## Escopo do bootstrap
+
+Nesta execução, inventarie, estruture, migre e audite. Não inicie desenvolvimento de conteúdo, não edite imagens ou o Master Map, não abra o GIMP, não gere novos POIs e não altere arquivos de fonte para corrigir conflitos.
+
+Use a tabela de destinos do inventário como mapa principal. Preserve cada documento-fonte em um único local proprietário e use referências cruzadas nos outros módulos, em vez de manter cópias canônicas independentes. Quando uma linha do inventário apontar para um destino que não aparece na tabela geral de pastas — por exemplo, referências a 06_CAMPAIGN_ARCHITECTURE ou 40_OUTPUTS/tiles — registre a discrepância em MIGRATION_COVERAGE.md. Não a resolva silenciosamente nem force o conteúdo em outro capítulo.
+
+## Estrutura a materializar
+
+Crie, na raiz NOVYDRES, o mínimo necessário para o mapa de fontes:
+
+- Arquivos globais: .AGENT.md, .CONTEXTG.md, README.md, PROJECT_STATE.md e CHANGELOG.md.
+- 00_SOURCE/: MASTER HANDOFF V1, este inventário, o adendo, este prompt, HANDOFF_MANIFEST.md e MIGRATION_COVERAGE.md.
+- 01_GOVERNANCE/: autoridade editorial, contratos, dependências, glossário e política de conflitos.
+- 10_CHAPTERS/: módulos 01_WORLD_CANON, 02_POLITICS_DOMAIN_FACTIONS, 03_SYSTEM_MECHANICS, 04_CHARACTER_CREATION_A_K, 05_NPCS_POWER_SCALE, 07_PROVOCATIONS_MARCOS, 08_CARTOGRAPHY_GEOGRAPHY, 09_MOBILITY_INFRASTRUCTURE, 10_MASTER_MAP, 11_POI_REGISTRY, 12_VISUAL_LANGUAGE e 13_PRODUCTION_PIPELINE. Crie outros módulos somente se o handoff contiver conteúdo com responsabilidade própria; explique o mapeamento e registre conflitos de destino.
+- 20_ASSETS/: maps, approved, generated e references. Coloque em approved somente assets com vínculo inequívoco a veredito final.
+- 40_OUTPUTS/tiles/ somente quando houver pacote de tiles disponível; os tiles derivam do Master Map e não redefinem geografia.
+- 90_ARCHIVE/: cópias históricas, saídas superadas ou descartadas e proveniência que precisa ser preservada.
+- 99_INBOX/: cópias temporárias de conteúdo sem proprietário claro. Preserve o original e registre cada item como UNMAPPED até receber destino explícito.
+
+Cada módulo de capítulo deve ter, no mínimo, .AGENT.md, .CONTEXTG.md, README.md, CANON.md, STATE.md, OPEN.md, DECISIONS.md e SOURCES.md. Os arquivos de contexto devem ser curtos e apontar para as fontes certas; não replique o handoff inteiro em cada capítulo.
+
+## Passes de trabalho e gates
+
+### A — Pré-checagem
+
+1. Confirme as três fontes obrigatórias e registre nome, versão disponível, tamanho e localização.
+2. Confirme o acesso ao destino fixo e verifique a árvore existente.
+3. Leia as instruções locais .AGENT.md e .CONTEXTG.md antes de criar ou editar qualquer arquivo.
+4. Se houver acesso apenas aos dois documentos de auditoria, sem acesso ao handoff V1, não faça a migração de conteúdo.
+
+### B — Inventário e cobertura
+
+Leia o handoff V1 integralmente. Registre cada heading e bloco relevante em HANDOFF_MANIFEST.md e MIGRATION_COVERAGE.md, com origem, função, destino principal, relações, estado e evidência.
+
+Use a taxonomia de cobertura já definida no protocolo de bootstrap: MIGRATED, CROSS-REFERENCED, CONFLICT-REGISTERED, ARCHIVED e UNMAPPED. Não invente outros estados para MIGRATION_COVERAGE.md. Registre lacunas factuais como pendências em OPEN.md; conteúdo sem proprietário claro vai para 99_INBOX/ e recebe UNMAPPED.
+
+Todo bloco do handoff deve ter destino ou referência cruzada. UNMAPPED deve chegar a zero antes de declarar a migração de conteúdo completa. Se uma fonte necessária estiver ausente, não fabrique conteúdo: registre o item, mantenha a migração como parcial e não declare o bootstrap completo.
+
+### C — Scaffold e migração
+
+Crie os diretórios e arquivos estruturais sem substituir conteúdo existente. Transfira ou sintetize módulos a partir das fontes mantendo fidelidade e rastreabilidade. Para cada afirmação migrada, registre a fonte e, quando possível, a seção do handoff. Não duplique o mesmo cânone em capítulos diferentes.
+
+Em cada módulo, .AGENT.md deve definir limites e regras de trabalho; .CONTEXTG.md deve indicar o que ler e onde procurar; CANON.md preserva o conteúdo canônico; STATE.md e OPEN.md registram estado e pendências; DECISIONS.md e SOURCES.md mantêm ledgers e proveniência.
+
+### D — Auditoria final
+
+Compare a cobertura com o handoff completo, confirme que nenhum arquivo existente foi sobrescrito e valide todos os destinos. Mantenha os conflitos visíveis e confira que a estrutura permite a um agente receber uma tarefa local sem carregar o handoff inteiro.
+
+## Estado atual que deve continuar explícito
+
+Registre como pendente, sem completar por inferência:
+
+- POI 23: aprovado com correção; não há veredito final localizado após a correção.
+- POI 24: há prompt atualizado, sem veredito final localizado.
+- POIs 25 e 31: sem aprovação posterior localizada.
+- Os estados de POIs congelados 04–07, 09, 12–17 e 20–21 permanecem no handoff, mas vários vínculos exatos de Library ID a veredito ainda faltam.
+- A fonte editável vigente do Master Map, seu caminho/hash e a relação exata com MasterMap.png não foram confirmados.
+- O corpus integral do Workstream L não foi localizado além do handoff L.
+- A aba Fontes do Project NOVYDRES foi observada vazia na sessão autenticada anterior. Não afirme que estes documentos foram adicionados ao Project.
+- A contagem registrada para o handoff diverge entre 2.008 linhas no chat de consolidação e 2.007 na extração da Library; as cópias comparadas são textualmente idênticas. Preserve a nota sem tratar a contagem como prova de divergência.
+
+## Saída
+
+Ao terminar, grave BOOTSTRAP_REPORT.md na raiz do destino com: resultado real; raiz usada; arquivos de entrada e versões; estrutura criada; cobertura por estado; conflitos preservados; fontes ausentes; pendências; e restart point recomendado.
+
+Declare a migração concluída somente se a gravação ocorreu no caminho permitido e a auditoria confirmou cobertura completa sem UNMAPPED. Se o caminho, o handoff ou uma instrução aplicável bloquear a execução, pare, não use outro destino e relate o bloqueio específico sem afirmar conclusão.
+
+Comece pela pré-checagem. Não escreva nada no destino até confirmar que as fontes obrigatórias e o caminho estão acessíveis.
+
+Se o prompt anterior NOVYDRES_PROJECT_BOOTSTRAP_PROMPT_WEB_V2.txt estiver disponível na Library, use seus critérios estruturais e de QA que não conflitem com este prompt. Para esta execução, este prompt define o uso do ChatGPT Desktop; preserve o caminho físico obrigatório e as proteções de cânone. Não substitua nem apague o prompt anterior.
