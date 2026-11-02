@@ -159,7 +159,11 @@
       "tags"
     ],
     "unknown": "NEEDS_EVIDENCE_NOT_FALSE",
-    "original_sources_are_required_for_decisive_details": true
+    "original_sources_are_required_for_decisive_details": true,
+    "additional_required_checks": [
+      "Always use original source and corrections before deciding an event is true",
+      "Roll-related markers are not proof of RNG or COMMITTED ledger"
+    ]
   },
   "technical_ledger_status": "HISTORICALLY_UNPOPULATED_NOT_RECONSTRUCTED",
   "poc_data_imported": false,
@@ -180,5 +184,15 @@
     }
   ],
   "mechanical_projection_ref": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
-  "historical_unindexed_relationships": "M1 historical search index now available, M2.01-M2.03 and post-M1 status still require field-by-field verification"
+  "historical_unindexed_relationships": "M1 historical search index now available, M2.01-M2.03 and post-M1 status still require field-by-field verification",
+  "m2_source_marker_index": {
+    "path": "novydres/chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json",
+    "unique_identifiers": 87,
+    "status": "TEXT_LOCATORS_ONLY_NOT_AUDITED_LEDGER",
+    "source_refs": [
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+    ],
+    "exact_checkpoint": "M2.03.073"
+  }
 }
