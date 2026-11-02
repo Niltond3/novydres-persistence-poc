@@ -1,0 +1,221 @@
+{
+  "schema": "NOVYDRES_CONTEXTUAL_PROGRESSIVE_MEMORY_V1_1",
+  "chronicle_id": "CHR-001",
+  "simulation_only": false,
+  "activation_status": "INACTIVE_CANDIDATE_PENDING_AUDIT",
+  "operational_source": false,
+  "projection_created_at": "2026-11-02",
+  "last_confirmed_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+  "stage": {
+    "mode": "GUIDED_CHARACTER_CREATION",
+    "M1": "CLOSED",
+    "M2": "ACTIVE",
+    "M2_01": "CLOSED",
+    "M2_02": "CLOSED",
+    "M2_03": "ACTIVE_AWAITING_PLAYER_RESPONSE",
+    "M3_to_M5": "NOT_STARTED",
+    "embrace_occurred": false,
+    "main_chronicle_2010_started": false,
+    "diegetic_period": "late 1970s",
+    "diegetic_date_exact": null
+  },
+  "character": {
+    "entity_id": "pc-bartholomeu-krauser",
+    "name": "Bartholomeu Krauser",
+    "family_surname": "Krauser",
+    "wife": "Mary Krauser",
+    "son": "Mikahel Krauser",
+    "daughter": "Sara Krauser",
+    "touchstone": "Sara Krauser",
+    "mortal": true,
+    "clan_planned": "Gangrel, future only",
+    "resources": {
+      "xp_total": 519,
+      "xp_spent": 170,
+      "xp_remaining": 349,
+      "xp_credit_available": 20,
+      "willpower_provisional_max": 6,
+      "willpower_superficial_damage": 5,
+      "willpower_aggravated_damage": 0,
+      "willpower_available": 1
+    },
+    "full_v5_sheet": "PENDING_FIELD_BY_FIELD_HISTORICAL_RECONCILIATION",
+    "sheet_source_refs": [
+      "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+    ],
+    "target_sheet_not_equivalent_to_current": true
+  },
+  "scene": {
+    "scene_id": "CHR001-M203-HOSPITAL-STAFF-CHANGING_ROOM",
+    "episode_id": "M2.03",
+    "location": "hospital employee changing room, hospital name unknown",
+    "participants": [
+      "pc-bartholomeu-krauser",
+      "npc-gray-apron-hospital-worker"
+    ],
+    "last_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+    "awaiting": "PLAYER_RESPONSE_TO_QUESTION",
+    "context_packet": {
+      "built_from_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+      "context_status": "EVIDENCE_BACKED_CURRENT_SCENE_ONLY",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ],
+      "location": "hospital employee changing room",
+      "participants": [
+        "pc-bartholomeu-krauser",
+        "npc-gray-apron-hospital-worker"
+      ],
+      "confirmed_facts": [
+        {
+          "text": "Bartholomeu entered the staff changing room without interception at M2.03.072; no ongoing invisibility granted",
+          "source_event_ids": [
+            "CHR001-M203-STAFF-ACCESS-20261102-001"
+          ]
+        },
+        {
+          "text": "Bartholomeu wears a disposable medical mask, removed bloody trousers and put on bulky, poorly fitting work trousers; upper body clothing change incomplete",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Mary-made winter coat is on the bench, not worn; original bloody garments are nearby, not discarded",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Knife taken from severely injured stranger remains in Bart's control; exact placement concealed or exposed is unspecified",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Gray-apron worker entered with used clothing, saw bloody garments and asks: Você veio da emergência?",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Severely wounded stranger remains in clinical care; outcome unknown",
+          "source_event_ids": [
+            "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001"
+          ]
+        }
+      ],
+      "original_player_declaration": "Eu coloco uma mascara hospitalar. E começo a trcar de roupa, quem olhar vai ver só mais alguem trocando de roupa num vestiario faço isso sem pressa, e só colo o o casaco que minha esposa fez depois que eu tiver só",
+      "declaration_ends_incomplete": true,
+      "player_assumption_not_fact": "Anyone who looks will see just someone changing in staff locker room",
+      "intent_not_fully_resolved": "Re-wear Mary-made coat after changing; ambiguous unfinished last clause",
+      "npc_claims": [
+        {
+          "source": "unnamed injured stranger",
+          "claim": "Nadezhda Sokolova allegedly stayed in boardinghouse Travessa Volnaya 12 room 4; Gromov allegedly received address",
+          "verified": false,
+          "source_event_ids": [
+            "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001"
+          ]
+        }
+      ],
+      "actor_knowledge": [
+        {
+          "entity_id": "npc-gray-apron-hospital-worker",
+          "knows_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ],
+          "confirmed_observations": [
+            "a person changing clothes",
+            "bloody clothes within reach"
+          ],
+          "unknowns": [
+            "Bart's identity",
+            "Bart's history",
+            "knife existence/location",
+            "reason for blood",
+            "whether Bart came from ER"
+          ],
+          "role_beyond_apron": "UNKNOWN"
+        },
+        {
+          "entity_id": "pc-bartholomeu-krauser",
+          "known_from_source_refs": [
+            "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+            "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+          ],
+          "unknowns": [
+            "injured man's medical outcome",
+            "gray-apron worker's motives",
+            "Nadezhda actual location",
+            "Gromov actual identity/capabilities"
+          ]
+        }
+      ],
+      "latent_obligations": [
+        {
+          "thread_id": "intent-help-nadezhda",
+          "type": "PLAYER_INTENT",
+          "status": "OPEN",
+          "source_refs": [
+            "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+          ]
+        }
+      ],
+      "unresolved": [
+        "Staff member awaits Bart's response",
+        "Clothing change incomplete; exact attire upper body unknown",
+        "Bloodied clothes not disposed",
+        "Patient outcome unknown",
+        "PENDING_LORE_AUDIT of stranger",
+        "Unconfirmed Nadezhda/Gromov claims"
+      ],
+      "constraints": [
+        "PC agency reserved to player",
+        "No retcon or implicit completion of unfinished sentence",
+        "NPC autonomy and limited knowledge",
+        "No new roll or Willpower cost",
+        "No 2010 or Embrace"
+      ],
+      "context_packet_source_status": "SOURCE_TEXT_VERIFIED_PROJECTION_NOT_AUDITED_FULL_HISTORY"
+    }
+  },
+  "recent_event_ids": [
+    "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+    "CHR001-M203-STAFF-ACCESS-20261102-001",
+    "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+  ],
+  "event_buffer": [],
+  "event_buffer_status": "NO_TECHNICAL_EVENT_LEDGER_RECONSTRUCTED; SOURCE_EPISODE_PRESERVED_SEPARATELY",
+  "roll_pending": null,
+  "last_roll_transcript": {
+    "roll_id": "CHR001-M203-R001-STAFF-ACCESS",
+    "faces": [
+      3,
+      9,
+      10,
+      4
+    ],
+    "reported_successes": 2,
+    "player_accepted": true,
+    "willpower_spent": 0,
+    "rng_origin": "UNVERIFIED",
+    "no_reroll": true
+  },
+  "history_index_ref": "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
+  "persistence": {
+    "store": "GITHUB_INACTIVE_CANDIDATE",
+    "operational_drives_source": "GOOGLE_DRIVE",
+    "readback_required": true,
+    "cutover_complete": false,
+    "previous_technical_ledger_events": "NOT_BACKFILLED",
+    "previous_technical_ledger_rolls": "NOT_BACKFILLED"
+  },
+  "rotation": {
+    "max_chars_provisional": 30000,
+    "max_event_buffer_provisional": 20
+  }
+}

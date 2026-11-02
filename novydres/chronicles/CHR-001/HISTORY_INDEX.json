@@ -1,0 +1,166 @@
+{
+  "schema": "NOVYDRES_HISTORY_INDEX_V1_1_REAL_CANDIDATE",
+  "chronicle_id": "CHR-001",
+  "simulation_only": false,
+  "activation_status": "INACTIVE_CANDIDATE",
+  "index_coverage": "PARTIAL_SPARSE_NEEDS_COMPLETE_HISTORY_AUDIT",
+  "entrypoints": {
+    "live": "novydres/chronicles/CHR-001/LIVE.json",
+    "current_episode": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+    "current_character_state": "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+    "full_legacy_diary": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+  },
+  "entities": {
+    "pc-bartholomeu-krauser": {
+      "aliases": [
+        "Bartholomeu Krauser",
+        "Bart"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "history_status": "MORTAL"
+    },
+    "npc-mary-krauser": {
+      "aliases": [
+        "Mary"
+      ],
+      "relation": "WIFE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    },
+    "npc-mikahel-krauser": {
+      "aliases": [
+        "Mikahel"
+      ],
+      "relation": "SON",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "npc-sara-krauser": {
+      "aliases": [
+        "Sara"
+      ],
+      "relation": "DAUGHTER_TOUCHSTONE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "npc-gray-apron-hospital-worker": {
+      "aliases": [
+        "gray-apron hospital staff member"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "identity": "UNKNOWN"
+    },
+    "npc-unnamed-injured-stranger": {
+      "aliases": [
+        "unknown severely injured man"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "identity": "UNKNOWN"
+    },
+    "npc-nadezhda-claimed": {
+      "aliases": [
+        "Nadezhda Sokolova"
+      ],
+      "evidence_class": "NPC_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    },
+    "npc-gromov-claimed": {
+      "aliases": [
+        "Gromov"
+      ],
+      "evidence_class": "NPC_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "arcs": {
+    "guided-creation": {
+      "status": "ACTIVE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v008.source.txt"
+      ]
+    },
+    "m2-03-unknown-man": {
+      "status": "ACTIVE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "help-nadezhda": {
+      "status": "PLAYER_INTENT_OPEN",
+      "source_event_ids": [
+        "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "history_batches": [
+    {
+      "episode_range": "M1.01-M1.09, M2.01-M2.02",
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "provenance": "ORIGINAL_DRIVE_OPERATIONAL_DIARY_NOT_AUDITED_LEDGER"
+    },
+    {
+      "episode_range": "M2.03.001-M2.03.073",
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+      "provenance": "DRIVE_EPISODE_CUMULATIVE_V008_OPERATIONAL_DIARY"
+    }
+  ],
+  "version_history": {
+    "episode_m203_dir": "novydres/chronicles/CHR-001/episodes/history/",
+    "character_state_dir": "novydres/chronicles/CHR-001/character/history/",
+    "invalid_v007": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt"
+  },
+  "locations": {
+    "hospital-staff-changing-room": {
+      "entity_ids": [
+        "pc-bartholomeu-krauser",
+        "npc-gray-apron-hospital-worker"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "unindexed_historic_entities_and_promises": "PENDING_EXTRACTION; do not assume absent",
+  "last_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+  "retrieval_policy": {
+    "primary": [
+      "entity_id",
+      "location_id",
+      "arc_id",
+      "open_thread"
+    ],
+    "secondary": [
+      "aliases",
+      "tags"
+    ],
+    "unknown": "NEEDS_EVIDENCE_NOT_FALSE",
+    "original_sources_are_required_for_decisive_details": true
+  },
+  "technical_ledger_status": "HISTORICALLY_UNPOPULATED_NOT_RECONSTRUCTED",
+  "poc_data_imported": false
+}
