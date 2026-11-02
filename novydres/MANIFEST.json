@@ -8,7 +8,7 @@
   "primary_operational_source": "GOOGLE_DRIVE",
   "poc_isolation": "poc/memory-v1 untouched",
   "sources_registered": 169,
-  "source_document_copies": 41,
+  "source_document_copies": 87,
   "inventory": "migration/INVENTORY.json",
   "progress": "migration/PROGRESS.json",
   "chronicle": "chronicles/CHR-001",
@@ -18,5 +18,12 @@
     "Text extracted from Google Docs; original native docs remain authoritative for non-text aspects",
     "LIVE.json and HISTORY_INDEX.json pending historical reconciliation"
   ],
-  "inventory_coverage": "PARTIAL"
+  "inventory_coverage": "PARTIAL",
+  "copy_integrity": "EXTRACTED_TEXT_READBACK_ONLY",
+  "native_binary_copies": 0,
+  "operational_source": "GOOGLE_DRIVE",
+  "candidate_memory_refs": [
+    "chronicles/CHR-001/LIVE.json",
+    "chronicles/CHR-001/HISTORY_INDEX.json"
+  ]
 }
