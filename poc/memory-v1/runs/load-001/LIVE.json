@@ -1,0 +1,76 @@
+{
+  "schema": "novydres-live-v1-load",
+  "chronicle_id": "CHR-SIM-LOAD-001",
+  "simulation_only": true,
+  "phase": "GUIDED_CREATION_SIMULATION",
+  "scene": {
+    "scene_id": "SC-LOAD-WORKSHOP-01",
+    "episode_id": "M0.01",
+    "location_id": "loc-workshop",
+    "participants": [
+      "pc-iris",
+      "npc-ivo"
+    ],
+    "last_event_seq": 4,
+    "last_event_id": "SIM-M001-E004",
+    "awaiting": "SYNTHETIC_NEXT_EVENT",
+    "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
+    "context_anchor_event_id": "SIM-M001-E004"
+  },
+  "character": {
+    "character_id": "pc-iris",
+    "resources": {
+      "xp_total": 0,
+      "xp_spent": 0,
+      "willpower_max": 3,
+      "willpower_superficial": 0
+    },
+    "state_known": true
+  },
+  "recent_event_ids": [
+    "SIM-M001-E001",
+    "SIM-M001-E002",
+    "SIM-M001-E003",
+    "SIM-M001-E004"
+  ],
+  "event_buffer": [],
+  "last_archived_seq": 4,
+  "narrative_constraints": [
+    "Não decidir ação voluntária sem declaração do jogador",
+    "Alarme é evento; causa desconhecida",
+    "Relatório seguro = alegação de Vale",
+    "Ivo não leu relatório",
+    "Promessa não vira cumprimento automaticamente"
+  ],
+  "open_threads": [
+    {
+      "id": "thread-signature",
+      "status": "OPEN",
+      "label": "Assinatura ainda não confirmada",
+      "source_event_ids": [
+        "SIM-M001-E001"
+      ]
+    },
+    {
+      "id": "thread-alarm",
+      "status": "OPEN",
+      "label": "Causa do alarme desconhecida",
+      "source_event_ids": [
+        "SIM-M001-E003"
+      ]
+    }
+  ],
+  "roll_pending": null,
+  "persistence": {
+    "store": "github_poc",
+    "require_readback": true,
+    "technical_chronicle_ledger_status": "NOT_MIGRATED",
+    "scenario": "load-001"
+  },
+  "history_index_ref": "poc/memory-v1/runs/load-001/HISTORY_INDEX.json",
+  "rotation": {
+    "max_chars_provisional": 30000,
+    "max_buffer_events_provisional": 20,
+    "archiving_required_before_trim": true
+  }
+}
