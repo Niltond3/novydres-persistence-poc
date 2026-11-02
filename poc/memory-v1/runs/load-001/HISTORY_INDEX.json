@@ -2,7 +2,7 @@
   "schema": "novydres-history-index-v1-load",
   "simulation_only": true,
   "chronicle_id": "CHR-SIM-LOAD-001",
-  "revision": 4,
+  "revision": 5,
   "active_scene": "SC-LOAD-WORKSHOP-03",
   "entrypoints": {
     "live": "poc/memory-v1/runs/load-001/LIVE.json",
@@ -37,7 +37,8 @@
         "arc-pump"
       ],
       "history_refs": [
-        "SIM-M001-E004"
+        "SIM-M001-E004",
+        "SIM-LOAD-001-E024"
       ],
       "memory_ref": "poc/memory-v1/entities/npc-ivo.json"
     },
@@ -102,7 +103,8 @@
       "status": "OPEN",
       "memory_ref": null,
       "event_refs": [
-        "SIM-LOAD-001-E013"
+        "SIM-LOAD-001-E013",
+        "SIM-LOAD-001-E024"
       ]
     }
   },
