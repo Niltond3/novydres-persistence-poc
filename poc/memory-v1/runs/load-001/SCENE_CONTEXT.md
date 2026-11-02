@@ -1,16 +1,15 @@
 # SCENE_CONTEXT — SC-LOAD-HOME-02
 
-**Simulação, projeção; não é prova de história real.** Refs aos eventos originais: `poc/memory-v1/episodes/M0.01/events-001-004.json`; últimos eventos no LIVE.
+POC sintética, projeção renovada após compromisso relevante em **SIM-LOAD-001-E013**. Source events no LIVE; fatos anteriores no arquivo inicial `poc/memory-v1/episodes/M0.01/events-001-004.json`.
 
-Local: casa de Íris. Presentes: Íris e Leta. Chegada em corte narrativo sintético autorizado no vetor do evento SIM-LOAD-001-E011. 
+## Cena atual
+Íris em casa com Leta. Em turno 12, Leta perguntou genericamente sobre o trabalho, sem conhecimento confirmado de Vale, do relatório ou da causa do alarme.
 
-## Fatos relevantes para a PJ
-- Íris se comprometeu a inspecionar a bomba antes de assinar (SIM-M001-E001). Inspeção ainda sem conclusão confirmada.
-- O alarme foi observado, causa desconhecida (SIM-M001-E003).
-- Vale **alegou** que relatório era seguro (SIM-M001-E002, NPC_CLAIM). Relatório não comprovado.
+## Compromisso confirmado
+Íris declarou literalmente: "Eu prometo a você: não vou assinar antes de conferir tudo." (evento SIM-LOAD-001-E013; ouvida por Leta). Isso é promessa verbal, **não** confirmação da futura inspeção, de assinatura ou de qualquer consequência. Repercussões ainda abertas.
 
-## Conhecimento limitado da NPC
-Leta NÃO estava presente no galpão; não possui, neste ponto, fonte confirmada de conhecimento sobre Vale, relatório ou causa do alarme. Só pode reagir ao que de fato testemunhar ou lhe for comunicado. Não atribuir a Íris fala que ainda não declarou.
+## Memória causal
+Alarme ocorreu (SIM-M001-E003), causa desconhecida. Vale alegou segurança do relatório (SIM-M001-E002, NPC_CLAIM não confirmada). Íris declarou antes que verificaria a bomba (SIM-M001-E001). Sem retcon.
 
-## Pendências
-Assinatura, inspeção, causa do alarme e consequência das declarações de NPCs. Memória de cena será recomposta quando houver mudança significativa; os eventos correntes permanecem no LIVE.
+## Limites
+Leta ouviu a promessa, mas não sabe por fonte confirmada os fatos do galpão nem o teor do relatório. Nenhuma ação voluntária de Íris fora dos eventos de teste.

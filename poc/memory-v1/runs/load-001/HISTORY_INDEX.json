@@ -2,7 +2,7 @@
   "schema": "novydres-history-index-v1-load",
   "simulation_only": true,
   "chronicle_id": "CHR-SIM-LOAD-001",
-  "revision": 2,
+  "revision": 3,
   "active_scene": "SC-LOAD-HOME-02",
   "entrypoints": {
     "live": "poc/memory-v1/runs/load-001/LIVE.json",
@@ -69,7 +69,9 @@
       "arc_ids": [
         "arc-promise"
       ],
-      "history_refs": [],
+      "history_refs": [
+        "SIM-LOAD-001-E013"
+      ],
       "memory_ref": null
     }
   },
@@ -97,9 +99,11 @@
         "Leta",
         "assinatura"
       ],
-      "status": "NOT_STARTED",
+      "status": "OPEN",
       "memory_ref": null,
-      "event_refs": []
+      "event_refs": [
+        "SIM-LOAD-001-E013"
+      ]
     }
   },
   "locations": {
