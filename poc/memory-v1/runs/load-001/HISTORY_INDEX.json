@@ -2,7 +2,7 @@
   "schema": "novydres-history-index-v1-load",
   "simulation_only": true,
   "chronicle_id": "CHR-SIM-LOAD-001",
-  "revision": 5,
+  "revision": 6,
   "active_scene": "SC-LOAD-WORKSHOP-03",
   "entrypoints": {
     "live": "poc/memory-v1/runs/load-001/LIVE.json",
@@ -143,6 +143,15 @@
       "source_chronicle_id": "CHR-SIM-002",
       "provenance": "synthetic_seed_import",
       "source_type_preserved": true
+    },
+    {
+      "first_seq": 5,
+      "last_seq": 19,
+      "path": "poc/memory-v1/runs/load-001/episodes/M0.01/events-005-019.json",
+      "source_chronicle_id": "CHR-SIM-LOAD-001",
+      "provenance": "synthetic_operational_events",
+      "source_type_preserved": true,
+      "verification": "requires_readback"
     }
   ],
   "retrieval_policy": {

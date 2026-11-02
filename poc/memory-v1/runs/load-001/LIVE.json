@@ -11,8 +11,8 @@
       "pc-iris",
       "npc-ivo"
     ],
-    "last_event_seq": 24,
-    "last_event_id": "SIM-LOAD-001-E024",
+    "last_event_seq": 25,
+    "last_event_id": "SIM-LOAD-001-E025",
     "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E021"
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E015",
     "SIM-LOAD-001-E016",
     "SIM-LOAD-001-E017",
     "SIM-LOAD-001-E018",
@@ -37,246 +36,10 @@
     "SIM-LOAD-001-E021",
     "SIM-LOAD-001-E022",
     "SIM-LOAD-001-E023",
-    "SIM-LOAD-001-E024"
+    "SIM-LOAD-001-E024",
+    "SIM-LOAD-001-E025"
   ],
   "event_buffer": [
-    {
-      "event_id": "SIM-LOAD-001-E005",
-      "seq": 5,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "WORLD_EVENT",
-      "observable_payload": "Uma gota cai da calha do galpão; causa e relevância desconhecidas.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "world",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E006",
-      "seq": 6,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_DECLARATION",
-      "observable_payload": "Ainda não sei por que o alarme tocou.",
-      "original_declaration_quote": "Ainda não sei por que o alarme tocou.",
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E007",
-      "seq": 7,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "NPC_CLAIM",
-      "observable_payload": "Ivo diz que o ruído talvez tenha vindo do lado norte da bomba.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "npc-ivo",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E008",
-      "seq": 8,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "WORLD_EVENT",
-      "observable_payload": "Uma gota de condensação aparece no painel, sem conclusão sobre a bomba.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "world",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E009",
-      "seq": 9,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_INTENT",
-      "observable_payload": "Íris pretende examinar um trecho da tubulação; conclusão ainda pendente.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E010",
-      "seq": 10,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "WORLD_EVENT",
-      "observable_payload": "A lâmpada do galpão oscila por um instante.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "world",
-      "causal_event_ids": [],
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E011",
-      "seq": 11,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_DECLARATION",
-      "observable_payload": "Vou voltar para casa agora e pensar no que vi.",
-      "original_declaration_quote": "Vou voltar para casa agora e pensar no que vi.",
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "location_id": "loc-workshop",
-      "diegetic_datetime": "UNKNOWN",
-      "resolved_scene_transition": {
-        "source_type": "WORLD_EVENT",
-        "to_location_id": "loc-home",
-        "outcome": "Corte sintético de viagem: Íris chegou em casa.",
-        "status": "RESOLVED"
-      }
-    },
-    {
-      "event_id": "SIM-LOAD-001-E012",
-      "seq": 12,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "NPC_ACTION",
-      "observable_payload": "Leta pergunta a Íris como foi o trabalho, sem demonstrar saber do relatório.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "npc-leta",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "knowledge_constraint": "Não sabe do relatório/ Vale por fonte verificada"
-    },
-    {
-      "event_id": "SIM-LOAD-001-E013",
-      "seq": 13,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_DECLARATION",
-      "observable_payload": "Eu prometo a você: não vou assinar antes de conferir tudo.",
-      "original_declaration_quote": "Eu prometo a você: não vou assinar antes de conferir tudo.",
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "location_id": "loc-home",
-      "knowledge_by": [
-        "pc-iris",
-        "npc-leta"
-      ],
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": [
-        "SIM-M001-E001"
-      ]
-    },
-    {
-      "event_id": "SIM-LOAD-001-E014",
-      "seq": 14,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "NPC_CLAIM",
-      "observable_payload": "Leta diz que não sabe o que ocorreu na bomba e recomenda cautela; não declara conhecer Vale.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "npc-leta",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": []
-    },
-    {
-      "event_id": "SIM-LOAD-001-E015",
-      "seq": 15,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "WORLD_EVENT",
-      "observable_payload": "O telefone da cozinha toca uma vez e silencia, sem identificar quem ligou.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "world",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": []
-    },
-    {
-      "event_id": "SIM-LOAD-001-E016",
-      "seq": 16,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_INTENT",
-      "observable_payload": "Íris considera ligar para Ivo, mas a chamada não foi concluída.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": []
-    },
-    {
-      "event_id": "SIM-LOAD-001-E017",
-      "seq": 17,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "MECHANICAL_RESULT",
-      "observable_payload": "Vetor de dados fixo [3,9,10,4] para teste técnico; decisão de FV pendente.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "world",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": [],
-      "roll": {
-        "roll_id": "SIM-ROLL-017",
-        "dice_faces": [
-          3,
-          9,
-          10,
-          4
-        ],
-        "successes": 2,
-        "provenance": "FIXED_TEST_VECTOR_NOT_ACTUAL_RANDOM",
-        "state": "AWAITING_PLAYER_WP_CHOICE"
-      }
-    },
-    {
-      "event_id": "SIM-LOAD-001-E018",
-      "seq": 18,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "PLAYER_DECLARATION",
-      "observable_payload": "Aceito o resultado sintético, sem gastar Força de Vontade.",
-      "original_declaration_quote": "Aceito o resultado sintético, sem gastar Força de Vontade.",
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "pc-iris",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": [],
-      "resolves_roll_id": "SIM-ROLL-017",
-      "wp_decision": "DECLINED",
-      "wp_spent": 0,
-      "dice_regenerated": false
-    },
-    {
-      "event_id": "SIM-LOAD-001-E019",
-      "seq": 19,
-      "chronicle_id": "CHR-SIM-LOAD-001",
-      "simulation_only": true,
-      "source_type": "NPC_ACTION",
-      "observable_payload": "Leta oferece uma xícara de chá; Íris ainda não a aceitou.",
-      "original_declaration_quote": null,
-      "source_provenance": "SYNTHETIC_SCRIPT",
-      "actor_id": "npc-leta",
-      "location_id": "loc-home",
-      "diegetic_datetime": "UNKNOWN",
-      "causal_event_ids": []
-    },
     {
       "event_id": "SIM-LOAD-001-E020",
       "seq": 20,
@@ -358,9 +121,22 @@
       ],
       "diegetic_datetime": "UNKNOWN",
       "claim_status": null
+    },
+    {
+      "event_id": "SIM-LOAD-001-E025",
+      "seq": 25,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "WORLD_EVENT",
+      "observable_payload": "O ponteiro de pressão se move brevemente; causa indeterminada.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "world",
+      "location_id": "loc-workshop",
+      "diegetic_datetime": "UNKNOWN"
     }
   ],
-  "last_archived_seq": 4,
+  "last_archived_seq": 19,
   "narrative_constraints": [
     "Não decidir ação voluntária sem declaração do jogador",
     "Alarme é evento; causa desconhecida",
@@ -403,7 +179,8 @@
     "store": "github_poc",
     "require_readback": true,
     "technical_chronicle_ledger_status": "NOT_MIGRATED",
-    "scenario": "load-001"
+    "scenario": "load-001",
+    "last_rotation_at_seq": 25
   },
   "history_index_ref": "poc/memory-v1/runs/load-001/HISTORY_INDEX.json",
   "rotation": {
