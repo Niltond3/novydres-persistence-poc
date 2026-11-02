@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "DRIVE_TREE_ENUMERATION_1_OF_2",
+  "phase": "DRIVE_LEGACY_TREE_ENUMERATED",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -25,9 +25,9 @@
     "Validate real new-chat recovery/semantic consistency, then write MIG-DEC-002 cutover; do not narrate before validation"
   ],
   "catalogue_legacy_references": 76,
-  "inventory_records": 185,
+  "inventory_records": 190,
   "text_sources_verified": 148,
-  "pending_records": 21,
+  "pending_records": 19,
   "native_binary_migrated": 0,
   "native_google_docs_migrated": 0,
   "last_verified_checkpoint": "M2.03.073",
@@ -76,5 +76,8 @@
     "locations": 10
   },
   "character_allocations_audited": "PARTIAL_VERIFIED_170_XP_AND_TWO_HISTORICAL_TOUCHSTONES",
-  "folder_count_scanned": 7
+  "folder_count_scanned": 14,
+  "new_unknown_child_source_count": 2,
+  "direct_drive_pending_documents": 0,
+  "binary_originals_library_pending": 19
 }
