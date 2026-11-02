@@ -11,9 +11,9 @@
       "pc-iris",
       "npc-leta"
     ],
-    "last_event_seq": 17,
-    "last_event_id": "SIM-LOAD-001-E017",
-    "awaiting": "SYNTHETIC_WP_CHOICE",
+    "last_event_seq": 18,
+    "last_event_id": "SIM-LOAD-001-E018",
+    "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E011"
   },
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E008",
     "SIM-LOAD-001-E009",
     "SIM-LOAD-001-E010",
     "SIM-LOAD-001-E011",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E014",
     "SIM-LOAD-001-E015",
     "SIM-LOAD-001-E016",
-    "SIM-LOAD-001-E017"
+    "SIM-LOAD-001-E017",
+    "SIM-LOAD-001-E018"
   ],
   "event_buffer": [
     {
@@ -244,6 +244,24 @@
         "provenance": "FIXED_TEST_VECTOR_NOT_ACTUAL_RANDOM",
         "state": "AWAITING_PLAYER_WP_CHOICE"
       }
+    },
+    {
+      "event_id": "SIM-LOAD-001-E018",
+      "seq": 18,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "PLAYER_DECLARATION",
+      "observable_payload": "Aceito o resultado sintético, sem gastar Força de Vontade.",
+      "original_declaration_quote": "Aceito o resultado sintético, sem gastar Força de Vontade.",
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "pc-iris",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN",
+      "causal_event_ids": [],
+      "resolves_roll_id": "SIM-ROLL-017",
+      "wp_decision": "DECLINED",
+      "wp_spent": 0,
+      "dice_regenerated": false
     }
   ],
   "last_archived_seq": 4,
@@ -284,19 +302,7 @@
       ]
     }
   ],
-  "roll_pending": {
-    "roll_id": "SIM-ROLL-017",
-    "event_id": "SIM-LOAD-001-E017",
-    "dice_faces": [
-      3,
-      9,
-      10,
-      4
-    ],
-    "successes": 2,
-    "state": "AWAITING_PLAYER_WP_CHOICE",
-    "wp_spend": null
-  },
+  "roll_pending": null,
   "persistence": {
     "store": "github_poc",
     "require_readback": true,
