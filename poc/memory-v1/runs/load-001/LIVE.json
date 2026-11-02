@@ -11,8 +11,8 @@
       "pc-iris",
       "npc-ivo"
     ],
-    "last_event_seq": 28,
-    "last_event_id": "SIM-LOAD-001-E028",
+    "last_event_seq": 29,
+    "last_event_id": "SIM-LOAD-001-E029",
     "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E021"
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E019",
     "SIM-LOAD-001-E020",
     "SIM-LOAD-001-E021",
     "SIM-LOAD-001-E022",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E025",
     "SIM-LOAD-001-E026",
     "SIM-LOAD-001-E027",
-    "SIM-LOAD-001-E028"
+    "SIM-LOAD-001-E028",
+    "SIM-LOAD-001-E029"
   ],
   "event_buffer": [
     {
@@ -177,6 +177,24 @@
       "location_id": "loc-workshop",
       "diegetic_datetime": "UNKNOWN",
       "claim_status": null
+    },
+    {
+      "event_id": "SIM-LOAD-001-E029",
+      "seq": 29,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "PLAYER_DECLARATION",
+      "observable_payload": "Eu mantenho minha palavra.",
+      "original_declaration_quote": "Eu mantenho minha palavra.",
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "pc-iris",
+      "location_id": "loc-workshop",
+      "diegetic_datetime": "UNKNOWN",
+      "claim_status": null,
+      "causal_event_ids": [
+        "SIM-LOAD-001-E013",
+        "SIM-LOAD-001-E024"
+      ]
     }
   ],
   "last_archived_seq": 19,
