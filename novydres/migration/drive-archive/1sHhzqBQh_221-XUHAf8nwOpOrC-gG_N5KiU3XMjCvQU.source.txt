@@ -1,0 +1,35 @@
+NOVYDRES / CHRONICLE_001  -  CONTRATO OPERACIONAL V3 (MINUTA / NAO VIGENTE)
+Data de elaboracao: 31/10/2026
+Estado: PROPOSTA PARA PROMOCAO, NAO APROVADA; NAO ALTERA .AGENT V1/V2, .CONTEXTG V1.3, DECISIONS_STATE_V2, EVENT_PROTOCOL_V1 ou canone global.
+1. OBJETIVO UNICO
+Reduzir leituras e escritas remotas e impedir perda de continuidade no ChatGPT Web, preservando eventos, correcoes, causalidade e agencia. Drive e o repositorio persistente, sem cliente desktop local, banco de dados local ou sincronizador em segundo plano.
+2. AUTORIDADES QUE PERMANECEM
+Canone fechado/congelado original > contratos da cronica de ambito local validos > decisoes expressas > eventos com proveniencia confirmada > diario historico > chat/copias nao reconciliadas.
+G01-G18 do .AGENT V1, G19-G23 do .AGENT V2, EVENT_PROTOCOL_V1 e DECISIONS_STATE_V2 continuam operantes ate aprovacao expressa desta minuta.
+Uma versao mais recente so supera uma anterior no escopo documentado e mediante decisao expressa e verificada; arquivos oficiais nao podem ser reescritos silenciosamente.
+3. TIPOS DE MEMORIA
+SOURCE: character.md e documentos historicos antigos, completos e preservados, com status tecnico proprio.
+ACTIVE: documento JSON pequeno contendo o snapshot/checkpoint, eventos NOVOS da provocacao aberta, global_seq, prev_hash e referencias a arquivos anteriores. Apenas apos promocao validada podera ser autoridade para novos commits.
+ARCHIVES: documento individual para cada provocacao fechada. Arquivo precisa ser lido e validado antes de trocar o ponteiro ativo. Eventos antigos nao se tornam comprometidos tecnicamente por estarem resumidos em um archive.
+INDEX: IDs de personagem/local/evento e relacoes, indexacao reconstruivel, nunca competindo com fatos auditados.
+HISTORICAL_MANIFEST: um pacote de evidencia por provocacao M1.01-M1.09; contem marcadores, status epistemico, recursos e pendencias. Nao equivale a eventos cripto-auditados.
+4. PROPOSTA DE PRE-FLIGHT MAIS CURTO (DEPENDE DE APROVACAO)
+Ao iniciar nova conversa: ler gateway vigente, contrato V1/V2/V3, decisoes, protocolo, ACTIVE atual, manifesto e dados especificos pertinentes; verificar version_id/checkpoint/source_revision. Em novos turnos da mesma sessao, ler ACTIVE por revisionId e validar delta antes de gravar; nao reler o inteiro character.md ou contratos imutados a cada fala, exceto por mudanca de versao, conflito ou referencia nao carregada. Nao se dispensa conferencia de estado remoto. A leitura obrigatoria atualmente prevista no G19/V2 permanece ate a promocao formal.
+5. GATES DE NARRACAO (ATOMICOS NO DOCUMENTO ACTIVE)
+A. Validar origem da mensagem do jogador: literal e identificador se disponivel; diferenciar fala, acao, intencao, crenca, pergunta e metajogo.
+B. Conferir estado temporal, localizacao, NPCs presentes, conhecimento local e ultima janela de decisao; sem presumir fala/acao/compra de Bartholomeu.
+C. Resolver acoes NPC e mundo com causa observavel; registrar como fatos apenas efeitos realmente narrados ou resolvidos, separando NPC_CLAIM, GM_HYPOTHESIS, PC_BELIEF, UNKNOWN.
+D. Para gasto opcional de XP/FV, exigir aprovacao literal com fonte, antes/depois, custo e regra. Uma autorizacao de rolagem e diferente da execucao do resultado, e resultados brutos anteriores nao podem ser recriados em retrospecto.
+E. Compilar evento+snapshot como uma unica atualizacao controlada por revisionId; exigir occurrencesChanged=1; reler; validar hash e replay; narrar somente apos confirmacao. Falha e ACK ambiguo: ler antes de tentar repetir, buscar o mesmo ID e bloquear avanco se nao reconcilia.
+F. Nunca converter texto de historico antigo em evento TECH_COMMITTED sem revisao de proveniencia, evidencia e decisao de migracao propria.
+6. ROLAGENS
+Pre-registrar pool, Fome, dificuldade e regra com fonte antes de sortear. Usar motor real; guardar faces originais, rerrolagens e regra de pontuacao. Commit do resultado antes da narracao mecanica. Se sorteio ocorreu mas confirmacao remota falhou, nao rerrolar em silencio; reconciliar ou pedir decisao em incidente aberto. Motor V3 candidato deste estagio NAO inclui implementacao V5 final de producao.
+7. SEQUENCIA GLOBAL E ARQUIVAMENTO
+IDs e hashes de eventos futuros monotonicos atraves das provocacoes (inclusive ao arquivar). Um shard inclui estado inicial, eventos, hash anterior, hash final, estado final, vinculo com manifest. O ACTIVE contem referencia e prova de readback, mas nao e suficiente sem comparacao com bytes reais dos arquivos. Em falha entre salvar shard e CAS do ACTIVE, manter evento no ACTIVE e permitir arquivo staged orfao; jamais remover eventos antes de confirmar ponteiro.
+8. CORRECOES, REGRAS E CANON
+Ajustes do jogador sao eventos de correcao com source/target sem reescrever eventos antigos. Nao resolver implicitamente sobrenome, datas, genealogia, crencas, leis locais, resultado da queixa e fatos de NPCs. CORR-IDENTITY-002 confirma Krauser prospectivamente; falas antigas preservadas. Ficha TARGET-SHEET-V1 e objetivo, nao ficha atual. 96 XP credito nao sao gasto autorizado.
+9. LIMITES TECNICOS E PROMOCAO
+Casos da atual V3 candidata ainda nao garantem integridade externa de cada shard em todas as sessoes, protecao criptografica independente da autoria, recuperacao apos perda simultanea de contexto e indisponibilidade do Drive, nem validacao mecanica V5 integral. O codigo pode impedir inconsistencias estruturais especificas, mas o julgamento narrativo e a proveniencia do chat continuam procedimentais. Antes da promocao, exigir: replay real de arquivos, CAS + readback dos arquivos V3 em cenario de falha, regressoes V1/V2, comparacao M1.01-M1.09, reconciliacao de 3 FV e rolagens, aprovacao explicita do jogador e atualizacao de gateway/decisoes por revisao controlada.
+10. DECISAO REQUERIDA (NAO TOMADA)
+Aprovar ou rejeitar formalmente o novo regime de leitura/gravacao, a fonte de verdade para futuros eventos, o tratamento dos arquivos historicos e o momento do corte. Nenhum arquivo CANONICO/FECHADO ou APROVADO/CONGELADO do cenario muda por esse acordo local.
+ESTADO NESTA MINUTA: DRAFT_NOT_ACTIVE / PRODUCTION_LEDGER_V0_2_UNCHANGED / NO_NARRATIVE_ADVANCE.

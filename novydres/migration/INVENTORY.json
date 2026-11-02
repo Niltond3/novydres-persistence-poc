@@ -30,7 +30,7 @@
       "source_url": "https://docs.google.com/document/d/1O08odypBTff8wJS-yZqRijsJUFtL0ccpbwb4_fVXtQo/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1O08odypBTff8wJS-yZqRijsJUFtL0ccpbwb4_fVXtQo.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -92,7 +92,7 @@
       "source_url": "https://docs.google.com/document/d/1dERbp2J-fvHPCeWlBv01HWUfA2uG01jaqRPBPhZL_JQ/edit?usp=drivesdk",
       "scope": "CHRONICLE_TEST_OR_DRAFT",
       "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1dERbp2J-fvHPCeWlBv01HWUfA2uG01jaqRPBPhZL_JQ.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -112,7 +112,7 @@
       "source_url": "https://docs.google.com/document/d/1PfVQHI4607N93rbkx73CdI2JJRGweHkA5XEHm0QUqLA/edit?usp=drivesdk",
       "scope": "CHRONICLE_TEST_OR_DRAFT",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1PfVQHI4607N93rbkx73CdI2JJRGweHkA5XEHm0QUqLA.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -132,7 +132,7 @@
       "source_url": "https://docs.google.com/document/d/18oXGmRYesd8vAHKJtAzo9TY0H2H0FAjIDLgjQpWZaPw/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/18oXGmRYesd8vAHKJtAzo9TY0H2H0FAjIDLgjQpWZaPw.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -446,13 +446,18 @@
       "source_url": "https://docs.google.com/document/d/1Ai0ed-yICnmgEX_7Dba3Yxnei1U0zblDLW9yVG43XXA/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1Ai0ed-yICnmgEX_7Dba3Yxnei1U0zblDLW9yVG43XXA.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMTlehlSgabor8sX9NF7Rdx3Gwop7nJsgi0tXbvNaMf3cSulbmlKKFM6c-hUQ_BVBTFdWBLHXmeN-6_3rXZGHDQzTrybPmEWWylmlA",
+      "source_characters": 3299,
+      "source_paragraphs": 81
     },
     {
       "id": "1cFk2V0tllBjXt8YIdPKUoCCneT4tyXILmPKsxJMtbkc",
@@ -461,13 +466,18 @@
       "source_url": "https://docs.google.com/document/d/1cFk2V0tllBjXt8YIdPKUoCCneT4tyXILmPKsxJMtbkc/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1cFk2V0tllBjXt8YIdPKUoCCneT4tyXILmPKsxJMtbkc.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMQt42Jm6SHJZx0a0eoOUwLvIXAB4c8JQuY1RZFVX1hLaYW2Ph2bBvQUrc_lwQ9ArhWBqLnwrRGIiSsZ7vIZ3w_r5Dx0p7PkHr1w2A",
+      "source_characters": 3626,
+      "source_paragraphs": 104
     },
     {
       "id": "1stMefst3AePq0PPtk0QGytuxI2zCK7bLmFvD4_zl0sM",
@@ -645,13 +655,18 @@
       "source_url": "https://docs.google.com/document/d/1dmfMo6LnYjZ2mrHA-4DC-QbNpJ2Kwbj_dp_lv2SNCT0/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1dmfMo6LnYjZ2mrHA-4DC-QbNpJ2Kwbj_dp_lv2SNCT0.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMTv_EGY4Na-ICvQ-VA12NT2dLEg_lbF03zIU3RIbQ5S6o8QWlLz2FFLt2Dc_0oPEdhO2rFjF7tB7aZff2tlPBuUH1FemZVpvT3eJg",
+      "source_characters": 10193,
+      "source_paragraphs": 39
     },
     {
       "id": "1j4cwl9UD1SmSMqH0GVje6lX2hknGkeD4LCJ6KJ4N3h0",
@@ -660,13 +675,18 @@
       "source_url": "https://docs.google.com/document/d/1j4cwl9UD1SmSMqH0GVje6lX2hknGkeD4LCJ6KJ4N3h0/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1j4cwl9UD1SmSMqH0GVje6lX2hknGkeD4LCJ6KJ4N3h0.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMT8jZZoe7YY8MTutAXCGYz93YdRQi4_hDIX59B3nBHFURxfhF1tBZrXbGJPQi3cjqUkv528CdAcKkCJPXpH2wvH3OG0dvlMlm-POw",
+      "source_characters": 6284,
+      "source_paragraphs": 45
     },
     {
       "id": "15PSjO058uYSsUKhptf56VA94hxKozsM4467IZW_3bjI",
@@ -675,13 +695,18 @@
       "source_url": "https://docs.google.com/document/d/15PSjO058uYSsUKhptf56VA94hxKozsM4467IZW_3bjI/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/15PSjO058uYSsUKhptf56VA94hxKozsM4467IZW_3bjI.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMRuuI4aPlhNuh8WPvmGpEVu76J--fCvKxZBpXIr41kN4vzmh_kpaShSwfkLbigah28aj2Nj2Lfk3S5gpfLp48QFAEGAemtibwUezA",
+      "source_characters": 5650,
+      "source_paragraphs": 33
     },
     {
       "id": "1DiH1qU-m3RM3H2SvCqZ-HrJN6tMF4-nahODuQQmmTAo",
@@ -690,13 +715,18 @@
       "source_url": "https://docs.google.com/document/d/1DiH1qU-m3RM3H2SvCqZ-HrJN6tMF4-nahODuQQmmTAo/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "VERIFIED_LABEL_NOT_AUTHORITY_PROOF",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1DiH1qU-m3RM3H2SvCqZ-HrJN6tMF4-nahODuQQmmTAo.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMQL7TjDGGCgfzkLjyck5xktxeEPulwM3o5dd4_HvjnAJJR3Z_CONaqCF4MwJyPT_YSV2s4fC2AoblCtoWK7Hcdz9mYKWIzjwyqsfQ",
+      "source_characters": 7037,
+      "source_paragraphs": 32
     },
     {
       "id": "1SLltagiqPZsEfnHCuDI4-QK1srmL96RRjkTb7EcaJd0",
@@ -705,13 +735,18 @@
       "source_url": "https://docs.google.com/document/d/1SLltagiqPZsEfnHCuDI4-QK1srmL96RRjkTb7EcaJd0/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1SLltagiqPZsEfnHCuDI4-QK1srmL96RRjkTb7EcaJd0.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMQlAttVKBZdcKG8bHIefgNKAgEqANf1ZrZeBNq33rrrakhXPQ5EpGxruAesPHfFcwit6TWGYQauu-zRZR7qUI5r2QqRAYEeHTTvIQ",
+      "source_characters": 3581,
+      "source_paragraphs": 26
     },
     {
       "id": "1yDVZpacSwhBuH87tR2-1OUYQwYnTt0sF4OVEQpGHXjM",
@@ -720,7 +755,7 @@
       "source_url": "https://docs.google.com/document/d/1yDVZpacSwhBuH87tR2-1OUYQwYnTt0sF4OVEQpGHXjM/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1yDVZpacSwhBuH87tR2-1OUYQwYnTt0sF4OVEQpGHXjM.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -971,13 +1006,18 @@
       "source_url": "https://docs.google.com/document/d/1q1w9oYI3YqLWsd7jZ7p8_MhxNzzwR7zuWWvp7MnoLs4/edit?usp=drivesdk",
       "scope": "CHR-001",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1q1w9oYI3YqLWsd7jZ7p8_MhxNzzwR7zuWWvp7MnoLs4.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMRuEwc8I51_N6fqd-1kf8nZ_QrlO_fb5sAFqkjc46q1_ox4DVO_CjwnU0RNfENl4t94MtlrY-XO0rZgHXDyCZkLBZY4up0zbA3AjQ",
+      "source_characters": 14439,
+      "source_paragraphs": 61
     },
     {
       "id": "1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98",
@@ -1159,15 +1199,20 @@
       "title": "IMPLEMENTATION_STATUS_V0_1 — Núcleo técnico Novydres",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1x8z3aXAvMOA0TcimFxB8M9yVhqsGv2R9i7DO7RujOPU/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
+      "scope": "CHRONICLE_GOVERNANCE_OR_ENGINE_ARCHIVE",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1x8z3aXAvMOA0TcimFxB8M9yVhqsGv2R9i7DO7RujOPU.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMStAWa8yEIE8vtMhzwCR9QdKUJW-7mSfiiRj2R6jg_x-TMEEDthM_MxBXzh5lA-vlLIa731021xcTFWJ4-_kRHiaSalawxxed7t_Q",
+      "source_characters": 3012,
+      "source_paragraphs": 30
     },
     {
       "id": "1g4oxXuN8kVCSbosQY_-6KXdAj2kvUspDuXUvEmAlhJc",
@@ -1294,45 +1339,60 @@
       "title": "NOVYDRES — .AGENT V3 — MINUTA DE GOVERNANCA — LEITURA VERIFICADA",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1sHhzqBQh_221-XUHAf8nwOpOrC-gG_N5KiU3XMjCvQU/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
+      "scope": "CHRONICLE_GOVERNANCE_OR_ENGINE_ARCHIVE",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1sHhzqBQh_221-XUHAf8nwOpOrC-gG_N5KiU3XMjCvQU.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMR7IlfoNVWl4iZa1Ef-5lJa50sXubXdaasySPtN9KHfQnIhB2n9d6KbZpXJvl22-PFMJ9KXLDtq9KbdB8CgOGa7vRBIbTVPAWpNSg",
+      "source_characters": 6137,
+      "source_paragraphs": 35
     },
     {
       "id": "12LfRM8Ujxh0TBS0XQA_NLFlLEmxibpuSo55gTPW-BHM",
       "title": "NOVYDRES — .AGENT V3 — MINUTA PARA APROVACAO — NAO VIGENTE",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/12LfRM8Ujxh0TBS0XQA_NLFlLEmxibpuSo55gTPW-BHM/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
+      "scope": "CHRONICLE_GOVERNANCE_OR_ENGINE_ARCHIVE",
       "governance_status": "NOT_ACTIVE_OR_TEST",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/12LfRM8Ujxh0TBS0XQA_NLFlLEmxibpuSo55gTPW-BHM.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMQ8X2v98cQkoyJR9Dwfq1ao-bKAQJM3ZrIWi7B-N8tmL1b_fBbRKmh1nc3vHQ0sy2yX7CFCF4HMraY17Mqz3cl9LS7zmaaQMcHKRA",
+      "source_characters": 6319,
+      "source_paragraphs": 35
     },
     {
       "id": "1p0FwWX1-9csTfaD5eWxD-FnXxA3JHKgJm1R17dE9Wws",
       "title": "NOVYDRES — .AGENT V3 — MINUTA PARA APROVACAO — UTF8 VERIFIED",
       "mime_type": "application/vnd.google-apps.document",
       "source_url": "https://docs.google.com/document/d/1p0FwWX1-9csTfaD5eWxD-FnXxA3JHKgJm1R17dE9Wws/edit?usp=drivesdk",
-      "scope": "NOVYDRES_OR_UNCLASSIFIED",
+      "scope": "CHRONICLE_GOVERNANCE_OR_ENGINE_ARCHIVE",
       "governance_status": "VERIFIED_LABEL_NOT_AUTHORITY_PROOF",
-      "migration_state": "PENDING_REVIEW_AND_COPY",
-      "target": null,
+      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "target": "novydres/migration/drive-archive/1p0FwWX1-9csTfaD5eWxD-FnXxA3JHKgJm1R17dE9Wws.source.txt",
       "version": null,
-      "provenance": "DRIVE_SEARCH_METADATA",
+      "provenance": "GOOGLE_DRIVE_GET_DOCUMENT_TEXT",
       "dependencies": [],
       "conflicts": [],
-      "limitations": []
+      "limitations": [
+        "Extracted text verified separately; native Docs formatting not transferred"
+      ],
+      "source_revision": "AHj4eMQxGAkWsSyJaZiDJOi1QnmlV33sNDgA0dEXYGv64R5U4zOFADpOj8KT3MXq4jrwhIszDBpKey8uzM6yaEPQI_7XJAaV-uM_JjujVw",
+      "source_characters": 6322,
+      "source_paragraphs": 35
     },
     {
       "id": "1TAZmn3pn5BT8LEZocAPPmjMx7DJShubcglXc6puuZUc",
@@ -1405,7 +1465,7 @@
       "source_url": "https://docs.google.com/document/d/1IPcXp-056cnNPb-5bZsZhVDHuzGt0gJvkoiSmTTx5o8/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1IPcXp-056cnNPb-5bZsZhVDHuzGt0gJvkoiSmTTx5o8.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1425,7 +1485,7 @@
       "source_url": "https://docs.google.com/document/d/1T6XeZIBiBhFyP6pvM5bfoCigLmchD8IgjWQV6BGm7cM/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1T6XeZIBiBhFyP6pvM5bfoCigLmchD8IgjWQV6BGm7cM.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1445,7 +1505,7 @@
       "source_url": "https://docs.google.com/document/d/1MYw6peyqhbJsH-S4ODkZ-ftSQXdwt8aC95XRd2U7Ge0/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "VERIFIED_LABEL_NOT_AUTHORITY_PROOF",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1MYw6peyqhbJsH-S4ODkZ-ftSQXdwt8aC95XRd2U7Ge0.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1465,7 +1525,7 @@
       "source_url": "https://docs.google.com/document/d/15mT0QMp3GdR2sDPaJLtOYswHb-DJ40FChm0lQhi0s-A/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "VERIFIED_LABEL_NOT_AUTHORITY_PROOF",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/15mT0QMp3GdR2sDPaJLtOYswHb-DJ40FChm0lQhi0s-A.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1485,7 +1545,7 @@
       "source_url": "https://docs.google.com/document/d/1tSHLwQh52DIWpaNEEx6lqR10sCLbNq8LwamoRIUX0zw/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "VERIFIED_LABEL_NOT_AUTHORITY_PROOF",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1tSHLwQh52DIWpaNEEx6lqR10sCLbNq8LwamoRIUX0zw.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1505,7 +1565,7 @@
       "source_url": "https://docs.google.com/document/d/1YZPbdVmTScK2HuAs1Ha0pvY3IkDlMKautwJPvl58aLc/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1YZPbdVmTScK2HuAs1Ha0pvY3IkDlMKautwJPvl58aLc.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",
@@ -1555,7 +1615,7 @@
       "source_url": "https://docs.google.com/document/d/1ZUUDBgjCaZlXh_o9PYGewJb2NlxXUOOZ_oSNVINUQGk/edit?usp=drivesdk",
       "scope": "CHRONICLE_GOVERNANCE_HISTORICAL",
       "governance_status": "TO_BE_CLASSIFIED",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/migration/drive-archive/1ZUUDBgjCaZlXh_o9PYGewJb2NlxXUOOZ_oSNVINUQGk.source.txt",
       "version": null,
       "provenance": "GOOGLE_DOCS_FULL_EXTRACT",

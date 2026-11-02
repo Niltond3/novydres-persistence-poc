@@ -1,0 +1,26 @@
+CHRONICLE_001 — ETAPA 4 | RELATÓRIO DE PRÉ-PROMOÇÃO V3
+31/10/2026 — NÃO PROMOVIDO
+ESCOPO
+Preparação da arquitetura operacional V3 para ChatGPT Web + Google Drive. Somente novos arquivos em 06_ETAPA4_V3_PREPARACAO_NAO_PROMOVIDA. Documentos canônicos, contratos atuais, character.md e CHRONICLE_STORE_V0_2 preservados. Não houve narração, compra XP ou rolagem de campanha.
+PRODUTOS
+1. Código Python webfirst_v3_candidate.py (STAGING_ONLY) e 30 testes unitários importados para Google Docs e disponíveis como arquivos locais para auditoria.
+2. HISTORICAL_MANIFEST_DRAFT_V3 com 9 pacotes de proveniência M1.01–M1.09, incluindo créditos 140, gastos 44, 3 FV históricos sem consolidação, e zero eventos/rolagens técnicos retroativamente fabricados.
+3. ACTIVE_STAGING_V3 com anchor_state e hash apenas do snapshot derivado do character.md, fonte e revisão identificadas, para não vender o passado como evento hash-commit.
+4. Minuta CONTRATO_OPERACIONAL_V3: proposta de leitura otimizada, hierarquia de fontes, commit, recuperação de falhas, CAS, readback, rotação e barreiras de promoção; não entra em vigor automaticamente.
+EVIDÊNCIA E LIMITAÇÕES
+30 testes unitários executados localmente no Python nesta rodada: 30 passaram. Durante desenvolvimento, teste de continuidade global após rotação falhou; bug de reuso/ID corrigido, regressão reexecutada. Cobertura: integridade estrutural, hash/replay dentro do segmento ativo, XP, agência limitada, idempotência local, prevenção de edição retroativa, snapshots de base, rotação e numeração global. Estes testes não atestam cumprimento integral de G01–G23, autoria real de mensagens, legalidade de compra V5 ou comportamento narrativo.
+O CAS e readback reais da Etapa 3 foram testados em Google Docs com dados sintéticos. A V3 candidata NÃO foi testada ainda em commits reais do Google Docs, nem em reconstrução de estado de múltiplos archives após perda de contexto. O programa planeja operações, mas a execução pelo ChatGPT Web continua explícita em cada turno.
+QUESTÕES IMPORTANTES
+- O protótipo usa hash sobre eventos novos, não retroativo; um resumo no character.md é evidência narrativa, não registro técnico COMMITTED.
+- ACTIVE_STAGING_V3 não é a fonte operacional; chararacter.md segue referência histórica, e CHRONICLE_STORE_V0_2 segue vazio.
+- Validar um manifesto sem reler bytes dos archives não comprova sua integridade. Ainda é preciso um verificador de arquivos encadeados no Drive.
+- Sem serviço permanente fora do ChatGPT Web, não existe sincronização em segundo plano. A leitura remota por turno não pode ser eliminada se a confirmação da gravação for mandatória.
+- O status de XP 519/44/475 e crédito 140/96 foi preservado sem compras. O NPC não recebeu resposta nova; Mary continua sem fala registrada após a declaração recuperada.
+GATE DE PROMOÇÃO BLOQUEADO
+1. Aprovação explícita do novo contrato V3 e plano de corte pelo jogador.
+2. Teste real de replay de shards por múltiplos documentos e pós-falha (inclusive ACK incerto) com recuperação de um novo chat.
+3. Auditoria das fontes A–K canônicas pertinentes e reconciliação de rolagens/FV sem falsificação.
+4. Bateria de testes de regra V5 e pré-registro de rolagens no sistema pronto.
+5. Atualização do gateway vigente somente após comparação das fontes, CAS + readback e decisão registrada.
+CONCLUSÃO
+Versão V3 candidata preparada; tecnologia local testada em 30 casos e staging preparado no Drive. Nenhuma migração do histórico para ledger técnico ocorreu. A governança oficial permanece a V2 vigente, com V1 herdado. Nenhum arquivo canônico/congelado foi alterado.
