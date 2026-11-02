@@ -1,0 +1,419 @@
+# NOVYDRES — MOTOR MECÂNICO V5 / WEB-FIRST
+## Manual de rolagens + protocolo de recursos + handoff CHRONICLE_001 — M2.03
+**Edição:** V1.0 OPERACIONAL / 2026-11-01. **Estado:** não CANÔNICO, não FECHADO, não CONGELADO; verificações pendentes marcadas. **Abrangência:** criação guiada M1–M5 (mortal/vampiro quando aplicável), crônica principal futura em Novydres (2010), NPCs, tarefas, confrontos físicos e sociais.
+**SINGLE ENTRY / AGENTE:** Esta é a leitura operacional única para toda rolagem. Ler integralmente este documento na inicialização de um chat novo, depois apenas o checkpoint mais recente de `CHRONICLE_001 — character.md`, e, em caso de conflito, os `.AGENT.md` e `.CONTEXTG.md` vigentes. Os arquivos CANÔNICOS/FECHADOS e APROVADOS/CONGELADOS mantêm precedência sobre este documento. Nunca modificar regras congeladas ou resolver divergência silenciosamente.
+**REGRA INVIOLÁVEL — G19:** antes de NARRAR resultado, calcular/alterar recurso, anunciar nova provocação, ou comprar XP: recuperar o estado, produzir registro com proveniência, gravar por revisão obrigatória (CAS) no Google Drive, RElER e verificar o ID do evento exatamente uma vez; somente então responder. Se a gravação falhar: estado `PENDING_PERSISTENCE`, sem afirmar sucesso, sem continuar a cena. Se o mesmo conteúdo já constar, não duplicar. **O arquivo Python local, sozinho, NÃO é persistência no Drive.**
+---
+# 00 — Quick Start em 15 linhas (ler durante jogo)
+1. Ver último EVENT_ID e o checkpoint de recursos. Identificar mortal/vampiro; cenário/tempo; regras vigentes; se há rolagem realmente necessária.
+2. Declarar **intenção** (do jogador), **o que está em risco**, **o que o teste pode/ não pode produzir**. Não substituir intenção por êxito.
+3. Escolher `TESTE_SIMPLES` (dificuldade), `OPPOSTO` (duas paradas), `ESTENDIDO` (progresso/intervalos), ou `SEM_ROLAGEM` (sem incerteza/risco). Perguntar apenas dado essencial ausente; caso contrário usar convenção documentada.
+4. Fixar **Atributo + Perícia** de cada participante ANTES dos dados; fixar bônus/penalidades, armas, especialização de fato adquirida, oposição, dificuldade. **Dados ≠ sucessos.**
+5. Para Bart no MODO GUIADO usar **ficha-alvo provisória** como capacidade dos testes (não confundir com atributos comprados). Após aprovação/ficha fechada, usar ficha final adquirida. Para NPC usar traços próprios, e nunca a parada de esquiva como Força/Vigor.
+6. Se vampiro, oferecer Blood Surge ANTES de rolar quando elegível; com BP corrigida, adicionar **dados normais** à parada, não novos pontos de atributo. Reservar Rouse Check para DEPOIS do resultado.
+7. Calcular `pool = atributo + perícia + bônus - penalidade + BloodSurge`, mínimo 1 para testes rolados; trocar até `Fome` dados normais por **dados vermelhos**, limitados ao tamanho total. Mortal: Fome=0/BloodSurge=0.
+8. Usar `NOVYDRES_V5_DICE_ENGINE.py` com Python `secrets.SystemRandom`; nunca inventar faces, reusar resultados de outro teste, ou chamar números escritos de RNG auditado.
+9. Cada face 6–9 ou 10 fornece 1 sucesso; cada **PAR de 10** adiciona mais 2 sucessos além dos 2 próprios (par = 4). Crítico com fome em 10 => crítico bagunçado quando há par.
+10. Simples: comparar sucessos com dificuldade; oposto: calcular margens; empate em teste atacante oposto = não obtém objetivo. Se falha + algum `1` vermelho: avaliar falha bestial. Não aplicar efeitos sobrenaturais a mortal.
+11. **Mostrar faces, sucessos, críticos, margens e dados elegíveis de FV.** Oferecer janela voluntária de **1 FV para rerrolar até três dados NORMAIS** (apenas em testes elegíveis, uma vez por teste) antes do fechamento da consequência; jogador escolhe posições. Poderá melhorar inclusive sucesso.
+12. Debitar FV em trilha **Superficial / por gasto = 1 caixa**, sem reduzir pela metade; exigir saldo auditado e aprovação. Se trilha cheia de `////`, conversão para `X` exige aviso e consentimento específico. Se desconhecida, suspender débito/rolagem adicional e reconciliar; nunca dar FV grátis.
+13. Recalcular resultados após rerrolagem, preservando todos os outros dados; registrar raw anterior, posições 1-based, raw novo, raw final, dano e recursos.
+14. Narrar somente consequência autorizada pelo tipo de teste. Uma disputa vitoriosa não autoriza amputação, morte, confissão, mudança de emoção ou compra de XP automática. Interpretação e agência do PC ficam com o jogador.
+15. Se Rouse Check pendente, resolvê-lo como **1d10 separado**: 6–10 Fome inalterada, 1–5 +1 Fome (até 5). Rouse não se rerrola com FV. Persistir eventos/estado antes da narrativa.
+---
+# 01 — Roteamento universal das ações
+**1A. SEM ROLAGEM:** tarefa trivial, NPC não disputando, sem risco concreto ou sem resultado incerto. Aplicar resultado cotidiano, sem criar drama arbitrário. Alternativa: `Take Half` apenas quando permitido pela regra e sem Blood Surge; pontuação de sucesso = metade da parada arredondada para baixo. Não usar quando disputa dramática exige faces; não usar como fuga de rolagem de NPC.
+**1B. TESTE_SIMPLES:** `Atributo + Perícia ± modificadores` contra dificuldade previamente estabelecida, em geral de 1 a 5 sucessos para situações ordinárias/desafiadoras (definir caso a caso, não fixar dificuldade após ver dado). Exemplo: consertar radiador ou automóvel: `Inteligência + Ofícios` para diagnosticar e reparar; `Destreza + Ofícios` quando a precisão manual sob prazo for decisiva, `Inteligência + Tecnologia` quando falha eletrônica; dificuldade e intervalo conforme defeito, ferramentas, tempo e ambiente. Resultado de falha pode consumir tempo/peça ou agravar risco apenas se anunciado antes. Ação continuada: estruturar como teste estendido (`progresso_total`, `intervalo`, `limite`, `risco_em_cada_falha`) quando necessário, não rolar cada parafuso.
+**1C. TESTE_OPOSTO:** duas paradas independentes com seu próprio número de dados e suas faces. Ex.: ataque desarmado `Força + Briga` vs esquiva `Destreza + Atletismo` (se o defensor só evita), ou vs `Força + Briga` (se resiste/agarra). **Não transportar** a pontuação de Destreza+Atletismo para Força+Briga. O narrador fixa a capacidade do NPC ANTES do sorteio; se já fixada, mantém. Empate em ação ofensiva = atacante não muda a situação. Margem é a diferença entre sucessos, não entre número de dados.
+**1D. CONFRONTO SOCIAL:** a intenção e as convicções/poder de decisão dos NPCs são independentes; conversa casual não causa dano à FV. `Carisma + Persuasão`, `Manipulação + Persuasão`, `Raciocínio + Perspicácia`, `Autocontrole + Perspicácia`, `Carisma + Intimidação`, etc., conforme abordagem e oposição real. Definir previamente se é influência simples (dificuldade), resistência de NPC (oposto) ou **conflito social formal** que pode causar dano à FV. Nunca declarar que NPC “acredita/assina/entrega segredo” porque há margem sem considerar conhecimentos, incentivos, segurança e consentimento narrativo. Para conflito formal, margem pode determinar dano Superficial de FV (geralmente metade arredondada para cima), ou Agravado em casos graves previstos no livro; nunca inventar dano FV em mera conversa.
+**1E. FURTIVIDADE/VIGILÂNCIA:** `Destreza + Furtividade` vs `Raciocínio + Prontidão` para vigia ativamente atento ou `Destreza + Furtividade` vs dificuldade/passiva quando ninguém procura. Distinguir personagem escondido e NPC sem razão para reconhecer; sucesso não concede onisciência, anonimato permanente ou invisibilidade ao entrar em área aberta. Se alguém passa a procurar, nova oposição justificada, não rolar repetidamente para forçar falha.
+**1F. PERSEGUIÇÃO, CONDUÇÃO, INVESTIGAÇÃO E OFÍCIO:** selecionar o atributo pela finalidade (reflexos = Destreza, análise = Inteligência, detecção = Raciocínio, resistência = Vigor), perícia relevante, oposição real ou dificuldade. Para trabalho complexo usar testes prolongados. Falha não transforma descoberta em certeza sem evidência. Não pedir rolagem para operações rotineiras quando não há risco/incerteza real.
+**1G. SURPRESA, VÁRIOS ADVERSÁRIOS, COBERTURA, ARMAS, DISCIPLINAS:** módulos de regras específicos precisam ser lidos quando acionados; não inventar bônus cumulativos ou poderes. Ao não conhecer uma regra material, consultar fonte e registrar a decisão antes do teste.
+---
+# 02 — Composição das paradas e bônus
+`POOL = atributo + perícia + especialização_aprovada + bônus_situacional + BloodSurge − penalidades`.
+- Especialização de Perícia efetivamente adquirida e aplicável: tipicamente +1 dado; **não** usar só porque consta no TARGET-SHEET-V1 como aquisição futura. Traços alvo provisórios para capacidade dos testes (convenção de criação guiada) NÃO equivalem a compras.
+- Vantagem de posição/tática: +1 a +3 dados quando já conquistada e aplicável no momento. Se o jogador ainda TENTA obter a posição, rolar para conquistá-la primeiro e bonificar ação seguinte. Não contar +1 anterior e +3 da mesma posição duas vezes; não aplicar simultaneamente bônus e penalidade espelhada ao adversário sem fatos independentes.
+- Ataque localizado (“called shot”) costuma impor **−2 sucessos**, não −2 dados; só quando efetivamente classificado como alvo localizado e não for a mecânica normal de disputa de agarramento para produzir dano. **Dano de membro extremo não é automático.**
+- O tipo de resistência do NPC responde ao objetivo: esquiva = Destreza+Atletismo; força/controle = Força+Briga; suportar toxina/elemento = Vigor+atributo/perícia que a regra exigir. A habilidade usada em uma ação não define todas as outras.
+- Penalidade Impaired: trilha Vitalidade cheia afeta testes Físicos (−2 dados); trilha FV cheia afeta Sociais/Mentais (−2 dados); mínimo de 1 dado quando precisar rolar. Registrar fonte e causa, não presumir.
+- Geração de faces: todos d10 independentes. A ordem do JSON deve permitir referenciar posições 1-based. Exibir dados normais e de fome separadamente.
+---
+# 03 — Avaliação e roteamento do resultado
+1. Conte cada resultado >=6 como 1 sucesso. Para cada par de `10` no conjunto inteiro (normais + fome), adicione 2 sucessos extras (ex.: `[10,10]` = 4 sucessos; `[10,10,10,10]` = 8). Um `10` isolado vale 1.
+2. Teste simples: `sucessos >= dificuldade` vence. Oposto: `margem = sucesso_PC − sucesso_NPC`; positivo = PC vence, zero = empate (não alcança objetivo ofensivo), negativo = defesa/concorrente vence. Defender não significa obrigatoriamente contra-atacar.
+3. **Crítico bagunçado (Messy Critical):** se há um par de `10` e ao menos um dos `10` está em dado de Fome. O sucesso existe, mas com complicação da Fera; não invalidar automaticamente nem impor escolha voluntária ao PC. Narrador consulta regras e produz risco proporcional com agência.
+4. **Falha bestial (Bestial Failure):** o teste falha e algum dado de Fome apresenta `1`. A Fera intervém conforme regra; não confundir com qualquer `1` de dado normal. Rolagem de mortal nunca tem essas ocorrências.
+5. **Dano:** declarar antes o alvo (Saúde ou FV), tipo (Superficial/Agravado), bônus de arma/plateia caso autorizados e como a margem se relaciona ao dano. Dano Superficial normalmente se divide por dois e arredonda para cima antes de marcar na trilha. Ferimentos críticos específicos e violência com perda de membros exigem base da regra/efeito narrativo, não margem mágica.
+6. Uma rolagem **não** determina mudança psicológica do personagem jogador, perdão, confissão, morte certa, conhecimento impossível, compra de atributos ou destino de NPC fora do alcance causal.
+7. Quando sucesso tem custo ou complicação, explicitar se é regra ou escolha de Narrador antes de aplicá-la, salvo regras secretas legítimas com auditoria privada. Nunca reinterpretar valor aleatório para ajustar drama.
+---
+# 04 — FORÇA DE VONTADE (FV) / TRILHA CONTÁBIL
+**Trilha:** `FV_MAX = Autocontrole (Composure) + Determinação (Resolve)`; campos `FV_SUPERFICIAL`, `FV_AGRAVADO`, `FV_DISPONÍVEL = FV_MAX - FV_SUPERFICIAL - FV_AGRAVADO`. Não subtrair FV de `XP`, nem confundir dano à FV com perda permanente de FV_MAX.
+**Gastar para rerrolar:** pergunta explícita após a rolagem e antes do efeito: “Gastar 1 FV para rerrolar até 3 dados NORMAIS? Escolha posições.” O gasto marca **1 caixa de dano superficial** (`/`) integral, SEM dividir pela metade. Dado de Fome NÃO pode ser rerrolado por FV. Rouse Check, dados de tracker, testes de Remorso e One-Roll Conflict seguem exclusões específicas. Uma janela de FV por teste no protocolo operacional, sem repetição ilimitada de gastos. Uma rerrolagem pode piorar ou melhorar o resultado. Nunca gastar sem autorização, nunca trocar mais de três faces, nunca rerrolar dados da defesa junto com os do ataque sem o respectivo proprietário decidir.
+**Trilha cheia:** se ainda houver caixa livre, marcar `/`. Se não houver caixa livre e houver `/`, a regra V5 prevê conversão de `/` em `X` quando mais dano superficial é imposto por gasto; exibir aviso explícito e exigir consentimento para esse risco antes do gasto. Se todas as caixas forem `X`, barrar. Se saldo/sessões anteriores forem desconhecidos, `WP_AUDIT_REQUIRED`: NÃO oferecer gasto como se definitivamente disponível, nem deduzir recuperação por troca de chat.
+**Dano social à FV:** conforme conflito social formal, dano Superficial derivado de margem e outros modificadores explícitos deve ser **dividido por dois arredondando para cima**, salvo regra específica. Dano Agravado à FV apenas em condições realmente aplicáveis (p.ex. revelação profundamente danosa ou ataque de pessoa de confiança); não classificar sem fonte. **O gasto voluntário de 1 FV, diferentemente do dano social, não é reduzido à metade.** Superficial é `/`, Agravado é `X`; se trilha cheia, penalidades e eventual conversão conforme regras vigentes. Não impor estados emocionais ao PJ como resultado automático de dano social.
+**Recuperar Superficial:** na ABERTURA REAL de uma nova sessão (não a cada conversa/chat ou cena), remover até `max(Autocontrole, Determinação)` de `/`, desde que não seja cliffhanger em que a perda de FV deva continuar. Registrar `SESSION_ID`, `RECOVERY_ID`, estado antes/depois, e impedir duplo reset. A critério do narrador, uma vez por sessão, promover Desejo significativo pode recuperar 1 `/` com registro e evidência. Recompensas por interpretar crítico bagunçado/frenesi/Compulsão exigem condição real e aprovação, nunca “ganho automático”.
+**Recuperar Agravado:** em condições de sessão e Ambição, ou atos especiais envolvendo Touchstones/Convicções quando as regras permitirem; registrar fonte e quantidade. Nunca converter `X` em `/` silenciosamente, nunca restaurar FV por descansar uma noite in-game sem regra e marcação de sessão.
+**EXCEÇÃO ATUAL CHR-001:** ficha-alvo de Bart = Autocontrole 3 + Determinação 3, FV_MAX 6 como referência PROVISÓRIA. Três gastos históricos anteriores à M2.03 constam no diário mas não foram reconstruídos em trilha; mais três gastos relatados e registrados na M2.03 (golpe inicial, obtenção de posição, pressão na alavanca). O gasto recente do desarme foi recusado, portanto 0. Total **seis declarações de gasto históricas** sem linha completa de recuperação; NÃO presumir que todas estejam simultaneamente abertas nem que tenham sido restauradas. Antes de outro gasto: reconstruir em ordem gastos/recuperações por SESSÃO, definir `FV_SUPERFICIAL/AGRAVADO/DISPONÍVEL`, mostrar ao jogador e não adulterar o passado. Se seis gastos permanecerem ativos na mesma trilha com FV_MAX 6, não há caixa livre. O agente não pode oferecer novo gasto sem esse acerto; o benefício do teste em curso pode permanecer suspenso até reconciliação.
+---
+# 05 — VAMPIRO APÓS O ABRAÇO: FOME, BLOOD SURGE E ROUSE
+**Antes do Abraço:** personagem mortal => `fome=0`, `potencia_sangue=None`, sem Blood Surge, sem Discipline, sem Rouse. Clã futuro Gangrel NÃO confere vantagem sobrenatural retroativa. **Após o Abraço e validação de ficha:** ativar modos vampíricos; não atribuir BP/clã/geração sem estado confirmado.
+**Tabela oficial corrigida Renegade/Companion/Player's Guide:** BP 0 = +1 Blood Surge; BP 1–2 = +2; BP 3–4 = +3; BP 5–6 = +4; BP 7–8 = +5; BP 9–10 = +6. Fonte oficial `https://renegadegamestudios.com/content/File%20Storage%20for%20site/VTM/BloodPotencyTable.pdf` (não usar a tabela antiga +1 de BP1). BP-alvo Bart = 2, portanto futuramente Blood Surge +2 dados, **SE** adquirido/validado pós-Abraço.
+**Blood Surge:** é opcional, **qualquer Atributo elegível, inclusive Social/Mental**, não só Físico; antes da rolagem: “Deseja ativar Blood Surge (+N dados), com 1 Rouse Check?” Exige Fome <=4 e BP confirmado. Adiciona N **dados normais** à PARADA daquele teste, não aumenta o nível escrito do Atributo. Uma vez por rolagem, não cumulativo consigo mesmo; não usar em testes de FV, Humanidade, One-Roll Combat ou Take Half. **Fome usada para substituir dados é a Fome no instante da ação; Rouse é processado DEPOIS da ação, não altera retroativamente os dados de Fome da rolagem corrente.**
+**Dados vermelhos de Fome:** do total final já incluindo bônus de Blood Surge, substituir `min(fome, total)` dados normais por dados vermelhos. Ex.: base 7 + Surge BP2 (+2) => 9 dados, Fome 3 => 6 normais + 3 vermelhos. Calcular 6+/10 das duas cores juntas, mas marcar `1` e `10` vermelhos para Falha Bestial/Crítico Bagunçado. FV rerrola somente normais. Dados de Fome não são dados adicionais, são SUBSTITUIÇÕES.
+**Rouse Check:** 1d10 separado, sem Fome e sem rerrolagem de FV; 6–10 sucesso e Fome inalterada, 1–5 falha e Fome +1 (máximo 5). Em Fome 5, não permitir Rouse voluntário; forçado exige revisão de Frenesi conforme regra. Se a ação é elegível, o Surge funciona independentemente do resultado do Rouse. Registre `rouse_id`, motivo, face, Fome ANTES e DEPOIS. Disciplinas e outras ativações exigem checagens distintas se tiverem custos distintos. Atribuição de Fome 0 para vampiro não é resultado automático de beber sangue; seguir alimentação/cânone.
+**Dano e cura:** vampiros normalmente sofrem dano Superficial de armas convencionais, com exceções graves específicas; dano Superficial divide pela metade arredondando para cima antes da trilha. Cura Superficial da Vitalidade usa Rouse e quantidade por Potência de Sangue, segundo tabela. Cura agravada exige procedimento específico, não simular uma sessão de sono. Para mortal, condições/dano/recuperação têm regras diferentes. Não usar rolagem simples de Fome ou sangue para limpar FV.
+---
+# 06 — MOTOR PYTHON — COMO USAR PELO CHATGPT WEB
+**Arquivo auxiliar local:** `novydres_v5_dice_engine.py` (anexado à entrega do handoff). A implementação integral está incorporada no APÊNDICE PYTHON ao final deste documento. O agente pode executá-lo em ambiente Python disponível. Se o script não estiver montado no novo chat, copiar do APÊNDICE, salvar e executar; jamais inventar sorteios para economizar chamadas.
+**Operações aceitas:** `roll`, `reroll`, `rouse`, `damage`, `recover_wp`. Entrada via JSON em STDIN; saída JSON com `normal[]`, `hunger[]`, `comparison`, `reroll_event`, marcas de recursos e timestamp. O resultado de script **nunca** grava Drive por si. Não marcar `state_committed` true sem CAS + readback.
+**EXEMPLOS de comandos** (transcrever para Python tool; valores de exemplo NÃO são dados canônicos):
+```shell
+python novydres_v5_dice_engine.py <<'JSON'
+{"op":"roll","event_id":"EX-DEMONSTRACAO","actor":{"base":10,"bonus":3,"hunger":0},"opponent":{"base":7,"hunger":0}}
+JSON
+```
+```shell
+python novydres_v5_dice_engine.py <<'JSON'
+{"op":"roll","event_id":"EX-FURTIVIDADE","actor":{"base":7,"vampire":true,"hunger":2,"blood_potency":2,"blood_surge":true},"opponent":{"base":5,"hunger":0}}
+JSON
+```
+O segundo produz `pending_rouse_checks=1`: após a janela de FV e resolução, executar `{"op":"rouse","hunger":2}` **com Fome da ação**, persistir mudança. Um Rouse Check nunca muda o pool já rolado. A rodada é um exemplo, não fazer se Bart ainda for mortal.
+```shell
+# Para rerrolar, passe o OBJETO JSON ORIGINAL completo no campo "previous":
+{"op":"reroll","previous":{...json_que_saiu_em_roll...},"positions":[1,3,6],"authorized_by_player":true,"wp_track":{"maximum":6,"superficial":2,"aggravated":0}}
+```
+**ATENÇÃO:** reroll exige `wp_track` completo e reconciliado; se ausente dá erro em vez de gastar ficticiamente. Com WP cheio e somente `/` exige `confirm_conversion=true` e autorização específica do jogador. Persistir ambos: rolagem inicial e rerrolagem.
+**Modo generalizado:** para teste simples, fornecer `difficulty:3` e omitir `opponent`; para oposto, fornecer `opponent` e omitir `difficulty`. Modificadores no campo `actor.bonus` e `actor.penalty` (números de DADOS, não sucessos). Modificador de **−2 sucessos** de tiro localizado é pós-rolagem e deve constar como campo de regra/evidência separado: **não** passar como `penalty:2`.
+**Checagens de qualidade do motor:** 10+10=4 sucessos; 10 normal +10 fome é crítico bagunçado; falha com 1 fome é falha bestial; 1 FV custa 1 `/` sem redução; golpe de margem positiva não causa efeito fora do escopo autorizado; BP2 = +2; Rouse não é rerrolável por FV. Testes locais foram executados, não equivalem a auditoria de integração Drive.
+---
+# 07 — TEMPLATES DE UI (discretos, V5: marfim/carvão/oxblood)
+Não montar formulários gigantes. Após a rolagem, mostrar uma tabela curta ou cartão mínimo. Ações/botões somente se funcionais no ChatGPT Web. Usar títulos discretos, vermelho-sangue apenas como referência temática, nunca cor como único sinal. Um cartão de rolagem por confronto, dados normais em neutro e dados de Fome identificados por texto `🔴 FOME`.
+**ANTES — anúncio de parada**
+`M2.03 • TENTATIVA | Ficha: TARGET V1 (provisória) | PC: 13d10 [5 Força + 5 Briga + 3 posição] | Defesa: 7d10 [4 Força + 3 Briga] | Efeito buscado: agravar lesão | Efeito automático excluído: amputação | FV: auditando.`
+**DEPOIS — cartão com resultado provisório**
+`🎲 CONFRONTO [EVENT_ID]` 
+`PC 13d10: [faces...] → N sucessos (crítico? sim/não)`
+`NPC 7d10: [faces...] → M sucessos`
+`Margem provisória: +X | Estado: aguardando decisão de FV` 
+`Dados normais elegíveis: posições ... (não os dados vermelhos)`
+`[Manter] ou [Gastar 1 FV] — apenas se trilha disponível e evento elegível.`
+**QUANDO FV DESCONHECIDA:** em vez do botão “gastar”, exibir `FV_AUDIT_REQUIRED — valores de dano/recuperação indisponíveis. Não há autorização mecânica para o gasto até conciliar trilha.` O jogador não precisa examinar código nem discutir números aleatórios; Narrador apresenta só pergunta clara e as posições.
+**APÓS CONFIRMAÇÃO + READBACK:** `FINAL: +X sucessos; FV −1, trilha / de A→B; Saúde/FV dano; NPC; evento persistido; continuação até próxima ação de Bart.` Não usar widget decorativo inerte, não dizer “foi registrado” sem confirmação do Drive.
+---
+# 08 — CONTRATO DE PERSISTÊNCIA E REGRESSÃO (web-first)
+A) Carregar `.AGENT.md` V2 e `.CONTEXTG.md` V1.3 (governança), o arquivo operacional `CHRONICLE_001 — character.md` e este documento. Fonte canônica prevalece. `character.md` é histórico operacional; `CHRONICLE_STORE_V0_2` (events/rolls ainda vazios) NÃO é `COMMITTED` técnico.
+B) Cada ação gera `EVENT_ID` idempotente; gravar `PLAYER_DECLARATION`, `PLAYER_INTENT`, `PC_THOUGHT`, `NPC_ACTION`, `WORLD_EVENT`, `NPC_CLAIM`, `GM_PROPOSAL`, `MECHANICAL_RESULT`, `UNKNOWN` separadamente. Não transformar boato, pensamento ou hipótese em fato.
+C) Sempre fixar `PRE_ROLL` (traços, bônus, tipo, stake, critério de dano, consentimento Blood Surge), gerar e guardar `RAW`, derivar `PRELIMINARY`, abrir `WP_DECISION`, guardar rerrolagem e débito se escolhido, gerar `FINAL`, gravar `STATE_DELTA`, `READBACK`, narrar. Não reverter roll ruim nem criar nova amostra por problema de persistência.
+D) Para alterações de Google Docs, usar `write_control.requiredRevisionId` do get_document atual, inserir delta curto no final da aba confirmada, reler e contar ocorrência `EVENT_ID === 1`. Em erro de segurança/limite, reduzir delta ou salvar em novo documento operacional de recuperação, **não** alterar arquivo congelado nem dizer que caráter foi salvo no ledger técnico. Registrar sempre arquivo exato de destino e link de leitura.
+E) Se falha de Drive após rolagem, manter `PENDING_PERSISTENCE`: não rolar novamente, não narrar resultado, não debitar recursos, não criar fatos fora de cena. No chat limpo, primeiro procurar o ID na fonte, depois usar os números originais com ressalva de origem e persistir, evitando rolagem nova.
+F) Sessão ≠ chat. Não recuperar FV por handoff. Handoff deve carregar SESSION_ID atual ou `UNKNOWN` e situação de recuperação como pendente.
+G) Para testes secretos, usar seção privada/visibilidade apropriada; não vazar identidade de NPC/plot twist no resumo exibido ao jogador. Fatos observáveis podem ser narrados sem revelar sua causa.
+H) Não há autorização para alterar automaticamente `.AGENT.md` ou `.CONTEXTG.md` de material aprovado/congelado sem instrução explícita. Este documento é operacional e versionável; propostas de mudança formal precisam ser aprovadas.
+I) Se o agente não dispõe de motor/Google Drive, sinalizar que o requisito não pode ser cumprido e não fingir execução. O objetivo é reduzir improvisação, **não eliminar julgamento de regras complexas ou agência humana**.
+---
+# 09 — HANDOFF INTEGRAL — CHR-001 / M2.03 / 2026-11-01
+**O QUE O USUÁRIO PEDIU:** preservar a continuidade da criação guiada em ChatGPT Web, implantar documentação mecânica completa e tornar o mecanismo uma fonte de uso fácil e obrigatório em Drive. Não iniciar a crônica 2010. Não alterar canônico aprovado. Handoff para chat limpo, em português.
+**PERSONAGEM:** Bartholomeu **Krauser**, mortal, fim dos anos 1970. Esposa Mary Krauser; filhos Mikahel e Sara. Futuro Gangrel, somente após Abraço. Traços provisórios de prova durante criação: ficha-alvo TARGET-SHEET-V1: Força 5, Destreza 4, Vigor 5, Carisma 2, Manipulação 2, Autocontrole 3, Inteligência 3, Raciocínio 3, Determinação 3; Briga 5, Atletismo 3, Investigação 3, Política 3, Ofícios 2, Prontidão 2, Intimidação 2, Ladroagem 2, Armas de Fogo 1, Condução 2. Especialização Briga (Agarrar) ALVO, ainda não concedida e não somada. Ficha alvo não equivale a compras realizadas. XP 519 total, 170 gasto, 349 restante; crédito 190 liberado, 20 disponível.
+**GOVERNAÇA E DOCUMENTOS EXISTENTES:**
+- `character.md` (diário operacional): https://docs.google.com/document/d/1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE/edit
+- `.AGENT.md` V2: https://docs.google.com/document/d/1TAZmn3pn5BT8LEZocAPPmjMx7DJShubcglXc6puuZUc/edit
+- `.CONTEXTG.md` V1.3: https://docs.google.com/document/d/13aw8j3rC8eMAbf5IDOrrPoe6UHt0_VLmdSO9JcU0An4/edit
+- `DECISIONS_STATE V2`: https://docs.google.com/document/d/1ZUUDBgjCaZlXh_o9PYGewJb2NlxXUOOZ_oSNVINUQGk/edit
+- `EVENT_PROTOCOL V1`: https://docs.google.com/document/d/1iibkasTYCFF5g-u96CX7R9e5Id7n5u92s6wE8cC7weI/edit
+- `CHRONICLE_STORE V0.2`: https://docs.google.com/document/d/1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98/edit
+- Gateway obrigatório anterior: https://docs.google.com/document/d/1yDVZpacSwhBuH87tR2-1OUYQwYnTt0sF4OVEQpGHXjM/edit
+- Pipeline modo guiado: `novydres_modo_guiado_pipeline.md` na Library. M1 CLOSED, M2 ACTIVE, M2.01 e M2.02 encerradas, M2.03 aberta; M2 tem de produzir Fissura significativa e não se fechar por pequenas lacunas.
+**ULTIMO ESTADO DO DOCUMENTO CANÔNICO/OPERACIONAL ATÉ AQUELE INSTANTE:** Drive `character.md` confirmado pelo ID `CHR001-M203-GRAPPLE-DAMAGE-REROLL-20261101-001`; M2.03, noite de inverno, rua diante da casa Krauser. Homem de casaco escuro, cuja natureza ainda é UNKNOWN, foi desarmado; faca em posse de Bart. Mulher se afasta rumo à esquina e disse que chamaria a polícia, ainda não se sabe se chamou. Bart, em luta corporal, conseguiu alavanca com os pés apoiados no rosto/tronco do homem e controle de seu braço. Primeira pressão deslocou gravemente ombro e comprometeu tecidos, mas braço continua preso ao corpo; não foi arrancado. O homem está no chão e ainda resiste. Família do PC não recebeu novas ações. Nenhum Abraço nem poder vampírico confirmado.
+**EVENTO SEGUINTE, NOVO, PENDENTE DE PERSISTÊNCIA EM character.md:** `CHR001-M203-RENEWED-TORQUE-20261101-001`. Jogador decidiu CONTINUAR e intensificar a manobra, girando o corpo para aumentar a torção, com objetivo de arrancar o braço. Não interpretar giro pretendido de 360 graus como realizado ou sucesso automático. Narrador fixou `13d10 = Força 5 + Briga 5 + 3 posição` para Bart, `7d10 = Força 4 + Briga 3` para oponente, sem redutor duplo e sem −2 de ataque localizado dentro dessa disputa de dano em agarramento.
+**DADOS QUE FORAM PUBLICADOS NA CONVERSA ANTERIOR (PROVISIONAIS, NÃO PERSISTIDOS E SEM PROVA INDEPENDENTE DA EXECUÇÃO DO RNG):** Bartholomeu `[6,10,5,6,1,4,3,4,2,8,5,9,10]` = 8 sucessos (seis dados 6+ e um par de 10 totaliza dois extras). Desconhecido `[4,6,3,6,8,3,6]` = 4 sucessos. **Margem publicada +4 provisória.** Dados falhados de Bart nas posições 1-based `[3,5,6,7,8,9,11]`; valores `[5,1,4,3,4,2,5]`. Nenhuma rerrolagem ou novo FV gasto; resolução física final NÃO NARRADA. O narrador anterior mencionou explicitamente executar RNG, mas não há comprovação recuperável da execução original na mensagem de ferramenta, portanto a origem desses números permanece `AUDIT_REQUIRED`. **Não apresentar como auditoria perfeita, e não rerrolar silenciosamente para substituir números sem consentimento.**
+**PERSISTÊNCIA BLOQUEADA NO CHAT ANTERIOR:** várias tentativas de append em `character.md` foram rejeitadas pela ferramenta (erro de segurança e falha interna), até com deltas diminutos e inserção indexada. `get_document_text` posterior confirmou que `CHR001-M203-RENEWED-TORQUE-20261101-001` NÃO estava no `character.md`, revisão que permaneceu `AHj4eMTfvc1CS-3OD5eK0erp08CrGe6AtgLrRDHare1MmlR7fKfoMG5i-A4M0Heim9bUfZ3vLLk3Xlr75TOHLfeBuCC2DoRraWQH29ZB5A` naquele momento. Na retomada, conferir revisão atual novamente, idempotência, e resolver bloqueio gravando em documento operacional não congelado com link; não mentir dizendo que character foi atualizado se só novo arquivo foi salvo.
+**PENDÊNCIA FV ESPECÍFICA:** 3 gastos de FV históricos anteriores, ainda não reconciliados; +3 gastos autorizados e registrados em M2.03 (1 no golpe inicial, 1 na obtenção da alavanca, 1 na pressão que deslocou ombro). Nenhum gasto na tentativa atual. Como FV alvo máximo =6, o saldo pode estar esgotado se os seis gastos estiverem simultaneamente ativos; períodos/sessões/recuperações não foram reconciliados. O agente não deve oferecer FV como disponível de modo definitivo sem auditar os gastos de sessões e recuperação. Deve informar a pendência e pedir decisão apenas quando o saldo for elegível; se contestado, suspender em vez de transferir custos automaticamente.
+**PASSOS EXATOS PARA RETOMADA:**
+(A) Ler ESTE documento integral e o checkpoint final de character.md, conferindo governança.
+(B) Consultar no Drive se o ID pendente já foi incluído. Não duplicar.
+(C) Se ausente, persistir uma nota de recuperação `PRELIMINARY` com fala/ação do jogador, pools, raw e advertência de auditabilidade; usar CAS + readback. Se character.md continuar bloqueado, persistir no documento de recuperação separado em Drive, marcando `PARTIAL_SYNC`, fornecendo link. Não alterar canônico aprovado/congelado.
+(D) Reconciliar trilha FV (máximo 6 provisório) e decisão se há gasto admissível. A pré-rolagem 8x4 tem origem não comprovada; não substituí-la silenciosamente. O resultado+efeito permanece `PENDING_RESOLUTION` até decisão e persistência.
+(E) Quando possível, retomar a escolha de rerrolagem (ou manter os dados), com informação clara sobre custo FV real, avaliar consequência de dano conforme V5 e narrar até próxima decisão de Bartholomeu — sem transformar sucesso em amputação automaticamente.
+(F) Manter M2.03 aberta até o arco produzir uma Fissura substancial e os gates forem satisfeitos; não iniciar 2010, não confundir hipóteses de Bart com fatos do mundo.
+---
+# 10 — PROMPT PRONTO PARA NOVO CHAT
+> Você é o Narrador/Agente Mecânico de NOVYDRES, ChatGPT Web, em modo de CRIAÇÃO GUIADA já em andamento. O Google Drive é a memória primária e a gravação deve acontecer antes da narrativa (G19).
+>
+> Documento único e obrigatório para mecânicas e handoff: **NOVYDRES — MOTOR MECÂNICO V5 / WEB-FIRST — Manual + Handoff CHR-001 M2.03** (link do documento compartilhado pelo usuário). Leia-o INTEGRALMENTE, inclusive Quick Start, Python, controle FV, Fome/Blood Surge e caso pendente. Consulte `.AGENT.md V2`, `.CONTEXTG.md V1.3`, `EVENT_PROTOCOL V1`, `DECISIONS_STATE V2` e o checkpoint final de `CHRONICLE_001 — character.md` pelos links descritos nele; respeite qualquer documento canônico/aprovado/congelado.
+>
+> Retome exatamente no evento `CHR001-M203-RENEWED-TORQUE-20261101-001`: última ação de Bartholomeu foi intensificar a alavanca que controla o braço do estranho. Resultado divulgado provisório: PC 13d10 `[6,10,5,6,1,4,3,4,2,8,5,9,10]` = 8 sucessos contra NPC 7d10 `[4,6,3,6,8,3,6]` = 4 sucessos, margem +4. Ação NÃO persistida em character.md após bloqueios. Não considere dados verificados por RNG sem auditoria, não invente nova rolagem nem narrativa. Resolva PRIMEIRO a persistência e audite a disponibilidade FV (três gastos históricos + três no M2.03, máximo provisório 6). Não presuma recuperação por mudança de chat. Respeite agência de Bartholomeu, sem imputar fala ou intenção e sem desfecho sobrenatural inventado.
+>
+> Use sempre a ficha-alvo TARGET-SHEET-V1 como capacidade PROVISÓRIA dos testes durante modo guiado; compras XP reais continuam separadas. Para todo teste: fixar pool e oposição ANTES, rolar d10 realmente por Python, publicar faces e margem, abrir opção FV somente se saldo auditado, salvar por CAS e readback ANTES de narrar. Futuro pós-Abraço: usar tabela Blood Potency corrigida, Fome vermelha, Blood Surge e Rouse conforme manual. O engine só produz JSON; você é responsável por persistir e preservar proveniência.
+>
+> Entregue inicialmente um status objetivo de `SOURCE_READ`, `PERSISTENCE`, `FV_AUDIT`, e indique o próximo ato seguro. Não prolongue discussão; retome narrativa assim que estiver autorizado e persistido.
+---
+# 11 — FONTES E PROVENIÊNCIA DE REGRAS
+- V5 Core Book: procedimentos de teste/sucesso/crítico/Fome, pp. 118–126, 205–211; dano pp.126–127; FV p.158; sangue/Blood Surge p.218; combate pp.296–305. Consultar edição e errata apropriadas. A numeração pode variar por edição/tradução.
+- Renegade Game Studios, tabela **V5 Blood Potency Correction** oficial (Companion 2020, Players Guide p.248 e reimpressões): https://renegadegamestudios.com/content/File%20Storage%20for%20site/VTM/BloodPotencyTable.pdf
+- Roll20 Free Basic Rules, Rouse Checks and using the Blood: https://app.roll20.net/compendium/vtm/Rules:Rouse%20checks%20and%20using%20the%20Blood
+- Regras de Willpower e Superficial: Core Book p.158, pp.126–127; clarificação de não dividir gasto por dois: https://rpg.stackexchange.com/questions/200775/is-superficial-willpower-damage-halved-in-v5
+- Toda exceção local de NOVYDRES deve aparecer com `DECISION_ID`, fonte, escopo e aprovação. Regras propostas neste documento não substituem fontes fechadas.
+---
+# APÊNDICE — CÓDIGO FONTE COMPLETO DO MOTOR PYTHON
+Arquivo `novydres_v5_dice_engine.py`, versão v1.0. Motor local, sem acesso autônomo ao Drive e sem persistência por si só. Executar com Python 3.11+ e biblioteca padrão.
+```python
+#!/usr/bin/env python3
+"""NOVYDRES V5 — motor de dados, sem estado persistente, execução JSON por stdin.
+Exemplos:
+  echo '{"op":"roll","actor":{"base":10,"bonus":3,"hunger":0},"opponent":{"base":7,"hunger":0},"difficulty":null}' | python novydres_v5_dice_engine.py
+  echo '{"op":"rouse","hunger":2}' | python novydres_v5_dice_engine.py
+O narrador grava o JSON bruto em Google Drive antes de narrar; isto não faz commit remoto.
+"""
+import json
+import math
+import secrets
+import sys
+from datetime import datetime, timezone
+from typing import Any
+RNG = secrets.SystemRandom()
+BLOOD_SURGE = {0: 1, 1: 2, 2: 2, 3: 3, 4: 3, 5: 4, 6: 4, 7: 5, 8: 5, 9: 6, 10: 6}
+def die() -> int:
+    return RNG.randint(1, 10)
+def timestamp() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec='seconds')
+def integer(v: Any, label: str, lo: int = 0, hi: int = 200) -> int:
+    if not isinstance(v, int) or isinstance(v, bool) or v < lo or v > hi:
+        raise ValueError(f'{label} precisa ser inteiro entre {lo} e {hi}')
+    return v
+def score(normal: list[int], hunger: list[int], difficulty: int | None = None) -> dict:
+    for x in normal + hunger:
+        integer(x, 'face d10', 1, 10)
+    faces = normal + hunger
+    tens = sum(v == 10 for v in faces)
+    pairs = tens // 2
+    basic = sum(v >= 6 for v in faces)
+    successes = basic + 2 * pairs
+    win = successes >= difficulty if difficulty is not None else None
+    messy = pairs > 0 and 10 in hunger
+    bestial = (win is False) and (1 in hunger)
+    return {'successes': successes, 'basic_successes': basic, 'ten_pairs': pairs,
+            'critical': pairs > 0, 'messy_critical': messy, 'bestial_failure': bestial,
+            'eligible_wp_positions': [i + 1 for i, v in enumerate(normal) if v < 6],
+            'success_vs_difficulty': win}
+def actor_roll(actor: dict) -> dict:
+    base = integer(actor['base'], 'base', 0, 100)
+    bonus = integer(actor.get('bonus', 0), 'bonus', -100, 100)
+    penalty = integer(actor.get('penalty', 0), 'penalty', 0, 100)
+    vampire = bool(actor.get('vampire', False))
+    hunger = integer(actor.get('hunger', 0), 'hunger', 0, 5)
+    surge = bool(actor.get('blood_surge', False))
+    if not vampire and (hunger or surge):
+        raise ValueError('Mortal não usa Fome nem Blood Surge')
+    surge_bonus = 0
+    bp = None
+    if surge:
+        if hunger == 5:
+            raise ValueError('Não se pode fazer Blood Surge voluntário com Fome 5')
+        bp = integer(actor['blood_potency'], 'potência de sangue', 0, 10)
+        surge_bonus = BLOOD_SURGE[bp]
+    total = base + bonus - penalty + surge_bonus
+    if total < 1:
+        total = 1  # mínimo padrão para uma parada que deva ser rolada
+    if total > 100:
+        raise ValueError('Parada maior que 100 não suportada')
+    hcount = min(total, hunger)
+    normal = [die() for _ in range(total - hcount)]
+    hraw = [die() for _ in range(hcount)]
+    return {'base': base, 'bonus': bonus, 'penalty': penalty,
+            'surge_bonus': surge_bonus, 'blood_potency': bp, 'total_dice': total,
+            'hunger_at_roll': hunger, 'normal': normal, 'hunger': hraw,
+            'blood_surge_pending_rouse': surge, 'score': score(normal, hraw),
+            'wp_rerolled': False}
+def compare(a: dict, b: dict | None, difficulty: int | None) -> dict:
+    successes = a['score']['successes']
+    if b is not None:
+        if difficulty is not None:
+            raise ValueError('Usar dificuldade OU oponente, não ambos')
+        margin = successes - b['score']['successes']
+        result = 'actor_wins' if margin > 0 else 'tie_actor_no_success' if margin == 0 else 'opponent_wins'
+        # Falha bestial em disputa: a definição depende da vitória efetiva.
+        a['score']['bestial_failure'] = (margin <= 0 and 1 in a['hunger'])
+        b['score']['bestial_failure'] = (margin >= 0 and 1 in b['hunger'])
+    else:
+        if difficulty is None:
+            raise ValueError('Informe difficulty ou opponent')
+        difficulty = integer(difficulty, 'difficulty', 0, 100)
+        margin = successes - difficulty
+        result = 'actor_wins' if margin >= 0 else 'actor_fails'
+        a['score'] = score(a['normal'], a['hunger'], difficulty)
+    return {'result': result, 'margin': margin, 'actor_successes': successes,
+            'opponent_successes': b['score']['successes'] if b else None,
+            'difficulty': difficulty}
+def roll(args: dict) -> dict:
+    a = actor_roll(args['actor'])
+    b = actor_roll(args['opponent']) if args.get('opponent') is not None else None
+    comp = compare(a, b, args.get('difficulty'))
+    return {'engine': 'NOVYDRES-V5-ROLL-v1.0', 'op': 'roll', 'created_utc': timestamp(),
+            'event_id': args.get('event_id'), 'actor': a, 'opponent': b,
+            'comparison': comp, 'pending_wp_choice': True,
+            'pending_rouse_checks': int(a['blood_surge_pending_rouse']) + (int(b['blood_surge_pending_rouse']) if b else 0),
+            'state_committed': False}
+def wp_available(track: dict) -> tuple[bool, str]:
+    m = integer(track['maximum'], 'WP máximo', 1, 20)
+    sup = integer(track['superficial'], 'WP superficial', 0, m)
+    agg = integer(track['aggravated'], 'WP agravado', 0, m)
+    if sup + agg > m:
+        raise ValueError('Trilha WP inválida: dano excede máximo')
+    if sup + agg < m:
+        return True, 'add_superficial'
+    if sup:
+        return True, 'convert_superficial_to_aggravated'
+    return False, 'all_aggravated'
+def spend_wp(track: dict) -> tuple[dict, str]:
+    valid, kind = wp_available(track)
+    if not valid:
+        raise ValueError('WP cheio de dano agravado; gasto bloqueado')
+    updated = dict(track)
+    if kind == 'add_superficial':
+        updated['superficial'] += 1
+    else:
+        # Exigir confirmação explícita do risco antes de permitir conversão.
+        if not track.get('confirm_conversion', False):
+            raise ValueError('Gasto converteria / em X: exigir confirm_conversion=true do jogador')
+        updated['superficial'] -= 1
+        updated['aggravated'] += 1
+    updated.pop('confirm_conversion', None)
+    return updated, kind
+def reroll(args: dict) -> dict:
+    prev = args['previous']
+    if prev.get('engine') != 'NOVYDRES-V5-ROLL-v1.0' or prev.get('op') != 'roll':
+        raise ValueError('previous deve ser um JSON roll original deste motor')
+    side = args.get('side', 'actor')
+    if side not in ('actor', 'opponent'):
+        raise ValueError('side inválido')
+    chosen = prev.get(side)
+    if chosen is None:
+        raise ValueError('Oponente ausente')
+    if chosen.get('wp_rerolled'):
+        raise ValueError('Já houve rerrolagem WP neste teste')
+    positions = args['positions']
+    if not isinstance(positions, list) or not 1 <= len(positions) <= 3 or len(positions) != len(set(positions)):
+        raise ValueError('Escolha de 1 a 3 posições únicas')
+    n = len(chosen['normal'])
+    for pos in positions:
+        integer(pos, 'posição de dado normal', 1, n)
+    if not args.get('authorized_by_player', False):
+        raise ValueError('Gasto WP exige autorização explícita')
+    if 'wp_track' not in args:
+        raise ValueError('Trilha WP incompleta: reconciliar antes de gastar')
+    newtrack, spending_kind = spend_wp(args['wp_track'])
+    new_faces = [die() for _ in positions]
+    import copy
+    out = copy.deepcopy(prev)
+    out['op'] = 'reroll'
+    out['created_utc'] = timestamp()
+    target = out[side]
+    before = target['normal'][:]
+    for pos, face in zip(positions, new_faces):
+        target['normal'][pos - 1] = face
+    target['score'] = score(target['normal'], target['hunger'])
+    target['wp_rerolled'] = True
+    out['comparison'] = compare(out['actor'], out['opponent'], prev['comparison']['difficulty'])
+    out['reroll_event'] = {'side': side, 'positions_1_based': positions,
+                           'old_faces': [before[p-1] for p in positions],
+                           'new_faces': new_faces, 'wp_before': args['wp_track'],
+                           'wp_after': newtrack, 'spend_kind': spending_kind}
+    out['pending_wp_choice'] = False
+    out['state_committed'] = False
+    return out
+def rouse(args: dict) -> dict:
+    h = integer(args['hunger'], 'hunger', 0, 5)
+    if h >= 5 and not args.get('forced', False):
+        raise ValueError('Rouse voluntário bloqueado com Fome 5')
+    face = die()
+    return {'engine': 'NOVYDRES-V5-ROLL-v1.0', 'op': 'rouse',
+            'created_utc': timestamp(), 'event_id': args.get('event_id'),
+            'hunger_before': h, 'die': face, 'success': face >= 6,
+            'hunger_after': min(5, h + int(face <= 5)),
+            'forced_at_5_requires_frenzy_review': h == 5 and face <= 5,
+            'state_committed': False}
+def healing(args: dict) -> dict:
+    track = dict(args['track'])
+    m = integer(track['maximum'], 'WP máximo', 1, 20)
+    s = integer(track['superficial'], 'superficial', 0, m)
+    a = integer(track['aggravated'], 'aggravated', 0, m)
+    if s + a > m:
+        raise ValueError('trilha inconsistente')
+    source = args.get('source')
+    if source == 'session_start':
+        if not args.get('session_id') or not args.get('session_change_confirmed'):
+            raise ValueError('Necessário session_id e confirmação de sessão real')
+        if args.get('already_recovered_this_session'):
+            raise ValueError('Sessão já recuperada')
+        if args.get('cliffhanger_carries_wp'):
+            amount = 0
+        else:
+            amount = min(s, max(integer(args['composure'], 'autocontrole', 0, 10), integer(args['resolve'], 'determinação', 0, 10)))
+    elif source == 'desire':
+        if not args.get('narrator_approved') or args.get('already_desire_this_session'):
+            raise ValueError('Desire requer evidência, aprovação e limite uma vez/sessão')
+        amount = min(1, s)
+    elif source == 'ambition_aggravated':
+        if not args.get('narrator_approved') or not args.get('session_change_confirmed'):
+            raise ValueError('Ambition agravado requer evidência e início de sessão')
+        new = dict(track)
+        new['aggravated'] = max(0, a-1)
+        return {'before': track, 'after': new, 'aggravated_healed': a-new['aggravated'], 'state_committed': False}
+    else:
+        raise ValueError('Fonte de recuperação desconhecida: revisão do Narrador')
+    updated = dict(track)
+    updated['superficial'] = s - amount
+    return {'before': track, 'after': updated, 'superficial_healed': amount,
+            'source': source, 'state_committed': False}
+def damage(args: dict) -> dict:
+    track = dict(args['track'])
+    m = integer(track['maximum'], 'máximo', 1, 100)
+    s = integer(track['superficial'], 'superficial', 0, m)
+    a = integer(track['aggravated'], 'aggravated', 0, m)
+    if s+a > m:
+        raise ValueError('trilha inconsistente')
+    amount = integer(args['raw_damage'], 'dano bruto', 0, 100)
+    kind = args['kind']
+    if kind not in ('superficial', 'aggravated'):
+        raise ValueError('tipo inválido')
+    applied = amount if kind == 'aggravated' or args.get('unhalved', False) else math.ceil(amount / 2)
+    for _ in range(applied):
+        if kind == 'aggravated':
+            if s+a < m:
+                a += 1
+            elif s:
+                s -= 1
+                a += 1
+            else:
+                break
+        elif s+a < m:
+            s += 1
+        elif s:
+            s -= 1
+            a += 1
+        else:
+            break
+    return {'before': track, 'after': {'maximum':m,'superficial':s,'aggravated':a},
+            'raw_damage': amount, 'applied_levels': applied, 'kind':kind,
+            'impaired': s+a>=m, 'all_aggravated':a>=m,
+            'state_committed': False,
+            'warning':'Narrador valida gravidade, tipo de dano e consequências narrativas antes do commit.'}
+def main(data: dict) -> dict:
+    op = data['op']
+    if op == 'roll': return roll(data)
+    if op == 'reroll': return reroll(data)
+    if op == 'rouse': return rouse(data)
+    if op == 'recover_wp': return healing(data)
+    if op == 'damage': return damage(data)
+    raise ValueError('op desconhecido: roll | reroll | rouse | recover_wp | damage')
+if __name__ == '__main__':
+    try:
+        spec = json.load(sys.stdin)
+        print(json.dumps(main(spec), ensure_ascii=False, indent=2))
+    except Exception as exc:
+        print(json.dumps({'error': str(exc), 'state_committed': False}, ensure_ascii=False))
+        sys.exit(2)
+```
+FIM DO DOCUMENTO.

@@ -1,0 +1,28 @@
+{
+  "status": "MIGRATION_IN_PROGRESS",
+  "phase": "ETAPA_2_PARTIAL_TEXT_PRESERVATION",
+  "generated_on": "2026-11-02",
+  "confirmed_git_identity": "Niltond3",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "master",
+  "previous_head": "121895ec61bf0e71a0d414510ce5ee6e35d296c7",
+  "discovered_unique": 88,
+  "imported_text_pending_readback": 8,
+  "fully_migrated_native_docs": 0,
+  "operational_cutover": false,
+  "chronicle_checkpoint_candidate": "M2.03.073",
+  "blocked_issues": [
+    "World/art binary assets not comprehensively discovered or transferred",
+    "Previous versions and legacy historic evidence not completely imported",
+    "Source text extraction cannot guarantee native formatting or embedded media",
+    "Mechanical and NPC knowledge projection require source reconciliation",
+    "Readback of the batch must be confirmed before claiming validation"
+  ],
+  "next_steps": [
+    "Verify all imported texts against source and commit head",
+    "Extend Drive and Project file inventory for NOVYDRES world and binary assets",
+    "Import previous character and episode versions with invalid version segregated",
+    "Reconcile full history before LIVE/HISTORY_INDEX promotion",
+    "Validate and formalize cutover only for CHR-001 if all gates pass"
+  ]
+}
