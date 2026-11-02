@@ -12,8 +12,8 @@
       "pc-iris",
       "npc-ivo"
     ],
-    "last_event_id": "SIM-M001-E004",
-    "last_event_seq": 4,
+    "last_event_id": "SIM-M001-E005",
+    "last_event_seq": 5,
     "awaiting": "PLAYER_RESPONSE",
     "context_ref": "poc/memory-v1/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-M001-E004"
@@ -32,9 +32,25 @@
     "SIM-M001-E001",
     "SIM-M001-E002",
     "SIM-M001-E003",
-    "SIM-M001-E004"
+    "SIM-M001-E004",
+    "SIM-M001-E005"
   ],
-  "event_buffer": [],
+  "event_buffer": [
+    {
+      "event_id": "SIM-M001-E005",
+      "seq": 5,
+      "chronicle_id": "CHR-SIM-002",
+      "simulation_only": true,
+      "source_type": "WORLD_EVENT",
+      "observable_payload": "Ouviu-se uma gota de água cair de uma calha externa; nenhuma conclusão ou reação de personagem foi estabelecida.",
+      "diegetic_datetime": "UNKNOWN",
+      "location_id": "loc-workshop",
+      "actor_id": "world",
+      "causal_event_ids": [],
+      "visibility": "OBSERVED",
+      "state_delta": []
+    }
+  ],
   "last_archived_seq": 4,
   "narrative_constraints": [
     "Não decidir fala/ação de Íris",
@@ -65,7 +81,8 @@
     "update_mechanism": "one_file_replace",
     "require_readback": true,
     "rolls_engine_status": "NOT_TESTED_IN_THIS_FIXTURE",
-    "technical_chronicle_ledger_status": "NOT_MIGRATED"
+    "technical_chronicle_ledger_status": "NOT_MIGRATED",
+    "last_write_poc_reason": "Turno sintético sem alteração das relações nem necessidade de novo SCENE_CONTEXT"
   },
   "history_index_ref": "poc/memory-v1/HISTORY_INDEX.json",
   "rotation": {
