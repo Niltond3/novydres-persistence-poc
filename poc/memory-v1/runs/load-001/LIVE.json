@@ -11,9 +11,9 @@
       "pc-iris",
       "npc-leta"
     ],
-    "last_event_seq": 16,
-    "last_event_id": "SIM-LOAD-001-E016",
-    "awaiting": "SYNTHETIC_NEXT_EVENT",
+    "last_event_seq": 17,
+    "last_event_id": "SIM-LOAD-001-E017",
+    "awaiting": "SYNTHETIC_WP_CHOICE",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E011"
   },
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E007",
     "SIM-LOAD-001-E008",
     "SIM-LOAD-001-E009",
     "SIM-LOAD-001-E010",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E013",
     "SIM-LOAD-001-E014",
     "SIM-LOAD-001-E015",
-    "SIM-LOAD-001-E016"
+    "SIM-LOAD-001-E016",
+    "SIM-LOAD-001-E017"
   ],
   "event_buffer": [
     {
@@ -218,6 +218,32 @@
       "location_id": "loc-home",
       "diegetic_datetime": "UNKNOWN",
       "causal_event_ids": []
+    },
+    {
+      "event_id": "SIM-LOAD-001-E017",
+      "seq": 17,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "MECHANICAL_RESULT",
+      "observable_payload": "Vetor de dados fixo [3,9,10,4] para teste técnico; decisão de FV pendente.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "world",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN",
+      "causal_event_ids": [],
+      "roll": {
+        "roll_id": "SIM-ROLL-017",
+        "dice_faces": [
+          3,
+          9,
+          10,
+          4
+        ],
+        "successes": 2,
+        "provenance": "FIXED_TEST_VECTOR_NOT_ACTUAL_RANDOM",
+        "state": "AWAITING_PLAYER_WP_CHOICE"
+      }
     }
   ],
   "last_archived_seq": 4,
@@ -258,7 +284,19 @@
       ]
     }
   ],
-  "roll_pending": null,
+  "roll_pending": {
+    "roll_id": "SIM-ROLL-017",
+    "event_id": "SIM-LOAD-001-E017",
+    "dice_faces": [
+      3,
+      9,
+      10,
+      4
+    ],
+    "successes": 2,
+    "state": "AWAITING_PLAYER_WP_CHOICE",
+    "wp_spend": null
+  },
   "persistence": {
     "store": "github_poc",
     "require_readback": true,
