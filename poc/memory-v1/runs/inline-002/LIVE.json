@@ -4,24 +4,24 @@
   "simulation_only": true,
   "phase": "GUIDED_CREATION_SIMULATION",
   "scene": {
-    "scene_id": "SC-INLINE-HOME-04",
+    "scene_id": "SC-INLINE-WORKSHOP-05",
     "episode_id": "M0.01",
-    "location_id": "loc-home",
+    "location_id": "loc-workshop",
     "participants": [
       "pc-iris",
-      "npc-leta"
+      "npc-ivo"
     ],
-    "last_event_seq": 32,
-    "last_event_id": "SIM-INLINE-002-E32",
+    "last_event_seq": 33,
+    "last_event_id": "SIM-INLINE-002-E33",
     "awaiting": "PLAYER_RESPONSE",
     "context_ref": null,
-    "context_anchor_event_id": "SIM-INLINE-002-E31",
+    "context_anchor_event_id": "SIM-INLINE-002-E33",
     "context_packet": {
-      "built_from_event_id": "SIM-INLINE-002-E31",
-      "location": "loc-home",
+      "built_from_event_id": "SIM-INLINE-002-E33",
+      "location": "loc-workshop",
       "participants": [
         "pc-iris",
-        "npc-leta"
+        "npc-ivo"
       ],
       "context_status": "EVIDENCE_BACKED_POC",
       "confirmed_facts": [
@@ -48,6 +48,12 @@
           "source_event_ids": [
             "SIM-INLINE-002-E31"
           ]
+        },
+        {
+          "text": "Íris voltou ao galpão num corte de transição sintético.",
+          "source_event_ids": [
+            "SIM-INLINE-002-E33"
+          ]
         }
       ],
       "npc_claims": [
@@ -62,20 +68,22 @@
       ],
       "actor_knowledge": [
         {
-          "entity_id": "npc-leta",
+          "entity_id": "npc-ivo",
           "knows_event_ids": [
-            "SIM-LOAD-001-E013"
+            "SIM-M001-E001",
+            "SIM-M001-E003",
+            "SIM-LOAD-001-E024"
           ],
           "unknowns": [
-            "O que aconteceu no galpão após a promessa",
-            "Conteúdo real do relatório"
+            "Texto original integral da promessa a Leta",
+            "Causa do alarme",
+            "Teor verdadeiro do relatório"
           ]
         },
         {
           "entity_id": "pc-iris",
           "knows_event_ids": [
-            "SIM-LOAD-001-E013",
-            "SIM-LOAD-001-E024"
+            "SIM-LOAD-001-E013"
           ],
           "unknowns": [
             "Causa do alarme"
@@ -120,7 +128,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E023",
     "SIM-LOAD-001-E024",
     "SIM-LOAD-001-E025",
     "SIM-LOAD-001-E026",
@@ -129,7 +136,8 @@
     "SIM-LOAD-001-E029",
     "SIM-LOAD-001-E030",
     "SIM-INLINE-002-E31",
-    "SIM-INLINE-002-E32"
+    "SIM-INLINE-002-E32",
+    "SIM-INLINE-002-E33"
   ],
   "event_buffer": [
     {
@@ -334,6 +342,26 @@
       "actor_id": "npc-leta",
       "location_id": "loc-home",
       "diegetic_datetime": "UNKNOWN"
+    },
+    {
+      "event_id": "SIM-INLINE-002-E33",
+      "seq": 33,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "PLAYER_DECLARATION",
+      "observable_payload": "Volto ao galpão para conversar com Ivo.",
+      "original_declaration_quote": "Volto ao galpão para conversar com Ivo.",
+      "source_provenance": "SYNTHETIC_INLINE_SCRIPT",
+      "actor_id": "pc-iris",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN",
+      "resolved_scene_transition": {
+        "source_type": "WORLD_EVENT",
+        "from_location_id": "loc-home",
+        "to_location_id": "loc-workshop",
+        "origin": "SYNTHETIC_TEST_VECTOR",
+        "status": "RESOLVED"
+      }
     }
   ],
   "last_archived_seq": 19,
