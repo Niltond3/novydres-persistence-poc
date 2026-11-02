@@ -10,3 +10,5 @@
 - **TECHNICAL_ROLL_LIMIT:** Rolagem M2.03.072 ([3,9,10,4]) permanece transcrição aceita, origem RNG não auditável. Não rerrolar.
 - **SUPERSEDED_INVALID_HISTORICAL:** M2.03 v007 inválida permanece segregada. Índice M1 v0.1 é retrato histórico desatualizado, não checkpoint vigente.
 - **DEC-CR-014:** decisão histórica do Drive preservada. Procedimento Git só entra em vigor após cutover formal MIG-DEC-002, ainda NÃO emitida.
+
+- **CONFLICT-003B / TEXT_DIFFERENCES_VERIFIED_AUTHORITY_OPEN:** Quatro registros de fonte `Madame Zoya` foram confrontados: duas cópias de `madame_zoya_v0_9.md` são idênticas; `madame_zoya_v0_9(1).md` altera frontmatter e outros trechos; `madame_zoya_v0_9(2).md` troca exatamente a expressão `pertence ao truth-home de Segredos do Narrador, não a este perfil` por `permanece deliberadamente fora desta narrativa`. Todos os textos estão guardados (duas bases idênticas por alias) e validados por readback. NÃO inferir qual variante é a última aprovada; SENIOR_EDITOR_VERDICT_PENDING.

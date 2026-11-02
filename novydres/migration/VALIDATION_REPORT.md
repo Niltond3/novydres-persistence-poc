@@ -31,3 +31,11 @@ Classificação: **MIGRATION_IN_PROGRESS**. Cutover operacional: **NÃO**.
 - Motor V5 V1.0 determina uso de ficha-alvo **provisória para rolagens no modo guiado**, distinta dos 170 XP efetivamente comprados. A rolagem M2.03.072 de quatro dados é transcrição aceita, sem origem RNG verificada; não rerrolar.
 - Matriz dos capítulos 01–06 comprova `status: candidate` em todos os seis frontmatters, contrastando com relato de fechamento editorial. Nenhuma promoção foi aplicada.
 - Registry visual detalha **19** ativos da Biblioteca não transferidos: 11 com aprovação/congelamento **relatados** no handoff, 5 sem autoridade verificada e 3 candidatos. Os vereditos originais não foram reabertos para prova direta.
+
+## Auditoria adicional: indexação sem perda e fontes Madame Zoya
+
+- 23 fragmentos do diário legado (406.151 caracteres extraídos) e 7 do episódio M2.03 v008 (111.894), comparados fragmento a fragmento com o texto-fonte original via GitHub `fetch_file`: **30/30 exatos**. Fonte integral e hashes mantidos.
+- Índice histórico de rotas por ID e pistas lexicais registrado em `chronicles/CHR-001/historical/VERIFIED_SHARD_CATALOG_V1.json`. Busca exemplar de dois eventos (M2.01 e M2.03) recuperou ambos em **3 leituras do GitHub** (catálogo + 2 trechos), ~42.990 caracteres em lugar de 518.045; teste no mesmo chat, não cold boot independente.
+- Madame Zoya v0.9: duas cópias-base exatamente iguais, variante (1) com alterações de estrutura e variante (2) com uma substituição literal no texto de fundo. **4 fontes Library verificadas** contra **3 caminhos textuais distintos GitHub**; autoridade editorial sem promoção.
+- Inventário atualizado para **193 registros**: 151 registros de fontes textuais (incluindo 1 alias duplicado), 9 arquivos brutos verificados, 14 pastas, 19 visuais ainda pendentes. Arquivos textuais físicos migrados e verificados: 150 caminhos; 30 fragmentos derivados adicionais não contam como fontes novas.
+- Estado CHR-001 segue `M2.03.073`, sem novo evento ou consumo. GitHub candidato INACTIVE; Drive fonte operacional. Cutover ainda bloqueado.

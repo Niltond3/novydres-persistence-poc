@@ -7,8 +7,8 @@
   "operational_cutover": false,
   "primary_operational_source": "GOOGLE_DRIVE",
   "poc_isolation": "poc/memory-v1 untouched",
-  "sources_registered": 190,
-  "source_document_copies": 148,
+  "sources_registered": 193,
+  "source_document_copies": 150,
   "inventory": "migration/INVENTORY.json",
   "progress": "migration/PROGRESS.json",
   "chronicle": "chronicles/CHR-001",
@@ -29,7 +29,7 @@
     "chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
     "chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json"
   ],
-  "migration_phase": "GITHUB_ONLY_RECOVERY_15_OF_15_AND_EVIDENCE_CLASSIFIED_FRESH_CHAT_PENDING",
+  "migration_phase": "VERBATIM_HISTORY_RETRIEVAL_AND_ZOYA_VARIANTS_READBACK_COMPLETE",
   "character_latest_known_checkpoint": "M2.03.073",
   "character_memory_status": "INACTIVE_CANDIDATE_MECHANICAL_PARTIAL",
   "raw_original_files_copied": 9,
@@ -44,5 +44,8 @@
     "chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
     "chronicles/CHR-001/knowledge/OPEN_THREADS_V1.json"
   ],
-  "verbatim_history_shard_catalog_ref": "novydres/chronicles/CHR-001/historical/VERIFIED_SHARD_CATALOG_V1.json"
+  "verbatim_history_shard_catalog_ref": "novydres/chronicles/CHR-001/historical/VERIFIED_SHARD_CATALOG_V1.json",
+  "text_source_records_verified": 151,
+  "verified_library_text_alias_records": 1,
+  "zoya_variant_audit_ref": "novydres/world/organizations/npc-sources/MADAME_ZOYA_V09_VARIANT_AUDIT_VERIFIED_V2.json"
 }

@@ -3767,7 +3767,7 @@
       "mime_type": "text/markdown",
       "scope": "WORLD_NPC_VARIANTS_HISTORICAL",
       "governance_status": "AUTHORITY_UNVERIFIED_DONT_PROMOTE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/world/organizations/npc-sources/madame_zoya_v0_9_original_library.source.md",
       "provenance": "LIBRARY_FILES_READ_FULL_TEXT",
       "text_characters": 25271,
@@ -3776,7 +3776,9 @@
       "limitations": [
         "Text extracted through Library read; not native original-byte proof",
         "Same numeric v0.9 has divergent versions; editorial authority unsettled"
-      ]
+      ],
+      "verification_method": "EXACT_LIBRARY_FULL_TEXT_EQUALS_GITHUB_FETCH_FILE",
+      "original_library_format_not_migrated": true
     },
     {
       "id": "libfile_c4fcdb5778608191ae07b124a9856beb",
@@ -3784,7 +3786,7 @@
       "mime_type": "text/markdown",
       "scope": "WORLD_NPC_VARIANTS_HISTORICAL",
       "governance_status": "AUTHORITY_UNVERIFIED_DONT_PROMOTE",
-      "migration_state": "TEXT_ALIAS_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/world/organizations/npc-sources/madame_zoya_v0_9_original_library.source.md",
       "provenance": "LIBRARY_FILES_READ_FULL_TEXT",
       "text_characters": 25271,
@@ -3793,7 +3795,9 @@
       "limitations": [
         "Text extracted through Library read; not native original-byte proof",
         "Same numeric v0.9 has divergent versions; editorial authority unsettled"
-      ]
+      ],
+      "verification_method": "EXACT_LIBRARY_DUPLICATE_SOURCE_EQUALS_VERIFIED_GITHUB_BASE_PATH",
+      "original_library_format_not_migrated": true
     },
     {
       "id": "libfile_a0c740f67be48191baf8819dd78f4be5",
@@ -3801,7 +3805,7 @@
       "mime_type": "text/markdown",
       "scope": "WORLD_NPC_VARIANTS_HISTORICAL",
       "governance_status": "AUTHORITY_UNVERIFIED_DONT_PROMOTE",
-      "migration_state": "TEXT_IMPORTED_PENDING_READBACK",
+      "migration_state": "TEXT_READBACK_VERIFIED",
       "target": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(1)_library.source.md",
       "provenance": "LIBRARY_FILES_READ_FULL_TEXT",
       "text_characters": 25505,
@@ -3810,7 +3814,9 @@
       "limitations": [
         "Text extracted through Library read; not native original-byte proof",
         "Same numeric v0.9 has divergent versions; editorial authority unsettled"
-      ]
+      ],
+      "verification_method": "EXACT_LIBRARY_FULL_TEXT_EQUALS_GITHUB_FETCH_FILE",
+      "original_library_format_not_migrated": true
     }
   ],
   "discovery_status": "PARTIAL"

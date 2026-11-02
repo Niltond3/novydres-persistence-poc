@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "NPC_LIBRARY_VARIANT_ARCHIVE_AND_SHARD_CATALOG_VERIFIED",
+  "phase": "VERBATIM_HISTORY_RETRIEVAL_AND_ZOYA_VARIANTS_READBACK_COMPLETE",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -13,7 +13,8 @@
     "Character mechanical purchases 170 XP verified; other V5 fields, consequences and wider NPC graph not exhaustively reconciled",
     "Technical RNG origin and COMMITTED ledgers not historically verified; must not rewrite accepted roll",
     "New-chat independent GitHub-only recovery not executed",
-    "Native Google Docs formatting, media and comments not preserved by textual extraction"
+    "Native Google Docs formatting, media and comments not preserved by textual extraction",
+    "Madame Zoya original/(1)/(2) variants are preserved and compared, but senior-editor authority for unbumped v0.9 revisions is still unresolved"
   ],
   "next_steps": [
     "Run independent fresh-chat recovery using read-only prompt and evaluate against stored rubric",
@@ -24,8 +25,8 @@
   ],
   "catalogue_legacy_references": 76,
   "inventory_records": 193,
-  "text_sources_verified": 148,
-  "pending_records": 22,
+  "text_sources_verified": 151,
+  "pending_records": 19,
   "native_binary_migrated": 3,
   "native_google_docs_migrated": 0,
   "last_verified_checkpoint": "M2.03.073",
@@ -124,7 +125,7 @@
   "migration_gates": {
     "source_text_and_raw_drive_archives": "PASS_FOR_ENUMERATED_SOURCE_RECORDS",
     "visual_asset_original_bytes": "BLOCKED_19_LIBRARY_FILES",
-    "world_editorial_authority": "PENDING_CANDIDATE_VS_HISTORICAL_CLOSURE",
+    "world_editorial_authority": "PENDING_CANDIDATE_AND_ZOYA_V09_VARIANTS",
     "npc_knowledge": "PARTIAL_9_ENTITIES_11_THREADS",
     "mechanical_state": "PARTIAL_PROVISIONAL_ROLL_POLICY_VERIFIED",
     "independent_new_chat_recovery": "NOT_RUN",
@@ -134,5 +135,17 @@
   "history_shards_verified": 30,
   "history_shard_source_characters": 518045,
   "memory_retrieval": "INDEX_PLUS_TARGET_SHARD_INSTEAD_OF_FULL_518K_SOURCE_FOR_COMMON_HISTORICAL_LOOKUPS",
-  "zoya_audit_ref": "novydres/world/organizations/npc-sources/MADAME_ZOYA_V09_VARIANT_AUDIT_V1.json"
+  "zoya_audit_ref": "novydres/world/organizations/npc-sources/MADAME_ZOYA_V09_VARIANT_AUDIT_VERIFIED_V2.json",
+  "text_archive_paths_verified": 150,
+  "text_alias_records_verified": 1,
+  "zoya_variant_record_count": 4,
+  "zoya_variants_integrity": "VERIFIED_3_LIBRARY_REFS_PLUS_PREVIOUS_V09_2",
+  "zoya_authority": "UNRESOLVED",
+  "sparse_retrieval_test": {
+    "read_count": 3,
+    "pass": true,
+    "source_chars": 518045,
+    "read_chars_approx": 42990,
+    "originals_unchanged": true
+  }
 }
