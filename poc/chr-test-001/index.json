@@ -3,11 +3,12 @@
   "simulation_only": true,
   "chronicle_id": "CHR-TEST-001",
   "active_episode": "M2.03",
-  "last_event_id": "POC-CHR-TEST-M203-002",
-  "step": 2,
-  "expected_event_count": 2,
+  "last_event_id": "POC-CHR-TEST-M203-003",
+  "step": 3,
+  "expected_event_count": 3,
   "checks": {
     "atomic_turn": true,
-    "write_verified": false
+    "write_verified": false,
+    "simulated_interruption": true
   }
 }
