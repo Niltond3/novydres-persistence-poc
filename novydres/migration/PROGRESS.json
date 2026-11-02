@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "ETAPA_2_WORLD_CANON_SOURCES",
+  "phase": "WORLD_SOURCE_DISCOVERY_AND_TEXT_PRESERVATION",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -19,11 +19,20 @@
     "Readback of the batch must be confirmed before claiming validation"
   ],
   "next_steps": [
-    "Verify all imported texts against source and commit head",
-    "Extend Drive and Project file inventory for NOVYDRES world and binary assets",
-    "Import previous character and episode versions with invalid version segregated",
-    "Reconcile full history before LIVE/HISTORY_INDEX promotion",
-    "Validate and formalize cutover only for CHR-001 if all gates pass"
+    "Import unresolved original canon, contracts, A-K and visual assets",
+    "Construct and audit V1.1 memory projection",
+    "Reconcile full mechanics and all NPC knowledge",
+    "Validate readback and cut over only on formal gate"
   ],
-  "last_batch_note": "8 chapter/character-creation sources; frontmatter statuses preserved"
+  "last_batch_note": "8 chapter/character-creation sources; frontmatter statuses preserved",
+  "direct_items_found": 104,
+  "catalogue_legacy_references": 76,
+  "inventory_records": 169,
+  "text_sources_verified": 41,
+  "pending_records": 128,
+  "native_binary_migrated": 0,
+  "native_google_docs_migrated": 0,
+  "last_verified_checkpoint": "M2.03.073",
+  "last_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+  "source_of_truth": "GOOGLE_DRIVE_UNTIL_CUTOVER"
 }

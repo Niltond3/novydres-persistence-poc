@@ -5,10 +5,10 @@
   "policy": "G19_G23",
   "status": "MIGRATION_IN_PROGRESS",
   "operational_cutover": false,
-  "primary_operational_source": "GOOGLE_DRIVE_UNTIL_VALIDATED",
+  "primary_operational_source": "GOOGLE_DRIVE",
   "poc_isolation": "poc/memory-v1 untouched",
-  "sources_registered": 88,
-  "source_document_copies": 8,
+  "sources_registered": 169,
+  "source_document_copies": 41,
   "inventory": "migration/INVENTORY.json",
   "progress": "migration/PROGRESS.json",
   "chronicle": "chronicles/CHR-001",
@@ -17,5 +17,6 @@
     "No simulated POC event may be imported as historical fact",
     "Text extracted from Google Docs; original native docs remain authoritative for non-text aspects",
     "LIVE.json and HISTORY_INDEX.json pending historical reconciliation"
-  ]
+  ],
+  "inventory_coverage": "PARTIAL"
 }

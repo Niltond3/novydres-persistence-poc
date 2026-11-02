@@ -1,7 +1,14 @@
-# VALIDATION REPORT — LOTE 001
+# NOVYDRES Migration Validation (partial)
 
-Estado: **PENDING_READBACK** (não confundir com validação operacional).
+STATUS: MIGRATION_IN_PROGRESS; OPERATIONAL CUTOVER: NO.
 
-Lote contém extrações integrais de texto de oito Google Docs, com paragrafação representada por quebras de linha; não é cópia binária dos documentos nativos nem garante incorporação de imagens, estilos, comentários ou cabeçalhos. Conferência do conteúdo via GitHub `fetch_file` ainda necessária. Estado V1.1 operacional `LIVE.json` não instalado. Fonte operacional permanece Drive.
+- Text sources with source-vs-GitHub exact readback: 41.
+- Inventory records including historical references: 169.
+- Legacy Library IDs mentioned in canonical inventory: 76 (may overlap copied sources).
+- Native binaries migrated: 0; native rich Google Docs byte-equal migrated: 0.
+- Last verified CHR-001 episode: M2.03.073, state v008, episode v008.
+- M2.03.072 roll accepted as transcript, RNG source not auditable.
+- POC unchanged; technical ledger not retroactively filled.
+- World canon, frozen assets, all A-K and NPC knowledge still incomplete.
 
-A POC permanece sob `poc/memory-v1/`, intocada.
+DO NOT NARRATE OR CUT OVER. G19/G23 preserved.
