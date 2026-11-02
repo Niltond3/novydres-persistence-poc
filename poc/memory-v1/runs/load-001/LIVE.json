@@ -11,8 +11,8 @@
       "pc-iris",
       "npc-leta"
     ],
-    "last_event_seq": 14,
-    "last_event_id": "SIM-LOAD-001-E014",
+    "last_event_seq": 15,
+    "last_event_id": "SIM-LOAD-001-E015",
     "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E011"
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E005",
     "SIM-LOAD-001-E006",
     "SIM-LOAD-001-E007",
     "SIM-LOAD-001-E008",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E011",
     "SIM-LOAD-001-E012",
     "SIM-LOAD-001-E013",
-    "SIM-LOAD-001-E014"
+    "SIM-LOAD-001-E014",
+    "SIM-LOAD-001-E015"
   ],
   "event_buffer": [
     {
@@ -187,6 +187,20 @@
       "original_declaration_quote": null,
       "source_provenance": "SYNTHETIC_SCRIPT",
       "actor_id": "npc-leta",
+      "location_id": "loc-home",
+      "diegetic_datetime": "UNKNOWN",
+      "causal_event_ids": []
+    },
+    {
+      "event_id": "SIM-LOAD-001-E015",
+      "seq": 15,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "WORLD_EVENT",
+      "observable_payload": "O telefone da cozinha toca uma vez e silencia, sem identificar quem ligou.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "world",
       "location_id": "loc-home",
       "diegetic_datetime": "UNKNOWN",
       "causal_event_ids": []
