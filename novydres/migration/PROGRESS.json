@@ -1,13 +1,13 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "ETAPA_2_PARTIAL_TEXT_PRESERVATION",
+  "phase": "ETAPA_2_EPISODES_HISTORY",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
   "branch": "master",
   "previous_head": "121895ec61bf0e71a0d414510ce5ee6e35d296c7",
   "discovered_unique": 88,
-  "imported_text_pending_readback": 8,
+  "imported_text_pending_readback": 16,
   "fully_migrated_native_docs": 0,
   "operational_cutover": false,
   "chronicle_checkpoint_candidate": "M2.03.073",
@@ -24,5 +24,6 @@
     "Import previous character and episode versions with invalid version segregated",
     "Reconcile full history before LIVE/HISTORY_INDEX promotion",
     "Validate and formalize cutover only for CHR-001 if all gates pass"
-  ]
+  ],
+  "last_batch_note": "8 episode versions, includes invalid v007 separate"
 }
