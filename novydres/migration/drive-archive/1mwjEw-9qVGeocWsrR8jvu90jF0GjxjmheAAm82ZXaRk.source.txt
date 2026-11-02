@@ -1,0 +1,26 @@
+NOVYDRES — DECISIONS & STATE V1
+Escopo: governança operacional da crônica · 28/10/2026
+Decisões vigentes para narração
+DEC-CR-001 | 28/10/2026 | VIGENTE | O Narrador segue contrato operacional explícito, separado do cânone do cenário Novydres. O usuário solicitou canonizar regras de prevenção de alucinações e agência do jogador; esta versão documenta a implementação inicial de governança.
+DEC-CR-002 | VIGENTE | Declarações voluntárias do personagem cabem somente ao jogador. Tentativa, intenção e resultado são três estados distintos. Narrador controla NPCs, mundo e efeitos involuntários causados por regras válidas.
+DEC-CR-003 | VIGENTE | O passado jogado é representado por eventos confirmados com proveniência e revisão; retcon silencioso e inferência de evento inexistente são proibidos. Correções preservam histórico.
+DEC-CR-004 | VIGENTE | Fatos do cânone do cenário dependem de fontes oficiais e de .AGENT/.CONTEXTG; fatos novos da crônica jamais alteram o cânone global por implicação.
+DEC-CR-005 | VIGENTE | Rolagens V5 devem ser realmente executadas por motor aleatório externo à prosa, previamente parametrizadas e auditadas por dados brutos; alterações na ficha precisam indicar causa e antes/depois.
+DEC-CR-006 | VIGENTE | Percepções do PC, afirmações de NPC e verdades do Narrador são registros distintos, e planos NPC não contam como fatos realizados.
+DEC-CR-007 | VIGENTE | Persistência só é anunciada após confirmação da escrita; falha gera estado pendente, sem ficção de salvamento. Validador independente é requisito desejado, mas NÃO implementado neste marco.
+Estado atual
+CURRENT_PHASE = PREPARAÇÃO DA PRIMEIRA CRÔNICA. status da governança operacional = V1 DOCUMENTADA; verificação documental = SIM após criação/leitura; motor V5 = NÃO IMPLEMENTADO; planilha viva = NÃO CRIADA; event ledger = NÃO CRIADO; validador determinístico independente = NÃO IMPLEMENTADO; character_id = null; chronicle_id = null; session_id = null; last_event_id = null; last_roll_id = null; location = unknown; diegetic_datetime = unknown; player_decisions = nenhuma; story_events = nenhum.
+Pendências e gates para começar
+OPEN-CR-001 | obter ou consultar .AGENT/.CONTEXTG da raiz canônica de Novydres e capítulos usados; o Drive atual contém apenas snapshots, não o workspace validado.
+OPEN-CR-002 | selecionar personagem já existente ou iniciar criação Rápida/Guiada conforme fontes A–K e suas decisões posteriores; validar ficha inicial.
+OPEN-CR-003 | criar estrutura de uma crônica específica: STATE, EVENT_LEDGER, WORLD_STATE, ROLL_LEDGER, PLAYER_JOURNAL e notas narrativas separadas; comprovar leitura/escrita.
+OPEN-CR-004 | implementar/testar motor de dados V5 e validações determinísticas mínimas; registrar versão, política de segredo e event_id idempotente.
+OPEN-CR-005 | executar e registrar testes T01–T12 antes de proclamar persistência robusta; sem backend externo não declarar transação atômica ou append-only inviolável.
+Conflitos explícitos e limites
+CONFLICT-CR-001 | Snapshot e protocolo publicados em 28/10/2026 são PROVISÓRIOS; governança operacional V1 aqui não altera status do cenário nem valida integralmente as fontes. Os documentos originais permanecem preservados.
+CONFLICT-CR-002 | Fontes históricas divergem em geografia textual versus Master Map, e parte do sistema de criação posterior não foi lida na versão atual. Não resolver por inferência; exigir fonte apropriada quando o assunto for relevante.
+LIMIT-CR-001 | Google Docs/Sheets oferecem armazenamento acessível, mas não garantem por si só validação independente, proteção de segredos contra o próprio titular nem gravações multi-arquivo transacionais.
+Contrato de mudança
+Qualquer nova decisão deve receber DEC-CR-NNN com pedido/aprovação do usuário, data, regra afetada, motivação e supersession. Não editar silenciosamente documentos V1: preferir versão V2 e marcar depreciação apenas depois de confirmar nova gravação. Alterações do cânone oficial seguem governança separada.
+Restart point
+Na próxima conversa: localizar pasta NOVYDRES — Continuidade da Crônica, abrir 00_GOVERNANCA_DA_CRONICA/.CONTEXTG.md e .AGENT.md, ler EVENT_PROTOCOL_V1 e DECISIONS_STATE_V1, consultar fontes do cenário e arquivos de snapshot histórico, cumprir OPEN-CR-001..005, definir personagem e só então iniciar uma cena. Nenhuma ação de jogo ocorreu até aqui.
