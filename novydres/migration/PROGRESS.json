@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "DRIVE_TECH_STAGING_ARCHIVE_LOT_016",
+  "phase": "DRIVE_SYNTHETIC_TEST_CORPUS_LOT_017",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -26,8 +26,8 @@
   ],
   "catalogue_legacy_references": 76,
   "inventory_records": 169,
-  "text_sources_verified": 122,
-  "pending_records": 47,
+  "text_sources_verified": 133,
+  "pending_records": 36,
   "native_binary_migrated": 0,
   "native_google_docs_migrated": 0,
   "last_verified_checkpoint": "M2.03.073",
@@ -66,22 +66,14 @@
     "CHRONICLE_001": "SOURCE_PRESERVATION_PARTIAL_CONTEXT_CANDIDATE_INACTIVE"
   },
   "last_batch_pending_verification": [
-    "novydres/migration/drive-archive/1g4oxXuN8kVCSbosQY_-6KXdAj2kvUspDuXUvEmAlhJc.source.txt",
-    "novydres/migration/drive-archive/1z6aoibnbZGGC3I_tk4v70VL68iwpr2gj_ZOEGRu0lzc.source.txt",
-    "novydres/migration/drive-archive/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU.source.txt",
-    "novydres/migration/drive-archive/16Ft2yOTeIgr4kqiSiEbmB5GwWZdEUG_WyAwwosbEUq0.source.txt",
-    "novydres/migration/drive-archive/1GapbQJUChQni11fUSSNh9HLCo1lMLcNi4J1M9UG4PIY.source.txt",
-    "novydres/migration/drive-archive/1mIhtaDJM9Mwp108FGydp9XQyt3KGXUvi7w7GYg4rb0w.source.txt",
-    "novydres/migration/drive-archive/1MrSm-q4JLom2NqvDjzplL0d2iX07f68Hx-Ostp9Zk0w.source.txt",
-    "novydres/migration/drive-archive/13X6IpIT4jYjlXgyzQaqO42QM3FSW798Sl4h6YK8HcuQ.source.txt",
-    "novydres/migration/drive-archive/1EhPCUdp5Mjd1ibc1takdVVzO8ZDXPCg0WC_6gXwtkGE.source.txt",
-    "novydres/migration/drive-archive/1Pg-gvxg1JJIzvOTe60aNsZ4p-_kbWH51QIgfGwY7Djg.source.txt",
-    "novydres/migration/drive-archive/16trj8MATgRsYXy8K2G0o-Zs5KMUXojzxTNyXoZnlbtc.source.txt"
+    "novydres/migration/drive-archive/12td4XtDnvxiODDcCWvmNEB0ROdTnFW2Hgvhu4eUDKrw.source.txt",
+    "novydres/migration/drive-archive/1wmZf4wlKHMTx7EK1Zot_6TCzhiKSrDTQHJrSoFfLG3k.source.txt",
+    "novydres/migration/drive-archive/1Q8rEu6fwXN4SgtEui1DwCWA3Ntl-uTIxWHAGpHyPjKI.source.txt",
+    "novydres/migration/drive-archive/1Lxod9XUWt-Rhnk3GFwPJefaxWVrRSZMr0aPw69rcO0w.source.txt",
+    "novydres/migration/drive-archive/1jUd32601l0vb2QL11NgvFKY85jkiUVOeRbiVi9Cria4.source.txt",
+    "novydres/migration/drive-archive/1u-Q0XLEdKSn3d0QuGWQAmkZOVfO4EndElgZEsKH7IIg.source.txt",
+    "novydres/migration/drive-archive/1U6wVumwJ2hpm_c_xQvk0pDIBWbdcXvTeSCGCj6JHdYY.source.txt",
+    "novydres/migration/drive-archive/1XEadaFHFBmbQeas8CGcX7AQomMYncDvMa0Ye06bmyes.source.txt"
   ],
-  "last_batch_failures": [
-    {
-      "id": "12td4XtDnvxiODDcCWvm4eUDKrw",
-      "error": "NOT_FOUND: Error code: NOT_FOUND; Error: HTTPError: 404: \n\n\n\nNot Found\n\nContent:\n{'code': 404,\n 'message': 'Requested entity was not found.',\n 'status': 'NOT_FOUND'}\n\nRequest URL:\nhttps://docs.googleapis.com/v1/documents/12td4XtDnvxiODDcCWvm4eUDKrw?includeTabsContent=True (Response: {'error': {'code': 404, 'message': 'Requested entity was not found.', 'status': 'NOT_FOUND'}})"
-    }
-  ]
+  "last_batch_failures": []
 }
