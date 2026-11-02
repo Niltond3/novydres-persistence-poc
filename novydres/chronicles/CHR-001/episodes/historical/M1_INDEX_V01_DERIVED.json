@@ -1,0 +1,624 @@
+{
+  "schema": "NOVYDRES_CHR001_HISTORICAL_M1_SEARCH_INDEX_V01",
+  "status": "HISTORICAL_ONLY_STALE_FOR_CURRENT_STATE",
+  "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+  "original_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+  "source_index_date": "2026-10-31",
+  "note": "Source index references an old M1.09 active state. Current operational checkpoint is M2.03.073. IDs IDX-* are historical search keys, never technical committed event IDs. Read original diary and later corrections for proof.",
+  "counts": {
+    "narrative_milestones": 27,
+    "entities": 26,
+    "relationships": 12,
+    "locations": 10
+  },
+  "records": {
+    "narrative_milestones": [
+      {
+        "id": "IDX-EV-001",
+        "label": "M1.01",
+        "original_entry": "IDX-EV-001 | M1.01 | Pessach: atos/falas do PJ, memória materna, ensinamentos e vínculo com Sara | BUSCAR: \"PRÓLOGO — REGISTRO DE CENA 001\" | STATUS: DOC_CONFIRMED; reclassificação administrativa por GATE04 posterior.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-002",
+        "label": "M1.01",
+        "original_entry": "IDX-EV-002 | M1.01 | GATE04 PASS e autorização de Vigor+Carisma | BUSCAR: \"JOB03 — FECHAMENTO OPERACIONAL E GATE04\" | STATUS: DOC_CONFIRMED; não anteriorizar gate.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-003",
+        "label": "M1.02",
+        "original_entry": "IDX-EV-003 | M1.02 | Vera/filha, serviço de aquecimento e coerção no gabinete de Mikhailov | BUSCAR: \"M1.02 — PROVOCAÇÃO DE LOOP\" | STATUS: DOC_CONFIRMED; consequências mais amplas desconhecidas.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-004",
+        "label": "M1.02",
+        "original_entry": "IDX-EV-004 | M1.02 | Compra Força 1, Destreza 1, 10 XP | BUSCAR: \"TRANSAÇÃO ATR-FORCA-001\" | STATUS: DOC_CONFIRMED, autorização registrada.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-005",
+        "label": "M1.03",
+        "original_entry": "IDX-EV-005 | M1.03 | Conflito Mikahel, Yuri, Dima; escola, responsabilidade e testemunhos | BUSCAR: \"M1.03 — PROVOCAÇÃO DO LOOP\" | STATUS: DOC_CONFIRMED; sem reconciliação automática dos meninos.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-006",
+        "label": "M1.03",
+        "original_entry": "IDX-EV-006 | M1.03 | Compra Determinação 1, Autocontrole 1 | BUSCAR: \"M1.03 — ENCERRAMENTO MECÂNICO\" | STATUS: DOC_CONFIRMED, autorização registrada.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-007",
+        "label": "M1.04",
+        "original_entry": "IDX-EV-007 | M1.04 | Vistoria do ramal, perda de pressão e laudo não assinado | BUSCAR: \"M1.04 — O RELATÓRIO EM BRANCO\" | STATUS: DOC_CONFIRMED; reparo definitivo UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-008",
+        "label": "M1.04",
+        "original_entry": "IDX-EV-008 | M1.04 | Compra Inteligência 1 e Ofícios 1, 8 XP | BUSCAR: \"M1.04 — DECISÃO DE COMPRA\" | STATUS: DOC_CONFIRMED.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-009",
+        "label": "M1.05",
+        "original_entry": "IDX-EV-009 | M1.05 | Agressão a Lev e esposa, Nikolai pressionado por denúncia, recusa de confirmação formal | BUSCAR: \"M1.05 — O PREÇO DO SILÊNCIO\" | STATUS: DOC_CONFIRMED; resultados médicos e retirada oficial então UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-010",
+        "label": "M1.05",
+        "original_entry": "IDX-EV-010 | M1.05 | Compra Briga 1 e Intimidação 1; norma de crédito cumulativo proporcional | BUSCAR: \"M1.05 — COMPRA CONFIRMADA\" | STATUS: DOC_CONFIRMED; decisão local, não lei global V5.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-011",
+        "label": "M1.06",
+        "original_entry": "IDX-EV-011 | M1.06 | Carta da escola e erro de interlocutor | BUSCAR: \"CORR-M1.06-001\" | STATUS: DOC_CORRECTED: Bart falou com Mary; fala de Mikahel atribuída incorretamente invalidada.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-012",
+        "label": "M1.07",
+        "original_entry": "IDX-EV-012 | M1.07 | Confissão a Mary, revelações e limites autônomos da esposa | BUSCAR: \"M1.07 — REVELAÇÃO A MARY\" | STATUS: DOC_CONFIRMED; perdão/aceitação futura não presumidos.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-013",
+        "label": "M1.07",
+        "original_entry": "IDX-EV-013 | M1.07 | Mary escolhida Touchstone histórica e Convicção associada | BUSCAR: \"DEC-CHAR-TOUCHSTONE-MARY-001\" | STATUS: DOC_CONFIRMED; elegibilidade em 2010 pendente.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-014",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-014 | M1.08 | Intermediário visita portão da oficina, pagamento/envelope, denúncia sem comprovação naquele ponto | BUSCAR: \"M1.08 — O HOMEM NO PORTÃO\" | STATUS: DOC_CONFIRMED; handoff antigo captura somente esta fase.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-015",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-015 | M1.08 | Entrevistas com moradoras e uso do alias Sasha Rumyantsev | BUSCAR: \"M1.08 — ALIAS SASHA RUMYANTSEV\" | STATUS: DOC_CONFIRMED; alegações sobre papel de investigador não viram profissão real.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-016",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-016 | M1.08 | Conversa com esposa de Lev sob marquise hospitalar | BUSCAR: \"M1.08 — CONFISSÃO EMOCIONAL\" | STATUS: NPC_CLAIM sobre estado de Lev; não diagnóstico independente.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-017",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-017 | M1.08 | Consulta a pasta pública de queixa ainda 'EM APURAÇÃO' | BUSCAR: \"M1.08 — CONSULTA DA PASTA DO PROTOCOLO\" | STATUS: Documento observado naquele momento; não declarar arquivamento posterior.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-018",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-018 | M1.08 | Ataque na portaria de registros e correção da rolagem | BUSCAR: \"M1.08 — RETIFICAÇÃO AUDITÁVEL DO GOLPE\" | STATUS: DOC_CORRECTED, primeiro resultado substituído; 1 FV, sem roll_id técnico.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-019",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-019 | M1.08 | Armazém 3, contato com Viktor Belov e conversa telefônica com Irina | BUSCAR: \"M1.08 — FIM DO TELEFONEMA E APRESENTAÇÃO DO ENCARREGADO\" | STATUS: DOC_CONFIRMED; identidade/vínculo de Irina UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-020",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-020 | M1.08 | Tentativa e entrada em setor de Pessoal; consulta ao cadastro e endereço de Nikolai | BUSCAR: \"M1.08 — CONSULTA AO CADASTRO DE NIKOLAI E SAÍDA\" | STATUS: DOC_CONFIRMED; endereço fornecido no cadastro não comprova residência atual.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-021",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-021 | M1.08 | Apartamento 16: tentativas, contenção, lesão no ombro, 2 usos adicionais de FV | BUSCAR: \"M1.08 — RERROLAGEM AUTORIZADA E RESOLUÇÃO\" | STATUS: DOC_CONFIRMED; dados brutos no diário, TECH_MISSING.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-022",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-022 | M1.08 | Retratação escrita sob coerção; original postado e via carbonada mantida | BUSCAR: \"M1.08 — ENCERRAMENTO DA VISITA E VOLTA PARA CASA\" | STATUS: DOC_CONFIRMED; aceitação/arquivamento pelo órgão UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-023",
+        "label": "M1.08",
+        "original_entry": "IDX-EV-023 | M1.08 | Relato integral a Mary, decisão de deixar serviços; fechamento de cena | BUSCAR: \"CHECKPOINT M1.08 — ENCERRAMENTO AUTORIZADO\" | STATUS: DOC_CONFIRMED; compromisso futuro não cumprido por antecipação.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-024",
+        "label": "M1.09",
+        "original_entry": "IDX-EV-024 | M1.09 | Intermediário pede encontro noturno; PJ aceita encontro, não outro serviço | BUSCAR: \"M1.09 — ACEITAÇÃO DO ENCONTRO E ORIENTAÇÕES\" | STATUS: PLAYER_DECLARATION + NPC_CLAIM, não presumir intenção real do mandante.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-025",
+        "label": "M1.09",
+        "original_entry": "IDX-EV-025 | M1.09 | PJ recolhe bilhete, despede-se e conversa com Mary; sem reação narrada de NPC | BUSCAR: \"M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR\" | STATUS: CHAT_RECOVERED→DOC_CONFIRMED por CAS/readback; não COMMITTED técnico.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-026",
+        "label": "transversal",
+        "original_entry": "IDX-EV-026 | transversal | Retificação de sobrenome Krause→Krauser para toda a família | BUSCAR: \"CORR-IDENTITY-002\" | STATUS: DOC_CORRECTED; adendos antigos preservados.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-EV-027",
+        "label": "transversal",
+        "original_entry": "IDX-EV-027 | transversal | Créditos XP 140, gasto 44, disponível 96, meta de ficha não comprada | BUSCAR: \"DEC-CR-008..011\" | STATUS: DOC_CONFIRMED; metas/benefícios condicionados.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      }
+    ],
+    "entities": [
+      {
+        "id": "IDX-ENT-001",
+        "label": "Bartholomeu Krauser",
+        "original_entry": "IDX-ENT-001 | Bartholomeu Krauser | PJ; trabalhador do aquecimento; Gangrel futuro | ONDE: M1.01–M1.09 | CAUTELA: nome retificado CORR-IDENTITY-002; condição mortal nas cenas M1.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-002",
+        "label": "Mary Krauser",
+        "original_entry": "IDX-ENT-002 | Mary Krauser | Esposa; Touchstone histórica declarada | ONDE: M1.01, M1.03, M1.06–M1.09 | CAUTELA: conhece confissões conforme M1.07/M1.08; resposta M1.09 não narrada; futuro 2010 UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-003",
+        "label": "Mikahel Krauser",
+        "original_entry": "IDX-ENT-003 | Mikahel Krauser | Filho | ONDE: M1.01, M1.03, M1.06 | CAUTELA: fala errada em M1.06 invalidada por CORR-M1.06-001.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-004",
+        "label": "Sara Krauser",
+        "original_entry": "IDX-ENT-004 | Sara Krauser | Filha; Touchstone histórica | ONDE: M1.01 | CAUTELA: vida/vínculo em 2010 UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-005",
+        "label": "Mikha'el / Habi Mikha",
+        "original_entry": "IDX-ENT-005 | Mikha'el / Habi Mikha | Rabino, diretor escolar e mentor juvenil de Bart | ONDE: JOB03, M1.01 | CAUTELA: destino e vida em 2010 UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-006",
+        "label": "Vera",
+        "original_entry": "IDX-ENT-006 | Vera | Moradora afetada por corte do aquecimento | ONDE: M1.02 | CAUTELA: sobrenome/desfechos além de cena UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-007",
+        "label": "Filha de Vera",
+        "original_entry": "IDX-ENT-007 | Filha de Vera | Criança com problema de saúde relatado | ONDE: M1.02 | CAUTELA: nome/diagnóstico e desfecho UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-008",
+        "label": "Mikhailov",
+        "original_entry": "IDX-ENT-008 | Mikhailov | Responsável/supervisor na repartição do aquecimento | ONDE: M1.02 | CAUTELA: religações e responsabilidade limitadas à cena.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-009",
+        "label": "Pavel (chefia do aquecimento)",
+        "original_entry": "IDX-ENT-009 | Pavel (chefia do aquecimento) | Chefia local no trabalho de Bart | ONDE: M1.04, notas de profissão | CAUTELA: não fundir automaticamente ao 'Pavel' citado em M1.08 no armazém.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-010",
+        "label": "Liev",
+        "original_entry": "IDX-ENT-010 | Liev | Colega do aquecimento | ONDE: M1.04 | CAUTELA: participa da inspeção do ramal.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-011",
+        "label": "Yuri",
+        "original_entry": "IDX-ENT-011 | Yuri | Aluno envolvido em conflito escolar | ONDE: M1.03, M1.06 | CAUTELA: não presumir amizade/reincidência.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-012",
+        "label": "Dima",
+        "original_entry": "IDX-ENT-012 | Dima | Aluno alvo das provocações narradas | ONDE: M1.03, M1.06 | CAUTELA: não presumir consequências posteriores.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-013",
+        "label": "Orlova",
+        "original_entry": "IDX-ENT-013 | Orlova | Inspetora escolar | ONDE: M1.03, M1.06 | CAUTELA: registros escolares limitados ao narrado.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-014",
+        "label": "Diretora da escola (nome não confirmado)",
+        "original_entry": "IDX-ENT-014 | Diretora da escola (nome não confirmado) | Direção escolar | ONDE: M1.03 | CAUTELA: identidade e outros vínculos UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-015",
+        "label": "Pai de Yuri (nome não confirmado)",
+        "original_entry": "IDX-ENT-015 | Pai de Yuri (nome não confirmado) | Responsável de Yuri | ONDE: M1.03 | CAUTELA: não presumir reconciliação de famílias.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-016",
+        "label": "Lev Morozov",
+        "original_entry": "IDX-ENT-016 | Lev Morozov | Morador agredido pelo PJ | ONDE: M1.05, M1.08 | CAUTELA: hospitalização relatada; estado clínico final UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-017",
+        "label": "Esposa de Lev (nome não confirmado)",
+        "original_entry": "IDX-ENT-017 | Esposa de Lev (nome não confirmado) | Testemunha/interlocutora | ONDE: M1.05, M1.08 | CAUTELA: alega estado grave de Lev; não converter relato em diagnóstico.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-018",
+        "label": "Nikolai Serebryakov",
+        "original_entry": "IDX-ENT-018 | Nikolai Serebryakov | Denunciante ligado à queixa contra policial | ONDE: M1.05, M1.08 | CAUTELA: retratou-se sob coerção; desfecho oficial da queixa UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-019",
+        "label": "Intermediário recorrente (nome desconhecido)",
+        "original_entry": "IDX-ENT-019 | Intermediário recorrente (nome desconhecido) | Mensageiro de serviços e encontro alegado | ONDE: M1.05, M1.08, M1.09 | CAUTELA: mandante/organização UNKNOWN; não imputar onisciência.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-020",
+        "label": "Moradora idosa do prédio de Lev",
+        "original_entry": "IDX-ENT-020 | Moradora idosa do prédio de Lev | Testemunha local; nome UNKNOWN | ONDE: M1.05, M1.08 | CAUTELA: não assumir que sabe agressor/ligação completa.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-021",
+        "label": "Moradora mais jovem do prédio de Lev",
+        "original_entry": "IDX-ENT-021 | Moradora mais jovem do prédio de Lev | Interlocutora local; nome UNKNOWN | ONDE: M1.08 | CAUTELA: não assumir conhecimento de crime.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-022",
+        "label": "Vigilante da repartição de registros",
+        "original_entry": "IDX-ENT-022 | Vigilante da repartição de registros | Guarda de portaria; nome UNKNOWN | ONDE: M1.08 | CAUTELA: condição final e consequências UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-023",
+        "label": "Viktor Belov",
+        "original_entry": "IDX-ENT-023 | Viktor Belov | Encarregado do turno no Armazém 3 | ONDE: M1.08 | CAUTELA: não forneceu endereço particular; conhecimento limitado ao contato.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-024",
+        "label": "Irina (identidade/parentesco não validado)",
+        "original_entry": "IDX-ENT-024 | Irina (identidade/parentesco não validado) | Pessoa atendendo telefonema ligado a Nikolai | ONDE: M1.08 | CAUTELA: papel/vínculo real não confirmado.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-025",
+        "label": "Funcionário da sala vizinha ao Pessoal / chamado 'Pavel' em trecho",
+        "original_entry": "IDX-ENT-025 | Funcionário da sala vizinha ao Pessoal / chamado 'Pavel' em trecho | Interlocutor no armazém | ONDE: M1.08 | CAUTELA: POTENCIAL CONFLITO DE IDENTIDADE: não fundir com IDX-ENT-009 sem reconciliação.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-ENT-026",
+        "label": "Contratante por trás do intermediário (não identificado)",
+        "original_entry": "IDX-ENT-026 | Contratante por trás do intermediário (não identificado) | Sujeito alegado por intermediário | ONDE: M1.09 | CAUTELA: identidade, plano e presença na reunião UNKNOWN; não tratar como agência confirmada.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "IDX-REL-001",
+        "label": "Bartholomeu ↔ Mary",
+        "original_entry": "IDX-REL-001 | Bartholomeu ↔ Mary | casamento e vínculo afetivo declarados | ORIGEM: M1.01, M1.07, M1.08, M1.09 | LIMITE: Mary sabe do relato que Bart lhe fez nos episódios registrados; não há perdão irrestrito nem resposta nova em M1.09.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-002",
+        "label": "Bartholomeu ↔ Mikahel",
+        "original_entry": "IDX-REL-002 | Bartholomeu ↔ Mikahel | pai e filho; formação/proteção | ORIGEM: M1.01, M1.03, M1.06 | LIMITE: M1.06: Bart falou com Mary, não com Mikahel.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-003",
+        "label": "Bartholomeu ↔ Sara",
+        "original_entry": "IDX-REL-003 | Bartholomeu ↔ Sara | pai e filha; Touchstone histórica | ORIGEM: M1.01 | LIMITE: não inferir sobrevida/vínculo até 2010.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-004",
+        "label": "Bartholomeu ↔ Mikha'el",
+        "original_entry": "IDX-REL-004 | Bartholomeu ↔ Mikha'el | discípulo/mentor no passado | ORIGEM: JOB03/M1.01 | LIMITE: não inventar reencontro.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-005",
+        "label": "Bartholomeu ↔ Vera",
+        "original_entry": "IDX-REL-005 | Bartholomeu ↔ Vera | ajuda oferecida no aquecimento | ORIGEM: M1.02 | LIMITE: não inferir proteção vitalícia nem extinção do problema sistêmico.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-006",
+        "label": "Mikahel ↔ Yuri ↔ Dima",
+        "original_entry": "IDX-REL-006 | Mikahel ↔ Yuri ↔ Dima | conflito na escola com apuração | ORIGEM: M1.03/M1.06 | LIMITE: não declarar amizade ou decisão fora das medidas narradas.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-007",
+        "label": "Bartholomeu ↔ Lev/esposa",
+        "original_entry": "IDX-REL-007 | Bartholomeu ↔ Lev/esposa | agressão anterior e encontro posterior | ORIGEM: M1.05/M1.08 | LIMITE: esposa de Lev reconhece PJ no hospital; seus conhecimentos específicos exigem fonte.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-008",
+        "label": "Bartholomeu ↔ Nikolai",
+        "original_entry": "IDX-REL-008 | Bartholomeu ↔ Nikolai | coerção, queixa, retratação sob pressão | ORIGEM: M1.05/M1.08 | LIMITE: a carta não demonstra arquivamento.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-009",
+        "label": "Intermediário ↔ Bartholomeu",
+        "original_entry": "IDX-REL-009 | Intermediário ↔ Bartholomeu | serviços anteriores, encontro alegado em M1.09 | ORIGEM: M1.05/M1.08/M1.09 | LIMITE: não prova poderes/contatos do intermediário nem aceitar novos serviços.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-010",
+        "label": "Nikolai ↔ Irina",
+        "original_entry": "IDX-REL-010 | Nikolai ↔ Irina | contato telefônico documentado | ORIGEM: M1.08 | LIMITE: relação pessoal, controle e localização UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-011",
+        "label": "Bartholomeu ↔ Viktor Belov",
+        "original_entry": "IDX-REL-011 | Bartholomeu ↔ Viktor Belov | contato no armazém sob alias de entregador | ORIGEM: M1.08 | LIMITE: não presumir que Belov descobriu identidade real ou crime.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-REL-012",
+        "label": "Bartholomeu ↔ contratante não identificado",
+        "original_entry": "IDX-REL-012 | Bartholomeu ↔ contratante não identificado | convite transmitido por intermediário | ORIGEM: M1.09 | LIMITE: NPC_CLAIM, não reunião realizada ou ameaça comprovada.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      }
+    ],
+    "locations": [
+      {
+        "id": "IDX-LOC-001",
+        "label": "Residência da família Krauser",
+        "original_entry": "IDX-LOC-001 | Residência da família Krauser | ORIGEM: M1.01, M1.07–M1.09 | LIMITE: casa, cozinha/quarto narrados em momentos diferentes; posição exata de Mary no último turno UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-002",
+        "label": "Oficina de manutenção de aquecimento",
+        "original_entry": "IDX-LOC-002 | Oficina de manutenção de aquecimento | ORIGEM: M1.04/M1.08 | LIMITE: portão/pátio; não confundir com casa.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-003",
+        "label": "Ramal de aquecimento sob vistoria",
+        "original_entry": "IDX-LOC-003 | Ramal de aquecimento sob vistoria | ORIGEM: M1.04 | LIMITE: reparo definitivo UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-004",
+        "label": "Escola de Mikahel",
+        "original_entry": "IDX-LOC-004 | Escola de Mikahel | ORIGEM: M1.03/M1.06 | LIMITE: nome/endereço exatos UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-005",
+        "label": "Edifício dos Morozov",
+        "original_entry": "IDX-LOC-005 | Edifício dos Morozov | ORIGEM: M1.05/M1.08 | LIMITE: não presumir estado atual de moradores.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-006",
+        "label": "Hospital visitado após agressão",
+        "original_entry": "IDX-LOC-006 | Hospital visitado após agressão | ORIGEM: M1.08 | LIMITE: nome/endereço clínico e prontuário direto UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-007",
+        "label": "Repartição/arquivo público de protocolos",
+        "original_entry": "IDX-LOC-007 | Repartição/arquivo público de protocolos | ORIGEM: M1.08 | LIMITE: pasta examinada em dado momento, queixa em apuração então.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-008",
+        "label": "Pátio Ferroviário de Mercadorias / Armazém 3",
+        "original_entry": "IDX-LOC-008 | Pátio Ferroviário de Mercadorias / Armazém 3 | ORIGEM: M1.08 | LIMITE: cadastro e visitas, testemunhas e consequências posteriores UNKNOWN.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-009",
+        "label": "Rua Arsenyev 41, bloco 2, apartamento 16, Drevnigrad",
+        "original_entry": "IDX-LOC-009 | Rua Arsenyev 41, bloco 2, apartamento 16, Drevnigrad | ORIGEM: M1.08 | LIMITE: endereço encontrado em cadastro; lugar da interação narrada com Nikolai.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      },
+      {
+        "id": "IDX-LOC-010",
+        "label": "Depósito comercial de carvão / sala dos fundos",
+        "original_entry": "IDX-LOC-010 | Depósito comercial de carvão / sala dos fundos | ORIGEM: M1.09 | LIMITE: somente local alegado de encontro às 20h; endereço escrito no papel não transcrito.",
+        "classification": "HISTORICAL_SEARCH_MARKER_NOT_AUDITED_EVENT",
+        "source_ref": "novydres/migration/drive-archive/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA.source.txt",
+        "primary_history_ref": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      }
+    ]
+  }
+}

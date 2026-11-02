@@ -26,7 +26,6 @@
     "wife": "Mary Krauser",
     "son": "Mikahel Krauser",
     "daughter": "Sara Krauser",
-    "touchstone": "Sara Krauser",
     "mortal": true,
     "clan_planned": "Gangrel, future only",
     "resources": {
@@ -39,12 +38,49 @@
       "willpower_aggravated_damage": 0,
       "willpower_available": 1
     },
-    "full_v5_sheet": "PENDING_FIELD_BY_FIELD_HISTORICAL_RECONCILIATION",
+    "full_v5_sheet": "PARTIAL_ALLOCATIONS_VERIFIED_NONALLOCATED_TRAITS_PENDING",
     "sheet_source_refs": [
       "novydres/chronicles/CHR-001/character/state_v008.source.txt",
-      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json"
     ],
-    "target_sheet_not_equivalent_to_current": true
+    "target_sheet_not_equivalent_to_current": true,
+    "allocated_attributes": {
+      "Vigor": 3,
+      "Carisma": 2,
+      "Força": 4,
+      "Destreza": 2,
+      "Determinação": 1,
+      "Autocontrole": 1,
+      "Inteligência": 1
+    },
+    "allocated_skills": {
+      "Ofícios": 1,
+      "Briga": 4,
+      "Intimidação": 1,
+      "Condução": 2
+    },
+    "touchstones_historical": [
+      {
+        "name": "Sara Krauser",
+        "conviction_context": "inocência e cuidado"
+      },
+      {
+        "name": "Mary Krauser",
+        "conviction_context": "amor verdadeiro que tudo suporta, espera e perdoa"
+      }
+    ],
+    "touchstones_2010_validation": "UNKNOWN",
+    "mechanical_projection_ref": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+    "allocated_xp_breakdown": {
+      "attributes": 125,
+      "skills": 45,
+      "spent": 170,
+      "total": 519,
+      "remaining": 349,
+      "credit_available": 20
+    },
+    "future_predator_type": "GATO_DE_RUA_NO_CURRENT_VAMPIRE_EFFECT"
   },
   "scene": {
     "scene_id": "CHR001-M203-HOSPITAL-STAFF-CHANGING_ROOM",
