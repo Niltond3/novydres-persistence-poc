@@ -1,6 +1,6 @@
 {
   "status": "MIGRATION_IN_PROGRESS",
-  "phase": "ETAPA_3_CHRONICLE_M2_EVENT_LOCATOR_INDEX",
+  "phase": "ETAPAS_2_3_COPY_ARCHIVED_AND_SEMANTIC_INDEX_PARTIAL",
   "generated_on": "2026-11-02",
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
@@ -8,27 +8,25 @@
   "operational_cutover": false,
   "chronicle_checkpoint_candidate": "M2.03.073",
   "blocked_issues": [
-    "63 directly enumerated but not preserved Drive references, including possible old versions/duplicate drafts requiring classification",
-    "19 catalogued original binary sources cannot be imported as byte-verified copies through available direct connectors",
-    "Native Google Docs media, rich formatting, comments and exact original-byte equivalence not assured by text extraction",
-    "World authority disagreements and POI approval-to-asset links require evidence",
-    "Full mechanical sheet and historic NPC relations/knowledge not reconciled in inactive candidate memory",
-    "Technical diary not an audited ledger; no retroactive COMMITTED event claims",
-    "Real fresh-chat GitHub-only narrative recovery not yet validated"
+    "19 visual assets cited in 2026-09-28 Library inventory lack an authorized original-byte transfer path (including MasterMap PNG, tiles ZIP and approved POIs)",
+    "Original native Google Docs formatting, embedded objects, comments and raw-byte integrity not preserved by extracted-text copies",
+    "Global world sources are partial beyond audited historical Library catalogue; approval/closure of candidate frontmatters and POI verdict links unresolved",
+    "CHR-001 current mechanical allocations 170 XP validated but unallocated V5 traits and historical NPC knowledge/causal relationships require complete operational audit",
+    "Legacy technical ledger is not backfilled; past RNG provenance for M2.03.072 unverified",
+    "Real new-chat GitHub-only recovery not tested; operational cutover decision MIG-DEC-002 not issued"
   ],
   "next_steps": [
-    "Import 63 remaining directly discovered Drive records / classify duplicates and invalid draft versions",
-    "Complete native or byte-verified transfer of 19 binary references (visual and tiles) with authorized raw access and GitHub base64 uploader",
-    "Audit current full V5 field-by-field character sheet against source, XP/FV ledger and actual last state",
-    "Complete sparse HISTORY_INDEX for all historical entities, relationships and promises, retaining full text provenance",
-    "Audit world governance status: candidate frontmatters vs later approved/closed editor decisions and actual asset mapping",
-    "Validate real new-chat recovery/semantic consistency, then write MIG-DEC-002 cutover; do not narrate before validation"
+    "Resolve original Library visual transfer via authorized raw-byte access or register permanent blocker; never substitute preview",
+    "Reconcile remaining character fields and M2 NPC knowledge, consequences and memories against originals and explicit corrections",
+    "Audit authority and POI canon from direct verdicts, maintaining candidate/frozen distinction",
+    "Test fresh-chat bootstrap using GitHub only and verify scene/resource/knowledge fidelity",
+    "Issue MIG-DEC-002 formal operational cutover only after all relevant gates; do not advance M2.03 now"
   ],
   "catalogue_legacy_references": 76,
   "inventory_records": 190,
   "text_sources_verified": 148,
   "pending_records": 19,
-  "native_binary_migrated": 0,
+  "native_binary_migrated": 3,
   "native_google_docs_migrated": 0,
   "last_verified_checkpoint": "M2.03.073",
   "last_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
@@ -37,7 +35,7 @@
   "historical_catalogue_text_refs_verified": 57,
   "historical_catalogue_text_refs_pending": 0,
   "historical_catalogue_binary_refs_pending": 19,
-  "binary_files_verified": 0,
+  "binary_files_verified": 3,
   "native_google_docs_verified": 0,
   "cutover_prerequisites_met": false,
   "live_candidate_path": "novydres/chronicles/CHR-001/LIVE.json",
@@ -56,14 +54,25 @@
     "7ae0f3ab5eba3e39fe69f67c9b2e1c33618627e7",
     "1ea5a3494b9ab51bd9ae8abdb2f5342ab8a6779c",
     "fef230089e426fdfc4697491b280b63fc42a4c10",
-    "cedc4722d72f14310243bccdc36c6e0d5412288c"
+    "cedc4722d72f14310243bccdc36c6e0d5412288c",
+    "94d87644c6defec1956569aa9b91d718f3ef4448",
+    "ba640787357a749d72594ea40af4f66fe4c77e86",
+    "1d2f68adbff07038f8c8c52ec9575e250f175f32",
+    "e2af1efc0d661a82cae21b49ff8b256ca5d3622b",
+    "b3a28c12fa464c28d37a782d483b4d8303ee9e6e",
+    "4e2458419d294cddb1710e501eeede2309a9c69f",
+    "7c9582215c9c66dd12ce5f6bef32c191f538d6bc",
+    "b52879f69ad72f5659bb41ab55e1ec2ae0df31e2",
+    "7d8146c5925948c50a05220ccd06d64fdcfc8e52",
+    "82882b74b3ce5401a6c502cc4a95904b6811da44",
+    "b05fb29a600089c5670a2a1533837297c7508a87"
   ],
   "required_gate": "MIG-DEC-002_NOT_YET_AUTHORIZED_FOR_EXECUTION",
   "candidate_operational_status": "INACTIVE_PENDING_VALIDATION",
   "poc_status": "PRESERVED_UNMODIFIED",
   "domain_status": {
-    "NOVYDRES": "SOURCE_MIGRATION_PARTIAL_BINARY_AND_AUTHORITY_BLOCKERS",
-    "CHRONICLE_001": "SOURCE_PRESERVATION_PARTIAL_CONTEXT_CANDIDATE_INACTIVE"
+    "NOVYDRES": "PARTIAL_TEXT_AND_RAW_DRIVE_MIGRATED_19_LIBRARY_VISUALS_BLOCKED",
+    "CHRONICLE_001": "SOURCE_ARCHIVE_PRESENT_M1_AND_M2_LOCATORS_CANDIDATE_INACTIVE"
   },
   "last_batch_pending_verification": [],
   "last_batch_failures": [],
@@ -77,8 +86,18 @@
   },
   "character_allocations_audited": "PARTIAL_VERIFIED_170_XP_AND_TWO_HISTORICAL_TOUCHSTONES",
   "folder_count_scanned": 14,
-  "new_unknown_child_source_count": 2,
+  "new_unknown_child_source_count": 0,
   "direct_drive_pending_documents": 0,
   "binary_originals_library_pending": 19,
-  "chronicle_m2_marker_count": 87
+  "chronicle_m2_marker_count": 87,
+  "drive_zip_raw_verified": 3,
+  "raw_code_and_text_verified": 6,
+  "visual_asset_originals_verified": 0,
+  "validation": {
+    "poc_files_unchanged": 45,
+    "all_runtime_paths_resolve": true,
+    "source_shas_match_m2_locator": true,
+    "current_scene_last_event_agrees": true,
+    "raw_git_blob_sha_matches_source": true
+  }
 }

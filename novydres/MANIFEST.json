@@ -7,8 +7,8 @@
   "operational_cutover": false,
   "primary_operational_source": "GOOGLE_DRIVE",
   "poc_isolation": "poc/memory-v1 untouched",
-  "sources_registered": 169,
-  "source_document_copies": 87,
+  "sources_registered": 190,
+  "source_document_copies": 148,
   "inventory": "migration/INVENTORY.json",
   "progress": "migration/PROGRESS.json",
   "chronicle": "chronicles/CHR-001",
@@ -18,15 +18,22 @@
     "Text extracted from Google Docs; original native docs remain authoritative for non-text aspects",
     "LIVE.json and HISTORY_INDEX.json pending historical reconciliation"
   ],
-  "inventory_coverage": "PARTIAL",
-  "copy_integrity": "EXTRACTED_TEXT_READBACK_ONLY",
-  "native_binary_copies": 0,
+  "inventory_coverage": "PARTIAL_BEYOND_ENUMERATED_DRIVE_AND_20260928_LIBRARY_CATALOG",
+  "copy_integrity": "148_EXTRACTED_TEXT_EQUAL_READBACK_9_RAW_BYTE_SHA_VERIFIED",
+  "native_binary_copies": 3,
   "operational_source": "GOOGLE_DRIVE",
   "candidate_memory_refs": [
     "chronicles/CHR-001/LIVE.json",
-    "chronicles/CHR-001/HISTORY_INDEX.json"
+    "chronicles/CHR-001/HISTORY_INDEX.json",
+    "chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+    "chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+    "chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json"
   ],
-  "migration_phase": "PARTIAL_SOURCE_PRESERVATION_COMPLETE_AND_CANDIDATE_MEMORY_INACTIVE",
+  "migration_phase": "ETAPAS_2_3_COPY_ARCHIVED_AND_SEMANTIC_INDEX_PARTIAL",
   "character_latest_known_checkpoint": "M2.03.073",
-  "character_memory_status": "INACTIVE_CANDIDATE"
+  "character_memory_status": "INACTIVE_CANDIDATE_MECHANICAL_PARTIAL",
+  "raw_original_files_copied": 9,
+  "raw_archives_copied": 3,
+  "library_visuals_missing": 19,
+  "folders_scanned": 14
 }
