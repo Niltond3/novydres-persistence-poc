@@ -5,18 +5,16 @@
   "confirmed_git_identity": "Niltond3",
   "repository": "Niltond3/novydres-persistence-poc",
   "branch": "master",
-  "previous_head": "121895ec61bf0e71a0d414510ce5ee6e35d296c7",
-  "discovered_unique": 104,
-  "imported_text_pending_readback": 41,
-  "fully_migrated_native_docs": 0,
   "operational_cutover": false,
   "chronicle_checkpoint_candidate": "M2.03.073",
   "blocked_issues": [
-    "World/art binary assets not comprehensively discovered or transferred",
-    "Previous versions and legacy historic evidence not completely imported",
-    "Source text extraction cannot guarantee native formatting or embedded media",
-    "Mechanical and NPC knowledge projection require source reconciliation",
-    "Readback of the batch must be confirmed before claiming validation"
+    "63 directly enumerated but not preserved Drive references, including possible old versions/duplicate drafts requiring classification",
+    "19 catalogued original binary sources cannot be imported as byte-verified copies through available direct connectors",
+    "Native Google Docs media, rich formatting, comments and exact original-byte equivalence not assured by text extraction",
+    "World authority disagreements and POI approval-to-asset links require evidence",
+    "Full mechanical sheet and historic NPC relations/knowledge not reconciled in inactive candidate memory",
+    "Technical diary not an audited ledger; no retroactive COMMITTED event claims",
+    "Real fresh-chat GitHub-only narrative recovery not yet validated"
   ],
   "next_steps": [
     "Import 63 remaining directly discovered Drive records / classify duplicates and invalid draft versions",
@@ -26,8 +24,6 @@
     "Audit world governance status: candidate frontmatters vs later approved/closed editor decisions and actual asset mapping",
     "Validate real new-chat recovery/semantic consistency, then write MIG-DEC-002 cutover; do not narrate before validation"
   ],
-  "last_batch_note": "11 guided creation H-L, coterie and architecture sources copied",
-  "direct_items_found": 104,
   "catalogue_legacy_references": 76,
   "inventory_records": 169,
   "text_sources_verified": 87,
@@ -37,7 +33,6 @@
   "last_verified_checkpoint": "M2.03.073",
   "last_event_id": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
   "source_of_truth": "GOOGLE_DRIVE_AND_ORIGINAL_CANON_UNTIL_FORMAL_CUTOVER",
-  "text_sources_imported_pending_readback": 12,
   "direct_items_found_before_historical_catalogue": 104,
   "historical_catalogue_text_refs_verified": 57,
   "historical_catalogue_text_refs_pending": 0,
@@ -47,7 +42,6 @@
   "cutover_prerequisites_met": false,
   "live_candidate_path": "novydres/chronicles/CHR-001/LIVE.json",
   "history_index_candidate_path": "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
-  "last_known_valid_commit_before_checkpoint": "fef230089e426fdfc4697491b280b63fc42a4c10",
   "commits_this_migration": [
     "a98ea586852457acd36c33e438e8d3841fb16154",
     "14538938966b40e48ecc616282835404cc067ba0",
@@ -61,6 +55,14 @@
     "bdbc24fb08279e7d18d3a159f539a8471eb244bc",
     "7ae0f3ab5eba3e39fe69f67c9b2e1c33618627e7",
     "1ea5a3494b9ab51bd9ae8abdb2f5342ab8a6779c",
-    "fef230089e426fdfc4697491b280b63fc42a4c10"
-  ]
+    "fef230089e426fdfc4697491b280b63fc42a4c10",
+    "cedc4722d72f14310243bccdc36c6e0d5412288c"
+  ],
+  "required_gate": "MIG-DEC-002_NOT_YET_AUTHORIZED_FOR_EXECUTION",
+  "candidate_operational_status": "INACTIVE_PENDING_VALIDATION",
+  "poc_status": "PRESERVED_UNMODIFIED",
+  "domain_status": {
+    "NOVYDRES": "SOURCE_MIGRATION_PARTIAL_BINARY_AND_AUTHORITY_BLOCKERS",
+    "CHRONICLE_001": "SOURCE_PRESERVATION_PARTIAL_CONTEXT_CANDIDATE_INACTIVE"
+  }
 }
