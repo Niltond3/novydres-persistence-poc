@@ -1,0 +1,985 @@
+{
+  "schema": "NOVYDRES_CHR001_VERBATIM_SHARD_CATALOG_V1",
+  "status": "ALL_SHARDS_READBACK_VERIFIED_AS_EXACT_SOURCE_SUBSTRINGS",
+  "created_on": "2026-11-02",
+  "not_operational_event_ledger": true,
+  "source_integrity": [
+    {
+      "kind": "LEGACY",
+      "source": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "utf16_chars": 406151,
+      "shards": 23,
+      "segmentation_index": "novydres/chronicles/CHR-001/historical/HISTORY_SHARD_INDEX_V1.json"
+    },
+    {
+      "kind": "EPISODE",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+      "sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+      "utf16_chars": 111894,
+      "shards": 7,
+      "segmentation_index": "novydres/chronicles/CHR-001/episodes/shards/M2.03_SHARD_INDEX_V1.json"
+    }
+  ],
+  "verification": {
+    "method": "Every one of 30 github fetch_file shard readback strings equals the exact matching JS UTF-16 source text substring; total concatenation equals original; Git tree sha pointers checked",
+    "verified_shards": 30,
+    "failed": 0,
+    "total_utf16_chars": 518045,
+    "originals_preserved": true,
+    "includes_new_story_events": false
+  },
+  "routing": {
+    "by_event_id": {
+      "CHR001-M201-PAVEL-OBS-20261101-001": [
+        "LEGACY:17"
+      ],
+      "CHR001-M201-PAVEL-COPIA-20261101-001": [
+        "LEGACY:17"
+      ],
+      "CHR001-M201-FONTE-COPIA-20261101-001": [
+        "LEGACY:17"
+      ],
+      "CHR001-M201-RITMO-CLOSE-20261101-001": [
+        "LEGACY:17"
+      ],
+      "CHR001-M202-PRESENTED-20261101-001": [
+        "LEGACY:18"
+      ],
+      "CHR001-M202-CLOSE-20261101-001": [
+        "LEGACY:18"
+      ],
+      "CHR001-M202-CODA-M2-GUIDANCE-20261101-001": [
+        "LEGACY:18"
+      ],
+      "CHR001-M203-INITIAL-20261101-001": [
+        "LEGACY:18",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-CHALLENGE-20261101-001": [
+        "LEGACY:18",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-ATTACK-20261101-001": [
+        "LEGACY:18",
+        "LEGACY:19",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-ROLL-20261101-001": [
+        "LEGACY:19",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-ROLL-CORR-20261101-001": [
+        "LEGACY:19",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-FV-REROLL-20261101-001": [
+        "LEGACY:19",
+        "EPISODE:1"
+      ],
+      "CHR001-M203-DISARM-ROLL-20261101-001": [
+        "LEGACY:19",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-DISARM-RESOLVE-20261101-001": [
+        "LEGACY:19",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-GRAPPLE-SETUP-20261101-001": [
+        "LEGACY:19",
+        "LEGACY:20",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-GRAPPLE-REROLL-20261101-001": [
+        "LEGACY:20",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-GRAPPLE-DAMAGE-ROLL-20261101-001": [
+        "LEGACY:20",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-GRAPPLE-DAMAGE-REROLL-20261101-001": [
+        "LEGACY:20",
+        "EPISODE:2"
+      ],
+      "CHR001-M203-RENEWED-TORQUE-20261101-001": [
+        "LEGACY:20",
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-AUDIT-HOLD-20261101-001": [
+        "LEGACY:20",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-PROVENANCE-FV-REVIEW-20261101-001": [
+        "LEGACY:20",
+        "EPISODE:3"
+      ],
+      "CHR001-SESSION-PROVOCATION-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-FV-RECONCILED-PROVOCATIONS-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M109-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M201-ZERO-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M202-ZERO-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-ZERO-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-WP-AUTH-20261101-1": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-WP-CHOICE-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-WP-REROLL-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-RENEWED-TORQUE-CONSEQUENCE-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-AFTERMATH-WAIT-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:3"
+      ],
+      "CHR001-M203-MARY-HELP-CALL-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-CHECK-BREATHING-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-FAMILY-QUESTION-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-FAMILY-CLARIFICATION-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-EMERGENCY-CARE-PREFLIGHT-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-EMERGENCY-CARE-ROLL-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-EMERGENCY-CARE-FV-AUTH-20261101-001": [
+        "LEGACY:21",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-EMERGENCY-CARE-REROLL-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-FIRSTAID-OUTCOME-AND-ARRIVAL-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-AMBULANCE-REQUEST-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-RESPOSTA-SOCORRISTA-20261101-002": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-PARAMEDICS-RESPONSE-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-PARAMEDIC-SOCIAL-PREFLIGHT-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-PARAMEDIC-SOCIAL-ROLL-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-SOCIAL-FINAL-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-AMBULANCE-TRANSFER-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-WHISPER-ACTION-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-WHISPER-NPC-RESPONSE-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-WHISPER-INJURY-QUESTION-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-WHISPER-HELP-CHOICE-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:4"
+      ],
+      "CHR001-M203-HEALING-QUESTION-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-RESERVE-ANSWER-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-VAMPIRE-QUESTION-LORE-AUDIT-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-VAMPIRE-QUESTION-NPC-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-VWORD-YESNO-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-DARK-HUMOR-REPLY-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-MOVIE-STRENGTH-SURVIVAL-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-SKEPTICISM-BOAT-20261101-001": [
+        "LEGACY:22",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-PROMISE-SURGERY-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-BLOOD-QUERY-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-PARAMEDIC-BLOOD-RESPONSE-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-BLOOD-QUERY-DETAIL-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-INTIM-PRE-003": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-INTIM-ROLL-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-INTIMIDATION-FINAL-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-EVASIVE-TIMING-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-EXPLANATION-EXCESS-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-NOTIME-ASK-WOMAN-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-WOMAN-EXPLANATION-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-BELIEF-REASK-20261101-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-SISTER-PROTECTION-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-WHO-WOMAN-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:5"
+      ],
+      "CHR001-M203-WHAT-TOLD-WOMAN-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-TO-WHOM-DANGER-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-PROTECT-WOMAN-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-HERO-FAMILY-CONFESSION-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-WHAT-EXPECT-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-VAMPIRE-ABILITIES-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001": [
+        "LEGACY:23",
+        "EPISODE:6"
+      ],
+      "CHR001-M203-WINDOW-QUESTION-20261102-001": [
+        "EPISODE:6"
+      ],
+      "CHR001-M203-WHAT-EXPECT-RECONCILIATION-20261102-001": [
+        "EPISODE:6"
+      ],
+      "CHR001-M203-WINDOW-RESOLUTION-20261102-001": [
+        "EPISODE:6"
+      ],
+      "CHR001-M203-HOSPITAL-PLAN-20261102-001": [
+        "EPISODE:6"
+      ],
+      "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001": [
+        "EPISODE:6",
+        "EPISODE:7"
+      ],
+      "CHR001-M203-STAFF-ACCESS-20261102-001": [
+        "EPISODE:7"
+      ],
+      "CHR001-M203-R001-STAFF-ACCESS": [
+        "EPISODE:7"
+      ],
+      "CHR001-M203-CHANGING-CLOTHES-20261102-001": [
+        "EPISODE:7"
+      ]
+    },
+    "by_lexical_name": {
+      "liev": [
+        "LEGACY:1",
+        "LEGACY:6",
+        "LEGACY:16",
+        "LEGACY:17",
+        "LEGACY:18"
+      ],
+      "mary": [
+        "LEGACY:1",
+        "LEGACY:2",
+        "LEGACY:3",
+        "LEGACY:4",
+        "LEGACY:5",
+        "LEGACY:6",
+        "LEGACY:7",
+        "LEGACY:8",
+        "LEGACY:9",
+        "LEGACY:11",
+        "LEGACY:12",
+        "LEGACY:13",
+        "LEGACY:14",
+        "LEGACY:15",
+        "LEGACY:16",
+        "LEGACY:18",
+        "LEGACY:21",
+        "LEGACY:22",
+        "LEGACY:23"
+      ],
+      "mikahel": [
+        "LEGACY:1",
+        "LEGACY:3",
+        "LEGACY:4",
+        "LEGACY:5",
+        "LEGACY:6",
+        "LEGACY:7",
+        "LEGACY:13",
+        "LEGACY:14",
+        "LEGACY:15",
+        "LEGACY:16",
+        "LEGACY:18"
+      ],
+      "sara": [
+        "LEGACY:1",
+        "LEGACY:3",
+        "LEGACY:4",
+        "LEGACY:5",
+        "LEGACY:7",
+        "LEGACY:13",
+        "LEGACY:14",
+        "LEGACY:15",
+        "LEGACY:16",
+        "LEGACY:18"
+      ],
+      "mikhailov": [
+        "LEGACY:4"
+      ],
+      "pavel": [
+        "LEGACY:6",
+        "LEGACY:10",
+        "LEGACY:16",
+        "LEGACY:17",
+        "LEGACY:18"
+      ],
+      "lev morozov": [
+        "LEGACY:6",
+        "LEGACY:7",
+        "LEGACY:8",
+        "LEGACY:10",
+        "LEGACY:16",
+        "LEGACY:17"
+      ],
+      "serebryakov": [
+        "LEGACY:6",
+        "LEGACY:7",
+        "LEGACY:8",
+        "LEGACY:9",
+        "LEGACY:10",
+        "LEGACY:11",
+        "LEGACY:14",
+        "LEGACY:15"
+      ],
+      "lev": [
+        "LEGACY:6",
+        "LEGACY:7",
+        "LEGACY:8",
+        "LEGACY:9",
+        "LEGACY:11",
+        "LEGACY:12",
+        "LEGACY:15",
+        "LEGACY:16",
+        "LEGACY:17"
+      ],
+      "irina": [
+        "LEGACY:10"
+      ],
+      "belov": [
+        "LEGACY:10"
+      ],
+      "armin": [
+        "LEGACY:13",
+        "LEGACY:14",
+        "LEGACY:15",
+        "LEGACY:16"
+      ],
+      "gromov": [
+        "LEGACY:23"
+      ],
+      "nadezhda": [
+        "LEGACY:23"
+      ]
+    },
+    "part_key_format": "SOURCE:part; e.g. LEGACY:19 or EPISODE:6",
+    "usage": "When an old actor/event matters, open this catalog then the specific part(s) matched by event id or lexical name. Open neighbor parts if scene crosses chunk boundary. Always respect later corrections; do not infer absence from missing marker. No canonical promotion."
+  },
+  "shards": [
+    {
+      "source": "LEGACY",
+      "part": 1,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_001.source.txt",
+      "blob_sha": "b4acdfcd19991530f70932eae4f5674acd055a1e",
+      "offset_utf16": [
+        0,
+        17530
+      ],
+      "lines": [
+        1,
+        94
+      ],
+      "characters": 17530,
+      "first_line": "ATENÇÃO — GATEWAY V1.3 VIGENTE: consultar .AGENT V2, .CONTEXTG V1.3, DECISIONS V2 e o checkpoint mais recente no fim deste documento. Modo g"
+    },
+    {
+      "source": "LEGACY",
+      "part": 2,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_002.source.txt",
+      "blob_sha": "0ffabc2d89a0607935ccb4930290ebd4f9b4ddb0",
+      "offset_utf16": [
+        17530,
+        35163
+      ],
+      "lines": [
+        94,
+        170
+      ],
+      "characters": 17633,
+      "first_line": "FIM DO ADENDO 007"
+    },
+    {
+      "source": "LEGACY",
+      "part": 3,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_003.source.txt",
+      "blob_sha": "73f6c5b05759fd86f827625d921fe792159e136f",
+      "offset_utf16": [
+        35163,
+        52882
+      ],
+      "lines": [
+        170,
+        223
+      ],
+      "characters": 17719,
+      "first_line": "NOVO FATO BIOGRÁFICO: Bartholomeu já começou a ensinar o filho a lutar; não inferir quando começaram, intensidade do treino, habilidades adq"
+    },
+    {
+      "source": "LEGACY",
+      "part": 4,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_004.source.txt",
+      "blob_sha": "cada22228a036b815c6f019f919236f6304c53fb",
+      "offset_utf16": [
+        52882,
+        70468
+      ],
+      "lines": [
+        223,
+        280
+      ],
+      "characters": 17586,
+      "first_line": "CONTRATO DE CONHECIMENTO: nenhum funcionário, cobrador ou empregador específico foi nomeado; não transformar a declaração da vizinha em cond"
+    },
+    {
+      "source": "LEGACY",
+      "part": 5,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_005.source.txt",
+      "blob_sha": "fce17955429035edcf29934d6730b30f4e174554",
+      "offset_utf16": [
+        70468,
+        88161
+      ],
+      "lines": [
+        280,
+        313
+      ],
+      "characters": 17693,
+      "first_line": "M1.03 — DECISÃO ABERTA: Mary permanece perto do filho, cansada e preocupada, sem antecipar o julgamento de Bartholomeu. Mikahel pergunta: 'P"
+    },
+    {
+      "source": "LEGACY",
+      "part": 6,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_006.source.txt",
+      "blob_sha": "9c44ddb8e2b0681d31430b2586a6741eb01b9dd0",
+      "offset_utf16": [
+        88161,
+        106585
+      ],
+      "lines": [
+        313,
+        346
+      ],
+      "characters": 18424,
+      "first_line": "M1.03 — RESOLUÇÃO DA DESPEDIDA (NPC_ACTION): Mikahel escuta a advertência do pai sobre repercussões e obrigações de terceiros; diz que não h"
+    },
+    {
+      "source": "LEGACY",
+      "part": 7,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_007.source.txt",
+      "blob_sha": "38b40e98ad6dbfee165ca253ec251797dc87d19c",
+      "offset_utf16": [
+        106585,
+        124320
+      ],
+      "lines": [
+        346,
+        386
+      ],
+      "characters": 17735,
+      "first_line": "M1.06 — CARTA DA ESCOLA: Orlova informa advertências a Yuri e Mikahel e revisão das providências da escola. Mikahel pergunta como agir diant"
+    },
+    {
+      "source": "LEGACY",
+      "part": 8,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_008.source.txt",
+      "blob_sha": "e32f4a835a430a1c83c574e43ea43c7415e5e213",
+      "offset_utf16": [
+        124320,
+        142300
+      ],
+      "lines": [
+        386,
+        435
+      ],
+      "characters": 17980,
+      "first_line": "M1.08 — ABORDAGEM DAS MORADORAS NO EXTERIOR DO PRÉDIO — 30/10/2026"
+    },
+    {
+      "source": "LEGACY",
+      "part": 9,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_009.source.txt",
+      "blob_sha": "9b0282609dace7961c9d7ad3f088165db192a830",
+      "offset_utf16": [
+        142300,
+        159993
+      ],
+      "lines": [
+        435,
+        467
+      ],
+      "characters": 17693,
+      "first_line": "M1.08 — CONTINUIDADE NO HOSPITAL: Bartholomeu se aproxima da mulher que saiu do hospital carregando roupas. Pergunta com voz tranquila: 'Des"
+    },
+    {
+      "source": "LEGACY",
+      "part": 10,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_010.source.txt",
+      "blob_sha": "ad68a70df9f79c9cc2fae421062de4bc98eb34bf",
+      "offset_utf16": [
+        159993,
+        178103
+      ],
+      "lines": [
+        467,
+        487
+      ],
+      "characters": 18110,
+      "first_line": "M1.08: Novo indício documental encontrado: contato profissional e local de trabalho declarados na ficha, um armazém ferroviário. Dados atuai"
+    },
+    {
+      "source": "LEGACY",
+      "part": 11,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_011.source.txt",
+      "blob_sha": "558e665df521d9a9478015476e219fc59413ab27",
+      "offset_utf16": [
+        178103,
+        196118
+      ],
+      "lines": [
+        487,
+        504
+      ],
+      "characters": 18015,
+      "first_line": "M1.08 — AJUSTE TEMPORAL E CAMPAINHA DO APARTAMENTO 16. ESCLARECIMENTO EXPLÍCITO DO JOGADOR: esta etapa da biografia do personagem decorre ap"
+    },
+    {
+      "source": "LEGACY",
+      "part": 12,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_012.source.txt",
+      "blob_sha": "7ddbb043ca4fc38a9d1f1cf8d8ba1b89843522b5",
+      "offset_utf16": [
+        196118,
+        213725
+      ],
+      "lines": [
+        504,
+        562
+      ],
+      "characters": 17607,
+      "first_line": "=== CHECKPOINT M1.08 — ENCERRAMENTO AUTORIZADO ==="
+    },
+    {
+      "source": "LEGACY",
+      "part": 13,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_013.source.txt",
+      "blob_sha": "4e60d24a8e1c1f306c585c760110b9a840333018",
+      "offset_utf16": [
+        213725,
+        231312
+      ],
+      "lines": [
+        562,
+        612
+      ],
+      "characters": 17587,
+      "first_line": "Estas concessões são regras locais para Bartholomeu, não alterações aos livros V5 ou à governança canônica de Novydres. São permissões, não "
+    },
+    {
+      "source": "LEGACY",
+      "part": 14,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_014.source.txt",
+      "blob_sha": "c324a4f3e172cb8b3c7b145aaccf40f245518ac8",
+      "offset_utf16": [
+        231312,
+        248902
+      ],
+      "lines": [
+        612,
+        675
+      ],
+      "characters": 17590,
+      "first_line": "M1.09 — Armin, confiança e preparação familiar (turno atual)."
+    },
+    {
+      "source": "LEGACY",
+      "part": 15,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_015.source.txt",
+      "blob_sha": "76461e50d3930c50f20e459cf239db703e8fb297",
+      "offset_utf16": [
+        248902,
+        266608
+      ],
+      "lines": [
+        675,
+        720
+      ],
+      "characters": 17706,
+      "first_line": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE. Noite, fim dos anos 1970, Bartholomeu mortal e de pé na sala do depósito, barba média. Vi"
+    },
+    {
+      "source": "LEGACY",
+      "part": 16,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_016.source.txt",
+      "blob_sha": "136fa07584ae891f3fa834439e3b955d2c8ec65c",
+      "offset_utf16": [
+        266608,
+        284449
+      ],
+      "lines": [
+        720,
+        764
+      ],
+      "characters": 17841,
+      "first_line": "M1.CLOSE — APROVADO POR JUÍZO DO NARRADOR sob delegação do jogador e pelo gate de cobertura/coerência/consequência. A Ilusão da Estabilidade"
+    },
+    {
+      "source": "LEGACY",
+      "part": 17,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_017.source.txt",
+      "blob_sha": "1c3e3da3f8222179033ad051f1a0f7c6b392b8f4",
+      "offset_utf16": [
+        284449,
+        302011
+      ],
+      "lines": [
+        764,
+        803
+      ],
+      "characters": 17562,
+      "first_line": "CHECKPOINT: M1_CLOSED; M2_ACTIVE/M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã do fim dos anos 1970, escritório da unidade municipal de aquec"
+    },
+    {
+      "source": "LEGACY",
+      "part": 18,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_018.source.txt",
+      "blob_sha": "db42eaf9d37757408b21b19b26af179b33ed1680",
+      "offset_utf16": [
+        302011,
+        319844
+      ],
+      "lines": [
+        803,
+        842
+      ],
+      "characters": 17833,
+      "first_line": "CHECKPOINT ATUALIZADO: CHR-001; MODO GUIADO, fim dos anos 1970, manhã; M1 CLOSED, M2 ACTIVE, M2.01 CLOSED/CURTA, M2.02 NOT_PRESENTED. Bartho"
+    },
+    {
+      "source": "LEGACY",
+      "part": 19,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_019.source.txt",
+      "blob_sha": "74a4f1a24b70d9339b306b074570f48f42cd192f",
+      "offset_utf16": [
+        319844,
+        337518
+      ],
+      "lines": [
+        842,
+        875
+      ],
+      "characters": 17674,
+      "first_line": "PLAYER_THOUGHT / PC_BELIEF: Bartholomeu tenta racionalizar a perfuração observada como raspar superficial, faca contida pela roupa grossa ou"
+    },
+    {
+      "source": "LEGACY",
+      "part": 20,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_020.source.txt",
+      "blob_sha": "c28b5e754bed1f54242d7c6bd951433722ad2f6d",
+      "offset_utf16": [
+        337518,
+        355562
+      ],
+      "lines": [
+        875,
+        918
+      ],
+      "characters": 18044,
+      "first_line": "RULE / MODIFIER: V5 p.301 grappling: Força + Briga em disputa; conquistar um agarrão não causa dano automaticamente, e, em turno posterior, "
+    },
+    {
+      "source": "LEGACY",
+      "part": 21,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_021.source.txt",
+      "blob_sha": "b35298967b5b978674106230418e02975427a6d6",
+      "offset_utf16": [
+        355562,
+        373641
+      ],
+      "lines": [
+        918,
+        957
+      ],
+      "characters": 18079,
+      "first_line": "REGRAS CONDICIONAIS: máxima apenas TARGET provisória 6 = Autocontrole 3 + Determinação 3, não ficha adquirida final. No cenário sem recupera"
+    },
+    {
+      "source": "LEGACY",
+      "part": 22,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_022.source.txt",
+      "blob_sha": "7d1b93ed429bc0f08edf4450c26d56f14ea649e9",
+      "offset_utf16": [
+        373641,
+        391562
+      ],
+      "lines": [
+        957,
+        983
+      ],
+      "characters": 17921,
+      "first_line": "CHR001-M203-EMERGENCY-CARE-REROLL-20261101-001: RESULTADO REAL Python3 2026-11-01T22:41:31.847908+00:00, RNG secrets.SystemRandom().randint("
+    },
+    {
+      "source": "LEGACY",
+      "part": 23,
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_023.source.txt",
+      "blob_sha": "6fdf161537f27ec2ec29e7d1f44b2b1113c30d11",
+      "offset_utf16": [
+        391562,
+        406151
+      ],
+      "lines": [
+        983,
+        1026
+      ],
+      "characters": 14589,
+      "first_line": "CHR001-M203-PROMISE-SURGERY-20261101-001: PLAYER_DECLARATION: Bartholomeu assegura que ficara o maximo possivel com o desconhecido, oferecer"
+    },
+    {
+      "source": "EPISODE",
+      "part": 1,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_001.source.txt",
+      "blob_sha": "a84ffb9dfdabba4b1b23668359cd43dac683b22f",
+      "offset_utf16": [
+        0,
+        17632
+      ],
+      "lines": [
+        1,
+        35
+      ],
+      "characters": 17632,
+      "first_line": "CHR-001 — M2.03, PROVOCAÇÃO “O HOMEM QUE NÃO CAIU” — EVENT_ID CHR001-M203-INITIAL-20261101-001."
+    },
+    {
+      "source": "EPISODE",
+      "part": 2,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_002.source.txt",
+      "blob_sha": "41f15ffcd26cdaaf66fb96a07a347988e3674f3b",
+      "offset_utf16": [
+        17632,
+        35290
+      ],
+      "lines": [
+        35,
+        71
+      ],
+      "characters": 17658,
+      "first_line": "NARRATIVE_RESOLUTION: Com a finta alta, Bartholomeu encaixa o soco na virilha do desconhecido com peso e precisão. O imp"
+    },
+    {
+      "source": "EPISODE",
+      "part": 3,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_003.source.txt",
+      "blob_sha": "61be85730eeffac3aed21236456133b65cf27b44",
+      "offset_utf16": [
+        35290,
+        53232
+      ],
+      "lines": [
+        71,
+        117
+      ],
+      "characters": 17942,
+      "first_line": "RESOLUÇÃO: Bart mantém controle do membro com pés no rosto/tronco do adversário e mão na alavanca, usando também mordida"
+    },
+    {
+      "source": "EPISODE",
+      "part": 4,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_004.source.txt",
+      "blob_sha": "17f02f9e3c0b3a0f734b80c9bd8851d21a76aa8d",
+      "offset_utf16": [
+        53232,
+        71045
+      ],
+      "lines": [
+        117,
+        151
+      ],
+      "characters": 17813,
+      "first_line": "CHR001-M203-MARY-HELP-CALL-20261101-001: JOGADOR: Bartholomeu observa a cena, respira fundo, tenta acalmar-se e chama po"
+    },
+    {
+      "source": "EPISODE",
+      "part": 5,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_005.source.txt",
+      "blob_sha": "c83fc8f51d5b14ea63113b54fbe1ad753a67d1d7",
+      "offset_utf16": [
+        71045,
+        88569
+      ],
+      "lines": [
+        151,
+        185
+      ],
+      "characters": 17524,
+      "first_line": "CHR001-M203-HEALING-QUESTION-20261101-001: PLAYER_DECLARATION: Bartholomeu chama o estranho de desesperado, considera ju"
+    },
+    {
+      "source": "EPISODE",
+      "part": 6,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_006.source.txt",
+      "blob_sha": "01397d613d04f8e2d56412127eb5464af45dffe5",
+      "offset_utf16": [
+        88569,
+        106192
+      ],
+      "lines": [
+        185,
+        251
+      ],
+      "characters": 17623,
+      "first_line": "CHR001-M203-WHAT-TOLD-WOMAN-20261102-001: PLAYER_DECLARATION: Bart questiona por que a mulher fugiria se ja sabia o que "
+    },
+    {
+      "source": "EPISODE",
+      "part": 7,
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_007.source.txt",
+      "blob_sha": "0219c761bd6fdb1136a695b22bd8cd77f614e753",
+      "offset_utf16": [
+        106192,
+        111894
+      ],
+      "lines": [
+        251,
+        268
+      ],
+      "characters": 5702,
+      "first_line": "M2.03.072 — VESTIÁRIO — TENTATIVA E RESULTADO ACEITO"
+    }
+  ]
+}
