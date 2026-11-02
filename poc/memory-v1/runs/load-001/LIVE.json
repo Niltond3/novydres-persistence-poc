@@ -11,8 +11,8 @@
       "pc-iris",
       "npc-ivo"
     ],
-    "last_event_seq": 22,
-    "last_event_id": "SIM-LOAD-001-E022",
+    "last_event_seq": 23,
+    "last_event_id": "SIM-LOAD-001-E023",
     "awaiting": "SYNTHETIC_NEXT_EVENT",
     "context_ref": "poc/memory-v1/runs/load-001/SCENE_CONTEXT.md",
     "context_anchor_event_id": "SIM-LOAD-001-E021"
@@ -28,7 +28,6 @@
     "state_known": true
   },
   "recent_event_ids": [
-    "SIM-LOAD-001-E013",
     "SIM-LOAD-001-E014",
     "SIM-LOAD-001-E015",
     "SIM-LOAD-001-E016",
@@ -37,7 +36,8 @@
     "SIM-LOAD-001-E019",
     "SIM-LOAD-001-E020",
     "SIM-LOAD-001-E021",
-    "SIM-LOAD-001-E022"
+    "SIM-LOAD-001-E022",
+    "SIM-LOAD-001-E023"
   ],
   "event_buffer": [
     {
@@ -323,6 +323,20 @@
       "location_id": "loc-workshop",
       "diegetic_datetime": "UNKNOWN",
       "claim_status": null
+    },
+    {
+      "event_id": "SIM-LOAD-001-E023",
+      "seq": 23,
+      "chronicle_id": "CHR-SIM-LOAD-001",
+      "simulation_only": true,
+      "source_type": "NPC_CLAIM",
+      "observable_payload": "Vale afirma novamente que a inspeção está concluída; prova não apresentada.",
+      "original_declaration_quote": null,
+      "source_provenance": "SYNTHETIC_SCRIPT",
+      "actor_id": "npc-ivo",
+      "location_id": "loc-workshop",
+      "diegetic_datetime": "UNKNOWN",
+      "claim_status": "UNVERIFIED"
     }
   ],
   "last_archived_seq": 4,
