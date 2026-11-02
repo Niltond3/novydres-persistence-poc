@@ -163,6 +163,14 @@
     "additional_required_checks": [
       "Always use original source and corrections before deciding an event is true",
       "Roll-related markers are not proof of RNG or COMMITTED ledger"
+    ],
+    "bootstrap_suggested": [
+      "LIVE.json",
+      "HISTORY_INDEX.json"
+    ],
+    "followup_on_mention": [
+      "knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+      "knowledge/OPEN_THREADS_V1.json"
     ]
   },
   "technical_ledger_status": "HISTORICALLY_UNPOPULATED_NOT_RECONSTRUCTED",
@@ -194,5 +202,8 @@
       "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
     ],
     "exact_checkpoint": "M2.03.073"
-  }
+  },
+  "knowledge_index_ref": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+  "open_threads_ref": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V1.json",
+  "knowledge_index_status": "PARTIAL_M1_M2_CLAIM_GUARDRAILS_NOT_COMPLETE_ENTITY_COVERAGE"
 }
