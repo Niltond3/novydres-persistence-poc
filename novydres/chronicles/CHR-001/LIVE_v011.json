@@ -1,0 +1,825 @@
+{
+  "schema": "NOVYDRES_CONTEXTUAL_PROGRESSIVE_MEMORY_V1_1",
+  "chronicle_id": "CHR-001",
+  "simulation_only": false,
+  "activation_status": "ACTIVE_PRIMARY_AUDIT_PARTIAL",
+  "operational_source": true,
+  "projection_created_at": "2026-11-02",
+  "last_confirmed_event_id": "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001",
+  "stage": {
+    "mode": "GUIDED_CHARACTER_CREATION",
+    "M1": "CLOSED",
+    "M2": "ACTIVE",
+    "M2_01": "CLOSED",
+    "M2_02": "CLOSED",
+    "M2_03": "ACTIVE_AWAITING_PLAYER_ACTION",
+    "M3_to_M5": "NOT_STARTED",
+    "embrace_occurred": false,
+    "main_chronicle_2010_started": false,
+    "diegetic_period": "late 1970s",
+    "diegetic_date_exact": null
+  },
+  "character": {
+    "entity_id": "pc-bartholomeu-krauser",
+    "name": "Bartholomeu Krauser",
+    "family_surname": "Krauser",
+    "wife": "Mary Krauser",
+    "son": "Mikahel Krauser",
+    "daughter": "Sara Krauser",
+    "mortal": true,
+    "clan_planned": "Gangrel, future only",
+    "resources": {
+      "xp_total": 519,
+      "xp_spent": 170,
+      "xp_remaining": 349,
+      "xp_credit_available": 20,
+      "willpower_provisional_max": 6,
+      "willpower_superficial_damage": 5,
+      "willpower_aggravated_damage": 0,
+      "willpower_available": 1
+    },
+    "full_v5_sheet": "PARTIAL_ALLOCATIONS_VERIFIED_NONALLOCATED_TRAITS_PENDING",
+    "sheet_source_refs": [
+      "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json"
+    ],
+    "target_sheet_not_equivalent_to_current": true,
+    "allocated_attributes": {
+      "Vigor": 3,
+      "Carisma": 2,
+      "Força": 4,
+      "Destreza": 2,
+      "Determinação": 1,
+      "Autocontrole": 1,
+      "Inteligência": 1
+    },
+    "allocated_skills": {
+      "Ofícios": 1,
+      "Briga": 4,
+      "Intimidação": 1,
+      "Condução": 2
+    },
+    "touchstones_historical": [
+      {
+        "name": "Sara Krauser",
+        "conviction_context": "inocência e cuidado"
+      },
+      {
+        "name": "Mary Krauser",
+        "conviction_context": "amor verdadeiro que tudo suporta, espera e perdoa"
+      }
+    ],
+    "touchstones_2010_validation": "UNKNOWN",
+    "mechanical_projection_ref": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+    "allocated_xp_breakdown": {
+      "attributes": 125,
+      "skills": 45,
+      "spent": 170,
+      "total": 519,
+      "remaining": 349,
+      "credit_available": 20
+    },
+    "future_predator_type": "GATO_DE_RUA_NO_CURRENT_VAMPIRE_EFFECT",
+    "provisional_roll_policy_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V2.json",
+    "roll_pool_basis_during_guided_creation": "TARGET_V2_PROVISIONAL_FROM_2026-11-03_PREVIOUS_ROLLS_UNCHANGED",
+    "target_sheet_ref": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+    "target_sheet_status": "APPROVED_NOT_BOUGHT",
+    "future_lineage_profile_ref": "novydres/systems/character-creation/local-profiles/GANGREL_URBANO_NOVYDRES_V1.json",
+    "future_lineage_lore_ref": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+    "approved_exception_target_equivalent_cap_xp": 675,
+    "exception_ceiling_is_not_spendable_xp": true,
+    "lineage_ancestor_knowledge_for_pc": "UNKNOWN_NOT_GRANTED"
+  },
+  "scene": {
+    "scene_id": "CHR001-M203-REAR-YARD-POST-COMBAT-SEARCH",
+    "episode_id": "M2.03",
+    "location": "rear courtyard by storage crates, unconscious unknown watcher; Bart crouched searching body; Nadezhda upstairs concealed by service-stair wall",
+    "participants": [
+      "pc-bartholomeu-krauser",
+      "npc-rear-courtyard-observer-unidentified",
+      "npc-street-woman-recognized"
+    ],
+    "last_event_id": "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001",
+    "awaiting": "PLAYER_NEXT_ACTION_CHOOSE_ITEMS_AND_PLAN_EXIT",
+    "context_packet": {
+      "built_from_event_id": "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001",
+      "context_status": "G28_SCENE_END_BATCH_COMBAT_CLOSED_SEARCH_EPILOGUE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v017.source.txt",
+        "novydres/governance/decisions/DECISIONS_STATE_V9.source.txt",
+        "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v015.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v016.source.txt",
+        "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+        "novydres/governance/decisions/DECISIONS_STATE_V8.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v014.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v015.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v013.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v014.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v013.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v011.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v010.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v010.source.txt"
+      ],
+      "location": "rear courtyard by storage crates, unconscious unknown watcher; Bart crouched searching body; Nadezhda upstairs concealed by service-stair wall",
+      "participants": [
+        "pc-bartholomeu-krauser",
+        "npc-rear-courtyard-observer-unidentified",
+        "npc-street-woman-recognized"
+      ],
+      "confirmed_facts": [
+        {
+          "text": "Bartholomeu entered the staff changing room without interception at M2.03.072; no ongoing invisibility granted",
+          "source_event_ids": [
+            "CHR001-M203-STAFF-ACCESS-20261102-001"
+          ]
+        },
+        {
+          "text": "Bartholomeu wears a disposable medical mask, removed bloody trousers and put on bulky, poorly fitting work trousers; upper body clothing change incomplete",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Mary-made winter coat is on the bench, not worn; original bloody garments are nearby, not discarded",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Knife taken from severely injured stranger remains in Bart's control; exact placement concealed or exposed is unspecified",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Gray-apron worker entered with used clothing, saw bloody garments and asks: Você veio da emergência?",
+          "source_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001"
+          ]
+        },
+        {
+          "text": "Severely wounded stranger remains in clinical care; outcome unknown",
+          "source_event_ids": [
+            "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001"
+          ]
+        },
+        {
+          "text": "Bart responde 'Sim' de maneira seca, termina de vestir/ajustar roupas de trabalho, funcionário interrompe perguntas e volta à própria tarefa; PJ permanece no vestiário",
+          "source_event_ids": [
+            "CHR001-M203-STAFF-TAKE-HALF-20261102-001"
+          ]
+        },
+        {
+          "text": "Vigor alvo provisório 5 + Intimidação alvo provisório 2 => Take Half 3 sucessos versus dificuldade 3; nenhum d10 ou FV foi usado",
+          "source_event_ids": [
+            "CHR001-M203-STAFF-TAKE-HALF-20261102-001"
+          ]
+        },
+        {
+          "text": "PC left hospital wearing Mary's coat and nonbloody used winter work gear, with knife concealed. Bloodied clothes left in hospital staff room; avoided casual approaches by G25 Take Half 7 pool vs difficulty3.",
+          "source_event_ids": [
+            "CHR001-M203-HOSPITAL-EXIT-20261102-001"
+          ]
+        },
+        {
+          "text": "PC believes stranger supernatural; went via metro on own pass to alleged Volnaya address, on foot; the NPC_CLAIM concerning Nadezhda is not confirmed",
+          "source_event_ids": [
+            "CHR001-M203-METRO-VOLNAYA-20261102-001"
+          ]
+        },
+        {
+          "text": "Voicemail left for Mary that PC is safe and helping someone, not returning to prior work. Whether she heard it unknown. PC outside building 12 observing nearby sedan, utility vehicle, windows and side access",
+          "source_event_ids": [
+            "CHR001-M203-MARY-CALL-OBSERVE-20261102-001"
+          ]
+        },
+        {
+          "text": "Perception test Raciocínio provisional3+Prontidão provisional2 pool5, difficulty3; faces transcribed [4,4,5,4,9] 1 success. RNG origin not audited. Player requested replace preliminary resolution with Take Half2/3 and win at cost; narrator exception explicit, no new RNG, no FV",
+          "source_event_ids": [
+            "CHR001-M203-VIGIL-ROLL-PRELIM-20261102-001",
+            "CHR001-M203-VIGIL-COST-20261102-001"
+          ]
+        },
+        {
+          "text": "Useful perception: sedan is occupied; silhouette appears focused on entrance. Side service path has recent disturbances/footprints. Cost: occupant turns attention toward Bart during his extended scrutiny. Not proof of menace or ties to Gromov",
+          "source_event_ids": [
+            "CHR001-M203-VIGIL-COST-20261102-001"
+          ]
+        },
+        {
+          "text": "Bart ignored sedan occupant, entered building12, listened before bifurcation with +1 situational, Take Half pool6 difficulty3 successes3 no RNG/FV; reached room4",
+          "source_event_ids": [
+            "CHR001-M203-APPROACH-VOLNAYA12-20261103-001",
+            "CHR001-M203-ENTER-LISTEN-VOLNAYA12-20261103-001",
+            "CHR001-M203-TAKE-HALF-FIND-ROOM4-20261103-001"
+          ]
+        },
+        {
+          "text": "Bart recognized woman through room4 door as same woman from initial street incident; prior unknown-to-PC interpretation explicitly corrected. She opted to accompany him, has bag and coat, directed service stairs to rear, not fully trusting",
+          "source_event_ids": [
+            "CHR001-M203-ROOM4-KNOCK-VOICE-20261103-001",
+            "CHR001-M203-ROOM4-ALIVE-CLAIM-20261103-001",
+            "CHR001-M203-DOOR-RECOGNITION-CORR-20261103-001",
+            "CHR001-M203-ROOM4-ESCAPE-QUESTION-20261103-001",
+            "CHR001-M203-ROOM4-ESCAPE-DECISION-20261103-001"
+          ]
+        },
+        {
+          "text": "Bart offered recovered knife; street woman accepted it and wrapped blade in cloth, now holds it; Bart no longer holds it",
+          "source_event_ids": [
+            "CHR001-M203-ROOM4-KNIFE-OFFER-20261103-001"
+          ]
+        },
+        {
+          "text": "At upper service stair window Bart positioned woman outside line of sight and looked into rear yard. Raciocínio3+Prontidão2+1=6 against D4, faces [10,9,6,9,4,3] shown in chat, 4 successes, player accepted without FV. RNG provenance UNVERIFIED",
+          "source_event_ids": [
+            "CHR001-M203-SERVICE-STAIR-WINDOW-ROLL-20261103-001",
+            "CHR001-M203-REAR-COURTYARD-SENTINEL-20261103-001"
+          ]
+        },
+        {
+          "text": "Rear courtyard visible from above: service exit lit, iron gate to narrow passage; wooden crates/small depot cast a shadow. One man remains near depot out of view from direct doorway and appears to watch service exit and gate. Unidentified, armament/affiliation and other watchers unknown, no detection of PC confirmed",
+          "source_event_ids": [
+            "CHR001-M203-REAR-COURTYARD-SENTINEL-20261103-001"
+          ]
+        },
+        {
+          "text": "Woman claims to have maintained names/addresses for Gromov, copied records and fled, says some people disappeared; unverified NPC_CLAIM. Bart reflects on family and avoiding violence; asks her why she is sought.",
+          "source_event_ids": [
+            "CHR001-M203-NADEZHDA-REGISTERS-20261103-001"
+          ]
+        },
+        {
+          "text": "Bart declared he will handle man, verified first floor above rear yard. No earlier combat or movement from clarification alone.",
+          "source_event_ids": [
+            "CHR001-M203-FIRST-FLOOR-CLARIFICATION-20261103-001"
+          ]
+        },
+        {
+          "text": "Jump preflight target V2 Destreza4+Atletismo3 pool7 vs difficulty4, faces already shown in previous turn [7,1,10,1,8,2,10] 6 successes, preliminary old-chat RNG unverified.",
+          "source_event_ids": [
+            "CHR001-M203-WINDOW-LEAP-PRELIMINARY-20261103-001"
+          ]
+        },
+        {
+          "text": "Player explicitly accepted six successes no WP. Bart jumped through service-stair window and landed with controlled breakfall near watcher, no fall damage; slight muffled impact noise; woman remains upstairs; no physical contact yet.",
+          "source_event_ids": [
+            "CHR001-M203-LEAP-ACCEPTED-LANDING-20261103-001"
+          ]
+        },
+        {
+          "text": "Surprise opposed fresh roll, Bart TARGET V2 Destreza4+Furtividade3 pool7 faces [1,5,9,7,10,1,3] 3 successes, watcher provisional Raciocínio3+Prontidão2 pool5 faces [9,4,5,4,8] 2 successes. Provisional margin+1, player has one WP free and choice pending; do not conclude awareness, grapple or unconsciousness.",
+          "source_event_ids": [
+            "CHR001-M203-SURPRISE-PRELIM-20261103-001"
+          ]
+        },
+        {
+          "text": "Player accepted surprise check, Bart Destreza4+Furtividade3 3 successes vs rear observer Raciocínio3+Prontidão2 2, no WP. One attack with surprise uses static D1; man not defending this initial move.",
+          "source_event_ids": [
+            "CHR001-M203-SURPRISE-ACCEPTED-20261103-001"
+          ]
+        },
+        {
+          "text": "First grappling attack roll TARGET V2 provisional Força5+Briga5 10 dice [8,2,7,7,4,10,6,10,6,1], 9 successes including pair of tens vs static D1, preliminary margin+8. WP1 pending with failed positions2,5,10. No grappling/noise consequence/KO finalized.",
+          "source_event_ids": [
+            "CHR001-M203-FIRST-GRAPPLE-PRELIM-20261103-001"
+          ]
+        },
+        {
+          "text": "Player confirmed original first grapple 9 successes no WP; explicitly corrected narrator that gradual injury/incapacitation until unconscious was in initial intent. V5 first successful grapple holds but does no damage, so no retroactive damage. Bart has handhold over watcher, slight local scrape/box creak; no shout confirmed.",
+          "source_event_ids": [
+            "CHR001-M203-INITIAL-GRAPPLE-ACCEPTED-INTENT-CORRECTION-20261103-001"
+          ]
+        },
+        {
+          "text": "Following-round V5 contested grapple for nonlethal damage, Bart Target V2 Força5+Briga5=10 vs watcher fixed Força3+Briga2=5, faces PC [5,4,8,9,4,5,6,3,5,6] successes4; NPC [9,8,2,10,3] successes3. Margin +1 provisional, 1 superficial damage if accepted, NOT knockout. WP1 choice pending, possible reroll up to3 failures among 1,2,5,6,8,9.",
+          "source_event_ids": [
+            "CHR001-M203-GRAPPLE-DAMAGE-CONTEST-PRELIM-20261103-001"
+          ]
+        },
+        {
+          "text": "Player explicitly requested provisional Briga (Agarrar) specialization active because it is in TARGET V2. Current policy DEC-CR-018 excluded specialties; DEC-CR-019 is scoped amendment: temporary +1 die only to Briga (Agarrar) from pending M2.03.099 and future applicable rolls, no purchase, XP, previous completed rolls, or other specialty changes.",
+          "source_event_ids": [
+            "CHR001-M203-EXPLICIT-PROVISIONAL-GRAPPLE-SPEC-20261103-001"
+          ]
+        },
+        {
+          "text": "M2.03.099 finalized: PC4 vs watcher3 successes, margin1; added specialization die [3] no successes; WP preserved. Watcher takes 1 superficial blunt, still conscious. NPC health provisional6 (Vigor3+3). No loud shout or alarm confirmed, slight local scraping/creak.",
+          "source_event_ids": [
+            "CHR001-M203-EXPLICIT-PROVISIONAL-GRAPPLE-SPEC-20261103-001"
+          ]
+        },
+        {
+          "text": "M2.03.101 next opposed grapple damage: PC Força5+Briga5+1 specialized pool11 faces [8,1,6,4,5,2,8,5,10,1,4] =4 successes; watcher Força3+Briga2 pool5 [4,2,10,4,3]=1. Provisional margin+3, 2 superficial if accepted, NPC current damage1 and proposed total3. No damage applied in this round, WP1 choice pending with failed PC positions2,4,5,6,8,10,11.",
+          "source_event_ids": [
+            "CHR001-M203-SUSTAINED-GRAPPLE-PRELIM-20261103-001"
+          ]
+        },
+        {
+          "text": "102 prior margin+3 accepted no WP -> +2 watcher superficial (total3/6); 103 opposed 4vs3 margin+1 pre-roll; 104 accepted no WP -> +1 superficial total4/6. Retrospective narrator typo 5/6 was corrected to4/6.",
+          "source_event_ids": [
+            "CHR001-M203-GRAPPLE-101-ACCEPTED-DAMAGE-20261103-001",
+            "CHR001-M203-GRAPPLE-103-PRELIMINARY-20261103-001",
+            "CHR001-M203-GRAPPLE-103-ACCEPTED-DAMAGE-20261103-001"
+          ]
+        },
+        {
+          "text": "105 opposed 3vs2 margin+1 provisional; 106 player accepted no WP and inflicted +1 superficial man4->5/6. Then player expressly chose cinematic Take Half PC11->5 vs watcher5->2 margin+3, 0 RNG/FV, 2 superficial after halving -> fills sixth and overflows one superficial converted to aggravated. Final 6/6 five superficial+one aggravated, mortal unconscious alive breathing shallow; combat CLOSED.",
+          "source_event_ids": [
+            "CHR001-M203-GRAPPLE-105-PRELIMINARY-20261103-001",
+            "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001"
+          ]
+        },
+        {
+          "text": "107 Bart searched unconscious observer with no opposition and no dice. Found concealed compact pistol at waist (loaded status unknown), wallet with money and ID printed 'Aleksei Vetrov' (not verified), keyring3 with one resembling vehicle key (unknown vehicle), folded pencil note Volnaya12 / quarto4 / fundos, and NO evident radio. No items taken/retained yet. Suggests surveilling this specific room, but employer/allegiance unproven.",
+          "source_event_ids": [
+            "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001"
+          ]
+        }
+      ],
+      "original_player_declaration": "Eu faço uma revista no homem, procurando por armas, chaves, carteira, qualquer coisa útil",
+      "declaration_ends_incomplete": false,
+      "player_assumption_not_fact": "Printed document says Aleksei Vetrov, unverified civil identity. Note is evidence of familiarity with Volnaya12 room4 and rear exit, NOT confirmation of employment by Gromov or relation to front sedan. Breathing confirmed immediately after incident, longer-term survival unknown.",
+      "intent_not_fully_resolved": "Bart has inspected items but not chosen what to take, no further movement/aid; Nadezhda still upstairs, unknown she knows combat outcome. Current question is next player action.",
+      "npc_claims": [
+        {
+          "source": "unnamed injured stranger",
+          "claim": "Nadezhda Sokolova allegedly stayed in boardinghouse Travessa Volnaya 12 room 4; Gromov allegedly received address",
+          "verified": false,
+          "source_event_ids": [
+            "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001"
+          ]
+        },
+        {
+          "source": "narrator constrained new observation",
+          "claim": "Sedan occupant appears to watch number 12; identity, loyalties, and motives not verified",
+          "verified": false,
+          "source_event_ids": [
+            "CHR001-M203-VIGIL-COST-20261102-001"
+          ]
+        }
+      ],
+      "actor_knowledge": [
+        {
+          "entity_id": "npc-gray-apron-hospital-worker",
+          "knows_event_ids": [
+            "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+            "CHR001-M203-STAFF-TAKE-HALF-20261102-001"
+          ],
+          "confirmed_observations": [
+            "a person changing clothes",
+            "bloody clothes within reach",
+            "Bart disse 'Sim' secamente e mostrou postura fechada; continuou a troca de roupa"
+          ],
+          "unknowns": [
+            "Bart's identity",
+            "Bart's history",
+            "knife existence/location",
+            "reason for blood",
+            "whether Bart came from ER",
+            "Intenção futura de Bart de deixar o hospital; causa do sangue e a identidade real continuam UNKNOWN"
+          ],
+          "role_beyond_apron": "UNKNOWN"
+        },
+        {
+          "entity_id": "pc-bartholomeu-krauser",
+          "known_from_source_refs": [
+            "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+            "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+          ],
+          "unknowns": [
+            "injured man's medical outcome",
+            "gray-apron worker's motives",
+            "Nadezhda actual location",
+            "Gromov actual identity/capabilities"
+          ]
+        },
+        {
+          "entity_id": "npc-unidentified-sedan-occupant",
+          "knows_event_ids": [
+            "CHR001-M203-VIGIL-COST-20261102-001"
+          ],
+          "confirmed_observations": [
+            "A very large bundled figure outside looked toward the sedan/building repeatedly"
+          ],
+          "unknowns": [
+            "Bart's identity",
+            "Bart's role",
+            "existence or nature of patient's injury",
+            "Nadezhda's claimed address as NPC_CLAIM",
+            "knife concealed",
+            "Mary's voicemail",
+            "Bart's reasoning"
+          ],
+          "role": "UNKNOWN"
+        },
+        {
+          "entity_id": "npc-street-woman-recognized",
+          "knows_event_ids": [
+            "CHR001-M203-ROOM4-KNOCK-VOICE-20261103-001",
+            "CHR001-M203-ROOM4-ALIVE-CLAIM-20261103-001",
+            "CHR001-M203-DOOR-RECOGNITION-CORR-20261103-001",
+            "CHR001-M203-ROOM4-ESCAPE-QUESTION-20261103-001",
+            "CHR001-M203-ROOM4-ESCAPE-DECISION-20261103-001",
+            "CHR001-M203-ROOM4-KNIFE-OFFER-20261103-001"
+          ],
+          "confirmed_observations": [
+            "Has seen Bart at initial street incident and recognized him",
+            "Bart says injured man at hospital and alive, unverified",
+            "He says a dark sedan occupant watched main entrance",
+            "Accepted returned knife and carries bag"
+          ],
+          "unknowns": [
+            "Rear watcher existence unless Bart tells her",
+            "Bart plan",
+            "Patient medical condition",
+            "Affiliation of any watchers"
+          ],
+          "name_status": "Nadezhda name told by injured man; not independently verified"
+        },
+        {
+          "entity_id": "npc-rear-courtyard-observer-unidentified",
+          "knows_event_ids": [],
+          "confirmed_observations": [],
+          "unknowns": [
+            "Bart at upper window",
+            "woman's location",
+            "why they investigate courtyard"
+          ],
+          "status": "one man visually spotted by PC, no evidence that he noticed PCs"
+        },
+        {
+          "entity_id": "pc-bartholomeu-krauser",
+          "known_from_source_refs": [
+            "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+            "novydres/chronicles/CHR-001/character/state_v017.source.txt"
+          ],
+          "confirmed_observations": [
+            "Rear watcher unconscious, breathing shallow",
+            "Printed identification Aleksei Vetrov",
+            "Concealed pistol, wallet with small cash, three keys, pencil note explicitly names room4 and rear",
+            "No obvious radio during search"
+          ],
+          "unknowns": [
+            "Whether ID authentic",
+            "whether firearm loaded",
+            "which vehicle key opens",
+            "whether Gromov employs watcher",
+            "who else watched the encounter",
+            "watcher's medical outcome"
+          ]
+        }
+      ],
+      "latent_obligations": [
+        {
+          "thread_id": "intent-help-nadezhda",
+          "type": "PLAYER_INTENT",
+          "status": "OPEN",
+          "source_refs": [
+            "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+          ]
+        }
+      ],
+      "unresolved": [
+        "Bloodied clothes not disposed",
+        "Patient outcome unknown",
+        "PENDING_LORE_AUDIT of stranger",
+        "Unconfirmed Nadezhda/Gromov claims",
+        "Funcionário se afastou da interação, mas notou vestimentas ensanguentadas; ações futuras não definidas",
+        "Referência a outra pessoa não estabelece presença de segundo NPC",
+        "Sedan occupant has noticed Bart observing; identity and what they do next unknown",
+        "Reported recent footprints by service entrance; person and timing unknown",
+        "Mary has not been confirmed to hear the recorded call",
+        "Nadezhda and Gromov, relationship to occupant and patient outcome remain UNKNOWN",
+        "One watcher at rear by small depot; identity, armament, motive and links unknown; unknown if more watchers",
+        "PC has not descended service stair or opened rear door; woman has knife and travel bag, shielded from window view",
+        "Surprise roll 3 vs 2 preliminary, WP reroll decision pending; grapple and target response not resolved.",
+        "Bart landed safely but some muffled impact noise happened; target has not yet visibly reacted, whether he heard cannot be finalized.",
+        "Initial grapple roll provisional 9 vs difficulty1, WP decision pending; man has not yet visibly reacted.",
+        "V5 second-round contested grapple roll PC4 vs NPC3 preliminary, 1 WP free, reroll positions1,2,5,6,8,9 until authorized",
+        "M2.03.101 opposed grapple PC4 vs NPC1 provisional margin+3; FV1 choice pending; prospective 2 superficial not applied yet.",
+        "Rear watcher incapacitated at 6/6 (5 superficial /1 aggravated), breathing shallow; prognosis unknown; no continuing combat, no FV gate.",
+        "Found pistol, wallet cash and identity document Aleksei Vetrov, three keys, note Volnaya12 quarto4 fundos; none yet looted.",
+        "G28 local scene-end batch persistence approved; do not commit every micro-turn during open scene."
+      ],
+      "constraints": [
+        "PC agency reserved to player",
+        "No retcon or implicit completion of unfinished sentence",
+        "NPC autonomy and limited knowledge",
+        "No new roll or Willpower cost",
+        "No 2010 or Embrace",
+        "G27 narrator responsible for tests/options, G25 before rolls and FV after, G26 batch writes; do not assume identity or enemy affiliation",
+        "G25 post-roll WP choice before consequence; G27 narrator determines surprise/grapple; TARGET_V2 applies from approval, no purchased specialization.",
+        "V5 surprise initial attack static D1, not opposed this first attack; future struggle opposed Força+Briga. G25 FV window after dice. No invented speciality bonuses.",
+        "Do not retcon declared intent as 'noninjurious'; initial grapple mechanically no damage, following-round damage if PC wins per V5 core p301.",
+        "DEC-CR-019 scoped temporary Briga(Agarrar) +1 only; no broader provisional specializations without separate approval.",
+        "Preserve existing accepted M2.03.097 initial grab 9 successes no specialist die; M2.03.099 +1 specialist die rolled 3 no change to margin.",
+        "Final Take Half PC5 vs NPC2 was explicit local player-authorized quick-out, not universal Take Half in opposed combat.",
+        "The player searched but did not declare taking any item; NPC unconscious, no automatic revival, search no roll."
+      ],
+      "context_packet_source_status": "SOURCE_TEXT_VERIFIED_PROJECTION_NOT_AUDITED_FULL_HISTORY"
+    },
+    "combat_state": {
+      "status": "CLOSED",
+      "closed_event_id": "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+      "opponent": "npc-rear-courtyard-observer-unidentified",
+      "health_max_provisional": 6,
+      "health_superficial_confirmed": 5,
+      "health_aggravated_confirmed": 1,
+      "health_total": 6,
+      "conscious": false,
+      "breathing": "SHALLOW_PRESENT_AT_CLOSE",
+      "alive": true,
+      "prognosis": "UNKNOWN",
+      "external_alarm": "NONE_CONFIRMED",
+      "no_further_grapple_pending": true
+    },
+    "postcombat_search": {
+      "event_id": "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001",
+      "without_test": true,
+      "items_found": [
+        {
+          "item": "compact_pistol",
+          "location": "concealed waist holster",
+          "loaded": "UNKNOWN",
+          "taken": false
+        },
+        {
+          "item": "wallet",
+          "contains": [
+            "modest cash",
+            "identity document Aleksei Vetrov"
+          ],
+          "identity_verified": false,
+          "taken": false
+        },
+        {
+          "item": "three_keys",
+          "vehicle_like_key": true,
+          "vehicle_identity": "UNKNOWN",
+          "taken": false
+        },
+        {
+          "item": "penciled_note",
+          "text": "Travessa Volnaya, 12 / Quarto 4 / Fundos",
+          "taken": false
+        }
+      ],
+      "no_evident_radio": true,
+      "pc_has_taken_items": false
+    }
+  },
+  "recent_event_ids": [
+    "CHR001-M203-LEAP-ACCEPTED-LANDING-20261103-001",
+    "CHR001-M203-SURPRISE-PRELIM-20261103-001",
+    "CHR001-M203-SURPRISE-ACCEPTED-20261103-001",
+    "CHR001-M203-FIRST-GRAPPLE-PRELIM-20261103-001",
+    "CHR001-M203-INITIAL-GRAPPLE-ACCEPTED-INTENT-CORRECTION-20261103-001",
+    "CHR001-M203-GRAPPLE-DAMAGE-CONTEST-PRELIM-20261103-001",
+    "CHR001-M203-EXPLICIT-PROVISIONAL-GRAPPLE-SPEC-20261103-001",
+    "CHR001-M203-SUSTAINED-GRAPPLE-PRELIM-20261103-001",
+    "CHR001-M203-GRAPPLE-101-ACCEPTED-DAMAGE-20261103-001",
+    "CHR001-M203-GRAPPLE-103-PRELIMINARY-20261103-001",
+    "CHR001-M203-GRAPPLE-103-ACCEPTED-DAMAGE-20261103-001",
+    "CHR001-M203-GRAPPLE-105-PRELIMINARY-20261103-001",
+    "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+    "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001"
+  ],
+  "event_buffer": [
+    {
+      "event_id": "CHR001-M203-ROOM4-ESCAPE-QUESTION-20261103-001",
+      "entry": "M2.03.086",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "kind": "CHAT_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-ROOM4-ESCAPE-DECISION-20261103-001",
+      "entry": "M2.03.087",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "kind": "CHAT_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-ROOM4-KNIFE-OFFER-20261103-001",
+      "entry": "M2.03.088",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "kind": "CHAT_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-SERVICE-STAIR-WINDOW-ROLL-20261103-001",
+      "entry": "M2.03.089",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "kind": "PRELIMINARY_ROLL",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-REAR-COURTYARD-SENTINEL-20261103-001",
+      "entry": "M2.03.090",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "kind": "PLAYER_ACCEPTANCE_AND_WORLD_OBSERVATION",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-NADEZHDA-REGISTERS-20261103-001",
+      "entry": "M2.03.091",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "kind": "G26_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-FIRST-FLOOR-CLARIFICATION-20261103-001",
+      "entry": "M2.03.092",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "kind": "G26_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-WINDOW-LEAP-PRELIMINARY-20261103-001",
+      "entry": "M2.03.093",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "kind": "G26_BACKLOG",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-LEAP-ACCEPTED-LANDING-20261103-001",
+      "entry": "M2.03.094",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "kind": "JUMP_ACCEPTED_SAFE_LANDING",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-SURPRISE-PRELIM-20261103-001",
+      "entry": "M2.03.095",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "kind": "OPPOSED_SURPRISE_PRELIMINARY_AWAITING_WP",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-SURPRISE-ACCEPTED-20261103-001",
+      "entry": "M2.03.096",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v013.source.txt",
+      "kind": "SURPRISE_ACCEPTED",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-FIRST-GRAPPLE-PRELIM-20261103-001",
+      "entry": "M2.03.097",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v013.source.txt",
+      "kind": "FIRST_GRAPPLE_PROVISIONAL_AWAIT_WP",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-INITIAL-GRAPPLE-ACCEPTED-INTENT-CORRECTION-20261103-001",
+      "entry": "M2.03.098",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v014.source.txt",
+      "kind": "PLAYER_INTENT_CORRECTION_AND_ACCEPTANCE",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-GRAPPLE-DAMAGE-CONTEST-PRELIM-20261103-001",
+      "entry": "M2.03.099",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v014.source.txt",
+      "kind": "OPPOSED_GRAPPLE_DAMAGE_PRELIM_WP_PENDING",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-EXPLICIT-PROVISIONAL-GRAPPLE-SPEC-20261103-001",
+      "entry": "M2.03.100",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v015.source.txt",
+      "kind": "PLAYER_ACCEPT_AND_EXPLICIT_SPECIALIZATION_AMENDMENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-SUSTAINED-GRAPPLE-PRELIM-20261103-001",
+      "entry": "M2.03.101",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v015.source.txt",
+      "kind": "GRAPPLE_DAMAGE_OPPOSED_PRELIM_WP_PENDING",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-GRAPPLE-101-ACCEPTED-DAMAGE-20261103-001",
+      "entry": "M2.03.102",
+      "kind": "DAMAGE_101_ACCEPTED",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-GRAPPLE-103-PRELIMINARY-20261103-001",
+      "entry": "M2.03.103",
+      "kind": "PRELIM_ROLL_103",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-GRAPPLE-103-ACCEPTED-DAMAGE-20261103-001",
+      "entry": "M2.03.104",
+      "kind": "DAMAGE_103_ACCEPTED",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-GRAPPLE-105-PRELIMINARY-20261103-001",
+      "entry": "M2.03.105",
+      "kind": "PRELIM_ROLL_105",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+      "entry": "M2.03.106",
+      "kind": "COMBAT_CLOSED_TAKE_HALF",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M203-UNCONSCIOUS-WATCHER-SEARCH-20261103-001",
+      "entry": "M2.03.107",
+      "kind": "UNCONSCIOUS_WATCHER_SEARCH",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "technical_ledger_committed": false
+    }
+  ],
+  "event_buffer_status": "G28_SCENE_CLOSED_READY_FOR_ONE_COMMIT",
+  "roll_pending": null,
+  "last_roll_transcript": {
+    "event_id": "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+    "method": "TAKE_HALF_LOCAL_APPROVED_CINEMATIC_OPPOSED",
+    "actor_pool": 11,
+    "actor_successes": 5,
+    "opponent_pool": 5,
+    "opponent_successes": 2,
+    "margin": 3,
+    "dice_faces": [],
+    "rng_used": false,
+    "wp_spent": 0,
+    "damage_superficial_applied": 2,
+    "npc_track_final": {
+      "superficial": 5,
+      "aggravated": 1,
+      "max": 6
+    },
+    "result": "MORTAL_NPC_INCAPACITATED_UNCONSCIOUS"
+  },
+  "history_index_ref": "novydres/chronicles/CHR-001/HISTORY_INDEX_v011.json",
+  "persistence": {
+    "store": "GITHUB_ACTIVE_PRIMARY",
+    "operational_drives_source": "GOOGLE_DRIVE_INACTIVE_TEXT_ARCHIVE_ONLY",
+    "readback_required": true,
+    "cutover_complete": true,
+    "previous_technical_ledger_events": "NOT_BACKFILLED",
+    "previous_technical_ledger_rolls": "NOT_BACKFILLED"
+  },
+  "rotation": {
+    "max_chars_provisional": 30000,
+    "max_event_buffer_provisional": 20
+  },
+  "operational_activation": {
+    "decision": "MIG-DEC-002",
+    "date": "2026-11-02",
+    "previous_path": "novydres/chronicles/CHR-001/LIVE.json",
+    "previous_blob_sha": "1b91140a686b77eb23dcdd22357e3b8e4cefc53d",
+    "scope": "OPERATIONAL_ONLY_FULL_MIGRATION_PENDING",
+    "new_scene_events": 17,
+    "github_primary": true,
+    "drive_text_inactive": true,
+    "drive_visual_originals_active": true,
+    "independent_fresh_chat_verified": false
+  },
+  "versioning": {
+    "parent": "novydres/chronicles/CHR-001/LIVE_v010.json",
+    "parent_blob_sha": "389aeff81f8680348026aa68d9d9dbb755c394dd",
+    "source_head_sha": "c9387340433900f444ce8508d9136d35c8ba4bb8",
+    "current_version": 11,
+    "readback_required": true
+  },
+  "pending_persistence_policy": {
+    "event_grouping": "SCENE_END_ONLY",
+    "decision": "DEC-CR-020",
+    "path": "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
+    "with_G26_error_handling": true
+  },
+  "narrator_adjudication_policy": {
+    "decision": "DEC-CR-017",
+    "path": "novydres/runtime/NARRATOR_LED_ADJUDICATION_G27_V1.md",
+    "status": "ACTIVE"
+  },
+  "metadata_decision_id": "DEC-CR-018",
+  "previous_version": {
+    "ref": "novydres/chronicles/CHR-001/LIVE_v005.json",
+    "blob_sha": "2e85e296cbc52a707b00802032ac633a32b11388"
+  },
+  "provisional_roll_policy_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+  "governance_scoped_exception": {
+    "decision": "DEC-CR-019",
+    "scope": "Briga (Agarrar) only during guided provisional applicable rolls from M2.03.099",
+    "no_xp": true
+  }
+}
