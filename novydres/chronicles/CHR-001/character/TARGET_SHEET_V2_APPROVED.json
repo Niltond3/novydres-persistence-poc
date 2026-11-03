@@ -1,0 +1,175 @@
+{
+  "schema": "NOVYDRES_CHRONICLE_TARGET_SHEET_V2",
+  "document_id": "CHR001_TARGET_SHEET",
+  "version": "2.0",
+  "status": "APPROVED_LOCAL_TARGET_ACTIVE_NOT_BOUGHT",
+  "effective_date": "2026-11-03",
+  "scope": "CHR-001",
+  "name": "Bartholomeu Krauser",
+  "creation_mode": "GUIDED_M2_MORTAL",
+  "clan": "Gangrel",
+  "variant_id": "GANGREL_URBANO_NOVYDRES_V1",
+  "lineage_ref": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+  "lineage_profile_ref": "novydres/systems/character-creation/local-profiles/GANGREL_URBANO_NOVYDRES_V1.json",
+  "future_sire_name": null,
+  "future_sire_gender": null,
+  "embrace_when": null,
+  "generation": null,
+  "predator_future": "Gato de Rua",
+  "attributes": {
+    "Força": 5,
+    "Destreza": 4,
+    "Vigor": 5,
+    "Carisma": 2,
+    "Manipulação": 2,
+    "Autocontrole": 3,
+    "Inteligência": 3,
+    "Raciocínio": 4,
+    "Determinação": 3
+  },
+  "skills": {
+    "Briga": 5,
+    "Atletismo": 3,
+    "Investigação": 3,
+    "Política": 3,
+    "Ofícios": 2,
+    "Prontidão": 3,
+    "Intimidação": 4,
+    "Ladroagem": 2,
+    "Armas de Fogo": 3,
+    "Condução": 2,
+    "Sobrevivência": 3,
+    "Furtividade": 3
+  },
+  "specializations": {
+    "Briga": [
+      "Agarrar"
+    ],
+    "Intimidação": [
+      "Coerção Física"
+    ],
+    "Ofícios": [
+      "Mecânica de Automóveis"
+    ]
+  },
+  "specializations_grant_source": "PENDING_FINAL_AUDIT",
+  "future_disciplines": {
+    "Proteanismo": 2,
+    "Fortitude": 3,
+    "Potência": 1,
+    "Animalismo": 0
+  },
+  "future_powers": {
+    "Proteanismo": [
+      "Garras Ferais"
+    ],
+    "Fortitude": [],
+    "Potência": []
+  },
+  "future_blood_potency": 2,
+  "future_backgrounds": {
+    "Contatos Criminais": 3,
+    "Contatos Policiais": 3,
+    "Recursos": 1
+  },
+  "languages_gratuities_claimed": 2,
+  "languages_audit_pending": true,
+  "future_predator_local_exception": "Substituição de Rapidez/Potência por Fortitude 1, somente pós-Abraço, DEC-CR-009",
+  "future_humanity": "Baseline V5 -1 por Gato de Rua; resultado final ainda a validar",
+  "derived_target_willpower": 6,
+  "derived_target_health_base": 8,
+  "cost_convention": "LOCAL_HISTORICAL_EQUIVALENT_NOT_FINAL_AUDITED_V5",
+  "cost_breakdown": {
+    "attributes": 370,
+    "skills": 228,
+    "disciplines": 45,
+    "blood_potency": 20,
+    "advantages_backgrounds": 12
+  },
+  "provisional_total_xp_equivalent": 675,
+  "prior_target_total": 574,
+  "additional_over_prior": 101,
+  "base_budget": 519,
+  "exceptional_difference": 156,
+  "budget_cap_approved_for_this_sheet": 675,
+  "approval_does_not_grant_or_spend_xp": true,
+  "current_ledger_unchanged": {
+    "xp_total": 519,
+    "xp_spent": 170,
+    "xp_remaining": 349,
+    "xp_credit_available": 20
+  },
+  "current_allocated_sheet": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+  "new_changes": [
+    {
+      "trait": "Raciocínio",
+      "from": 3,
+      "to": 4,
+      "cost": 20
+    },
+    {
+      "trait": "Prontidão",
+      "from": 2,
+      "to": 3,
+      "cost": 9
+    },
+    {
+      "trait": "Intimidação",
+      "from": 2,
+      "to": 4,
+      "cost": 21
+    },
+    {
+      "trait": "Armas de Fogo",
+      "from": 1,
+      "to": 3,
+      "cost": 15
+    },
+    {
+      "trait": "Sobrevivência",
+      "from": "not_in_prior_target",
+      "to": 3,
+      "cost": 18
+    },
+    {
+      "trait": "Furtividade",
+      "from": "not_in_prior_target",
+      "to": 3,
+      "cost": 18
+    },
+    {
+      "trait": "Ofícios especialização",
+      "from": "Sistemas de Aquecimento",
+      "to": "Mecânica de Automóveis",
+      "cost": 0
+    },
+    {
+      "trait": "Animalismo 1",
+      "from": "in-clan ordinary Gangrel",
+      "to": "Potência 1 in-clan local hereditary",
+      "cost": 0
+    }
+  ],
+  "narrative_evidence": {
+    "reasoning_awareness": "Improvisação sob pressão e vigilância de veterano de duas guerras",
+    "intimidation": "Trabalhos de coerção/cobrança e experiência militar",
+    "firearms": "Serviço na Segunda Guerra Mundial e Guerra do Vietnã",
+    "survival": "Experiência em obter água/comida/abrigo, primeiros socorros e terreno de selva no Vietnã, conforme declaração do jogador",
+    "stealth": "Movimento furtivo, horas de espera, emboscadas e aproximação silenciosa para combate corpo a corpo na selva, conforme declaração do jogador",
+    "vehicle_mechanics": "Manutenção de veículos militares em condições adversas, conforme declaração do jogador"
+  },
+  "guided_roll_convention": "TARGET_V2_PROVISIONAL_FOR_NEW_ROLLS_ONLY_NO_RETROACTIVITY",
+  "acquired_traits_unchanged": true,
+  "supernatural_only_after_embrace": true,
+  "no_retroactive_impact_on_historical_rolls": true,
+  "remaining_gates": [
+    "poderes e especializações a validar",
+    "auditoria de gratuidade de idiomas",
+    "genealogia e Abraço",
+    "fechamento M1–M5",
+    "auditoria final do custo equivalente"
+  ],
+  "official_gangrel_unchanged": true,
+  "source_legacy": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+  "decision_ref": "novydres/governance/decisions/DECISIONS_STATE_V7.source.txt"
+}
