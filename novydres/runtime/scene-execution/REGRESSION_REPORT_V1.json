@@ -1,0 +1,214 @@
+{
+  "schema": "NOVYDRES_SCENE_REGRESSION_REPORT_V1",
+  "baseline_commit": "78c1524307197f73db44f9f0faedd3c6df89ecdb",
+  "run_date": "2026-11-03",
+  "status": "PRECOMMIT_GUARD_TESTS_PASS_POSTCOMMIT_READBACK_PENDING",
+  "scope": "Contract guard simulation + current repo snapshot assertions; NOT an end-to-end live ChatGPT narrating experiment",
+  "test_count": 24,
+  "passed": 24,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "T01",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T02",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T03",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T04",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T05",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T06",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T07a",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T07b",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "T07c",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T08",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T09",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T10",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T11",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "T12",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "S01",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "S02",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "S03",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "S04",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "S05",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "S06",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "S07",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "S08",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    },
+    {
+      "id": "S09",
+      "result": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    {
+      "id": "S10",
+      "result": "ALLOW",
+      "expected": "ALLOW",
+      "pass": true
+    }
+  ],
+  "snapshot_assertions": [
+    {
+      "name": "base_head",
+      "pass": true
+    },
+    {
+      "name": "M2.03_closed",
+      "pass": true
+    },
+    {
+      "name": "M2.04_not_started",
+      "pass": true
+    },
+    {
+      "name": "mortal_1970s",
+      "pass": true
+    },
+    {
+      "name": "xp_base",
+      "pass": true
+    },
+    {
+      "name": "fv_base",
+      "pass": true
+    },
+    {
+      "name": "manifest_previous",
+      "pass": true
+    },
+    {
+      "name": "frozen_sha",
+      "pass": true
+    },
+    {
+      "name": "schema_min_fields",
+      "pass": true
+    },
+    {
+      "name": "checklist_coverage",
+      "pass": true
+    },
+    {
+      "name": "regression_count",
+      "pass": true
+    }
+  ],
+  "immutable_assets": {
+    "target_sheet_path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+    "target_sheet_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+    "current_live_path": "novydres/chronicles/CHR-001/LIVE_v012.json",
+    "current_live_sha": "87ab0ac25bb5df36dd11af56b876ff1826e74495"
+  },
+  "limits": [
+    "Validation is pure JS inside ChatGPT Web; no external CI runner installed",
+    "Tests verify gate predicates and invariants, not model future obedience",
+    "Post-commit GitHub readback must be independently performed after ref update",
+    "Nothing changes M2.03 event, M2.04 scene, XP, FV or character"
+  ]
+}
