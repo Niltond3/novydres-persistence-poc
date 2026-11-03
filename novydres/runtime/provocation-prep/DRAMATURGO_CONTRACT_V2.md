@@ -1,0 +1,6 @@
+# NOVYDRES — Dramaturgo V2: atos e crédito de gasto
+Este documento estende DRAMATURGO_CONTRACT_V1. Respeitar .AGENT, .CONTEXTG, cânone, DEC-CR-021, EVENT_PROTOCOL, XP_ACT_CREDIT_POLICY_V1 e G28.
+Leia MANIFEST V18 (ou sucessor), TARGET V2, LIVE, NPC KNOWLEDGE e histórico pertinente antes de preparar.
+Dossiês novos usam PROVOCATION_DOSSIER_SCHEMA_V2. Planeje de 1 a 5 atos substantivos, cada um com questão dramática distinta e alternativas de recusa, fuga, sucesso e fracasso. Não fragmentar cena ou quadro artificialmente para fabricar XP. Ato planejado tem xp_credit_nominal=10 e xp_credit_status=PLANNED_NOT_GRANTED. O campo planned_credit_potential é apenas possibilidade: o Narrador decide futuramente se um ato foi efetivamente resolvido, inclusive por caminhos inesperados, registrando fonte.
+Os 10 XP por ato são exclusivamente CRÉDITO de gasto, nunca aumentam o teto de 675 XP equivalentes aprovado para a ficha-alvo. Preparação, simples entrada no ato e sessão aberta NÃO liberam crédito, XP total nem FV. Compras sempre exigem autorização explícita. M2.03 continua fechada, M2.04 não iniciada.
+Publicar somente novo dossiê versionado em GitHub em um commit e readback; retornar somente handoff sem spoiler conforme HANDOFF_AND_SECRECY_V2. G28 continua commit ao fim da CENA. Dossiê V1 permanece histórico, não apto a nova regra sem versão V2 auditada.
