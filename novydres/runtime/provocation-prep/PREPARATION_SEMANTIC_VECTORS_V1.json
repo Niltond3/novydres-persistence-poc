@@ -1,0 +1,133 @@
+{
+  "schema": "NOVYDRES_PREPARATION_SEMANTIC_VECTORS_V1",
+  "status": "SYNTHETIC_NOT_CHRONICLE_EVENTS",
+  "test_mode": "SNAPSHOT_SEMANTIC_PREDICATE_TESTS",
+  "base_example_ref": "novydres/runtime/provocation-prep/EXAMPLE_SYNTHETIC_DOSSIER_V1.json",
+  "cases": [
+    {
+      "id": "S01_BASELINE",
+      "expected": "ALLOW",
+      "detected_violations": []
+    },
+    {
+      "id": "S02_DUP_SCENE",
+      "expected": "DENY",
+      "detected_violations": [
+        "SCENE_ID_DUPLICATED",
+        "BEAT_ID_DUPLICATED",
+        "OUTCOME_ID_DUPLICATED"
+      ]
+    },
+    {
+      "id": "S03_UNKNOWN_CLUE_ID",
+      "expected": "DENY",
+      "detected_violations": [
+        "CLUE_REFERENCE_MISSING"
+      ]
+    },
+    {
+      "id": "S04_DUP_CLUE_ROUTE_ID",
+      "expected": "DENY",
+      "detected_violations": [
+        "CLUE_ROUTE_DUPLICATE"
+      ]
+    },
+    {
+      "id": "S05_CRITICAL_CLUE_ONE_REAL_ROUTE",
+      "expected": "DENY",
+      "detected_violations": [
+        "CRITICAL_CLUE_SINGLE_REAL_ROUTE"
+      ]
+    },
+    {
+      "id": "S06_NPC_KNOWN_WITHOUT_EVIDENCE",
+      "expected": "DENY",
+      "detected_violations": [
+        "NPC_KNOWN_WITHOUT_EVENT"
+      ]
+    },
+    {
+      "id": "S07_ESTABLISHED_WITHOUT_EVENT",
+      "expected": "DENY",
+      "detected_violations": [
+        "ESTABLISHED_WITHOUT_EVENT"
+      ]
+    },
+    {
+      "id": "S08_STALE_LIVE",
+      "expected": "DENY",
+      "detected_violations": [
+        "STALE_PLAN_REVIEW",
+        "LIVE_SOURCE_MISSING"
+      ]
+    },
+    {
+      "id": "S09_STALE_EVENT",
+      "expected": "DENY",
+      "detected_violations": [
+        "STALE_PLAN_REVIEW"
+      ]
+    },
+    {
+      "id": "S10_UNKNOWN_WITH_FAKE_EVENT",
+      "expected": "DENY",
+      "detected_violations": [
+        "UNKNOWN_WITH_EVENT"
+      ]
+    },
+    {
+      "id": "S11_MISSING_SOURCE",
+      "expected": "DENY",
+      "detected_violations": [
+        "LIVE_SOURCE_MISSING"
+      ]
+    },
+    {
+      "id": "S12_FORCED_FRAME",
+      "expected": "DENY",
+      "detected_violations": [
+        "MANDATORY_FRAME"
+      ]
+    },
+    {
+      "id": "S13_FALLBACK_REFUSAL_MISSING",
+      "expected": "DENY",
+      "detected_violations": [
+        "FALLBACK_REFUSAL_MISSING"
+      ]
+    },
+    {
+      "id": "S14_SAFE_HANDOFF",
+      "expected": "ALLOW",
+      "detected_violations": []
+    },
+    {
+      "id": "S15_SECRET_LEAK_HANDOFF",
+      "expected": "DENY",
+      "detected_violations": [
+        "HANDOFF_SECRET_LEAK"
+      ]
+    },
+    {
+      "id": "S16_INVALID_HANDOFF",
+      "expected": "DENY",
+      "detected_violations": [
+        "HANDOFF_LINK_INVALID"
+      ]
+    },
+    {
+      "id": "S17_NO_M204_AUTO_START",
+      "expected": "DENY",
+      "detected_violations": [
+        "G28_OR_SESSION_VIOLATION"
+      ]
+    },
+    {
+      "id": "S18_NO_EARLY_RNG",
+      "expected": "DENY",
+      "detected_violations": [
+        "MECHANICS_PERFORMED_IN_PREP"
+      ]
+    }
+  ]
+}
