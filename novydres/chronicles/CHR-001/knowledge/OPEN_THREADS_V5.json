@@ -1,0 +1,247 @@
+{
+  "schema": "CHR001_OPEN_THREADS_V1",
+  "status": "ACTIVE_OPERATIONAL_PARTIAL",
+  "reference_checkpoint": "M2.04.C02_CLOSED",
+  "threads": [
+    {
+      "id": "m201-report-authorship",
+      "topic": "Autoria da rubrica no relatório de liberação",
+      "kind": "OPEN_MYSTERY",
+      "source": "legacy",
+      "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+      "unknown": "Quem autorizou/rubricou o relatório; não declarar fraude provada",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+        "offset": 293015,
+        "evidence_excerpt": "no; não declarar COMMITTED técnico. M2.01 — AUTORIZAÇÃO PARA PAVEL RETER A CÓPIA — EVENTO CHR001-M201-PAVEL-COPIA-20261101-001 (01/11/2026, registro operacional). PLAYER_SPEECH literal: “Sem problemas Pavel, pode ficar. Você tem o itinerário, qualquer coisa sabe onde me"
+      }
+    },
+    {
+      "id": "m201-ramal-condition",
+      "topic": "Segurança e reparo definitivo do ramal",
+      "kind": "OPEN_CAUSAL",
+      "source": "legacy",
+      "anchor": "M2.01 CLOSED",
+      "unknown": "Não há reparo final ou condição presente comprovados",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "M2.01 CLOSED",
+        "offset": 302104,
+        "evidence_excerpt": "CKPOINT ATUALIZADO: CHR-001; MODO GUIADO, fim dos anos 1970, manhã; M1 CLOSED, M2 ACTIVE, M2.01 CLOSED/CURTA, M2.02 NOT_PRESENTED. Bartholomeu Krauser mortal ainda diante da mesa do supervisor Pavel, que mantém a cópia do relatório em pasta aberta e declarou que pretend"
+      }
+    },
+    {
+      "id": "m201-pavel-commitment",
+      "topic": "Promessa de Pavel de conferir registros",
+      "kind": "NPC_INTENT_NOT_COMPLETED",
+      "source": "legacy",
+      "anchor": "CHR001-M201-RITMO-CLOSE-20261101-001",
+      "unknown": "Pavel não teve verificação final narrada",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "CHR001-M201-RITMO-CLOSE-20261101-001",
+        "offset": 297955,
+        "evidence_excerpt": "— M2.01 — RESPOSTA DE BART, AVALIAÇÃO DE RITMO E FECHAMENTO CURTO — 2026-11-01 — EVENT_ID CHR001-M201-RITMO-CLOSE-20261101-001. PLAYER_SPEECH (literal): “Pessoal do leve mesmo, mas de toda forma se tá em circulação, se ele tem contato, é uma coisa que a gente tem que en"
+      }
+    },
+    {
+      "id": "m201-liev-colleagues",
+      "topic": "Sondagem de trabalhadores por Liev",
+      "kind": "OPEN_CAUSAL",
+      "source": "legacy",
+      "anchor": "CHR001-M201-PAVEL-OBS-20261101-001",
+      "unknown": "Resultados de sondagem/inspeção sem confirmação",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "CHR001-M201-PAVEL-OBS-20261101-001",
+        "offset": 289501,
+        "evidence_excerpt": "as pendentes; ledger técnico não migrado. M2.01 — OBSERVAÇÃO SILENCIOSA DE PAVEL — EVENTO CHR001-M201-PAVEL-OBS-20261101-001 (01/11/2026, registro operacional). PLAYER_DECLARATION literal: “Olho pavel demoradamente, quero prestar atenção na respiração, postura, expressõ"
+      }
+    },
+    {
+      "id": "m202-school-rumor",
+      "topic": "Origem do boato da escola e crenças de Mikahel",
+      "kind": "NPC_CLAIM_AND_OPEN_RELATION",
+      "source": "legacy",
+      "anchor": "CHR001-M202-PRESENTED-20261101-001",
+      "unknown": "Origem, precisão e conclusão do menino não demonstradas",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "CHR001-M202-PRESENTED-20261101-001",
+        "offset": 302787,
+        "evidence_excerpt": " CHR-001 — M2.02 / O QUE DISSERAM NA ESCOLA — APRESENTAÇÃO DA PROVOCAÇÃO CURTA — EVENT_ID CHR001-M202-PRESENTED-20261101-001. PLAYER_META: “Continue”. Interpretado como solicitação para apresentar a próxima provocação de M2 após M2.01 CLOSED, sem autorização para invent"
+      }
+    },
+    {
+      "id": "m203-patient-prognosis",
+      "topic": "Prognóstico do homem ferido no hospital",
+      "kind": "OPEN_CLINICAL_OUTCOME",
+      "source": "episode",
+      "anchor": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+      "unknown": "Resultado médico ainda não verificado",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+        "anchor": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+        "offset": 101744,
+        "evidence_excerpt": "3.071 — CHEGADA AO PRONTO-SOCORRO / ACESSO A ROUPAS AINDA PENDENTE — 2026-11-02 event_id: CHR001-M203-HOSPITAL-ARRIVAL-20261102-001 parent_event_id: CHR001-M203-HOSPITAL-PLAN-20261102-001 parent_version_url: https://docs.google.com/document/d/1ooLNfyloBtTmMV-YJAiSlLCeoM"
+      }
+    },
+    {
+      "id": "m203-woman-identity-location",
+      "topic": "Identidade/localização atual de Nadezhda",
+      "kind": "OPEN_FUTURE_OUTCOME",
+      "source": "episode",
+      "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+      "unknown": "Mulher foi encontrada e auxiliada na pensão, saiu da cena em M2.03.125; identidade civil não independentemente provada, paradeiro subsequente e segurança desconhecidos.",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+        "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+        "offset": 91375,
+        "evidence_excerpt": "tal. Nenhuma nova escolha de Bart; M2.03 ACTIVE, sem teste, gastos ou mudanca de FV e XP. CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001: PLAYER_DECLARATION: Bartholomeu declara que assume responsabilidade pelos atos; reconhece que exagerou ao ferir o desconhecido. Pede"
+      },
+      "updated_by_event_id": "CHR001-M203-ESCAPE-125-20261103-001",
+      "historical_source_preserved": true
+    },
+    {
+      "id": "m203-gromov-threat",
+      "topic": "Existência, capacidades e ameaça de Gromov",
+      "kind": "NPC_CLAIM_NOT_CONFIRMED",
+      "source": "episode",
+      "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+      "unknown": "Não retropropagar perigos à família sem fonte",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+        "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+        "offset": 89623,
+        "evidence_excerpt": " NPC: 'Se ele encontra-la, sim, ela corre perigo. Eu nao sei se ja a encontrou.' EVENT_ID CHR001-M203-TO-WHOM-DANGER-20261102-001. Tudo relatado e alegacao do NPC; nenhum fato confirmado fora da fala. M2.03 ativa, ambulancia em transito. Sem rolagem ou gastos. FV dispon"
+      }
+    },
+    {
+      "id": "m203-help-woman",
+      "topic": "Intenção declarada de ajudar a mulher",
+      "kind": "IMMEDIATE_HELP_COMPLETED_FUTURE_UNVERIFIED",
+      "source": "episode",
+      "anchor": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+      "unknown": "Ajuda imediata realizada, dinheiro e endereço comunicado; deslocamento de ônibus, encontro com contato ou destino seguro não demonstrados.",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+        "anchor": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+        "offset": 93288,
+        "evidence_excerpt": "capacidades possui Gromov nem quem estaria na pensao. Nao garante que sejam iguais a ele. CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001: PLAYER_DECLARATION: Bart reafirma responsabilidade pelo homem ferido e pela situacao de Nadezhda. Diz que pretende encontra-la, con"
+      },
+      "updated_by_event_id": "CHR001-M203-ESCAPE-125-20261103-001",
+      "completion_scope": "LOCAL_SCENE_ONLY",
+      "historical_source_preserved": true
+    },
+    {
+      "id": "m203-changes-and-worker",
+      "topic": "Troca de roupas e resposta ao funcionário",
+      "kind": "HISTORICAL_CHECKPOINT_SUPERSEDED_NOT_CURRENT_ACTION",
+      "source": "episode",
+      "anchor": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+      "unknown": "A pergunta do funcionário é checkpoint histórico M2.03.073; M2.03.126 já encerrou a provocação e não há decisão atual pendente no vestiário. Detalhes da resposta do funcionário exigem consulta ao diário, não inferência.",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+        "anchor": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+        "offset": 108603,
+        "evidence_excerpt": " preservado em cópia v007. M2.03.073 — A TROCA COMEÇA NO VESTIÁRIO — 2026-11-02 EVENT_ID: CHR001-M203-CHANGING-CLOTHES-20261102-001 PARENT_EVENT_ID: CHR001-M203-STAFF-ACCESS-20261102-001 PARENT_VERSION: https://docs.google.com/document/d/1qApPgaqrzYOilDiFmjtyLNhI9UJ0zyL"
+      },
+      "updated_by_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "historical_source_preserved": true
+    },
+    {
+      "id": "family-armin-support",
+      "topic": "Contato Armin e plano anterior de fuga",
+      "kind": "HISTORIC_UNEXECUTED_SUPPORT",
+      "source": "legacy",
+      "anchor": "Armin",
+      "unknown": "Disponibilidade atual de Armin não testada",
+      "evidence": {
+        "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "anchor": "Armin",
+        "offset": 229987,
+        "evidence_excerpt": "igo, saia antes dele com os filhos e leve a mala antiga. Entrega ou indica um endereço de Armin Vassilyev, contato policial e amigo de guerra. Afirma que Armin conhece a família e ajudará. O jogador acrescenta que Bartholomeu salvou Armin mais de uma vez na guerra, orig"
+      }
+    },
+    {
+      "id": "m203-nadezhda-departure",
+      "topic": "Escape completed, bus/contact future",
+      "kind": "OPEN_FUTURE_OUTCOME",
+      "unknown": "Whether she reached debtor or travelled elsewhere",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "anchor": "CHR001-M203-ESCAPE-125-20261103-001"
+    },
+    {
+      "id": "m203-van-cargo",
+      "topic": "Cooperativa Volnaya OS-219/D-4 hidden cargo floor",
+      "kind": "OPEN_MYSTERY",
+      "unknown": "Purpose/previous cargo/association with Gromov",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "anchor": "CHR001-M203-ESCAPE-121-20261103-001"
+    },
+    {
+      "id": "m203-npc-name-provenance",
+      "topic": "NPC knowledge of Bartholomeu first name",
+      "kind": "CORRECTION",
+      "unknown": "Patient and medics still do not know; Nadezhda learns M2.03.124",
+      "source": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V2.json",
+      "anchor": "CHR001-M203-ESCAPE-124-20261103-001"
+    },
+    {
+      "id": "m203-oficios-specialization",
+      "topic": "RNG origin/specialization mechanical audit",
+      "kind": "RULE_AUDIT_PENDING",
+      "unknown": "Take Half G25 correct; displayed Ofícios faces not audited RNG; +1 spec one-test only, future scope requires explicit ruling",
+      "source": "novydres/chronicles/CHR-001/character/state_v018.source.txt",
+      "anchor": "CHR001-M203-ESCAPE-119-20261103-001"
+    },
+    {
+      "id": "m204-family-safety",
+      "topic": "Autonomia e segurança de Mary e filhos",
+      "kind": "OPEN_CAUSAL",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v001.source.txt",
+      "anchor": "CHR001-M204-C01-12-20261103-001",
+      "unknown": "Mary orientou Mikahel e Sara a chamar os pais antes de abrir a porta em C02; Mikahel aceitou, mas quer compreender. Continua UNKNOWN se terceiros conhecem a casa, o endereço ou a identidade de Bart.",
+      "updated_by_event_id": "CHR001-M204-C02-03-20261103-001"
+    },
+    {
+      "id": "m204-volnaya-papers",
+      "topic": "Destino dos papéis Volnaya e nomes humanos",
+      "kind": "OPEN_DECISION",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v001.source.txt",
+      "anchor": "CHR001-M204-C01-11-20261103-001",
+      "unknown": "Bart foi ao trabalho e seguiu rotina normal em C03; nenhum exame externo, entrega ou decisão definitiva sobre as três folhas Volnaya foi narrado. Compromisso com Mary permanece aberto, documentos e etiqueta com Bart.",
+      "updated_by_event_id": "CHR001-M204-C03-03-20261103-001"
+    },
+    {
+      "id": "m204-mary-bart-trust",
+      "topic": "Confiança e limites no casamento após confissões",
+      "kind": "OPEN_RELATIONAL",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v003.source.txt",
+      "anchor": "CHR001-M204-C03-02-20261103-001",
+      "unknown": "Após a despedida, Bart foi voluntariamente ao emprego e cumpriu expediente habitual em C03. O próximo movimento após o turno e o momento de retomar Volnaya com Mary seguem UNKNOWN; A1 continua aberto.",
+      "updated_by_event_id": "CHR001-M204-C03-03-20261103-001"
+    }
+  ],
+  "note": "Open threads do not force scenes or imply offscreen resolution; source evidence must be re-read for consequential decisions",
+  "last_event_id": "CHR001-M204-C03-03-20261103-001",
+  "previous_version": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V4.json",
+  "notes": [
+    "M2.03.073 e intenção inicial de ajudar a mulher eram checkpoints históricos, não pendências atuais após M2.03.126; destinos futuros continuam desconhecidos.",
+    "C01 fechada: nenhum assunto externo verificado, nenhum recurso ajustado e sem prêmio de ato.",
+    "C02 encerrada em despedida, sem supor saída para emprego ou início de investigação. Sem atos resolvidos, créditos, testes ou recuperação FV.",
+    "C03: rotina de trabalho normal estabelecida pelo jogador; nenhum desfecho externo, investigação ou recurso alterado; próxima ação voluntária não determinada."
+  ]
+}
