@@ -1,0 +1,1441 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V2",
+  "simulation_only": false,
+  "chronicle_id": "CHR-001",
+  "episode_id": "M2.04",
+  "preparation_id": "CHR001-PREP-M204-20261105-V2",
+  "dossier_version": 2,
+  "status": "PUBLISHED_NOT_STARTED",
+  "source_checkpoint": {
+    "base_commit_sha": "d0ae5a8edea9692b905c1c1de31b1b34af27bd6d",
+    "manifest_path": "novydres/MANIFEST_V31.json",
+    "live_path": "novydres/chronicles/CHR-001/LIVE_v022.json",
+    "live_blob_sha": "30ddf3c3bdf163bd7fcc5afbcb046e9454963f1a",
+    "history_index_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v022.json",
+    "last_confirmed_event_id": "CHR001-M204-C09-23-20261105-001",
+    "m203_status": "CLOSED",
+    "next_episode_status": "NOT_STARTED"
+  },
+  "sources": [
+    {
+      "path": "novydres/MANIFEST_V30.json",
+      "sha": "f1bce4e532d2a37b4cb57ce677c3845323cd41ef",
+      "role": "MANIFEST"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v022.json",
+      "sha": "30ddf3c3bdf163bd7fcc5afbcb046e9454963f1a",
+      "role": "LIVE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v022.json",
+      "sha": "587ec2c8450c0c55d5eb14dce844aac4db8bcd6e",
+      "role": "HISTORY_INDEX"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v028.source.txt",
+      "sha": "425240a30e50fd756b5ba7797cc750ac48b58c4b",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V8.json",
+      "sha": "29900d1b15cb68cee8f1c4ac49b3379a9995d6ae",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V9.json",
+      "sha": "3fc987cbf6ce5f8bb11658404712a43a961b407b",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V10.source.txt",
+      "sha": "02b9caa2718464293b051e6cb0b12cbbb4e1f029",
+      "role": "DECISION"
+    }
+  ],
+  "dramatic_core": {
+    "premise": "Após C09 de M2.04, confiança familiar foi vivida, provas Volnaya foram obtidas sob custo, danos a terceiros continuam sem desfecho e a Oficina Krauser surgiu por iniciativa do personagem. A revisão não reencena fatos, só dispõe escolhas e consequências prospectivas.",
+    "theme": "Responsabilidade sem posse, limites da violência, valor de evidências parciais e autonomia para reconstruir o próprio trabalho.",
+    "pressure": "Há papéis originais em casa, lacunas documentais, repercussões possíveis da incursão e plano econômico ainda não lido por Mary. Não há perseguição confirmada, nem futuro clínico decidido, nem identidade de intruso conhecida por terceiros.",
+    "open_questions": [
+      "Qual diferença entre proteger e dirigir a vida de pessoas que têm desejos e informações próprios?",
+      "O que fazer com provas já obtidas sem presumir vítimas, culpados ou vínculo sobrenatural?",
+      "O que significa responder por dano real se reparação não garante perdão ou controle?",
+      "O sonho independente de trabalho subsiste quando exige escolhas e custos que o plano escrito ainda não resolve?"
+    ],
+    "agency_contract": "PLAYER_CHOICES_NEVER_SCRIPTED",
+    "narrative_constraints": [
+      "M2.04 ACTIVE C01–C09 CLOSED; C10 NOT_STARTED. O status PUBLISHED_NOT_STARTED e o campo next_episode_status NOT_STARTED são enums legados relativos ao plano PROSPECTIVO não jogado; NÃO negam cenas já jogadas.",
+      "IDs editoriais P-Q/P-S não designam C10 ou outras cenas efetivas; nenhuma sequência obrigatória. A próxima cena só pode surgir após handoff válido e autorização do jogador.",
+      "Não repetir diálogos domésticos sem stakes novos; não repetir consulta à lista telefônica, invasão, coleta dos originais, comparação de veículos, planejamento 14/14 ou rolagens já aceitas.",
+      "Bartholomeu dorme à mesa da cozinha após escrever plano empresarial. Mary está na cama e não leu a versão escrita detalhada. Os originais Volnaya estão na cozinha; espingarda Sara e munição ficam na bolsa sob banco traseiro do carro.",
+      "Mary conhece análise documental/frota e ideia de Oficina Krauser, mas não o estrangulamento de Ilya, prestação de socorros nem métodos de entrada na Volnaya. Mikahel/Sara não conhecem segredos da investigação.",
+      "Somente VL-3471 tem compartimento oculto evidenciado; VL-3286 e VL-3510 constam como veículos de adaptações, sem prova de mesmo uso. Bases registradas não são localização corrente; V-09 é classificação e não placa.",
+      "Ilya encontrado respirando, colega pediu ambulância; tratamento, prognóstico, reconhecimento e consequências criminais são UNKNOWN. Ninguém no pátio identificou o intruso.",
+      "Pessoa ferida M2.03, Nadezhda, Gromov, papel da cooperativa e conexões caínitas permanecem UNKNOWN ou NPC_CLAIM, não fatos garantidos. Nenhuma ligação entre aquecimento, Volnaya e vampiros por conveniência.",
+      "O sonho e plano 14/14 da oficina são fatos; firma, guincho, imóvel, crédito, Resources2, contrato e dinheiro não adquiridos. Mary não consentiu investir reserva dos filhos nem assumir empréstimos.",
+      "A1–A3 ainda não têm ACT_RESOLUTION confirmado. A4 prospectivo trata independência material como questão distinta; não creditar C09 retroativamente nem duplicar A1 por mera mudança de tema.",
+      "G25/G27/G28/G26 continuam intactos. Sem compra, XP, FV, talentos ou regra de dano para Sara em preparação; a ficha-alvo aprovada não equivale a ficha atual.",
+      "Para o próximo enquadramento perguntar WHY_NOW, escolha real, transformação e função no Marco; abstrair rotinas, usar montagem ou elipse, com oportunidade de intervenção antes de perder decisão importante.",
+      "M2 (A Fissura) OPEN: cobertura ampla existente, coerência/consequência parcialmente pendentes, sem fechar só por contagem de cenas e sem prolongar por inércia.",
+      "Rumo a 2010 requer Abraço causal ainda futuro e vida caínita JOGADA depois, sem prever sire, geração, data ou desfecho neste dossiê.",
+      "Planejamento é GM_PLAN condicional: NPCs possuem objetivos próprios, eventos dependem de fontes, clocks de causas e tempo diegético, não de número de turnos."
+    ]
+  },
+  "established_facts": [
+    {
+      "claim_id": "F01",
+      "text": "M2.03 encerrada e Bartholomeu regressou ao lar com Mary, Mikahel e Sara; não revelou evento a eles em cena.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F02",
+      "text": "Mikahel foi nomeado Touchstone e Convicção 'Nunca deixar para atrás aquilo que você é responsável' pelo jogador.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F03",
+      "text": "Bartholomeu reteve três papéis e etiqueta OS-219/D-4, abandonando van VL-3471 com arma dentro.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-ESCAPE-125-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F04",
+      "text": "A mulher partiu com dinheiro e endereço de contato, sem destino verificado.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-ESCAPE-125-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F05",
+      "text": "A mulher ouviu somente o primeiro nome de Bartholomeu na despedida.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-ESCAPE-124-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F06",
+      "text": "O homem ferido recebeu atendimento hospitalar, prognóstico e natureza continuam desconhecidos.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F07",
+      "text": "Pavel recebeu cópia do relatório e disse que iria conferir; verificação conclusiva não consta.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "source_event_id": "CHR001-M201-PAVEL-COPIA-20261101-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F08",
+      "text": "Mikahel relatou boato escolar e falou disso com o pai.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "source_event_id": "CHR001-M202-PRESENTED-20261101-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F09",
+      "text": "O ferido pronunciou alegação sobre Gromov, mas sua veracidade não foi estabelecida.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "source_event_id": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+      "visibility": "SYSTEM_AUDIT"
+    },
+    {
+      "claim_id": "F10",
+      "text": "C01–C02: Mary e filhos participaram de diálogos sobre proteção, autonomia e confiança; crianças não conheceram a confidência da investigação.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C02-14-20261103-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F11",
+      "text": "C03 transcorreu como rotina de trabalho por decisão do jogador; em C04 Bart conversou sobre compartimento oculto e suspeitas com Mary, não confirmou vítimas.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C04-14-20261104-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F12",
+      "text": "C05: Sara e acessórios no carro, dano proposto ainda não aprovado; C06 estabeleceu memórias de família sem avanço externo presumido.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C06-09-20261104-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F13",
+      "text": "C07 encontrou endereço comercial de Volnaya em catálogo e obteve confirmação telefônica, sem prova de crime ou identificação pessoal pelo contato.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C07-09-20261104-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F14",
+      "text": "C08: Bart recolheu originais; estrangulou escriturário chamado Ilya por colega, depois prestou socorro; trabalhadores o encontraram respirando e solicitaram ambulância, sem identificar Bart. Prognóstico UNKNOWN.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C08-27-20261104-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F15",
+      "text": "C09: provas identificam VL-3471, VL-3286, VL-3510 e referências de frota, mas só VL-3471 tem croqui de compartimento; circulação, destinos e rubrica S.K. não foram esclarecidos.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C09-09-20261105-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F16",
+      "text": "C09: Bart propôs Oficina Krauser, mecânica e futuro guincho; Mary aceitou estudar sem aprovar financiamento, reserva dos filhos, casa, demissão ou compra.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C09-11-20261105-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F17",
+      "text": "C09: Bart concluiu plano 14/14 em 4 intervalos, sem FV, e adormeceu sobre papéis; Mary dormia e não leu plano. A1 OPEN; nenhum ato resolvido, crédito ou compra; FV disponível 1/6.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "source_event_id": "CHR001-M204-C09-23-20261105-001",
+      "visibility": "PLAYER_KNOWN"
+    }
+  ],
+  "prepared_truths": [
+    {
+      "prep_id": "PT01",
+      "text": "Funcionário da cooperativa, se introduzido, tem motivação laboral de localizar veículo; não conhece Bart, arma ou compartimento sem contato real.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Rotina ou busca efetivamente estabelecida"
+      ]
+    },
+    {
+      "prep_id": "PT02",
+      "text": "Possível arquivista pode verificar procedência parcial sem afirmar fraude, operação ou ligação entre relatórios.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Acesso a fontes comparáveis é legítimo e demonstrado"
+      ]
+    },
+    {
+      "prep_id": "PT03",
+      "text": "Vínculos podem sofrer por omissão, promessa ou conversa concreta, não por telepatia de Mary/Mikahel.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Interações diegéticas realizadas"
+      ]
+    },
+    {
+      "prep_id": "PT04",
+      "text": "Paciente, mulher e sentinela mantêm destinos abertos até nova resolução fundada; não há tragédia programada.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Clocks independentes, sem evento automático"
+      ]
+    },
+    {
+      "prep_id": "PT05",
+      "text": "A coincidência entre papéis da van e aquecimento pode ser mera coincidência; só permitir ligação com evidência futura.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Investigação real e cadeia de fontes"
+      ]
+    },
+    {
+      "prep_id": "PT06",
+      "text": "Uma reação à falta dos originais e à agressão a Ilya depende de trabalhadores, acesso, tempo e comunicações efetivas; não há identificação mágica do intruso.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Desaparecimento de documentos e estado de Ilya percebidos segundo C08",
+        "Ações independentes efetivamente adjudicadas"
+      ]
+    },
+    {
+      "prep_id": "PT07",
+      "text": "Oficina Krauser pode seguir, mudar ou não acontecer; estudo preliminar não fornece por si dinheiro, autorização ou vantagem.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Iniciativa ou oportunidade verificável posterior",
+        "Decisão voluntária do protagonista ou NPC independente"
+      ]
+    },
+    {
+      "prep_id": "PT08",
+      "text": "Oportunidade de contato com o insólito deve decorrer de causa, não de escala artificial. Falas do paciente não provam vampirismo, clan ou Volnaya.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Fonte e causa real",
+        "Gate de conhecimento e governança de lore"
+      ]
+    }
+  ],
+  "npc_dossiers": [
+    {
+      "entity_id": "npc-mary-krauser",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "personal_goal": "Proteger filhos e manter confiança adulta sem perder autonomia.",
+      "resources": [
+        "Vínculo doméstico",
+        "Conhecimento de conversas antigas sobre violência"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece explicação documental e análise de Volnaya incluindo veículos e suspeitas, sem prova de cativeiro nas demais vans.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C09-23-20261105-001"
+        },
+        {
+          "statement": "Conhece ideia da oficina e concordou somente em estudar a viabilidade, sem comprometer reservas ou empréstimos.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C09-23-20261105-001"
+        },
+        {
+          "statement": "Não sabe que Bart estrangulou o escriturário Ilya nem todos os métodos usados no pátio.",
+          "status": "UNKNOWN",
+          "event_id": null
+        },
+        {
+          "statement": "Não leu o plano escrito por Bart depois que adormeceu.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Mantém decisões familiares próprias; não lê por onisciência papéis fora de seu alcance.",
+        "Pode ponderar uma proposta conhecida e tomar posição independente quando houver tempo e causa."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se Bart falar",
+          "possible_response": "Ouvir, questionar e escolher resposta independente",
+          "status": "CONDITIONAL"
+        },
+        {
+          "trigger": "Se Bart calar",
+          "possible_response": "Não deduzir sobrenatural nem identificar mulher por mágica",
+          "status": "CONDITIONAL"
+        },
+        {
+          "trigger": "Compromisso novo com risco de família ou finanças",
+          "possible_response": "Negociar condições, discordar ou recusar, sem concordância garantida",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-mikahel-krauser",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "personal_goal": "Entender o pai e manter próprias dúvidas sem ser instrumento da trama.",
+      "resources": [
+        "Rotina escolar",
+        "Memória de boato"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece regra da porta e conversas familiares C02/C06.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C06-09-20261104-001"
+        },
+        {
+          "statement": "Percebeu o pai sorridente/contente ao voltar, sem receber conteúdo da investigação.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C09-23-20261105-001"
+        },
+        {
+          "statement": "Não conhece originais, suspeita caínita ou evento do escriturário.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Estuda e desenvolve opinião própria"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se houver conversa",
+          "possible_response": "Pode dialogar ou não querer falar",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-pavel-heating-supervisor",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "personal_goal": "Proteger segurança do ramal e própria responsabilidade documental.",
+      "resources": [
+        "Cópia do relatório",
+        "Acesso técnico sujeito a procedimento"
+      ],
+      "knowledge": [
+        {
+          "statement": "Recebeu cópia com anuência de Bart",
+          "status": "KNOWN",
+          "event_id": "CHR001-M201-PAVEL-COPIA-20261101-001"
+        },
+        {
+          "statement": "Relação com Volnaya",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Pode tentar conferência, mas não alcança conclusão automática"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se questionado",
+          "possible_response": "Compartilhar apenas o que verificou",
+          "status": "CONDITIONAL"
+        },
+        {
+          "trigger": "Se intimidado",
+          "possible_response": "Resistir, negar ou buscar apoio justificável",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-nadezhda-claimed",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "personal_goal": "Preservar própria segurança e decidir contatos.",
+      "resources": [
+        "Dinheiro",
+        "Bolsa",
+        "Faca",
+        "Endereço relatado por Bart"
+      ],
+      "knowledge": [
+        {
+          "statement": "Ouviu o primeiro nome Bartolomeu",
+          "status": "KNOWN",
+          "event_id": "CHR001-M203-ESCAPE-124-20261103-001"
+        },
+        {
+          "statement": "Sabe sobrenome e família",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Pode tentar deslocar-se; destino permanece incerto"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se contatada por meio real",
+          "possible_response": "Pode aceitar, negar ou negociar ajuda",
+          "status": "CONDITIONAL"
+        },
+        {
+          "trigger": "Se ameaçada",
+          "possible_response": "Busca opções próprias, não roteiro obrigatório",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-unnamed-injured-stranger",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "personal_goal": "Se capaz, decidir como lidar com danos e afirmações anteriores.",
+      "resources": [
+        "Tratamento último confirmado",
+        "Relatos próprios cuja verdade não é provada"
+      ],
+      "knowledge": [
+        {
+          "statement": "Foi confrontado por Bart",
+          "status": "KNOWN",
+          "event_id": "CHR001-M203-CHALLENGE-20261101-001"
+        },
+        {
+          "statement": "Sabe nome civil do PJ",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Estado futuro depende de tratamento/causalidade, não de programação"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se procurado",
+          "possible_response": "Pode não conseguir falar, recusar ou testemunhar conforme estado",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-armin-contact",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "personal_goal": "Conciliar amizade anterior e dever profissional se procurado.",
+      "resources": [
+        "Vínculo anterior",
+        "Possível canal policial não automaticamente disponível"
+      ],
+      "knowledge": [
+        {
+          "statement": "Tem ciência de Volnaya",
+          "status": "UNKNOWN",
+          "event_id": null
+        },
+        {
+          "statement": "Histórico de relação militar apresentado pelo jogador",
+          "status": "CLAIMED",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Cumpre seus compromissos; não acompanha Bart por destino"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se procurado",
+          "possible_response": "Pode limitar ajuda ou recusar por prudência",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-prep-fleet-clerk",
+      "entity_origin": "PREPARED_ENTITY",
+      "source_path": null,
+      "personal_goal": "Encontrar veículo de trabalho que possa faltar ao controle.",
+      "resources": [
+        "Registros de frota, se apresentados"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece PJ",
+          "status": "UNKNOWN",
+          "event_id": null
+        },
+        {
+          "statement": "Conhece compartimento/arma",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Se houver gatilho de rotina real, pode checar ausência de van"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se encontrar carro",
+          "possible_response": "Pode reportar ou vistoriar, sem identificar Bart sem prova",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-prep-archivist",
+      "entity_origin": "PREPARED_ENTITY",
+      "source_path": null,
+      "personal_goal": "Conferir procedência, evitando culpar pessoas sem documentos.",
+      "resources": [
+        "Arquivos acessíveis se estabelecidos"
+      ],
+      "knowledge": [
+        {
+          "statement": "Identidade/suspeita de Bart",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Trabalha por rotina institucional"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se consultado",
+          "possible_response": "Pode exigir fonte original e delimitar interpretação",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-prep-hospital-worker",
+      "entity_origin": "PREPARED_ENTITY",
+      "source_path": null,
+      "personal_goal": "Tratar pacientes e preservar informações clínicas.",
+      "resources": [
+        "Prontuários sob acesso profissional"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece o nome de Bart",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Segue atendimento, sem conclusão clínica pré-fixada"
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Se questionado",
+          "possible_response": "Exige motivo legítimo antes de informar",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "personal_goal": "Se capaz, preservar saúde, autonomia e decidir resposta a fatos pessoalmente observados.",
+      "resources": [],
+      "knowledge": [
+        {
+          "statement": "Estava trabalhando tarde e sofreu imobilização e perda de consciência.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C08-24-20261104-001"
+        },
+        {
+          "statement": "Identidade do agressor e prognóstico clínico não estabelecidos.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Só age caso sua condição real e acesso permitam; nenhuma recuperação ou morte predeterminadas."
+      ],
+      "conditional_responses": [],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-volnaya-night-workers",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "personal_goal": "Proteger colega ferido e registrar perdas/ocorrências conforme capacidade e interesses próprios.",
+      "resources": [],
+      "knowledge": [
+        {
+          "statement": "Colega estava respirando; pediram ambulância e perceberam desordem documental.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C08-27-20261104-001"
+        },
+        {
+          "statement": "Não identificaram Bart como autor.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Podem agir por meios efetivos após tempo diegético; sem descobrir o protagonista por fiat."
+      ],
+      "conditional_responses": [],
+      "secrets_visibility": "GM_HIDDEN"
+    }
+  ],
+  "clues": [
+    {
+      "clue_id": "CL01",
+      "meaning_if_discovered": "Originais obtidos já em C08 e analisados até C09 permanecem lacunares; qualquer evidência nova exige fonte independente, não repetir descoberta.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL01R1",
+          "conditions": "Consultar fonte nova e alcançável",
+          "holder_or_location": "Registros externos legítimos"
+        },
+        {
+          "route_id": "CL01R2",
+          "conditions": "Escolher destino da prova",
+          "holder_or_location": "Originais na cozinha dos Krauser"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL02",
+      "meaning_if_discovered": "Rubrica do aquecimento segue independente de Volnaya até prova real de conexão.",
+      "critical": false,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL02R1",
+          "conditions": "Pavel ou Liev proporciona dado fundado",
+          "holder_or_location": "Trabalho do aquecimento"
+        },
+        {
+          "route_id": "CL02R2",
+          "conditions": "Bart toma iniciativa verificável de obter relatório",
+          "holder_or_location": "Arquivo técnico acessível"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL03",
+      "meaning_if_discovered": "Destino de Nadezhda e resultado do homem ferido M2.03 permanecem desconhecidos e sujeitos à autonomia e privacidade.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL03R1",
+          "conditions": "Contato hospitalar legítimo",
+          "holder_or_location": "Hospital"
+        },
+        {
+          "route_id": "CL03R2",
+          "conditions": "Comunicação independente verificável",
+          "holder_or_location": "Contato ainda não demonstrado"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL04",
+      "meaning_if_discovered": "Rumor de Mikahel só retorna diante de fato novo, não de lição repetida.",
+      "critical": false,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL04R1",
+          "conditions": "Ocorrência escolar nova",
+          "holder_or_location": "Escola"
+        },
+        {
+          "route_id": "CL04R2",
+          "conditions": "Diálogo por mudança relacional nova",
+          "holder_or_location": "Família"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL05",
+      "meaning_if_discovered": "Ausência de van e documentos pode gerar rastro, mas não implica identidade de ladrão conhecida por terceiros.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL05R1",
+          "conditions": "Fonte de frota realmente consultada",
+          "holder_or_location": "Cooperativa ou arquivo"
+        },
+        {
+          "route_id": "CL05R2",
+          "conditions": "Pessoa habilitada observa situação e fala",
+          "holder_or_location": "Testemunha causal"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL06",
+      "meaning_if_discovered": "Condição de Ilya, atendimento e reação à ausência de arquivos devem ser obtidos com fonte, não decididos pelo plano.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL06R1",
+          "conditions": "Informação médica limitada por privacidade",
+          "holder_or_location": "Hospital ou clínica ainda indeterminado"
+        },
+        {
+          "route_id": "CL06R2",
+          "conditions": "Ação fundada de colegas ou autoridade",
+          "holder_or_location": "Volnaya/registro de ocorrência"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL07",
+      "meaning_if_discovered": "Plano de negócio 14/14 é fato, não negócio legalmente constituído; viabilidade futura demanda decisão e verificação.",
+      "critical": false,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL07R1",
+          "conditions": "Mary lê versão escrita quando puder",
+          "holder_or_location": "Cozinha/casa"
+        },
+        {
+          "route_id": "CL07R2",
+          "conditions": "Verificação de custos com fonte própria",
+          "holder_or_location": "Interlocutor real de mercado"
+        }
+      ]
+    }
+  ],
+  "offscreen_clocks": [
+    {
+      "clock_id": "K01",
+      "trigger": "Interação real com Mary sobre decisão nova ou informação revelada.",
+      "possible_consequence": "Confiança pode ganhar limite ou mudar sem leitura mental.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K02",
+      "trigger": "Pavel ou colega tem tempo/acesso profissional à revisão de aquecimento.",
+      "possible_consequence": "Resultado independente não une automaticamente Volnaya.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K03",
+      "trigger": "Van ausente é localizada por trabalhador com acesso à frota.",
+      "possible_consequence": "Reação possível sem identificar Bart automaticamente.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K04",
+      "trigger": "Tempo clínico e fonte concreta sobre ferido M2.03.",
+      "possible_consequence": "Prognóstico depende de adjudicação; sem morte/cura obrigatórias.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K05",
+      "trigger": "Nadezhda escolhe contato verificável ou realmente é procurada.",
+      "possible_consequence": "Contato, recusa ou silêncio são possíveis, sem destino fixo.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K06",
+      "trigger": "Fato novo repercute na escola ou na percepção de Mikahel.",
+      "possible_consequence": "Mudança relacional independente, não repetição compulsória.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K07",
+      "trigger": "Colegas/serviços reagem à agressão a Ilya e ao desaparecimento de originais.",
+      "possible_consequence": "Consequências condicionadas a quem sabe, tempo e acesso; intruso não identificado por fiat.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K08",
+      "trigger": "Bart ou Mary dá passo efetivo de projeto empresarial com dados verificados.",
+      "possible_consequence": "Viabilidade e risco podem amadurecer; nunca firma, carro-guincho ou Resources2 automáticos.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    }
+  ],
+  "acts": [
+    {
+      "act_id": "A1",
+      "dramatic_function": "CONFIANÇA: testar limite novo da aliança familiar; não repetir carinho nem escuta de C01–C09.",
+      "entry_options": [
+        "Nova decisão de proteção, informação ou compromisso com relevância real",
+        "Sem pressão nova, preferir elipse"
+      ],
+      "frames": [
+        {
+          "frame_id": "P-Q1",
+          "purpose": "Autonomia de familiares diante de decisão concreta.",
+          "location_options": [
+            "Casa dos Krauser",
+            "Outro lugar legitimamente alcançado"
+          ],
+          "possible_entry_conditions": [
+            "Fato novo com escolha e transformação potencial"
+          ],
+          "scenes": [
+            {
+              "scene_id": "P-S11",
+              "possible_entry": [
+                "Bart ou Mary aborda questão nova de informação, finanças ou segurança"
+              ],
+              "conflict": "Diferença entre proteger e controlar informação",
+              "stakes": "Autonomia de Mary e confiança adulta",
+              "npc_active_goals": [
+                "Mary pode discordar, aceitar parcialmente ou exigir condições"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S11B1",
+                  "prompt_or_npc_action": "Ela não sabe do estrangulamento; não presumir descoberta",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S11O1",
+                  "trigger": "Conversa gera pacto ou fronteira verificável",
+                  "possible_consequence": "Registrar limite e custo",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S11O2",
+                  "trigger": "Conversa é evitada, compromisso negado ou não existe urgência",
+                  "possible_consequence": "A questão pode permanecer aberta sem repetir cena",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [],
+              "test_preflight_refs": [
+                "G25/G27 somente para oposição legítima, nunca forçar afeto"
+              ],
+              "pc_decisions_unwritten": true
+            },
+            {
+              "scene_id": "P-S12",
+              "possible_entry": [
+                "Fato novo envolve escolha autônoma dos filhos, não repetição de rumores ou brincadeiras"
+              ],
+              "conflict": "Cuidado sem tutela absoluta",
+              "stakes": "Desenvolvimento de vínculos e convicções",
+              "npc_active_goals": [
+                "Mikahel e Sara respondem segundo idade e conhecimento"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S12B1",
+                  "prompt_or_npc_action": "Relembrar regra da porta apenas se houver nova consequência",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S12O1",
+                  "trigger": "Há decisão nova",
+                  "possible_consequence": "Registrar efeitos verificáveis",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S12O2",
+                  "trigger": "Não há mudança de situação",
+                  "possible_consequence": "Não abrir cena doméstica apenas para demonstrar afeto",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL04"
+              ],
+              "test_preflight_refs": [],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Encerrar, desviar ou manter questão aberta; oportunidade editorial não é encontro obrigatório."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Ato só remunerável com questão substantiva demonstravelmente resolvida, nunca pelo afeto já jogado."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A2",
+      "dramatic_function": "PROVAS: destino responsável de originais e seus rastros, sem reinventar análise de frota já alcançada.",
+      "entry_options": [
+        "Escolha futura sobre guardar, preservar, revelar, verificar ou abandonar evidência",
+        "Resposta independente só por acesso e causa"
+      ],
+      "frames": [
+        {
+          "frame_id": "P-Q2",
+          "purpose": "Novo uso da prova ou consequência de sua subtração.",
+          "location_options": [
+            "Casa",
+            "Registro real",
+            "Local originado causalmente"
+          ],
+          "possible_entry_conditions": [
+            "Escolha com risco ou resposta externa sustentada"
+          ],
+          "scenes": [
+            {
+              "scene_id": "P-S21",
+              "possible_entry": [
+                "Bart escolhe destino de originais ou procura fonte nova"
+              ],
+              "conflict": "Indícios incompletos versus prova responsável",
+              "stakes": "Valor das evidências, risco de exposição e ética",
+              "npc_active_goals": [
+                "Terceiros podem exigir procedência ou negar acesso"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S21B1",
+                  "prompt_or_npc_action": "Não refazer busca C07, invasão C08 ou exame de frota C09",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S21O1",
+                  "trigger": "Decisão informada de uso/guarda/revelação",
+                  "possible_consequence": "Mudança rastreável sem acusação presumida",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S21O2",
+                  "trigger": "Bart se retira, não investiga ou guarda papéis",
+                  "possible_consequence": "Não forçar novo circuito documental",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL01",
+                "CL05"
+              ],
+              "test_preflight_refs": [
+                "G25 pré-teste se ação realmente exigir"
+              ],
+              "pc_decisions_unwritten": true
+            },
+            {
+              "scene_id": "P-S22",
+              "possible_entry": [
+                "Uma reação real à falta de arquivos/veículo alcança o PJ por via verificável"
+              ],
+              "conflict": "Ninguém conhece rosto/nome de Bart por conveniência",
+              "stakes": "Segurança, consequência institucional e cadeia de custódia",
+              "npc_active_goals": [
+                "Funcionários cuidam de colega e registros segundo seus meios"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S22B1",
+                  "prompt_or_npc_action": "Rastro não é perseguição automática",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S22O1",
+                  "trigger": "Contato real e causal muda risco",
+                  "possible_consequence": "Adjudicar só o que evidência suporta",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S22O2",
+                  "trigger": "Não há abordagem, ou PJ não se envolve",
+                  "possible_consequence": "Manter clock ou elidir rotina sem perseguidor fictício",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL05",
+                "CL06"
+              ],
+              "test_preflight_refs": [
+                "G27 somente com oposição verificada"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Encerrar, desviar ou manter questão aberta; oportunidade editorial não é encontro obrigatório."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Responsabilidade sobre a evidência se transforma por escolha real; posse dos arquivos em C08 não concede crédito retroativo."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A3",
+      "dramatic_function": "REPARAÇÃO: enfrentar efeitos de danos sem possuir o destino de pessoas afetadas ou impor absolvição.",
+      "entry_options": [
+        "Conhecimento comprovado de dano ou oportunidade de assumir responsabilidade",
+        "Contato voluntário ou consequência causal legítima"
+      ],
+      "frames": [
+        {
+          "frame_id": "P-Q3",
+          "purpose": "Dano e autonomia de terceiros.",
+          "location_options": [
+            "Contato clínico legítimo",
+            "Casa, trabalho ou lugar causalmente surgido"
+          ],
+          "possible_entry_conditions": [
+            "Nova escolha moral com impacto concreto, não culpa presumida"
+          ],
+          "scenes": [
+            {
+              "scene_id": "P-S31",
+              "possible_entry": [
+                "Notícia real sobre Ilya chega por canal possível ou Bart decide buscar informação"
+              ],
+              "conflict": "Agressão real e socorro não determinam tratamento, perdão ou reconhecimento",
+              "stakes": "Custo moral, responsabilidade e posição pública",
+              "npc_active_goals": [
+                "Ilya e colegas têm conhecimento restrito e interesses próprios"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S31B1",
+                  "prompt_or_npc_action": "Não declarar morte/recuperação por necessidade de trama",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S31O1",
+                  "trigger": "Encontro/informação real cria dilema",
+                  "possible_consequence": "Escolha e consequência são registradas",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S31O2",
+                  "trigger": "Acesso negado, contato não ocorre ou Bart recusa",
+                  "possible_consequence": "A questão segue aberta ou termina por recusa substantiva adjudicada",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL06"
+              ],
+              "test_preflight_refs": [
+                "Privacidade médica; mecânica somente quando necessária"
+              ],
+              "pc_decisions_unwritten": true
+            },
+            {
+              "scene_id": "P-S32",
+              "possible_entry": [
+                "Contato verificável permite retornar a outro envolvido de M2.03"
+              ],
+              "conflict": "Ajuda não constitui posse ou verdade sobrenatural",
+              "stakes": "Autonomia e limites de reparação",
+              "npc_active_goals": [
+                "Paciente e Nadezhda escolhem quando e se capazes"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S32B1",
+                  "prompt_or_npc_action": "Não fixar sobrenatural nem destino futuro",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S32O1",
+                  "trigger": "Interação sustentada abre decisão",
+                  "possible_consequence": "Não impor perdão ou continuidade",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S32O2",
+                  "trigger": "Não há contato ou ele é recusado",
+                  "possible_consequence": "Não obrigar perseguição ou nova investigação",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL03"
+              ],
+              "test_preflight_refs": [
+                "G25/G27 se couber"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Encerrar, desviar ou manter questão aberta; oportunidade editorial não é encontro obrigatório."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Ato só resolve com questão e consequência verificáveis, não remorso imaginado."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A4",
+      "dramatic_function": "INDEPENDÊNCIA MATERIAL: escolha sobre vida profissional própria; distinta de A1 e de mera conclusão técnica do plano 14/14.",
+      "entry_options": [
+        "Novo compromisso com custo ou decisão de alterar sonho após informação concreta",
+        "O sonho pode continuar em aberto sem que a história vire rotina de cartório"
+      ],
+      "frames": [
+        {
+          "frame_id": "P-Q4",
+          "purpose": "Do planejamento escrito para uma decisão de identidade e compromisso real.",
+          "location_options": [
+            "Casa dos Krauser",
+            "Contato de ofício plausível",
+            "Intervalo de continuidade"
+          ],
+          "possible_entry_conditions": [
+            "Informação confiável ou diferença relevante com Mary"
+          ],
+          "scenes": [
+            {
+              "scene_id": "P-S41",
+              "possible_entry": [
+                "Mary lê o plano quando tiver acesso real, ou Bart inicia decisão concreta"
+              ],
+              "conflict": "O plano válido não é patrimônio nem anuência financeira",
+              "stakes": "Vínculo conjugal, proteção das reservas e autonomia de trabalho",
+              "npc_active_goals": [
+                "Mary aceita estudo, pode negar gastos ou negociar"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S41B1",
+                  "prompt_or_npc_action": "Não inventar leis, números de preços ou lucro de Novydres",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S41O1",
+                  "trigger": "Existe decisão concreta sobre limites/ritmo",
+                  "possible_consequence": "Registrar o que foi negociado",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S41O2",
+                  "trigger": "Projeto adiado ou Mary recusa compromisso",
+                  "possible_consequence": "Não tratar resistência como falta moral",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL07"
+              ],
+              "test_preflight_refs": [
+                "Abstrair cálculos/rotina sem eliminar decisões significativas"
+              ],
+              "pc_decisions_unwritten": true
+            },
+            {
+              "scene_id": "P-S42",
+              "possible_entry": [
+                "Uma oportunidade econômica verificada cria escolha transformadora"
+              ],
+              "conflict": "Risco financeiro e vocação não se resolvem por sucesso 14/14",
+              "stakes": "Trajetória profissional e eventual posição social futura",
+              "npc_active_goals": [
+                "Credores, técnicos e parceiros só dispõem de recursos/fontes legítimos"
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "P-S42B1",
+                  "prompt_or_npc_action": "Recursos2, imóvel e veículo exigem fatos, autorização e compras reais",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "P-S42O1",
+                  "trigger": "Mudança substancial é escolhida",
+                  "possible_consequence": "Registrar custos e origem",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "P-S42O2",
+                  "trigger": "Bart abandona, desvia ou pausa o negócio",
+                  "possible_consequence": "Preservar liberdade e consequência, sem prêmio por plano antigo",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Resolver, recusar, desviar ou encerrar diante de mudança causal; nunca pré-decidir ato voluntário do PJ."
+              ],
+              "clue_ids": [
+                "CL07"
+              ],
+              "test_preflight_refs": [
+                "Nunca adquirir Resources sem gate de XP"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Encerrar, desviar ou manter questão aberta; oportunidade editorial não é encontro obrigatório."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "A4 é questão nova apenas se independente de A1; sem crédito retroativo nem duplicado por C09."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    }
+  ],
+  "fallback_routes": [
+    {
+      "kind": "REFUSAL",
+      "npc_reaction_basis": "NPCs têm interesses e conhecimento limitados.",
+      "possible_routes": [
+        "Recusa pode ser resolução de ato se fechar questão dramática; caso contrário permanece OPEN",
+        "Mary/Pavel prosseguem escolhas sem controlar Bart"
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "UNPLANNED_ACTION",
+      "npc_reaction_basis": "Usar fonte e causalidade antes de ampliar fatos.",
+      "possible_routes": [
+        "Improvisar locais e NPCs mantendo proveniência",
+        "Ato emergente substitui um ato não resolvido sem crédito duplicado",
+        "Se A4 convergir materialmente com A1, reclassificar como uma resolução apenas e impedir crédito duplo."
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "FAILURE",
+      "npc_reaction_basis": "Falhas impõem custos e abrem rotas alternativas, não morte automática.",
+      "possible_routes": [
+        "Negar acesso documental, permitir outra fonte",
+        "Discordância familiar com consequências próprias"
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "DEPARTURE",
+      "npc_reaction_basis": "PC pode sair, recusar e agir em outro lugar.",
+      "possible_routes": [
+        "Reenquadrar situação onde ele for sem forçar perseguição",
+        "Não pagar crédito se questão permaneceu aberta"
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "DELAY",
+      "npc_reaction_basis": "Mudanças seguem causas diegéticas e relógios, não número de turnos.",
+      "possible_routes": [
+        "Arquivos podem não ser encontrados",
+        "Paciente e mulher podem permanecer desconhecidos",
+        "Preferir montagem ou elipse sem conceder empresa, recuperação clínica, XP/FV nem progresso caínita automático."
+      ],
+      "pc_forced": false
+    }
+  ],
+  "mechanical_preparation": {
+    "engine_ref": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+    "take_half_ref": "novydres/runtime/PRE_ROLL_TAKE_HALF_GATE_V1.md",
+    "narrator_gate_ref": "novydres/runtime/NARRATOR_LED_ADJUDICATION_G27_V1.md",
+    "provisional_rules_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+    "only_proposed_tests": true,
+    "rng_performed": false,
+    "xp_fv_modified": false
+  },
+  "guards": {
+    "does_not_change_g28": true,
+    "does_not_start_session": true,
+    "does_not_advance_m204": true,
+    "does_not_modify_history": true,
+    "no_forced_pc_action": true,
+    "player_handoff_contains_no_spoilers": true,
+    "does_not_award_xp_on_preparation": true,
+    "does_not_increase_budget_per_act": true
+  },
+  "xp_credit_plan": {
+    "policy_id": "DEC-CR-021",
+    "cap_source": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+    "cap_xp": 675,
+    "nominal_per_act": 10,
+    "planned_act_count": 4,
+    "planned_credit_potential": 40,
+    "grant_automatically_on_preparation": false,
+    "reward_is_new_xp": false,
+    "act_eligibility_event_required": true,
+    "cap_is_absolute": true
+  }
+}
