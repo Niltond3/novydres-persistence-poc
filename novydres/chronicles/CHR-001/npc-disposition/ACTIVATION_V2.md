@@ -1,0 +1,9 @@
+# CHR-001 / Exceção de ativação de predisposição em C15 — V2
+STATUS: ACTIVE_C15, somente após commit atômico, conferência de HEAD e readback do manifesto.
+AUTORIZAÇÃO DIRETA DO JOGADOR, 2026-11-06: "Vamos reiniciar a C15 já com as mecanicas".
+Esta instrução supera EXCLUSIVAMENTE o adiamento da ativação até o fechamento de C15 previsto em ACTIVATION_V1.md. V1, regras, cenas fechadas e CYCLE_V0012 continuam imutáveis. Não há C15 anterior persistida: iniciar significa abrir pela primeira vez após C14.
+O registro administrativo CHR001-ADMIN-C15-20261106-001 é identificado no campo de compatibilidade activation_event_id; NÃO É EVENTO DIEGÉTICO e não concede XP/FV, não move Bartholomeu nem muda conhecimento NPC.
+Carregar e verificar ACTIVATION_C15_V2.json, STATE_V002.json, CONTRACT_V1.md, CYCLE_V0012, LIVE_v027 e dossiê V7 antes de narrar. VALIDATOR_V2.mjs confere as âncoras e os SHAs. Nenhum novo ciclo é criado só para ativar um módulo editorial. CYCLE_V0012 ainda é o handoff autorizado; a exceção sidecar não altera o Dramaturgo ou o plano.
+Humor não é sorteado antes de interação relevante. No início da primeira interação importante de cada NPC em janela temporal, lançar dois d3 reais pelo motor de RNG verificável ou fallback neutro identificado, sem inventar causas de humor. Interpretar pela personalidade, limites e interesses. Respeitar agência do PJ e saída desconhecida da escola.
+G28 permanece obrigatório somente no encerramento da C15: um commit COW com episódio, LIVE novo apontando state social ACTIVE validado (ou sucessor versionado), índices e CYCLE sucessor READY_FOR_DRAMATURGO; readback e handoff. Nunca abrir outra cena sem Dramaturgo.
+Conflitos não são resolvidos silenciosamente. Se houver ciclo posterior a V0012 ou qualquer divergência antes da abertura, bloquear a exceção de C15.
