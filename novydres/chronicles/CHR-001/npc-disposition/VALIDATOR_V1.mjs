@@ -33,12 +33,12 @@ export function validateState(root,statePath,{livePath=null}={}){
  check(['STAGED','ACTIVE'].includes(s.status),'wrong status');
  exact(s.checkpoint,['source_head_sha','cycle_path','cycle_blob_sha','last_event_id'],'checkpoint');
  check(HEX.test(s.checkpoint.source_head_sha)&&HEX.test(s.checkpoint.cycle_blob_sha)&&str(s.checkpoint.last_event_id),'missing checkpoint SHA/event');
- check(/^novydres\/chronicles\/CHR-001\/orchestration\/CYCLE_V[0-9]{4}\\.json$/.test(s.checkpoint.cycle_path),'invalid anchor cycle');
+ check(/^novydres\/chronicles\/CHR-001\/orchestration\/CYCLE_V[0-9]{4}\.json$/.test(s.checkpoint.cycle_path),'invalid anchor cycle');
  check(gitBlobSha(load(root,s.checkpoint.cycle_path))===s.checkpoint.cycle_blob_sha,'anchor cycle blob mismatch');
  const cycle=json(root,s.checkpoint.cycle_path);
  check(cycle.checkpoint?.last_event_id===s.checkpoint.last_event_id,'anchor event mismatch');
  if(s.previous_version!==null){
-   check(/^novydres\/chronicles\/CHR-001\/npc-disposition\/STATE_V[0-9]{3}\\.json$/.test(s.previous_version),'bad predecessor path');
+   check(/^novydres\/chronicles\/CHR-001\/npc-disposition\/STATE_V[0-9]{3}\.json$/.test(s.previous_version),'bad predecessor path');
    check(s.previous_version!==statePath,'self-predecessor');
    const prior=json(root,s.previous_version);
    check(prior.chronicle_id==='CHR-001'&&prior.schema_id===s.schema_id,'predecessor scope mismatch');
