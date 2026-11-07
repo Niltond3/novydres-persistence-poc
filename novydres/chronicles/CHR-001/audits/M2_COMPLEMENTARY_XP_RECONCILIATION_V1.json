@@ -1,0 +1,168 @@
+{
+  "schema_id": "CHR001_M2_COMPLEMENTARY_XP_RECONCILIATION_V1",
+  "status": "DOCUMENTARY_AUDIT_PENDING_FORMAL_ACT_ADJUDICATION",
+  "source_head_sha": "42c6ce726ff2b24ff91ce57e460db074d326eadc",
+  "source_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0018.json",
+    "blob_sha": "d160bf4cd28f48c0c6616c90f4c7f250d0da6d72",
+    "status": "PROVOCATION_CLOSURE_PENDING",
+    "last_event_id": "CHR001-M204-C17-08-20261106-001"
+  },
+  "request_classification": "PLAYER_AUTHORIZED_REVIEW_BEFORE_OFFICIAL_CLOSURE; not player authorization for exact retroactive credit change or trait purchase",
+  "scope": "M2.01_M2.04_AND_M2_MARCO; historical original sources retained; no retroactive story invention",
+  "binding_policy": {
+    "decision": "DEC-CR-021",
+    "path": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+    "legacy_rule": "M1.05 local short=10, intermediate <=20, long up to 30 credit per closed provocation",
+    "prospective_rule": "one settled ACT_RESOLUTION with distinct substantive question = at most 10 credit; up to five real acts per provocation; no double credit",
+    "no_historical_auto_reclassification": "DEC-CR-021 explicitly prospective, prohibits synthesizing five retrospective planned acts for closed M2.03. Formal scoped amendment/exception needed for additional retroactive reconciliation.",
+    "not_an_increase_to_total_xp": true
+  },
+  "baseline": {
+    "xp_budget_cap": 675,
+    "xp_spent": 170,
+    "xp_remaining_capacity": 505,
+    "xp_credit_available": 50,
+    "xp_locked_capacity": 455,
+    "willpower_max": 6,
+    "willpower_superficial_damage": 6,
+    "willpower_available": 0,
+    "acts_recorded_in_live": 0
+  },
+  "provocation_screening": [
+    {
+      "id": "M2.01",
+      "nature": "SHORT_LEGACY",
+      "evidence": "legacy_character_full.source.txt, M2.01 CLOSED/CURTA, report/denial/contested signature",
+      "credit_already_settled": 10,
+      "additional_credit_recommended": 0,
+      "reason": "Questão dramatizada e encerrada sob regra vigente à época. Pendência técnica futura não equivale a novo ato retroativo."
+    },
+    {
+      "id": "M2.02",
+      "nature": "SHORT_LEGACY",
+      "evidence": "legacy_character_full.source.txt, CHR001-M202-CLOSE-20261101-001",
+      "credit_already_settled": 10,
+      "additional_credit_recommended": 0,
+      "reason": "Pergunta de Mikahel enfrentada com consequência de dúvida, classificação curta legítima; escola C14 é desdobramento em M2.04, não recontar M2.02."
+    },
+    {
+      "id": "M2.03",
+      "nature": "LONG_LEGACY",
+      "evidence": "M2.03_v017.source.txt, CHR001-M203-HOSPITAL-ARRIVAL-20261102-001; CHR001-M203-ESCAPE-108-20261103-001 through CHR001-M203-ESCAPE-125-20261103-001; CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001; administrative record CHR001-XP-HISTORIC-M203-30-20261103-001",
+      "credit_already_settled": 30,
+      "additional_credit_recommended": 0,
+      "possible_historical_exception_delta": "UP_TO_10_CANDIDATE_IF_FOUR_DISTINCT_QUESTIONS_FORMALLY_SUPPORTED; NOT_GRANTED",
+      "reason": "Extensão e complexidade já reconheceram máximo de 30 pela regra legada. Quatro núcleos passíveis de comparação: limite da violência; cuidado e atendimento médico; autonomia/resgate de Nadezhda; provas/abandono do veículo. São unidades analíticas, não atos retroativamente criados. Contar quatro em vez de três exige exceção expressa à prospectividade DEC-CR-021, validação de autonomia e vedação de duplicidade. Mikahel Touchstone não é um quinto ato automaticamente."
+    },
+    {
+      "id": "M2.04",
+      "nature": "PROSPECTIVE_ACT_RULE",
+      "evidence": "M2.04_v016.source.txt C01–C17; M2.04_DOSSIER_V9 and LONGITUDINAL_SIDECAR_V8",
+      "credit_already_settled": 0,
+      "candidate_range": "30_CONFIRMED_SOURCE_REVIEW_CANDIDATES_TO_40_IF_A4_REALIZED_IN_AUTHORIZED_DOWNTIME",
+      "additional_credit_recommended": "PENDING_ADJUDICATION",
+      "reason": "A1–A4 permanecem OPEN no LIVE. Densidade de 17 cenas, sozinha, não gera crédito. Analisar resoluções distintas pelos eventos efetivos."
+    }
+  ],
+  "m204_act_candidates": [
+    {
+      "act": "A1",
+      "question": "Confiança, responsabilidade familiar e autonomia social",
+      "evidence": [
+        "CHR001-M204-C01-16-20261103-001",
+        "CHR001-M204-C02-14-20261103-001",
+        "CHR001-M204-C14-24-20261105-001"
+      ],
+      "recommendation": "ELIGIBLE_FOR_FORMAL_RESOLUTION_REVIEW",
+      "nominal_credit_if_settled": 10,
+      "reason": "Bart/Mary compartilham limites e decisões, e a resposta à escola preservou responsabilidade e autonomia de Mikahel. Consequência relacional comprovada; não exige resolver origem do boato.",
+      "anti_double_count": "O mesmo arco familiar em C01, C02 e C14 vale no máximo uma resolução; M2.02 já remunerada não é segunda parcela."
+    },
+    {
+      "act": "A2",
+      "question": "Prova, integridade profissional e limites de poder/autoridade",
+      "evidence": [
+        "CHR001-M204-C08-27-20261104-001",
+        "CHR001-M204-C09-10-20261105-001",
+        "CHR001-M204-C10-16-20261105-001",
+        "CHR001-M204-C11-17-20261105-001",
+        "CHR001-M204-C13-18-20261105-001"
+      ],
+      "recommendation": "ELIGIBLE_FOR_FORMAL_RESOLUTION_REVIEW",
+      "nominal_credit_if_settled": 10,
+      "reason": "Há escolhas com efeitos confirmados: preservar prova, contestar autoria atribuída, isolar seção insegura, buscar resposta institucional. A questão dramática pode estar resolvida por compromisso de agir com prova sem que autor da fraude ou fins Volnaya sejam conhecidos.",
+      "anti_double_count": "Uma única resolução A2; não multiplicar por investigação Volnaya, formulários C10, isolamento C11 e reunião C13."
+    },
+    {
+      "act": "A3",
+      "question": "Violência, poder, clemência e responsabilidade",
+      "evidence": [
+        "CHR001-M204-C16-16-20261106-001",
+        "CHR001-M204-C16-26-20261106-001",
+        "CHR001-M204-C17-08-20261106-001"
+      ],
+      "recommendation": "STRONG_FORMAL_RESOLUTION_CANDIDATE",
+      "nominal_credit_if_settled": 10,
+      "reason": "A violência efetiva e a decisão voluntária de poupar/deixar ir tiveram consequência própria; o PJ também escolheu regressar e evacuar. A resposta moral ocorre mesmo com natureza de Oleg não verificada.",
+      "anti_double_count": "Não separar combate/diálogo/resgate em três atos por extensão; no máximo um A3."
+    },
+    {
+      "act": "A4",
+      "question": "Independência econômica e mudança de vida",
+      "evidence": [
+        "CHR001-M204-C09-13-20261105-001",
+        "CHR001-M204-C09-22-20261105-001",
+        "CHR001-M204-C10-09-20261105-001",
+        "CHR001-M204-C13-07-20261105-001"
+      ],
+      "recommendation": "CONDITIONAL_ON_ACTUAL_DOWNTIME_RESOLUTION",
+      "nominal_credit_if_settled": 10,
+      "reason": "A escolha e plano 14/14 existem, mas oficina, capital e horas extras pagas não existem como fato confirmado. Pode tornar-se resolução quando a abertura real for consolidada em downtime autorizado e auditado.",
+      "anti_double_count": "Abrir oficina não multiplica crédito por licença, aluguel, primeiras ferramentas, primeiro cliente e guincho."
+    }
+  ],
+  "math_scenarios": {
+    "without_new_act_credit": {
+      "credit": 50,
+      "spent": 170,
+      "total": 675,
+      "remaining_capacity": 505
+    },
+    "three_formally_settled_m204_acts": {
+      "credit": 80,
+      "delta": 30,
+      "spent": 170,
+      "total": 675,
+      "remaining_capacity": 505
+    },
+    "four_formally_settled_m204_acts_after_downtime": {
+      "credit": 90,
+      "delta": 40,
+      "spent": 170,
+      "total": 675,
+      "remaining_capacity": 505
+    },
+    "possible_separate_m203_one_time_exception_only_if_authorized": {
+      "additional_delta_upper_bound": 10,
+      "credit_if_three_m204_plus_exception": 90,
+      "credit_if_four_m204_plus_exception": 100,
+      "not_granted": true
+    },
+    "formula": "effective_credit = min(10,max(0,675−xp_spent−xp_credit_available)) per unique legitimate settled act"
+  },
+  "formal_resolution_requirements": [
+    "Check original event IDs and approved scope of each act against dossier version/source events; adjudicate exact resolution_type; no duplicate across provocations.",
+    "If M2.03 retroactive exception is desired, publish NEW explicit local decision reconciling DEC-CR-021 without editing frozen or historical documents and without counting Touchstone as automatic act.",
+    "Only grant actual credit in a separate authorized settlement/closure transaction with ACT_RESOLUTION IDs, updated COW LIVE/character/index/manifest as required and readback; no XP purchase.",
+    "Closure/M2 gate after reconciliation; neither event outcomes nor downtime passage are created in this audit."
+  ],
+  "integrity": {
+    "no_current_resource_change": true,
+    "no_new_story_events": true,
+    "no_scene_start": true,
+    "no_m204_closure": true,
+    "no_m2_closure": true,
+    "no_canon_change": true
+  }
+}
