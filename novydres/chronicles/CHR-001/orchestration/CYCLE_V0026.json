@@ -1,0 +1,88 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V3",
+  "cycle_id": "CHR001-CYCLE-0026",
+  "sequence": 26,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M3.01",
+  "manifest_path": "novydres/MANIFEST_V46.json",
+  "source_head_sha": "8187eb105b69c6f9e058162886a1f023e57e7f11",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0025.json",
+    "blob_sha": "c228d35ff046f98c70a179ae4c5a6060da362551"
+  },
+  "transition": "SCENE_COMMITTED",
+  "status": "READY_FOR_DRAMATURGO",
+  "next_role": "DRAMATURGO",
+  "checkpoint": {
+    "last_event_id": "CHR001-M301-C02-16-20261107-001",
+    "last_closed_scene": "C02",
+    "next_scene": "C03",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v034.json",
+      "blob_sha": "45fa26e37a5d8f76bd1a8e2ed4e4d1068b54d2bd"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v034.json",
+      "blob_sha": "ca4274c29e017d00f000845cf214b4f3b5d3d14f"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+      "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v040.source.txt",
+      "blob_sha": "05cd328f51ecd4a5a3019e481a3526d3d97243c7"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V18.json",
+      "blob_sha": "649bb37e09b6e20fce2ad7f7d894a12d33e22ed8"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V20.json",
+      "blob_sha": "37ed5f10ba3f36bc604dfff9152770a05f0468fb"
+    },
+    "npc_disposition": {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/STATE_V004.json",
+      "blob_sha": "d0d8873da5f961245e7e03eb080212d891856437"
+    },
+    "roll_audit": {
+      "path": "novydres/chronicles/CHR-001/events/M3.01_C02_ROLLS_V1.json",
+      "blob_sha": "f236a74864531455bd74a518cfa919f64283e94e"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M301-20261107-V2",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V2.json",
+      "blob_sha": "42452ea370e083f2897643eba0ec81b4b6249164"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V2.json",
+      "blob_sha": "ad6cc8e1d565573ce83fbb96a68554fff3282317"
+    },
+    "validity": "REVIEW_REQUIRED_AFTER_C02",
+    "reviewed_against_event_id": "CHR001-M301-C01-08-20261107-001"
+  },
+  "review": {
+    "decision": "SCENE_COMMITTED_REVIEW_REQUIRED",
+    "against_last_event_id": "CHR001-M301-C02-16-20261107-001",
+    "public_rationale": "C02 encerrada após reaparição de homem da ambulância (nome Jonas Mercer e clã Ventrue autodeclarados), discussão de sigilo/clãs/política, intimidação social 7x3 (margem4), 2 FV superficiais no NPC e acordo de avisos futuros sob coerção, sem busca ativa nem proteção. Dramaturgo deve reavaliar M3.01 inteira, autonomia NPC, horror, consequências/segredo, ritmo e atos sem avanço automático."
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}
