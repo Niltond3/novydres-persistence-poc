@@ -1,0 +1,28 @@
+name: NOVYDRES CHR-001 Marco Closure Validation V3
+on:
+  push:
+    paths:
+      - 'novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs'
+      - 'novydres/runtime/orchestration/ORCHESTRATION_TESTS_V3.mjs'
+      - 'novydres/runtime/orchestration/CYCLE_SCHEMA_V3.json'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0022.json'
+      - '.github/workflows/novydres-marco-closure-v3.yml'
+  pull_request:
+    paths:
+      - 'novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0022.json'
+permissions:
+  contents: read
+jobs:
+  validate-closed-marco-v3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test M2 closure and M3 preparation gate
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V3.mjs
+      - name: Validate latest cycle and raw source blob SHAs
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs --root .

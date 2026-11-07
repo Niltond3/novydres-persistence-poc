@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {validateLatestV3,validateTransitionV3} from './ORCHESTRATION_VALIDATOR_V3.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const paths={cycle:'novydres/chronicles/CHR-001/orchestration/CYCLE_V0022.json',prev:'novydres/chronicles/CHR-001/orchestration/CYCLE_V0021.json',live:'novydres/chronicles/CHR-001/LIVE_v032.json',prevLive:'novydres/chronicles/CHR-001/LIVE_v032.json',closure:'novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json',manifest:'novydres/MANIFEST_V44.json'};
+const setup=()=>[read(paths.cycle),read(paths.prev),read(paths.live),read(paths.prevLive),read(paths.closure),read(paths.manifest)];
+test('M2 closure verifies hashes, schema and source refs',()=>{const r=validateLatestV3(root);assert.equal(r.ok,true);assert.equal(r.marco,'M2');assert.equal(r.next_marco,'M3');assert.equal(r.initial_provocation,'NOT_CREATED');assert.equal(r.kind,'ADMIN_VALIDATOR_REVALIDATED')});
+test('closure does not generate M3 provocation or release Narrador',()=>{const r=setup();assert.equal(r[0].next_role,'DRAMATURGO');assert.equal(r[0].status,'READY_FOR_DRAMATURGO');assert.equal(r[0].provocation_id,'M2.04');assert.equal(r[2].stage.M3,'NOT_STARTED')});
+test('reject fictional event injected at Marco closure',()=>{const r=setup();r[0].checkpoint.last_event_id='FAKE';assert.throws(()=>validateTransitionV3(...r),/BLOCK/)});
+test('reject extra XP attributed to closure',()=>{const r=setup();r[2].character.resources.xp_spent+=10;assert.throws(()=>validateTransitionV3(...r),/BLOCK/)});
+test('reject M3 dossier precreated',()=>{const r=setup();r[0].plan.dossier.blob_sha='a'.repeat(40);assert.throws(()=>validateTransitionV3(...r),/BLOCK/)});
+test('reject false cultural/naming manifest',()=>{const r=setup();delete r[5].runtime.civic_cultural_naming_lens_current;assert.throws(()=>validateTransitionV3(...r),/BLOCK/)});
+test('reject auto narrator before initial M3 dramaturgy',()=>{const r=setup();r[0].next_role='NARRADOR';assert.throws(()=>validateTransitionV3(...r),/BLOCK/)});
+test('reject unclosed M2 or auto-embrace',()=>{const r=setup();r[2].stage.M2='ACTIVE';assert.throws(()=>validateTransitionV3(...r),/BLOCK/);const s=setup();s[2].stage.embrace_occurred=true;assert.throws(()=>validateTransitionV3(...s),/BLOCK/)});
