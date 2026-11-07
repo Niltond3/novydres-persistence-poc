@@ -1,0 +1,60 @@
+{
+  "schema_id": "CHR001_M301_POST_C01_REVALIDATION_AUDIT_V2",
+  "status": "PROSPECTIVE_PLAN_REVISION",
+  "base_head": "418834f097883bf24b270f42fd54d286d490a8b8",
+  "source_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0024.json",
+  "source_cycle_blob_sha": "fdfaf1d0d1c902df719acad8c3fcab32d09363a9",
+  "last_event_id": "CHR001-M301-C01-08-20261107-001",
+  "scene_boundary": "M3.01.C01 CLOSED; C02 NOT_STARTED",
+  "assessment": {
+    "decision": "PLAN_REVISED",
+    "material_changes": [
+      "Reconciliar recusa expressa e contato condicional, sem dever de intervenção.",
+      "Promover Eleanor e Samir de candidatos a introduzidos, distinguindo reivindicações de fatos e seus conhecimentos individuais.",
+      "Corrigir dossiê pré-sessão de FV0/6 para FV6/6 mediante recuperação excepcional única documentada.",
+      "Reajustar atos e gatilhos futuros para evitar retomar a mesma oferta de guarda ou obrigar telefonema e conflitos compensatórios.",
+      "Verificar horizonte M3, horror gótico-punk, autonomia/competência NPC e cenário americano plural sem vincular fios anteriores."
+    ],
+    "no_act_resolution": "A1–A4 ainda PLANNED_NOT_GRANTED; C01 caracteriza escolha moral, não resolução substantiva ou crédito.",
+    "supernatural_progress": "ANOMALY herdada de M2; zero evidência sobrenatural nova em C01; nenhuma genealogia ou Abraço criado.",
+    "scene_02_gate": "ONLY_AFTER_READY_FOR_NARRATOR_AND_PLAYER_AUTHORIZATION_AND_WHY_NOW_WITH_REAL_CHOICE"
+  },
+  "authoritative_sources": {
+    "manifest": "novydres/MANIFEST_V46.json",
+    "live": "novydres/chronicles/CHR-001/LIVE_v033.json",
+    "episode": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+    "character": "novydres/chronicles/CHR-001/character/state_v039.source.txt",
+    "knowledge": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V17.json",
+    "threads": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V19.json",
+    "session_transition": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M3.01_V1.json"
+  },
+  "resources": {
+    "willpower": {
+      "max": 6,
+      "superficial": 0,
+      "aggravated": 0,
+      "available": 6,
+      "standard_recovery": 3,
+      "scoped_exception_additional": 3
+    },
+    "xp": {
+      "cap": 675,
+      "spent": 270,
+      "capacity": 405,
+      "credit_available": 0,
+      "m301_acts_paid": 0
+    }
+  },
+  "preservations": {
+    "m2_closed": true,
+    "c01_closed": true,
+    "no_new_story_events": true,
+    "no_npc_knowledge_updates": true,
+    "no_xp_fv_delta": true,
+    "no_scene_started": true,
+    "no_embrace": true,
+    "no_frozen_edits": true,
+    "no_spoilers_in_public_handoff": true
+  },
+  "validation_scope": "Structural schema shape and SHA/lineage readback. No V5 roll or narrator end-to-end execution performed."
+}
