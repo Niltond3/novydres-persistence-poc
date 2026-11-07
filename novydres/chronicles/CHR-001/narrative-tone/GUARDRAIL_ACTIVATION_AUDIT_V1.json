@@ -1,0 +1,42 @@
+{
+  "schema_id": "CHR001_NPC_AND_GOTHIC_PUNK_GUARDRAILS_ACTIVATION_V1",
+  "status": "ACTIVE_PROSPECTIVELY_AFTER_ATOMIC_READBACK",
+  "chronicle_id": "CHR-001",
+  "source_player_direction": "2026-11-06 current chat: improve NPC agency and resist over-courtesy, add gothic-punk horror as real recurring causal tone before closing M2",
+  "initial_checkpoint": "M2.04_C17_CLOSED_WORKSHOP_ONLY_DOWNTIME_CLOSURE_PENDING",
+  "source_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0019.json",
+  "new_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0020.json",
+  "changes": {
+    "npc_disposition": "V2 neutral band -1..+1 selects no positive expression, mood needs verification, unprofiled NPC not assumed neutral-pleasant",
+    "social_gate": "Purpose/authority/cost/limits/knowledge/mood/vinculo before significant NPC decisions",
+    "gothic_punk": "Institutions/power asymmetry, real horror vectors, flawed people, action with causal costs and agency; not forced cruelty or vampire in every scene",
+    "narrator_adapter": "NARRADOR_ROLE_V2 prospective",
+    "dramaturgo_adapter": "DRAMATURGO_ROLE_V2 prospective"
+  },
+  "historical_audit": {
+    "c14_leave_work_event": "CHR001-M204-C14-04-20261105-001",
+    "historical_fact": "Pavel offered to cover shift, Andreyev agreed without documented adversarial friction",
+    "previous_disposition_activation": "ACTIVE_FROM_C15",
+    "no_retroactive_c14_edit": true,
+    "current_npc_profiles": 4,
+    "mood_windows_persisted": 0,
+    "issue": "EVALUATOR_V1 positive expression for neutral and missing institutional goal/power-cost preflight"
+  },
+  "guardrails": {
+    "no_global_canon_change": true,
+    "no_frozen_modification": true,
+    "no_closed_scene_changes": true,
+    "no_pc_internal_emotion_or_action_assumed": true,
+    "no_diegetic_event": true,
+    "no_xp_fv_changes": true,
+    "no_next_scene_or_marco_open": true,
+    "next_role": "NONE",
+    "no_spoilers": true
+  },
+  "testing": {
+    "new_suite": "novydres/chronicles/CHR-001/npc-disposition/TESTS_V3.mjs",
+    "planned_command": "node --test novydres/chronicles/CHR-001/npc-disposition/TESTS_V3.mjs",
+    "execution_status": "NOT_RUN_IN_CONNECTOR_AT_PUBLICATION",
+    "static_guard_checks": "REQUIRED_BEFORE_ACTIVATION"
+  }
+}
