@@ -1,0 +1,2116 @@
+{
+  "schema": "NOVYDRES_CHR001_D03_AGENT_REGISTRY_V001",
+  "phase": "D03",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06": "NOT_STARTED"
+  },
+  "d02_gate": "PASS_WITH_UNKNOWN",
+  "errata": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+  },
+  "constraints": [
+    "PLAYER_SAFE and PROPOSED only",
+    "V011 provenance errata controls invalid V001 metadata",
+    "Derived source does not authenticate original chat, author or RNG",
+    "NPC_CLAIM is not objective fact; temporal sequence is not causal",
+    "No unseen NPC witness, unproved identity merge, reciprocal relation or private PC thought",
+    "No GM hidden disclosures, new events, XP, FV, Embrace, 2010 or C06"
+  ],
+  "count": 58,
+  "source_atlas_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+  "agents": [
+    {
+      "agent_id": "pc-bartholomeu-krauser",
+      "identity": "Bartholomeu Krauser",
+      "kind": "PC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [
+        "Bart",
+        "Bartolomeu"
+      ],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M1.01",
+        "card": "HIST-IDX-EV-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C05",
+        "event_id": "CHR001-M301-C05-22-20261109-001",
+        "level": "DERIVED_EPISODE"
+      },
+      "index_card_count": 275,
+      "unverified_event_cards": [
+        "CHR001-M201-PAVEL-OBS-20261101-001",
+        "CHR001-M201-PAVEL-COPIA-20261101-001",
+        "CHR001-M201-FONTE-COPIA-20261101-001",
+        "CHR001-M202-PRESENTED-20261101-001",
+        "CHR001-M202-CODA-M2-GUIDANCE-20261101-001"
+      ],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            52,
+            62
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-mary-krauser",
+      "identity": "Mary Krauser",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M1.06",
+        "card": "HIST-IDX-EV-011",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.02",
+        "card": "CHR001-M301-C04-02-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 79,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        3,
+        45
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            102,
+            112
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-mikahel-krauser",
+      "identity": "Mikahel Krauser",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M1.03",
+        "card": "HIST-IDX-EV-005",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M2.04.C14.23",
+        "card": "CHR001-M204-C14-23-20261105-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 37,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        2
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            176,
+            186
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-sara-krauser",
+      "identity": "Sara Krauser",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M1.01",
+        "card": "HIST-IDX-EV-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M2.04.C14.14",
+        "card": "CHR001-M204-C14-14-20261105-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 37,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        12
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            243,
+            253
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-rabino-mikhael",
+      "identity": "Mikha'el / Habi Mikha",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            300,
+            310
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-vera-heating-resident",
+      "identity": "Vera",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            347,
+            357
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-vera-daughter",
+      "identity": "Filha de Vera",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            394,
+            404
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-mikhailov",
+      "identity": "Mikhailov",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            441,
+            451
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-pavel-heating-supervisor",
+      "identity": "Pavel (chefia do aquecimento)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M2.03.118",
+        "card": "CHR001-M203-ESCAPE-118-20261103-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M2.04.C17.08",
+        "card": "CHR001-M204-C17-08-20261106-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 50,
+      "unverified_event_cards": [
+        "CHR001-M201-PAVEL-OBS-20261101-001",
+        "CHR001-M201-PAVEL-COPIA-20261101-001",
+        "CHR001-M201-FONTE-COPIA-20261101-001"
+      ],
+      "knowledge_index_records": [
+        1,
+        18,
+        25,
+        33,
+        34
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            488,
+            498
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-liev-heating-colleague",
+      "identity": "Liev",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M2.04.C10.05",
+        "card": "CHR001-M204-C10-05-20261105-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M2.04.C17.08",
+        "card": "CHR001-M204-C17-08-20261106-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 9,
+      "unverified_event_cards": [
+        "CHR001-M201-FONTE-COPIA-20261101-001"
+      ],
+      "knowledge_index_records": [
+        0,
+        26,
+        35
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            583,
+            593
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-yuri-school",
+      "identity": "Yuri",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            654,
+            664
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-dima-school",
+      "identity": "Dima",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            701,
+            711
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-orlova-school",
+      "identity": "Orlova",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            748,
+            758
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-school-director-unnamed",
+      "identity": "Diretora da escola (nome não confirmado)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            795,
+            805
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-yuri-father",
+      "identity": "Pai de Yuri (nome não confirmado)",
+      "kind": "NPC",
+      "role": "MENTION_ONLY",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            842,
+            852
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-lev-morozov",
+      "identity": "Lev Morozov",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        8
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            889,
+            899
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-lev-wife",
+      "identity": "Esposa de Lev (nome não confirmado)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            946,
+            956
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-nikolai-serebryakov",
+      "identity": "Nikolai Serebryakov",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            993,
+            1003
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m1-intermediary",
+      "identity": "Intermediário recorrente (nome desconhecido)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1040,
+            1050
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-lev-elderly-neighbor",
+      "identity": "Moradora idosa do prédio de Lev",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1087,
+            1097
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-lev-younger-neighbor",
+      "identity": "Moradora mais jovem do prédio de Lev",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1134,
+            1144
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-guard-records",
+      "identity": "Vigilante da repartição de registros",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1181,
+            1191
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-belov",
+      "identity": "Viktor Belov",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1228,
+            1238
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-irina-unverified",
+      "identity": "Irina (identidade/parentesco não validado)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1275,
+            1285
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-pavel-warehouse-distinct",
+      "identity": "Funcionário da sala vizinha ao Pessoal / chamado 'Pavel' em trecho",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1322,
+            1332
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-contractor-unidentified",
+      "identity": "Contratante por trás do intermediário (não identificado)",
+      "kind": "NPC",
+      "role": "MENTION_ONLY",
+      "identity_index_status": "ANONYMOUS_INDIVIDUATED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1369,
+            1379
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-unnamed-injured-stranger",
+      "identity": "Homem ferido na ambulância — 'Jonas Mercer' (autodeclaração)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [
+        "Jonas Mercer (autodeclaração)"
+      ],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C02.03",
+        "card": "CHR001-M301-C02-03-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C03.02",
+        "card": "CHR001-M301-C03-02-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 15,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        4
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1416,
+            1426
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-nadezhda-claimed",
+      "identity": "Nadezhda Sokolova (nome relatado)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [
+        "Nadezhda Sokolova (nome alegado)"
+      ],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M2.03.108",
+        "card": "CHR001-M203-ESCAPE-108-20261103-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.06",
+        "card": "CHR001-M301-C04-06-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 15,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        5
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1478,
+            1488
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-gromov-claimed",
+      "identity": "Gromov (nome alegado)",
+      "kind": "NPC",
+      "role": "MENTION_ONLY",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        6
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1530,
+            1540
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-gray-apron-hospital-worker",
+      "identity": "Funcionário de avental cinza",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        7
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1577,
+            1587
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-paramedics-unspecified",
+      "identity": "Ambulance/medical personnel",
+      "kind": "GROUP",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        9
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1627,
+            1637
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-unidentified-sedan-occupant",
+      "identity": "Unknown sedan motorist",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        10
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1676,
+            1686
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-unnamed-criminal-debtor",
+      "identity": "Unnamed criminal contact owing Bart favor per player",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        11
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1725,
+            1735
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "identity": "Volnaya clerk (~50s), called Ilya by colleague",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        13
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1772,
+            1782
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-volnaya-night-workers",
+      "identity": "Volnaya night workers and guard",
+      "kind": "GROUP",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        14
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1822,
+            1832
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-elena-heating-instrumentation",
+      "identity": "Elena (instrumentista da unidade)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        15
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1872,
+            1882
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-heating-mechanic",
+      "identity": "Viktor (mecânico do ramal)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        16
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1921,
+            1931
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-anton-heating-mechanic",
+      "identity": "Anton (mecânico do ramal)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        17
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1970,
+            1980
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-c12-housing-administrator-unnamed",
+      "identity": "Visitante administradora de edifícios (nome UNKNOWN)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        19
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2019,
+            2029
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-andreyev-administrative-director",
+      "identity": "Viktor Andreyev (direção administrativa)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        20
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2069,
+            2079
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-distribution-representative-unnamed",
+      "identity": "Representante da distribuição não nomeado",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        21
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2119,
+            2129
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-anna-morozova-vice-diretora",
+      "identity": "Anna Morozova",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        22
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2169,
+            2179
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-sokolov",
+      "identity": "Viktor Sokolov",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        23
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2229,
+            2239
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-larissa-sokolova",
+      "identity": "Larissa Sokolova",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        24
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2278,
+            2288
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-leonid-orlov-distribution",
+      "identity": "Leonid Orlov",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        27
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2327,
+            2337
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-grigori-makarov-technical-safety",
+      "identity": "Grigori Makarov",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        28
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2376,
+            2386
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-anton-c15-safety-inspector",
+      "identity": "Anton, segurança C15",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        29,
+        36
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2425,
+            2435
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-dmitri-return-maintenance",
+      "identity": "Dmitri",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        30
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2481,
+            2491
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-oleg-vedenin-claimed",
+      "identity": "Oleg Vedenin (identidade e clã alegados; homem da galeria C16)",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "ALIAS_UNRESOLVED",
+      "aliases": [
+        "Oleg Vedenin (nome/clã alegados)"
+      ],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M2.04.C16.22",
+        "card": "CHR001-M204-C16-22-20261106-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C02.16",
+        "card": "CHR001-M301-C02-16-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 10,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        31
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2530,
+            2540
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-unidentified-man-c16",
+      "identity": "Homem inicialmente suspenso pela figura de casaco escuro",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        32,
+        37
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2582,
+            2592
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m3-eleanor-price-candidate",
+      "identity": "Eleanor Price — M3.01.C01",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C01.02",
+        "card": "CHR001-M301-C01-02-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C01.07",
+        "card": "CHR001-M301-C01-07-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 5,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        38
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2639,
+            2649
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m3-samir-haddad-candidate",
+      "identity": "Samir Haddad — M3.01.C01",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C01.03",
+        "card": "CHR001-M301-C01-03-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C01.07",
+        "card": "CHR001-M301-C01-07-20261107-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 4,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        39
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2689,
+            2699
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m301-daniel-foster",
+      "identity": "Daniel Foster — M3.01.C03",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": "UNKNOWN",
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        40
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2739,
+            2749
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m301-marta-funeral",
+      "identity": "Marta, amiga de Yelena",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C04.04",
+        "card": "CHR001-M301-C04-04-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.14",
+        "card": "CHR001-M301-C04-14-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 5,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        41
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2789,
+            2799
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m301-margaret-funeral",
+      "identity": "Margaret, atendente funerária",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C04.08",
+        "card": "CHR001-M301-C04-08-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.09",
+        "card": "CHR001-M301-C04-09-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 2,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        42
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2838,
+            2848
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m301-richard-funeral",
+      "identity": "Richard, funerária",
+      "kind": "NPC",
+      "role": "DIRECT_SCENE",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M3.01.C04.08",
+        "card": "CHR001-M301-C04-08-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.08",
+        "card": "CHR001-M301-C04-08-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 1,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        43
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2887,
+            2897
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-m301-daniel-son",
+      "identity": "Daniel, filho de Yelena (não Daniel Foster)",
+      "kind": "NPC",
+      "role": "UNKNOWN",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": "UNKNOWN",
+      "last_occurrence": {
+        "checkpoint": "M3.01.C05",
+        "event_id": "CHR001-M301-C05-22-20261109-001",
+        "level": "DERIVED_EPISODE"
+      },
+      "index_card_count": 0,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [
+        44
+      ],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2936,
+            2946
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    },
+    {
+      "agent_id": "npc-yelena-baranova",
+      "identity": "Yelena Baranova",
+      "kind": "NPC",
+      "role": "MATERIAL_IMPACT",
+      "identity_index_status": "IDENTIFIED",
+      "aliases": [],
+      "alias_equivalence_to_other_ids": "UNKNOWN_NOT_MERGED",
+      "first_occurrence": {
+        "checkpoint": "M2.03.118",
+        "card": "CHR001-M203-ESCAPE-118-20261103-001",
+        "level": "DERIVED_INDEX"
+      },
+      "last_occurrence": {
+        "checkpoint": "M3.01.C04.13",
+        "card": "CHR001-M301-C04-13-20261108-001",
+        "level": "DERIVED_INDEX"
+      },
+      "index_card_count": 11,
+      "unverified_event_cards": [],
+      "knowledge_index_records": [],
+      "factual_motive": "UNKNOWN",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2985,
+            2995
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ],
+      "limits": [
+        "Historical role attribution not independently authenticated",
+        "No temporal carry-forward of location or knowledge"
+      ]
+    }
+  ]
+}

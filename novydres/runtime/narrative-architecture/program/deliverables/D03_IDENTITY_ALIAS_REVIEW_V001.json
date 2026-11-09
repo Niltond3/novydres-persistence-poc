@@ -1,0 +1,1470 @@
+{
+  "schema": "NOVYDRES_CHR001_D03_IDENTITY_ALIAS_REVIEW_V001",
+  "phase": "D03",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06": "NOT_STARTED"
+  },
+  "d02_gate": "PASS_WITH_UNKNOWN",
+  "errata": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+  },
+  "constraints": [
+    "PLAYER_SAFE and PROPOSED only",
+    "V011 provenance errata controls invalid V001 metadata",
+    "Derived source does not authenticate original chat, author or RNG",
+    "NPC_CLAIM is not objective fact; temporal sequence is not causal",
+    "No unseen NPC witness, unproved identity merge, reciprocal relation or private PC thought",
+    "No GM hidden disclosures, new events, XP, FV, Embrace, 2010 or C06"
+  ],
+  "per_agent": [
+    {
+      "agent_id": "pc-bartholomeu-krauser",
+      "aliases": [
+        "Bart",
+        "Bartolomeu"
+      ],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            52,
+            62
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-mary-krauser",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            102,
+            112
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-mikahel-krauser",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            176,
+            186
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-sara-krauser",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            243,
+            253
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-rabino-mikhael",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            300,
+            310
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-vera-heating-resident",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            347,
+            357
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-vera-daughter",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            394,
+            404
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-mikhailov",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            441,
+            451
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-pavel-heating-supervisor",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            488,
+            498
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-liev-heating-colleague",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            583,
+            593
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-yuri-school",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            654,
+            664
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-dima-school",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            701,
+            711
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-orlova-school",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            748,
+            758
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-school-director-unnamed",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            795,
+            805
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-yuri-father",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            842,
+            852
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-lev-morozov",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            889,
+            899
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-lev-wife",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            946,
+            956
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-nikolai-serebryakov",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            993,
+            1003
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m1-intermediary",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1040,
+            1050
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-lev-elderly-neighbor",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1087,
+            1097
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-lev-younger-neighbor",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1134,
+            1144
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-guard-records",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1181,
+            1191
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-belov",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1228,
+            1238
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-irina-unverified",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1275,
+            1285
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-pavel-warehouse-distinct",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1322,
+            1332
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-contractor-unidentified",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1369,
+            1379
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-unnamed-injured-stranger",
+      "aliases": [
+        "Jonas Mercer (autodeclaração)"
+      ],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1416,
+            1426
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-nadezhda-claimed",
+      "aliases": [
+        "Nadezhda Sokolova (nome alegado)"
+      ],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1478,
+            1488
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-gromov-claimed",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1530,
+            1540
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-gray-apron-hospital-worker",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1577,
+            1587
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-paramedics-unspecified",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1627,
+            1637
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-unidentified-sedan-occupant",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1676,
+            1686
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-unnamed-criminal-debtor",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1725,
+            1735
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1772,
+            1782
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-volnaya-night-workers",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1822,
+            1832
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-elena-heating-instrumentation",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1872,
+            1882
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-heating-mechanic",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1921,
+            1931
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-anton-heating-mechanic",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1970,
+            1980
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-c12-housing-administrator-unnamed",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2019,
+            2029
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-andreyev-administrative-director",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2069,
+            2079
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-distribution-representative-unnamed",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2119,
+            2129
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-anna-morozova-vice-diretora",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2169,
+            2179
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-viktor-sokolov",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2229,
+            2239
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-larissa-sokolova",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2278,
+            2288
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-leonid-orlov-distribution",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2327,
+            2337
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-grigori-makarov-technical-safety",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2376,
+            2386
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-anton-c15-safety-inspector",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2425,
+            2435
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-dmitri-return-maintenance",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2481,
+            2491
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-oleg-vedenin-claimed",
+      "aliases": [
+        "Oleg Vedenin (nome/clã alegados)"
+      ],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2530,
+            2540
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-unidentified-man-c16",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2582,
+            2592
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m3-eleanor-price-candidate",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2639,
+            2649
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m3-samir-haddad-candidate",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2689,
+            2699
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m301-daniel-foster",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2739,
+            2749
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m301-marta-funeral",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2789,
+            2799
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m301-margaret-funeral",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2838,
+            2848
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m301-richard-funeral",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2887,
+            2897
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-m301-daniel-son",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2936,
+            2946
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "agent_id": "npc-yelena-baranova",
+      "aliases": [],
+      "other_id_equivalence": "UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2985,
+            2995
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "D03-ALIAS-001",
+      "left": "npc-liev-heating-colleague",
+      "right": "npc-lev-morozov",
+      "classification": "DISTINCT",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            583,
+            587
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            889,
+            893
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-002",
+      "left": "npc-m301-daniel-foster",
+      "right": "npc-m301-daniel-son",
+      "classification": "DISTINCT",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2739,
+            2743
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2936,
+            2940
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-003",
+      "left": "npc-pavel-heating-supervisor",
+      "right": "npc-pavel-warehouse-distinct",
+      "classification": "DISTINCT",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            488,
+            492
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1322,
+            1326
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-004",
+      "left": "npc-mikahel-krauser",
+      "right": "npc-rabino-mikhael",
+      "classification": "DISTINCT",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            176,
+            180
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            300,
+            304
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-005",
+      "left": "npc-anton-heating-mechanic",
+      "right": "npc-anton-c15-safety-inspector",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1970,
+            1974
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2425,
+            2429
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-006",
+      "left": "npc-viktor-heating-mechanic",
+      "right": "npc-viktor-andreyev-administrative-director",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1921,
+            1925
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2069,
+            2073
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-007",
+      "left": "npc-nadezhda-claimed",
+      "right": "npc-larissa-sokolova",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1478,
+            1482
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2278,
+            2282
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-008",
+      "left": "npc-elena-heating-instrumentation",
+      "right": "npc-yelena-baranova",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1872,
+            1876
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2985,
+            2989
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-009",
+      "left": "npc-viktor-belov",
+      "right": "npc-viktor-andreyev-administrative-director",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1228,
+            1232
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2069,
+            2073
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-010",
+      "left": "npc-unnamed-injured-stranger",
+      "right": "npc-unidentified-man-c16",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1416,
+            1420
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2582,
+            2586
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-011",
+      "left": "npc-unnamed-injured-stranger",
+      "right": "npc-oleg-vedenin-claimed",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1416,
+            1420
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2530,
+            2534
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-012",
+      "left": "npc-anna-morozova-vice-diretora",
+      "right": "npc-lev-morozov",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2169,
+            2173
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            889,
+            893
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-013",
+      "left": "npc-viktor-sokolov",
+      "right": "npc-viktor-heating-mechanic",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2229,
+            2233
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1921,
+            1925
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-014",
+      "left": "npc-m301-marta-funeral",
+      "right": "npc-mary-krauser",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            2789,
+            2793
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            102,
+            106
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "D03-ALIAS-015",
+      "left": "npc-nadezhda-claimed",
+      "right": "npc-unnamed-injured-stranger",
+      "classification": "UNKNOWN",
+      "merge_permitted": false,
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1478,
+            1482
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            1416,
+            1420
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    }
+  ],
+  "spelling_correction": {
+    "agent_id": "pc-bartholomeu-krauser",
+    "former": "Krause",
+    "authoritative": "Krauser",
+    "status": "CONFIRMED_SAME",
+    "authority": "novydres/.AGENT.md CORR-IDENTITY-002"
+  },
+  "mergers": 0
+}

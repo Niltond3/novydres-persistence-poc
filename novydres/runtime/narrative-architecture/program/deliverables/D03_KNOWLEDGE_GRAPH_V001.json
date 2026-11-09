@@ -1,0 +1,5490 @@
+{
+  "schema": "NOVYDRES_CHR001_D03_KNOWLEDGE_GRAPH_V001",
+  "phase": "D03",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06": "NOT_STARTED"
+  },
+  "d02_gate": "PASS_WITH_UNKNOWN",
+  "errata": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+  },
+  "constraints": [
+    "PLAYER_SAFE and PROPOSED only",
+    "V011 provenance errata controls invalid V001 metadata",
+    "Derived source does not authenticate original chat, author or RNG",
+    "NPC_CLAIM is not objective fact; temporal sequence is not causal",
+    "No unseen NPC witness, unproved identity merge, reciprocal relation or private PC thought",
+    "No GM hidden disclosures, new events, XP, FV, Embrace, 2010 or C06"
+  ],
+  "count": 260,
+  "attributions": [
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0001",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        13,
+        13
+      ],
+      "statement_pointer": {
+        "record_index": 0,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0002",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        14,
+        14
+      ],
+      "statement_pointer": {
+        "record_index": 0,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0003",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        17,
+        17
+      ],
+      "statement_pointer": {
+        "record_index": 0,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0004",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        20,
+        20
+      ],
+      "statement_pointer": {
+        "record_index": 0,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0005",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        21,
+        21
+      ],
+      "statement_pointer": {
+        "record_index": 0,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0006",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        39,
+        39
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0007",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        40,
+        40
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0008",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        41,
+        41
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0009",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        42,
+        42
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0010",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        43,
+        43
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 4
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0011",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        44,
+        44
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 5
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0012",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        45,
+        45
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 6
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0013",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        46,
+        46
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "confirmed",
+        "index": 7
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0014",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        49,
+        49
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0015",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        50,
+        50
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0016",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        53,
+        53
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0017",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        54,
+        54
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0018",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        55,
+        55
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0019",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        56,
+        56
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0020",
+      "checkpoint": "M2.01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        57,
+        57
+      ],
+      "statement_pointer": {
+        "record_index": 1,
+        "array": "unknown",
+        "index": 4
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0021",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        77,
+        77
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0022",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        78,
+        78
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0023",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        79,
+        79
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0024",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        80,
+        80
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0025",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        81,
+        81
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 4
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0026",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        82,
+        82
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 5
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0027",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        83,
+        83
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 6
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0028",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        84,
+        84
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "confirmed",
+        "index": 7
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0029",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        87,
+        87
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0030",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        90,
+        90
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0031",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        91,
+        91
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0032",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        92,
+        92
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0033",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        93,
+        93
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0034",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        94,
+        94
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 4
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mikahel-krauser",
+      "knowledge_id": "D03-K-0035",
+      "checkpoint": "M2.02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        95,
+        95
+      ],
+      "statement_pointer": {
+        "record_index": 2,
+        "array": "unknown",
+        "index": 5
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0036",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        115,
+        115
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0037",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        116,
+        116
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0038",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        117,
+        117
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0039",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        118,
+        118
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0040",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        119,
+        119
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 4
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0041",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        120,
+        120
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 5
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0042",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        121,
+        121
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 6
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0043",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        122,
+        122
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 7
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0044",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        123,
+        123
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 8
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0045",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        124,
+        124
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 9
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0046",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        125,
+        125
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 10
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0047",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        126,
+        126
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 11
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0048",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        127,
+        127
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 12
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0049",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        128,
+        128
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 13
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0050",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        129,
+        129
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 14
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0051",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        130,
+        130
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 15
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0052",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        131,
+        131
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 16
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0053",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        132,
+        132
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 17
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0054",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        133,
+        133
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 18
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0055",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        134,
+        134
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 19
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0056",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        135,
+        135
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "confirmed",
+        "index": 20
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0057",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        138,
+        138
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0058",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        139,
+        139
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0059",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        140,
+        140
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "claims",
+        "index": 2
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0060",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        141,
+        141
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "claims",
+        "index": 3
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0061",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        164,
+        164
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "suspected",
+        "index": 0
+      },
+      "epistemic_status": "SUSPECTED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0062",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        144,
+        144
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0063",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        145,
+        145
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0064",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        146,
+        146
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0065",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        147,
+        147
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0066",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        148,
+        148
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 4
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0067",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        149,
+        149
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 5
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0068",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        150,
+        150
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 6
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0069",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        151,
+        151
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 7
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0070",
+      "checkpoint": "M1.07-M1.09; M2.04.C01-C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        152,
+        152
+      ],
+      "statement_pointer": {
+        "record_index": 3,
+        "array": "unknown",
+        "index": 8
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0071",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        174,
+        174
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0072",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        175,
+        175
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0073",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        176,
+        176
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0074",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        177,
+        177
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0075",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        178,
+        178
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "confirmed",
+        "index": 4
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0076",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        181,
+        181
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0077",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        182,
+        182
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0078",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        183,
+        183
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "claims",
+        "index": 2
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0079",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        184,
+        184
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "claims",
+        "index": 3
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0080",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        185,
+        185
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "claims",
+        "index": 4
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0081",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        188,
+        188
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0082",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        189,
+        189
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0083",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        190,
+        190
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0084",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        191,
+        191
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0085",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        192,
+        192
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 4
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-injured-stranger",
+      "knowledge_id": "D03-K-0086",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        193,
+        193
+      ],
+      "statement_pointer": {
+        "record_index": 4,
+        "array": "unknown",
+        "index": 5
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0087",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        214,
+        214
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0088",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        215,
+        215
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0089",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        216,
+        216
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0090",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        219,
+        219
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0091",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        246,
+        246
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "suspected",
+        "index": 0
+      },
+      "epistemic_status": "SUSPECTED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0092",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        222,
+        222
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0093",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        223,
+        223
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0094",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        224,
+        224
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0095",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        225,
+        225
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0096",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        226,
+        226
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 4
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-nadezhda-claimed",
+      "knowledge_id": "D03-K-0097",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        227,
+        227
+      ],
+      "statement_pointer": {
+        "record_index": 5,
+        "array": "unknown",
+        "index": 5
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0098",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        255,
+        255
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0099",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        256,
+        256
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0100",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        259,
+        259
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0101",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        260,
+        260
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0102",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        261,
+        261
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gromov-claimed",
+      "knowledge_id": "D03-K-0103",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        262,
+        262
+      ],
+      "statement_pointer": {
+        "record_index": 6,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0104",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        280,
+        280
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0105",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        281,
+        281
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0106",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        282,
+        282
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0107",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        286,
+        286
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0108",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        287,
+        287
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0109",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        288,
+        288
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-gray-apron-hospital-worker",
+      "knowledge_id": "D03-K-0110",
+      "checkpoint": "M2.03.073",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        289,
+        289
+      ],
+      "statement_pointer": {
+        "record_index": 7,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-lev-morozov",
+      "knowledge_id": "D03-K-0111",
+      "checkpoint": "M1.05-M1.08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        307,
+        307
+      ],
+      "statement_pointer": {
+        "record_index": 8,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-lev-morozov",
+      "knowledge_id": "D03-K-0112",
+      "checkpoint": "M1.05-M1.08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        308,
+        308
+      ],
+      "statement_pointer": {
+        "record_index": 8,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-lev-morozov",
+      "knowledge_id": "D03-K-0113",
+      "checkpoint": "M1.05-M1.08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        312,
+        312
+      ],
+      "statement_pointer": {
+        "record_index": 8,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-lev-morozov",
+      "knowledge_id": "D03-K-0114",
+      "checkpoint": "M1.05-M1.08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        313,
+        313
+      ],
+      "statement_pointer": {
+        "record_index": 8,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-lev-morozov",
+      "knowledge_id": "D03-K-0115",
+      "checkpoint": "M1.05-M1.08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        314,
+        314
+      ],
+      "statement_pointer": {
+        "record_index": 8,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-paramedics-unspecified",
+      "knowledge_id": "D03-K-0116",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        332,
+        332
+      ],
+      "statement_pointer": {
+        "record_index": 9,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-paramedics-unspecified",
+      "knowledge_id": "D03-K-0117",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        336,
+        336
+      ],
+      "statement_pointer": {
+        "record_index": 9,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-paramedics-unspecified",
+      "knowledge_id": "D03-K-0118",
+      "checkpoint": "M2.03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        337,
+        337
+      ],
+      "statement_pointer": {
+        "record_index": 9,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-sedan-occupant",
+      "knowledge_id": "D03-K-0119",
+      "checkpoint": "M2.03.110-116",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        346,
+        346
+      ],
+      "statement_pointer": {
+        "record_index": 10,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-sedan-occupant",
+      "knowledge_id": "D03-K-0120",
+      "checkpoint": "M2.03.110-116",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        350,
+        350
+      ],
+      "statement_pointer": {
+        "record_index": 10,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-criminal-debtor",
+      "knowledge_id": "D03-K-0121",
+      "checkpoint": "M2.03.124-125",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        361,
+        361
+      ],
+      "statement_pointer": {
+        "record_index": 11,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unnamed-criminal-debtor",
+      "knowledge_id": "D03-K-0122",
+      "checkpoint": "M2.03.124-125",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        364,
+        364
+      ],
+      "statement_pointer": {
+        "record_index": 11,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-sara-krauser",
+      "knowledge_id": "D03-K-0123",
+      "checkpoint": "M2.04.C02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        374,
+        374
+      ],
+      "statement_pointer": {
+        "record_index": 12,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-sara-krauser",
+      "knowledge_id": "D03-K-0124",
+      "checkpoint": "M2.04.C02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        375,
+        375
+      ],
+      "statement_pointer": {
+        "record_index": 12,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-sara-krauser",
+      "knowledge_id": "D03-K-0125",
+      "checkpoint": "M2.04.C02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        376,
+        376
+      ],
+      "statement_pointer": {
+        "record_index": 12,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-sara-krauser",
+      "knowledge_id": "D03-K-0126",
+      "checkpoint": "M2.04.C02",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        381,
+        381
+      ],
+      "statement_pointer": {
+        "record_index": 12,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0127",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        392,
+        392
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0128",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        393,
+        393
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0129",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        394,
+        394
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0130",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        395,
+        395
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0131",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        398,
+        398
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0132",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        401,
+        401
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0133",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        402,
+        402
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-clerk-ilya-unverified-name",
+      "knowledge_id": "D03-K-0134",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        403,
+        403
+      ],
+      "statement_pointer": {
+        "record_index": 13,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0135",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        414,
+        414
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0136",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        415,
+        415
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0137",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        416,
+        416
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0138",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        417,
+        417
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0139",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        421,
+        421
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-volnaya-night-workers",
+      "knowledge_id": "D03-K-0140",
+      "checkpoint": "M2.04.C08",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        422,
+        422
+      ],
+      "statement_pointer": {
+        "record_index": 14,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-elena-heating-instrumentation",
+      "knowledge_id": "D03-K-0141",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        433,
+        433
+      ],
+      "statement_pointer": {
+        "record_index": 15,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-elena-heating-instrumentation",
+      "knowledge_id": "D03-K-0142",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        438,
+        438
+      ],
+      "statement_pointer": {
+        "record_index": 15,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-heating-mechanic",
+      "knowledge_id": "D03-K-0143",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        450,
+        450
+      ],
+      "statement_pointer": {
+        "record_index": 16,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-heating-mechanic",
+      "knowledge_id": "D03-K-0144",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        455,
+        455
+      ],
+      "statement_pointer": {
+        "record_index": 16,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-heating-mechanic",
+      "knowledge_id": "D03-K-0145",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        467,
+        467
+      ],
+      "statement_pointer": {
+        "record_index": 17,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-heating-mechanic",
+      "knowledge_id": "D03-K-0146",
+      "checkpoint": "M2.04.C11",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        472,
+        472
+      ],
+      "statement_pointer": {
+        "record_index": 17,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0147",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        484,
+        484
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0148",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        485,
+        485
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0149",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        486,
+        486
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0150",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        487,
+        487
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0151",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        490,
+        490
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0152",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        494,
+        494
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0153",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        495,
+        495
+      ],
+      "statement_pointer": {
+        "record_index": 18,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-c12-housing-administrator-unnamed",
+      "knowledge_id": "D03-K-0154",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        507,
+        507
+      ],
+      "statement_pointer": {
+        "record_index": 19,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-c12-housing-administrator-unnamed",
+      "knowledge_id": "D03-K-0155",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        508,
+        508
+      ],
+      "statement_pointer": {
+        "record_index": 19,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-c12-housing-administrator-unnamed",
+      "knowledge_id": "D03-K-0156",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        511,
+        511
+      ],
+      "statement_pointer": {
+        "record_index": 19,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-c12-housing-administrator-unnamed",
+      "knowledge_id": "D03-K-0157",
+      "checkpoint": "M2.04.C12",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        515,
+        515
+      ],
+      "statement_pointer": {
+        "record_index": 19,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-andreyev-administrative-director",
+      "knowledge_id": "D03-K-0158",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        527,
+        527
+      ],
+      "statement_pointer": {
+        "record_index": 20,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-andreyev-administrative-director",
+      "knowledge_id": "D03-K-0159",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        528,
+        528
+      ],
+      "statement_pointer": {
+        "record_index": 20,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-andreyev-administrative-director",
+      "knowledge_id": "D03-K-0160",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        531,
+        531
+      ],
+      "statement_pointer": {
+        "record_index": 20,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-andreyev-administrative-director",
+      "knowledge_id": "D03-K-0161",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        535,
+        535
+      ],
+      "statement_pointer": {
+        "record_index": 20,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-distribution-representative-unnamed",
+      "knowledge_id": "D03-K-0162",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        547,
+        547
+      ],
+      "statement_pointer": {
+        "record_index": 21,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-distribution-representative-unnamed",
+      "knowledge_id": "D03-K-0163",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        548,
+        548
+      ],
+      "statement_pointer": {
+        "record_index": 21,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-distribution-representative-unnamed",
+      "knowledge_id": "D03-K-0164",
+      "checkpoint": "M2.04.C13",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        553,
+        553
+      ],
+      "statement_pointer": {
+        "record_index": 21,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anna-morozova-vice-diretora",
+      "knowledge_id": "D03-K-0165",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        565,
+        565
+      ],
+      "statement_pointer": {
+        "record_index": 22,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anna-morozova-vice-diretora",
+      "knowledge_id": "D03-K-0166",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        566,
+        566
+      ],
+      "statement_pointer": {
+        "record_index": 22,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anna-morozova-vice-diretora",
+      "knowledge_id": "D03-K-0167",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        569,
+        569
+      ],
+      "statement_pointer": {
+        "record_index": 22,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anna-morozova-vice-diretora",
+      "knowledge_id": "D03-K-0168",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        573,
+        573
+      ],
+      "statement_pointer": {
+        "record_index": 22,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-sokolov",
+      "knowledge_id": "D03-K-0169",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        585,
+        585
+      ],
+      "statement_pointer": {
+        "record_index": 23,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-sokolov",
+      "knowledge_id": "D03-K-0170",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        588,
+        588
+      ],
+      "statement_pointer": {
+        "record_index": 23,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-viktor-sokolov",
+      "knowledge_id": "D03-K-0171",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        592,
+        592
+      ],
+      "statement_pointer": {
+        "record_index": 23,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-larissa-sokolova",
+      "knowledge_id": "D03-K-0172",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        604,
+        604
+      ],
+      "statement_pointer": {
+        "record_index": 24,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-larissa-sokolova",
+      "knowledge_id": "D03-K-0173",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        607,
+        607
+      ],
+      "statement_pointer": {
+        "record_index": 24,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-larissa-sokolova",
+      "knowledge_id": "D03-K-0174",
+      "checkpoint": "M2.04.C14",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        611,
+        611
+      ],
+      "statement_pointer": {
+        "record_index": 24,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0175",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        623,
+        623
+      ],
+      "statement_pointer": {
+        "record_index": 25,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0176",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        624,
+        624
+      ],
+      "statement_pointer": {
+        "record_index": 25,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0177",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        629,
+        629
+      ],
+      "statement_pointer": {
+        "record_index": 25,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0178",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        641,
+        641
+      ],
+      "statement_pointer": {
+        "record_index": 26,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0179",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        646,
+        646
+      ],
+      "statement_pointer": {
+        "record_index": 26,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-leonid-orlov-distribution",
+      "knowledge_id": "D03-K-0180",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        658,
+        658
+      ],
+      "statement_pointer": {
+        "record_index": 27,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-leonid-orlov-distribution",
+      "knowledge_id": "D03-K-0181",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        663,
+        663
+      ],
+      "statement_pointer": {
+        "record_index": 27,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-grigori-makarov-technical-safety",
+      "knowledge_id": "D03-K-0182",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        675,
+        675
+      ],
+      "statement_pointer": {
+        "record_index": 28,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-grigori-makarov-technical-safety",
+      "knowledge_id": "D03-K-0183",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        680,
+        680
+      ],
+      "statement_pointer": {
+        "record_index": 28,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-c15-safety-inspector",
+      "knowledge_id": "D03-K-0184",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        692,
+        692
+      ],
+      "statement_pointer": {
+        "record_index": 29,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-c15-safety-inspector",
+      "knowledge_id": "D03-K-0185",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        697,
+        697
+      ],
+      "statement_pointer": {
+        "record_index": 29,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-dmitri-return-maintenance",
+      "knowledge_id": "D03-K-0186",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        709,
+        709
+      ],
+      "statement_pointer": {
+        "record_index": 30,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-dmitri-return-maintenance",
+      "knowledge_id": "D03-K-0187",
+      "checkpoint": "M2.04.C15",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        714,
+        714
+      ],
+      "statement_pointer": {
+        "record_index": 30,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0188",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        726,
+        726
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0189",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        727,
+        727
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0190",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        728,
+        728
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0191",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        731,
+        731
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0192",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        732,
+        732
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0193",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        733,
+        733
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "claims",
+        "index": 2
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0194",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        734,
+        734
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "claims",
+        "index": 3
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0195",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        738,
+        738
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0196",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        739,
+        739
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0197",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        740,
+        740
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-oleg-vedenin-claimed",
+      "knowledge_id": "D03-K-0198",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        741,
+        741
+      ],
+      "statement_pointer": {
+        "record_index": 31,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0199",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        752,
+        752
+      ],
+      "statement_pointer": {
+        "record_index": 32,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0200",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        753,
+        753
+      ],
+      "statement_pointer": {
+        "record_index": 32,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0201",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        758,
+        758
+      ],
+      "statement_pointer": {
+        "record_index": 32,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0202",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        759,
+        759
+      ],
+      "statement_pointer": {
+        "record_index": 32,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0203",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        769,
+        769
+      ],
+      "statement_pointer": {
+        "record_index": 33,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0204",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        770,
+        770
+      ],
+      "statement_pointer": {
+        "record_index": 33,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0205",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        775,
+        775
+      ],
+      "statement_pointer": {
+        "record_index": 33,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0206",
+      "checkpoint": "M2.04.C16",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        776,
+        776
+      ],
+      "statement_pointer": {
+        "record_index": 33,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0207",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        786,
+        786
+      ],
+      "statement_pointer": {
+        "record_index": 34,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0208",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        787,
+        787
+      ],
+      "statement_pointer": {
+        "record_index": 34,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-pavel-heating-supervisor",
+      "knowledge_id": "D03-K-0209",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        792,
+        792
+      ],
+      "statement_pointer": {
+        "record_index": 34,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0210",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        803,
+        803
+      ],
+      "statement_pointer": {
+        "record_index": 35,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-liev-heating-colleague",
+      "knowledge_id": "D03-K-0211",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        808,
+        808
+      ],
+      "statement_pointer": {
+        "record_index": 35,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-c15-safety-inspector",
+      "knowledge_id": "D03-K-0212",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        819,
+        819
+      ],
+      "statement_pointer": {
+        "record_index": 36,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-anton-c15-safety-inspector",
+      "knowledge_id": "D03-K-0213",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        824,
+        824
+      ],
+      "statement_pointer": {
+        "record_index": 36,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0214",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        835,
+        835
+      ],
+      "statement_pointer": {
+        "record_index": 37,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-unidentified-man-c16",
+      "knowledge_id": "D03-K-0215",
+      "checkpoint": "M2.04.C17",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        840,
+        840
+      ],
+      "statement_pointer": {
+        "record_index": 37,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0216",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        851,
+        851
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0217",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        852,
+        852
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0218",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        853,
+        853
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0219",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        856,
+        856
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0220",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        860,
+        860
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-eleanor-price-candidate",
+      "knowledge_id": "D03-K-0221",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        861,
+        861
+      ],
+      "statement_pointer": {
+        "record_index": 38,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0222",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        872,
+        872
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0223",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        873,
+        873
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0224",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        874,
+        874
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0225",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        877,
+        877
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0226",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        881,
+        881
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0227",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        882,
+        882
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m3-samir-haddad-candidate",
+      "knowledge_id": "D03-K-0228",
+      "checkpoint": "M3.01.C01",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        883,
+        883
+      ],
+      "statement_pointer": {
+        "record_index": 39,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0229",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        894,
+        894
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0230",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        895,
+        895
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0231",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        896,
+        896
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0232",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        899,
+        899
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0233",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        900,
+        900
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0234",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        903,
+        903
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "suspected",
+        "index": 0
+      },
+      "epistemic_status": "SUSPECTED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0235",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        906,
+        906
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-foster",
+      "knowledge_id": "D03-K-0236",
+      "checkpoint": "M3.01.C03",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        907,
+        907
+      ],
+      "statement_pointer": {
+        "record_index": 40,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-marta-funeral",
+      "knowledge_id": "D03-K-0237",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        918,
+        918
+      ],
+      "statement_pointer": {
+        "record_index": 41,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-marta-funeral",
+      "knowledge_id": "D03-K-0238",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        921,
+        921
+      ],
+      "statement_pointer": {
+        "record_index": 41,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-marta-funeral",
+      "knowledge_id": "D03-K-0239",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        925,
+        925
+      ],
+      "statement_pointer": {
+        "record_index": 41,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-margaret-funeral",
+      "knowledge_id": "D03-K-0240",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        936,
+        936
+      ],
+      "statement_pointer": {
+        "record_index": 42,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-margaret-funeral",
+      "knowledge_id": "D03-K-0241",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        939,
+        939
+      ],
+      "statement_pointer": {
+        "record_index": 42,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-margaret-funeral",
+      "knowledge_id": "D03-K-0242",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        943,
+        943
+      ],
+      "statement_pointer": {
+        "record_index": 42,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-richard-funeral",
+      "knowledge_id": "D03-K-0243",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        954,
+        954
+      ],
+      "statement_pointer": {
+        "record_index": 43,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-richard-funeral",
+      "knowledge_id": "D03-K-0244",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        959,
+        959
+      ],
+      "statement_pointer": {
+        "record_index": 43,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0245",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        970,
+        970
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0246",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        971,
+        971
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "confirmed",
+        "index": 1
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0247",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        972,
+        972
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "confirmed",
+        "index": 2
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0248",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        973,
+        973
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "confirmed",
+        "index": 3
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0249",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        974,
+        974
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "confirmed",
+        "index": 4
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0250",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        977,
+        977
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "claims",
+        "index": 0
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0251",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        978,
+        978
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "claims",
+        "index": 1
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0252",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        979,
+        979
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "claims",
+        "index": 2
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0253",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        980,
+        980
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "claims",
+        "index": 3
+      },
+      "epistemic_status": "NPC_CLAIM",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0254",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        984,
+        984
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0255",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        985,
+        985
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "unknown",
+        "index": 1
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0256",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        986,
+        986
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "unknown",
+        "index": 2
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-0257",
+      "checkpoint": "M3.01.C04-C05",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        987,
+        987
+      ],
+      "statement_pointer": {
+        "record_index": 44,
+        "array": "unknown",
+        "index": 3
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0258",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        998,
+        998
+      ],
+      "statement_pointer": {
+        "record_index": 45,
+        "array": "confirmed",
+        "index": 0
+      },
+      "epistemic_status": "DERIVED_CONFIRMED_NOT_PROVEN_ACQUIRED",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-mary-krauser",
+      "knowledge_id": "D03-K-0259",
+      "checkpoint": "M3.01.C04",
+      "acquisition_mechanism": "UNKNOWN_FROM_PARTIAL_INDEX",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "source_lines": [
+        1003,
+        1003
+      ],
+      "statement_pointer": {
+        "record_index": 45,
+        "array": "unknown",
+        "index": 0
+      },
+      "epistemic_status": "UNKNOWN",
+      "can_NPC_use_as_knowledge": false,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    },
+    {
+      "owner_id": "npc-m301-daniel-son",
+      "knowledge_id": "D03-K-C05-CONTACT",
+      "checkpoint": "M3.01.C05.19",
+      "acquisition_mechanism": "DIRECT_DIALOGUE_REPORTED_DERIVED_ARCHIVE",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "source_lines": [
+        279,
+        281
+      ],
+      "statement_pointer": {
+        "event_id": "CHR001-M301-C05-19-20261109-001",
+        "kind": "PROFESSIONAL_CONTACT_RECEIVED"
+      },
+      "epistemic_status": "DERIVED_DIALOGUE_NOT_ORIGINAL_AUTHENTICATED",
+      "can_NPC_use_as_knowledge": true,
+      "original_author": "AUTHOR_UNKNOWN",
+      "no_retroactive_acquisition": true
+    }
+  ]
+}

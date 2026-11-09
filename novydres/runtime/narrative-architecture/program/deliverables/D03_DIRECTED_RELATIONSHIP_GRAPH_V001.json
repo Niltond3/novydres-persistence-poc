@@ -1,0 +1,1305 @@
+{
+  "schema": "NOVYDRES_CHR001_D03_DIRECTED_RELATIONSHIP_GRAPH_V001",
+  "phase": "D03",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06": "NOT_STARTED"
+  },
+  "d02_gate": "PASS_WITH_UNKNOWN",
+  "errata": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+  },
+  "constraints": [
+    "PLAYER_SAFE and PROPOSED only",
+    "V011 provenance errata controls invalid V001 metadata",
+    "Derived source does not authenticate original chat, author or RNG",
+    "NPC_CLAIM is not objective fact; temporal sequence is not causal",
+    "No unseen NPC witness, unproved identity merge, reciprocal relation or private PC thought",
+    "No GM hidden disclosures, new events, XP, FV, Embrace, 2010 or C06"
+  ],
+  "count": 49,
+  "edges": [
+    {
+      "id": "REL-001",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-mary-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-08-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3035,
+            3045
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-002",
+      "from": "npc-mary-krauser",
+      "to": "pc-bartholomeu-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-08-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3054,
+            3064
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-003",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-mikahel-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-03-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3073,
+            3083
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-004",
+      "from": "npc-mikahel-krauser",
+      "to": "pc-bartholomeu-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-03-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3092,
+            3102
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-005",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-sara-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3111,
+            3121
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-006",
+      "from": "npc-sara-krauser",
+      "to": "pc-bartholomeu-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3130,
+            3140
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-007",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-pavel-heating-supervisor",
+      "type": "EMPLOYMENT",
+      "establishment_checkpoint": "CHR001-M204-C10-06-20261105-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3149,
+            3159
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-008",
+      "from": "npc-pavel-heating-supervisor",
+      "to": "pc-bartholomeu-krauser",
+      "type": "EMPLOYMENT",
+      "establishment_checkpoint": "CHR001-M204-C10-06-20261105-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3168,
+            3178
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-009",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-liev-heating-colleague",
+      "type": "EMPLOYMENT",
+      "establishment_checkpoint": "CHR001-M204-C15-15-20261106-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3187,
+            3197
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-010",
+      "from": "npc-liev-heating-colleague",
+      "to": "pc-bartholomeu-krauser",
+      "type": "EMPLOYMENT",
+      "establishment_checkpoint": "CHR001-M204-C15-15-20261106-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3206,
+            3216
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-011",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-unnamed-injured-stranger",
+      "type": "AGREEMENT",
+      "establishment_checkpoint": "CHR001-M301-C02-13-20261107-001",
+      "status": "CONDITIONAL_NOT_PROVEN_ACCEPTED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3225,
+            3235
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-012",
+      "from": "npc-unnamed-injured-stranger",
+      "to": "pc-bartholomeu-krauser",
+      "type": "AGREEMENT",
+      "establishment_checkpoint": "CHR001-M301-C02-13-20261107-001",
+      "status": "CONDITIONAL_NOT_PROVEN_ACCEPTED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3244,
+            3254
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-013",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-oleg-vedenin-claimed",
+      "type": "RIVALRY",
+      "establishment_checkpoint": "CHR001-M204-C16-23-20261106-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3263,
+            3273
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-014",
+      "from": "npc-oleg-vedenin-claimed",
+      "to": "pc-bartholomeu-krauser",
+      "type": "RIVALRY",
+      "establishment_checkpoint": "CHR001-M204-C16-23-20261106-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3282,
+            3292
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-015",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m301-daniel-foster",
+      "type": "OTHER",
+      "establishment_checkpoint": "CHR001-M301-C03-02-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3301,
+            3311
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-016",
+      "from": "npc-m301-daniel-foster",
+      "to": "pc-bartholomeu-krauser",
+      "type": "OTHER",
+      "establishment_checkpoint": "CHR001-M301-C03-02-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3320,
+            3330
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-017",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m301-marta-funeral",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C04-04-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3339,
+            3349
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-018",
+      "from": "npc-m301-marta-funeral",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C04-04-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3358,
+            3368
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-019",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m301-margaret-funeral",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C04-09-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3377,
+            3387
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-020",
+      "from": "npc-m301-margaret-funeral",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C04-09-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3396,
+            3406
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-021",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m3-eleanor-price-candidate",
+      "type": "OTHER",
+      "establishment_checkpoint": "CHR001-M301-C01-04-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3415,
+            3425
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-022",
+      "from": "npc-m3-eleanor-price-candidate",
+      "to": "pc-bartholomeu-krauser",
+      "type": "OTHER",
+      "establishment_checkpoint": "CHR001-M301-C01-04-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3434,
+            3444
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-023",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m3-samir-haddad-candidate",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C01-06-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3453,
+            3463
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-024",
+      "from": "npc-m3-samir-haddad-candidate",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M301-C01-06-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3472,
+            3482
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-025",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-nadezhda-claimed",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M203-ESCAPE-124-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3491,
+            3501
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-026",
+      "from": "npc-nadezhda-claimed",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "CHR001-M203-ESCAPE-124-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3510,
+            3520
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-027",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-vera-heating-resident",
+      "type": "OTHER",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3529,
+            3539
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-028",
+      "from": "npc-vera-heating-resident",
+      "to": "pc-bartholomeu-krauser",
+      "type": "OTHER",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3548,
+            3558
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-029",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-lev-morozov",
+      "type": "COERCION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3567,
+            3577
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-030",
+      "from": "npc-lev-morozov",
+      "to": "pc-bartholomeu-krauser",
+      "type": "COERCION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3586,
+            3596
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-031",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-nikolai-serebryakov",
+      "type": "COERCION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3605,
+            3615
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-032",
+      "from": "npc-nikolai-serebryakov",
+      "to": "pc-bartholomeu-krauser",
+      "type": "COERCION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3624,
+            3634
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-033",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-m1-intermediary",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3643,
+            3653
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-034",
+      "from": "npc-m1-intermediary",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3662,
+            3672
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-035",
+      "from": "pc-bartholomeu-krauser",
+      "to": "npc-viktor-belov",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3681,
+            3691
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-036",
+      "from": "npc-viktor-belov",
+      "to": "pc-bartholomeu-krauser",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3700,
+            3710
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-037",
+      "from": "npc-mary-krauser",
+      "to": "npc-mikahel-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3719,
+            3729
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-038",
+      "from": "npc-mikahel-krauser",
+      "to": "npc-mary-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3738,
+            3748
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-039",
+      "from": "npc-mary-krauser",
+      "to": "npc-sara-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3757,
+            3767
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-040",
+      "from": "npc-sara-krauser",
+      "to": "npc-mary-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3776,
+            3786
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-041",
+      "from": "npc-mikahel-krauser",
+      "to": "npc-sara-krauser",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M204-C01-01-20261103-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3795,
+            3805
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-042",
+      "from": "npc-vera-heating-resident",
+      "to": "npc-vera-daughter",
+      "type": "FAMILY",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3814,
+            3824
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-043",
+      "from": "npc-lev-morozov",
+      "to": "npc-lev-wife",
+      "type": "FAMILY",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3833,
+            3843
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-044",
+      "from": "npc-nikolai-serebryakov",
+      "to": "npc-irina-unverified",
+      "type": "INFORMATION",
+      "establishment_checkpoint": "UNKNOWN",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3852,
+            3862
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-045",
+      "from": "npc-pavel-heating-supervisor",
+      "to": "npc-liev-heating-colleague",
+      "type": "AUTHORITY",
+      "establishment_checkpoint": "CHR001-M204-C10-06-20261105-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3871,
+            3881
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-046",
+      "from": "npc-m301-marta-funeral",
+      "to": "npc-yelena-baranova",
+      "type": "FRIENDSHIP",
+      "establishment_checkpoint": "CHR001-M301-C04-04-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3890,
+            3900
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-047",
+      "from": "npc-yelena-baranova",
+      "to": "npc-m301-daniel-son",
+      "type": "FAMILY",
+      "establishment_checkpoint": "CHR001-M301-C04-06-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3909,
+            3919
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-048",
+      "from": "npc-m301-margaret-funeral",
+      "to": "npc-m301-richard-funeral",
+      "type": "AFFILIATION",
+      "establishment_checkpoint": "CHR001-M301-C04-08-20261108-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3928,
+            3938
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    },
+    {
+      "id": "REL-049",
+      "from": "npc-m3-eleanor-price-candidate",
+      "to": "npc-m3-samir-haddad-candidate",
+      "type": "RIVALRY",
+      "establishment_checkpoint": "CHR001-M301-C01-03-20261107-001",
+      "status": "DERIVED_REPORTED_NOT_ORIGINAL_AUTHENTICATED",
+      "reciprocity": "UNKNOWN",
+      "reverse_edge_inferred": false,
+      "offer_accepted": "UNKNOWN",
+      "executed": "UNKNOWN",
+      "causal_link": "SEQUENCE_ONLY_UNLESS_TWO_SIDED_PROOF",
+      "original_author": "AUTHOR_UNKNOWN",
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+          "source_lines": [
+            3947,
+            3957
+          ],
+          "source_level": "PARTIAL_DERIVED_ATLAS",
+          "original_chat_authenticated": false
+        }
+      ]
+    }
+  ]
+}

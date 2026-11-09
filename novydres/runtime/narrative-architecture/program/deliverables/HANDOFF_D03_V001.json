@@ -1,0 +1,55 @@
+{
+  "schema": "NOVYDRES_CHR001_D03_HANDOFF_V001",
+  "phase": "D03",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06": "NOT_STARTED"
+  },
+  "d02_gate": "PASS_WITH_UNKNOWN",
+  "errata": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+  },
+  "constraints": [
+    "PLAYER_SAFE and PROPOSED only",
+    "V011 provenance errata controls invalid V001 metadata",
+    "Derived source does not authenticate original chat, author or RNG",
+    "NPC_CLAIM is not objective fact; temporal sequence is not causal",
+    "No unseen NPC witness, unproved identity merge, reciprocal relation or private PC thought",
+    "No GM hidden disclosures, new events, XP, FV, Embrace, 2010 or C06"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "next_phase": "D04",
+  "branch": "design/chr001-narrative-program-d01",
+  "design_parent_sha": "d770794d20dbe0b68a50524c1969cecfcda27690",
+  "commit_sha": "READ_BRANCH_REF_NOT_SELF_EMBEDDED",
+  "required_files": [
+    "D03_AGENT_REGISTRY_V001.json",
+    "D03_NPC_CHECKPOINT_STATES_V001.json",
+    "D03_DIRECTED_RELATIONSHIP_GRAPH_V001.json",
+    "D03_KNOWLEDGE_GRAPH_V001.json",
+    "D03_IDENTITY_ALIAS_REVIEW_V001.json",
+    "D03_UNCERTAINTY_REGISTER_V001.json",
+    "D03_ADVERSARIAL_TESTS_V001.json",
+    "AUDIT_D03_V001.json",
+    "HANDOFF_D03_V001.json"
+  ],
+  "D04_mandate": "Classify all 44 heterogeneous OPEN_THREADS_V23 records as plots, threads, incidents or unknown; not 44 automatic story arcs",
+  "D04_bounds": [
+    "Read D03 and D02 V011 errata, preserve all unknowns",
+    "Only PROPOSED PLAYER_SAFE",
+    "No C06, narration, 2010, Embrace, master or canon mutation"
+  ],
+  "open_conflicts": [
+    "D01-ADM-001",
+    "ALIAS_UNRESOLVED",
+    "NPC_KNOWLEDGE_UNVERIFIABLE_ORIGINAL"
+  ]
+}
