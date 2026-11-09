@@ -1,0 +1,58 @@
+{
+  "schema": "NOVYDRES_D02_SCENE_BATCH_PROTOCOL_V006",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 6,
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "928bfd356a283e192918919d865f991472aef32b",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "PROPOSED_UNPROMOTED",
+  "scope_policy": "BATCH_CLOSED_ONLY_WHEN_ALL_ARCHIVAL_MARKERS_AND_SUBCLAUSES_ARE_CLASSIFIED; ORIGINAL_AUTHENTICITY_SEPARATE",
+  "layers": [
+    {
+      "id": "A",
+      "name": "ARCHIVAL_SEMANTIC_CLASSIFICATION",
+      "pass_if": "Scene boundary validated; every known marker covers a non-overlapping line span; first-person declarations, NPC claims, narrator effects, mechanical labels, and exit/status split; all contrary evidence and unknowns explicit; coverage contains no omitted archival lines."
+    },
+    {
+      "id": "B",
+      "name": "ORIGINAL_PROVENANCE_AUTHENTICATION",
+      "pass_if": "Independently verifiable original player, narrator and actual RNG/tool transcripts with consistent timestamps and immutable locators; absent proof stays UNKNOWN."
+    },
+    {
+      "id": "C",
+      "name": "EXTERNAL_INDEPENDENT_EDITORIAL_REVIEW",
+      "pass_if": "Named reviewer materially distinct from author validates sample/contradictions/marking, records signed verdict; author may not self-attest independence."
+    },
+    {
+      "id": "D",
+      "name": "PHASE_GATE",
+      "pass_if": "Required full M1/M2/M3 coverage, authorship provenance or UNKNOWN, causal links evidence graded, G28 assessment and truly independent review; gaps resolved by valid dispositions, not just asserted PASS."
+    }
+  ],
+  "rules": [
+    "Original messages cannot be reconstructed by rephrasing an editorial diary.",
+    "Archive-classified marker may leave unknown historical facts; report unknown instead of fabricating.",
+    "No new XP, FV, dice, events, C06 or 2010.",
+    "Earlier historical snapshot is not current status; apply explicit later correction at its point in sequence.",
+    "Do not infer D03 from progress in a single archive scene.",
+    "No GM_HIDDEN material in output or artifact title."
+  ],
+  "next_batch_targets": [
+    "M1.03",
+    "M1.04",
+    "M1.05",
+    "M1.06",
+    "M1.07",
+    "M1.08",
+    "M1.09",
+    "M2.01",
+    "M2.02",
+    "M2.03"
+  ],
+  "note": "This contract is proposed documentary procedure on design branch, not a canon/governance modification."
+}

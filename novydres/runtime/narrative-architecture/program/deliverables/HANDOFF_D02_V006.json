@@ -1,0 +1,52 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V006",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 6,
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "928bfd356a283e192918919d865f991472aef32b",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "FAIL",
+  "next_phase": "D02",
+  "next_version": "V007",
+  "d03_unlocked": false,
+  "batch_achievement": {
+    "scene": "M1.02",
+    "archival_markers_finished": 14,
+    "remaining_archival_markers": 647,
+    "original_provenance_pass": 0,
+    "m101_partial_with_missing_archive": "M1.01-002-003"
+  },
+  "next_actions": [
+    "Revalidate fresh branch HEADs and cycle.",
+    "Read all prior sources (D01, D02 V001–V006), governance and correction order.",
+    "Prioritize M1.03 complete interval and complete further full M1 scenes with actual manual semantic clause distinctions.",
+    "Search for M1.01 scenes 002-003 from original Library / connected Drive; if unavailable leave UNKNOWN.",
+    "Maintain 647 archival triage outstanding markers (plus newly identified missing-scope dependencies).",
+    "Do not conflate archival closure with original provenance, G28 trace or editorial independent signoff.",
+    "Publish versioned-only V007 and full next D02 remediation prompt in chat; never GitHub NEXT_PROMPT file."
+  ],
+  "output_basename_prefixes": [
+    "D02_SCENE_BATCH_PROTOCOL_V006",
+    "D02_SCENE_BATCH_CLOSURE_V006",
+    "D02_ASSERTION_QUEUE_V006",
+    "D02_EVIDENCE_DEPENDENCIES_V006",
+    "AUDIT_D02_V006",
+    "HANDOFF_D02_V006"
+  ],
+  "requires_independent_reviewer": true,
+  "forbidden": [
+    "D03",
+    "master modifications",
+    "canon retcon",
+    "GM spoilers",
+    "C06",
+    "2010",
+    "XP/FV/dice/event mutation"
+  ],
+  "prompt_in_git": false
+}

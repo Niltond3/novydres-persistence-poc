@@ -1,0 +1,59 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V006",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 6,
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "928bfd356a283e192918919d865f991472aef32b",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "FAIL",
+  "phase_gate": "FAIL",
+  "d03_unlocked": false,
+  "branch_policy": {
+    "master": "READ_ONLY",
+    "design": "NEW_VERSIONED_DOCUMENTS_ONLY",
+    "writes_to_master": false,
+    "canonical_mutations": false
+  },
+  "source_evidence": {
+    "legacy_file_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "triage_661_sha": "e3eba41ee19709232f84cff961f963e73b7a1f48",
+    "v005_queue_sha": "6c27ee45272695815571870f1ad0185588d5f35b"
+  },
+  "checks": {
+    "github_refs_discovered": true,
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "design_head_before": "928bfd356a283e192918919d865f991472aef32b",
+    "cycle_latest": "CYCLE_V0033",
+    "m102_markers_expected": 14,
+    "m102_markers_classified": 14,
+    "m102_archive_range_lines": 59,
+    "m102_coverage_nonoverlap": true,
+    "m101_missing_source_explicit": true,
+    "archive_semantic_classified_total_v006": 14,
+    "archive_semantic_outstanding_total_v006": 647,
+    "independently_authenticated_original_chat": 0,
+    "technical_committed_minted": 0,
+    "g28_rng_proven": 0,
+    "independent_editorial_signoff": false
+  },
+  "gaps_open": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "other_open": [
+    "D01-ADM-001"
+  ],
+  "gaps_resolved": [],
+  "phase_gate_notes": "Fourteen M1.02 source markers completely classed within archive line interval; original raw chat/tool provenance still UNKNOWN; all six global gaps remain, D03 blocked.",
+  "prompt_storage": "CHAT_ONLY",
+  "new_scene_started": false
+}

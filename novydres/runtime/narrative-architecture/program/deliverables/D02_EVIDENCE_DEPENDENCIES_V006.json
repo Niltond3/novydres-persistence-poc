@@ -1,0 +1,92 @@
+{
+  "schema": "NOVYDRES_D02_EVIDENCE_DEPENDENCIES_V006",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 6,
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "928bfd356a283e192918919d865f991472aef32b",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "OPEN_DEPENDENCIES",
+  "blockers": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "label": "M1 full historical coverage",
+      "progress": "M1.02 archival marker classifications complete; M1.01 scenes 002–003 missing; M1.03–M1.09 pending.",
+      "proof_required": "Complete original/reconciled sources and classify all remaining M1 scopes; preserve gaps explicitly.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "label": "M2.01–M2.03 coverage",
+      "progress": "Not newly audited in V006.",
+      "proof_required": "Retrieve original/archived scenes, adjudicate actor voice/effects/corrections/exits.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "label": "M2.04 and M3.01 through C05",
+      "progress": "Existing V005 localized judgments remain partial.",
+      "proof_required": "Complete scene batches on all C01–C17 and C01–C05; check final checkpoint.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "label": "Original creative authorship",
+      "progress": "No independently authenticated original author transcript.",
+      "proof_required": "Keep AUTHOR_UNKNOWN until signed provenance tied to original dialogue.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "label": "Causal graph edges",
+      "progress": "D02-CAUSE-002 remains SEQUENCE_ONLY.",
+      "proof_required": "Show explicit causal source, not mere chronology; otherwise leave SEQUENCE_ONLY.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "label": "G28 and RNG/tool origin",
+      "progress": "Archived audit JSON not authenticated original random-tool execution.",
+      "proof_required": "Obtain real tool provenance/trace and independent verification, else UNKNOWN.",
+      "not_allowed": "NO_FALSE_PASS_BY_NUMBER_OF_ROUNDS"
+    }
+  ],
+  "independent_editorial_review": {
+    "state": "NOT_PERFORMED",
+    "why": "Same executor cannot simulate different human/editorial reviewer.",
+    "acceptable": "Distinct person/reviewer with independent material assessment and recorded sign-off",
+    "self_signature": false
+  },
+  "external_sources": {
+    "original_chat": "NOT_AUTHENTICATED",
+    "original_rng": "NOT_AUTHENTICATED",
+    "missing_library_prologue": "UNKNOWN_TO_CURRENT_EXECUTOR"
+  },
+  "minor_open": [
+    "D01-ADM-001"
+  ],
+  "closure_bars": [
+    "Do not claim source absence proves no event.",
+    "Do not upgrade dialogue to real NPC motive or administrative legality.",
+    "Do not create fictional original turns or tool logs.",
+    "Unknown is a valid fact classification, but does not automatically waive a mandated review gate."
+  ],
+  "planning_not_commitment": {
+    "v007": "M1.03 onward and M1 missing-source retrieval",
+    "v008_v009": "M2 and M3 batches",
+    "v010": "authorship/causality/G28",
+    "v011": "distinct independent editorial review",
+    "v012": "remediation and conditional final PASS",
+    "note": "No guarantee of D03 by V012; external evidence/reviewer remain prerequisites."
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "schema": "NOVYDRES_D02_SCENE_BATCH_V006",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 6,
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "928bfd356a283e192918919d865f991472aef32b",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "ARCHIVE_M102_COMPLETE_ORIGINAL_PROVENANCE_FAIL",
+  "scene_scope": {
+    "scene": "M1.02",
+    "archive_start_line": 218,
+    "archive_end_line": 276,
+    "marker_ids": [
+      "D02-LEG-0218",
+      "D02-LEG-0225",
+      "D02-LEG-0233",
+      "D02-LEG-0244",
+      "D02-LEG-0249",
+      "D02-LEG-0250",
+      "D02-LEG-0251",
+      "D02-LEG-0257",
+      "D02-LEG-0258",
+      "D02-LEG-0259",
+      "D02-LEG-0260",
+      "D02-LEG-0263",
+      "D02-LEG-0264",
+      "D02-LEG-0268"
+    ],
+    "markers_reviewed": 14,
+    "classified": 14,
+    "archive_contiguous_coverage": true,
+    "independent_original_transcript_authenticated": false
+  },
+  "m101": {
+    "scene": "M1.01",
+    "status": "NOT_ARCHIVE_COMPLETE",
+    "archival_scopes_observed": [
+      {
+        "lines": [
+          146,
+          165
+        ],
+        "finding": "Player-requested opening and first prologue action; NPC response separate; no M1 activation at the original moment."
+      },
+      {
+        "lines": [
+          166,
+          173
+        ],
+        "finding": "Player teaching, child naming; original scenes 002-003 referenced but missing from this archive."
+      },
+      {
+        "lines": [
+          174,
+          192
+        ],
+        "finding": "Prologue continuation, actor autonomy and scene termination; no roll."
+      },
+      {
+        "lines": [
+          193,
+          209
+        ],
+        "finding": "Player build/XP decision later corrected; earlier identity spelling superseded at later point."
+      },
+      {
+        "lines": [
+          210,
+          217
+        ],
+        "finding": "Gate 04 later PASS; retrospective administrative reclassification as M1.01 without retroactive claim gate existed during play."
+      }
+    ],
+    "known_missing": [
+      {
+        "id": "M101-ARCHIVE-002-003",
+        "reason": "Source explicitly says scenes 002–003 are in Library and not reconciled in legacy document.",
+        "locator": {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "lines": [
+            166,
+            167
+          ]
+        },
+        "needed": "Original transcript or its authenticated Library segment; do not synthesize."
+      },
+      {
+        "id": "M101-CORR-IDENTITY",
+        "reason": "Earlier Krause stage superseded by later CORR-IDENTITY-002 Krauser; keep historical spellings without treating obsolete snapshot as current.",
+        "locator": {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "lines": [
+            201,
+            214
+          ]
+        },
+        "needed": "Read current correction precedence; no rename of source."
+      }
+    ],
+    "technical_ledger": "NO_TECHNICAL_COMMITTED_INFERRED",
+    "result": "PARTIAL_PENDING_MISSING_SOURCE"
+  },
+  "m102_records": [
+    {
+      "id": "D02-LEG-0218",
+      "scene": "M1.02",
+      "start_line": 218,
+      "end_line": 224,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "SCENE_OPENING",
+        "voice": "NPC_CLAIM_AND_NARRATOR_SETUP",
+        "semantic_finding": "A visitante atribui a falta de calor a cobrança pendente; o narrador apresenta a situação e mantém a decisão aberta.",
+        "not_proven": "Origem técnica/administrativa real, idade/saúde da menina e política institucional não confirmadas.",
+        "checkpoint": "PRESENTED_AWAITING_RESPONSE",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0225",
+      "scene": "M1.02",
+      "start_line": 225,
+      "end_line": 232,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_DECISION_AND_DOCUMENT",
+        "voice": "PLAYER_DECLARATION_WITH_NPC_DOCUMENT",
+        "semantic_finding": "O jogador promete tentar ajudar e lê o aviso; o documento afirma suspensão por débito e condição administrativa para religação.",
+        "not_proven": "Promessa não é religação; o aviso não comprova a causa objetiva nem a legalidade da cobrança.",
+        "checkpoint": "PLAYER_RESPONSE_PARTIAL",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0233",
+      "scene": "M1.02",
+      "start_line": 233,
+      "end_line": 243,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_DECLARATION_AND_INTERIORITY",
+        "voice": "PLAYER_DECLARATION",
+        "semantic_finding": "O PJ oferece abrigo, pede discrição, pede atendimento de Mary e declara intenção de resolver; sua leitura da esposa é subjetiva.",
+        "not_proven": "Mary ainda não serviu bebida nem confirmou conhecer trabalhos ocultos; sigilo futuro não está comprovado.",
+        "checkpoint": "PLAYER_RESPONSE_PARTIAL",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0244",
+      "scene": "M1.02",
+      "start_line": 244,
+      "end_line": 248,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "NPC_RESPONSE_AND_INTERIM_STATE",
+        "voice": "NARRATOR_NPC_ADJUDICATION",
+        "semantic_finding": "A mulher promete discrição sem garantia; Mary abriga mãe e filha, e anuncia bebida quente; o PJ permanece com o aviso.",
+        "not_proven": "Oferta/compromisso não prova cumprimento posterior, aprovação da abordagem ou conhecimento de Mary sobre coerção.",
+        "checkpoint": "SCENE_OPEN",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0249",
+      "scene": "M1.02",
+      "start_line": 249,
+      "end_line": 249,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_ACTION_AND_LOCATION",
+        "voice": "MIXED_ARCHIVAL_NARRATOR_SUMMARY",
+        "semantic_finding": "O PJ lê o verso, identifica a moradora pelo nome no arquivo, desloca-se à repartição de supervisão; a responsabilidade individual pelo corte não está apurada.",
+        "not_proven": "O deslocamento não confirma culpa pessoal do supervisor nem restabelecimento do calor.",
+        "checkpoint": "ARRIVED_AT_OFFICE",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0250",
+      "scene": "M1.02",
+      "start_line": 250,
+      "end_line": 250,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "NPC_PROMPT",
+        "voice": "NARRATOR_NPC_ADJUDICATION",
+        "semantic_finding": "Um funcionário pergunta se o visitante procura o supervisor; a resposta do PJ ainda está aberta.",
+        "not_proven": "Não atribuir resposta verbal do PJ ou autorização de entrada.",
+        "checkpoint": "SCENE_OPEN",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0251",
+      "scene": "M1.02",
+      "start_line": 251,
+      "end_line": 256,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_ACTION_AND_PERCEPTION",
+        "voice": "PLAYER_DECLARATION_PLUS_ARCHIVE_SUMMARY",
+        "semantic_finding": "O jogador descreve observação instrumental e avanço na repartição; ocorre esbarrão que derruba papéis; a identidade do homem atrás da persiana é uma hipótese até confirmação posterior.",
+        "not_proven": "Dieta concreta de funcionário, culpa administrativa, ferimento, perícia mecânica e identificação antes da placa não são prova.",
+        "checkpoint": "OFFICE_MEZZANINE_APPROACH",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0257",
+      "scene": "M1.02",
+      "start_line": 257,
+      "end_line": 257,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "NPC_REACTION_AND_ID_CONFIRMATION",
+        "voice": "NARRATOR_NPC_ADJUDICATION",
+        "semantic_finding": "NPCs protestam sem deter o PJ; placa local confirma o nome da supervisão; o homem interpela o visitante.",
+        "not_proven": "Identidade do supervisor não prova autoria da suspensão, ciência prévia do aviso ou infração adicional.",
+        "checkpoint": "SCENE_OPEN",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0258",
+      "scene": "M1.02",
+      "start_line": 258,
+      "end_line": 258,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_ULTIMATUM",
+        "voice": "MIXED_ARCHIVAL_SUMMARY",
+        "semantic_finding": "O PJ exige religação provisória em 40 minutos, vinculando a pedido de revisão de cobrança e ameaça de consequência.",
+        "not_proven": "Prazo proposto não demonstra execução em 40 minutos; erro de cobrança não provado.",
+        "checkpoint": "ULTIMATUM_ISSUED",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0259",
+      "scene": "M1.02",
+      "start_line": 259,
+      "end_line": 259,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "NARRATED_OBSERVABLE_RESULT",
+        "voice": "NARRATOR_ARCHIVAL_ADJUDICATION",
+        "semantic_finding": "O registro afirma observação posterior de circulação ativa e válvula aberta, com trajeto indireto até a residência familiar.",
+        "not_proven": "Indicadores não aferem temperatura interna; ausência de perseguição visível não exclui seguidor; medo e vingança são interpretações.",
+        "checkpoint": "AFTER_OFFICE_AND_CHECK",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0260",
+      "scene": "M1.02",
+      "start_line": 260,
+      "end_line": 262,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_EXIT_AND_PERCEPTION",
+        "voice": "PLAYER_DECLARATION",
+        "semantic_finding": "A fala do jogador confirma saída, escolha de rota, passagem pela residência e salto de cerca para tentar detectar perseguição.",
+        "not_proven": "Motivação de evitar perseguição não prova perseguidor, não certifica perícia ou estado emocional de terceiro.",
+        "checkpoint": "RETURN_TRIP",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0263",
+      "scene": "M1.02",
+      "start_line": 263,
+      "end_line": 263,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "NPC_RETURN_STATE",
+        "voice": "NARRATOR_NPC_ADJUDICATION",
+        "semantic_finding": "NPCs acolhem o retorno; a mulher aguarda notícias; o resumo registra indicadores de circulação sem aferição de temperatura interna.",
+        "not_proven": "Não atribuir a Mary conhecimento da abordagem no gabinete ou confirmação térmica na moradia.",
+        "checkpoint": "BACK_HOME_WAITING_REPLY",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0264",
+      "scene": "M1.02",
+      "start_line": 264,
+      "end_line": 267,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "PLAYER_REPLY_AND_NPC_EXIT",
+        "voice": "PLAYER_DECLARATION_PLUS_NARRATOR_NPC_ADJUDICATION",
+        "semantic_finding": "O PJ comunica que a visitante pode regressar e a lembra de quitar a dívida; a mulher e a filha se despedem e saem.",
+        "not_proven": "Nenhum pagamento ou quitação, visita domiciliar posterior, reconciliação administrativa ou cumplicidade conjugal é demonstrada.",
+        "checkpoint": "NARRATIVE_EXIT",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    },
+    {
+      "id": "D02-LEG-0268",
+      "scene": "M1.02",
+      "start_line": 268,
+      "end_line": 276,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true
+      },
+      "review": {
+        "mode": "MANUAL_CONTEXTUAL_SEMANTIC_CLASSIFICATION_ARCHIVE_ONLY",
+        "dimension": "SCENE_CLOSURE_AND_PURCHASE",
+        "voice": "EDITORIAL_CLOSURE_WITH_PLAYER_PURCHASE",
+        "semantic_finding": "O registro encerra a provocação; depois, o jogador solicita duas compras de atributos; o arquivo descreve dois débitos equivalentes de 5 XP e o saldo após compras.",
+        "not_proven": "Não é nova concessão de XP ou transação técnica COMMITTED; referência à demonstração com nozes carece de ação original completa neste intervalo de fonte.",
+        "checkpoint": "ARCHIVAL_XP_WINDOW_CLOSED",
+        "original_chat_authenticated": false,
+        "original_story_author": "AUTHOR_UNKNOWN",
+        "independent_editorial_signoff": false
+      },
+      "archival_marker_disposition": "CLASSIFIED_WITH_EXPLICIT_UNKNOWNS",
+      "technical_committed_minted": false
+    }
+  ],
+  "negative_controls": [
+    {
+      "id": "M102-NOZES",
+      "finding": "Only later purchase justification mentions 'nozes'; exact performed act is not present as a separate player quote in M1.02 L218–276.",
+      "treatment": "ORIGINAL_ACTION_PROVENANCE_UNKNOWN_NOT_SYNTHESIZED",
+      "line_range": [
+        270,
+        274
+      ]
+    },
+    {
+      "id": "M102-HEAT",
+      "finding": "Narrator/archive affirms circulation indicator and valve; does not demonstrate independent meter or confirmed in-home temperature.",
+      "treatment": "NARRATOR_ARCHIVE_EFFECT_NOT_EXTERNAL_TECHNICAL_PROOF",
+      "line_range": [
+        259,
+        263
+      ]
+    },
+    {
+      "id": "M102-ADMIN",
+      "finding": "Administrative debit shown in construction diary, not independent tool-committed event.",
+      "treatment": "MIGRATED_MECHANICAL_RECORD_NOT_TECHNICAL_LEDGER",
+      "line_range": [
+        270,
+        275
+      ]
+    }
+  ],
+  "summary": {
+    "m102_prior_markers_archivally_semantically_classified": 14,
+    "m102_original_chat_authenticated": 0,
+    "m101_archive_semantically_closed": false,
+    "phase_gap_count_still_open": 6,
+    "distinct_reviewer_available": false,
+    "global_gate": "FAIL"
+  }
+}
