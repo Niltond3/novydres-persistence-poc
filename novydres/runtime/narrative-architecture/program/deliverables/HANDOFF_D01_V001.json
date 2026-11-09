@@ -1,0 +1,237 @@
+{
+  "program_id": "NOVYDRES_NARRATIVE_D00_D12_V1",
+  "phase": "D01",
+  "status": "PASS",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "design_branch": "design/chr001-narrative-program-d01",
+  "design_content_commit_sha": "7f512102d598bd767ba63d54e31111af18b19d3e",
+  "design_head_sha_at_architecture_readback": "7f512102d598bd767ba63d54e31111af18b19d3e",
+  "master_head_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "inputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/START_HERE_PLAYER_SAFE_V1.md",
+      "blob_sha": "477cdc6f5ebb206a4660fde2d1e586d7dba14b89"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/D01_MANDATE_V1.md",
+      "blob_sha": "22cf5c17f0d6224c7bf0c15161d9a7fc8a76104e"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_HANDOFF_CONTRACT_V1.md",
+      "blob_sha": "fd910b3f5b1a03db4b241c85bbae136283c1d71e"
+    },
+    {
+      "path": "novydres/.AGENT.md",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c"
+    },
+    {
+      "path": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V2.md",
+      "blob_sha": "f8d7b3a68e73c225f327c161eef0f7f1b616f0ad"
+    },
+    {
+      "path": "novydres/runtime/orchestration/NARRADOR_ROLE_V2.md",
+      "blob_sha": "ee869c43573f67cb63c78883b675283561b856fe"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/DRAMATURGO_CONTRACT_V3.md",
+      "blob_sha": "a61e43f658eb040d95f216323fedb7b6f2938790"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/LONGITUDINAL_PROGRESS_GATE_V1.md",
+      "blob_sha": "04161f0618bf3a4a550405be3343bad7e32b4524"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/NARRATIVE_ATLAS_CONTRACT_V1.md",
+      "blob_sha": "95170168a3285236c43bd40297055d45f54665ca"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/COVERAGE_REPORT_V002.json",
+      "blob_sha": "ab63ceadab183ff1b657bef8d5422afaf41ab552"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH07_PLANO_ATLAS_NARRATIVO_RETROATIVO_V1.md",
+      "blob_sha": "c7a4645a82b58e589642941ae55121400dfc03e5"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_ARCHITECTURE_V001.md",
+      "blob_sha": "276461297a10f4fd9c355574729d2ea3d2fb5093",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_VALIDATOR_V001.mjs",
+      "blob_sha": "56d6b1b7709623b446bbdb701068c383732fb4c3",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_TEST_RUNNER_V001.mjs",
+      "blob_sha": "790387355d41c3f3170131cd71de5de63f1cc71f",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_TEST_VECTORS_V001.json",
+      "blob_sha": "8928a70b1f1eaf27ddabc3e5ecdc210396508e4f",
+      "status": "PROPOSED",
+      "readback": "PASS"
+    }
+  ],
+  "tests": [
+    {
+      "id": "G01",
+      "name": "HEAD_MASTER_AND_CYCLE_REFERENCE",
+      "result": "PASS"
+    },
+    {
+      "id": "G02",
+      "name": "CYCLE_PREDECESSOR_AND_NINE_REFERENCES",
+      "result": "PASS"
+    },
+    {
+      "id": "G03",
+      "name": "D1_MARCO_EPISODE_SUFFICIENCY",
+      "result": "PASS"
+    },
+    {
+      "id": "G04",
+      "name": "D2_RANDOM_INDEPENDENT_PROMPTS_NONBRANCHING",
+      "result": "PASS"
+    },
+    {
+      "id": "G05",
+      "name": "H_PARITY_NO_NEW_XP_MECHANICS",
+      "result": "PASS"
+    },
+    {
+      "id": "G06",
+      "name": "AGENCY_REFUSAL_FAILURE_MULTIPLE_ENDINGS",
+      "result": "PASS"
+    },
+    {
+      "id": "G07",
+      "name": "NPC_EPISTEMICS_AND_AUTONOMY",
+      "result": "PASS"
+    },
+    {
+      "id": "G08",
+      "name": "PROVENANCE_RETCON_APPROVAL_AND_COW",
+      "result": "PASS"
+    },
+    {
+      "id": "G09",
+      "name": "SECRECY_CLASSIFICATION_ACL_REALISM",
+      "result": "PASS"
+    },
+    {
+      "id": "G10",
+      "name": "INITIAL_SEMANTIC_FIXTURES_20_OF_20",
+      "result": "PASS"
+    },
+    {
+      "id": "G11",
+      "name": "ARCHITECTURE_BLOBS_7_OF_7_READBACK",
+      "result": "PASS"
+    },
+    {
+      "id": "G12",
+      "name": "MASTER_UNCHANGED_PROPOSAL_ONLY",
+      "result": "PASS"
+    },
+    {
+      "id": "G13",
+      "name": "LITERARY_AND_FULL_JSON_SCHEMA_RELEASE_TESTS",
+      "result": "DEFERRED_TO_D10_D11"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "D01-ADM-001",
+      "type": "AUTHORITY_DISCREPANCY_RECORDED",
+      "public_label": "Manifesto conserva ponteiros históricos/administrativos anteriores ao ciclo 0033; exige revisão da compatibilidade de ponteiros antes de qualquer transição narrativa.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "D01-GAP-002",
+      "type": "SOURCE_COVERAGE_GAP",
+      "public_label": "Atlas PARTIAL e inventário retrospectivo ainda incompleto; tarefa de D02.",
+      "status": "OPEN"
+    },
+    {
+      "id": "D01-GAP-003",
+      "type": "ACCESS_CONTROL_GAP",
+      "public_label": "Nenhuma segregação de leitura GM do proprietário foi comprovada; não depositar conteúdo secreto em GitHub compartilhado.",
+      "status": "OPEN"
+    },
+    {
+      "id": "D01-GAP-004",
+      "type": "VALIDATOR_SCOPE",
+      "public_label": "Suíte inicial semântica 20/20 executada em V8; CLI Node, validador JSON Schema completo e revisão literária independente ainda não executados.",
+      "status": "DEFERRED_D10_D11"
+    }
+  ],
+  "next_prompt_path": "novydres/runtime/narrative-architecture/program/deliverables/NEXT_PROMPT_D02_V001.md",
+  "next_phase": "D02",
+  "phase_scope": "ARCHITECTURE_AND_CONTRACTS_ONLY",
+  "narration_permission": false,
+  "master_changed": false,
+  "publication_protocol": {
+    "content_commit_sha": "7f512102d598bd767ba63d54e31111af18b19d3e",
+    "handoff_commit_sha_embedded": null,
+    "reason": "Git commit cannot contain its own hash",
+    "read_branch_ref_at_next_chat": true,
+    "readback_required": true,
+    "never_treat_branch_tip_as_immutable": true
+  },
+  "approval_state": "PROPOSAL_PASS_NOT_PROMOTED_D12_APPROVAL_LATER"
+}
