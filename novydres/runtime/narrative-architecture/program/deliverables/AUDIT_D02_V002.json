@@ -1,0 +1,124 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V002",
+  "version": 2,
+  "phase": "D02",
+  "status": "FAIL",
+  "supersedes": "AUDIT_D02_V001.json",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "base": {
+    "master_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "design_pre_content_sha": "e4c67186e880041435973c3e34fa0a11fbc0a198",
+    "content_commit_sha": "537614af97464445f2e196e031290d53cd0200aa",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "M3.01.C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "inputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V001.json",
+      "blob_sha": "cff563cb8474826de5c6bdcef477e068fd700005"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D02_V001.json",
+      "blob_sha": "d78004798a9416f66c33da8aae4c46c267fc46c9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVENT_HISTORIOGRAPHY_V001.json",
+      "blob_sha": "a1e5f007c8a9fad8581b1cd494f5ae1b94a40012"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SOURCE_INVENTORY_V001.json",
+      "blob_sha": "2930c663076969d7bb1071220bbe7d862409fc23"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SOURCE_ASSERTION_CHECKS_V002.json",
+      "blob_sha": "3b8e2b147ecfb3b56ca7ff48d696f9fdf8dd9162",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SEMANTIC_CASEBOOK_V002.json",
+      "blob_sha": "36477d8a87b70868823e5325704efc409e63b0d9",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_MAP_V002.json",
+      "blob_sha": "cdd9730869adf29fbf5d0215bcc1e592fe801cf7",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_AUTHORSHIP_EVIDENCE_V002.json",
+      "blob_sha": "22eb0c07cc1deb74bafd27dfa11cd4780f0a0bc3",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_COVERAGE_AND_PROVENANCE_V002.json",
+      "blob_sha": "27e1c5fdfd2083c1d3e8ed9de1c701e0d9a30bba",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    }
+  ],
+  "checks": {
+    "master_head_read": "PASS_BEFORE_FINAL_COMMIT",
+    "design_ref_lease": "PASS_CONTENT_COMMIT",
+    "cycle_predecessor_chain": "PASS_1_TO_33",
+    "cycle_six_refs_two_plan_refs": "PASS_8_OF_8",
+    "d01_hashes": "PASS_7_OF_7",
+    "v002_content_blob_readback": "PASS_5_OF_5",
+    "v002_source_assertion_sha_and_line": "PASS_661_OF_661",
+    "v002_label_alignment": "633_DIRECT_28_CONTEXT_PENDING",
+    "v002_ids_unique": true,
+    "v002_casebook_evidence_ranges": "PASS_12_CASES",
+    "version_prefix": "PASS_39_VALID_VERSIONS_AND_INVALID_V007_EXCLUDED_AS_AUTHORITY",
+    "m1_prologue_reclassification": "DOCUMENTED",
+    "m106_errata": "DOCUMENTED",
+    "m203_roll_correction": "DOCUMENTED",
+    "m301_c04_supersession": "DOCUMENTED",
+    "causal_pending_promotions": "RECLASSIFIED_TO_SEQUENCE_ONLY",
+    "author_ascription": "AUTHOR_UNKNOWN_IF_NOT_PROVEN",
+    "atlas_coverage": "PARTIAL_UNCHANGED",
+    "heterogeneous_threads": "44_NOT_44_PLOTS",
+    "mechanical_ledger": "NOT_CLAIMED_COMMITTED",
+    "independent_structural_readback": "PASS",
+    "independent_semantic_editorial_audit": "FAIL_NOT_COMPLETED",
+    "no_master_or_operational_mutation": true
+  },
+  "semantic_gates": {
+    "source_inventory_exhaustive_semantic_review": "FAIL",
+    "assertion_by_assertion_voice_and_state": "FAIL",
+    "original_author_provenance": "FAIL_MORE_CHECKS_NEEDED",
+    "causality_all_edges_verified": "FAIL_MORE_CHECKS_NEEDED",
+    "g28_roll_rng_tools_complete": "FAIL",
+    "gaps_explicit": "PASS",
+    "D01_contract_compatibility": "PASS_PROPOSAL_SCOPE",
+    "overall": "FAIL"
+  },
+  "blocking_gaps": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "other_pending": [
+    "D01-ADM-001",
+    "D01-GAP-003"
+  ],
+  "acceptance": "NOT_ACCEPTED_FOR_D03",
+  "next_phase": "D02_CONTINUATION_ONLY",
+  "no_d03_prompt": true,
+  "no_narrator_prompt": true,
+  "no_c06_started": true,
+  "publication_note": "This audit is a new proposal. Its containing commit cannot be embedded in itself; read branch ref and blobs after publish."
+}

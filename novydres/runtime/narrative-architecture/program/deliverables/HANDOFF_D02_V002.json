@@ -1,0 +1,78 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V002",
+  "phase": "D02",
+  "status": "FAIL",
+  "supersedes": "HANDOFF_D02_V001.json",
+  "spoiler_class": "PLAYER_SAFE",
+  "public_only": true,
+  "repository": "Niltond3/novydres-persistence-poc",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_branch": "design/chr001-narrative-program-d01",
+  "design_content_commit_sha": "537614af97464445f2e196e031290d53cd0200aa",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "status": "READY_FOR_DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c06_started": false
+  },
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SOURCE_ASSERTION_CHECKS_V002.json",
+      "blob_sha": "3b8e2b147ecfb3b56ca7ff48d696f9fdf8dd9162",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SEMANTIC_CASEBOOK_V002.json",
+      "blob_sha": "36477d8a87b70868823e5325704efc409e63b0d9",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_MAP_V002.json",
+      "blob_sha": "cdd9730869adf29fbf5d0215bcc1e592fe801cf7",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_AUTHORSHIP_EVIDENCE_V002.json",
+      "blob_sha": "22eb0c07cc1deb74bafd27dfa11cd4780f0a0bc3",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_COVERAGE_AND_PROVENANCE_V002.json",
+      "blob_sha": "27e1c5fdfd2083c1d3e8ed9de1c701e0d9a30bba",
+      "readback": "PASS",
+      "status": "PROPOSED_PARTIAL"
+    }
+  ],
+  "baseline_metrics": {
+    "original_source_inventory": 474,
+    "derived_records": 661,
+    "sha_line_pass": 661,
+    "direct_excerpt_present": 633,
+    "excerpt_needs_context_review": 28,
+    "scoped_casebook_records": 12
+  },
+  "blocking_gaps": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "editorial_independent_review": "NOT_COMPLETED",
+  "pending_administrative": "D01-ADM-001",
+  "technical_ledger": "COMMITTED_NOT_PROVEN",
+  "original_author_if_unsubstantiated": "AUTHOR_UNKNOWN",
+  "master_mutated": false,
+  "operational_material_mutated": false,
+  "accepted_for_d03": false,
+  "required_next_prompt": "NEXT_PROMPT_CONTINUE_D02_V002.md",
+  "next_phase": "D02",
+  "release_condition": "D02 PASS after all six gaps resolved and independently audited, with source/correction/causal/readback verification",
+  "publication_protocol": "Content SHA immutable; final audit/prompt commit SHA discover by branch ref on next execution."
+}
