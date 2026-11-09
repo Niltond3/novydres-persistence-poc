@@ -1,0 +1,144 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_PRECEDENCE_AND_MECHANICS_SPOTCHECK_V005",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 5,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "37c494b99a0f875e67284ea1fa28cc68486b7834",
+  "source_refs": {
+    "L": {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+    },
+    "P": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1"
+    },
+    "T": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+    },
+    "M": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    }
+  },
+  "status": "ARCHIVAL_CROSSCHECK_PARTIAL",
+  "cases": [
+    {
+      "id": "V005-PRECEDENCE-01",
+      "scope": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+        "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+        "start_line": 20,
+        "end_line": 30
+      },
+      "correction": "8-dice first result superseded by 10-dice provisional preflight; earlier fictional consequence invalidated; one attack intention retained",
+      "limit": "New dice tooling original log not independently authenticated; cannot treat as second attack"
+    },
+    {
+      "id": "V005-PRECEDENCE-02",
+      "scope": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_valid.source.txt",
+        "blob_sha": "337c22eb273e4b81d30a0ed5d4122a0222568713"
+      },
+      "excluded": {
+        "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt",
+        "blob_sha": "b35212d618a7aa195757d5d7bd28976c06d3c327"
+      },
+      "verdict": "INVALID_PARTIAL_EXCLUDED_VALID_VERSION_PREVAILS",
+      "limit": "Readbacks of both variant blobs performed separately; comprehensive delta comparison remains pending"
+    },
+    {
+      "id": "V005-PRECEDENCE-03",
+      "scope": "M3.01.C03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 91,
+        "end_line": 97
+      },
+      "verdict": "RETRACTED_OPENING_EXCLUDED",
+      "limit": "Does not alter valid second opening"
+    },
+    {
+      "id": "V005-PRECEDENCE-04",
+      "scope": "M3.01.C04",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 180,
+        "end_line": 184
+      },
+      "verdict": "C04_09_VALID_OVER_C04_08_INVALID",
+      "limit": "No independent RNG tool transcript bound to archive claim"
+    },
+    {
+      "id": "V005-G28-01",
+      "scope": "M2.04.C10",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 469,
+        "end_line": 473
+      },
+      "verdict": "TAKE_HALF_NO_RNG_NO_FV",
+      "limit": "Only local archive and rule; original chat separately unauthenticated"
+    },
+    {
+      "id": "V005-G28-02",
+      "scope": "M3.01.C03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 132,
+        "end_line": 139
+      },
+      "roll_file": {
+        "path": "novydres/chronicles/CHR-001/events/M3.01_C03_ROLLS_V1.json",
+        "blob_sha": "520cbae504abbe8f9d1b36e0635e2555ce281702"
+      },
+      "verdict": "PRE_ROLL_AND_ACCEPTANCE_DOCUMENTED_EXTERNAL_RNG_ORIGIN_UNVERIFIED",
+      "limit": "Does not establish local occupational law"
+    },
+    {
+      "id": "V005-G28-03",
+      "scope": "M3.01.C04",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 207,
+        "end_line": 214
+      },
+      "roll_file": {
+        "path": "novydres/chronicles/CHR-001/events/M3.01_C04_ROLLS_V1.json",
+        "blob_sha": "160ed383c9622afd45e5722d0e874bd00afb5c1f"
+      },
+      "verdict": "ACCEPTED_ROLL_WITH_FAILED_TOOL_GENERATION_RNG_ORIGIN_UNKNOWN",
+      "limit": "Preserve outcome no reroll"
+    },
+    {
+      "id": "V005-G28-04",
+      "scope": "M3.01.C05",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 237,
+        "end_line": 244
+      },
+      "roll_file": {
+        "path": "novydres/chronicles/CHR-001/events/M3.01_C05_ROLLS_V1.json",
+        "blob_sha": "f6300d5e0d745fdab24f7cb95a4addca9b73afde"
+      },
+      "verdict": "WP_ONE_REROLL_ACCEPTED_ORIGINAL_RNG_UNKNOWN",
+      "limit": "Preserve faces and success; no separate technical COMMITTED event"
+    }
+  ],
+  "g28_all_seven_files_prior_structural_readback": true,
+  "g28_new_independent_rng_authentications": 0,
+  "technical_committed_events_minted": 0,
+  "scene_events_created": 0
+}

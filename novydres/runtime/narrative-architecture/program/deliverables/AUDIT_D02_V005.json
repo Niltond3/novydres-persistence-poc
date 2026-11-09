@@ -1,0 +1,89 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V005",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 5,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "37c494b99a0f875e67284ea1fa28cc68486b7834",
+  "source_refs": {
+    "L": {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+    },
+    "P": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1"
+    },
+    "T": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+    },
+    "M": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    }
+  },
+  "status": "FAIL",
+  "phase_gate": "FAIL",
+  "d03_unlocked": false,
+  "checkpoint": {
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "cycle": "CYCLE_V0033",
+    "cycle_blob": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "live_blob": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+    "manifest_blob": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+    "status": "READY_FOR_DRAMATURGO",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "checks": {
+    "master_branch_current_initial": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "design_branch_current_initial": "37c494b99a0f875e67284ea1fa28cc68486b7834",
+    "design_ancestry_to_v004": "PASS_V004_CHECKPOINT",
+    "d01_ten_files_read": true,
+    "d02_v001_v002_v003_v004_fetched": true,
+    "v004_commit_parent_tree_confirmed": true,
+    "v005_source_blobs": 4,
+    "v005_clause_judgments": 57,
+    "v005_marker_ids_touched": 50,
+    "fully_semantically_cleared_marker_ids": 0,
+    "original_chat_authenticated": 0,
+    "causal_002": "SEQUENCE_ONLY",
+    "original_creative_author": "AUTHOR_UNKNOWN_WHERE_UNPROVEN",
+    "g28_rng_independence": "UNKNOWN_FOR_UNAUTHENTICATED",
+    "editorial_distinct_reviewer": "NOT_AVAILABLE",
+    "technical_committed": "NOT_CLAIMED",
+    "master_writes": false,
+    "canon_mutations": false
+  },
+  "gaps_open": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "gaps_resolved": [],
+  "other_open": [
+    "D01-ADM-001"
+  ],
+  "outputs_expected": [
+    "D02_SEMANTIC_CLAUSE_ADJUDICATION_V005.json",
+    "D02_REMAINING_ASSERTION_QUEUE_V005.json",
+    "D02_PRECEDENCE_AND_MECHANICS_SPOTCHECK_V005.json",
+    "AUDIT_D02_V005.json",
+    "HANDOFF_D02_V005.json"
+  ],
+  "independent_editorial_review": {
+    "reviewer": null,
+    "distinct_from_executor": false,
+    "verdict": "NOT_PERFORMED",
+    "signoff": false
+  },
+  "note": "This audit is a pre-publication artifact; final Git commit SHA verified by external readback, not embedded self-referentially.",
+  "next_phase": "D02_CONTINUATION_ONLY",
+  "prompt_storage": "CHAT_ONLY"
+}

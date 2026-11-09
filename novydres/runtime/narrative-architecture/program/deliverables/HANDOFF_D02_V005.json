@@ -1,0 +1,67 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V005",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 5,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "37c494b99a0f875e67284ea1fa28cc68486b7834",
+  "source_refs": {
+    "L": {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+    },
+    "P": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1"
+    },
+    "T": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+    },
+    "M": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    }
+  },
+  "status": "FAIL",
+  "next_phase": "D02",
+  "d03_unlocked": false,
+  "source_master": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_expected_parent": "37c494b99a0f875e67284ea1fa28cc68486b7834",
+  "finished_work": {
+    "reviewed_archival_clauses": 57,
+    "scopes": 13,
+    "distinct_prior_marker_ids_touched": 50,
+    "prior_markers_semantically_cleared": 0,
+    "source_sha_range_check_failures": 0,
+    "source_lineages": "MIGRATED_DIARY_AND_CUMULATIVE_EPISODES_ONLY",
+    "claim_authenticity": "ARCHIVAL_ONLY_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+    "rng_independent_origin_confirmations": 0,
+    "adjudicated_original_creative_authors": 0
+  },
+  "blockers": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "independent_review": {
+    "reviewer": null,
+    "signoff": "NOT_GRANTED"
+  },
+  "preserve": [
+    "MASTER_READ_ONLY",
+    "NO_CANON_MUTATION",
+    "NO_TECHNICAL_COMMITTED_MINTING",
+    "NO_C06",
+    "NO_2010",
+    "NO_RETCON",
+    "NO_XP_OR_FV",
+    "D01-ADM-001"
+  ],
+  "next_prompt_policy": "ENTIRE_TEXT_IN_CHAT_NOT_GITHUB",
+  "publication": "PENDING_AT_OBJECT_CREATION_LEASE_READBACK"
+}
