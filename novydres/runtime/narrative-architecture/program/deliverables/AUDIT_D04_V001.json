@@ -1,0 +1,82 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "AUDIT_D04_V001",
+  "gate": "PASS_WITH_UNKNOWN",
+  "counts": {
+    "baseline": 44,
+    "classifications": 44,
+    "distribution": {
+      "PLOT_CHRONICLE": 0,
+      "PLOT_MAJOR": 0,
+      "PLOT_MEDIUM": 1,
+      "PLOT_MINOR": 0,
+      "THREAD": 18,
+      "CLUE": 6,
+      "CONSEQUENCE": 15,
+      "INCIDENTAL": 2,
+      "BACKGROUND_UNKNOWN": 2,
+      "UNCLASSIFIED_EVIDENCE_GAP": 0
+    },
+    "plot_candidates": 4,
+    "provisional_plots": 1,
+    "links": 22,
+    "unmapped": 22,
+    "source_anchor_located": 42,
+    "source_anchor_unknown": 2,
+    "uncertainties": 15,
+    "tests_pass": 16,
+    "tests_fail": 0
+  },
+  "review": "Editorial structural audit with 44 source-line crosswalks; no original dialogue/RNG authentication",
+  "source_blobs": {
+    "baseline": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "atlas": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+    "cycle": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "D02_errata": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "D03_agents": "57584922f67380be82d3bd12029403804b4bad8c",
+    "D03_states": "0177f96d4931c40d94dc3fc66732beb7b328a80b",
+    "D03_relationships": "f0a8d75863d125abd6c78b6aea544797265b2ce5",
+    "D03_knowledge": "45450ac09db20256143ecf70e932afcf6470b806",
+    "D03_aliases": "00852a0ec6b1b26fb520cf4f523dc362f66cdcb1"
+  },
+  "open_conflicts": [
+    "D01-ADM-001",
+    "C05 profession scope vs conditional offer"
+  ],
+  "no_operational_mutation": true,
+  "publication_sha": "VERIFY_REMOTE_BRANCH_AND_TREE_NOT_SELF_EMBEDDED"
+}

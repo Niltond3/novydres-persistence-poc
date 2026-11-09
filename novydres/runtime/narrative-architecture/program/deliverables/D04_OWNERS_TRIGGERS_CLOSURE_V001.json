@@ -1,0 +1,2617 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "D04_OWNERS_TRIGGERS_CLOSURE_V001",
+  "total": 44,
+  "items": [
+    {
+      "thread_id": "m201-report-authorship",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            7,
+            22
+          ],
+          "anchor": "m201-report-authorship",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            782,
+            782
+          ],
+          "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m201-ramal-condition",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "TECHNICAL_SAFETY_WITH_UNPROVEN_RELEASE",
+      "closure": {
+        "class": "PROPOSED",
+        "description": "Proposta editorial: reparo, teste e autorização formal ou decisão documentada alternativa",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            23,
+            38
+          ],
+          "anchor": "m201-ramal-condition",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            803,
+            803
+          ],
+          "anchor": "M2.01 CLOSED",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m201-pavel-commitment",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            39,
+            54
+          ],
+          "anchor": "m201-pavel-commitment",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            795,
+            795
+          ],
+          "anchor": "CHR001-M201-RITMO-CLOSE-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m201-liev-colleagues",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-liev-heating-colleague"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-009",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-liev-heating-colleague",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-010",
+          "from": "npc-liev-heating-colleague",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            55,
+            69
+          ],
+          "anchor": "m201-liev-colleagues",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            773,
+            773
+          ],
+          "anchor": "CHR001-M201-PAVEL-OBS-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m202-school-rumor",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mikahel-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            70,
+            84
+          ],
+          "anchor": "m202-school-rumor",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            804,
+            804
+          ],
+          "anchor": "CHR001-M202-PRESENTED-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-patient-prognosis",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            85,
+            99
+          ],
+          "anchor": "m203-patient-prognosis",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            240,
+            240
+          ],
+          "anchor": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-woman-identity-location",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-nadezhda-claimed"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            100,
+            116
+          ],
+          "anchor": "m203-woman-identity-location",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            195,
+            195
+          ],
+          "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-gromov-threat",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            117,
+            131
+          ],
+          "anchor": "m203-gromov-threat",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            191,
+            191
+          ],
+          "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-help-woman",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-nadezhda-claimed"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Ajuda imediata ocorreu; destino posterior UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            132,
+            149
+          ],
+          "anchor": "m203-help-woman",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            202,
+            202
+          ],
+          "anchor": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-changes-and-worker",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-gray-apron-hospital-worker"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Checkpoint histórico superado; não é ação pendente",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            150,
+            166
+          ],
+          "anchor": "m203-changes-and-worker",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            260,
+            260
+          ],
+          "anchor": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "family-armin-support",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            167,
+            181
+          ],
+          "anchor": "family-armin-support",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            610,
+            610
+          ],
+          "anchor": "Armin",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-nadezhda-departure",
+      "owner": "UNKNOWN",
+      "agents": [
+        "npc-nadezhda-claimed"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            182,
+            189
+          ],
+          "anchor": "m203-nadezhda-departure",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+          "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+          "source_lines": [
+            561,
+            561
+          ],
+          "anchor": "CHR001-M203-ESCAPE-125-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-van-cargo",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            190,
+            198
+          ],
+          "anchor": "m203-van-cargo",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": null,
+          "anchor": "CHR001-M203-ESCAPE-121-20261103-001",
+          "authority": "ANCHOR_UNLOCATED_USE_BASELINE_ONLY"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-npc-name-provenance",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger",
+        "npc-nadezhda-claimed",
+        "npc-paramedics-unspecified"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            199,
+            206
+          ],
+          "anchor": "m203-npc-name-provenance",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V2.json",
+          "blob_sha": "170eba262841d021c975ee69c02ffff6c4a2c203",
+          "source_lines": [
+            178,
+            178
+          ],
+          "anchor": "CHR001-M203-ESCAPE-124-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m203-oficios-specialization",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            207,
+            214
+          ],
+          "anchor": "m203-oficios-specialization",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/state_v018.source.txt",
+          "blob_sha": "c6b39a733868777c14d02097a874f9a58fce1ff9",
+          "source_lines": null,
+          "anchor": "CHR001-M203-ESCAPE-119-20261103-001",
+          "authority": "ANCHOR_UNLOCATED_USE_BASELINE_ONLY"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-family-safety",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser",
+        "npc-mikahel-krauser",
+        "npc-sara-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-005",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-006",
+          "from": "npc-sara-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-037",
+          "from": "npc-mary-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-038",
+          "from": "npc-mikahel-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-039",
+          "from": "npc-mary-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-040",
+          "from": "npc-sara-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-041",
+          "from": "npc-mikahel-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            215,
+            223
+          ],
+          "anchor": "m204-family-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v004.source.txt",
+          "blob_sha": "8a4f780622b75a62729a7d67e5c4c60645ef3606",
+          "source_lines": [
+            41,
+            41
+          ],
+          "anchor": "CHR001-M204-C01-12-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-volnaya-papers",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            224,
+            232
+          ],
+          "anchor": "m204-volnaya-papers",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            38,
+            38
+          ],
+          "anchor": "CHR001-M204-C01-11-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-mary-bart-trust",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            233,
+            241
+          ],
+          "anchor": "m204-mary-bart-trust",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            124,
+            124
+          ],
+          "anchor": "CHR001-M204-C03-02-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-volnaya-clerk-ilya-condition",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-volnaya-clerk-ilya-unverified-name"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            242,
+            250
+          ],
+          "anchor": "m204-volnaya-clerk-ilya-condition",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            349,
+            349
+          ],
+          "anchor": "CHR001-M204-C08-24-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-volnaya-documents-stolen",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            251,
+            259
+          ],
+          "anchor": "m204-volnaya-documents-stolen",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            352,
+            352
+          ],
+          "anchor": "CHR001-M204-C08-25-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-os219-circulation",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            260,
+            267
+          ],
+          "anchor": "m204-os219-circulation",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            343,
+            343
+          ],
+          "anchor": "CHR001-M204-C08-22-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-krauser-workshop-plan",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Oficina aberta; lucro e futuro UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            268,
+            276
+          ],
+          "anchor": "m204-krauser-workshop-plan",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "source_lines": [
+            398,
+            398
+          ],
+          "anchor": "CHR001-M204-C09-11-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-volnaya-fleet-tracing",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            277,
+            284
+          ],
+          "anchor": "m204-volnaya-fleet-tracing",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            392,
+            392
+          ],
+          "anchor": "CHR001-M204-C09-09-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-heating-overtime-claim",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-mary-krauser"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            285,
+            293
+          ],
+          "anchor": "m204-heating-overtime-claim",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            481,
+            481
+          ],
+          "anchor": "CHR001-M204-C10-14-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c11-component-analysis",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            294,
+            302
+          ],
+          "anchor": "m204-c11-component-analysis",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+          "blob_sha": "88fb084df412897b659f65a436b8fcd957fcf369",
+          "source_lines": [
+            546,
+            546
+          ],
+          "anchor": "CHR001-M204-C11-18-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c12-old-city-heat-transfer-study",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            303,
+            311
+          ],
+          "anchor": "m204-c12-old-city-heat-transfer-study",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            595,
+            595
+          ],
+          "anchor": "CHR001-M204-C12-14-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c13-preliminary-note-followup",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Nota triada; obra UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            312,
+            320
+          ],
+          "anchor": "m204-c13-preliminary-note-followup",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            655,
+            655
+          ],
+          "anchor": "CHR001-M204-C13-18-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c14-school-followup",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mikahel-krauser",
+        "npc-anna-morozova-vice-diretora",
+        "npc-viktor-sokolov"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            321,
+            329
+          ],
+          "anchor": "m204-c14-school-followup",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v013.source.txt",
+          "blob_sha": "c162d4c7e4df46486b02796bafd153f9e48c64ce",
+          "source_lines": [
+            733,
+            733
+          ],
+          "anchor": "CHR001-M204-C14-24-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c15-underground-survey",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-grigori-makarov-technical-safety"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            330,
+            338
+          ],
+          "anchor": "m204-c15-underground-survey",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+          "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9",
+          "source_lines": [
+            806,
+            806
+          ],
+          "anchor": "CHR001-M204-C15-22-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c15-makarov-pavel-trust",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-grigori-makarov-technical-safety"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            339,
+            347
+          ],
+          "anchor": "m204-c15-makarov-pavel-trust",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+          "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9",
+          "source_lines": [
+            806,
+            806
+          ],
+          "anchor": "CHR001-M204-C15-22-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c16-oleg-identity",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            348,
+            356
+          ],
+          "anchor": "m204-c16-oleg-identity",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            882,
+            882
+          ],
+          "anchor": "CHR001-M204-C16-23-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c16-pipe-safety",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "OBSERVED_PIPE_BREAK_REPAIR_UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            357,
+            365
+          ],
+          "anchor": "m204-c16-pipe-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            846,
+            846
+          ],
+          "anchor": "CHR001-M204-C16-11-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c16-man-rescued",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unidentified-man-c16"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Resgate local; prognóstico UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            366,
+            374
+          ],
+          "anchor": "m204-c16-man-rescued",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            816,
+            816
+          ],
+          "anchor": "CHR001-M204-C16-01-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m204-c16-pact-with-oleg",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Saída permitida; repercussão UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            375,
+            383
+          ],
+          "anchor": "m204-c16-pact-with-oleg",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            894,
+            894
+          ],
+          "anchor": "CHR001-M204-C16-27-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c01-price-haddad-contract-pay-dispute",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m3-eleanor-price-candidate",
+        "npc-m3-samir-haddad-candidate"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-021",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-eleanor-price-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-022",
+          "from": "npc-m3-eleanor-price-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-023",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-024",
+          "from": "npc-m3-samir-haddad-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-049",
+          "from": "npc-m3-eleanor-price-candidate",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            384,
+            392
+          ],
+          "anchor": "m301-c01-price-haddad-contract-pay-dispute",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "source_lines": [
+            13,
+            13
+          ],
+          "anchor": "CHR001-M301-C01-03-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c01-samir-krauser-office-phone",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m3-samir-haddad-candidate"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-023",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-024",
+          "from": "npc-m3-samir-haddad-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Telefone fornecido; contato posterior UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            393,
+            401
+          ],
+          "anchor": "m301-c01-samir-krauser-office-phone",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "source_lines": [
+            22,
+            22
+          ],
+          "anchor": "CHR001-M301-C01-06-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c02-jonas-identity",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            402,
+            410
+          ],
+          "anchor": "m301-c02-jonas-identity",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+          "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c",
+          "source_lines": [
+            44,
+            44
+          ],
+          "anchor": "CHR001-M301-C02-03-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c02-jonas-agreement",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Promessa verbal realizada; cumprimento UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            411,
+            419
+          ],
+          "anchor": "m301-c02-jonas-agreement",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+          "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c",
+          "source_lines": [
+            74,
+            74
+          ],
+          "anchor": "CHR001-M301-C02-13-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c03-daniel-truck-safety",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-foster"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-015",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-daniel-foster",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-016",
+          "from": "npc-m301-daniel-foster",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "DOCUMENTED_VEHICLE_SAFETY_CONCERN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            420,
+            428
+          ],
+          "anchor": "m301-c03-daniel-truck-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+          "blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769",
+          "source_lines": [
+            126,
+            126
+          ],
+          "anchor": "CHR001-M301-C03-12-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c04-yelena-baranova",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-marta-funeral",
+        "npc-yelena-baranova"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-017",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-marta-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-018",
+          "from": "npc-m301-marta-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-046",
+          "from": "npc-m301-marta-funeral",
+          "to": "npc-yelena-baranova",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            429,
+            437
+          ],
+          "anchor": "m301-c04-yelena-baranova",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            171,
+            171
+          ],
+          "anchor": "CHR001-M301-C04-05-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c04-unopened-box",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            438,
+            446
+          ],
+          "anchor": "m301-c04-unopened-box",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            198,
+            198
+          ],
+          "anchor": "CHR001-M301-C04-14-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c04-marta-and-funeral-address",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-marta-funeral",
+        "npc-m301-margaret-funeral",
+        "npc-m301-daniel-son"
+      ],
+      "relations": [
+        {
+          "edge_id": "REL-017",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-marta-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-018",
+          "from": "npc-m301-marta-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-019",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-margaret-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-020",
+          "from": "npc-m301-margaret-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Endereço obtido; reação futura UNKNOWN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            447,
+            455
+          ],
+          "anchor": "m301-c04-marta-and-funeral-address",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            183,
+            183
+          ],
+          "anchor": "CHR001-M301-C04-09-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c05-daniel-contact-and-envelope",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-son"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [
+          {
+            "knowledge_id": "D03-K-C05-CONTACT",
+            "owner_id": "npc-m301-daniel-son",
+            "acquisition_mechanism": "DIRECT_DIALOGUE_REPORTED_DERIVED_ARCHIVE",
+            "checkpoint": "M3.01.C05.19",
+            "evidence": {
+              "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+              "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+              "source_lines": [
+                279,
+                281
+              ]
+            }
+          }
+        ],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            456,
+            464
+          ],
+          "anchor": "m301-c05-daniel-contact-and-envelope",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "source_lines": [
+            279,
+            279
+          ],
+          "anchor": "CHR001-M301-C05-19-20261109-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    },
+    {
+      "thread_id": "m301-c05-professional-scope-contradiction",
+      "owner": "UNKNOWN",
+      "agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-son"
+      ],
+      "relations": [],
+      "knowledge": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "trigger": "UNKNOWN",
+      "review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "risk": "UNKNOWN",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "source": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            465,
+            497
+          ],
+          "anchor": "m301-c05-professional-scope-contradiction",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "source_lines": [
+            276,
+            276
+          ],
+          "anchor": "CHR001-M301-C05-18-20261109-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "D04_UNCERTAINTY_REGISTER_V001",
+  "total": 15,
+  "items": [
+    {
+      "id": "D04-U01",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNVERIFIABLE_ORIGINAL",
+      "scope": "M1.01 002–003 and other unindexed original turns",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U02",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "AUTHOR_UNKNOWN",
+      "scope": "Original actor/speaker/authorship provenance",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U03",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "SEQUENCE_ONLY",
+      "scope": "Causality among unrelated records, locations and claims",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U04",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "259 D03 NPC knowledge attributions not demonstrably acquired",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U05",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "D03 alias comparison limits and zero new mergers",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U06",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "CONDITIONAL",
+      "scope": "Three plot candidates not promoted; provisional plot cannot change operational state",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U07",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "Sealed object content and envelope destination unverified",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U08",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "NPC_CLAIM",
+      "scope": "Identity, threats, affiliation and death claims not objective facts",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U09",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "CONFLICT",
+      "scope": "C05 conditional transport/incineration offer versus C03 professional scope",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U10",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "D01-ADM-001 manifest historic pointer discrepancy",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U11",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "No verified GM_HIDDEN access segregation",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U12",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNVERIFIABLE_ORIGINAL",
+      "scope": "RNG and invalid D02 V001 ledger metadata overridden by V011",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-U13",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "CONDITIONAL",
+      "scope": "C06 not started; stale preparation not played",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-A-013",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "m203-van-cargo source anchor not located; use baseline provenance",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    },
+    {
+      "id": "D04-A-015",
+      "status": "OPEN_BOUNDED",
+      "epistemic_class": "UNKNOWN_SOURCE",
+      "scope": "m203-oficios-specialization source anchor not located; use baseline provenance",
+      "resolution": "D05 proposal/targeted evidence review only; no silent correction or historical event"
+    }
+  ],
+  "open_conflicts": [
+    "D01-ADM-001",
+    "D04-U09",
+    "D01-ADM-001",
+    "ORIGINAL_ROLE_AUTHENTICATION",
+    "ALIASES_UNKNOWN",
+    "NPC_ACQUISITION_UNKNOWN"
+  ],
+  "no_silent_resolution": true
+}

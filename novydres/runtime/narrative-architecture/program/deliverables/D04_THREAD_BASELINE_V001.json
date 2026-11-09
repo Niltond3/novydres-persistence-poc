@@ -1,0 +1,839 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "D04_THREAD_BASELINE_V001",
+  "source_atlas": {
+    "path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+    "sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+    "status": "PARTIAL",
+    "not_authoritative": true
+  },
+  "reconciled_count": 44,
+  "items": [
+    {
+      "thread_id": "m201-report-authorship",
+      "index": 1,
+      "baseline_kind": "OPEN_MYSTERY",
+      "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+      "last_event": "CHR001-M204-C10-16-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          7,
+          22
+        ],
+        "anchor": "m201-report-authorship",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m201-ramal-condition",
+      "index": 2,
+      "baseline_kind": "OPEN_CAUSAL",
+      "anchor": "M2.01 CLOSED",
+      "last_event": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          23,
+          38
+        ],
+        "anchor": "m201-ramal-condition",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m201-pavel-commitment",
+      "index": 3,
+      "baseline_kind": "PARTIALLY_FULFILLED_FOLLOWUP_OPEN",
+      "anchor": "CHR001-M201-RITMO-CLOSE-20261101-001",
+      "last_event": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          39,
+          54
+        ],
+        "anchor": "m201-pavel-commitment",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m201-liev-colleagues",
+      "index": 4,
+      "baseline_kind": "OPEN_CAUSAL",
+      "anchor": "CHR001-M201-PAVEL-OBS-20261101-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          55,
+          69
+        ],
+        "anchor": "m201-liev-colleagues",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m202-school-rumor",
+      "index": 5,
+      "baseline_kind": "NPC_CLAIM_AND_OPEN_RELATION",
+      "anchor": "CHR001-M202-PRESENTED-20261101-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          70,
+          84
+        ],
+        "anchor": "m202-school-rumor",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-patient-prognosis",
+      "index": 6,
+      "baseline_kind": "OPEN_CLINICAL_OUTCOME",
+      "anchor": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          85,
+          99
+        ],
+        "anchor": "m203-patient-prognosis",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-woman-identity-location",
+      "index": 7,
+      "baseline_kind": "OPEN_FUTURE_OUTCOME",
+      "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+      "last_event": "CHR001-M203-ESCAPE-125-20261103-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          100,
+          116
+        ],
+        "anchor": "m203-woman-identity-location",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-gromov-threat",
+      "index": 8,
+      "baseline_kind": "NPC_CLAIM_NOT_CONFIRMED",
+      "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          117,
+          131
+        ],
+        "anchor": "m203-gromov-threat",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-help-woman",
+      "index": 9,
+      "baseline_kind": "IMMEDIATE_HELP_COMPLETED_FUTURE_UNVERIFIED",
+      "anchor": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+      "last_event": "CHR001-M203-ESCAPE-125-20261103-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          132,
+          149
+        ],
+        "anchor": "m203-help-woman",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-changes-and-worker",
+      "index": 10,
+      "baseline_kind": "HISTORICAL_CHECKPOINT_SUPERSEDED_NOT_CURRENT_ACTION",
+      "anchor": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+      "last_event": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          150,
+          166
+        ],
+        "anchor": "m203-changes-and-worker",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "family-armin-support",
+      "index": 11,
+      "baseline_kind": "HISTORIC_UNEXECUTED_SUPPORT",
+      "anchor": "Armin",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          167,
+          181
+        ],
+        "anchor": "family-armin-support",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-nadezhda-departure",
+      "index": 12,
+      "baseline_kind": "OPEN_FUTURE_OUTCOME",
+      "anchor": "CHR001-M203-ESCAPE-125-20261103-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          182,
+          189
+        ],
+        "anchor": "m203-nadezhda-departure",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-van-cargo",
+      "index": 13,
+      "baseline_kind": "OPEN_MYSTERY",
+      "anchor": "CHR001-M203-ESCAPE-121-20261103-001",
+      "last_event": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          190,
+          198
+        ],
+        "anchor": "m203-van-cargo",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-npc-name-provenance",
+      "index": 14,
+      "baseline_kind": "CORRECTION",
+      "anchor": "CHR001-M203-ESCAPE-124-20261103-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          199,
+          206
+        ],
+        "anchor": "m203-npc-name-provenance",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m203-oficios-specialization",
+      "index": 15,
+      "baseline_kind": "RULE_AUDIT_PENDING",
+      "anchor": "CHR001-M203-ESCAPE-119-20261103-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          207,
+          214
+        ],
+        "anchor": "m203-oficios-specialization",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-family-safety",
+      "index": 16,
+      "baseline_kind": "OPEN_CAUSAL",
+      "anchor": "CHR001-M204-C01-12-20261103-001",
+      "last_event": "CHR001-M204-C04-14-20261104-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          215,
+          223
+        ],
+        "anchor": "m204-family-safety",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-volnaya-papers",
+      "index": 17,
+      "baseline_kind": "OPEN_DECISION",
+      "anchor": "CHR001-M204-C01-11-20261103-001",
+      "last_event": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          224,
+          232
+        ],
+        "anchor": "m204-volnaya-papers",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-mary-bart-trust",
+      "index": 18,
+      "baseline_kind": "OPEN_RELATIONAL",
+      "anchor": "CHR001-M204-C03-02-20261103-001",
+      "last_event": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          233,
+          241
+        ],
+        "anchor": "m204-mary-bart-trust",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-volnaya-clerk-ilya-condition",
+      "index": 19,
+      "baseline_kind": "OPEN_MEDICAL_OUTCOME",
+      "anchor": "CHR001-M204-C08-24-20261104-001",
+      "last_event": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          242,
+          250
+        ],
+        "anchor": "m204-volnaya-clerk-ilya-condition",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-volnaya-documents-stolen",
+      "index": 20,
+      "baseline_kind": "OPEN_CAUSAL",
+      "anchor": "CHR001-M204-C08-25-20261104-001",
+      "last_event": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          251,
+          259
+        ],
+        "anchor": "m204-volnaya-documents-stolen",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-os219-circulation",
+      "index": 21,
+      "baseline_kind": "OPEN_MYSTERY",
+      "anchor": "CHR001-M204-C08-22-20261104-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          260,
+          267
+        ],
+        "anchor": "m204-os219-circulation",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-krauser-workshop-plan",
+      "index": 22,
+      "baseline_kind": "BUSINESS_OPEN_WITH_LONGITUDINAL_FINANCIAL_UNKNOWNS",
+      "anchor": "CHR001-M204-C09-11-20261105-001",
+      "last_event": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          268,
+          276
+        ],
+        "anchor": "m204-krauser-workshop-plan",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-volnaya-fleet-tracing",
+      "index": 23,
+      "baseline_kind": "OPEN_INVESTIGATION",
+      "anchor": "CHR001-M204-C09-09-20261105-001",
+      "last_event": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          277,
+          284
+        ],
+        "anchor": "m204-volnaya-fleet-tracing",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-heating-overtime-claim",
+      "index": 24,
+      "baseline_kind": "OPEN_UNVERIFIED_FINANCIAL_CLAIM",
+      "anchor": "CHR001-M204-C10-14-20261105-001",
+      "last_event": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          285,
+          293
+        ],
+        "anchor": "m204-heating-overtime-claim",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c11-component-analysis",
+      "index": 25,
+      "baseline_kind": "OPEN_TECHNICAL_FOLLOWUP",
+      "anchor": "CHR001-M204-C11-18-20261105-001",
+      "last_event": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          294,
+          302
+        ],
+        "anchor": "m204-c11-component-analysis",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c12-old-city-heat-transfer-study",
+      "index": 26,
+      "baseline_kind": "OPEN_TECHNICAL_INSTITUTIONAL_STUDY",
+      "anchor": "CHR001-M204-C12-14-20261105-001",
+      "last_event": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          303,
+          311
+        ],
+        "anchor": "m204-c12-old-city-heat-transfer-study",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c13-preliminary-note-followup",
+      "index": 27,
+      "baseline_kind": "OPEN_INSTITUTIONAL_FOLLOWUP",
+      "anchor": "CHR001-M204-C13-18-20261105-001",
+      "last_event": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          312,
+          320
+        ],
+        "anchor": "m204-c13-preliminary-note-followup",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c14-school-followup",
+      "index": 28,
+      "baseline_kind": "OPEN_SCHOOL_FAMILY_FOLLOWUP",
+      "anchor": "CHR001-M204-C14-24-20261105-001",
+      "last_event": "CHR001-M204-C14-24-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          321,
+          329
+        ],
+        "anchor": "m204-c14-school-followup",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c15-underground-survey",
+      "index": 29,
+      "baseline_kind": "OPEN_TECHNICAL_VERIFICATION",
+      "anchor": "CHR001-M204-C15-22-20261106-001",
+      "last_event": "CHR001-M204-C15-22-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          330,
+          338
+        ],
+        "anchor": "m204-c15-underground-survey",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c15-makarov-pavel-trust",
+      "index": 30,
+      "baseline_kind": "OPEN_NPC_PROFESSIONAL_RELATION",
+      "anchor": "CHR001-M204-C15-22-20261106-001",
+      "last_event": "CHR001-M204-C15-22-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          339,
+          347
+        ],
+        "anchor": "m204-c15-makarov-pavel-trust",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c16-oleg-identity",
+      "index": 31,
+      "baseline_kind": "OPEN_NPC_CLAIM",
+      "anchor": "CHR001-M204-C16-23-20261106-001",
+      "last_event": "CHR001-M204-C16-27-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          348,
+          356
+        ],
+        "anchor": "m204-c16-oleg-identity",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c16-pipe-safety",
+      "index": 32,
+      "baseline_kind": "OPEN_IMMEDIATE_CAUSAL",
+      "anchor": "CHR001-M204-C16-11-20261106-001",
+      "last_event": "CHR001-M204-C17-08-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          357,
+          365
+        ],
+        "anchor": "m204-c16-pipe-safety",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c16-man-rescued",
+      "index": 33,
+      "baseline_kind": "OPEN_NPC_FATE_AND_CLAIM",
+      "anchor": "CHR001-M204-C16-01-20261106-001",
+      "last_event": "CHR001-M204-C17-08-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          366,
+          374
+        ],
+        "anchor": "m204-c16-man-rescued",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m204-c16-pact-with-oleg",
+      "index": 34,
+      "baseline_kind": "OPEN_POSSIBLE_CONSEQUENCE_NOT_PREDECIDED",
+      "anchor": "CHR001-M204-C16-27-20261106-001",
+      "last_event": "CHR001-M204-C16-27-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          375,
+          383
+        ],
+        "anchor": "m204-c16-pact-with-oleg",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c01-price-haddad-contract-pay-dispute",
+      "index": 35,
+      "baseline_kind": "OPEN_DISPUTED_CIVIL_NPC_CLAIMS",
+      "anchor": "CHR001-M301-C01-03-20261107-001",
+      "last_event": "CHR001-M301-C01-08-20261107-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          384,
+          392
+        ],
+        "anchor": "m301-c01-price-haddad-contract-pay-dispute",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c01-samir-krauser-office-phone",
+      "index": 36,
+      "baseline_kind": "OPEN_CONTACT_OPPORTUNITY_NOT_OBLIGATION",
+      "anchor": "CHR001-M301-C01-06-20261107-001",
+      "last_event": "CHR001-M301-C01-08-20261107-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          393,
+          401
+        ],
+        "anchor": "m301-c01-samir-krauser-office-phone",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c02-jonas-identity",
+      "index": 37,
+      "baseline_kind": "OPEN_NPC_CLAIM_OBSERVED_ANOMALY",
+      "anchor": "CHR001-M301-C02-03-20261107-001",
+      "last_event": "CHR001-M301-C02-16-20261107-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          402,
+          410
+        ],
+        "anchor": "m301-c02-jonas-identity",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c02-jonas-agreement",
+      "index": 38,
+      "baseline_kind": "OPEN_COERCED_WARNING_PROMISE",
+      "anchor": "CHR001-M301-C02-13-20261107-001",
+      "last_event": "CHR001-M301-C02-16-20261107-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          411,
+          419
+        ],
+        "anchor": "m301-c02-jonas-agreement",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c03-daniel-truck-safety",
+      "index": 39,
+      "baseline_kind": "OPEN_INDEPENDENT_CIVIL_EMPLOYMENT_THREAD",
+      "anchor": "CHR001-M301-C03-12-20261107-001",
+      "last_event": "CHR001-M301-C03-20-20261107-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          420,
+          428
+        ],
+        "anchor": "m301-c03-daniel-truck-safety",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c04-yelena-baranova",
+      "index": 40,
+      "baseline_kind": "OPEN_DOCUMENT_AND_NPC_CLAIMS",
+      "anchor": "CHR001-M301-C04-05-20261108-001",
+      "last_event": "CHR001-M301-C04-20-20261108-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          429,
+          437
+        ],
+        "anchor": "m301-c04-yelena-baranova",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c04-unopened-box",
+      "index": 41,
+      "baseline_kind": "OPEN_OBJECT_PROVENANCE",
+      "anchor": "CHR001-M301-C04-14-20261108-001",
+      "last_event": "CHR001-M301-C05-22-20261109-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          438,
+          446
+        ],
+        "anchor": "m301-c04-unopened-box",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c04-marta-and-funeral-address",
+      "index": 42,
+      "baseline_kind": "OPEN_INDEPENDENT_NPC",
+      "anchor": "CHR001-M301-C04-09-20261108-001",
+      "last_event": "CHR001-M301-C04-20-20261108-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          447,
+          455
+        ],
+        "anchor": "m301-c04-marta-and-funeral-address",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c05-daniel-contact-and-envelope",
+      "index": 43,
+      "baseline_kind": "OPEN_NPC_CONTACT_AND_OBJECT_UNKNOWN",
+      "anchor": "CHR001-M301-C05-19-20261109-001",
+      "last_event": "CHR001-M301-C05-22-20261109-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          456,
+          464
+        ],
+        "anchor": "m301-c05-daniel-contact-and-envelope",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    },
+    {
+      "thread_id": "m301-c05-professional-scope-contradiction",
+      "index": 44,
+      "baseline_kind": "OPEN_PLAYER_CHARACTERIZATION_CONFLICT_NOT_AUTORECONCILED",
+      "anchor": "CHR001-M301-C05-18-20261109-001",
+      "last_event": "CHR001-M301-C05-22-20261109-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          465,
+          497
+        ],
+        "anchor": "m301-c05-professional-scope-contradiction",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "no_plot_inference": true
+    }
+  ]
+}

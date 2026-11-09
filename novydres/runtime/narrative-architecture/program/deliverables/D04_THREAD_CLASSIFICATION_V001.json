@@ -1,0 +1,4146 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "D04_THREAD_CLASSIFICATION_V001",
+  "total": 44,
+  "distribution": {
+    "PLOT_CHRONICLE": 0,
+    "PLOT_MAJOR": 0,
+    "PLOT_MEDIUM": 1,
+    "PLOT_MINOR": 0,
+    "THREAD": 18,
+    "CLUE": 6,
+    "CONSEQUENCE": 15,
+    "INCIDENTAL": 2,
+    "BACKGROUND_UNKNOWN": 2,
+    "UNCLASSIFIED_EVIDENCE_GAP": 0
+  },
+  "items": [
+    {
+      "thread_id": "m201-report-authorship",
+      "baseline_index": 1,
+      "baseline_kind": "OPEN_MYSTERY",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Rubrica contestada é indício documental, sem autor ou falsificação comprovados.",
+      "first_documented_checkpoint": "CHR001-M201-PAVEL-COPIA-20261101-001",
+      "last_provable_update": "CHR001-M204-C10-16-20261105-001",
+      "historical_state": "OPEN_MYSTERY",
+      "reported_open_detail": "Bart agora possui contestação formal protocolada; autoria, rubrica, emissão e eventual falsificação da circular continuam desconhecidas.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            7,
+            22
+          ],
+          "anchor": "m201-report-authorship",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            782,
+            782
+          ],
+          "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Bart agora possui contestação formal protocolada; autoria, rubrica, emissão e eventual falsificação da circular continuam desconhecidas.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Rubrica contestada é indício documental, sem autor ou falsificação comprovados.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m201-ramal-condition",
+      "baseline_index": 2,
+      "baseline_kind": "OPEN_CAUSAL",
+      "primary_class": "PLOT_MEDIUM",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Falha do ramal retorna em inspeção, interdição, revisão de peça e decisões institucionais; trama técnica provisória com terminal apenas editorial.",
+      "first_documented_checkpoint": "M2.01 CLOSED",
+      "last_provable_update": "CHR001-M204-C11-18-20261105-001",
+      "historical_state": "OPEN_CAUSAL",
+      "reported_open_detail": "C11: ramal agora isolado/interditado após medidas divergentes, luva de menor seção e aparência diferente do esquema. Desconhecidos laudo conclusivo, nexo de causalidade integral, autoria/data da adaptação, material aprovado disponível, reparo, ensaio final e data de liberação.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            23,
+            38
+          ],
+          "anchor": "m201-ramal-condition",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            803,
+            803
+          ],
+          "anchor": "M2.01 CLOSED",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C11: ramal agora isolado/interditado após medidas divergentes, luva de menor seção e aparência diferente do esquema. Desconhecidos laudo conclusivo, nexo de causalidade integral, autoria/data da adaptação, material aprovado disponível, reparo, ensaio final e data de liberação.",
+      "current_risk": "TECHNICAL_SAFETY_WITH_UNPROVEN_RELEASE",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "PROPOSED",
+        "description": "Proposta editorial: reparo, teste e autorização formal ou decisão documentada alternativa",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "REPEATED_TECHNICAL_AND_INSTITUTIONAL_CONFLICT_WITH_BOUNDED_UNKNOWN; EDITORIAL_ONLY",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "RECURRING",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m201-pavel-commitment",
+      "baseline_index": 3,
+      "baseline_kind": "PARTIALLY_FULFILLED_FOLLOWUP_OPEN",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Promessa de revisão teve seguimento parcial e não demonstra novo antagonista.",
+      "first_documented_checkpoint": "CHR001-M201-RITMO-CLOSE-20261101-001",
+      "last_provable_update": "CHR001-M204-C11-18-20261105-001",
+      "historical_state": "PARTIALLY_FULFILLED_FOLLOWUP_OPEN",
+      "reported_open_detail": "C11: Pavel manteve interdição, recebeu relatório e determinou avaliação de engenharia/material, mas rubrica contestada e histórico da adaptação ainda não esclarecidos.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            39,
+            54
+          ],
+          "anchor": "m201-pavel-commitment",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            795,
+            795
+          ],
+          "anchor": "CHR001-M201-RITMO-CLOSE-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C11: Pavel manteve interdição, recebeu relatório e determinou avaliação de engenharia/material, mas rubrica contestada e histórico da adaptação ainda não esclarecidos.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Promessa de revisão teve seguimento parcial e não demonstra novo antagonista.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m201-liev-colleagues",
+      "baseline_index": 4,
+      "baseline_kind": "OPEN_CAUSAL",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Sondagem sem resultados comprovados não constitui conspiração.",
+      "first_documented_checkpoint": "CHR001-M201-PAVEL-OBS-20261101-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "OPEN_CAUSAL",
+      "reported_open_detail": "Resultados de sondagem/inspeção sem confirmação",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            55,
+            69
+          ],
+          "anchor": "m201-liev-colleagues",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            773,
+            773
+          ],
+          "anchor": "CHR001-M201-PAVEL-OBS-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-liev-heating-colleague"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-009",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-liev-heating-colleague",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-010",
+          "from": "npc-liev-heating-colleague",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Resultados de sondagem/inspeção sem confirmação",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Sondagem sem resultados comprovados não constitui conspiração.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m202-school-rumor",
+      "baseline_index": 5,
+      "baseline_kind": "NPC_CLAIM_AND_OPEN_RELATION",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Boato e interpretações de aluno não demonstram autor nem intenção externa.",
+      "first_documented_checkpoint": "CHR001-M202-PRESENTED-20261101-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "NPC_CLAIM_AND_OPEN_RELATION",
+      "reported_open_detail": "Origem, precisão e conclusão do menino não demonstradas",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            70,
+            84
+          ],
+          "anchor": "m202-school-rumor",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            804,
+            804
+          ],
+          "anchor": "CHR001-M202-PRESENTED-20261101-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mikahel-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Origem, precisão e conclusão do menino não demonstradas",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC04",
+      "promotion_reason": "NOT_PROMOTED: Boato e interpretações de aluno não demonstram autor nem intenção externa.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-patient-prognosis",
+      "baseline_index": 6,
+      "baseline_kind": "OPEN_CLINICAL_OUTCOME",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Prognóstico posterior é repercussão médica, não trama autônoma demonstrada.",
+      "first_documented_checkpoint": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "OPEN_CLINICAL_OUTCOME",
+      "reported_open_detail": "Resultado médico ainda não verificado",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            85,
+            99
+          ],
+          "anchor": "m203-patient-prognosis",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            240,
+            240
+          ],
+          "anchor": "CHR001-M203-HOSPITAL-ARRIVAL-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Resultado médico ainda não verificado",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Prognóstico posterior é repercussão médica, não trama autônoma demonstrada.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-woman-identity-location",
+      "baseline_index": 7,
+      "baseline_kind": "OPEN_FUTURE_OUTCOME",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Auxílio imediato ocorreu, mas paradeiro e identidade civil posteriores permanecem incertos.",
+      "first_documented_checkpoint": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+      "last_provable_update": "CHR001-M203-ESCAPE-125-20261103-001",
+      "historical_state": "OPEN_FUTURE_OUTCOME",
+      "reported_open_detail": "Mulher foi encontrada e auxiliada na pensão, saiu da cena em M2.03.125; identidade civil não independentemente provada, paradeiro subsequente e segurança desconhecidos.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            100,
+            116
+          ],
+          "anchor": "m203-woman-identity-location",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            195,
+            195
+          ],
+          "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-nadezhda-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Mulher foi encontrada e auxiliada na pensão, saiu da cena em M2.03.125; identidade civil não independentemente provada, paradeiro subsequente e segurança desconhecidos.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Auxílio imediato ocorreu, mas paradeiro e identidade civil posteriores permanecem incertos.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-gromov-threat",
+      "baseline_index": 8,
+      "baseline_kind": "NPC_CLAIM_NOT_CONFIRMED",
+      "primary_class": "BACKGROUND_UNKNOWN",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Ameaça alegada por NPC não é risco objetivamente confirmado.",
+      "first_documented_checkpoint": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "NPC_CLAIM_NOT_CONFIRMED",
+      "reported_open_detail": "Não retropropagar perigos à família sem fonte",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            117,
+            131
+          ],
+          "anchor": "m203-gromov-threat",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            191,
+            191
+          ],
+          "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "claimed_or_missing_agents": [
+        "npc-gromov-claimed_NPC_CLAIM_ONLY"
+      ],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Não retropropagar perigos à família sem fonte",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Ameaça alegada por NPC não é risco objetivamente confirmado.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-help-woman",
+      "baseline_index": 9,
+      "baseline_kind": "IMMEDIATE_HELP_COMPLETED_FUTURE_UNVERIFIED",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Ajuda pontual foi realizada, sem comprovação do destino posterior.",
+      "first_documented_checkpoint": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+      "last_provable_update": "CHR001-M203-ESCAPE-125-20261103-001",
+      "historical_state": "IMMEDIATE_HELP_COMPLETED_FUTURE_UNVERIFIED",
+      "reported_open_detail": "Ajuda imediata realizada, dinheiro e endereço comunicado; deslocamento de ônibus, encontro com contato ou destino seguro não demonstrados.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            132,
+            149
+          ],
+          "anchor": "m203-help-woman",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            202,
+            202
+          ],
+          "anchor": "CHR001-M203-RESPONSIBILITY-NO-NAME-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-nadezhda-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Ajuda imediata realizada, dinheiro e endereço comunicado; deslocamento de ônibus, encontro com contato ou destino seguro não demonstrados.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Ajuda imediata ocorreu; destino posterior UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Ajuda pontual foi realizada, sem comprovação do destino posterior.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-changes-and-worker",
+      "baseline_index": 10,
+      "baseline_kind": "HISTORICAL_CHECKPOINT_SUPERSEDED_NOT_CURRENT_ACTION",
+      "primary_class": "INCIDENTAL",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Checkpoint do vestiário é histórico e foi superado pelo fechamento da provocação.",
+      "first_documented_checkpoint": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+      "last_provable_update": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "historical_state": "HISTORICAL_CHECKPOINT_SUPERSEDED_NOT_CURRENT_ACTION",
+      "reported_open_detail": "A pergunta do funcionário é checkpoint histórico M2.03.073; M2.03.126 já encerrou a provocação e não há decisão atual pendente no vestiário. Detalhes da resposta do funcionário exigem consulta ao diário, não inferência.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            150,
+            166
+          ],
+          "anchor": "m203-changes-and-worker",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "source_lines": [
+            260,
+            260
+          ],
+          "anchor": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-gray-apron-hospital-worker"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "A pergunta do funcionário é checkpoint histórico M2.03.073; M2.03.126 já encerrou a provocação e não há decisão atual pendente no vestiário. Detalhes da resposta do funcionário exigem consulta ao diário, não inferência.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Checkpoint histórico superado; não é ação pendente",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Checkpoint do vestiário é histórico e foi superado pelo fechamento da provocação.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "family-armin-support",
+      "baseline_index": 11,
+      "baseline_kind": "HISTORIC_UNEXECUTED_SUPPORT",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Contato de eventual apoio não teve disponibilidade atual demonstrada.",
+      "first_documented_checkpoint": "Armin",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "HISTORIC_UNEXECUTED_SUPPORT",
+      "reported_open_detail": "Disponibilidade atual de Armin não testada",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            167,
+            181
+          ],
+          "anchor": "family-armin-support",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "source_lines": [
+            610,
+            610
+          ],
+          "anchor": "Armin",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [
+        "Armin not in D03 registry; agent ID UNKNOWN"
+      ],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Disponibilidade atual de Armin não testada",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Contato de eventual apoio não teve disponibilidade atual demonstrada.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-nadezhda-departure",
+      "baseline_index": 12,
+      "baseline_kind": "OPEN_FUTURE_OUTCOME",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Saída histórica não comprova chegada ao destino; fio correlato, não duplicado.",
+      "first_documented_checkpoint": "CHR001-M203-ESCAPE-125-20261103-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "OPEN_FUTURE_OUTCOME",
+      "reported_open_detail": "Whether she reached debtor or travelled elsewhere",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            182,
+            189
+          ],
+          "anchor": "m203-nadezhda-departure",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+          "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+          "source_lines": [
+            561,
+            561
+          ],
+          "anchor": "CHR001-M203-ESCAPE-125-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "npc-nadezhda-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Whether she reached debtor or travelled elsewhere",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Saída histórica não comprova chegada ao destino; fio correlato, não duplicado.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-van-cargo",
+      "baseline_index": 13,
+      "baseline_kind": "OPEN_MYSTERY",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Projeto de compartimento observado é indício, não prova de uso ou finalidade.",
+      "first_documented_checkpoint": "CHR001-M203-ESCAPE-121-20261103-001",
+      "last_provable_update": "CHR001-M204-C09-23-20261105-001",
+      "historical_state": "OPEN_MYSTERY",
+      "reported_open_detail": "C09 additional fleet records identify VL-3471 (OS-219), VL-3286 (OS-214), VL-3510 (OS-226); V-09 classification not license plate. Only first hidden compartment design proven. Actual use, victim transport and Gromov unknown. Mary knows paperwork but not violence at Volnaya.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            190,
+            198
+          ],
+          "anchor": "m203-van-cargo",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": null,
+          "anchor": "CHR001-M203-ESCAPE-121-20261103-001",
+          "authority": "ANCHOR_UNLOCATED_USE_BASELINE_ONLY"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C09 additional fleet records identify VL-3471 (OS-219), VL-3286 (OS-214), VL-3510 (OS-226); V-09 classification not license plate. Only first hidden compartment design proven. Actual use, victim transport and Gromov unknown. Mary knows paperwork but not violence at Volnaya.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "UNKNOWN_SOURCE"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE",
+        "ARCHIVAL_ANCHOR_UNLOCATED"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Projeto de compartimento observado é indício, não prova de uso ou finalidade.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-npc-name-provenance",
+      "baseline_index": 14,
+      "baseline_kind": "CORRECTION",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Correção de conhecimento impede transferir nome ou informação a testemunhas ausentes.",
+      "first_documented_checkpoint": "CHR001-M203-ESCAPE-124-20261103-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "CORRECTION",
+      "reported_open_detail": "Patient and medics still do not know; Nadezhda learns M2.03.124",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            199,
+            206
+          ],
+          "anchor": "m203-npc-name-provenance",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V2.json",
+          "blob_sha": "170eba262841d021c975ee69c02ffff6c4a2c203",
+          "source_lines": [
+            178,
+            178
+          ],
+          "anchor": "CHR001-M203-ESCAPE-124-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger",
+        "npc-nadezhda-claimed",
+        "npc-paramedics-unspecified"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-025",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-nadezhda-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-026",
+          "from": "npc-nadezhda-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Patient and medics still do not know; Nadezhda learns M2.03.124",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Correção de conhecimento impede transferir nome ou informação a testemunhas ausentes.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m203-oficios-specialization",
+      "baseline_index": 15,
+      "baseline_kind": "RULE_AUDIT_PENDING",
+      "primary_class": "BACKGROUND_UNKNOWN",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Auditoria de mecânica e RNG é pendência probatória fora da diegese.",
+      "first_documented_checkpoint": "CHR001-M203-ESCAPE-119-20261103-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "RULE_AUDIT_PENDING",
+      "reported_open_detail": "Take Half G25 correct; displayed Ofícios faces not audited RNG; +1 spec one-test only, future scope requires explicit ruling",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            207,
+            214
+          ],
+          "anchor": "m203-oficios-specialization",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/character/state_v018.source.txt",
+          "blob_sha": "c6b39a733868777c14d02097a874f9a58fce1ff9",
+          "source_lines": null,
+          "anchor": "CHR001-M203-ESCAPE-119-20261103-001",
+          "authority": "ANCHOR_UNLOCATED_USE_BASELINE_ONLY"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Take Half G25 correct; displayed Ofícios faces not audited RNG; +1 spec one-test only, future scope requires explicit ruling",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "UNKNOWN_SOURCE"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE",
+        "ARCHIVAL_ANCHOR_UNLOCATED"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Auditoria de mecânica e RNG é pendência probatória fora da diegese.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-family-safety",
+      "baseline_index": 16,
+      "baseline_kind": "OPEN_CAUSAL",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Cuidado familiar é persistente; perseguidor com conhecimento da família não foi comprovado.",
+      "first_documented_checkpoint": "CHR001-M204-C01-12-20261103-001",
+      "last_provable_update": "CHR001-M204-C04-14-20261104-001",
+      "historical_state": "OPEN_CAUSAL",
+      "reported_open_detail": "C04: Mary soube da van com contenção oculta, arma abandonada, temores de Bart e planejamento de consulta/visita ao pátio. Existe acordo de deliberar e comunicar-se, mas não há garantia objetiva de segurança familiar, nem prova de perseguidores conhecerem endereço. Crianças desconhecem detalhes.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            215,
+            223
+          ],
+          "anchor": "m204-family-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v004.source.txt",
+          "blob_sha": "8a4f780622b75a62729a7d67e5c4c60645ef3606",
+          "source_lines": [
+            41,
+            41
+          ],
+          "anchor": "CHR001-M204-C01-12-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser",
+        "npc-mikahel-krauser",
+        "npc-sara-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-005",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-006",
+          "from": "npc-sara-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-037",
+          "from": "npc-mary-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-038",
+          "from": "npc-mikahel-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-039",
+          "from": "npc-mary-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-040",
+          "from": "npc-sara-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-041",
+          "from": "npc-mikahel-krauser",
+          "to": "npc-sara-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C04: Mary soube da van com contenção oculta, arma abandonada, temores de Bart e planejamento de consulta/visita ao pátio. Existe acordo de deliberar e comunicar-se, mas não há garantia objetiva de segurança familiar, nem prova de perseguidores conhecerem endereço. Crianças desconhecem detalhes.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC03",
+      "promotion_reason": "NOT_PROMOTED: Cuidado familiar é persistente; perseguidor com conhecimento da família não foi comprovado.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-volnaya-papers",
+      "baseline_index": 17,
+      "baseline_kind": "OPEN_DECISION",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Papéis foram examinados e preservados; lacunas de circulação não provam culpados.",
+      "first_documented_checkpoint": "CHR001-M204-C01-11-20261103-001",
+      "last_provable_update": "CHR001-M204-C09-23-20261105-001",
+      "historical_state": "OPEN_DECISION",
+      "reported_open_detail": "C09 originals with Bart at home, now reviewed with Mary, grouped on kitchen table. Added fleet match: VL-3471, VL-3286, VL-3510, base locales but no live positions; Andrei Volkov assigned receipt of VL-3286 and 'S. K.' unresolved for VL-3471. Missing complete driver shifts and operations circulation log. PC fell asleep among original papers.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            224,
+            232
+          ],
+          "anchor": "m204-volnaya-papers",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            38,
+            38
+          ],
+          "anchor": "CHR001-M204-C01-11-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C09 originals with Bart at home, now reviewed with Mary, grouped on kitchen table. Added fleet match: VL-3471, VL-3286, VL-3510, base locales but no live positions; Andrei Volkov assigned receipt of VL-3286 and 'S. K.' unresolved for VL-3471. Missing complete driver shifts and operations circulation log. PC fell asleep among original papers.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Papéis foram examinados e preservados; lacunas de circulação não provam culpados.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-mary-bart-trust",
+      "baseline_index": 18,
+      "baseline_kind": "OPEN_RELATIONAL",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Confissões parciais e confiança conjugal são tensão relacional não pré-encerrada.",
+      "first_documented_checkpoint": "CHR001-M204-C03-02-20261103-001",
+      "last_provable_update": "CHR001-M204-C09-23-20261105-001",
+      "historical_state": "OPEN_RELATIONAL",
+      "reported_open_detail": "C09 Mary and Bart openly discussed family aspirations/workshop, but Bart did not share warehouse assault on Ilya or infiltration methods, self-understood as war casualty rather than intentional concealment. Mary sleeping when solo business plan drafted; continued trust arc open.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            233,
+            241
+          ],
+          "anchor": "m204-mary-bart-trust",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            124,
+            124
+          ],
+          "anchor": "CHR001-M204-C03-02-20261103-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C09 Mary and Bart openly discussed family aspirations/workshop, but Bart did not share warehouse assault on Ilya or infiltration methods, self-understood as war casualty rather than intentional concealment. Mary sleeping when solo business plan drafted; continued trust arc open.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC03",
+      "promotion_reason": "NOT_PROMOTED: Confissões parciais e confiança conjugal são tensão relacional não pré-encerrada.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-volnaya-clerk-ilya-condition",
+      "baseline_index": 19,
+      "baseline_kind": "OPEN_MEDICAL_OUTCOME",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Prognóstico de funcionário é consequência possível; notícia não autentica identidade ou causa.",
+      "first_documented_checkpoint": "CHR001-M204-C08-24-20261104-001",
+      "last_provable_update": "CHR001-M204-C13-18-20261105-001",
+      "historical_state": "OPEN_MEDICAL_OUTCOME",
+      "reported_open_detail": "C13: jornal reportou empregado anônimo inconsciente na Volnaya; não confirmou identidade, prognóstico nem autoria. Destino de Ilya permanece UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            242,
+            250
+          ],
+          "anchor": "m204-volnaya-clerk-ilya-condition",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            349,
+            349
+          ],
+          "anchor": "CHR001-M204-C08-24-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-volnaya-clerk-ilya-unverified-name"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C13: jornal reportou empregado anônimo inconsciente na Volnaya; não confirmou identidade, prognóstico nem autoria. Destino de Ilya permanece UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Prognóstico de funcionário é consequência possível; notícia não autentica identidade ou causa.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-volnaya-documents-stolen",
+      "baseline_index": 20,
+      "baseline_kind": "OPEN_CAUSAL",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Notícia de documentos ausentes não prova autoria, reconhecimento ou perseguição.",
+      "first_documented_checkpoint": "CHR001-M204-C08-25-20261104-001",
+      "last_provable_update": "CHR001-M204-C13-18-20261105-001",
+      "historical_state": "OPEN_CAUSAL",
+      "reported_open_detail": "C13 jornal alega registros da Volnaya não localizados, sem comprovar natureza dos papéis, autoria nem identificação de Bart.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            251,
+            259
+          ],
+          "anchor": "m204-volnaya-documents-stolen",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            352,
+            352
+          ],
+          "anchor": "CHR001-M204-C08-25-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C13 jornal alega registros da Volnaya não localizados, sem comprovar natureza dos papéis, autoria nem identificação de Bart.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Notícia de documentos ausentes não prova autoria, reconhecimento ou perseguição.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-os219-circulation",
+      "baseline_index": 21,
+      "baseline_kind": "OPEN_MYSTERY",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Log de circulação faltante delimita pista, sem demonstrar operação ilícita.",
+      "first_documented_checkpoint": "CHR001-M204-C08-22-20261104-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "OPEN_MYSTERY",
+      "reported_open_detail": "Date corrections and approval unclear; vehicle circulation log outside office not located, three referenced human names unidentified and cargo purpose unknown.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            260,
+            267
+          ],
+          "anchor": "m204-os219-circulation",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+          "source_lines": [
+            343,
+            343
+          ],
+          "anchor": "CHR001-M204-C08-22-20261104-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Date corrections and approval unclear; vehicle circulation log outside office not located, three referenced human names unidentified and cargo purpose unknown.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Log de circulação faltante delimita pista, sem demonstrar operação ilícita.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-krauser-workshop-plan",
+      "baseline_index": 22,
+      "baseline_kind": "BUSINESS_OPEN_WITH_LONGITUDINAL_FINANCIAL_UNKNOWNS",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Oficina foi aberta; renda futura, expansão e continuidade não estão garantidas.",
+      "first_documented_checkpoint": "CHR001-M204-C09-11-20261105-001",
+      "last_provable_update": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "historical_state": "BUSINESS_OPEN_WITH_LONGITUDINAL_FINANCIAL_UNKNOWNS",
+      "reported_open_detail": "Lucro/fluxo em dinheiro, endereço exato, estabilidade, continuidade até 2010 e possível guincho próprio UNKNOWN. Horas extras não pagas/confirmadas. Reserva dos filhos protegida.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            268,
+            276
+          ],
+          "anchor": "m204-krauser-workshop-plan",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "source_lines": [
+            398,
+            398
+          ],
+          "anchor": "CHR001-M204-C09-11-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Lucro/fluxo em dinheiro, endereço exato, estabilidade, continuidade até 2010 e possível guincho próprio UNKNOWN. Horas extras não pagas/confirmadas. Reserva dos filhos protegida.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Oficina aberta; lucro e futuro UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Oficina foi aberta; renda futura, expansão e continuidade não estão garantidas.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-volnaya-fleet-tracing",
+      "baseline_index": 23,
+      "baseline_kind": "OPEN_INVESTIGATION",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Rastreamento de frota tem limites precisos, sem localização atual ou uso presumido.",
+      "first_documented_checkpoint": "CHR001-M204-C09-09-20261105-001",
+      "last_provable_update": "UNKNOWN_BASELINE_ONLY",
+      "historical_state": "OPEN_INVESTIGATION",
+      "reported_open_detail": "Three plates/bases documented but no current physical locations; missing complete circulation records; unknown meaning of S.K. initials; Andrei Volkov only assigned at VL-3286 maintenance release. No proof other two vehicles carry illicit compartment.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            277,
+            284
+          ],
+          "anchor": "m204-volnaya-fleet-tracing",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+          "source_lines": [
+            392,
+            392
+          ],
+          "anchor": "CHR001-M204-C09-09-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mary-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Three plates/bases documented but no current physical locations; missing complete circulation records; unknown meaning of S.K. initials; Andrei Volkov only assigned at VL-3286 maintenance release. No proof other two vehicles carry illicit compartment.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Rastreamento de frota tem limites precisos, sem localização atual ou uso presumido.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-heating-overtime-claim",
+      "baseline_index": 24,
+      "baseline_kind": "OPEN_UNVERIFIED_FINANCIAL_CLAIM",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Reivindicação salarial não paga/validada não se conecta causalmente ao reparo.",
+      "first_documented_checkpoint": "CHR001-M204-C10-14-20261105-001",
+      "last_provable_update": "CHR001-M204-C13-18-20261105-001",
+      "historical_state": "OPEN_UNVERIFIED_FINANCIAL_CLAIM",
+      "reported_open_detail": "C13: Mary enviou cópias a Bart via recepção; PJ entregou expressamente a Pavel, originais continuam com Mary. Apenas leitura visual preliminar; valor, dívida, pagamento e confronto com folha interna desconhecidos.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            285,
+            293
+          ],
+          "anchor": "m204-heating-overtime-claim",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            481,
+            481
+          ],
+          "anchor": "CHR001-M204-C10-14-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-mary-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-001",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mary-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-002",
+          "from": "npc-mary-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C13: Mary enviou cópias a Bart via recepção; PJ entregou expressamente a Pavel, originais continuam com Mary. Apenas leitura visual preliminar; valor, dívida, pagamento e confronto com folha interna desconhecidos.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Reivindicação salarial não paga/validada não se conecta causalmente ao reparo.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c11-component-analysis",
+      "baseline_index": 25,
+      "baseline_kind": "OPEN_TECHNICAL_FOLLOWUP",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Análise laboratorial encaminhada, sem laudo, reparo ou liberação comprovados.",
+      "first_documented_checkpoint": "CHR001-M204-C11-18-20261105-001",
+      "last_provable_update": "CHR001-M204-C11-18-20261105-001",
+      "historical_state": "OPEN_TECHNICAL_FOLLOWUP",
+      "reported_open_detail": "Bart requereu envio para análise e urgência, Pavel determinou preservação e remessa identificada. Ainda não há prova de recebimento pelo laboratório, laudo, especificação definitiva, entrega de peça, instalação, ensaios ou liberação.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            294,
+            302
+          ],
+          "anchor": "m204-c11-component-analysis",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+          "blob_sha": "88fb084df412897b659f65a436b8fcd957fcf369",
+          "source_lines": [
+            546,
+            546
+          ],
+          "anchor": "CHR001-M204-C11-18-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Bart requereu envio para análise e urgência, Pavel determinou preservação e remessa identificada. Ainda não há prova de recebimento pelo laboratório, laudo, especificação definitiva, entrega de peça, instalação, ensaios ou liberação.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Análise laboratorial encaminhada, sem laudo, reparo ou liberação comprovados.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c12-old-city-heat-transfer-study",
+      "baseline_index": 26,
+      "baseline_kind": "OPEN_TECHNICAL_INSTITUTIONAL_STUDY",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Proposta de estudo hidráulico não representa obra iniciada nem nexo paranormal.",
+      "first_documented_checkpoint": "CHR001-M204-C12-14-20261105-001",
+      "last_provable_update": "CHR001-M204-C13-18-20261105-001",
+      "historical_state": "OPEN_TECHNICAL_INSTITUTIONAL_STUDY",
+      "reported_open_detail": "C13: triagem PRIORITÁRIA documental e medições autorizadas; nota de Bart MANUSCRITA, autoria reconhecida, datilografia/conferência/anexação e alocação do PJ ainda pendentes. Sem obra/manobra/liberação C11; viabilidade hidráulica, vazões, retorno, efeitos Bukovie e causa predial UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            303,
+            311
+          ],
+          "anchor": "m204-c12-old-city-heat-transfer-study",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            595,
+            595
+          ],
+          "anchor": "CHR001-M204-C12-14-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "C13: triagem PRIORITÁRIA documental e medições autorizadas; nota de Bart MANUSCRITA, autoria reconhecida, datilografia/conferência/anexação e alocação do PJ ainda pendentes. Sem obra/manobra/liberação C11; viabilidade hidráulica, vazões, retorno, efeitos Bukovie e causa predial UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Proposta de estudo hidráulico não representa obra iniciada nem nexo paranormal.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c13-preliminary-note-followup",
+      "baseline_index": 27,
+      "baseline_kind": "OPEN_INSTITUTIONAL_FOLLOWUP",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Nota reconhecida e triada é seguimento administrativo parcial.",
+      "first_documented_checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "last_provable_update": "CHR001-M204-C13-18-20261105-001",
+      "historical_state": "OPEN_INSTITUTIONAL_FOLLOWUP",
+      "reported_open_detail": "Datilografia, conferência e anexação definitiva pendentes; alocação do PJ ainda a combinar; nenhuma intervenção autorizada.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            312,
+            320
+          ],
+          "anchor": "m204-c13-preliminary-note-followup",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+          "source_lines": [
+            655,
+            655
+          ],
+          "anchor": "CHR001-M204-C13-18-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Datilografia, conferência e anexação definitiva pendentes; alocação do PJ ainda a combinar; nenhuma intervenção autorizada.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Nota triada; obra UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Nota reconhecida e triada é seguimento administrativo parcial.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c14-school-followup",
+      "baseline_index": 28,
+      "baseline_kind": "OPEN_SCHOOL_FAMILY_FOLLOWUP",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Acompanhamento escolar e atividade supervisionada são condicionais, ainda não executados.",
+      "first_documented_checkpoint": "CHR001-M204-C14-24-20261105-001",
+      "last_provable_update": "CHR001-M204-C14-24-20261105-001",
+      "historical_state": "OPEN_SCHOOL_FAMILY_FOLLOWUP",
+      "reported_open_detail": "Anna pretende verificar Denis e acompanhar meninos; resultados futuros UNKNOWN. Atividade com maternal depende da professora e supervisão adulta, não iniciada. Fonte original de boatos UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            321,
+            329
+          ],
+          "anchor": "m204-c14-school-followup",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v013.source.txt",
+          "blob_sha": "c162d4c7e4df46486b02796bafd153f9e48c64ce",
+          "source_lines": [
+            733,
+            733
+          ],
+          "anchor": "CHR001-M204-C14-24-20261105-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-mikahel-krauser",
+        "npc-anna-morozova-vice-diretora",
+        "npc-viktor-sokolov"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-003",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-mikahel-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-004",
+          "from": "npc-mikahel-krauser",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Anna pretende verificar Denis e acompanhar meninos; resultados futuros UNKNOWN. Atividade com maternal depende da professora e supervisão adulta, não iniciada. Fonte original de boatos UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "CONDITIONAL"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC04",
+      "promotion_reason": "NOT_PROMOTED: Acompanhamento escolar e atividade supervisionada são condicionais, ainda não executados.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c15-underground-survey",
+      "baseline_index": 29,
+      "baseline_kind": "OPEN_TECHNICAL_VERIFICATION",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Diferença de traçado é indício técnico, não explicação de causa ou localização oculta.",
+      "first_documented_checkpoint": "CHR001-M204-C15-22-20261106-001",
+      "last_provable_update": "CHR001-M204-C15-22-20261106-001",
+      "historical_state": "OPEN_TECHNICAL_VERIFICATION",
+      "reported_open_detail": "Rota/função e condição real da derivação, análise estrutural, dados hidráulicos/arquivo, sem reparo, liberação ou ligação paranormal presumidos.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            330,
+            338
+          ],
+          "anchor": "m204-c15-underground-survey",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+          "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9",
+          "source_lines": [
+            806,
+            806
+          ],
+          "anchor": "CHR001-M204-C15-22-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-grigori-makarov-technical-safety"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Rota/função e condição real da derivação, análise estrutural, dados hidráulicos/arquivo, sem reparo, liberação ou ligação paranormal presumidos.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Diferença de traçado é indício técnico, não explicação de causa ou localização oculta.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c15-makarov-pavel-trust",
+      "baseline_index": 30,
+      "baseline_kind": "OPEN_NPC_PROFESSIONAL_RELATION",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Tensão profissional é efeito registrado, sem ação futura ou retaliação comprovadas.",
+      "first_documented_checkpoint": "CHR001-M204-C15-22-20261106-001",
+      "last_provable_update": "CHR001-M204-C15-22-20261106-001",
+      "historical_state": "OPEN_NPC_PROFESSIONAL_RELATION",
+      "reported_open_detail": "Consequência institucional e social futura não determinada; evitar repetição de sermão e debates de segurança sem nova causa.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            339,
+            347
+          ],
+          "anchor": "m204-c15-makarov-pavel-trust",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+          "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9",
+          "source_lines": [
+            806,
+            806
+          ],
+          "anchor": "CHR001-M204-C15-22-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-pavel-heating-supervisor",
+        "npc-grigori-makarov-technical-safety"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-007",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-pavel-heating-supervisor",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-008",
+          "from": "npc-pavel-heating-supervisor",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Consequência institucional e social futura não determinada; evitar repetição de sermão e debates de segurança sem nova causa.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Tensão profissional é efeito registrado, sem ação futura ou retaliação comprovadas.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c16-oleg-identity",
+      "baseline_index": 31,
+      "baseline_kind": "OPEN_NPC_CLAIM",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Identidade e capacidades autodeclaradas não são autenticação independente.",
+      "first_documented_checkpoint": "CHR001-M204-C16-23-20261106-001",
+      "last_provable_update": "CHR001-M204-C16-27-20261106-001",
+      "historical_state": "OPEN_NPC_CLAIM",
+      "reported_open_detail": "Ele afirmou chamar-se Oleg Vedenin, ser Brujah e usar Potência, Rapidez e Presença. Nenhuma prova de identidade/clã/Disciplinas, organização local ou uso de Blood Surge foi obtida. Libertado e ausente; destino posterior UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            348,
+            356
+          ],
+          "anchor": "m204-c16-oleg-identity",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            882,
+            882
+          ],
+          "anchor": "CHR001-M204-C16-23-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Ele afirmou chamar-se Oleg Vedenin, ser Brujah e usar Potência, Rapidez e Presença. Nenhuma prova de identidade/clã/Disciplinas, organização local ou uso de Blood Surge foi obtida. Libertado e ausente; destino posterior UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Identidade e capacidades autodeclaradas não são autenticação independente.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c16-pipe-safety",
+      "baseline_index": 32,
+      "baseline_kind": "OPEN_IMMEDIATE_CAUSAL",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Ruptura de tubulação é observada; ligação causal ao ramal estudado não demonstrada.",
+      "first_documented_checkpoint": "CHR001-M204-C16-11-20261106-001",
+      "last_provable_update": "CHR001-M204-C17-08-20261106-001",
+      "historical_state": "OPEN_IMMEDIATE_CAUSAL",
+      "reported_open_detail": "Grupo evacuado do jato imediato; vazamento sem reparo ou isolamento verificado, origem/efeitos futuros UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            357,
+            365
+          ],
+          "anchor": "m204-c16-pipe-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            846,
+            846
+          ],
+          "anchor": "CHR001-M204-C16-11-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Grupo evacuado do jato imediato; vazamento sem reparo ou isolamento verificado, origem/efeitos futuros UNKNOWN.",
+      "current_risk": "OBSERVED_PIPE_BREAK_REPAIR_UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC01",
+      "promotion_reason": "NOT_PROMOTED: Ruptura de tubulação é observada; ligação causal ao ramal estudado não demonstrada.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c16-man-rescued",
+      "baseline_index": 33,
+      "baseline_kind": "OPEN_NPC_FATE_AND_CLAIM",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Resgate físico local ocorreu, sem estado clínico ou identidade posterior confirmados.",
+      "first_documented_checkpoint": "CHR001-M204-C16-01-20261106-001",
+      "last_provable_update": "CHR001-M204-C17-08-20261106-001",
+      "historical_state": "OPEN_NPC_FATE_AND_CLAIM",
+      "reported_open_detail": "Resgatado consciente carregado por Bart ao acesso ventilado; identidade, lesões, motivo e prognóstico UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            366,
+            374
+          ],
+          "anchor": "m204-c16-man-rescued",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            816,
+            816
+          ],
+          "anchor": "CHR001-M204-C16-01-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unidentified-man-c16"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Resgatado consciente carregado por Bart ao acesso ventilado; identidade, lesões, motivo e prognóstico UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Resgate local; prognóstico UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Resgate físico local ocorreu, sem estado clínico ou identidade posterior confirmados.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m204-c16-pact-with-oleg",
+      "baseline_index": 34,
+      "baseline_kind": "OPEN_POSSIBLE_CONSEQUENCE_NOT_PREDECIDED",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Saída permitida não criou juramento, dívida ou vingança executada.",
+      "first_documented_checkpoint": "CHR001-M204-C16-27-20261106-001",
+      "last_provable_update": "CHR001-M204-C16-27-20261106-001",
+      "historical_state": "OPEN_POSSIBLE_CONSEQUENCE_NOT_PREDECIDED",
+      "reported_open_detail": "Oleg aceitou saída oposta à equipe e desapareceu de vista; nenhum juramento sobrenatural, lealdade, dívida formal, vingança ou segurança futura foi estabelecido. Consequências só por causa/tempo.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            375,
+            383
+          ],
+          "anchor": "m204-c16-pact-with-oleg",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+          "source_lines": [
+            894,
+            894
+          ],
+          "anchor": "CHR001-M204-C16-27-20261106-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-oleg-vedenin-claimed"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-013",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-oleg-vedenin-claimed",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-014",
+          "from": "npc-oleg-vedenin-claimed",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Oleg aceitou saída oposta à equipe e desapareceu de vista; nenhum juramento sobrenatural, lealdade, dívida formal, vingança ou segurança futura foi estabelecido. Consequências só por causa/tempo.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Saída permitida; repercussão UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Saída permitida não criou juramento, dívida ou vingança executada.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c01-price-haddad-contract-pay-dispute",
+      "baseline_index": 35,
+      "baseline_kind": "OPEN_DISPUTED_CIVIL_NPC_CLAIMS",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Disputa civil contém alegações concorrentes, não vínculo necessário com investigação externa.",
+      "first_documented_checkpoint": "CHR001-M301-C01-03-20261107-001",
+      "last_provable_update": "CHR001-M301-C01-08-20261107-001",
+      "historical_state": "OPEN_DISPUTED_CIVIL_NPC_CLAIMS",
+      "reported_open_detail": "Proprietário legal dos bens, relação contratual, dívidas, outras pessoas, medidas futuras; não ligar automaticamente a Volnaya, Gromov, Oleg nem caínitas.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            384,
+            392
+          ],
+          "anchor": "m301-c01-price-haddad-contract-pay-dispute",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "source_lines": [
+            13,
+            13
+          ],
+          "anchor": "CHR001-M301-C01-03-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m3-eleanor-price-candidate",
+        "npc-m3-samir-haddad-candidate"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-021",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-eleanor-price-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-022",
+          "from": "npc-m3-eleanor-price-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-023",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-024",
+          "from": "npc-m3-samir-haddad-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-049",
+          "from": "npc-m3-eleanor-price-candidate",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Proprietário legal dos bens, relação contratual, dívidas, outras pessoas, medidas futuras; não ligar automaticamente a Volnaya, Gromov, Oleg nem caínitas.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Disputa civil contém alegações concorrentes, não vínculo necessário com investigação externa.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c01-samir-krauser-office-phone",
+      "baseline_index": 36,
+      "baseline_kind": "OPEN_CONTACT_OPPORTUNITY_NOT_OBLIGATION",
+      "primary_class": "INCIDENTAL",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Número cedido cria possibilidade de contato, não obrigação narrativa.",
+      "first_documented_checkpoint": "CHR001-M301-C01-06-20261107-001",
+      "last_provable_update": "CHR001-M301-C01-08-20261107-001",
+      "historical_state": "OPEN_CONTACT_OPPORTUNITY_NOT_OBLIGATION",
+      "reported_open_detail": "Contato, momento, circunstâncias e respostas dos NPCs ainda não aconteceram; nenhuma obrigação de intervenção; telefone exato UNKNOWN.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            393,
+            401
+          ],
+          "anchor": "m301-c01-samir-krauser-office-phone",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "source_lines": [
+            22,
+            22
+          ],
+          "anchor": "CHR001-M301-C01-06-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m3-samir-haddad-candidate"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-023",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m3-samir-haddad-candidate",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-024",
+          "from": "npc-m3-samir-haddad-candidate",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Contato, momento, circunstâncias e respostas dos NPCs ainda não aconteceram; nenhuma obrigação de intervenção; telefone exato UNKNOWN.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Telefone fornecido; contato posterior UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Número cedido cria possibilidade de contato, não obrigação narrativa.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c02-jonas-identity",
+      "baseline_index": 37,
+      "baseline_kind": "OPEN_NPC_CLAIM_OBSERVED_ANOMALY",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Anomalia observada é distinta das alegações de identidade e afiliação.",
+      "first_documented_checkpoint": "CHR001-M301-C02-03-20261107-001",
+      "last_provable_update": "CHR001-M301-C02-16-20261107-001",
+      "historical_state": "OPEN_NPC_CLAIM_OBSERVED_ANOMALY",
+      "reported_open_detail": "Identidade civil, clã, vínculos ao Concílio/Camarilla, explicação do braço recuperado e origem do conhecimento de Jonas sobre Bart não verificados.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            402,
+            410
+          ],
+          "anchor": "m301-c02-jonas-identity",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+          "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c",
+          "source_lines": [
+            44,
+            44
+          ],
+          "anchor": "CHR001-M301-C02-03-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Identidade civil, clã, vínculos ao Concílio/Camarilla, explicação do braço recuperado e origem do conhecimento de Jonas sobre Bart não verificados.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Anomalia observada é distinta das alegações de identidade e afiliação.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c02-jonas-agreement",
+      "baseline_index": 38,
+      "baseline_kind": "OPEN_COERCED_WARNING_PROMISE",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Acordo verbal é limitado a riscos efetivamente conhecidos; não garante vigilância.",
+      "first_documented_checkpoint": "CHR001-M301-C02-13-20261107-001",
+      "last_provable_update": "CHR001-M301-C02-16-20261107-001",
+      "historical_state": "OPEN_COERCED_WARNING_PROMISE",
+      "reported_open_detail": "Sob intimidação Jonas aceitou avisar sobre risco de que venha a saber, sem buscar ativamente informações, manter guarda ou proteger a família. Cumprimento futuro, custos e repercussão de reputação não determinados.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            411,
+            419
+          ],
+          "anchor": "m301-c02-jonas-agreement",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+          "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c",
+          "source_lines": [
+            74,
+            74
+          ],
+          "anchor": "CHR001-M301-C02-13-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-unnamed-injured-stranger"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-011",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-unnamed-injured-stranger",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-012",
+          "from": "npc-unnamed-injured-stranger",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Sob intimidação Jonas aceitou avisar sobre risco de que venha a saber, sem buscar ativamente informações, manter guarda ou proteger a família. Cumprimento futuro, custos e repercussão de reputação não determinados.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Promessa verbal realizada; cumprimento UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Acordo verbal é limitado a riscos efetivamente conhecidos; não garante vigilância.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c03-daniel-truck-safety",
+      "baseline_index": 39,
+      "baseline_kind": "OPEN_INDEPENDENT_CIVIL_EMPLOYMENT_THREAD",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Laudo do caminhão abre resposta trabalhista independente, sem culpado atribuído.",
+      "first_documented_checkpoint": "CHR001-M301-C03-12-20261107-001",
+      "last_provable_update": "CHR001-M301-C03-20-20261107-001",
+      "historical_state": "OPEN_INDEPENDENT_CIVIL_EMPLOYMENT_THREAD",
+      "reported_open_detail": "Resultado da tentativa de contatar empresa/sindicato e resposta formal; remoção do veículo, culpa por instalação irregular, sabotagem e efeitos no emprego NÃO conhecidos. Bartholomeu não prometeu defesa sindical, guarda, reparo do caminhão nem frete sem contratação.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            420,
+            428
+          ],
+          "anchor": "m301-c03-daniel-truck-safety",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+          "blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769",
+          "source_lines": [
+            126,
+            126
+          ],
+          "anchor": "CHR001-M301-C03-12-20261107-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-foster"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-015",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-daniel-foster",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-016",
+          "from": "npc-m301-daniel-foster",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Resultado da tentativa de contatar empresa/sindicato e resposta formal; remoção do veículo, culpa por instalação irregular, sabotagem e efeitos no emprego NÃO conhecidos. Bartholomeu não prometeu defesa sindical, guarda, reparo do caminhão nem frete sem contratação.",
+      "current_risk": "DOCUMENTED_VEHICLE_SAFETY_CONCERN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Laudo do caminhão abre resposta trabalhista independente, sem culpado atribuído.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c04-yelena-baranova",
+      "baseline_index": 40,
+      "baseline_kind": "OPEN_DOCUMENT_AND_NPC_CLAIMS",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Documento institucional e relato de morte não constituem prova de crime ou nexo ilícito.",
+      "first_documented_checkpoint": "CHR001-M301-C04-05-20261108-001",
+      "last_provable_update": "CHR001-M301-C04-20-20261108-001",
+      "historical_state": "OPEN_DOCUMENT_AND_NPC_CLAIMS",
+      "reported_open_detail": "Documento doméstico de desligamento cita Yelena/Volnaya, sem prova de ocupação em esquemas. Óbito declarado como cardíaco por Marta sem documentação; crimes e relação Gromov desconhecidos.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            429,
+            437
+          ],
+          "anchor": "m301-c04-yelena-baranova",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            171,
+            171
+          ],
+          "anchor": "CHR001-M301-C04-05-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-marta-funeral",
+        "npc-yelena-baranova"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-017",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-marta-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-018",
+          "from": "npc-m301-marta-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-046",
+          "from": "npc-m301-marta-funeral",
+          "to": "npc-yelena-baranova",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Documento doméstico de desligamento cita Yelena/Volnaya, sem prova de ocupação em esquemas. Óbito declarado como cardíaco por Marta sem documentação; crimes e relação Gromov desconhecidos.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY",
+        "NPC_CLAIM"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": "D04-PC02",
+      "promotion_reason": "NOT_PROMOTED: Documento institucional e relato de morte não constituem prova de crime ou nexo ilícito.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c04-unopened-box",
+      "baseline_index": 41,
+      "baseline_kind": "OPEN_OBJECT_PROVENANCE",
+      "primary_class": "CLUE",
+      "secondary_functions": [
+        "EVIDENCE_ONLY"
+      ],
+      "player_safe_editorial_summary": "Caixa não aberta confirma posse e inscrição, não conteúdo ou relação causal.",
+      "first_documented_checkpoint": "CHR001-M301-C04-14-20261108-001",
+      "last_provable_update": "CHR001-M301-C05-22-20261109-001",
+      "historical_state": "OPEN_OBJECT_PROVENANCE",
+      "reported_open_detail": "Conteúdo UNKNOWN; equivalência com caixa oferecida a Marta UNKNOWN; ainda fechada no carro do PJ após C05, sem autorização família. Daniel não a viu identificadamente, testemunhas da entrada não comprovadas.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            438,
+            446
+          ],
+          "anchor": "m301-c04-unopened-box",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            198,
+            198
+          ],
+          "anchor": "CHR001-M301-C04-14-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Conteúdo UNKNOWN; equivalência com caixa oferecida a Marta UNKNOWN; ainda fechada no carro do PJ após C05, sem autorização família. Daniel não a viu identificadamente, testemunhas da entrada não comprovadas.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Caixa não aberta confirma posse e inscrição, não conteúdo ou relação causal.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c04-marta-and-funeral-address",
+      "baseline_index": 42,
+      "baseline_kind": "OPEN_INDEPENDENT_NPC",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Endereço obtido por pretexto é consequência, não reação futura de terceiros.",
+      "first_documented_checkpoint": "CHR001-M301-C04-09-20261108-001",
+      "last_provable_update": "CHR001-M301-C04-20-20261108-001",
+      "historical_state": "OPEN_INDEPENDENT_NPC",
+      "reported_open_detail": "Marta pode lembrar, não prometeu nada; Margaret acredita pretexto falso, Daniel não autorizou. Ninguém notificou falecimento como crime ou arrombamento futuro.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            447,
+            455
+          ],
+          "anchor": "m301-c04-marta-and-funeral-address",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+          "source_lines": [
+            183,
+            183
+          ],
+          "anchor": "CHR001-M301-C04-09-20261108-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-marta-funeral",
+        "npc-m301-margaret-funeral",
+        "npc-m301-daniel-son"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [
+        {
+          "edge_id": "REL-017",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-marta-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-018",
+          "from": "npc-m301-marta-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-019",
+          "from": "pc-bartholomeu-krauser",
+          "to": "npc-m301-margaret-funeral",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        },
+        {
+          "edge_id": "REL-020",
+          "from": "npc-m301-margaret-funeral",
+          "to": "pc-bartholomeu-krauser",
+          "reciprocity": "UNKNOWN",
+          "link_type": "DIRECTED_D03_NOT_CAUSALITY"
+        }
+      ],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Marta pode lembrar, não prometeu nada; Margaret acredita pretexto falso, Daniel não autorizou. Ninguém notificou falecimento como crime ou arrombamento futuro.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "HISTORICAL_LOCAL_ONLY",
+        "description": "Endereço obtido; reação futura UNKNOWN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Endereço obtido por pretexto é consequência, não reação futura de terceiros.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c05-daniel-contact-and-envelope",
+      "baseline_index": 43,
+      "baseline_kind": "OPEN_NPC_CONTACT_AND_OBJECT_UNKNOWN",
+      "primary_class": "THREAD",
+      "secondary_functions": [],
+      "player_safe_editorial_summary": "Contato profissional foi conhecido; paradeiro do envelope e próximos passos são desconhecidos.",
+      "first_documented_checkpoint": "CHR001-M301-C05-19-20261109-001",
+      "last_provable_update": "CHR001-M301-C05-22-20261109-001",
+      "historical_state": "OPEN_NPC_CONTACT_AND_OBJECT_UNKNOWN",
+      "reported_open_detail": "Daniel não conhece arrombamento ou caixa; sobrenome 'Baranova' autodeclarado. Destino envelope UNKNOWN. Telefone comercial pode ser usado ou não, sem vínculo automático com outros fios. Nenhuma futura busca/visita/incineração confirmada.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            456,
+            464
+          ],
+          "anchor": "m301-c05-daniel-contact-and-envelope",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "source_lines": [
+            279,
+            279
+          ],
+          "anchor": "CHR001-M301-C05-19-20261109-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-son"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [
+          {
+            "knowledge_id": "D03-K-C05-CONTACT",
+            "owner_id": "npc-m301-daniel-son",
+            "acquisition_mechanism": "DIRECT_DIALOGUE_REPORTED_DERIVED_ARCHIVE",
+            "checkpoint": "M3.01.C05.19",
+            "evidence": {
+              "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+              "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+              "source_lines": [
+                279,
+                281
+              ]
+            }
+          }
+        ],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Daniel não conhece arrombamento ou caixa; sobrenome 'Baranova' autodeclarado. Destino envelope UNKNOWN. Telefone comercial pode ser usado ou não, sem vínculo automático com outros fios. Nenhuma futura busca/visita/incineração confirmada.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Contato profissional foi conhecido; paradeiro do envelope e próximos passos são desconhecidos.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    },
+    {
+      "thread_id": "m301-c05-professional-scope-contradiction",
+      "baseline_index": 44,
+      "baseline_kind": "OPEN_PLAYER_CHARACTERIZATION_CONFLICT_NOT_AUTORECONCILED",
+      "primary_class": "CONSEQUENCE",
+      "secondary_functions": [
+        "THREAD_IF_FUTURE_REOPENING_PROVEN"
+      ],
+      "player_safe_editorial_summary": "Oferta condicional tensiona o escopo profissional sem execução ou revisão de política.",
+      "first_documented_checkpoint": "CHR001-M301-C05-18-20261109-001",
+      "last_provable_update": "CHR001-M301-C05-22-20261109-001",
+      "historical_state": "OPEN_PLAYER_CHARACTERIZATION_CONFLICT_NOT_AUTORECONCILED",
+      "reported_open_detail": "Pode ser gesto extraordinário, graça, contradição pontual ou revisão futura do próprio personagem; não inferir nova política, pagamento ou execução. Necessita tratamento explícito sem sobrepor diretriz estável C03.",
+      "sources": [
+        {
+          "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "source_lines": [
+            465,
+            497
+          ],
+          "anchor": "m301-c05-professional-scope-contradiction",
+          "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+        },
+        {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "source_lines": [
+            276,
+            276
+          ],
+          "anchor": "CHR001-M301-C05-18-20261109-001",
+          "authority": "ARCHIVAL_ANCHOR_FOUND_NOT_FULL_EXCERPT_AUTHENTICATED"
+        }
+      ],
+      "agent_responsible": "UNKNOWN",
+      "proven_involved_agents": [
+        "pc-bartholomeu-krauser",
+        "npc-m301-daniel-son"
+      ],
+      "claimed_or_missing_agents": [],
+      "directed_relationships": [],
+      "knowledge_requirements": {
+        "for_future_NPC_initiative": "UNKNOWN_NEEDS_PROVEN_ACQUISITION",
+        "proven_usable_attributions_for_this_thread": [],
+        "unproven_D03_knowledge_not_used": true,
+        "autonomous_NPC_action_authorized": false
+      },
+      "dramatic_or_historical_question": "Pode ser gesto extraordinário, graça, contradição pontual ou revisão futura do próprio personagem; não inferir nova política, pagamento ou execução. Necessita tratamento explícito sem sobrepor diretriz estável C03.",
+      "current_risk": "UNKNOWN",
+      "next_verified_trigger": "UNKNOWN",
+      "editorial_review_trigger": "NEW_ATTESTED_EVENT_OR_EXPLICIT_FUTURE_AUTHORIZATION_ONLY",
+      "closure": {
+        "class": "UNKNOWN",
+        "description": "UNKNOWN_NO_TERMINAL_PROVEN",
+        "full_thread_closed": false
+      },
+      "epistemic_classes": [
+        "AUTHOR_UNKNOWN",
+        "UNVERIFIABLE_ORIGINAL",
+        "SEQUENCE_ONLY"
+      ],
+      "gaps": [
+        "ORIGINAL_MESSAGE_AUTHENTICATION",
+        "ORIGINAL_AUTHOR",
+        "CAUSAL_EVIDENCE"
+      ],
+      "plot_candidate_id": null,
+      "promotion_reason": "NOT_PROMOTED: Oferta condicional tensiona o escopo profissional sem execução ou revisão de política.",
+      "plot_tests": {
+        "origin": "DERIVED_SOURCE_PRESENT",
+        "conflict": "PARTIAL_OR_UNKNOWN",
+        "agents": "D03_BOUND",
+        "motives": "UNKNOWN",
+        "independent_action": "UNPROVEN_FUTURE",
+        "consequence": "DERIVED_ARCHIVE",
+        "causal_sequence": "SEQUENCE_ONLY_UNLESS_SCENE_SPECIFIC",
+        "closure": "PROPOSED_OR_UNKNOWN"
+      }
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "phase": "D04",
+  "version": 1,
+  "status": "PROPOSED",
+  "spoiler_class": "PLAYER_SAFE",
+  "authority": "EDITORIAL_ONLY",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "baseline": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "count": 44
+  },
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE"
+  },
+  "provenance": {
+    "D02_gate": "PASS_WITH_UNKNOWN",
+    "D03_gate": "PASS_WITH_UNKNOWN",
+    "errata_path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+    "errata_blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+    "original_author": "AUTHOR_UNKNOWN",
+    "original_dialogue": "UNVERIFIABLE_ORIGINAL",
+    "default_causality": "SEQUENCE_ONLY",
+    "technical_ledger_committed": false
+  },
+  "no_narration": true,
+  "no_master_or_canon_edits": true,
+  "document_id": "D04_CAUSAL_DEPENDENCIES_V001",
+  "typed_edges": [
+    {
+      "edge_id": "D04-EDGE-001",
+      "thread_id": "m201-report-authorship",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C10-16-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          7,
+          22
+        ],
+        "anchor": "m201-report-authorship",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-002",
+      "thread_id": "m201-ramal-condition",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "PROVISIONAL_PLOT_ANCHOR",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          23,
+          38
+        ],
+        "anchor": "m201-ramal-condition",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-003",
+      "thread_id": "m201-pavel-commitment",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "CONSEQUENCE_CONTEXT",
+      "link_type": "CONSEQUENCE",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          39,
+          54
+        ],
+        "anchor": "m201-pavel-commitment",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-004",
+      "thread_id": "m201-liev-colleagues",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          55,
+          69
+        ],
+        "anchor": "m201-liev-colleagues",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-005",
+      "thread_id": "m202-school-rumor",
+      "plot_id": "D04-PC04",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          70,
+          84
+        ],
+        "anchor": "m202-school-rumor",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-013",
+      "thread_id": "m203-van-cargo",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          190,
+          198
+        ],
+        "anchor": "m203-van-cargo",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-016",
+      "thread_id": "m204-family-safety",
+      "plot_id": "D04-PC03",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M204-C04-14-20261104-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          215,
+          223
+        ],
+        "anchor": "m204-family-safety",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-017",
+      "thread_id": "m204-volnaya-papers",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          224,
+          232
+        ],
+        "anchor": "m204-volnaya-papers",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-018",
+      "thread_id": "m204-mary-bart-trust",
+      "plot_id": "D04-PC03",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C09-23-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          233,
+          241
+        ],
+        "anchor": "m204-mary-bart-trust",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-019",
+      "thread_id": "m204-volnaya-clerk-ilya-condition",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          242,
+          250
+        ],
+        "anchor": "m204-volnaya-clerk-ilya-condition",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-020",
+      "thread_id": "m204-volnaya-documents-stolen",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "CONSEQUENCE_CONTEXT",
+      "link_type": "CONSEQUENCE",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          251,
+          259
+        ],
+        "anchor": "m204-volnaya-documents-stolen",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-021",
+      "thread_id": "m204-os219-circulation",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          260,
+          267
+        ],
+        "anchor": "m204-os219-circulation",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-023",
+      "thread_id": "m204-volnaya-fleet-tracing",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "UNKNOWN_BASELINE_ONLY",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          277,
+          284
+        ],
+        "anchor": "m204-volnaya-fleet-tracing",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-024",
+      "thread_id": "m204-heating-overtime-claim",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          285,
+          293
+        ],
+        "anchor": "m204-heating-overtime-claim",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-025",
+      "thread_id": "m204-c11-component-analysis",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C11-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          294,
+          302
+        ],
+        "anchor": "m204-c11-component-analysis",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-026",
+      "thread_id": "m204-c12-old-city-heat-transfer-study",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          303,
+          311
+        ],
+        "anchor": "m204-c12-old-city-heat-transfer-study",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-027",
+      "thread_id": "m204-c13-preliminary-note-followup",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "CONSEQUENCE_CONTEXT",
+      "link_type": "CONSEQUENCE",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C13-18-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          312,
+          320
+        ],
+        "anchor": "m204-c13-preliminary-note-followup",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-028",
+      "thread_id": "m204-c14-school-followup",
+      "plot_id": "D04-PC04",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C14-24-20261105-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          321,
+          329
+        ],
+        "anchor": "m204-c14-school-followup",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-029",
+      "thread_id": "m204-c15-underground-survey",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+      "link_type": "EVIDENTIARY",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C15-22-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          330,
+          338
+        ],
+        "anchor": "m204-c15-underground-survey",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-030",
+      "thread_id": "m204-c15-makarov-pavel-trust",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "CONSEQUENCE_CONTEXT",
+      "link_type": "CONSEQUENCE",
+      "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+      "confidence": "MEDIUM_DERIVED_ONLY",
+      "checkpoint": "CHR001-M204-C15-22-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          339,
+          347
+        ],
+        "anchor": "m204-c15-makarov-pavel-trust",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-032",
+      "thread_id": "m204-c16-pipe-safety",
+      "plot_id": "D04-PC01",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M204-C17-08-20261106-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          357,
+          365
+        ],
+        "anchor": "m204-c16-pipe-safety",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    },
+    {
+      "edge_id": "D04-EDGE-040",
+      "thread_id": "m301-c04-yelena-baranova",
+      "plot_id": "D04-PC02",
+      "direction": "THREAD_TO_PLOT",
+      "relation_kind": "THEMATIC_CONTEXT",
+      "link_type": "THEMATIC",
+      "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "confidence": "LOW",
+      "checkpoint": "CHR001-M301-C04-20-20261108-001",
+      "source": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "source_lines": [
+          429,
+          437
+        ],
+        "anchor": "m301-c04-yelena-baranova",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+      },
+      "promotes_plot_or_cause": false
+    }
+  ],
+  "proven_causal_edges": 0,
+  "non_equivalences": [
+    {
+      "left": "m203-woman-identity-location",
+      "right": "m203-nadezhda-departure",
+      "relation": "POSSIBLE_OVERLAP",
+      "merge_permitted": false
+    },
+    {
+      "left": "m203-help-woman",
+      "right": "m203-nadezhda-departure",
+      "relation": "LOCAL_COMPLETION_VS_FUTURE_UNKNOWN",
+      "merge_permitted": false
+    },
+    {
+      "left": "m201-ramal-condition",
+      "right": "m204-c11-component-analysis",
+      "relation": "PARTIAL_SUBPROCESS",
+      "merge_permitted": false
+    },
+    {
+      "left": "m204-c12-old-city-heat-transfer-study",
+      "right": "m204-c13-preliminary-note-followup",
+      "relation": "PROCEDURAL_RELATION_NOT_IDENTICAL",
+      "merge_permitted": false
+    },
+    {
+      "left": "m301-c03-daniel-truck-safety",
+      "right": "m301-c05-daniel-contact-and-envelope",
+      "relation": "DISTINCT_D03_PERSONS",
+      "merge_permitted": false
+    }
+  ],
+  "no_CAUSAL_without_two_sided_evidence": true,
+  "exclusions": [
+    "No institutional mention proves organized wrongdoing",
+    "No sealed object contents inferred",
+    "No Daniel Foster and Yelena son identity merger",
+    "No NPC threat or supernatural affiliation promoted to objective truth",
+    "No direct causal link between unrelated pipe incidents",
+    "No sequential or thematic edge becomes causal"
+  ]
+}
