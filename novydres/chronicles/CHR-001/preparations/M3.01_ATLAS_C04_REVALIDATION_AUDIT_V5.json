@@ -1,0 +1,46 @@
+{
+  "schema_id": "CHR001_M301_POST_C04_ATLAS_REVALIDATION_AUDIT_V5",
+  "status": "PROSPECTIVE_PLAN_REVISION",
+  "base_head": "f8fd28b62fb6cd805668720b77ca52fd978f7b37",
+  "source_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0031.json",
+  "last_event_id": "CHR001-M301-C04-20-20261108-001",
+  "decision": "PLAN_REVISED",
+  "previous_preparation_id": "CHR001-PREP-M301-20261107-V4",
+  "new_preparation_id": "CHR001-PREP-M301-20261108-V5",
+  "atlas_snapshot": {
+    "path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+    "sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+    "status": "PARTIAL"
+  },
+  "assessment": {
+    "material_changes": [
+      "C04 oferece decisão investigativa real e custódia de caixa fechada, sem verdade sobre conteúdo, testemunhas ou assassinato.",
+      "Marta e agentes funerários adquirem autonomia e limites de conhecimento; nenhuma lealdade, contato ou relação futura presumida.",
+      "Arcos no atlas confrontados por evidência, com delimitação de Volnaya e sem conexão forçada a caínitas.",
+      "Manter atos A1–A4 propostos sem crédito e sem transformar C04 em resolução automática.",
+      "C05 continua NOT_STARTED, uma cena por vez, WHY_NOW e elipse quando conveniente."
+    ],
+    "epistemic_gates": [
+      "Documentos e caixa são observações, conteúdo UNKNOWN.",
+      "Morte noticiada não prova mecanismo clínico nem culpado.",
+      "Ausência de reação não certifica ausência de testemunhas.",
+      "Rolagem de reparo aceita pelo jogador; RNG source UNVERIFIED."
+    ],
+    "mechanics": "FV5/6, superficial1; XP cap675 spent270 capacity405 credit0. Nenhuma alteração por preparação.",
+    "marco": "M3 ACTIVE; Abraço e 2010 futuros, sem roteiro obrigatório."
+  },
+  "preservation": {
+    "m1_m2_closed_unchanged": true,
+    "m301_c01_c04_unchanged": true,
+    "live_episode_state_unmodified": true,
+    "player_choice_preserved": true,
+    "no_new_events": true,
+    "no_xp_fv_delta": true,
+    "no_spoilers_in_handoff": true
+  },
+  "publication": {
+    "dossier_path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V5.json",
+    "sidecar_path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V5.json",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0032.json"
+  }
+}
