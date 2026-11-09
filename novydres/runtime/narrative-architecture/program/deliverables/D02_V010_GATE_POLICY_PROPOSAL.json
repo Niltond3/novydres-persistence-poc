@@ -1,0 +1,112 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "phase": "D02",
+  "version": 10,
+  "spoiler_class": "PLAYER_SAFE",
+  "provenance_parent": "5f82b05752c3f27acb20539ea747b2e1ee8b2c76",
+  "master_head_checked": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+  },
+  "source_basis": {
+    "runbook": {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    "governance": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    "audit009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    "dependencies009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    "coverage009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    "queue009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    "reviewer004": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    "m101008": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    "causal009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    "rng009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  },
+  "schema": "NOVYDRES_D02_V010_GATE_POLICY_PROPOSAL",
+  "user_instruction": "Record UNKNOWN for inaccessible or unproven source claims; close everything provable; avoid endless audit cycles while preserving historical accuracy.",
+  "status": "DESIGN_LAYER_PROPOSAL_FOR_REVIEW_NOT_CANONICAL_OVERRIDE",
+  "normative_basis": [
+    {
+      "source": {
+        "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+        "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+      },
+      "scope": "D02 exit",
+      "explicit_requirement": "Historigraphy M1..M3 C05, retrospective graphs, documented authorship or UNKNOWN, audited source inventory; gate = no invented fact or unsupported original intention."
+    },
+    {
+      "source": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+        "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+      },
+      "scope": "D01 provenance vocabulary",
+      "explicit_requirement": "original_author allows AUTHOR_UNKNOWN; fact_status allows UNKNOWN and CONFLICT; source kinds distinguish reconstruction from event and GM plan."
+    },
+    {
+      "source": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+        "sha": "b595400c39e08790714da6450631180d0c76b761"
+      },
+      "scope": "D02 independent review",
+      "explicit_requirement": "Distinct agent/human, sampled evidence and source lines, adversarial objections, explicit PASS/FAIL signoff."
+    }
+  ],
+  "proposal": "Permit an epistemic closure of D02 WITHOUT original primary transcripts or RNG receipts if every unprovable claim is typed UNKNOWN, derived confidence is explicit, no fictive causal authorial/mechanical authentication is asserted, all source bounds and open omissions are retained, and a materially distinct reviewer signs a clean audit.",
+  "sufficient_for_review": [
+    "Archive 661/661 ledger readback and M1.01 omission cataloged without creative filling",
+    "Every unproven original author is AUTHOR_UNKNOWN and historical role is not inferred from prose",
+    "Causal edges without bilateral direct support remain SEQUENCE_ONLY/UNKNOWN",
+    "RNG source remains UNVERIFIABLE and never regenerated; reported accepted results preserved",
+    "A distinct reviewer adversarially tests omissions, corrections, support and semantic coverage and signs",
+    "No canon/closed or approved/frozen mutation, no spoilers, no narration, C06 NOT_STARTED"
+  ],
+  "not_sufficient": [
+    "Self-signed review",
+    "Claiming original chats exist from diary summaries",
+    "Treating all 661 classified markers as 661 primary-authenticated utterances",
+    "Rebranding missing proof as PASS_AUTHENTICATED",
+    "Auto-approving modifications to frozen contracts"
+  ],
+  "phase_decision": {
+    "executor_current": "READY_FOR_INDEPENDENT_REVIEW_UNDER_BOUNDED_UNKNOWN_POLICY",
+    "official_D02_pass": "NOT_YET_GRANTED",
+    "next_D03": "LOCKED_UNTIL_DISTINCT_REVIEWER_PASS_AND_GOVERNANCE_VALIDATION",
+    "if_reviewer_finds_genuine_evidence_conflict": "FAIL_TARGETED_REMEDIATION_NOT_GLOBAL_REAUDIT",
+    "if_reviewer_passes": "Create new versioned independent signoff/phase-gate with readback, then issue D03 prompt in chat only"
+  },
+  "approval_boundaries": "User instruction authorizes documentary use of UNKNOWN; it does not replace any CANONICAL/FROZEN material or create independent reviewer signature."
+}

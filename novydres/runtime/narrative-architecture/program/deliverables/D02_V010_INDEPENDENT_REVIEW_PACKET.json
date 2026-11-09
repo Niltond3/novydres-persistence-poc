@@ -1,0 +1,169 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "phase": "D02",
+  "version": 10,
+  "spoiler_class": "PLAYER_SAFE",
+  "provenance_parent": "5f82b05752c3f27acb20539ea747b2e1ee8b2c76",
+  "master_head_checked": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+  },
+  "source_basis": {
+    "runbook": {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    "governance": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    "audit009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    "dependencies009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    "coverage009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    "queue009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    "reviewer004": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    "m101008": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    "causal009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    "rng009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  },
+  "schema": "NOVYDRES_D02_V010_INDEPENDENT_REVIEW_PACKET",
+  "status": "AWAITING_DISTINCT_REVIEWER",
+  "reviewer_identity": null,
+  "reviewer_signature": null,
+  "independent_review_performed": false,
+  "principal_sources": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  ],
+  "source_ranges": [
+    {
+      "scene": "M1.01",
+      "known_gap": "Original scenes 002–003 not authenticated",
+      "source": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "lines": "162–167",
+      "comparison": "V008 Library snapshot descriptions"
+    },
+    {
+      "scene": "M1.02–M1.09",
+      "source": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "lines": "43–723",
+      "comparison": "D02 V006–V009 scene closures; overlapping ranges per markers"
+    },
+    {
+      "scene": "M2.01–M2.02",
+      "source": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "lines": "724–824",
+      "comparison": "D02_SCENE_BATCH_CLOSURE_V009_B.json"
+    },
+    {
+      "scene": "M2.03",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+      "lines": "1–570",
+      "comparison": "D02_SCENE_BATCH_CLOSURE_V009_D.json and D02_M203_VERSION_CHAIN_V009.json"
+    },
+    {
+      "scene": "M2.04",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+      "lines": "1–940",
+      "comparison": "D02_SCENE_BATCH_CLOSURE_V009_E/F/G.json"
+    },
+    {
+      "scene": "M3.01",
+      "source": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "lines": "1–291",
+      "comparison": "D02_SCENE_BATCH_CLOSURE_V009_C.json"
+    }
+  ],
+  "reviewer_obligations": [
+    "Use independent context/agent from V009 and V010 author, disclose reviewer identity (agent/human and unique context) and method.",
+    "Preselect adversarial sample before adopting executor conclusions and verify exact original blob SHA and source line intervals.",
+    "Audit all 661 classifications clause-by-clause OR document a defensible complete-semantic-coverage strategy per V004.",
+    "Challenge M1.01 002–003 proposals, source omission and later corrections; preserve AUTHENTICITY_UNKNOWN rather than invent missing dialogue.",
+    "Distinguish actor speech, NPC claim, narrator adjudication, editorial reconstruction and original creative author.",
+    "Review D02-CAUSE-002 specifically; no inferred cross-plot motive. Challenge G28 original-call authenticity separately from arithmetic.",
+    "Verify M3.01 C05 closed, C06 not started, master read-only, no changes to XP/FV/canon/frozen materials.",
+    "Publish separate new versioned report with reviewer identity, tested ids, SHA/line anchors, rejections, fixes, final PASS or FAIL, via CAS and readback.",
+    "Do not require nonexistent primary sources as an automatic infinite review loop; decide whether bounded UNKNOWN makes all downstream claims safe."
+  ],
+  "success_criterion": "Review is signed by materially distinct agent/human, all unsupported claims remain UNKNOWN, errors corrected by new documented version; D02 epistemic gate may be PASS_WITH_UNKNOWN if governance permits.",
+  "failure_criterion": "Unattributed factual promotions, unreviewed completeness, contradictions, unsupported original claims, fabricated authenticity, identity not distinct, or broken provenance.",
+  "cannot_self_sign": true
+}

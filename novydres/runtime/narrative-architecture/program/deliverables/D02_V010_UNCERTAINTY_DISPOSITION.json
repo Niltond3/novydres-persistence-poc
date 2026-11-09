@@ -1,0 +1,155 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "phase": "D02",
+  "version": 10,
+  "spoiler_class": "PLAYER_SAFE",
+  "provenance_parent": "5f82b05752c3f27acb20539ea747b2e1ee8b2c76",
+  "master_head_checked": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+  },
+  "source_basis": {
+    "runbook": {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    "governance": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    "audit009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    "dependencies009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    "coverage009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    "queue009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    "reviewer004": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    "m101008": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    "causal009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    "rng009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  },
+  "schema": "NOVYDRES_D02_V010_UNCERTAINTY_DISPOSITION",
+  "replaces_prior_evidence": false,
+  "counts": {
+    "inventoried_markers": 661,
+    "archive_classified": 661,
+    "archive_pending": 0,
+    "original_chat_authenticated": 0,
+    "original_rng_authenticated": 0,
+    "independent_reviews_signed": 0
+  },
+  "gaps": [
+    {
+      "id": "D02-GAP-001",
+      "topic": "M1 coverage",
+      "archive_scope": "M1.02–M1.09 indexed and classified; M1.01 002–003 partial editorial snapshots only",
+      "existing_coverage": "165 indexed archive markers",
+      "unproved": "Original role-attributed full M1.01 and any unindexed historical turns",
+      "disposition": "UNKNOWN_SOURCE_FOR_M101_UNINDEXED",
+      "safe_claim": "Only indexed derivations and historical summary can be cited; intended NPC continuations cannot become played events",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    },
+    {
+      "id": "D02-GAP-002",
+      "topic": "M2.01–M2.03 coverage",
+      "archive_scope": "M2.01, M2.02 and M2.03 Level-A archive classified; M2.03 version-chain continuity checked",
+      "existing_coverage": "140 indexed archive markers",
+      "unproved": "Original separate turns, timestamps, independent attribution and original tool calls",
+      "disposition": "ARCHIVAL_COMPLETE_ORIGINAL_UNKNOWN",
+      "safe_claim": "Source text/variant provenance is documented, original event-by-event attribution not certified",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    },
+    {
+      "id": "D02-GAP-003",
+      "topic": "M2.04 / M3.01 to C05",
+      "archive_scope": "M2.04 C01–C17 and M3.01 C01–C05 archive classified",
+      "existing_coverage": "356 indexed archive markers",
+      "unproved": "Original conversation completeness, original attribution and source-omission detection",
+      "disposition": "ARCHIVAL_COMPLETE_ORIGINAL_UNKNOWN",
+      "safe_claim": "Do not invent skipped turns or extend M3.01 to C06",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    },
+    {
+      "id": "D02-GAP-004",
+      "topic": "Original creative authorship",
+      "archive_scope": "Original-author fields in derivative narrative not independently established",
+      "existing_coverage": "No authenticated original authors",
+      "unproved": "Whether each creative choice was PLAYER, NARRATOR, DRAMATURGO or SHARED_EMERGENT",
+      "disposition": "AUTHOR_UNKNOWN_WHERE_NOT_ATTESTED",
+      "safe_claim": "Distinguish reported character action from original creative author and Git commit author",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    },
+    {
+      "id": "D02-GAP-005",
+      "topic": "Historical causal edges",
+      "archive_scope": "D02-CAUSE-001 local archival derivation; D02-CAUSE-002/003/004 SEQUENCE_ONLY",
+      "existing_coverage": "4 reviewed candidate edges",
+      "unproved": "Original two-sided evidence for global cause; narrator motive and cross-plot links",
+      "disposition": "CAUSALITY_UNKNOWN_OR_SEQUENCE_ONLY",
+      "safe_claim": "No cross-plot causal claim can be promoted from sequence or thematic resemblance",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    },
+    {
+      "id": "D02-GAP-006",
+      "topic": "RNG source authenticity",
+      "archive_scope": "48 G28 tests, 49 reported face arrays structurally reviewed; accepted in-play outcomes preserved",
+      "existing_coverage": "Structural checks only; original tool execution receipts 0",
+      "unproved": "Independent tool call, original runtime seed/source/receipt/temporal linkage for random faces",
+      "disposition": "RNG_ORIGIN_UNVERIFIABLE_WITH_CURRENT_SOURCES",
+      "safe_claim": "Accept historical table outcome without claiming cryptographic or provider authentication; Take Half has no RNG but requires a traceable preflight",
+      "review_required": true,
+      "classification_status": "DOCUMENTED_FOR_REVIEW_NOT_PROBATIVE_PASS",
+      "reopen_trigger": "New identifiable original source, conflicting authority, or independent reviewer finding"
+    }
+  ],
+  "statuses_defined": {
+    "EVIDENCE_CONFIRMED": "Supported by direct source of declared level; cite exact SHA/path/anchor.",
+    "UNKNOWN_IN_CHECKED_SOURCES": "No original evidence located in checked Git/Drive/Library scope; not a global no-existence claim.",
+    "UNVERIFIABLE_ORIGINAL": "An archived outcome exists but independent original execution cannot be established.",
+    "DISPOSITION_DOCUMENTED": "Unknown is bounded and explicitly recorded; no claim of original authenticity.",
+    "INDEPENDENT_PASS": "Only distinct signed reviewer can certify editorial acceptability of bounded unknowns."
+  },
+  "authenticity_not_silently_relaxed": true,
+  "canon_revisions": 0,
+  "mechanical_revisions": 0,
+  "c06_status": "NOT_STARTED",
+  "phase_gate": "PENDING_DISTINCT_REVIEWER"
+}

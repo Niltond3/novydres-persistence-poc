@@ -1,0 +1,90 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "phase": "D02",
+  "version": 10,
+  "spoiler_class": "PLAYER_SAFE",
+  "provenance_parent": "5f82b05752c3f27acb20539ea747b2e1ee8b2c76",
+  "master_head_checked": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+  },
+  "source_basis": {
+    "runbook": {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    "governance": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    "audit009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    "dependencies009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    "coverage009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    "queue009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    "reviewer004": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    "m101008": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    "causal009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    "rng009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  },
+  "schema": "NOVYDRES_D02_AUDIT_V010",
+  "status": "PENDING_INDEPENDENT_REVIEW",
+  "phase_gate": "FAIL_NOT_YET_SIGNED",
+  "d03_unlocked": false,
+  "tests": {
+    "master_head_revalidated": "PASS",
+    "design_parent_revalidated": "PASS",
+    "source_gov_read": "PASS",
+    "archival_queue_661": "PASS_FROM_V009",
+    "original_source_search_targeted": "PERFORMED_NO_AUTHENTICATED_NEW_PRIMARY",
+    "unknown_policy_documented": "PASS",
+    "records_of_all_six_blockers": "DISPOSITION_DOCUMENTED_NOT_ORIGINAL_AUTHENTICATED",
+    "independent_reviewer": "PENDING_DISTINCT_AGENT",
+    "RNG_reexecution": "NOT_DONE",
+    "master_write": "NOT_DONE",
+    "canon_changes": "NOT_DONE",
+    "C06_start": "NOT_DONE"
+  },
+  "evidence": {
+    "recovery_file": "D02_V010_PROBATIVE_RECOVERY.json",
+    "disposition_file": "D02_V010_UNCERTAINTY_DISPOSITION.json",
+    "proposed_gate_file": "D02_V010_GATE_POLICY_PROPOSAL.json",
+    "reviewer_packet": "D02_V010_INDEPENDENT_REVIEW_PACKET.json"
+  },
+  "open_gates": [
+    "Independent reviewer identity, adversarial source check and signed PASS/FAIL",
+    "D02 phase-gate reconciliation under documented bounded UNKNOWN policy"
+  ],
+  "warning": "Zero archive markers pending does not equal authenticated original utterances or original RNG. Unknown is not false nor a recovered primary source.",
+  "next_phase": "D02_INDEPENDENT_REVIEW",
+  "next_version": 11
+}

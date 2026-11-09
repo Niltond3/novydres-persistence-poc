@@ -1,0 +1,98 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "phase": "D02",
+  "version": 10,
+  "spoiler_class": "PLAYER_SAFE",
+  "provenance_parent": "5f82b05752c3f27acb20539ea747b2e1ee8b2c76",
+  "master_head_checked": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+  },
+  "source_basis": {
+    "runbook": {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9"
+    },
+    "governance": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    "audit009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V009.json",
+      "sha": "4228c303edcf9c3a53c30c1ffb9e72a1dd97dbe2"
+    },
+    "dependencies009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V009.json",
+      "sha": "c222e7b43736362d172e0cbc3ec6821cd552bd35"
+    },
+    "coverage009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_V009.json",
+      "sha": "0261d77fb06d7128aa650f428bcb14dad61e71bb"
+    },
+    "queue009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V009.json",
+      "sha": "fb16e8d3db54304967d13bdd45cd6172a1bcb77b"
+    },
+    "reviewer004": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "sha": "b595400c39e08790714da6450631180d0c76b761"
+    },
+    "m101008": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+      "sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33"
+    },
+    "causal009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    },
+    "rng009": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_RNG_PROVENANCE_AUDIT_V009.json",
+      "sha": "fc399e8833812ad5c4c29bca708f507a4593768f"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  },
+  "schema": "NOVYDRES_D02_HANDOFF_V010",
+  "status": "READY_FOR_DISTINCT_EDITORIAL_AUDIT",
+  "phase_gate": "FAIL_PENDING_REVIEW",
+  "d03_unlocked": false,
+  "complete": {
+    "archive_markers": 661,
+    "archive_markers_pending": 0,
+    "scene_units": 33,
+    "source_search_rechecked": true,
+    "all_six_gap_dispositions_documented": true
+  },
+  "unresolved": {
+    "M101": "ORIGINAL_TURNS_002_003_UNKNOWN",
+    "authorship": "AUTHOR_UNKNOWN_UNLESS_ORIGINAL_ATTESTATION",
+    "cause_002": "SEQUENCE_ONLY",
+    "rng": "ORIGINAL_EXECUTION_UNVERIFIABLE_IN_CHECKED_SOURCES",
+    "independent_editorial_signoff": "PENDING"
+  },
+  "next_actor": "DISTINCT_EDITORIAL_REVIEW_AGENT_NOT_THIS_EXECUTOR",
+  "work_order": [
+    "Do not redo 661 generic classifications; audit sample/coverage adversarially and source-backed.",
+    "Accept bounded UNKNOWN as epistemic state, not original authentication.",
+    "Produce independent signed review + CAS readback, then apply documented D02 gate; FAIL only for real evidentiary/promotional inconsistencies.",
+    "If review PASS and no conflict, unlock D03 in a NEW explicit versioned handoff; prompt stays chat-only."
+  ],
+  "artifacts": [
+    "D02_V010_PROBATIVE_RECOVERY.json",
+    "D02_V010_UNCERTAINTY_DISPOSITION.json",
+    "D02_V010_GATE_POLICY_PROPOSAL.json",
+    "D02_V010_INDEPENDENT_REVIEW_PACKET.json",
+    "AUDIT_D02_V010.json",
+    "HANDOFF_D02_V010.json"
+  ],
+  "no_new_C06": true,
+  "no_D03_in_this_execution": true,
+  "no_master_mutation": true,
+  "no_canon_mutation": true,
+  "no_roll_regeneration": true,
+  "prompt_location": "CHAT_ONLY"
+}
