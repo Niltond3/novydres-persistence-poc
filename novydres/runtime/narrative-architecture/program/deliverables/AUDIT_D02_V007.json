@@ -1,0 +1,118 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V007",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 7,
+  "spoiler_class": "PLAYER_SAFE",
+  "design_parent_sha": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "FAIL",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "checkpoint": "CHR001-M301-C05-22-20261109-001",
+    "next_role": "DRAMATURGO",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED"
+  },
+  "phase_gate": "FAIL",
+  "d03_unlocked": false,
+  "checks": {
+    "master_read_only": true,
+    "design_branch_lease_expected": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "old_classified": 14,
+    "new_classified": 53,
+    "total_classified": 67,
+    "total_waiting": 594,
+    "baseline_total": 661,
+    "archivally_closed_new_scenes": 5,
+    "archivally_closed_cumulative_scenes": 6,
+    "scenes": [
+      {
+        "id": "M1.03",
+        "markers": 23,
+        "range": [
+          277,
+          318
+        ],
+        "A": "PASS_ARCHIVE_ONLY",
+        "B": "FAIL_UNAUTHENTICATED",
+        "C": "NOT_PERFORMED"
+      },
+      {
+        "id": "M1.04",
+        "markers": 5,
+        "range": [
+          319,
+          329
+        ],
+        "A": "PASS_ARCHIVE_ONLY",
+        "B": "FAIL_UNAUTHENTICATED",
+        "C": "NOT_PERFORMED"
+      },
+      {
+        "id": "M1.05",
+        "markers": 15,
+        "range": [
+          330,
+          345
+        ],
+        "A": "PASS_ARCHIVE_ONLY",
+        "B": "FAIL_UNAUTHENTICATED",
+        "C": "NOT_PERFORMED"
+      },
+      {
+        "id": "M1.06",
+        "markers": 1,
+        "range": [
+          346,
+          347
+        ],
+        "A": "PASS_ARCHIVE_ONLY",
+        "B": "FAIL_UNAUTHENTICATED",
+        "C": "NOT_PERFORMED"
+      },
+      {
+        "id": "M1.07",
+        "markers": 9,
+        "range": [
+          348,
+          361
+        ],
+        "A": "PASS_ARCHIVE_ONLY",
+        "B": "FAIL_UNAUTHENTICATED",
+        "C": "NOT_PERFORMED"
+      }
+    ],
+    "source_exact_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "source_range_contiguous": true,
+    "source_subclauses_limited": true,
+    "original_dialogue_authenticated": 0,
+    "g28_tool_executions_authenticated": 0,
+    "independent_editorial_signoff": false,
+    "technical_committed_minted": 0,
+    "m101_library_records_found": 2,
+    "m101_original_transcripts_authenticated": 0,
+    "causal_002": "SEQUENCE_ONLY"
+  },
+  "gaps_open": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "other_open": [
+    "D01-ADM-001"
+  ],
+  "publication": "EXPECTED_ATOMIC_COMMIT_CAS_READBACK_REQUIRED",
+  "next_phase": "D02",
+  "next_version": "V008",
+  "no_scene_mutation": true
+}

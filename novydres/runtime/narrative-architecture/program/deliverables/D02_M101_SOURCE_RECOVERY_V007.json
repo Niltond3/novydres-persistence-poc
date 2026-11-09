@@ -1,0 +1,83 @@
+{
+  "schema": "NOVYDRES_D02_M101_SOURCE_RECOVERY_V007",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 7,
+  "spoiler_class": "PLAYER_SAFE",
+  "design_parent_sha": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "SUPPLEMENTAL_SOURCES_LOCATED_ORIGINAL_NOT_AUTHENTICATED",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "checkpoint": "CHR001-M301-C05-22-20261109-001",
+    "next_role": "DRAMATURGO",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED"
+  },
+  "target": "M1.01 SCENES 002–003",
+  "baseline_missing_archive": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "lines": [
+      166,
+      167
+    ]
+  },
+  "library_sources": [
+    {
+      "file_id": "file_000000000dcc820e83fbb1dcd99d1249",
+      "version_id": "1",
+      "title": "CHRONICLE_001_PESSACH_SCENE_002_PENDING.md",
+      "archive_lines": 16,
+      "authentication": "LIBRARY_SNAPSHOT_PENDING_NOT_ORIGINAL_CHAT",
+      "sha": "NOT_EXPOSED_BY_PROVIDER"
+    },
+    {
+      "file_id": "file_000000002748820ea30c5be608fc7a7e",
+      "version_id": "1",
+      "title": "CHRONICLE_001_PESSACH_SCENES_002_003_PENDING.md",
+      "archive_lines": 32,
+      "authentication": "LIBRARY_RECONCILIATION_PENDING_NOT_ORIGINAL_CHAT",
+      "sha": "NOT_EXPOSED_BY_PROVIDER"
+    }
+  ],
+  "comparison_findings": [
+    {
+      "scene": "002",
+      "finding": "Two Library snapshots preserve matching attributed player utterance about glasses and family teaching",
+      "classification": "SUPPLEMENTAL_EDITORIAL_RECORD",
+      "proof_limit": "Neither is an immutable independent original conversation export"
+    },
+    {
+      "scene": "003",
+      "finding": "One Library snapshot preserves an attributed first-person player statement and separates desired but not executed gestures from spoken content",
+      "classification": "SUPPLEMENTAL_EDITORIAL_RECORD",
+      "proof_limit": "Document marks itself pending synchronization and narrative continuation as proposed"
+    },
+    {
+      "scene": "002–003",
+      "finding": "Earlier administrative M1.01 recategorization cannot retroactively make M1 gate active during this historical prologue",
+      "classification": "PRECEDENCE_RETAINED",
+      "proof_limit": "Requires original authored message provenance for B"
+    }
+  ],
+  "drive_search": {
+    "searched_keywords": [
+      "M1.01",
+      "Pessach",
+      "CENA 002"
+    ],
+    "result": "INDEX_AND_LEGACY_DOCS_FOUND; NO RAW ORIGINAL CHAT PROVEN",
+    "source_sha": "NOT_APPLICABLE_PROVIDER_METADATA"
+  },
+  "github_search": {
+    "query": "M1.01 cenas 002 003",
+    "result": "NO_DIRECT_MATCHING_ORIGINAL_FOUND"
+  },
+  "resolution": "M101_SOURCE_GAP_REDUCED_TO_RECONCILIATION_AND_AUTHENTICITY; NOT_CLOSED; NO_ORIGINAL_TRANSCRIPT_FABRICATED"
+}

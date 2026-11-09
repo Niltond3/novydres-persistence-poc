@@ -1,0 +1,143 @@
+{
+  "schema": "NOVYDRES_D02_EVIDENCE_DEPENDENCIES_V007",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 7,
+  "spoiler_class": "PLAYER_SAFE",
+  "design_parent_sha": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "SIX_BLOCKERS_OPEN_PARTIALLY_REDUCED",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "checkpoint": "CHR001-M301-C05-22-20261109-001",
+    "next_role": "DRAMATURGO",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED"
+  },
+  "source_dependencies": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V006.json",
+      "sha": "f7daf1e114b7df2771bd2fec01dfcd4562c8ba96"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V006.json",
+      "sha": "4d302247a8e8f6e2e47e7048bd306182552bc9a5"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "progress": "M1.02 and M1.03–M1.07 Layer A complete (67 markers total). 594 remain globally, including M1.08/M1.09. M1.01 source scenes 002-003 partially recovered as Library editorial snapshots.",
+      "proof_required": "M1.01 source reconciliation, M1.08–M1.09 complete source batches, Level B and independent review for gate."
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "progress": "M2.01–M2.03 source boundaries and archival alternatives inventoried; no new semantic marker closure.",
+      "proof_required": "Examine M2.01/M2.02 and entire M2.03 including shards/version correction and non-technical logs."
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "progress": "No new audit of M2.04 or M3.01.",
+      "proof_required": "Complete all scene batches through C05."
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "progress": "AUTHOR_UNKNOWN recorded in 53 new markers; no independent signed creative attribution.",
+      "proof_required": "Original attributed conversations or signed independent authorship evidence."
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "progress": "Local narrative sequences documented, no new independent causal edge promoted; D02-CAUSE-002 SEQUENCE_ONLY.",
+      "proof_required": "Two-sided original and source-backed causality audit."
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "progress": "No original G28 RNG/tool execution authenticated; no COMMITTED events created.",
+      "proof_required": "Cryptographically/technically verifiable original RNG invocation and independent assessor."
+    }
+  ],
+  "m2_preliminary_inventory": [
+    {
+      "scene": "M2.01",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "observed_start": 724,
+      "observed_end": 803,
+      "coverage": "NOT_CLAUSE_AUDITED",
+      "closure": "ARCHIVAL_CLOSURE_REPORTED_NOT_RECHECKED"
+    },
+    {
+      "scene": "M2.02",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "observed_start": 804,
+      "observed_end": 824,
+      "coverage": "NOT_CLAUSE_AUDITED",
+      "note": "Coda after local closure included"
+    },
+    {
+      "scene": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "observed_start": 825,
+      "observed_end": "UNVERIFIED",
+      "coverage": "NOT_CLAUSE_AUDITED"
+    },
+    {
+      "scene": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+        "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1"
+      },
+      "observed_start": 1,
+      "observed_end": "UNVERIFIED",
+      "coverage": "NOT_CLAUSE_AUDITED"
+    },
+    {
+      "scene": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_SHARD_INDEX_V1.json",
+        "blob_sha": "34413811899a0c4081d4e59a82a984f4b61590b0"
+      },
+      "state": "PENDING_READBACK; INACTIVE_DERIVED_ACCESS_PATH; 7 fragments",
+      "coverage": "NOT_CLAUSE_AUDITED"
+    },
+    {
+      "scene": "M2.03",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt",
+        "blob_sha": "b35212d618a7aa195757d5d7bd28976c06d3c327"
+      },
+      "state": "INVALID_PARTIAL_DO_NOT_PROMOTE",
+      "coverage": "NOT_CLAUSE_AUDITED"
+    }
+  ],
+  "independent_editorial_review": {
+    "status": "NOT_PERFORMED",
+    "self_signature": false
+  },
+  "original_conversation_authentication": "ZERO_AUTHENTICATED",
+  "m101_recovery_artifact": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V007.json",
+  "admin_open": [
+    "D01-ADM-001"
+  ],
+  "no_d03": true,
+  "causal_002": "SEQUENCE_ONLY"
+}

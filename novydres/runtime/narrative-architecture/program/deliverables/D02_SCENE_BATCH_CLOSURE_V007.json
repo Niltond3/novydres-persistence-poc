@@ -1,0 +1,1693 @@
+{
+  "schema": "NOVYDRES_D02_SCENE_BATCH_CLOSURE_V007",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 7,
+  "spoiler_class": "PLAYER_SAFE",
+  "design_parent_sha": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "FIVE_NEW_ARCHIVAL_SCENES_COMPLETE_ORIGINAL_AUTHENTICATION_FAIL",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "checkpoint": "CHR001-M301-C05-22-20261109-001",
+    "next_role": "DRAMATURGO",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED"
+  },
+  "prior_v006": {
+    "file": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V006.json",
+    "sha": "b3ba482f741fa5ad44699107ae1974d7ec3fd2bd",
+    "scene": "M1.02",
+    "archival_markers": 14
+  },
+  "scene_reports": [
+    {
+      "scene": "M1.03",
+      "start_line": 277,
+      "end_line": 318,
+      "markers": 23,
+      "archive_lines_covered": 42,
+      "nonoverlap": true,
+      "contiguous": true,
+      "archival_layer_a": "PASS_ARCHIVE_ONLY",
+      "original_layer_b": "FAIL_UNAUTHENTICATED",
+      "editorial_layer_c": "NOT_PERFORMED",
+      "original_story_author": "AUTHOR_UNKNOWN",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "final_status": "ARCHIVAL_SCENE_CLOSED_ORIGINAL_PENDING"
+    },
+    {
+      "scene": "M1.04",
+      "start_line": 319,
+      "end_line": 329,
+      "markers": 5,
+      "archive_lines_covered": 11,
+      "nonoverlap": true,
+      "contiguous": true,
+      "archival_layer_a": "PASS_ARCHIVE_ONLY",
+      "original_layer_b": "FAIL_UNAUTHENTICATED",
+      "editorial_layer_c": "NOT_PERFORMED",
+      "original_story_author": "AUTHOR_UNKNOWN",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "final_status": "ARCHIVAL_SCENE_CLOSED_ORIGINAL_PENDING"
+    },
+    {
+      "scene": "M1.05",
+      "start_line": 330,
+      "end_line": 345,
+      "markers": 15,
+      "archive_lines_covered": 16,
+      "nonoverlap": true,
+      "contiguous": true,
+      "archival_layer_a": "PASS_ARCHIVE_ONLY",
+      "original_layer_b": "FAIL_UNAUTHENTICATED",
+      "editorial_layer_c": "NOT_PERFORMED",
+      "original_story_author": "AUTHOR_UNKNOWN",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "final_status": "ARCHIVAL_SCENE_CLOSED_ORIGINAL_PENDING"
+    },
+    {
+      "scene": "M1.06",
+      "start_line": 346,
+      "end_line": 347,
+      "markers": 1,
+      "archive_lines_covered": 2,
+      "nonoverlap": true,
+      "contiguous": true,
+      "archival_layer_a": "PASS_ARCHIVE_ONLY",
+      "original_layer_b": "FAIL_UNAUTHENTICATED",
+      "editorial_layer_c": "NOT_PERFORMED",
+      "original_story_author": "AUTHOR_UNKNOWN",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "final_status": "ARCHIVAL_SCENE_CLOSED_ORIGINAL_PENDING"
+    },
+    {
+      "scene": "M1.07",
+      "start_line": 348,
+      "end_line": 361,
+      "markers": 9,
+      "archive_lines_covered": 14,
+      "nonoverlap": true,
+      "contiguous": true,
+      "archival_layer_a": "PASS_ARCHIVE_ONLY",
+      "original_layer_b": "FAIL_UNAUTHENTICATED",
+      "editorial_layer_c": "NOT_PERFORMED",
+      "original_story_author": "AUTHOR_UNKNOWN",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+      },
+      "final_status": "ARCHIVAL_SCENE_CLOSED_ORIGINAL_PENDING"
+    }
+  ],
+  "records": [
+    {
+      "id": "D02-LEG-0277",
+      "scene": "M1.03",
+      "start_line": 277,
+      "end_line": 279,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "EDITORIAL_ARCHIVAL_SUMMARY",
+          "NPC_CLAIM_OR_NPC_ACTION"
+        ],
+        "finding": "Apresentação doméstica, bilhete e relato de Mikahel; relato do golpe e de sua iminência é atribuído à criança.",
+        "not_proven": "Não prova intenção de Yuri, cronologia escolar completa nem condição física de outro aluno.",
+        "exit_or_intermediate": "AWAITING_PLAYER_REPLY",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0280",
+      "scene": "M1.03",
+      "start_line": 280,
+      "end_line": 281,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Pergunta moral de Mikahel e janela de resposta em casa; não há resposta imputada ao protagonista.",
+        "not_proven": "Não confundir fim de batida apresentada com encerramento da provocação.",
+        "exit_or_intermediate": "OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0282",
+      "scene": "M1.03",
+      "start_line": 282,
+      "end_line": 282,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Orientação do pai e compromisso de comparecer à escola são registrados como ação/fala do jogador.",
+        "not_proven": "Compromisso não é visita efetivada; versão de Dima ainda não corroborada.",
+        "exit_or_intermediate": "OPEN_HOME",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0283",
+      "scene": "M1.03",
+      "start_line": 283,
+      "end_line": 283,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Pai distingue defesa alegada, responsabilidade e convicção religiosa; declara ir à escola.",
+        "not_proven": "Moral afirmada por Bartholomeu não é julgamento disciplinar nem prova da versão de Mikahel.",
+        "exit_or_intermediate": "OPEN_HOME",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0284",
+      "scene": "M1.03",
+      "start_line": 284,
+      "end_line": 284,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Mikahel pergunta como discernir erro; Mary apoia apuração, sem saída de casa.",
+        "not_proven": "Não pressupor que os depoimentos foram colhidos ou que a criança entendeu integralmente.",
+        "exit_or_intermediate": "OPEN_HOME",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0285",
+      "scene": "M1.03",
+      "start_line": 285,
+      "end_line": 285,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Jogador declara telefonema de atraso, café e caminhada silenciosa com o filho; bilhete doméstico sem teor literal.",
+        "not_proven": "Silêncio não certifica intenção disciplinar percebida por Mikahel; atraso não é aprovação da empresa.",
+        "exit_or_intermediate": "SCHOOL_JOURNEY",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0286",
+      "scene": "M1.03",
+      "start_line": 286,
+      "end_line": 286,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Chegada ao portão e instruções de Orlova, que espera decisão antes de reunião.",
+        "not_proven": "Orlova não testemunhou início da briga e não apresenta investigação concluída.",
+        "exit_or_intermediate": "GATE_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0287",
+      "scene": "M1.03",
+      "start_line": 287,
+      "end_line": 287,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "POSTERIOR_CORRECTION_WITH_PRECEDENCE",
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER"
+        ],
+        "finding": "Retificação expressa de sobrenome para Krauser e pedido de ouvir três alunos; pergunta pelo pai de Yuri.",
+        "not_proven": "Grafia anterior preservada como histórica; pedido não equivale a oitiva realizada.",
+        "exit_or_intermediate": "IDENTITY_SUPERSESSION",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0288",
+      "scene": "M1.03",
+      "start_line": 288,
+      "end_line": 288,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Orlova reconhece limite de testemunho, lacuna do relatório e presença relatada de outro pai; oferece encaminhamento.",
+        "not_proven": "Relato escolar não confirma versão integral dos alunos nem sanção.",
+        "exit_or_intermediate": "GATE_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0289",
+      "scene": "M1.03",
+      "start_line": 289,
+      "end_line": 289,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "POSTERIOR_CORRECTION_WITH_PRECEDENCE",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Retificação de agência reconhece que 'Podemos seguir' autorizara entrada; encaminhamento à recepção e espera.",
+        "not_proven": "A nota de espera por nova escolha foi superada; nenhuma entrevista ou sanção nesse ponto.",
+        "exit_or_intermediate": "SCHOOL_RECEPTION",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0290",
+      "scene": "M1.03",
+      "start_line": 290,
+      "end_line": 295,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Transcrição de fala do PJ exige escuta e responsabilização institucional; diretora verifica relatório, Orlova confirma incidente anterior sem registro, pai de Yuri apresenta contestação.",
+        "not_proven": "Confiar no filho e acusações de omissão são alegações do PJ; dano e motivações de Yuri são depoimentos, não verdade independente.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0296",
+      "scene": "M1.03",
+      "start_line": 296,
+      "end_line": 299,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Nova fala literal do jogador distingue agressão por raiva de defesa possível, exigindo apuração.",
+        "not_proven": "Hipóteses sobre Yuri e omissão institucional não são fatos diretamente testemunhados pelo PJ.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0300",
+      "scene": "M1.03",
+      "start_line": 300,
+      "end_line": 300,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Pai transmite versão de Yuri sobre braço erguido; diretora mantém apuração, Orlova anuncia posição de Dima.",
+        "not_proven": "Versão transmitida e intenção de Yuri não verificadas; nenhum veredicto.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0301",
+      "scene": "M1.03",
+      "start_line": 301,
+      "end_line": 301,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ percebe indumentária e conjectura diferença social, afirma compromisso de apoiar o filho.",
+        "not_proven": "Aparência não prova renda nem intenção oculta do pai de Yuri.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0302",
+      "scene": "M1.03",
+      "start_line": 302,
+      "end_line": 302,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Pai de Yuri fala de responsabilidade; diretora reporta depoimento reservado de Dima sobre gorro e empurrão.",
+        "not_proven": "Depoimento indireto não estabelece intenção de soco no instante disputado; posição social permanece desconhecida.",
+        "exit_or_intermediate": "HEARINGS_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0303",
+      "scene": "M1.03",
+      "start_line": 303,
+      "end_line": 303,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Anuência do PJ à oitiva; Yuri admite provocações anteriores, contesta intenção de soco e relata incerteza sobre empurrão.",
+        "not_proven": "Confissão de atos relatados é fala do NPC, não exame forense; decisão disciplinar ainda aberta.",
+        "exit_or_intermediate": "HEARING_YURI",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0304",
+      "scene": "M1.03",
+      "start_line": 304,
+      "end_line": 304,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Aceno do PJ permite relato; Mikahel admite golpe primeiro, dúvida sobre ataque iminente e satisfação momentânea; Yuri discorda.",
+        "not_proven": "Não converter narrativas conflitantes em reconstrução objetiva e não atribuir fala adicional ao pai.",
+        "exit_or_intermediate": "HEARING_MIKAHEL",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0305",
+      "scene": "M1.03",
+      "start_line": 305,
+      "end_line": 307,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Fala literal do jogador assume responsabilidade pelos ensinamentos, defende força condicional contra injustiça e distingue agressão gratuita.",
+        "not_proven": "Juízo moral do PJ não é regra universal nem sanção da direção; não inferir reação dos NPCs antes da batida seguinte.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0308",
+      "scene": "M1.03",
+      "start_line": 308,
+      "end_line": 308,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Diretora e pai de Yuri reagem autonomamente; Mikahel expõe dúvida sobre ter tentado alternativas.",
+        "not_proven": "Compromisso de reavaliar não prova nova política escolar; sanções indefinidas.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0309",
+      "scene": "M1.03",
+      "start_line": 309,
+      "end_line": 309,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Jogador aceita aperto de mão; pai de Yuri reage respeitosamente e inquérito continua.",
+        "not_proven": "Gesto não prova reconciliação, perdão ou aprovação de agressão.",
+        "exit_or_intermediate": "EXIT_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0310",
+      "scene": "M1.03",
+      "start_line": 310,
+      "end_line": 312,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Despedida literal do PJ ensina efeitos indiretos e olhar firme; informa retorno ao trabalho.",
+        "not_proven": "Possível falta de calor é exemplo hipotético; 'time' é grafia literal com leitura contextual de Dima.",
+        "exit_or_intermediate": "PLAYER_GOES_TO_WORK_INTENT",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0313",
+      "scene": "M1.03",
+      "start_line": 313,
+      "end_line": 313,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Mikahel responde, campainha chama e criança segue à aula; encerramento da cena escolar registrado.",
+        "not_proven": "Não há apuração escolar final, reparação entre colegas nem efeito térmico provado.",
+        "exit_or_intermediate": "SCHOOL_SCENE_RESOLVED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0314",
+      "scene": "M1.03",
+      "start_line": 314,
+      "end_line": 318,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "ARCHIVED_MECHANICAL_OR_RULE",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Escolha posterior de Determinação e Autocontrole é anotada; diário registra débito total de 10 XP e fechamento M1.03.",
+        "not_proven": "Janela mecânica editorial não é execução COMMITTED; traços não alocados não são valores finais zero.",
+        "exit_or_intermediate": "M103_ARCHIVE_CLOSED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0319",
+      "scene": "M1.04",
+      "start_line": 319,
+      "end_line": 320,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Pavel apresenta laudo favorável pré-preenchido e pede assinatura; há relato de perda de pressão e isolamento provisório.",
+        "not_proven": "Exigência administrativa é alegação de Pavel; ainda não existe assinatura nem fraude consumada.",
+        "exit_or_intermediate": "PRESENTED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0321",
+      "scene": "M1.04",
+      "start_line": 321,
+      "end_line": 321,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER"
+        ],
+        "finding": "Jogador condiciona assinatura à inspeção presencial, disposto a trabalhar mais.",
+        "not_proven": "Promessa não é inspeção concluída nem aprovação de laudo.",
+        "exit_or_intermediate": "INSPECTION_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0322",
+      "scene": "M1.04",
+      "start_line": 322,
+      "end_line": 323,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "NARRATOR_ADJUDICATION_REPORTED"
+        ],
+        "finding": "Pavel permite vistoria; Liev apresenta isolamento emergencial; manômetro e umidade são percepção cênica.",
+        "not_proven": "Vazamento sob carga e segurança final ainda dependem de teste.",
+        "exit_or_intermediate": "RAMAL_ACTIVE",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0324",
+      "scene": "M1.04",
+      "start_line": 324,
+      "end_line": 324,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "ARCHIVED_MECHANICAL_OR_RULE"
+        ],
+        "finding": "Pedido do PJ por teste precede observação narrada de queda de pressão e gotejamento; Pavel mantém laudo sem assinatura e ordena reparo.",
+        "not_proven": "Vazamento na prova de carga é efeito do arquivo, não ensaio instrumental independente; reparo definitivo e famílias afetadas não provados; sugestão de compras não é compra.",
+        "exit_or_intermediate": "NARRATIVE_RESOLVED_XP_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0325",
+      "scene": "M1.04",
+      "start_line": 325,
+      "end_line": 329,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "POSTERIOR_CORRECTION_WITH_PRECEDENCE",
+          "ARCHIVED_MECHANICAL_OR_RULE",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Jogador aprova Inteligência/Ofícios e corrige a regra de crédito para acumulação; histórico de débito 8 XP e M1.04 CLOSED.",
+        "not_proven": "Regra anterior de não acumulação fica superada localmente; não altera cânone global ou ledger técnico.",
+        "exit_or_intermediate": "M104_ARCHIVE_CLOSED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0330",
+      "scene": "M1.05",
+      "start_line": 330,
+      "end_line": 331,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Contato oferece pagamento para retirada de denúncia e entrega endereço; decisão do PJ ainda não ocorreu.",
+        "not_proven": "Alegação de ausência de violência requerida, verdade da denúncia e pagamento não são prova.",
+        "exit_or_intermediate": "PRESENTED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0332",
+      "scene": "M1.05",
+      "start_line": 332,
+      "end_line": 332,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ investe contra morador ainda não identificado, tenta imobilizar e exige retirada de queixa.",
+        "not_proven": "Intenção de controle seguro não prova imobilização não letal nem identidade do alvo; sem teste V5.",
+        "exit_or_intermediate": "ASSAULT_DECLARED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0333",
+      "scene": "M1.05",
+      "start_line": 333,
+      "end_line": 333,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ tenta localizar carteira e reconhece precipitação; crença sobre compressão no pescoço é subjetiva.",
+        "not_proven": "Busca declarada não é resultado automático e crença não é fato médico; risco físico não apagado.",
+        "exit_or_intermediate": "SEARCH_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0334",
+      "scene": "M1.05",
+      "start_line": 334,
+      "end_line": 334,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Documento encontrado identifica Lev e diverge do bilhete sobre Nikolai; mulher testemunha e grita; vítima exibe sinais de risco.",
+        "not_proven": "Documento não prova relação entre os homens; sem atestado de morte, diagnóstico ou identidade pública do agressor.",
+        "exit_or_intermediate": "IDENTITY_MISMATCH",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0335",
+      "scene": "M1.05",
+      "start_line": 335,
+      "end_line": 335,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ declara tentativa de golpe contra mulher e continuidade da compressão, mais intenção de buscar endereço.",
+        "not_proven": "Anonimato, inconsciência e ausência de lesão não garantidos; sem resolução mecânica V5.",
+        "exit_or_intermediate": "ATTACK_INTENT",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0336",
+      "scene": "M1.05",
+      "start_line": 336,
+      "end_line": 336,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Arquivo narra golpe com queda da mulher, soltura de Lev inerte, entrada no apartamento e correspondência; vizinhança reage.",
+        "not_proven": "Estado clínico, sucesso da ameaça, ausência de reconhecimento e presença de Nikolai continuam desconhecidos.",
+        "exit_or_intermediate": "AFTER_ASSAULT",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0337",
+      "scene": "M1.05",
+      "start_line": 337,
+      "end_line": 337,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ permanece em beco e busca observar socorro e cartas; continuidade registrada em resumo.",
+        "not_proven": "Origem literal de cada movimento do PJ não independentemente autenticada; ocultação de testemunhas não garantida.",
+        "exit_or_intermediate": "ALLEY_OBSERVATION",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0338",
+      "scene": "M1.05",
+      "start_line": 338,
+      "end_line": 338,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Carta da ouvidoria confirma convocação documental; ambulância chega, mulher sai consciente e Lev em maca.",
+        "not_proven": "Não se conhece desfecho clínico de Lev nem reconhecimento do agressor; carta não é retirada da denúncia.",
+        "exit_or_intermediate": "ALLEY_ACTIVE",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0339",
+      "scene": "M1.05",
+      "start_line": 339,
+      "end_line": 339,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ decide vigília noturna e expressa medo de retaliação familiar, expectativa sobre hábitos da esposa.",
+        "not_proven": "Imaginar risco não prova ameaça; Mary habituada é percepção do PJ, não consentimento de Mary.",
+        "exit_or_intermediate": "NIGHT_WATCH",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0340",
+      "scene": "M1.05",
+      "start_line": 340,
+      "end_line": 340,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Moradora chama visitante de Nikolai e o informa do ataque; reação observada é surpresa e preocupação.",
+        "not_proven": "Identificação é por terceira pessoa, não documento; estado de Lev segue desconhecido.",
+        "exit_or_intermediate": "POSSIBLE_CONTACT",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0341",
+      "scene": "M1.05",
+      "start_line": 341,
+      "end_line": 341,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER"
+        ],
+        "finding": "Jogador declara perseguição à distância e chamamento pelo nome.",
+        "not_proven": "Não autoriza nova violência, invasão ou invisibilidade da vigilância.",
+        "exit_or_intermediate": "FOLLOW_INTENT",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0342",
+      "scene": "M1.05",
+      "start_line": 342,
+      "end_line": 342,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NARRATOR_ADJUDICATION_REPORTED",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Homem seguido interrompe caminhada e reage ao nome, pergunta por Lev.",
+        "not_proven": "Reação é compatível com identificação mas não a autentica; ausência de testemunhas não demonstrada.",
+        "exit_or_intermediate": "CONTACT_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0343",
+      "scene": "M1.05",
+      "start_line": 343,
+      "end_line": 343,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ exige silêncio; homem atribui a si apenas responsabilidade pela própria denúncia.",
+        "not_proven": "Declaração NPC não comprova retirada da denúncia ou responsabilidade de terceiros.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0344",
+      "scene": "M1.05",
+      "start_line": 344,
+      "end_line": 344,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY",
+          "ARCHIVED_MECHANICAL_OR_RULE"
+        ],
+        "finding": "PJ determina saída e silêncio, interlocutor se afasta; narrativamente encerra-se a interação e abre janela de crédito.",
+        "not_proven": "Nenhuma retirada formal, quitação, pagamento nem condição de Lev comprovados; crédito registrado não é gasto.",
+        "exit_or_intermediate": "NARRATIVE_RESOLVED_XP_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0345",
+      "scene": "M1.05",
+      "start_line": 345,
+      "end_line": 345,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "POSTERIOR_CORRECTION_WITH_PRECEDENCE",
+          "ARCHIVED_MECHANICAL_OR_RULE",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Jogador aprova Briga/Intimidação e classifica M1.05 como LONGA; arquivo documenta +30 crédito da provocação e 6 gastos.",
+        "not_proven": "Crédito local não aumenta orçamento XP_TOTAL, não gera teste retroativo nem ledger técnico COMMITTED.",
+        "exit_or_intermediate": "M105_ARCHIVE_CLOSED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0346",
+      "scene": "M1.06",
+      "start_line": 346,
+      "end_line": 347,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "EDITORIAL_ARCHIVAL_SUMMARY",
+          "POSTERIOR_CORRECTION_WITH_PRECEDENCE"
+        ],
+        "finding": "Documento relata carta escolar e orientação atribuída inicialmente ao filho; CORR-M1.06-001 prevalece: fala do PJ foi dirigida a Mary e resposta narrada de Mikahel NÃO ocorreu.",
+        "not_proven": "Não presumir transmissão de Mary a Mikahel; encerramento M1.06 com 0 XP gasto não revalida reação anulada.",
+        "exit_or_intermediate": "M106_ARCHIVE_CLOSED_CORRECTED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0348",
+      "scene": "M1.07",
+      "start_line": 348,
+      "end_line": 348,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Mary abre conversa sobre ajuda e ausência de Bart; conta doméstica apresentada e limites de conhecimento dela definidos.",
+        "not_proven": "Abertura não revela ciência de crimes ou destino de terceiros; não afirmar retransmissão do conselho.",
+        "exit_or_intermediate": "PRESENTED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0349",
+      "scene": "M1.07",
+      "start_line": 349,
+      "end_line": 349,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ sonda amor e confiança; Mary declara amor mas questiona reciprocidade e distância emocional.",
+        "not_proven": "Amor alegado não implica aprovação de violência, aceitação futura ou leitura de mente.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0350",
+      "scene": "M1.07",
+      "start_line": 350,
+      "end_line": 350,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ revela práticas clandestinas e incidente recente; Mary reage com choque e pergunta pelo estado de Lev.",
+        "not_proven": "Mary conhece relato do PJ, não fatos clínicos por verificação própria; divulgação a terceiros não demonstrada.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0351",
+      "scene": "M1.07",
+      "start_line": 351,
+      "end_line": 351,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ admite desconhecimento clínico, outras vítimas e temor de sair; Mary pergunta sobre risco familiar.",
+        "not_proven": "Temor e conhecimento alegado não identificam ameaça objetiva ou confirmação de futuro.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0352",
+      "scene": "M1.07",
+      "start_line": 352,
+      "end_line": 352,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ diz que não recebeu ameaças diretas e admite receios; Mary exige escolha diante de eventual novo serviço.",
+        "not_proven": "Ausência de ameaça comunicada não prova segurança futura; reputação é hipótese do PJ.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0353",
+      "scene": "M1.07",
+      "start_line": 353,
+      "end_line": 353,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ afirma incapacidade de recusar; Mary declara limite de permanência apesar do desejo de apoiar.",
+        "not_proven": "Não converter limitação de Mary em promessa incondicional ou ruptura consumada.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0354",
+      "scene": "M1.07",
+      "start_line": 354,
+      "end_line": 354,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "PJ declara que encontrará solução; Mary pede ajuda compartilhada.",
+        "not_proven": "Intenção não demonstra plano ou mudança real da atividade.",
+        "exit_or_intermediate": "DISCUSSION_OPEN",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0355",
+      "scene": "M1.07",
+      "start_line": 355,
+      "end_line": 355,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Jogador declara abraço e beijo, Mary corresponde; fechamento ainda não ocorreu neste registro.",
+        "not_proven": "Afeto não implica perdão automático, confiança total ou fim do conflito.",
+        "exit_or_intermediate": "CLOSURE_PENDING",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    },
+    {
+      "id": "D02-LEG-0356",
+      "scene": "M1.07",
+      "start_line": 356,
+      "end_line": 361,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "line_range_validated": true,
+        "source_kind": "MIGRATED_EDITORIAL_ARCHIVE_NOT_RAW_CHAT"
+      },
+      "review": {
+        "mode": "MANUAL_SEMANTIC_SCENE_BATCH_FULL_ARCHIVE",
+        "component_classes": [
+          "PLAYER_DECLARATION_OR_REPORTED_PLAYER",
+          "NPC_CLAIM_OR_NPC_ACTION",
+          "ARCHIVED_MECHANICAL_OR_RULE",
+          "EDITORIAL_ARCHIVAL_SUMMARY"
+        ],
+        "finding": "Fechamento por instrução do jogador; classificação de provocação longa com crédito; escolha histórica de Mary como Touchstone e Convicção associada posterior.",
+        "not_proven": "Diretriz moral do PC não obriga Mary; elegibilidade em 2010 desconhecida; sem gasto XP ou Humanidade automática, nem COMMITTED técnico.",
+        "exit_or_intermediate": "M107_ARCHIVE_CLOSED",
+        "archive_classification": "COMPLETE_WITH_LIMITS",
+        "original_author": "AUTHOR_UNKNOWN",
+        "original_chat_authenticated": false,
+        "independent_editorial_signoff": false
+      },
+      "technical_committed_minted": false,
+      "disposition": "ARCHIVE_SEMANTIC_CLASSIFIED"
+    }
+  ],
+  "critical_precedence": [
+    {
+      "id": "M103-CORR-NAME",
+      "source_lines": [
+        287,
+        287
+      ],
+      "effect": "KRAUSER_CURRENT; retain Krause historical quotes"
+    },
+    {
+      "id": "M103-AGENCY",
+      "source_lines": [
+        289,
+        289
+      ],
+      "effect": "Earlier wait-for-authorization text superseded by existing 'Podemos seguir'"
+    },
+    {
+      "id": "M104-CREDIT",
+      "source_lines": [
+        323,
+        329
+      ],
+      "effect": "Nonaccumulation historical wording superseded by explicit player-approved local cumulative purchase credit; no global canon change"
+    },
+    {
+      "id": "M105-LONG",
+      "source_lines": [
+        344,
+        345
+      ],
+      "effect": "Retroactive player-authorized long-prompt credit classification replaces preliminary base rate in historical accounting; no new technical event"
+    },
+    {
+      "id": "M106-RECIPIENT",
+      "source_lines": [
+        346,
+        347
+      ],
+      "effect": "Player spoke to Mary, not Mikahel; Mikahel reaction earlier narrated is invalidated"
+    },
+    {
+      "id": "M107-TOUCHSTONE",
+      "source_lines": [
+        357,
+        361
+      ],
+      "effect": "Historical selection after closure; no 2010 continuity assumed"
+    }
+  ],
+  "layer_distinction": {
+    "A": "PASS for five complete source-archive scenes only",
+    "B": "FAIL: zero original transcripts authenticated",
+    "C": "NOT_PERFORMED distinct editor",
+    "D": "FAIL D02 phase"
+  },
+  "original_chat_authenticated_count": 0,
+  "technical_committed_minted": 0
+}

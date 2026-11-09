@@ -1,0 +1,57 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V007",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 7,
+  "spoiler_class": "PLAYER_SAFE",
+  "design_parent_sha": "0b9b218d4400a7126dc8fb1d6911f7cf5d23499d",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "FAIL",
+  "source_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "checkpoint": "CHR001-M301-C05-22-20261109-001",
+    "next_role": "DRAMATURGO",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED"
+  },
+  "next_phase": "D02",
+  "next_version": "V008",
+  "d03_unlocked": false,
+  "player_safe": true,
+  "progress": {
+    "new_archival_scenes": 5,
+    "archival_scenes_total": 6,
+    "archival_markers_new": 53,
+    "archival_markers_total": 67,
+    "archival_markers_remaining": 594,
+    "original_chat_authenticated": 0,
+    "m101_library_sources": 2
+  },
+  "deliverables": [
+    "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D02_V007.json"
+  ],
+  "next_actions": [
+    "Verify HEADs/cycle and six V007 documents by blob sha; respect D01/V001–V006",
+    "Audit M1.08 fully (legacy source starts L362; first archival marker D02-LEG-0362), continue M1.09 fully without partial PASS",
+    "Reconcile M1.01 Library scene 002-003 records against independent original conversation if available",
+    "Audit M2.01–M2.03 by complete spans, correct version precedence and distinguish original RNG evidence",
+    "Keep D02-CAUSE-002 SEQUENCE_ONLY; D01-ADM-001 OPEN",
+    "Request genuinely independent editorial reviewer; no surrogate self approval",
+    "Publish only versioned V008 documents to design branch; prompt to player in chat only"
+  ],
+  "independent_review": "NOT_PERFORMED",
+  "original_source_authentication": "FAIL",
+  "master_writes": false,
+  "canon_writes": false,
+  "prompt_in_git": false
+}
