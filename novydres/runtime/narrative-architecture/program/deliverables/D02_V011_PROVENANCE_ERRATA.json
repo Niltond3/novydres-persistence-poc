@@ -1,0 +1,73 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_V011_PROVENANCE_ERRATA",
+  "phase": "D02",
+  "version": 11,
+  "spoiler_class": "PLAYER_SAFE",
+  "status": "DESIGN_LAYER_CORRECTION_SUPERSEDES_CONFLICTING_DERIVED_METADATA_ONLY",
+  "target_sources": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVENT_HISTORIOGRAPHY_V001.json",
+      "sha": "a1e5f007c8a9fad8581b1cd494f5ae1b94a40012"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_EDGE_REVIEW_V009.json",
+      "sha": "f277a10e8879b183bbb92f20a0da426c894f3d10"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "D02-V011-ERR-001",
+      "scope": "D02_EVENT_HISTORIOGRAPHY_V001.records[*].evidence[0]",
+      "affected_count": 661,
+      "invalid_fields": {
+        "authority": "PRIMARY_RECORDED_TEXT",
+        "technical_ledger_committed_not_inferred": true
+      },
+      "replacement_interpretation": {
+        "authority": "MIGRATED_OR_RECONCILED_DERIVED_ARCHIVE_TEXT",
+        "technical_ledger_committed_not_inferred": false
+      },
+      "reason": "Every one of the same 661 records also has not_technical_committed=true, and the active ledger's events/rolls were not demonstrated COMMITTED. A Git blob hash authenticates text bytes, not role-separated original messages or technical ledger commits."
+    },
+    {
+      "id": "D02-V011-ERR-002",
+      "scope": "D02_EVENT_HISTORIOGRAPHY_V001.locator_crosswalk[*].source_ref",
+      "affected_count": 27,
+      "invalid_fields": {
+        "authority": "PRIMARY_RECORDED_TEXT",
+        "technical_ledger_committed_not_inferred": true
+      },
+      "replacement_interpretation": {
+        "authority": "DERIVED_ARCHIVE_LOCATOR",
+        "technical_ledger_committed_not_inferred": false
+      },
+      "reason": "Index crosswalk only locates archived text; no separate technical ledger COMMITTED receipt."
+    },
+    {
+      "id": "D02-V011-ERR-003",
+      "scope": "D02_EVENT_HISTORIOGRAPHY_V001.records[*].summary_excerpt original evidence spans",
+      "affected_count": 102,
+      "distribution": {
+        "M2.03": 88,
+        "M2.04_and_M3.01": 14
+      },
+      "correction": "Old per-record evidence span must not be quoted as supporting the entire excerpt when substring is not within the cited line interval. Use V009 normalized scene-closure intervals and verify exact source lines; if not covered, treat specific wording as UNCERTAIN.",
+      "verification": "102/661 V001 excerpts not verbatim contained in old declared intervals; V009 A–G have 2111/2111 exact source-line comparisons."
+    },
+    {
+      "id": "D02-V011-ERR-004",
+      "scope": "D02_CAUSAL_EDGE_REVIEW_V009.edges[D02-CAUSE-001].archival_type",
+      "affected_count": 1,
+      "invalid_value": "CAUSAL_CONFIRMED_AS_ORIGINAL",
+      "effective_value": "LOCAL_DERIVED_SCENE_CLOSURE_OR_SEQUENCE_ONLY",
+      "original_two_sided_verified": false,
+      "reason": "Original bilateral evidence absent; local archival narrative supports only attributed refusal, observed consequence and scene closure, not independently authenticated global cause. CAUSE-002/003/004 remain SEQUENCE_ONLY."
+    }
+  ],
+  "precedence_rule": "For all subsequent D02/D03 proposed artifacts, these explicit V011 interpretation overrides govern the cited earlier derived metadata. Original V001/V009 files remain immutable. If a downstream consumer cannot apply overlays it MUST reject the legacy source as an authenticated technical/original record, not silently trust its booleans.",
+  "canonical_or_operational_mutations": 0,
+  "original_dialogue_recreated": false,
+  "rng_regenerated": false,
+  "retcon": false,
+  "player_approval_implied": false
+}

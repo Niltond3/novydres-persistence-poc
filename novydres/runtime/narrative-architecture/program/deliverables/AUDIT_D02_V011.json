@@ -1,0 +1,112 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_AUDIT_V011",
+  "phase": "D02",
+  "version": 11,
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "design_parent_sha": "d6e2b776c3fadc69ec023ce395ff37b6bae57834",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "reviewer_id": "GPT6_D02_V011_SEPARATE_REVIEW_CONTEXT_20261109",
+  "reviewer_type": "AGENT",
+  "distinct_context_from_d02_documentary_executor": true,
+  "reviewer_signature": "GPT-6 / V011 independent editorial declaration / 2026-11-09 / not a cryptographic signature",
+  "decision": "PASS_WITH_UNKNOWN",
+  "gate": "PASS_WITH_UNKNOWN",
+  "d03_design_unlocked": true,
+  "original_authentication_granted": false,
+  "evidence": {
+    "queue_count": 661,
+    "queue_distinct": 661,
+    "scene_units": 33,
+    "all_author_unknown": true,
+    "all_original_chat_authenticated": false,
+    "all_original_rng_authenticated": false,
+    "all_source_blob_refs_match": true,
+    "v009_lines_compared": 2111,
+    "v009_text_mismatches": 0,
+    "v009_duplicate_lines": 0,
+    "v001_invalid_ledger_metadata": 688,
+    "v001_excerpt_interval_mismatches": 102,
+    "causal_overclaims_corrected": 1,
+    "m101_original_authenticated": false,
+    "rng_original_authenticated": 0
+  },
+  "six_gaps": [
+    {
+      "id": "D02-GAP-001",
+      "status": "PASS_WITH_UNKNOWN",
+      "scope": "M1",
+      "archival": "M1.02–M1.09 indexed archival 165; M1.01 scenes 002–003 only editorial pending snapshots",
+      "unknown": "UNINDEXED_M101_ORIGINAL_CHAT",
+      "restriction": "No proposed NPC continuation or unverified utterance becomes fact; incomplete original sequence explicitly bounded."
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "PASS_WITH_UNKNOWN",
+      "scope": "M2.01–M2.03",
+      "archival": "140 indexed derived markers; v007 invalid prefix excluded; v017 current reconciled source",
+      "unknown": "ORIGINAL_ROLE_TIMESTAMP_AND_TOOL_RECEIPTS",
+      "restriction": "Archive narrative/variant chain not original authenticated conversation."
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "PASS_WITH_UNKNOWN",
+      "scope": "M2.04 C01–C17 and M3.01 C01–C05",
+      "archival": "356 indexed markers, V009 scene text exact-verified",
+      "unknown": "ORIGINAL_CHAT_COMPLETENESS_AND_UNINDEXED_TURNS",
+      "restriction": "No unplayed C18 or C06, no offscreen event invention."
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "PASS_WITH_UNKNOWN",
+      "scope": "Original creative authorship",
+      "archival": "661/661 original_author AUTHOR_UNKNOWN",
+      "unknown": "ALL_UNATTESTED_CREATIVE_AUTHORSHIP",
+      "restriction": "Player action reported in diary does not prove original author or player message provenance."
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "PASS_WITH_UNKNOWN_AFTER_ERRATA",
+      "scope": "Historical causal edges",
+      "archival": "D02-CAUSE-001 local derived closure only; D02-CAUSE-002/003/004 sequence only",
+      "unknown": "ORIGINAL_BILATERAL_CAUSALITY",
+      "restriction": "No global CAUSAL_CONFIRMED without two-sided direct original evidence."
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "PASS_WITH_UNKNOWN",
+      "scope": "RNG/tool provenance",
+      "archival": "48 G28 test records, 49 reported face arrays, 0 range and pool-size errors in prior structural audit",
+      "unknown": "ORIGINAL_TOOL_RUNTIME_LOGS_UNVERIFIABLE",
+      "restriction": "Preserve played accepted outcomes and G25 take half without claiming provider authentication or rerolling."
+    }
+  ],
+  "tests": {
+    "master_head_revalidated": "PASS",
+    "design_parent_revalidated": "PASS",
+    "canonical_mutation": "NONE",
+    "original_chat_completeness": "UNKNOWN_NOT_IMPLICIT_PASS",
+    "authorship": "AUTHOR_UNKNOWN",
+    "source_text_verification": "PASS_FOR_RECONCILED_ARCHIVE_SCOPES",
+    "M101": "BOUNDED_UNKNOWN",
+    "M203_version_chain": "DERIVED_PREFIX_VALID_INVALID_EXCLUDED",
+    "source_v001_conflicts": "RESOLVED_BY_VERSIONED_V011_ERRATA",
+    "causal_origins": "SEQUENCE_ONLY_OR_LOCAL_DERIVED",
+    "G28_rng": "STRUCTURAL_PASS_SOURCE_UNVERIFIABLE",
+    "independent_editorial_review": "PASS_WITH_METHOD_DISPLOSURE",
+    "GM_HIDDEN_exposed": false,
+    "C06_started": false,
+    "C18_started": false,
+    "master_mutated": false
+  },
+  "dependencies": {
+    "errata": "D02_V011_PROVENANCE_ERRATA.json",
+    "samples": "D02_V011_SOURCE_SAMPLE.json",
+    "opinion": "D02_V011_INDEPENDENT_REVIEW.md"
+  },
+  "open_administrative": [
+    "D01-ADM-001"
+  ],
+  "downstream_boundaries": "D03 may model NPC states and knowledge as PROPOSED derived from proven archived text and UNKNOWN; no canon/tech ledger promotion, no new scene, no inferred NPC telepathy, no unverified author/causality/RNG promotion."
+}

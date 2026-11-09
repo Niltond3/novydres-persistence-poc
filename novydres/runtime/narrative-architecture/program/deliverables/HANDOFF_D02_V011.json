@@ -1,0 +1,53 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_HANDOFF_V011",
+  "phase": "D02",
+  "version": 11,
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "design_parent_sha": "d6e2b776c3fadc69ec023ce395ff37b6bae57834",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "COMPLETE_EPISTEMIC_WITH_BOUNDED_UNKNOWN",
+  "gate": "PASS_WITH_UNKNOWN",
+  "next_phase": "D03",
+  "d03_design_unlocked": true,
+  "readback_requirement": "Commit SHA and file blob SHA of all V011 outputs must be verified after atomic branch update; git branch HEAD is authoritative, this file cannot embed its own commit hash.",
+  "reviewer_id": "GPT6_D02_V011_SEPARATE_REVIEW_CONTEXT_20261109",
+  "reviewer_signature_type": "noncryptographic_separate_agent_declaration",
+  "corrections_effective_from_version": "V011",
+  "required_files": [
+    "D02_V011_INDEPENDENT_REVIEW.md",
+    "D02_V011_SOURCE_SAMPLE.json",
+    "D02_V011_PROVENANCE_ERRATA.json",
+    "AUDIT_D02_V011.json",
+    "HANDOFF_D02_V011.json"
+  ],
+  "known_unknowns": [
+    "M1.01 original scenes 002–003",
+    "Unindexed original turns M1–M3",
+    "Original author role, message ID/time provenance",
+    "Unverified original RNG execution receipts",
+    "Unproven causal edges and NPC motives"
+  ],
+  "no_master_or_canon_mutation": true,
+  "no_GM_HIDDEN_publication": true,
+  "no_fv_xp_mutation": true,
+  "no_C06_start": true,
+  "no_2010_or_embrace": true,
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "next_role": "DRAMATURGO",
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "d03_mandate": "D03 — Agents/NPCs, checkpoint states, directed relationships and knowledge graphs with source-level epistemic constraints; D03 artifacts remain design proposals, with no narration or spoiler disclosure.",
+  "open_admin": [
+    "D01-ADM-001"
+  ],
+  "handoff_prompt_location": "CHAT_ONLY"
+}
