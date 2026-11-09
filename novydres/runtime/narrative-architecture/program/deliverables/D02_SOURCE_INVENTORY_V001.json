@@ -1,0 +1,3380 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_SOURCE_INVENTORY_V001",
+  "phase": "D02",
+  "status": "PROPOSED_PARTIAL",
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_head_before_publication": "f0bcae1bd903af0ddd75de8c3d05e8558aa2e69b",
+  "cycle": {
+    "id": "CHR001-CYCLE-0033",
+    "sequence": 33,
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "status": "READY_FOR_DRAMATURGO"
+  },
+  "method": {
+    "git_tree_complete": true,
+    "source_texts_recovered": [
+      {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "js_utf16_chars": 406151,
+        "lines": 1026
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+        "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+        "js_utf16_chars": 156500,
+        "lines": 570
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "js_utf16_chars": 105933,
+        "lines": 940
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "js_utf16_chars": 38969,
+        "lines": 292
+      }
+    ],
+    "historical_original_shard_slice_checks": {
+      "legacy": 23,
+      "episode_m203_v008": 7,
+      "failed": 0
+    },
+    "m1_derived_anchors_checked": 27,
+    "m1_derived_anchors_found": 27,
+    "preparation_plan_does_not_prove_played_event": true
+  },
+  "files": [
+    {
+      "path": "novydres/.AGENT.md",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/MANIFEST_V46.json",
+      "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/CHARACTER_AUDIT_PENDING.md",
+      "blob_sha": "9ecea98407fb3cb9c87a6df5d8d54c54c9b6f664",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
+      "blob_sha": "e68dca15a5e66e5305f187f3056898a86b2d5e44",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v002.json",
+      "blob_sha": "b9a6881559c6351b1cf5eaaf5e6a03a5b307280d",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v003.json",
+      "blob_sha": "913fe649ae1597664206916edbcc21493064d516",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v004.json",
+      "blob_sha": "a452073fe6ea7945241302ac28130f4ee12b7097",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v005.json",
+      "blob_sha": "e803f35ac40067565e6587b11eb45e293d14046a",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v006.json",
+      "blob_sha": "b3a080bfe33aba09e608722cae3560aa01e77793",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v007.json",
+      "blob_sha": "ec02d3878b21ec1f37473ecbff6ae4a606323686",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v008.json",
+      "blob_sha": "012d19c4fe77b5bdf9a1ae319db644a6dbce04d1",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v009.json",
+      "blob_sha": "6b14088e025405531fc8100fc1a7c3475adf17ee",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v010.json",
+      "blob_sha": "79e00d9e52a9fce036f6b0fca47855d889040ddd",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v011.json",
+      "blob_sha": "321675512b007ade6283a5f0acff79c3a50d36ed",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v012.json",
+      "blob_sha": "f19b1ce92a723415af905dfa62cd0798b8d3c844",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v013.json",
+      "blob_sha": "a226f2b6291a18ca90794aadac798b689ad33c24",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v014.json",
+      "blob_sha": "253277905b97ae3d5b9089ed1ce8d31a11940704",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v015.json",
+      "blob_sha": "48269bebe82a66555f506ea213e0ccc2a6f84de5",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v016.json",
+      "blob_sha": "8de03eda194d0b47a80f19ab8eeadab973778120",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v017.json",
+      "blob_sha": "157efa2d8298e4cb9fc5d15d4f9c54be57e72088",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v018.json",
+      "blob_sha": "8b6bda5eeaa49002dd243e73c2079f248cacb5ab",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v019.json",
+      "blob_sha": "5f75cc9fcef7138d9683d982cf5f7950ccaec5ef",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v020.json",
+      "blob_sha": "30732e8a01205fc85db19bc708793b4559140f3c",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v021.json",
+      "blob_sha": "43f06683f9ca45fd5f438dfdf23f7ba17fb4700d",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v022.json",
+      "blob_sha": "587ec2c8450c0c55d5eb14dce844aac4db8bcd6e",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v023.json",
+      "blob_sha": "7397959065251175e5e88898d4f90cf53e839fb8",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v024.json",
+      "blob_sha": "169a22984c5b62dd6afd77088c306b6acfda30dd",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v025.json",
+      "blob_sha": "0925f484395243ccc5afb598e1d2b5c28bb810bc",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v026.json",
+      "blob_sha": "7a67f53eff026e35f667b29839d4bff9ab780037",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v027.json",
+      "blob_sha": "8e9b014ba5da10a9ed21d8f619fc059a24749ebd",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v028.json",
+      "blob_sha": "c9bbe20ffb5197062a76e4e87f15b4a12e8a4239",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v029.json",
+      "blob_sha": "cd7a2a85f5e63226242bd0eb0afe151d1db0fcdd",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v030.json",
+      "blob_sha": "9d5564467443977510b9da0ef262e464bdfe44d8",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v031.json",
+      "blob_sha": "e77231038137c7ad5fe5fd8f2a430e877cba80fd",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v032.json",
+      "blob_sha": "a63082ca0594913db9380891e3a010482287aba2",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v033.json",
+      "blob_sha": "d7127ef1a23b820b42a6c71e1effd425253ff83d",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v034.json",
+      "blob_sha": "ca4274c29e017d00f000845cf214b4f3b5d3d14f",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v035.json",
+      "blob_sha": "c85c73723e1699f332cd5e730ddf7ee7a85c3e9a",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v036.json",
+      "blob_sha": "fbfdb51e40a49958bcb7ae18980e2a8887877cce",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json",
+      "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE.json",
+      "blob_sha": "1b91140a686b77eb23dcdd22357e3b8e4cefc53d",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v002.json",
+      "blob_sha": "ce8c3de0ff006d3e5569e286a636ff4f1bf08a58",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v003.json",
+      "blob_sha": "025a2120ee4fe04823bf73a30f599a2a119b1e8e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v004.json",
+      "blob_sha": "dc36345089d392ef90bf87f1001f426cd6025c7f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v005.json",
+      "blob_sha": "2e85e296cbc52a707b00802032ac633a32b11388",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v006.json",
+      "blob_sha": "4698fc8f16d9fa15a705fd207e4ac56bf69fe219",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v007.json",
+      "blob_sha": "72065044a1d6caa3dac04f5c20ef4b9c988c8175",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v008.json",
+      "blob_sha": "e87fec47050b4f974c56347f2d5feb2c97359404",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v009.json",
+      "blob_sha": "b506e945f43f2981f868bbe805a98eb6e94e9400",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v010.json",
+      "blob_sha": "389aeff81f8680348026aa68d9d9dbb755c394dd",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v011.json",
+      "blob_sha": "c5c8f07b31120bc6dc14f13a875c958d80cf425d",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v012.json",
+      "blob_sha": "87ab0ac25bb5df36dd11af56b876ff1826e74495",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v013.json",
+      "blob_sha": "879ecde7b1c6a11a8035f50b1de65d633b168366",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v014.json",
+      "blob_sha": "acdd221ef6f246e5688d0dfd6189634ef2a7b44a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v015.json",
+      "blob_sha": "347380e421d58343764d4f54c1a7d9bb2ef0d496",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v016.json",
+      "blob_sha": "ebddf3a678ca9db5024627006c8db901df97ca87",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v017.json",
+      "blob_sha": "1d63dd9d97c0d46d7bf5a04ea302858d9bfb2163",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v018.json",
+      "blob_sha": "a8d7c9f9797017a93f699e9cb8603f82e3cd7c75",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v019.json",
+      "blob_sha": "eb2a852230781573dc0201ede70ad9beb7e61fce",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v020.json",
+      "blob_sha": "13dfd718a1f1a6acc25a493f03f3ed18bef4efef",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v021.json",
+      "blob_sha": "08245c20aa60ec5d5f22913f3cdeaa0799110203",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v022.json",
+      "blob_sha": "30ddf3c3bdf163bd7fcc5afbcb046e9454963f1a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v023.json",
+      "blob_sha": "3393309b189afe1dc662a97ad99a278d495b3e49",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v024.json",
+      "blob_sha": "d59fb826d3ff73e593824e23da7b7f50ac6d6747",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v025.json",
+      "blob_sha": "36d16d9d19e8deebbd7e7e993b361efd47ce8900",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v026.json",
+      "blob_sha": "cdd9594c862a4f72d5e9157f9476d94d8f96427c",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v027.json",
+      "blob_sha": "1d5e33da867681e2d86914f8aa6661c8404163c0",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v028.json",
+      "blob_sha": "86c45e07c0b8637df6363fb4435ef7e7f4502153",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v029.json",
+      "blob_sha": "ce172a20f4dc3e0df0e84a5e3146ea8bfe789169",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v030.json",
+      "blob_sha": "86897bef9d3559193153baf8f88a3d7fef139f90",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v031.json",
+      "blob_sha": "5fe68f821cc72082ec41950b3d76e6f2ec7f7c3f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v032.json",
+      "blob_sha": "6091d43bfff1ddf9c1ab7301ee4f414f96a61322",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v033.json",
+      "blob_sha": "2bb6cee1375020fb5665acae43d7ac988be2315b",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v034.json",
+      "blob_sha": "45fa26e37a5d8f76bd1a8e2ed4e4d1068b54d2bd",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v035.json",
+      "blob_sha": "0c3568b02395ad193309e835be351d5a91b5dddd",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v036.json",
+      "blob_sha": "11e4e5ff67d1713e6688eb49544c8328c45b9794",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+      "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/RECOVERY.md",
+      "blob_sha": "dbb5c0294ba00e82b3b8fb39e722b123039aca10",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/ATLAS_BACKFILL_QUEUE_V002.json",
+      "blob_sha": "ea2dd335c2c9b4b02f37e783cf670c45a7d18401",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/ATLAS_BACKFILL_QUEUE_V003.json",
+      "blob_sha": "7180dfb53259c9af48cd806626b79f08155adfb5",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/ATLAS_BACKFILL_QUEUE_V1.json",
+      "blob_sha": "720342c74b96a65e70497ded5f504ba756b09d69",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json",
+      "blob_sha": "e2e6acb4c9c7604e903dcfd6fc10ad62726d7ec6",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_SCOPE_AND_XP100_PLAYER_AUTHORIZATION_V1.json",
+      "blob_sha": "1b6264fdcae172244e2ea13e2c68458f6259010c",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_PLAYER_PURCHASE_SELECTION_V1.json",
+      "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M3.01_C03_CYCLE_SCHEMA_CORRECTION_V1.json",
+      "blob_sha": "0efb76048c50c3a6be4da93f340cc98e9e808171",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M3_DRAMATURGO_CLEAN_CHAT_HANDOFF_V1.md",
+      "blob_sha": "9e2d116521aa3d00ec52cccd217582837462a255",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/NEXT_DRAMATURGO_ATLAS_MANDATE_V1.md",
+      "blob_sha": "7243537f29261b80bdaa61396af413f489902485",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M2.04_V1.json",
+      "blob_sha": "7b5393c3f09dea6c9a522bf1835744bf3c1dc25e",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M3.01_V1.json",
+      "blob_sha": "635d1720a7680586d4947259cada17539eed67fd",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/audits/M2.04_C01_C09_ACT_CREDIT_SCREENING_V1.json",
+      "blob_sha": "c896f83272a5b9084edc8eba21f770e704776d9f",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/audits/M2_COMPLEMENTARY_XP_RECONCILIATION_V1.json",
+      "blob_sha": "3f976b299b31a97a2f08d53f047f648c9d12ee02",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/audits/M2_XP100_ALLOCATION_RECOMMENDATION_V1.json",
+      "blob_sha": "a7e9cbe2a703f3405a919a4d2ffd6b7355838f84",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+      "blob_sha": "c1f2c6acb67a8d0a11074ca7ebbcfffd142fcf89",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V2.json",
+      "blob_sha": "285e206f4ad956e1d6bdb6315366429aeb4d9bdf",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V1.json",
+      "blob_sha": "f8f7cc1a561f29ffdb1d9d42ee77686fa3f40e67",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V2.json",
+      "blob_sha": "960fee2478523ff9ad6d6610d69db00ced36c884",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/equipment/SARA_PLAYER_PROPOSAL_V1.json",
+      "blob_sha": "2c9f8dc83e2318e431ed7a120ee22529d80d8f38",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v001.source.txt",
+      "blob_sha": "a66837651647485d8f3d51c300a5db955c5ea153",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v002.source.txt",
+      "blob_sha": "c6f230f1394e6fae04cce783aedcd73faf0e4c8d",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v003.source.txt",
+      "blob_sha": "6c19ce27a68188b5f0bbc538937ce4e94d77fc23",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v004.source.txt",
+      "blob_sha": "18edd2544ae57121a2a439f70d033140256e6352",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v005.source.txt",
+      "blob_sha": "445e3e1c7a536af03b484c7d0944bfca7434bb3b",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v006.source.txt",
+      "blob_sha": "0019266c4e5854b92742dfd46b74cb51d08c84a4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/history/state_v007.source.txt",
+      "blob_sha": "8639f8ae79c21f8f19803215290de2f4c762ca1c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "role": "PRIMARY_EVENT_RECORD",
+      "verification": "CONTENT_READ_AND_TREE_SHA_MATCH",
+      "can_prove_played_event": "ONLY_WITH_LINE_LEVEL_PROVENANCE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+      "blob_sha": "72b66063691c6b9c6d4f3353357c23303fc6caad",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v009.source.txt",
+      "blob_sha": "c45da1eca093b6baac85da6dc766bae814ff1231",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v010.source.txt",
+      "blob_sha": "0c99114f1ade3f1d9dd2e4d4678916ab6eb380ad",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v011.source.txt",
+      "blob_sha": "ebfa035bbfd0031470e8ca03edaa63fe9d2ed266",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v012.source.txt",
+      "blob_sha": "63095f71e18c5aca53e01ceb9c2632f85d5a2c97",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v013.source.txt",
+      "blob_sha": "ab08a6708dab18d713b2bccb61a6847f0343141a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v014.source.txt",
+      "blob_sha": "97b3ed7698de64ccf5fd589a54e870e7941bcc79",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v015.source.txt",
+      "blob_sha": "b2f049c9afdb0a6231fc97880970a2f3b69b9011",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v016.source.txt",
+      "blob_sha": "3030446fbe2cdf8f2744b11ebaf41742560b2946",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v017.source.txt",
+      "blob_sha": "4c1eb2763161ccefcaeed805701b1b61170e1768",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v018.source.txt",
+      "blob_sha": "c6b39a733868777c14d02097a874f9a58fce1ff9",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v019.source.txt",
+      "blob_sha": "a27648c54c9c0484efd703478f991d4edab3746e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v020.source.txt",
+      "blob_sha": "8cbb704387d2c4090205cc6d40253aac2be414a3",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v021.source.txt",
+      "blob_sha": "7b573e6627b9b855703245efa9d3a8c9543ea094",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v022.source.txt",
+      "blob_sha": "4d89643a679663b1933d4462e9584fee2520448f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v023.source.txt",
+      "blob_sha": "0486465975937adf230fcb45f23dec78e8af753f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v024.source.txt",
+      "blob_sha": "b62c4d481dce80fed593f7f9897d835a3ea84b6d",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v025.source.txt",
+      "blob_sha": "7e03a0307844462a8428fa4a9167a51b1de2c879",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v026.source.txt",
+      "blob_sha": "7ef227bcab861f5f4f70a60eaa19a9916a9f6cf2",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v027.source.txt",
+      "blob_sha": "8a192764655ac0d97461c5dc6fd51245d242de0b",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v028.source.txt",
+      "blob_sha": "425240a30e50fd756b5ba7797cc750ac48b58c4b",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v029.source.txt",
+      "blob_sha": "67bb50763e5c120e7901bdfb785aba698250f763",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v030.source.txt",
+      "blob_sha": "66055eaaba1919aef25b72ed5a23b145a7b9be0d",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v031.source.txt",
+      "blob_sha": "21528e7ce11a99d3f7f22ca635e66a656df45ab8",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v032.source.txt",
+      "blob_sha": "7607d26f0218294df74ebf19462da72b56c12a22",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v033.source.txt",
+      "blob_sha": "4bfb575890416d58a26a98a53e1b181ca807bd53",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v034.source.txt",
+      "blob_sha": "05d8ada7194b94e3e208a7d48276cfdb0a5119c3",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v035.source.txt",
+      "blob_sha": "75e31330b4eb50169296b9d2f859d0c8bf74f56e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v036.source.txt",
+      "blob_sha": "8a982986cdceb0e223a1249930d9975175014ba7",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v037.source.txt",
+      "blob_sha": "6f91f0ad62e533dc64fac92f519990bb40c33a89",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v038.source.txt",
+      "blob_sha": "4d0e7e28bfff47161acb7f9810ca13a1474f1208",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v039.source.txt",
+      "blob_sha": "2b79894d3edbedcf95cf6c16ec2ff7c6b85ef1fe",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v040.source.txt",
+      "blob_sha": "05cd328f51ecd4a5a3019e481a3526d3d97243c7",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v041.source.txt",
+      "blob_sha": "36a6d80ada114bc523fa1df8490f9c4785f496ae",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v042.source.txt",
+      "blob_sha": "892688c82a56d9cd290325e49227db2fb24018c3",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+      "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+      "blob_sha": "6b55a14aa6d293fb2a8ae7d7def3f79050e55f83",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v010.source.txt",
+      "blob_sha": "c8e270009c97a7ccb6f67a4623dd195f4d61e0c8",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v011.source.txt",
+      "blob_sha": "665a4a279a55ffb6107d68fd53dd266fa0955f33",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v012.source.txt",
+      "blob_sha": "5d17a5cbfaa62b19fb9589e410f02882874fcb33",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v013.source.txt",
+      "blob_sha": "0efcf1467c6f5f4562a46bfcb57708bba51584d5",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v014.source.txt",
+      "blob_sha": "22199016e2886eb0a84a404e031abd9040ae5d09",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v015.source.txt",
+      "blob_sha": "4c9093b903e4cdf6a2e57b217cbd5c0fd37b71a3",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "blob_sha": "83b93c6a8662d207690358efc832ca600fb9b994",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+      "role": "PRIMARY_EVENT_RECORD",
+      "verification": "CONTENT_READ_AND_TREE_SHA_MATCH",
+      "can_prove_played_event": "ONLY_WITH_LINE_LEVEL_PROVENANCE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v001.source.txt",
+      "blob_sha": "07bcf1d83a55037b739fd55c9368fec49b7807df",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v002.source.txt",
+      "blob_sha": "31439630c00c48eb48c0e833e2477b01fe08a4c6",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v003.source.txt",
+      "blob_sha": "df891101e92f9d1909a2d6d66356a9d8d01a8af4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v004.source.txt",
+      "blob_sha": "8a4f780622b75a62729a7d67e5c4c60645ef3606",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v005.source.txt",
+      "blob_sha": "bb9a2b7277736da69082e618248efdb9b3963a00",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v006.source.txt",
+      "blob_sha": "2dd4c1689c4f45f38f0f20fd17226679f338fbe8",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+      "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v008.source.txt",
+      "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v009.source.txt",
+      "blob_sha": "41eaf9909d33b30a9e3256ab4ecea864d4fd958b",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+      "blob_sha": "88fb084df412897b659f65a436b8fcd957fcf369",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v011.source.txt",
+      "blob_sha": "5b05de0a01b49a6f16504f238febafe3429b7021",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+      "blob_sha": "dd032ed4ef95af9819038939118803a523a84740",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v013.source.txt",
+      "blob_sha": "c162d4c7e4df46486b02796bafd153f9e48c64ce",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+      "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+      "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "blob_sha": "64a92912d129c1964cb8727ec0ca54634853c788",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+      "role": "PRIMARY_EVENT_RECORD",
+      "verification": "CONTENT_READ_AND_TREE_SHA_MATCH",
+      "can_prove_played_event": "ONLY_WITH_LINE_LEVEL_PROVENANCE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v002.source.txt",
+      "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+      "blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+      "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "role": "PRIMARY_EVENT_RECORD",
+      "verification": "CONTENT_READ_AND_TREE_SHA_MATCH",
+      "can_prove_played_event": "ONLY_WITH_LINE_LEVEL_PROVENANCE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "blob_sha": "f1479f5673eb3921c57ed17b02d9880de6ba7152",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v001.source.txt",
+      "blob_sha": "1897afaca33946cabd0a99e6609b9825cbd36e76",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v002.source.txt",
+      "blob_sha": "be915950e35794bd15f9a8784a96b6397be376d0",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v003.source.txt",
+      "blob_sha": "3f27c018906c138b69592da039ac6bb92923550e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v004.source.txt",
+      "blob_sha": "d1b940076a3539cc4f5d7c36a128c1611b19a052",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v005.source.txt",
+      "blob_sha": "2f16f4d6732518ee72df9acb6916e62e1ff10c76",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v006.source.txt",
+      "blob_sha": "78f392314262c6f93e048de2356bddc43feb31ff",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt",
+      "blob_sha": "b35212d618a7aa195757d5d7bd28976c06d3c327",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_valid.source.txt",
+      "blob_sha": "337c22eb273e4b81d30a0ed5d4122a0222568713",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_SHARD_INDEX_V1.json",
+      "blob_sha": "34413811899a0c4081d4e59a82a984f4b61590b0",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_001.source.txt",
+      "blob_sha": "a84ffb9dfdabba4b1b23668359cd43dac683b22f",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_002.source.txt",
+      "blob_sha": "41f15ffcd26cdaaf66fb96a07a347988e3674f3b",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_003.source.txt",
+      "blob_sha": "61be85730eeffac3aed21236456133b65cf27b44",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_004.source.txt",
+      "blob_sha": "17f02f9e3c0b3a0f734b80c9bd8851d21a76aa8d",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_005.source.txt",
+      "blob_sha": "c83fc8f51d5b14ea63113b54fbe1ad753a67d1d7",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_006.source.txt",
+      "blob_sha": "01397d613d04f8e2d56412127eb5464af45dffe5",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_007.source.txt",
+      "blob_sha": "0219c761bd6fdb1136a695b22bd8cd77f614e753",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_7_OF_7",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M2.04_C08_ROLLS_V1.json",
+      "blob_sha": "354eb0b0bdb87af5c81eed20b730bad39e7202bd",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M2.04_C09_ROLLS_V1.json",
+      "blob_sha": "de90d3031d298ed5fdf9d1f2f7ab046cb44503fd",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M2.04_C16_ROLLS_V1.json",
+      "blob_sha": "4f195dc71c87b5faef7024e07fe0086d764f4cdf",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json",
+      "blob_sha": "ac0660060cf38b2ec75e7d2d026b5e526cb9f37c",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M3.01_C02_ROLLS_V1.json",
+      "blob_sha": "f236a74864531455bd74a518cfa919f64283e94e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M3.01_C03_ROLLS_V1.json",
+      "blob_sha": "520cbae504abbe8f9d1b36e0635e2555ce281702",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M3.01_C04_ROLLS_V1.json",
+      "blob_sha": "160ed383c9622afd45e5722d0e874bd00afb5c1f",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/events/M3.01_C05_ROLLS_V1.json",
+      "blob_sha": "f6300d5e0d745fdab24f7cb95a4addca9b73afde",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/HISTORY_SHARD_INDEX_V1.json",
+      "blob_sha": "bae45ad8c6916150d60c897aca6215dd179a380f",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/VERIFIED_SHARD_CATALOG_V1.json",
+      "blob_sha": "d5142216a18e984ff847a7729a5859e11d40f694",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_001.source.txt",
+      "blob_sha": "b4acdfcd19991530f70932eae4f5674acd055a1e",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_002.source.txt",
+      "blob_sha": "0ffabc2d89a0607935ccb4930290ebd4f9b4ddb0",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_003.source.txt",
+      "blob_sha": "73f6c5b05759fd86f827625d921fe792159e136f",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_004.source.txt",
+      "blob_sha": "cada22228a036b815c6f019f919236f6304c53fb",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_005.source.txt",
+      "blob_sha": "fce17955429035edcf29934d6730b30f4e174554",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_006.source.txt",
+      "blob_sha": "9c44ddb8e2b0681d31430b2586a6741eb01b9dd0",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_007.source.txt",
+      "blob_sha": "38b40e98ad6dbfee165ca253ec251797dc87d19c",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_008.source.txt",
+      "blob_sha": "e32f4a835a430a1c83c574e43ea43c7415e5e213",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_009.source.txt",
+      "blob_sha": "9b0282609dace7961c9d7ad3f088165db192a830",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_010.source.txt",
+      "blob_sha": "ad68a70df9f79c9cc2fae421062de4bc98eb34bf",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_011.source.txt",
+      "blob_sha": "558e665df521d9a9478015476e219fc59413ab27",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_012.source.txt",
+      "blob_sha": "7ddbb043ca4fc38a9d1f1cf8d8ba1b89843522b5",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_013.source.txt",
+      "blob_sha": "4e60d24a8e1c1f306c585c760110b9a840333018",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_014.source.txt",
+      "blob_sha": "c324a4f3e172cb8b3c7b145aaccf40f245518ac8",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_015.source.txt",
+      "blob_sha": "76461e50d3930c50f20e459cf239db703e8fb297",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_016.source.txt",
+      "blob_sha": "136fa07584ae891f3fa834439e3b955d2c8ec65c",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_017.source.txt",
+      "blob_sha": "1c3e3da3f8222179033ad051f1a0f7c6b392b8f4",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_018.source.txt",
+      "blob_sha": "db42eaf9d37757408b21b19b26af179b33ed1680",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_019.source.txt",
+      "blob_sha": "74a4f1a24b70d9339b306b074570f48f42cd192f",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_020.source.txt",
+      "blob_sha": "c28b5e754bed1f54242d7c6bd951433722ad2f6d",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_021.source.txt",
+      "blob_sha": "b35298967b5b978674106230418e02975427a6d6",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_022.source.txt",
+      "blob_sha": "7d1b93ed429bc0f08edf4450c26d56f14ea649e9",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/historical/legacy-diary/part_023.source.txt",
+      "blob_sha": "6fdf161537f27ec2ec29e7d1f44b2b1113c30d11",
+      "role": "VERBATIM_SHARD",
+      "verification": "SOURCE_SUBSTRING_READBACK_VERIFIED_23_OF_23",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+      "blob_sha": "c32c9d70a0c73fabc4fc73a45d62e43c84994a77",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V10.json",
+      "blob_sha": "46bb49a8d7d1b3f0e534ffe3fabb101d3586aa23",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V11.json",
+      "blob_sha": "195ace527d269c6422af7f05c108c1bb0e3cf0a1",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V12.json",
+      "blob_sha": "a51e20ad1b5b8df15f299ee8a6cce0b335c49ed7",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V13.json",
+      "blob_sha": "b8b00f71b20573d12c2b46a74bf58009ed9c6bc6",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V14.json",
+      "blob_sha": "a9530c302c07a9dd08710a967c6ab638fff57d6a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V15.json",
+      "blob_sha": "1a4eab00c08e1a6fd0148f1754aa029e035a7427",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "blob_sha": "5da9719103088a792847036973386926815bf292",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V17.json",
+      "blob_sha": "5b457fea3041e875c8f6cd1f6cec17dc433bc50b",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V18.json",
+      "blob_sha": "649bb37e09b6e20fce2ad7f7d894a12d33e22ed8",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V19.json",
+      "blob_sha": "259ce432941c5ac213b25aed0ea7867d27340443",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V2.json",
+      "blob_sha": "170eba262841d021c975ee69c02ffff6c4a2c203",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V20.json",
+      "blob_sha": "eaa941bb6f910151ba4f78d632758cfc5917d72a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V3.json",
+      "blob_sha": "2ead6d45c5e5cb354c9d7106fce93cc2fd724309",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V4.json",
+      "blob_sha": "bd6c4d6c88155a44957cd1cf62fa4cfa45f82599",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V5.json",
+      "blob_sha": "a4280244695c9e515d3e902cbe78803f2dc83dd3",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V6.json",
+      "blob_sha": "7cac2deb08ddd191768bbb961e60107ec035b353",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V7.json",
+      "blob_sha": "81a028496cb819374d388fdf68c6fe6f702b8d35",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V8.json",
+      "blob_sha": "29900d1b15cb68cee8f1c4ac49b3379a9995d6ae",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V9.json",
+      "blob_sha": "f287ad72be87148c9e3966d950a9e30107fbdbe7",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V1.json",
+      "blob_sha": "028fd2c85dd19ad079b464171faf7ae4afe20a06",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V10.json",
+      "blob_sha": "ad5b7c1291cfb514987b29fa4665b82274019345",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V11.json",
+      "blob_sha": "9d19207968ef632019debed2cd4d3e3f22abe4af",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V12.json",
+      "blob_sha": "ff5006ff333a62e06d3301adb21221ee176482ed",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V13.json",
+      "blob_sha": "60b468ea5fcb1dd1af00bfc95ec6f5ac0927b0aa",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V14.json",
+      "blob_sha": "41683c648423de27b0cb4032dd0cda999a698b8a",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V15.json",
+      "blob_sha": "4ac2900e712136039f9d82c0120c46cce5b1274d",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V16.json",
+      "blob_sha": "55c0aa3ddd70ce144d2899c39c80f16babf0431f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V17.json",
+      "blob_sha": "64ca70fa5a794609ddd9c0213e8559c3adabdc95",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+      "blob_sha": "740e584430db113a52c505acc02c9aab3ce91ece",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V19.json",
+      "blob_sha": "207885210cf82e1cf5523ead269a44771afbc56c",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V2.json",
+      "blob_sha": "4a65b4c22150dd3378a076b3748798d6fb5bd786",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V20.json",
+      "blob_sha": "37ed5f10ba3f36bc604dfff9152770a05f0468fb",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V21.json",
+      "blob_sha": "b5637ede9af35938e2d337061b0d63aa8e882ffe",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V22.json",
+      "blob_sha": "1c10370c352ce78f0c8360c39d5621d4b3b72054",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V3.json",
+      "blob_sha": "128cddd61162969547f4cf775950957b418e5d1e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V4.json",
+      "blob_sha": "c495087c448d1fdf4dd6345a184499b972a7c380",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V5.json",
+      "blob_sha": "f4e56669740147796241a3969e3d7f4221c1c70e",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V6.json",
+      "blob_sha": "a1ebb0667fb63278fc77ffd25711fc8b84e68042",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V7.json",
+      "blob_sha": "8af699d1c4fedb9fe403f39c50441280f0703199",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V8.json",
+      "blob_sha": "137b2a973cd79f8422c4729d09cf2766d352987f",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V9.json",
+      "blob_sha": "3fc987cbf6ce5f8bb11658404712a43a961b407b",
+      "role": "STATE_OR_EPISTEMIC_SNAPSHOT",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_DIAGRAM_VALIDATION_V002.json",
+      "blob_sha": "504b97a8d7db6906bd1700bc52bac67ac3d280d7",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+      "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/COVERAGE_REPORT_V001.json",
+      "blob_sha": "320501eab1f1f77cc0077fdc4c99d9713820195b",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/COVERAGE_REPORT_V002.json",
+      "blob_sha": "ab63ceadab183ff1b657bef8d5422afaf41ab552",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/RECONSTRUCTION_NOTES_V001.md",
+      "blob_sha": "98f9842e42b17c2ecc79567c911c4f635ccdf4a0",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/CRONOLOGIA_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "07b1658f540c29f0fc14caad53596b4d9e986a64",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/RELACOES_BART_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "440584b6f9fdd86a8bdcef5620fe3014387425a0",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/RELACOES_NPC_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "f3482666a3e70323660f041be26c6f3507d8df75",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/TRAMAS_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "11046bc17809afbc8503343fd5ad5a1f1a6c4eff",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/TRAMAS_PLAYER_SAFE_V002.mmd",
+      "blob_sha": "c780e6b1887e8a95ab200b0fa4b9785b29cf4f06",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-atlas/scenarios/SOLO_REPLAY_INDEX_V001.json",
+      "blob_sha": "7f5233bb8529c57e224ac9b48df45e2306e8daec",
+      "role": "DERIVED_LOCATOR_OR_ATLAS",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-tone/CI_LEGACY_FAILURE_AUDIT_V1.json",
+      "blob_sha": "bc2779c02324c2f74b46cf0a1a939fe5fe0fec4c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-tone/GOTHIC_PUNK_HORROR_GUARDRAILS_V1.md",
+      "blob_sha": "9c2b2cd975f531b4ad5e71fc1823a19dd66b3e9c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-tone/GUARDRAIL_ACTIVATION_AUDIT_V1.json",
+      "blob_sha": "c054d41244e5067d72a1c738b85b8bcec4261a99",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/ACTIVATION_C15_V2.json",
+      "blob_sha": "1a5703d9e0e98a5572e40876424816bd11105db5",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/ACTIVATION_V1.md",
+      "blob_sha": "8c8ecf0b0a355108b341a5e4941543ce539a0f01",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/ACTIVATION_V2.md",
+      "blob_sha": "e102aeb6c8c2cc42ae3a0225c0d330cc4918269b",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/BOOTSTRAP_FIX_AUDIT_V1.md",
+      "blob_sha": "d2a5bc557fbe1de7e906bd3d06a834a0ea1540c1",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/CONTRACT_V1.md",
+      "blob_sha": "69ba9199250946efc5780760ffdd810ddd949030",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/CONTRACT_V2.md",
+      "blob_sha": "08ec4a22e67f5799168a67bfc17e9a25a29213aa",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/EVALUATOR_V1.mjs",
+      "blob_sha": "3d2597695b5e37830dc4a5b5e2b55592f05dec23",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/EVALUATOR_V2.mjs",
+      "blob_sha": "8c626b5cc6ee326e619b0b6e747b9c2e1485ee1e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/README.md",
+      "blob_sha": "45db86f5a2a91e457c290668be042bb2838b76d3",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/SCHEMA_V1.json",
+      "blob_sha": "67f477c86bba871d43816bf37c0f60c321eb5d5b",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/STATE_V001.json",
+      "blob_sha": "709746d4e6ea44ec57e54a6e895ac9ec49e79fc1",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/STATE_V002.json",
+      "blob_sha": "0f9fb5b6be43f2afb08667e7f7dceefc24e1234d",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/STATE_V003.json",
+      "blob_sha": "714bdcbc89b76861248c53e7f7df0df196a5b980",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/STATE_V004.json",
+      "blob_sha": "d0d8873da5f961245e7e03eb080212d891856437",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/TESTS_V1.mjs",
+      "blob_sha": "b3b21296a296ceef20f6f661f991cc32cc7a7dfc",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/TESTS_V2.mjs",
+      "blob_sha": "452c955ef381ce685153bd8a7f5d44ad96329cf8",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/TESTS_V3.mjs",
+      "blob_sha": "ba37e0343a49361a4e24afeb996087411375ab99",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/VALIDATOR_V1.mjs",
+      "blob_sha": "e1d00250ade29a7e1a9644c0906dd915ba2d342e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/VALIDATOR_V2.mjs",
+      "blob_sha": "d582781ce351c49e6356fd940d4832e688ce42ff",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0001.json",
+      "blob_sha": "af96cb7ccb93833d7904d98bf925f3938d5aa71f",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0002.json",
+      "blob_sha": "a101e8ff7562bee446d41c7ec733248cd076048b",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0003.json",
+      "blob_sha": "687a570b6dbf25abd72bbc5800b63b54810a754b",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0004.json",
+      "blob_sha": "ee31daf0a37f7cd8945ea9c6c352d94f7d33efe9",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0005.json",
+      "blob_sha": "26c2532112d69b0a8452cf2b0d079abd99cd4456",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0006.json",
+      "blob_sha": "2bc8bd1b4389f5c5eed7298f81d47ec9aec23e11",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0007.json",
+      "blob_sha": "96745f3006e217a03b75bada7e29927649351cca",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0008.json",
+      "blob_sha": "0e55854916a9cd3969b487f8700fd2c3c7c81830",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0009.json",
+      "blob_sha": "cae78ea64691ac0dc012996226af26cec5d8e302",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0010.json",
+      "blob_sha": "d8d5b1809b727a41121982c765fa46533fcd96b6",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0011.json",
+      "blob_sha": "42202c0f6a0ca3a87b4d5ad87976d83d6d2848b0",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0012.json",
+      "blob_sha": "24cf4b9100651c795b2cca7d09d374a2c2110e81",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0013.json",
+      "blob_sha": "ecd65c88c89dfd94182ae6001303b3bb0b10a30e",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0014.json",
+      "blob_sha": "8c798bee280d70a6ef607bfb383e11ed0a454ff0",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0015.json",
+      "blob_sha": "f7f487a960a5d293f1f1d9a372d58cb4b78b8ceb",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0016.json",
+      "blob_sha": "20dc1b6b9261729162d3ddc0b4484b10e64a4b6e",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0017.json",
+      "blob_sha": "d6e7fbf5c747a2117c5117957d6cddbed354b40a",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0018.json",
+      "blob_sha": "d160bf4cd28f48c0c6616c90f4c7f250d0da6d72",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0019.json",
+      "blob_sha": "dc6c1a38e13b42edaa75595faf49b5d8673e4fe3",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0020.json",
+      "blob_sha": "74989a2046a9e9a01abe4ffb710326b230419cee",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0021.json",
+      "blob_sha": "7f6090b60b81bd53ae1024c40a9e27d930b91475",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0022.json",
+      "blob_sha": "028f684a371307f67cce88be5823a91fa6673ddb",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0023.json",
+      "blob_sha": "2c9511ea97ffe116cfc160da0f9a8a106eeaf265",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0024.json",
+      "blob_sha": "fdfaf1d0d1c902df719acad8c3fcab32d09363a9",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0025.json",
+      "blob_sha": "c228d35ff046f98c70a179ae4c5a6060da362551",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0026.json",
+      "blob_sha": "71d9db01b8a6a3467e7e9ba6e29b59ce75481398",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0027.json",
+      "blob_sha": "d92fb6de9ab4cb70e94a3b2f553fd2a6b8719df4",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0028.json",
+      "blob_sha": "943e6bcf3475b2c99834abd2f46e725abecba913",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0029.json",
+      "blob_sha": "e5de8f9bb2f58e677455996f93712d892234f2e7",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0030.json",
+      "blob_sha": "d6fce50348e7f5f8bb21d57ab8b81d2f134c9a31",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0031.json",
+      "blob_sha": "a99f3c6e389eaddff017bfcd8d4a9fb97ed0f11e",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0032.json",
+      "blob_sha": "2a65c1c8f8cad3d4c891d7db36ff2751722f0eda",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_C17_CLOSURE_SCREENING_V1.json",
+      "blob_sha": "cac758681cd46333ba7fea4643477cffde758ebe",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V1.json",
+      "blob_sha": "70aa88a7f2ce867611bc63f96bffa4a55d3637d6",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V2.json",
+      "blob_sha": "82ec86c89f65a9d52f8dc4d6172f6f018b87c540",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V3.json",
+      "blob_sha": "0f796ce9c2a874127c44d705fa9663238dd495f3",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V4.json",
+      "blob_sha": "13ae90e606dca5bbcbc989f00d5282f71e7ccc38",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V5.json",
+      "blob_sha": "5d74e5a6540602b12928982f9bc2828f873125e4",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V6.json",
+      "blob_sha": "7b79fdabf58354725c9b1d0cd31e463eb78d22c2",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V7.json",
+      "blob_sha": "e3b12c4577d11010c59f0505ac7a8a3ef1cf531c",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V8.json",
+      "blob_sha": "779ad5366aa00b488ac49a91625f3fba9fa1f6be",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V9.json",
+      "blob_sha": "35d0a677ae5798bfbce713ff1d582ae7f1e77215",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V1.json",
+      "blob_sha": "2e0b577442bf4a15be0a406f0a6f1ff93e469009",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V2.json",
+      "blob_sha": "8dae1494a925518a6792af15a9277d2d20d90e42",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V3.json",
+      "blob_sha": "16505001e9732e55be59d8d8f71cce0dd27f0f29",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V4.json",
+      "blob_sha": "723a4b622e0c6344a42a86cc5acabff773f240ae",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V5.json",
+      "blob_sha": "b4e6b116d5068ec1c9d3e82b8f5f86d7698cb7cc",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V6.json",
+      "blob_sha": "7f6f91ac01229c811f53662515a3a9157fd7e696",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V7.json",
+      "blob_sha": "654896c7d8c432a2b43f55a3b7ce578275759632",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V8.json",
+      "blob_sha": "4770a033cb0d12b224966058641931c78b557414",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_PREPARATION_AUDIT_V1.json",
+      "blob_sha": "23f2f8410c3466e0d883ed97a7c3ec59a4590550",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_PREPARATION_AUDIT_V2.json",
+      "blob_sha": "e3350120043289928361c6ad6f745f46b06e106b",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_PREPARATION_AUDIT_V3.json",
+      "blob_sha": "819d700819402f5f467b13558628004601ed7b89",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2_CLOSURE_DOWNTIME_PROPOSAL_V1.json",
+      "blob_sha": "576739d289e0bde98b5d1dbf8b465dd1168ec87c",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_ATLAS_C04_REVALIDATION_AUDIT_V5.json",
+      "blob_sha": "c5609834037cbc35d7969c0e9a841a29b2b2b6fd",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V1.json",
+      "blob_sha": "552c251a9d4895a6a6a5211b125f7da50f8996b5",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V2.json",
+      "blob_sha": "42452ea370e083f2897643eba0ec81b4b6249164",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V3.json",
+      "blob_sha": "c85efa740363d9c8d4bd5ab862916e9372fd77f9",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V4.json",
+      "blob_sha": "e5379c1a25ae65a2a10fcb5c7b36b5683bebcdd6",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V5.json",
+      "blob_sha": "e0e2ca03bd7517b96c29c9fb79bee7ccdd1a001d",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V1.json",
+      "blob_sha": "5774c83c6ea092ce9cbfb2e03d342f560a856b4b",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V2.json",
+      "blob_sha": "ad6cc8e1d565573ce83fbb96a68554fff3282317",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V3.json",
+      "blob_sha": "d396900322291c5ab7d07ed62da3789ee956e66b",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V4.json",
+      "blob_sha": "2e3432854bf79dd007e2ef88a78b52c6227bf303",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V5.json",
+      "blob_sha": "37f0f74afda6c73f1d091b8a096088f10a0f4611",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_PREPARATION_AUDIT_V1.json",
+      "blob_sha": "bef6818432bddfe6beaf1d4ff095f9af03173a71",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_REVALIDATION_AUDIT_V2.json",
+      "blob_sha": "b886e89a605f19f043ddeb1e3a721ced35046942",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_REVALIDATION_AUDIT_V3.json",
+      "blob_sha": "1ea8b932893955359f8a912b734628768dbc6264",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_REVALIDATION_AUDIT_V4.json",
+      "blob_sha": "b62b8a7f55a814a41c152056d3ec16d83f146164",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH00_PLANEJAMENTO_LONGITUDINAL_V1.md",
+      "blob_sha": "a718f0994cabb08828ed0bfeb00941d3b223ba7e",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH01_AUDITORIA_TRAJETORIA_V1.md",
+      "blob_sha": "4a71134677f0e2598f79706c40aa3a92ddde5955",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH02_DIAGNOSTICO_M2_V1.md",
+      "blob_sha": "780c51a9f81d7555d7907dab5fb0524cc3386860",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH03_TRAJETORIA_ATE_2010_V1.md",
+      "blob_sha": "6083fe000673554064c3c7de1361c594dbd8ac74",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH04_ECOLOGIA_CAINITA_COBERTURA_V1.md",
+      "blob_sha": "e696d283b16c5233dbdc4e6b0d50aa8bf4816644",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH05_INTEGRACAO_OPERACIONAL_V1.md",
+      "blob_sha": "3dd98c623b0a04f44a04c5546269e89ec8f9d818",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH06_VALIDACAO_E_HANDOFF_V1.md",
+      "blob_sha": "88a2d597b7cf04dc9d89fba66ec2cf36eae5ebc5",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH07_PLANO_ATLAS_NARRATIVO_RETROATIVO_V1.md",
+      "blob_sha": "c7a4645a82b58e589642941ae55121400dfc03e5",
+      "role": "PREPARATION_ONLY",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/sources/campaign_charter.source.txt",
+      "blob_sha": "20dc18eb84e406f4015bbd18711e720fc9526c77",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/sources/continuity_20261102.source.txt",
+      "blob_sha": "210e42f15c2d86859563b3cce08cd5ee8cfbdcd4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/world/CIVIC_CULTURAL_NAMING_LENS_V1.md",
+      "blob_sha": "7cd1179f403bebb81ea4abbb95ff19b28577b718",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V10.source.txt",
+      "blob_sha": "02b9caa2718464293b051e6cb0b12cbbb4e1f029",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V3.source.txt",
+      "blob_sha": "f5f9d2ba6998d5f699871a546e8babd9d50096c1",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V4.source.txt",
+      "blob_sha": "83d82ae42523b2f0c6bb9d55e2e31364b5e38fef",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V5.source.txt",
+      "blob_sha": "c1d001e84aaf7084411399feeae9d89e6612e9f1",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V6.source.txt",
+      "blob_sha": "ae7630c165861c72430a8513f62a74eaab3ea8ba",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V7.source.txt",
+      "blob_sha": "64963362b1af7c8dda40e4a4654235b4f852eb22",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V8.source.txt",
+      "blob_sha": "a33ec3b23bb751c613c04ef7d07cc68b190ff0b4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V9.source.txt",
+      "blob_sha": "baa4ccff29516c30fa28c9b59744af788b51119f",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/decisions/MIGRATION_ADENDUM_001.md",
+      "blob_sha": "b7fd79f64ef970cc001e687a73b1ca02c3fa3b8d",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/protocols/EVENT_PROTOCOL_V2.source.txt",
+      "blob_sha": "3091485091e1470472184d427676cfe9202e3336",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/protocols/EVENT_PROTOCOL_V3.source.txt",
+      "blob_sha": "174219059f8a658a24d610968c7908841acf70bf",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/protocols/EVENT_PROTOCOL_V4.source.txt",
+      "blob_sha": "4114cea20d7b54795fd5bce982739b40a19769ae",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/protocols/EVENT_PROTOCOL_V5.source.txt",
+      "blob_sha": "48d0e97d7c9f040b51e299798fb512631f1c6aa3",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_editorial_governance_v1_0.md",
+      "blob_sha": "27925001f7e8e791b35a90fef4bca51e1a076722",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_editorial_map_v0_9_4.json",
+      "blob_sha": "f4a401c1b921178b01d8f356faa87e9dfae59281",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_editorial_prohibitions_contract_v0_1.md",
+      "blob_sha": "ae7961e6826b8e449792722e12bf6e5872f9ee46",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_format_contract_decisions_v0_1.md",
+      "blob_sha": "7118bf33597dffdd7cd3539f54b350c795f6b262",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_format_contract_v0_3_1.md",
+      "blob_sha": "89c6c0543dc3fb07808874f9ca85fec679010ebc",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_play_guidance_contract_v0_1.md",
+      "blob_sha": "fd033004239f84b2decfbe2ecc8966b3058715e3",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_play_guidance_decisions_v0_1.md",
+      "blob_sha": "b08a0c9911c59490dd362a2e22b0626972c7282e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_prompt_reuse_contract_v0_1.md",
+      "blob_sha": "aa1b98b9d673f5f52a1105a0da16a25b9598f580",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_retroactive_dependency_living_memory_policy_v0_1.md",
+      "blob_sha": "f6308671ddc52ab27a487e7bf9e54c6639857fb4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_revelation_architecture_contract_v0_1.md",
+      "blob_sha": "8f266678593d4b5539cb70c7f268eb9d1e4bdfe7",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_revelation_architecture_decisions_v0_1.md",
+      "blob_sha": "bcf43f04f3082918b2e096a396c366e36610c246",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_standalone_rules_contract_v0_1.md",
+      "blob_sha": "f35aea8a34a3209911bac49f931e142aa56e44e9",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/governance/sources/novydres_standalone_rules_decisions_v0_1.md",
+      "blob_sha": "b69bbecf283490749eb108012802ab76d8c2c182",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
+      "blob_sha": "231cb78d712c4c7d2be88a41a4058d21e1cf88ea",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "CONTENT_REVIEWED_IN_PREFLIGHT",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V1.md",
+      "blob_sha": "764177e3618b83af2758393356722d45a9edcd3e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V2.md",
+      "blob_sha": "d51a5f4e6e62be9d4b6f5607abcb0f1fcec335d1",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V3.md",
+      "blob_sha": "de90b96c5cb941e4353b0ed842394ed6b4d58639",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V4.md",
+      "blob_sha": "081a0ec51cbd5eb825bd97c22209d45e3f9683b7",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/ATLAS_SNAPSHOT_SCHEMA_V1.json",
+      "blob_sha": "1327a4b68be89b1d66b04a5340a49d4385cb2d46",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/NARRATIVE_ATLAS_CONTRACT_V1.md",
+      "blob_sha": "95170168a3285236c43bd40297055d45f54665ca",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/D01_MANDATE_V1.md",
+      "blob_sha": "22cf5c17f0d6224c7bf0c15161d9a7fc8a76104e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_HANDOFF_CONTRACT_V1.md",
+      "blob_sha": "fd910b3f5b1a03db4b241c85bbae136283c1d71e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/START_HERE_PLAYER_SAFE_V1.md",
+      "blob_sha": "477cdc6f5ebb206a4660fde2d1e586d7dba14b89",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V1.json",
+      "blob_sha": "cd87fcbea314acc9772dcf185fb62c5a7c20f193",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V2.json",
+      "blob_sha": "2c0c3785c8f61053fadf40bfc4bede14a1643465",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V3.json",
+      "blob_sha": "f6813da88e73f18cfa5806365ef3e825812b8f9a",
+      "role": "ADMINISTRATIVE_OR_G28_CONTROL",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V1.md",
+      "blob_sha": "57f4220acf5502aed4a3cf24d592333735b81e29",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V2.md",
+      "blob_sha": "f8d7b3a68e73c225f327c161eef0f7f1b616f0ad",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V1.md",
+      "blob_sha": "a9ad197b1165adf54f05118f697ed50c775f0732",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/HANDOFF_NARRADOR_TO_DRAMATURGO_V1.md",
+      "blob_sha": "5ea41630da9c1cc7d7f78608b0398ae93b87bb11",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/IMPLEMENTATION_AUDIT_V1.json",
+      "blob_sha": "50748633aac20572a073d614a292d64fc8757927",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/MARCO_CLOSURE_CONTRACT_V1.md",
+      "blob_sha": "0abd0ea3efd3f1569ef742fc5a3c5e817d5faae0",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/NARRADOR_ROLE_V1.md",
+      "blob_sha": "293ec803eeb86b5937b47213d31017e08c28fbe3",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/NARRADOR_ROLE_V2.md",
+      "blob_sha": "ee869c43573f67cb63c78883b675283561b856fe",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V1.mjs",
+      "blob_sha": "c4d48d4b033033a630b4414bc5e9a57702fc86fb",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V2.mjs",
+      "blob_sha": "03974927839a8e29fa7183de801d985308920007",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V3.mjs",
+      "blob_sha": "36b070c6a206d668bd3e6b03bfa416329e882070",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V1.mjs",
+      "blob_sha": "9654c2d5889e732aeacd21dac13ca66b91258e56",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs",
+      "blob_sha": "ae7c3bd84477371528d7447d67333a77b1d4d9bf",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs",
+      "blob_sha": "a49cc85381d512adaac030dff50f43d0fae8ed5d",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/orchestration/START_HERE_V1.md",
+      "blob_sha": "23372a326ec6a7516e278449050776ed7d627b9e",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/DRAMATURGO_CONTRACT_V1.md",
+      "blob_sha": "5129c6d75f05dcf2f045f26d89dc5cc0982a5c78",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/DRAMATURGO_CONTRACT_V2.md",
+      "blob_sha": "c841640335da2a8a4654d6591b831df212b53e62",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/DRAMATURGO_CONTRACT_V3.md",
+      "blob_sha": "a61e43f658eb040d95f216323fedb7b6f2938790",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/EXAMPLE_SYNTHETIC_DOSSIER_V1.json",
+      "blob_sha": "4503f7097db9b53dfc57b54a5b17c1dac0aea7ed",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/EXAMPLE_SYNTHETIC_DOSSIER_V2.json",
+      "blob_sha": "503540b7f6adc16128049848ef43965cb50a14b0",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/HANDOFF_AND_SECRECY_V1.md",
+      "blob_sha": "e4862595cc30278452b42c3c3a77877ea6a0f625",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/HANDOFF_AND_SECRECY_V2.md",
+      "blob_sha": "a264d123f11ccf1ca89a5fc88932ce4800ced10b",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/IMPLEMENTATION_PLAN_V1.md",
+      "blob_sha": "5e93ef68649fa2f50c336a3ead0c69a2ce7d5984",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/LONGITUDINAL_PROGRESS_GATE_V1.md",
+      "blob_sha": "04161f0618bf3a4a550405be3343bad7e32b4524",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/NARRATOR_PREPARATION_ADAPTER_V1.md",
+      "blob_sha": "19305b2400712cd8c761a626d472b9c81755f6f6",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/NARRATOR_PREPARATION_ADAPTER_V2.md",
+      "blob_sha": "f2d5aa0df2e68b22dd45ed587967e572a3be2b8e",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/NARRATOR_PREPARATION_ADAPTER_V3.md",
+      "blob_sha": "49b9c1d920fbae672b90f0a712d527cee2a1829d",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_AUDIT_V1.md",
+      "blob_sha": "36be40b5ca22f7fbcfaf59df387fe18630ca2639",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_AUDIT_V2.md",
+      "blob_sha": "12cc185d353ee993a17187f9edcc8887d835c4d5",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_REGRESSION_REPORT_V1.json",
+      "blob_sha": "94d5915b6ac2ed0a568c67c62fbe08a69db046a6",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_REGRESSION_REPORT_V2.json",
+      "blob_sha": "696e190faa786cddd438d5bb0e2b125e4bc45453",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_SEMANTIC_GATE_V1.md",
+      "blob_sha": "8e30bc192288554335013608dc36e85d599029b7",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_SEMANTIC_GATE_V2.md",
+      "blob_sha": "4fae0dd1be149c1630ead5614d4d0cb89d793548",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PREPARATION_SEMANTIC_VECTORS_V1.json",
+      "blob_sha": "fad914ba44b33ba28142159d97638716a4635d53",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V1.json",
+      "blob_sha": "978503ee0f9876dcd62fc220a2593a98412b4d67",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V2.json",
+      "blob_sha": "0a281c03238d42ce30ac13aa6c87d4da025de5ac",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V1.json",
+      "blob_sha": "b3a3d32a591c38d2d03407795da743ae0aa78e99",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/SCENE_PREPARATION_BOOTSTRAP_V2.md",
+      "blob_sha": "5fe5a20136bc78a3bcb268d5a1a25fc3c34775bf",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/SCENE_PREPARATION_BOOTSTRAP_V3.md",
+      "blob_sha": "41f7c5867dad6dec617793c774b5199a7feda699",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/SCENE_PREPARATION_BOOTSTRAP_V4.md",
+      "blob_sha": "a7d1167a8f85e203bc307acf316dc24d9126fe74",
+      "role": "PREPARATION_ONLY",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_decisions_v0_1.md",
+      "blob_sha": "4aa45b3e804278b9f9e6471fcd6b05e93b3dea86",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "blob_sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_decisions_v0_1.md",
+      "blob_sha": "774698ddd36c86b53fc6217f2beadd3f59cc7c01",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_v0_1.md",
+      "blob_sha": "5c972b08c70187e883bc6da7d4ad964cb165612f",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_decisions_v0_1_1.md",
+      "blob_sha": "c72fbe83c0cd834b72e8b9e37a7b75e77bbba1f6",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "blob_sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "role": "CONTRACT_POLICY_OR_HISTORICAL_VERSION",
+      "verification": "GIT_TREE_SHA_ONLY_SEMANTIC_REVIEW_PENDING",
+      "can_prove_played_event": false
+    }
+  ],
+  "missing_semantic_review_groups": [
+    "All historical versions of dossier, episode and character state",
+    "Original story authorship per scene and authoring commit before scene",
+    "Semantic correction of all M1/M2.01/M2.02 line records",
+    "Per-assertion epistemology for all cumulative episode records",
+    "Independent audit of G28 roll provenance per incident"
+  ],
+  "authority": "NEW_PROPOSAL_ONLY_NOT_OPERATIONAL"
+}

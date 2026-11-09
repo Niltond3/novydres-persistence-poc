@@ -1,0 +1,215 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_CAUSAL_MAP_V001",
+  "status": "PROPOSED_PARTIAL",
+  "spoiler_class": "PLAYER_SAFE",
+  "validation_rule": "Only CAUSAL_CONFIRMED edges with precise two-sided primary source evidence can be elevated to established causal graph. Administrative dependency, temporal adjacency and theme stay distinct.",
+  "edges": [
+    {
+      "id": "D02-CAUSE-001",
+      "type": "CAUSAL_CONFIRMED_LOCAL",
+      "from": {
+        "event_id": "CHR001-M301-C01-04-20261107-001",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 16,
+          "end_line": 17,
+          "authority": "PRIMARY_RECORDED_TEXT",
+          "technical_ledger_committed_not_inferred": true
+        }
+      },
+      "to": {
+        "event_id": "CHR001-M301-C01-08-20261107-001",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 28,
+          "end_line": 30,
+          "authority": "PRIMARY_RECORDED_TEXT",
+          "technical_ledger_committed_not_inferred": true
+        }
+      },
+      "provenance": "The scene closes after player's explicit refusal to accept non-workshop employment and NPC exit; does not imply wider contract settlement.",
+      "scope": "local_scene_conclusion"
+    },
+    {
+      "id": "D02-CAUSE-002",
+      "type": "CAUSAL_CONFIRMED_MATERIAL",
+      "from": {
+        "event_id": "CHR001-M204-C08-23-20261104-001",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 346,
+          "end_line": 347,
+          "authority": "PRIMARY_RECORDED_TEXT",
+          "technical_ledger_committed_not_inferred": true
+        }
+      },
+      "to": {
+        "event_id": "CHR001-M204-C09-01-20261105-001",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 368,
+          "end_line": 369,
+          "authority": "PRIMARY_RECORDED_TEXT",
+          "technical_ledger_committed_not_inferred": true
+        }
+      },
+      "provenance": "Documentary originals taken in the C08 sequence are physically brought home in C09; specific from-event position requires further editorial verification.",
+      "scope": "archival_transfer",
+      "verification": "PENDING_FROM_EVENT_ID_EXACT_CHECK"
+    },
+    {
+      "id": "D02-CAUSE-003",
+      "type": "ADMINISTRATIVE_APPROVAL_NOT_DIEGETIC_CAUSE",
+      "from": {
+        "event_id": "CHR001-M204-C17-08-20261106-001",
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt"
+      },
+      "to": {
+        "event_id": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+        "source": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json"
+      },
+      "provenance": "Closing M2 required distinct player authorization and formal administrative closure; not a scene event."
+    },
+    {
+      "id": "D02-CAUSE-004",
+      "type": "DOCUMENTED_SESSION_PARENT_NOT_FORCED_CAUSALITY",
+      "from": {
+        "event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+        "source": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json"
+      },
+      "to": {
+        "event_id": "CHR001-M301-C01-01-20261107-001",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 7,
+          "end_line": 8,
+          "authority": "PRIMARY_RECORDED_TEXT",
+          "technical_ledger_committed_not_inferred": true
+        }
+      },
+      "provenance": "M3.01 episode explicitly records this parent of player-approved workshop downtime; no unattended subplot progressed."
+    }
+  ],
+  "chronological_sequence_only": [
+    {
+      "before": "M1.01",
+      "after": "M1.02",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.02",
+      "after": "M1.03",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.03",
+      "after": "M1.04",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.04",
+      "after": "M1.05",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.05",
+      "after": "M1.06",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.06",
+      "after": "M1.07",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.07",
+      "after": "M1.08",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.08",
+      "after": "M1.09",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M1.09",
+      "after": "M2.01",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M2.01",
+      "after": "M2.02",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M2.02",
+      "after": "M2.03",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M2.03",
+      "after": "M2.04.C01",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M2.04.C17",
+      "after": "M3.01.C01",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    },
+    {
+      "before": "M3.01.C04",
+      "after": "M3.01.C05",
+      "kind": "SEQUENCE_ONLY_NOT_CAUSAL",
+      "basis": "Recorded stage/episode order"
+    }
+  ],
+  "thematic_non_causal_candidates": [
+    {
+      "id": "D02-THEME-001",
+      "nodes": [
+        "M1.04",
+        "M2.04.C11"
+      ],
+      "kind": "THEMATIC_ONLY",
+      "theme": "professional safety and accountability",
+      "causal_link": "UNKNOWN"
+    },
+    {
+      "id": "D02-THEME-002",
+      "nodes": [
+        "M1.03",
+        "M2.04.C14"
+      ],
+      "kind": "THEMATIC_ONLY",
+      "theme": "family and school responsibility",
+      "causal_link": "UNKNOWN"
+    }
+  ],
+  "unresolved_edges": [
+    {
+      "id": "D02-UNRESOLVED-001",
+      "type": "UNKNOWN",
+      "reason": "Shared documents, locations, allegations or NPC names do not substantiate a unifying hidden conspiracy."
+    }
+  ],
+  "plot_taxonomy": "NOT_CREATED_D02_D03_D04_ONLY",
+  "no_44_threads_to_44_plots": true
+}
