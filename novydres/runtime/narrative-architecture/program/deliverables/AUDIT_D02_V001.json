@@ -1,0 +1,102 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V001",
+  "phase": "D02",
+  "version": 1,
+  "spoiler_class": "PLAYER_SAFE",
+  "status": "FAIL",
+  "publication_status": "PARTIAL_CONTENT_PUBLISHED",
+  "acceptance": "NOT_ACCEPTED_FOR_D03",
+  "reason": "DECISIVE_SEMANTIC_GAPS_NOT_FINALIZED",
+  "branch": "design/chr001-narrative-program-d01",
+  "master_ref": {
+    "expected_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "verified_unchanged_before_audit": true
+  },
+  "design_ref": {
+    "parent_commit": "25a5a9ff57e5773c2a42b93b6258b3131ba245d9"
+  },
+  "content_commit_sha": "25a5a9ff57e5773c2a42b93b6258b3131ba245d9",
+  "source_checkpoint": {
+    "cycle": "CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "status": "READY_FOR_DRAMATURGO",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "live_blob": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+    "manifest_version": "V46",
+    "manifest_administrative_exception": "D01-ADM-001_PRESERVED"
+  },
+  "technical_validation": {
+    "cycle_chain": "PASS_33_OF_33",
+    "latest_cycle_refs": "PASS_8_OF_8",
+    "d01_deliverable_hash_check": "PASS_10_OF_10",
+    "source_shard_substring_exact": "PASS_30_OF_30",
+    "m1_locators_in_original": "PASS_27_OF_27",
+    "inventory_file_count": 474,
+    "event_derived_records": 661,
+    "derived_record_id_uniqueness": "PASS",
+    "declared_scene_scope": "PASS_M1_01_TO_09_M2_01_TO_04_M301_C01_TO_C05",
+    "source_line_presence": "PASS_661_OF_661",
+    "original_plot_author": "AUTHOR_UNKNOWN_NOT_INFERRED_FROM_POSTHOC_PREP",
+    "technical_ledger_merged": "NO",
+    "master_write": "NONE",
+    "story_operational_write": "NONE"
+  },
+  "content_objects": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SOURCE_INVENTORY_V001.json",
+      "blob_sha": "2930c663076969d7bb1071220bbe7d862409fc23",
+      "readback_verified": true
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVENT_HISTORIOGRAPHY_V001.json",
+      "blob_sha": "a1e5f007c8a9fad8581b1cd494f5ae1b94a40012",
+      "readback_verified": true
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_MAP_V001.json",
+      "blob_sha": "5fad83a37fb0f0036eabd4050f8bde6e37a089fe",
+      "readback_verified": true
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_COVERAGE_AND_PROVENANCE_V001.json",
+      "blob_sha": "21b1b200afa0ce1f16d8a258fadafd6aaf68fd40",
+      "readback_verified": true
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_DOCUMENTARY_SEQUENCE_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "6b17b782869f6e728a038dc292da6fc5f4689d2b",
+      "readback_verified": true
+    }
+  ],
+  "semantic_acceptance": {
+    "source_per_assertion_audit": "FAIL_INCOMPLETE",
+    "correction_precedence": "PARTIAL",
+    "original_story_creator_authorship": "UNKNOWN_REQUIRES_AUTHORSHIP_EVIDENCE_CHECK",
+    "causal_two_way_proof": "PARTIAL",
+    "preparation_vs_played_separation": "PASS_NO_PREP_USED_AS_PROOF",
+    "unknown_preserved": "PASS",
+    "coverage_gap_disclosure": "PASS",
+    "g28_ledger_adjudication": "NOT_CLAIMED",
+    "overall": "FAIL"
+  },
+  "blocking_gaps": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "administrative_deferred": [
+    "D01-ADM-001",
+    "D01-GAP-003"
+  ],
+  "next_phase": "D02_CONTINUATION_ONLY",
+  "no_d03_prompt": true,
+  "no_narrator_prompt": true,
+  "no_c06_started": true,
+  "approval_required_before_canon_promotion": true,
+  "commit_readback_method": "Fetch design branch and exact five blob SHAs; this audit commits in second atomic documentation set."
+}

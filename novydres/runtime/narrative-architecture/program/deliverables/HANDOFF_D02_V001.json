@@ -1,0 +1,75 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V001",
+  "phase": "D02",
+  "status": "FAIL",
+  "approval": "NOT_REQUESTED_FOR_INCOMPLETE_RECONSTRUCTION",
+  "spoiler_class": "PLAYER_SAFE",
+  "public_only": true,
+  "repository": "Niltond3/novydres-persistence-poc",
+  "design_branch": "design/chr001-narrative-program-d01",
+  "master_head_at_audit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_content_commit": "25a5a9ff57e5773c2a42b93b6258b3131ba245d9",
+  "source_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+  "last_event_id": "CHR001-M301-C05-22-20261109-001",
+  "deliverables": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SOURCE_INVENTORY_V001.json",
+      "blob_sha": "2930c663076969d7bb1071220bbe7d862409fc23",
+      "status": "PROPOSAL_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVENT_HISTORIOGRAPHY_V001.json",
+      "blob_sha": "a1e5f007c8a9fad8581b1cd494f5ae1b94a40012",
+      "status": "PROPOSAL_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_MAP_V001.json",
+      "blob_sha": "5fad83a37fb0f0036eabd4050f8bde6e37a089fe",
+      "status": "PROPOSAL_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_COVERAGE_AND_PROVENANCE_V001.json",
+      "blob_sha": "21b1b200afa0ce1f16d8a258fadafd6aaf68fd40",
+      "status": "PROPOSAL_PARTIAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_DOCUMENTARY_SEQUENCE_PLAYER_SAFE_V001.mmd",
+      "blob_sha": "6b17b782869f6e728a038dc292da6fc5f4689d2b",
+      "status": "PROPOSAL_PARTIAL"
+    }
+  ],
+  "audit_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V001.json",
+    "blob_sha": "cff563cb8474826de5c6bdcef477e068fd700005"
+  },
+  "counts": {
+    "source_inventory": 474,
+    "documentary_records": 661,
+    "m1_primary_crosswalk_anchors": 27,
+    "verified_shards": 30
+  },
+  "critical_gaps": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "operational_guards": {
+    "master_unchanged": true,
+    "narrative_files_unchanged": true,
+    "c06_not_started": true,
+    "gm_hidden_not_in_public_handoff": true,
+    "technical_ledger_not_inferred": true,
+    "unverified_author_stays_unknown": true,
+    "revision_policy": "NEW_VERSIONED_FILES_ONLY"
+  },
+  "next_work": {
+    "phase": "D02",
+    "document": "NEXT_PROMPT_CONTINUE_D02_V001.md",
+    "release_condition": "Only after independent semantic audit and verified PASS; then create D03 prompt",
+    "readback_source": "GitHub HEAD and exact blob SHA, not historical checkpoint"
+  },
+  "publication_status": "CONTENT_COMMIT_VERIFIED_AUDIT_HANDOFF_COMMIT_TO_BE_READBACK"
+}
