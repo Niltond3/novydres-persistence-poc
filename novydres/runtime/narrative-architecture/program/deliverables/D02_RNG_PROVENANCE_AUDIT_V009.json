@@ -1,0 +1,94 @@
+{
+  "schema": "NOVYDRES_D02_RNG_PROVENANCE_AUDIT_V009",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 9,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "08301c993090b89278eeb38392ace140072100a2",
+  "design_head_initial": "8dc22f987a2913fdda87e54118516199724315cf",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "next_role": "DRAMATURGO",
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "status": "ACCEPTED_PLAYED_RESULTS_BUT_INDEPENDENT_RNG_NOT_AUTHENTICATED",
+  "prior": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_G28_ROLL_PROVENANCE_V003.json",
+    "blob_sha": "cf87d78ac2ee60f91283754c3db12fef54eac3fa"
+  },
+  "structural": {
+    "G28_files": 7,
+    "tests": 48,
+    "face_arrays": 49,
+    "range_errors": 0,
+    "pool_checks": 46,
+    "pool_errors": 0,
+    "take_half_or_explicit_no_rng": 9,
+    "claims_to_Python_or_tool": 4
+  },
+  "specific_dependencies": [
+    {
+      "source": "M2.03_v017",
+      "anchors": [
+        23,
+        31,
+        87,
+        90,
+        113,
+        131,
+        133,
+        304,
+        407
+      ],
+      "status": "REPORTED_FACES_AND_PLAYER_ACCEPTANCE_ONLY_NO_ORIGINAL_CALL_LOG"
+    },
+    {
+      "source": "M2.04_v017",
+      "anchors": [
+        286,
+        313,
+        325,
+        337,
+        389,
+        431,
+        516,
+        764,
+        767,
+        822,
+        837,
+        846,
+        867
+      ],
+      "status": "REPORTED_CONTEST_AND_REROLLS_ONLY_NO_ORIGINAL_CALL_LOG"
+    },
+    {
+      "source": "M3.01_v005",
+      "anchors": [
+        68,
+        135,
+        183,
+        192,
+        210,
+        237,
+        240
+      ],
+      "status": "PLAYER_ACCEPTED_REPORTED_OUTCOMES_BUT_PARTIAL_OR_MISSING_RUNTIME_PROOF"
+    }
+  ],
+  "distinctions": [
+    "Take Half is deterministic and does not need original random faces, but actor choice/preflight still requires provenance.",
+    "Claim 'real Python' in episode narrative is not proof of independent tool execution.",
+    "Player approval preserves table adjudication, not RNG origin authentication.",
+    "Never regenerate historical rolls, alter XP/FV, or silently change official outcomes."
+  ],
+  "original_rng_authenticated": 0,
+  "independent_technical_reviewer": "NOT_PERFORMED",
+  "global_gap_006": "OPEN"
+}

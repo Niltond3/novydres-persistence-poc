@@ -1,0 +1,137 @@
+{
+  "schema": "NOVYDRES_D02_EVIDENCE_DEPENDENCIES_V009",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 9,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "08301c993090b89278eeb38392ace140072100a2",
+  "design_head_initial": "8dc22f987a2913fdda87e54118516199724315cf",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "next_role": "DRAMATURGO",
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "status": "SIX_GLOBAL_GAPS_OPEN_WHILE_ARCHIVAL_MARKERS_ZERO",
+  "counts": {
+    "markers_total": 661,
+    "previous_classified": 133,
+    "classified_this_session": 528,
+    "archival_classified_total": 661,
+    "archival_waiting": 0,
+    "scene_units_total": 33,
+    "previous_scene_units": 7,
+    "new_scene_units": 26,
+    "original_chat_authenticated": 0,
+    "original_rng_authenticated": 0,
+    "independent_editorial_reviews_signed": 0
+  },
+  "blockers": [
+    {
+      "id": "D02-GAP-001",
+      "global_status": "OPEN",
+      "archive_status": "M1.02_M1.09_ARCHIVE_CLASSIFIED_165_MARKERS_M1.01_MISSING",
+      "coverage": "PARCIAL",
+      "blocked_on": [
+        "Authenticated full M1.01 scenes 002–003 and original prologue/recategorization with message IDs/time/roles and integrity provenance",
+        "Independent adversarial validation of missing or unindexed subassertions",
+        "Separate original creative author provenance or AUTHOR_UNKNOWN per attestation"
+      ],
+      "evidence": {
+        "m109_closed": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_A.json",
+        "m101_original_missing_source": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json"
+      }
+    },
+    {
+      "id": "D02-GAP-002",
+      "global_status": "OPEN",
+      "archive_status": "M2.01_M2.03_COMPLETE_AT_ARCHIVE_LEVEL_A",
+      "coverage": "COMPLETA_NO_ARQUIVO_DERIVADO",
+      "blocked_on": [
+        "Original role-attributed and time-anchored chats for M2.01–M2.03, independently attestable",
+        "Adversarial original-versus-shards/version-duplicate resolution, especially M2.03 scene transitions",
+        "Reconcile original RNG/roll tool logs separately from accepted fictional result"
+      ],
+      "evidence": {
+        "m201_m202": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_B.json",
+        "m203": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_D.json",
+        "version_chain": "novydres/runtime/narrative-architecture/program/deliverables/D02_M203_VERSION_CHAIN_V009.json"
+      }
+    },
+    {
+      "id": "D02-GAP-003",
+      "global_status": "OPEN",
+      "archive_status": "M2.04_C01_C17_AND_M3.01_C01_C05_COMPLETE_AT_ARCHIVE_LEVEL_A",
+      "coverage": "COMPLETA_NO_ARQUIVO_DERIVADO",
+      "blocked_on": [
+        "Original chat and scene-level role/time/correction verification, or maintain NOT_AUTHENTICATED",
+        "Independent editorial review of all later scene closures and state/knowledge limits",
+        "No C06 until subsequent authorized dramaturgy, no C18 or retroactive plots"
+      ],
+      "evidence": {
+        "M204": [
+          "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_E.json",
+          "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_F.json",
+          "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_G.json"
+        ],
+        "M301": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_BATCH_CLOSURE_V009_C.json"
+      }
+    },
+    {
+      "id": "D02-GAP-004",
+      "global_status": "OPEN",
+      "coverage": "NOT_AUTHENTICATED",
+      "blocked_on": [
+        "Original identifiable role-separated conversation data with provenance and immutable locators",
+        "Contemporary independent preparation authorship proof per claimed creative attribution; Git committer and retrospective summary alone insufficient",
+        "Retain AUTHOR_UNKNOWN for unsupported creative attribution; do not assign author by style or scene proximity"
+      ],
+      "original_creative_authors_authenticated": 0
+    },
+    {
+      "id": "D02-GAP-005",
+      "global_status": "OPEN",
+      "coverage": "LOCAL_ARCHIVAL_EDGES_ONLY",
+      "blocked_on": [
+        "Event-origin and event-effect original two-sided independent source support for every proposed confirmed historical causal edge",
+        "Reevaluate all candidate edges including omission and contradictions; keep D02-CAUSE-002 SEQUENCE_ONLY absent originals",
+        "Distinct independent verification of external links; thematic similarity is NOT causal proof"
+      ],
+      "cause_002": "SEQUENCE_ONLY"
+    },
+    {
+      "id": "D02-GAP-006",
+      "global_status": "OPEN",
+      "coverage": "STRUCTURAL_REVIEW_ONLY",
+      "blocked_on": [
+        "Immutable original RNG/tool invocation logs, seeds or verifiable provider execution receipts where available; attribute exact original calls and dates without regeneration",
+        "Reconcile per-roll preflights, faces, opposed pools, reroll positions and FV/Take Half against original evidence",
+        "Independent technical reviewer, any unverifiable roll remains UNAUTHENTICATED even if player accepted reported outcome"
+      ],
+      "original_rng_authenticated": 0,
+      "previous_48_tests_structural": 48
+    }
+  ],
+  "external_editorial_gate": {
+    "status": "NOT_PERFORMED",
+    "reviewer_must_differ_from_executor": true,
+    "signoff_required": true,
+    "protocol": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json"
+  },
+  "M101_source_recovery": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_M101_SOURCE_RECOVERY_V008.json",
+    "blob_sha": "eea5ab0d594dd1f1fc85a0ee35e4ab1298f63f33",
+    "source_count": 2,
+    "provider_sha": "NOT_EXPOSED_BY_PROVIDER",
+    "original_chat_export_located": false,
+    "not_authentically_reconstructed": true
+  },
+  "admin_open": "D01-ADM-001",
+  "d03_unlocked": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "NOVYDRES_D02_CAUSAL_EDGE_REVIEW_V009",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 9,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "08301c993090b89278eeb38392ace140072100a2",
+  "design_head_initial": "8dc22f987a2913fdda87e54118516199724315cf",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "next_role": "DRAMATURGO",
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "status": "CAUSAL_002_REMAINS_SEQUENCE_ONLY_NO_ORIGINAL_TWO_SIDED_EVIDENCE",
+  "prior": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_MAP_V002.json",
+    "blob_sha": "cdd9730869adf29fbf5d0215bcc1e592fe801cf7"
+  },
+  "edges": [
+    {
+      "id": "D02-CAUSE-001",
+      "archival_type": "CAUSAL_CONFIRMED",
+      "scope": "LOCAL_SCENE_CONCLUSION_ONLY",
+      "source_before": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 16,
+        "end_line": 17,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "source_after": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 28,
+        "end_line": 30,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "LOCAL_SCENE_CLOSURE_AS_DERIVED_ONLY",
+      "original_two_sided_verified": false,
+      "no_promotion": true
+    },
+    {
+      "id": "D02-CAUSE-002",
+      "archival_type": "SEQUENCE_ONLY",
+      "scope": null,
+      "source_before": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 346,
+        "end_line": 347,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "source_after": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 368,
+        "end_line": 369,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "SEQUENCE_ONLY_UNTIL_ORIGINAL_CORRELATION",
+      "original_two_sided_verified": false,
+      "no_promotion": true
+    },
+    {
+      "id": "D02-CAUSE-003",
+      "archival_type": "SEQUENCE_ONLY",
+      "scope": null,
+      "source_before": null,
+      "source_after": null,
+      "adjudication": "ADMINISTRATIVE_SEQUENCE_ONLY",
+      "original_two_sided_verified": false,
+      "no_promotion": true
+    },
+    {
+      "id": "D02-CAUSE-004",
+      "archival_type": "SEQUENCE_ONLY",
+      "scope": null,
+      "source_before": null,
+      "source_after": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 7,
+        "end_line": 8,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "ADMINISTRATIVE_SEQUENCE_ONLY",
+      "original_two_sided_verified": false,
+      "no_promotion": true
+    }
+  ],
+  "unknown_edge_policy": "Any unproven causal NPC motive/cross-plot connection stays UNKNOWN; no thematic-to-causal promotion",
+  "independent_reviewer": false,
+  "global_gap_005": "OPEN"
+}
