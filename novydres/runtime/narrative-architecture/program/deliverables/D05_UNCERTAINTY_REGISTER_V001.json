@@ -1,0 +1,153 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Registro delimitado do que permanece desconhecido após reconciliação.",
+  "uncertainties": [
+    {
+      "id": "UNC-GAP-D05-001",
+      "source_gap": "GAP-D05-001",
+      "statement": "Autoria e contexto originais não autenticados para registros derivados de cenas anteriores.",
+      "boundary": "Requer exportação original com proveniência verificável; não atribuir autoria.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-002",
+      "source_gap": "GAP-D05-002",
+      "statement": "D02 V011 identificou 102 excertos sem suporte nos intervalos legados; usar somente intervalos V009 verificados ou rebaixar a UNKNOWN.",
+      "boundary": "Não reaproveitar os intervalos antigos.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-004",
+      "source_gap": "GAP-D05-004",
+      "statement": "27 referências localizadoras não têm recibo técnico de commit; locator não prova persistência canônica.",
+      "boundary": "Manter DERIVED_ARCHIVE_LOCATOR.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-005",
+      "source_gap": "GAP-D05-005",
+      "statement": "Autoria permanece UNKNOWN em 661 registros.",
+      "boundary": "Não preencher por inferência narrativa.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-006",
+      "source_gap": "GAP-D05-006",
+      "statement": "Originais de M1.01 C02–C03 não localizados no corpus validado.",
+      "boundary": "Não reconstruir diálogos nem rolagens.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-007",
+      "source_gap": "GAP-D05-007",
+      "statement": "Recibos RNG originais permanecem incompletos; D02 V011 não valida resultados ausentes.",
+      "boundary": "Não repetir nem reconstruir rolagens.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-008",
+      "source_gap": "GAP-D05-008",
+      "statement": "CYCLE_V0033 e MANIFEST_V46 apontam para checkpoints operacionais distintos.",
+      "boundary": "Não escolher silenciosamente autoridade para alteração operacional; bloqueia promoção e retomada do Narrador.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-009",
+      "source_gap": "GAP-D05-009",
+      "statement": "Não há segregação efetiva de armazenamento GM_HIDDEN contra o proprietário do repositório privado.",
+      "boundary": "Não registrar verdades secretas em Git, commits, logs, handoffs ou chat.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-010",
+      "source_gap": "GAP-D05-010",
+      "statement": "D03 tem 259/260 atribuições de conhecimento UNKNOWN_FROM_PARTIAL_INDEX; o único registro restante é derivado e não autentica autoria original.",
+      "boundary": "Nenhum conhecimento NPC utilizável sem aquisição demonstrada.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-011",
+      "source_gap": "GAP-D05-011",
+      "statement": "11 de 15 comparações de alias permanecem UNKNOWN; não houve fusão de identidades.",
+      "boundary": "Preservar identidades separadas.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-012",
+      "source_gap": "GAP-D05-012",
+      "statement": "D02/D04 não sustentam causalidade global; relações permanecem sequência ou fechamento local derivado.",
+      "boundary": "Não converter proximidade temporal em causa.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-013",
+      "source_gap": "GAP-D05-013",
+      "statement": "Dois IDs antes sem âncora foram localizados em M2.03_v017 e arquivos derivados; autenticidade da fonte original continua desconhecida.",
+      "boundary": "Atualização restrita à localização; não altera verdade, autoria ou RNG.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-014",
+      "source_gap": "GAP-D05-014",
+      "statement": "D02 V011 declara desvio da ordem de amostragem prescrita em V004; compensou com conferência exaustiva dos intervalos.",
+      "boundary": "Preservar PASS_WITH_METHOD_DISCLOSURE; não alegar conformidade literal.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-015",
+      "source_gap": "GAP-D05-015",
+      "statement": "O atlas e inventário de fontes têm cobertura parcial.",
+      "boundary": "Não inferir completude global.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-GAP-D05-016",
+      "source_gap": "GAP-D05-016",
+      "statement": "A revisão do ciclo V0033 contra seu último evento está NOT_REVIEWED; preparação anterior consta STALE.",
+      "boundary": "Requer revisão e autorização operacional própria; D05 não revisa nem libera cena.",
+      "promotion_condition": "Somente evidência primária autenticada ou decisão expressa competente; nenhum preenchimento por inferência."
+    },
+    {
+      "id": "UNC-D05-017",
+      "source_gap": "D04-A-013/D04-A-015",
+      "statement": "Dois localizadores de evento foram localizados no texto de episódio derivado M2.03_v017.source.txt e em artefatos derivados.",
+      "boundary": "Confirma presença textual em arquivo derivado; não confirma autoria, diálogo de origem, rolagem, resultado nem validade canônica.",
+      "promotion_condition": "Fonte original autenticada, se disponível."
+    },
+    {
+      "id": "UNC-D05-018",
+      "source_gap": "D03 alias review",
+      "statement": "Quatro comparações de aliases foram avaliadas como distintas; onze permanecem indeterminadas.",
+      "boundary": "Nenhuma identidade indeterminada foi fundida.",
+      "promotion_condition": "Prova de identidade com fonte e autoridade apropriadas."
+    },
+    {
+      "id": "UNC-D05-019",
+      "source_gap": "D04 plot candidate review",
+      "statement": "Quatro candidatos editoriais existem, mas classificação não lhes dá autoridade operacional.",
+      "boundary": "Nenhum arco, dono, gatilho ou causalidade é promovido.",
+      "promotion_condition": "Mandato de fase e contrato operacional, depois de autorização."
+    },
+    {
+      "id": "UNC-D05-020",
+      "source_gap": "cycle review",
+      "statement": "CYCLE_V0033 registra review NOT_REVIEWED contra o last_event_id atual e preparation STALE.",
+      "boundary": "D05 usa o ciclo apenas como cursor documental; não o declara aprovado para cena.",
+      "promotion_condition": "Revisão e gate operacional pelo protocolo vigente."
+    }
+  ]
+}

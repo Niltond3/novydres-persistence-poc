@@ -1,0 +1,56 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Alternativas de continuidade que preservam os registros e as lacunas atuais.",
+  "alternatives": [
+    {
+      "id": "ALT-D05-001",
+      "issue": "ponteiro CYCLE/MANIFEST divergente",
+      "option": "Manter ciclo V0033 como cursor documental de leitura, manter V46 como referência divergente, suspender qualquer escrita/promover.",
+      "effect": "Permite arquitetura documental; bloqueia readiness operacional.",
+      "retcon": false,
+      "requires_player_approval": "antes de adjudicar/prometer os ponteiros."
+    },
+    {
+      "id": "ALT-D05-002",
+      "issue": "fonte derivada sem original",
+      "option": "Usar somente localização e texto derivado com classe de proveniência explícita; não atribuir autor nem aumentar confiança.",
+      "effect": "Mantém rastreabilidade sem alegação histórica adicional.",
+      "retcon": false
+    },
+    {
+      "id": "ALT-D05-003",
+      "issue": "oferta/escopo não reconciliados",
+      "option": "Manter ambas as observações e aceitação UNKNOWN; permitir que desenvolvimento futuro siga apenas por conteúdo independente.",
+      "effect": "Evita diálogo/decisão retroativa.",
+      "retcon": false
+    },
+    {
+      "id": "ALT-D05-004",
+      "issue": "verdade autoral necessária a mistério",
+      "option": "Bloquear pistas e resolução dependentes; projetar estrutura sem resposta e aguardar segregação efetiva ou variante escolhida pelo jogador.",
+      "effect": "Sem spoiler e sem solução ad hoc.",
+      "retcon": false
+    },
+    {
+      "id": "ALT-D05-005",
+      "issue": "lacunas de conhecimento de NPC",
+      "option": "Manter conhecimento desconhecido e exigir futura aquisição demonstrável em cena autorizada.",
+      "effect": "Impede onisciência retroativa.",
+      "retcon": false
+    }
+  ]
+}

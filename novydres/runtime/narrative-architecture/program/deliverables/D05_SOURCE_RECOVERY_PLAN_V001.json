@@ -1,0 +1,88 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Plano de recuperação sem presumir disponibilidade de fonte externa.",
+  "work_items": [
+    {
+      "id": "SR-D05-001",
+      "target": "Autoria, contexto e confirmação original dos eventos já presentes somente em arquivo derivado.",
+      "minimum_evidence": [
+        "exportação integral original ou registro primário autenticável",
+        "autor e contexto verificáveis",
+        "integridade/hash e cadeia de custódia"
+      ],
+      "current_state": "not available in validated repository evidence",
+      "action": "Solicitar/ localizar exportação original fora deste clone; até lá, UNKNOWN.",
+      "priority": "high",
+      "owner": "player_or_source_custodian",
+      "safe_without_recovery": "Sim; arquitetura pode marcar dependências como não comprovadas."
+    },
+    {
+      "id": "SR-D05-002",
+      "target": "Recibos RNG ausentes ou incompletos.",
+      "minimum_evidence": [
+        "recibo original vinculado ao evento",
+        "identidade do teste e resultado preservados",
+        "integridade verificável"
+      ],
+      "current_state": "unknown",
+      "action": "Recuperar somente se recibo original existir; nunca rerolar.",
+      "priority": "high",
+      "owner": "source_custodian",
+      "safe_without_recovery": "Sim; não depender do resultado."
+    },
+    {
+      "id": "SR-D05-003",
+      "target": "Autoridade do ponteiro operacional entre ciclo V0033 e manifesto V46.",
+      "minimum_evidence": [
+        "regra de precedência vigente aplicável",
+        "revisão de ciclo e manifestação/decisão autorizada",
+        "readback do ref escolhido"
+      ],
+      "current_state": "conflict_open",
+      "action": "Manter ambos e exigir adjudicação explícita antes de promoção operacional.",
+      "priority": "blocking_for_narrator",
+      "owner": "player",
+      "safe_without_recovery": "Não para transição ao Narrador."
+    },
+    {
+      "id": "SR-D05-004",
+      "target": "Segregação efetiva para material GM_HIDDEN.",
+      "minimum_evidence": [
+        "repositório/armazenamento com controle de acesso segregado do jogador-proprietário",
+        "teste de acesso negativo independente"
+      ],
+      "current_state": "not provided",
+      "action": "Não depositar verdade autoral secreta; bloquear investigações que dependam dela.",
+      "priority": "blocking_for_truth_dependent_D07",
+      "owner": "player_or_platform_admin",
+      "safe_without_recovery": "Sim para estruturas públicas sem solução secreta."
+    },
+    {
+      "id": "SR-D05-005",
+      "target": "Cobertura completa do atlas e inventário de fontes.",
+      "minimum_evidence": [
+        "inventário de caminhos fechado contra a raiz relevante",
+        "reconciliação das lacunas"
+      ],
+      "current_state": "partial",
+      "action": "Tratar apenas o corpus efetivamente lido como cobertura; ampliar em nova versão se houver necessidade concreta.",
+      "priority": "medium",
+      "owner": "documentary_orchestrator",
+      "safe_without_recovery": "Sim; UNKNOWN delimitado."
+    }
+  ]
+}

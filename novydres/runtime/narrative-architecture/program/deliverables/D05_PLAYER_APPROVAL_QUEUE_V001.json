@@ -1,0 +1,67 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Decisões reservadas ao jogador ou a custodiante autorizado; nenhuma resposta é presumida.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicar a divergência de ponteiros entre ciclo V0033 e MANIFEST_V46 para qualquer uso operacional.",
+      "when_required": "Antes de promoção ou transição ao Narrador.",
+      "options": [
+        "confirmar autoridade do ciclo com evidência e revisão adequada",
+        "confirmar autoridade do manifesto com evidência e revisão adequada",
+        "manter bloqueio e solicitar nova reconciliação"
+      ],
+      "default": "nenhuma; pendente",
+      "status": "PENDING_PLAYER_APPROVAL"
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Autorizar eventual promoção de arquitetura documental para uso operacional/master.",
+      "when_required": "D12, depois de auditoria, validação e readback.",
+      "options": [
+        "aprovar promoção explicitamente",
+        "rejeitar/solicitar remediação",
+        "manter apenas como proposta documental"
+      ],
+      "default": "manter apenas como proposta documental",
+      "status": "PENDING_PLAYER_APPROVAL"
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Fornecer ou aprovar ambiente de verdade autoral efetivamente segregado, caso D07 necessite solução secreta jogável.",
+      "when_required": "Antes de escrever ou narrar conteúdo truth-dependent.",
+      "options": [
+        "prover ambiente segregado com acesso negativo verificado",
+        "escolher variante aberta antes da narração",
+        "manter a investigação bloqueada"
+      ],
+      "default": "manter bloqueada",
+      "status": "BLOCKED_EXTERNAL_DEPENDENCY"
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Autorizar cena/retomada do Narrador conforme os contratos operacionais vigentes.",
+      "when_required": "Somente quando ciclo, SCENE_READY e NARRATOR_PERMISSION satisfizerem seus próprios gates.",
+      "options": [
+        "autorizar por mecanismo vigente após validação",
+        "não autorizar ainda"
+      ],
+      "default": "não autorizar ainda",
+      "status": "NOT_GRANTED"
+    }
+  ]
+}

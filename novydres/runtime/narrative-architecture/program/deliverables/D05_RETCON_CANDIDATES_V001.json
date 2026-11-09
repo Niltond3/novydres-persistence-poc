@@ -1,0 +1,46 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Triagem de candidatos a retcon. D05 não executa alterações históricas.",
+  "actionable_retcon_candidates": [],
+  "non_candidates": [
+    {
+      "id": "RC-D05-001",
+      "issue": "CYCLE_V0033 versus MANIFEST_V46",
+      "classification": "ADMINISTRATIVE_POINTER_CONFLICT",
+      "reason": "Não demonstra que evento narrativo fechado esteja incorreto; corrigir pointer requer adjudicação operacional."
+    },
+    {
+      "id": "RC-D05-002",
+      "issue": "D02 V011 provenance errata",
+      "classification": "INTERPRETIVE_PROVENANCE_CORRECTION",
+      "reason": "Reclassifica peso e limites da fonte, sem reescrever evento."
+    },
+    {
+      "id": "RC-D05-003",
+      "issue": "D04 localizadores recuperados em arquivo derivado",
+      "classification": "SOURCE_LOCATION_UPDATE",
+      "reason": "Localização do registro não autentica nem altera o evento."
+    },
+    {
+      "id": "RC-D05-004",
+      "issue": "C05 offer versus C03 professional scope",
+      "classification": "UNRESOLVED_INTERPRETATION",
+      "reason": "Aceitação não comprovada; qualquer resposta inventada seria adição histórica."
+    }
+  ],
+  "rule": "Se evidência futura indicar alteração de evento fechado, abrir novo registro versionado com impacto, alternativas e aprovação expressa identificada do jogador antes de qualquer execução."
+}

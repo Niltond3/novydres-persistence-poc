@@ -1,0 +1,165 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "6cf1434147527a2d6fd7892ee4538670ad0dad7a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Checks adversariais documentais realizados; não representam testes automatizados nem prova de autenticidade externa.",
+  "independent_review": "completed; see AUDIT_D05_V001.independent_review",
+  "tests": [
+    {
+      "id": "T-D05-001",
+      "assertion": "Descoberta numérica do ciclo máximo",
+      "evidence": "CYCLE_V0033 é o maior ciclo encontrado no diretório de orquestração.",
+      "result": "PASS",
+      "limit": "Inventário de nomes com ordenação numérica; não prova ausência de refs remotas ainda não buscadas.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-002",
+      "assertion": "Cursor e evento do ciclo",
+      "evidence": "V0033 informa sequência 33 e last_event_id CHR001-M301-C05-22-20261109-001.",
+      "result": "PASS",
+      "limit": "Leitura do JSON corrente.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-003",
+      "assertion": "Estado de C05/C06 e mortalidade",
+      "evidence": "C05 CLOSED, C06 NOT_STARTED; personagem mortal e Abraço false.",
+      "result": "PASS",
+      "limit": "Leitura do JSON corrente.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-004",
+      "assertion": "Divergência do manifesto",
+      "evidence": "MANIFEST_V46 aponta para ponteiros anteriores ao ciclo V0033.",
+      "result": "PASS",
+      "limit": "Comparação documental; nenhuma autoridade é adjudicada.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-005",
+      "assertion": "Errata D02 V011 prevalece",
+      "evidence": "As quatro peças V011 e seu contrato foram identificados como base obrigatória.",
+      "result": "PASS",
+      "limit": "Handoff/audit/errata revisados; não refaz revisão histórica integral.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-006",
+      "assertion": "Limite dos 102 excertos",
+      "evidence": "Intervalos legados sem suporte não são reutilizados como evidência.",
+      "result": "PASS",
+      "limit": "V011 lido; a correção posterior depende de intervalos V009 exatos ou UNKNOWN.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-007",
+      "assertion": "Localização de IDs 119 e 121",
+      "evidence": "ESCAPE-119 appears at M2.03_v017.source.txt:537 and LIVE_v018.json:439; ESCAPE-121 appears at M2.03_v017.source.txt:545 and was not found in LIVE_v018. Exact-ID search only; all locations are derived.",
+      "result": "PASS",
+      "limit": "Confirms path/line location only, not original authorship, dialogue, RNG, canonical validity, or participant knowledge.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-008",
+      "assertion": "D03 knowledge acquisition",
+      "evidence": "Unknown/partial-index rows não são promovidos a conhecimento de NPC.",
+      "result": "PASS",
+      "limit": "Revisão dos entregáveis e limites D03; sem inferência retroativa.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-009",
+      "assertion": "Alias identity merge",
+      "evidence": "Nenhuma das comparações indeterminadas é fundida.",
+      "result": "PASS",
+      "limit": "D03 identity review e handoff consultados.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-010",
+      "assertion": "D04 heterogeneity",
+      "evidence": "44 registros mantêm classificações heterogêneas e não viram 44 tramas.",
+      "result": "PASS",
+      "limit": "Baseline e classificação D04 consultadas.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-011",
+      "assertion": "Causality",
+      "evidence": "Nenhuma aresta causal global é criada por proximidade ou sequência.",
+      "result": "PASS",
+      "limit": "D02 V011 causal errata e D04 causal map consultados.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-012",
+      "assertion": "Acceptance inference",
+      "evidence": "Aceitação da oferta não é inferida.",
+      "result": "PASS",
+      "limit": "Conflito de escopo registrado como UNKNOWN.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-013",
+      "assertion": "Retcon execution",
+      "evidence": "Nenhum retcon é executado nem proposto como fato aprovado.",
+      "result": "PASS",
+      "limit": "D05 lista zero candidatos acionáveis; branch permaneceu sem alterações nesta fase de redação.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-014",
+      "assertion": "Secret containment",
+      "evidence": "Nenhum segredo de bastidor é gravado; requisito de isolamento é bloqueador externo.",
+      "result": "PASS",
+      "limit": "Artefatos D05 player-safe; validação não substitui teste de ACL segregada.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-015",
+      "assertion": "Operational authorization",
+      "evidence": "Nenhuma cena, C06, XP, FV ou promoção de master é autorizada por D05.",
+      "result": "PASS",
+      "limit": "Governança/runbook e estado V0033 aplicados.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-016",
+      "assertion": "Scope and branch",
+      "evidence": "Saídas permitidas são novos documentos D05 na branch documental.",
+      "result": "PASS",
+      "limit": "Inspeção prévia da branch e HEAD; validação final após geração e stage.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-017",
+      "assertion": "Approval queue coverage",
+      "evidence": "Conflito de ponteiros, promoção, isolamento e autorização de Narrador possuem dependências explícitas.",
+      "result": "PASS",
+      "limit": "Matriz de conflitos cruzada com fila de decisões.",
+      "method": "documentary_adversarial_check"
+    },
+    {
+      "id": "T-D05-018",
+      "assertion": "Unknown boundaries",
+      "evidence": "Cada lacuna tem disposição, limite e condição para eventual promoção.",
+      "result": "PASS",
+      "limit": "Revisão cruzada GAP/UNCERTAINTY/RECOVERY.",
+      "method": "documentary_adversarial_check"
+    }
+  ]
+}
