@@ -1,0 +1,105 @@
+{
+  "schema_id": "CHR001_ATLAS_DIAGRAM_VALIDATION_V2",
+  "status": "PASS_SNAPSHOT_CROSSREFERENCE_PARTIAL_SEMANTICS",
+  "source_head": "d140d7cf547bb97e9ef2181362a6e1d2520967be",
+  "source_snapshot": {
+    "path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+    "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30"
+  },
+  "corrected_diagram_path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/TRAMAS_PLAYER_SAFE_V002.mmd",
+  "supersedes": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/TRAMAS_PLAYER_SAFE_V001.mmd",
+  "tested_arc_event_edges": 12,
+  "all_edges_present_in_arc_timeline_and_event_cards": true,
+  "all_event_cards_source_anchored": true,
+  "cross_arc_connections_without_source": 0,
+  "links": [
+    {
+      "arc_id": "familia",
+      "event_id": "HIST-IDX-EV-001",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "familia",
+      "event_id": "HIST-IDX-EV-013",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "aquecimento",
+      "event_id": "HIST-IDX-EV-007",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "aquecimento",
+      "event_id": "CHR001-M201-ZERO-20261101-001",
+      "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "event_status": "HISTORICAL_SOURCE_UNVERIFIED"
+    },
+    {
+      "arc_id": "volnaya",
+      "event_id": "CHR001-M301-C04-04-20261108-001",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "volnaya",
+      "event_id": "CHR001-M203-ESCAPE-124-20261103-001",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "lev-nikolai",
+      "event_id": "HIST-IDX-EV-009",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "lev-nikolai",
+      "event_id": "HIST-IDX-EV-025",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "escola",
+      "event_id": "HIST-IDX-EV-005",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "escola",
+      "event_id": "HIST-IDX-EV-011",
+      "source_path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "oficina",
+      "event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "event_status": "PLAYED"
+    },
+    {
+      "arc_id": "anomalia",
+      "event_id": "CHR001-M203-INITIAL-20261101-001",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "event_status": "PLAYED"
+    }
+  ],
+  "remaining_gaps": [
+    "Índice M1 é somente localizador; conferência original por afirmação pendente.",
+    "Cartões M2.01–M2.02 usam marcadores legados, não ledger COMMITTED.",
+    "Extração lexical dos atores não comprova interação ou conhecimento; revisão por evento necessária.",
+    "Censo parte de 46 registros operacionais e 26 entidades de índice M1; total de figurantes ainda não auditado.",
+    "Autoria editorial original não aferida por commits cronológicos anteriores.",
+    "Datas diegéticas, vida/morte, localização e objetivos não comprovados permanecem UNKNOWN.",
+    "Shards, versões históricas dos dossiês, atribuições NPC-NPC e clocks devem ser auditados individualmente.",
+    "Causas clínicas e identidade dos envolvidos em M3.01.C04 não estão confirmadas.",
+    "O atlas não contém eventos jogados do período até 2010."
+  ],
+  "notes": [
+    "V001 representava vínculos temáticos sem prova explícita de causalidade. V002 retira esses conectores e ancora setas exclusivamente em event cards existentes.",
+    "PASS significa equivalência documental ao snapshot, não auditoria semântica completa da história.",
+    "Ciclo narrativo READY_FOR_NARRATOR não muda."
+  ]
+}
