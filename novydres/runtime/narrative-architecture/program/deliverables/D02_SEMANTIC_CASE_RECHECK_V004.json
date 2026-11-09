@@ -1,0 +1,305 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_SEMANTIC_CASE_RECHECK_V004",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 4,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "68e3a0c373a2395db17c819fc6c6bea37d93e6e1",
+  "status": "ARCHIVAL_LOCATOR_AND_INTERPRETATION_RECHECK_NOT_FINAL",
+  "source_casebook": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SEMANTIC_CASEBOOK_V002.json",
+    "blob_sha": "36477d8a87b70868823e5325704efc409e63b0d9"
+  },
+  "cases_checked": 12,
+  "evidence_ranges_retrieved": 16,
+  "range_sha_nonempty_pass": 16,
+  "archival_casebook_findings_rechecked": 12,
+  "independent_original_chat_utterance_confirmed": 0,
+  "semantic_661_fully_cleared": 0,
+  "independent_editorial_signoffs": 0,
+  "source_classification_limit": "Even lines labeled literal speech are migrated archive attestations, not independently authenticated original chat/tool logs.",
+  "cases": [
+    {
+      "case_id": "D02-SEM-001",
+      "scope": "M1.PROLOGUE",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 153,
+          "end_line": 165,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "PROLOGUE_PRE_GATE_NO_RETROACTIVE_GATE",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-002",
+      "scope": "M1.01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 193,
+          "end_line": 216,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "ADMIN_REGULARIZATION_DISTINCT_FROM_PLAY",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-003",
+      "scope": "M1.06",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 346,
+          "end_line": 347,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "EXPLICIT_CORRECTION_SUPERSEDES_EARLIER_NARRATOR",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-004",
+      "scope": "M2.01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 724,
+          "end_line": 746,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "ALIAS_AND_DOCUMENT_AUTHENTICITY_UNPROVEN",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-005",
+      "scope": "M2.02",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 818,
+          "end_line": 824,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "META_GUIDANCE_SEPARATE_FROM_DIEGETIC_ACTION",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-006",
+      "scope": "M2.03",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+          "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+          "start_line": 23,
+          "end_line": 30,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 847,
+          "end_line": 854,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "MIGRATED_COMPOSITE_DIARY"
+        }
+      ],
+      "finding_code": "CORRECTED_MECHANICAL_RESULT_NO_ADDITIONAL_FICTIONAL_ATTACK",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-007",
+      "scope": "M2.04.C08-C09",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 346,
+          "end_line": 359,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 364,
+          "end_line": 375,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "TWO_ARCHIVAL_SIDES_SEQUENCE_ONLY_PENDING_ORIGINAL_EVIDENCE",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-008",
+      "scope": "M3.01.C01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 15,
+          "end_line": 31,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "LOCAL_REFUSAL_NOT_EXTERNAL_CONFLICT_RESOLUTION",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-009",
+      "scope": "M3.01.C04",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 180,
+          "end_line": 184,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "C04_09_PREVAILS_OVER_INVALID_C04_08",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-010",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 238,
+          "end_line": 244,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 261,
+          "end_line": 265,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "ACCEPTED_CHAT_RESULT_RNG_ORIGIN_UNKNOWN",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-011",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 255,
+          "end_line": 259,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 276,
+          "end_line": 283,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "PLAYER_SPEECH_NPC_ASSERTION_CONTRACT_SEPARATION",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    },
+    {
+      "case_id": "D02-SEM-012",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 285,
+          "end_line": 289,
+          "sha_matches": true,
+          "nonempty": true,
+          "range_in_bounds": true,
+          "source_class": "CUMULATIVE_EPISODE_RECORD"
+        }
+      ],
+      "finding_code": "SCENE_CLOSURE_NOT_FUTURE_SCENE_AUTHORIZATION",
+      "conclusion": "ARCHIVAL_CONTEXT_CONSISTENT_NOT_ORIGINAL_CHAT_AUTHENTICATED",
+      "original_creative_author": "AUTHOR_UNKNOWN",
+      "editorial_independent_signoff": false
+    }
+  ],
+  "not_a_new_technical_ledger": true
+}

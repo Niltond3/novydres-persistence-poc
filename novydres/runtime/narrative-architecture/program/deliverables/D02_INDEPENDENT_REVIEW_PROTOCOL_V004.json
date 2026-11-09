@@ -1,0 +1,34 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_INDEPENDENT_REVIEW_PROTOCOL_V004",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 4,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "68e3a0c373a2395db17c819fc6c6bea37d93e6e1",
+  "status": "REVIEW_NOT_PERFORMED",
+  "authoring_executor": "D02_DOCUMENTARY_EXECUTOR",
+  "independent_reviewer": null,
+  "reviewer_must_not_be_same_executor": true,
+  "mandatory_scope": [
+    "Sample before reading author conclusions; verify selected source intervals at blob SHA and source_kind",
+    "Review all 661 claims clause-by-clause or document justified complete semantic coverage",
+    "Distinguish PLAYER_DECLARATION/NPC_CLAIM/NARRATOR_ADJUDICATION/EDITORIAL_SUMMARY/MECHANICS",
+    "Test all correction precedence and excluded partial versions",
+    "Trace original author when contemporary evidence exists; otherwise AUTHOR_UNKNOWN",
+    "Demand bilateral direct support for each CAUSAL_CONFIRMED edge",
+    "Check G28 outcomes separately from authenticity of RNG tools",
+    "Check NPC epistemic limits and any unsupported retrospective event",
+    "Verify no master/canon/operation mutation and no GM_HIDDEN exposure"
+  ],
+  "signoff_requirements": {
+    "reviewer_identity": "REQUIRED_DISTINCT_AGENT_OR_HUMAN",
+    "evidence_sample_ids": "REQUIRED",
+    "adversarial_rejections_and_resolutions": "REQUIRED",
+    "source_blobs_and_lines": "REQUIRED",
+    "outcome": "PASS_OR_FAIL_WITH_SIGNED_ARTIFACT"
+  },
+  "editorial_signoff": "NOT_GRANTED",
+  "same_executor_followup_does_not_count": true,
+  "phase_gate_until_signoff": "FAIL"
+}

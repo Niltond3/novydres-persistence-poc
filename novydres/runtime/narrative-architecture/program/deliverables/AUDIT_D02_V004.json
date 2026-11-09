@@ -1,0 +1,103 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V004",
+  "phase": "D02",
+  "version": 4,
+  "status": "FAIL",
+  "spoiler_class": "PLAYER_SAFE",
+  "supersedes": "AUDIT_D02_V003.json",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "design_branch": "design/chr001-narrative-program-d01",
+  "design_expected_parent_sha": "68e3a0c373a2395db17c819fc6c6bea37d93e6e1",
+  "master_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "checkpoint": {
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_sequence": 33,
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "chain": "33_OF_33_PREDECESSOR_SHA_AND_SEQUENCE_CHECKED",
+    "operational_refs": "6_OF_6_SHA_MATCH",
+    "plan_refs": "2_OF_2_SHA_MATCH",
+    "manifest_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+    "live_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "status": "READY_FOR_DRAMATURGO",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "inputs": {
+    "d01_pass": "AUDIT_D01_V001.json",
+    "d01_artifacts_fetched": 10,
+    "baseline_d02_versions": [
+      "V001",
+      "V002",
+      "V003"
+    ],
+    "v003_audit_blob": "34b7f69c9dde8bccc6dcbed880c78826f291092c",
+    "v003_handoff_blob": "532d3152f2fbb1b7b946b65a497f4296cf5d0b49"
+  },
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SEMANTIC_CASE_RECHECK_V004.json",
+      "blob_sha": "3ba25eb9ec4a1498e0f1ca81e5cf5fa7a6e911b8",
+      "status": "PROPOSED_PLAYER_SAFE_READBACK_REQUIRED"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_GAP_EVIDENCE_REGISTER_V004.json",
+      "blob_sha": "d936f0d983dc05fa963124d8c7855528f4f83d66",
+      "status": "PROPOSED_PLAYER_SAFE_READBACK_REQUIRED"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_INDEPENDENT_REVIEW_PROTOCOL_V004.json",
+      "blob_sha": "b595400c39e08790714da6450631180d0c76b761",
+      "status": "PROPOSED_PLAYER_SAFE_READBACK_REQUIRED"
+    }
+  ],
+  "checks": {
+    "program_and_governance_read": "YES",
+    "cycle_numeric_max": "CYCLE_V0033",
+    "chain": "PASS_33",
+    "cycle_references": "PASS_8",
+    "manifest_and_live": "SHA_PASS_HISTORICAL_POINTER_DISCREPANCY_D01_ADM_001",
+    "d01_ten_files": "READ_SHA_MATCH_PASS",
+    "d02_v003_eight_files": "READ_SHA_MATCH_PASS",
+    "archive_cases_resolved": 12,
+    "archive_ranges_fetched": 16,
+    "archive_sha_and_bounds": 16,
+    "archive_ranges_failed": 0,
+    "source_original_chat_independently_authenticated": 0,
+    "all_assertions_provisionally_classified": 661,
+    "semantically_finalized_total": 0,
+    "original_authorship_proven_per_all_scenes": false,
+    "causal_002": "SEQUENCE_ONLY",
+    "g28_source_files": 7,
+    "g28_test_records": 48,
+    "g28_rng_origin": "UNKNOWN_OR_UNVERIFIED_FOR_NON_TAKE_HALF",
+    "technical_ledger": "COMMITTED_NOT_PROVEN",
+    "atlas_and_coverage": "PARTIAL",
+    "independent_editorial_signoff": "NOT_GRANTED",
+    "master_and_operational_writes": false
+  },
+  "blocking_gaps": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "other_open": [
+    "D01-ADM-001"
+  ],
+  "editorial_review": {
+    "same_executor_rechecks": "NOT_INDEPENDENT",
+    "result": "FAIL"
+  },
+  "phase_gate": "FAIL",
+  "d03_unlocked": false,
+  "next_phase": "D02_CONTINUATION_ONLY",
+  "next_prompt_storage": "CHAT_ONLY_NOT_GITHUB",
+  "no_c06": true,
+  "no_2010": true,
+  "no_canon_rewrite": true,
+  "publication_note": "Atomic commit containing five new blobs; its own commit SHA cannot be embedded in the audit, branch readback required."
+}

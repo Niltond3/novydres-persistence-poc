@@ -1,0 +1,83 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_GAP_EVIDENCE_REGISTER_V004",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 4,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "68e3a0c373a2395db17c819fc6c6bea37d93e6e1",
+  "status": "SIX_BLOCKERS_RETAINED",
+  "baseline": {
+    "d01_pass": true,
+    "d02_v003_fail": true,
+    "total_documentary_markers": 661,
+    "provisional_triage": 661,
+    "independent_semantic_clearances": 0,
+    "source_inventory": 474,
+    "scene_groups": 33,
+    "contextual_anchor_checks": 28,
+    "mechanical_test_records": 48,
+    "atlas": "PARTIAL"
+  },
+  "checkpoint": {
+    "cycle": "CYCLE_V0033",
+    "cycle_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "gaps": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "evidence_gain": "M1 prologue/gate and corrected interlocutor source ranges rechecked; entire M1 voice/decision/outcome corpus not adjudicated",
+      "required_to_close": "Clause-wise M1.01-M1.09 and prologue, originals vs later administrative reclassification, per-claim voice and state"
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "evidence_gain": "M2.01/M2.02 targeted archive passages and M2.03 roll correction source checked",
+      "required_to_close": "Original chat and legacy/shards/cumulative chain crosswalk including invalid_partial exclusion and correction outcome"
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "evidence_gain": "Sampled M2.04 C08-C09 and M3.01 C01,C04,C05 with explicit correction boundaries",
+      "required_to_close": "C01-C17 all decisive utterances and states, downtime, M3.01 C01-C05, all NPC knowledge limits"
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "evidence_gain": "No original creative author inferred from publisher, plan or transcript summary",
+      "required_to_close": "Contemporaneous preparation/creation evidence per scene; otherwise AUTHOR_UNKNOWN for every unsupported attribution"
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "evidence_gain": "D02-CAUSE-002 remains SEQUENCE_ONLY; no new speculative link",
+      "required_to_close": "All causal edges original two-sided proofs and complete candidate graph; classify thematic/sequence/unknown conservatively"
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "evidence_gain": "Seven G28 files/48 tests structurally reviewed in V003, no original external RNG evidence",
+      "required_to_close": "Cross-match event outcomes, pre-roll declarations, faces, FV/Take Half, tool provenance independently; unknown retained where missing"
+    }
+  ],
+  "external_editorial_gate": "NOT_COMPLETED",
+  "unchanged_invariants": [
+    "MASTER_READ_ONLY",
+    "NO_CANONICAL_MUTATION",
+    "NO_OPERATING_DELTA",
+    "NO_XP_FV_ROLLS",
+    "NO_RETCON",
+    "NO_C06",
+    "NO_2010",
+    "NO_COMMITTED_INFERENCE"
+  ],
+  "pending_admin": [
+    "D01-ADM-001"
+  ],
+  "d03_unlocked": false
+}
