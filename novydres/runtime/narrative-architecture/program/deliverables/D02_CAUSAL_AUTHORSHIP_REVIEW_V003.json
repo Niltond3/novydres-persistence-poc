@@ -1,0 +1,281 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_CAUSAL_AUTHORSHIP_REVIEW_V003",
+  "phase": "D02",
+  "status": "PARTIAL_NOT_FINAL",
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "commit_provenance_checks": [
+    {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "record_commit": "a98ea586852457acd36c33e438e8d3841fb16154",
+      "committed_at": "2026-11-02T17:04:38Z",
+      "source_role": "MIGRATED_ARCHIVE",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+      "record_commit": "a98ea586852457acd36c33e438e8d3841fb16154",
+      "committed_at": "2026-11-02T17:04:38Z",
+      "source_role": "MIGRATED_ARCHIVE",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V1.json",
+      "record_commit": "90bf4eea54f39a1481dc16cfd25b59bf15a63932",
+      "committed_at": "2026-11-03T21:52:16Z",
+      "source_role": "PROSPECTIVE_PREPARATION",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v001.source.txt",
+      "record_commit": "87ecc5771dbdee89b1542c804e65909f14ce20db",
+      "committed_at": "2026-11-04T00:08:39Z",
+      "source_role": "POST_SCENE_G28_SUMMARY",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "record_commit": "b452d04cb981506dae735a9556b4af0d1fc08220",
+      "committed_at": "2026-11-07T02:00:29Z",
+      "source_role": "POST_SCENE_CUMULATIVE",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V1.json",
+      "record_commit": "537398867571d0a87a14b4aefce5457b86b531c4",
+      "committed_at": "2026-11-07T04:21:24Z",
+      "source_role": "PROSPECTIVE_PREPARATION",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "record_commit": "418834f097883bf24b270f42fd54d286d490a8b8",
+      "committed_at": "2026-11-07T14:49:42Z",
+      "source_role": "POST_SCENE_G28_SUMMARY",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "record_commit": "471ca26926c8413ed2c452806f27217f1cb57bc3",
+      "committed_at": "2026-11-09T13:20:18Z",
+      "source_role": "POST_SCENE_CUMULATIVE",
+      "original_author": "AUTHOR_UNKNOWN",
+      "limit": "GitHub publisher/time is not the original scene creative author; a plan prepared before execution is not evidence of authorship of each result"
+    }
+  ],
+  "original_scene_authorship": "AUTHOR_UNKNOWN_UNLESS_INDEPENDENT_CONTEMPORARY_CREATIVE_EVIDENCE",
+  "original_chat_transcripts_in_git": "NOT_ESTABLISHED",
+  "contemporary_chat_context_unexported": "Cannot serve as immutable repository proof; original scene creation and individual utterance authorship cannot be certified by later archive summaries",
+  "publication_before_scene_does_not_prove_written_played_result": true,
+  "causality_v001_sha": "5fad83a37fb0f0036eabd4050f8bde6e37a089fe",
+  "causality_v002_sha": "cdd9730869adf29fbf5d0215bcc1e592fe801cf7",
+  "assessed_v002_edges": [
+    {
+      "id": "D02-CAUSE-001",
+      "classification": "CAUSAL_CONFIRMED",
+      "from": "CHR001-M301-C01-04-20261107-001",
+      "to": "CHR001-M301-C01-08-20261107-001",
+      "from_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 16,
+        "end_line": 17,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 28,
+        "end_line": 30,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "RETAIN_V002_NO_UPGRADE",
+      "two_sided_direct_attribution": "BOTH_RECORDED_CUMULATIVE_SUMMARY",
+      "technical_committed": false,
+      "decision": "No unverified causal claim will be promoted"
+    },
+    {
+      "id": "D02-CAUSE-002",
+      "classification": "SEQUENCE_ONLY",
+      "from": "CHR001-M204-C08-23-20261104-001",
+      "to": "CHR001-M204-C09-01-20261105-001",
+      "from_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 346,
+        "end_line": 347,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 368,
+        "end_line": 369,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "RETAIN_V002_NO_UPGRADE",
+      "two_sided_direct_attribution": "BOTH_RECORDED_CUMULATIVE_SUMMARY",
+      "technical_committed": false,
+      "decision": "No unverified causal claim will be promoted"
+    },
+    {
+      "id": "D02-CAUSE-003",
+      "classification": "SEQUENCE_ONLY",
+      "from": "CHR001-M204-C17-08-20261106-001",
+      "to": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+      "from_evidence": null,
+      "to_evidence": null,
+      "adjudication": "RETAIN_V002_NO_UPGRADE",
+      "two_sided_direct_attribution": "NOT_FULLY_EVIDENCED_AT_ORIGINAL_TRANSCRIPT",
+      "technical_committed": false,
+      "decision": "No unverified causal claim will be promoted"
+    },
+    {
+      "id": "D02-CAUSE-004",
+      "classification": "SEQUENCE_ONLY",
+      "from": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "to": "CHR001-M301-C01-01-20261107-001",
+      "from_evidence": null,
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 7,
+        "end_line": 8,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "adjudication": "RETAIN_V002_NO_UPGRADE",
+      "two_sided_direct_attribution": "NOT_FULLY_EVIDENCED_AT_ORIGINAL_TRANSCRIPT",
+      "technical_committed": false,
+      "decision": "No unverified causal claim will be promoted"
+    }
+  ],
+  "sequence_only_v001": [
+    {
+      "before": "M1.01",
+      "after": "M1.02",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.02",
+      "after": "M1.03",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.03",
+      "after": "M1.04",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.04",
+      "after": "M1.05",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.05",
+      "after": "M1.06",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.06",
+      "after": "M1.07",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.07",
+      "after": "M1.08",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.08",
+      "after": "M1.09",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M1.09",
+      "after": "M2.01",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M2.01",
+      "after": "M2.02",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M2.02",
+      "after": "M2.03",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M2.03",
+      "after": "M2.04.C01",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M2.04.C17",
+      "after": "M3.01.C01",
+      "classification": "SEQUENCE_ONLY"
+    },
+    {
+      "before": "M3.01.C04",
+      "after": "M3.01.C05",
+      "classification": "SEQUENCE_ONLY"
+    }
+  ],
+  "thematic_v001": [
+    {
+      "id": "D02-THEME-001",
+      "nodes": [
+        "M1.04",
+        "M2.04.C11"
+      ],
+      "classification": "THEMATIC_ONLY",
+      "causal_link": "UNKNOWN"
+    },
+    {
+      "id": "D02-THEME-002",
+      "nodes": [
+        "M1.03",
+        "M2.04.C14"
+      ],
+      "classification": "THEMATIC_ONLY",
+      "causal_link": "UNKNOWN"
+    }
+  ],
+  "unknown_edge_count": 1,
+  "unproven_cross_arc_connections": "UNKNOWN",
+  "full_two_sided_original_transcript_audit": false,
+  "hidden_cause_inferred": false,
+  "gap_004": "OPEN_AUTHORSHIP_ORIGINAL",
+  "gap_005": "OPEN_UNEXAMINED_CROSS_STORY_CAUSES",
+  "corrective_precedence": [
+    {
+      "id": "CORR-IDENTITY-002",
+      "status": "GOVERNANCE_CORRECTED_NAME_NO_REWRITE"
+    },
+    {
+      "id": "CORR-M1.06-001",
+      "status": "AUTHORITATIVE_INTERLOCUTOR_CORRECTION"
+    },
+    {
+      "id": "CHR001-M203-ROLL-CORR-20261101-001",
+      "status": "SUPERSESSION_NOT_NEW_ATTACK"
+    },
+    {
+      "id": "M3.01.C04.08_to_C04.09",
+      "status": "CORRECTED_GATE_PREVAILS_INVALID_PREVIOUS"
+    }
+  ],
+  "technical_ledger_not_claimed": true
+}

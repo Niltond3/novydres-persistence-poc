@@ -1,0 +1,136 @@
+{
+  "schema": "NOVYDRES_CHR001_AUDIT_D02_V003",
+  "phase": "D02",
+  "version": 3,
+  "status": "FAIL",
+  "spoiler_class": "PLAYER_SAFE",
+  "supersedes": "AUDIT_D02_V002.json",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "base": {
+    "master_sha_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "design_head_before_publication": "d1d84b4c6f99f9765d52ef0086637d17eb528144",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "manifest_path": "novydres/MANIFEST_V46.json",
+    "manifest_blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+    "live_path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+    "live_blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "M3.01.C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CONTEXT_ANCHOR_AUDIT_V003.json",
+      "blob_sha": "681555e3b289a76010948ce0d7c65f4937fec7c7",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_TRIAGE_V003.json",
+      "blob_sha": "e3eba41ee19709232f84cff961f963e73b7a1f48",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_MATRIX_V003.json",
+      "blob_sha": "9492451142962c9b31a16899dcf7bc445478df9b",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_G28_ROLL_PROVENANCE_V003.json",
+      "blob_sha": "cf87d78ac2ee60f91283754c3db12fef54eac3fa",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_AUTHORSHIP_REVIEW_V003.json",
+      "blob_sha": "d301b4d2b3f69c1f7a73d6d753da338f1b4f93c8",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EDITORIAL_ADVERSARIAL_DESK_V003.json",
+      "blob_sha": "e84b465f010998038716afc8ecfce073fd17515e",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    }
+  ],
+  "checks": {
+    "branch_refs_revalidated": "PASS",
+    "numeric_cycle_inventory": "33_LATEST",
+    "cycle_predecessor_chain": "PASS_33_OF_33",
+    "current_cycle_eight_refs": "PASS_8_OF_8",
+    "manifest_and_live": "READ_CURRENT_POINTERS_MANIFEST_HISTORICAL_POINTER_RISK_D01_ADM_001",
+    "d01_ten_files_fetched": "PASS",
+    "d01_seven_contract_blobs": "PASS",
+    "prior_assertion_anchors_integrity": "V002_PASS_661_OF_661",
+    "prior_direct_excerpt_checks": "V002_633_DIRECT_28_CONTEXT_REQUIRED",
+    "v003_context_readback_preparation": "28_ANCHORS_REVIEWED_27_CONTEXT_EXCERPT_1_EDITORIAL_NON_EVENT",
+    "v003_661_assertion_triage": "661_OF_661_CLASSIFIED_CONSERVATIVELY_0_INDEPENDENTLY_CLEARED",
+    "v003_scene_matrix": "33_SCENE_GROUPS_M1_PROLOGUE_AND_DOWNTIME_SEPARATELY_GAPPED",
+    "v003_g28_mechanics": "7_FILES_48_TESTS_DICE_RANGES_AND_POOL_STRUCTURE_NO_ERRORS_EXTERNAL_RNG_UNVERIFIED",
+    "v003_commit_chronology": "8_FILE_PUBLISHING_COMMIT_CHECKS_NO_AUTHORSHIP_PROMOTION",
+    "v003_causal_review": "4_V002_EDGES_RETAINED_NO_NEW_CAUSAL_PROMOTION",
+    "v003_adversarial_review": "9_GUARDS_PASS_3_GATE_FAILURES_NOT_INDEPENDENT",
+    "atlas": "PARTIAL_UNMODIFIED",
+    "master_and_operational_mutation": false,
+    "semantic_corrections_precedence": "PRESERVED_NO_RETCON",
+    "no_technical_ledger_promotion": true
+  },
+  "semantic_gates": {
+    "full_by_assertion_semantic_adjudication": "FAIL",
+    "original_chat_attribution": "FAIL",
+    "creative_authorship_source": "FAIL",
+    "all_causality_original_two_sided": "FAIL",
+    "g28_rng_tool_origin": "FAIL",
+    "independent_editorial_signoff": "FAIL",
+    "overall": "FAIL"
+  },
+  "blocking_gaps": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "public_reason": "M1 prologue and M1.01–M1.09 complete clause-level voice/decision/effect/outcome proof missing"
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "public_reason": "M2.01–M2.03 legacy/shards/precedence still lack complete original-utterance audit"
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "public_reason": "M2.04 C01–C17, downtime, M3.01 C01–C05 cumulative source is not original full attributed transcript"
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "public_reason": "Original scene-story creative authorship remains AUTHOR_UNKNOWN absent individualized contemporaneous source"
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "public_reason": "Only 4 previously considered causal edges adjudicated at V002 level; complete two-sided independent review unproven"
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "public_reason": "G28 RNG original tool logs unverified, atlas partial, no technical COMMITTED ledger migration"
+    }
+  ],
+  "other_open": [
+    "D01-ADM-001",
+    "D01-GAP-003"
+  ],
+  "next_phase": "D02_CONTINUATION_ONLY",
+  "accepted_for_d03": false,
+  "technical_ledger_status": "COMMITTED_NOT_PROVEN",
+  "publication_note": "All new artifacts committed atomically with expected branch SHA and readback; publish status is not asserted inside pre-published audit blob",
+  "no_d03_prompt": true,
+  "no_narrator_prompt": true,
+  "no_scene_authorization": true
+}

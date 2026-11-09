@@ -1,0 +1,112 @@
+{
+  "schema": "NOVYDRES_CHR001_HANDOFF_D02_V003",
+  "phase": "D02",
+  "version": 3,
+  "status": "FAIL",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "design_branch": "design/chr001-narrative-program-d01",
+  "design_expected_parent_sha": "d1d84b4c6f99f9765d52ef0086637d17eb528144",
+  "master_head_at_review": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "status": "READY_FOR_DRAMATURGO",
+    "closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED"
+  },
+  "outputs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CONTEXT_ANCHOR_AUDIT_V003.json",
+      "blob_sha": "681555e3b289a76010948ce0d7c65f4937fec7c7",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_TRIAGE_V003.json",
+      "blob_sha": "e3eba41ee19709232f84cff961f963e73b7a1f48",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_SCENE_COVERAGE_MATRIX_V003.json",
+      "blob_sha": "9492451142962c9b31a16899dcf7bc445478df9b",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_G28_ROLL_PROVENANCE_V003.json",
+      "blob_sha": "cf87d78ac2ee60f91283754c3db12fef54eac3fa",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_CAUSAL_AUTHORSHIP_REVIEW_V003.json",
+      "blob_sha": "d301b4d2b3f69c1f7a73d6d753da338f1b4f93c8",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EDITORIAL_ADVERSARIAL_DESK_V003.json",
+      "blob_sha": "e84b465f010998038716afc8ecfce073fd17515e",
+      "status": "PROPOSED_NOT_OPERATIONAL",
+      "readback": "REQUIRED_AFTER_PUBLICATION"
+    }
+  ],
+  "progress": {
+    "source_records_structural_verified": 661,
+    "records_provisional_annotated": 661,
+    "contextual_flagged_28_reviewed": 28,
+    "contextual_valid_excerpt_27": 27,
+    "editorial_non_event_1": 1,
+    "original_semantic_utterance_adjudications_newly_certified": 0,
+    "g28_audit_files": 7,
+    "g28_recorded_tests": 48,
+    "original_rng_independently_verified": "NO",
+    "original_creative_authorship": "AUTHOR_UNKNOWN",
+    "atlas": "PARTIAL",
+    "technical_committed": "NOT_PROVEN"
+  },
+  "unresolved": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "public_reason": "M1 prologue and M1.01–M1.09 complete clause-level voice/decision/effect/outcome proof missing"
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "public_reason": "M2.01–M2.03 legacy/shards/precedence still lack complete original-utterance audit"
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "public_reason": "M2.04 C01–C17, downtime, M3.01 C01–C05 cumulative source is not original full attributed transcript"
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "public_reason": "Original scene-story creative authorship remains AUTHOR_UNKNOWN absent individualized contemporaneous source"
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "public_reason": "Only 4 previously considered causal edges adjudicated at V002 level; complete two-sided independent review unproven"
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "public_reason": "G28 RNG original tool logs unverified, atlas partial, no technical COMMITTED ledger migration"
+    }
+  ],
+  "editorial_independent_review": "NOT_COMPLETED",
+  "d03_unlocked": false,
+  "next_phase": "D02",
+  "next_prompt_path": "novydres/runtime/narrative-architecture/program/deliverables/NEXT_PROMPT_CONTINUE_D02_V003.md",
+  "publication_commit": "DISCOVER_FROM_BRANCH_REF_AFTER_COMMIT",
+  "technical_ledger": "COMMITTED_NOT_PROVEN",
+  "no_master_write": true,
+  "no_operational_write": true
+}
