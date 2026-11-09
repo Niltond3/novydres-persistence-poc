@@ -1,0 +1,1409 @@
+{
+  "schema": "NOVYDRES_D02_SCENE_BATCH_CLOSURE_V009_B",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 9,
+  "checkpoint": "B",
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "1f888d4bcae325a650e192dfcf7213e2d2bc8a67",
+  "archival_source": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "status": "TWO_SCENES_ARCHIVAL_LEVEL_A_ONLY",
+  "scope": [
+    "M2.01",
+    "M2.02"
+  ],
+  "previously_classified_after_A": 165,
+  "classified_new": 12,
+  "classified_cumulative": 177,
+  "waiting_after_B": 484,
+  "scenes": [
+    {
+      "scene": "M2.01",
+      "lines": [
+        724,
+        803
+      ],
+      "source_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "markers_classified": 11,
+      "records": [
+        {
+          "marker_id": "D02-M201-UNMARKED",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 724,
+          "end_line": 727,
+          "subclauses": [
+            {
+              "line": 724,
+              "archive_text": "CHR-001 — M2_ENTER / M2.01 — O NOME NO RELATÓRIO (31/10/2026, início narrativo).",
+              "semantic_checks": [
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 725,
+              "archive_text": "PRÉ-CONDIÇÃO VERIFICADA: M1.GATE=PASS e M1_CLOSED persistidos e lidos. Usuário pediu continuar; narrador inicia M2.01 PROVOCAÇÃO INICIAL, não uma M1.10. M2_FUNÇÃO: primeira fissura na noção de segurança e controle que Bart possuía sobre a própria vida e seu emprego legítimo. Não consumar ruptura irreversível, punição ou culpa sem jogo.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 726,
+              "archive_text": "TRANSIÇÃO: manhã seguinte à noite de reconexão com Mary, fim dos anos 1970, data exata UNKNOWN. Não se presume que o PJ dormiu, despertou, levantou, saiu do quarto ou realizou outra ação voluntária. Os preparativos da véspera e o carro estacionado sem motor ligado não foram alterados em cena. Estado atual de Mary, Mikahel e Sara nessa manhã ainda não verificado.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 727,
+              "archive_text": "WORLD_EVENT: Batidas à porta principal da casa chegam audivelmente até o quarto. Uma voz masculina chama de fora: é Liev, conhecido colega de Bartholomeu do setor municipal de aquecimento, reconhecível pela voz. Ele não entra, não abre a porta nem vê o PJ. Não foi relatada ameaça imediata ou conflito. NPC_SPEECH: “Bart? É o Liev. Preciso mostrar uma coisa. Aquele relatório do ramal que deixamos sem assinatura... Vi uma cópia circulando como se o serviço tivesse sido aprovado. E tinha seu nome nele.” Liev apresenta seu próprio relato, NÃO prova independente de documento assinado, fraude, identidade de adulterador, operação efetivamente segura ou insegura hoje, vítimas, acidente ou responsabilização oficial. Nenhum documento foi entregue/inspecionado em cena. O ramal foi deixado sinalizado para reparo após teste anterior com perda de pressão; reparo definitivo permanecia desconhecido.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Unmarked source framing and closure included rather than omitted; do not mistake editorial instructions, alleged report contents, or M2.02 prior closure for authenticated original dialogue.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0728",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 728,
+          "end_line": 728,
+          "subclauses": [
+            {
+              "line": 728,
+              "archive_text": "M2.01 STATUS: INITIAL_PROVOCATION_PRESENTED_AWAITING_PLAYER_RESPONSE. PJ continua na área do quarto ou posição não declarada após a noite; tem liberdade de responder, ouvir, ignorar, verificar identidade ou abrir a porta; nenhum desses atos foi imputado. Liev aguarda do lado de fora. M2_ACTIVE; M3–M5 NOT_STARTED; M1_CLOSED. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0; nenhuma compra, rolagem ou gasto. Três FV históricas pendentes e CHRONICLE_STORE_V0_2 sem migração técnica.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Presented M2.01: player may respond, but has not opened door or reviewed alleged report; visitor remains outside. Historic briefing not instant event technical commit.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0729",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 729,
+          "end_line": 729,
+          "subclauses": [
+            {
+              "line": 729,
+              "archive_text": "M2.01 — Bart grita para o visitante “Já vou Lev”, beija Mary, diz que precisa levantar para resolver um problema no trabalho e sorri. O visitante previamente identificado é Liev; a fala não altera sua identidade. A leveza sentida por Bart é subjetiva. Mary corresponde ao beijo, sorri e diz: “Olha só... você está sorrindo. Fazia tempo que eu não via você assim.” Ela pede: “Depois me conta o que aconteceu no trabalho, está bem?” Liev segue aguardando fora da porta fechada. Bart ainda não declarou que se levantou ou abriu a porta. M2.01 ativa; XP 519/170/349, crédito 170/0 inalterado, sem teste nem compra.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player calls 'Lev' as nickname for actual coworker Liev and kisses Mary; does not establish identity with Lev Morozov; no work discussion yet.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0730",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 730,
+          "end_line": 742,
+          "subclauses": [
+            {
+              "line": 730,
+              "archive_text": "M2.01 — PORTA DESTRANCADA — DECLARAÇÃO E REAÇÃO",
+              "semantic_checks": [
+                "ARCHIVAL_REPORT"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 731,
+              "archive_text": "PLAYER_ACTION: Bartholomeu continua sorrindo, sai do quarto, veste roupas mais pesadas e vai até a entrada, destrancando a porta. Na declaração do jogador, ele diz “Lev” para se referir ao visitante; identidade vigente do colega é Liev, distinta de Lev Morozov. A porta foi destrancada, mas não há declaração explícita de que tenha sido aberta; nenhuma ação posterior de Bart presumida.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 732,
+              "archive_text": "NPC_ACTION: Liev ouve o movimento na fechadura e, ainda do lado de fora, diz: “Bart? Trouxe uma cópia. Prefiro que você veja antes de eu falar mais.” Isso é alegação do NPC; documento ainda não visto, autenticidade, autoria e gravidade desconhecidas. Ele não entra nem passa o papel pela porta.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 733,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE; M2.01 INITIAL_PROVOCATION_ACTIVE_AWAITING_PLAYER_RESPONSE; manhã, fim dos anos 1970. Bart vestido para o frio junto à porta destrancada mas fechada; Liev esperando fora. Mary no interior sem nova reação atribuída; estado atual das crianças não verificado. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0. Nenhuma rolagem, compra ou gasto; 3 FV históricas pendentes; store V0.2 não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 734,
+              "archive_text": "M2.01 — VISITA DE LIEV, RELATÓRIO E CAFÉ",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 735,
+              "archive_text": "PLAYER_DECLARATION literal: “Eu abro a porta: Entre Lev, me de esse documento, eu leio enquanto faço um cafe pra a gente. Faço um café com Vodka para mim e Lev”. PLAYER_ACTION: Bartholomeu abre a porta já destrancada, convida o visitante para entrar, pede o documento, lê enquanto prepara duas porções de café com vodca, uma para si e outra para Liev. A fala “Lev” é preservada sem alterar a identidade do colega Liev, distinto de Lev Morozov. A preparação das bebidas não decide se o NPC aceita bebê-la.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 736,
+              "archive_text": "NPC_ACTION: Liev entra por vontade própria, fecha a porta atrás de si e entrega a folha dobrada a Bart. Observa a preparação do café sem assumir que o PJ já tomou um gole. Ao receber sua porção, Liev mantém a xícara sem beber de imediato e explica: “Eu vi isso na mesa da distribuição. Não sei quem mandou circular.” É relato de Liev sobre a origem, não fato institucional independente.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 737,
+              "archive_text": "DOCUMENT_OBSERVATION: a cópia física entregue é um formulário técnico de liberação de ramal, com o nome datilografado “Bartholomeu Krauser” no campo responsável pela inspeção. Nos campos de resultado, lê-se “ensaio sob carga: satisfatório”, “vazamentos: não observados” e “liberado para operação”. Há uma rubrica no campo de validação cuja autoria não é identificável apenas por esta leitura. Essas inscrições são conteúdo verificável do PAPEL, mas não comprovam que o ensaio tenha sido satisfatório, que Bart tenha assinado, que haja autorização genuína, que o reparo tenha sido feito ou quem alterou/emitiu o documento. As inscrições contradizem a inspeção anteriormente vivida, quando houve queda de pressão e gotejamento sob carga e o relatório de operação segura ficou sem assinatura. Evitar declarar fraude, culpa ou perigo atual como fato consumado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 738,
+              "archive_text": "CHECKPOINT: CHR-001; M1_CLOSED; M2_ACTIVE / M2.01 INITIAL_PROVOCATION_ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã do fim dos anos 1970; Bartholomeu mortal na cozinha de casa com cópia em mãos, preparou café com vodca para si e Liev; Liev entrou voluntariamente e está com a própria xícara, sem beber ainda; Mary não recebeu ação inventada; crianças e estado da casa desconhecidos nesta manhã salvo posições prévias. Relatório é evidência documental de afirmações e nome impresso, autoria e validade não determinadas. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0; sem teste, rolagem ou compra, três FV históricas pendentes, store V0.2 não migrado. Próxima resposta cabe ao jogador.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 739,
+              "archive_text": "M2.01 — PEDIDO DE DUPLA VISTORIA A LIEV",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 740,
+              "archive_text": "PLAYER_SPEECH literal: “O nosso supervisor estava interessado de mais em minha assinatura aqui. Tem coisa errada aqui Lev. Eu não tenho tempo de vistoriar tudo nesse setor pra garantir que ta bem de verdade, eu vou descobrir o que aconteceu. Lev, você tem um ... relacionamento, melhor com os rapazes, tem como falar com eles pra fazer um double check nesse setor?” Bartholomeu manifesta suspeita sobre o interesse de Pavel em sua assinatura, afirma que investigará o ocorrido e PEDE a Liev que converse com outros trabalhadores para uma segunda verificação do setor. Suspeita não é prova de participação de Pavel. 'Lev' é fala literal, porém o colega presente é Liev, diferente de Lev Morozov. O jogador não ordenou que Liev já tenha mobilizado equipe nem executado inspeção.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 741,
+              "archive_text": "NPC_RESPONSE: Liev escuta, olha o formulário e responde: “Posso conversar com eles. Alguns me ouvem, sim. Mas conferir o setor inteiro não é coisa para fazer escondido, nem numa manhã. Primeiro eu tentaria que revisassem esse ramal e olhassem o registro de reparo. Se a chefia não autorizou, ninguém vai querer mexer em tubulação sob pressão.” Após uma pausa: “Só preciso saber uma coisa: quer que eu faça o pedido oficialmente, com o seu nome, ou que eu sonde os rapazes primeiro, sem envolver você?” Essa é a avaliação/proposta de Liev; ele ainda não contatou a equipe, não vistoriou setor, não verificou livro de reparo e não informou supervisor. A questão pede decisão do jogador, não cria automaticamente uma operação clandestina.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 742,
+              "archive_text": "CHECKPOINT: CHR-001 M1_CLOSED, M2_ACTIVE / M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE; cozinha da família Krauser, manhã do fim dos anos 1970, PJ mortal. Liev à mesa, café com vodca preparado, sem consumo imposto ao PJ. Bart possui cópia de relatório datilografado com seu nome, resultados 'satisfatório/sem vazamentos/liberado', rubrica não atribuída. Observações antigas reais: perda de pressão e vazamento na inspeção. Autenticidade, autor da rubrica, reparo, riscos atuais e responsabilidade do supervisor UNKNOWN. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349; crédito concedido 170, disponível 0. Sem rolagem ou compra, 3 FV históricas pendentes, store técnico não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player unlocks but has not opened; Liev speaks from outside, document unseen until later entry.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0743",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 743,
+          "end_line": 750,
+          "subclauses": [
+            {
+              "line": 743,
+              "archive_text": "M2.01 — CONSULTA DISCRETA E INTENÇÃO DE CONFRONTAR PAVEL",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 744,
+              "archive_text": "PLAYER_SPEECH: “Nada oficial, isso daqui (aponto o papel) é fumaça, e onde tem fumaça... bem. Vou falar com Pavel, ele sempre foi franco com a gente, quero ver se ele consegue titubear cara a cara comigo ..” PLAYER_INTENT: Bart não quer pedido formal; deseja que Liev sonde discretamente os colegas e pretende conversar pessoalmente com Pavel para avaliar sua reação. A suspeita sobre Pavel não é prova de participação, e nenhum encontro com ele foi realizado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 745,
+              "archive_text": "NPC_RESPONSE: Liev olha o documento e diz: “Está bem. Vou perguntar aos rapazes se alguém soube de um reparo naquele ramal depois do nosso teste, sem abrir solicitação oficial. Mas não posso prometer que ninguém vá comentar. E, Bart, não confunda nervosismo com culpa.” Liev ainda não consultou colegas nem verificou registros; compromisso verbal de tentar obter informações, sem resultado antecipado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 746,
+              "archive_text": "CHECKPOINT: M1_CLOSED, M2_ACTIVE / M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã do fim dos anos 1970, cozinha Krauser. Bart mortal com a cópia do relatório, Liev presente com café preparado. Nome de Bart impresso e rubrica não identificada não confirmam assinatura autêntica ou fraude; reparo atual desconhecido. Conversa com Pavel é apenas intenção de Bart; sondagem de Liev pendente. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0; nenhuma rolagem nem compra; 3 FV históricas pendentes; ledger técnico não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 747,
+              "archive_text": "M2.01 — CAFÉ EM UM GOLE E GRATIDÃO A LIEV",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 748,
+              "archive_text": "PLAYER_DECLARATION: “Primeira coisa que vou fazer quando chegar no trabalho. E Lev, te devo uma, vir aqui tão cedo nesse frio, eu não vou esquecer viu. Tomo meu cafe em um só gole.” Bart promete conversar com Pavel ao chegar ao trabalho, agradece ao colega e toma em um único gole seu café com vodca. “Lev” na fala não altera a identidade de Liev, distinto de Lev Morozov. Não se presume viagem ou confronto já realizado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 749,
+              "archive_text": "NPC_RESPONSE: Liev observa o gesto, esboça um sorriso e diz: “Desse jeito você ainda queima a garganta, Bart.” Acrescenta com seriedade: “Não me deve nada. Eu estava naquele teste também. Vou perguntar aos rapazes sobre algum reparo depois da nossa vistoria. E cuidado ao falar com Pavel.” Liev não contatou ninguém ainda, não saiu da cozinha e não tem prova sobre autor do relatório.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 750,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE / M2.01 aguardando próxima decisão. Bart e Liev na cozinha da casa Krauser, manhã do fim dos anos 1970. Bart ingeriu sua bebida; Liev mantém sua xícara sem consumo afirmado. Bart tem a cópia do relatório técnico; autenticidade e responsabilidade indeterminadas. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0; nenhuma rolagem, compra ou recurso adicional; 3 FV históricas pendentes; ledger técnico V0.2 não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player asks for discreet consultation and intends Pavel confrontation; Liev has only agreed to seek information, no questioning yet.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0751",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 751,
+          "end_line": 756,
+          "subclauses": [
+            {
+              "line": 751,
+              "archive_text": "M2.01 — CARONA OFERECIDA E CHEGADA AO TRABALHO",
+              "semantic_checks": [
+                "ARCHIVAL_REPORT"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 752,
+              "archive_text": "PLAYER_SPEECH literal: “Normalmente é simples Lev, mas isso nem sempre quer dizer bom .. Mas vamos, você não acordou cedo assim pra se atradar, deixa seu carro ai, eu te dou uma carona”. Bart diz a Liev que explicações simples nem sempre são boas; convida-o a sair e oferece carona ao local de trabalho, sugerindo que deixe o carro estacionado na casa. A fala literal “Lev” não altera a identidade de Liev nem o confunde com Lev Morozov.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 753,
+              "archive_text": "NPC_ACTION/SPEECH: Liev aceita a carona, confirma que pode deixar seu próprio carro estacionado na rua diante da casa por enquanto e diz: “Está bem. Obrigado. E, Bart, quando falar com Pavel, escute primeiro o que ele disser. Eu vou perguntar aos rapazes o que sabem do ramal.” Sua última frase expressa intenção futura, não investigação executada.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 754,
+              "archive_text": "TRANSIÇÃO AUTORIZADA PELO JOGADOR: O convite “vamos” e a oferta de carona autorizam a saída conjunta da cozinha, o embarque dos dois no automóvel de Bartholomeu e o deslocamento até o pátio da unidade municipal de aquecimento onde trabalham, sem registrar ações voluntárias ou falas adicionais do PJ. Descrever apenas a chegada, não confrontar Pavel automaticamente. O carro próprio de Liev fica estacionado diante da residência Krauser, como aceito por ele; o veículo de Bart é o da carona. A cópia do relatório continua em posse/custódia de Bart; sem afirmar local exato de guarda. Nenhuma reação ou deslocamento de Mary, Mikahel e Sara narrado. Não presumir que Liev já consultou colegas, nem que Pavel está presente/é culpado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 755,
+              "archive_text": "WORLD_STATE: Pátio da manutenção municipal pela manhã, frio acentuado; setor de escritórios administrativos acessível a partir dali. Liev deixa a carona, mas ainda não segue sozinho para contatar trabalhadores até a próxima decisão/interação. O acesso ao corredor que leva à sala de Pavel está livre; presença atual de Pavel atrás da porta não verificada. Bart e Liev estão no pátio e jogador pode decidir como proceder.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 756,
+              "archive_text": "CHECKPOINT: M1_CLOSED, M2_ACTIVE / M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE, fim dos anos 1970. XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0. Nenhuma rolagem ou gasto de XP/FV adicional; três FV históricos pendentes; CHRONICLE_STORE_V0_2 não migrado. Originalidade/autoria do relatório e estado atual do reparo UNKNOWN.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Car offered, accepted, and move to work explicitly sanctioned; Liev's personal car stays behind and no investigation by him inferred during trip.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0757",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 757,
+          "end_line": 764,
+          "subclauses": [
+            {
+              "line": 757,
+              "archive_text": "M2.01 — CHEGADA AO ESCRITÓRIO DE PAVEL — 2026-11-01",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 758,
+              "archive_text": "PLAYER_ACTION: Bartholomeu diz a Liev “Certo Lev, vai lá. Não se complica meu chapa, vou falar com o Pavel”. Sai do próprio carro, tranca-o e vai até o escritório de Pavel. A grafia “Lev” é preservada na fala; o colega permanece Liev. Não se presume que Bart já tenha entrado na sala, feito acusação, mostrado documentos ou conversado com Pavel.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 759,
+              "archive_text": "NPC_ACTION: Liev responde “Pode deixar, Bart” e segue para a área de trabalho; não se presume que já conversou com colegas. Pavel está em seu escritório, atrás da mesa, e olha para Bart quando ele se aproxima da porta entreaberta. Diz: “Krauser? Bom dia. Precisa de alguma coisa?” A reação comum de Pavel não determina sua participação ou ausência de participação no relatório.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 760,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE/M2.01 aguardando jogador. Bart junto à entrada do escritório de Pavel; Pavel dentro, porta entreaberta. Veículo de Bart trancado no pátio; cópia do relatório sob sua custódia. Causa e autenticidade do relatório, identidade de quem rubricou e reparo do ramal desconhecidos. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Sem rolagem, compra ou gasto. Ledger técnico não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 761,
+              "archive_text": "M2.01 — RELATÓRIO SOBRE A MESA DE PAVEL",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 762,
+              "archive_text": "PLAYER_ACTION: Bartholomeu diz ao supervisor: “Licença Pavel. To com uma duvida aqui, acho que aconteceu algum engano.” Em seguida, coloca sobre a mesa os papéis que trouxe, incluindo a cópia do relatório do ramal. Não faz acusação específica e não decide sentar-se, afastar-se ou entregar a propriedade permanente do documento. O plural “papéis” não autoriza presumir novos documentos com conteúdo definido.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 763,
+              "archive_text": "NPC_RESPONSE: Pavel olha a cópia sobre a mesa, interrompe o trabalho que fazia e percorre com os olhos o cabeçalho e os campos do formulário. Pergunta: “É o relatório daquele ramal? Qual é o engano, Krauser?” Seu tom é de pergunta direta; não se presume culpa, inocência, conhecimento da circulação da cópia ou reconhecimento da rubrica. O documento continua sobre a mesa, acessível ao jogador.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 764,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE/M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã do fim dos anos 1970, escritório da unidade municipal de aquecimento. Bart está junto à mesa de Pavel; Pavel está em seu escritório e espera resposta. A cópia ostenta nome datilografado “Bartholomeu Krauser”, “ensaio sob carga: satisfatório”, “vazamentos: não observados”, “liberado para operação”, rubrica de autoria não verificada. Na inspeção original Bart e Liev constataram perda de pressão e vazamento; não assinaram liberação. Autenticidade, autoria, possível reparo e participação de Pavel UNKNOWN. Liev afastou-se para sondar colegas, sem resultados narrados. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Sem rolagem, compra ou gasto; 3 FV históricas pendentes; ledger técnico não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player approaches Pavel's office and NPC answers; no face-to-face confession or culprit inferred.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0765",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 765,
+          "end_line": 768,
+          "subclauses": [
+            {
+              "line": 765,
+              "archive_text": "M2.01 — BART CONTESTA A LIBERAÇÃO E ALERTA SOBRE TRÊS ZONAS",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 766,
+              "archive_text": "PLAYER_SPEECH literal: “Eu não assinei isso. No dia fiz uma inspeção com o Lev, mas não assinei, não tava seguro, a gente terminou a manutenção mas precisava de mais trabalho. Passa pressão de 3 zonas por aquele ramal, se der problema ali, o povo ficar no frio vai ser a menor preocupação da gente”. Bartholomeu nega que tenha assinado ou validado o relatório, recorda a inspeção com o colega Liev (chamado de Lev em sua fala), a manutenção insuficiente e alerta Pavel sobre pressão ligada a três zonas e potenciais consequências graves. A informação “três zonas” e a avaliação de riscos são declarações do PJ, não medições independentes verificadas agora. O ensaio anterior com queda de pressão e gotejamento é fato já registrado. O PJ não atribuiu autoria à rubrica e não fez acusação direta de falsificação a Pavel.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 767,
+              "archive_text": "NPC_RESPONSE: Pavel interrompe o exame por um momento, torna a olhar os campos do relatório e responde: “Eu me lembro do teste. Você disse que não estava seguro, e eu mandei sinalizar para reparo.” Em seguida aponta para o campo de liberação: “Mas isto aqui diz que foi liberado. Não estou dizendo que você assinou. Quero entender quem autorizou depois daquele teste.” Pavel volta a olhar para Bartholomeu e pergunta: “De onde veio esta cópia?” As falas expressam posição e conhecimento alegados pelo NPC, não inocência comprovada, autoria reconhecida ou confirmação de reparo. Pavel não retém os papéis, não convoca ninguém e não toma providência adicional nesta resposta.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 768,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE/M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã no fim dos anos 1970, escritório de Pavel. Bart de pé junto à mesa; Pavel sentado. Cópia sobre a mesa acessível a ambos, com nome datilografado de Bartholomeu Krauser, resultados favoráveis e rubrica de autoria desconhecida. Inspeção original constatou vazamento e perda de pressão; liberação não assinada por Bart. Autenticidade e autoria do documento, eventual reparo, risco atual e eventual responsabilidade de Pavel = UNKNOWN. Liev iniciou deslocamento para sondar colegas informalmente, sem resultado confirmado. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Sem testes, rolagens, gastos ou compras; três FV históricas pendentes, ledger V0.2 não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player challenges attributed signature, reports earlier unsafe result, warnings are claim not actual new disaster; Pavel's statements distinguish assertion from verified source.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0769",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 769,
+          "end_line": 772,
+          "subclauses": [
+            {
+              "line": 769,
+              "archive_text": "M2.01 — CÓPIA EM CIRCULAÇÃO E PEDIDO DE PAVEL",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 770,
+              "archive_text": "PLAYER_DECLARATION literal: “Ta na circulação ja Pavel, deve ter uma copia nessa pilha de documentos sua também, só num deve ter chegado nela ainda”. Bart diz que o relatório já está circulando e conjectura que uma cópia talvez esteja entre os papéis de Pavel. Não revela de quem recebeu sua cópia. A circulação além da cópia vista é alegação baseada no relato prévio de Liev, não distribuição formal comprovada. A presença de outra cópia na pilha é hipótese de Bart.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 771,
+              "archive_text": "NPC_RESPONSE: Pavel olha para a pilha de documentos, remexe apenas os primeiros papéis sem localizar outra cópia e torna a observar o relatório apresentado. Diz: “Se isso está circulando, preciso descobrir quem autorizou essa liberação.” Em seguida pergunta: “Você me deixa usar esta cópia para conferir a ordem de serviço e o registro original?” Pavel ainda não toma a cópia para si, não identifica autor, não convoca ninguém e não verifica os registros. O comentário de Pavel é condicional, não prova que desconhecia o documento ou que seja inocente.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 772,
+              "archive_text": "CHECKPOINT: M1_CLOSED; M2_ACTIVE/M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã no fim dos anos 1970; Bart e Pavel no escritório do supervisor, cópia sobre a mesa e acessível a Bart; Pavel pede permissão para usá-la e espera resposta. Bart nega assinatura; relatório traz seu nome datilografado, liberação positiva e rubrica de autoria não estabelecida; inspeção anterior com Liev confirmou vazamento e queda de pressão. Quem emitiu, rubricou ou fez circular o papel, se houve reparo e condição atual do ramal UNKNOWN. Liev ausente, sondagem informal ainda sem resultado confirmado. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0; nenhuma rolagem, compra ou gasto de recurso; três FV históricas pendentes; ledger técnico não migrado.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player conjectures copies might circulate; supervisor does not confirm they exist and asks to use copy.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0773",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 773,
+          "end_line": 781,
+          "subclauses": [
+            {
+              "line": 773,
+              "archive_text": "M2.01 — OBSERVAÇÃO SILENCIOSA DE PAVEL — EVENTO CHR001-M201-PAVEL-OBS-20261101-001 (01/11/2026, registro operacional).",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 774,
+              "archive_text": "PLAYER_DECLARATION literal: “Olho pavel demoradamente, quero prestar atenção na respiração, postura, expressões, qiero saber se el3 ta escondendo alguma coisa ates de eu responder”.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 775,
+              "archive_text": "PLAYER_ACTION / PLAYER_INTENT: Bartholomeu permanece em silêncio diante de Pavel, observa-o demoradamente, atentando à respiração, postura, expressões faciais e pequenos movimentos; pretende verificar se o supervisor oculta alguma informação ANTES de responder. A intenção de identificar ocultação não é descoberta garantida. Não há permissão para Pavel ficar com a cópia, nem resposta, ameaça, acusação nova ou movimento voluntário adicional de Bartholomeu.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 776,
+              "archive_text": "NPC_ACTION / OBSERVABLE: Pavel sustenta o olhar por alguns instantes, ainda sentado. Sua respiração parece regular, mas ele deixa escapar uma expiração mais longa pelo nariz; os lábios se comprimem por um momento, e sua expressão se fecha ao perceber que a pergunta continua sem resposta. Uma das mãos se aproxima da borda da cópia sem levantá-la, depois se retrai. Ele olha brevemente para o campo da rubrica e volta os olhos a Bartholomeu. Esses sinais externos são perceptíveis; não demonstram por si mesmos mentira, inocência, conhecimento prévio, medo ou intenção oculta.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 777,
+              "archive_text": "NPC_SPEECH / NPC_CLAIM: Depois do silêncio, Pavel diz: “Krauser, eu fiz uma pergunta. Não vou pegar sua cópia sem você deixar. Preciso compará-la com a ordem de serviço e o registro original. Se preferir, pode acompanhar a conferência.” Trata-se de fala e proposta de Pavel, não prova de que ele desconheça a origem do relatório, nem de que a consulta tenha ocorrido. Ele aguarda a decisão de Bartholomeu.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 778,
+              "archive_text": "MECHANICS: Sem teste ou rolagem: não há parada validada para determinar ocultação/engano, pois traços sociais/perceptivos relevantes não estão integralmente alocados na ficha em construção. A narração limita-se a sinais externos, sem atribuir sucesso automático ao propósito investigativo. roll_id=null; nenhum gasto de Força de Vontade, XP ou outro recurso.",
+              "semantic_checks": [
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 779,
+              "archive_text": "CONFIRMED: Bart observou silenciosamente Pavel; Pavel exibiu os sinais externos e pronunciou a proposta acima; a cópia continua na mesa, ao alcance de Bart, sem ser retida ou usada por Pavel; o pedido de permissão não foi respondido. Liev está fora da sala e nenhuma descoberta da sondagem informal foi registrada.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 780,
+              "archive_text": "UNKNOWN: intenção e conhecimento íntimos de Pavel; origem e validade do relatório; autor da rubrica; eventual reparo posterior; segurança atual do ramal; existência de outra cópia entre os documentos de Pavel; resultados da sondagem de Liev.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 781,
+              "archive_text": "CHECKPOINT: CHR-001; modo guiado; M1 CLOSED; M2 ACTIVE; M2.01 “O Nome no Relatório” ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã, fim dos anos 1970, escritório de Pavel na unidade municipal de aquecimento. Bartholomeu Krauser mortal está diante da mesa, em silêncio após observar o supervisor. Pavel permanece sentado, espera permissão para consultar a cópia e ofereceu que Bart acompanhe a conferência. Nenhuma permissão, resposta ou outra ação de Bartholomeu presumida. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Três gastos históricos de FV aguardam reconciliação técnica; CHRONICLE_STORE_V0_2 não integralmente migrado (events=[]; rolls=[]). Sem novos resultados mecânicos. Fonte da ação: declaração original do jogador; reação externa: resolução narrativa deste turno; não declarar COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player observes external behavior only; lack of validated roll forbids hidden-state success or proof of guilt.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0782",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 782,
+          "end_line": 788,
+          "subclauses": [
+            {
+              "line": 782,
+              "archive_text": "M2.01 — AUTORIZAÇÃO PARA PAVEL RETER A CÓPIA — EVENTO CHR001-M201-PAVEL-COPIA-20261101-001 (01/11/2026, registro operacional).",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 783,
+              "archive_text": "PLAYER_SPEECH literal: “Sem problemas Pavel, pode ficar. Você tem o itinerário, qualquer coisa sabe onde me achar, terminando o turno venho saber com você o que aconteceu”.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 784,
+              "archive_text": "PLAYER_ACTION / PLAYER_INTENT: Bartholomeu Krauser autoriza expressamente Pavel a ficar com a cópia do relatório para sua conferência. Informa que Pavel dispõe de seu itinerário de trabalho e poderá encontrá-lo se precisar, e manifesta intenção de voltar ao fim do turno para saber o que aconteceu. Ainda não se afasta da mesa, não sai da sala, não começa nem conclui o turno e não retorna posteriormente; o retorno anunciado é futuro e não consumado. A referência ao itinerário é declaração do PJ, não verificação independente do conteúdo ou localização desse registro.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 785,
+              "archive_text": "NPC_ACTION / OBSERVABLE: Após a autorização, Pavel puxa a cópia do relatório para o seu lado da mesa e a coloca numa pasta de trabalho aberta, mantendo-a à vista. O documento passa à custódia de Pavel com consentimento de Bart; nenhuma consulta à ordem de serviço, ao registro original ou a reparos foi realizada nesta cena. Pavel recupera seu tom profissional e responde, sem prometer resultado antecipado: “Está bem. Vou conferir os registros. Se precisar de você antes, mando chamar.” Ele olha novamente para o cabeçalho do relatório e acrescenta: “Mas ainda preciso saber uma coisa, Krauser: quem lhe entregou esta cópia?” Sua pergunta é um pedido de informação de NPC, não comprova culpa, inocência ou acesso efetivo aos registros. Pavel aguarda, sem exigir resposta por imposição física.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 786,
+              "archive_text": "CONFIRMED: autorização de Bart para reter a cópia; Pavel recebeu a custódia e a colocou em pasta aberta sobre a mesa; intenção verbalizada de Bart de retornar depois do turno; Pavel anunciou intenção de conferir registros e perguntou de quem Bart recebeu a cópia. UNKNOWN: veracidade e autoria do relatório, quem o validou/rubricou, reparo posterior, segurança atual do ramal, conhecimento/responsabilidade de Pavel, existência de cópias adicionais, resultado de qualquer conferência futura e sondagem de Liev.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 787,
+              "archive_text": "MECHANICS: Sem teste, rolagem, compra ou gasto de recurso. Nenhuma informação oculta revelada ou sucesso investigativo pressuposto; roll_id=null.",
+              "semantic_checks": [
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 788,
+              "archive_text": "CHECKPOINT: CHR-001; modo guiado; M1 CLOSED; M2 ACTIVE; M2.01 “O Nome no Relatório” ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã do fim dos anos 1970; Bartholomeu mortal ainda diante da mesa de Pavel, no escritório da unidade municipal de aquecimento. Pavel sentado, com a cópia do relatório sob sua custódia numa pasta aberta, pede informação sobre a origem da cópia. Bartholomeu ainda não respondeu à nova pergunta nem saiu; apenas disse que pretende voltar após o turno. Liev segue fora do escritório, sem investigação concluída confirmada. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0; três gastos históricos de FV pendentes de reconciliação; CHRONICLE_STORE_V0_2 não integralmente migrado (events=[]; rolls=[]). Sem mudanças mecânicas; registro operacional não equivale a COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Player explicitly authorizes transfer of the copy to Pavel; intention of later inspection is not completed; transfer is custody not original authenticity.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0789",
+          "scene": "M2.01",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 789,
+          "end_line": 803,
+          "subclauses": [
+            {
+              "line": 789,
+              "archive_text": "M2.01 — ORIGEM DA CÓPIA INFORMADA — CHR001-M201-FONTE-COPIA-20261101-001",
+              "semantic_checks": [
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 790,
+              "archive_text": "PLAYER_SPEECH (literal): “Foi o Lev, mas porque a pergunta. É uma circular Pavel, todo mundo tem uma”.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 791,
+              "archive_text": "INTERPRETAÇÃO: Bartholomeu informa que recebeu a cópia de Liev, a quem costuma chamar de Lev (não Lev Morozov). Pergunta a Pavel por que deseja saber e afirma que o relatório circula amplamente. “Todo mundo tem uma” é fala de Bartholomeu, não constatação comprovada sobre a distribuição.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 792,
+              "archive_text": "NPC_ACTION/SPEECH: Pavel mantém a cópia dentro da pasta aberta, olha para Bart e responde: “Porque isso é um relatório de liberação, Krauser. Se existem tantas cópias, quero saber de onde saíram. Você viu outras pessoalmente, ou foi o Liev que lhe contou?” Seu tom é firme e objetivo. A pergunta não confirma que o supervisor esteja mentindo, nem que tenha conhecimento prévio da origem. Ele não chamou Liev nem consultou os arquivos até aqui.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 793,
+              "archive_text": "PENDÊNCIAS: autoria e autenticidade do relatório, origem da circulação, rubrica, reparo posterior, segurança do ramal, participação de Pavel e resultado da consulta informal de Liev permanecem desconhecidos.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 794,
+              "archive_text": "CHECKPOINT: CHR-001; criação guiada; M1 CLOSED; M2 ACTIVE; M2.01 ACTIVE_AWAITING_PLAYER_RESPONSE. Manhã no fim dos anos 1970, escritório de Pavel. Bartholomeu Krauser mortal diante da mesa; Pavel sentado com a cópia autorizadamente sob sua custódia. Pavel acaba de perguntar se Bart viu outras cópias ou ouviu isso de Liev. Bart ainda não respondeu nem saiu. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Sem teste, rolagem, compra, gasto de FV ou mudança mecânica. Três gastos históricos de FV pendentes; ledger V0.2 não migrado. Registro operacional, não COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 795,
+              "archive_text": "CHR-001 — M2.01 — RESPOSTA DE BART, AVALIAÇÃO DE RITMO E FECHAMENTO CURTO — 2026-11-01 — EVENT_ID CHR001-M201-RITMO-CLOSE-20261101-001.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 796,
+              "archive_text": "PLAYER_SPEECH (literal): “Pessoal do leve mesmo, mas de toda forma se tá em circulação, se ele tem contato, é uma coisa que a gente tem que entender o que aconteceu. O que importa é que eu não assinei isso e a gente tem que descobrir como é que um papel desse foi parar com minha \"assinatura\".”",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 797,
+              "archive_text": "PLAYER_DECLARATION: Bartholomeu reitera que não assinou ou autorizou a liberação, considera relevante apurar a circulação do relatório e exige esclarecimento sobre o emprego de seu nome e a rubrica. A expressão “Pessoal do leve mesmo” mantém a proveniência oral referida por Bart sem confirmar que ele tenha visto pessoalmente outras cópias ou que toda a equipe possua uma. “Assinatura” entre aspas é a caracterização do PJ, NÃO autenticação de sua assinatura no papel.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 798,
+              "archive_text": "PLAYER_META_FEEDBACK (separado da cena): Jogador aponta que a provocação M2.01 ganhou demasiadas trocas de diálogo sem novas escolhas transformadoras; prefere modo guiado de criação com predominância de provocações CURTAS (premissa → decisão → consequência → conclusão), cenas MÉDIAS seletivas e LONGAS excepcionais com impacto dramático real. Exemplifica uma conclusão com burocrata responsável como POSSIBILIDADE DE CONSTRUÇÃO, não afirmação factual nem autorização de retcon para determinar autor neste caso. Solicita que Narrador exerça julgamento e respeite ritmo aplicável também a mesas com vários jogadores. Esta orientação não altera arquivo CANÔNICO/CONGELADO, contratos superiores, nem exige fechar todos os futuros fios causais.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 799,
+              "archive_text": "NARRATOR_ASSESSMENT: M2.01 já estabeleceu uma fissura na segurança profissional de Bart: seu nome foi usado em relatório favorável contradizendo teste anterior com vazamento. Bart não validou o documento, procurou o supervisor, contestou a atribuição e optou por investigação administrativa. Novas perguntas repetitivas não acrescentariam transformação ou escolha substantiva. Classificação narrativa de M2.01 = CURTA apesar das várias interações já ocorridas; fechar o foco da provocação sem fabricar conclusão sobre a autoria ou antecipar eventual investigação. Preservar restante do mistério como fio causal aberto, caso retorne de forma justificada em futuro jogo.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 800,
+              "archive_text": "NPC_ACTION/SPEECH: Pavel ouve a reafirmação e responde sem iniciar novo interrogatório: “Entendi, Krauser. Você não reconhece a rubrica e o teste que fizemos não liberava aquele ramal. Vou conferir quem registrou a liberação e se houve serviço depois da nossa inspeção. Até olhar esses registros, não vou afirmar que sei quem fez isso.” Ele deixa a cópia na pasta aberta, sob sua custódia já autorizada. A afirmação de que vai conferir é intenção/compromisso verbal de Pavel, não conferência concluída nem declaração independente de inocência. Pavel não interrompe o trabalho de Bart, não o despacha da sala, não convoca Liev e não produz resultado novo.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 801,
+              "archive_text": "RESOLUTION / SCENE STATUS: M2.01 “O Nome no Relatório” CLOSED como provocação CURTA; a conversa imediata chegou ao ponto de conclusão temática, sem executar deslocamento, início de trabalho ou retorno no fim do turno por Bartholomeu. M2 permanece ACTIVE; M2.02 ainda NÃO APRESENTADA. O PJ continua livre para falar/agir ali, se desejar. PENDÊNCIAS CAUSAIS: verificação posterior de Pavel; origem da cópia; autoria/validade da rubrica; existência de reparo e segurança do ramal; resultado da consulta informal de Liev; eventual responsabilização. Não se adotou o exemplo de culpado inventado pelo metacomentário.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 802,
+              "archive_text": "MECHANICS / CREDIT EVENT: No fechamento desta provocação CURTA, aplicar regra local de CRÉDITO DE COMPRA +10, conforme padrão documental vigente de provocação curta (não gera XP novo, nem realiza compra). XP_TOTAL=519 INALTERADO; XP_SPENT=170 INALTERADO; XP_REMAINING=349 INALTERADO; XP_CREDIT_GRANTED=170→180; XP_CREDIT_AVAILABLE=0→10. Nenhuma compra ou gasto opcional; nenhuma rolagem. Três gastos históricos de Força de Vontade ainda aguardam reconciliação; CHRONICLE_STORE_V0_2 não integralmente migrado (events=[]; rolls=[]). Registro operacional, não COMMITTED técnico.",
+              "semantic_checks": [
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 803,
+              "archive_text": "CHECKPOINT ATUALIZADO: CHR-001; MODO GUIADO, fim dos anos 1970, manhã; M1 CLOSED, M2 ACTIVE, M2.01 CLOSED/CURTA, M2.02 NOT_PRESENTED. Bartholomeu Krauser mortal ainda diante da mesa do supervisor Pavel, que mantém a cópia do relatório em pasta aberta e declarou que pretende conferir os registros. A fala e a decisão de Bart de contestar assinatura estão confirmadas, sem prova atual de fraude, autoria, reparo, segurança ou resultados de Liev; Bart não saiu da sala e nenhum tempo ou local novo foi imposto. XP 519 total / 170 gasto / 349 restante; crédito liberado 180 / disponível 10. Feedback de ritmo incorporado como orientação operacional local, sem mudança silenciosa de cânone.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Bart identifies Liev as source, while statement 'everybody has one' is his assertion; 795-803 later short closure, credit +10, M2.02 not yet presented.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        }
+      ],
+      "coverage": {
+        "source_lines": 80,
+        "contiguous": true,
+        "nonoverlap": true,
+        "unmarked_lines": 4
+      },
+      "status": "ARCHIVAL_LEVEL_A_CLASSIFIED_WITH_LIMITS"
+    },
+    {
+      "scene": "M2.02",
+      "lines": [
+        804,
+        824
+      ],
+      "source_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "markers_classified": 1,
+      "records": [
+        {
+          "marker_id": "D02-M202-UNMARKED",
+          "scene": "M2.02",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 804,
+          "end_line": 817,
+          "subclauses": [
+            {
+              "line": 804,
+              "archive_text": "CHR-001 — M2.02 / O QUE DISSERAM NA ESCOLA — APRESENTAÇÃO DA PROVOCAÇÃO CURTA — EVENT_ID CHR001-M202-PRESENTED-20261101-001.",
+              "semantic_checks": [
+                "ARCHIVAL_REPORT"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 805,
+              "archive_text": "PLAYER_META: “Continue”. Interpretado como solicitação para apresentar a próxima provocação de M2 após M2.01 CLOSED, sem autorização para inventar decisões, falas ou trajetos voluntários de Bartholomeu ou resolver antecipadamente a nova situação.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 806,
+              "archive_text": "AUTHORITY / DESIGN: Pipeline M2 “A Fissura”: introduzir perda, ruptura ou descoberta que comprometa retorno à estabilidade de M1. Orientação operacional de ritmo vigente: predominância de provocações curtas, uma escolha significativa e consequência sintética; manter raras as longas. M2.02 é nova situação independente da investigação administrativa M2.01. A referência anterior ao apelido pessoal “mãos no gelo” não será usada como prova de reputação generalizada.",
+              "semantic_checks": [
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 807,
+              "archive_text": "NARRATOR_SCENE_FRAMING: Em uma tarde posterior da mesma fase mortal (fim dos anos 1970; dia exato e intervalo temporal não fixados), a provocação enquadra um momento na residência Krauser em que Mikahel pode dirigir uma pergunta ao pai. A transição é recorte narrativo autorizado pelo comando de continuar o modo guiado, sem registrar percurso, atividade de trabalho, encontros, consumo de recursos, ações ou palavras de Bartholomeu durante o intervalo omitido. Mary e Sara não recebem ações novas nesta apresentação.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 808,
+              "archive_text": "NPC_CLAIM / OBSERVABLE: Mikahel relata que um menino da escola lhe disse que seu pai machuca pessoas quando elas não fazem o que ele quer. O autor e a origem da informação não estão verificados; a fala do colega é um boato referido por Mikahel, não prova independente nem conhecimento exato dos trabalhos paralelos do pai. Mikahel pergunta, em tom sério e direto: “Pai, um menino na escola disse que o senhor machuca pessoas para conseguir o que quer. Isso é verdade?” A pergunta não implica que Mikahel já saiba a verdade, que tenha condenado o pai ou que tenha presenciado violência. Ele aguarda a resposta.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 809,
+              "archive_text": "PURPOSE: Testar como o passado de violência e a imagem de protetor de Bartholomeu coexistem quando a criança passa a questioná-lo. Conexão com M1.03 (conversa sobre a defesa de Dima), M1.07 (confissão de trabalhos violentos a Mary) e M1.09 (decisão de interromper serviços paralelos). Não repetir investigação escolar, revelar fontes ocultas nem obrigar confissão. Uma resposta do jogador pode permitir concluir a provocação curta sem múltiplas cenas.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 810,
+              "archive_text": "CHECKPOINT: CHR-001; criação guiada; M1 CLOSED; M2 ACTIVE; M2.01 CLOSED/CURTA; M2.02 INITIAL_PRESENTED_AWAITING_PLAYER_RESPONSE. Bartholomeu Krauser ainda mortal, fim dos anos 1970, novo recorte na residência da família; sem trajeto voluntário narrado. Mikahel acaba de repetir boato escolar sobre o pai e pergunta se é verdadeiro. Nenhuma resposta, emoção, movimento, confissão ou punição atribuída a Bart. A investigação do relatório (Pavel/Liev/autoria/reparo) segue causalmente pendente, sem resultado atribuído durante a elipse. XP_TOTAL 519, XP_SPENT 170, XP_REMAINING 349, XP_CREDIT_GRANTED 180, XP_CREDIT_AVAILABLE 10. Sem compra, crédito extra, teste, rolagem ou gastos. Três FV históricos pendentes; ledger técnico V0.2 não migrado. Registro de diário, não COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 811,
+              "archive_text": "CHR-001 — M2.02 O QUE DISSERAM NA ESCOLA — RESPOSTA, CONSEQUÊNCIA E FECHAMENTO CURTO — EVENT_ID CHR001-M202-CLOSE-20261101-001.",
+              "semantic_checks": [
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 812,
+              "archive_text": "PLAYER_DECLARATION literal: “Eu respiro fundo. Para um instante e penso que minha aparência antecede os meus atos, o que eu fiz no passado, ficou no passado. E as consequências de eu ter feito ficaram sombras tão profundas que se tivessem chegado nos ouvidos de um garoto de escola, o menor dos meus problemas seria meu filho me confrontar com isso. Então não me abalo. Eu só respondo: filho, às vezes como seu pai se parece, o meu tamanho, o jeito que eu falo, o jeito que eu me aproximo das pessoas faz com que elas tenham medo. E faz com que elas pensem coisas que eu não faço. Mas elas decidem na cabeça delas que eu faço. Então, se alguém disser isso pra você, se importe tanto quanto se você se importa se alguém disser que você é fraco ou burro. Você não é fraco nem burro. Então o que as pessoas falam ou pensam pouco importa”.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 813,
+              "archive_text": "PLAYER_ACTION: Bartholomeu respira fundo, faz breve pausa, não se abala conforme sua própria declaração, e responde ao filho que sua aparência e porte podem gerar medo e julgamentos errados; aconselha Mikahel a não basear o valor próprio no que outros dizem. PLAYER_THOUGHT/PC_BELIEF: Ele considera que a violência de seu passado e suas consequências não chegaram de forma concreta à escola, pois, em sua avaliação, seriam problemas muito mais sérios caso tivessem chegado. Isso é pensamento e inferência do PJ, NÃO constatação independente de que os fatos estão encerrados, ocultos ou que o boato seja infundado. PLAYER_SPEECH: A resposta não confirma nem nega diretamente todos os atos violentos anteriores nem identifica fonte do rumor; não tratar como confissão ou prova de inocência.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 814,
+              "archive_text": "NPC_ACTION/SPEECH: Mikahel escuta o pai até o fim, franze ligeiramente a testa e responde em voz baixa: “Eu sei que não sou burro, pai. Mas eu perguntei se era verdade.” Ele espera por um instante, então baixa os olhos e não insiste. Não diz ter acreditado nem oferece perdão, julgamento definitivo ou novo conhecimento. Sua observação de que a pergunta não recebeu resposta direta representa percepção própria de Mikahel, não prova sobre a veracidade do boato.",
+              "semantic_checks": [
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 815,
+              "archive_text": "RESOLUÇÃO: O confronto da M2.02 encerra-se nesse momento como provocação CURTA, sem obrigar Bartholomeu a revelar, negar ou justificar mais nada. Resultado temático: a proteção que ele tenta oferecer por meio do conselho não elimina necessariamente a dúvida do filho; o modo como ambos lidarão com isso no futuro permanece aberto. Origem, autor e alcance do boato escolar UNKNOWN; não abrir uma nova investigação escolar ou narrar testemunhas/segredos não estabelecidos. O jogador continua livre para responder espontaneamente, mas a provocação não exigirá mais cenas. M2 permanece ACTIVE; M2.03 ainda NOT_PRESENTED.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 816,
+              "archive_text": "MECHANICS: Regra local de provocação CURTA encerrada: +10 XP de CRÉDITO DE COMPRA acumulativo (NÃO XP novo, NÃO compra). XP_TOTAL 519, XP_SPENT 170, XP_REMAINING 349 inalterados. XP_CREDIT_GRANTED 180→190, XP_CREDIT_AVAILABLE 10→20. Sem teste, rolagem, compra ou gasto de Força de Vontade. Três gastos históricos de FV pendentes e ledger técnico V0.2 não migrado.",
+              "semantic_checks": [
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 817,
+              "archive_text": "CHECKPOINT: CHR-001, MODO GUIADO, fim dos anos 1970, casa dos Krauser, tarde não datada; M1 CLOSED; M2 ACTIVE; M2.01 CLOSED/CURTA; M2.02 CLOSED/CURTA; M2.03 NOT_PRESENTED. Bartholomeu Krauser mortal acaba de explicar ao filho que sua aparência pode gerar rumores e aconselhá-lo a ignorar juízos alheios. Mikahel registrou verbalmente que não obteve resposta direta à pergunta e não insistiu. Não presumir próxima fala, gesto, deslocamento ou decisão de Bart; não inferir verdade do boato. Pendências M2.01 continuam abertas sem avanço fora de cena afirmado. Recursos 519/170/349, crédito 190/20, sem mudanças além de crédito. Registro narrativo do character.md verificado somente após readback, não COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "INTENTION_NOT_EXECUTED_OR_UNCERTAINTY"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Unmarked source framing and closure included rather than omitted; do not mistake editorial instructions, alleged report contents, or M2.02 prior closure for authenticated original dialogue.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        },
+        {
+          "marker_id": "D02-LEG-0818",
+          "scene": "M2.02",
+          "source": {
+            "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+            "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+            "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+            "kind": "MIGRATED_DIARY_NOT_ORIGINAL_TRANSCRIPT"
+          },
+          "start_line": 818,
+          "end_line": 824,
+          "subclauses": [
+            {
+              "line": 818,
+              "archive_text": "M2.02 — CODA E ORIENTAÇÃO DE RITMO — CHR001-M202-CODA-M2-GUIDANCE-20261101-001.",
+              "semantic_checks": [
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 819,
+              "archive_text": "FALA DO JOGADOR (literal): “Eu espero um pouco e termino dizendo: É o mesmo agora, Você mesmo já tomou suas conclusões, pois já assumiu suas dúvidas, meu filho. Você conhece o seu pai mais do que eles. Você devia saber o que eu sou capaz e o que eu não sou, mais do que eles.”",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 820,
+              "archive_text": "AÇÃO: Bart aguarda brevemente e acrescenta essas palavras a Mikahel. Atribuir conclusões ao menino é juízo de Bart, não comprovação do que Mikahel pensa.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 821,
+              "archive_text": "REAÇÃO DE MIKAHEL: Ele escuta e responde baixo: “Eu conheço o senhor como meu pai. Foi por isso que perguntei.” Não insiste e não afirma ter mudado de opinião. Não atribuir ação adicional ao jogador.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 822,
+              "archive_text": "META — DIRETRIZ DO JOGADOR: O Marco 2 deve desconstruir fundamentos reais da estabilidade do personagem e da sua identidade, em vez de ampliar pequenas lacunas anteriores. Explorar também a vida interior, as estruturas psicológicas e sociais e mudanças substantivas que preparem ou, conforme o desenvolvimento, consolidem o Abraço. Não reduzir a fissura a revisitar fatos menores. Preservar agência e não predeterminar sentimentos, decisões, Abraço ou identidade vampírica.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 823,
+              "archive_text": "AVALIAÇÃO: M2.01 e M2.02 foram encerradas como curtas; nenhuma delas, por si, realiza a fissura estrutural exigida pelo marco. Não reabrir ou reescrever acontecimentos; M2 ainda exige experiências de maior alcance. Próximas provocações devem responder à função de M2 e manter ritmo proporcional. Esta orientação é operacional local, sem alterar material canônico.",
+              "semantic_checks": [
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            },
+            {
+              "line": 824,
+              "archive_text": "ESTADO: M1 CLOSED; M2 ACTIVE; M2.01 e M2.02 CLOSED; M2.03 NOT_PRESENTED. Tarde no fim dos anos 1970, casa Krauser; Bart ainda mortal, conversando com Mikahel. Nenhum deslocamento, decisão futura ou desfecho sobre boato atribuído. XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=190; XP_CREDIT_AVAILABLE=20. Sem nova compra, crédito, rolagem ou gasto. Três gastos históricos de FV ainda pendentes; ledger técnico não migrado. Registro operacional, não COMMITTED técnico.",
+              "semantic_checks": [
+                "PLAYER_ATTRIBUTED_OR_REPORTED",
+                "NPC_OR_THIRD_PARTY_REPORTED",
+                "DOCUMENT_OR_CLAIM_NOT_AUTHENTICATED",
+                "STATUS_OR_RESOURCE_BOUNDARY",
+                "EDITORIAL_OR_CLOSURE_AS_ARCHIVED"
+              ],
+              "epistemic_limit": "REPORTED_IN_MIGRATED_ARCHIVE_NOT_AN_ORIGINAL_AUTHENTICATED_MESSAGE"
+            }
+          ],
+          "review_finding": "Coda after M2.02 already marked CLOSED: later player speech and Mikahel reply are recorded, without retroactive reopening or proof about rumor. Guidance for Marco 2 is meta design, not played action.",
+          "original_author": "AUTHOR_UNKNOWN",
+          "original_chat_authenticated": false,
+          "original_rng_authenticated": false,
+          "technical_committed": false,
+          "independent_editorial_review": "NOT_PERFORMED",
+          "semantic_classification": "ARCHIVAL_LEVEL_A_ONLY"
+        }
+      ],
+      "coverage": {
+        "source_lines": 21,
+        "contiguous": true,
+        "nonoverlap": true,
+        "unmarked_lines": 14
+      },
+      "status": "ARCHIVAL_LEVEL_A_CLASSIFIED_WITH_LIMITS"
+    }
+  ],
+  "precedence_rules": [
+    "M2.01 short closure 795-803 precedes M2.02 framing 804; pending institutional facts not resolved by closure",
+    "M2.02 closure 811-817 and later coda 818-824 coexist; coda does not erase closure",
+    "Liev nicknamed Lev is not Lev Morozov; preserve attribution without entity merger",
+    "Printed name and rubrics on form prove only inscription, not original authorization or present safety",
+    "Credit is purchase allowance, not additional XP, and no new purchase on these two scenes"
+  ],
+  "global_status": "D02_FAIL",
+  "original_chat_authenticated": false,
+  "independent_reviewer_signed": false
+}
