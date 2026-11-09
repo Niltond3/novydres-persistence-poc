@@ -1,0 +1,98 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_CAUSAL_MAP_V002",
+  "phase": "D02",
+  "status": "PROPOSED_PARTIAL",
+  "spoiler_class": "PLAYER_SAFE",
+  "supersedes": "D02_CAUSAL_MAP_V001.json",
+  "edge_vocabulary": [
+    "CAUSAL_CONFIRMED",
+    "SEQUENCE_ONLY",
+    "THEMATIC_ONLY",
+    "UNKNOWN"
+  ],
+  "edges": [
+    {
+      "id": "D02-CAUSE-001",
+      "type": "CAUSAL_CONFIRMED",
+      "scope": "LOCAL_SCENE_CONCLUSION_ONLY",
+      "from": "CHR001-M301-C01-04-20261107-001",
+      "to": "CHR001-M301-C01-08-20261107-001",
+      "from_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 16,
+        "end_line": 17,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 28,
+        "end_line": 30,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "limit": "Refusal and NPC exit summarized; no external labor settlement proven"
+    },
+    {
+      "id": "D02-CAUSE-002",
+      "type": "SEQUENCE_ONLY",
+      "v001_classification": "CAUSAL_CONFIRMED_MATERIAL_WITH_PENDING_SOURCE_ID_VERIFICATION",
+      "from": "CHR001-M204-C08-23-20261104-001",
+      "to": "CHR001-M204-C09-01-20261105-001",
+      "from_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 346,
+        "end_line": 347,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+        "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+        "start_line": 368,
+        "end_line": 369,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "finding": "Both named events match recorded source; the carrying-of-originals continuity is explicit, but narrative source is a cumulative summary rather than complete original transcript",
+      "promotion": "PENDING_INDEPENDENT_ORIGINAL_TRANSCRIPT_CORRELATION"
+    },
+    {
+      "id": "D02-CAUSE-003",
+      "type": "SEQUENCE_ONLY",
+      "administrative": true,
+      "from": "CHR001-M204-C17-08-20261106-001",
+      "to": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+      "limit": "Player-approved formal closure is administrative not diegetic causality"
+    },
+    {
+      "id": "D02-CAUSE-004",
+      "type": "SEQUENCE_ONLY",
+      "administrative": true,
+      "from": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "to": "CHR001-M301-C01-01-20261107-001",
+      "to_evidence": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+        "start_line": 7,
+        "end_line": 8,
+        "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+        "technical_ledger_status": "UNPROVEN"
+      },
+      "limit": "Session parent/downtime authorisation, not hidden plot causation"
+    }
+  ],
+  "thematic_only": "See D02_CAUSAL_MAP_V001.json; thematic links never evidence shared culprit",
+  "unknown": [
+    {
+      "id": "D02-UNRESOLVED-001",
+      "type": "UNKNOWN",
+      "subject": "All unproven connections across independent narrative strands"
+    }
+  ],
+  "no_conspiracy_inferred": true,
+  "no_44_to_44_plots": true
+}

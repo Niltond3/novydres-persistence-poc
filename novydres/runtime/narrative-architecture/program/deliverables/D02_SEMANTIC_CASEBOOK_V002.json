@@ -1,0 +1,312 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_SEMANTIC_CASEBOOK_V002",
+  "phase": "D02",
+  "status": "TARGETED_PRIMARY_REVIEW_NOT_TOTAL_COVERAGE",
+  "spoiler_class": "PLAYER_SAFE",
+  "augments": "D02_EVENT_HISTORIOGRAPHY_V001.json",
+  "scope": "Documentary adjudication samples; not a replacement for full utterance review",
+  "cases": [
+    {
+      "id": "D02-SEM-001",
+      "scope": "M1.PROLOGUE",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 153,
+          "end_line": 165,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Player performed family scene; narrator supplied NPC reaction separately",
+      "effect": "Prologue played with UNKNOWN diegetic date; no M1 gate at play time",
+      "exit": "PLAYER_RESPONSE_PENDING_IN_NARRATIVE_BEAT",
+      "precedence": "LATER_RECLASSIFICATION_SEPARATE"
+    },
+    {
+      "id": "D02-SEM-002",
+      "scope": "M1.01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 193,
+          "end_line": 216,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "ADMINISTRATIVE_DECISION"
+      ],
+      "decision": "Player authorized XP allocation; subsequent gate classified prior Pessach as M1.01",
+      "effect": "M1.01 administrative designation follows original prologue, not retroactive gate at time of play",
+      "exit": "M1.01_RESOLVED_AFTER_GATE_REGULARIZATION",
+      "precedence": "RECLASSIFICATION_NO_RETCON"
+    },
+    {
+      "id": "D02-SEM-003",
+      "scope": "M1.06",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 346,
+          "end_line": 347,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "NARRATOR_ADJUDICATION",
+        "EXPLICIT_CORRECTION"
+      ],
+      "decision": "Correction states address was Mary not Mikahel",
+      "effect": "Formerly narrated response from Mikahel invalidated; Mary's relay to child unproven",
+      "exit": "SUPERSEDED_ADJUDICATION",
+      "precedence": "CORR-M1.06-001"
+    },
+    {
+      "id": "D02-SEM-004",
+      "scope": "M2.01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 724,
+          "end_line": 746,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "NPC_CLAIM",
+        "OBSERVATION"
+      ],
+      "decision": "Player calls Liev 'Lev'; source distinguishes NPC Liev and separate Lev; requests discrete investigation",
+      "effect": "Document inscriptions observed; signature authenticity not confirmed, colleague's intended checks not yet accomplished",
+      "exit": "INVESTIGATION_OPEN",
+      "precedence": "NPC_ID_LIEV_NOT_AUTOMATIC_ALIAS_LEV"
+    },
+    {
+      "id": "D02-SEM-005",
+      "scope": "M2.02",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 818,
+          "end_line": 824,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "ADMINISTRATIVE_GUIDANCE",
+        "ARCHIVAL_SUMMARY"
+      ],
+      "decision": "Structural rhythm guidance appears alongside scene marker",
+      "effect": "Guidance is not a distinct played action or technical COMMITTED event",
+      "exit": "M2.02_CLOSED_PER_ARCHIVE",
+      "precedence": "ADMIN_NOT_DIEGETIC"
+    },
+    {
+      "id": "D02-SEM-006",
+      "scope": "M2.03",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+          "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+          "start_line": 23,
+          "end_line": 30,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "start_line": 847,
+          "end_line": 854,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "MECHANICAL_CORRECTION",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Roll correction supersedes premature failure result; FV decision remains distinct",
+      "effect": "No duplicated new attack from correction",
+      "exit": "CORRECTED_ROLL_CONTINUITY",
+      "precedence": "CHR001-M203-ROLL-CORR-20261101-001"
+    },
+    {
+      "id": "D02-SEM-007",
+      "scope": "M2.04.C08-C09",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 346,
+          "end_line": 359,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+          "start_line": 364,
+          "end_line": 375,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_ACTION_REPORTED",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Original documents removed in C08 and brought home in C09",
+      "effect": "Physical continuity grounded in two source event ids; no hidden motive/culprit proven",
+      "exit": "C08_CLOSED_C09_STARTED",
+      "precedence": "SOURCE_EVENTS_NOT_DERIVED_INDEX"
+    },
+    {
+      "id": "D02-SEM-008",
+      "scope": "M3.01.C01",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 15,
+          "end_line": 31,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "NPC_CLAIM",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Player declines out-of-scope work",
+      "effect": "Visitor leaves; no verified external dispute resolution",
+      "exit": "C01_CLOSED",
+      "precedence": "LOCAL_ONLY"
+    },
+    {
+      "id": "D02-SEM-009",
+      "scope": "M3.01.C04",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 180,
+          "end_line": 184,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "CORRECTION",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Mandatory independent verification imposed by narrator was annulled; subsequent social test determined outcome",
+      "effect": "Invalidated obstacle not historical action by NPC",
+      "exit": "C04.09_VALID_PREVAILS_OVER_C04.08",
+      "precedence": "SUPERSEDED"
+    },
+    {
+      "id": "D02-SEM-010",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 238,
+          "end_line": 244,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 261,
+          "end_line": 265,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECISION",
+        "MECHANICAL_ADJUDICATION"
+      ],
+      "decision": "FV reroll accepted, source says tool RNG trail unavailable; later Take Half opted without RNG",
+      "effect": "Source-reported outcome retained; independent randomness proof remains UNKNOWN",
+      "exit": "MECHANICAL_PROVENANCE_PARTIAL",
+      "precedence": "NO_REPLAY_OR_RETROACTIVE_ROLL"
+    },
+    {
+      "id": "D02-SEM-011",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 255,
+          "end_line": 259,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        },
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 276,
+          "end_line": 283,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "NPC_CLAIM",
+        "EDITORIAL_NOTE"
+      ],
+      "decision": "Player's social explanation is not objective marital status; unaccepted service offer not a contract",
+      "effect": "Professional code tension recorded, not silently repealed",
+      "exit": "NO_SERVICE_COMMITMENT",
+      "precedence": "C03_PROFESSIONAL_CODE_PRESERVED"
+    },
+    {
+      "id": "D02-SEM-012",
+      "scope": "M3.01.C05",
+      "evidence": [
+        {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+          "start_line": 285,
+          "end_line": 289,
+          "source_kind": "PLAYED_ARCHIVE_OR_SUMMARY",
+          "technical_ledger_status": "UNPROVEN"
+        }
+      ],
+      "voices": [
+        "PLAYER_DECLARATION",
+        "NARRATOR_ADJUDICATION"
+      ],
+      "decision": "Player ends local encounter; G28 records closure",
+      "effect": "C06 NOT_STARTED, no 2010, no additional XP; any missing object fate UNKNOWN",
+      "exit": "C05_CLOSED",
+      "precedence": "CYCLE_V0033_CURSOR"
+    }
+  ],
+  "independent_review_status": "NOT_COMPLETED",
+  "source_evidence_rule": "1-based inclusive lines at exact blob_sha"
+}

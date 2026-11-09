@@ -1,0 +1,46 @@
+{
+  "schema": "NOVYDRES_CHR001_D02_AUTHORSHIP_EVIDENCE_V002",
+  "phase": "D02",
+  "status": "EVIDENCE_SCOPED_AUTHOR_UNKNOWN",
+  "spoiler_class": "PLAYER_SAFE",
+  "author_vocab": [
+    "PLAYER",
+    "NARRATOR",
+    "DRAMATURGO",
+    "SHARED_EMERGENT",
+    "AUTHOR_UNKNOWN"
+  ],
+  "checks": [
+    {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "record_commit": "a98ea586852457acd36c33e438e8d3841fb16154",
+      "committed_at": "2026-11-02T17:04:38Z",
+      "interpretation": "Migration into GitHub occurred after original play; not proof of original scene designer",
+      "author": "AUTHOR_UNKNOWN"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v001.source.txt",
+      "record_commit": "87ecc5771dbdee89b1542c804e65909f14ce20db",
+      "committed_at": "2026-11-04T00:08:39Z",
+      "interpretation": "Published end-of-scene summary, not full original transcript or evidence of original creative author",
+      "author": "AUTHOR_UNKNOWN"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V1.json",
+      "record_commit": "537398867571d0a87a14b4aefce5457b86b531c4",
+      "committed_at": "2026-11-07T04:21:24Z",
+      "interpretation": "Prospective preparation published before G28 C01 closure; proves prior publication, not that author of all played events was Dramaturgo",
+      "author": "AUTHOR_UNKNOWN"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "record_commit": "418834f097883bf24b270f42fd54d286d490a8b8",
+      "committed_at": "2026-11-07T14:49:42Z",
+      "interpretation": "G28 closure after publication of preparation; GitHub account is a committer, not necessarily source author",
+      "author": "AUTHOR_UNKNOWN"
+    }
+  ],
+  "all_661_original_creative_authors": "AUTHOR_UNKNOWN",
+  "scope_warning": "Player words/actions can be PLAYER_DECLARATION without proving authorship of entire story; NPC choices and emergent play require utterance-level trace",
+  "unreviewed": "Chronological correlation across all scene-level preparation commits and full original chat source pending"
+}
