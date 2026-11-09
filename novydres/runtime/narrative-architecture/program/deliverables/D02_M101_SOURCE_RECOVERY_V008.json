@@ -1,0 +1,94 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 8,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "e92d58fc8a8b92ec6593f1e2e6cf709874c28b9d",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "next_role": "DRAMATURGO"
+  },
+  "archival_source": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "schema": "NOVYDRES_D02_M101_SOURCE_RECOVERY_V008",
+  "status": "PARTIAL_LIBRARY_SNAPSHOTS_NOT_ORIGINAL",
+  "scope": "M1.01 scenes 002 and 003; earlier prologue later administratively reclassified",
+  "sources": [
+    {
+      "id": "file_000000000dcc820e83fbb1dcd99d1249",
+      "version": "1",
+      "title": "CHRONICLE_001_PESSACH_SCENE_002_PENDING.md",
+      "lines": 16,
+      "sha": "NOT_EXPOSED_BY_PROVIDER",
+      "auth": "PENDING_EDITORIAL_SNAPSHOT"
+    },
+    {
+      "id": "file_000000002748820ea30c5be608fc7a7e",
+      "version": "1",
+      "title": "CHRONICLE_001_PESSACH_SCENES_002_003_PENDING.md",
+      "lines": 32,
+      "sha": "NOT_EXPOSED_BY_PROVIDER",
+      "auth": "PENDING_EDITORIAL_RECONCILIATION"
+    }
+  ],
+  "comparison": [
+    {
+      "scope": "002",
+      "finding": "Same attributed player declaration appears verbatim in both records"
+    },
+    {
+      "scope": "002",
+      "finding": "Second longer record has narrator NPC continuation labeled already presented, not independent transcript"
+    },
+    {
+      "scope": "003",
+      "finding": "Only longer record preserves attributed player declaration; wishing to smile/touch is not completed action"
+    },
+    {
+      "scope": "003",
+      "finding": "Further narrator NPC action explicitly proposed and must not be promoted as played"
+    }
+  ],
+  "legacy_anchor": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "lines": [
+      162,
+      167
+    ],
+    "finding": "Original scene 002–003 not wholly present in migrated diary; scene 004 starts line 166"
+  },
+  "drive_checks": [
+    {
+      "id": "1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE",
+      "kind": "DERIVED_DIARY"
+    },
+    {
+      "id": "19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA",
+      "kind": "DERIVED_INDEX"
+    },
+    {
+      "id": "1xtuNowtY8IrQchrr3CC2TV9Aq_DiknzcZw5nrQ9DfCQ",
+      "kind": "DRAFT_MIGRATION_MANIFEST"
+    },
+    {
+      "id": "1q1w9oYI3YqLWsd7jZ7p8_MhxNzzwR7zuWWvp7MnoLs4",
+      "kind": "MIGRATION_REGISTER"
+    }
+  ],
+  "original_conversation_export_located": false,
+  "original_utterances_authenticated": 0,
+  "required": [
+    "Original separately attributable chat export with timestamps/message IDs",
+    "Resolve narrator proposed continuation against original log",
+    "Preserve earlier prologue status before later M1.01 administrative classification"
+  ],
+  "git_equivalent_sha_fabricated": false
+}

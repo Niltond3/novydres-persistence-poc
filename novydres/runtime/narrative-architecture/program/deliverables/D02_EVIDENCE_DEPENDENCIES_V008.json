@@ -1,0 +1,87 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 8,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "e92d58fc8a8b92ec6593f1e2e6cf709874c28b9d",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "next_role": "DRAMATURGO"
+  },
+  "archival_source": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "schema": "NOVYDRES_D02_EVIDENCE_DEPENDENCIES_V008",
+  "status": "SIX_OPEN",
+  "blockers": [
+    {
+      "id": "D02-GAP-001",
+      "status": "OPEN",
+      "progress": "M1.08 classified as archive Level A; M1.09 and M1.01 originals pending",
+      "evidence_required": "Complete M1 including original provenance and distinct reviewer"
+    },
+    {
+      "id": "D02-GAP-002",
+      "status": "OPEN",
+      "progress": "M2.01–M2.03 source inventory and coda recorded, not semantically closed",
+      "evidence_required": "Whole batches and version precedence with authentic originals"
+    },
+    {
+      "id": "D02-GAP-003",
+      "status": "OPEN",
+      "progress": "No Level A closure of M2.04/M3.01 in V008",
+      "evidence_required": "Classify scenes through C05"
+    },
+    {
+      "id": "D02-GAP-004",
+      "status": "OPEN",
+      "progress": "AUTHOR_UNKNOWN remains, no distinct original signed creative attribution",
+      "evidence_required": "Authenticated original messages or signed attribution"
+    },
+    {
+      "id": "D02-GAP-005",
+      "status": "OPEN",
+      "progress": "D02-CAUSE-002 SEQUENCE_ONLY; chronology not causation",
+      "evidence_required": "Two-sided original evidence for edges"
+    },
+    {
+      "id": "D02-GAP-006",
+      "status": "OPEN",
+      "progress": "Reported rolls not original independent RNG calls",
+      "evidence_required": "Authentic execution log and technical external review"
+    }
+  ],
+  "source_dependencies": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_EVIDENCE_DEPENDENCIES_V007.json",
+      "sha": "7b4cd35b493ee3b11bbf6d83da0d933fa7b093ca"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_ASSERTION_QUEUE_V007.json",
+      "sha": "a46f507f688222821f0975c4711772498fc9c366"
+    }
+  ],
+  "coverage": {
+    "total": 661,
+    "closed_archival": 133,
+    "waiting_archival": 528,
+    "closed_scenes": 7
+  },
+  "original_authentication": {
+    "chat": 0,
+    "rng": 0
+  },
+  "independent_editorial_review": {
+    "status": "NOT_PERFORMED",
+    "signed_by_different_reviewer": false
+  },
+  "causal_002": "SEQUENCE_ONLY",
+  "admin_open": "D01-ADM-001",
+  "d03_unlocked": false
+}

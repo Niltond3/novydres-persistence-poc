@@ -1,0 +1,65 @@
+{
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 8,
+  "spoiler_class": "PLAYER_SAFE",
+  "master_sha": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "e92d58fc8a8b92ec6593f1e2e6cf709874c28b9d",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "c05": "CLOSED",
+    "c06": "NOT_STARTED",
+    "next_role": "DRAMATURGO"
+  },
+  "archival_source": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+  },
+  "schema": "NOVYDRES_D02_AUDIT_V008",
+  "status": "FAIL",
+  "phase_gate": "FAIL",
+  "d03_unlocked": false,
+  "tests": {
+    "heads_initial": "PASS",
+    "cycle_chain_001_to_033": "PASS",
+    "v007_blob_sha_six": "PASS",
+    "legacy_archive_sha": "PASS",
+    "m108_complete_archive": "PASS_LEVEL_A_ONLY",
+    "m109": "PARTIAL",
+    "m101_chat": "NOT_AUTHENTICATED",
+    "m2": "PREPARATION_ONLY",
+    "independent_review": "NOT_PERFORMED",
+    "rng_original": "NOT_AUTHENTICATED",
+    "marker_partition": "PASS_133_PLUS_528",
+    "publication_readback": "PENDING_PUBLICATION"
+  },
+  "counts": {
+    "closed_scenes_new": 1,
+    "closed_scenes_total": 7,
+    "classified_markers_new": 66,
+    "classified_markers_total": 133,
+    "waiting_markers": 528,
+    "authenticated_original": 0,
+    "authenticated_rng": 0
+  },
+  "gaps_open": [
+    "D02-GAP-001",
+    "D02-GAP-002",
+    "D02-GAP-003",
+    "D02-GAP-004",
+    "D02-GAP-005",
+    "D02-GAP-006"
+  ],
+  "other_open": [
+    "D01-ADM-001"
+  ],
+  "no_c06": true,
+  "master_mutated": false,
+  "mechanics_mutated": false,
+  "canon_mutated": false,
+  "prompt_in_github": false,
+  "next_phase": "D02",
+  "next_version": 9
+}
