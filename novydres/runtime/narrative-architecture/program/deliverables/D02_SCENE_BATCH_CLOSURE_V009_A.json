@@ -1,0 +1,2890 @@
+{
+  "schema": "NOVYDRES_D02_SCENE_BATCH_CLOSURE_V009_A",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "D02",
+  "version": 9,
+  "checkpoint": "A",
+  "spoiler_class": "PLAYER_SAFE",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "design_parent_sha": "8dc22f987a2913fdda87e54118516199724315cf",
+  "source": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "ref": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "kind": "MIGRATED_EDITORIAL_DIARY"
+  },
+  "scene": "M1.09",
+  "scope_lines": [
+    515,
+    723
+  ],
+  "marker_count": 32,
+  "previously_classified": 133,
+  "new_classified": 32,
+  "new_waiting": 496,
+  "coverage": {
+    "source_lines": 209,
+    "covered": 209,
+    "nonoverlap": true,
+    "contiguous": true,
+    "unmarked_frontmatter_lines": 53,
+    "record_count": 33
+  },
+  "status": "ARCHIVAL_LEVEL_A_CLASSIFIED_ORIGINAL_UNAUTHENTICATED_EDITOR_NOT_INDEPENDENT",
+  "precedence": {
+    "identity": "Explicit later CORR-IDENTITY-002 supersedes earlier ambiguous/lower-precedence references",
+    "purchases": "M1.09 target and packages remain proposals until recorded player approval and purchase in 704-715",
+    "m1_close": "Consolidated closure 717-723 is later than earlier scene and proposal checkpoints",
+    "original": "Reported recovered literal utterance is not cryptographically authenticated original chat"
+  },
+  "pre_marker_context": {
+    "id": "D02-M109-UNMARKED-0515-0567",
+    "scene": "M1.09",
+    "start_line": 515,
+    "end_line": 567,
+    "source": {
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+      "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+      "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+      "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+    },
+    "archival_subclauses": [
+      {
+        "line": 515,
+        "archive_text": "=== M1.09 — O PRIMEIRO NÃO | ABERTURA DE PROVOCAÇÃO ===",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 516,
+        "archive_text": "Transição de cena autorizada por pedido explícito 'Continue' após M1.08 fechada. Tempo: manhã do dia seguinte, data exata desconhecida, fim dos anos 1970. Local: casa da família Krause, Bartholomeu permanece no quarto; não atribuir sono, alimentação, deslocamento ou fala voluntária sem declaração. A luz fria do amanhecer entra pela janela; ruídos cotidianos vindos da cozinha indicam que Mary e os filhos estão acordados. Três batidas na porta principal. Do lado de fora, voz masculina familiar para Bartholomeu: é o intermediário que negociou e trouxe pagamento do serviço sobre a denúncia de Nikolai, reconhecido pelo timbre, sem nome confirmado. Ele chama 'Bart, sou eu. Preciso falar contigo sobre aquele serviço. É só um minuto.' Mary não abre a porta e, ao ouvir, pausa na cozinha; não há confirmação de que reconheceu a voz, nem de que o intermediário saiba de confissões domésticas ou do conteúdo da retratação. O homem não entrou, não ameaçou ou agrediu a família, não foi visto pelo PJ ainda. O motivo real da visita e sua ligação com outros agentes permanece desconhecido para o jogador. A decisão do PJ é aguardada antes de contato ou abertura de porta. O nome da provocação é rótulo editorial local do narrador, sem impor roteiro ou exigir que o PJ recuse algo.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 517,
+        "archive_text": "ESTADO: M1.08 CLOSED; M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE; M1 geral ACTIVE, M2–M5 NÃO INICIADOS. XP_TOTAL=519; XP_SPENT=44; XP_REMAINING=475; XP_CREDIT_GRANTED=140; XP_CREDIT_AVAILABLE=96; nenhuma compra aprovada; 3 FV gastos historicamente com consolidação pendente. Registro de diário narrativo, não evento COMMITTED no CHRONICLE_STORE_V0_2.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 518,
+        "archive_text": "=== PROPOSTA DO JOGADOR — FICHA-ALVO V5 DE BARTHOLOMEU KRAUSE — 2026-10-30 ===",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 519,
+        "archive_text": "ESTADO: PLAYER_PROPOSAL / NÃO COMPRADA / NÃO VALIDADA CONTRA FONTES A–K.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 520,
+        "archive_text": "Jogador pede análise e eventual custo histórico excepcional, não autoriza executar qualquer compra automaticamente; nenhuma alteração aos arquivos canônicos/congelados.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 521,
+        "archive_text": "Clã Gangrel; Tipo de Predador Gato de Rua; orçamento declarado 520 XP; total declarado 555 XP; excesso declarado +35 XP. O orçamento atualmente registrado na crônica é 519 XP, diferença efetiva +36 contra 555.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 522,
+        "archive_text": "ATRIBUTOS (330): Força 5; Destreza 4; Vigor 5; Carisma 1; Manipulação 1; Autocontrole 3; Inteligência 3; Raciocínio 3; Determinação 3. Derivado Força de Vontade 6.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 523,
+        "archive_text": "PERÍCIAS (138): Briga 5; Atletismo 3; Investigação 3; Política 2; Ofícios 2; Prontidão 2; Intimidação 2; Ladroagem 2; Armas de Fogo 1; Condução 2.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 524,
+        "archive_text": "ESPECIALIZAÇÕES (0 declarado): Briga (Agarrar), concedida pelo Predador; Intimidação (Coerção Física), gratuita proposta; Ofícios (Sistemas de Aquecimento), gratuita proposta.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 525,
+        "archive_text": "DISCIPLINAS (45 declarado): Proteanismo 2 (Garras Ferais) =15; Fortitude 3=25 com primeiro ponto gratuito por exceção acordada/proposta; Animalismo 1 (Vínculo com Fâmulo)=5; Potência 0.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 526,
+        "archive_text": "POTÊNCIA DE SANGUE (30 declarado): grau 2.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 527,
+        "archive_text": "VANTAGENS/ANTECEDENTES (12 declarado): Contatos Criminais 3 gratuitos via Predador; Contatos Policiais 3 por 9; Recursos 1 por 3; Idiomas 2 gratuitos.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 528,
+        "archive_text": "GATO DE RUA declarado: Especialização Briga (Agarrar); Contatos Criminais 3; Fortitude +1 substitui Potência +1, condicionada a aprovação do Narrador; Humanidade -1.",
+        "semantic_checks": [
+          "NARRATOR_REPORT_OR_OBSERVATION"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 529,
+        "archive_text": "SOMAS ORIGINAIS: Atributos 330 + Perícias 138 + Especializações 0 + Disciplinas 45 + Potência de Sangue 30 + Vantagens 12 = TOTAL 555 XP.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 530,
+        "archive_text": "MOTIVAÇÃO AUTORAL: jogador entende excedente como coincidência/equivalência histórica por longa experiência e passado do personagem, não um aumento súbito conquistado em jogo. Não aprovar silenciosamente exceção de orçamento ou de tipo de predador; manter marcadores de validação separados.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 531,
+        "archive_text": "=== AUDITORIA DE CUSTOS E RECOMENDAÇÕES — NÃO APROVADAS / NÃO EXECUTADAS ===",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 532,
+        "archive_text": "A soma aritmética da proposta é 555 XP. Cálculo das categorias segue a convenção de equivalência local que inclui o custo do primeiro ponto: Atributos físicos 200, sociais 40, mentais 90 =330; Perícias [45,18,18,9,9,9,9,9,3,9]=138; Disciplinas 45; Potência de Sangue 30; Antecedentes 12.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 533,
+        "archive_text": "REGRAS V5 EXTERNAS DE REFERÊNCIA (requerem conciliação com fontes A–K): Atributo nível novo x5; Perícia nível novo x3; Disciplina de clã nível novo x5; Antecedente 3 por ponto; Potência de Sangue nível novo x10. Se o personagem inicia como neófito com Potência de Sangue 1 concedida, chegar a 2 custa 20 e não 30, total numérico ajustado de 555 para 545 ANTES de descontar eventuais pontos gratuitos iniciais. O modelo local de 519 XP usa contabilidade especial e trata primeiro ponto de Atributo como gasto de XP equivalente; não reclassificar automaticamente compras antigas.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 534,
+        "archive_text": "Exceções a negociar: Gato de Rua na V5 concede 1 ponto de Rapidez ou Potência, e não Fortitude; substituição pelo primeiro ponto de Fortitude precisa decisão local documentada. Especializações gratuitas: Briga(Agarrar) pelo Predador, Ofícios(Sistemas de Aquecimento) pela regra de formação profissional, e Intimidação(Coerção Física) pode consumir a especialização geral gratuita; conferir origem de cada. Dois idiomas gratuitos exigem identificar quais são língua de nascimento e idioma dominante do cenário, senão há mérito Linguística a contabilizar. Disciplinas e potência sanguínea NÃO existem na fase mortal jogada; devem ser aplicadas somente após o Abraço na biografia. Política 3 anteriormente afirmada em cena conflita com Política 2 na ficha proposta; preservar ambos e aguardar reconciliação na validação.",
+        "semantic_checks": [
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 535,
+        "archive_text": "PACOTE A (proposta anterior, 96 XP): Força 1=>4 por 10+15+20=45; Briga 1=>4 por 6+9+12=27; Política não alocada=>3 por 3+6+9=18; Investigação não alocada=>1 por 3; Prontidão não alocada=>1 por 3. TOTAL=96, simulação, sem compra.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 536,
+        "archive_text": "PACOTE B (recomendação nova para espelhar ficha-alvo, 96 XP): Força 1=>4 por 45; Briga 1=>5 por 6+9+12+15=42; Política não alocada=>2 por 3+6=9. TOTAL=96, simulação, sem compra. Força 4=>5 exigirá mais 25 XP em crédito futuro. Caso apenas o pacote B seja aprovado e validado: XP_SPENT 44=>140, XP_REMAINING 475=>379, XP_CREDIT_AVAILABLE 96=>0, mantendo XP_TOTAL 519 e crédito acumulado liberado 140. Não executar sem nova aprovação do jogador.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 537,
+        "archive_text": "Excesso 35 sobre 520 (+36 sobre 519) registrado como pedido de exceção de construção HISTÓRICA, NÃO como XP automaticamente concedido, compras efetuadas ou poder sobrenatural retroativo. Pode ser implementado por decisão editorial local expressa após validação completa da metodologia e do teto de Perfil 1; geração/sire/Abraço ainda desconhecidos. Nenhuma fonte canônica/fechada alterada.",
+        "semantic_checks": [
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 538,
+        "archive_text": "=== ADENDO DE FICHA-ALVO — REVISÃO DO JOGADOR E PARECER DO NARRADOR ===",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 539,
+        "archive_text": "STATUS: OBJETIVO NARRATIVO ACEITO EM PRINCÍPIO, NÃO É COMPRA NEM APROVAÇÃO MECÂNICA FINAL. Data da solicitação: 2026-10-30. Personagem: Bartholomeu Krause, em etapa biográfica mortal, clã futuro Gangrel. O jogador propôs inicialmente 555 XP equivalentes em um orçamento mencionado como 520 XP, e pede Política 3, Carisma 2 e Manipulação 2; entende a ultrapassagem como representação de uma história longa, não ganho súbito de poder. O narrador aceita trabalhar em direção a esse perfil como alvo histórico excepcional, com validação futura de custo, teto do Perfil 1, fontes de criação A-K, Geração e Abraço, sem aquisição retroativa de poderes durante a fase mortal.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 540,
+        "archive_text": "AUDITORIA ARITMÉTICA: proposta original 555; Política 2=>3 +9; Carisma 1=>2 +10; Manipulação 1=>2 +10; total nominal revisado 584. Diferença: +64 sobre 520 declarado; +65 sobre o orçamento efetivo 519. Na regra V5, se o primeiro grau de Potência de Sangue já vier do chassi vampírico, ir a grau 2 custa 20, não 30: total ajustado provisoriamente 574 e excesso +55 frente aos 519, sujeito à auditoria de vantagens e bases gratuitas. Nada disso é XP liberado ou dívida automática. Força de Vontade 6 deriva de Autocontrole 3 + Determinação 3, consistente.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 541,
+        "archive_text": "CONDIÇÕES: Gato de Rua concede especialização Briga(Agarrar), contatos criminais 3, -1 Humanidade e grau 1 de Rapidez ou Potência conforme V5; substituí-lo por grau 1 de Fortitude é EXCEÇÃO PROPOSTA, ainda não aplicada. Duas especializações gratuitas adicionais e idiomas exigem fontes válidas ou contabilização. Fortitude 3 necessita escolhas de poderes. Proteanismo, Animalismo, Fortitude, Potência de Sangue, Gato de Rua e Humanidade ajustada só entram após o Abraço; não durante passado mortal. Excedente não é isento de impacto mecânico, portanto nenhuma exceção de saldo/teto é aprovada definitivamente sem deliberação explícita e registro apropriado.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 542,
+        "archive_text": "CRÉDITO: M1.08 LONGA fechada com 30 XP de crédito; XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96. Valores já constantes do checkpoint anterior; NÃO somar novamente. Três FV gastas historicamente, ainda sem consolidação técnica. NENHUMA NOVA COMPRA AUTORIZADA.",
+        "semantic_checks": [
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 543,
+        "archive_text": "RECOMENDAÇÃO PRINCIPAL 96 XP, SIMULAÇÃO: Força 1=>4: 10+15+20=45; Briga 1=>4: 6+9+12=27; Política não alocada=>3: 3+6+9=18; Ofícios 1=>2: 6. TOTAL=96. Foco: força histórica, luta, prática política documentada no relato e ofício de aquecimento. Saldo SIMULADO se aprovada: XP_SPENT=140; XP_REMAINING=379; XP_CREDIT_AVAILABLE=0. Alternativa já registrada: Força 1=>4 45, Briga 1=>5 42, Política não alocada=>2 9 =96. Não executar nenhum pacote sem confirmação explícita do jogador.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 544,
+        "archive_text": "CHECKPOINT PRESERVADO: M1.08 CLOSED. M1.09 O PRIMEIRO NÃO já aberta no diário, manhã seguinte na casa Krause, intermediário à porta, Bartholomeu ainda no quarto; nenhuma resposta, conversa com interlocutor ou compra automática estabelecida. Não sobrescrever o estado anterior nem o cânone do mundo. Diário operacional, CHRONICLE_STORE_V0_2 permanece sem eventos técnicos registrados.",
+        "semantic_checks": [
+          "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 545,
+        "archive_text": "=== TARGET-SHEET-V1 — FICHA-ALVO GUIADA DE BARTHOLOMEU KRAUSER ===",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 546,
+        "archive_text": "Registro solicitado pelo jogador, não compra. Clã-alvo Gangrel; Predador-alvo Gato de Rua. Objetivo de desenvolvimento dos Marcos M1–M5, não resultado garantido. Não converter escolhas, oportunidades ou contratempos automaticamente em números: cada atributo exige proveniência e validação. O narrador pode contrariar expectativas pela ficção, sem mudar o alvo ou resolver conflitos silenciosamente.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 547,
+        "archive_text": "ATRIBUTOS: Força 5, Destreza 4, Vigor 5; Carisma 2, Manipulação 2, Autocontrole 3; Inteligência 3, Raciocínio 3, Determinação 3. Força de Vontade máxima derivada 6.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 548,
+        "archive_text": "PERÍCIAS: Briga 5, Atletismo 3, Investigação 3, Política 3, Ofícios 2, Prontidão 2, Intimidação 2, Ladroagem 2, Armas de Fogo 1, Condução 2.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 549,
+        "archive_text": "ESPECIALIZAÇÕES: Briga (Agarrar), Intimidação (Coerção Física), Ofícios (Sistemas de Aquecimento). Origem de cada gratuidade ainda a validar.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 550,
+        "archive_text": "DISCIPLINAS FUTURAS: Proteanismo 2 (Garras Ferais), Fortitude 3 (primeiro grau via exceção pretendida), Animalismo 1 (Vínculo com Fâmulo), Potência 0. Potência de Sangue alvo 2.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 551,
+        "archive_text": "ANTECEDENTES: Contatos Criminais 3, Contatos Policiais 3, Recursos 1. Idiomas 2 gratuitos propostos, ainda a auditar. Gato de Rua: especialização e contatos, Humanidade -1, substituição proposta de Rapidez/Potência 1 por Fortitude 1.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 552,
+        "archive_text": "CONTAS SOB CONVENÇÃO EQUIVALENTE LOCAL: Atributos 350, Perícias 147, Disciplinas 45, Vantagens 12; Potência de Sangue 30 pelo cálculo inicial ou 20 com BP1 inicial. Total nominal 584; ajustado provisório 574. Orçamento operacional 519; excedente provisório 55. A ficha original proposta era 555 antes de Política 3, Carisma 2 e Manipulação 2. Distinção necessária entre histórico representado e poder mecânico.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 553,
+        "archive_text": "EXCEÇÕES NÃO APROVADAS: excedente e teto do Perfil 1, substituição no predador, nível 5 na criação estendida. Validar regras e fontes A–K antes da definição final. NÃO APLICAR XP, não impor Abraço, geração, contatos concretos ou resultado narrativo.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 554,
+        "archive_text": "CHECKPOINT: M1.09 em pausa a pedido do jogador, após ele abrir a porta principal e mantê-la aberta, perguntar 'O que foi?' ao intermediário e aguardar resposta. O NPC ainda não respondeu. XP_TOTAL 519; XP_SPENT 44; XP_REMAINING 475; XP_CREDIT_AVAILABLE 96. Registro operacional, não ledger técnico.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 555,
+        "archive_text": "=== DEC-CR-008..011 / ACORDO EXPLÍCITO DO JOGADOR / 2026-10-31 ===",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 556,
+        "archive_text": "FONTE: jogador afirma 'Concordo, consolide tudo na documentação', referindo-se expressamente às três exceções propostas pelo narrador e ao uso continuado da ficha-alvo. Esta decisão aprova a NORMA OPERACIONAL do modo guiado já INICIADO, não modifica cânone global e não concede pontos ou sucesso narrativo automaticamente.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "NARRATOR_REPORT_OR_OBSERVATION",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 557,
+        "archive_text": "DEC-CR-008 — FICHA-ALVO DIRETIVA. TARGET-SHEET-V1 do registro anterior, com Política 3, Carisma 2 e Manipulação 2, é o OBJETIVO ESTÁVEL para a criação guiada em curso. Cada provocação deve oferecer oportunidades orgânicas, desafios e consequências que possam justificar características-alvo, sem roteiro obrigatório ou garantia de êxito; registrar por traço TARGET, CURRENT_CONFIRMED, EVIDENCE, COST, ELIGIBILITY e STATUS. Nunca trocar a ficha-alvo silenciosamente por uma ficha mais conveniente. Divergência ou inviabilidade será discutida antes de decidir sua resolução.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 558,
+        "archive_text": "DEC-CR-009 — EXCEÇÕES LOCAIS APROVADAS, CONDICIONADAS À CONSTRUÇÃO.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 559,
+        "archive_text": "(A) Orçamento histórico excepcional: AUTORIZADA A EXCEPCIONALIDADE LOCAL de ultrapassar o orçamento 519 até o custo auditado da ficha-alvo, sem fixar agora adicional efetivo, valor definitivo nem conceder XP retroativamente. Registro numérico de referência 574 XP equivalentes (excedente provisório 55) sujeito a auditoria dos benefícios iniciais, descontos, disciplinas, idiomas e marcos. Não expandir esse teto para traços diferentes sem novo acordo.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 560,
+        "archive_text": "(B) Benefício de Gato de Rua: AUTORIZADA A SUBSTITUIÇÃO LOCAL do ponto que seria Rapidez ou Potência por 1 ponto de Fortitude, apenas na futura aplicação do tipo de Predador após o Abraço, condicionado a se tornar vampiro e estabelecer a causa diegética. Não conceder Fortitude na biografia mortal.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 561,
+        "archive_text": "(C) Níveis 5: AUTORIZADA a possibilidade de Força 5, Vigor 5 e Briga 5 no final da construção guiada estendida, acima da configuração ordinária inicial; somente por trajetória coerente, critérios mecânicos auditados e compras explicitamente autorizadas pelo jogador.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 562,
+        "archive_text": "Estas concessões são regras locais para Bartholomeu, não alterações aos livros V5 ou à governança canônica de Novydres. São permissões, não resultados inevitáveis.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 563,
+        "archive_text": "DEC-CR-010 — REGIME DE MEMÓRIA PROGRESSIVA NO DRIVE (GATE OBRIGATÓRIO). A criação guiada já está jogada e documentada: M1.01–M1.08 encerradas, M1.09 aberta; nunca reiniciar no JOB03 ou dizer que ainda não começou. Antes de QUALQUER nova análise substantiva, sugestão de provocação, narração, rolagem ou interação evolutiva: recuperar .AGENT, .CONTEXTG, protocolos/decisões pertinentes e último checkpoint persistido; classificar o turno; persistir delta/checkpoint em documento operacional com controle de revisão, confirmar sucesso e fazer readback ANTES de responder com fatos novos. Quando nenhuma alteração factual existe, verificar estado vigente antes da resposta. Se escrita falhar, não avançar a história nem fazer compras; informar PENDING_PERSISTENCE e tentar saneamento. O chat isolado nunca é memória canônica suficiente. Cada turno deve preservar autoria, cronologia, alegação de NPC vs verdade, estado mecânico, XP e consequências. Não afirmar que o ledger técnico recebeu eventos se não recebeu.",
+        "semantic_checks": [
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 564,
+        "archive_text": "DEC-CR-011 — DOIS PERÍODOS, UM HISTÓRICO CONTÍNUO. O jogo atual É O MODO GUIADO DE CRIAÇÃO (pré-crônica principal), com cenas interpretadas como histórico vivido por Bartholomeu no fim dos anos 1970 e outras épocas. A CRÔNICA PROPRIAMENTE DITA somente começará após M1–M5, fechamento da biografia, ficha inicial final validada, Abraço, genealogia, decisões de clã/predador e demais gates. A crônica principal será em Novydres em 2010; continuidade, escolhas, relações, danos e consequências da criação devem ser herdadas, sem automaticamente transpor NPCs mortos/ausentes ou afirmar que todos chegaram vivos a 2010.",
+        "semantic_checks": [
+          "NARRATOR_REPORT_OR_OBSERVATION"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 565,
+        "archive_text": "STATUS ATUAL / CHECKPOINT IMUTADO: M1.08 CLOSED; M1.09 ACTIVE e PAUSED pela negociação. Bartholomeu abre a porta principal e a mantém aberta, diante do intermediário, pergunta somente 'O que foi?' e aguarda. Não há resposta do intermediário ainda. Mary e filhos dentro da casa, sem ação adicional presumida. XP_TOTAL=519; XP_SPENT=44; XP_REMAINING=475; XP_CREDIT_GRANTED=140; XP_CREDIT_AVAILABLE=96; nenhuma nova compra. Gasto anterior de 3 FV pendente na ficha. CHRONICLE_STORE_V0_2 técnico ainda events=[] e rolls=[], não declarar COMMITTED ou SNAPSHOT_SYNCED. Esta escrita é MEMÓRIA OPERACIONAL COM READBACK, não commit técnico do engine. Cada futura compra requer autorização voluntária separada.",
+        "semantic_checks": [
+          "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+          "STATUS_EPISTEMIC_LIMIT"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 566,
+        "archive_text": "FIM DO ACORDO.",
+        "semantic_checks": [
+          "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      },
+      {
+        "line": 567,
+        "archive_text": "ADENDO DE IDENTIDADE — NOVA DECLARAÇÃO DO JOGADOR. Solicita corrigir registros sobre o sobrenome e escreveu literalmente: 'é Krauser e krause'. Os registros anteriores usam Krause como vigente e Krauser como grafia prévia. Dada a presença expressa das duas formas, não apagar histórico nem decidir sozinho se é sobrenome composto, alternativa familiar ou correção de uma grafia pela outra. Nome definitivo pendente de esclarecimento do jogador. Sem mudanças de XP ou dos acontecimentos da M1.09.",
+        "semantic_checks": [
+          "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+          "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+          "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+          "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+        ],
+        "original_author": "AUTHOR_UNKNOWN",
+        "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+      }
+    ],
+    "review_finding": "Full unmarked pre-marker content, including provisional target sheet, hypothetical XP offers, budget review, conditional local rules, old paused checkpoints, and ambiguity later superseded by explicit identity correction. These do not prove a purchase, a supernatural status or a played event.",
+    "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+    "original_chat_authenticated": false,
+    "original_rng_authenticated": false,
+    "independent_reviewer_signed": false,
+    "technical_committed": false
+  },
+  "records": [
+    {
+      "id": "D02-LEG-0568",
+      "scene": "M1.09",
+      "start_line": 568,
+      "end_line": 569,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 568,
+          "archive_text": "M1.09 — RETOMADA / FALA DO INTERMEDIÁRIO NA PORTA. Manhã, fim da década de 1970, casa da família. Bartholomeu permanece no limiar com a porta aberta, após perguntar 'O que foi?'. O intermediário olha brevemente para o corredor sem entrar, baixa a voz e responde: 'Não vim oferecer outro serviço. O homem que pagou pelo último ouviu que houve uma confusão no endereço. Quer conversar com você hoje à noite, pessoalmente. Mandou perguntar se você aceita encontrar com ele. Posso levar um sim ou um não?'. A informação sobre a suposta confusão e a vontade do contratante é alegação do intermediário, não confirmação independente. Nenhum nome, endereço de reunião ou motivo verdadeiro foi revelado. Mary e crianças não agem neste registro. Bartholomeu não responde nem assume compromisso; decisão do jogador pendente. M1.09 ativa. XP_TOTAL 519; XP_SPENT 44; XP_REMAINING 475; XP_CREDIT_AVAILABLE 96. Sem teste ou compra. Diário operacional, não ledger técnico COMMITTED.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 569,
+          "archive_text": "CORR-IDENTITY-002 — RETIFICAÇÃO EXPLÍCITA DO JOGADOR: sobrenome vigente BARTHOLOMEU KRAUSER, NÃO Krause. A família usa o sobrenome paterno Krauser: Mary Krauser, Mikahel Krauser e Sara Krauser. A correção supera os registros anteriores sem apagar o histórico. O personagem permanece na porta aberta aguardando responder ao convite de reunião noturna apresentado pelo intermediário. M1.09 ativa; 475 XP restantes, 96 XP de crédito; nenhuma compra ou nova ação.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Intermediary reports proposed meeting, not independently verified safe/obligatory; inherited earlier ambiguous surname is superseded at 569.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0570",
+      "scene": "M1.09",
+      "start_line": 570,
+      "end_line": 570,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 570,
+          "archive_text": "M1.09 — ACEITAÇÃO DO ENCONTRO E ORIENTAÇÕES DO INTERMEDIÁRIO. PLAYER_DECLARATION (literal): 'Eu vou, pode falar que quero por um ponto final nisso'. Bartholomeu aceita comparecer à reunião solicitada pelo contratante naquela noite e manda transmitir sua intenção de pôr fim à situação; NÃO aceita novo serviço, não promete sigilo, não sai de casa nem toma papel por esta fala. NPC_ACTION: o intermediário observa a porta aberta e responde baixo: 'Eu digo que você vai. Mas não posso prometer que ele queira encerrar isso.' Informa que a reunião será às oito da noite, numa sala dos fundos de um depósito comercial de carvão, com entrada lateral; estende um papel dobrado com endereço escrito, sem pô-lo nas mãos do personagem. Acrescenta: 'É para conversar. Foi isso que me mandaram dizer.' NPC_CLAIM: local e intenção atribuídos ao contratante são informação da boca do intermediário, não garantia objetiva sobre quem estará presente, segurança ou finalidade. A decisão de pegar o bilhete, fechar a porta, falar mais ou agir cabe ao PJ. Mary e filhos continuam em casa, sem novas ações presumidas. Condição mortal no fim dos anos 1970. M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96. Três FV previamente gastos pendentes de consolidação. Nenhum teste ou compra; memória operacional CAS, não commit do ledger técnico.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player agrees to attend, not to undertake another job; reported time/location are NPC-supplied instructions.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0571",
+      "scene": "M1.09",
+      "start_line": 571,
+      "end_line": 590,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 571,
+          "archive_text": "M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR (CHAT 31/10/2026, após a oferta do bilhete)",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 572,
+          "archive_text": "STATUS DE PROVENIÊNCIA: PLAYER_DECLARATION recuperada da mensagem original do jogador no chat (2026-10-31, aprox. 11:38 UTC), anteriormente PENDING_PERSISTENCE após falha de gravação. Texto preservado literalmente abaixo. Esta recuperação preserva o fato declarativo, não cria um evento técnico COMMITTED ou um roll_id no CHRONICLE_STORE_V0_2.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 573,
+          "archive_text": "DECLARAÇÃO ORIGINAL DO JOGADOR:",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 574,
+          "archive_text": "Pego o papel, e digo um \"Tenha um bom dia\" seco. ",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 575,
+          "archive_text": "Vou ate Mary explicar o que era e dizer que vou por um fim nisso essa noite, que sabia que era perigoso e que iam tentar me convencer de continuar mas eu tinha que ir pra terminar oque eu tinha começado",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 576,
+          "archive_text": "CLASSIFICAÇÃO / DELTA NARRATIVO: (1) Bartholomeu recolhe o papel dobrado que o intermediário lhe estendeu; tem posse do bilhete, mas os detalhes literais de seu endereço não foram transcritos no histórico. (2) Dirige ao intermediário um 'Tenha um bom dia' seco. Nenhuma reação subsequente do intermediário foi narrada ou confirmada. (3) Vai procurar Mary e lhe explica que há um encontro previsto para a noite, que pretende pôr um ponto final na situação e que considera o encontro perigoso. Expressa como expectativa pessoal que tentarão convencê-lo a continuar os serviços, e considera necessário terminar o que começou. Estas previsões e receios do PJ NÃO confirmam planos concretos ou decisões do contratante.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 577,
+          "archive_text": "LIMITES DE AGÊNCIA / EPISTEMOLOGIA: Não atribuir resposta, assentimento, medo, perdão, conselho ou ação a Mary. Não presumir que os filhos ouviram, nem o fechamento da porta, a saída da casa, a chegada ao depósito ou o resultado da reunião. A localização exata de Mary na casa não foi documentada neste turno. O endereço da reunião e sua alegada finalidade vieram do intermediário (NPC_CLAIM), sem comprovação independente. Bartholomeu permanece em fase mortal, fim dos anos 1970, data exata desconhecida.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 578,
+          "archive_text": "CHECKPOINT RECUPERADO: CHR-001 / M1 ACTIVE / M1.01–M1.08 CLOSED / M1.09 ACTIVE_AWAITING_NPC_RESPONSE. Bartholomeu está junto de Mary na residência familiar após declarar sua explicação; a resposta de Mary permanece não narrada. Ele possui o bilhete dobrado recebido. Reunião alegada para 20h, no depósito comercial de carvão (fonte NPC, não fato de segurança). XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96; nenhuma compra, rolagem ou gasto novo. Três pontos de Força de Vontade historicamente gastos continuam sem consolidação técnica.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 579,
+          "archive_text": "STATUS DE ARMAZENAMENTO: Recuperação em character.md via CAS + readback. Não houve escrita no CHRONICLE_STORE_V0_2, que ainda contém events=[] e rolls=[]. Atualizações de índices derivados exigem referência a este adendo e não podem omitir a proveniência de recuperação.",
+          "semantic_checks": [
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 580,
+          "archive_text": "FIM — ADENDO RECUPERADO M1.09",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 581,
+          "archive_text": "=== M1.09 — RESPOSTA DE MARY AO ANÚNCIO DO ENCONTRO — 31/10/2026 ===",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 582,
+          "archive_text": "PROVENIÊNCIA: NPC_ACTION / NPC_SPEECH introduzidas pelo narrador após recuperar e conferir o adendo \"M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR\" (PLAYER_DECLARATION literal, 31/10/2026). Referências de conhecimento de Mary: \"M1.07 — REVELAÇÃO A MARY\", demais diálogos M1.07, \"M1.08 — CONFISSÃO COMPLETA A MARY\" e \"CHECKPOINT M1.08 — ENCERRAMENTO AUTORIZADO\". A existência do convite e do horário é conhecida pelo relato presente de Bartholomeu; a suposta intenção do mandante segue NPC_CLAIM, não WORLD_EVENT confirmado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 583,
+          "archive_text": "NARRAÇÃO / AÇÃO E FALA DE MARY: Mary permanece em silêncio por alguns segundos. Os dedos se fecham em torno do próprio antebraço; quando fala, não ergue a voz.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 584,
+          "archive_text": "\"Ontem você me prometeu que ia parar. Mas também me disse que não podia simplesmente recusar essas pessoas.\"",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 585,
+          "archive_text": "Ela olha para Bartholomeu.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 586,
+          "archive_text": "\"Eu não vou fingir que esse encontro é seguro. Se você disser que acabou e ele responder que não... o que você vai fazer, Bart?\"",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 587,
+          "archive_text": "Mary aguarda a resposta. A pergunta expressa dúvida e preocupação próprias da NPC; NÃO confirma que o contratante recusará o desligamento, nem que haverá coerção específica na reunião.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 588,
+          "archive_text": "ESTADO / LIMITES: Mary não aprovou o encontro, não exigiu que Bartholomeu ficasse e não revelou informação aos filhos. Nenhuma fala, pensamento, gesto, resposta ou decisão adicional foi atribuída a Bartholomeu. Sem movimento do PJ, sem avanço de tempo para a noite, sem reação do intermediário, sem mudança de posição das crianças. A localização exata dentro da residência permanece UNKNOWN. A data diegética precisa permanece UNKNOWN; manhã, fim dos anos 1970; Bartholomeu ainda mortal.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 589,
+          "archive_text": "CHECKPOINT: CHR-001; M1 ativo; M1.01–M1.08 CLOSED; M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, janela de resposta à pergunta de Mary. Bilhete com Bartholomeu; reunião às 20h e depósito comercial de carvão informados pelo intermediário (NPC_CLAIM). XP_TOTAL=519; XP_SPENT=44; XP_REMAINING=475; XP_CREDIT_GRANTED=140; XP_CREDIT_AVAILABLE=96. Crédito M1.09 ainda 0; nenhuma compra, teste ou gasto novo. Três gastos históricos de FV seguem pendentes de consolidação. CHRONICLE_STORE_V0_2 permanece ledger preparatório vazio (events=[], rolls=[]); isto é somente memória narrativa operacional, sem COMMITTED técnico.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 590,
+          "archive_text": "=== FIM — DELTA M1.09 / MARY ===",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Diary reproduces attributed player text after a persistence failure; embedded original-chat claim is NOT independently authenticated; separates possession of paper, farewell, disclosure to Mary, and predictions from verified outcome.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0591",
+      "scene": "M1.09",
+      "start_line": 591,
+      "end_line": 596,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 591,
+          "archive_text": "M1.09 — CONTINUIDADE MARY / FALA DO JOGADOR E RESPOSTA",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 592,
+          "archive_text": "PLAYER_DECLARATION literal: “Eu vou insistir que acabou ... Mary, e se eles derem uma condição, um ultimo trabalho pra sair disso, e se eu tiver que fazer alguma coisa pra a gente se livrar disso de vez? Querida, eu vivi a vida toda tomando as decisões sozinho, mas agora preciso que você me guie amor”",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 593,
+          "archive_text": "PLAYER_INTENT: insistir no encerramento dos serviços. A condição ou último trabalho é hipótese apresentada pelo PJ, não exigência confirmada do contratante. Ele pede conselho; não delega decisão futura nem aceita serviço.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 594,
+          "archive_text": "NPC_ACTION / NPC_SPEECH: Mary escuta. A pressão dos dedos sobre o próprio antebraço diminui, mas ela sustenta o olhar. Diz: “Eu posso te ajudar a decidir, Bart. Mas não posso decidir por você. Não sei o que vão pedir. Só sei que, se a nossa paz depender de causar sofrimento a outra família, isso não será o fim do que você faz. Vão apenas chamar de último trabalho. Eu quero procurar uma saída com você, mas não posso te aconselhar a fazer isso outra vez.” Depois pergunta: “Se eles exigirem isso hoje à noite, você consegue dizer não?”",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 595,
+          "archive_text": "Mary expressa orientação moral e dúvida, não informações verificadas sobre a reunião. Aguarda resposta do PJ. Nenhuma ação voluntária adicional do PJ, nem viagem, rolagem, gasto ou compra. M1.09 ainda ativa, dia exato desconhecido, manhã no fim dos anos 1970. XP 519 total, 44 gastos, 475 restantes; crédito 140 concedidos e 96 disponíveis. Três gastos históricos de FV seguem pendentes. Registro somente no diário; ledger técnico não migrado.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 596,
+          "archive_text": "FIM M1.09 — TURNO DE ORIENTAÇÃO MARY",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Dialogue with Mary is a request for advice; possible last job is hypothetical; Mary's refusal to decide for Bart is NPC autonomy.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0597",
+      "scene": "M1.09",
+      "start_line": 597,
+      "end_line": 600,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 597,
+          "archive_text": "M1.09 — Diálogo sobre saída e fuga (31/10/2026).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 598,
+          "archive_text": "PLAYER_DECLARATION: Bartholomeu afirma conseguir recusar outros serviços, mas teme as consequências. Diz a Mary que aceitaria fazer qualquer coisa para garantir a segurança familiar e um encerramento definitivo, e propõe como alternativa mudar com a família para outro lugar dentro da cidade, reconhecendo o risco de serem encontrados. Pede perdão. São hipóteses e intenções do PJ; não há proposta concreta de contratante, mudança ou ato novo.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 599,
+          "archive_text": "NPC_ACTION / SPEECH: Mary demora alguns instantes antes de responder e recua um passo. Diz: “Não me peça para escolher uma vítima por você, Bart. Eu não quero que você faça isso por nós. Nem por mim, nem pelas crianças.” Acrescenta: “Tenho medo de fugir, de perder nossa casa, a escola de Mikahel e de que nos encontrem. Mas estou disposta a conversar sobre ir embora, juntos, em vez de aceitar mais violência. Não vou prometer que será fácil.” Sobre o perdão, diz: “Eu te amo, mas preciso ver você parar, não apenas prometer.” Pergunta: “Você disse que conseguiria dizer não. Agora disse que faria qualquer coisa a qualquer um. Qual dessas coisas vai valer se impuserem uma condição?”",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 600,
+          "archive_text": "CHECKPOINT: Mary aguarda a resposta. M1.09 ativa, manhã, fim de 1970s; Bartholomeu ainda mortal, em casa com Mary e bilhete. Sem avanço de tempo, fuga, serviço, rolagem, recurso ou compra. XP 519 total, 44 gastos, 475 restantes; crédito 140 total, 96 disponível. FV histórica pendente (3); ledger técnico não migrado.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Contemplated escape and moral boundary remain options, not enacted departure or harm.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0601",
+      "scene": "M1.09",
+      "start_line": 601,
+      "end_line": 610,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 601,
+          "archive_text": "M1.09 — Resposta ao limite de Mary, 31/10/2026.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 602,
+          "archive_text": "PLAYER_DECLARATION: Bart responde que dirá não; distingue não prejudicar inocentes de prometer jamais se defender se a família for ameaçada. Trata-se de hipótese futura, não de ação praticada.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 603,
+          "archive_text": "NPC_SPEECH: Mary se aproxima um pouco e diz: “Eu não te pedi que deixasse alguém machucar Mikahel ou Sara. Mas ter medo do que podem fazer não é o mesmo que estarem aqui ameaçando nossas crianças.” Depois pergunta: “Se você disser não e eles não aceitarem, consegue voltar para casa e conversar comigo antes de decidir o próximo passo?”",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 604,
+          "archive_text": "Aguarda resposta do jogador. M1.09 ativa, manhã, fim dos anos 1970, casa Krauser. Nenhum tempo avançado, teste, gasto ou compra. XP 519/44/475; crédito 140/96. FV 3 pendente. Ledger técnico V0.2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 605,
+          "archive_text": "M1.09 — PLANO DE PARTIDA, pedido do jogador.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 606,
+          "archive_text": "PLAYER_DECLARATION: Bart afirma que precisa decidir agora; pretende ir à reunião à noite e tentar resolver o problema. Pede a Mary que se prepare para uma possível partida com Mikahel e Sara, carro, provisões e objetos essenciais. Menciona uma mala pesada no armário que diz conter armas antigas; sua existência e condição ainda não foram verificadas. Promete usar sua força apenas em defesa da família. Isto não comprova a execução dos preparativos.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 607,
+          "archive_text": "NPC_SPEECH: Mary responde: “Eu posso separar roupas, documentos e o necessário para as crianças. Mas não vou mexer naquela mala, Bart. Não vou pôr aquilo perto delas.” Pergunta: “Você me pede que esteja pronta para sair, talvez sem esperar por você. Se você não voltar, para onde eu levo Mikahel e Sara?” Nenhuma preparação consumada ou destino estabelecido.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 608,
+          "archive_text": "CHECKPOINT: M1.09 ativa, manhã no fim dos anos 1970, casa da família. Bart mortal, bilhete em mãos; reunião noturna alegada pelo intermediário. Aguardando decisão do PJ. XP 519 total/44 gastos/475 restantes; crédito 140/96. Sem rolagens, gasto ou compras; FV histórica pendente; ledger técnico vazio.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 609,
+          "archive_text": "=== M1.09 — NOVA DECLARAÇÃO / ARMIN VASSILYEV ===",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 610,
+          "archive_text": "Origem: mensagem do jogador nesta conversa. Bartholomeu promete voltar. Pede a Mary que, diante de perigo, saia antes dele com os filhos e leve a mala antiga. Entrega ou indica um endereço de Armin Vassilyev, contato policial e amigo de guerra. Afirma que Armin conhece a família e ajudará. O jogador acrescenta que Bartholomeu salvou Armin mais de uma vez na guerra, origem de uma dívida pessoal. O endereço literal não está disponível. A ajuda e a capacidade de Armin não estão confirmadas; nenhum antecedente ou XP foi adquirido. O convite noturno e demais pendências permanecem. M1.09 segue aberta.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player states intended refusal and conditional self-defense; hypothetical threat does not become an actual threat.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0611",
+      "scene": "M1.09",
+      "start_line": 611,
+      "end_line": 611,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 611,
+          "archive_text": "M1.09 — REAÇÃO DE MARY (NPC_ACTION/NPC_SPEECH, após declaração sobre Armin): Mary acolhe a indicação do endereço, mas não considera comprovado que haverá abrigo. Ela diz: “Eu vou ficar pronta para sair com Mikahel e Sara se for preciso. E vou guardar o endereço. Mas não vou prometer levar aquela mala com as crianças.” Após uma pausa, acrescenta: “Eu quero acreditar que você vai voltar, Bart. Só preciso saber uma coisa: Armin sabe que nós podemos chegar lá, sem aviso, pedindo ajuda?” Mary aguarda a resposta. Nenhuma preparação, deslocamento, contato com Armin ou garantia de socorro é consumado; nenhuma ação nova do PJ é atribuída. M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã do fim dos anos 1970. XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96; nenhuma compra ou rolagem. Três gastos históricos de FV pendentes de consolidação, ledger técnico ainda não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Mary's support and reservations are reported as NPC response, not proof Armin will shelter family.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0612",
+      "scene": "M1.09",
+      "start_line": 612,
+      "end_line": 616,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 612,
+          "archive_text": "M1.09 — Armin, confiança e preparação familiar (turno atual).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 613,
+          "archive_text": "PLAYER_DECLARATION, fala literal: “sabe. Ele literalmente me deve a vida. Ele literalmente sabe que em qualquer coisa eu posso aparecer lá, ou qualquer um de vocês pode aparecer lá. Ele não sabe o que eu faço da vida, ele não precisa saber nenhum motivo. Mas ele não ia negar nada. Eu confio minha vida a esse homem e ele confia a vida dele a mim.”",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 614,
+          "archive_text": "Classificação: Bart afirma a Mary que Armin Vassilyev permite que ele ou a família peçam auxílio sem aviso, desconhece o trabalho clandestino e, na avaliação de Bart, não recusaria ajuda. A confiança recíproca é afirmação do PJ, não promessa independente de Armin em cena nem prova da capacidade atual dele. A relação com Armin foi estabelecida pelo jogador no turno anterior; este delta não compra Contatos Policiais.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 615,
+          "archive_text": "NPC_SPEECH / MARY: Mary solta o ar devagar. “Então eu sei para onde levar as crianças se for preciso. Não conheço Armin como você, mas vou me apoiar na confiança que tem nele.” Depois diz: “Só não quero que Mikahel e Sara descubram isso de repente, vendo a casa inteira sendo guardada. O que vamos dizer a Mikahel se ele perguntar por que estamos nos preparando para partir?” Mary aguarda. Não ocorreu arrumação, aviso aos filhos, viagem ou contato com Armin.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 616,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã no fim dos anos 1970, casa Krauser, Bart ainda mortal. Convite para reunião à noite permanece alegação do intermediário. XP total 519, gasto 44, restante 475; crédito liberado 140, disponível 96. Sem teste, compra, crédito ou gasto novo. Três FV históricas pendentes; store técnico V0.2 sem migração.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player's claim about Armin and Mary’s reaction separated; confidence about third party remains attributed only.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0617",
+      "scene": "M1.09",
+      "start_line": 617,
+      "end_line": 621,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 617,
+          "archive_text": "M1.09 — ORIENTAÇÃO SOBRE O QUE DIZER AOS FILHOS (31/10/2026)",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 618,
+          "archive_text": "PLAYER_DECLARATION (literal): \"Diga que a gente vai sair de férias. Diga que pra onde a gente vai, e os detalhes. Quem vai dizer sou eu, quando eu chegar. E até lá, tudo é uma surpresa\"",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 619,
+          "archive_text": "CLASSIFICAÇÃO: Bartholomeu instrui Mary a apresentar aos filhos eventual preparação como viagem de férias e reservar a explicação de destino/detalhes para ele, quando voltar; até então, tratá-los como surpresa. Nenhum destino foi escolhido ou declarado; \"quando eu chegar\" é intenção/esperança do PJ, não retorno futuro confirmado. Nenhuma fala a Mikahel ou Sara foi ainda realizada.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 620,
+          "archive_text": "NPC_SPEECH/DECISION DE MARY: Mary repete baixinho \"Férias\", pensativa. Diz a Bartholomeu: \"Posso dizer que estamos preparando uma viagem e que o destino é surpresa, que você vai contar quando voltar.\" Em seguida estabelece seu limite: \"Mas, se Mikahel me perguntar se estamos em perigo, não vou dizer que estamos seguros só para ele parar de perguntar.\" Mary aguarda, sem atribuir concordância ou reação voluntária a Bartholomeu.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 621,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã no fim dos anos 1970, residência Krauser, data exata desconhecida. O PJ ainda está com Mary e possui o bilhete do intermediário; não foi à reunião, cuja hora/local são alegações do intermediário. Nenhum preparativo concretizado, criança informada, destino estabelecido, partida ou reação de Armin Vassilyev. Sua ajuda continua não verificada. XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96. Sem novos gastos, testes ou compras; três FV históricos pendentes de consolidação e ledger técnico V0.2 sem eventos/rolagens migrados.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Instructions on what to tell children are intended future communication; not proof children have been informed.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0622",
+      "scene": "M1.09",
+      "start_line": 622,
+      "end_line": 626,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 622,
+          "archive_text": "M1.09 — Resposta à preocupação de Mary com as crianças (31/10/2026).",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 623,
+          "archive_text": "PLAYER_DECLARATION literal: “Você não precisa mentir. Você só precisa falar que eu vou explicar tudo quando eu chegar”.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 624,
+          "archive_text": "CLASSIFICAÇÃO: Bartholomeu pede a Mary que, se Mikahel fizer perguntas, apenas diga que ele explicará tudo quando retornar. Não declara que já informou as crianças, que voltou, nem que existe destino confirmado.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 625,
+          "archive_text": "NPC_ACTION/SPEECH: Mary escuta e concorda com esse limite específico: “Está bem, Bart. Se ele perguntar, digo que você vai explicar quando voltar. Não vou inventar respostas.” Ela segura por um instante o olhar do marido e acrescenta: “Vou cuidar deles. Você cuide de voltar.” Não há garantia objetiva de retorno; esta é uma expressão de esperança de Mary.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 626,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, manhã do fim dos anos 1970, família Krauser em casa. Bart mortal, com bilhete recebido; encontro noturno informado pelo intermediário, não realizado. Mary ainda não falou com Mikahel ou Sara, não preparou a viagem e não alterou a decisão sobre a mala. Nenhum avanço de tempo, viagem, contato com Armin, teste ou compra. XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96. Três FV históricos pendentes de consolidação; CHRONICLE_STORE_V0_2 não migrado. Memória operacional em character.md.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Mary accepts a narrow instruction without falsely establishing a destination or prior conversation with children.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0627",
+      "scene": "M1.09",
+      "start_line": 627,
+      "end_line": 630,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 627,
+          "archive_text": "M1.09 — GESTO ENTRE BART E MARY (continuação recuperada).",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 628,
+          "archive_text": "PLAYER_DECLARATION: Bartholomeu beija Mary de modo profundo e delicado. Entende o gesto como divisor de águas, o fim da vida que conheciam. É interpretação do personagem, não prova de desfecho futuro.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 629,
+          "archive_text": "NPC_ACTION: Mary corresponde ao beijo. Quando se afastam, mantém a mão por um instante junto ao rosto dele. Diz baixinho: “Então não vamos fingir que nada mudou. Mas ainda estamos aqui, Bart. Volte para mim.” Ela não o impede nem determina sua próxima ação.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 630,
+          "archive_text": "CHECKPOINT: M1.09 segue aberta, aguardando jogador. Manhã no fim dos anos 1970, casa familiar, Bartholomeu mortal. Nenhuma viagem, passagem de tempo ou encontro realizado. XP 519 total, 44 gastos, 475 restantes; crédito 140 concedido e 96 disponível; sem mudanças mecânicas. Ledger técnico não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Affectionate gesture reported played; future transformation is player interpretation, not foretold outcome.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0631",
+      "scene": "M1.09",
+      "start_line": 631,
+      "end_line": 644,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 631,
+          "archive_text": "M1.09 — A JORNADA NORMAL E A CHEGADA AO ENCONTRO (31/10/2026).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 632,
+          "archive_text": "PLAYER_DECLARATION literal: “Continuo o dia normalmente.. tomo café, vou trabalhar, janto, e só entao vou para o encontro”.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 633,
+          "archive_text": "PLAYER_ACTION: Bartholomeu toma café, cumpre seu trabalho cotidiano no sistema de aquecimento, janta e então se dirige ao endereço de encontro indicado no bilhete do intermediário. Com as tarefas ordinárias não contestadas, a narrativa avança do período da manhã até a noite. Nenhuma fala adicional do PJ, despedida, reação dos filhos ou ação concluída de Mary foi presumida. Não se estabelece o resultado de quaisquer preparativos familiares; Armin Vassilyev não foi contatado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 634,
+          "archive_text": "WORLD_EVENT / NPC_ACTION de abertura da nova cena: À noite, Bartholomeu chega à parte externa do depósito comercial de carvão indicado no bilhete. O edifício é de tijolos escurecidos e a entrada lateral é iluminada por uma lâmpada amarelada. Um homem de casaco escuro está junto à entrada; ao reparar na chegada de Bart, pergunta: “Krauser?” Sua identidade, ocupação e vínculo com o alegado contratante ainda são UNKNOWN. A existência de uma sala de reunião com o contratante no interior NÃO foi verificada; isso segue NPC_CLAIM originada no intermediário. Bartholomeu ainda não respondeu ao homem nem entrou no depósito. O horário exato de chegada não foi estabelecido; é noite, no período da reunião alegada para 20h.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 635,
+          "archive_text": "CHECKPOINT: CHR-001; M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, exterior junto à entrada lateral do depósito de carvão, fim dos anos 1970. PJ mortal, bilhete em sua posse. Nenhum conflito ou teste, compra de XP, gasto de FV ou desfecho imputado. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96; três gastos prévios de FV seguem pendentes da reconciliação técnica, CHRONICLE_STORE_V0_2 ainda com histórico não migrado. Narrativa operacional, não COMMITTED técnico.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 636,
+          "archive_text": "M1.09 — Observação do desconhecido.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 637,
+          "archive_text": "PLAYER_DECLARATION: “Não respondo de imediato, eu quero ver o homem primeiro”.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 638,
+          "archive_text": "Bart observa em silêncio, sem ingressar no depósito. O homem parece ter quarenta e poucos anos, rosto magro, nariz torto, barba curta, casaco escuro de lã e botas com pouca fuligem. Uma mão fica junto ao corpo, a outra no bolso. Ele olha brevemente para a rua. Não há distintivo nem armamento visível; identidade e intenção seguem desconhecidas. Depois de esperar um instante, pergunta em tom neutro: “Você veio para a conversa?” Não se aproxima nem abre a porta.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 639,
+          "archive_text": "Checkpoint: M1.09 ativa, noite, exterior junto à entrada lateral. Bart possui o bilhete. Não houve teste ou compra; XP 519/44/475, crédito 140/96; três FV pendentes; ledger técnico não migrado.",
+          "semantic_checks": [
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 640,
+          "archive_text": "M1.09 — RESPOSTA E APARÊNCIA",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 641,
+          "archive_text": "O jogador respondeu ao desconhecido com a fala curta “sim”, firme e seca. Correção da aparência atual de Bartholomeu: barba de comprimento médio, mantida sem novos cortes desde que cresceu. Não alterar retroativamente os registros antigos da barba raspada.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 642,
+          "archive_text": "M1.09 — REAÇÃO DO HOMEM DA PORTA",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 643,
+          "archive_text": "NPC_ACTION / NPC_SPEECH: Ao ouvir o “sim” seco de Bartholomeu, o desconhecido observa seu rosto por um instante, afasta-se para o lado e abre a porta lateral do depósito. Da soleira, torna-se visível um corredor estreito, pouco iluminado, de onde vem cheiro de carvão. O homem diz apenas: “Por aqui.” Não toca no personagem, não o revista nem obriga sua entrada. Sua identidade e a presença de qualquer contratante no interior seguem desconhecidas.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 644,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE; noite, entrada lateral aberta. Bartholomeu, ainda mortal, permanece do lado de fora, com o bilhete. Barba atual de comprimento médio. Não há entrada automática do PJ, teste, gasto nem compra. XP 519 total, 44 gastos, 475 restantes; crédito 140 concedidos, 96 disponíveis. Três gastos anteriores de FV ainda pendentes; ledger técnico ainda não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player-directed routine and travel distinguish mundane elision from any invented interactions or threats.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0645",
+      "scene": "M1.09",
+      "start_line": 645,
+      "end_line": 645,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 645,
+          "archive_text": "M1.09 — Bartholomeu avança para dentro do corredor, atento às suas características, contando passos e procurando recordar o percurso. Ainda não entrou na sala da reunião.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Entry to corridor reported as player action; measured route a narrated observation, not secret causal proof.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0646",
+      "scene": "M1.09",
+      "start_line": 646,
+      "end_line": 652,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 646,
+          "archive_text": "M1.09 — Corredor observado: o trajeto tem 16 passos até uma curva à direita, depois 9 passos até uma porta de madeira à esquerda. Tijolos manchados, grade no piso, cano no teto, odor de carvão e óleo, umidade na curva e vozes indistintas atrás da porta. O desconhecido acompanha a passagem e diz: “É aqui.” A porta está fechada. Bart aguarda a próxima escolha diante dela; não há entrada na sala nem teste. XP 519/44/475 e crédito 140/96 inalterados.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 647,
+          "archive_text": "M1.09 — Entrada na sala do depósito.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 648,
+          "archive_text": "PLAYER_ACTION: “Eu avanço”. Bart avança rumo à sala indicada, depois de percorrer o corredor. O homem do casaco abre a porta à sua frente, permitindo sua entrada; Bart cruza a soleira, sem se sentar, falar ou tomar qualquer outra decisão.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 649,
+          "archive_text": "WORLD_OBSERVATION: Sala pequena, aquecida, com mesa de madeira, uma luminária, duas cadeiras e papéis fechados sobre a mesa. Um homem de meia-idade, de colete escuro, está de pé ao lado da mesa. O acompanhante permanece próximo da porta aberta. Nenhum deles teve identidade ou filiação confirmadas.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 650,
+          "archive_text": "NPC_SPEECH: O homem do colete observa Bart e diz: “Krauser. Disseram que você quer parar. Prefiro ouvir isso de você.” Aguarda resposta. Informação que recebeu é alegação dele, não confirmação de intenções ou acordos.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 651,
+          "archive_text": "CHECKPOINT: M1.09 ativa, noite, sala junto ao corredor do depósito; PJ mortal, bilhete consigo, barba média. Não houve teste, ameaça confirmada, saída fechada, compra nem gasto. XP 519/44/475, crédito 140/96, FV histórica pendente; ledger técnico não migrado.",
+          "semantic_checks": [
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 652,
+          "archive_text": "M1.09: Bart responde que parou.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Observed corridor dimensions and subsequent entry separated from identities or intentions of others.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0653",
+      "scene": "M1.09",
+      "start_line": 653,
+      "end_line": 653,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 653,
+          "archive_text": "M1.09 — Complemento: antes de responder, Bartholomeu demorou-se observando a sala e olhou o homem diretamente nos olhos. Sua fala literal foi: “Eu parei”. Isso é declaração do jogador e não comprova concordância do interlocutor.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player's explicit refusal and NPC answer are not contractual agreement; preserves earlier observer role.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0654",
+      "scene": "M1.09",
+      "start_line": 654,
+      "end_line": 654,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 654,
+          "archive_text": "M1.09 — NPC: o homem de colete mantém os olhos em Bartholomeu. Encosta dois dedos nos papéis fechados e responde: “Ouvi. Não vou lhe oferecer outro trabalho. Quero conversar sobre o último.” O que ele diz é alegação própria; os papéis continuam fechados. Ele espera resposta. O homem do casaco continua próximo da porta aberta. M1.09 ativa, noite na sala do depósito. Bartholomeu está de pé, sem ação adicional atribuída. XP 519/44/475; crédito 140/96; sem rolagens, compras ou gastos. Ledger técnico permanece não migrado.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "NPC statement about last service is allegation; closed papers don't verify their contents.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0655",
+      "scene": "M1.09",
+      "start_line": 655,
+      "end_line": 658,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 655,
+          "archive_text": "M1.09 — RESPOSTA AO ASSUNTO DO ÚLTIMO SERVIÇO.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 656,
+          "archive_text": "PLAYER_SPEECH literal: “Estou ouvindo”. Bartholomeu dá a palavra ao homem de colete; não concorda com qualquer alegação nem aceita nova obrigação.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 657,
+          "archive_text": "NPC_ACTION/SPEECH: O homem afasta os dedos dos papéis sem abri-los. Diz: “Nikolai Serebryakov. Chegaram até mim relatos de uma porta danificada e de um homem ferido no apartamento dele. Eu não estava lá. E você estava.” Após uma pausa pergunta: “Alguém viu seu rosto naquela noite?” O conteúdo dos relatos e a origem das informações são NPC_CLAIM, não fatos apurados pelo homem nem confirmação de que haja rastreamento até Bartholomeu.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 658,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE; sala do depósito, noite, fim dos anos 1970. Bartholomeu mortal, de pé, barba média; homem de colete à mesa, outro próximo da porta aberta. Papéis seguem fechados. Sem avanço de cena ou movimento do PJ, rolagem, gasto ou compra. XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475; XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96; três FV históricas pendentes; ledger técnico não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player explicitly invites explanation; interlocutor's reported information is not objectively proven.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0659",
+      "scene": "M1.09",
+      "start_line": 659,
+      "end_line": 660,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 659,
+          "archive_text": "M1.09: Bartholomeu responde ao homem e questiona sua preocupação.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 660,
+          "archive_text": "PLAYER_SPEECH literal: “Isso importa ? o probla seria meu, não seu, Serebryakov cancelou a queixa, e esse era o trabalho”. Trata-se da afirmação do jogador, não de confirmação oficial.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player asserts complaint withdrawn; no proof of legal closing established by that assertion.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0661",
+      "scene": "M1.09",
+      "start_line": 661,
+      "end_line": 661,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 661,
+          "archive_text": "M1.09 — Ele pergunta como Bart verificou o resultado da tarefa.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Interlocutor requests verification; question itself proves no fact.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0662",
+      "scene": "M1.09",
+      "start_line": 662,
+      "end_line": 665,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 662,
+          "archive_text": "M1.09 — EXPLICAÇÃO DE BARTHOLOMEU E RESPOSTA.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 663,
+          "archive_text": "PLAYER_DECLARATION: Bartholomeu explica tecnicamente o que presenciou no último serviço: Nikolai telefonou à autoridade sobre o protocolo da queixa e declarou intenção de retratação; redigiu e assinou carta com impressões digitais; Bartholomeu fez cópia carbonada e postou o original ao órgão policial. Ele não afirma ter recebido comprovante de encerramento. Completa literalmente: “Eu posso ter certeza do que ele fez na minha frente, eu nao tinha como ser baba dele o resto da vida”. A execução desses atos é histórica; encerramento administrativo continua NÃO VERIFICADO.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 664,
+          "archive_text": "NPC_SPEECH: O homem de colete ouve, sem abrir os papéis. Responde: “Não estou pedindo que fosse babá dele. Você me descreveu uma retratação, não um encerramento confirmado. Entendo o que presenciou. Mas quero saber o que ficou fora do seu controle: alguém pode identificar você naquela visita?” É avaliação e pergunta do NPC, não prova de que haja testemunha ou risco efetivo. Aguarda resposta; homem de casaco próximo da porta aberta.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 665,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, noite na sala do depósito, PJ mortal, de pé, barba média, bilhete consigo. Sem novas ações voluntárias, teste, rolagem, gasto ou compra. XP 519/44/475, crédito 140/96; 3 FV históricas pendentes, ledger V0.2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Distinguishes player description of telephone/post from legal closure; NPC responds with narrower interpretation.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0666",
+      "scene": "M1.09",
+      "start_line": 666,
+      "end_line": 669,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 666,
+          "archive_text": "M1.09 — RESPOSTA DE BART SOBRE RECONHECIMENTO E RISCO.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 667,
+          "archive_text": "PLAYER_SPEECH literal: “Não, nem Serebryakov viu minha cara. mas de novo, se viu, me viu, o problema seria meu ... mas ate onde me consta ninguem consegue ver atraves de tecido”. Bart afirma que manteve o rosto coberto e ninguém o viu; registro anterior confirma uso de máscara de frio e chapéu durante a visita ao apartamento. A ausência absoluta de reconhecimento por voz, porte ou testemunhas permanece não verificada; sua afirmação é PC_CLAIM, sem impor certeza objetiva.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 668,
+          "archive_text": "NPC_ACTION/SPEECH: O homem de colete observa a altura e o porte de Bartholomeu. Responde em voz baixa: “Através de tecido, não. Mas há outras maneiras de reconhecer alguém. E, se alguém ligar a visita a quem a encomendou, deixa de ser só problema seu.” Após breve pausa: “Você disse a Serebryakov quem lhe mandou lá? Deu algum nome?” O risco expresso é possibilidade levantada pelo NPC; não estabelece testemunha, perseguição ou vínculo confirmado. Não revela identidade nem abre os papéis; homem de casaco segue próximo à porta aberta.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 669,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, sala do depósito, noite, fim dos anos 1970. Bart mortal, de pé, bilhete consigo, barba média. Ninguém lhe impôs acordo; sem nova ação voluntária, rolagem, gasto ou compra. XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475, XP_CREDIT_GRANTED=140, XP_CREDIT_AVAILABLE=96; três FV anteriores pendentes, CHRONICLE_STORE_V0_2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player's disguise assertion not absolute proof of nonidentifiability; NPC warns of possible recognition.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0670",
+      "scene": "M1.09",
+      "start_line": 670,
+      "end_line": 671,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 670,
+          "archive_text": "M1.09: Bart afirma não conhecer nomes e diz que não os revelaria mesmo se conhecesse.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 671,
+          "archive_text": "NPC: O homem responde que não revelou seu nome a Bart. Lembra a cópia carbonada da carta que Bart mencionou e diz: “Quero essa cópia. É o que peço para encerrar nossa conta.” É um pedido do NPC, não um acordo firmado. Ele não sabe onde a cópia está. Os papéis na mesa seguem fechados e a porta continua aberta. M1.09 ativa; Bart pode responder; XP e recursos inalterados.",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player declines names; NPC's proposed condition is a request rather than accepted contract.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0672",
+      "scene": "M1.09",
+      "start_line": 672,
+      "end_line": 675,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 672,
+          "archive_text": "M1.09 — VIA CARBONADA SOBRE A MESA (31/10/2026, registro operacional).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 673,
+          "archive_text": "PLAYER_DECLARATION literal: “eu coloco na mesa”. Referente à via carbonada da declaração de Serebryakov, solicitada imediatamente antes pelo homem de colete. PLAYER_ACTION: Bartholomeu coloca essa via sobre a mesa. O ato atual estabelece que ele a trouxe consigo ao depósito; o registro anterior somente dizia que levou a cópia para casa após a visita, sem fixar onde a guardou depois. Não se inventa ocasião em que a retirou de casa ou outro documento. Nenhuma nova fala ou aceitação de acordo além desse gesto.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 674,
+          "archive_text": "NPC_ACTION/SPEECH: O homem observa o papel, segura-o pelas bordas e verifica o conteúdo sob a luminária. Reconhece que é uma reprodução carbonada, não o original assinado, e diz: “Era isso que eu queria.” Coloca a cópia junto dos papéis que já estão na mesa. Depois diz, em tom contido: “Quanto à nossa conta, por mim está encerrada, Krauser. Não vou lhe pedir outro serviço. Não posso falar por pessoas que não estão nesta sala.” Esta é a posição e promessa do NPC, não garantia independente de segurança ou encerramento de todos os vínculos. O homem de casaco segue junto à porta aberta e não impede a saída.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 675,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE. Noite, fim dos anos 1970, Bartholomeu mortal e de pé na sala do depósito, barba média. Via carbonada agora sobre a mesa sob controle do homem de colete; bilhete do encontro ainda com PJ. Documento original fora da cena, postado anteriormente, recebimento e arquivamento desconhecidos. Homem de colete e acompanhante sem identidades confirmadas. Sem rolagem, compra ou gasto. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96. Três FV anteriores pendentes; ledger técnico V0.2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Carbon copy deposited on table and taken into NPC custody; not original official order or proof of final withdrawal.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0676",
+      "scene": "M1.09",
+      "start_line": 676,
+      "end_line": 676,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 676,
+          "archive_text": "M1.09: Bart diz 'Com licença' e vai embora do depósito.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player explicitly exits and receives no resistance; no later coercion inferred.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0677",
+      "scene": "M1.09",
+      "start_line": 677,
+      "end_line": 677,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 677,
+          "archive_text": "M1.09 — Ao sair, Bart refaz o corredor observado: nove passos até a curva, esquerda, e cerca de dezesseis passos até a saída lateral. O homem de casaco permite sua passagem. O homem de colete não o retém; permanece com a via carbonada. Bart chega à rua, à noite. Não há trajeto posterior ou chegada a casa presumidos. M1.09 permanece ativa para nova decisão do jogador.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Observed exit and route re-used; no action beyond reported departure assigned.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0678",
+      "scene": "M1.09",
+      "start_line": 678,
+      "end_line": 678,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 678,
+          "archive_text": "M1.09 — Bart entra no próprio carro e, antes de ligar o motor, examina freios, tanque, componentes da ignição e escapamento. Para avaliar componentes externos, deixa o assento temporariamente. Observa que não há manchas novas de líquido sob o carro; mangueiras aparentes dos freios e conexões sob o capô parecem conectadas; tanque e escapamento visíveis sem furos evidentes. Não há cheiro intenso de gasolina. Peças internas e pastilhas não são verificáveis sem desmontagem. Não há confirmação de dano nem prova de segurança total. Motor permanece desligado, sem viagem ou destino escolhido. M1.09 ativa; XP 519/44/475 e crédito 140/96 inalterados.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Car inspection report cannot certify absence of all risks; no mechanics invented.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0679",
+      "scene": "M1.09",
+      "start_line": 679,
+      "end_line": 679,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 679,
+          "archive_text": "M1.09 — REGRESSO À CASA. PLAYER_DECLARATION: “Dou a partida e vou pra casa, rapido mas sem desrespeitar nenhuma lei, prestando atenção se não tem ninguém me seguindo”. Bartholomeu liga o carro e conduz até a residência, respeitando as regras de trânsito e atento ao retrovisor. Durante o percurso, alguns carros circulam atrás dele por trechos, mas nenhum pode ser identificado com segurança como seguidor. O motor e os freios funcionam sem anomalia perceptível no trajeto, sem garantir ausência de defeitos ocultos. Chega à rua de casa e estaciona; não sai do veículo nem entra na residência ainda. M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE. Sem testes, rolagens, compras ou gastos; XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, crédito 140/96; 3 FV históricas pendentes; ledger técnico não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player-directed legal-speed return; observation of being followed is not universal proof no surveillance.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0680",
+      "scene": "M1.09",
+      "start_line": 680,
+      "end_line": 683,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 680,
+          "archive_text": "M1.09 — CHEGADA EM CASA: CARRO LIGADO E FAMÍLIA (31/10/2026, registro operacional).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 681,
+          "archive_text": "PLAYER_DECLARATION literal: “Eu saio do carro, deixo ele ligado e vou ver como todo mundo está”. PLAYER_ACTION: Bartholomeu sai de seu automóvel estacionado diante de casa, mantendo o motor ligado conforme determina o jogador, e entra na residência para verificar Mary, Mikahel e Sara. A narração anterior chamou o motor de parado, criando ambiguidade de estado; a instrução atual do jogador estabelece o motor funcionando quando Bart sai, podendo ter voltado a ligá-lo sem presumir qualquer outra ação. Ele não anunciou abandono de casa nem viagem, e não fechou a M1.09.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 682,
+          "archive_text": "NPC_ACTION / OBSERVAÇÃO: Dentro de casa há iluminação baixa e Mary está acordada. Entre os preparativos que ela teve o dia para fazer, separou roupas e documentos em duas bolsas junto à entrada, sem tê-las colocado em veículo. Ela não tocou na mala pesada mencionada por Bart e não contatou Armin. Mikahel e Sara estão deitados em suas camas, dormindo sem indício visível de sofrimento ou ferimento; Bart pode constatá-lo ao vê-los. A observação imediata não garante estado médico ou segurança futura. Mary ouve a chegada e o ruído do automóvel ligado e pergunta: “Bart... você voltou. O que aconteceu? Precisamos sair agora?” Ela não sabe o resultado da reunião nem considera a família segura por isso.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 683,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE; noite no fim dos anos 1970, residência Krauser. Bartholomeu mortal e dentro da casa após verificar a família; o carro permanece estacionado diante dela com o motor ligado. Mary acordada, duas bolsas preparadas com roupas e documentos, não colocadas no carro; mala pesada intocada; Mikahel e Sara dormem em suas camas. Nenhuma outra fala ou reação voluntária do PJ presumida. Sem confirmação de perseguição nem segurança total; promessa do homem do depósito é NPC_CLAIM. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96; três FV históricas pendentes, ledger V0.2 não migrado, sem teste, gasto ou compra.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player reenters home while car running; family observations bounded to reported location/time.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0684",
+      "scene": "M1.09",
+      "start_line": 684,
+      "end_line": 684,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 684,
+          "archive_text": "M1.09 — Bartholomeu conta a Mary todo o encontro no depósito: as perguntas sobre Serebryakov, a entrega da cópia carbonada e a promessa limitada do homem de colete, que disse não pedir mais serviços, mas não falou por terceiros. Depois diz: “Mary, foi facil, facil de mais, eu não consigo acreditar que a gente ta livre disso tudo”. A desconfiança é percepção de Bart, não ameaça confirmada. Carro permanece ligado fora; crianças dormem, bolsas preparadas junto à entrada. Nenhuma decisão de fuga. M1.09 ativa; XP 519/44/475; crédito 140/96; sem gastos nem testes.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Reported full debrief to Mary; her reaction and distinction among promises are NPC perspective.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0685",
+      "scene": "M1.09",
+      "start_line": 685,
+      "end_line": 693,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 685,
+          "archive_text": "M1.09 — REAÇÃO DE MARY. Mary ouve o relato inteiro. Olha de relance para as duas bolsas prontas, depois para Bart. Responde: “Então ele prometeu que não vai mais te chamar. Mas não prometeu nada pelos outros.” Ela escuta o motor funcionando lá fora e acrescenta: “Eu preparei o que podia. Se precisarmos sair, saímos. Mas não quero acordar nossos filhos e levá-los embora só porque aquele homem deixou perguntas sem resposta. Você viu algum sinal de perigo no caminho, Bart? Alguma coisa além dessa sensação?” Ela aguarda a resposta, sem presumir decisão de fuga. Mikahel e Sara continuam dormindo. Bolsa, carro ligado e mala pesada mantêm seus estados anteriores. A leitura de Mary é interpretação de fala do NPC, sem comprovação de ameaça. M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, noite na residência, XP e recursos sem mudanças; três FV históricas pendentes e ledger técnico não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 686,
+          "archive_text": "M1.09 — RESPOSTA DE BART E REAÇÃO DE MARY.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 687,
+          "archive_text": "PLAYER_SPEECH literal: “Não querida, ta tudo calmo ... acho ... acho que acabou”. Bart relata não ter visto sinal concreto de perigo no retorno. Sua esperança é crença do personagem, não confirmação de segurança definitiva.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 688,
+          "archive_text": "NPC_ACTION/SPEECH: Mary escuta, deixa os ombros relaxarem um pouco, mas mantém cautela. Segura a mão de Bart e diz: “Eu também quero acreditar, meu amor. Não precisamos decidir tudo esta noite.” Após olhar para as bolsas prontas, acrescenta: “Vou deixar as coisas separadas, por enquanto. As crianças podem dormir.” Ao ouvir o motor ainda ligado diante da casa, pergunta: “Você quer desligar o carro e ficar um pouco comigo?” Mary não desfaz as bolsas nem acorda as crianças. Nenhuma decisão ou ação adicional de Bart é presumida.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 689,
+          "archive_text": "CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE; noite, fim dos anos 1970, em casa com Mary; Mikahel e Sara dormindo, bolsas preparadas, carro ligado fora; nenhum perigo imediato comprovado, promessa do homem do depósito limitada ao próprio envolvimento. Sem rolagem, compra ou gasto. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96. Três FV anteriores pendentes, ledger V0.2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 690,
+          "archive_text": "M1.09 — TEMPO A DOIS COM MARY.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 691,
+          "archive_text": "PLAYER_SPEECH literal: “Sim, vamos vamos ficar juntos como faziamos quando eramos jovens”. PLAYER_INTENT: Bart aceita o convite de Mary de desligar o carro e passar tempo com ela, evocando sua juventude em comum; não descreve outros gestos íntimos específicos. A aceitação do convite inclui ir ao carro e desligar o motor, retornando em seguida à casa; não se presume outro deslocamento ou mudança de planos.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 692,
+          "archive_text": "NPC_ACTION/SPEECH: Mary sorri, aliviada pela escolha de ficarem juntos. Aguarda o retorno dele após desligar o motor e se aproxima. Diz: “Como quando éramos jovens? Eu gostaria disso, Bart. Só nós dois, por um instante.” Encosta a mão no peito dele e acrescenta, de forma afetuosa: “Não precisa me prometer que o mundo ficou seguro. Só fica comigo esta noite.” Ela não supõe que todas as obrigações terminaram nem força qualquer gesto ou contato adicional do PJ. Mikahel e Sara continuam dormindo; bolsas permanecem prontas perto da entrada.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 693,
+          "archive_text": "CHECKPOINT: CHR-001, M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, noite, fim dos anos 1970, casa familiar. Bart mortal voltou à casa após desligar o carro. Mary próxima dele e aguardando sua resposta/gesto; clima de reconexão íntima e voluntária, sem cena sexual explicitada. Carro estacionado, motor desligado. Crianças dormindo; malas prontas. Nenhuma ameaça ou segurança absoluta confirmada, nenhuma saída da cidade, rolagem, gasto ou compra. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96; três FV históricas pendentes; CHRONICLE_STORE_V0_2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Mary's reported caution reflects her interpretation, not proof of future danger.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0694",
+      "scene": "M1.09",
+      "start_line": 694,
+      "end_line": 694,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 694,
+          "archive_text": "M1.09 — RECONEXÃO DE BARTHOLOMEU E MARY. PLAYER_ACTION: Bart toma Mary nos braços, beija-a e a leva ao quarto. Deseja uma noite de amor e proximidade, sem pressa, cobranças ou culpa, como não tinham havia muito tempo. NPC_ACTION: Mary corresponde ao beijo por vontade própria, abraça-o, sorri e diz baixinho: “Eu senti tanta falta de nós, Bart.” Ela aceita ficar com ele no quarto e compartilha o momento de intimidade afetiva. Cena íntima em elipse, sem conteúdo gráfico e sem avançar automaticamente ao amanhecer. CHECKPOINT: M1.09 ACTIVE_AWAITING_PLAYER_RESPONSE, noite no quarto do casal; filhos dormem, duas bolsas junto à porta, carro estacionado com motor desligado; não há ameaça comprovada nem garantia de segurança definitiva. XP 519/44/475, crédito 140/96; sem rolagem, gasto ou compra; 3 FV históricas pendentes, ledger V0.2 não migrado.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player's intimacy and narrator fade-out distinguished from later closure; no unsupported event detailed.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    },
+    {
+      "id": "D02-LEG-0695",
+      "scene": "M1.09",
+      "start_line": 695,
+      "end_line": 723,
+      "source": {
+        "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+        "kind": "MIGRATED_EDITORIAL_DIARY_NOT_AUTHENTICATED_CHAT",
+        "ref_commit": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+        "authority": "ARCHIVAL_LEVEL_A_NOT_ORIGINAL"
+      },
+      "archival_subclauses": [
+        {
+          "line": 695,
+          "archive_text": "M1.09 — ENCERRAMENTO DA CENA ÍNTIMA COM MARY (31/10/2026, registro de sessão).",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 696,
+          "archive_text": "PLAYER_META_DIRECTIVE literal: “cena encerrada”. Autoriza concluir o enquadramento narrativo da noite a dois com Mary, sem acrescentar fala, ação, emoção ou decisão voluntária de Bartholomeu, sem antecipar o amanhecer e sem criar novos acontecimentos. SCENE_STATUS: CLOSED — noite de reconexão do casal encerrada narrativamente no quarto; os detalhes privados permanecem em elipse. O fechamento da cena não equivale ao fechamento formal de toda a provocação M1.09, nem aprova automaticamente XP, compra, testes ou início de M2.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 697,
+          "archive_text": "CHECKPOINT: CHR-001; MODO GUIADO; M1.09 ACTIVE — SCENE_CLOSED / aguardando revisão de encerramento da provocação ou próxima orientação do jogador. Bart mortal com Mary no quarto, fim dos anos 1970, sem avanço automático de data; Mikahel e Sara dormindo, duas bolsas preparadas na entrada, carro desligado. Via carbonada ficou com o homem do depósito; a promessa de encerrar os pedidos era declaração desse NPC, não garantia de segurança. XP_TOTAL 519, XP_SPENT 44, XP_REMAINING 475, XP_CREDIT_GRANTED 140, XP_CREDIT_AVAILABLE 96, nenhuma alteração; três FV históricas pendentes e ledger técnico V0.2 não migrado. Sobrenome vigente conforme DECISIONS_STATE_V2: Krauser.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 698,
+          "archive_text": "CHR-001 — CONSOLIDAÇÃO CONTÁBIL DE M1.09 (31/10/2026).",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 699,
+          "archive_text": "PLAYER_REQUEST: “Vamos consolidar o gasto dos 126 de xp liberados”. Interpretação restrita: pedido de revisão e destinação do crédito, sem seleção literal de atributos/perícias nem aprovação de pacote de compras determinado. Não lançar compras ainda.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 700,
+          "archive_text": "AUDITORIA: M1.09 O PRIMEIRO NÃO foi jogada em múltiplas cenas: recusa em prosseguir nos serviços, encontro no depósito, entrega da via carbonada, saída, retorno ao lar e conversa com Mary; última cena concluída por declaração explícita “cena encerrada”. Encerramento FORMAL da provocação M1.09 = CLOSED para efeitos de janela de compra. Riscos externos permanecem não resolvidos; o NPC apenas disse não pedir novos serviços em seu próprio nome. Classificação M1.09 LONGA/MULTIPARTES e liberação de 30 XP de CRÉDITO DE GASTO pela regra local de extensão (não é concessão de experiência nova nem acréscimo a XP_TOTAL). M1.01–M1.09 todas CLOSED; M1 continua ACTIVE, M2–M5 NOT_STARTED.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 701,
+          "archive_text": "SALDOS ATUALIZADOS DE CRÉDITO: XP_TOTAL 519 INALTERADO; XP_SPENT 44 INALTERADO; XP_REMAINING 475 INALTERADO. XP_CREDIT_GRANTED 140 -> 170 (+30 relativo a M1.09); XP_CREDIT_AVAILABLE 96 -> 126. Nenhuma compra efetuada nesta consolidação; compras exigem detalhamento de traços, custo, elegibilidade e autorização explícita do jogador. Não reaplicar +30 da M1.08 nem converter crédito de compra em XP extra.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 702,
+          "archive_text": "PROPOSTA NÃO APROVADA / NÃO DEBITADA — gasto exato de 126: Força 1->4 (45 XP); Briga 1->4 (27 XP); Vigor 1->3 (25 XP); Destreza 1->2 (10 XP); Condução não alocada ->2 (9 XP); Carisma 1->2 (10 XP). Total 126. Os zeros referem-se a pontos ainda não alocados, não a característica final ilegal. Essa proposta difere da antiga recomendação de 96 XP de DECISIONS V2, que nunca foi aprovada; não substituir histórico, nem executar compras antes de aprovação específica. Custo por novo nível: atributos 5x; perícias 3x. Cada alvo é compatível com TARGET-SHEET-V1; evidências biográficas exigem validação no fechamento da compra.",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 703,
+          "archive_text": "CHECKPOINT: M1.09 CLOSED; próxima provocação M1.10 não apresentada, não criar automaticamente. Último momento narrativo: noite fechada em elipse, Bart e Mary no quarto, filhos dormindo, bolsas prontas, carro desligado. Saldo de compra 126 PENDING_ALLOCATION, 0 debitado. Três FV históricas pendentes; CHRONICLE_STORE_V0_2 não migrado. Nome vigente Bartholomeu Krauser conforme decisão posterior do documento DECISIONS V2.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "CORRECTION_OR_IDENTITY_PRECEDENCE_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 704,
+          "archive_text": "CHR-001 — COMPRA DE 126 XP — M1.09 — AUTORIZAÇÃO EXPRESSA E CONFERÊNCIA (31/10/2026).",
+          "semantic_checks": [
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 705,
+          "archive_text": "AUTORIA: O jogador aprovou expressamente “Força 1→4 (45), Briga 1→4 (27), Vigor 1→3 (25), Destreza 1→2 (10), Condução não alocada→2 (9) e Carisma 1→2 (10)” e solicitou registro no character.md. A proposta anterior ainda não havia sido debitada. Nenhuma transação duplicada encontrada no checkpoint anterior.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 706,
+          "archive_text": "AUDITORIA: Orçamento global anterior XP_TOTAL=519, XP_SPENT=44, XP_REMAINING=475; crédito cumulativo após M1.09 CLOSED: XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=126. Custos: Atributos 5×novo ponto, Perícias 3×novo ponto. Nenhum atributo ou perícia ultrapassa 4 e todos os valores de destino estão dentro da TARGET-SHEET-V1. Condução estava sem pontos alocados (não significa atributo 0). Suporte biográfico: Força e Briga — luta greco-romana, boxe, judô e coerção física; Vigor — porte e trabalho físico; Destreza — locomoção e treino marcial; Condução — condução cotidiana observada; Carisma — comunicação com Mikahel, Sara e Mary. As ações históricas fundamentam elegibilidade narrativa, sem alterar resultados retrospectivos.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 707,
+          "archive_text": "TRANSAÇÕES AUTORIZADAS / EXECUTADAS NO DIÁRIO OPERACIONAL:",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 708,
+          "archive_text": "ATR-FORCA-M109-001: Força 1→2 (10 XP), 2→3 (15 XP), 3→4 (20 XP); total 45 XP; FINAL 4.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 709,
+          "archive_text": "PER-BRIGA-M109-001: Briga 1→2 (6 XP), 2→3 (9 XP), 3→4 (12 XP); total 27 XP; FINAL 4.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 710,
+          "archive_text": "ATR-VIGOR-M109-001: Vigor 1→2 (10 XP), 2→3 (15 XP); total 25 XP; FINAL 3.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 711,
+          "archive_text": "ATR-DESTREZA-M109-001: Destreza 1→2 (10 XP); FINAL 2.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 712,
+          "archive_text": "PER-CONDUCAO-M109-001: Condução não alocada→1 (3 XP), 1→2 (6 XP); total 9 XP; FINAL 2.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 713,
+          "archive_text": "ATR-CARISMA-M109-001: Carisma 1→2 (10 XP); FINAL 2.",
+          "semantic_checks": [
+            "ARCHIVAL_CONTEXT_NARRATIVE_REPORTED"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 714,
+          "archive_text": "SOMA = 45+27+25+10+9+10 = 126 XP. Sem compras de outras características; a antiga proposta de Política e Ofícios não foi aplicada.",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 715,
+          "archive_text": "SALDO VIGENTE PÓS-COMPRA: XP_TOTAL=519; XP_SPENT=170; XP_REMAINING=349; XP_CREDIT_GRANTED=170; XP_CREDIT_AVAILABLE=0. Atributos alocados: Força 4, Destreza 2, Vigor 3, Carisma 2, Determinação 1, Autocontrole 1, Inteligência 1; Manipulação e Raciocínio ainda não alocados. Perícias alocadas: Briga 4, Condução 2, Ofícios 1, Intimidação 1. Ficha completa ainda em criação, não pronta para crônica de 2010. Sem teste, rolagem, gasto de FV ou nova provocação. Três gastos históricos de FV pendentes; CHRONICLE_STORE_V0_2 técnico não migrado. Este é registro operacional auditável por leitura, não COMMITTED técnico.",
+          "semantic_checks": [
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 716,
+          "archive_text": "CHECKPOINT: M1.01–M1.09 CLOSED; M1 ACTIVE, M2–M5 NOT_STARTED; nenhuma M1.10 apresentada. Última cena: noite de Mary e Bartholomeu encerrada em elipse, fim dos anos 1970; duas bolsas junto à entrada, filhos dormindo, carro desligado. Pendências narrativas e promessas de NPC permanecem sem garantias objetivas. O cabeçalho histórico será sincronizado com esta movimentação, sem editar eventos anteriores.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 717,
+          "archive_text": "CHR-001 — M1.GATE / PACOTE DE CONSOLIDAÇÃO DE MARCO (31/10/2026, auditoria narrativa).",
+          "semantic_checks": [
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 718,
+          "archive_text": "PLAYER_META: “Continue. E avalie se já não é o tempo de encerrar o marco um. Creio que a estabilidade e a ilusão dela de Bartolomeu já estão bem definidas. Mas a decisão tem que ser sua, como narrador.” O jogador delega ao Narrador o juízo de fechamento, sem ordenar resultados diegéticos ou gasto de XP.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 719,
+          "archive_text": "M1.CLOSE_CANDIDATE=TRUE; M1.CLOSE_REQUEST=GENERATED; M1.GATE=PASS. Cobertura funcional PASS: história vivida M1.01–M1.09 estabeleceu identidade mortal, formação, crença judaica e valores familiares, trabalho técnico e coercitivo, relação com Mary, Mikahel e Sara, responsabilidade moral, pertencimento doméstico e ambição de manter uma vida com trabalho, segurança e família. Coerência PASS: o desejo de encerrar serviços paralelos e restaurar vida normal é expectativa e decisão do PJ, não prova de que o passado deixou de existir. Entrega da cópia carbonada e promessa limitada do interlocutor são históricas; identidades, intenções de terceiros, consequências do caso Serebryakov e segurança da família permanecem abertas. O quadro não exige que essas pendências sejam resolvidas para fechar M1. Consequência PASS: Mary conhece os serviços violentos de Bart e impôs limites; família preparou bolsas; o personagem escolheu explicitamente romper o vínculo com contratantes, confia no apoio potencial de Armin sem confirmação dele; a distância entre imagem de protetor e violência exercida ficou estabelecida. A noite de reconciliação é conclusão emocional de um período, não garantia de estabilidade futura.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 720,
+          "archive_text": "M1.CLOSE — APROVADO POR JUÍZO DO NARRADOR sob delegação do jogador e pelo gate de cobertura/coerência/consequência. A Ilusão da Estabilidade está suficientemente construída e não exige M1.10. HISTÓRIA: Pessach e proteção dos filhos; Vera e aquecimento; caso escolar Mikahel-Yuri; laudo recusado; agressão a Lev e repercussão desconhecida; conflito de denúncia Nikolai; confissão a Mary; decisão de parar, encontro no depósito, entrega da via carbonada, retorno e intimidade com Mary. COBERTURA CRONOLÓGICA: cenas mortais no fim dos anos 1970, sem dia exato; sem atribuir avanço automático para 2010.",
+          "semantic_checks": [
+            "PLAYER_ATTRIBUTED_IN_ARCHIVE",
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 721,
+          "archive_text": "DÍVIDA CAUSAL: condições de Lev e sua esposa desconhecidas, possível responsabilização da violência, denúncia e trâmite oficial não confirmados, identidade/autoridade do homem do depósito desconhecidas, promessa de saída só vale como NPC_CLAIM, reparo final do ramal não confirmado, confiança de Mary ainda fragilizada, futuro e possível ajuda de Armin não testados, vínculos familiares não presumidos duráveis até 2010. Contatos/recursos, memórias e Touchstones finais em 2010 sujeitos a confirmação. M1 CLOSE não encerra esses fios nem os resolve por decreto.",
+          "semantic_checks": [
+            "NPC_ACTION_SPEECH_OR_CLAIM_ATTRIBUTED_IN_ARCHIVE",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 722,
+          "archive_text": "MECÂNICA AO FECHAR: XP_TOTAL=519, XP_SPENT=170, XP_REMAINING=349, XP_CREDIT_GRANTED=170, XP_CREDIT_AVAILABLE=0. Compras M1.09 já debitadas, nenhuma nova compra ou rolagem. Três FV históricas pendentes; CHRONICLE_STORE_V0_2 técnico não migrado. Ficha ainda incompleta e mortal; clã futuro Gangrel não produz poderes antes do Abraço.",
+          "semantic_checks": [
+            "MECHANICS_OR_LEDGER_REPORTED_CHECK"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        },
+        {
+          "line": 723,
+          "archive_text": "ESTADO DE PIPELINE: M1_CLOSED; M1.01–M1.09 CLOSED; M2_NOT_STARTED, M3–M5 NOT_STARTED. Próxima operação autorizada: M2.01 INITIAL_PROVOCATION somente após readback deste fechamento. Última cena diegética foi encerrada em elipse no quarto do casal; filhos dormiam, bolsas preparadas, carro desligado. Nenhum evento posterior criado neste registro.",
+          "semantic_checks": [
+            "NARRATOR_REPORT_OR_OBSERVATION",
+            "INTENTION_PROPOSAL_OR_CONDITIONAL_CHECK",
+            "STATUS_EPISTEMIC_LIMIT"
+          ],
+          "original_author": "AUTHOR_UNKNOWN",
+          "evidence_limit": "AS_RECORDED_IN_DERIVED_ARCHIVE_ONLY"
+        }
+      ],
+      "review_finding": "Player closes intimate scene; later M1.09 XP credit proposal is initially unapproved, then 126 XP purchase expressly authorized at 704-715, and M1 gate closes at 717-723. M1.10 never presented.",
+      "epistemic_status": "ARCHIVE_LEVEL_A_WITH_UNKNOWN_ORIGINAL_AUTHENTICITY",
+      "original_chat_authenticated": false,
+      "original_rng_authenticated": false,
+      "independent_reviewer_signed": false,
+      "technical_committed": false
+    }
+  ],
+  "original_chat_authenticated": false,
+  "original_rng_authenticated": false,
+  "independent_review": "NOT_PERFORMED",
+  "global_gap_001": "OPEN_M101_ORIGINAL_UNAUTHENTICATED"
+}
