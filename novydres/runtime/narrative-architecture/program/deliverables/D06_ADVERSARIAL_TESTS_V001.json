@@ -1,0 +1,122 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V001",
+  "status": "EXECUTED_DOCUMENTARY_CHECKS",
+  "method": "20 explicit documentary assertions executed by D06_VALIDATE_V001.py; not a live narrative simulation",
+  "tests": [
+    {
+      "id": "T-D06-001",
+      "assertion": "cycle sequence and last event pinned to verified input",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-002",
+      "assertion": "C05 closed and C06 not started preserved as as-of facts",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-003",
+      "assertion": "Embrace not occurred; no sire or date asserted",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-004",
+      "assertion": "CH00-CH07 remain unactivated proposals",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-005",
+      "assertion": "M3.01 IDs not equated with macro milestone sufficiency",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-006",
+      "assertion": "M1 closed history cannot be reopened",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-007",
+      "assertion": "older M2 status not asserted as current",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-008",
+      "assertion": "no XP, FV, powers, ties, assets or status granted",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-009",
+      "assertion": "no future scene, dialogue, action or NPC knowledge authored",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-010",
+      "assertion": "no central plot or causal link created",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-011",
+      "assertion": "future routes conditional; none selected by default",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-012",
+      "assertion": "vampire-by-2010 requires authorized actual transformation and played aftermath",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-013",
+      "assertion": "alternate non-vampire target is approval gated",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-014",
+      "assertion": "refusal, failure, absence and unfinished states remain reportable",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-015",
+      "assertion": "2010 is a soft horizon with no invented dates",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-016",
+      "assertion": "Marco sufficiency uses Coverage, Coherence and Consequence",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-017",
+      "assertion": "D03 knowledge and identity limits remain in force",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-018",
+      "assertion": "D05 pointer and secret segregation blockers remain pending",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-019",
+      "assertion": "declared source blobs match input tree",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D06-020",
+      "assertion": "JSON parses and required keys exist",
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "does not simulate play or prove future playability",
+    "source authenticity, operational pointer and secret segregation unknowns remain"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "execution": {
+    "command": "python3 novydres/runtime/narrative-architecture/program/deliverables/D06_VALIDATE_V001.py",
+    "runner": "D06_VALIDATE_V001.py",
+    "scope": "checkpoint, authority boundaries, route conditions, source blob pins, and gate consistency",
+    "result": "PASS",
+    "checks_passed": 20,
+    "source_blob_refs_verified": 20
+  }
+}

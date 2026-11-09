@@ -1,0 +1,50 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V001",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "38ed1270d83a3fc31ab05fc881535849f3045211",
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "summary": "C05 closed; C06 not started; mortal; Embrace not occurred"
+  },
+  "deliverables": [
+    "D06_CHRONICLE_BIBLE_V001.json",
+    "D06_TRANSFORMATION_PATHS_V001.json",
+    "D06_ADVERSARIAL_TESTS_V001.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V001.json",
+    "AUDIT_D06_V001.json",
+    "NEXT_PROMPT_D07_V001.md",
+    "D06_VALIDATE_V001.py"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "remote publication/readback to be recorded in the local execution manifest",
+    "APPROVAL-D06-001 for operational completion criteria",
+    "inherited D05 approvals and dependencies"
+  ],
+  "publication_readback": {
+    "status": "PENDING",
+    "post_publish_record": "local CHR001_D05-D12_RUN_STATE.json; this handoff is not self-referential"
+  },
+  "next_phase": "D07",
+  "next_phase_boundary": "documentary work only where independent of target selection and secret truth; operational promotion and narration remain blocked",
+  "restrictions": [
+    "no canon change",
+    "no retcon",
+    "no scene",
+    "no mechanical grant",
+    "no secret truth",
+    "no master edit",
+    "no Narrator permission"
+  ]
+}

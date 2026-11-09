@@ -1,0 +1,46 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "PLAYER_DECISION_REQUIRED",
+  "spoiler_class": "PLAYER_SAFE",
+  "decisions": [
+    {
+      "id": "APPROVAL-D06-001",
+      "decision": "Confirm target for guided-creation completion: retain vampire-by-2010 as a chosen goal, approve a non-vampire alternative, or leave target unresolved.",
+      "options": [
+        "retain vampire-by-2010 as player-selected goal, not guaranteed result",
+        "approve non-vampire alternate target",
+        "leave unresolved and keep graduation pending"
+      ],
+      "default": "PENDING_PLAYER_APPROVAL",
+      "when_required": "before operational graduation criteria or promotion treats one route as required",
+      "independent_work": "D07/D08 may continue only where independent of target selection"
+    },
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicate CYCLE_V0033 versus MANIFEST_V46 pointer conflict.",
+      "default": "pending; blocks operational state change",
+      "when_required": "before operational transition"
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Authorize or decline future promotion to operational/master use.",
+      "default": "keep proposed documents only",
+      "when_required": "D12 after audit and readback"
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Provide effective secret-truth segregation, approve an open variant, or keep truth-dependent investigation blocked.",
+      "default": "store no secret; block dependent play",
+      "when_required": "before truth-dependent D07 material"
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff.",
+      "default": "not granted by D06",
+      "when_required": "future scene handoff"
+    }
+  ]
+}
