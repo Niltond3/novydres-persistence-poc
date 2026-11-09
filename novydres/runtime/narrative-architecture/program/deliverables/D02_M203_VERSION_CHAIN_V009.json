@@ -1,0 +1,127 @@
+{
+  "schema": "NOVYDRES_D02_M203_VERSION_CHAIN_V009",
+  "phase": "D02",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "spoiler_class": "PLAYER_SAFE",
+  "version": 9,
+  "checkpoint": "H",
+  "design_parent_sha": "5e6eeb656c7ae8e238f0ab8c63e7e4b862996eac",
+  "master_head_verified": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "status": "DERIVED_VERSION_CHAIN_EXACT_PREFIX_AND_SHARD_READBACK_VERIFIED_NOT_ORIGINAL_AUTHENTICATION",
+  "sources": [
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt",
+      "blob_sha": "b35212d618a7aa195757d5d7bd28976c06d3c327",
+      "characters_utf16": 106201,
+      "version_class": "INVALID_INCOMPLETE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_valid.source.txt",
+      "blob_sha": "337c22eb273e4b81d30a0ed5d4122a0222568713",
+      "characters_utf16": 108539,
+      "version_class": "HISTORIC_VALID"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+      "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+      "characters_utf16": 111894,
+      "version_class": "HISTORIC_VALID"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v016.source.txt",
+      "blob_sha": "83b93c6a8662d207690358efc832ca600fb9b994",
+      "characters_utf16": 147594,
+      "version_class": "PARENT_VALID"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1",
+      "characters_utf16": 156500,
+      "version_class": "CURRENT_VALID"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_001.source.txt",
+      "blob_sha": "a84ffb9dfdabba4b1b23668359cd43dac683b22f",
+      "characters_utf16": 17632,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_002.source.txt",
+      "blob_sha": "41f15ffcd26cdaaf66fb96a07a347988e3674f3b",
+      "characters_utf16": 17658,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_003.source.txt",
+      "blob_sha": "61be85730eeffac3aed21236456133b65cf27b44",
+      "characters_utf16": 17942,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_004.source.txt",
+      "blob_sha": "17f02f9e3c0b3a0f734b80c9bd8851d21a76aa8d",
+      "characters_utf16": 17813,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_005.source.txt",
+      "blob_sha": "c83fc8f51d5b14ea63113b54fbe1ad753a67d1d7",
+      "characters_utf16": 17524,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_006.source.txt",
+      "blob_sha": "01397d613d04f8e2d56412127eb5464af45dffe5",
+      "characters_utf16": 17623,
+      "version_class": "DERIVED_FRAGMENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_007.source.txt",
+      "blob_sha": "0219c761bd6fdb1136a695b22bd8cd77f614e753",
+      "characters_utf16": 5702,
+      "version_class": "DERIVED_FRAGMENT"
+    }
+  ],
+  "shard_index": {
+    "path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_SHARD_INDEX_V1.json",
+    "blob_sha": "34413811899a0c4081d4e59a82a984f4b61590b0",
+    "index_status": "PENDING_READBACK",
+    "index_authority": "INACTIVE_DERIVED_ACCESS_PATH",
+    "fragment_count": 7,
+    "source_ref": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+    "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34"
+  },
+  "legacy": {
+    "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+    "lines": [
+      825,
+      1026
+    ],
+    "prefix_lines_equal_v017": 202
+  },
+  "checks": {
+    "invalid_partial_prefix_of_valid": true,
+    "valid_v007_prefix_of_v008": true,
+    "v008_prefix_of_v016": true,
+    "v016_prefix_of_v017": true,
+    "seven_shards_equal_v008": true,
+    "shards_utf16": 111894,
+    "index_expected_utf16": 111894,
+    "v008_utf16": 111894,
+    "legacy_825_to_1026_equals_v017_first_202_lines": true,
+    "source_shas_match_index": true,
+    "shards_count": 7
+  },
+  "interpretation": [
+    "The invalid partial v007 is exactly a truncated prefix of the valid v007, not new played material and not a higher-precedence version.",
+    "Valid v007, v008, v016 and v017 form an exact growing text-prefix chain; later added events/corrections can supersede earlier unresolved checkpoints.",
+    "The seven v008 shards concatenate byte-character identically to the v008 full text but preserve only the derived v008 stage, not original player/narrator messages.",
+    "Migrated legacy M2.03 first 202 lines match v017 exactly; no independent provider message IDs, role signatures or original RNG logs are thereby recovered.",
+    "Original author remains AUTHOR_UNKNOWN. Institutional claims, NPC lore and hypothetical powers must not be elevated to verified hidden causality."
+  ],
+  "original_chat_authenticated": false,
+  "original_rng_authenticated": false,
+  "independent_review": "NOT_PERFORMED",
+  "global_d02_status": "FAIL"
+}
