@@ -1,0 +1,620 @@
+{
+  "phase": "D07",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "d3e4dd25b1b9403548c888a57af82c7a441d957f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "current proposed contracts; documentary constraints only"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f",
+      "role": "precedence, authority, consent and secrecy"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "lifecycle and gate constraints"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+      "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+      "role": "mandatory provenance limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+      "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+      "role": "only D04 provisional plot candidate"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+      "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a",
+      "role": "per-thread classes and knowledge boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_BASELINE_V001.json",
+      "blob_sha": "564a465ad6e363f25b5fe0453f2b0ccf441d00c0",
+      "role": "44-record heterogeneous baseline"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+      "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+      "role": "typed non-causal links for PC01"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_OWNERS_TRIGGERS_CLOSURE_V001.json",
+      "blob_sha": "cbbca1a1080aea6de0955501bdbdba2339a523aa",
+      "role": "owners, triggers and closure limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+      "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422",
+      "role": "causal dependency limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D04_V001.json",
+      "blob_sha": "d0afdf683b0718b5e517fb0673fe8606962de86c",
+      "role": "D04 gate and adversarial findings"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D04_V001.json",
+      "blob_sha": "f3220e134de9bccc5af0a2b3aca11351a0dc9656",
+      "role": "D04 gate and next phase handoff"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V001.json",
+      "blob_sha": "6496fe8572db5c879c3fe5795abfbe5f20d1ec04",
+      "role": "D05 unresolved dependencies and approval queue"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_UNCERTAINTY_REGISTER_V001.json",
+      "blob_sha": "f13906d75b2c388b0c0f672b88369c7ed63ccfc7",
+      "role": "bounded unknowns and provenance rules"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "pending player decisions"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "macro continuity, agency, authority and secret boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "unselected player route and conditional continuation"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "target selection remains pending"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "D06 gate and D07 independence boundary"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "as-of narrative cursor; must be revalidated before any scene"
+    }
+  ],
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "document_id": "D07_PLOT_BIBLES_V001",
+  "checkpoint_as_of": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "protagonist_mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE",
+    "use": "Documentary cursor only; refresh the latest cycle, manifest and event ledger before operational or narrative use."
+  },
+  "contract_count": 1,
+  "admission_rule": "Only a D04-elevated provisional candidate may receive a conditional D07 contract. This remains editorial; no plot, thread, agent, fact, or causal relation is operationally promoted.",
+  "contracts": [
+    {
+      "plot_id": "D04-PC01",
+      "safe_title": "Segurança e controle do trabalho técnico",
+      "status": "DRAFT",
+      "D04_status": "PROVISIONAL_PLOT_EDITORIAL_ONLY",
+      "scale": "MEDIUM_PROVISIONAL",
+      "anchor_thread": "m201-ramal-condition",
+      "dramatic_question": "Qual disposição, se alguma, pode ser sustentada por evidência e considerada segura pelas pessoas responsáveis, ou qual alternativa documentada preserva a segurança sem presumir resolução?",
+      "purpose": "Organizar condicionalmente decisões futuras sobre a condição técnica do ramal, seus testes e eventual disposição formal, apenas se o jogador escolher esse foco e fontes atuais sustentarem a situação.",
+      "historical_basis": {
+        "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+        "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED",
+        "bounded_statement": "O arquivo derivado registra em C11 isolamento/interdição, medidas divergentes, uma luva descrita como de seção menor e aparência distinta do esquema. Isso é um relato de arquivo derivado, não autenticação de fonte original nem confirmação da condição atual.",
+        "current_condition": "UNKNOWN_UNTIL_REVALIDATED",
+        "not_established": [
+          "laudo conclusivo",
+          "nexo causal integral",
+          "autoria ou data de eventual adaptação",
+          "material aprovado disponível",
+          "reparo executado",
+          "ensaios finais",
+          "data ou autorização de liberação",
+          "culpado, dolo, sabotagem ou elemento sobrenatural"
+        ]
+      },
+      "participants_and_agency": {
+        "protagonist": "Bartholomeu pode participar se escolher; envolvimento futuro não é obrigatório.",
+        "historically_named_in_records": [
+          "pc-bartholomeu-krauser",
+          "npc-pavel-heating-supervisor"
+        ],
+        "future_presence_or_objective": "UNKNOWN; historical mention does not establish current availability, intent, knowledge, or scene entry.",
+        "opposition": "NONE_ESTABLISHED",
+        "opposition_objectives": "UNKNOWN",
+        "NPC_autonomy": "ONLY_ARCHIVED_ACTIONS",
+        "new_agents": "NONE_CREATED",
+        "autonomy_limit": "No prospective NPC initiative is authorized; any future action needs proven acquisition and separate authorization."
+      },
+      "typed_links": {
+        "map_path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+        "map_blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+        "edges": [
+          {
+            "edge_id": "D04-EDGE-001",
+            "thread_id": "m201-report-authorship",
+            "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C10-16-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                7,
+                22
+              ],
+              "anchor": "m201-report-authorship",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-002",
+            "thread_id": "m201-ramal-condition",
+            "relation_kind": "PROVISIONAL_PLOT_ANCHOR",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C11-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                23,
+                38
+              ],
+              "anchor": "m201-ramal-condition",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-003",
+            "thread_id": "m201-pavel-commitment",
+            "relation_kind": "CONSEQUENCE_CONTEXT",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C11-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                39,
+                54
+              ],
+              "anchor": "m201-pavel-commitment",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-004",
+            "thread_id": "m201-liev-colleagues",
+            "relation_kind": "THEMATIC_CONTEXT",
+            "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+            "promotes_plot_or_cause": false,
+            "confidence": "LOW",
+            "checkpoint": "UNKNOWN_BASELINE_ONLY",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                55,
+                69
+              ],
+              "anchor": "m201-liev-colleagues",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-024",
+            "thread_id": "m204-heating-overtime-claim",
+            "relation_kind": "THEMATIC_CONTEXT",
+            "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+            "promotes_plot_or_cause": false,
+            "confidence": "LOW",
+            "checkpoint": "CHR001-M204-C13-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                285,
+                293
+              ],
+              "anchor": "m204-heating-overtime-claim",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-025",
+            "thread_id": "m204-c11-component-analysis",
+            "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C11-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                294,
+                302
+              ],
+              "anchor": "m204-c11-component-analysis",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-026",
+            "thread_id": "m204-c12-old-city-heat-transfer-study",
+            "relation_kind": "THEMATIC_CONTEXT",
+            "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+            "promotes_plot_or_cause": false,
+            "confidence": "LOW",
+            "checkpoint": "CHR001-M204-C13-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                303,
+                311
+              ],
+              "anchor": "m204-c12-old-city-heat-transfer-study",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-027",
+            "thread_id": "m204-c13-preliminary-note-followup",
+            "relation_kind": "CONSEQUENCE_CONTEXT",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C13-18-20261105-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                312,
+                320
+              ],
+              "anchor": "m204-c13-preliminary-note-followup",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-029",
+            "thread_id": "m204-c15-underground-survey",
+            "relation_kind": "EVIDENCE_FOR_CANDIDATE",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C15-22-20261106-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                330,
+                338
+              ],
+              "anchor": "m204-c15-underground-survey",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-030",
+            "thread_id": "m204-c15-makarov-pavel-trust",
+            "relation_kind": "CONSEQUENCE_CONTEXT",
+            "epistemic_class": "DERIVED_ARCHIVE_LIMITED",
+            "promotes_plot_or_cause": false,
+            "confidence": "MEDIUM_DERIVED_ONLY",
+            "checkpoint": "CHR001-M204-C15-22-20261106-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                339,
+                347
+              ],
+              "anchor": "m204-c15-makarov-pavel-trust",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          },
+          {
+            "edge_id": "D04-EDGE-032",
+            "thread_id": "m204-c16-pipe-safety",
+            "relation_kind": "THEMATIC_CONTEXT",
+            "epistemic_class": "SEQUENCE_ONLY_NOT_CAUSAL",
+            "promotes_plot_or_cause": false,
+            "confidence": "LOW",
+            "checkpoint": "CHR001-M204-C17-08-20261106-001",
+            "source": {
+              "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+              "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+              "source_lines": [
+                357,
+                365
+              ],
+              "anchor": "m204-c16-pipe-safety",
+              "authority": "CURRENT_DERIVED_ARCHIVE_NOT_ORIGINAL_AUTHENTICATED"
+            }
+          }
+        ],
+        "interpretation": "These are evidentiary, anchor, consequence-context or thematic-context links only. None proves causality, shared authorship, common motive, or a larger conspiracy. Preserve each edge type."
+      },
+      "causality_contract": {
+        "global_causal_edges": "NONE_ESTABLISHED",
+        "default": "SEQUENCE_ONLY unless a future scene-specific source supports a typed causal relation",
+        "prohibited_inferences": [
+          "temporal proximity as cause",
+          "C16 pipe break as cause of the ramal condition",
+          "overtime claim as cause of repair or harm",
+          "C12 heat-transfer study as cause of C13 follow-up",
+          "Pavel follow-up as antagonism",
+          "Makarov–Pavel trust as a causal motive"
+        ]
+      },
+      "entry_conditions": {
+        "design_only": "No current scene or trigger is declared. Trigger and next verified event remain UNKNOWN.",
+        "future_scene_requires": [
+          "latest cycle/manifest/event pointers reconciled under current protocol",
+          "separate SCENE_READY and NARRATOR_PERMISSION gates satisfied",
+          "player explicitly chooses or accepts this focus, or independently evidenced NPC initiative is separately authorized",
+          "current condition and relevant evidence revalidated from applicable sources",
+          "truth-dependent authorship investigation remains blocked until truth-lock dependency is satisfied"
+        ],
+        "not_a_trigger": [
+          "D04 open-thread status",
+          "a document existing",
+          "passage of time",
+          "D07 publication",
+          "C06 not yet started",
+          "unproved NPC knowledge"
+        ]
+      },
+      "conditional_routes": [
+        {
+          "id": "ROUTE-D07-PC01-REPAIR-AND-TEST",
+          "conditions": [
+            "player chooses participation",
+            "current evidence supports this path",
+            "responsible authority and materials are established in future play",
+            "repair and tests actually occur and are persisted"
+          ],
+          "possible_disposition": "A future documented test and formal disposition may support use; success, schedule and approval are not assumed."
+        },
+        {
+          "id": "ROUTE-D07-PC01-DOCUMENTED-ALTERNATIVE",
+          "conditions": [
+            "player or evidenced responsible authority chooses an alternative",
+            "the choice and its authority are supported and persisted"
+          ],
+          "possible_disposition": "A supported alternative, continued isolation, replacement, or other disposition may remain local to this problem; no option is preselected."
+        },
+        {
+          "id": "ROUTE-D07-PC01-DECLINE-SUSPEND-ABANDON",
+          "conditions": [
+            "player declines, pauses, leaves, or abandons the issue, or a supported impediment stops work"
+          ],
+          "possible_disposition": "The issue remains unresolved, suspended, or abandoned with only actually established consequences recorded; no penalty or forced continuation."
+        },
+        {
+          "id": "ROUTE-D07-PC01-FAILURE",
+          "conditions": [
+            "future authorized attempt actually fails or evidence blocks a safe disposition"
+          ],
+          "possible_disposition": "Record the failed attempt and supported consequence; do not convert failure into proof of a culprit, hidden cause, or supernatural answer."
+        }
+      ],
+      "closure_contract": {
+        "intro_and_local_end": "A future story, if authored in D08, must have an optional entry and a local ending independent of full plot closure.",
+        "local_disposition_requires": [
+          "actual evidence-backed assessment or choice",
+          "authority for any formal release is demonstrated",
+          "player involvement or independently authorized action is recorded where relevant",
+          "cycle/ledger persistence and readback complete"
+        ],
+        "full_thread_closure": "Not proposed. Requires separate evidence-backed D1 review; a repair, test, unanswered authorship question, or local disposition alone does not close all linked threads.",
+        "terminal_states_that_are_not_success": [
+          "unresolved",
+          "suspended",
+          "refused",
+          "abandoned",
+          "failed",
+          "blocked by missing authority or evidence"
+        ]
+      },
+      "locked_mystery_dependency": {
+        "thread_id": "m201-report-authorship",
+        "question_scope": "The archived record describes a contested signature; author, issuance, authenticity, and any falsification remain unknown.",
+        "play_status": "BLOCKED_FOR_TRUTH_DEPENDENT_INVESTIGATION",
+        "lock_ref": "D07-TL-001",
+        "allowed_now": "Carry the unresolved question as an editorial dependency; do not invent answer, suspect, motive, clue, or agent action.",
+        "release_condition": "Effective GM-hidden segregation with negative-access verification, or an explicit player-approved open variant before creating any new clue or investigative scene."
+      },
+      "continuity_and_limits": [
+        "This contract does not resolve D05 pointer conflict or select the D06 target route.",
+        "No closed scene is reopened; no event after the cited archive is implied.",
+        "The archive is derived and original source authenticity remains limited.",
+        "No retcon, canon change, mechanics, XP/FV, relation change, NPC knowledge acquisition, scene or narrator permission is created.",
+        "PC02, PC03 and PC04 remain candidates only and receive no D07 plot contract."
+      ],
+      "proposal_status": "CONDITIONAL_PROPOSED_EDITORIAL_ONLY",
+      "D01_plot_projection": {
+        "plot_id": "D04-PC01",
+        "scope": "MEDIUM",
+        "status": "DRAFT",
+        "origin_event_refs": [
+          "CHR001-M204-C10-16-20261105-001",
+          "CHR001-M204-C11-18-20261105-001",
+          "CHR001-M204-C13-18-20261105-001",
+          "CHR001-M204-C15-22-20261106-001",
+          "CHR001-M204-C17-08-20261106-001"
+        ],
+        "dramatic_question": "Qual disposição, se alguma, pode ser sustentada por evidência e considerada segura pelas pessoas responsáveis, ou qual alternativa documentada preserva a segurança sem presumir resolução?",
+        "why_matters": "A disposição técnica pode envolver segurança e responsabilidade institucional; o estado atual e consequências permanecem UNKNOWN até revalidação de fontes.",
+        "pc_hook_noncoercive": "Nenhum convite ou cena é presumido. Bartholomeu pode escolher envolver-se, recusar, pausar ou não retomar o assunto.",
+        "actors": [
+          "pc-bartholomeu-krauser",
+          "npc-pavel-heating-supervisor"
+        ],
+        "opposition": [],
+        "independent_pressure": "UNKNOWN; nenhuma pressão autônoma futura está comprovada nem autorizada.",
+        "constraints": [
+          "atores aparecem apenas como referências históricas derivadas; presença, intenção e conhecimento futuros não são presumidos",
+          "nenhuma pista nova, culpado, motivo, causa integral ou elemento sobrenatural é criado",
+          "o registro de autoria contestada permanece bloqueado para investigação dependente de verdade",
+          "o contrato é editorial e não ativa trama nem cena"
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+            "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+            "anchor": "D04-PC01",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+            "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+            "anchor": "D04-PC01 typed links",
+            "verification": "DERIVED"
+          }
+        ],
+        "truth_lock_ref": "D07-TL-001",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "Somente se reparo, ensaios e autoridade de liberação forem futuramente sustentados, escolhidos e efetivamente registrados.",
+            "consequences": [
+              "Registrar apenas disposição e efeitos provados; sucesso não é garantido."
+            ],
+            "closure_test": "A disposição local pode ser revista após evidência e persistência; não encerra fios independentes.",
+            "evidence_refs": []
+          },
+          {
+            "route": "PARTIAL",
+            "condition": "Uma etapa é interrompida, suspensa ou não conclui disposição segura por escolha ou impedimento demonstrado.",
+            "consequences": [
+              "O estado fica aberto ou suspenso; não inferir culpado ou causa."
+            ],
+            "closure_test": "Sem evidência terminal suficiente, permanece aberto.",
+            "evidence_refs": []
+          },
+          {
+            "route": "FAILURE",
+            "condition": "Uma tentativa futura autorizada falha ou a evidência impede disposição segura.",
+            "consequences": [
+              "Registrar tentativa e consequência demonstradas; falha não prova dolo, causa ou sobrenatural."
+            ],
+            "closure_test": "Falha encerra apenas a tentativa, não os mistérios relacionados.",
+            "evidence_refs": []
+          },
+          {
+            "route": "REFUSAL",
+            "condition": "O jogador recusa ou não escolhe participação.",
+            "consequences": [
+              "Nenhuma penalidade ou envolvimento forçado."
+            ],
+            "closure_test": "A trama não começa; sem estado local novo a registrar.",
+            "evidence_refs": []
+          },
+          {
+            "route": "ALTERNATIVE",
+            "condition": "Uma alternativa documentada e autorizada é escolhida em jogo.",
+            "consequences": [
+              "Persistir a decisão e os efeitos efetivamente demonstrados."
+            ],
+            "closure_test": "Requer base documental e autoridade próprias; não presume reparo nem encerramento global.",
+            "evidence_refs": []
+          }
+        ],
+        "closure_test": "Disposição local exige escolha ou ação autorizada, evidência adequada, responsabilidade formal quando aplicável e persistência com readback. Fechamento total exige revisão D1 separada; esta proposta não o declara.",
+        "terminal_evidence_refs": [],
+        "suspension": {
+          "reason": "Condição atual, fonte original, gatilho e decisão de retomar não estão revalidados.",
+          "review_owner": "Dramaturgo após autorização e fonte atual; UNKNOWN antes disso.",
+          "review_trigger": "Novo evento atestado ou autorização futura explícita."
+        },
+        "plot_links": [],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "CONDITIONAL",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": [
+            {
+              "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+              "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+              "anchor": "D04-PC01",
+              "verification": "DERIVED"
+            },
+            {
+              "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+              "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+              "anchor": "D04-PC01 typed links",
+              "verification": "DERIVED"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "gate_limits": [
+    "D04 source remains a derived archive; current technical state and original provenance are not authenticated.",
+    "Truth-dependent authorship investigation is blocked because no effective GM-hidden storage segregation exists.",
+    "Approvals, operational promotion, scene readiness and narrator permission remain pending/not granted."
+  ],
+  "pending_approvals": [
+    "APPROVAL-D05-001",
+    "APPROVAL-D05-002",
+    "APPROVAL-D05-003",
+    "APPROVAL-D05-004",
+    "APPROVAL-D06-001",
+    "APPROVAL-D07-001"
+  ]
+}

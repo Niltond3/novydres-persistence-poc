@@ -1,0 +1,325 @@
+{
+  "phase": "D07",
+  "version": "V001",
+  "status": "EXECUTED_DOCUMENTARY_CHECKS",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "d3e4dd25b1b9403548c888a57af82c7a441d957f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "current proposed contracts; documentary constraints only"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f",
+      "role": "precedence, authority, consent and secrecy"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "lifecycle and gate constraints"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+      "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+      "role": "mandatory provenance limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+      "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+      "role": "only D04 provisional plot candidate"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+      "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a",
+      "role": "per-thread classes and knowledge boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_BASELINE_V001.json",
+      "blob_sha": "564a465ad6e363f25b5fe0453f2b0ccf441d00c0",
+      "role": "44-record heterogeneous baseline"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+      "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+      "role": "typed non-causal links for PC01"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_OWNERS_TRIGGERS_CLOSURE_V001.json",
+      "blob_sha": "cbbca1a1080aea6de0955501bdbdba2339a523aa",
+      "role": "owners, triggers and closure limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+      "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422",
+      "role": "causal dependency limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D04_V001.json",
+      "blob_sha": "d0afdf683b0718b5e517fb0673fe8606962de86c",
+      "role": "D04 gate and adversarial findings"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D04_V001.json",
+      "blob_sha": "f3220e134de9bccc5af0a2b3aca11351a0dc9656",
+      "role": "D04 gate and next phase handoff"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V001.json",
+      "blob_sha": "6496fe8572db5c879c3fe5795abfbe5f20d1ec04",
+      "role": "D05 unresolved dependencies and approval queue"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_UNCERTAINTY_REGISTER_V001.json",
+      "blob_sha": "f13906d75b2c388b0c0f672b88369c7ed63ccfc7",
+      "role": "bounded unknowns and provenance rules"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "pending player decisions"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "macro continuity, agency, authority and secret boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "unselected player route and conditional continuation"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "target selection remains pending"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "D06 gate and D07 independence boundary"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "as-of narrative cursor; must be revalidated before any scene"
+    }
+  ],
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "document_id": "D07_ADVERSARIAL_TESTS_V001",
+  "validator": "D07_VALIDATE_V001.py",
+  "test_count": 38,
+  "checks": [
+    {
+      "id": "T-D07-001",
+      "name": "repository_metadata_and_scope",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-002",
+      "name": "all_json_documents_parse",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-003",
+      "name": "one_contract_only",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-004",
+      "name": "PC01_is_only_admitted_plot",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-005",
+      "name": "PC01_retains_provisional_editorial_status",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-006",
+      "name": "PC02_PC03_PC04_not_admitted",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-007",
+      "name": "all_eleven_D04_links_present",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-008",
+      "name": "link_edge_ids_match_D04_map",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-009",
+      "name": "typed_relation_classes_preserved",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-010",
+      "name": "no_link_claims_causality",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-011",
+      "name": "derived_archive_provenance_disclosed",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-012",
+      "name": "current_state_requires_revalidation",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-013",
+      "name": "C06_not_started_and_no_scene_created",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-014",
+      "name": "opposition_motives_remain_unknown",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-015",
+      "name": "no_future_NPC_autonomy_authorized",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-016",
+      "name": "no_new_agents_created",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-017",
+      "name": "player_entry_is_optional",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-018",
+      "name": "refusal_suspension_abandonment_and_failure_supported",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-019",
+      "name": "repair_and_release_are_conditional",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-020",
+      "name": "local_closure_requires_actual_evidence_and_persistence",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-021",
+      "name": "full_thread_closure_not_claimed",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-022",
+      "name": "report_authorship_answer_not_created",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-023",
+      "name": "truth_dependent_play_blocked_without_segregation",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-024",
+      "name": "no_secret_payload_fields_or_values",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-025",
+      "name": "all_pending_approvals_retained",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-026",
+      "name": "no_operational_or_narrator_authority",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-027",
+      "name": "cycle_and_master_refs_exact",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-028",
+      "name": "all_source_blob_hashes_verified",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-029",
+      "name": "all_gate_fields_aligned",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-030",
+      "name": "adversarial_answer_injection_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-031",
+      "name": "adversarial_causal_edge_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-032",
+      "name": "adversarial_promotion_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-033",
+      "name": "adversarial_NPC_knowledge_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-034",
+      "name": "adversarial_secret_payload_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-035",
+      "name": "adversarial_candidate_fusion_rejected",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-036",
+      "name": "edge_source_metadata_preserved",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-037",
+      "name": "D01_plot_projection_matches_contract_shape",
+      "expected": "PASS"
+    },
+    {
+      "id": "T-D07-038",
+      "name": "declared_test_catalog_matches_runner",
+      "expected": "PASS"
+    }
+  ],
+  "negative_cases": [
+    "fixed authorship answer injection",
+    "causal promotion of typed context link",
+    "operational status promotion",
+    "unproven autonomous NPC knowledge",
+    "secret payload injection",
+    "admission of non-PC01 candidate"
+  ],
+  "execution": {
+    "status": "PASS",
+    "command": "python3 D07_VALIDATE_V001.py --repo-root <clone> --expected-gate PASS_WITH_UNKNOWN",
+    "result": "38/38 PASS"
+  },
+  "gate": "PASS_WITH_UNKNOWN"
+}

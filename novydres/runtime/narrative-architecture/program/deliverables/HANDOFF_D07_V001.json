@@ -1,0 +1,160 @@
+{
+  "phase": "D07",
+  "version": "V001",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "d3e4dd25b1b9403548c888a57af82c7a441d957f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "current proposed contracts; documentary constraints only"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f",
+      "role": "precedence, authority, consent and secrecy"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "lifecycle and gate constraints"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+      "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+      "role": "mandatory provenance limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+      "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+      "role": "only D04 provisional plot candidate"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+      "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a",
+      "role": "per-thread classes and knowledge boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_BASELINE_V001.json",
+      "blob_sha": "564a465ad6e363f25b5fe0453f2b0ccf441d00c0",
+      "role": "44-record heterogeneous baseline"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+      "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+      "role": "typed non-causal links for PC01"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_OWNERS_TRIGGERS_CLOSURE_V001.json",
+      "blob_sha": "cbbca1a1080aea6de0955501bdbdba2339a523aa",
+      "role": "owners, triggers and closure limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+      "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422",
+      "role": "causal dependency limits"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D04_V001.json",
+      "blob_sha": "d0afdf683b0718b5e517fb0673fe8606962de86c",
+      "role": "D04 gate and adversarial findings"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D04_V001.json",
+      "blob_sha": "f3220e134de9bccc5af0a2b3aca11351a0dc9656",
+      "role": "D04 gate and next phase handoff"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V001.json",
+      "blob_sha": "6496fe8572db5c879c3fe5795abfbe5f20d1ec04",
+      "role": "D05 unresolved dependencies and approval queue"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_UNCERTAINTY_REGISTER_V001.json",
+      "blob_sha": "f13906d75b2c388b0c0f672b88369c7ed63ccfc7",
+      "role": "bounded unknowns and provenance rules"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "pending player decisions"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "macro continuity, agency, authority and secret boundaries"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "unselected player route and conditional continuation"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "target selection remains pending"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "D06 gate and D07 independence boundary"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "as-of narrative cursor; must be revalidated before any scene"
+    }
+  ],
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "document_id": "HANDOFF_D07_V001",
+  "input": {
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "d3e4dd25b1b9403548c888a57af82c7a441d957f",
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "summary": "C05 closed; C06 not started; mortal; Embrace not occurred"
+  },
+  "deliverables": [
+    "D07_PLOT_BIBLES_V001.json",
+    "D07_TRUTH_LOCKS_V001.json",
+    "D07_PLAYER_APPROVAL_QUEUE_V001.json",
+    "D07_ADVERSARIAL_TESTS_V001.json",
+    "D07_VALIDATE_V001.py",
+    "AUDIT_D07_V001.json",
+    "NEXT_PROMPT_D08_V001.md"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "inherited D05/D06 player decisions and approvals remain unresolved as recorded in their queues",
+    "effective GM-hidden access segregation or player-approved open variant before truth-dependent play"
+  ],
+  "next_phase": "D08",
+  "next_phase_boundary": "D08 may start only after this handoff has gate PASS_WITH_UNKNOWN and the local run manifest records successful publication/readback of commit, tree, every blob and exact contents. Until both checks pass, remain in D07 remediation; no scene, state mutation, promotion, secret answer, or NPC initiative.",
+  "publication_readback": {
+    "status": "EXTERNAL_MANIFEST_REQUIRED",
+    "record": "CHR001_D05-D12_RUN_STATE.json",
+    "note": "After publication, record output commit/tree/blob SHAs and exact readback in the run manifest; no self-referential SHA."
+  },
+  "restrictions": [
+    "no retcon",
+    "no canon edit",
+    "no event replay",
+    "no cycle/manifest edit",
+    "no scene permission",
+    "no operational promotion",
+    "no mechanics grant",
+    "no secret truth or clue payload"
+  ]
+}
