@@ -1,0 +1,661 @@
+{
+  "suite_id": "NOVYDRES_D01_SEMANTIC_FIXTURES_V001",
+  "synthetic_only": true,
+  "scope": "No narrative canon data",
+  "cases": [
+    {
+      "id": "T01_PLOT_VALID",
+      "kind": "plot",
+      "record": {
+        "plot_id": "SYN-PLOT-01",
+        "scope": "MINOR",
+        "status": "DRAFT",
+        "origin_event_refs": [],
+        "dramatic_question": "Questao ficticia?",
+        "why_matters": "Decisao importa",
+        "pc_hook_noncoercive": "Convite dispensavel",
+        "actors": [
+          "SYN-ACTOR"
+        ],
+        "opposition": [
+          "dificuldade"
+        ],
+        "independent_pressure": "Ator age se habilitado",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "FAILURE",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "REFUSAL",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "OFFSCREEN",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "closure_test": "verificar evidencias",
+        "plot_links": [],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T02_PLOT_MISSING_REFUSAL",
+      "kind": "plot",
+      "record": {
+        "plot_id": "SYN-PLOT-01",
+        "scope": "MINOR",
+        "status": "DRAFT",
+        "origin_event_refs": [],
+        "dramatic_question": "Questao ficticia?",
+        "why_matters": "Decisao importa",
+        "pc_hook_noncoercive": "Convite dispensavel",
+        "actors": [
+          "SYN-ACTOR"
+        ],
+        "opposition": [
+          "dificuldade"
+        ],
+        "independent_pressure": "Ator age se habilitado",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "FAILURE",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "closure_test": "verificar evidencias",
+        "plot_links": [],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "OUTCOME_ROUTE_COVERAGE"
+    },
+    {
+      "id": "T03_PLOT_RESOLVED_NO_EVIDENCE",
+      "kind": "plot",
+      "record": {
+        "plot_id": "SYN-PLOT-01",
+        "scope": "MINOR",
+        "status": "RESOLVED",
+        "origin_event_refs": [],
+        "dramatic_question": "Questao ficticia?",
+        "why_matters": "Decisao importa",
+        "pc_hook_noncoercive": "Convite dispensavel",
+        "actors": [
+          "SYN-ACTOR"
+        ],
+        "opposition": [
+          "dificuldade"
+        ],
+        "independent_pressure": "Ator age se habilitado",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "FAILURE",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "REFUSAL",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "OFFSCREEN",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "closure_test": "verificar evidencias",
+        "plot_links": [],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "TERMINAL_EVIDENCE_REQUIRED"
+    },
+    {
+      "id": "T04_PLOT_SUSPENDED_NO_REVIEW",
+      "kind": "plot",
+      "record": {
+        "plot_id": "SYN-PLOT-01",
+        "scope": "MINOR",
+        "status": "SUSPENDED",
+        "origin_event_refs": [],
+        "dramatic_question": "Questao ficticia?",
+        "why_matters": "Decisao importa",
+        "pc_hook_noncoercive": "Convite dispensavel",
+        "actors": [
+          "SYN-ACTOR"
+        ],
+        "opposition": [
+          "dificuldade"
+        ],
+        "independent_pressure": "Ator age se habilitado",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "FAILURE",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "REFUSAL",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "OFFSCREEN",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "closure_test": "verificar evidencias",
+        "plot_links": [],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "SUSPENSION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "T05_PLOT_CAUSAL_NO_PROOF",
+      "kind": "plot",
+      "record": {
+        "plot_id": "SYN-PLOT-01",
+        "scope": "MINOR",
+        "status": "DRAFT",
+        "origin_event_refs": [],
+        "dramatic_question": "Questao ficticia?",
+        "why_matters": "Decisao importa",
+        "pc_hook_noncoercive": "Convite dispensavel",
+        "actors": [
+          "SYN-ACTOR"
+        ],
+        "opposition": [
+          "dificuldade"
+        ],
+        "independent_pressure": "Ator age se habilitado",
+        "clue_refs": [],
+        "clock_refs": [],
+        "outcomes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "FAILURE",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "REFUSAL",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          },
+          {
+            "route": "OFFSCREEN",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "closure_test": "verificar evidencias",
+        "plot_links": [
+          {
+            "target_id": "SYN-PLOT-02",
+            "kind": "CAUSAL",
+            "sources": []
+          }
+        ],
+        "spoiler_class": "PLAYER_SAFE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "CAUSAL_LINK_EVIDENCE_REQUIRED"
+    },
+    {
+      "id": "T06_STORY_VALID",
+      "kind": "story",
+      "record": {
+        "story_id": "SYN-STORY-01",
+        "story_kind": "STORY",
+        "marco_id": "SYN-MARCO",
+        "plot_ids": [],
+        "state": "DRAFT",
+        "inciting_incident": "situacao",
+        "why_now": "mudanca",
+        "goals": [],
+        "nonmandatory_entry": "pode recusar",
+        "npc_agendas": [],
+        "dramatic_question": "que decisao?",
+        "escalation": [],
+        "critical_choices": [],
+        "closure_routes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "consequences": [],
+        "refusal_path": "afastar-se",
+        "failure_path": "aceitar custo",
+        "temporal_mode": "SPOTLIGHT",
+        "d2_selection_mode": "NOT_APPLICABLE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T07_STORY_REFUSAL_FORCED",
+      "kind": "story",
+      "record": {
+        "story_id": "SYN-STORY-01",
+        "story_kind": "STORY",
+        "marco_id": "SYN-MARCO",
+        "plot_ids": [],
+        "state": "DRAFT",
+        "inciting_incident": "situacao",
+        "why_now": "mudanca",
+        "goals": [],
+        "nonmandatory_entry": "pode recusar",
+        "npc_agendas": [],
+        "dramatic_question": "que decisao?",
+        "escalation": [],
+        "critical_choices": [],
+        "closure_routes": [
+          {
+            "route": "SUCCESS",
+            "condition": "condicao sintetica",
+            "consequences": [
+              "mudanca sintetica"
+            ],
+            "closure_test": "evento de conclusao"
+          }
+        ],
+        "consequences": [],
+        "refusal_path": "",
+        "failure_path": "aceitar custo",
+        "temporal_mode": "SPOTLIGHT",
+        "d2_selection_mode": "NOT_APPLICABLE",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "STORY_REFUSAL_REQUIRED"
+    },
+    {
+      "id": "T08_SCENE_VALID",
+      "kind": "scene",
+      "record": {
+        "scene_id": "SYN-SCENE-01",
+        "story_id": "SYN-STORY-01",
+        "state": "PREPARED",
+        "present_actor_ids": [],
+        "entry_preconditions": [],
+        "viewpoint_limit_refs": [],
+        "stakes": "alteracao",
+        "potential_change": "mudanca real",
+        "beat_refs": [],
+        "pre_roll_gate": "G25",
+        "exit_conditions": [],
+        "refusal_path": "deixar o local",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T09_SCENE_FORCES_PC",
+      "kind": "scene",
+      "record": {
+        "scene_id": "SYN-SCENE-01",
+        "story_id": "SYN-STORY-01",
+        "state": "PREPARED",
+        "present_actor_ids": [],
+        "entry_preconditions": [],
+        "viewpoint_limit_refs": [],
+        "stakes": "alteracao",
+        "potential_change": "mudanca real",
+        "beat_refs": [],
+        "pre_roll_gate": "G25",
+        "exit_conditions": [],
+        "refusal_path": "deixar o local",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        },
+        "forces_pc_action": true
+      },
+      "expected": "FAIL",
+      "expected_error": "PLAYER_AGENCY_VIOLATION"
+    },
+    {
+      "id": "T10_CLUE_VALID",
+      "kind": "clue",
+      "record": {
+        "clue_id": "SYN-CLUE-01",
+        "fact_ref": "SYN-FACT-01",
+        "critical": true,
+        "discovery_routes": [
+          {
+            "route_id": "R1",
+            "independent_mechanism": "arquivo",
+            "access_condition": "pesquisa"
+          },
+          {
+            "route_id": "R2",
+            "independent_mechanism": "testemunha",
+            "access_condition": "entrevista"
+          }
+        ],
+        "truth_lock_status": "LOCKED",
+        "truth_lock_ref": "OPAQUE-VALIDATED-REF",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T11_CLUE_ONE_ROUTE",
+      "kind": "clue",
+      "record": {
+        "clue_id": "SYN-CLUE-01",
+        "fact_ref": "SYN-FACT-01",
+        "critical": true,
+        "discovery_routes": [
+          {
+            "route_id": "R1",
+            "independent_mechanism": "arquivo",
+            "access_condition": "pesquisa"
+          }
+        ],
+        "truth_lock_status": "LOCKED",
+        "truth_lock_ref": "OPAQUE-VALIDATED-REF",
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "CRITICAL_CLUE_ROUTES"
+    },
+    {
+      "id": "T12_CLUE_UNLOCKED",
+      "kind": "clue",
+      "record": {
+        "clue_id": "SYN-CLUE-01",
+        "fact_ref": "SYN-FACT-01",
+        "critical": true,
+        "discovery_routes": [
+          {
+            "route_id": "R1",
+            "independent_mechanism": "arquivo",
+            "access_condition": "pesquisa"
+          },
+          {
+            "route_id": "R2",
+            "independent_mechanism": "testemunha",
+            "access_condition": "entrevista"
+          }
+        ],
+        "truth_lock_status": "CANDIDATE",
+        "truth_lock_ref": null,
+        "provenance": {
+          "record_kind": "NEW_AUTHORIAL_DESIGN_POST_HOC",
+          "original_author": "DRAMATURGO",
+          "fact_status": "PROPOSED",
+          "source_refs": []
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "AUTHORIAL_TRUTH_NOT_LOCKED"
+    },
+    {
+      "id": "T13_CLOCK_VALID",
+      "kind": "clock",
+      "record": {
+        "clock_id": "SYN-CLOCK-01",
+        "actor_id": "SYN-ACTOR-01",
+        "current": 0,
+        "maximum": 3,
+        "tick_trigger": "evento habilitador",
+        "event_evidence_refs": [],
+        "completion_effect": "nova situacao"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T14_CLOCK_NO_TRIGGER",
+      "kind": "clock",
+      "record": {
+        "clock_id": "SYN-CLOCK-01",
+        "actor_id": "SYN-ACTOR-01",
+        "current": 0,
+        "maximum": 3,
+        "tick_trigger": "",
+        "event_evidence_refs": [],
+        "completion_effect": "nova situacao"
+      },
+      "expected": "FAIL",
+      "expected_error": "CLOCK_CAUSAL_TRIGGER_REQUIRED"
+    },
+    {
+      "id": "T15_NPC_TELEPATHY",
+      "kind": "knowledge",
+      "record": {
+        "knowledge_id": "SYN-KNOWLEDGE",
+        "knower_id": "SYN-ACTOR",
+        "as_of_event_id": "SYN-EVENT",
+        "acquisition_ref": ""
+      },
+      "expected": "FAIL",
+      "expected_error": "KNOWLEDGE_ACQUISITION_REQUIRED"
+    },
+    {
+      "id": "T16_RETCON_NEEDS_APPROVAL",
+      "kind": "retcon",
+      "record": {
+        "change_id": "SYN-RETCON",
+        "kind": "RETCON_HARD",
+        "approval_required": false,
+        "status": "PROPOSED"
+      },
+      "expected": "FAIL",
+      "expected_error": "RETCON_APPROVAL_REQUIRED"
+    },
+    {
+      "id": "T17_PUBLIC_HANDOFF_VALID",
+      "kind": "handoff",
+      "record": {
+        "phase": "D01",
+        "repository": "Niltond3/novydres-persistence-poc",
+        "design_branch": "design/chr001-narrative-program-d01",
+        "spoiler_class": "PLAYER_SAFE"
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "T18_HIDDEN_HANDOFF_REJECTED",
+      "kind": "handoff",
+      "record": {
+        "phase": "D01",
+        "repository": "Niltond3/novydres-persistence-poc",
+        "design_branch": "design/chr001-narrative-program-d01",
+        "spoiler_class": "GM_HIDDEN"
+      },
+      "expected": "FAIL",
+      "expected_error": "HANDOFF_NOT_PLAYER_SAFE"
+    },
+    {
+      "id": "T19_D12_BLOCKED",
+      "kind": "handoff",
+      "record": {
+        "phase": "D12",
+        "repository": "Niltond3/novydres-persistence-poc",
+        "design_branch": "design/chr001-narrative-program-d01",
+        "spoiler_class": "PLAYER_SAFE",
+        "next_phase": "NARRADOR",
+        "cycle": {
+          "status": "READY_FOR_DRAMATURGO",
+          "next_role": "DRAMATURGO"
+        },
+        "player_authorization": {
+          "verified": false
+        }
+      },
+      "expected": "FAIL",
+      "expected_error": "NARRATOR_GATE_NOT_MET"
+    },
+    {
+      "id": "T20_MARCO_REQUIRED_SUFFICIENCY",
+      "kind": "marco",
+      "record": {
+        "marco_id": "SYN-MARCO",
+        "functional_goal": "construcao",
+        "coverage_test": "cobertura",
+        "coherence_test": "coerencia",
+        "consequence_test": "consequencias"
+      },
+      "expected": "PASS"
+    }
+  ]
+}
