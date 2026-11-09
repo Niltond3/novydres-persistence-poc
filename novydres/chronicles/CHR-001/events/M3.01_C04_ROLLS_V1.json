@@ -1,0 +1,122 @@
+{
+  "schema_id": "CHR001_M301_C04_ROLL_AUDIT_V1",
+  "chronicle_id": "CHR-001",
+  "scene": "C04",
+  "source": "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+  "last_event_id": "CHR001-M301-C04-20-20261108-001",
+  "tests": [
+    {
+      "id": "C04_INV_FUNERAL",
+      "kind": "TAKE_HALF",
+      "pool": 6,
+      "difficulty": 3,
+      "successes": 3,
+      "rng": false,
+      "fv": 0
+    },
+    {
+      "id": "C04_SOCIAL_MARGARET",
+      "kind": "SIMPLE",
+      "pool": 3,
+      "difficulty": 2,
+      "faces": [
+        7,
+        8,
+        8
+      ],
+      "successes": 3,
+      "margin": 1,
+      "origin": "PYTHON_USER_VISIBLE_SECRETS_SYSTEMRANDOM",
+      "fv": 0,
+      "previous_narrator_verification_obstacle": "ANNULLED"
+    },
+    {
+      "id": "C04_LISTEN",
+      "kind": "TAKE_HALF",
+      "pool": 7,
+      "difficulty": 3,
+      "successes": 3,
+      "rng": false,
+      "fv": 0
+    },
+    {
+      "id": "C04_FORCE",
+      "kind": "SIMPLE",
+      "pool": 7,
+      "difficulty": 4,
+      "first": [
+        3,
+        7,
+        2,
+        1,
+        1,
+        7,
+        10
+      ],
+      "first_successes": 3,
+      "rerolled_positions_one_based": [
+        1,
+        3,
+        4
+      ],
+      "new_faces": [
+        6,
+        6,
+        6
+      ],
+      "final": [
+        6,
+        7,
+        6,
+        6,
+        1,
+        7,
+        10
+      ],
+      "successes": 6,
+      "margin": 2,
+      "origin": "PYTHON_USER_VISIBLE_SECRETS_SYSTEMRANDOM",
+      "fv": 1
+    },
+    {
+      "id": "C04_BOX_SEARCH",
+      "kind": "TAKE_HALF",
+      "pool": 7,
+      "difficulty": 3,
+      "successes": 3,
+      "rng": false,
+      "fv": 0
+    },
+    {
+      "id": "C04_REPAIR",
+      "kind": "SIMPLE",
+      "pool": 6,
+      "difficulty": 4,
+      "faces": [
+        3,
+        8,
+        10,
+        2,
+        6,
+        10
+      ],
+      "base": 4,
+      "bonus_critical_pair": 2,
+      "successes": 6,
+      "margin": 2,
+      "origin": "UNVERIFIED_CHAT_PRESENTATION_PYTHON_TOOL_FAILED",
+      "accepted_by_player": true,
+      "fv": 0
+    }
+  ],
+  "fv_before": 6,
+  "fv_after": 5,
+  "superficial_damage": 1,
+  "xp_credit_awarded": 0,
+  "act_resolutions": [],
+  "unknowns": [
+    "Box contents",
+    "Cause death",
+    "RNG origin repair"
+  ]
+}
