@@ -69,10 +69,77 @@
     "SCENE_READY and NARRATOR_PERMISSION are not verified"
   ],
   "publication_readback": {
-    "status": "PENDING_REMOTE_PUBLICATION_AND_READBACK",
-    "base_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
-    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
-    "master_modified": false
+    "status": "PASS_INITIAL_PUBLICATION_READBACK",
+    "commit_sha": "f2a8eaedf21c536c2ca72c7d959c32a0e571446c",
+    "files": 16,
+    "master_modified": false,
+    "evidence": "All 16 paths were fetched at commit A and each remote Git blob SHA matched the locally expected SHA.",
+    "blobs": [
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+        "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+        "blob_sha": "197e015135626508c07372b257c29cf889284f6d"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V002.json",
+        "blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V006.json",
+        "blob_sha": "d655df907e8c89930e46cb71e5ee286c482fcd39"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V006.json",
+        "blob_sha": "093f542043b602db762cff6e50ac3d1bef0e618c"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V006.json",
+        "blob_sha": "46e5dc0802384dd440c3853abf73cdde585a9c3a"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V006.json",
+        "blob_sha": "e0d20aaf8ac82a22af3a5e8a27bd37567dd749ae"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V006.json",
+        "blob_sha": "aa7fce833e3f87dc11ed40dff6bfce49117ec0e6"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V002.py",
+        "blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V002_RESULT.json",
+        "blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V006.json",
+        "blob_sha": "c7775a9a3e045f1be1b79ab4d40d901c77fe03f6"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V006.json",
+        "blob_sha": "c150cf7ce773673101777b45198a4946226d576b"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V006.json",
+        "blob_sha": "9728abd48fff3e1ca4ed07efcfe721f8375e3809"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V006.py",
+        "blob_sha": "f07817d3a441543d2f382aaa869c81af29a5721f"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V006_RESULT.json",
+        "blob_sha": "98d1c0653343a4b393b3455cdf541a807e1bf842"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/DRAMATURGO_CONTINUITY_PROMPT_V002.md",
+        "blob_sha": "65f285307a65387bbcae348d1dc6bdc912da0cf9"
+      }
+    ]
   },
   "next_phase": "Dramaturge continuity planning only, using player-safe candidates and the supplied prompt",
   "next_phase_boundary": "No scene, no Narrator prompt, no D07 activation or master promotion. Candidate sources are planning-only.",
