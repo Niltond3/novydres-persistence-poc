@@ -1,0 +1,37 @@
+{
+  "document_id": "AUDIT_D05_V003",
+  "phase": "D05",
+  "version": "V003",
+  "result": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "scope": "Delta de decisões D12 e investigação do conflito de ponteiros; sem reexecução da suíte histórica de conteúdo D05.",
+  "finding": {
+    "id": "D05-F-006",
+    "severity": "operational_blocker",
+    "prior_state": "APPROVAL-D05-001 e D05-002/003 ainda aguardavam resposta na versão anterior.",
+    "evidence": "O jogador autorizou investigação, aprovou promoção futura de todos os documentos propostos sujeita a gates e registrou compromisso pessoal de não ler segredos. O contrato dá precedência normativa ao ciclo mais recente, mas exige BLOCKED_CONFLICT enquanto MANIFEST_V46 aponta a CYCLE_V0024.",
+    "disposition": "Decisões registradas em D05_PLAYER_APPROVAL_QUEUE_V002; ponteiro não corrigido, promoção não executada, segredo não acessado."
+  },
+  "source_record": "D05_PLAYER_APPROVAL_QUEUE_V002.json",
+  "content_gate": "PASS_WITH_UNKNOWN inherited from the already completed D05 review and 18/18 recorded tests; tests_reexecuted=false.",
+  "independent_review": {
+    "status": "PASS_WITH_UNKNOWN",
+    "reviewer_id": "d05_adversarial_review",
+    "basis": "Earlier read-only adversarial review found no remaining material content finding after its targeted remediations; this V002 changes only the handoff state supported by the post-push execution record."
+  },
+  "remaining_unknowns": [
+    "MANIFEST_V46 ainda aponta para CYCLE_V0024; a divergência bloqueia transição operacional.",
+    "Não existe ACL efetiva para verdade autoral; o compromisso do jogador não altera permissões técnicas.",
+    "D02 V011 e limites de proveniência D03/D04 permanecem."
+  ],
+  "constraints": [
+    "No retcon executed.",
+    "No canon, cycle, character, mechanics, or scene state changed.",
+    "No secret truth read or disclosed.",
+    "Promotion authorization is pending the corresponding gates; no promotion performed.",
+    "No scene permission inferred."
+  ],
+  "next_phase": "D06",
+  "gate_transition": "D05 PASS_WITH_UNKNOWN permits documentary continuation; operational release remains BLOCKED_CONFLICT."
+}

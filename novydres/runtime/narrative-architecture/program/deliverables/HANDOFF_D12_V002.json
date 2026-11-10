@@ -1,0 +1,51 @@
+{
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "BLOCKED_CONFLICT",
+  "gate": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": {
+    "status": "PENDING",
+    "record": "local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json after push",
+    "rule": "Record actual remote commit, parent, tree, master ref, all four artifact blobs and exact content; do not use self-referential SHA."
+  },
+  "input_design_head": "5d4f0841779a60591cd816b3363892fe33064f2a",
+  "input_master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "output_head": "resolve from remote branch after publication; no self-reference",
+  "outputs": [
+    "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V003.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V004.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V002.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V002.py"
+  ],
+  "next_action": "Reconcile the MANIFEST_V46 pointer and the selected pre-1970-12-25 Embrace target against the later mortal checkpoint without silent retcon; preserve truth-dependent work as blocked. Then revalidate operational gates. The authorized promotion has not been performed. Do not start a scene or emit a Narrator prompt.",
+  "unresolved": [
+    "CYCLE_V0033/MANIFEST_V46 pointer conflict blocks operational transition.",
+    "Selected Embrace target before 1970-12-25 conflicts with later mortal checkpoint; no retcon authorized.",
+    "No effective ACL or approved open variant for truth-dependent material.",
+    "D07 conditional operational use remains pending source reconciliation and gates.",
+    "SCENE_READY and NARRATOR_PERMISSION are unverified."
+  ],
+  "restrictions": [
+    "documentary branch only until operational gates pass",
+    "master and narrative cycle remain read-only in this update",
+    "no retcon",
+    "no scene or character-state change",
+    "no XP/FV or sheet mutation",
+    "no hidden truth read or disclosure",
+    "no Narrator prompt"
+  ],
+  "narrator_release": "NOT_READY_FOR_NARRATOR",
+  "promotion_authorized": true,
+  "promotion_performed": false
+}

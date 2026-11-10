@@ -1,0 +1,81 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V002",
+  "status": "DECISIONS_RECORDED_WITH_BLOCKERS",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "5d4f0841779a60591cd816b3363892fe33064f2a",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Registrar as decisões expressas do jogador em D12; nenhuma transição operacional ou permissão de cena decorre automaticamente.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicar a divergência de ponteiros entre ciclo V0033 e MANIFEST_V46 para qualquer uso operacional.",
+      "when_required": "Antes de promoção ou transição ao Narrador.",
+      "options": [
+        "confirmar autoridade do ciclo com evidência e revisão adequada",
+        "confirmar autoridade do manifesto com evidência e revisão adequada",
+        "manter bloqueio e solicitar nova reconciliação"
+      ],
+      "default": "nenhuma; pendente",
+      "status": "INVESTIGATED_BLOCKED_CONFLICT",
+      "response": "Autorizo investigação.",
+      "investigation_result": {
+        "contract": "ORCHESTRATION_CONTRACT_V1.md determina que o CYCLE numérico mais recente é a fonte do cursor e de next_role; o MANIFEST não é um segundo cursor.",
+        "current_cycle": "CYCLE_V0033 define READY_FOR_DRAMATURGO e next_role DRAMATURGO.",
+        "conflict": "MANIFEST_V46 ainda aponta para CYCLE_V0024; o mesmo contrato exige BLOCKED_CONFLICT para divergência e proíbe resolução silenciosa.",
+        "disposition": "CYCLE é a autoridade normativa para ler o cursor; a divergência material continua bloqueando transição operacional até reconciliação do ponteiro. Nenhum ciclo ou manifesto foi editado."
+      }
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Autorizar eventual promoção de arquitetura documental para uso operacional/master.",
+      "when_required": "D12, depois de auditoria, validação e readback.",
+      "options": [
+        "aprovar promoção explicitamente",
+        "rejeitar/solicitar remediação",
+        "manter apenas como proposta documental"
+      ],
+      "default": "manter apenas como proposta documental",
+      "status": "APPROVED_PENDING_GATES",
+      "response": "Sim para todos.",
+      "scope": "Todos os documentos propostos D05-D12 para consideração de promoção a uso operacional/master, após os gates correspondentes.",
+      "promotion_performed": false,
+      "condition": "Autorização registrada; nenhuma promoção ocorre enquanto conflitos/gates operacionais permanecerem bloqueados."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Fornecer ou aprovar ambiente de verdade autoral efetivamente segregado, caso D07 necessite solução secreta jogável.",
+      "when_required": "Antes de escrever ou narrar conteúdo truth-dependent.",
+      "options": [
+        "prover ambiente segregado com acesso negativo verificado",
+        "escolher variante aberta antes da narração",
+        "manter a investigação bloqueada"
+      ],
+      "default": "manter bloqueada",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "response": "Não precisa; comprometo-me a não olhar segredos.",
+      "disposition": "Compromisso registrado. Não fornece ACL efetiva, não aprova variante aberta e não autoriza leitura de D07_TRUTH_LOCKS; nenhum segredo foi lido. Conteúdo dependente de verdade oculta permanece bloqueado."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Autorizar cena/retomada do Narrador conforme os contratos operacionais vigentes.",
+      "when_required": "Somente quando ciclo, SCENE_READY e NARRATOR_PERMISSION satisfizerem seus próprios gates.",
+      "options": [
+        "autorizar por mecanismo vigente após validação",
+        "não autorizar ainda"
+      ],
+      "default": "não autorizar ainda",
+      "status": "NOT_GRANTED",
+      "response": "A resposta D12 não concede permissão de cena."
+    }
+  ]
+}
