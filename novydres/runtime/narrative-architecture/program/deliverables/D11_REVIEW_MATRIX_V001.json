@@ -1,0 +1,436 @@
+{
+  "document_id": "D11_REVIEW_MATRIX_V001",
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "review_basis_head": "b26dfb313e714b72872c33effbddc29193938451",
+  "method": "Leitura documental cruzada com SHAs pinados, pareceres independentes técnico e literário e achados de domínio já registrados. Não foram simuladas cenas nem repetidas suítes existentes.",
+  "domains": [
+    {
+      "id": "D11-01",
+      "domain": "Integridade histórica",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "O conjunto D02 aplica a errata de proveniência; nenhuma fase D05–D10 alterou eventos fechados. C05 permanece fechado e C06 não começou no checkpoint verificado.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+          "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V011.json",
+          "blob_sha": "e3e2eeab359e8f2a276f760486ace213cc1b8862"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc"
+        }
+      ]
+    },
+    {
+      "id": "D11-02",
+      "domain": "Proveniência",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Limitações de fonte e autoria seguem delimitadas; a errata D02 V011 é obrigatória e não foi substituída por inferência posterior.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_INDEPENDENT_REVIEW.md",
+          "blob_sha": "1c98e1f157900173f08b2d949d97f58fb2d1148a"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+          "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_UNCERTAINTY_REGISTER_V001.json",
+          "blob_sha": "6dc44e76acd11de133e6c95e4c5d243eaf0122fa"
+        }
+      ]
+    },
+    {
+      "id": "D11-03",
+      "domain": "Compatibilidade de contratos",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Contratos D01 permanecem propostos; D10 V005 acrescenta validação versionada sem promover contrato congelado nem tornar o Narrador operacional.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+          "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+          "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D10_V005.json",
+          "blob_sha": "f0c2f7818b77c7f2e6be8f803b35cfbbc709516c"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D10_V005.json",
+          "blob_sha": "a6593c3d5a2e6194b339abfe303563cc83f76c92"
+        }
+      ]
+    },
+    {
+      "id": "D11-04",
+      "domain": "Causalidade",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "D04 marca dependências editoriais sem convertê-las em causalidade histórica; lacunas não receberam causa inventada.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+          "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_UNCERTAINTY_REGISTER_V001.json",
+          "blob_sha": "6dc44e76acd11de133e6c95e4c5d243eaf0122fa"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc"
+        }
+      ]
+    },
+    {
+      "id": "D11-05",
+      "domain": "Conhecimento de NPC",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "A exceção D03 derivada não é aquisição tipada nem conhecimento utilizável por NPC. Manter UNKNOWN até evidência de aquisição tipada em fonte aplicável.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+          "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_AGENT_REGISTRY_V001.json",
+          "blob_sha": "57584922f67380be82d3bd12029403804b4bad8c"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D03_V001.json",
+          "blob_sha": "37ed1b55f1f8a46528bd2129d273b188530beac9"
+        }
+      ]
+    },
+    {
+      "id": "D11-06",
+      "domain": "Identidades e aliases",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Revisão de aliases mantém 11 desconhecidos e 4 distintos; zero fusões autorizadas por semelhança nominal.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_IDENTITY_ALIAS_REVIEW_V001.json",
+          "blob_sha": "00852a0ec6b1b26fb520cf4f523dc362f66cdcb1"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D03_V001.json",
+          "blob_sha": "37ed1b55f1f8a46528bd2129d273b188530beac9"
+        }
+      ]
+    },
+    {
+      "id": "D11-07",
+      "domain": "Autonomia de NPC",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Objetivos e capacidades que não têm evidência histórica permanecem prospectivos; D08 não nomeia ator atual confirmado para conduzir a preparação.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_AGENT_REGISTRY_V001.json",
+          "blob_sha": "57584922f67380be82d3bd12029403804b4bad8c"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+          "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+          "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+        }
+      ]
+    },
+    {
+      "id": "D11-08",
+      "domain": "Agência do jogador",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Recusa, pausa, falha e não resolução continuam saídas legítimas. Seleção de rota e aprovações editoriais não foram presumidas.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+          "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+          "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+        }
+      ]
+    },
+    {
+      "id": "D11-09",
+      "domain": "Estrutura de tramas",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "As classificações D04 continuam editoriais. D07 não autoriza promover fios a arcos nem ligar problemas independentes sem suporte.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+          "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+          "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+          "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4"
+        }
+      ]
+    },
+    {
+      "id": "D11-10",
+      "domain": "Qualidade das histórias",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "D08 é material preparado, sem atores confirmados ou incidente/porquê-agora atual; stakes condicionais não autorizam cena ativa.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+          "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D08_V001.json",
+          "blob_sha": "a7127bd15290b8a5eec87bccdc6bf6f0327340b8"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D08_V001.json",
+          "blob_sha": "474024460e9dd55f45544f512accc2abc7cbaf6d"
+        }
+      ]
+    },
+    {
+      "id": "D11-11",
+      "domain": "Encerramentos",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "As propostas incluem recusa, suspensão, falha e encerramento local; adequação em jogo ainda não foi demonstrada e depende de gatilhos válidos.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+          "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+          "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+          "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+        }
+      ]
+    },
+    {
+      "id": "D11-12",
+      "domain": "Gestão de retcon",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Nenhum retcon foi executado. Conflitos seguem em fila de aprovação; correção de handoff é mudança documental prospectiva, não mudança de cânone.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V002.json",
+          "blob_sha": "b23cfa4055227139373449599e7eef8ae9a358bc"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V003.json",
+          "blob_sha": "86b332ad766e377d2b035b7b9e39cbcedff43744"
+        }
+      ]
+    },
+    {
+      "id": "D11-13",
+      "domain": "Consistência mecânica",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "D09 não concede XP, FV, poderes nem Abraço; mudança mecânica exige contrato vigente e registro futuro.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V001.json",
+          "blob_sha": "e1b8dc1e00c5fabdb5a13a9df8c4900e33898c9e"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D09_V001.json",
+          "blob_sha": "87593085af5459fa4b9b8162165dd3e7540a51f2"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+          "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736"
+        }
+      ]
+    },
+    {
+      "id": "D11-14",
+      "domain": "Continuidade até 2010",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Rota ainda não selecionada. Horizonte de 2010 não garante Abraço, sobrevivência, vínculo ou trajetória padrão.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+          "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+          "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V001.json",
+          "blob_sha": "e1b8dc1e00c5fabdb5a13a9df8c4900e33898c9e"
+        }
+      ]
+    },
+    {
+      "id": "D11-15",
+      "domain": "Segurança contra spoilers",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Nenhuma verdade GM_HIDDEN é publicada como solução. Repositório privado não segrega conteúdo do proprietário; tramas dependentes de segredo ficam bloqueadas.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+          "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D10_V005.json",
+          "blob_sha": "a6593c3d5a2e6194b339abfe303563cc83f76c92"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+          "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+        }
+      ]
+    },
+    {
+      "id": "D11-16",
+      "domain": "Compatibilidade com cânone",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "Nenhuma cena fechada, ciclo, ficha ou contrato congelado foi alterado por D05–D10; propostas seguem não operacionais.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+          "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V002.json",
+          "blob_sha": "b23cfa4055227139373449599e7eef8ae9a358bc"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D10_V005.json",
+          "blob_sha": "f0c2f7818b77c7f2e6be8f803b35cfbbc709516c"
+        }
+      ]
+    },
+    {
+      "id": "D11-17",
+      "domain": "Versionamento",
+      "assessment": "PASS",
+      "review": "D10 preserva versões reprovadas V003/V004 e versão final V005; a remediação D05 é um novo handoff V003 sem sobrescrever V001/V002.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V005.json",
+          "blob_sha": "a173aa30ae75621fde2cbabe5e15f835f72a9b82"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+          "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V003.json",
+          "blob_sha": "86b332ad766e377d2b035b7b9e39cbcedff43744"
+        }
+      ]
+    },
+    {
+      "id": "D11-18",
+      "domain": "Publicação e readback",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "D10 V005 foi publicado e relido; o manifesto local registra commit, árvore, 25 blobs e master inalterada. Hand-offs mais antigos preservam estados pré-readback, delimitados pelo registro de execução.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D10_V005.json",
+          "blob_sha": "a6593c3d5a2e6194b339abfe303563cc83f76c92"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+          "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+          "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93"
+        }
+      ]
+    },
+    {
+      "id": "D11-19",
+      "domain": "Gates",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "D05–D10 têm gates editoriais registrados; D11 aguarda readback da própria publicação. Aprovações e dependências externas permanecem separadas de PASS documental.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V002.json",
+          "blob_sha": "b23cfa4055227139373449599e7eef8ae9a358bc"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V001.json",
+          "blob_sha": "2fc4e166a60d3758b33c1d127461471e7f152fd9"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V001.json",
+          "blob_sha": "83ea55bcc233fd641bf5636e38e1df14e59637e8"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D08_V001.json",
+          "blob_sha": "a7127bd15290b8a5eec87bccdc6bf6f0327340b8"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D09_V001.json",
+          "blob_sha": "87593085af5459fa4b9b8162165dd3e7540a51f2"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D10_V005.json",
+          "blob_sha": "f0c2f7818b77c7f2e6be8f803b35cfbbc709516c"
+        }
+      ]
+    },
+    {
+      "id": "D11-20",
+      "domain": "Retomada narrativa",
+      "assessment": "PASS_WITH_UNKNOWN",
+      "review": "O checkpoint verificado preserva C05 CLOSED/C06 NOT_STARTED; ausência de SCENE_READY e NARRATOR_PERMISSION impede iniciar cena.",
+      "evidence": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D10_V005.json",
+          "blob_sha": "a6593c3d5a2e6194b339abfe303563cc83f76c92"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+          "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V001.json",
+          "blob_sha": "e1b8dc1e00c5fabdb5a13a9df8c4900e33898c9e"
+        }
+      ]
+    }
+  ],
+  "bounded_unknowns": [
+    "A atribuição derivada em D03 não demonstra aquisição tipada e fica fora do conhecimento acionável de NPCs.",
+    "D05/MANIFEST_V46 mantém conflito de ponteiro sem adjudicação do jogador.",
+    "Aprovações D05–D07 permanecem pendentes, incluindo rota futura.",
+    "Não há segregação GM_HIDDEN efetiva neste repositório privado; soluções dependentes de segredo não podem ser narradas.",
+    "D08 não comprova ator, incidente ou motivo atual para iniciar pressão narrativa.",
+    "O ciclo CYCLE_V0033 é o último checkpoint verificado nesta auditoria; D12 deve revalidar o ciclo atual."
+  ],
+  "material_failures_open": 0,
+  "content_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": "PENDING"
+}

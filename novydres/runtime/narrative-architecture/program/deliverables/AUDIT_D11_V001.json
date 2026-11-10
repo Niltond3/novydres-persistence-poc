@@ -1,0 +1,60 @@
+{
+  "document_id": "AUDIT_D11_V001",
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "status": "AUDITING",
+  "content_gate": "PASS_WITH_UNKNOWN",
+  "input_head": "b26dfb313e714b72872c33effbddc29193938451",
+  "master_head_at_input": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle_checkpoint": {
+    "sequence": 33,
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "state": "C05 CLOSED; C06 NOT_STARTED; Bartholomeu MORTAL; no Embrace; 2010 FUTURE"
+  },
+  "scope": "Adversarial technical and literary audit of D01–D10; no master/canon/cycle edit; no scene execution; no resource awards; no retcon.",
+  "review_matrix_path": "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_MATRIX_V001.json",
+  "adversarial_cases_path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V001.json",
+  "independent_review_path": "novydres/runtime/narrative-architecture/program/deliverables/D11_INDEPENDENT_REVIEW_V001.json",
+  "source_heads": {
+    "documentary": "b26dfb313e714b72872c33effbddc29193938451",
+    "master": "124f9a9f43ed427d3db106d9187a875d74f60ac6"
+  },
+  "phase_gates": {
+    "D01": "PASS",
+    "D02_V011": "PASS_WITH_UNKNOWN",
+    "D03_V001": "PASS_WITH_UNKNOWN",
+    "D04_V001": "PASS_WITH_UNKNOWN",
+    "D05": "PASS_WITH_UNKNOWN after D05 V003 correction is published",
+    "D06": "PASS_WITH_UNKNOWN",
+    "D07": "PASS_WITH_UNKNOWN",
+    "D08": "PASS_WITH_UNKNOWN",
+    "D09": "PASS_WITH_UNKNOWN",
+    "D10_V005": "PASS_WITH_UNKNOWN (8/8; independent review; published)"
+  },
+  "adversarial_cases_reviewed": 10,
+  "runtime_scenarios_executed": 0,
+  "automated_suites_rerun": 0,
+  "material_findings": {
+    "opened": 1,
+    "resolved_in_proposed_version": 1,
+    "open_after_remediation": 0,
+    "finding": "D11-TECH-001; corrected in HANDOFF_D05_V003, publication pending."
+  },
+  "bounded_unknowns": [
+    "D03 acquisition evidence absent for the derived exception.",
+    "D05/MANIFEST_V46 pointer conflict and approvals remain pending.",
+    "2010 route remains unselected.",
+    "D08 current actor, incident and why-now remain UNKNOWN.",
+    "No effective GM_HIDDEN segregation.",
+    "Cycle and master ref must be revalidated at D12."
+  ],
+  "publication_readback": {
+    "status": "PENDING",
+    "record_after_push": "local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json"
+  },
+  "operational_release": "NOT_AUTHORIZED",
+  "narrator_status": "HOLD_PROPOSED_NON_OPERATIONAL",
+  "next_phase": "D12"
+}

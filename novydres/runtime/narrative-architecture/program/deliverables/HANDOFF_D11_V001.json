@@ -1,0 +1,42 @@
+{
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "status": "AUDITING",
+  "gate": "PASS_WITH_UNKNOWN",
+  "content_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": {
+    "status": "PENDING",
+    "record": "local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json",
+    "rule": "After normal push, record actual remote commit, parent, tree, changed artifact blobs and master ref. If readback fails, hold D12 release."
+  },
+  "input_head": "b26dfb313e714b72872c33effbddc29193938451",
+  "input_master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "output_head": "resolved from remote branch after publication; do not create self-referential hash",
+  "outputs": [
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V003.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_MATRIX_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D11_INDEPENDENT_REVIEW_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D11_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/NEXT_PROMPT_D12_V001.md"
+  ],
+  "next_phase": "D12",
+  "next_action": "After publishing and recording D11 readback, execute D12 integration audit. Keep D12 at PENDING_PLAYER_APPROVAL for operational promotion, unresolved player decisions, and effective GM_HIDDEN segregation. Do not issue a Narrator prompt.",
+  "unresolved": [
+    "D05 pointer conflict and player approvals",
+    "D06/D07 player approvals and 2010 route selection",
+    "D03 unsupported acquisition exception",
+    "D08 no verified current actor/incident/why-now",
+    "no effective GM_HIDDEN segregation",
+    "no operational promotion authorization, SCENE_READY or NARRATOR_PERMISSION"
+  ],
+  "restrictions": [
+    "documentary branch only",
+    "do not edit master, canon, cycle, scenes, sheet, XP/FV",
+    "no retcon or promotion",
+    "no secret truth disclosed",
+    "D12 must independently revalidate current master and numeric latest cycle"
+  ],
+  "narrator_release": "NOT_READY_FOR_NARRATOR"
+}

@@ -1,0 +1,93 @@
+{
+  "document_id": "D11_INDEPENDENT_REVIEW_V001",
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "technical_review": {
+    "reviewer_id": "CHR001-D11-TECH-INDEP-2026-11-10",
+    "independence": "Revisor independente distinto da autoria do pacote D10/D11.",
+    "result": "PASS_WITH_UNKNOWN",
+    "material_findings": [
+      {
+        "id": "D11-TECH-001",
+        "severity": "material_process",
+        "finding": "HANDOFF_D05_V002 declara readback e gate fechados, mas next_action manda parar antes de D06 e registrar novamente o gate.",
+        "resolution": "HANDOFF_D05_V003 corrige somente next_action, declara D06 concluído e preserva V002 e as pendências. Revisor confirmou a correção textual; publicação ainda pendente."
+      }
+    ],
+    "D10_V005": "Compatibilidade técnica confirmada; 8/8 casos do relatório V005; vínculo runner/catalog/report revisto sem reexecutar suíte.",
+    "limitations": [
+      "Não reexecutou suítes nem refez readbacks anteriores.",
+      "A prova de execução de D06–D10 depende do manifesto local; D12 deverá realizar readback integral de seu release e revalidar a integração."
+    ],
+    "review_evidence": [
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V002.json",
+        "blob_sha": "a01ea811e544be8be53ecb552beb3c84a419f5d8"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V003.json",
+        "blob_sha": "86b332ad766e377d2b035b7b9e39cbcedff43744"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+        "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+        "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V005.json",
+        "blob_sha": "7010b28dbec2969822d82b1a29191e24fb97572a"
+      }
+    ]
+  },
+  "literary_review": {
+    "reviewer_id": "CHR001-D11-LIT-INDEP-2026-11-10",
+    "independence": "Revisor independente com foco em fontes, conhecimento e estrutura narrativa.",
+    "result": "PASS_WITH_UNKNOWN",
+    "material_findings": [],
+    "findings": [
+      "D08 permanece PREPARED: atores, incidente e why-now atuais não estão demonstrados.",
+      "Recusa, pausa, falha e ausência são saídas admissíveis; a preparação não cria evento executado.",
+      "D06/D09 deixam rota 2010 pendente; Abraço, sobrevivência e continuidade de vínculos não são presumidos.",
+      "D03 mantém atribuição não tipada fora do conhecimento acionável; identidades não comprovadas não são fundidas.",
+      "Segredos dependentes de solução autoral ficam bloqueados sem segregação GM_HIDDEN efetiva."
+    ],
+    "review_basis": [
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+        "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+        "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+        "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_IDENTITY_ALIAS_REVIEW_V001.json",
+        "blob_sha": "00852a0ec6b1b26fb520cf4f523dc362f66cdcb1"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+        "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+        "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+        "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V001.json",
+        "blob_sha": "e1b8dc1e00c5fabdb5a13a9df8c4900e33898c9e"
+      }
+    ]
+  },
+  "overall": "D11 content review is PASS_WITH_UNKNOWN. The D05 correction is confirmed in draft; D11 phase closure remains AUDITING until HANDOFF_D05_V003 and the D11 package are published and read back. No scene permission or operational promotion is granted."
+}

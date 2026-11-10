@@ -1,0 +1,70 @@
+{
+  "document_id": "D11_ADVERSARIAL_CASES_V001",
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "method": "Revisão estática adversarial de contratos e preparações; não é execução de cena nem teste automatizado.",
+  "cases": [
+    {
+      "id": "D11-A01",
+      "scenario": "Jogador recusa o gancho",
+      "disposition": "SAFE_OPTIONAL",
+      "expected": "Aceitar recusa sem impor consequência oculta; usar alternativa independente ou encerrar sem avanço."
+    },
+    {
+      "id": "D11-A02",
+      "scenario": "A história falha",
+      "disposition": "SAFE_WITH_UNKNOWN",
+      "expected": "Registrar falha/suspensão/abandono como saída legítima; não converter em sucesso por roteiro."
+    },
+    {
+      "id": "D11-A03",
+      "scenario": "NPC relevante morre ou fica indisponível",
+      "disposition": "DEPENDENCIES_RECHECK_REQUIRED",
+      "expected": "Recalcular dependências e remover garantias de disponibilidade; não ressuscitar função sem causa."
+    },
+    {
+      "id": "D11-A04",
+      "scenario": "Jogador encontra uma pista cedo",
+      "disposition": "SOURCE_AND_ACQUISITION_REQUIRED",
+      "expected": "Respeitar ação e proveniência; não reter pista nem inventar solução retroativa."
+    },
+    {
+      "id": "D11-A05",
+      "scenario": "Mistério exige reconfiguração",
+      "disposition": "BLOCKED_WITHOUT_TRUTH_LOCK",
+      "expected": "Fixar solução/variante em ambiente realmente segregado antes de pista significativa; sem isso, não narrar resolução."
+    },
+    {
+      "id": "D11-A06",
+      "scenario": "Estagnação",
+      "disposition": "UNKNOWN_CURRENT_PRESSURE",
+      "expected": "Não fabricar ator, urgência, custo ou contato; Dramaturgo pode propor nova preparação após evidência e decisão aplicável."
+    },
+    {
+      "id": "D11-A07",
+      "scenario": "Contato sobrenatural surge antes de condição válida",
+      "disposition": "BLOCKED_BY_CURRENT_STATE",
+      "expected": "Não antecipar Abraço nem presumir contato; verificar gatilho, fonte e estado vigente."
+    },
+    {
+      "id": "D11-A08",
+      "scenario": "Conflito entre precedência documental e ponteiro operacional",
+      "disposition": "PENDING_PLAYER_APPROVAL",
+      "expected": "Manter divergência explícita; sem adjudicação, nenhum ponteiro operacional é promovido."
+    },
+    {
+      "id": "D11-A09",
+      "scenario": "Pedido para executar retcon sem aprovação",
+      "disposition": "REJECT_AND_QUEUE",
+      "expected": "Não alterar fato fechado; registrar proposta e efeitos para decisão expressa do jogador."
+    },
+    {
+      "id": "D11-A10",
+      "scenario": "Conteúdo de bastidor vaza ao jogador",
+      "disposition": "BLOCKED_NO_EFFECTIVE_SEGREGATION",
+      "expected": "Não publicar nem usar verdade GM_HIDDEN; repositório privado não constitui segregação contra o proprietário."
+    }
+  ],
+  "runtime_executed": false,
+  "conclusion": "Todos os casos têm resposta de contenção documental; os estados bloqueados/unknown impedem prontidão de cena e não são PASS operacional."
+}
