@@ -1,0 +1,93 @@
+{
+  "phase": "D07",
+  "version": "V005",
+  "status": "PLAYER_DECISIONS_RECORDED_WITH_CONDITIONS",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+  "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5",
+      "role": "current public pointer"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+      "role": "source-reconciled checkpoint; C05 last played; C06 not started"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+      "blob_sha": "a9ca553f72d48f5bd5e204252151ab54f5764f89",
+      "role": "current chronology/provenance reconciliation"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d",
+      "role": "bounded player-authored planning variant"
+    }
+  ],
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "document_id": "D07_PLAYER_APPROVAL_QUEUE_V005",
+  "purpose": "Preserve player decisions and external dependencies; no option is selected by silence or continued documentary work.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "inherited": true,
+      "status": "CURRENT_POINTER_RECONCILED_TO_CYCLE_V0034",
+      "decision": "Adjudicate the CYCLE_V0033 versus MANIFEST_V46 pointer conflict before operational transition.",
+      "player_response_summary": "The current MANIFEST_V48 points to CYCLE_V0034; V47 -> V0033 remains historical."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "inherited": true,
+      "status": "APPROVED_CONDITIONALLY",
+      "decision": "Explicitly authorize or decline promotion for operational/master use after D12 audit/readback.",
+      "player_response_summary": "Public D05-D12 documents are approved for master after applicable documentary gates and remote readback."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "inherited": true,
+      "status": "NO_ACL; LIMITED_PLAYER_OPEN_VARIANT_APPROVED_FOR_DRAMATURGE_PLANNING_ONLY",
+      "decision": "Provide effective GM-hidden segregation, approve an open variant, or keep truth-dependent investigation blocked.",
+      "player_response_summary": "The player-approved variant is limited to the stated Dramaturge planning premises; no secret source access or validation."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "inherited": true,
+      "status": "NOT_GRANTED",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff.",
+      "player_response_summary": "No scene permission."
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "inherited": true,
+      "status": "SUPERSEDED_BY_APPROVAL-D06-002",
+      "decision": "Register the author's mandatory forced-Embrace target and M3.01 retiming decision; preserve blocker until sources are reconciled.",
+      "player_response_summary": "Historical pre-1970 target superseded; character creation and all M3.01 are in 1970."
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "inherited": false,
+      "status": "APPROVED_FOR_FUTURE_CONSIDERATION_AFTER_SOURCE_RECONCILIATION; APPLICABLE_GATES_PENDING; NOT_ACTIVATED",
+      "decision": "Decide whether the conditional PC01 proposal may be considered for future operational use after current-source reconciliation; this is not needed to continue independent documentary design and grants no scene permission.",
+      "options": [
+        "consider PC01 for future use after gates",
+        "keep PC01 editorial only",
+        "defer decision"
+      ],
+      "default": "PENDING_PLAYER_APPROVAL",
+      "when_required": "Before any operational promotion or scene relying on this contract",
+      "player_response": "Uso operacional.",
+      "disposition": "Aprovado para consideração de uso operacional futuro após reconciliação das fontes e aprovação dos gates aplicáveis; nenhuma ativação, promoção ou permissão de cena nesta retomada.",
+      "player_response_summary": "Uso operacional futuro pode ser considerado após reconciliação e gates; a autorização não ativa D07 nem concede cena."
+    }
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "truth_dependency_disposition": "The approved player-open variant permits only Dramaturge continuity planning. D07 remains inactive; all additional hidden-dependent play stays blocked."
+}

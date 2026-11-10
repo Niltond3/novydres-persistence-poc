@@ -1,0 +1,386 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V007",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "design_head": "9148095a273f9fa72a54a49a48651ebf4a54615e"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+    "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "sequence": 34,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "recorded_state": {
+      "M3.01_C05": "CLOSED",
+      "M3.01_C06": "NOT_STARTED",
+      "Bartholomeu": "MORTAL",
+      "Embrace": "NOT_OCCURRED"
+    },
+    "canonical_sources": {
+      "M2.03": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+        "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+      },
+      "M2.04": {
+        "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+        "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+      },
+      "M3.01": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+        "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+      }
+    },
+    "character_state": {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+    },
+    "status": "SOURCE_RECONCILED_FOR_DRAMATURGE_PLANNING"
+  },
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "ref": "master candidate after SOURCE_RECONCILED",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5",
+      "use": "current pointer"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "ref": "CYCLE_V0034",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+      "use": "current checkpoint/role"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac",
+      "use": "creation chronology"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8",
+      "use": "M2 chronology/workshop downtime"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42",
+      "use": "current episode chronology"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57",
+      "use": "current cumulative state/provenance"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d",
+      "use": "limited player-open planning variant"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "use": "selected future sire Kuthulun"
+    }
+  ],
+  "precedence": {
+    "rule": "closed/canonical; approved/frozen; current governance and verified player decisions; validated history; derived sources within provenance limits; proposals",
+    "CH00_CH07": "explicitly unactivated preparation proposals; future claims are neither history nor operational authority",
+    "D01": "proposed architecture used as documentary constraints only"
+  },
+  "scope": {
+    "purpose": "macro structure for played guided history and possible continuation toward 2010",
+    "excludes": [
+      "reconstructing past events",
+      "starting a scene or opening C06",
+      "creating future dialogue, action, NPC knowledge or causal links",
+      "granting XP, FV, powers, status, assets or relationships",
+      "operational promotion or Narrator permission"
+    ]
+  },
+  "macro_question": "Como Bartholomeu responde às exigências contraditórias de construir uma vida que reconheça como sua enquanto vulnerabilidade, poder e mudança histórica testam seus limites — e que limites escolhe preservar, transformar ou abandonar?",
+  "genre_promise": [
+    "horror pessoal por escolhas e custos, não sofrimento imposto",
+    "horror gótico-punk atento a poder assimétrico, instituições, dependência e resistência",
+    "vínculos humanos mantêm autonomia própria e não são instrumentos do protagonista"
+  ],
+  "structure": {
+    "principle": "M1-M5 são contratos de cobertura e suficiência, não eras, contagem de cenas, roteiro ou garantia de resultado. Suas funções podem reaparecer, mudar de ordem ou ficar incompletas.",
+    "checkpoint_limit": "M3.01 C05/C06 não definem a suficiência dos macro-Marcos."
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "function": "estabelecer ponto de partida moral, familiar, social e prático documentado",
+      "recorded_status": "CLOSED in historical inputs where verified",
+      "sufficiency": "Coverage, Coherence and Consequence in the applicable close packet",
+      "limits": [
+        "do not reopen",
+        "do not add missing dialogue or rolls",
+        "closed history is immutable"
+      ]
+    },
+    {
+      "id": "M2",
+      "function": "testar limites e custos da estabilidade tentada; separar contradições humanas de alegações sobrenaturais",
+      "recorded_status": "ACTIVE in older CH02/CH03 snapshots; current status requires source-chain reconciliation",
+      "sufficiency": "formal D1 review may close its character-building question without solving independent mysteries",
+      "limits": [
+        "scene count is not a gate",
+        "do not repeat closed scenes",
+        "no required resolution of Volnaya or another independent mystery"
+      ]
+    },
+    {
+      "id": "M3",
+      "function": "offer negotiation among identity, responsibility, vulnerability and power with more than one meaningful response",
+      "recorded_status": "function proposal only",
+      "sufficiency": "document distinct changes or costs across relevant dimensions; unresolved threads may remain",
+      "limits": [
+        "not equivalent to operational M3.01",
+        "do not claim C05 satisfies or fails this function"
+      ]
+    },
+    {
+      "id": "M4",
+      "function": "realizar o Abraço imposto por Kuthulun como alvo autoral, se a cadeia causal e a cena vierem a ser autorizadas e persistidas",
+      "recorded_status": "function proposal only",
+      "sufficiency": "if transformation occurs, record cause, permission, immediate cost and later consequences; otherwise record the chosen alternative",
+      "limits": [
+        "o Abraço ainda não ocorreu no checkpoint",
+        "alvo autoral não é evento ocorrido nem autorização de cena",
+        "não presumir consentimento de Bart; o Abraço é imposto contra a vontade dele",
+        "nenhuma cena ou permissão de Narrador decorre deste documento"
+      ]
+    },
+    {
+      "id": "M5",
+      "function": "integrate selected consequences and, if reachable and authorized, assess state at 2010 horizon",
+      "recorded_status": "function proposal only",
+      "sufficiency": "source-backed snapshot of acquired mechanics, ties, position, obligations and costs; no epilogue grants them",
+      "limits": [
+        "2010 is a horizon, not guaranteed scene or survival",
+        "old ties/assets need continuity evidence"
+      ]
+    }
+  ],
+  "transformation_opportunities": [
+    {
+      "axis": "self-understanding",
+      "possible": "beliefs, loyalties, identity and limits may change through chosen actions and consequences",
+      "not_assumed": [
+        "emotion",
+        "belief change",
+        "redemption",
+        "corruption"
+      ]
+    },
+    {
+      "axis": "moral_agency",
+      "possible": "choices may clarify, revise or strain declared values",
+      "not_assumed": [
+        "automatic Humanity loss",
+        "predetermined moral destination"
+      ]
+    },
+    {
+      "axis": "social_position",
+      "possible": "relationships, institutions, obligations or isolation may change where evidenced",
+      "not_assumed": [
+        "trust",
+        "authority",
+        "status",
+        "contacts",
+        "lasting bonds"
+      ]
+    },
+    {
+      "axis": "embodiment",
+      "possible": "mortal or supernatural experience only after an authorized, causally played event",
+      "not_assumed": [
+        "Embrace",
+        "clan",
+        "sire",
+        "generation",
+        "powers",
+        "date"
+      ]
+    },
+    {
+      "axis": "practical_life",
+      "possible": "work, home, resources and security may be acquired, lost or revised through play",
+      "not_assumed": [
+        "Oficina Krauser as operating business or sheet advantage"
+      ]
+    },
+    {
+      "axis": "historical_continuity",
+      "possible": "time, absence, losses and change may shape a 2010 snapshot where supported",
+      "not_assumed": [
+        "survival",
+        "unchanged ties",
+        "unplayed off-screen events"
+      ]
+    }
+  ],
+  "dependencies": {
+    "causality": "D06 creates no causal links; inherit D04 NONE/UNKNOWN and require evidence before future promotion",
+    "npc_knowledge": "each NPC fact needs recorded acquisition",
+    "secrets": "no GM_HIDDEN truth included; truth-dependent work blocked pending effective segregation or authorized open variant",
+    "mechanics": "future gates use current V5/local contracts; D06 awards nothing",
+    "time": "use verified diegetic anchors; exact personal dates and durations remain UNKNOWN until sourced"
+  },
+  "sufficiency_model": {
+    "marco_close": "Coverage + Coherence + Consequence with source refs, authorized owner and immutable close evidence under D1",
+    "review_triggers": [
+      "before a new story, compare checkpoint to the selected milestone function",
+      "if player choice or world facts block progress, mark BLOCKED_DESIGN; do not add an event",
+      "after scenes without meaningful delta, request pacing review without inventing off-screen change"
+    ],
+    "completion_is_not": [
+      "scene or thread count",
+      "one plot resolution",
+      "target sheet",
+      "unplayed epilogue"
+    ]
+  },
+  "timeline_to_2010": {
+    "horizon": "2010",
+    "precision": "The current character-creation and M3.01 chronology is reconciled to 1970 under APPROVAL-D06-002. Bart remains mortal throughout M3.01; forced Embrace before 1970-12-25 is an unoccurred authorial target. Exact dates are unknown. Current refs support Dramaturge planning only; no scene readiness is established.",
+    "planning_units": [
+      "verified checkpoint",
+      "player-authorized transition",
+      "caused transformation if any",
+      "meaningful post-transition experience when applicable",
+      "choice-specific consolidation",
+      "2010 readiness review only if reached"
+    ],
+    "rules": [
+      "Use explicit source dates only; do not assign exact dates where sources provide none.",
+      "Do not create an event, resource delta, NPC action, survival, torpor or tie continuity during planning.",
+      "The forced Embrace is a player-authored future target, not an occurred event.",
+      "Future graduation toward 2010 remains a separate long-range review and is not a gate for this documentary promotion."
+    ],
+    "selected_target_window": "Character creation and M3.01 in 1970; forced Embrace after C05 and before 1970-12-25; exact dates and spacing unknown.",
+    "player_rationale": "O intervalo deve permitir que Bart ingresse, compreenda e se adapte à sociedade cainita; o jogador deseja drama familiar pela impossibilidade de acompanhar os filhos e a esposa, provações sociais e escolhas difíceis para proteger a família."
+  },
+  "central_plot_ids": [],
+  "graduation_gate": {
+    "status": "NOT_MET_LONG_RANGE_REQUIREMENTS",
+    "requirements": [
+      "Required Marcos have source-backed Coverage/Coherence/Consequence review.",
+      "Mechanics and traits are proven by an applicable ledger and rule source.",
+      "Knowledge, identity and relationships have evidence paths.",
+      "Unresolved threads remain classified.",
+      "If a vampire-by-2010 route is selected: an authorized Embrace must actually occur and sufficient post-Embrace experience must be played.",
+      "Scene readiness and Narrator permission remain separate future gates and are not granted.",
+      "M3.01 chronology and current source refs are reconciled for planning under APPROVAL-D06-002 and APPROVAL-D06-003; this does not grant scene readiness."
+    ],
+    "scope": "Long-range graduation/2010 route only; not a blocker to public documentary promotion or Dramaturge continuity planning."
+  },
+  "frozen_boundaries": [
+    "do not change CYCLE_V0033 or closed events",
+    "no retcon or canon change",
+    "no new secret or causal fact",
+    "no character or mechanical change",
+    "no operational promotion",
+    "no scene permission"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending_approvals": [
+    "APPROVAL-D05-004"
+  ],
+  "player_intent": {
+    "approval_id": "APPROVAL-D06-002",
+    "target_state": "Forced Embrace by Kuthulun, against Bartolomeu’s will, as a future authorial target; not occurred.",
+    "target_window": "Character creation and all M3.01 in 1970; Bart mortal throughout M3.01; forced Embrace after C05 and before 1970-12-25; C06 not started.",
+    "actual_event_date": "UNKNOWN; NO EMBRACE OCCURRED",
+    "sire": "Kuthulun, player-selected future Senhora; not a diegetic revelation to Bart.",
+    "rationale_player_provided": [
+      "O Abraço imposto deve ocorrer antes de 1970-12-25 para haver tempo de ingresso, compreensão e adaptação à sociedade cainita.",
+      "Bart deve permanecer mortal durante todo M3.01; a data civil de M3.01 ainda precisa de fonte versionada e reconciliação.",
+      "Kuthulun é a Senhora escolhida; a imposição do Abraço independe do querer de Bart.",
+      "O jogador descreve os Gangrel de Novydres como cultura militar pautada pela força de combate; rumores sobre um mortal capaz de enfrentar Cainitas sem armas atraem a atenção da Primogênita.",
+      "A proposta de clímax é uma derrota de Bart para Kuthulun e o Abraço imposto à beira da morte, precedidos por construção gradual e conflitos; isto é proposta autoral, não evento.",
+      "O drama desejado inclui a separação da família, observar os filhos crescerem e a esposa envelhecer sem poder participar, adaptação social Cainita e escolhas difíceis para manter a família segura."
+    ],
+    "status": "AUTHORIAL_TARGET_RECORDED_NOT_CANON_EVENT",
+    "chronology_gate": "SOURCE_RECONCILED_FOR_DRAMATURGE_PLANNING; SCENE_READY_NOT_VERIFIED",
+    "conflict_evidence": "The prior source chronology and provenance conflicts are resolved for the current planning refs by D06_SOURCE_RECONCILIATION_V003 and CYCLE_V0034. Exact civil dates remain unknown.",
+    "disposition": "Use the new versioned sources and CYCLE_V0034 for Dramaturge planning only. Do not record an Embrace or initiate a scene.",
+    "sire_source": {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    "candidate_sequence_status": "PLAYER_DIRECTION_FOR_DRAMATURGE_PLANNING_NOT_EVENT",
+    "knowledge_limits": {
+      "source_limit": "No hidden source was opened or used to validate this variant.",
+      "player_open_variant": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+        "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d",
+        "scope": "Dramaturge continuity planning only"
+      },
+      "allowed_boundary": "Use only the player-authored statements that the carrier is connected to Sistema Circulatório and Kuthulun knows what Mary knows about the carrier and the fight with the man who lost an arm and survived.",
+      "unknown_beyond_variant": [
+        "Exact content of Mary’s knowledge",
+        "How or when Kuthulun learned it",
+        "Any additional people, route, mechanism, or hidden truth"
+      ],
+      "dramaturge_boundary": "Do not infer or validate details beyond the exact player-open variant; leave further truth-dependent material blocked."
+    },
+    "historical_superseded_conflict": {
+      "prior_evidence": "The prior source chronology and provenance conflicts are resolved for the current planning refs by D06_SOURCE_RECONCILIATION_V003 and CYCLE_V0034. Exact civil dates remain unknown.",
+      "prior_disposition": "Use the new versioned sources and CYCLE_V0034 for Dramaturge planning only. Do not record an Embrace or initiate a scene.",
+      "status": "SUPERSEDED_BY_D06_SOURCE_RECONCILIATION_V003; historical record only"
+    }
+  },
+  "blocked_dependencies": [
+    "Additional hidden details outside D12_PLAYER_OPEN_VARIANT_V001 remain blocked for truth-dependent use."
+  ],
+  "operational_target_gate": "SOURCE_RECONCILED_FOR_DRAMATURGE_PLANNING",
+  "continuity_design_direction": {
+    "authority": "PLAYER_AUTHORED_DIRECTION_NOT_ESTABLISHED_EVENT",
+    "sire": "Kuthulun, already selected as future Senhora",
+    "rumor": "A mortal who can face Cainites unarmed attracts Gangrel attention",
+    "gradual_preparation": "One or two additional Cainite conflicts, including at least one Gangrel, with causal spacing and no fixed dates",
+    "carrier": "Use only D12_PLAYER_OPEN_VARIANT_V001; additional information remains unknown",
+    "candidate_confrontation": "Approximately seven or eight Gangrel, Kuthulun at center and Bart before her; imposed fight with no safe exit, family under threat; escalation of blood gifts only as needed; Bart cannot win; forced Embrace near death without consent",
+    "consequences": [
+      "family grief and anger",
+      "resentment from long-waiting ghouls",
+      "Cainite adaptation and social trials",
+      "learning to rely on others",
+      "rejected compromises possibly considered to protect family"
+    ],
+    "open": "Exact sequence, dates, pacing, intervening conflicts, family responses and social mechanisms remain for the Dramaturge to propose, not assumed facts."
+  },
+  "timeline": {
+    "approval": "APPROVAL-D06-002",
+    "M3.01": "1970",
+    "Bartolomeu": "mortal throughout M3.01",
+    "embrace": "forced against his will after the C05 checkpoint and before 1970-12-25; not occurred",
+    "exact_dates": "UNKNOWN"
+  },
+  "state_checkpoint": {
+    "last_played_section": "C05",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001"
+  },
+  "route_policy": "Character creation and M3.01 occur in 1970; Bart remains mortal throughout M3.01. Forced Embrace by Kuthulun before 1970-12-25 remains an unoccurred authorial target. V007/v045 are player-safe planning candidates only; master refs remain conflicted.",
+  "supersession": {
+    "source_reconciliation": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+      "blob_sha": "a9ca553f72d48f5bd5e204252151ab54f5764f89"
+    },
+    "prior_state_mismatch_claim": "RETRACTED",
+    "state_v045": "NOT_CURRENT; DO_NOT_USE",
+    "transition": "SOURCE_RECONCILED"
+  },
+  "current_documentary_gate": "PASS_WITH_UNKNOWN",
+  "current_promotion_gate": "PASS_WITH_UNKNOWN_FOR_PUBLIC_DOCUMENTARY_RELEASE; remote branch readback recorded externally before master write."
+}

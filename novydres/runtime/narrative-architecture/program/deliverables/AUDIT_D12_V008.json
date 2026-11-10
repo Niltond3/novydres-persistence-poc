@@ -1,0 +1,118 @@
+{
+  "document_id": "AUDIT_D12_V008",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "version": "V008",
+  "status": "PASS_WITH_UNKNOWN",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "input_heads": {
+    "design_branch": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+    "master": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+  },
+  "scope": "Public documentary reconciliation and planning release. Gate classification separates master publication of the approved public package from future scene, Narrator and truth-dependent use.",
+  "gates": {
+    "documentary_promotion": "PASS_WITH_UNKNOWN_AFTER_DIRECT_VALIDATORS_AND_REMOTE_READBACK",
+    "operational_state": "SOURCE_RECONCILED_FOR_DRAMATURGE_PLANNING",
+    "bounded_variant": "APPROVED_FOR_DRAMATURGE_PLANNING_ONLY",
+    "out_of_scope_hidden_truth": "BLOCKED_EXTERNAL_DEPENDENCY",
+    "D07_activation": "NOT_ACTIVATED",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED",
+    "master_promotion": "AUTHORIZED_BY_APPROVAL-D05-002_AFTER_GATES"
+  },
+  "promotion_scope": "Public, non-secret D05-D12 reconciliation and continuity-planning documents listed in D12_RELEASE_CANDIDATE_V008.outputs. No hidden truth payload is included.",
+  "source_validation": {
+    "validator": "D06_SOURCE_VALIDATE_V003.py",
+    "result_path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003_RESULT.json",
+    "status": "PASS",
+    "checks": "33/33"
+  },
+  "orchestration_validation": {
+    "validator": "ORCHESTRATION_VALIDATOR_V4.mjs",
+    "status": "PASS",
+    "transition": "SOURCE_RECONCILED",
+    "tests": "7/7"
+  },
+  "d12_validation": {
+    "validator": "D12_VALIDATE_V008.py",
+    "version": "V008",
+    "result_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008_RESULT.json",
+    "status": "PASS",
+    "checks": "47/47",
+    "validator_blob_sha": "e66bff4568f319bf34dffabd5662969f8a666399",
+    "result_blob_sha": "611973d852b5e363c99c8516b8cb76f586dc31e0"
+  },
+  "D11_closure": {
+    "audit": "AUDIT_D11_V002.json",
+    "handoff": "HANDOFF_D11_V002.json",
+    "status": "PASS_WITH_UNKNOWN",
+    "D11-TECH-001": "RESOLVED"
+  },
+  "historical_conflicts": {
+    "D05_pointer": "Resolved for current pointer by MANIFEST_V48 -> CYCLE_V0034; earlier V47 -> V0033 retained as history.",
+    "D06_chronology": "Resolved for current planning sources to year 1970 under APPROVAL-D06-002.",
+    "state_provenance": "state_v043 lineage verified and unchanged; new state_v044 makes 1970 label reconciliation explicit; prior false mismatch finding retracted."
+  },
+  "unknowns": [
+    "Exact dates and spacing",
+    "D08 actor/incident/why-now",
+    "Exact Mary knowledge and transmission details beyond the limited variant",
+    "Long-range 2010 graduation requirements"
+  ],
+  "publication_readback": "Record actual branch/master commit, tree and every changed blob in local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json.",
+  "promotion_performed": false,
+  "master_write_performed": false,
+  "release_inventory": {
+    "count": 43,
+    "paths": [
+      "novydres/.CONTEXTG.md",
+      "novydres/MANIFEST_V48.json",
+      "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V006.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V008.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V003.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V002.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V008.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V005.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V006.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003.py",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003_RESULT.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V005.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V008.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008.py",
+      "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008_RESULT.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/DRAMATURGO_CONTINUITY_PROMPT_V003.md",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V008.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V007.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V008.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V002.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D11_V002.json",
+      "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V008.json",
+      "novydres/runtime/orchestration/CYCLE_SCHEMA_V4.json",
+      "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V2.md",
+      "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V4.mjs",
+      "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V4_RESULT.json",
+      "novydres/runtime/orchestration/ORCHESTRATION_V4_VALIDATION_RESULT.json",
+      "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V4.mjs"
+    ]
+  },
+  "current_audits": {
+    "D05": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V007.json",
+    "D06": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V008.json",
+    "D11": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V002.json"
+  }
+}

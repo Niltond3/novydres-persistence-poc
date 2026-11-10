@@ -1,0 +1,69 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V007",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "design_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+  },
+  "checkpoint": {
+    "cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+    "cycle_blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "next_role": "DRAMATURGO",
+    "Bartholomeu": "MORTAL",
+    "Embrace": "NOT_OCCURRED"
+  },
+  "deliverables": [
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V007.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V007.json",
+    "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+    "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+    "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+    "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json"
+  ],
+  "gate": "PASS_WITH_UNKNOWN for source reconciliation and planning; scene/Narrator gates remain ungranted.",
+  "pending": [
+    "Exact dates and pace remain for Dramaturge proposal.",
+    "Hidden details outside the variant remain blocked.",
+    "No scene or Narrator permission."
+  ],
+  "publication_readback": {
+    "status": "PENDING_REMOTE_READBACK"
+  },
+  "next_phase": "Dramaturge continuity planning only, using player-safe candidates and the supplied prompt",
+  "next_phase_boundary": "Planning of continuity only; no scene, no Narrator prompt/cycle, no D07 activation.",
+  "restrictions": [
+    "Use M3.01_v007 and state_v045 only as planning candidates.",
+    "Keep exact dates unknown; M3.01 before 1970; Bartholomeu mortal throughout; no Embrace in M3.01.",
+    "Do not access, quote, or extend hidden truth. Leave any dependent link blocked without an open variant.",
+    "A READY_FOR_DRAMATURGO cycle is not SCENE_READY or NARRATOR_PERMISSION."
+  ],
+  "document_id": "HANDOFF_D06_V007",
+  "player_intent_delta": "No new player decision requested or inferred; existing APPROVAL-D06-001 is applied to non-operational planning candidates.",
+  "input_head": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+  "timeline_correction": "APPROVAL-D06-002: creation and all M3.01 in 1970; Bart mortal throughout M3.01; forced Embrace after C05 and before 1970-12-25 remains future/unoccurred; C05 last played; C06 not started.",
+  "validation": {
+    "validator": "D06_SOURCE_VALIDATE_V002.py",
+    "version": "V002",
+    "status": "PASS",
+    "checks_passed": 24,
+    "checks_total": 24,
+    "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+    "result_blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+    "inputs": {
+      "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+    }
+  }
+}
