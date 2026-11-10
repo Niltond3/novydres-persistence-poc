@@ -1,0 +1,42 @@
+{
+  "document_id": "AUDIT_D05_V005",
+  "phase": "D05",
+  "version": "V005",
+  "result": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "scope": "Revalidação da reconciliação do ponteiro e registro da decisão D05; sem reexecução dos testes históricos de conteúdo D05.",
+  "finding": {
+    "id": "D05-F-007",
+    "severity": "resolved",
+    "prior_state": "CYCLE_V0033 havia sido adjudicado como autoridade do cursor, mas MANIFEST_V46 apontava para V0024.",
+    "evidence": "No HEAD master 735fe5d52e2761c4d492fe873a4b6bbcce17654a, MANIFEST_V47 (blob 6d00581981b406ec30bd0138928248965b083cc7) aponta current_cycle para CYCLE_V0033. O contrato ORCHESTRATION_CONTRACT_V1.md mantém o maior ciclo numérico validado como autoridade de cursor/next_role.",
+    "disposition": "Divergência do ponteiro atual reconciliada; D12-03 pode passar. O ciclo segue READY_FOR_DRAMATURGO. Isso não valida SCENE_READY, NARRATOR_PERMISSION nem a cronologia D06."
+  },
+  "source_record": "D05_PLAYER_APPROVAL_QUEUE_V004.json",
+  "content_gate": "PASS_WITH_UNKNOWN inherited from the already completed D05 review and 18/18 recorded tests; tests_reexecuted=false.",
+  "independent_review": {
+    "status": "PASS_WITH_UNKNOWN",
+    "reviewer_id": "d05_adversarial_review",
+    "basis": "Earlier read-only adversarial review found no remaining material content finding after its targeted remediations; this V002 changes only the handoff state supported by the post-push execution record."
+  },
+  "remaining_unknowns": [
+    "APPROVAL-D06-001 tem alvo autoral atualizado, mas a cronologia ainda não foi persistida nas fontes; D06 permanece bloqueado.",
+    "Não existe ACL efetiva para verdade autoral; o compromisso do jogador não altera permissões técnicas.",
+    "D02 V011 e limites de proveniência D03/D04 permanecem."
+  ],
+  "constraints": [
+    "No retcon executed.",
+    "No canon, cycle, character, mechanics, or scene state changed.",
+    "No secret truth read or disclosed.",
+    "Promotion authorization is pending the corresponding gates; no promotion performed.",
+    "No scene permission inferred."
+  ],
+  "next_phase": "D12_GATE_REVALIDATION",
+  "gate_transition": "D05 PASS_WITH_UNKNOWN permite continuidade documental; a divergência do ponteiro foi reconciliada, mas outros gates operacionais permanecem bloqueados.",
+  "input": {
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+  }
+}

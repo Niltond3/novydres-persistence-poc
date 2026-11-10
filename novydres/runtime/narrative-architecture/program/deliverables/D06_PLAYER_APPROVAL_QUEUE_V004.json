@@ -1,0 +1,90 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V004",
+  "status": "AUTHORIAL_TARGET_RECORDED_SOURCE_RECONCILIATION_PENDING",
+  "authority": "PLAYER_INTENT; EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "decisions": [
+    {
+      "id": "APPROVAL-D06-001",
+      "decision": "Register the player's authorial target: M3.01 before 1970 with Bartholomeu mortal throughout; forced Embrace by Kuthulun before 1970-12-25.",
+      "options": [
+        "record authorial temporal target and keep blocked pending source reconciliation"
+      ],
+      "default": "No event, date or scene is inferred; operational use remains blocked until sources are reconciled.",
+      "when_required": "before operational graduation criteria or promotion treats one route as required",
+      "independent_work": "D07/D08 may continue only where independent of target selection",
+      "status": "AUTHORIAL_TARGET_RECORDED_BLOCKED_SOURCE_RECONCILIATION",
+      "response": "M3.01 deve ser mudado para antes de 1970; Bart permanece mortal durante M3.01. Kuthulun deve impor o Abraço, independentemente do querer dele, antes de 25/12/1970.",
+      "selected_target": "M3.01 antes de 1970, Bart mortal durante todo o ciclo; Abraço forçado por Kuthulun antes de 1970-12-25.",
+      "player_context": "O jogador estabelece Kuthulun como Senhora e descreve os Gangrel de Novydres como cultura militar pautada pela força de combate. Rumores sobre um mortal que enfrenta Cainitas sem armas atraem a atenção da Primogênita. O Abraço é imposição, não desejo de Bart.",
+      "operational_disposition": "Decisão autoral explícita registrada. O episódio fonte ainda diz fim dos anos 1970; o checkpoint CYCLE_V0033 mantém Bart mortal e sem Abraço. O blob em state_v043.source.txt contém texto antigo de M2.03, não um estado M3.01 atual. Nenhuma fonte operacional foi retimada; manter BLOCKED_CONFLICT.",
+      "actual_event": "NOT_ESTABLISHED",
+      "authorial_sequence": {
+        "status": "CANDIDATE_DESIGN_NOT_EVENT",
+        "beats": [
+          "Construir gradualmente pressão por mais um ou dois conflitos com Cainitas, incluindo ao menos um Gangrel.",
+          "Como clímax candidato, Kuthulun enfrenta e derrota Bart; o Abraço imposto ocorre quando ele está à beira da morte.",
+          "Consequências desejadas incluem separação e luto familiar, adaptação à sociedade Cainita, limites para resolver tudo sozinho e escolhas difíceis para proteger a família."
+        ],
+        "timing": "M3.01 deve preceder o Abraço e permanecer com Bart mortal; a data civil exata de M3.01 e o espaçamento exato até o Abraço não foram definidos."
+      }
+    },
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicate CYCLE_V0033 versus MANIFEST_V46 pointer conflict.",
+      "default": "pending; blocks operational state change",
+      "when_required": "before operational transition",
+      "status": "CURSOR_RECONCILED_TO_CYCLE_V0033",
+      "response_summary": "MANIFEST_V47 no HEAD master atual aponta para CYCLE_V0033; divergência atual do ponteiro reconciliada."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Authorize or decline future promotion to operational/master use.",
+      "default": "keep proposed documents only",
+      "when_required": "D12 after audit and readback",
+      "status": "APPROVED_PENDING_GATES",
+      "response_summary": "Todos os documentos D05-D12 aprovados para promoção futura sujeita aos gates; promoção não realizada."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Provide effective secret-truth segregation, approve an open variant, or keep truth-dependent investigation blocked.",
+      "default": "store no secret; block dependent play",
+      "when_required": "before truth-dependent D07 material",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "response_summary": "Compromisso de não ler segredos registrado; sem ACL ou variante aberta, conteúdo dependente permanece bloqueado."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff.",
+      "default": "not granted by D06",
+      "when_required": "future scene handoff",
+      "status": "NOT_GRANTED",
+      "response_summary": "Nenhuma permissão de cena ou Narrador foi concedida."
+    }
+  ],
+  "input_head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86",
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    },
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7"
+    }
+  ]
+}

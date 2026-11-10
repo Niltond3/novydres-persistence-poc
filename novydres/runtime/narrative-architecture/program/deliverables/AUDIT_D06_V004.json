@@ -1,0 +1,126 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V004",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "cycle_blob": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "manifest_v47_blob": "6d00581981b406ec30bd0138928248965b083cc7"
+  },
+  "method": "precedence review of D01/D05 and CH00-CH07; independent adversarial review; repeatable assertions via D06_VALIDATE_V001.py",
+  "findings": [
+    {
+      "id": "D06-F-001",
+      "classification": "BOUNDED_UNKNOWN",
+      "finding": "O alvo autoral agora é Abraço imposto por Kuthulun antes de 1970-12-25, precedido de M3.01 antes de 1970 com Bart mortal; permanece direção não operacional.",
+      "disposition": "Registrar alvo autoral; não inferir evento, data ou permissão."
+    },
+    {
+      "id": "D06-F-002",
+      "classification": "BOUNDED_UNKNOWN",
+      "finding": "CYCLE_V0033 records M3.01 C05 closed and C06 not started; older CH01-CH03 state snapshots are not promoted to current operational state.",
+      "disposition": "preserve as-of checkpoint and label older status with provenance"
+    },
+    {
+      "id": "D06-F-003",
+      "classification": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "finding": "Effective GM_HIDDEN storage segregation against repository owner is not available in the known environment.",
+      "disposition": "no secret included"
+    },
+    {
+      "id": "D06-F-004",
+      "classification": "RESOLVED",
+      "finding": "MANIFEST_V47, no HEAD master atual, aponta para CYCLE_V0033; o ponteiro atual está reconciliado.",
+      "disposition": "APPROVAL-D05-001 reconciliado; D12-03 passa. Sem inferir SCENE_READY ou NARRATOR_PERMISSION."
+    },
+    {
+      "id": "D06-F-005",
+      "classification": "PASS_WITH_UNKNOWN",
+      "finding": "D04 did not establish operational plots or global causality; D06 creates no central plot or causal relation.",
+      "disposition": "preserved"
+    },
+    {
+      "id": "D06-F-006",
+      "classification": "BLOCKED_CONFLICT",
+      "finding": "O jogador autoriza M3.01 antes de 1970, com Bart mortal durante todo o ciclo, e fixa Abraço forçado por Kuthulun antes de 1970-12-25. M3.01_v005 ainda afirma fim dos anos 1970; CYCLE_V0033 mantém mortal/sem Abraço; o blob de state_v043 referenciado contém estado textual antigo M2.03.",
+      "disposition": "Direção autoral registrada, sem mudança de fonte. Manter BLOCKED_CONFLICT até retimar o episódio e reconciliar character-state/LIVE/cycle refs em novas versões; nenhum evento/dia é inferido."
+    }
+  ],
+  "independent_review": {
+    "status": "COMPLETED",
+    "reviewer": "independent adversarial reviewer",
+    "scope": "seven D06 deliverables, source precedence, agency, routes, checkpoint distinctions, causality, knowledge, mechanics, retcon, secrecy, permissions",
+    "findings": [
+      {
+        "id": "D06-R-001",
+        "classification": "PROCESS_FINDING_REMEDIATED",
+        "finding": "The initial test claims lacked a reproducible execution record.",
+        "remediation": "Added D06_VALIDATE_V001.py with 20 explicit assertions; final run result recorded in D06_ADVERSARIAL_TESTS_V001.json."
+      },
+      {
+        "id": "D06-R-002",
+        "classification": "PROCESS_FINDING_REMEDIATED",
+        "finding": "Bible, audit and handoff gate fields differed during review.",
+        "remediation": "Aligned all three to PASS_WITH_UNKNOWN after the completed review; final validator asserts equality."
+      }
+    ],
+    "content_findings": "No material narrative finding; alternatives and player agency remain intact; no canon, causal, secret, mechanical or operational promotion."
+  },
+  "validation": {
+    "json_parse": "PASS",
+    "semantic_assertions": "PASS",
+    "source_blob_verification": "PASS_LOCAL_TREE",
+    "validator": "D06_VALIDATE_V001.py",
+    "reproducible_run": "PASS",
+    "checks_passed": 20,
+    "source_blob_refs_verified": 20
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "remote publication and full readback",
+    "player approvals and inherited D05 dependencies remain outside this documentary gate"
+  ],
+  "document_id": "AUDIT_D06_V004",
+  "scope": "Delta da direção autoral temporal de APPROVAL-D06-001 e reconciliação do ponteiro; nenhuma mudança de evento, história, ficha ou estado mecânico.",
+  "operational_target_gate": "BLOCKED_CONFLICT",
+  "validation_delta": {
+    "validator": "D12_VALIDATE_V004.py",
+    "status": "PASS",
+    "checks_passed": 62,
+    "checks_total": 62
+  },
+  "remaining_unknowns": [
+    "M3.01 source retiming to before 1970 is authorized but not persisted; its exact date is unknown.",
+    "The referenced state_v043 blob contains M2.03 text rather than a current M3.01 state; reconcile state provenance.",
+    "No actual Embrace date or diegetic event is established.",
+    "The future dramatic sequence remains candidate authorial design, not event or scene."
+  ],
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7"
+    }
+  ],
+  "scope_note": "APPROVAL-D06-001 records an authorial target; Bart remains mortal through M3.01, and no event or scene is authorized."
+}

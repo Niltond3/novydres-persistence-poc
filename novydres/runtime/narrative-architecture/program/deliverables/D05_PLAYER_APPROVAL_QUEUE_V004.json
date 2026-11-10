@@ -1,0 +1,121 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V004",
+  "status": "DECISIONS_RECORDED_WITH_OPERATIONAL_BLOCKERS",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "purpose": "Registrar as decisões expressas do jogador em D12; nenhuma transição operacional ou permissão de cena decorre automaticamente.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicar a divergência de ponteiros entre ciclo V0033 e MANIFEST_V46 para qualquer uso operacional.",
+      "when_required": "Antes de promoção ou transição ao Narrador.",
+      "options": [
+        "confirmar autoridade do ciclo com evidência e revisão adequada",
+        "confirmar autoridade do manifesto com evidência e revisão adequada",
+        "manter bloqueio e solicitar nova reconciliação"
+      ],
+      "default": "nenhuma; pendente",
+      "status": "CURSOR_RECONCILED_TO_CYCLE_V0033",
+      "response": "Autorizo investigação; o ciclo numérico mais recente é a autoridade do cursor conforme o contrato.",
+      "investigation_result": {
+        "contract": "ORCHESTRATION_CONTRACT_V1.md define o maior CYCLE numérico validado como autoridade do cursor e de next_role; MANIFEST não é segundo cursor e checkpoints nele podem ser históricos.",
+        "contract_blocker": "O mesmo contrato diz que campos de checkpoint do manifesto devem ser reconciliados com LIVE/ciclo e que divergência entre manifesto e ciclo produz BLOCKED_CONFLICT.",
+        "current_cycle": {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+          "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+          "sequence": 33,
+          "status": "READY_FOR_DRAMATURGO",
+          "next_role": "DRAMATURGO",
+          "last_event_id": "CHR001-M301-C05-22-20261109-001"
+        },
+        "chain_audit": {
+          "range": "CYCLE_V0001–CYCLE_V0033",
+          "sequence_gaps": 0,
+          "previous_cycle_blob_matches": true,
+          "source_refs_and_live_event_matches": true
+        },
+        "manifest": {
+          "path": "novydres/MANIFEST_V46.json",
+          "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+          "current_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0024.json",
+          "last_touched_commit": "418834f097883bf24b270f42fd54d286d490a8b8",
+          "disposition": "Registro histórico superado pelo MANIFEST_V47 no HEAD atual de master."
+        },
+        "disposition": "Cursor/next_role adjudicado a CYCLE_V0033 sob o contrato; MANIFEST_V47, no HEAD atual de master, também aponta a V0033. Divergência de ponteiro reconciliada. Nenhuma cena ou transição de papel é autorizada por esta decisão.",
+        "current_manifest": {
+          "path": "novydres/MANIFEST_V47.json",
+          "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+          "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+          "current_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json"
+        }
+      },
+      "evidence_refs": [
+        {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+          "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+        },
+        {
+          "path": "novydres/MANIFEST_V46.json",
+          "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba"
+        },
+        {
+          "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+          "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c"
+        }
+      ]
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Autorizar eventual promoção de arquitetura documental para uso operacional/master.",
+      "when_required": "D12, depois de auditoria, validação e readback.",
+      "options": [
+        "aprovar promoção explicitamente",
+        "rejeitar/solicitar remediação",
+        "manter apenas como proposta documental"
+      ],
+      "default": "manter apenas como proposta documental",
+      "status": "APPROVED_PENDING_GATES",
+      "response": "Sim para todos.",
+      "scope": "Todos os documentos propostos D05-D12 para consideração de promoção a uso operacional/master, após os gates correspondentes.",
+      "promotion_performed": false,
+      "condition": "Autorização registrada; nenhuma promoção ocorre enquanto conflitos/gates operacionais permanecerem bloqueados."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Fornecer ou aprovar ambiente de verdade autoral efetivamente segregado, caso D07 necessite solução secreta jogável.",
+      "when_required": "Antes de escrever ou narrar conteúdo truth-dependent.",
+      "options": [
+        "prover ambiente segregado com acesso negativo verificado",
+        "escolher variante aberta antes da narração",
+        "manter a investigação bloqueada"
+      ],
+      "default": "manter bloqueada",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "response": "Não precisa; comprometo-me a não olhar segredos.",
+      "disposition": "Compromisso registrado. Não fornece ACL efetiva, não aprova variante aberta e não autoriza leitura de D07_TRUTH_LOCKS; nenhum segredo foi lido. Conteúdo dependente de verdade oculta permanece bloqueado."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Autorizar cena/retomada do Narrador conforme os contratos operacionais vigentes.",
+      "when_required": "Somente quando ciclo, SCENE_READY e NARRATOR_PERMISSION satisfizerem seus próprios gates.",
+      "options": [
+        "autorizar por mecanismo vigente após validação",
+        "não autorizar ainda"
+      ],
+      "default": "não autorizar ainda",
+      "status": "NOT_GRANTED",
+      "response": "A resposta D12 não concede permissão de cena."
+    }
+  ]
+}

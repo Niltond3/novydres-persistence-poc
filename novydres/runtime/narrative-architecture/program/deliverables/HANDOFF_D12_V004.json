@@ -1,0 +1,50 @@
+{
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "BLOCKED_CONFLICT",
+  "gate": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": {
+    "status": "PENDING_REMOTE_READBACK",
+    "record": "execution-manifest.json e CHR001_D05-D12_RUN_STATE.json após publicação V004."
+  },
+  "input_design_head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86",
+  "input_master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "output_head": "resolve from remote branch after publication; no self-reference",
+  "outputs": [
+    "D05_PLAYER_APPROVAL_QUEUE_V004.json",
+    "AUDIT_D05_V005.json",
+    "HANDOFF_D05_V006.json",
+    "D06_CHRONICLE_BIBLE_V004.json",
+    "D06_TRANSFORMATION_PATHS_V004.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V004.json",
+    "AUDIT_D06_V004.json",
+    "HANDOFF_D06_V004.json",
+    "D07_PLAYER_APPROVAL_QUEUE_V004.json",
+    "AUDIT_D12_V004.json",
+    "HANDOFF_D12_V004.json",
+    "D12_RELEASE_CANDIDATE_V004.json",
+    "D12_VALIDATE_V004.py"
+  ],
+  "next_action": "O ponteiro de execução está reconciliado: MANIFEST_V47 aponta para CYCLE_V0033. Próximo trabalho é retimar M3.01 para antes de 1970 sem tornar Bart Cainita durante o ciclo, reconciliar a fonte state_v043 (blob lido contém M2.03 antigo), e validar a cadeia episódio/estado/LIVE/ciclo em novas versões. Não iniciar cena nem criar prompt de Narrador.",
+  "unresolved": [
+    "M3.01 ainda informa fim dos anos 1970, apesar da decisão autoral de situá-lo antes de 1970; Bart permanece mortal no ciclo atual.",
+    "Abraço forçado por Kuthulun até 1970-12-24 é alvo autoral, sem evento ou data exata estabelecidos.",
+    "O blob state_v043 referido pelo ciclo contém texto STATE v019/M2.03; proveniência atual do estado deve ser reconciliada.",
+    "Sem ACL efetiva ou variante aberta, conteúdo dependente de verdade autoral permanece bloqueado.",
+    "SCENE_READY e NARRATOR_PERMISSION não verificados; ciclo aponta DRAMATURGO."
+  ],
+  "restrictions": [
+    "documentary branch only until operational gates pass",
+    "master and narrative cycle remain read-only in this update",
+    "no retcon and no source retiming in this approval-recording update",
+    "no scene or character-state change",
+    "no XP/FV or sheet mutation",
+    "no hidden truth read or disclosure",
+    "no Narrator prompt"
+  ],
+  "narrator_release": "NOT_READY_FOR_NARRATOR",
+  "promotion_authorized": true,
+  "promotion_performed": false,
+  "version": "V004"
+}

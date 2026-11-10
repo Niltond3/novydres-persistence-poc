@@ -1,0 +1,89 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V004",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "route_policy": "O alvo autoral é o Abraço imposto por Kuthulun antes de 1970-12-25; Bart permanece mortal em M3.01, que deve ser retimado para antes de 1970. A fonte ainda não foi reconciliada, então não há evento, data diegética ou operação estabelecida.",
+  "routes": [
+    {
+      "id": "ROUTE-VAMPIRE-BY-2010",
+      "label": "forced Embrace before 1970-12-25, with later Cainite adaptation toward the 2010 horizon",
+      "preconditions": [
+        "versioned source reconciliation retimes all M3.01 chronology to before 1970 while Bartholomeu remains mortal throughout",
+        "reconcile episode, character-state, LIVE and cycle references; verify the current character-state source",
+        "a future scene must be separately authorized, causally played and persisted",
+        "record the forced Embrace as imposed by Kuthulun, independent of Bart's consent, only after it actually occurs",
+        "played post-Embrace experience covers body, Hunger/Beast, human ties, Cainite society, power and costs under current rules",
+        "a later horizon snapshot has continuity evidence"
+      ],
+      "if_unavailable": "Keep BLOCKED_CONFLICT; do not alter source history silently, infer that the Embrace occurred, or treat this authorial target as scene permission.",
+      "status": "AUTHORIAL_TARGET_SELECTED_PENDING_SOURCE_RECONCILIATION",
+      "target_window": "M3.01 before 1970; forced Embrace by Kuthulun before 1970-12-25; exact dates unknown.",
+      "player_rationale": "O jogador quer que Bart permaneça mortal durante M3.01 e seja abraçado à força por Kuthulun, independentemente do desejo dele. A proposta dramática inclui construção gradual com mais conflitos Cainitas, derrota diante de Kuthulun, separação familiar e adaptação social. Trata-se de direção autoral, não de evento."
+    },
+    {
+      "id": "ROUTE-NONVAMPIRIC-2010",
+      "label": "possible mortal or non-vampire state at the horizon",
+      "preconditions": [
+        "player approves this alternate target if the legacy vampire target is changed",
+        "state and continuity are evidenced"
+      ],
+      "if_unapproved": "This is not the selected authorial target; future changes require an explicit decision and source reconciliation.",
+      "status": "NOT_SELECTED_BY_PLAYER"
+    },
+    {
+      "id": "ROUTE-UNFINISHED-OR-EARLY-TERMINAL",
+      "label": "truthful unfinished, refused, failed, absent or terminal state",
+      "preconditions": [
+        "actual play or player choice causes it and evidence is persisted"
+      ],
+      "if_selected": "preserve consequences and do not add plot armor; phase may close without passing the selected target",
+      "status": "VALID_REPORTING; NOT_A_SUCCESS_SHORTCUT"
+    },
+    {
+      "id": "ROUTE-EXTENDED-OR-PAUSED-HORIZON",
+      "label": "pause or extend if plausibility cannot fit",
+      "preconditions": [
+        "identify timing/capacity conflict",
+        "player approves changing target window or treatment of horizon"
+      ],
+      "if_unapproved": "keep mismatch visible and block the dependent step",
+      "status": "PLAYER_DECISION_REQUIRED"
+    }
+  ],
+  "choice_contract": {
+    "approval_id": "APPROVAL-D06-001",
+    "no_default": "Silence does not change the authored forced-Embrace target; it also does not create an event, chronology reconciliation, or scene permission.",
+    "decision_before": "Source reconciliation and operational graduation; any scene still requires separate current-cycle readiness and Narrator permission.",
+    "safe_interim_work": "Documentary design independent of scene execution, truth-dependent content, and source retiming."
+  },
+  "coverage_matrix": [
+    {
+      "dimension": "body and supernatural condition",
+      "evidence": "source-backed event, applicable rule and lived consequence"
+    },
+    {
+      "dimension": "information and epistemic limits",
+      "evidence": "event-specific acquisition for protagonist and each NPC"
+    },
+    {
+      "dimension": "relationships and human ties",
+      "evidence": "formation, change, loss and 2010 continuity evidence"
+    },
+    {
+      "dimension": "society, institutions and territory",
+      "evidence": "causal contact and authorized position"
+    },
+    {
+      "dimension": "mechanics and powers",
+      "evidence": "rule source, acquisition authorization and ledger"
+    },
+    {
+      "dimension": "time and consequences",
+      "evidence": "supported date or UNKNOWN; no invented off-screen event"
+    }
+  ],
+  "input_head": "c3bba6e1495bd76c0f967fe45727388b9de0fb86"
+}
