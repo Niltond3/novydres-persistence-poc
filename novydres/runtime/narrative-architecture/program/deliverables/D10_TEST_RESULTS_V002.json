@@ -1,0 +1,209 @@
+{
+  "phase": "D10",
+  "status": "PASS",
+  "passed": 40,
+  "total": 40,
+  "catalog_matches_runner": true,
+  "tests": [
+    {
+      "id": "handoff gate rejects a symlink document",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "audit evidence rejects a symlink report",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "test evidence rejects a symlink report",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "event IDs derive from latest master checkpoint",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "fabricated or older event IDs are rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "exact acquisition source binds actor/event/method/fact",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "mismatched acquisition claim is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "exact player-decision authority is source-bound",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "event claims require exact event source record",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "causal links require exact typed source record",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "unreferenced generic fixture is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "source blob differing from exact cycle ref is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "real remote commit/tree/blob/content readback passes",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "synthetic commit SHA is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "fabricated blob SHA is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "master target is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "caller booleans cannot substitute for artifact manifest",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "handoff enum without pinned source is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "duplicated pending approval remains unresolved",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "divergent repeated approval requests remain pending",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "one approval cannot clear divergent repeated request content",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "unverified terminal approval status is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "source-backed approval resolution supersedes duplicated pending copies",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "approval resolution cannot use a different source decision",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "approval queue rejects a symlink document",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D12 rejects missing prior handoff evidence",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "material review finding cannot hide under PASS",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "resolved material finding has tracked linked remediation evidence",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "resolved evidence is bound to the exact finding ID",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "duplicate review finding IDs are rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "review evidence rejects report self-copy",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "review evidence rejects symlink tree entries",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "RFC 6901 rejects invalid array indexes and escapes",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "knowledge fact matches its acquisition",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "knowledge cannot claim a different acquired fact",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "CLI bundle mode runs and fails closed",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "CLI envelope mode runs and fails closed",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "CLI publication mode runs and fails closed",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "CLI publication mode accepts a verified readback",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "publication readback rejects a symlink artifact",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}

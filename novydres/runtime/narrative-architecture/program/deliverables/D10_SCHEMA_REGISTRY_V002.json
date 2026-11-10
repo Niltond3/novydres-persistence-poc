@@ -1,0 +1,1783 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/chr-001/d10/schema-registry/v002",
+  "title": "NOVYDRES CHR-001 D10 schema registry",
+  "registry_status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "source": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+    "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+    "schema_status": "PROPOSED_NON_OPERATIONAL",
+    "verification": "VERIFIED_READ_ONLY_COPY"
+  },
+  "type_map": {
+    "source": "#/source_schema/$defs/source",
+    "provenance": "#/source_schema/$defs/provenance",
+    "outcome": "#/source_schema/$defs/outcome",
+    "link": "#/source_schema/$defs/link",
+    "suspension": "#/source_schema/$defs/suspension",
+    "chronicle": "#/source_schema/$defs/chronicle",
+    "marco": "#/source_schema/$defs/marco",
+    "history_episode": "#/source_schema/$defs/history_episode",
+    "plot": "#/source_schema/$defs/plot",
+    "story": "#/source_schema/$defs/story",
+    "scene": "#/source_schema/$defs/scene",
+    "beat": "#/source_schema/$defs/beat",
+    "thread": "#/source_schema/$defs/thread",
+    "actor": "#/source_schema/$defs/actor",
+    "relationship": "#/source_schema/$defs/relationship",
+    "clue": "#/source_schema/$defs/clue",
+    "clock": "#/source_schema/$defs/clock",
+    "knowledge": "#/source_schema/$defs/knowledge",
+    "ledger": "#/source_schema/$defs/ledger",
+    "retcon": "#/source_schema/$defs/retcon",
+    "phase_handoff": "#/source_schema/$defs/phase_handoff"
+  },
+  "source_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:novydres:narrative:d01:contracts:v001",
+    "title": "NOVYDRES D01 Narrative Contracts V001",
+    "description": "PLAYER_SAFE. Candidate schemas for D01 review, NOT operational, no authority over frozen contracts.",
+    "schema_status": "PROPOSED_NON_OPERATIONAL",
+    "x_invariants": [
+      "D2 selection prompts do not form a narrative unlock tree.",
+      "Missing provenance is UNKNOWN, never retroactive attribution.",
+      "Only evidence supports CAUSAL links and terminal plot closure.",
+      "GM_HIDDEN denotes display classification, not access control.",
+      "D10 shall formalize and test full schemas; D01 initial validator checks critical semantic constraints."
+    ],
+    "$defs": {
+      "source": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "blob_sha",
+          "anchor",
+          "verification"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blob_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "VERIFIED",
+              "UNVERIFIED",
+              "DERIVED",
+              "CONFLICT"
+            ]
+          }
+        }
+      },
+      "provenance": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "record_kind",
+          "original_author",
+          "fact_status",
+          "source_refs"
+        ],
+        "properties": {
+          "record_kind": {
+            "type": "string",
+            "enum": [
+              "CANON_EVENT",
+              "PLAYER_DECLARATION",
+              "NPC_CLAIM",
+              "NARRATOR_ADJUDICATION",
+              "CANON_SOURCE",
+              "GM_PREPARED",
+              "GM_LOCKED_TRUTH",
+              "CONDITIONAL",
+              "EDITORIAL_RECONSTRUCTION",
+              "NEW_AUTHORIAL_DESIGN_POST_HOC",
+              "PROPOSED_RETCON",
+              "UNKNOWN"
+            ]
+          },
+          "original_author": {
+            "type": "string",
+            "enum": [
+              "PLAYER",
+              "NARRATOR",
+              "DRAMATURGO",
+              "SHARED_EMERGENT",
+              "AUTHOR_UNKNOWN"
+            ]
+          },
+          "fact_status": {
+            "type": "string",
+            "enum": [
+              "CONFIRMED",
+              "CLAIMED",
+              "PROPOSED",
+              "CONDITIONAL",
+              "UNKNOWN",
+              "CONFLICT"
+            ]
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "prepared_before_event": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "diegetic_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "as_of_event_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "outcome": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "route",
+          "condition",
+          "consequences",
+          "closure_test"
+        ],
+        "properties": {
+          "route": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "FAILURE",
+              "REFUSAL",
+              "OFFSCREEN",
+              "PARTIAL",
+              "ALTERNATIVE"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequences": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "closure_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "link": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "kind",
+          "sources"
+        ],
+        "properties": {
+          "target_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "CAUSAL",
+              "THEMATIC",
+              "NONE",
+              "UNKNOWN"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          }
+        }
+      },
+      "suspension": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reason",
+          "review_owner",
+          "review_trigger"
+        ],
+        "properties": {
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review_owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review_after": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "chronicle": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "chronicle_id",
+          "genre_promise",
+          "macro_question",
+          "canon_dependencies",
+          "marco_ids",
+          "period_constraints",
+          "timeline_horizon",
+          "post_embrace_playable_coverage",
+          "graduation_gate",
+          "frozen_boundaries",
+          "possible_final_states",
+          "status",
+          "spoiler_class",
+          "provenance"
+        ],
+        "properties": {
+          "chronicle_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "genre_promise": {
+            "type": "string",
+            "minLength": 1
+          },
+          "macro_question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canon_dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "marco_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "period_constraints": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "timeline_horizon": {
+            "type": "string",
+            "minLength": 1
+          },
+          "post_embrace_playable_coverage": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "graduation_gate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "frozen_boundaries": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "possible_final_states": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "central_plot_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "AUDITED",
+              "PROPOSED",
+              "APPROVED"
+            ]
+          },
+          "spoiler_class": {
+            "type": "string",
+            "enum": [
+              "PLAYER_SAFE",
+              "GM_HIDDEN"
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "marco": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "marco_id",
+          "chronicle_id",
+          "functional_goal",
+          "required_surfaces",
+          "coverage_test",
+          "coherence_test",
+          "consequence_test",
+          "state",
+          "consolidation_ref",
+          "provenance"
+        ],
+        "properties": {
+          "marco_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "chronicle_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "functional_goal": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_surfaces": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "coverage_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coherence_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consequence_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "NOT_STARTED",
+              "ACTIVE",
+              "CLOSED",
+              "BLOCKED"
+            ]
+          },
+          "consolidation_ref": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "causal_debts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "history_episode": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "history_episode_id",
+          "marco_id",
+          "temporal_position",
+          "entry_state_ref",
+          "situation_ref",
+          "player_response_ref",
+          "outcome_event_ref",
+          "exit_state_ref",
+          "material_output_refs",
+          "provenance"
+        ],
+        "properties": {
+          "history_episode_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "marco_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "temporal_position": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entry_state_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "situation_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "player_response_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "outcome_event_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_state_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "material_output_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "plot": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "plot_id",
+          "scope",
+          "status",
+          "origin_event_refs",
+          "dramatic_question",
+          "why_matters",
+          "pc_hook_noncoercive",
+          "actors",
+          "opposition",
+          "independent_pressure",
+          "clue_refs",
+          "clock_refs",
+          "outcomes",
+          "closure_test",
+          "plot_links",
+          "spoiler_class",
+          "provenance"
+        ],
+        "properties": {
+          "plot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "CHRONICLE",
+              "MAJOR",
+              "MEDIUM",
+              "MINOR"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "LATENT",
+              "ACTIVE",
+              "ESCALATING",
+              "SUSPENDED",
+              "RESOLVED",
+              "FAILED",
+              "ABANDONED_WITH_CONSEQUENCES",
+              "RESOLVED_OFFSCREEN_WITH_EVIDENCE",
+              "SUPERSEDED_WITH_PROVENANCE"
+            ]
+          },
+          "origin_event_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "dramatic_question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why_matters": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pc_hook_noncoercive": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "opposition": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "independent_pressure": {
+            "type": "string",
+            "minLength": 1
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "truth_lock_ref": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "clue_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "clock_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "outcomes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/outcome"
+            }
+          },
+          "closure_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "terminal_evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "suspension": {
+            "$ref": "#/$defs/suspension"
+          },
+          "plot_links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/link"
+            }
+          },
+          "spoiler_class": {
+            "type": "string",
+            "enum": [
+              "PLAYER_SAFE",
+              "GM_HIDDEN"
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        },
+        "description": "Terminal evidence and suspension review requirements are validated semantically."
+      },
+      "story": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "story_id",
+          "story_kind",
+          "marco_id",
+          "plot_ids",
+          "state",
+          "inciting_incident",
+          "why_now",
+          "goals",
+          "nonmandatory_entry",
+          "npc_agendas",
+          "dramatic_question",
+          "escalation",
+          "critical_choices",
+          "closure_routes",
+          "consequences",
+          "refusal_path",
+          "failure_path",
+          "temporal_mode",
+          "d2_selection_mode",
+          "provenance"
+        ],
+        "properties": {
+          "story_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "story_kind": {
+            "type": "string",
+            "enum": [
+              "STORY",
+              "PROVOCATION_SESSION",
+              "SIDE_QUEST",
+              "D2_LIBRARY_PROMPT"
+            ]
+          },
+          "marco_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "plot_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "ELIGIBLE",
+              "IN_PLAY",
+              "SUSPENDED",
+              "CLOSED_RESOLVED",
+              "CLOSED_FAILED",
+              "CLOSED_REFUSED",
+              "CLOSED_ABANDONED"
+            ]
+          },
+          "inciting_incident": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why_now": {
+            "type": "string",
+            "minLength": 1
+          },
+          "goals": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "nonmandatory_entry": {
+            "type": "string",
+            "minLength": 1
+          },
+          "npc_agendas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "dramatic_question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "escalation": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "critical_choices": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "closure_routes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/outcome"
+            }
+          },
+          "consequences": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "refusal_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "failure_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "temporal_mode": {
+            "type": "string",
+            "enum": [
+              "SPOTLIGHT",
+              "MONTAGE",
+              "ELISION",
+              "RETROSPECTIVE"
+            ]
+          },
+          "d2_selection_mode": {
+            "type": "string",
+            "enum": [
+              "D2_RNG_ELIGIBLE",
+              "CHR001_CURATED_SESSION",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "scene": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scene_id",
+          "story_id",
+          "state",
+          "present_actor_ids",
+          "entry_preconditions",
+          "viewpoint_limit_refs",
+          "stakes",
+          "potential_change",
+          "beat_refs",
+          "pre_roll_gate",
+          "exit_conditions",
+          "refusal_path",
+          "provenance"
+        ],
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "story_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "PREPARED",
+              "READY",
+              "IN_PLAY",
+              "INTERRUPTED",
+              "SUSPENDED",
+              "CLOSED"
+            ]
+          },
+          "present_actor_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "entry_preconditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "viewpoint_limit_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "stakes": {
+            "type": "string",
+            "minLength": 1
+          },
+          "potential_change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "beat_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "pre_roll_gate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_conditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "refusal_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "forces_pc_action": {
+            "type": "boolean",
+            "const": false
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "beat": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "beat_id",
+          "scene_id",
+          "trigger",
+          "actor",
+          "intended_change",
+          "if_not_triggered",
+          "forbidden_claims",
+          "provenance"
+        ],
+        "properties": {
+          "beat_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scene_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actor": {
+            "type": "string",
+            "enum": [
+              "NPC",
+              "WORLD",
+              "NARRATOR_REACTION",
+              "PLAYER_ONLY"
+            ]
+          },
+          "intended_change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "if_not_triggered": {
+            "type": "string",
+            "minLength": 1
+          },
+          "forbidden_claims": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "forces_pc_action": {
+            "type": "boolean",
+            "const": false
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "thread": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "thread_id",
+          "classification",
+          "status",
+          "owner_id",
+          "origin_event_ref",
+          "next_review_trigger",
+          "provenance"
+        ],
+        "properties": {
+          "thread_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "PLOT_THREAD",
+              "CONSEQUENCE",
+              "CLUE_CANDIDATE",
+              "INCIDENTAL",
+              "BACKGROUND_UNKNOWN"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "UNCLASSIFIED",
+              "OPEN",
+              "MONITORED",
+              "SUSPENDED",
+              "CLOSED_WITH_EVIDENCE"
+            ]
+          },
+          "owner_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "plot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "origin_event_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "next_review_trigger": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "actor": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "actor_id",
+          "actor_kind",
+          "as_of_event_id",
+          "goals",
+          "fears",
+          "limits",
+          "capabilities",
+          "knowledge_refs",
+          "relationship_refs",
+          "provenance"
+        ],
+        "properties": {
+          "actor_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actor_kind": {
+            "type": "string",
+            "enum": [
+              "PC",
+              "NPC",
+              "ORGANIZATION"
+            ]
+          },
+          "as_of_event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "goals": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "fears": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "limits": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "knowledge_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "relationship_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "relationship": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id",
+          "from_id",
+          "to_id",
+          "relation_kind",
+          "as_of_event_id",
+          "epistemic_status",
+          "evidence_refs",
+          "provenance"
+        ],
+        "properties": {
+          "edge_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation_kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "as_of_event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "CONFIRMED",
+              "PERCEIVED",
+              "CLAIMED",
+              "UNKNOWN"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "relationship_score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": -5,
+                "maximum": 5
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        },
+        "description": "Directed relationship; score B is optional and can be UNKNOWN. Do not infer reciprocity or assume neutral 0."
+      },
+      "clue": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "clue_id",
+          "fact_ref",
+          "critical",
+          "discovery_routes",
+          "truth_lock_status",
+          "truth_lock_ref",
+          "provenance"
+        ],
+        "properties": {
+          "clue_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fact_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "discovery_routes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "route_id",
+                "independent_mechanism",
+                "access_condition"
+              ],
+              "properties": {
+                "route_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "independent_mechanism": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "access_condition": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "truth_lock_status": {
+            "type": "string",
+            "enum": [
+              "NOT_APPLICABLE",
+              "UNDECIDED",
+              "CANDIDATE",
+              "LOCKED",
+              "REVISED_WITH_APPROVAL"
+            ]
+          },
+          "truth_lock_ref": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        },
+        "description": "Critical clues require two independent routes and truth-lock, validated semantically."
+      },
+      "clock": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "clock_id",
+          "actor_id",
+          "current",
+          "maximum",
+          "tick_trigger",
+          "event_evidence_refs",
+          "completion_effect"
+        ],
+        "properties": {
+          "clock_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actor_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "current": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "maximum": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tick_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "completion_effect": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "knowledge": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "knowledge_id",
+          "knower_id",
+          "fact_ref",
+          "as_of_event_id",
+          "acquisition_ref",
+          "epistemic_status",
+          "provenance"
+        ],
+        "properties": {
+          "knowledge_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "knower_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fact_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "as_of_event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acquisition_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "KNOWN",
+              "BELIEVED",
+              "CLAIMED",
+              "UNKNOWN"
+            ]
+          },
+          "provenance": {
+            "$ref": "#/$defs/provenance"
+          }
+        }
+      },
+      "ledger": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ledger_id",
+          "chronicle_id",
+          "as_of_event_id",
+          "event_refs",
+          "actor_state_refs",
+          "plot_state_refs",
+          "clue_dispositions",
+          "clock_states",
+          "open_thread_refs",
+          "terminal_evidence_refs"
+        ],
+        "properties": {
+          "ledger_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "chronicle_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "as_of_event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "actor_state_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "plot_state_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "clue_dispositions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "clock_states": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "open_thread_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "terminal_evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "retcon": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "change_id",
+          "kind",
+          "affected_refs",
+          "before_claim",
+          "after_proposal",
+          "evidence",
+          "downstream_impacts",
+          "alternatives",
+          "approval_required",
+          "approval_decision_id",
+          "status"
+        ],
+        "properties": {
+          "change_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "GAP_FILL_PROSPECTIVE",
+              "INTERPRETATION",
+              "RETCON_SOFT",
+              "RETCON_HARD",
+              "CANON_CONFLICT"
+            ]
+          },
+          "affected_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "before_claim": {
+            "type": "string",
+            "minLength": 1
+          },
+          "after_proposal": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "downstream_impacts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "approval_required": {
+            "type": "boolean"
+          },
+          "approval_decision_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PROPOSED",
+              "PENDING_PLAYER_APPROVAL",
+              "PLAYER_APPROVED",
+              "REJECTED",
+              "APPLIED_VERSIONED",
+              "STOP_CONFLICT"
+            ]
+          }
+        }
+      },
+      "phase_handoff": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "program_id",
+          "phase",
+          "status",
+          "repository",
+          "design_branch",
+          "design_content_commit_sha",
+          "master_head_sha_at_review",
+          "cycle",
+          "inputs",
+          "outputs",
+          "tests",
+          "unresolved",
+          "next_phase",
+          "next_prompt_path",
+          "spoiler_class"
+        ],
+        "properties": {
+          "program_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "phase": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "PENDING_PLAYER_APPROVAL",
+              "STOP_CONFLICT"
+            ]
+          },
+          "repository": {
+            "type": "string",
+            "minLength": 1
+          },
+          "design_branch": {
+            "type": "string",
+            "minLength": 1
+          },
+          "design_content_commit_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "master_head_sha_at_review": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "cycle": {
+            "type": "object"
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "unresolved": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "next_phase": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "next_prompt_path": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "spoiler_class": {
+            "const": "PLAYER_SAFE"
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "This registry copies the frozen D01 proposal for validation only.",
+    "It does not activate, amend, supersede or promote D01 contracts.",
+    "Operational authorization, scene readiness and narrator permission remain separate gates.",
+    "D10 rejects GM_HIDDEN payloads outright because it does not implement an independently verifiable segregation attestation mechanism."
+  ],
+  "compatibility_notes": [
+    {
+      "constraint": "D01 phase_handoff.status uses a narrower vocabulary and remains byte-for-byte unchanged.",
+      "handling": "D10_PHASE_ENVELOPE_SCHEMA_V002.json is an additive documentary envelope; D01 is not modified.",
+      "authority": "ADDITIVE_DOCUMENTARY_ADAPTER_ONLY"
+    }
+  ],
+  "validator_enforced_bundle_records": {
+    "source_checkpoint": {
+      "required": "source_head and an independently supplied expected source HEAD",
+      "checks": [
+        "repository HEAD equals expected HEAD",
+        "source path remains beneath repository root",
+        "source path is tracked at expected HEAD",
+        "working bytes and expected Git tree blob match pinned blob SHA"
+      ]
+    },
+    "npc_knowledge_acquisition": {
+      "required": [
+        "acquisition_id",
+        "knower_id",
+        "event_id",
+        "method",
+        "evidence_id",
+        "source"
+      ],
+      "methods": [
+        "OBSERVED",
+        "HEARD",
+        "READ",
+        "TOLD",
+        "INFERRED",
+        "SHARED",
+        "OTHER"
+      ],
+      "checks": [
+        "actor match",
+        "known checkpoint event",
+        "verified evidence record",
+        "acquisition does not postdate knowledge",
+        "source file is tracked at the expected Git HEAD and blob SHA matches"
+      ]
+    },
+    "player_decision": {
+      "required": [
+        "decision_id",
+        "decision_maker",
+        "decision_kind",
+        "scope",
+        "affected_refs",
+        "event_id",
+        "evidence_id",
+        "source"
+      ],
+      "retcon_approval_checks": [
+        "decision_maker PLAYER",
+        "RETCON_APPROVAL",
+        "EXACT_RETCON",
+        "exact affected_refs",
+        "verified source and evidence"
+      ]
+    },
+    "gm_hidden": "All GM_HIDDEN payloads are rejected while this proposal lacks an independently verified segregation attestation mechanism.",
+    "phase_success": "PASS/PASS_WITH_UNKNOWN and D12 final release require all catalogued validation checks to pass, complete technical/literary reviews and valid publication/readback."
+  },
+  "document_id": "D10_SCHEMA_REGISTRY_V002",
+  "version": "V002",
+  "validator": "D10_VALIDATE_V002.py",
+  "validation_contract": {
+    "document_integrity": "Authoritative cycles, cycle-ref sources, phase handoffs, approval queues, audit and test reports, review evidence and publication artifacts must each be regular Git blobs (mode 100644 or 100755, type blob) pinned to the verified tree; symlinks and other tree entries fail closed.",
+    "checkpoint": "Derived from numerically latest CYCLE_V*.json on verified origin/master; caller event IDs must equal checkpoint.last_event_id.",
+    "semantic_sources": "Claim-bearing acquisition, player decision, event, and causal refs resolve exact RFC6901 JSON pointers in cycle.refs blobs and match each asserted field.",
+    "publication": "Remote ref, commit parent/tree, added-file diff, blob SHAs, and bytes are fetched and verified from origin; boolean attestations are not accepted.",
+    "prior_gates": "Each D01-D11 gate derives from its exact version-pinned authoritative handoff at verified HEAD. Repeated approval entries are fingerprinted over every request field other than stable ID, status and resolution metadata. Divergent or unverifiable copies remain pending; a terminal resolution is accepted only when every copy has the same SHA256 request fingerprint, the queue repeats that fingerprint, and one exact source-backed PLAYER_DECISION binds the same fingerprint, decision ID, status, scope, affected refs, event and evidence.",
+    "approval_resolutions": "APPROVED, DECLINED, and NOT_REQUIRED require a matching source-backed PLAYER_DECISION in a blob referenced by the numerically latest master cycle. The queue resolution and source decision must bind the SHA256 of every exact request field other than stable ID, status and resolution metadata. Divergent copies cannot be cleared by one approval; an inline queue status alone never resolves or grants authority.",
+    "review_findings": "A passing review cannot contain OPEN findings. Every finding must have a unique, non-empty stable ID within its report. MATERIAL, BLOCKER, or CRITICAL findings must be RESOLVED with a structured record binding the exact finding ID, a remediation summary and one or more typed refs to regular deliverable blobs pinned at the review HEAD with resolving strict JSON-pointer or text anchors; symlinks and non-blob tree entries are rejected. The validator proves linkage and source integrity, while an independent reviewer judges semantic relevance and checks that references substantively support the remediation. Exact self-paths and byte-identical copies are rejected; modified copies cannot be identified by hash alone and remain an independent-review limit. BOUNDED_UNKNOWN requires PASS_WITH_UNKNOWN. Findings need recognized severity/disposition values."
+  },
+  "runtime_support": {
+    "required_artifacts": [
+      {
+        "path": "D10_VALIDATE_V001.py",
+        "blob_sha": "c9dd68a43ef845a39f7f5ae41bbcb25700b3f386",
+        "role": "Structural validator implementation dependency; not an independent phase gate."
+      },
+      {
+        "path": "D10_SCHEMA_REGISTRY_V001.json",
+        "blob_sha": "cb09ed0f172bd63c0bffe8a4d3fdd2a0356d8a03",
+        "role": "Embedded frozen D01 schema registry consumed by the structural validator."
+      }
+    ],
+    "external_frozen_input": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Existing frozen contract copied into the scratch test fixture; not a new D10 runtime artifact."
+    },
+    "authority_note": "V001 support files are executable dependencies for V002; including them grants no operational authority and does not mark the old pending V001 phase gate as passed."
+  }
+}

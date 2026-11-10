@@ -1,0 +1,150 @@
+{
+  "document_id": "HANDOFF_D10_V002",
+  "version": "V002",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "phase": "D10",
+  "gate": "PASS_WITH_UNKNOWN",
+  "input_head": "308210837d96f0760b4cf93ccb3d3d64a83c7ef8",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "scope": "D10 formalizou contratos técnicos propostos, adaptadores, validação semântica e testes; nenhum estado narrativo ou operacional foi alterado.",
+  "artifacts": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V001.py",
+      "blob_sha": "c9dd68a43ef845a39f7f5ae41bbcb25700b3f386",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V001.json",
+      "blob_sha": "cb09ed0f172bd63c0bffe8a4d3fdd2a0356d8a03",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V002.json",
+      "blob_sha": "6c53a942200607fb4065be4b2aa828632018da02",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V002.json",
+      "blob_sha": "54b7c8a2c30f225dfec44545619b800b83c82ec1",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V002.json",
+      "blob_sha": "49d976fa5498954f69b9702aea2c629628fbb939",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_HARDENING_TESTS_V002.json",
+      "blob_sha": "aee7b6aefe436b0c8093c506593445affbeabe02",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V002.json",
+      "blob_sha": "27601ee34cc7f991ab3a2777bc867f14b5add526",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V002.py",
+      "blob_sha": "9aef34bd49535974b0cef6032caf124e4cfb13e3",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V002.json",
+      "blob_sha": "8b97cf1567df2985b5e1160d6903a3de63046c5e",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_LITERARY_REVIEW_V002.json",
+      "blob_sha": "fffc3bebcffbd82c7ceaa7ebe9b7d131a7037c33",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D10_V002.json",
+      "blob_sha": "e1689dcf055a26c57e35041d88e00bce502d7a1d",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/NEXT_PROMPT_D11_V001.md",
+      "blob_sha": "5f3a4ce9ba5e27e353f91f74a9eacd2af8f0e342",
+      "spoiler_class": "PLAYER_SAFE"
+    }
+  ],
+  "validation": {
+    "command": "python3 D10_VALIDATE_V002.py --self-test --report-out D10_TEST_RESULTS_V002.json",
+    "passed": 40,
+    "total": 40,
+    "failed": 0,
+    "gate": "PASS_WITH_UNKNOWN",
+    "catalog_matches_runner": true
+  },
+  "independent_review": {
+    "technical": "PASS_WITH_UNKNOWN",
+    "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+    "material_findings_open": 0,
+    "material_findings_resolved": 1,
+    "literary": "NOT_APPLICABLE",
+    "literary_scope_confirmed_by_same_independent_reviewer": true
+  },
+  "support_only": [
+    "D10_VALIDATE_V001.py",
+    "D10_SCHEMA_REGISTRY_V001.json"
+  ],
+  "pending_player_decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "status": "PENDING_PLAYER_APPROVAL"
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "status": "PENDING_PLAYER_APPROVAL"
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "status": "BLOCKED_EXTERNAL_DEPENDENCY"
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "status": "NOT_GRANTED"
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "status": "PENDING_PLAYER_APPROVAL"
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "status": "PENDING_PLAYER_APPROVAL"
+    }
+  ],
+  "bounded_unknowns": [
+    "D01 e D10 permanecem PROPOSED_NON_OPERATIONAL; nenhum contrato foi ativado.",
+    "Repositório GitHub privado não fornece segregação efetiva GM_HIDDEN; D10 não publica verdade autoral bloqueada nem trata placeholder como verdade bloqueada.",
+    "Decisões de jogador herdadas de D05–D07 permanecem abertas ou bloqueadas; não há autorização de promoção operacional, SCENE_READY ou NARRATOR_PERMISSION.",
+    "Validação de referências e estruturas não determina verdade histórica, autoria ou causalidade além da evidência exata citada."
+  ],
+  "narrative_checkpoint": {
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "character_mortal": true,
+    "embrace_occurred": false,
+    "chronicle_2010": "FUTURE",
+    "preparation": "STALE"
+  },
+  "publication": {
+    "remote": "origin",
+    "target_branch": "design/chr001-narrative-program-d01",
+    "force_push": false,
+    "input_head": "308210837d96f0760b4cf93ccb3d3d64a83c7ef8",
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "output_head_resolution": "Resolve from remote branch HEAD after publication; commit, parent, tree, every artifact blob and exact content readback are recorded in the external execution manifest. This handoff intentionally does not embed its own commit SHA."
+  },
+  "next_safe_action": "Revalidate repository and cycle, then run independent general audit D11. Keep D10 as a proposal-only technical contract.",
+  "narrator_ready": false,
+  "operational_mutation": false
+}

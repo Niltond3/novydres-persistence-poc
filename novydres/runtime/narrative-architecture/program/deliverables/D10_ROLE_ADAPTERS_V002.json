@@ -1,0 +1,136 @@
+{
+  "document_id": "D10_ROLE_ADAPTERS_V002",
+  "version": "V002",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "anchor": "Orthogonal lifecycle gates; AUTHORIAL_TRUTH_LOCKED, SCENE_READY, NARRATOR_PERMISSION."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "anchor": "D10 role adapters and emergency route to Dramaturgo."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V002.json",
+      "blob_sha": "6c53a942200607fb4065be4b2aa828632018da02",
+      "anchor": "D10 V002 evidence, request-bound approvals, finding-linked remediation records, readback and runtime support manifest."
+    }
+  ],
+  "roles": {
+    "PLAYER": {
+      "mode": "READ_ONLY",
+      "allow": [
+        "PLAYER_SAFE"
+      ],
+      "deny": [
+        "GM_HIDDEN",
+        "unapproved_operations",
+        "scene_authorization"
+      ],
+      "on_unknown": "preserve_UNKNOWN"
+    },
+    "NARRATOR": {
+      "mode": "HOLD_PROPOSED_NON_OPERATIONAL",
+      "preconditions": [
+        "The current D10 adapter always returns HOLD for NARRATOR while D01/D10 remain PROPOSED_NON_OPERATIONAL.",
+        "semantic_validation_passed_for_exact_payload",
+        "A future adapter must prove semantic_validation_passed_for_exact_payload against verified sources; a caller flag alone is insufficient.",
+        "A future separately approved operational adapter must validate the exact payload and source blobs before projection.",
+        "SCENE_READY and NARRATOR_PERMISSION must be independently verified for the same exact scene and event.",
+        "Player consent, documentary release, all required gates, operational commit and readback must be verified from authoritative evidence; caller-supplied booleans are never authority."
+      ],
+      "max_scenes_per_handoff": 1,
+      "deny": [
+        "all narration while this proposal-only adapter is in force",
+        "caller-supplied flags as authorization",
+        "GM_HIDDEN_without_effective_segregation",
+        "closed_scenes",
+        "future_outcomes",
+        "unacquired_NPC_knowledge",
+        "retcons_without_express_approval"
+      ],
+      "on_failed_preflight": "HOLD_AND_ROUTE_TO_DRAMATURGO"
+    },
+    "DRAMATURGO": {
+      "mode": "EDITORIAL_READ_AND_PREPARE",
+      "allow": [
+        "PLAYER_SAFE",
+        "UNKNOWN",
+        "proposals"
+      ],
+      "deny": [
+        "operational_mutation_without_authorization",
+        "all_GM_HIDDEN_payloads_until_future_independent_segregation_contract"
+      ],
+      "on_emergency": "HOLD_AND_REVIEW; no narration, mutation or secret projection"
+    },
+    "AUDITOR": {
+      "mode": "READ_ONLY",
+      "allow": [
+        "PLAYER_SAFE",
+        "provenance",
+        "validation_results"
+      ],
+      "deny": [
+        "GM_HIDDEN_without_effective_segregation",
+        "write_or_promote"
+      ]
+    },
+    "ORCHESTRATOR": {
+      "mode": "DOCUMENTARY_COORDINATION",
+      "allow": [
+        "new_proposed_artifacts_on_authorized_design_branch"
+      ],
+      "deny": [
+        "master_write",
+        "canon_edit",
+        "cycle_mutation",
+        "mechanical_grants",
+        "scene_execution",
+        "force_push"
+      ]
+    }
+  },
+  "global_rules": [
+    "D01 schema_status PROPOSED_NON_OPERATIONAL cannot satisfy narrator operational preconditions.",
+    "NARRATOR_PERMISSION and SCENE_READY are independent, exact-scene checks.",
+    "A private repository is not effective GM-hidden segregation; this D10 proposal rejects every GM_HIDDEN payload because no independently verified segregation attestation mechanism exists.",
+    "An empty placeholder is not AUTHORIAL_TRUTH_LOCKED.",
+    "An emergency routes to Dramaturgo and leaves the scene on HOLD.",
+    "Role adaptation is projection only; it cannot create facts, knowledge, reciprocal relationship edges, causal links or events.",
+    "Each projection validates the exact bundle and requires source paths and blob SHAs to match the Git tree at a caller-independent expected source HEAD.",
+    "NPC knowledge requires a source-backed acquisition record bound to the knower, an in-checkpoint event, method, verified evidence and event ordering; free-form acquisition ID lists have no authority.",
+    "Applied retcons require a structured player decision record backed by verified source/evidence, with exact RETCON_APPROVAL scope and exact affected references.",
+    "Caller-supplied booleans cannot establish segregation, narrator permission, scene readiness, consent, release approval or readback.",
+    "Successful phase transitions and D12 final release require every validation check to pass, completed reviews, authorized branch publication, and verified readback.",
+    "Caller-supplied event IDs are never authoritative; IDs are derived from the numerically latest cycle on the independently verified master ref.",
+    "Claim-bearing source refs require an exact JSON pointer into a blob referenced by that cycle and exact field equality for each asserted claim.",
+    "D12 gate values are resolved from pinned current handoffs; every approval queue is read from the same Git tree and unresolved entries block final release.",
+    "Publication success requires Git fetch, actual remote ref, commit parent, tree, added paths, blob IDs and bytes; booleans and SHA-shaped strings alone have no evidentiary value.",
+    "Every authoritative cycle, semantic source, phase handoff, approval queue, review/test report, remediation evidence ref and published artifact must be a regular Git blob pinned to its verified tree; symlinks and non-blob entries fail closed.",
+    "Each KNOWN knowledge fact_ref must equal the fact_ref of the exact source-backed acquisition referenced by acquisition_ref; an acquisition of one fact cannot support another.",
+    "Approval queues are grouped by stable decision ID and fingerprinted over every player-facing request field except stable ID, status and resolution metadata. Divergent or unverifiable copies remain pending; a terminal status can resolve copies only when all request fingerprints match, the queue and exact latest-cycle PLAYER_DECISION bind that SHA256, and decision ID, status, scope, affected refs, event and evidence match.",
+    "Review finding IDs must be unique and non-empty within each report. A review cannot pass with OPEN findings; material findings require a structured remediation record bound to that exact finding ID and typed refs to regular deliverable blobs whose SHA and anchor resolve at the pinned review HEAD; symlinks and other non-blob entries fail closed. The validator proves linkage and source integrity; independent review checks substantive relevance. Exact self-paths and byte-identical copies fail closed; modified copies cannot be detected from hashes alone and require independent semantic scrutiny; bounded unknowns require PASS_WITH_UNKNOWN.",
+    "D10 V002 runtime includes tracked support artifact D10_VALIDATE_V001.py; its V001 label is dependency provenance only and does not confer an earlier phase gate.",
+    "D10 V002 runtime includes tracked support artifact D10_SCHEMA_REGISTRY_V001.json; its V001 label is dependency provenance only and does not confer an earlier phase gate."
+  ],
+  "emergency_flow": {
+    "gate_failure": "HOLD",
+    "route": "DRAMATURGO",
+    "narration": "PROHIBITED_UNTIL_REVALIDATED",
+    "mutation": "PROHIBITED"
+  },
+  "validation_behavior": {
+    "checkpoint": "The validator selects the numerically highest CYCLE_V*.json from origin/master, checks its blob and derives the only supported event cursor from checkpoint.last_event_id. The caller bundle must match that exact cycle; unsupported earlier event IDs remain UNKNOWN.",
+    "semantic_sources": "Acquisition, PLAYER decision, CANON_EVENT and CAUSAL_LINK claims require exact JSON pointer evidence within the latest cycle refs and exact asserted-field equality. Generic tracked files and source verification labels cannot prove claims.",
+    "publication": "The validator fetches origin refs and checks current documentary branch ancestry, actual commit parent and tree, new-file-only deliverable diff, and every manifest blob/content. It does not trust booleans.",
+    "prior_gates": "Each D01-D11 status derives from its exact version-pinned authoritative handoff at verified HEAD. Repeated approval entries are fingerprinted over every request field other than stable ID, status and resolution metadata; divergent copies remain pending. A terminal resolution requires the queue, every repeated request copy and the exact latest-cycle PLAYER_DECISION to bind the same SHA256 request fingerprint and matching decision ID, status, scope, affected refs, event and evidence.",
+    "reviews": "Technical and literary review status requires a tracked report with matching phase/role, reviewer identity distinct from author, result and structured findings with unique stable IDs. A passing result is rejected for OPEN findings; MATERIAL/BLOCKER/CRITICAL require RESOLVED plus a record bound to the exact finding ID, a remediation summary and typed source refs to regular Git blobs pinned to the review HEAD with resolving JSON-pointer or text anchors. The validator checks source integrity and linkage; independent reviewers judge substantive relevance and detect modified copies. BOUNDED_UNKNOWN requires PASS_WITH_UNKNOWN.",
+    "narrator": "Always HOLD while the D01/D10 contracts remain PROPOSED_NON_OPERATIONAL; no D10 artifact grants operational permission."
+  }
+}

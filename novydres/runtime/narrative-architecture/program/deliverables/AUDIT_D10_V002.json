@@ -1,0 +1,162 @@
+{
+  "document_id": "AUDIT_D10_V002",
+  "version": "V002",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "phase": "D10",
+  "gate": "PASS_WITH_UNKNOWN",
+  "input_head": "308210837d96f0760b4cf93ccb3d3d64a83c7ef8",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "scope": "Formalização técnica dos contratos D01 como schemas propostos, adaptadores de papel, envelope de fase, validação semântica e evidência Git. Não promove contratos, não altera cânone e não executa estado narrativo.",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "anchor": "Contrato congelado usado como cópia de referência; permanece PROPOSED_NON_OPERATIONAL."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "anchor": "AUTHORIAL_TRUTH_LOCKED, SCENE_READY e NARRATOR_PERMISSION são gates distintos."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "anchor": "Mandato D10 para schemas, adaptadores, validação e testes adversariais."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V002.json",
+      "blob_sha": "a01ea811e544be8be53ecb552beb3c84a419f5d8",
+      "anchor": "Incertezas de proveniência, conflitos e aprovações preservadas."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D09_V001.json",
+      "blob_sha": "f1f3760b5a5fd25fec059383e3aecc4bce5d67f6",
+      "anchor": "Gate D09, ciclo de referência e decisões ainda pendentes."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V001.py",
+      "blob_sha": "c9dd68a43ef845a39f7f5ae41bbcb25700b3f386",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V001.json",
+      "blob_sha": "cb09ed0f172bd63c0bffe8a4d3fdd2a0356d8a03",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V002.json",
+      "blob_sha": "6c53a942200607fb4065be4b2aa828632018da02",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V002.json",
+      "blob_sha": "54b7c8a2c30f225dfec44545619b800b83c82ec1",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V002.json",
+      "blob_sha": "49d976fa5498954f69b9702aea2c629628fbb939",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_HARDENING_TESTS_V002.json",
+      "blob_sha": "aee7b6aefe436b0c8093c506593445affbeabe02",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V002.json",
+      "blob_sha": "27601ee34cc7f991ab3a2777bc867f14b5add526",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V002.py",
+      "blob_sha": "9aef34bd49535974b0cef6032caf124e4cfb13e3",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V002.json",
+      "blob_sha": "8b97cf1567df2985b5e1160d6903a3de63046c5e",
+      "spoiler_class": "PLAYER_SAFE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_LITERARY_REVIEW_V002.json",
+      "blob_sha": "fffc3bebcffbd82c7ceaa7ebe9b7d131a7037c33",
+      "spoiler_class": "PLAYER_SAFE"
+    }
+  ],
+  "technical_validation": {
+    "command": "python3 D10_VALIDATE_V002.py --self-test --report-out D10_TEST_RESULTS_V002.json",
+    "passed": 40,
+    "total": 40,
+    "failed": 0,
+    "result": "PASS_WITH_UNKNOWN",
+    "catalog_alignment": "40 IDs únicos, na mesma ordem no catálogo, runner e resultado; todos PASS.",
+    "coverage": "Git tree modes e blob hashes; checkpoint numérico mais recente; referências semânticas; aquisição de conhecimento; aprovações vinculadas ao pedido e repetição de filas; IDs e remediações de revisão; RFC 6901; publicação normal e readback remoto local."
+  },
+  "review": {
+    "technical": {
+      "status": "PASS_WITH_UNKNOWN",
+      "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+      "report_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V002.json",
+        "blob_sha": "8b97cf1567df2985b5e1160d6903a3de63046c5e"
+      }
+    },
+    "literary": {
+      "status": "NOT_APPLICABLE",
+      "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+      "report_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_LITERARY_REVIEW_V002.json",
+        "blob_sha": "fffc3bebcffbd82c7ceaa7ebe9b7d131a7037c33"
+      },
+      "reason": "D10 contém contratos técnicos, não ficção narrativa."
+    },
+    "open_material_findings": 0,
+    "resolved_material_findings": 1
+  },
+  "remediation_history": [
+    {
+      "finding_id": "D10-TECH-001",
+      "result": "RESOLVED",
+      "action": "Fixtures regulares válidas agora são aceitas; as variantes symlink são rejeitadas por todos os consumidores com motivo explícito de entrada Git não regular; testes reforçados e reexecutados 40/40."
+    }
+  ],
+  "support_dependencies": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V001.py",
+      "blob_sha": "c9dd68a43ef845a39f7f5ae41bbcb25700b3f386",
+      "purpose": "Dependência de execução herdada do contrato D01; cópia de suporte, não gate autônomo."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V001.json",
+      "blob_sha": "cb09ed0f172bd63c0bffe8a4d3fdd2a0356d8a03",
+      "purpose": "Registry carregado pela camada de compatibilidade; cópia de suporte, não autorização operacional."
+    }
+  ],
+  "bounded_unknowns": [
+    "D01 e D10 permanecem PROPOSED_NON_OPERATIONAL; nenhum contrato foi ativado.",
+    "Repositório GitHub privado não fornece segregação efetiva GM_HIDDEN; D10 não publica verdade autoral bloqueada nem trata placeholder como verdade bloqueada.",
+    "Decisões de jogador herdadas de D05–D07 permanecem abertas ou bloqueadas; não há autorização de promoção operacional, SCENE_READY ou NARRATOR_PERMISSION.",
+    "Validação de referências e estruturas não determina verdade histórica, autoria ou causalidade além da evidência exata citada."
+  ],
+  "narrative_checkpoint": {
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "character_mortal": true,
+    "embrace_occurred": false,
+    "chronicle_2010": "FUTURE",
+    "preparation": "STALE"
+  },
+  "literary_review": "NOT_APPLICABLE; D11 still includes literary review of D01–D10.",
+  "narrator_ready": false,
+  "operational_mutation": false
+}

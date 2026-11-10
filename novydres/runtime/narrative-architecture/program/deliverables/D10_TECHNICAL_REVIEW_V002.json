@@ -1,0 +1,59 @@
+{
+  "document_id": "D10_TECHNICAL_REVIEW_V002",
+  "version": "V002",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "phase": "D10",
+  "review_role": "technical",
+  "author_id": "Codex Orchestrator CHR-001",
+  "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+  "result": "PASS_WITH_UNKNOWN",
+  "scope": "Revisão independente adversarial das estruturas, adaptadores, validador executável, evidências Git e catálogo de testes D10 V002, incluindo a correção dos casos de symlink.",
+  "findings": [
+    {
+      "id": "D10-TECH-001",
+      "severity": "MATERIAL",
+      "disposition": "RESOLVED",
+      "summary": "A primeira versão dos casos de symlink para relatórios aceitava erro de validação não relacionado ao modo Git; a fixture inválida podia mascarar a ausência do guard no consumidor.",
+      "resolution_evidence": [
+        {
+          "finding_id": "D10-TECH-001",
+          "remediation": "Substituídas as fixtures por documentos regulares válidos; cada consumidor aceita a fixture regular e exige que a versão symlink retorne a razão específica de entrada Git não regular. O runner confirma a chamada direta ao helper e a rejeição específica por handoff, auditoria e teste.",
+          "refs": [
+            {
+              "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V002.py",
+              "blob_sha": "9aef34bd49535974b0cef6032caf124e4cfb13e3",
+              "anchor_kind": "TEXT_LITERAL",
+              "anchor": "assert_regular_then_symlink_rejected"
+            },
+            {
+              "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_HARDENING_TESTS_V002.json",
+              "blob_sha": "aee7b6aefe436b0c8093c506593445affbeabe02",
+              "anchor_kind": "JSON_POINTER",
+              "anchor": "/test_cases/0/id"
+            },
+            {
+              "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V002.json",
+              "blob_sha": "27601ee34cc7f991ab3a2777bc867f14b5add526",
+              "anchor_kind": "JSON_POINTER",
+              "anchor": "/tests/0/result"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D10-TECH-002",
+      "severity": "MEDIUM",
+      "disposition": "BOUNDED_UNKNOWN",
+      "summary": "A validação comprova integridade estrutural, referências e evidências declaradas; não estabelece verdade autoral, promoção operacional nem segregação efetiva de material GM_HIDDEN. Essas autoridades continuam fora do escopo de D10."
+    }
+  ],
+  "review_notes": [
+    "40 casos executáveis têm IDs únicos e alinhados em ordem entre catálogo e resultado; todos PASS.",
+    "Os consumidores auditados usam leitura de blob Git regular com modo e conteúdo vinculados à árvore no HEAD informado.",
+    "Nenhuma falha material permanece aberta."
+  ],
+  "literary_scope": "D10 só formaliza estruturas e verificadores técnicos; a revisão literária foi considerada NOT_APPLICABLE por não haver cenas, diálogos ou ficção redigida."
+}
