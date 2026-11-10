@@ -1,0 +1,237 @@
+{
+  "document_id": "D06_SOURCE_RECONCILIATION_V002",
+  "program_id": "CHR001_NARRATIVE_PROGRAM",
+  "phase": "D06_D12_SOURCE_RECONCILIATION",
+  "version": "V002",
+  "date": "2026-11-10",
+  "classification": "PLAYER_SAFE_DOCUMENTARY_CANDIDATE",
+  "status": "RECONCILED_FOR_PLANNING_WITH_BOUNDED_UNKNOWN; OPERATIONAL_BLOCKED",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "design_branch": {
+    "name": "design/chr001-narrative-program-d01",
+    "head_read": "1360dbd2bad2124859f1d145c69b0c41ec589347"
+  },
+  "master": {
+    "head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "tree_read": "d39f499a8c8fe0ac27ba17469598d80e0b6fd5f5",
+    "modified_by_this_run": false
+  },
+  "sources": [
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+      "use": "current manifest cursor"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "use": "current checkpoint and next-role authority"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "use": "cursor authority rules"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "use": "historical episode preserved as source parent"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a",
+      "use": "provenance mismatch investigated; not treated as current state"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+      "use": "current open state corroborating C05 and mortality"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf",
+      "use": "current entrypoints and event"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "use": "bounded evidence for Mary and the injured man; not secret source"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "use": "current open-thread index"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "use": "player-selected future sire identity"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b",
+      "use": "local Gangrel lineage language; not proof of all player-supplied culture claims"
+    },
+    {
+      "path": "novydres/.AGENT.md",
+      "ref": "design/chr001-narrative-program-d01@1360dbd2bad2124859f1d145c69b0c41ec589347",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc",
+      "use": "versioned-source and no-silent-retcon rules"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "ref": "design/chr001-narrative-program-d01@1360dbd2bad2124859f1d145c69b0c41ec589347",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630",
+      "use": "terminology and context check"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "use": "pre-1970 planning copy; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "use": "reconstructed planning checkpoint; non-operational"
+    }
+  ],
+  "required_d12_v001_reads": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V001.json",
+      "blob_sha": "c08c91ddf19d63e44e60d3b2448e212b00141b64"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V001.json",
+      "blob_sha": "67aed57c8dbf4ed4c24dabddd33c8b35716bed3c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V001.json",
+      "blob_sha": "0e1d89d8b303305bddc6d6a877ba95b4b8c6eb6c"
+    }
+  ],
+  "latest_prior_d12_reads": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V004.json",
+      "blob_sha": "be4a3d4b499ce643f51a346baeaf6d39ec4ecde0"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V004.json",
+      "blob_sha": "bdb5b7a6a9995104f093d19a2096726aef2e6204"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V004.json",
+      "blob_sha": "a1e9179c801ab2784ee9eb9ff97faa69377f4ce7"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V004.py",
+      "blob_sha": "198108985e7fdc6853bf12526981a903ba8d95dd",
+      "rerun": "PASS: 62/62 D12 V004 assertions"
+    }
+  ],
+  "local_records_read": [
+    {
+      "path": "/home/nilton_neto/Documents/Codex/2026-11-09-novydres-chr-001-codex-orquestrador-geral-2/execution-manifest.json",
+      "sha256": "0286dad22a87a973de539d9ce95670983e283dba600f94069ae49cd058731d47",
+      "reported_design_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+      "reported_master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+    },
+    {
+      "path": "/home/nilton_neto/Documents/Codex/2026-11-09-novydres-chr-001-codex-orquestrador-geral-2/CHR001_D05-D12_RUN_STATE.json",
+      "sha256": "87249ad00b4e7ada06b841067cca8c520aeea89a860a5ac6016bbde19c252816",
+      "reported_next_action": "retime M3.01 before 1970, keep Bart mortal, reconcile state and LIVE/cycle refs"
+    }
+  ],
+  "pointer_reconciliation": {
+    "current_authority": "MANIFEST_V47 at master HEAD points to CYCLE_V0033; latest numeric cycle is cursor authority under ORCHESTRATION_CONTRACT_V1.",
+    "cycle": "CYCLE_V0033 is sequence 33, READY_FOR_DRAMATURGO, next_role DRAMATURGO, C05 closed, C06 not started, mortal=true, embrace_occurred=false.",
+    "historical_reference": "CYCLE_V0033.manifest_path records MANIFEST_V46; this is embedded historical metadata, not the current cursor.",
+    "divergence": "No current pointer disagreement found. The cycle's story-source refs still have content/provenance conflicts."
+  },
+  "timeline_reconciliation": {
+    "approval": "APPROVAL-D06-002",
+    "player_correction": "A criação do personagem e M3.01 se passam em 1970; o Abraço deve ocorrer antes de 1970-12-25.",
+    "supersedes": "APPROVAL-D06-001 only for its pre-1970 temporal clause; its compatible constraints remain: Bart mortal throughout M3.01 and forced Embrace against his will before 1970-12-25.",
+    "candidate_rule": "M3.01 C01-C05 are situated in 1970; Bartholomeu remains mortal throughout; no Embrace occurs within M3.01. The target Embrace remains unoccurred and must be forced after the C05 checkpoint but before 1970-12-25.",
+    "date_precision": "Exact civil dates and spacing within 1970 remain unknown. Event IDs containing 2026 are persistence identifiers, not diegetic dates.",
+    "source_correction": "M3.01_v007 is a new candidate derived from master v005; scene content and order C01-C05 are retained while temporal labels are aligned to 1970 and the unverified C03.15 legal reference remains an anomaly. Historical v005 and v006 are preserved.",
+    "embrace_target": "Forced Embrace against Bartolomeu’s will by 1970-12-24 inclusive is an authorial target only; no event is established."
+  },
+  "state_provenance_reconciliation": {
+    "mismatch": "The blob named state_v043 starts as STATE v019 / M2.03. It contains explicit markers through STATE v041 / M3.01 C03, but no formal STATE v042 or v043 checkpoint and no formal C05 state header.",
+    "trace": "Git history identifies commit 471ca26926c8413ed2c452806f27217f1cb57bc3 (2026-11-09, 'feat(chr-001): persist M3.01 C05 and handoff to dramaturgo'), parent 5a707bf6ba1232e96971a579ad488659dc7b7324, as the file-history commit. Its file content still does not substantiate a v043 C05 snapshot.",
+    "corroboration": "CYCLE_V0033, LIVE_v037 and HISTORY_INDEX_v037 independently agree on the C05 event and current open checkpoint.",
+    "correction": "state_v045 is a new limited player-safe planning snapshot; C05 is the last played/closed section and C06 has not started. It uses CYCLE_V0033, LIVE_v037 and HISTORY_INDEX_v037 and does not reinterpret state_v043.",
+    "checkpoint_user_confirmation": "Player correction on 2026-11-10 explicitly confirms C05 as the last played section; CYCLE_V0033 independently records C05 CLOSED, C06 NOT_STARTED and event CHR001-M301-C05-22-20261109-001."
+  },
+  "knowledge_scope": {
+    "mary_established": "NPC_KNOWLEDGE_PROVENANCE_V21 records that Mary received Bartholomeu's account and saw Volnaya documents/van information; she also heard his account of injuring a man and taking him to hospital.",
+    "not_established": [
+      "Mary knows that the man lost an arm and later returned with both arms intact",
+      "Mary knows the name Sistema Circulatório",
+      "Mary knows a Ventrue network connection"
+    ],
+    "injured_man": "The same knowledge index records the injured man later appearing with both arms intact. The fact is open-source history; Mary's knowledge of that return is not recorded.",
+    "dramaturge_boundary": "Treat the player's desired Anciã knowledge as a future authorial design constraint. Ask the Dramaturge to make its acquisition causal using open information; if it requires hidden truth, leave that link blocked and seek a player-open variant."
+  },
+  "identity_and_canon": {
+    "future_sire": "Kuthulun is the player-selected future Senhora in FUTURE_SIRE_PLAYER_SELECTION_V1.",
+    "title_limit": "The selection file records Primogênita as player-asserted and not independently verified. The reputation of never losing a fight and the current 'Anciã' framing are player-supplied direction, not independently established by the open source examined.",
+    "terminology": "Branch .CONTEXTG.md and relevant sources were checked. No new domain definition is introduced; no CONTEXTG edit is required."
+  },
+  "gate_disposition": {
+    "documentary_planning": "PASS_WITH_UNKNOWN after V002 source reconciliation; candidate chronology in 1970 and checkpoint C05 last played are bounded by explicit player correction and open cycle evidence.",
+    "operational_gate": "BLOCKED_CONFLICT: master M3.01_v005 still has late-1970s labels and master state_v043 remains provenance-incompatible; candidates are non-operational.",
+    "secret_truth": "BLOCKED_EXTERNAL_DEPENDENCY; no effective ACL and no open variant; no secret file/content was accessed",
+    "d07": "APPROVAL-D07-001 remains conditional future consideration only; D07 not activated",
+    "scene_ready": "NOT_VERIFIED",
+    "narrator_permission": "NOT_GRANTED",
+    "promotion": "NOT_PERFORMED; APPROVAL-D05-002 remains subject to gates"
+  },
+  "versioned_candidates": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+      "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "classification": "PLAYER_SAFE_CANDIDATE_NON_OPERATIONAL"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+      "blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "classification": "PLAYER_SAFE_CANDIDATE_NON_OPERATIONAL"
+    }
+  ],
+  "correction_record": {
+    "id": "APPROVAL-D06-002",
+    "source": "Explicit player correction in chat on 2026-11-10",
+    "scope": [
+      "M3.01 and character creation occur in 1970",
+      "forced Embrace before 1970-12-25",
+      "C05 is last played section"
+    ],
+    "recorded_once": true
+  },
+  "candidate_sources": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+      "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "parent": "master M3.01_v005.source.txt / 42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+      "blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "parent": "state_v043 blob 46612796f44c9b75cbd7ab43854dcec33283804a is provenance-mismatched, not a current snapshot"
+    }
+  ]
+}

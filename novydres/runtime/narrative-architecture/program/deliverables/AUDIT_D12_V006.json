@@ -1,0 +1,192 @@
+{
+  "document_id": "AUDIT_D12_V006",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "version": "V006",
+  "status": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "operational_gate": "BLOCKED_CONFLICT",
+  "input": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "design_branch": "design/chr001-narrative-program-d01",
+    "design_head_read": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "master_modified": false,
+    "current_manifest_path": "novydres/MANIFEST_V47.json",
+    "current_manifest_blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+    "current_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "current_cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "cycle_status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "Bartholomeu": "MORTAL",
+    "Embrace": "NOT_OCCURRED"
+  },
+  "required_and_prior_reads": [
+    {
+      "version": "D12 V001 required read",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V001.json",
+      "blob_sha": "c08c91ddf19d63e44e60d3b2448e212b00141b64"
+    },
+    {
+      "version": "D12 V001 required read",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V001.json",
+      "blob_sha": "67aed57c8dbf4ed4c24dabddd33c8b35716bed3c"
+    },
+    {
+      "version": "D12 V001 required read",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V001.json",
+      "blob_sha": "0e1d89d8b303305bddc6d6a877ba95b4b8c6eb6c"
+    },
+    {
+      "version": "latest prior D12",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V004.json",
+      "blob_sha": "be4a3d4b499ce643f51a346baeaf6d39ec4ecde0"
+    },
+    {
+      "version": "latest prior D12",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V004.json",
+      "blob_sha": "bdb5b7a6a9995104f093d19a2096726aef2e6204"
+    },
+    {
+      "version": "latest prior D12",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V004.json",
+      "blob_sha": "a1e9179c801ab2784ee9eb9ff97faa69377f4ce7"
+    },
+    {
+      "version": "latest prior D12",
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V004.py",
+      "blob_sha": "198108985e7fdc6853bf12526981a903ba8d95dd",
+      "run": "PASS 62/62; rerun in this reconciliation"
+    },
+    {
+      "version": "local execution record",
+      "path": "execution-manifest.json",
+      "sha256": "0286dad22a87a973de539d9ce95670983e283dba600f94069ae49cd058731d47"
+    },
+    {
+      "version": "local execution record",
+      "path": "CHR001_D05-D12_RUN_STATE.json",
+      "sha256": "87249ad00b4e7ada06b841067cca8c520aeea89a860a5ac6016bbde19c252816"
+    }
+  ],
+  "source_reconciliation": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V002.json",
+    "blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9",
+    "episode_candidate_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+    "state_candidate_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+    "source_validation": {
+      "validator": "D06_SOURCE_VALIDATE_V002.py",
+      "version": "V002",
+      "status": "PASS",
+      "checks_passed": 24,
+      "checks_total": 24,
+      "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+      "result_blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+      "inputs": {
+        "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+        "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+        "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "D12-V006-01",
+      "result": "PASS",
+      "finding": "MANIFEST_V47 at current master HEAD points to CYCLE_V0033; embedded MANIFEST_V46 is historical metadata."
+    },
+    {
+      "id": "D12-V006-02",
+      "result": "PASS_WITH_UNKNOWN",
+      "finding": "M3.01_v007 places character creation and M3.01 in 1970, keeps Bart mortal throughout, and records no Embrace in M3.01."
+    },
+    {
+      "id": "D12-V006-03",
+      "result": "PASS_WITH_UNKNOWN",
+      "finding": "The player correction and cycle agree that C05 is last played/closed and C06 is not started; state_v045 does not relabel state_v043."
+    },
+    {
+      "id": "D12-V006-04",
+      "result": "BLOCKED_CONFLICT",
+      "finding": "Master M3.01_v005 retains late-1970s labels; planning candidates are not operational and no master source refs were changed."
+    },
+    {
+      "id": "D12-V006-05",
+      "result": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "finding": "No effective secret ACL or open truth variant; no hidden content was accessed."
+    },
+    {
+      "id": "D12-V006-06",
+      "result": "PASS_WITH_UNKNOWN",
+      "finding": "Prompt separates established facts, player direction and unknowns and is limited to Dramaturge planning."
+    }
+  ],
+  "gates": {
+    "dramaturge_cycle_status": "READY_FOR_DRAMATURGO",
+    "dramaturge_planning_brief": "PREPARED_FOR_PLANNING_ONLY",
+    "documentary_planning": "PASS_WITH_UNKNOWN",
+    "operational_state": "BLOCKED_CONFLICT",
+    "secret_truth": "BLOCKED_EXTERNAL_DEPENDENCY",
+    "D07_activation": "NOT_ACTIVATED",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED",
+    "promotion": "NOT_PERFORMED"
+  },
+  "approvals": {
+    "APPROVAL-D05-001": "current pointer reconciled to CYCLE_V0033",
+    "APPROVAL-D05-002": "future promotion approved only subject to gates; no promotion performed",
+    "APPROVAL-D05-003": "commitment recorded but no effective ACL; dependent truth remains blocked",
+    "APPROVAL-D06-001": "applied to non-operational candidates only; forced Abraço target before 1970-12-25 is not an event",
+    "APPROVAL-D07-001": "future operational consideration only; D07 not activated"
+  },
+  "previous_validation": {
+    "validator": "D12_VALIDATE_V004.py",
+    "validator_blob_sha": "198108985e7fdc6853bf12526981a903ba8d95dd",
+    "status": "PASS",
+    "checks": "62/62",
+    "run_this_turn": true
+  },
+  "validation": {
+    "validator": "D12_VALIDATE_V006.py",
+    "version": "V006",
+    "status": "PASS",
+    "checks_passed": 41,
+    "checks_total": 41,
+    "validator_blob_sha": "f07817d3a441543d2f382aaa869c81af29a5721f",
+    "result_blob_sha": "98d1c0653343a4b393b3455cdf541a807e1bf842",
+    "inputs": {
+      "D06_SOURCE_RECONCILIATION_V002": "91054f7711e36939f1b3d3c6d6396751aea6e5f9",
+      "D06_SOURCE_VALIDATE_V002_RESULT": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+      "prompt": "65f285307a65387bbcae348d1dc6bdc912da0cf9"
+    }
+  },
+  "scope": "Source reconciliation and Dramaturge planning prompt only. No master, manifest, cycle, LIVE, history, scene, sheet, mechanic, or secret content changed.",
+  "publication_readback": {
+    "status": "PENDING_REMOTE_PUBLICATION_AND_READBACK",
+    "base_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_modified": false
+  },
+  "source_validation": {
+    "validator": "D06_SOURCE_VALIDATE_V002.py",
+    "version": "V002",
+    "status": "PASS",
+    "checks_passed": 24,
+    "checks_total": 24,
+    "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+    "result_blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+    "inputs": {
+      "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+    }
+  },
+  "validator_result": {
+    "path": "D12_VALIDATE_V006_RESULT.json",
+    "blob_sha": "98d1c0653343a4b393b3455cdf541a807e1bf842",
+    "checks": "41/41",
+    "status": "PASS"
+  }
+}

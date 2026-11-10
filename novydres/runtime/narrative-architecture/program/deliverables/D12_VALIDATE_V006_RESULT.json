@@ -1,0 +1,220 @@
+{
+  "validator": "D12_VALIDATE_V006.py",
+  "status": "PASS",
+  "checks_passed": 41,
+  "checks_total": 41,
+  "checks": [
+    {
+      "id": "D12-01",
+      "label": "candidate episode SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-02",
+      "label": "candidate state SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-03",
+      "label": "episode timeline in 1970",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-04",
+      "label": "mortal throughout M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-05",
+      "label": "no Embrace in M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-06",
+      "label": "obsolete chronology absent from candidate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-07",
+      "label": "state identifies C05 as last played",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-08",
+      "label": "C06 not started",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-09",
+      "label": "old state identity retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-10",
+      "label": "design branch HEAD current",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-11",
+      "label": "master unchanged",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-12",
+      "label": "correction registered",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-13",
+      "label": "source reconciliation operational gate blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-14",
+      "label": "secret gate remains blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-15",
+      "label": "SCENE_READY not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-16",
+      "label": "Narrator permission not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-17",
+      "label": "new decision recorded",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-18",
+      "label": "old decision retained as historical",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-19",
+      "label": "prompt cites corrected decision",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-20",
+      "label": "prompt timeline",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-21",
+      "label": "prompt checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-22",
+      "label": "prompt forced Embrace cutoff",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-23",
+      "label": "forced nature retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-24",
+      "label": "authorial direction retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-25",
+      "label": "confrontation design retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-26",
+      "label": "scene writing excluded",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-27",
+      "label": "Narrator cycle excluded",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-28",
+      "label": "secrets excluded",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-29",
+      "label": "scene gate distinguished",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-30",
+      "label": "Narrator gate distinguished",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-31",
+      "label": "documentary and operational gates separated",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-32",
+      "label": "operational gate blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-33",
+      "label": "secret gate blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-34",
+      "label": "D07 not activated",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-35",
+      "label": "SCENE_READY not verified",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-36",
+      "label": "Narrator permission not granted",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-37",
+      "label": "release status accurately blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-38",
+      "label": "release records corrected timeline and checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-39",
+      "label": "no promotion or master write",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-40",
+      "label": "no scene or Narrator permission",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-41",
+      "label": "16 unique release deliverables",
+      "result": "PASS"
+    }
+  ],
+  "validator_blob_sha": "f07817d3a441543d2f382aaa869c81af29a5721f",
+  "documentary_input_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+  "master_input_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "candidate_blobs": {
+    "episode": "4192586d8561c89c7e759b921038bee0422b7512",
+    "state": "197e015135626508c07372b257c29cf889284f6d"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V006",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "design_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "recorded_state": {
+      "M3.01_C05": "CLOSED",
+      "M3.01_C06": "NOT_STARTED",
+      "Bartholomeu": "MORTAL",
+      "Embrace": "NOT_OCCURRED"
+    },
+    "candidate_state": {
+      "episode": {
+        "path": "source-candidates/M3.01_v007.source.txt",
+        "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512"
+      },
+      "character": {
+        "path": "source-candidates/state_v045.source.txt",
+        "blob_sha": "197e015135626508c07372b257c29cf889284f6d"
+      }
+    },
+    "limit": "Candidate sources support planning only; current master cursor and operational source refs are unchanged."
+  },
+  "deliverables": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V006.json",
+      "blob_sha": "aa0baa59e0cbdac8741a19345643e7c3e828725c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V006.json",
+      "blob_sha": "20c18d9932df4ba093f64ff832f5c40b83570030"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V006.json",
+      "blob_sha": "6bc7710f1a7907c0c168463c2d99aa00c08bac10"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V006.json",
+      "blob_sha": "58058d90103fc09d8f65313e0f9de3dcb9f5784d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V001.py",
+      "blob_sha": "5c62902b27fed7f1db1ae4539c0f743969a2304b"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V001_RESULT.json",
+      "blob_sha": "f339bdda736662a652f65a96c1d699fe274fcb2a"
+    }
+  ],
+  "gate": "PASS_WITH_UNKNOWN; operational target remains BLOCKED_CONFLICT",
+  "pending": [
+    "Master source refs remain unchanged",
+    "Hidden-truth dependency has no ACL/open variant",
+    "SCENE_READY and NARRATOR_PERMISSION are not verified"
+  ],
+  "publication_readback": {
+    "status": "PENDING_REMOTE_PUBLICATION_AND_READBACK",
+    "base_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "master_modified": false
+  },
+  "next_phase": "Dramaturge continuity planning only, using player-safe candidates and the supplied prompt",
+  "next_phase_boundary": "No scene, no Narrator prompt, no D07 activation or master promotion. Candidate sources are planning-only.",
+  "restrictions": [
+    "Use M3.01_v007 and state_v045 only as planning candidates.",
+    "Keep exact dates unknown; M3.01 before 1970; Bartholomeu mortal throughout; no Embrace in M3.01.",
+    "Do not access, quote, or extend hidden truth. Leave any dependent link blocked without an open variant.",
+    "A READY_FOR_DRAMATURGO cycle is not SCENE_READY or NARRATOR_PERMISSION."
+  ],
+  "document_id": "HANDOFF_D06_V006",
+  "player_intent_delta": "No new player decision requested or inferred; existing APPROVAL-D06-001 is applied to non-operational planning candidates.",
+  "input_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+  "timeline_correction": "APPROVAL-D06-002: character creation/M3.01 in 1970; forced Embrace before 1970-12-25; C05 last played. Exact dates unknown; no event inferred.",
+  "validation": {
+    "validator": "D06_SOURCE_VALIDATE_V002.py",
+    "version": "V002",
+    "status": "PASS",
+    "checks_passed": 24,
+    "checks_total": 24,
+    "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+    "result_blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+    "inputs": {
+      "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+    }
+  }
+}

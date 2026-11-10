@@ -1,0 +1,194 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V006",
+  "status": "AUTHORIAL_TARGET_RECONCILED_IN_CANDIDATES_OPERATIONAL_GATES_BLOCKED",
+  "authority": "PLAYER_INTENT; EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "decisions": [
+    {
+      "id": "APPROVAL-D06-001",
+      "decision": "Register the player's authorial target: M3.01 before 1970 with Bartholomeu mortal throughout; forced Embrace by Kuthulun before 1970-12-25.",
+      "options": [
+        "record authorial temporal target and keep blocked pending source reconciliation"
+      ],
+      "default": "No event, date or scene is inferred; operational use remains blocked until sources are reconciled.",
+      "when_required": "before operational graduation criteria or promotion treats one route as required",
+      "independent_work": "D07/D08 may continue only where independent of target selection",
+      "status": "SUPERSEDED_FOR_TEMPORAL_SCOPE_BY_APPROVAL-D06-002",
+      "response": "M3.01 deve ser mudado para antes de 1970; Bart permanece mortal durante M3.01. Kuthulun deve impor o Abraço, independentemente do querer dele, antes de 25/12/1970.",
+      "selected_target": "M3.01 antes de 1970, Bart mortal durante todo o ciclo; Abraço forçado por Kuthulun antes de 1970-12-25.",
+      "player_context": "O jogador estabelece Kuthulun como Senhora e descreve os Gangrel de Novydres como cultura militar pautada pela força de combate. Rumores sobre um mortal que enfrenta Cainitas sem armas atraem a atenção da Primogênita. O Abraço é imposição, não desejo de Bart.",
+      "operational_disposition": "Candidate episode/state sources reconcile the planning chronology and checkpoint. No master source, LIVE, cycle, scene, or event was changed; operational gate remains BLOCKED_CONFLICT.",
+      "actual_event": "NOT_ESTABLISHED",
+      "authorial_sequence": {
+        "status": "CANDIDATE_DESIGN_NOT_EVENT",
+        "beats": [
+          "Construir gradualmente pressão por mais um ou dois conflitos com Cainitas, incluindo ao menos um Gangrel.",
+          "Como clímax candidato, Kuthulun enfrenta e derrota Bart; o Abraço imposto ocorre quando ele está à beira da morte.",
+          "Consequências desejadas incluem separação e luto familiar, adaptação à sociedade Cainita, limites para resolver tudo sozinho e escolhas difíceis para proteger a família."
+        ],
+        "timing": "M3.01 deve preceder o Abraço e permanecer com Bart mortal; a data civil exata de M3.01 e o espaçamento exato até o Abraço não foram definidos."
+      },
+      "candidate_sources": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+          "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512"
+        },
+        {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+          "blob_sha": "197e015135626508c07372b257c29cf889284f6d"
+        }
+      ],
+      "residual_unknowns": [
+        "Exact civil dates",
+        "C03.15 legal-historical basis",
+        "Mary's knowledge of the one-armed man's return",
+        "any connection requiring hidden truth"
+      ],
+      "supersession_note": "Only the clause placing M3.01 before 1970 is superseded. The constraints that Bart stays mortal during M3.01 and the forced Embrace remains before 1970-12-25 are reaffirmed."
+    },
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicate CYCLE_V0033 versus MANIFEST_V46 pointer conflict.",
+      "default": "pending; blocks operational state change",
+      "when_required": "before operational transition",
+      "status": "CURSOR_RECONCILED_TO_CYCLE_V0033",
+      "response_summary": "MANIFEST_V47 no HEAD master atual aponta para CYCLE_V0033; divergência atual do ponteiro reconciliada."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Authorize or decline future promotion to operational/master use.",
+      "default": "keep proposed documents only",
+      "when_required": "D12 after audit and readback",
+      "status": "APPROVED_PENDING_GATES",
+      "response_summary": "Todos os documentos D05-D12 aprovados para promoção futura sujeita aos gates; promoção não realizada."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Provide effective secret-truth segregation, approve an open variant, or keep truth-dependent investigation blocked.",
+      "default": "store no secret; block dependent play",
+      "when_required": "before truth-dependent D07 material",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "response_summary": "Compromisso de não ler segredos registrado; sem ACL ou variante aberta, conteúdo dependente permanece bloqueado."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff.",
+      "default": "not granted by D06",
+      "when_required": "future scene handoff",
+      "status": "NOT_GRANTED",
+      "response_summary": "Nenhuma permissão de cena ou Narrador foi concedida."
+    },
+    {
+      "id": "APPROVAL-D06-002",
+      "decision": "Correct the character-creation/M3.01 year and confirm the last played section.",
+      "default": "retain historical D06-001 and block changed chronology until explicit player correction",
+      "when_required": "before candidate source retiming and Dramaturge continuity briefing",
+      "status": "PLAYER_CONFIRMED_AND_RECORDED; APPLIED_TO_NON_OPERATIONAL_CANDIDATES",
+      "response": "A criação do personagem se passa em 1970; o Abraço tem que acontecer antes de 25/12/1970; a última seção jogada foi C05.",
+      "selected_target": "M3.01/character creation in 1970; Bart mortal throughout M3.01; forced Abraço against his will after C05 and before 1970-12-25; C05 last played, C06 not started.",
+      "actual_event": "NOT_ESTABLISHED",
+      "exact_dates": "UNKNOWN",
+      "operational_disposition": "Master sources remain unchanged; operational gate BLOCKED_CONFLICT.",
+      "supersedes": "APPROVAL-D06-001 only for pre-1970 placement; compatible mortal/forced-Embrace constraints retained."
+    }
+  ],
+  "input_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+      "use": "current manifest cursor"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "use": "current checkpoint and next-role authority"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "use": "cursor authority rules"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "use": "historical episode preserved as source parent"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a",
+      "use": "provenance mismatch investigated; not treated as current state"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+      "use": "current open state corroborating C05 and mortality"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf",
+      "use": "current entrypoints and event"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "use": "bounded evidence for Mary and the injured man; not secret source"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "use": "current open-thread index"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "use": "player-selected future sire identity"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b",
+      "use": "local Gangrel lineage language; not proof of all player-supplied culture claims"
+    },
+    {
+      "path": "novydres/.AGENT.md",
+      "ref": "design/chr001-narrative-program-d01@1360dbd2bad2124859f1d145c69b0c41ec589347",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc",
+      "use": "versioned-source and no-silent-retcon rules"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "ref": "design/chr001-narrative-program-d01@1360dbd2bad2124859f1d145c69b0c41ec589347",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630",
+      "use": "terminology and context check"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v007.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "use": "pre-1970 planning copy; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v045.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "use": "reconstructed planning checkpoint; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    }
+  ]
+}

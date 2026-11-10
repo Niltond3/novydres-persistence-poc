@@ -1,0 +1,46 @@
+import hashlib,json,re
+from pathlib import Path
+B=Path(__file__).resolve().parent
+checks=[]
+def blob(p):
+ d=p.read_bytes(); return hashlib.sha1(f"blob {len(d)}\0".encode()+d).hexdigest()
+def ck(v,label):
+ checks.append((label,bool(v)))
+ if not v: raise AssertionError(label)
+def j(n): return json.loads((B/n).read_text(encoding="utf-8"))
+ep=B/"source-candidates/M3.01_v007.source.txt"; st=B/"source-candidates/state_v045.source.txt"
+e=ep.read_text(encoding="utf-8"); s=st.read_text(encoding="utf-8"); p=(B/"DRAMATURGO_CONTINUITY_PROMPT_V002.md").read_text(encoding="utf-8")
+r=j("D06_SOURCE_RECONCILIATION_V002.json"); q=j("D06_PLAYER_APPROVAL_QUEUE_V006.json"); a=j("AUDIT_D06_V006.json"); h=j("HANDOFF_D06_V006.json"); a12=j("AUDIT_D12_V006.json"); h12=j("HANDOFF_D12_V006.json"); rel=j("D12_RELEASE_CANDIDATE_V006.json")
+ck(blob(ep)=="4192586d8561c89c7e759b921038bee0422b7512","candidate episode SHA")
+ck(blob(st)=="197e015135626508c07372b257c29cf889284f6d","candidate state SHA")
+ck("M3.01 e a criação do personagem se passam em 1970" in e[:1600],"episode timeline in 1970")
+ck("Bartolomeu permanece mortal em todas as cenas" in e[:1600],"mortal throughout M3.01")
+ck("nenhum Abraço é registrado em M3.01" in e[:1600],"no Embrace in M3.01")
+ck(re.search(r"(?:antes de|before) 1970(?!-\d)", e, re.I) is None,"obsolete chronology absent from candidate")
+ck("C05 is the last played section" in s,"state identifies C05 as last played")
+ck("C06 not started" in s,"C06 not started")
+ck("state_v043.source.txt | BLOB_SHA: 46612796f44c9b75cbd7ab43854dcec33283804a" in s,"old state identity retained")
+ck(r["design_branch"]["head_read"]=="1360dbd2bad2124859f1d145c69b0c41ec589347","design branch HEAD current")
+ck(r["master"]["head_read"]=="735fe5d52e2761c4d492fe873a4b6bbcce17654a" and r["master"]["modified_by_this_run"] is False,"master unchanged")
+ck(r["timeline_reconciliation"]["approval"]=="APPROVAL-D06-002","correction registered")
+ck("BLOCKED_CONFLICT" in r["gate_disposition"]["operational_gate"],"source reconciliation operational gate blocked")
+ck(r["gate_disposition"]["secret_truth"].startswith("BLOCKED_EXTERNAL_DEPENDENCY"),"secret gate remains blocked")
+ck(r["gate_disposition"]["scene_ready"]=="NOT_VERIFIED","SCENE_READY not inferred")
+ck(r["gate_disposition"]["narrator_permission"]=="NOT_GRANTED","Narrator permission not inferred")
+ck(next(x for x in q["decisions"] if x["id"]=="APPROVAL-D06-002")["status"].startswith("PLAYER_CONFIRMED"),"new decision recorded")
+ck(next(x for x in q["decisions"] if x["id"]=="APPROVAL-D06-001")["status"]=="SUPERSEDED_FOR_TEMPORAL_SCOPE_BY_APPROVAL-D06-002","old decision retained as historical")
+for token,label in [("APPROVAL-D06-002","prompt cites corrected decision"),("M3.01 se passa em 1970","prompt timeline"),("C05 é a última seção jogada","prompt checkpoint"),("antes de 25/12/1970","prompt forced Embrace cutoff"),("consentimento","forced nature retained"),("Sistema Circulatório","authorial direction retained"),("aproximadamente sete ou oito Gangrel","confrontation design retained"),("Não escreva prosa de cena","scene writing excluded"),("não inicie ciclo de Narrador","Narrator cycle excluded"),("Não acesse","secrets excluded"),("SCENE_READY","scene gate distinguished"),("NARRATOR_PERMISSION","Narrator gate distinguished")]: ck(token in p,label)
+ck(a12["status"]=="BLOCKED_CONFLICT" and a12["documentary_gate"]=="PASS_WITH_UNKNOWN","documentary and operational gates separated")
+ck(a12["gates"]["operational_state"]=="BLOCKED_CONFLICT","operational gate blocked")
+ck(a12["gates"]["secret_truth"]=="BLOCKED_EXTERNAL_DEPENDENCY","secret gate blocked")
+ck(a12["gates"]["D07_activation"]=="NOT_ACTIVATED","D07 not activated")
+ck(a12["gates"]["SCENE_READY"]=="NOT_VERIFIED","SCENE_READY not verified")
+ck(a12["gates"]["NARRATOR_PERMISSION"]=="NOT_GRANTED","Narrator permission not granted")
+ck(rel["status"]=="BLOCKED_CONFLICT" and rel["documentary_gate"]=="PASS_WITH_UNKNOWN","release status accurately blocked")
+ck(rel["timeline"]["M3.01"]=="1970" and rel["input"]["checkpoint_last_played"]=="C05","release records corrected timeline and checkpoint")
+ck(rel["authorizations"]["promotion_performed"] is False and rel["authorizations"]["master_write"] is False,"no promotion or master write")
+ck(rel["authorizations"]["scene_execution"] is False and rel["authorizations"]["narrator_permission"] is False,"no scene or Narrator permission")
+ck(len(rel["outputs"])==16 and len(set(rel["outputs"]))==16,"16 unique release deliverables")
+res={"validator":"D12_VALIDATE_V006.py","status":"PASS","checks_passed":len(checks),"checks_total":len(checks),"checks":[{"id":f"D12-{i:02d}","label":l,"result":"PASS"} for i,(l,_) in enumerate(checks,1)],"validator_blob_sha":blob(Path(__file__)),"documentary_input_head":r["design_branch"]["head_read"],"master_input_head":r["master"]["head_read"],"candidate_blobs":{"episode":blob(ep),"state":blob(st)}}
+(B/"D12_VALIDATE_V006_RESULT.json").write_text(json.dumps(res,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+print(f"PASS: {len(checks)}/{len(checks)} D12 checks")

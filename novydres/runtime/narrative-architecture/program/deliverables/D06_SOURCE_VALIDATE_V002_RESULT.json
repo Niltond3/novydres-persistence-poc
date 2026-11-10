@@ -1,0 +1,134 @@
+{
+  "validator": "D06_SOURCE_VALIDATE_V002.py",
+  "status": "PASS",
+  "checks_passed": 24,
+  "checks_total": 24,
+  "checks": [
+    {
+      "id": "SRC-01",
+      "label": "M3.01 v007 blob SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-02",
+      "label": "state v045 blob SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-03",
+      "label": "episode cites current player correction",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-04",
+      "label": "M3.01 and character creation in 1970",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-05",
+      "label": "Bart mortal throughout M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-06",
+      "label": "no Embrace in M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-07",
+      "label": "forced Embrace target after C05 and before cutoff",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-08",
+      "label": "no active pre-1970 rule remains",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-09",
+      "label": "exact dates remain unknown",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-10",
+      "label": "C05 last played and C06 not started",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-11",
+      "label": "cycle event preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-12",
+      "label": "current mortal/no-Embrace state preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-13",
+      "label": "old state blob identity preserved",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-14",
+      "label": "old state provenance not reinterpreted",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-15",
+      "label": "state candidate stays non-operational",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-16",
+      "label": "current documentary branch base recorded",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-17",
+      "label": "master unchanged",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-18",
+      "label": "player correction registered",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-19",
+      "label": "timeline follows current approval",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-20",
+      "label": "state correction recorded",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-21",
+      "label": "operational conflict stays blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-22",
+      "label": "secret-dependent content stays blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-23",
+      "label": "scene readiness not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-24",
+      "label": "Narrator permission not inferred",
+      "result": "PASS"
+    }
+  ],
+  "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+  "inputs": {
+    "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+    "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+    "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+  }
+}

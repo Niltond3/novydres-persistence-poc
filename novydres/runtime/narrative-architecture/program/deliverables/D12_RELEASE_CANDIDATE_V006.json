@@ -1,0 +1,133 @@
+{
+  "document_id": "D12_RELEASE_CANDIDATE_V006",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "version": "V006",
+  "classification": "PLAYER_SAFE / PROPOSED / NON_OPERATIONAL",
+  "status": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "operational_release": "BLOCKED_PENDING_GATES",
+  "dramaturge_planning_brief": "PREPARED_FOR_PLANNING_ONLY",
+  "scene_ready": "NOT_VERIFIED",
+  "narrator_permission": "NOT_GRANTED",
+  "d07_activation": false,
+  "input": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "design_branch": "design/chr001-narrative-program-d01",
+    "design_head_read": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "master_modified": false,
+    "current_manifest_path": "novydres/MANIFEST_V47.json",
+    "current_manifest_blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+    "current_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "current_cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "cycle_status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "Bartholomeu": "MORTAL",
+    "Embrace": "NOT_OCCURRED",
+    "checkpoint_last_played": "C05",
+    "cycle_C05": "CLOSED",
+    "cycle_C06": "NOT_STARTED"
+  },
+  "gates": {
+    "dramaturge_cycle_status": "READY_FOR_DRAMATURGO",
+    "dramaturge_planning_brief": "PREPARED_FOR_PLANNING_ONLY",
+    "documentary_planning": "PASS_WITH_UNKNOWN",
+    "operational_state": "BLOCKED_CONFLICT",
+    "secret_truth": "BLOCKED_EXTERNAL_DEPENDENCY",
+    "D07_activation": "NOT_ACTIVATED",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED",
+    "promotion": "NOT_PERFORMED"
+  },
+  "authorizations": {
+    "APPROVAL-D05-002": "future promotion only after applicable gates pass",
+    "promotion_performed": false,
+    "master_write": false,
+    "scene_execution": false,
+    "narrator_permission": false,
+    "d07_activation": false
+  },
+  "outputs": [
+    "source-candidates/M3.01_v007.source.txt",
+    "source-candidates/state_v045.source.txt",
+    "D06_SOURCE_RECONCILIATION_V002.json",
+    "D06_CHRONICLE_BIBLE_V006.json",
+    "D06_TRANSFORMATION_PATHS_V006.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V006.json",
+    "AUDIT_D06_V006.json",
+    "HANDOFF_D06_V006.json",
+    "D06_SOURCE_VALIDATE_V002.py",
+    "D06_SOURCE_VALIDATE_V002_RESULT.json",
+    "AUDIT_D12_V006.json",
+    "HANDOFF_D12_V006.json",
+    "D12_RELEASE_CANDIDATE_V006.json",
+    "D12_VALIDATE_V006.py",
+    "D12_VALIDATE_V006_RESULT.json",
+    "DRAMATURGO_CONTINUITY_PROMPT_V002.md"
+  ],
+  "source_reconciliation": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V002.json",
+    "blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9",
+    "episode_candidate_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+    "state_candidate_blob_sha": "197e015135626508c07372b257c29cf889284f6d"
+  },
+  "validator": {
+    "validator": "D12_VALIDATE_V006.py",
+    "version": "V006",
+    "status": "PASS",
+    "checks_passed": 41,
+    "checks_total": 41,
+    "validator_blob_sha": "f07817d3a441543d2f382aaa869c81af29a5721f",
+    "result_blob_sha": "98d1c0653343a4b393b3455cdf541a807e1bf842",
+    "inputs": {
+      "D06_SOURCE_RECONCILIATION_V002": "91054f7711e36939f1b3d3c6d6396751aea6e5f9",
+      "D06_SOURCE_VALIDATE_V002_RESULT": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+      "prompt": "65f285307a65387bbcae348d1dc6bdc912da0cf9"
+    }
+  },
+  "publication_readback": {
+    "status": "PENDING_REMOTE_PUBLICATION_AND_READBACK",
+    "base_head": "1360dbd2bad2124859f1d145c69b0c41ec589347",
+    "files": 16,
+    "master_modified": false
+  },
+  "timeline": {
+    "approval": "APPROVAL-D06-002",
+    "M3.01": "1970",
+    "Bartolomeu_during_M3.01": "MORTAL",
+    "Embrace": "forced against his will before 1970-12-25; NOT_OCCURRED",
+    "exact_civil_dates": "UNKNOWN"
+  },
+  "source_validation": {
+    "validator": "D06_SOURCE_VALIDATE_V002.py",
+    "version": "V002",
+    "status": "PASS",
+    "checks_passed": 24,
+    "checks_total": 24,
+    "validator_blob_sha": "c84a1d12ff2b331d6f1ceec879109714480b4b2b",
+    "result_blob_sha": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+    "inputs": {
+      "episode_blob_sha": "4192586d8561c89c7e759b921038bee0422b7512",
+      "state_blob_sha": "197e015135626508c07372b257c29cf889284f6d",
+      "reconciliation_blob_sha": "91054f7711e36939f1b3d3c6d6396751aea6e5f9"
+    }
+  },
+  "validation": {
+    "validator": "D12_VALIDATE_V006.py",
+    "version": "V006",
+    "status": "PASS",
+    "checks_passed": 41,
+    "checks_total": 41,
+    "validator_blob_sha": "f07817d3a441543d2f382aaa869c81af29a5721f",
+    "result_blob_sha": "98d1c0653343a4b393b3455cdf541a807e1bf842",
+    "inputs": {
+      "D06_SOURCE_RECONCILIATION_V002": "91054f7711e36939f1b3d3c6d6396751aea6e5f9",
+      "D06_SOURCE_VALIDATE_V002_RESULT": "c7e51cfce5d4ff86f9526f551aa059cba43a1e93",
+      "prompt": "65f285307a65387bbcae348d1dc6bdc912da0cf9"
+    }
+  }
+}
