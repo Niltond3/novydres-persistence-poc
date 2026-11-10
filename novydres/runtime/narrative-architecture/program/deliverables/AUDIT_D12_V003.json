@@ -1,0 +1,244 @@
+{
+  "document_id": "AUDIT_D12_V003",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "BLOCKED_CONFLICT",
+  "gate": "PASS_WITH_UNKNOWN",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "input_design_head": "44ba5ade7de825c3f4781c3fc04ca9a510f6b290",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "cycle_id": "CHR001-CYCLE-0033",
+    "status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "checkpoint": {
+      "last_event_id": "CHR001-M301-C05-22-20261109-001",
+      "last_closed_scene": "C05",
+      "next_scene": "C06",
+      "next_scene_status": "NOT_STARTED",
+      "pending_persistence": false,
+      "mortal": true,
+      "embrace_occurred": false
+    },
+    "manifest_path": "novydres/MANIFEST_V46.json",
+    "authority_result": "The latest numeric CYCLE is the cursor/next-role authority under ORCHESTRATION_CONTRACT_V1.md.",
+    "manifest_conflict": "MANIFEST_V46 points to CYCLE_V0024; operational transition remains BLOCKED_CONFLICT until reconciled."
+  },
+  "scope": "D12 decision delta and gate revalidation. No master/canon/cycle/scene/sheet/mechanics edits, retcon, secret read, or narrator release.",
+  "checks": [
+    {
+      "id": "D12-01",
+      "criterion": "HEAD de master",
+      "result": "PASS",
+      "evidence": "origin/master foi confrontado com refs/heads/master do servidor; ambos apontam ao mesmo commit. A auditoria não escreve em master."
+    },
+    {
+      "id": "D12-02",
+      "criterion": "Branch documental e D11",
+      "result": "PASS",
+      "evidence": "D11 está no HEAD remoto da branch documental; commit, pai, árvore e sete blobs/content readback foram conferidos."
+    },
+    {
+      "id": "D12-03",
+      "criterion": "Ciclo numérico mais recente",
+      "result": "BLOCKED_CONFLICT",
+      "evidence": "A cadeia V0001–V0033 foi verificada sem lacunas, predecessor SHA ou divergência de LIVE. O contrato adjudica o ciclo numérico mais recente como autoridade de cursor/next_role; MANIFEST_V46, cujo último toque foi o commit 418834f em 2026-11-07, ainda aponta V0024. A mesma regra exige BLOCKED_CONFLICT até reconciliação versionada."
+    },
+    {
+      "id": "D12-04",
+      "criterion": "Gates D01-D11",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Gates registrados: D01 PASS; D02 V011 e D03-D11 PASS_WITH_UNKNOWN. Estados são documentais e condicionados por incertezas explicitadas."
+    },
+    {
+      "id": "D12-05",
+      "criterion": "Errata e proveniência",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Errata D02 V011 permanece aplicável; conhecimento NPC, causalidade e atribuições derivadas continuam limitados por evidência."
+    },
+    {
+      "id": "D12-06",
+      "criterion": "Aprovações do jogador",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Respostas explícitas estão preservadas em D05/D06/D07_PLAYER_APPROVAL_QUEUE_V003: autoridade do cursor adjudicada ao ciclo, alvo de Abraço antes de 1970-12-25 com justificativa registrada, promoção futura sujeita a gates, compromisso de não olhar segredos e ausência de permissão de cena."
+    },
+    {
+      "id": "D12-07",
+      "criterion": "Compatibilidade estrutural",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D10 V005 registra 8/8 casos executados e revisão independente; schemas/validadores seguem propostos e não ativados."
+    },
+    {
+      "id": "D12-08",
+      "criterion": "Tramas, conhecimento e relações",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D04-D09 preservam classificações editoriais, aquisição demonstrável, aliases sem fusão e saídas não compulsórias; dependências seguem condicionais."
+    },
+    {
+      "id": "D12-09",
+      "criterion": "Segredos e verdade autoral",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "No GM_HIDDEN content was read or exposed. Player commitment not to inspect secrets is recorded but does not provide technical ACL segregation."
+    },
+    {
+      "id": "D12-10",
+      "criterion": "Dependência de segregação",
+      "result": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "evidence": "Mistérios que exigem verdade autoral bloqueada continuam indisponíveis para resolução significativa até haver segregação efetiva ou decisão por variante aberta."
+    },
+    {
+      "id": "D12-11",
+      "criterion": "Testes finais",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Usam-se os resultados D10 V005 8/8 já registrados e a revisão estática D11 de 10 casos. Nenhuma suíte foi repetida na integração; D11 não simulou execução de cena."
+    },
+    {
+      "id": "D12-12",
+      "criterion": "Auditoria de publicação",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D11 teve readback exato. A transação D12 ainda precisa de seu readback pós-push, registrado no manifesto local."
+    },
+    {
+      "id": "D12-13",
+      "criterion": "Escopo de publicação",
+      "result": "PASS",
+      "evidence": "Somente novos artefatos PLAYER_SAFE/PROPOSED na branch documental são autorizados; nenhuma alteração de master, cânone, ciclo, cena, ficha ou recursos."
+    },
+    {
+      "id": "D12-14",
+      "criterion": "Autorização de promoção",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Player authorized all proposed D05-D12 documents for future operational/master promotion after gates. Promotion is not performed because operational conflicts remain."
+    },
+    {
+      "id": "D12-15",
+      "criterion": "Estado operacional e permissão",
+      "result": "NOT_READY_FOR_NARRATOR",
+      "evidence": "Cycle points to DRAMATURGO; SCENE_READY and NARRATOR_PERMISSION remain unverified. D12 response explicitly grants no scene permission."
+    },
+    {
+      "id": "D12-16",
+      "criterion": "Retomada sem antecipação",
+      "result": "PASS",
+      "evidence": "Nenhuma cena será iniciada, resultado antecipado, Abraço presumido, retcon executado ou recurso concedido."
+    },
+    {
+      "id": "D12-17",
+      "criterion": "Readback global do pacote D12",
+      "result": "PENDING_READBACK",
+      "evidence": "Readback remoto dos novos artefatos V003 ainda deve ser registrado no manifesto local de execução após publicação."
+    },
+    {
+      "id": "D12-18",
+      "criterion": "Prontidão para Narrador",
+      "result": "NOT_READY_FOR_NARRATOR",
+      "evidence": "No scene permission or narrator prompt; pointer and chronology conflicts remain."
+    },
+    {
+      "id": "D12-19",
+      "criterion": "Alvo D06 e cronologia fonte",
+      "result": "BLOCKED_CONFLICT",
+      "evidence": "APPROVAL-D06-001 escolhe Abraço antes de 1970-12-25 para permitir ingresso, compreensão e adaptação à sociedade cainita; Kuthulun já é a Senhora escolhida. Episode M3.01_v005 e state_v043 vinculados ao CYCLE_V0033 registram fim dos anos 1970, Bartholomeu mortal e Abraço não ocorrido. Sem retcon ou evento presumido; BLOCKED_CONFLICT."
+    },
+    {
+      "id": "D12-20",
+      "criterion": "Uso operacional condicional D07",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "APPROVAL-D07-001 approved future operational consideration after source reconciliation and applicable gates; no activation performed."
+    },
+    {
+      "id": "D12-21",
+      "criterion": "Compromisso de não leitura de segredos",
+      "result": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "evidence": "Player commitment is recorded; no effective ACL or open variant is in place, and truth-dependent content remains blocked. No truth lock was read."
+    },
+    {
+      "id": "D12-22",
+      "criterion": "Cadeia de ciclos e autoridade do cursor",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "CYCLE_V0001–V0033: sequência sem lacunas, previous_cycle blob SHA confere, referências do ciclo conferem e LIVE.last_confirmed_event_id coincide com checkpoint; o cursor normativo é CYCLE_V0033. A divergência com MANIFEST_V46 continua no D12-03."
+    }
+  ],
+  "phase_gates": {
+    "D01": "PASS",
+    "D02_V011": "PASS_WITH_UNKNOWN",
+    "D03_V001": "PASS_WITH_UNKNOWN",
+    "D04_V001": "PASS_WITH_UNKNOWN",
+    "D05": "PASS_WITH_UNKNOWN",
+    "D06": "PASS_WITH_UNKNOWN",
+    "D07": "PASS_WITH_UNKNOWN",
+    "D08": "PASS_WITH_UNKNOWN",
+    "D09": "PASS_WITH_UNKNOWN",
+    "D10_V005": "PASS_WITH_UNKNOWN",
+    "D11": "PASS_WITH_UNKNOWN",
+    "D06_TARGET": "BLOCKED_CONFLICT"
+  },
+  "review_summary": {
+    "D10_V005": "8/8 executed tests as recorded; technical independent review PASS_WITH_UNKNOWN; suite not rerun because no D10 source changed in D11/D12.",
+    "D11": "Independent technical and literary review PASS_WITH_UNKNOWN; 10 static adversarial cases; 0 runtime scenarios.",
+    "D12_new_automated_tests": 0,
+    "D12_V002_decision_delta": "D12_VALIDATE_V002.py executed; 20/20 assertions passed; this is gate validation, not a narrative simulation.",
+    "D12_V003_decision_delta": "Fonte de cursor adjudicada ao ciclo pela regra contratual; alvo D06 e justificativa temporal atualizados como intenção. D12_VALIDATE_V003.py executado: 28/28 assertions passaram; sem simulação narrativa."
+  },
+  "material_findings_open": 2,
+  "approval_and_dependency_items": [
+    {
+      "id": "APPROVAL-D05-001",
+      "status": "CURSOR_AUTHORITY_ADJUDICATED_BLOCKER_REMAINS",
+      "request": "O ciclo mais recente é autoridade para cursor/next_role; a reconciliação do ponteiro com MANIFEST_V46 ainda bloqueia transição."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "status": "APPROVED_PENDING_GATES",
+      "request": "Promoção futura de todos os documentos propostos D05-D12 autorizada sujeita a gates; não executada."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "request": "Compromisso de não ler segredos registrado; sem ACL/variante aberta, trabalho dependente segue bloqueado."
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "status": "DECIDED_TARGET_BLOCKED_CONFLICT",
+      "request": "Abraço antes de 1970-12-25; intenção e justificativa registradas; checkpoint posterior mortal continua incompatível."
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "status": "APPROVED_PENDING_SOURCE_RECONCILIATION",
+      "request": "Consideração futura para uso operacional aprovada condicionalmente; sem ativação."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "status": "NOT_GRANTED",
+      "request": "Nenhuma permissão de cena/Narrador."
+    }
+  ],
+  "bounded_unknowns": [
+    "CYCLE_V0033 é a autoridade adjudicada para cursor/next_role pelo contrato, mas MANIFEST_V46 aponta V0024 e mantém BLOCKED_CONFLICT operacional.",
+    "Abraço alvo antes de 1970-12-25 tem justificativa explícita do jogador, mas conflita com checkpoint posterior mortal; nenhum evento/data/retcon estabelecido.",
+    "Não há ACL efetiva nem variante aberta para conteúdo de verdade autoral; compromisso do jogador não substitui segregação técnica.",
+    "D03 derived attribution lacks typed acquisition and is not actionable NPC knowledge.",
+    "D08 has no verified current actor, incident or why-now.",
+    "D06-D08 handoffs preserve point-in-time statuses; local run state is publication evidence.",
+    "SCENE_READY and NARRATOR_PERMISSION remain unverified."
+  ],
+  "readback": {
+    "D11": "Exact readback of seven blobs/content at 8dd370ec0f72555af0268110525b0878d3fe7cce; master unchanged.",
+    "D12": "PENDING_REMOTE_READBACK; record commit/tree/blobs/exact content in local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json after publication."
+  },
+  "operational_release": "AUTHORIZED_PENDING_GATES",
+  "narrator_status": "NOT_READY_FOR_NARRATOR",
+  "decision": "APPROVAL-D05-001 adjudica CYCLE_V0033 como autoridade do cursor, sem liberar a transição enquanto a regra de conflito exige reconciliação do MANIFEST_V46. O alvo de Abraço antes de 1970-12-25 e sua justificativa estão registrados, mas o checkpoint posterior mortal permanece incompatível. Promoção futura autorizada e condicionada; D07 segue condicional; segredos e Narrador bloqueados. Nenhuma cena/prompt.",
+  "operational_gate": "BLOCKED_CONFLICT",
+  "promotion_performed": false,
+  "decision_delta_validation": {
+    "validator": "D12_VALIDATE_V003.py",
+    "status": "PASS",
+    "checks_passed": 28,
+    "checks_total": 28
+  },
+  "version": "V003"
+}

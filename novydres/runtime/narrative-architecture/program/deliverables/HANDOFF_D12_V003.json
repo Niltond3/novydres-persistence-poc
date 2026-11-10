@@ -1,0 +1,51 @@
+{
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "BLOCKED_CONFLICT",
+  "gate": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": {
+    "status": "PENDING",
+    "record": "execution-manifest.json and CHR001_D05-D12_RUN_STATE.json after push",
+    "rule": "Record actual commit, parent, tree, master ref, all new artifact blobs and exact content; no self-referential SHA."
+  },
+  "input_design_head": "44ba5ade7de825c3f4781c3fc04ca9a510f6b290",
+  "input_master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "output_head": "resolve from remote branch after publication; no self-reference",
+  "outputs": [
+    "D05_PLAYER_APPROVAL_QUEUE_V003.json",
+    "AUDIT_D05_V004.json",
+    "HANDOFF_D05_V005.json",
+    "D06_CHRONICLE_BIBLE_V003.json",
+    "D06_TRANSFORMATION_PATHS_V003.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V003.json",
+    "AUDIT_D06_V003.json",
+    "HANDOFF_D06_V003.json",
+    "D07_PLAYER_APPROVAL_QUEUE_V003.json",
+    "AUDIT_D12_V003.json",
+    "HANDOFF_D12_V003.json",
+    "D12_RELEASE_CANDIDATE_V003.json",
+    "D12_VALIDATE_V003.py"
+  ],
+  "next_action": "CYCLE_V0033 está adjudicado como autoridade do cursor conforme contrato; reconciliar a divergência material com MANIFEST_V46 antes de qualquer transição operacional. A intenção de Abraço antes de 1970-12-25 e sua justificativa estão registradas; as fontes de fim dos anos 1970 ainda afirmam estado mortal sem Abraço. Sem retcon, cena ou prompt. Depois, revalidar gates; D07 continua apenas elegível a consideração futura após reconciliação.",
+  "unresolved": [
+    "MANIFEST_V46 aponta para CYCLE_V0024; a transição continua BLOCKED_CONFLICT apesar da autoridade do ciclo estar adjudicada.",
+    "Alvo de Abraço antes de 1970-12-25 conflita com fontes posteriores de estado mortal; sem evento presumido ou retcon.",
+    "Nenhuma ACL efetiva ou variante aberta para verdade autoral; histórias dependentes seguem bloqueadas.",
+    "D07 autorizado apenas para consideração operacional futura após reconciliação e gates; não ativado.",
+    "SCENE_READY e NARRATOR_PERMISSION não verificados."
+  ],
+  "restrictions": [
+    "documentary branch only until operational gates pass",
+    "master and narrative cycle remain read-only in this update",
+    "no retcon",
+    "no scene or character-state change",
+    "no XP/FV or sheet mutation",
+    "no hidden truth read or disclosure",
+    "no Narrator prompt"
+  ],
+  "narrator_release": "NOT_READY_FOR_NARRATOR",
+  "promotion_authorized": true,
+  "promotion_performed": false,
+  "version": "V003"
+}

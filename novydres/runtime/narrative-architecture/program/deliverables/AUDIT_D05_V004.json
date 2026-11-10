@@ -1,0 +1,37 @@
+{
+  "document_id": "AUDIT_D05_V004",
+  "phase": "D05",
+  "version": "V004",
+  "result": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "scope": "Follow-up da adjudicação de cursor em D12; sem reexecução dos testes históricos de conteúdo D05.",
+  "finding": {
+    "id": "D05-F-007",
+    "severity": "operational_blocker",
+    "prior_state": "APPROVAL-D05-001 tinha investigação registrada sem decisão da fonte de autoridade.",
+    "evidence": "A cadeia CYCLE_V0001–V0033 foi verificada sem lacunas; cada previous_cycle SHA confere, refs do ciclo e LIVE.last_confirmed_event_id conferem. O contrato define o maior ciclo como autoridade de cursor/next_role. MANIFEST_V46, inalterado desde 2026-11-07, ainda aponta para V0024; o contrato também exige BLOCKED_CONFLICT para a divergência.",
+    "disposition": "Fonte do cursor adjudicada ao ciclo mais recente. A transição operacional permanece BLOCKED_CONFLICT até reconciliação versionada do manifesto/ciclo; nenhuma fonte operacional foi alterada."
+  },
+  "source_record": "D05_PLAYER_APPROVAL_QUEUE_V003.json",
+  "content_gate": "PASS_WITH_UNKNOWN inherited from the already completed D05 review and 18/18 recorded tests; tests_reexecuted=false.",
+  "independent_review": {
+    "status": "PASS_WITH_UNKNOWN",
+    "reviewer_id": "d05_adversarial_review",
+    "basis": "Earlier read-only adversarial review found no remaining material content finding after its targeted remediations; this V002 changes only the handoff state supported by the post-push execution record."
+  },
+  "remaining_unknowns": [
+    "A divergência entre MANIFEST_V46 e CYCLE_V0033 continua bloqueando transição operacional, embora a fonte normativa do cursor esteja identificada.",
+    "Não existe ACL efetiva para verdade autoral; o compromisso do jogador não altera permissões técnicas.",
+    "D02 V011 e limites de proveniência D03/D04 permanecem."
+  ],
+  "constraints": [
+    "No retcon executed.",
+    "No canon, cycle, character, mechanics, or scene state changed.",
+    "No secret truth read or disclosed.",
+    "Promotion authorization is pending the corresponding gates; no promotion performed.",
+    "No scene permission inferred."
+  ],
+  "next_phase": "D12_GATE_REVALIDATION",
+  "gate_transition": "D05 PASS_WITH_UNKNOWN permite continuidade documental; operação permanece BLOCKED_CONFLICT."
+}

@@ -1,0 +1,51 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V003",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "44ba5ade7de825c3f4781c3fc04ca9a510f6b290",
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "summary": "C05 closed; C06 not started; mortal; Embrace not occurred"
+  },
+  "deliverables": [
+    "D06_CHRONICLE_BIBLE_V003.json",
+    "D06_TRANSFORMATION_PATHS_V003.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V003.json",
+    "AUDIT_D06_V003.json",
+    "D12_VALIDATE_V003.py"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "reconcile the selected pre-1970-12-25 Embrace target with the later mortal checkpoint; rationale is recorded, no retcon is authorized",
+    "reconcile MANIFEST_V46 pointer under the orchestration contract before operational transition",
+    "truth-dependent content remains blocked; player commitment is not technical ACL",
+    "SCENE_READY and NARRATOR_PERMISSION remain unverified"
+  ],
+  "publication_readback": {
+    "status": "PENDING",
+    "post_publish_record": "local CHR001_D05-D12_RUN_STATE.json; this handoff is not self-referential"
+  },
+  "next_phase": "D12_GATE_REVALIDATION",
+  "next_phase_boundary": "Documentary decision state only; operational graduation blocked by chronology and pointer conflicts; no scene or Narrator prompt.",
+  "restrictions": [
+    "no canon change",
+    "no retcon",
+    "no scene",
+    "no mechanical grant",
+    "no secret truth",
+    "no master edit",
+    "no Narrator permission"
+  ],
+  "document_id": "HANDOFF_D06_V003",
+  "player_intent_delta": "Jogador esclarece que a janela anterior a 1970-12-25 deve permitir ingresso, compreensão e adaptação à sociedade cainita; Kuthulun é a Senhora escolhida. Isto permanece intenção, não evento."
+}

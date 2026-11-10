@@ -1,0 +1,89 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V003",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "route_policy": "O alvo vampírico foi escolhido pelo jogador como intenção; o conflito cronológico bloqueia sua operacionalização. Nenhuma rota é garantida ou evento presumido.",
+  "routes": [
+    {
+      "id": "ROUTE-VAMPIRE-BY-2010",
+      "label": "possible vampire state at the 2010 horizon",
+      "preconditions": [
+        "player confirms it as desired target",
+        "causal future events and permission support an actual Embrace",
+        "Embrace is played and persisted",
+        "meaningful post-Embrace experience covers body, Hunger/Beast, ties, society, power and costs under current rules",
+        "2010 snapshot has continuity evidence",
+        "reconcile the pre-1970-12-25 target with the later mortal CYCLE_V0033 checkpoint without silent retcon"
+      ],
+      "if_unavailable": "keep BLOCKED_CONFLICT; do not alter history, force an Embrace, or count player intent as an occurred event",
+      "status": "PLAYER_SELECTED_TARGET_BLOCKED_CONFLICT",
+      "target_window": "Embrace antes de 1970-12-25",
+      "player_rationale": "O jogador exige o Abraço como alvo antes de 1970-12-25 para permitir ingresso, compreensão e adaptação à sociedade cainita; afirma que Kuthulun já está definida como Senhora, que os Gangrel de Novydres têm cultura militar pautada pela força de combate e que rumores de mortal que enfrenta vampiros de mãos nuas chamariam a atenção da Primogênita. Isso não constitui evento nem resolve o checkpoint posterior mortal."
+    },
+    {
+      "id": "ROUTE-NONVAMPIRIC-2010",
+      "label": "possible mortal or non-vampire state at the horizon",
+      "preconditions": [
+        "player approves this alternate target if the legacy vampire target is changed",
+        "state and continuity are evidenced"
+      ],
+      "if_unapproved": "do not count it as satisfying the legacy proposed target; keep scope decision pending",
+      "status": "NOT_SELECTED_BY_PLAYER"
+    },
+    {
+      "id": "ROUTE-UNFINISHED-OR-EARLY-TERMINAL",
+      "label": "truthful unfinished, refused, failed, absent or terminal state",
+      "preconditions": [
+        "actual play or player choice causes it and evidence is persisted"
+      ],
+      "if_selected": "preserve consequences and do not add plot armor; phase may close without passing the selected target",
+      "status": "VALID_REPORTING; NOT_A_SUCCESS_SHORTCUT"
+    },
+    {
+      "id": "ROUTE-EXTENDED-OR-PAUSED-HORIZON",
+      "label": "pause or extend if plausibility cannot fit",
+      "preconditions": [
+        "identify timing/capacity conflict",
+        "player approves changing target window or treatment of horizon"
+      ],
+      "if_unapproved": "keep mismatch visible and block the dependent step",
+      "status": "PLAYER_DECISION_REQUIRED"
+    }
+  ],
+  "choice_contract": {
+    "approval_id": "APPROVAL-D06-001",
+    "no_default": "silence or continuation to later phases selects no route",
+    "decision_before": "Player target recorded; chronology reconciliation and operational gates required before operational graduation criteria or promotion.",
+    "safe_interim_work": "documentary design independent of target selection"
+  },
+  "coverage_matrix": [
+    {
+      "dimension": "body and supernatural condition",
+      "evidence": "source-backed event, applicable rule and lived consequence"
+    },
+    {
+      "dimension": "information and epistemic limits",
+      "evidence": "event-specific acquisition for protagonist and each NPC"
+    },
+    {
+      "dimension": "relationships and human ties",
+      "evidence": "formation, change, loss and 2010 continuity evidence"
+    },
+    {
+      "dimension": "society, institutions and territory",
+      "evidence": "causal contact and authorized position"
+    },
+    {
+      "dimension": "mechanics and powers",
+      "evidence": "rule source, acquisition authorization and ledger"
+    },
+    {
+      "dimension": "time and consequences",
+      "evidence": "supported date or UNKNOWN; no invented off-screen event"
+    }
+  ],
+  "input_head": "44ba5ade7de825c3f4781c3fc04ca9a510f6b290"
+}

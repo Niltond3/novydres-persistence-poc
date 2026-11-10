@@ -1,0 +1,79 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V003",
+  "status": "DECIDED_TARGET_BLOCKED_CONFLICT",
+  "authority": "PLAYER_INTENT; EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "decisions": [
+    {
+      "id": "APPROVAL-D06-001",
+      "decision": "Confirm target for guided-creation completion: retain vampire-by-2010 as a chosen goal, approve a non-vampire alternative, or leave target unresolved.",
+      "options": [
+        "retain vampire-by-2010 as player-selected goal, not guaranteed result",
+        "approve non-vampire alternate target",
+        "leave unresolved and keep graduation pending"
+      ],
+      "default": "PENDING_PLAYER_APPROVAL",
+      "when_required": "before operational graduation criteria or promotion treats one route as required",
+      "independent_work": "D07/D08 may continue only where independent of target selection",
+      "status": "DECIDED_TARGET_BLOCKED_CONFLICT",
+      "response": "Tem que ser Abraço; antes do Natal de 1970, para haver tempo de ingressar, entender e se adaptar à sociedade cainita.",
+      "selected_target": "Abraço vampírico antes de 1970-12-25",
+      "player_context": "Kuthulun já está definida como Senhora. O jogador descreve os Gangrel de Novydres como uma cultura militar pautada pela força de combate; rumores de um mortal que lida com vampiros de mãos nuas chamariam a atenção da Primogênita. A base para o Abraço está bem definida.",
+      "operational_disposition": "A intenção e sua justificativa temporal estão registradas. A cadeia fonte posterior continua situando Bartholomeu mortal e sem Abraço no fim dos anos 1970; sem retcon ou evento inferido, manter BLOCKED_CONFLICT.",
+      "actual_event": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicate CYCLE_V0033 versus MANIFEST_V46 pointer conflict.",
+      "default": "pending; blocks operational state change",
+      "when_required": "before operational transition",
+      "status": "CURSOR_AUTHORITY_ADJUDICATED_BLOCKER_REMAINS",
+      "response_summary": "CYCLE_V0033 é autoridade do cursor/next_role pelo contrato; MANIFEST_V46 aponta V0024 e mantém BLOCKED_CONFLICT até reconciliação versionada."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Authorize or decline future promotion to operational/master use.",
+      "default": "keep proposed documents only",
+      "when_required": "D12 after audit and readback",
+      "status": "APPROVED_PENDING_GATES",
+      "response_summary": "Todos os documentos D05-D12 aprovados para promoção futura sujeita aos gates; promoção não realizada."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Provide effective secret-truth segregation, approve an open variant, or keep truth-dependent investigation blocked.",
+      "default": "store no secret; block dependent play",
+      "when_required": "before truth-dependent D07 material",
+      "status": "COMMITMENT_RECORDED_BLOCKER_REMAINS",
+      "response_summary": "Compromisso de não ler segredos registrado; sem ACL ou variante aberta, conteúdo dependente permanece bloqueado."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff.",
+      "default": "not granted by D06",
+      "when_required": "future scene handoff",
+      "status": "NOT_GRANTED",
+      "response_summary": "Nenhuma permissão de cena ou Narrador foi concedida."
+    }
+  ],
+  "input_head": "44ba5ade7de825c3f4781c3fc04ca9a510f6b290",
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+    }
+  ]
+}
