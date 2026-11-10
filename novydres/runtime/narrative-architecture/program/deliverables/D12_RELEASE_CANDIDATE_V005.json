@@ -75,12 +75,16 @@
   },
   "validator": {
     "name": "D12_VALIDATE_V005.py",
-    "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+    "validator_blob_sha": "188155276175dc18984f0092fd677a2328e091b3",
     "status": "PASS",
-    "checks": "66/66",
-    "result_blob_sha": "a9b21729b33c1b757da1759514ed0a3a78960848"
+    "checks": "68/68",
+    "result_blob_sha": "468d83d1600e7ee82df5efa820ff1e519277046e"
   },
   "publication_readback": {
-    "status": "PENDING_REMOTE_READBACK"
+    "status": "PASS_INITIAL_PUBLICATION_READBACK",
+    "commit_sha": "22cb6dd34d5b62709fc70912504dc59dd421931a",
+    "files": 16,
+    "master_modified": false,
+    "evidence": "All 16 files in the initial package returned their expected Git blob SHA at commit A; metadata updates in commit B record this result."
   }
 }

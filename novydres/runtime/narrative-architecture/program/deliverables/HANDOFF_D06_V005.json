@@ -69,10 +69,48 @@
     "SCENE_READY and NARRATOR_PERMISSION are not verified"
   ],
   "publication_readback": {
-    "status": "PENDING_REMOTE_PUBLICATION_AND_READBACK",
-    "design_base_head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
-    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
-    "master_modified": false
+    "status": "PASS_INITIAL_PUBLICATION_READBACK",
+    "commit_sha": "22cb6dd34d5b62709fc70912504dc59dd421931a",
+    "published_package_files_read_back": 16,
+    "D06_artifacts_read_back": [
+      {
+        "path": "source-candidates/M3.01_v006.source.txt",
+        "blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf"
+      },
+      {
+        "path": "source-candidates/state_v044.source.txt",
+        "blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+        "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V005.json",
+        "blob_sha": "aa0baa59e0cbdac8741a19345643e7c3e828725c"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V005.json",
+        "blob_sha": "20c18d9932df4ba093f64ff832f5c40b83570030"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V005.json",
+        "blob_sha": "6bc7710f1a7907c0c168463c2d99aa00c08bac10"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V005.json",
+        "blob_sha": "58058d90103fc09d8f65313e0f9de3dcb9f5784d"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V001.py",
+        "blob_sha": "5c62902b27fed7f1db1ae4539c0f743969a2304b"
+      },
+      {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V001_RESULT.json",
+        "blob_sha": "f339bdda736662a652f65a96c1d699fe274fcb2a"
+      }
+    ],
+    "readback_result": "All 16 published paths returned the exact expected Git blob SHA at commit 22cb6dd34d5b62709fc70912504dc59dd421931a."
   },
   "next_phase": "Dramaturge continuity planning only, using player-safe candidates and the supplied prompt",
   "next_phase_boundary": "No scene, no Narrator prompt, no D07 activation or master promotion. Candidate sources are planning-only.",

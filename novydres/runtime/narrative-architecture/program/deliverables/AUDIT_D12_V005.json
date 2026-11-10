@@ -81,7 +81,7 @@
     "D06_audit_path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V005.json",
     "D06_audit_blob_sha": "58058d90103fc09d8f65313e0f9de3dcb9f5784d",
     "D06_handoff_path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V005.json",
-    "D06_handoff_blob_sha": "94dfa44e07b51ca8bcffe4346bd6305b49871258"
+    "D06_handoff_blob_sha": "c7ed949fd3255f46bc070efeef94d3a62058ed12"
   },
   "findings": [
     {
@@ -142,13 +142,20 @@
   },
   "validation": {
     "validator": "D12_VALIDATE_V005.py",
-    "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+    "validator_blob_sha": "188155276175dc18984f0092fd677a2328e091b3",
     "status": "PASS",
-    "checks_passed": 66,
-    "checks_total": 66,
+    "checks_passed": 68,
+    "checks_total": 68,
     "result_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V005_RESULT.json",
-    "result_blob_sha": "a9b21729b33c1b757da1759514ed0a3a78960848",
+    "result_blob_sha": "468d83d1600e7ee82df5efa820ff1e519277046e",
     "source_validator": "D06_SOURCE_VALIDATE_V001.py PASS 22/22"
   },
-  "scope": "Source reconciliation and Dramaturge planning prompt only. No master, manifest, cycle, LIVE, history, scene, sheet, mechanic, or secret content changed."
+  "scope": "Source reconciliation and Dramaturge planning prompt only. No master, manifest, cycle, LIVE, history, scene, sheet, mechanic, or secret content changed.",
+  "publication_readback": {
+    "status": "PASS_INITIAL_PUBLICATION_READBACK",
+    "commit_sha": "22cb6dd34d5b62709fc70912504dc59dd421931a",
+    "files": 16,
+    "master_modified": false,
+    "evidence": "All 16 files in the initial package returned their expected Git blob SHA at commit A; metadata updates in commit B record this result."
+  }
 }

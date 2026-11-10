@@ -1,8 +1,8 @@
 {
   "validator": "D12_VALIDATE_V005.py",
   "status": "PASS",
-  "checks_passed": 66,
-  "checks_total": 66,
+  "checks_passed": 68,
+  "checks_total": 68,
   "checks": [
     {
       "id": "D12-01",
@@ -196,146 +196,156 @@
     },
     {
       "id": "D12-39",
-      "label": "D06 handoff marks readback pending",
+      "label": "D06 initial package readback passed",
       "result": "PASS"
     },
     {
       "id": "D12-40",
-      "label": "D12 documentary and operational gates separated",
+      "label": "D06 initial readback binds commit A and all 16 files",
       "result": "PASS"
     },
     {
       "id": "D12-41",
-      "label": "D12 secret gate",
+      "label": "D12 documentary and operational gates separated",
       "result": "PASS"
     },
     {
       "id": "D12-42",
-      "label": "D12 scene gate",
+      "label": "D12 secret gate",
       "result": "PASS"
     },
     {
       "id": "D12-43",
-      "label": "D12 Narrator gate",
+      "label": "D12 scene gate",
       "result": "PASS"
     },
     {
       "id": "D12-44",
-      "label": "D12 promotion not performed",
+      "label": "D12 Narrator gate",
       "result": "PASS"
     },
     {
       "id": "D12-45",
-      "label": "V004 validator run retained",
+      "label": "D12 promotion not performed",
       "result": "PASS"
     },
     {
       "id": "D12-46",
-      "label": "D12 handoff remains blocked operationally",
+      "label": "V004 validator run retained",
       "result": "PASS"
     },
     {
       "id": "D12-47",
-      "label": "next step scoped to Dramaturge planning",
+      "label": "D12 handoff remains blocked operationally",
       "result": "PASS"
     },
     {
       "id": "D12-48",
-      "label": "readback status is explicit",
+      "label": "next step scoped to Dramaturge planning",
       "result": "PASS"
     },
     {
       "id": "D12-49",
-      "label": "release candidate remains blocked",
+      "label": "D12 initial readback binds commit A and all 16 files",
       "result": "PASS"
     },
     {
       "id": "D12-50",
-      "label": "release documentary gate",
+      "label": "audit and release record initial readback",
       "result": "PASS"
     },
     {
       "id": "D12-51",
-      "label": "no promotion or master write",
+      "label": "release candidate remains blocked",
       "result": "PASS"
     },
     {
       "id": "D12-52",
-      "label": "no scene or Narrator authorization",
+      "label": "release documentary gate",
       "result": "PASS"
     },
     {
       "id": "D12-53",
-      "label": "D07 not activated",
+      "label": "no promotion or master write",
       "result": "PASS"
     },
     {
       "id": "D12-54",
-      "label": "prompt cites episode candidate hash",
+      "label": "no scene or Narrator authorization",
       "result": "PASS"
     },
     {
       "id": "D12-55",
-      "label": "prompt cites state candidate hash",
+      "label": "D07 not activated",
       "result": "PASS"
     },
     {
       "id": "D12-56",
-      "label": "prompt identifies current manifest",
+      "label": "prompt cites episode candidate hash",
       "result": "PASS"
     },
     {
       "id": "D12-57",
-      "label": "prompt enforces M3.01 date boundary",
+      "label": "prompt cites state candidate hash",
       "result": "PASS"
     },
     {
       "id": "D12-58",
-      "label": "prompt preserves forced nature of Embrace",
+      "label": "prompt identifies current manifest",
       "result": "PASS"
     },
     {
       "id": "D12-59",
-      "label": "prompt retains authored network direction",
+      "label": "prompt enforces M3.01 date boundary",
       "result": "PASS"
     },
     {
       "id": "D12-60",
-      "label": "prompt retains player confrontation concept",
+      "label": "prompt preserves forced nature of Embrace",
       "result": "PASS"
     },
     {
       "id": "D12-61",
-      "label": "prompt excludes scene writing",
+      "label": "prompt retains authored network direction",
       "result": "PASS"
     },
     {
       "id": "D12-62",
-      "label": "prompt excludes Narrator cycle",
+      "label": "prompt retains player confrontation concept",
       "result": "PASS"
     },
     {
       "id": "D12-63",
-      "label": "prompt prohibits secret access",
+      "label": "prompt excludes scene writing",
       "result": "PASS"
     },
     {
       "id": "D12-64",
-      "label": "prompt distinguishes scene readiness",
+      "label": "prompt excludes Narrator cycle",
       "result": "PASS"
     },
     {
       "id": "D12-65",
-      "label": "prompt distinguishes Narrator permission",
+      "label": "prompt prohibits secret access",
       "result": "PASS"
     },
     {
       "id": "D12-66",
+      "label": "prompt distinguishes scene readiness",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-67",
+      "label": "prompt distinguishes Narrator permission",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-68",
       "label": "D12 release inventory exactly matches 16 deliverables",
       "result": "PASS"
     }
   ],
-  "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+  "validator_blob_sha": "188155276175dc18984f0092fd677a2328e091b3",
   "documentary_input_head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
   "master_input_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
   "candidate_blobs": {
