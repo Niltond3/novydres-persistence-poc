@@ -1,0 +1,56 @@
+{
+  "document_id": "D10_PHASE_BINDING_TESTS_V005",
+  "version": "V005",
+  "phase": "D10",
+  "test_runner": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+  "test_cases": [
+    {
+      "id": "D10 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "D11 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "D12 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "a declared PASS report differing from runner output is rejected",
+      "category": "negative",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "a different existing runner is rejected for catalog mismatch",
+      "category": "negative",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "correct runner path with false blob SHA is rejected",
+      "category": "negative",
+      "description": "Executes the pinned runner or rejects a phase report not bound to its exact file blob.",
+      "expected": "PASS"
+    },
+    {
+      "id": "valid envelope uses pinned schema despite local drift",
+      "category": "git-integrity",
+      "description": "Validates an envelope with the pinned Git schema while the worktree schema differs.",
+      "expected": "PASS"
+    },
+    {
+      "id": "symlink phase catalog is rejected",
+      "category": "git-integrity",
+      "description": "Rejects a symlink as a regular tracked report input.",
+      "expected": "PASS"
+    }
+  ]
+}

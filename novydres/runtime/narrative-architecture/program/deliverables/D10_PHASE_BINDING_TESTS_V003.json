@@ -1,0 +1,18 @@
+{
+  "document_id": "D10_PHASE_BINDING_TESTS_V003",
+  "version": "V003",
+  "phase": "D10",
+  "test_runner": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V003.py",
+  "test_cases": [
+    {"id":"D10 catalog accepts only its own phase report","category":"phase-binding","description":"Accepts a report whose regular catalog and report identify D10 and whose ordered IDs and totals agree.","expected":"PASS"},
+    {"id":"D11 phase-specific catalog and report are accepted","category":"phase-binding","description":"Accepts a regular D11 catalog and report with D11-specific ordered IDs.","expected":"PASS"},
+    {"id":"D12 phase-specific catalog and report are accepted","category":"phase-binding","description":"Accepts a regular D12 catalog and report with D12-specific ordered IDs.","expected":"PASS"},
+    {"id":"D10 catalog cannot masquerade as D11","category":"phase-binding","description":"Rejects D10 refs when the envelope phase is D11.","expected":"PASS"},
+    {"id":"catalog phase mismatch is rejected","category":"phase-binding","description":"Rejects a catalog whose phase differs from the report and envelope phase.","expected":"PASS"},
+    {"id":"wrong report ID order is rejected","category":"phase-binding","description":"Rejects reports that omit or reorder catalog IDs.","expected":"PASS"},
+    {"id":"wrong report totals are rejected","category":"phase-binding","description":"Rejects totals that differ from the phase catalog.","expected":"PASS"},
+    {"id":"symlink phase catalog is rejected","category":"regular-blob","description":"Rejects a symlink catalog even when its target is a valid regular catalog.","expected":"PASS"},
+    {"id":"symlink phase report is rejected","category":"regular-blob","description":"Rejects a symlink report even when its target is a valid regular report.","expected":"PASS"},
+    {"id":"runner path must match its catalog","category":"phase-binding","description":"Rejects a report runner reference that differs from the regular runner path named by its catalog.","expected":"PASS"}
+  ]
+}

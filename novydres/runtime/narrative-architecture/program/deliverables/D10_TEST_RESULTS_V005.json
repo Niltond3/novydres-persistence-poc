@@ -1,0 +1,58 @@
+{
+  "phase": "D10",
+  "status": "PASS",
+  "catalog_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V005.json",
+    "blob_sha": "7010b28dbec2969822d82b1a29191e24fb97572a"
+  },
+  "runner_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+    "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+  },
+  "execution_mode": "EXECUTED",
+  "passed": 8,
+  "total": 8,
+  "catalog_matches_runner": true,
+  "tests": [
+    {
+      "id": "D10 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D11 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D12 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "a declared PASS report differing from runner output is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "a different existing runner is rejected for catalog mismatch",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "correct runner path with false blob SHA is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "valid envelope uses pinned schema despite local drift",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "symlink phase catalog is rejected",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}

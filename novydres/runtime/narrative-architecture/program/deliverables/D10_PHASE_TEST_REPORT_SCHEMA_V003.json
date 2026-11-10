@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/chr-001/d10/phase-test-report/v003",
+  "title": "NOVYDRES CHR-001 phase test report V003",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["phase", "status", "catalog_ref", "runner_ref", "execution_mode", "passed", "total", "catalog_matches_runner", "tests"],
+  "properties": {
+    "phase": {"enum": ["D05", "D06", "D07", "D08", "D09", "D10", "D11", "D12"]},
+    "status": {"const": "PASS"},
+    "catalog_ref": {"$ref": "#/$defs/file_ref"},
+    "runner_ref": {"$ref": "#/$defs/file_ref"},
+    "execution_mode": {"const": "EXECUTED"},
+    "passed": {"type": "integer", "minimum": 1},
+    "total": {"type": "integer", "minimum": 1},
+    "catalog_matches_runner": {"const": true},
+    "tests": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["id", "result", "detail"],
+      "properties": {"id": {"type": "string", "minLength": 1}, "result": {"const": "PASS"}, "detail": {"type": ["string", "null"]}}
+    }}
+  },
+  "$defs": {"file_ref": {
+    "type": "object", "additionalProperties": false, "required": ["path", "blob_sha"],
+    "properties": {
+      "path": {"type": "string", "pattern": "^novydres/runtime/narrative-architecture/program/deliverables/[A-Za-z0-9._-]+$"},
+      "blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+    }
+  }}
+}

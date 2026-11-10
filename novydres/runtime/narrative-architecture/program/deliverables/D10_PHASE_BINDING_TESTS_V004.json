@@ -1,0 +1,50 @@
+{
+  "document_id": "D10_PHASE_BINDING_TESTS_V004",
+  "version": "V004",
+  "phase": "D10",
+  "test_runner": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+  "test_cases": [
+    {
+      "id": "D10 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "D11 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "D12 report matches output from the pinned runner execution",
+      "category": "exec",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "a declared PASS report differing from runner output is rejected",
+      "category": "negative",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "a different existing runner is rejected for catalog mismatch",
+      "category": "negative",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "envelope schema is loaded from pinned HEAD despite local drift",
+      "category": "git-integrity",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    },
+    {
+      "id": "symlink phase catalog is rejected",
+      "category": "git-integrity",
+      "description": "Executes the pinned phase runner or rejects unbound evidence.",
+      "expected": "PASS"
+    }
+  ]
+}

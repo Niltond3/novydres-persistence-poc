@@ -1,0 +1,70 @@
+{
+  "document_id": "D10_TECHNICAL_REVIEW_V003",
+  "version": "V003",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "phase": "D10",
+  "review_role": "technical",
+  "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+  "result": "FAIL",
+  "scope": "Independent technical review of D10 V003 delta.",
+  "findings": [
+    {
+      "id": "D10-V003-TECH-001",
+      "severity": "MATERIAL",
+      "disposition": "RESOLVED_IN_V004",
+      "summary": "V003 trusted EXECUTED/catalog_matches_runner declarations and did not run the pinned runner.",
+      "evidence": [
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V003.py",
+            "blob_sha": "32b1d5a1d03af6a1be57864db084fc1d5639baa0"
+          },
+          "anchor": "verify_test_report declaration checks"
+        },
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V003.json",
+            "blob_sha": "0922629d95804c24eb83df1d8bf8f94addbf2900"
+          },
+          "anchor": "/status"
+        }
+      ],
+      "resolution": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+          "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+        },
+        "anchor": "_execute_pinned_runner executes archive at source_head"
+      }
+    },
+    {
+      "id": "D10-V003-TECH-002",
+      "severity": "MATERIAL",
+      "disposition": "RESOLVED_IN_V004",
+      "summary": "V003 read the envelope schema from the worktree instead of source_head.",
+      "evidence": [
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V003.py",
+            "blob_sha": "32b1d5a1d03af6a1be57864db084fc1d5639baa0"
+          },
+          "anchor": "local BASE.read_text schema loading"
+        }
+      ],
+      "resolution": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+          "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+        },
+        "anchor": "_pinned_schema uses git_regular_blob"
+      }
+    }
+  ],
+  "review_notes": [
+    "Declared passing results did not prove pinned runner execution.",
+    "V003 gate is FAIL."
+  ],
+  "gate_effect": "FAIL; do not advance on this version."
+}

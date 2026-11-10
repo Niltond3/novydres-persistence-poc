@@ -1,0 +1,84 @@
+{
+  "document_id": "D10_TECHNICAL_REVIEW_V004",
+  "version": "V004",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "phase": "D10",
+  "review_role": "technical",
+  "reviewer_id": "CHR001-D10-INDEP-2026-11-09-B",
+  "result": "FAIL",
+  "scope": "Independent technical review of D10 V004 delta.",
+  "findings": [
+    {
+      "id": "D10-V004-TECH-001",
+      "severity": "MATERIAL",
+      "disposition": "RESOLVED_IN_V005",
+      "summary": "V004 did not bind report runner_ref.blob_sha to the regular runner blob executed.",
+      "evidence": [
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+            "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+          },
+          "anchor": "verify_test_report checks path only"
+        },
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V004.json",
+            "blob_sha": "b6ff662b0e80f860e0dd2a82d7283f1fa563acda"
+          },
+          "anchor": "/tests/4"
+        }
+      ],
+      "resolution": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+          "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+        },
+        "anchor": "pinned report SHA and generated runner_ref checked against regular blob"
+      },
+      "test": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V005.json",
+          "blob_sha": "7010b28dbec2969822d82b1a29191e24fb97572a"
+        },
+        "anchor": "/test_cases/5/id"
+      }
+    },
+    {
+      "id": "D10-V004-TECH-002",
+      "severity": "MATERIAL",
+      "disposition": "RESOLVED_IN_V005",
+      "summary": "V004 schema drift test called _pinned_schema directly, not the envelope validator.",
+      "evidence": [
+        {
+          "ref": {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+            "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+          },
+          "anchor": "pinned_schema_ignores_worktree_drift"
+        }
+      ],
+      "resolution": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+          "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+        },
+        "anchor": "valid_envelope_uses_pinned_schema_despite_local_drift calls validate_phase_envelope_v5"
+      },
+      "test": {
+        "ref": {
+          "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+          "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+        },
+        "anchor": "/tests/6/result"
+      }
+    }
+  ],
+  "review_notes": [
+    "Pinned execution and schema reading existed, but report hash binding and test integration were incomplete.",
+    "V004 gate is FAIL."
+  ],
+  "gate_effect": "FAIL; do not advance on this version."
+}

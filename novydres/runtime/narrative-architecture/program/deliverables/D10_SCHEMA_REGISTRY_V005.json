@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/chr-001/d10/schema-registry/v005",
+  "document_id": "D10_SCHEMA_REGISTRY_V005",
+  "version": "V005",
+  "status": "PROPOSED_NON_OPERATIONAL",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "parent_registry_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V002.json",
+    "blob_sha": "6c53a942200607fb4065be4b2aa828632018da02"
+  },
+  "source": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+    "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+    "schema_status": "PROPOSED_NON_OPERATIONAL",
+    "verification": "VERIFIED_READ_ONLY_COPY"
+  },
+  "version_gates": [
+    {
+      "version": "V003",
+      "gate": "FAIL",
+      "review_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V003.json",
+        "blob_sha": "28120ec00eef19bbea9b30e690acc6abc4bcd7e3"
+      }
+    },
+    {
+      "version": "V004",
+      "gate": "FAIL",
+      "review_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V004.json",
+        "blob_sha": "c68facc800eae081a020292d7cdccb43fc19803a"
+      }
+    },
+    {
+      "version": "V005",
+      "gate": "PASS_WITH_UNKNOWN",
+      "review_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V005.json",
+        "blob_sha": "a173aa30ae75621fde2cbabe5e15f835f72a9b82"
+      }
+    }
+  ],
+  "schemas": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V005.json",
+      "blob_sha": "265d3867309d56dccf4ac78626c2e6e88e6747f7"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_CATALOG_SCHEMA_V005.json",
+      "blob_sha": "ea153d78e67d5b408f9b3758d57b98f77bb1c817"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_REPORT_SCHEMA_V005.json",
+      "blob_sha": "aee80d2c505bc7165554234cea84a6c2c85df86e"
+    }
+  ],
+  "runner": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+    "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+  },
+  "catalog": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V005.json",
+    "blob_sha": "7010b28dbec2969822d82b1a29191e24fb97572a"
+  },
+  "test_report": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+    "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+  },
+  "history_artifacts": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V003.py",
+      "blob_sha": "32b1d5a1d03af6a1be57864db084fc1d5639baa0"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V003.json",
+      "blob_sha": "8bec4722a3ff6d1e651ec1258d0849d9816ef030"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_CATALOG_SCHEMA_V003.json",
+      "blob_sha": "69f56bdcd474da315105127070cfe0537a73e21f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_REPORT_SCHEMA_V003.json",
+      "blob_sha": "5fdb7b61358077c877e572ef89334c4fbea740b8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V003.json",
+      "blob_sha": "7b42ae39cf10bf7c40dd4475bca6c2082895e252"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V003.json",
+      "blob_sha": "0922629d95804c24eb83df1d8bf8f94addbf2900"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+      "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V004.json",
+      "blob_sha": "85ad57705d11f6f96a5581dbca3c0b540e0e2370"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_CATALOG_SCHEMA_V004.json",
+      "blob_sha": "ed213a066cc4fe7b399883e5422ff70da307f013"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_REPORT_SCHEMA_V004.json",
+      "blob_sha": "9f0942f6d42d51de06d739cac2a691f3d6b1d840"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V004.json",
+      "blob_sha": "73b0359ca40ae95c5afe408c325213c644072e57"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V004.json",
+      "blob_sha": "b6ff662b0e80f860e0dd2a82d7283f1fa563acda"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+      "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_ENVELOPE_SCHEMA_V005.json",
+      "blob_sha": "265d3867309d56dccf4ac78626c2e6e88e6747f7"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_CATALOG_SCHEMA_V005.json",
+      "blob_sha": "ea153d78e67d5b408f9b3758d57b98f77bb1c817"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_TEST_REPORT_SCHEMA_V005.json",
+      "blob_sha": "aee80d2c505bc7165554234cea84a6c2c85df86e"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V005.json",
+      "blob_sha": "7010b28dbec2969822d82b1a29191e24fb97572a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+      "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+    }
+  ],
+  "authority_limits": [
+    "Proposal only; no canonical or operational state changes.",
+    "No truth lock, SCENE_READY, NARRATOR_PERMISSION, or promotion is granted."
+  ]
+}

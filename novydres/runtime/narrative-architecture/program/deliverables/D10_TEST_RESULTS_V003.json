@@ -1,0 +1,68 @@
+{
+  "phase": "D10",
+  "status": "PASS",
+  "catalog_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V003.json",
+    "blob_sha": "7b42ae39cf10bf7c40dd4475bca6c2082895e252"
+  },
+  "runner_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V003.py",
+    "blob_sha": "32b1d5a1d03af6a1be57864db084fc1d5639baa0"
+  },
+  "execution_mode": "EXECUTED",
+  "passed": 10,
+  "total": 10,
+  "catalog_matches_runner": true,
+  "tests": [
+    {
+      "id": "D10 catalog accepts only its own phase report",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D11 phase-specific catalog and report are accepted",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D12 phase-specific catalog and report are accepted",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D10 catalog cannot masquerade as D11",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "catalog phase mismatch is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "wrong report ID order is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "wrong report totals are rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "symlink phase catalog is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "symlink phase report is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "runner path must match its catalog",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}

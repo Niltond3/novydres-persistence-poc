@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/chr-001/d10/phase-envelope/v005",
+  "title": "NOVYDRES CHR-001 phase envelope V005",
+  "description": "Additive proposal-only envelope. Each phase test report is bound to its own pinned phase catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "program_id",
+    "phase",
+    "gate",
+    "authority",
+    "schema_status",
+    "operational_mutation",
+    "artifacts",
+    "test_catalog_ref",
+    "validation_report_ref",
+    "audit",
+    "publication_record",
+    "previous_handoff_ref",
+    "prior_phase_gates",
+    "next_phase",
+    "narrator_ready"
+  ],
+  "properties": {
+    "program_id": {
+      "const": "CHR-001"
+    },
+    "phase": {
+      "enum": [
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12"
+      ]
+    },
+    "gate": {
+      "enum": [
+        "NOT_STARTED",
+        "IN_PROGRESS",
+        "AUDITING",
+        "REMEDIATING",
+        "PASS",
+        "PASS_WITH_UNKNOWN",
+        "PENDING_PLAYER_APPROVAL",
+        "BLOCKED_EXTERNAL_DEPENDENCY",
+        "FAIL"
+      ]
+    },
+    "authority": {
+      "const": "EDITORIAL_ONLY"
+    },
+    "schema_status": {
+      "const": "PROPOSED_NON_OPERATIONAL"
+    },
+    "operational_mutation": {
+      "const": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "test_catalog_ref": {
+      "$ref": "#/$defs/file_ref"
+    },
+    "validation_report_ref": {
+      "$ref": "#/$defs/file_ref"
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "technical",
+        "literary"
+      ],
+      "properties": {
+        "technical": {
+          "$ref": "#/$defs/review"
+        },
+        "literary": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "publication_record": {
+      "$ref": "#/$defs/publication"
+    },
+    "previous_handoff_ref": {
+      "$ref": "#/$defs/file_ref"
+    },
+    "prior_phase_gates": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^D(0[1-9]|1[01])$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/file_ref"
+      }
+    },
+    "next_phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        null
+      ]
+    },
+    "narrator_ready": {
+      "const": false
+    }
+  },
+  "$defs": {
+    "file_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "blob_sha"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^novydres/runtime/narrative-architecture/program/deliverables/[A-Za-z0-9._-]+$"
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "artifact": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/file_ref"
+        },
+        {
+          "type": "object",
+          "required": [
+            "spoiler_class"
+          ],
+          "properties": {
+            "spoiler_class": {
+              "const": "PLAYER_SAFE"
+            }
+          }
+        }
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reviewer_id",
+        "status",
+        "report_ref"
+      ],
+      "properties": {
+        "reviewer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_UNKNOWN",
+            "NOT_APPLICABLE",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "report_ref": {
+          "$ref": "#/$defs/file_ref"
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "remote",
+        "target_branch",
+        "force_push",
+        "input_head",
+        "master_head",
+        "commit",
+        "remote_head_after",
+        "tree",
+        "artifacts"
+      ],
+      "properties": {
+        "remote": {
+          "const": "origin"
+        },
+        "target_branch": {
+          "const": "design/chr001-narrative-program-d01"
+        },
+        "force_push": {
+          "const": false
+        },
+        "input_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "master_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "remote_head_after": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "tree": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file_ref"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "phase": "D10",
+  "status": "PASS",
+  "catalog_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_PHASE_BINDING_TESTS_V004.json",
+    "blob_sha": "73b0359ca40ae95c5afe408c325213c644072e57"
+  },
+  "runner_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V004.py",
+    "blob_sha": "884dd8546d1a37185d3b423b8af36fc7ca3c726a"
+  },
+  "execution_mode": "EXECUTED",
+  "passed": 7,
+  "total": 7,
+  "catalog_matches_runner": true,
+  "tests": [
+    {
+      "id": "D10 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D11 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "D12 report matches output from the pinned runner execution",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "a declared PASS report differing from runner output is rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "a different existing runner is rejected for catalog mismatch",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "envelope schema is loaded from pinned HEAD despite local drift",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "id": "symlink phase catalog is rejected",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}
