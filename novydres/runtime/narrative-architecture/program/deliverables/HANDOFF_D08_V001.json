@@ -1,0 +1,83 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D08",
+  "version": "V001",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "b8a814549ef8ea106c026154fbab1708e9052374",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+      "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+      "role": "Conditional PC01 draft and local closure limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+      "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+      "role": "Truth-dependent authorship play remains blocked."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "Inherited approvals and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V001.json",
+      "blob_sha": "83ea55bcc233fd641bf5636e38e1df14e59637e8",
+      "role": "D07 limitations and documentary gate."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V001.json",
+      "blob_sha": "71e3d737deea62aafe5847adc30bf0d680db86ab",
+      "role": "Published D07 handoff and checkpoint."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "Latest numeric cycle; documentary cursor only."
+    }
+  ],
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "protagonist_mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE",
+    "source_authority": "Latest numeric cycle is identical on design and master; documentary cursor only."
+  },
+  "deliverables": [
+    "D08_STORY_SCENES_BEATS_V001.json",
+    "D08_PLAYER_APPROVAL_QUEUE_V001.json",
+    "D08_ADVERSARIAL_TESTS_V001.json",
+    "D08_VALIDATE_V001.py",
+    "AUDIT_D08_V001.json",
+    "HANDOFF_D08_V001.json",
+    "NEXT_PROMPT_D09_V001.md"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "all inherited player approvals remain unresolved",
+    "current technical condition and live trigger remain UNKNOWN",
+    "no scene readiness or narrator permission",
+    "truth-dependent authorship remains blocked absent segregation/open-variant approval"
+  ],
+  "next_phase": "D09",
+  "next_phase_boundary": "D09 may begin only after D08 gate PASS/PASS_WITH_UNKNOWN and complete local-manifest commit/tree/per-file-blob/content readback. No scene starts or state changes.",
+  "publication_readback": {
+    "status": "EXTERNAL_MANIFEST_REQUIRED",
+    "record": "CHR001_D05-D12_RUN_STATE.json",
+    "note": "No self-referential hash."
+  }
+}

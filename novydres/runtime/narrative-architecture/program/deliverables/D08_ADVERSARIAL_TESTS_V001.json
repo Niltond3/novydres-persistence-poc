@@ -1,0 +1,325 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D08",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "b8a814549ef8ea106c026154fbab1708e9052374",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Candidate story/scene/beat schemas; non-operational."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+      "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+      "role": "Conditional PC01 draft and local closure limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+      "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+      "role": "Truth-dependent authorship play remains blocked."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "Inherited approvals and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V001.json",
+      "blob_sha": "71e3d737deea62aafe5847adc30bf0d680db86ab",
+      "role": "Published D07 handoff and checkpoint."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "Latest numeric cycle; documentary cursor only."
+    }
+  ],
+  "document_id": "D08_ADVERSARIAL_TESTS_V001",
+  "cases": [
+    {
+      "id": "T-D08-001",
+      "assertion": "repository branch and input metadata",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-002",
+      "assertion": "read-only master exact",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-003",
+      "assertion": "D07 input ancestor",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-004",
+      "assertion": "latest numeric cycle on both refs",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-005",
+      "assertion": "cycle blob pin",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-006",
+      "assertion": "scene/current checkpoint",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-007",
+      "assertion": "cycle same on master and design",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-008",
+      "assertion": "run manifest D07 gate/readback",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-009",
+      "assertion": "all eight D07 blobs/content",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-010",
+      "assertion": "all D08 JSON parse",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-011",
+      "assertion": "PLAYER_SAFE editorial metadata",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-012",
+      "assertion": "one story only",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-013",
+      "assertion": "PC01 only plot",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-014",
+      "assertion": "story remains DRAFT",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-015",
+      "assertion": "M2 proposal only",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-016",
+      "assertion": "inciting incident UNKNOWN",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-017",
+      "assertion": "why-now UNKNOWN and no calendar trigger",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-018",
+      "assertion": "optional entry and refusal",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-019",
+      "assertion": "no NPC agenda",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-020",
+      "assertion": "success/partial/alternative/refusal/failure/offscreen routes",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-021",
+      "assertion": "local endings only",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-022",
+      "assertion": "no mandatory scene order",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-023",
+      "assertion": "unique scenes",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-024",
+      "assertion": "all scenes PREPARED",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-025",
+      "assertion": "no actors assigned",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-026",
+      "assertion": "SCENE_READY and NARRATOR_PERMISSION gates",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-027",
+      "assertion": "refusal/suspension exits",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-028",
+      "assertion": "unique beats",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-029",
+      "assertion": "no NPC initiative",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-030",
+      "assertion": "no beat forces player action",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-031",
+      "assertion": "no speculative triggers",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-032",
+      "assertion": "forbidden claims bounded",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-033",
+      "assertion": "D01 story fields",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-034",
+      "assertion": "D01 scene fields",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-035",
+      "assertion": "D01 beat fields",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-036",
+      "assertion": "all source SHAs resolve",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-037",
+      "assertion": "current state limited to derived archive",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-038",
+      "assertion": "truth lock remains blocked",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-039",
+      "assertion": "no secret answer/clue",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-040",
+      "assertion": "no causal promotion",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-041",
+      "assertion": "no mechanical grant or result",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-042",
+      "assertion": "all inherited approvals retained",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-043",
+      "assertion": "approval statuses remain pending/not granted",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-044",
+      "assertion": "top-level gates aligned",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-045",
+      "assertion": "catalog matches runner",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-046",
+      "assertion": "D09 prompt requires readback",
+      "kind": "CONTRACT"
+    },
+    {
+      "id": "T-D08-047",
+      "assertion": "forced player choice mutation rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-048",
+      "assertion": "NPC agenda mutation rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-049",
+      "assertion": "READY scene mutation rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-050",
+      "assertion": "secret answer/PC02/causal mutation rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-051",
+      "assertion": "NPC knowledge mutation without acquisition rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-052",
+      "assertion": "generic truth/answer metadata mutations rejected",
+      "kind": "ADVERSARIAL"
+    },
+    {
+      "id": "T-D08-053",
+      "assertion": "only seven proposed D08 files changed",
+      "kind": "SCOPE"
+    },
+    {
+      "id": "T-D08-054",
+      "assertion": "execution status matches gate",
+      "kind": "CONTRACT"
+    }
+  ],
+  "execution": {
+    "status": "PASS",
+    "command": "python3 D08_VALIDATE_V001.py --repo-root <clone> --run-manifest <local-run-manifest> --expected-gate PASS_WITH_UNKNOWN",
+    "passed": 54,
+    "total": 54,
+    "result": "54/54 PASS"
+  },
+  "gate": "PASS_WITH_UNKNOWN"
+}

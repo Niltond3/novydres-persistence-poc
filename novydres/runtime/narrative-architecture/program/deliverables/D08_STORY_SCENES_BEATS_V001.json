@@ -1,0 +1,830 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D08",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "b8a814549ef8ea106c026154fbab1708e9052374",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "no_operational_promotion": true,
+  "document_id": "D08_STORY_SCENES_BEATS_V001",
+  "checkpoint_as_of": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "protagonist_mortal": true,
+    "embrace_occurred": false,
+    "preparation": "STALE",
+    "source_authority": "Latest numeric cycle is identical on design and master; documentary cursor only."
+  },
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Candidate story/scene/beat schemas; non-operational."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f",
+      "role": "Precedence, authority, consent and secrecy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "Lifecycle and scene/narrator gate contracts."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+      "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18",
+      "role": "Mandatory provenance limitations."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_AGENT_REGISTRY_V001.json",
+      "blob_sha": "57584922f67380be82d3bd12029403804b4bad8c",
+      "role": "Historical agent registry; no future presence inferred."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+      "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806",
+      "role": "NPC knowledge requires demonstrated acquisition."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_UNCERTAINTY_REGISTER_V001.json",
+      "blob_sha": "7042dc203879b63f92f6463136b0da2a16bfa64a",
+      "role": "Bounded epistemic unknowns."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D03_V001.json",
+      "blob_sha": "8fe479798296d8ce2e269571820312a1f8fc5570",
+      "role": "D03 gate and limitations."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_CANDIDATES_V001.json",
+      "blob_sha": "e691ce064932fb8ea84d2e250730aba8a0514a19",
+      "role": "PC01 only provisional plot; not operational."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+      "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a",
+      "role": "Heterogeneous thread classes."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_BASELINE_V001.json",
+      "blob_sha": "564a465ad6e363f25b5fe0453f2b0ccf441d00c0",
+      "role": "Derived baseline, not original-authenticated evidence."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_TO_PLOT_MAP_V001.json",
+      "blob_sha": "aee1e150ac9f3054f2fa2565ca96dc76ea78ddab",
+      "role": "Typed links do not promote causality."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_OWNERS_TRIGGERS_CLOSURE_V001.json",
+      "blob_sha": "cbbca1a1080aea6de0955501bdbdba2339a523aa",
+      "role": "Historical owners/triggers/closure limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+      "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422",
+      "role": "No unsupported causal dependencies."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D04_V001.json",
+      "blob_sha": "d0afdf683b0718b5e517fb0673fe8606962de86c",
+      "role": "D04 gate and adversarial limitations."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_UNCERTAINTY_REGISTER_V001.json",
+      "blob_sha": "f13906d75b2c388b0c0f672b88369c7ed63ccfc7",
+      "role": "Bounded unknowns and provenance."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "Pending player decisions."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "M2 function, agency and future horizon; editorial proposal."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "No future route selected."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "Target remains unselected."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+      "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+      "role": "Conditional PC01 draft and local closure limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+      "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+      "role": "Truth-dependent authorship play remains blocked."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "Inherited approvals and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V001.json",
+      "blob_sha": "83ea55bcc233fd641bf5636e38e1df14e59637e8",
+      "role": "D07 limitations and documentary gate."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V001.json",
+      "blob_sha": "71e3d737deea62aafe5847adc30bf0d680db86ab",
+      "role": "Published D07 handoff and checkpoint."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "role": "Current derived archive; not authenticated original."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "Latest numeric cycle; documentary cursor only."
+    }
+  ],
+  "design_policy": {
+    "story_selection": "One optional DRAFT story only for D04-PC01. PC02-PC04 remain candidates.",
+    "scene_order": "NONLINEAR_OPTIONAL; either prepared scene may be skipped or suspended; no sequence is required.",
+    "inciting_event_and_why_now": "UNKNOWN; no present incident, request, deadline, current condition or trigger. Calendar passage, open-thread status and publication are not triggers.",
+    "npc_autonomy": "No future agenda, presence, knowledge or initiative is authored; actor arrays remain empty until evidence and separate permission.",
+    "epistemic_scope": "C11 exists only as a derived archive account. It does not establish current condition, complete cause, adaptation author/date, culprit, intent, supernatural influence, completed repair, test or release.",
+    "truth_lock": "m201-report-authorship remains blocked for answer-dependent investigation, clues, suspects, motives, NPC knowledge/initiative or scenes until effective segregation is verified or an open variant is expressly approved.",
+    "causality": "No cross-thread causal link added; prior typed D04 relations retain their original classes.",
+    "scene_authority": "PREPARED is documentary only. No SCENE_READY, NARRATOR_PERMISSION, operational promotion, cycle write or event is granted.",
+    "mechanics": "No roll or result, XP, FV, power, relationship, asset, injury or mechanical consequence is authored; prior rolls are never repeated.",
+    "tone": "Human-scale accountability and uncertainty may carry personal horror only if later play establishes the pressure. No adversary, coercion, injury, supernatural cause or retaliation is presumed."
+  },
+  "story_selection": {
+    "count": 1,
+    "rule": "Only D04-elevated provisional PC01 receives a D08 story draft; PC02-PC04 remain candidates.",
+    "actor_presence": "No future agent/presence is established; scene actor arrays intentionally empty."
+  },
+  "stories": [
+    {
+      "story_id": "D08-ST01-OPTIONAL-SOURCE-AND-DISPOSITION-REVIEW",
+      "story_kind": "STORY",
+      "marco_id": "M2",
+      "plot_ids": [
+        "D04-PC01"
+      ],
+      "state": "DRAFT",
+      "inciting_incident": "UNKNOWN. No present incident, request, deadline or current technical condition is established. The story can become eligible only if a later source establishes a current question and the player chooses it.",
+      "why_now": "UNKNOWN. No diegetic date or urgency is set. Calendar passage, the open-thread label and this publication do not activate the story.",
+      "goals": [
+        "If chosen, distinguish the derived C11 record from current evidence and explicit unknowns.",
+        "Allow the player to set a bounded review scope or select a supported local disposition without requiring causal resolution.",
+        "Permit refusal, pause, abandonment, failure or an evidenced alternative without penalty or forced retry."
+      ],
+      "nonmandatory_entry": "No invitation, NPC request, work order, deadline or scene is presumed. Entry requires current cycle/pointer reconciliation, a current source establishing a live question, applicable authority, separate SCENE_READY and NARRATOR_PERMISSION, and the player choosing to participate. Decline or deferral carries no penalty.",
+      "npc_agendas": [],
+      "dramatic_question": "Qual disposição, se alguma, pode ser sustentada por evidência e considerada segura pelas pessoas responsáveis, ou qual alternativa documentada preserva a segurança sem presumir resolução?",
+      "escalation": [
+        "No current source or player opt-in: no scene; keep DRAFT.",
+        "If later records are incomplete or conflict, narrow claims to the supported record and preserve the conflict; suspend locally without adding danger.",
+        "Only if current evidence, actual authority and a player-selected scope exist may a local disposition be considered; no outcome or antagonist is assumed."
+      ],
+      "critical_choices": [
+        "Participate, decline, defer or leave the question untouched.",
+        "If participating, choose what documented question to pursue or stop if evidence/authority is insufficient.",
+        "Accept only a supported disposition, choose a supported alternative, suspend, refuse or abandon; no choice closes unrelated threads."
+      ],
+      "closure_routes": [
+        {
+          "route": "SUCCESS",
+          "condition": "A future authorized assessment actually occurs; relevant evidence, authority and any required test/release are documented and persisted.",
+          "consequences": [
+            "Record only the demonstrated local disposition; infer no complete cause, author, motive or linked-thread resolution."
+          ],
+          "closure_test": "Evidence-backed local disposition, demonstrated authority where required, persisted event and successful readback; other threads remain open.",
+          "evidence_refs": [
+            "D07_PLOT_BIBLES_V001.json#/contracts/0/closure_contract"
+          ]
+        },
+        {
+          "route": "PARTIAL",
+          "condition": "A future review establishes only a bounded subset or ends with evidence/authority still missing.",
+          "consequences": [
+            "Record the limited result and exact unknowns; missing evidence is not a failure."
+          ],
+          "closure_test": "Close the local review as partial with remaining questions persisted/read back; no plot closure claimed.",
+          "evidence_refs": [
+            "D07_PLOT_BIBLES_V001.json#/contracts/0/historical_basis"
+          ]
+        },
+        {
+          "route": "ALTERNATIVE",
+          "condition": "The player or evidenced responsible authority chooses an alternative supported by then-current sources.",
+          "consequences": [
+            "Record only the selected authorized alternative and demonstrated effects; examples are not preselected."
+          ],
+          "closure_test": "Alternative and authority are source-backed and locally persisted/read back.",
+          "evidence_refs": [
+            "D07_PLOT_BIBLES_V001.json#/contracts/0/conditional_routes"
+          ]
+        },
+        {
+          "route": "REFUSAL",
+          "condition": "The player explicitly declines or withdraws from the optional focus.",
+          "consequences": [
+            "No penalty or inferred motive; record refusal only if explicitly stated in play."
+          ],
+          "closure_test": "End or do not enter; no character decision is fabricated and no condition is called resolved.",
+          "evidence_refs": [
+            "D07_PLOT_BIBLES_V001.json#/contracts/0/closure_contract"
+          ]
+        },
+        {
+          "route": "FAILURE",
+          "condition": "A future authorized attempt actually fails or evidence does not support a safe disposition.",
+          "consequences": [
+            "Preserve only the failed attempt and evidenced effects; infer no sabotage, culprit, supernatural cause or negligence; no forced retry."
+          ],
+          "closure_test": "Record the actual failure/block and stop or suspend locally with uncertainty explicit.",
+          "evidence_refs": [
+            "D07_PLOT_BIBLES_V001.json#/contracts/0/conditional_routes"
+          ]
+        },
+        {
+          "route": "OFFSCREEN",
+          "condition": "A later independently persisted authoritative event resolves the local question outside these prepared scenes.",
+          "consequences": [
+            "Do not author the offscreen event; after it occurs, read back its source and record only supported content."
+          ],
+          "closure_test": "Verify a real later event and authority; otherwise remain UNKNOWN.",
+          "evidence_refs": [
+            "CYCLE_V0033.json#/checkpoint"
+          ]
+        }
+      ],
+      "consequences": [
+        "This proposal changes no current narrative state.",
+        "A local disposition cannot close report-authorship, Pavel follow-up or another thread by association.",
+        "No consequence exists until an authorized future action actually causes and persists it."
+      ],
+      "refusal_path": "If the player declines, pauses, leaves or abandons the focus, stop without penalty or retrospective motive. Record only an explicit in-play choice and leave the question at its evidenced status.",
+      "failure_path": "If an authorized future attempt fails or evidence/authority is inadequate, stop or suspend the local attempt, preserve the record and unknowns, and do not add a culprit, cause, injury, retry or moral penalty.",
+      "temporal_mode": "SPOTLIGHT",
+      "d2_selection_mode": "NOT_APPLICABLE",
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "D08-SC01-OPTIONAL-SCOPE-AND-SOURCE-REVIEW",
+      "story_id": "D08-ST01-OPTIONAL-SOURCE-AND-DISPOSITION-REVIEW",
+      "state": "PREPARED",
+      "present_actor_ids": [],
+      "entry_preconditions": [
+        "Reconcile the latest cycle and MANIFEST_V46 pointer conflict before operational use.",
+        "A current source establishes the question remains live; the derived archive alone is insufficient.",
+        "The player chooses the focus and confirms participation; add no actor until presence and knowledge are supported.",
+        "SCENE_READY and explicit NARRATOR_PERMISSION are independently satisfied.",
+        "Do not turn this into truth-dependent authorship investigation; D07-TL-001 blocks that scope."
+      ],
+      "viewpoint_limit_refs": [
+        "D03_KNOWLEDGE_GRAPH_V001.json: each NPC knowledge item requires demonstrated acquisition.",
+        "D07_PLOT_BIBLES_V001.json#/contracts/0/participants_and_agency: future presence and objective UNKNOWN.",
+        "CYCLE_V0033.json#/refs/knowledge: checkpoint source only; refresh before use."
+      ],
+      "stakes": "Whether a voluntary review can distinguish the limited record from unknowns. No hazard event, retaliation or hidden opposition is presumed.",
+      "potential_change": "Only the chosen review scope and its recorded known/unknown boundary may change after actual play; prep changes nothing.",
+      "beat_refs": [
+        "D08-B01-SOURCE-BOUNDARY",
+        "D08-B02-RECORD-CONFLICT",
+        "D08-B04-PLAYER-DECLINE"
+      ],
+      "pre_roll_gate": "No roll for reading/summarizing records. A future uncertain action needs declared stakes, current rule authority, valid gates and a fresh roll; never repeat a prior roll or roll to compel participation.",
+      "exit_conditions": [
+        "Player declines or defers: exit without penalty; status unchanged.",
+        "No current source, authority or participant knowledge: stop/suspend; create no NPC or clue.",
+        "Source conflict: preserve conflict and end locally without choosing a cause.",
+        "After any voluntary review, persist and read back its bounded result before another scene."
+      ],
+      "refusal_path": "The player may refuse entry or stop at any point. This is a complete local exit and does not determine why the player refused.",
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    },
+    {
+      "scene_id": "D08-SC02-OPTIONAL-LOCAL-DISPOSITION-AND-END",
+      "story_id": "D08-ST01-OPTIONAL-SOURCE-AND-DISPOSITION-REVIEW",
+      "state": "PREPARED",
+      "present_actor_ids": [],
+      "entry_preconditions": [
+        "Independent current evidence and actual decision authority are demonstrated.",
+        "The player chooses to continue; no earlier scene is mandatory if equivalent source-backed context exists.",
+        "Any repair/test/result mentioned actually occurred, was authorized and persisted; no result is prewritten.",
+        "SCENE_READY and NARRATOR_PERMISSION are independently satisfied.",
+        "Locked authorship truth remains excluded unless D07-TL-001 is properly released."
+      ],
+      "viewpoint_limit_refs": [
+        "D03_KNOWLEDGE_GRAPH_V001.json: no NPC knows a result without recorded acquisition.",
+        "D07_TRUTH_LOCKS_V001.json#/locks/id=D07-TL-001: truth-dependent investigation blocked.",
+        "D07_PLOT_BIBLES_V001.json#/contracts/0/closure_contract: local disposition is not global closure."
+      ],
+      "stakes": "Whether the chosen evidenced question has an authorized local disposition or remains unresolved; no safety result or approval is assumed.",
+      "potential_change": "Future play may record a bounded disposition, alternative, refusal, failure or suspension; this prepared card changes nothing.",
+      "beat_refs": [
+        "D08-B02-RECORD-CONFLICT",
+        "D08-B03-AUTHORITY-BOUNDARY",
+        "D08-B04-PLAYER-DECLINE",
+        "D08-B05-ACTUAL-FAILURE"
+      ],
+      "pre_roll_gate": "No check is proposed. For a future uncertain action, declare the current rule and permission before a new roll; persist once and never reroll.",
+      "exit_conditions": [
+        "Missing evidence/authority: defer or suspend; do not release.",
+        "Player refuses or changes scope: end without penalty.",
+        "Actual authorized disposition: read back and close only this local story.",
+        "Unrelated clue, cause and thread remain outside this scene and open."
+      ],
+      "refusal_path": "Accept refusal, withdrawal or pause as a complete local outcome; do not treat it as failure, guilt, consent or resolution.",
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    }
+  ],
+  "beats": [
+    {
+      "beat_id": "D08-B01-SOURCE-BOUNDARY",
+      "scene_id": "D08-SC01-OPTIONAL-SCOPE-AND-SOURCE-REVIEW",
+      "trigger": "Only when a player-selected review actually presents a source whose authority/date can be checked.",
+      "actor": "NARRATOR_REACTION",
+      "intended_change": "Separate exact source-backed statements from derived reporting and UNKNOWN; add no inference.",
+      "if_not_triggered": "Insert no source, clue, recollection or exposition.",
+      "forbidden_claims": [
+        "current condition from the old archive alone",
+        "full causal history",
+        "author, motive, culprit or supernatural influence",
+        "future NPC knowledge or presence"
+      ],
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    },
+    {
+      "beat_id": "D08-B02-RECORD-CONFLICT",
+      "scene_id": "D08-SC01-OPTIONAL-SCOPE-AND-SOURCE-REVIEW",
+      "trigger": "Only if two actually available, source-pinned records materially conflict during a chosen review.",
+      "actor": "NARRATOR_REACTION",
+      "intended_change": "Preserve both provenance paths and mark the claim UNKNOWN or CONFLICT; permit narrower scope or stop.",
+      "if_not_triggered": "Manufacture no disagreement for tension.",
+      "forbidden_claims": [
+        "silently choosing a winner",
+        "causality from sequence",
+        "retcon",
+        "secret answer or new clue"
+      ],
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    },
+    {
+      "beat_id": "D08-B03-AUTHORITY-BOUNDARY",
+      "scene_id": "D08-SC02-OPTIONAL-LOCAL-DISPOSITION-AND-END",
+      "trigger": "Only if future evidence establishes a formal decision is needed but its responsible authority/permission is absent.",
+      "actor": "NARRATOR_REACTION",
+      "intended_change": "Mark the formal disposition BLOCKED and provide a local stop/suspend route.",
+      "if_not_triggered": "Invent no authority, signature, refusal, deadline or institutional consequence.",
+      "forbidden_claims": [
+        "authority by title alone",
+        "formal release without demonstrated authorization",
+        "NPC motive, antagonism or knowledge"
+      ],
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    },
+    {
+      "beat_id": "D08-B04-PLAYER-DECLINE",
+      "scene_id": "D08-SC01-OPTIONAL-SCOPE-AND-SOURCE-REVIEW",
+      "trigger": "Only on an explicit player decline, pause, withdrawal or abandonment in future play.",
+      "actor": "PLAYER_ONLY",
+      "intended_change": "No authored character change; persist the player choice only if they choose to record it.",
+      "if_not_triggered": "Supply no protagonist response and infer no reason.",
+      "forbidden_claims": [
+        "player emotion or dialogue",
+        "coercion or penalty",
+        "consent inferred from silence",
+        "resolution inferred from exit"
+      ],
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    },
+    {
+      "beat_id": "D08-B05-ACTUAL-FAILURE",
+      "scene_id": "D08-SC02-OPTIONAL-LOCAL-DISPOSITION-AND-END",
+      "trigger": "Only if a future authorized attempt actually fails and the result is persisted.",
+      "actor": "NARRATOR_REACTION",
+      "intended_change": "Record the specific failure and supported consequence, then allow local closure/suspension.",
+      "if_not_triggered": "Prewrite no failure or test result.",
+      "forbidden_claims": [
+        "culprit or sabotage",
+        "supernatural cause",
+        "negligence without evidence",
+        "forced retry or penalty"
+      ],
+      "forces_pc_action": false,
+      "provenance": {
+        "record_kind": "CONDITIONAL",
+        "original_author": "DRAMATURGO",
+        "fact_status": "PROPOSED",
+        "source_refs": [
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+            "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+            "anchor": "/$defs/story,scene,beat",
+            "verification": "VERIFIED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+            "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+            "anchor": "/milestones/M2; macro function only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+            "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+            "anchor": "/contracts/0 D04-PC01; current condition UNKNOWN",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+            "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587",
+            "anchor": "/locks; no secret payload; investigation blocked",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+            "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+            "anchor": "/threads/id=m201-ramal-condition lines 23-36; derived archive only",
+            "verification": "DERIVED"
+          },
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+            "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+            "anchor": "/checkpoint; C05 closed, C06 not started, mortal, Embrace not occurred",
+            "verification": "VERIFIED"
+          }
+        ],
+        "prepared_before_event": "2026-11-09",
+        "diegetic_date": null,
+        "as_of_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    }
+  ],
+  "local_end_contract": {
+    "must_end_locally": true,
+    "unrelated_plot_may_remain_open": true,
+    "valid_local_terminal_states": [
+      "resolved_with_evidence",
+      "partial",
+      "alternative",
+      "refused",
+      "failed",
+      "abandoned",
+      "suspended",
+      "blocked_for_missing_authority_or_evidence"
+    ],
+    "full_plot_closure_claimed": false,
+    "proof": "Future played local disposition plus source, authority where needed, persistence and readback; else UNKNOWN."
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "gate_limits": [
+    "Current technical condition UNKNOWN; historical premise is only a derived archive.",
+    "No scene READY; no current trigger, actor, evidence, authority or player opt-in is known.",
+    "D05 pointer conflict and D06 target choice remain pending.",
+    "Report-authorship investigation remains blocked absent effective truth segregation or approved open variant."
+  ]
+}

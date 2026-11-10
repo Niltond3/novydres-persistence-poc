@@ -1,0 +1,91 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D08",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "b8a814549ef8ea106c026154fbab1708e9052374",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "document_id": "D08_PLAYER_APPROVAL_QUEUE_V001",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "Pending player decisions."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "Target remains unselected."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "Inherited approvals and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+      "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4",
+      "role": "Conditional PC01 draft and local closure limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V001.json",
+      "blob_sha": "71e3d737deea62aafe5847adc30bf0d680db86ab",
+      "role": "Published D07 handoff and checkpoint."
+    }
+  ],
+  "purpose": "Carry every inherited decision without default. Documentary work continues independently; no silence or commit selects a route or grants authority.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "inherited": true,
+      "status": "PENDING_PLAYER_APPROVAL",
+      "decision": "Adjudicate the CYCLE_V0033 versus MANIFEST_V46 pointer conflict before operational transition."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "inherited": true,
+      "status": "PENDING_PLAYER_APPROVAL",
+      "decision": "Explicitly authorize or decline promotion for operational/master use after D12 audit/readback."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "inherited": true,
+      "status": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "decision": "Provide effective GM-hidden segregation, approve an open variant, or keep truth-dependent investigation blocked."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "inherited": true,
+      "status": "NOT_GRANTED",
+      "decision": "Narrator permission only through current cycle, SCENE_READY and explicit handoff."
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "inherited": true,
+      "status": "PENDING_PLAYER_APPROVAL",
+      "decision": "Select vampire-by-2010 target, approve an alternate, or leave target unresolved."
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "inherited": false,
+      "status": "PENDING_PLAYER_APPROVAL",
+      "decision": "Decide whether the conditional PC01 proposal may be considered for future operational use after current-source reconciliation; this is not needed to continue independent documentary design and grants no scene permission.",
+      "options": [
+        "consider PC01 for future use after gates",
+        "keep PC01 editorial only",
+        "defer decision"
+      ],
+      "default": "PENDING_PLAYER_APPROVAL",
+      "when_required": "Before any operational promotion or scene relying on this contract"
+    }
+  ],
+  "d08_specific_authority": "No use, scene start, NPC initiative, narration, mechanical effect or promotion is approved. Any future use requires current gates and explicit permission.",
+  "gate": "PASS_WITH_UNKNOWN"
+}
