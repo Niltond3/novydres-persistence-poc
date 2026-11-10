@@ -1,0 +1,225 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V005",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "design_head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "candidate_reconciliation": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    }
+  },
+  "method": "precedence review of D01/D05 and CH00-CH07; independent adversarial review; repeatable assertions via D06_VALIDATE_V001.py",
+  "findings": [
+    {
+      "id": "D06-F-001",
+      "classification": "PASS_WITH_UNKNOWN",
+      "finding": "APPROVAL-D06-001 is preserved as a player authorial target: M3.01 before 1970 with Bart mortal, then forced Abraço by Kuthulun before 1970-12-25; no event/date is established.",
+      "disposition": "Retain exact-date uncertainty."
+    },
+    {
+      "id": "D06-F-002",
+      "classification": "RECONCILED_FOR_PLANNING",
+      "finding": "MANIFEST_V47 at master HEAD points to CYCLE_V0033. The cycle's embedded MANIFEST_V46 reference is historical metadata.",
+      "disposition": "Use current cycle for checkpoint; do not infer scene permission."
+    },
+    {
+      "id": "D06-F-003",
+      "classification": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "finding": "No effective ACL or open truth variant exists for hidden content.",
+      "disposition": "No hidden file/content accessed; dependent links remain blocked."
+    },
+    {
+      "id": "D06-F-004",
+      "classification": "RESOLVED",
+      "finding": "Current pointer is reconciled: MANIFEST_V47 -> CYCLE_V0033.",
+      "disposition": "Do not alter master during this documentary reconciliation."
+    },
+    {
+      "id": "D06-F-005",
+      "classification": "PASS_WITH_UNKNOWN",
+      "finding": "D06 remains macro planning; it creates no operational plot, scene event, or causal fact.",
+      "disposition": "Preserve proposal status."
+    },
+    {
+      "id": "D06-F-006",
+      "classification": "RECONCILED_IN_CANDIDATES_OPERATIONAL_BLOCKED",
+      "finding": "M3.01_v006 candidate retimes all episode periods before 1970; state_v044 candidate reconstructs the C05 checkpoint from cycle/live/index. Current master refs remain unchanged.",
+      "disposition": "Use only for planning; do not claim master operational reconciliation."
+    },
+    {
+      "id": "D06-F-007",
+      "classification": "BOUNDED_UNKNOWN",
+      "finding": "C03.15 in v005 had a 1970s legal-historical note. v006 flags its basis as unverified and non-diegetic; no replacement legal claim is asserted.",
+      "disposition": "Do not rely on this note in continuity design."
+    },
+    {
+      "id": "D06-F-008",
+      "classification": "BOUNDED_UNKNOWN",
+      "finding": "Knowledge index V21 records Mary heard Bartholomeu's account about Volnaya transport/evidence and injuring a man. It does not establish she knows the arm loss/return or the player-proposed secret network connection.",
+      "disposition": "Separate established disclosure from future authorial knowledge targets."
+    }
+  ],
+  "independent_review": {
+    "status": "NOT_REPEATED_FOR_V005",
+    "prior_review": "The independent review recorded in V004 remains historical evidence for its prior scope; this reconciliation did not claim a new independent reviewer.",
+    "current_review": "Source precedence, timeline, state provenance, knowledge limits, and gate status were reviewed against the open sources listed in D06_SOURCE_RECONCILIATION_V001.json and checked by D06_SOURCE_VALIDATE_V001.py."
+  },
+  "validation": {
+    "json_parse": "PASS",
+    "semantic_assertions": "PASS",
+    "source_blob_verification": "PASS_LOCAL_GIT_BLOB_SHA1",
+    "validator": "D06_SOURCE_VALIDATE_V001.py",
+    "validator_blob_sha": "5c62902b27fed7f1db1ae4539c0f743969a2304b",
+    "reproducible_run": "PASS",
+    "checks_passed": 22,
+    "checks_total": 22,
+    "result_path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V001_RESULT.json",
+    "result_blob_sha": "f339bdda736662a652f65a96c1d699fe274fcb2a",
+    "input_blob_shas": {
+      "episode_path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt",
+      "episode_blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+      "state_path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v044.source.txt",
+      "state_blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785",
+      "reconciliation_path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "reconciliation_blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    },
+    "prior_d06_validation": "V004 source state preserved as historical evidence; not represented as a rerun of V005 candidates."
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending": [
+    "remote publication and full readback",
+    "player approvals and inherited D05 dependencies remain outside this documentary gate"
+  ],
+  "document_id": "AUDIT_D06_V004",
+  "scope": "Delta da direção autoral temporal de APPROVAL-D06-001 e reconciliação do ponteiro; nenhuma mudança de evento, história, ficha ou estado mecânico.",
+  "operational_target_gate": "BLOCKED_CONFLICT",
+  "validation_delta": {
+    "source_validator": "D06_SOURCE_VALIDATE_V001.py",
+    "status": "PASS",
+    "checks_passed": 22,
+    "checks_total": 22,
+    "previous_d12_validation": "D12_VALIDATE_V004.py PASS 62/62, rerun during this reconciliation."
+  },
+  "remaining_unknowns": [
+    "Mary knows that the man lost an arm and later returned with both arms intact",
+    "Mary knows the name Sistema Circulatório",
+    "Mary knows a Ventrue network connection",
+    "Exact dates and pace",
+    "the precise causal route by which Kuthulun learns the open facts",
+    "C03.15 legal-historical basis"
+  ],
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+      "use": "current manifest cursor"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "use": "current checkpoint and next-role authority"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "use": "cursor authority rules"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "use": "historical episode preserved as source parent"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a",
+      "use": "provenance mismatch investigated; not treated as current state"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+      "use": "current open state corroborating C05 and mortality"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf",
+      "use": "current entrypoints and event"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "use": "bounded evidence for Mary and the injured man; not secret source"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "use": "current open-thread index"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "use": "player-selected future sire identity"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b",
+      "use": "local Gangrel lineage language; not proof of all player-supplied culture claims"
+    },
+    {
+      "path": "novydres/.AGENT.md",
+      "ref": "design/chr001-narrative-program-d01@3101f183c456a3cf0f188dd2a70ca50e3290092f",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc",
+      "use": "versioned-source and no-silent-retcon rules"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "ref": "design/chr001-narrative-program-d01@3101f183c456a3cf0f188dd2a70ca50e3290092f",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630",
+      "use": "terminology and context check"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+      "use": "pre-1970 planning copy; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v044.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785",
+      "use": "reconstructed planning checkpoint; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V005.json",
+      "blob_sha": "aa0baa59e0cbdac8741a19345643e7c3e828725c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V005.json",
+      "blob_sha": "20c18d9932df4ba093f64ff832f5c40b83570030"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V005.json",
+      "blob_sha": "6bc7710f1a7907c0c168463c2d99aa00c08bac10"
+    }
+  ],
+  "scope_note": "V005 retimes only the non-operational episode candidate and reconstructs a bounded state candidate from open checkpoint sources. No master, cycle, LIVE, history index, scene, secret, or operational gate was changed."
+}

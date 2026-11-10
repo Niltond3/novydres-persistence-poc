@@ -1,0 +1,86 @@
+{
+  "document_id": "D12_RELEASE_CANDIDATE_V005",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "version": "V005",
+  "classification": "PLAYER_SAFE / PROPOSED / NON_OPERATIONAL",
+  "status": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "operational_release": "BLOCKED_PENDING_GATES",
+  "dramaturge_planning_brief": "PREPARED_FOR_PLANNING_ONLY",
+  "scene_ready": "NOT_VERIFIED",
+  "narrator_permission": "NOT_GRANTED",
+  "d07_activation": false,
+  "input": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "design_branch": "design/chr001-narrative-program-d01",
+    "design_head_read": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
+    "master_head_read": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "master_modified": false,
+    "current_manifest_path": "novydres/MANIFEST_V47.json",
+    "current_manifest_blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+    "current_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "current_cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "cycle_status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C05": "CLOSED",
+    "C06": "NOT_STARTED",
+    "Bartholomeu": "MORTAL",
+    "Embrace": "NOT_OCCURRED"
+  },
+  "gates": {
+    "dramaturge_cycle_status": "READY_FOR_DRAMATURGO",
+    "dramaturge_planning_brief": "PREPARED_FOR_PLANNING_ONLY",
+    "documentary_planning": "PASS_WITH_UNKNOWN",
+    "operational_state": "BLOCKED_CONFLICT",
+    "secret_truth": "BLOCKED_EXTERNAL_DEPENDENCY",
+    "D07_activation": "NOT_ACTIVATED",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED",
+    "promotion": "NOT_PERFORMED"
+  },
+  "authorizations": {
+    "APPROVAL-D05-002": "future promotion only after applicable gates pass",
+    "promotion_performed": false,
+    "master_write": false,
+    "scene_execution": false,
+    "narrator_permission": false,
+    "d07_activation": false
+  },
+  "outputs": [
+    "source-candidates/M3.01_v006.source.txt",
+    "source-candidates/state_v044.source.txt",
+    "D06_SOURCE_RECONCILIATION_V001.json",
+    "D06_CHRONICLE_BIBLE_V005.json",
+    "D06_TRANSFORMATION_PATHS_V005.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V005.json",
+    "AUDIT_D06_V005.json",
+    "HANDOFF_D06_V005.json",
+    "D06_SOURCE_VALIDATE_V001.py",
+    "D06_SOURCE_VALIDATE_V001_RESULT.json",
+    "AUDIT_D12_V005.json",
+    "HANDOFF_D12_V005.json",
+    "D12_RELEASE_CANDIDATE_V005.json",
+    "D12_VALIDATE_V005.py",
+    "D12_VALIDATE_V005_RESULT.json",
+    "DRAMATURGO_CONTINUITY_PROMPT_V001.md"
+  ],
+  "source_reconciliation": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+    "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0",
+    "episode_candidate_blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+    "state_candidate_blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785",
+    "source_validation": "D06_SOURCE_VALIDATE_V001.py PASS 22/22"
+  },
+  "validator": {
+    "name": "D12_VALIDATE_V005.py",
+    "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+    "status": "PASS",
+    "checks": "66/66",
+    "result_blob_sha": "a9b21729b33c1b757da1759514ed0a3a78960848"
+  },
+  "publication_readback": {
+    "status": "PENDING_REMOTE_READBACK"
+  }
+}

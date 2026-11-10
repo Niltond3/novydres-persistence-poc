@@ -1,0 +1,62 @@
+{
+  "document_id": "HANDOFF_D12_V005",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "version": "V005",
+  "status": "BLOCKED_CONFLICT",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "gate": "BLOCKED_CONFLICT",
+  "input_design_head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
+  "input_master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "next_role": "DRAMATURGO",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "Bart_mortal": true,
+    "Embrace_occurred": false
+  },
+  "outputs": [
+    "source-candidates/M3.01_v006.source.txt",
+    "source-candidates/state_v044.source.txt",
+    "D06_SOURCE_RECONCILIATION_V001.json",
+    "D06_CHRONICLE_BIBLE_V005.json",
+    "D06_TRANSFORMATION_PATHS_V005.json",
+    "D06_PLAYER_APPROVAL_QUEUE_V005.json",
+    "AUDIT_D06_V005.json",
+    "HANDOFF_D06_V005.json",
+    "D06_SOURCE_VALIDATE_V001.py",
+    "D06_SOURCE_VALIDATE_V001_RESULT.json",
+    "AUDIT_D12_V005.json",
+    "HANDOFF_D12_V005.json",
+    "D12_RELEASE_CANDIDATE_V005.json",
+    "D12_VALIDATE_V005.py",
+    "D12_VALIDATE_V005_RESULT.json",
+    "DRAMATURGO_CONTINUITY_PROMPT_V001.md"
+  ],
+  "publication_readback": {
+    "status": "PENDING_REMOTE_READBACK",
+    "files": 16,
+    "master_modified": false
+  },
+  "next_phase": "Dramaturge planning only",
+  "next_phase_boundary": "Prompt supports continuity planning only; no scene, no Narrator prompt, no D07 activation, no master promotion.",
+  "gates": {
+    "documentary": "PASS_WITH_UNKNOWN",
+    "operational": "BLOCKED_CONFLICT",
+    "secret_truth": "BLOCKED_EXTERNAL_DEPENDENCY",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED"
+  },
+  "validation": {
+    "validator": "D12_VALIDATE_V005.py",
+    "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+    "status": "PASS",
+    "checks_passed": 66,
+    "checks_total": 66,
+    "result_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V005_RESULT.json",
+    "result_blob_sha": "a9b21729b33c1b757da1759514ed0a3a78960848",
+    "source_validator": "D06_SOURCE_VALIDATE_V001.py PASS 22/22"
+  }
+}

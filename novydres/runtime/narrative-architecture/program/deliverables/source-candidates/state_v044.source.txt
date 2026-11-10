@@ -1,0 +1,18 @@
+STATE v044 — CHR-001 / M3.01 C05 CLOSED
+CLASSIFICATION: PLAYER_SAFE CANDIDATE; NON_OPERATIONAL; NOT PROMOTED
+CREATED_FROM: APPROVAL-D06-001 plus source reconciliation dated 2026-11-10.
+PRIOR_REFERENCE_NOT_VALIDATED_AS_CURRENT: novydres/chronicles/CHR-001/character/state_v043.source.txt | BLOB_SHA: 46612796f44c9b75cbd7ab43854dcec33283804a
+PROVENANCE_FINDING: the referenced blob begins with STATE v019 / M2.03 and contains explicit version markers through STATE v041 / M3.01 C03; it has no formal STATE v042 or v043 checkpoint and no versioned C05 state header. Its trailing material is not silently relabeled as a current v043 snapshot.
+RECOVERY_SOURCES:
+- novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json | BLOB_SHA: 51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a
+- novydres/chronicles/CHR-001/LIVE_v037.json | BLOB_SHA: 3c51465d548484f0bbf5a42cd7d6611f0b3bb85e
+- novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json | BLOB_SHA: 80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf
+- candidate episode novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt | PARENT: M3.01_v005 blob 42fb8a8fe2b4b32f6d560f420c5b18710b0e011f | CANDIDATE_BLOB_SHA: 8b72355fb8242b4d35994bc76ced8af1811b85cf
+CURRENT_CHECKPOINT_FROM_CYCLE_AND_LIVE:
+- M3.01 C01-C05 closed; C06 not started.
+- Last confirmed event: CHR001-M301-C05-22-20261109-001.
+- Bartholomeu Krauser remains mortal; no Abraço has occurred.
+- Mary Krauser is his wife; Mikahel and Sara Krauser are their children.
+- Gangrel is a future lineage plan; Kuthulun is the player-selected future Senhora, not a diegetic revelation to Bart.
+- APPROVAL-D06-001 sets the candidate chronology before 1970 and a forced Abraço target before 1970-12-25. Neither an exact date nor an occurred Abraço is established.
+LIMIT: this is a reconciled planning snapshot only. It does not replace the current master source, rewrite CYCLE_V0033, change LIVE_v037, authorize C06, establish SCENE_READY, or grant NARRATOR_PERMISSION.

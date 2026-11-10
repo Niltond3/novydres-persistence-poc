@@ -1,0 +1,389 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V005",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "branch": "design/chr001-narrative-program-d01",
+    "head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
+    "master_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+  },
+  "checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "recorded_state": {
+      "M3.01_C05": "CLOSED",
+      "M3.01_C06": "NOT_STARTED",
+      "Bartholomeu": "MORTAL",
+      "Embrace": "NOT_OCCURRED"
+    },
+    "candidate_state": {
+      "episode": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt",
+        "blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf"
+      },
+      "character": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v044.source.txt",
+        "blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785"
+      }
+    },
+    "limit": "Candidate sources support planning only; current master cursor and operational source refs are unchanged."
+  },
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V47.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "6d00581981b406ec30bd0138928248965b083cc7",
+      "use": "current manifest cursor"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "use": "current checkpoint and next-role authority"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "use": "cursor authority rules"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f",
+      "use": "historical episode preserved as source parent"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v043.source.txt",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a",
+      "use": "provenance mismatch investigated; not treated as current state"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e",
+      "use": "current open state corroborating C05 and mortality"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v037.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf",
+      "use": "current entrypoints and event"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "use": "bounded evidence for Mary and the injured man; not secret source"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "use": "current open-thread index"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "use": "player-selected future sire identity"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "ref": "master@735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b",
+      "use": "local Gangrel lineage language; not proof of all player-supplied culture claims"
+    },
+    {
+      "path": "novydres/.AGENT.md",
+      "ref": "design/chr001-narrative-program-d01@3101f183c456a3cf0f188dd2a70ca50e3290092f",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc",
+      "use": "versioned-source and no-silent-retcon rules"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "ref": "design/chr001-narrative-program-d01@3101f183c456a3cf0f188dd2a70ca50e3290092f",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630",
+      "use": "terminology and context check"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+      "use": "pre-1970 planning copy; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v044.source.txt",
+      "ref": "candidate on design/chr001-narrative-program-d01",
+      "blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785",
+      "use": "reconstructed planning checkpoint; non-operational"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+      "blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+    }
+  ],
+  "precedence": {
+    "rule": "closed/canonical; approved/frozen; current governance and verified player decisions; validated history; derived sources within provenance limits; proposals",
+    "CH00_CH07": "explicitly unactivated preparation proposals; future claims are neither history nor operational authority",
+    "D01": "proposed architecture used as documentary constraints only"
+  },
+  "scope": {
+    "purpose": "macro structure for played guided history and possible continuation toward 2010",
+    "excludes": [
+      "reconstructing past events",
+      "starting a scene or opening C06",
+      "creating future dialogue, action, NPC knowledge or causal links",
+      "granting XP, FV, powers, status, assets or relationships",
+      "operational promotion or Narrator permission"
+    ]
+  },
+  "macro_question": "Como Bartholomeu responde às exigências contraditórias de construir uma vida que reconheça como sua enquanto vulnerabilidade, poder e mudança histórica testam seus limites — e que limites escolhe preservar, transformar ou abandonar?",
+  "genre_promise": [
+    "horror pessoal por escolhas e custos, não sofrimento imposto",
+    "horror gótico-punk atento a poder assimétrico, instituições, dependência e resistência",
+    "vínculos humanos mantêm autonomia própria e não são instrumentos do protagonista"
+  ],
+  "structure": {
+    "principle": "M1-M5 são contratos de cobertura e suficiência, não eras, contagem de cenas, roteiro ou garantia de resultado. Suas funções podem reaparecer, mudar de ordem ou ficar incompletas.",
+    "checkpoint_limit": "M3.01 C05/C06 não definem a suficiência dos macro-Marcos."
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "function": "estabelecer ponto de partida moral, familiar, social e prático documentado",
+      "recorded_status": "CLOSED in historical inputs where verified",
+      "sufficiency": "Coverage, Coherence and Consequence in the applicable close packet",
+      "limits": [
+        "do not reopen",
+        "do not add missing dialogue or rolls",
+        "closed history is immutable"
+      ]
+    },
+    {
+      "id": "M2",
+      "function": "testar limites e custos da estabilidade tentada; separar contradições humanas de alegações sobrenaturais",
+      "recorded_status": "ACTIVE in older CH02/CH03 snapshots; current status requires source-chain reconciliation",
+      "sufficiency": "formal D1 review may close its character-building question without solving independent mysteries",
+      "limits": [
+        "scene count is not a gate",
+        "do not repeat closed scenes",
+        "no required resolution of Volnaya or another independent mystery"
+      ]
+    },
+    {
+      "id": "M3",
+      "function": "offer negotiation among identity, responsibility, vulnerability and power with more than one meaningful response",
+      "recorded_status": "function proposal only",
+      "sufficiency": "document distinct changes or costs across relevant dimensions; unresolved threads may remain",
+      "limits": [
+        "not equivalent to operational M3.01",
+        "do not claim C05 satisfies or fails this function"
+      ]
+    },
+    {
+      "id": "M4",
+      "function": "realizar o Abraço imposto por Kuthulun como alvo autoral, se a cadeia causal e a cena vierem a ser autorizadas e persistidas",
+      "recorded_status": "function proposal only",
+      "sufficiency": "if transformation occurs, record cause, permission, immediate cost and later consequences; otherwise record the chosen alternative",
+      "limits": [
+        "o Abraço ainda não ocorreu no checkpoint",
+        "alvo autoral não é evento ocorrido nem autorização de cena",
+        "não presumir consentimento de Bart; o Abraço é imposto contra a vontade dele",
+        "nenhuma cena ou permissão de Narrador decorre deste documento"
+      ]
+    },
+    {
+      "id": "M5",
+      "function": "integrate selected consequences and, if reachable and authorized, assess state at 2010 horizon",
+      "recorded_status": "function proposal only",
+      "sufficiency": "source-backed snapshot of acquired mechanics, ties, position, obligations and costs; no epilogue grants them",
+      "limits": [
+        "2010 is a horizon, not guaranteed scene or survival",
+        "old ties/assets need continuity evidence"
+      ]
+    }
+  ],
+  "transformation_opportunities": [
+    {
+      "axis": "self-understanding",
+      "possible": "beliefs, loyalties, identity and limits may change through chosen actions and consequences",
+      "not_assumed": [
+        "emotion",
+        "belief change",
+        "redemption",
+        "corruption"
+      ]
+    },
+    {
+      "axis": "moral_agency",
+      "possible": "choices may clarify, revise or strain declared values",
+      "not_assumed": [
+        "automatic Humanity loss",
+        "predetermined moral destination"
+      ]
+    },
+    {
+      "axis": "social_position",
+      "possible": "relationships, institutions, obligations or isolation may change where evidenced",
+      "not_assumed": [
+        "trust",
+        "authority",
+        "status",
+        "contacts",
+        "lasting bonds"
+      ]
+    },
+    {
+      "axis": "embodiment",
+      "possible": "mortal or supernatural experience only after an authorized, causally played event",
+      "not_assumed": [
+        "Embrace",
+        "clan",
+        "sire",
+        "generation",
+        "powers",
+        "date"
+      ]
+    },
+    {
+      "axis": "practical_life",
+      "possible": "work, home, resources and security may be acquired, lost or revised through play",
+      "not_assumed": [
+        "Oficina Krauser as operating business or sheet advantage"
+      ]
+    },
+    {
+      "axis": "historical_continuity",
+      "possible": "time, absence, losses and change may shape a 2010 snapshot where supported",
+      "not_assumed": [
+        "survival",
+        "unchanged ties",
+        "unplayed off-screen events"
+      ]
+    }
+  ],
+  "dependencies": {
+    "causality": "D06 creates no causal links; inherit D04 NONE/UNKNOWN and require evidence before future promotion",
+    "npc_knowledge": "each NPC fact needs recorded acquisition",
+    "secrets": "no GM_HIDDEN truth included; truth-dependent work blocked pending effective segregation or authorized open variant",
+    "mechanics": "future gates use current V5/local contracts; D06 awards nothing",
+    "time": "use verified diegetic anchors; exact personal dates and durations remain UNKNOWN until sourced"
+  },
+  "sufficiency_model": {
+    "marco_close": "Coverage + Coherence + Consequence with source refs, authorized owner and immutable close evidence under D1",
+    "review_triggers": [
+      "before a new story, compare checkpoint to the selected milestone function",
+      "if player choice or world facts block progress, mark BLOCKED_DESIGN; do not add an event",
+      "after scenes without meaningful delta, request pacing review without inventing off-screen change"
+    ],
+    "completion_is_not": [
+      "scene or thread count",
+      "one plot resolution",
+      "target sheet",
+      "unplayed epilogue"
+    ]
+  },
+  "timeline_to_2010": {
+    "horizon": "2010",
+    "precision": "Planning candidate: M3.01 is before 1970 and Bartholomeu remains mortal throughout; forced Abraço by Kuthulun before 1970-12-25 remains an authorial target, not an event. Exact dates are unknown. Candidate sources are not operational.",
+    "planning_units": [
+      "verified checkpoint",
+      "player-authorized transition",
+      "caused transformation if any",
+      "meaningful post-transition experience when applicable",
+      "choice-specific consolidation",
+      "2010 readiness review only if reached"
+    ],
+    "rules": [
+      "use explicit source dates only",
+      "compress time only through authorized abstraction with truthful state update",
+      "no automatic torpor, survival, recovery, tie continuity or NPC action",
+      "do not silently change the target; if the documented timeline cannot support it, keep the dependent gate blocked",
+      "Candidate copies correct the source timeline for planning; master/live/cycle references remain unchanged until separate gates allow operational use."
+    ],
+    "selected_target_window": "M3.01 antes de 1970; Abraço forçado por Kuthulun antes de 1970-12-25; datas exatas desconhecidas; fonte candidata não operacional.",
+    "player_rationale": "O intervalo deve permitir que Bart ingresse, compreenda e se adapte à sociedade cainita; o jogador deseja drama familiar pela impossibilidade de acompanhar os filhos e a esposa, provações sociais e escolhas difíceis para proteger a família."
+  },
+  "central_plot_ids": [],
+  "graduation_gate": {
+    "status": "BLOCKED_CONFLICT",
+    "requirements": [
+      "player-selected target is explicit",
+      "required Marcos have source-backed Coverage/Coherence/Consequence review",
+      "mechanics and traits proven by ledger and rule source",
+      "knowledge, identity and relationships have evidence paths",
+      "unresolved threads remain classified",
+      "if vampire-by-2010 selected: actual authorized Embrace and sufficient played post-Embrace experience",
+      "cycle and manifest pointers reconciled before operational handoff",
+      "SCENE_READY and NARRATOR_PERMISSION remain separate and are not granted",
+      "retimar M3.01 para antes de 1970 em fontes versionadas, mantendo Bart mortal durante todo o ciclo; reconciliar episode, character state, LIVE/cycle refs before operational use"
+    ]
+  },
+  "frozen_boundaries": [
+    "do not change CYCLE_V0033 or closed events",
+    "no retcon or canon change",
+    "no new secret or causal fact",
+    "no character or mechanical change",
+    "no operational promotion",
+    "no scene permission"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "pending_approvals": [
+    "APPROVAL-D05-004"
+  ],
+  "player_intent": {
+    "approval_id": "APPROVAL-D06-001",
+    "target_state": "Abraço vampírico imposto por Kuthulun como alvo autoral obrigatório; independente do querer de Bart, ainda não ocorrido.",
+    "target_window": "Abraço até 1970-12-24; M3.01 antes de 1970 e Bart mortal em todas as cenas M3.01.",
+    "actual_event_date": "UNKNOWN; NO EMBRACE OCCURRED",
+    "sire": "Kuthulun, player-selected future Senhora; not a diegetic revelation to Bart.",
+    "rationale_player_provided": [
+      "O Abraço imposto deve ocorrer antes de 1970-12-25 para haver tempo de ingresso, compreensão e adaptação à sociedade cainita.",
+      "Bart deve permanecer mortal durante todo M3.01; a data civil de M3.01 ainda precisa de fonte versionada e reconciliação.",
+      "Kuthulun é a Senhora escolhida; a imposição do Abraço independe do querer de Bart.",
+      "O jogador descreve os Gangrel de Novydres como cultura militar pautada pela força de combate; rumores sobre um mortal capaz de enfrentar Cainitas sem armas atraem a atenção da Primogênita.",
+      "A proposta de clímax é uma derrota de Bart para Kuthulun e o Abraço imposto à beira da morte, precedidos por construção gradual e conflitos; isto é proposta autoral, não evento.",
+      "O drama desejado inclui a separação da família, observar os filhos crescerem e a esposa envelhecer sem poder participar, adaptação social Cainita e escolhas difíceis para manter a família segura."
+    ],
+    "status": "AUTHORIAL_TARGET_RECORDED_NOT_CANON_EVENT",
+    "chronology_gate": "CANDIDATE_RECONCILED; OPERATIONAL_BLOCKED",
+    "conflict_evidence": "M3.01_v005.source.txt ainda situa a história no fim dos anos 1970. CYCLE_V0033 mantém Bartholomeu mortal e sem Abraço. O blob 46612796f44c9b75cbd7ab43854dcec33283804a referenciado como state_v043.source.txt começa como STATE v019 e descreve M2.03, não um estado M3.01 atual; a proveniência de estado também precisa de reconciliação.",
+    "disposition": "Registrar direção autoral sem reescrever fontes nem presumir evento. Manter bloqueio até retimar M3.01 e corrigir/verificar a cadeia de estado e refs em novos artefatos versionados.",
+    "sire_source": {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    "candidate_sequence_status": "PLAYER_DIRECTION_FOR_DRAMATURGE_PLANNING_NOT_EVENT",
+    "knowledge_limits": {
+      "mary_established": "NPC_KNOWLEDGE_PROVENANCE_V21 records that Mary received Bartholomeu's account and saw Volnaya documents/van information; she also heard his account of injuring a man and taking him to hospital.",
+      "not_established": [
+        "Mary knows that the man lost an arm and later returned with both arms intact",
+        "Mary knows the name Sistema Circulatório",
+        "Mary knows a Ventrue network connection"
+      ],
+      "injured_man": "The same knowledge index records the injured man later appearing with both arms intact. The fact is open-source history; Mary's knowledge of that return is not recorded.",
+      "dramaturge_boundary": "Treat the player's desired Anciã knowledge as a future authorial design constraint. Ask the Dramaturge to make its acquisition causal using open information; if it requires hidden truth, leave that link blocked and seek a player-open variant."
+    }
+  },
+  "blocked_dependencies": [
+    "Current master CYCLE_V0033 still points to M3.01_v005 and state_v043; new candidate sources are not operational.",
+    "The C03.15 decade-specific legal-historical basis remains unresolved and is explicitly excluded from the pre-1970 planning facts.",
+    "Truth-dependent work remains blocked; no effective ACL or open variant was approved.",
+    "SCENE_READY and NARRATOR_PERMISSION are not verified."
+  ],
+  "operational_target_gate": "BLOCKED_CONFLICT",
+  "continuity_design_direction": {
+    "authority": "PLAYER_SUPPLIED_DIRECTION_FOR_DRAMATURGE_PLANNING",
+    "status": "PROPOSAL_NOT_EVENT_OR_CANON_SOURCE",
+    "summary": "Gradual escalation through one or two additional Cainite conflicts, at least one Gangrel; the player-proposed transportadora/Sistema Circulatório connection; eventual coercive confrontation led by Kuthulun with a group of roughly seven or eight Gangrel; defeat and forced Abraço near death; then family grief, Cainite social adaptation, resentment among long-waiting retainers, and difficult protective choices.",
+    "hidden_truth_boundary": "Use only the player's supplied wording as a provisional design target. Do not inspect or reveal hidden truth; if any link depends on it, mark BLOCKED_EXTERNAL_DEPENDENCY and request an open variant."
+  }
+}

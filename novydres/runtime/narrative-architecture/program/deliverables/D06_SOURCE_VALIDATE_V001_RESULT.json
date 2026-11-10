@@ -1,0 +1,127 @@
+{
+  "validator": "D06_SOURCE_VALIDATE_V001.py",
+  "status": "PASS",
+  "checks_passed": 22,
+  "checks_total": 22,
+  "checks": [
+    {
+      "id": "SRC-01",
+      "label": "episode candidate blob SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-02",
+      "label": "state candidate blob SHA",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-03",
+      "label": "episode parent v005 recorded",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-04",
+      "label": "M3.01 candidate retimed before 1970",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-05",
+      "label": "mortal through all M3.01 scenes",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-06",
+      "label": "no Embrace inside M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-07",
+      "label": "exact diegetic dates remain unknown",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-08",
+      "label": "state checkpoint event matches cycle",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-09",
+      "label": "state checkpoint recovered from open sources",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-10",
+      "label": "state preserves current mortal/no-Embrace checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-11",
+      "label": "state v043 mismatch source and hash retained",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-12",
+      "label": "old content is not silently relabeled",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-13",
+      "label": "state candidate is explicitly non-operational",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-14",
+      "label": "branch source HEAD captured",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-15",
+      "label": "master source HEAD captured",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-16",
+      "label": "master unchanged by reconciliation",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-17",
+      "label": "current manifest source captured",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-18",
+      "label": "current cursor points at cycle 33",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-19",
+      "label": "operational gate remains blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-20",
+      "label": "hidden-truth dependency remains blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-21",
+      "label": "scene readiness not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "SRC-22",
+      "label": "Narrator permission not inferred",
+      "result": "PASS"
+    }
+  ],
+  "validator_blob_sha": "5c62902b27fed7f1db1ae4539c0f743969a2304b",
+  "inputs": {
+    "episode_path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/M3.01_v006.source.txt",
+    "episode_blob_sha": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+    "state_path": "novydres/runtime/narrative-architecture/program/deliverables/source-candidates/state_v044.source.txt",
+    "state_blob_sha": "6dad4e47da3eeb9f59380e895eeebf15894ab785",
+    "reconciliation_path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V001.json",
+    "reconciliation_blob_sha": "201b223ccb88e07a308c6c5c06ec5fab037acdc0"
+  }
+}

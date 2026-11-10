@@ -1,0 +1,345 @@
+{
+  "validator": "D12_VALIDATE_V005.py",
+  "status": "PASS",
+  "checks_passed": 66,
+  "checks_total": 66,
+  "checks": [
+    {
+      "id": "D12-01",
+      "label": "file exists: D06_SOURCE_RECONCILIATION_V001.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-02",
+      "label": "file exists: D06_CHRONICLE_BIBLE_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-03",
+      "label": "file exists: D06_TRANSFORMATION_PATHS_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-04",
+      "label": "file exists: D06_PLAYER_APPROVAL_QUEUE_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-05",
+      "label": "file exists: AUDIT_D06_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-06",
+      "label": "file exists: HANDOFF_D06_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-07",
+      "label": "file exists: D06_SOURCE_VALIDATE_V001_RESULT.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-08",
+      "label": "file exists: AUDIT_D12_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-09",
+      "label": "file exists: HANDOFF_D12_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-10",
+      "label": "file exists: D12_RELEASE_CANDIDATE_V005.json",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-11",
+      "label": "M3.01 v006 blob",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-12",
+      "label": "state v044 blob",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-13",
+      "label": "direct source validator result",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-14",
+      "label": "direct source validator hash",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-15",
+      "label": "source validator bound to reconciliation blob",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-16",
+      "label": "M3.01 before 1970",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-17",
+      "label": "mortal throughout M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-18",
+      "label": "no Embrace in M3.01",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-19",
+      "label": "exact dates remain unknown",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-20",
+      "label": "prior late-1970s labels removed from candidate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-21",
+      "label": "old state provenance is explicitly described",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-22",
+      "label": "state candidate does not reinterpret or promote v043",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-23",
+      "label": "documentary input head",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-24",
+      "label": "master input head",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-25",
+      "label": "master remains unmodified",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-26",
+      "label": "MANIFEST_V47 cursor reconciled to CYCLE_V0033",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-27",
+      "label": "embedded MANIFEST_V46 remains historical",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-28",
+      "label": "operational conflict stays blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-29",
+      "label": "secret dependency stays blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-30",
+      "label": "SCENE_READY not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-31",
+      "label": "Narrator permission not inferred",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-32",
+      "label": "forced Embrace target is not an occurred event",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-33",
+      "label": "forced Embrace cutoff retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-34",
+      "label": "authorial target only applied to candidates",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-35",
+      "label": "D06 documentary gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-36",
+      "label": "D06 operational target gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-37",
+      "label": "no new independent review claimed",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-38",
+      "label": "D06 validation count recorded",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-39",
+      "label": "D06 handoff marks readback pending",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-40",
+      "label": "D12 documentary and operational gates separated",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-41",
+      "label": "D12 secret gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-42",
+      "label": "D12 scene gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-43",
+      "label": "D12 Narrator gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-44",
+      "label": "D12 promotion not performed",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-45",
+      "label": "V004 validator run retained",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-46",
+      "label": "D12 handoff remains blocked operationally",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-47",
+      "label": "next step scoped to Dramaturge planning",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-48",
+      "label": "readback status is explicit",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-49",
+      "label": "release candidate remains blocked",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-50",
+      "label": "release documentary gate",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-51",
+      "label": "no promotion or master write",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-52",
+      "label": "no scene or Narrator authorization",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-53",
+      "label": "D07 not activated",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-54",
+      "label": "prompt cites episode candidate hash",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-55",
+      "label": "prompt cites state candidate hash",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-56",
+      "label": "prompt identifies current manifest",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-57",
+      "label": "prompt enforces M3.01 date boundary",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-58",
+      "label": "prompt preserves forced nature of Embrace",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-59",
+      "label": "prompt retains authored network direction",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-60",
+      "label": "prompt retains player confrontation concept",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-61",
+      "label": "prompt excludes scene writing",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-62",
+      "label": "prompt excludes Narrator cycle",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-63",
+      "label": "prompt prohibits secret access",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-64",
+      "label": "prompt distinguishes scene readiness",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-65",
+      "label": "prompt distinguishes Narrator permission",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-66",
+      "label": "D12 release inventory exactly matches 16 deliverables",
+      "result": "PASS"
+    }
+  ],
+  "validator_blob_sha": "cd641a82992a6c8045115994fe8515c4ef3262f3",
+  "documentary_input_head": "3101f183c456a3cf0f188dd2a70ca50e3290092f",
+  "master_input_head": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "candidate_blobs": {
+    "episode": "8b72355fb8242b4d35994bc76ced8af1811b85cf",
+    "state": "6dad4e47da3eeb9f59380e895eeebf15894ab785"
+  }
+}
