@@ -1,0 +1,410 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D09",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "a6e8a6c4fe0bbba6b8ac2cd6ed2ac8b11612e60f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "no_operational_promotion": true,
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a",
+      "role": "D09 scope, program authority and release boundary."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "role": "D09 mandate: V5 progression, meaningful post-Embrace experience, D1 Marcos, 2010; no fictional XP/FV."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "Orthogonal gates; D01 proposal is not operational permission."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Frozen structural contracts and lifecycle limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "D06 structural proposal and Marco sufficiency model."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "Conditional, unselected 2010 routes and explicit no-default choice."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "Inherited target-route decision."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "Published D06 gate and authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+      "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f",
+      "role": "Optional D08 draft; no current trigger, actor assignment or scene authorization."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "e4f434477a2a881a56f234d5347a712c941dcf08",
+      "role": "Exact inherited player-decision queue."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D08_V001.json",
+      "blob_sha": "474024460e9dd55f45544f512accc2abc7cbaf6d",
+      "role": "D08 pass-with-unknown and readback."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "Original player approval decisions carried forward."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "D07 approval lineage and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+      "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806",
+      "role": "NPC knowledge claims require event-based acquisition."
+    }
+  ],
+  "document_id": "D09_ADVERSARIAL_TESTS_V001",
+  "cases": [
+    {
+      "id": "T-D09-001",
+      "description": "documentary branch and repository identity",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-002",
+      "description": "D09 input HEAD and parent checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-003",
+      "description": "master remains the pinned read-only HEAD",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-004",
+      "description": "design HEAD contains the D08 input",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-005",
+      "description": "latest numeric cycle found on design and master",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-006",
+      "description": "cycle blob matches the pinned checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-007",
+      "description": "cycle scene and mortal state are unchanged",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-008",
+      "description": "cycle content agrees across branches",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-009",
+      "description": "execution manifest records D08 published gate",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-010",
+      "description": "execution manifest D08 readback and master check",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-011",
+      "description": "all seven D08 artifacts remain pinned",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-012",
+      "description": "all D08 remote contents and blob IDs match",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-013",
+      "description": "all D09 JSON documents parse",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-014",
+      "description": "all declared source blob pins resolve",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-015",
+      "description": "workpaper authority statuses remain explicit",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-016",
+      "description": "top-level documents remain player-safe proposals",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-017",
+      "description": "no canon, cycle, scene or operational mutation is authorized",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-018",
+      "description": "all four D06 routes remain present and unselected",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-019",
+      "description": "target-route approval remains pending",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-020",
+      "description": "target sheet does not imply purchase or grant",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-021",
+      "description": "Marco closure requires Coverage Coherence and Consequence",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-022",
+      "description": "no scene count, age or elapsed-time quota is imposed",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-023",
+      "description": "vampire route requires real authorized played Embrace",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-024",
+      "description": "vampire route requires consequential post-Embrace experience",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-025",
+      "description": "alternate route requires explicit player approval",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-026",
+      "description": "unfinished or terminal path reports actual play truthfully",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-027",
+      "description": "no survival of human relationships is presumed",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-028",
+      "description": "2010 is a soft horizon without invented date",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-029",
+      "description": "M3.01 scene checkpoint does not close macro M3",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-030",
+      "description": "manifest versus cycle pointer conflict remains unresolved",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-031",
+      "description": "no new scene readiness or narrator permission is granted",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-032",
+      "description": "player may refuse pause fail or redirect without penalty",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-033",
+      "description": "NPC knowledge requires acquisition evidence",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-034",
+      "description": "no secret truth or GM-only payload is present",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-035",
+      "description": "route choice remains independent from target-sheet approval",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-036",
+      "description": "mechanical progression cites rule event ledger and authorization",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-037",
+      "description": "no XP FV powers or traits are granted by this phase",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-038",
+      "description": "age and time do not produce automatic power",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-039",
+      "description": "loss does not produce automatic refund",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-040",
+      "description": "relationship continuity records change loss or unknown",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-041",
+      "description": "target sheet cap is not treated as acquired total",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-042",
+      "description": "all inherited decision IDs match D08 queue",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-043",
+      "description": "all inherited decision statuses match D08 queue",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-044",
+      "description": "no inherited decision is marked approved",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-045",
+      "description": "approval default remains pending and silence selects nothing",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-046",
+      "description": "source refs include actual progression and chronology authorities",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-047",
+      "description": "handoff retains D09 documentary-only authority",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-048",
+      "description": "final audit gate requires complete independent and literary reviews",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-049",
+      "description": "handoff gate follows the reviewed audit",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-050",
+      "description": "test catalog and executable checks use identical IDs",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-051",
+      "description": "only seven D09 artifacts are in scope",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-052",
+      "description": "no untracked changes outside D09 artifact set",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-053",
+      "description": "reject route mutation that selects vampire-by-2010",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-054",
+      "description": "reject mutation that awards XP or FV",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-055",
+      "description": "reject mutation that invents a fixed Embrace date",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-056",
+      "description": "reject mutation that assumes a human tie survives to 2010",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-057",
+      "description": "reject mutation that sets SCENE_READY or Narrator permission",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-058",
+      "description": "reject mutation that marks a route selected by silence",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-059",
+      "description": "reject mutation that treats target sheet as purchased traits",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-060",
+      "description": "reject mutation that promotes workpapers to operational authority",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-061",
+      "description": "execution result and gate labels agree",
+      "result": "PASS"
+    },
+    {
+      "id": "T-D09-062",
+      "description": "reject final gate without complete review evidence",
+      "result": "PASS"
+    }
+  ],
+  "execution": {
+    "status": "PASS",
+    "passed": 62,
+    "total": 62,
+    "result": "62/62 PASS",
+    "runner": "D09_VALIDATE_V001.py",
+    "gate": "PASS_WITH_UNKNOWN"
+  },
+  "gate": "PASS_WITH_UNKNOWN"
+}

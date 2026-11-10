@@ -1,0 +1,238 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D09",
+  "version": "V001",
+  "status": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "a6e8a6c4fe0bbba6b8ac2cd6ed2ac8b11612e60f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "no_operational_promotion": true,
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a",
+      "role": "D09 scope, program authority and release boundary."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "role": "D09 mandate: V5 progression, meaningful post-Embrace experience, D1 Marcos, 2010; no fictional XP/FV."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "Orthogonal gates; D01 proposal is not operational permission."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Frozen structural contracts and lifecycle limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "D06 structural proposal and Marco sufficiency model."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "Conditional, unselected 2010 routes and explicit no-default choice."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "Inherited target-route decision."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "Published D06 gate and authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+      "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f",
+      "role": "Optional D08 draft; no current trigger, actor assignment or scene authorization."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "e4f434477a2a881a56f234d5347a712c941dcf08",
+      "role": "Exact inherited player-decision queue."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D08_V001.json",
+      "blob_sha": "474024460e9dd55f45544f512accc2abc7cbaf6d",
+      "role": "D08 pass-with-unknown and readback."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "Latest numeric narrative cursor; not scene permission."
+    },
+    {
+      "path": "novydres/MANIFEST_V46.json",
+      "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+      "role": "Conflicting older manifest pointer; conflict remains pending."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "role": "Approved local target sheet, not bought/acquired traits or route selection."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9",
+      "role": "Provisional mechanical testing conventions and no automatic XP."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH03_TRAJETORIA_ATE_2010_V1.md",
+      "blob_sha": "6083fe000673554064c3c7de1361c594dbd8ac74",
+      "role": "Editorial trajectory goals; no future events or embrace date."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH04_ECOLOGIA_CAINITA_COBERTURA_V1.md",
+      "blob_sha": "e696d283b16c5233dbdc4e6b0d50aa8bf4816644",
+      "role": "Public systems coverage only; no invented NPC positions or relationships."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH06_VALIDACAO_E_HANDOFF_V1.md",
+      "blob_sha": "88a2d597b7cf04dc9d89fba66ec2cf36eae5ebc5",
+      "role": "Pre-activation validation; no end-to-end narrator test or mechanical award."
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "role": "Cycle, review, scene permission, event persistence and progression gates."
+    },
+    {
+      "path": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V2.md",
+      "blob_sha": "f8d7b3a68e73c225f327c161eef0f7f1b616f0ad",
+      "role": "Current prospective Dramaturgo role and horror-pressure principles."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "blob_sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "role": "D1 workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_v0_1.md",
+      "blob_sha": "5c972b08c70187e883bc6da7d4ad964cb165612f",
+      "role": "D2 workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "blob_sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "role": "H workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_k_final_integration_decisions_v0_1.md",
+      "blob_sha": "fad50d9f24e59d39437e849ca3d9f0a28f96ed4c",
+      "role": "K decision file marked candidate for senior-editor closure."
+    },
+    {
+      "path": "novydres/systems/character-creation/novydres_character_creation_k_final_integration_v0_1.source.md",
+      "blob_sha": "d78cf689801f4f91c5ba6ec71f1a9f0a3d91f8e7",
+      "role": "K source workpaper marked candidate for senior-editor closure."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_l_guided_content_handoff_v0_1(1).md",
+      "blob_sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a",
+      "role": "L editorial handoff, explicitly not an architecture patch."
+    },
+    {
+      "path": "novydres/systems/character-creation/novydres_character_creation_core_v5_baseline_v0_1.source.md",
+      "blob_sha": "a657cb3f381fc090443270124189bc0231b3d5a0",
+      "role": "V5 baseline source; exact advancement still requires current rule citation."
+    },
+    {
+      "path": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "blob_sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "role": "Local V5 rules engine source; use current version and authorization at play."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "Original player approval decisions carried forward."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "D07 approval lineage and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+      "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806",
+      "role": "NPC knowledge claims require event-based acquisition."
+    }
+  ],
+  "document_id": "AUDIT_D09_V001",
+  "scope": {
+    "included": [
+      "route-neutral creation/progression gates",
+      "Marco sufficiency and evidence",
+      "pre/post-Embrace conditional pathway",
+      "chronology and 2010 continuity",
+      "mechanical authority and player agency",
+      "personal-horror literary review",
+      "source authority/provenance"
+    ],
+    "excluded": [
+      "retcon or canon changes",
+      "narrative events or scenes",
+      "character-sheet changes or XP/FV/power grants",
+      "route selection",
+      "operational promotion",
+      "secrets and future NPC truths"
+    ]
+  },
+  "findings": [
+    {
+      "id": "D09-U01",
+      "severity": "BOUNDED_UNKNOWN",
+      "description": "APPROVAL-D06-001 leaves the route to 2010 unselected."
+    },
+    {
+      "id": "D09-U02",
+      "severity": "BOUNDED_UNKNOWN",
+      "description": "Cycle/manifest pointer conflict and candidate workpaper maturity block operational conclusions."
+    },
+    {
+      "id": "D09-U03",
+      "severity": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "description": "No effective GM-hidden segregation for truth-dependent work."
+    },
+    {
+      "id": "D09-U04",
+      "severity": "BOUNDED_UNKNOWN",
+      "description": "Embrace, relationships, chronology, route-specific experience and mechanical acquisition remain unsupported until played and recorded."
+    }
+  ],
+  "automated_validation": {
+    "status": "PASS",
+    "runner": "D09_VALIDATE_V001.py",
+    "checks_passed": 62,
+    "checks_total": 62
+  },
+  "schema_validation": {
+    "status": "NOT_APPLICABLE_TO_D09; D10 WILL DEFINE RELEASE SCHEMAS"
+  },
+  "independent_review": {
+    "status": "PASS",
+    "reviewer": "Codex delegated reviewer /root/d05_adversarial_review (independent, read-only)",
+    "result": "PASS; no material findings in the D09 delta review.",
+    "evidence": "Independent execution of D09_VALIDATE_V001.py with --expected-gate PENDING: T-D09-001 through T-D09-062 PASS (62/62; exit 0). Reviewed review_complete/reviews_complete and negative cases for absent evidence, non-PASS status, blank reviewer, and blank result."
+  },
+  "literary_review": {
+    "status": "PASS",
+    "reviewer": "Codex delegated reviewer /root/d05_adversarial_review (independent, read-only)",
+    "result": "PASS_WITH_UNKNOWN; structure preserves player choice/refusal and aligns with personal horror and gothic-punk themes. Specific scene rhythm, pressure and stakes remain unknown until a route and actual events exist.",
+    "evidence": "D09_GUIDED_CREATION_PROGRESSION_V001.json: authority_and_route, graduation_gate, personal_horror_review; D06_CHRONICLE_BIBLE_V001.json: genre promise and transformation constraints. No new events, trauma or outcome assumed."
+  },
+  "gate": "PASS_WITH_UNKNOWN",
+  "test_catalog_count": 62
+}

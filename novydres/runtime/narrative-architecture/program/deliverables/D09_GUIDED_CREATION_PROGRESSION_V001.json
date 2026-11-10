@@ -1,0 +1,311 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D09",
+  "version": "V001",
+  "status": "PROPOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "design/chr001-narrative-program-d01",
+  "input_head": "a6e8a6c4fe0bbba6b8ac2cd6ed2ac8b11612e60f",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "no_canon_edit": true,
+  "no_cycle_edit": true,
+  "no_scene_authorization": true,
+  "no_operational_promotion": true,
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a",
+      "role": "D09 scope, program authority and release boundary."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "role": "D09 mandate: V5 progression, meaningful post-Embrace experience, D1 Marcos, 2010; no fictional XP/FV."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d",
+      "role": "Orthogonal gates; D01 proposal is not operational permission."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736",
+      "role": "Frozen structural contracts and lifecycle limits."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c",
+      "role": "D06 structural proposal and Marco sufficiency model."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V001.json",
+      "blob_sha": "e3fc7479f2c00ab31cfde29a3551fc0d44fe0798",
+      "role": "Conditional, unselected 2010 routes and explicit no-default choice."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d",
+      "role": "Inherited target-route decision."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93",
+      "role": "Published D06 gate and authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+      "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f",
+      "role": "Optional D08 draft; no current trigger, actor assignment or scene authorization."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "e4f434477a2a881a56f234d5347a712c941dcf08",
+      "role": "Exact inherited player-decision queue."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D08_V001.json",
+      "blob_sha": "474024460e9dd55f45544f512accc2abc7cbaf6d",
+      "role": "D08 pass-with-unknown and readback."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+      "role": "Latest numeric narrative cursor; not scene permission."
+    },
+    {
+      "path": "novydres/MANIFEST_V46.json",
+      "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+      "role": "Conflicting older manifest pointer; conflict remains pending."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "role": "Approved local target sheet, not bought/acquired traits or route selection."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9",
+      "role": "Provisional mechanical testing conventions and no automatic XP."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH03_TRAJETORIA_ATE_2010_V1.md",
+      "blob_sha": "6083fe000673554064c3c7de1361c594dbd8ac74",
+      "role": "Editorial trajectory goals; no future events or embrace date."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH04_ECOLOGIA_CAINITA_COBERTURA_V1.md",
+      "blob_sha": "e696d283b16c5233dbdc4e6b0d50aa8bf4816644",
+      "role": "Public systems coverage only; no invented NPC positions or relationships."
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/global/CH06_VALIDACAO_E_HANDOFF_V1.md",
+      "blob_sha": "88a2d597b7cf04dc9d89fba66ec2cf36eae5ebc5",
+      "role": "Pre-activation validation; no end-to-end narrator test or mechanical award."
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+      "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c",
+      "role": "Cycle, review, scene permission, event persistence and progression gates."
+    },
+    {
+      "path": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V2.md",
+      "blob_sha": "f8d7b3a68e73c225f327c161eef0f7f1b616f0ad",
+      "role": "Current prospective Dramaturgo role and horror-pressure principles."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "blob_sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "role": "D1 workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_v0_1.md",
+      "blob_sha": "5c972b08c70187e883bc6da7d4ad964cb165612f",
+      "role": "D2 workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "blob_sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "role": "H workpaper marked candidate for senior-editor revalidation."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_k_final_integration_decisions_v0_1.md",
+      "blob_sha": "fad50d9f24e59d39437e849ca3d9f0a28f96ed4c",
+      "role": "K decision file marked candidate for senior-editor closure."
+    },
+    {
+      "path": "novydres/systems/character-creation/novydres_character_creation_k_final_integration_v0_1.source.md",
+      "blob_sha": "d78cf689801f4f91c5ba6ec71f1a9f0a3d91f8e7",
+      "role": "K source workpaper marked candidate for senior-editor closure."
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_l_guided_content_handoff_v0_1(1).md",
+      "blob_sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a",
+      "role": "L editorial handoff, explicitly not an architecture patch."
+    },
+    {
+      "path": "novydres/systems/character-creation/novydres_character_creation_core_v5_baseline_v0_1.source.md",
+      "blob_sha": "a657cb3f381fc090443270124189bc0231b3d5a0",
+      "role": "V5 baseline source; exact advancement still requires current rule citation."
+    },
+    {
+      "path": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "blob_sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "role": "Local V5 rules engine source; use current version and authorization at play."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc",
+      "role": "Original player approval decisions carried forward."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9",
+      "role": "D07 approval lineage and no-default policy."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+      "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806",
+      "role": "NPC knowledge claims require event-based acquisition."
+    }
+  ],
+  "document_id": "D09_GUIDED_CREATION_PROGRESSION_V001",
+  "checkpoint_as_of": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "M3.01_C05": "CLOSED",
+    "M3.01_C06": "NOT_STARTED",
+    "character_state": "MORTAL",
+    "embrace": "NOT_OCCURRED",
+    "preparation": "STALE",
+    "use": "documentary cursor only"
+  },
+  "authority_and_route": {
+    "target_choice_id": "APPROVAL-D06-001",
+    "choice_status": "PENDING_PLAYER_APPROVAL",
+    "no_default": "continuation, silence, phase completion or target-sheet approval selects no route",
+    "selected_route": null,
+    "routes": [
+      {
+        "id": "ROUTE-VAMPIRE-BY-2010",
+        "status": "OPTION_NOT_SELECTED"
+      },
+      {
+        "id": "ROUTE-NONVAMPIRIC-2010",
+        "status": "ALTERNATE_REQUIRES_APPROVAL"
+      },
+      {
+        "id": "ROUTE-UNFINISHED-OR-EARLY-TERMINAL",
+        "status": "VALID_REPORTING; NOT_A_SUCCESS_SHORTCUT"
+      },
+      {
+        "id": "ROUTE-EXTENDED-OR-PAUSED-HORIZON",
+        "status": "PLAYER_DECISION_REQUIRED"
+      }
+    ]
+  },
+  "graduation_gate": {
+    "status": "PROPOSED_NOT_OPERATIONAL",
+    "must_not_be_used_until": [
+      "player selects/approves the target route",
+      "source pointer conflict is adjudicated for operational use",
+      "applicable authority documents are reconciled and promoted",
+      "current event/cycle and all required source ledgers are read back",
+      "Marco sufficiency is assessed against the operative D1 contract",
+      "mechanical ledger and current V5 rule references are audited",
+      "route-specific evidence below is present",
+      "separate D12 operational promotion and narrator/scene permission gates pass"
+    ],
+    "shared_criteria": [
+      "For each applicable Marco, assess Coverage, Coherence and Consequence with source-backed evidence; an event count, elapsed time or blank checklist cannot substitute.",
+      "Trace each claimed change to an actual played event, a valid source and the relevant authority; UNKNOWN remains visible.",
+      "Evaluate whether the protagonist had meaningful agency, alternatives and consequences without requiring one moral answer or a predetermined transformation.",
+      "Record unresolved causal debts and their owner/next legitimate resolution; open threads do not automatically block a truthful graduation unless a chosen target or authority requires resolution.",
+      "Assess continuity to the chosen horizon using sourced time and state; distinguish established, changed, lost, absent and UNKNOWN relationships.",
+      "Keep operational transition to the main 2010 chronicle separate from documentary graduation review and from scene readiness."
+    ],
+    "route_specific_criteria": {
+      "ROUTE-VAMPIRE-BY-2010": [
+        "An actual Embrace is caused by play, authorized, narrated and persisted; no planned date, sire, cause or success is assumed.",
+        "Post-Embrace play contains consequential lived experience of changed body, Hunger/Beast, moral cost, social exposure and power under the then-current rule source; coverage is demonstrated by events and choices, not a prescribed scene count.",
+        "All mechanical traits are supported by the current rule source, actual acquisition, player authorization and reconciled ledger; target-sheet entries alone do not qualify.",
+        "2010 state and relationships are evidenced; survival, memory, status, lineage and continuity are not assumed."
+      ],
+      "ROUTE-NONVAMPIRIC-2010": [
+        "The player expressly approves the alternate target; approval does not rewrite a prior target silently.",
+        "The actual mortal or other authorized state, relationships and 2010 continuity are evidenced; no vampire-only trait is granted."
+      ],
+      "ROUTE-UNFINISHED-OR-EARLY-TERMINAL": [
+        "Refusal, failure, absence, death or unfinished status is reported only if caused by actual play or explicit player choice and persisted where required.",
+        "A truthful terminal or unfinished result may fail the selected target; do not relabel it as successful graduation or add plot armor."
+      ],
+      "ROUTE-EXTENDED-OR-PAUSED-HORIZON": [
+        "Identify the actual plausibility or timing conflict and present its consequences for player decision.",
+        "No extension or target-window change occurs by silence or convenience."
+      ]
+    }
+  },
+  "progression_contract": {
+    "authority": "current operative V5 rules, frozen/local authority decisions after status reconciliation, real event record and explicit approval; this proposal grants nothing",
+    "eligible_evidence": [
+      "actual resolved events and authorized purchase/acquisition records",
+      "current rule text/version and any applicable local exception with its authority status",
+      "reconciled character ledger with source event, cost and approval",
+      "Marco consolidation evidence and relevant current character state"
+    ],
+    "prohibited_shortcuts": [
+      "XP/FV from elapsed years, age, scene count, chat changes, audit or editorial review",
+      "automatic powers, traits, Humanity changes, refunds, survival or social position",
+      "re-running accepted rolls or retrospectively inventing acquisition",
+      "treating provisional target values or budget ceiling as purchases"
+    ],
+    "rule_conflict": "Where workpapers conflict or their approval status is unresolved, preserve the exact provenance and suspend the dependent mechanical conclusion; do not harmonize silently."
+  },
+  "milestone_map": {
+    "M1": "closed material is immutable; no D09 reopening",
+    "M2": "macro sufficiency remains UNKNOWN pending eligible source-chain review; operational C05/C06 do not resolve it",
+    "M3": "macro status is not inferred from M3.01 scene labels",
+    "M4": "no transformation event or fixed location is presumed",
+    "M5": "2010 is a soft horizon; no automatic graduation or epilogue award"
+  },
+  "chronology_contract": {
+    "precision": "source-backed only; 2010 is a horizon, not a fixed event date",
+    "embrace_date": "UNKNOWN",
+    "embrace_cause": "UNKNOWN",
+    "sire": "UNKNOWN",
+    "generation": "UNKNOWN",
+    "relationship_continuity": "UNKNOWN; do not presume survival, memory, status or continuity for any human tie without evidence at the selected horizon.",
+    "offscreen_events": "never inserted to satisfy a graduation criterion"
+  },
+  "personal_horror_review": {
+    "review_questions": [
+      "Do pressures arise from supported institutions, relationships and choices rather than arbitrary punishment?",
+      "Can a player refuse, fail, redirect or accept cost without the outline erasing that choice?",
+      "Are moral costs consequential but not a forced moral answer, automatic Humanity loss or scripted trauma?",
+      "Does a proposed transformation expose conflict between identity, need, body and power through actual play rather than a target-sheet epilogue?",
+      "Do NPC aims and knowledge remain independent and source-backed?",
+      "Does pacing preserve gothic-punk pressure and personal stakes without quota scenes or artificial luck?"
+    ],
+    "authority": "literary quality questions only; not a new canon or mechanics rule"
+  },
+  "bounded_unknowns": [
+    "the target route is unselected under APP-D06-001",
+    "CYCLE_V0033 versus MANIFEST_V46 pointer conflict remains pending",
+    "effective GM-hidden segregation is absent; truth-dependent investigation remains blocked",
+    "D1, D2, H and K workpaper statuses are candidate for senior-editor revalidation/closure despite embedded decision labels",
+    "the current sufficiency of macro M2 and M3 is not inferred from the operational scene checkpoint",
+    "Embrace timing, cause, sire, generation, relationships and 2010 continuity are UNKNOWN",
+    "exact mechanical costs and acquired traits require current rule citations, actual event records and reconciled approval ledger",
+    "no SCENE_READY or NARRATOR_PERMISSION is present"
+  ],
+  "gate": "PASS_WITH_UNKNOWN",
+  "source_authority_status": {
+    "D1_D2_H": "candidate_for_senior_editor_revalidation; embedded APPROVED decision labels do not promote the workpapers",
+    "K": "candidate_for_senior_editor_closure; no architecture closure inferred",
+    "L": "active_handoff with authority_class editorial_handoff_not_architecture_patch",
+    "resolution": "Preserve source status tension; D09 uses these only as bounded design evidence pending legitimate authority reconciliation."
+  }
+}
