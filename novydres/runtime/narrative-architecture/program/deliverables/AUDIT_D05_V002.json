@@ -1,0 +1,37 @@
+{
+  "document_id": "AUDIT_D05_V002",
+  "phase": "D05",
+  "version": "V002",
+  "result": "PASS_WITH_UNKNOWN",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "scope": "Narrow versioned correction to the post-push publication/readback state of D05; no D05 content suite rerun and no change to historical claims.",
+  "finding": {
+    "id": "D05-F-005",
+    "severity": "process_gate",
+    "prior_state": "HANDOFF_D05_V001.json correctly recorded PENDING_READBACK before push.",
+    "evidence": "The persisted execution record identifies remote commit 38ed1270d83a3fc31ab05fc881535849f3045211, parent 6cf1434147527a2d6fd7892ee4538670ad0dad7a, tree 6b5041573f59c52f1f20cf8f388278e6e1a70b8f, and 12 exact artifact path/blob pairs with post-push readback marked complete.",
+    "disposition": "Resolve only the stale process gate in HANDOFF_D05_V002; retain V001 byte-for-byte and retain every substantive unknown and approval."
+  },
+  "source_record": "CHR001_D05-D12_RUN_STATE.json / phase_records.D05",
+  "content_gate": "PASS_WITH_UNKNOWN inherited from the already completed D05 review and 18/18 recorded tests; tests_reexecuted=false.",
+  "independent_review": {
+    "status": "PASS_WITH_UNKNOWN",
+    "reviewer_id": "d05_adversarial_review",
+    "basis": "Earlier read-only adversarial review found no remaining material content finding after its targeted remediations; this V002 changes only the handoff state supported by the post-push execution record."
+  },
+  "remaining_unknowns": [
+    "Operational pointer divergence awaits player adjudication.",
+    "Effective GM secret segregation is not evidenced.",
+    "No promotion or scene authorization exists.",
+    "D02 V011 provenance limits and D03/D04 derived classifications remain bounded."
+  ],
+  "constraints": [
+    "No retcon executed.",
+    "No canon, cycle, character, mechanics, or scene state changed.",
+    "No approval inferred from queue or repository access.",
+    "No D05 content suite rerun."
+  ],
+  "next_phase": "D06",
+  "gate_transition": "D05 PASS_WITH_UNKNOWN permits documentary continuation; operational release remains blocked."
+}
