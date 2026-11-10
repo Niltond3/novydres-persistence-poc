@@ -1,0 +1,206 @@
+{
+  "document_id": "AUDIT_D12_V001",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "PENDING_PLAYER_APPROVAL",
+  "gate": "PENDING_PLAYER_APPROVAL",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "input_design_head": "8dd370ec0f72555af0268110525b0878d3fe7cce",
+  "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "sequence": 33,
+    "cycle_id": "CHR001-CYCLE-0033",
+    "status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "checkpoint": {
+      "last_event_id": "CHR001-M301-C05-22-20261109-001",
+      "last_closed_scene": "C05",
+      "next_scene": "C06",
+      "next_scene_status": "NOT_STARTED",
+      "pending_persistence": false,
+      "mortal": true,
+      "embrace_occurred": false
+    },
+    "manifest_path": "novydres/MANIFEST_V46.json"
+  },
+  "scope": "Final documentary integration audit of D01-D11 and release readiness. No operational promotion, master/canon/cycle edits, scenes, mechanical grants or retcons.",
+  "checks": [
+    {
+      "id": "D12-01",
+      "criterion": "HEAD de master",
+      "result": "PASS",
+      "evidence": "origin/master foi confrontado com refs/heads/master do servidor; ambos apontam ao mesmo commit. A auditoria não escreve em master."
+    },
+    {
+      "id": "D12-02",
+      "criterion": "Branch documental e D11",
+      "result": "PASS",
+      "evidence": "D11 está no HEAD remoto da branch documental; commit, pai, árvore e sete blobs/content readback foram conferidos."
+    },
+    {
+      "id": "D12-03",
+      "criterion": "Ciclo numérico mais recente",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "A enumeração numérica localiza CYCLE_V0033 como o maior; checkpoint preserva C05 CLOSED/C06 NOT_STARTED, papel DRAMATURGO, estado mortal e Abraço não ocorrido. Divergência com MANIFEST_V46 continua sem adjudicação."
+    },
+    {
+      "id": "D12-04",
+      "criterion": "Gates D01-D11",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Gates registrados: D01 PASS; D02 V011 e D03-D11 PASS_WITH_UNKNOWN. Estados são documentais e condicionados por incertezas explicitadas."
+    },
+    {
+      "id": "D12-05",
+      "criterion": "Errata e proveniência",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Errata D02 V011 permanece aplicável; conhecimento NPC, causalidade e atribuições derivadas continuam limitados por evidência."
+    },
+    {
+      "id": "D12-06",
+      "criterion": "Aprovações do jogador",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "A divergência de ponteiros, promoção operacional, alvo de conclusão até 2010 e proposta condicional D07 seguem sem decisão expressa."
+    },
+    {
+      "id": "D12-07",
+      "criterion": "Compatibilidade estrutural",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D10 V005 registra 8/8 casos executados e revisão independente; schemas/validadores seguem propostos e não ativados."
+    },
+    {
+      "id": "D12-08",
+      "criterion": "Tramas, conhecimento e relações",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D04-D09 preservam classificações editoriais, aquisição demonstrável, aliases sem fusão e saídas não compulsórias; dependências seguem condicionais."
+    },
+    {
+      "id": "D12-09",
+      "criterion": "Segredos e verdade autoral",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Nenhuma solução GM_HIDDEN é exposta nos artefatos D11/D12; o repositório privado não oferece segregação efetiva contra o proprietário."
+    },
+    {
+      "id": "D12-10",
+      "criterion": "Dependência de segregação",
+      "result": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "evidence": "Mistérios que exigem verdade autoral bloqueada continuam indisponíveis para resolução significativa até haver segregação efetiva ou decisão por variante aberta."
+    },
+    {
+      "id": "D12-11",
+      "criterion": "Testes finais",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Usam-se os resultados D10 V005 8/8 já registrados e a revisão estática D11 de 10 casos. Nenhuma suíte foi repetida na integração; D11 não simulou execução de cena."
+    },
+    {
+      "id": "D12-12",
+      "criterion": "Auditoria de publicação",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D11 teve readback exato. A transação D12 ainda precisa de seu readback pós-push, registrado no manifesto local."
+    },
+    {
+      "id": "D12-13",
+      "criterion": "Escopo de publicação",
+      "result": "PASS",
+      "evidence": "Somente novos artefatos PLAYER_SAFE/PROPOSED na branch documental são autorizados; nenhuma alteração de master, cânone, ciclo, cena, ficha ou recursos."
+    },
+    {
+      "id": "D12-14",
+      "criterion": "Autorização de promoção",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "Não há autorização expressa para promover arquitetura/contratos para uso operacional ou master."
+    },
+    {
+      "id": "D12-15",
+      "criterion": "Estado operacional e permissão",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "O ciclo está READY_FOR_DRAMATURGO; não há SCENE_READY ou NARRATOR_PERMISSION verificado. Não cabe handoff para narrar."
+    },
+    {
+      "id": "D12-16",
+      "criterion": "Retomada sem antecipação",
+      "result": "PASS",
+      "evidence": "Nenhuma cena será iniciada, resultado antecipado, Abraço presumido, retcon executado ou recurso concedido."
+    },
+    {
+      "id": "D12-17",
+      "criterion": "Readback global do pacote D12",
+      "result": "PENDING",
+      "evidence": "Commit/tree/blobs/content de D12 serão registrados após publicação; não usar SHA autorreferente."
+    },
+    {
+      "id": "D12-18",
+      "criterion": "Prontidão para Narrador",
+      "result": "NOT_READY_FOR_NARRATOR",
+      "evidence": "Gates de autorização, divergência operacional e permissão de cena não permitem emitir prompt de Narrador."
+    }
+  ],
+  "phase_gates": {
+    "D01": "PASS",
+    "D02_V011": "PASS_WITH_UNKNOWN",
+    "D03_V001": "PASS_WITH_UNKNOWN",
+    "D04_V001": "PASS_WITH_UNKNOWN",
+    "D05": "PASS_WITH_UNKNOWN",
+    "D06": "PASS_WITH_UNKNOWN",
+    "D07": "PASS_WITH_UNKNOWN",
+    "D08": "PASS_WITH_UNKNOWN",
+    "D09": "PASS_WITH_UNKNOWN",
+    "D10_V005": "PASS_WITH_UNKNOWN",
+    "D11": "PASS_WITH_UNKNOWN"
+  },
+  "review_summary": {
+    "D10_V005": "8/8 executed tests as recorded; technical independent review PASS_WITH_UNKNOWN; suite not rerun because no D10 source changed in D11/D12.",
+    "D11": "Independent technical and literary review PASS_WITH_UNKNOWN; 10 static adversarial cases; 0 runtime scenarios.",
+    "D12_new_automated_tests": 0
+  },
+  "material_findings_open": 0,
+  "approval_and_dependency_items": [
+    {
+      "id": "APPROVAL-D05-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Adjudicar a divergência operacional entre CYCLE_V0033 e MANIFEST_V46, ou mantê-la explicitamente sem resolução."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Autorizar ou recusar promoção posterior dos artefatos para uso operacional/master; nenhuma promoção ocorre por silêncio."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "status": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "request": "Definir armazenamento com segregação efetiva para verdades autorais, aprovar variante aberta, ou manter histórias dependentes bloqueadas."
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Escolher alvo de criação guiada até 2010: manter objetivo vampírico, aprovar alternativa não vampírica, ou deixar sem definição."
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Decidir se a proposta condicional identificada em D07 poderá ser considerada para uso operacional futuro após reconciliação de fontes."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "status": "NOT_GRANTED",
+      "request": "Nenhuma permissão de Narrador/cena é inferida; reavaliar somente após autoridade operacional e SCENE_READY válidos."
+    }
+  ],
+  "bounded_unknowns": [
+    "CYCLE_V0033 versus MANIFEST_V46 pointer discrepancy is not adjudicated.",
+    "No effective GM_HIDDEN access segregation exists in the private repository.",
+    "D03 derived attribution lacks typed acquisition and is not actionable NPC knowledge.",
+    "D08 has no verified current actor, incident or why-now.",
+    "Route/target through 2010 remains unselected.",
+    "D06-D08 handoffs preserve pre-readback point-in-time statuses; local run state is the recorded publication evidence.",
+    "D11 handoff remains authored as AUDITING/PENDING_READBACK; local post-push manifest records the exact successful readback."
+  ],
+  "readback": {
+    "D11": "Exact readback of seven blobs/content at 8dd370ec0f72555af0268110525b0878d3fe7cce; master unchanged.",
+    "D12": "PENDING until post-push record in local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json."
+  },
+  "operational_release": "NOT_AUTHORIZED",
+  "narrator_status": "NOT_READY_FOR_NARRATOR",
+  "decision": "The documentary candidate is ready for player approval. The Narrator prompt is withheld; continue only after the player addresses the listed approval/dependency items."
+}

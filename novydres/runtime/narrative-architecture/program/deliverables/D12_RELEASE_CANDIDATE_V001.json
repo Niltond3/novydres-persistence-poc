@@ -1,0 +1,487 @@
+{
+  "document_id": "D12_RELEASE_CANDIDATE_V001",
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "classification": "PLAYER_SAFE / PROPOSED / NON_OPERATIONAL",
+  "status": "READY_FOR_APPROVAL",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "operational_release": "PENDING_PLAYER_APPROVAL",
+  "narrator_status": "NOT_READY_FOR_NARRATOR",
+  "input": {
+    "design_branch": "design/chr001-narrative-program-d01",
+    "design_head": "8dd370ec0f72555af0268110525b0878d3fe7cce",
+    "master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+    "cycle_blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a",
+    "cycle_sequence": 33,
+    "cycle_id": "CHR001-CYCLE-0033",
+    "cycle_status": "READY_FOR_DRAMATURGO",
+    "next_role": "DRAMATURGO",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "mortal": true,
+    "embrace_occurred": false,
+    "manifest_path": "novydres/MANIFEST_V46.json"
+  },
+  "phase_gates": {
+    "D01": "PASS",
+    "D02_V011": "PASS_WITH_UNKNOWN",
+    "D03_V001": "PASS_WITH_UNKNOWN",
+    "D04_V001": "PASS_WITH_UNKNOWN",
+    "D05": "PASS_WITH_UNKNOWN",
+    "D06": "PASS_WITH_UNKNOWN",
+    "D07": "PASS_WITH_UNKNOWN",
+    "D08": "PASS_WITH_UNKNOWN",
+    "D09": "PASS_WITH_UNKNOWN",
+    "D10_V005": "PASS_WITH_UNKNOWN",
+    "D11": "PASS_WITH_UNKNOWN"
+  },
+  "integration_checks": [
+    {
+      "id": "D12-01",
+      "criterion": "HEAD de master",
+      "result": "PASS",
+      "evidence": "origin/master foi confrontado com refs/heads/master do servidor; ambos apontam ao mesmo commit. A auditoria não escreve em master."
+    },
+    {
+      "id": "D12-02",
+      "criterion": "Branch documental e D11",
+      "result": "PASS",
+      "evidence": "D11 está no HEAD remoto da branch documental; commit, pai, árvore e sete blobs/content readback foram conferidos."
+    },
+    {
+      "id": "D12-03",
+      "criterion": "Ciclo numérico mais recente",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "A enumeração numérica localiza CYCLE_V0033 como o maior; checkpoint preserva C05 CLOSED/C06 NOT_STARTED, papel DRAMATURGO, estado mortal e Abraço não ocorrido. Divergência com MANIFEST_V46 continua sem adjudicação."
+    },
+    {
+      "id": "D12-04",
+      "criterion": "Gates D01-D11",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Gates registrados: D01 PASS; D02 V011 e D03-D11 PASS_WITH_UNKNOWN. Estados são documentais e condicionados por incertezas explicitadas."
+    },
+    {
+      "id": "D12-05",
+      "criterion": "Errata e proveniência",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Errata D02 V011 permanece aplicável; conhecimento NPC, causalidade e atribuições derivadas continuam limitados por evidência."
+    },
+    {
+      "id": "D12-06",
+      "criterion": "Aprovações do jogador",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "A divergência de ponteiros, promoção operacional, alvo de conclusão até 2010 e proposta condicional D07 seguem sem decisão expressa."
+    },
+    {
+      "id": "D12-07",
+      "criterion": "Compatibilidade estrutural",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D10 V005 registra 8/8 casos executados e revisão independente; schemas/validadores seguem propostos e não ativados."
+    },
+    {
+      "id": "D12-08",
+      "criterion": "Tramas, conhecimento e relações",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D04-D09 preservam classificações editoriais, aquisição demonstrável, aliases sem fusão e saídas não compulsórias; dependências seguem condicionais."
+    },
+    {
+      "id": "D12-09",
+      "criterion": "Segredos e verdade autoral",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Nenhuma solução GM_HIDDEN é exposta nos artefatos D11/D12; o repositório privado não oferece segregação efetiva contra o proprietário."
+    },
+    {
+      "id": "D12-10",
+      "criterion": "Dependência de segregação",
+      "result": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "evidence": "Mistérios que exigem verdade autoral bloqueada continuam indisponíveis para resolução significativa até haver segregação efetiva ou decisão por variante aberta."
+    },
+    {
+      "id": "D12-11",
+      "criterion": "Testes finais",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "Usam-se os resultados D10 V005 8/8 já registrados e a revisão estática D11 de 10 casos. Nenhuma suíte foi repetida na integração; D11 não simulou execução de cena."
+    },
+    {
+      "id": "D12-12",
+      "criterion": "Auditoria de publicação",
+      "result": "PASS_WITH_UNKNOWN",
+      "evidence": "D11 teve readback exato. A transação D12 ainda precisa de seu readback pós-push, registrado no manifesto local."
+    },
+    {
+      "id": "D12-13",
+      "criterion": "Escopo de publicação",
+      "result": "PASS",
+      "evidence": "Somente novos artefatos PLAYER_SAFE/PROPOSED na branch documental são autorizados; nenhuma alteração de master, cânone, ciclo, cena, ficha ou recursos."
+    },
+    {
+      "id": "D12-14",
+      "criterion": "Autorização de promoção",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "Não há autorização expressa para promover arquitetura/contratos para uso operacional ou master."
+    },
+    {
+      "id": "D12-15",
+      "criterion": "Estado operacional e permissão",
+      "result": "PENDING_PLAYER_APPROVAL",
+      "evidence": "O ciclo está READY_FOR_DRAMATURGO; não há SCENE_READY ou NARRATOR_PERMISSION verificado. Não cabe handoff para narrar."
+    },
+    {
+      "id": "D12-16",
+      "criterion": "Retomada sem antecipação",
+      "result": "PASS",
+      "evidence": "Nenhuma cena será iniciada, resultado antecipado, Abraço presumido, retcon executado ou recurso concedido."
+    },
+    {
+      "id": "D12-17",
+      "criterion": "Readback global do pacote D12",
+      "result": "PENDING",
+      "evidence": "Commit/tree/blobs/content de D12 serão registrados após publicação; não usar SHA autorreferente."
+    },
+    {
+      "id": "D12-18",
+      "criterion": "Prontidão para Narrador",
+      "result": "NOT_READY_FOR_NARRATOR",
+      "evidence": "Gates de autorização, divergência operacional e permissão de cena não permitem emitir prompt de Narrador."
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "novydres/.AGENT.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "0c439e9b174285d131014d53b09fed38c3dcb6fc"
+    },
+    {
+      "path": "novydres/.CONTEXTG.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "ae6d42862fe177079f1f1d4162729d5f73ed1630"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/START_HERE_PLAYER_SAFE_V1.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "477cdc6f5ebb206a4660fde2d1e586d7dba14b89"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_ARCHITECTURE_V001.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "276461297a10f4fd9c355574729d2ea3d2fb5093"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_CONTRACTS_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "22aa8bf6aa48156e9796bae42c912c630f70a736"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_GOVERNANCE_V001.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "e15307d486bf2d678c99894d637e9d1d8993963f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D01_LIFECYCLE_V001.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "5cc3427e8ac1d23811afece0c0f182da74ea756d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D01_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "28ef698da53a1e330088d210a49a7a576e2d186d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D01_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "5b81ea16af7bcc7b46d4a936c051fbb98db55542"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_INDEPENDENT_REVIEW.md",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "1c98e1f157900173f08b2d949d97f58fb2d1148a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D02_V011_PROVENANCE_ERRATA.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "7282d2d2d51b1c5194a80783dd94b77e644b6a18"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D02_V011.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "e3e2eeab359e8f2a276f760486ace213cc1b8862"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D02_V011.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "d5b8ee418b52eb8d8d9ea50b75b1b48f4cd38988"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_AGENT_REGISTRY_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "57584922f67380be82d3bd12029403804b4bad8c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_KNOWLEDGE_GRAPH_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "45450ac09db20256143ecf70e932afcf6470b806"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D03_IDENTITY_ALIAS_REVIEW_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "00852a0ec6b1b26fb520cf4f523dc362f66cdcb1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D03_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "37ed1b55f1f8a46528bd2129d273b188530beac9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D03_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "8fe479798296d8ce2e269571820312a1f8fc5570"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_THREAD_CLASSIFICATION_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "3d47ffee6e20b003c2267484212ac238ea2f523a"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_CAUSAL_DEPENDENCIES_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "2a105a356f0ac34d50e4c9a215223674e61e1422"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_UNCERTAINTY_REGISTER_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "6dc44e76acd11de133e6c95e4c5d243eaf0122fa"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D04_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "d0afdf683b0718b5e517fb0673fe8606962de86c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D04_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "f3220e134de9bccc5af0a2b3aca11351a0dc9656"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V002.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "b23cfa4055227139373449599e7eef8ae9a358bc"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "9c94c111615ad8ee9db8c1095d4806365ffa3efc"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V003.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "86b332ad766e377d2b035b7b9e39cbcedff43744"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "c4904ad75d9cb732df4b39c550643d7f4418196c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "3b68dd7951b5d9b200877a1025a26561abe2e83d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "2fc4e166a60d3758b33c1d127461471e7f152fd9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "b86ebca25899cede45b9a0264589183fd687cb93"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLOT_BIBLES_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "2a5b6fa9d131d4b9a89add1a46ee06b688fd2fb4"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_TRUTH_LOCKS_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "24be8c4cd4d3e6005f9098c2f5e2381618dbc587"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "c27061c43d5118afa512a4b5f37116ed7472bbb9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "83ea55bcc233fd641bf5636e38e1df14e59637e8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "71e3d737deea62aafe5847adc30bf0d680db86ab"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_SCENES_BEATS_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "c9ea2dd6a188b3bfce0dccfffd73f747273d528f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D08_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "a7127bd15290b8a5eec87bccdc6bf6f0327340b8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D08_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "474024460e9dd55f45544f512accc2abc7cbaf6d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "e1b8dc1e00c5fabdb5a13a9df8c4900e33898c9e"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D09_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "87593085af5459fa4b9b8162165dd3e7540a51f2"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D09_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "f1f3760b5a5fd25fec059383e3aecc4bce5d67f6"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V005.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "0142292a379462d1604be5052bc75f3ae8c43ba3"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V005.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "6fdf2c56d493a64724690f5dd8c5fe0228e56e25"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TECHNICAL_REVIEW_V005.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "a173aa30ae75621fde2cbabe5e15f835f72a9b82"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V005.py",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "b953b6865b64c06549772759f680617222c351e9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D10_V005.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "f0c2f7818b77c7f2e6be8f803b35cfbbc709516c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D10_V005.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "a6593c3d5a2e6194b339abfe303563cc83f76c92"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_MATRIX_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "13b8ae30a0073997783e3c5b5ed1182bef3c4832"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "684a3768031374a928d421e2d0595b41297ec8e3"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_INDEPENDENT_REVIEW_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "c978b1b18fa04e6783db5cbf068b8923bcf89385"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "cde0d18c739b68b998205f9d1db9170557a0edad"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D11_V001.json",
+      "ref": "origin/design/chr001-narrative-program-d01",
+      "blob_sha": "ce45463fabf1cdacc464e9b99dfbd570c7be2c27"
+    },
+    {
+      "path": "novydres/MANIFEST_V46.json",
+      "ref": "origin/master",
+      "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+      "ref": "origin/master",
+      "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+    }
+  ],
+  "authorizations": {
+    "documentary_branch_new_player_safe_proposed_artifacts": true,
+    "master_write": false,
+    "promotion_to_operational_use": false,
+    "canon_or_cycle_mutation": false,
+    "retcon": false,
+    "scene_execution": false,
+    "narrator_permission": false,
+    "xp_fv_or_sheet_changes": false
+  },
+  "pending_decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Adjudicar a divergência operacional entre CYCLE_V0033 e MANIFEST_V46, ou mantê-la explicitamente sem resolução."
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Autorizar ou recusar promoção posterior dos artefatos para uso operacional/master; nenhuma promoção ocorre por silêncio."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "status": "BLOCKED_EXTERNAL_DEPENDENCY",
+      "request": "Definir armazenamento com segregação efetiva para verdades autorais, aprovar variante aberta, ou manter histórias dependentes bloqueadas."
+    },
+    {
+      "id": "APPROVAL-D06-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Escolher alvo de criação guiada até 2010: manter objetivo vampírico, aprovar alternativa não vampírica, ou deixar sem definição."
+    },
+    {
+      "id": "APPROVAL-D07-001",
+      "status": "PENDING_PLAYER_APPROVAL",
+      "request": "Decidir se a proposta condicional identificada em D07 poderá ser considerada para uso operacional futuro após reconciliação de fontes."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "status": "NOT_GRANTED",
+      "request": "Nenhuma permissão de Narrador/cena é inferida; reavaliar somente após autoridade operacional e SCENE_READY válidos."
+    }
+  ],
+  "bounded_unknowns": [
+    "CYCLE_V0033 versus MANIFEST_V46 pointer discrepancy is not adjudicated.",
+    "No effective GM_HIDDEN access segregation exists in the private repository.",
+    "D03 derived attribution lacks typed acquisition and is not actionable NPC knowledge.",
+    "D08 has no verified current actor, incident or why-now.",
+    "Route/target through 2010 remains unselected.",
+    "D06-D08 handoffs preserve pre-readback point-in-time statuses; local run state is the recorded publication evidence.",
+    "D11 handoff remains authored as AUDITING/PENDING_READBACK; local post-push manifest records the exact successful readback."
+  ],
+  "promotion_decision": "PENDING_PLAYER_APPROVAL",
+  "release_condition": "Do not promote or narrate until player decisions, current operational source reconciliation, effective secret handling where needed, current-cycle gates, SCENE_READY and NARRATOR_PERMISSION are independently satisfied.",
+  "output_head": "resolve from remote documentary branch after publication; no self-referential SHA"
+}

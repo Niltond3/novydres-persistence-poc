@@ -1,0 +1,40 @@
+{
+  "program_id": "CHR-001",
+  "phase": "D12",
+  "status": "PENDING_PLAYER_APPROVAL",
+  "gate": "PENDING_PLAYER_APPROVAL",
+  "documentary_gate": "PASS_WITH_UNKNOWN",
+  "publication_readback": {
+    "status": "PENDING",
+    "record": "local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json after push",
+    "rule": "Record actual remote commit, parent, tree, master ref, all four artifact blobs and exact content; do not use self-referential SHA."
+  },
+  "input_design_head": "8dd370ec0f72555af0268110525b0878d3fe7cce",
+  "input_master_head": "124f9a9f43ed427d3db106d9187a875d74f60ac6",
+  "output_head": "resolve from remote branch after publication; no self-reference",
+  "outputs": [
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V001.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/PLAYER_APPROVAL_PROMPT_D12_V001.md"
+  ],
+  "next_action": "After readback, preserve this state as READY_FOR_APPROVAL/PENDING_PLAYER_APPROVAL. Obtain explicit player decisions listed in PLAYER_APPROVAL_PROMPT_D12_V001.md, then revalidate only the affected gates. Do not emit a Narrator prompt until all operational and scene permissions are verified.",
+  "unresolved": [
+    "CYCLE_V0033/MANIFEST_V46 pointer adjudication",
+    "promotion authorization",
+    "2010 route/target selection",
+    "effective GM_HIDDEN segregation or approved open variant",
+    "D07 conditional proposal decision",
+    "SCENE_READY and NARRATOR_PERMISSION are absent"
+  ],
+  "restrictions": [
+    "documentary branch only",
+    "master and narrative cycle remain read-only",
+    "no retcon",
+    "no scene or character-state change",
+    "no XP/FV or sheet mutation",
+    "no hidden truth disclosed",
+    "no Narrator prompt"
+  ],
+  "narrator_release": "NOT_READY_FOR_NARRATOR"
+}
