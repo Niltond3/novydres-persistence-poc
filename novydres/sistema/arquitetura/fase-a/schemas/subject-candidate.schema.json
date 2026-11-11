@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/subject-candidate.schema.json",
+  "title": "NOVYDRES candidate subject envelope - not active",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "subject_id",
+    "kind",
+    "owner_scope",
+    "status",
+    "visibility",
+    "source_refs",
+    "related_subject_ids"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "kind": {
+      "enum": [
+        "world-location",
+        "history-topic",
+        "organization",
+        "lineage",
+        "character",
+        "chronicle",
+        "story",
+        "plot",
+        "thread",
+        "episode",
+        "scene",
+        "beat",
+        "event",
+        "roll",
+        "decision",
+        "approval",
+        "correction",
+        "source",
+        "orchestration-cycle"
+      ]
+    },
+    "owner_scope": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "CANDIDATE",
+        "APPROVED",
+        "ACTIVE",
+        "FROZEN",
+        "CLOSED",
+        "SUPERSEDED",
+        "UNKNOWN"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "PLAYER_SAFE",
+        "PC_KNOWN",
+        "NPC_BELIEF",
+        "GM_HIDDEN",
+        "SYSTEM_AUDIT"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "sha"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          }
+        }
+      }
+    },
+    "related_subject_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    }
+  }
+}

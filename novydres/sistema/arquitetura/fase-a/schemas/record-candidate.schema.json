@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/record-candidate.schema.json",
+  "title": "NOVYDRES candidate immutable record envelope - not active",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_kind",
+    "owner_subject_id",
+    "scope",
+    "source_refs",
+    "epistemic_status",
+    "visibility",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "record_kind": {
+      "enum": [
+        "EVENT",
+        "ROLL",
+        "DECISION",
+        "APPROVAL",
+        "CORRECTION"
+      ]
+    },
+    "owner_subject_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 3
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "sha"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          }
+        }
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "CONFIRMED",
+        "NPC_CLAIM",
+        "GM_PREPARED",
+        "CONDITIONAL",
+        "UNKNOWN"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "PLAYER_SAFE",
+        "PC_KNOWN",
+        "NPC_BELIEF",
+        "GM_HIDDEN",
+        "SYSTEM_AUDIT"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "corrects_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "diegetic_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "causal_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_method": {
+      "type": "string"
+    }
+  }
+}
