@@ -1,0 +1,141 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_LONGITUDINAL_SIDECAR_V10",
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.02",
+  "preparation_id": "CHR001-PREP-M302-20261111-V4",
+  "classification": "GM_HIDDEN",
+  "status": "REVIEW_REQUIRED_NO_NARRATOR_HANDOFF",
+  "source_checkpoint": {
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0044.json",
+      "blob_sha": "5bc4f59519fb7e7e3f017eea975a154e84e7efc1"
+    },
+    "manifest": {
+      "path": "novydres/MANIFEST_V59.json",
+      "blob_sha": "6c1458fa2b72924d60e06f893f5211b695733443"
+    },
+    "last_event_id": "CHR001-M302-C01-05-20261111-001",
+    "last_closed_scene": "M3.02.C01",
+    "next_scene": "M3.02.C02",
+    "next_scene_status": "NOT_STARTED",
+    "state_refs": {
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+        "blob_sha": "04277d399330181b2cc029f5132dda38b6457c2f"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+        "blob_sha": "8a00eeaea0ceba59245a34c9da1992a03635b625"
+      },
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+        "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+        "blob_sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+        "blob_sha": "a5da61e00c5e29a4941d5697b2010743313f9007"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+        "blob_sha": "05ce76898d2757c1e270e9c3b1282712df123d13"
+      }
+    }
+  },
+  "dossier_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.02_DOSSIER_V4.json",
+    "blob_sha": "3418fd76091f4dd14ccddbf1c8fd9a8de6c2de7d"
+  },
+  "scene_queue": {
+    "closed": "M3.02.C01",
+    "next": "M3.02.C02",
+    "next_status": "NOT_STARTED",
+    "scene_ready": false,
+    "narrator_permission": false
+  },
+  "causal_relays": [
+    {
+      "plot_id": "PLOT-TECH-DISPOSITION",
+      "status": "UNREALIZED_REQUIRE_NEW_CURRENT_TRIGGER",
+      "preparation_only": true
+    },
+    {
+      "plot_id": "PLOT-GANGREL-ATTENTION",
+      "status": "UNREALIZED_NO_WITNESS_OR_RELAY_FROM_C01",
+      "preparation_only": true
+    }
+  ],
+  "temporal_policy": {
+    "year": 1970,
+    "civil_date": "UNKNOWN",
+    "post_c01_elapsed_time": "NOT_ADVANCED",
+    "mode": "REVIEW_REQUIRED",
+    "ellipsis_allowed_only_if_justified": true,
+    "temporal_gate_ready": false,
+    "open_threads_must_be_reconciled": 44
+  },
+  "protected_state": {
+    "state_refs": {
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+        "blob_sha": "04277d399330181b2cc029f5132dda38b6457c2f"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+        "blob_sha": "8a00eeaea0ceba59245a34c9da1992a03635b625"
+      },
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+        "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+        "blob_sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+        "blob_sha": "a5da61e00c5e29a4941d5697b2010743313f9007"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+        "blob_sha": "05ce76898d2757c1e270e9c3b1282712df123d13"
+      }
+    },
+    "threads_open": 44,
+    "xp_unchanged": true,
+    "willpower_unchanged": true,
+    "npc_knowledge_unchanged": true
+  },
+  "operational_gates": {
+    "story_preparation_ready": false,
+    "mechanical_scene_ready": false,
+    "scene_ready": false,
+    "narrator_permission": false
+  },
+  "immersion": {
+    "gate": {
+      "path": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
+      "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+    },
+    "player_comment": {
+      "path": "novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md",
+      "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+    },
+    "meta_not_event": true,
+    "no_double_action": true,
+    "no_redundant_closure": true
+  },
+  "predecessor_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.02_LONGITUDINAL_SIDECAR_V3.json",
+    "blob_sha": "c252a86b3cfb4fbb582693d8f0daa1b7f397edc8"
+  },
+  "act_state": {
+    "A1": "NO_ACT_RESOLUTION_ASSERTED",
+    "C01": "CLOSED_G28",
+    "C02": "NOT_STARTED"
+  },
+  "correction_note": "V3 predecessor retained as candidate history; current V4 maintains act-versus-scene boundary."
+}
