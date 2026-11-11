@@ -1,15 +1,19 @@
-name: NOVYDRES CHR-001 Orchestration Gate
+name: NOVYDRES CHR-001 Orchestration V12 Gate
 on:
   push:
     paths:
       - 'novydres/runtime/orchestration/**'
+      - 'novydres/runtime/provocation-prep/**'
       - 'novydres/chronicles/CHR-001/orchestration/**'
+      - 'novydres/chronicles/CHR-001/preparations/**'
       - 'novydres/MANIFEST_V*.json'
       - '.github/workflows/novydres-orchestration.yml'
   pull_request:
     paths:
       - 'novydres/runtime/orchestration/**'
+      - 'novydres/runtime/provocation-prep/**'
       - 'novydres/chronicles/CHR-001/orchestration/**'
+      - 'novydres/chronicles/CHR-001/preparations/**'
       - 'novydres/MANIFEST_V*.json'
       - '.github/workflows/novydres-orchestration.yml'
 permissions:
@@ -17,13 +21,22 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Testar transições permitidas e negadas
-        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V1.mjs
-      - name: Validar último ciclo versionado e proveniência
-        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V1.mjs --root .
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Draft 2020-12 schema validator
+        run: python3 -m pip install 'jsonschema>=4.18,<5'
+      - name: Test allowed and rejected V12 transitions
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V12.mjs
+      - name: Validate V12 and V7 preparation schemas with negative fixtures
+        run: python3 novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V12.py .
+      - name: Verify source chain, master lease, and closed scene gates
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V12.mjs --root .
