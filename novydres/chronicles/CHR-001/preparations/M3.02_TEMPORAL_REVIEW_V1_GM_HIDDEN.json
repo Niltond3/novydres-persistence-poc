@@ -1,0 +1,75 @@
+{
+  "document_id": "CHR001_M302_TEMPORAL_REVIEW_V1_GM_HIDDEN",
+  "status": "AUTHORIAL_PROSPECTIVE_NOT_PLAYED",
+  "classification": "GM_HIDDEN",
+  "source_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0040.json",
+    "blob_sha": "6cb23d46c63c7801d3b6d88b67c52e31ba6064a7"
+  },
+  "preparation": {
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.02_DOSSIER_V2.json",
+      "blob_sha": "68b01d0b7c317b073e0485bc57f3578095453684"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.02_LONGITUDINAL_SIDECAR_V2.json",
+      "blob_sha": "477629a919039b0915e0f3eef3b2383912a1d52e"
+    }
+  },
+  "source_last_event_id": "CHR001-M301-C05-22-20261109-001",
+  "governance": "Temporal mode selection is per opportunity; neither an ellipse nor prelude is universally required.",
+  "current_scene_editorial_choice": "A later evening at the already established workshop remains the prospective C40 spotlight for M3.02.C01; do not turn this into a mandatory ellipse for following scenes.",
+  "current_interval": "SHORT_UNQUANTIFIED_INTERVAL_UNTIL_SIGNIFICANT_OPPORTUNITY",
+  "duration": "RELATIVE_ONLY_NO_CIVIL_DAY_SET",
+  "prior_important_choice_erased": false,
+  "temporal_mode": "ELLIPSIS_PROSPECTIVE_FOR_THIS_FRAME_NOT_GLOBAL_POLICY",
+  "world_threads": [
+    {
+      "thread": "WORKSHOP_AND_SHARED_SPACE",
+      "prior": "Small rented established workshop, common area not personally owned",
+      "advancement": "Independently used shared passage creates a real site-use dispute at scene opening",
+      "cause": "Existing worksite usage and independent site actor; prepared in D07/D08/dossier V2",
+      "asserted_prior_event": false,
+      "claimed_business_expansion": false,
+      "claimed_business_retraction": false,
+      "possible_consequence": "Working access and reputation may change based on game decisions; no Resources or profits pre-awarded"
+    },
+    {
+      "thread": "RELATIONSHIPS_AND_OTHER_OPEN_THREADS",
+      "prior": "Source knowledge/threads refs carried unchanged",
+      "advancement": "No independent additional episode established in this short unspecified interval; future changes require causally authored causes and sufficient time",
+      "asserted_prior_event": false,
+      "claimed_family_contact": false,
+      "claimed_enemy_success": false,
+      "possible_consequence": "Can be authored in future ellipse or played continuity, not manufactured for mandatory quota"
+    }
+  ],
+  "prelude": {
+    "status": "OPTIONAL_NO_TEST_REQUIRED_AT_CURRENT_FRAME",
+    "test_specs": [],
+    "max_distinct_tests": 2,
+    "requires_player_choice_before_spotlight": false,
+    "if_significant_intervening_choice_discovered": "Do not skip; switch to continuity/prelude and re-gate, without auto-rolling",
+    "window_FV_intact": true
+  },
+  "opening_contract": {
+    "short_player_safe_summary_required_if_ellipse": true,
+    "do_not_disclose_hidden_plots": true,
+    "context": "Established workshop life has continued in the limited sense of its known ordinary operation. The shared space has its own actors, demands and constraints. Lead quickly into independently grounded new dispute at the selected frame.",
+    "must_not_claim": [
+      "Business revenue/cost change absent source",
+      "NPC knowledge magically gained",
+      "Bart personally unloaded or agreed to a service",
+      "Bart made a meaningful choice offscreen",
+      "Any fight, invitation, Embrace or mechanical result already occurred"
+    ]
+  },
+  "no_automatic_ellipse_next_scene": true,
+  "no_played_event": true,
+  "no_precommitted_time_delta": true,
+  "no_rolls": true,
+  "no_player_choice_assumed": true,
+  "no_resources_changed": true,
+  "no_npc_knowledge_changed": true,
+  "scene_started": false
+}
