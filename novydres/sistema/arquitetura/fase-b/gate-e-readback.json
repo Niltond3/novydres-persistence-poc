@@ -70,7 +70,8 @@
     "relations": "7/8 resolved; one explicitly out of scope",
     "operational_cycle": "C42-C44 predecessor links and 9/9 manifest/cycle operational pins checked",
     "current_design_tree_source_paths": "5/6",
-    "original_source_snapshot_path_sha": "6/6"
+    "original_source_snapshot_path_sha": "6/6",
+    "protected_write": "initial promotion from 35862 to 4e76 succeeded with expected_sha, force=false; two documented fast-forward correction promotions also succeeded"
   },
   "failing_or_incomplete": [
     "Codex response accuracy 51/90 against required 30/30; critical B-Q29/B-Q30 mismatch in all three rounds.",
@@ -93,5 +94,24 @@
     ],
     "status": "PLAYER_DECISION_REQUIRED; not adopted; cannot by itself change gate"
   },
-  "protected_write_and_final_readback": "Documented after promotion in final task response; branch write will use expected_sha=35862b10000883ac8e607f9de1a87d945b21c1a5 and force=false."
+  "protected_write_and_final_readback": "Three fast-forward promotions succeeded via expected_sha and force=false. Latest pre-final-report readback was cdf1d0330d4c7fc55730a4708537b29be7ff76e9 / tree b534ecfbac13931e4ca313a76a39355232f946aa: 10/10 report artifacts exact, 16/16 candidate pins exact, six source pins exact at c26, master unchanged. The final report-only commit is promoted with expected_sha=cdf1d0330d4c7fc55730a4708537b29be7ff76e9 and receives independent readback at task completion.",
+  "protected_promotion": {
+    "status": "PASS_SCOPED",
+    "updates": 3,
+    "method": "GitHub update_ref with exact expected_sha, fast-forward only (force=false)",
+    "latest_pre_final_report_head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+    "latest_pre_final_report_tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+    "latest_pre_final_report_readback": "10/10 report blobs and content exact; 16/16 candidate blob pins exact; six source pins exact at c26; master unchanged",
+    "safety": "No update to master; current final report commit requires separate final readback recorded in task completion."
+  },
+  "readback_before_this_report": {
+    "head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+    "tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+    "artifacts": "10/10 blob SHA and content exact",
+    "candidate_pins": "16/16 exact",
+    "source_pins": "6/6 exact at c26 and current master",
+    "master_head": "0418f70ca0f01827de993273da191453a16d9857",
+    "master_tree": "be99334d5856c8483d5fb759529bbb0f06228caf",
+    "ci": "0 workflow runs, 0 status contexts, 0 check-runs on cdf1"
+  }
 }

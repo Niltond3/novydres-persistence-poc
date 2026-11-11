@@ -11,6 +11,7 @@
 - Candidatos: 5/5 envelopes válidos; 16/16 pins de candidato e 21/21 referências de fonte verificados. Sete de oito relações resolvem; uma está explicitamente fora do escopo. UNKNOWN permanece. A trama segue provisória e a história textual não comprova ledger técnico COMMITTED.
 - Codex CLI: três rodadas reais da suíte de 30 consultas; 51/90 correspondências agregadas. O requisito fixo é 30/30. B-Q29/B-Q30 falharam nas três rodadas. Negativos e jornadas não foram testados como operações reais: os fixtures não trazem payload executável e critério de readback.
 - ChatGPT Web: os três resultados antigos são autodeclarados, sem dados por caso nem readback independente. Nenhuma nova sessão Web foi executada aqui; estado INSUFFICIENT_EVIDENCE.
+- Promoção remota protegida: três atualizações fast-forward por `expected_sha`, `force=false`; a primeira teve parent exato 35862. O último readback antes deste commit confirmou dez blobs, 16 pins de candidato, seis fontes em c26 e master inalterada. Esta consolidação será promovida com lease esperado sobre cdf1 e lida de volta.
 - Concorrência real local no Git bare isolado: dois commits distintos no mesmo parent, um CAS vencedor e um escritor obsoleto rejeitado. Isso prova somente o comportamento local. GitHub remoto: um no-op protegido no HEAD passou; escritores remotos concorrentes não testados.
 - CI não tem execuções no HEAD de design consultado. Telemetria Codex registrou tokens e bytes locais de trace; p50/p95 das três rodadas não é observável. Tokens/bytes HTTP Web não são expostos.
 

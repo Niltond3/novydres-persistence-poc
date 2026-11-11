@@ -1968,14 +1968,65 @@
       "tool_error": "generic UNKNOWN; rejection itself not proven"
     },
     "github_remote_distinct_competing_writers": "NOT_EXECUTED",
-    "final_protected_promotion": "to be verified by branch update with expected_sha and independent readback"
+    "final_protected_promotion": {
+      "status": "PASS_SCOPED",
+      "updates": 3,
+      "method": "GitHub update_ref with exact expected_sha, fast-forward only (force=false)",
+      "latest_pre_final_report_head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+      "latest_pre_final_report_tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+      "latest_pre_final_report_readback": "10/10 report blobs and content exact; 16/16 candidate blob pins exact; six source pins exact at c26; master unchanged",
+      "safety": "No update to master; current final report commit requires separate final readback recorded in task completion."
+    },
+    "protected_ref_updates": [
+      {
+        "expected_sha": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+        "target_commit": "4e76eb3dd2b1185ccb557889ff0a8e3b78d5048c",
+        "target_parent": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+        "force": false,
+        "result": "SUCCESS",
+        "readback_head": "4e76eb3dd2b1185ccb557889ff0a8e3b78d5048c"
+      },
+      {
+        "expected_sha": "4e76eb3dd2b1185ccb557889ff0a8e3b78d5048c",
+        "target_commit": "58eafa6b4184f0c01b4eeaed04940e5820bcfaa8",
+        "target_parent": "4e76eb3dd2b1185ccb557889ff0a8e3b78d5048c",
+        "force": false,
+        "result": "SUCCESS",
+        "readback_head": "58eafa6b4184f0c01b4eeaed04940e5820bcfaa8"
+      },
+      {
+        "expected_sha": "58eafa6b4184f0c01b4eeaed04940e5820bcfaa8",
+        "target_commit": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+        "target_parent": "58eafa6b4184f0c01b4eeaed04940e5820bcfaa8",
+        "force": false,
+        "result": "SUCCESS",
+        "readback_head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9"
+      }
+    ],
+    "last_independent_readback_before_this_report": {
+      "design_head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+      "design_tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+      "changed_fase_b_artifacts": "10/10 blob SHA and content exact",
+      "candidate_blobs": "16/16 unchanged",
+      "source_pins_at_c26": "6/6 exact",
+      "master_head": "0418f70ca0f01827de993273da191453a16d9857",
+      "master_tree": "be99334d5856c8483d5fb759529bbb0f06228caf",
+      "master_unchanged": true
+    }
   },
   "ci": {
     "design_pre_remediation_head": "35862b10000883ac8e607f9de1a87d945b21c1a5",
     "workflow_runs": 0,
     "status": "NOT_EXECUTED_NO_RUNS",
     "current_master_runs": "two successful and two failed operational workflow runs; not candidate-design validation",
-    "master_ci_details": "V16 and V17 failed on unexpected cycle-count regression; V18 and V15 succeeded"
+    "master_ci_details": "V16 and V17 failed on unexpected cycle-count regression; V18 and V15 succeeded",
+    "last_observed_commit": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+    "last_observed_ci": {
+      "actions_runs": 0,
+      "status_contexts": 0,
+      "check_runs": 0,
+      "status": "NOT_EXECUTED_NO_RUNS"
+    }
   },
   "gate_evaluation": [
     {
