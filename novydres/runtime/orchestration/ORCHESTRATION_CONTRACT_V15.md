@@ -1,0 +1,4 @@
+# NOVYDRES / CHR-001 — ORCHESTRATION_CONTRACT_V15
+Sucessor local prospectivo de V14. CYCLE_V0043 só pode ativar READY_FOR_NARRATOR com pacote TEMPORAL_TRANSITION_V2 (44/44 IDs, SHA exatos LIVE/HISTORY/episódio/estado/conhecimento/threads, 1 noite relativa delimitada, posse histórica da caixa Y.B., ausência de transmissão familiar, oficina e acessos físicos), validators e schema em PASS no candidato.
+Um pacote READY não é cena G28, não autoriza ação do PJ, nem altera registros fechados. A abertura inicial de M3.02.C01 já exibida em chat é reconhecida, não repetida nem apagada. O Narrador esclarece aspectos materiais e temporais como continuação da mesma abertura antes de novas escolhas.
+V16 valida o ciclo histórico C42 bloqueado; V17 valida C43 desbloqueado. O teste legado que exige exatamente 42 ciclos não deve ser usado para julgar a promoção V17. Preservar auditoria e arquivos V16 inalterados.
