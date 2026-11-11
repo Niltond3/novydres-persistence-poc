@@ -1,0 +1,63 @@
+{
+  "document_id": "D10_TEST_RESULTS_V023",
+  "validator": "D10_VALIDATE_V023.py",
+  "version": "V023",
+  "status": "PASS",
+  "checks_passed": 82,
+  "checks_total": 82,
+  "failed_check_ids": [],
+  "d11_cases": 58,
+  "d11_result": "PASS",
+  "independent_review": "PASS_WITH_LIMITATION",
+  "d06_source_reconciliation": {
+    "status": "PASS",
+    "checks_passed": 33,
+    "checks_total": 33
+  },
+  "mechanical_source_index": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
+    "blob_sha": "c4934e97101134ee012c08133c9bf0ea63be76ea"
+  },
+  "promotion_inventory": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V005_PLAYER_SAFE.json",
+    "blob_sha": "9c7e17fc21431b6ac6d434b35d3a40e1b2f407c9"
+  },
+  "orchestration_refs": {
+    "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V7.md": {
+      "blob_sha": "80dadd58cabe373337431296fed949da39b5ffa8"
+    },
+    "novydres/runtime/orchestration/CYCLE_SCHEMA_V9.json": {
+      "blob_sha": "fd7bc047ff1452de0e3545d4018a926b807c0141"
+    },
+    "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V9.mjs": {
+      "blob_sha": "66688d83e7e2fb91dc00b42e7d0ca8f47d01a7e8"
+    },
+    "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V9.mjs": {
+      "blob_sha": "359a9857b039a26dc601977da2d2a3a178c5d20c"
+    },
+    "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V9.py": {
+      "blob_sha": "e435037c173a5679a22f1c41fd4c2cd57908feb7"
+    },
+    "novydres/runtime/orchestration/START_HERE_V6.md": {
+      "blob_sha": "b66296780c982a66ca5ef476d9133b53dec95c73"
+    },
+    "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V6.json": {
+      "blob_sha": "be8116095c686c81429203572f7c2eacbae44766"
+    },
+    "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V5.json": {
+      "blob_sha": "95bcd7471828bdb6f4d829b4f1ec8d4919bf754c"
+    }
+  },
+  "operational_checkpoint": {
+    "cycle": "CYCLE_V0034 baseline",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "next_scene": "C06 NOT_STARTED",
+    "protagonist": "mortal",
+    "embrace_recorded": false
+  },
+  "SCENE_READY": false,
+  "NARRATOR_PERMISSION": false,
+  "d07_activation_record": "ACTIVE_CANDIDATE_ONLY_NOT_EFFECTIVE_UNTIL_CYCLE_AND_MANIFEST_PIN",
+  "result_detail_disclosed": false,
+  "limitation": "D10 validates sources and candidate contracts only. No C06 cause is admitted by current D04; scene and Narrator gates remain separate and false. D10 does not create a cycle, manifest, event, scene, state change, XP or FV change."
+}

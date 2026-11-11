@@ -1,0 +1,60 @@
+{
+  "document_id": "D11_TEST_RESULTS_V019_PLAYER_SAFE",
+  "version": "V019",
+  "status": "PASS",
+  "execution_mode": "DETERMINISTIC_SEEDED_STATE_CONTRACT_REDUCER",
+  "cases_total": 58,
+  "passed": 58,
+  "failed": 0,
+  "current_d04_c06_admission_present": false,
+  "scenes_played": 0,
+  "dice_simulated": false,
+  "persistent_state_mutated": false,
+  "result_detail_disclosed": false,
+  "input_artifact_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
+      "blob_sha": "3a2aaa0a24e4cc215e01ca4c334782fea265ce34"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json",
+      "blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V028.json",
+      "blob_sha": "269658dc87cf0e2ff9966a9e62d560b78ce75aa9",
+      "reference_role": "CURRENT_CHRONICLE_BIBLE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8",
+      "reference_role": "CURRENT_OPERATIVE_TRUTH_CONTRACT"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V018_GM_HIDDEN.md",
+      "blob_sha": "91189ae85de0fe1dc96d79c3d94bed9f8abd33f5",
+      "reference_role": "CURRENT_OPERATIVE_PREPARATION_CONTRACT"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
+      "blob_sha": "f3c2d40573183e473d328e64cebdd04448d253b7",
+      "reference_role": "CURRENT_PROGRESSION_CONTRACT"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
+      "blob_sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55",
+      "reference_role": "CANDIDATE_NOT_EFFECTIVE_UNTIL_VALIDATED_INTEGRATION_AND_EXACT_CYCLE_MANIFEST_PIN"
+    }
+  ],
+  "runner_source_sha256": "182dc507878857fc3fa288a50ad8b55e9cbf51abf1e91bf31bddb40f951fbdcb",
+  "case_failures": [],
+  "limitation": "The reducer checks seeded authored-contract transitions against pinned current D04-D09 sources. It is not the game engine and proves no live cycle transition, V5 roll result, time advancement, event persistence, or scene permission."
+}

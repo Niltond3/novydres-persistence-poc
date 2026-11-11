@@ -1,0 +1,42 @@
+{
+  "document_id": "D12_VALIDATE_V018_RESULT",
+  "validator": "D12_VALIDATE_V018.py",
+  "version": "V018",
+  "status": "PASS",
+  "checks_passed": 29,
+  "checks_total": 29,
+  "failed_check_ids": [],
+  "baseline_master_head_sha": "492457805e080a0049eb275e2ad59a0b4fac577d",
+  "promotion_counts": {
+    "ADD": 44,
+    "UPDATE": 0,
+    "already_present": 31,
+    "excluded": 20
+  },
+  "artifact_blobs": {
+    "inventory": "9c7e17fc21431b6ac6d434b35d3a40e1b2f407c9",
+    "candidate": "17a15fd0698c6a04c22e29883563609bb72f98ea",
+    "registry": "4bf979a3c5d9aad7d369ea5fc126d324f8394cff",
+    "adapters": "e7e7e553be90e967a31c59fae7e94ba1748aefcd",
+    "D10_result": "77dbc7269ad696f7731eb56748471c0780cfb1cf",
+    "D11_result": "350ce9355bb44638ea5dbc23777d1a7e6e25f025",
+    "D06_source_result": "58887356489a282554f1fed66176b95bdebf3a55"
+  },
+  "operational_state": {
+    "cycle": "CYCLE_V0034",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_scene": "C05 CLOSED",
+    "next_scene": "C06 NOT_STARTED",
+    "protagonist": "MORTAL",
+    "embrace_occurred": false,
+    "SCENE_READY": false,
+    "NARRATOR_PERMISSION": false,
+    "D07_activation_effective": false
+  },
+  "limitations": [
+    "No C06 cause is currently admitted; no scene readiness is asserted.",
+    "The D11 prospective positive-route transition remains unproven until D04 admits a cause.",
+    "The full primary rules book is unavailable for final 2010 sheet cost certification; this does not block covered mortal actions."
+  ],
+  "result_detail_disclosed": false
+}

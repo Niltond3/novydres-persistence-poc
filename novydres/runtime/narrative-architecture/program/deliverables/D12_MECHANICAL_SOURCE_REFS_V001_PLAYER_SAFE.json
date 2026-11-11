@@ -1,0 +1,183 @@
+{
+  "document_id": "D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE",
+  "version": "V001",
+  "classification": "PLAYER_SAFE",
+  "scope": "CHR-001 mechanical, XP, and operational readiness evidence at CYCLE_V0034",
+  "hash_method": "git hash-object (Git blob SHA-1 over exact file bytes)",
+  "state_checkpoint": {
+    "cycle_id": "CHR001-CYCLE-0034",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "C05",
+    "next_scene": "C06 NOT_STARTED",
+    "protagonist_mortal": true,
+    "embrace_occurred": false
+  },
+  "source_refs": [
+    {
+      "id": "guided_creation_mechanical_provenance",
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9",
+      "role": "Authoritative local provenance for guided creation pools and provisional-versus-acquired traits",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "approved_target_sheet",
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "role": "Approved target values and future options; not evidence of purchased traits or final audited costs",
+      "gate": "mortal_next_scene; future_development; final_2010_certification"
+    },
+    {
+      "id": "allocated_sheet_projection",
+      "path": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V2.json",
+      "blob_sha": "285e206f4ad956e1d6bdb6315366429aeb4d9bdf",
+      "role": "Current acquired-trait projection and explicit incompleteness",
+      "gate": "mortal_next_scene; final_2010_certification"
+    },
+    {
+      "id": "mechanical_adjudication_gate",
+      "path": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
+      "blob_sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7",
+      "role": "Action-specific preflight, pool provenance, and resolution guard",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "narrator_adjudication_g27",
+      "path": "novydres/runtime/NARRATOR_LED_ADJUDICATION_G27_V1.md",
+      "blob_sha": "6ebcbb1796c0407438d30a096a4d6fe365a645c5",
+      "role": "Narrator action adjudication sequence",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "v5_mechanical_rules_text",
+      "path": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "blob_sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "role": "Local rules text referenced for mortal actions; not a full core rulebook",
+      "gate": "mortal_next_scene; future_development; final_2010_certification"
+    },
+    {
+      "id": "current_authorized_decisions",
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V10.source.txt",
+      "blob_sha": "02b9caa2718464293b051e6cb0b12cbbb4e1f029",
+      "role": "Current local decisions including scoped specialization and XP policy exceptions",
+      "gate": "mortal_next_scene; future_development; final_2010_certification"
+    },
+    {
+      "id": "xp_credit_policy",
+      "path": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "blob_sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "role": "Credit and purchase policy; historical examples are not current balances",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "xp_credit_audit_contract",
+      "path": "novydres/runtime/xp/XP_ACT_CREDIT_AUDIT_V1.md",
+      "blob_sha": "602e901aa64c0f54783d755a9e14f982d887cf9f",
+      "role": "Audit requirements for unique act resolution and credit",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "act_resolution_schema_only",
+      "path": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
+      "blob_sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6",
+      "role": "Schema only; no separate rolling ACT_RESOLUTION ledger was located",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "current_xp_envelope",
+      "path": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "blob_sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "role": "Current approved XP envelope: cap 675, spent 270, remaining capacity 405, available credit 0",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "current_settled_xp_transaction_record",
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7",
+      "role": "Current settled administrative XP transaction record referenced by LIVE and XP_ENVELOPE_V3",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "xp_player_authorization_record",
+      "path": "novydres/chronicles/CHR-001/admin/M2_SCOPE_AND_XP100_PLAYER_AUTHORIZATION_V1.json",
+      "blob_sha": "1b6264fdcae172244e2ea13e2c68458f6259010c",
+      "role": "Historical player authorization supporting the settled transaction record",
+      "gate": "future_development; final_2010_certification"
+    },
+    {
+      "id": "xp_purchase_selection_record",
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_PLAYER_PURCHASE_SELECTION_V1.json",
+      "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45",
+      "role": "Historical player purchase selection supporting the settled transaction record",
+      "gate": "final_2010_certification"
+    },
+    {
+      "id": "current_live_state",
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+      "role": "Latest confirmed chronicle, character, resource, and XP state",
+      "gate": "mortal_next_scene; future_development; final_2010_certification"
+    },
+    {
+      "id": "current_cycle",
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+      "role": "Latest validated operational cursor and checkpoint",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "current_history_index",
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+      "role": "Current history index for checkpoint reconciliation",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "current_episode_source",
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42",
+      "role": "Current episode source for checkpoint and chronology reconciliation",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "current_npc_knowledge_provenance",
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+      "role": "Current NPC knowledge provenance; knowledge remains actor-specific",
+      "gate": "mortal_next_scene"
+    },
+    {
+      "id": "current_open_threads",
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+      "role": "Current open-thread state for checkpoint reconciliation",
+      "gate": "mortal_next_scene"
+    }
+  ],
+  "external_refs": [
+    {
+      "id": "drive_operational_manual_v1",
+      "provider": "Google Drive",
+      "document_id": "14e84lNAOu3HKYR2dEvsdqBLSpmyVhkQPwAWF7iXYU",
+      "revision_id": "AHj4eMRdlnGc6pcUAyUjNU-3sRobxtZUCqJ2XQrELPLzkaR6QieHsYmXoobxoIDFLmFvIhthnIHf6CjFwzZN-Aiwq0SbfqEsHo5LpcTSZA",
+      "role": "Procedural historical handoff for M2.03; not a canonical or primary rules source"
+    },
+    {
+      "id": "v5_core_rulebook_and_character_creation_text",
+      "provider": "Repository and connected Drive search",
+      "status": "NOT_FOUND",
+      "role": "Primary rules text needed for final V5 cost certification and future vampiric development; absence does not block mortal actions covered by current local contracts"
+    }
+  ],
+  "ledger_finding": {
+    "separate_rolling_act_resolution_ledger": "NOT_FOUND",
+    "schema_is_not_a_ledger": true,
+    "current_m3_01_act_resolution_or_xp_credit": "NONE_RECORDED",
+    "current_settled_transaction_record": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json"
+  },
+  "gate_status": {
+    "mortal_next_scene": "MECHANICALLY_CONDITIONAL_ON_CONCRETE_ACTION_AND_SOURCE_COVERAGE; DOES_NOT_ASSERT_SCENE_READY",
+    "future_embrace_and_vampiric_development": "NOT_ELIGIBLE_WHILE_MORTAL; REASSESS_AFTER_CONFIRMED_EVENT_AND_CHOICES",
+    "final_2010_sheet_certification": "PENDING_PRIMARY_V5_COST_AND_CHARACTER_CREATION_RULES_AND_REMAINING_CREATION_GATES"
+  }
+}

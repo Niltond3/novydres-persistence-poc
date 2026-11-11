@@ -1,0 +1,53 @@
+{
+  "decision_id": "PLAYER_DECISION_CHR001_AGENT_ACCESS_2026-11-10_V003",
+  "version": "V003",
+  "recorded_at": "2026-11-10",
+  "authority": "PLAYER_EXPLICIT_DECISION",
+  "scope": "CHR-001 D07 and dependent D06, D08, D09, D10, D11 and D12: full prospective authoring, agent access to GM_HIDDEN/SECRET/HIDDEN materials, validation, adversarial review, integration, private-repository publication and execution handoff; no retcon, frozen-canon change, scene execution, false readiness, or master promotion.",
+  "access_policy": {
+    "GM_HIDDEN_SECRET_HIDDEN_equivalent": "disclosure classification for the player; not an access denial for authorized Dramaturge, Narrator, Codex, authoring subagents, auditors or validators",
+    "agent_knowledge": "complete access to material required for authorized project work",
+    "player_knowledge": "only non-spoiler reports and facts appropriately revealed through play",
+    "pc_knowledge": "only information Bartholomeu actually acquires through play",
+    "npc_knowledge": "only information each NPC acquires from established sources or authored future events",
+    "repository_owner_acknowledgment": "the owner can open private-repository files; editorial separation prevents accidental disclosure, not owner access",
+    "gm_hidden_classification": "Disclosure restriction to the player only; never an access denial for authorized project agents.",
+    "classification_is_editorial_disclosure_only": true,
+    "authorized_agents_have_full_hidden_material_access": true,
+    "knowledge_levels_are_separate": true
+  },
+  "authorization": {
+    "read_hidden_material": true,
+    "run_validators_requiring_hidden_material": true,
+    "author_prospective_story_truth": true,
+    "author_new_prospective_agents_and_causal_events": true,
+    "publish_versioned_editorial_successors_to_private_repository": true,
+    "modify_frozen_canon_or_rewrite_confirmed_past": false,
+    "narrate_C06_or_other_scene": false,
+    "set_SCENE_READY_or_NARRATOR_PERMISSION_without_gates": false,
+    "remove_editorial_access_blocks_for_authorized_agents": true,
+    "complete_and_validate_D07_to_D12_with_hidden_materials": true
+  },
+  "supersedes": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V002.json",
+      "relation": "CURRENT_AUTHORIZATION_SUCCESSOR"
+    }
+  ],
+  "does_not_supersede": [
+    "Frozen canon and confirmed historical events",
+    "Higher-authority technical or repository restrictions, if any",
+    "Current-cycle scene-readiness and Narrator-permission gates",
+    "frozen_canon_and_confirmed_past",
+    "operational_scene_and_narrator_gates",
+    "master_promotion_controls",
+    "real_repository_or_service_access_controls"
+  ],
+  "provenance": {
+    "source": "Explicit player authorization and agent-access addendum in the active Codex conversation, 2026-11-10.",
+    "recorded_by": "Dramaturgo execution in Codex",
+    "content_digest_note": "Administrative decision only; narrative secrets are excluded."
+  },
+  "status": "CURRENT_PLAYER_AUTHORIZATION; AUTHORING_ALLOWED; SCENE_AND_MASTER_GATES_CLOSED",
+  "spoiler_class": "PLAYER_SAFE_ADMINISTRATIVE"
+}
