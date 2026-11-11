@@ -1,9 +1,0 @@
-# NOVYDRES / CHR-001 — Start Here V12 · Temporalidade contextual
-
-Bootstrap obrigatório: `novydres/.AGENT.md` e `novydres/.CONTEXTG.md`; depois `novydres/.AGENT_V4.md`, `novydres/.CONTEXTG_V3.md`, último ciclo numericamente validado `CYCLE_V0041`, `MANIFEST_V56` e refs de arquivos apontados por ambos, com verificação SHA completa. Ler ORCHESTRATION_CONTRACT_V13, DRAMATURGO_ROLE_V3, NARRADOR_ROLE_V3, PACING_TEMPORAL_FRAMING_V2, ELLIPSIS_PRELUDE_PROTOCOL_V1, HANDOFF_DRAMATURGO_TO_NARRADOR_V2, decisão PLAYER_DECISION_CHR001_LIVING_ELLIPSES_V001_PLAYER_SAFE, fontes D04–D12 e dossiê/sidecar M3.02 V2. Evitar spoilers GM_HIDDEN no player-facing.
-
-**Regra de leitura de cena:** continuidade antes de elipse quando existem acontecimentos relevantes para jogar. Nenhuma elipse por obrigação de troca de cena/ato/provocação. Se o Dramaturgo escolheu elipse justificável, vida/não-vida, negócios, NPCs e mundo podem progredir dentro de seus limites. Antes do spotlight principal, resolver apenas decisões inadiáveis do intervalo (até dois testes distintos e cadeia completa G25/G27/FV); então apresentar síntese do que mudou e iniciar o conflito. Sem elipse, abrir diretamente em continuidade; sem testes ou "mundo girando" artificiais.
-
-**Checkpoint de C41:** mesma última cena real M3.01.C05-22, M3.02.C01 NOT_STARTED, mortal, C06 NOT_STARTED. C40 autorizou cenário futuro da oficina como quadro prospectivo, sem avanços ocorridos. C41 preserva essa preparação e acrescenta disciplina para prelúdios opcionais e progressão causal, sem presumir data exata, ações relevantes, ganhos, perdas, recursos, NPC knowledge ou rolamentos. O Dramaturgo não executa acontecimentos; Narrador atualiza ficção e ledger somente com jogo. Não iniciar sem READY_FOR_NARRATOR + handoff explícito do jogador. G28/G26 preservados.
-
-Se descoberto conflito contra LIVE, canon, regras, prioridades do jogador ou preparo atual, bloquear especificamente e reavaliar, sem inventar PASS.

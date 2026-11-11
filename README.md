@@ -1,1 +1,0 @@
-# novydres-persistence-poc

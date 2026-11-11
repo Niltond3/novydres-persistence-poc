@@ -1,5 +1,0 @@
-# NOVYDRES / CHR-001 — PACING_TEMPORAL_FRAMING_V3
-Sucessor prospectivo de PACING_TEMPORAL_FRAMING_V2, que continua integralmente válido quanto às quatro velocidades.
-Na elipse, o Narrador deve distinguir 'o personagem teve oportunidade' de 'o jogador decidiu realizar'. Objetos, obrigações, família, negócio, ligações e inimigos precisam de destino temporal explícito ou de estado de retenção com fonte. Não é necessário resolver todas as threads nem mudar todo domínio; uma estabilidade justificada pode ser o resultado.
-O tempo diegético exato pode ser desconhecido, mas o horizonte relativo deve ser inteligível e suficiente para causalidade. Se o salto atinge material ainda não resolvido ou um relógio que não cabe no intervalo, manter continuidade ou exigir revisão.
-Toda abertura mostra em prosa natural a evolução efetiva/estabilidade dos domínios pertinentes e a cena fisicamente jogável. A checagem automática do pacote e de seus pins antecede a fala do NPC; nenhuma análise técnica é imposta ao jogador para corrigir a preparação.

@@ -1,6 +1,0 @@
-# NOVYDRES — Adaptador do Narrador V2 / crédito por ato
-Extende NARRATOR_PREPARATION_ADAPTER_V1. Respeitar G28 e DEC-CR-021.
-A cada sessão, comparar o dossiê planejado com LIVE vigente, usando XP_ACT_CREDIT_POLICY_V1. Uma provocação planejada com 1–5 atos indica crédito POTENCIAL de 10 por ato, não prêmio. Nenhum ponto de experiência entra no orçamento: teto aprovado da ficha-alvo=675, valor gasto inicial=170, capacidade restante=505 e crédito inicial disponível=20.
-Ato só qualifica quando a questão dramática foi efetivamente resolvida e documentada num evento, inclusive por recusa, fuga ou solução alternativa. Abandono de questão ainda aberta não concede. Ato emergente pode substituir ato preparado não resolvido, sem duplicar e com limite cinco remuneráveis por provocação.
-Registrar ACT_RESOLUTION_ID, ACT_ID, source_scene_event_id, adjudicação, duplicação e saldo. Crédito efetivo=min(10,max(0,675−XP_SPENT−XP_CREDIT_AVAILABLE)); ZERO quando teto já gasto/liberado. Esse crédito apenas autoriza compras futuras, não amplia 675 nem realiza compra. A ficha real só evolui após autorização explícita.
-Buffer de eventos e crédito no mesmo commit G28 ao encerrar CENA; sem gravar a cada batida/quadro/ato. M2.03 CLOSED; M2.04 NOT_STARTED. Crédito pendente de M2.03 sem retroatividade automática.

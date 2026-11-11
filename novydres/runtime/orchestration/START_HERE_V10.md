@@ -1,6 +1,0 @@
-# NOVYDRES / CHR-001 — START HERE V10
-Bootstrap via historical `novydres/.AGENT.md` and `novydres/.CONTEXTG.md`; operational gateways `.AGENT_V4.md`, `.CONTEXTG_V3.md` only after exact CYCLE_V0039 / MANIFEST_V54 pins, predecessor chain, Git blob readback and CI have been checked. Read ORCHESTRATION_CONTRACT_V11, CYCLE_SCHEMA_V13 and validator/tests V13 and all pinned D04–D12, mechanics, original M3.02 dossier and sidecar. C38 is immutable administrative opening; C39 is a prospective causal-entry review, not gameplay.
-
-C39 status INTENTION_PENDING; next_role PLAYER_INTENTION. PLAYER_SAFE permitted output is one open request for Bartholomeu's next intention from the C05-22 checkpoint. No initial M3.02.C01 scene, no invitation, no NPC encounter, no assumed travel or time. All scene/mechanical and Narrator-permission gates false. The player's reply is merely an intention, not an executed event. A subsequent authorized Dramaturgo must re-evaluate fresh causality and the next scene gates; a Narrator may narrate only after a distinct validated READY_FOR_NARRATOR grant and explicit player handoff.
-
-Do not load earlier cycle prose as a substitute; do not expose GM_HIDDEN; do not alter G28, canon, XP/FV, knowledge or persistent threads. If exact refs/CI/readback fail, report PLAYER_SAFE blocker.

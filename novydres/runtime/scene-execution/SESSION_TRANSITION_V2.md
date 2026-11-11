@@ -1,6 +1,0 @@
-# NOVYDRES — Session Transition V2: teto de XP e atos
-Adendo de SESSION_TRANSITION_V1, mantendo suas regras de FV, autorização de abertura e agência. Sobre crédito prevalecem DEC-CR-021 e XP_ACT_CREDIT_POLICY_V1.
-LIVE_v013 projeta orçamento total 675 da TARGET V2 aprovada; 519 é histórico. SPENT 170; REMAINING 505 é capacidade do orçamento, NÃO crédito de compra. CREDIT_AVAILABLE 20 permanece. A normalização do cap é reconhecimento administrativo, não premiação ou experiência ganha em sessão.
-Novo dossiê do Dramaturgo propõe 1–5 atos, potencial de 10 de CRÉDITO por ato. Preparar ou abrir a provocação não concede. Somente atos efetivamente RESOLVIDOS durante o jogo com ID e evento de suporte liberam min(10,max(0,675−SPENT−CREDIT)), sem modificar XP_TOTAL. Ao atingir CAP, a liberação é zero mesmo com sessões futuras.
-M2.03 CLOSED não teve atos preparados por esse método. O crédito histórico ainda pendente dela é avaliado separadamente pela regra anterior, limitado ao teto e sem duplicidade; não criar atos retroativos.
-FV recupera somente na abertura REAL de sessão com autorização e idempotência, conforme V1, nunca por chat novo. Compras exclusivamente autorizadas. G28 persiste por cena fechada; abrir M2.04 depende de decisão explícita e não é feito por esta atualização.

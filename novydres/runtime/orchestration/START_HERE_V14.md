@@ -1,4 +1,0 @@
-# NOVYDRES / CHR-001 — START_HERE_V14 · Retomada após gate temporal PASS
-Sucessor exclusivamente prospectivo de START_HERE_V13. Descobrir CYCLE_V0043 e MANIFEST_V58, verificar suas SHAs e CI vigente. Ler .AGENT.md, .CONTEXTG.md, .AGENT_V4.md, .CONTEXTG_V3.md, C43, D07–D12 e fontes de estado e conhecimento pinadas.
-M3.01.C05-22 permanece último evento G28. M3.02.C01 foi apresentada parcialmente no chat e está pausada, sem registro G28. Não reiniciar a abertura; sanar lacunas de tempo, caixa, Mary, oficina e acessos segundo o pacote V2. A elipse limitada a uma noite pertence apenas a este quadro, não é norma para próximas cenas.
-A retomada pelo Narrador exige C43 READY validado e novo prompt expresso do jogador. Não presumir abertura de caixa, conhecimento de Mary, movimento de Bart, rolagens, ganho/perda de recursos ou fato canônico.

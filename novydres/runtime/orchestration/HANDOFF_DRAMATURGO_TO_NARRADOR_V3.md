@@ -1,5 +1,0 @@
-# NOVYDRES / CHR-001 — HANDOFF_DRAMATURGO_TO_NARRADOR_V3
-Sucessor de HANDOFF_DRAMATURGO_TO_NARRADOR_V2. Aplicar após pin do ciclo novo.
-O handoff de ELLIPSIS/MONTAGE longa exige: ID e SHA do pacote TEMPORAL_TRANSITION; status READY após reconciliação real de LIVE/OPEN_THREADS/episode/state/knowledge; data ou intervalo relativo com limites causais; fios salientados e preservados; ações NPC autorizadas por fonte; escolhas indispensáveis do jogador com prelude opcional; estado de objetos e vínculos; descrição operacional dos acessos e impedimentos; resumo da abertura sem spoilers; G28/anti-duplicação.
-Nenhuma conversa em chat deve ser usada como substituto da detecção automática das pendências. Se pacote REVIEW_REQUIRED, não entregar autorização de narrativa.
-No modo CONTINUITY, o pacote pode ser NOT_APPLICABLE e a cena segue diretamente, sem elipse forçada.

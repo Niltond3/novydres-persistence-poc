@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "status",
+    "c02_causal_entry",
+    "temporal_decision",
+    "source_checkpoint",
+    "mechanics",
+    "guards",
+    "predecessor_ref"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_DOSSIER_V11"
+    },
+    "status": {
+      "const": "PROSPECTIVE_CAUSAL_ENTRY_PREPARED_NOT_ACTIVE"
+    },
+    "c02_causal_entry": {
+      "type": "object",
+      "required": [
+        "admission_id",
+        "c01_replay",
+        "actual_scene_event",
+        "invitation_delivered",
+        "target_identity_verified",
+        "knowledge_delta"
+      ],
+      "properties": {
+        "admission_id": {
+          "const": "PLOT-KUTHULUN-COERCION"
+        },
+        "c01_replay": {
+          "const": false
+        },
+        "actual_scene_event": {
+          "const": false
+        },
+        "invitation_delivered": {
+          "const": false
+        },
+        "target_identity_verified": {
+          "const": false
+        },
+        "knowledge_delta": {
+          "const": false
+        }
+      }
+    },
+    "temporal_decision": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "const": "CONTINUITY"
+        },
+        "significant_ellipsis": {
+          "const": false
+        },
+        "threads": {
+          "type": "array",
+          "minItems": 44,
+          "maxItems": 44
+        }
+      },
+      "required": [
+        "mode",
+        "significant_ellipsis",
+        "threads"
+      ]
+    },
+    "guards": {
+      "type": "object",
+      "properties": {
+        "no_new_event": {
+          "const": true
+        },
+        "no_pc_decision": {
+          "const": true
+        },
+        "no_knowledge_delta": {
+          "const": true
+        },
+        "no_xp_fv_delta": {
+          "const": true
+        },
+        "narrator_handoff_ready": {
+          "const": false
+        }
+      }
+    }
+  }
+}
