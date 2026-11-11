@@ -1,21 +1,19 @@
-name: NOVYDRES CHR-001 Orchestration V12 Gate
+name: NOVYDRES CHR-001 Causal Entry V13 Gate
 on:
   push:
     paths:
       - 'novydres/runtime/orchestration/**'
-      - 'novydres/runtime/provocation-prep/**'
       - 'novydres/chronicles/CHR-001/orchestration/**'
       - 'novydres/chronicles/CHR-001/preparations/**'
       - 'novydres/MANIFEST_V*.json'
-      - '.github/workflows/novydres-orchestration.yml'
+      - '.github/workflows/novydres-causal-entry-v13.yml'
   pull_request:
     paths:
       - 'novydres/runtime/orchestration/**'
-      - 'novydres/runtime/provocation-prep/**'
       - 'novydres/chronicles/CHR-001/orchestration/**'
       - 'novydres/chronicles/CHR-001/preparations/**'
       - 'novydres/MANIFEST_V*.json'
-      - '.github/workflows/novydres-orchestration.yml'
+      - '.github/workflows/novydres-causal-entry-v13.yml'
 permissions:
   contents: read
 jobs:
@@ -32,11 +30,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install Draft 2020-12 schema validator
+      - name: Install JSON schema validator
         run: python3 -m pip install 'jsonschema>=4.18,<5'
-      - name: Test allowed and rejected V12 transitions
-        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V12.mjs
-      - name: Validate V12 and V7 preparation schemas with negative fixtures
-        run: python3 novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V12.py .
-      - name: Verify source chain, master lease, and closed scene gates
-        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V12.mjs --root .
+      - name: Causal and agency regression tests including negative fixtures
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V13.mjs
+      - name: Validate schema and negative fixtures
+        run: python3 novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V13.py .
+      - name: Validate exact pins, chain, Git tree, and intent-only gates
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V13.mjs --root .
