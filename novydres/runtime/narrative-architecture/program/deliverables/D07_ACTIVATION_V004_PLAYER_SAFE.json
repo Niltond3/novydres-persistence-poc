@@ -1,0 +1,36 @@
+{
+  "document_id": "D07_ACTIVATION_V004_PLAYER_SAFE",
+  "version": "V004",
+  "chronicle_id": "CHR-001",
+  "status": "ACTIVE",
+  "activation_kind": "D07_RUNTIME_TRUTH_PACKAGE",
+  "recorded_on": "2026-11-11",
+  "authority": "PLAYER_EXPLICIT_AUTHORIZATION_SUBJECT_TO_VALIDATION_AND_CYCLE_PIN",
+  "authorization_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+    "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+  },
+  "truth_package_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+    "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8"
+  },
+  "runtime_activation": {
+    "d07_active": true
+  },
+  "activation_scope": "Candidate runtime activation of the exact D07 V018 truth package for authorized Dramaturgo and Narrator use. This record alone does not activate runtime. It becomes effective only after validated selective integration is committed and the current valid cycle and manifest pin this exact record blob. Scene readiness and Narrator permission remain independent cycle gates and are not asserted here.",
+  "disclosure_boundary": "GM_HIDDEN, SECRET, and HIDDEN classify disclosure to the player; they do not deny access to authorized agents. Public reports remain player-safe.",
+  "guards": {
+    "frozen_canon_unchanged": true,
+    "confirmed_events_unchanged": true,
+    "planned_content_not_recorded_as_played": true,
+    "protagonist_and_individual_npc_knowledge_separate": true,
+    "scene_requires_valid_cycle_and_player_prompt": true,
+    "scene_readiness_and_narrator_permission_independent": true
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V003_PLAYER_SAFE.json",
+    "blob_sha": "ee5b8f9c715d4856b36eb1c5d12f98d09ad74eb2",
+    "reference_role": "SUPERSEDED_CANDIDATE_RUNTIME_ACTIVATION_FOR_D07_V017"
+  },
+  "spoiler_class": "PLAYER_SAFE_ADMINISTRATIVE"
+}

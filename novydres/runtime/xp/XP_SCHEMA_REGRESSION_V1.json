@@ -1,0 +1,128 @@
+{
+  "schema": "NOVYDRES_XP_ACT_CREDIT_REGRESSION_V1",
+  "date": "2026-11-03",
+  "status": "PRECOMMIT_PASS",
+  "type": "STRUCTURAL_JSON_SCHEMA_SUBSET",
+  "description": "Testes sintéticos; não constitui execução de sessão. Semantic cross-field and arithmetic checks in separate report.",
+  "count": 19,
+  "passed": 19,
+  "failed": 0,
+  "results": [
+    {
+      "id": "VALID_V2_DOSSIER",
+      "expected_valid": true,
+      "actual_valid": true,
+      "pass": true
+    },
+    {
+      "id": "OLD_SCHEMA_ID",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "NO_XP_PLAN",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "AUTO_GRANT_ON_PREP",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "REWARD_ADDS_TOTAL_XP",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "WRONG_CAP_519",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "WRONG_PER_ACT_20",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "WRONG_ACT_CREDIT_20",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "ACT_MARKED_ALREADY_GRANTED",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "NON_SUBSTANTIVE_ACT",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "WRONG_COUNT_ZERO",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "WRONG_POTENTIAL_55",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "MISSING_SCENE",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "FORCED_PC_CHOICE",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "PREP_CHANGES_XP",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "PREP_INCREASES_BUDGET",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "TOO_MANY_ACTS",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "BAD_PLANNED_CREDIT_STATUS",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    },
+    {
+      "id": "SESSION_ALREADY_STARTED",
+      "expected_valid": false,
+      "actual_valid": false,
+      "pass": true
+    }
+  ],
+  "source_schema": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V2.json",
+  "source_fixture": "novydres/runtime/provocation-prep/EXAMPLE_SYNTHETIC_DOSSIER_V2.json"
+}

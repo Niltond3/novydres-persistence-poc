@@ -1,0 +1,57 @@
+{
+  "document_id": "AUDIT_D11_V002",
+  "program_id": "CHR-001",
+  "phase": "D11",
+  "version": "V002",
+  "status": "PASS_WITH_UNKNOWN",
+  "content_gate": "PASS_WITH_UNKNOWN",
+  "input_head": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+  "master_head_at_input": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+  "predecessor_audit": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V001.json",
+    "blob_sha": "cde0d18c739b68b998205f9d1db9170557a0edad",
+    "prior_status": "AUDITING; publication/readback closure awaited"
+  },
+  "scope": "Close the public D11 process finding and refresh current public cycle/source references. No scene, runtime simulation, hidden truth or D07 activation.",
+  "current_checkpoint": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+    "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "state": "C05 CLOSED; C06 NOT_STARTED; Bartolomeu MORTAL; no Embrace"
+  },
+  "resolved_finding": {
+    "id": "D11-TECH-001",
+    "status": "RESOLVED",
+    "evidence": "Later published D05 handoffs correct the next-action inconsistency; current HANDOFF_D05_V008 reflects CYCLE_V0034 and the bounded planning scope. Earlier D11 readback was recorded in the local execution manifest."
+  },
+  "phase_gates": {
+    "D05": "PASS_WITH_UNKNOWN for public documentary promotion after V008 validation/readback",
+    "D06": "PASS_WITH_UNKNOWN; source reconciliation verified",
+    "D07": "PASS_WITH_UNKNOWN for public documents; inactive; truth-dependent use outside variant remains blocked",
+    "D08": "PASS_WITH_UNKNOWN; current actor/incident/why-now remain UNKNOWN",
+    "D09": "PASS_WITH_UNKNOWN; no mechanics or Embrace inferred",
+    "D10": "PASS_WITH_UNKNOWN (existing V005 evidence retained; no rerun claimed)"
+  },
+  "adversarial_cases_reviewed": 10,
+  "runtime_scenarios_executed": 0,
+  "automated_suites_rerun": 0,
+  "remaining_unknowns": [
+    "Exact civil dates and spacing",
+    "Current actor/incident/why-now for any future scene",
+    "Hidden details beyond the approved player-open planning variant",
+    "2010 graduation route and played post-Embrace experience"
+  ],
+  "gates": {
+    "documentary": "PASS_WITH_UNKNOWN",
+    "public_documentary_promotion": "PASS_WITH_UNKNOWN_AFTER_D12_VALIDATION_AND_REMOTE_READBACK",
+    "SCENE_READY": "NOT_VERIFIED",
+    "NARRATOR_PERMISSION": "NOT_GRANTED",
+    "D07_activation": "NOT_ACTIVATED"
+  },
+  "publication_readback": {
+    "record": "local execution-manifest.json and CHR001_D05-D12_RUN_STATE.json; per-blob result recorded after publication"
+  },
+  "operational_release": "NOT_AUTHORIZED",
+  "narrator_status": "HOLD; no scene permission",
+  "next_phase": "Dramaturge continuity planning only"
+}

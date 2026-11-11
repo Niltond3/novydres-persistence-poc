@@ -1,0 +1,73 @@
+{
+  "schema": "novydres-poc-load-test-report-v1",
+  "scenario": "load-001",
+  "simulation_only": true,
+  "chronicle_id": "CHR-SIM-LOAD-001",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "results": {
+    "turns": 26,
+    "turn_range": [
+      5,
+      30
+    ],
+    "passed_turn_writes": 26,
+    "regular_turns": 21,
+    "special_multi_file_turns": 5,
+    "regular_ops_per_turn": {
+      "mutation": 1,
+      "readback": 1
+    },
+    "special_ops_per_turn": {
+      "mutation": 3,
+      "readback": 3
+    },
+    "direct_mutation_plus_readback_calls": 72,
+    "rotation": {
+      "triggered_at_seq": 25,
+      "archived_range": [
+        5,
+        19
+      ],
+      "archived_count": 15,
+      "buffer_after_rotation": 6,
+      "live_chars_before": 13589,
+      "live_chars_after": 5725
+    },
+    "final": {
+      "last_seq": 30,
+      "archived_count": 15,
+      "buffer_count": 11,
+      "total_unique_event_ids": 26
+    },
+    "cold_bootstrap_simulation": {
+      "base_files_read": 3,
+      "additional_archive_reads": 1,
+      "real_new_chat_test": false
+    },
+    "roll": {
+      "fixed_faces": [
+        3,
+        9,
+        10,
+        4
+      ],
+      "generated_with_rng": false,
+      "wp_spent": 0
+    },
+    "recovery_probe": {
+      "staged_unpublished": true,
+      "old_head_preserved": true,
+      "published_and_readback": true,
+      "real_network_fault_test": false
+    }
+  },
+  "limitations": [
+    "No autonomous narrative test",
+    "No real new-chat test",
+    "No timed performance benchmark",
+    "No live network outage test",
+    "No migration of real CHRONICLE_001",
+    "Call count excludes scaffolding, HEAD/tree/preflight reads"
+  ],
+  "proposal": "ARCHITECTURE_V1_1.md"
+}

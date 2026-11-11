@@ -1,0 +1,16 @@
+{
+  "document_id": "CHR001_M302_CI_SUCCESSOR_SCOPE_V1_PLAYER_SAFE",
+  "classification": "PLAYER_SAFE",
+  "status": "PROSPECTIVE_CI_SCOPE_RECONCILIATION",
+  "base_master": "d14e1a90de81f0348f2fd07062427b0602de3eb0",
+  "source_cycle": "CYCLE_V0042",
+  "successor_cycle": "CYCLE_V0043",
+  "reason": "Historical workflow V16 asserts exactly 42 cycles, which becomes categorically false once a legitimate C43 exists. Repeated V16 failures after C43 reflect version-specific scope, not temporal-reconciliation failure.",
+  "change": "Limit V16 workflow push/pull_request trigger paths to V16 source artifacts; leave V16 schema, validator, tests, C42, V57 and narrative checkpoint unchanged. V17 becomes current successor CI.",
+  "candidate_v17_pass_url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43079757672",
+  "historical_v16_successor_fail_url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43079757428",
+  "active_gate_required": "V17_CI_PASS",
+  "no_story_delta": true,
+  "no_canon_edit": true,
+  "no_g28_edit": true
+}

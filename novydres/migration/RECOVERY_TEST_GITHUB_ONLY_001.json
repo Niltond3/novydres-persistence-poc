@@ -1,0 +1,88 @@
+{
+  "schema": "NOVYDRES_GITHUB_ONLY_READBACK_RECOVERY_TEST_V1",
+  "date": "2026-11-02",
+  "method": "SAME_CHAT_ISOLATED_SCRIPT_ONLY_GITHUB_CONNECTOR_NO_DRIVE",
+  "independent_fresh_chat": false,
+  "read_count": 4,
+  "source_paths": [
+    "novydres/chronicles/CHR-001/LIVE.json",
+    "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
+    "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+    "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+  ],
+  "checks": [
+    {
+      "id": "V01_last_id_consistent",
+      "passed": true
+    },
+    {
+      "id": "V02_current_episode_available",
+      "passed": true
+    },
+    {
+      "id": "V03_player_quote_byte_exact",
+      "passed": true
+    },
+    {
+      "id": "V04_player_incomplete",
+      "passed": true
+    },
+    {
+      "id": "V05_question_confirmed",
+      "passed": true
+    },
+    {
+      "id": "V06_resources_conserved",
+      "passed": true
+    },
+    {
+      "id": "V07_WP_conserved",
+      "passed": true
+    },
+    {
+      "id": "V08_no_unverified_roll_upgrade",
+      "passed": true
+    },
+    {
+      "id": "V09_no_npc_omniscience",
+      "passed": true
+    },
+    {
+      "id": "V10_claim_vs_fact",
+      "passed": true
+    },
+    {
+      "id": "V11_no_cutover",
+      "passed": true
+    },
+    {
+      "id": "V12_POC_isolated",
+      "passed": true
+    },
+    {
+      "id": "V13_embrace_future_only",
+      "passed": true
+    },
+    {
+      "id": "V14_NPC_actor_index",
+      "passed": true
+    },
+    {
+      "id": "V15_sourceSHA_available",
+      "passed": true
+    }
+  ],
+  "pass_count": 15,
+  "fail_count": 0,
+  "source_sha_episode": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+  "last_checkpoint": "M2.03.073",
+  "last_event": "CHR001-M203-CHANGING-CLOTHES-20261102-001",
+  "read_mechanism": "GitHub fetch_file; all relevant facts are asserted from retrieved source and candidate JSON",
+  "limitations": [
+    "Tests are deterministic checks authored and run within existing chat, not a genuinely fresh ChatGPT chat",
+    "Recovery does not demonstrate full historical semantic memory or independent NPC behavior",
+    "Does not authorize narrative or GitHub cutover",
+    "No tests of push failures, timeouts or new ledger persistence"
+  ],
+  "next_gate": "FRESH_CHAT_INDEPENDENT_RECOVERY"
+}

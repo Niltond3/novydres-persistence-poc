@@ -1,0 +1,5 @@
+# NOVYDRES / CHR-001 — START_HERE_V13 · Gate de reconciliação temporal
+Sucessor de START_HERE_V12. Ler bootstrap .AGENT.md, .CONTEXTG.md, .AGENT_V4.md e .CONTEXTG_V3.md; validar ciclo/manifesto mais recentes e todos os pins.
+C42/V57 substituem somente o cursor administrativo de temporalidade, não o checkpoint de C05-22 nem a autoridade de histórias congeladas. Ler ORCHESTRATION_CONTRACT_V14, DRAMATURGO_ROLE_V4, NARRADOR_ROLE_V4, HANDOFF_DRAMATURGO_TO_NARRADOR_V3, PACING_TEMPORAL_FRAMING_V3 e TEMPORAL_TRANSITION_GATE_V1, schema, validator, tests e packet de M3.02.
+C41 tinha READY_FOR_NARRATOR e uma apresentação inicial C01 já ocorreu no chat, sem G28. C42 registra REVIEW_REQUIRED para corrigir em retrospecto administrativo a insuficiência da transição, não inventa que C01 jamais foi apresentada, nem registra evento/XP/FV/rolagem/entrada nova. O handoff efetivo está bloqueado até pacote READY e próximo ciclo específico.
+A correção não exige nova elipse a cada cena. Um modo CONTINUITY continua livre para jogar acontecimentos interessantes sem prelúdio.

@@ -1,0 +1,35 @@
+{
+  "schema_id": "CHR001_CYCLE_SCHEMA_CORRECTION_AUDIT_V1",
+  "chronicle_id": "CHR-001",
+  "scene_id": "M3.01.C03",
+  "reason": "Format-only correction of an already-committed cycle. Do not silently reinterpret earlier cycle.",
+  "story_commit": "385809212a4057abc5299cd4867b2f9b64442b8a",
+  "invalid_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0028.json",
+    "blob_sha": "943e6bcf3475b2c99834abd2f46e725abecba913",
+    "top_level_extra": [
+      "roll_audit"
+    ],
+    "review_decision_invalid": true,
+    "extra_guards": [
+      "no_xp_fv_delta_from_scene",
+      "plan_requires_new_review"
+    ],
+    "factual_refs_valid": true,
+    "checkpoint_event": "CHR001-M301-C03-20-20261107-001"
+  },
+  "corrective_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0029.json",
+    "status": "READY_FOR_DRAMATURGO",
+    "transition": "ADMIN_VALIDATOR_REVALIDATED",
+    "event_id": "CHR001-M301-C03-20-20261107-001"
+  },
+  "restrictions": [
+    "No editing any existing validated/frozen file",
+    "No second scene",
+    "No XP, FV, NPC or story delta",
+    "No handoff to Narrador before new Dramaturgo cycle",
+    "Schema shape manually checked. V3 transition validator known to support only M2 closure/first M3 planning, no claim of full CI."
+  ],
+  "governance": "NOVYDRES COW+G28; correction of own format defect, not a second G28 scene commit"
+}

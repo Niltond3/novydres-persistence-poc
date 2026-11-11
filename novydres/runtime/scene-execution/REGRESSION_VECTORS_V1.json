@@ -1,0 +1,273 @@
+{
+  "schema": "NOVYDRES_SCENE_REGRESSION_VECTORS_V1",
+  "purpose": "Model of contract gates; not a V5 dice engine and not a genuine playthrough",
+  "epistemic_status": "SYNTHETIC_TEST_CASES_NO_CHRONICLE_EVENTS",
+  "source_checkpoint": "M2.03.126_CLOSED",
+  "vectors": [
+    {
+      "id": "T01",
+      "kind": "intent",
+      "input": {
+        "player_intent": true,
+        "consequence_confirmed": false
+      },
+      "expected": "DENY",
+      "desc": "Tentar convencer não vira entrar"
+    },
+    {
+      "id": "T02",
+      "kind": "hypothesis",
+      "input": {
+        "hypothetical": true,
+        "action_confirmed": false
+      },
+      "expected": "DENY",
+      "desc": "Pergunta hipotética não é ataque"
+    },
+    {
+      "id": "T03",
+      "kind": "npc_outcome",
+      "input": {
+        "npc_intent_only": true,
+        "actual_event": false
+      },
+      "expected": "DENY",
+      "desc": "Plano NPC não vira morte consumada"
+    },
+    {
+      "id": "T04",
+      "kind": "wp",
+      "input": {
+        "spent": 1,
+        "player_authorized": false
+      },
+      "expected": "DENY",
+      "desc": "FV sem jogador"
+    },
+    {
+      "id": "T05",
+      "kind": "rng",
+      "input": {
+        "claimed_verified": true,
+        "provenance": "UNVERIFIED_CHAT_PRESENTATION"
+      },
+      "expected": "DENY",
+      "desc": "Faces chat não são RNG auditado"
+    },
+    {
+      "id": "T06",
+      "kind": "hunger",
+      "input": {
+        "mortal": true,
+        "hunger_change": 1
+      },
+      "expected": "DENY",
+      "desc": "Fome sobrenatural não aplicada a mortal"
+    },
+    {
+      "id": "T07a",
+      "kind": "npc_name",
+      "input": {
+        "npc": "Nadezhda",
+        "episode_entry": 117,
+        "first_name_known": false
+      },
+      "expected": "DENY",
+      "desc": "Nadezhda não sabia nome em 117"
+    },
+    {
+      "id": "T07b",
+      "kind": "npc_name",
+      "input": {
+        "npc": "Nadezhda",
+        "episode_entry": 124,
+        "first_name_known": true,
+        "source_event_id": "CHR001-M203-ESCAPE-124-20261103-001"
+      },
+      "expected": "ALLOW",
+      "desc": "Nadezhda pode saber primeiro nome após 124"
+    },
+    {
+      "id": "T07c",
+      "kind": "npc_name",
+      "input": {
+        "npc": "Paramedics",
+        "episode_entry": 126,
+        "first_name_known": false
+      },
+      "expected": "DENY",
+      "desc": "Profissionais não aprenderam nome"
+    },
+    {
+      "id": "T08",
+      "kind": "claim",
+      "input": {
+        "claim_type": "NPC_CLAIM",
+        "promote_to_fact": true
+      },
+      "expected": "DENY",
+      "desc": "Relato de Gromov não confirma realidade"
+    },
+    {
+      "id": "T09",
+      "kind": "checkpoint",
+      "input": {
+        "closed_m203": true,
+        "start_m204_without_player": true
+      },
+      "expected": "DENY",
+      "desc": "M2.04 não abre automaticamente"
+    },
+    {
+      "id": "T10",
+      "kind": "persistence",
+      "input": {
+        "write_success": false,
+        "announce_saved": true
+      },
+      "expected": "DENY",
+      "desc": "Sem readback não é persistido"
+    },
+    {
+      "id": "T11",
+      "kind": "frozen",
+      "input": {
+        "target_sheet_edited": true,
+        "explicit_permission": false
+      },
+      "expected": "DENY",
+      "desc": "Ficha congelada intocada"
+    },
+    {
+      "id": "T12",
+      "kind": "correction",
+      "input": {
+        "append_only": true,
+        "original_preserved": true
+      },
+      "expected": "ALLOW",
+      "desc": "Correção preserva evento original"
+    },
+    {
+      "id": "S01",
+      "kind": "credit",
+      "input": {
+        "credit_before": 20,
+        "award": 30,
+        "xp_total_before": 519,
+        "xp_total_after": 519,
+        "authorized": true
+      },
+      "expected": "ALLOW",
+      "desc": "Simulação crédito 20->50, total XP constante"
+    },
+    {
+      "id": "S02",
+      "kind": "credit",
+      "input": {
+        "credit_before": 20,
+        "award": 30,
+        "xp_total_before": 519,
+        "xp_total_after": 549,
+        "authorized": true
+      },
+      "expected": "DENY",
+      "desc": "Crédito não aumenta XP total"
+    },
+    {
+      "id": "S03",
+      "kind": "recovery",
+      "input": {
+        "started_real_session": true,
+        "already_recovered": false,
+        "superficial_before": 5,
+        "composure": 3,
+        "resolve": 3,
+        "superficial_after": 2
+      },
+      "expected": "ALLOW",
+      "desc": "Simulação FV 5->2 na abertura real"
+    },
+    {
+      "id": "S04",
+      "kind": "recovery",
+      "input": {
+        "started_real_session": false,
+        "already_recovered": false,
+        "superficial_before": 5,
+        "composure": 3,
+        "resolve": 3,
+        "superficial_after": 2
+      },
+      "expected": "DENY",
+      "desc": "Chat novo não recupera FV"
+    },
+    {
+      "id": "S05",
+      "kind": "specialty",
+      "input": {
+        "specialization": "Ofícios (Mecânica de Automóveis)",
+        "approved_global": false,
+        "roll_is_historical_m203119": false
+      },
+      "expected": "DENY",
+      "desc": "Especialização Ofícios sem liberação global"
+    },
+    {
+      "id": "S06",
+      "kind": "specialty",
+      "input": {
+        "specialization": "Briga (Agarrar)",
+        "approved_global": false,
+        "roll_is_historical_m203119": false,
+        "scope_dec_cr_019": true
+      },
+      "expected": "ALLOW",
+      "desc": "Briga Agarrar âmbito DEC-CR-019"
+    },
+    {
+      "id": "S07",
+      "kind": "take_half",
+      "input": {
+        "pool": 7,
+        "difficulty": 3,
+        "legally_eligible": true,
+        "rolled_before_player_choice": true
+      },
+      "expected": "DENY",
+      "desc": "G25 exige oferecer antes do dado"
+    },
+    {
+      "id": "S08",
+      "kind": "take_half",
+      "input": {
+        "pool": 7,
+        "difficulty": 3,
+        "legally_eligible": true,
+        "rolled_before_player_choice": false
+      },
+      "expected": "ALLOW",
+      "desc": "G25 preflight correto"
+    },
+    {
+      "id": "S09",
+      "kind": "g28",
+      "input": {
+        "scene_closed": false,
+        "github_commit_attempted": true
+      },
+      "expected": "DENY",
+      "desc": "Não persistir por turno com cena aberta"
+    },
+    {
+      "id": "S10",
+      "kind": "g28",
+      "input": {
+        "scene_closed": true,
+        "github_commit_attempted": true
+      },
+      "expected": "ALLOW",
+      "desc": "Consolidar ao fechar cena"
+    }
+  ]
+}

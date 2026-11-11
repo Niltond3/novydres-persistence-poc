@@ -1,0 +1,104 @@
+{
+  "schema_id": "CHR001_ATLAS_COVERAGE_REPORT_V1",
+  "status": "PARTIAL",
+  "baseline": {
+    "head_sha": "d64b1213c1531af512c15ad7082e90c9593c0947",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0031.json",
+    "live_path": "novydres/chronicles/CHR-001/LIVE_v036.json",
+    "last_event_id": "CHR001-M301-C04-20-20261108-001",
+    "diegetic_time": "Fim dos anos 1970; dia civil UNKNOWN"
+  },
+  "counts": {
+    "historical_m1_markers": 27,
+    "event_cards": 391,
+    "played_cards": 382,
+    "unverified_cards": 9,
+    "npc_entities": 55,
+    "entities_total": 58,
+    "directed_edges": 49,
+    "npc_npc_edges": 13,
+    "story_arcs": 7,
+    "solo_seeds": 5
+  },
+  "coverage": {
+    "periods": [
+      "M1.01–M1.09 (índice legado)",
+      "M2.01–M2.02 (marcadores)",
+      "M2.03 (cumulativo v017)",
+      "M2.04 C01–C17 e downtime (v017)",
+      "M3.01 C01–C04 (v004)"
+    ],
+    "reviewed_source_paths": [
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M3.01_v004.source.txt",
+      "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V20.json",
+      "novydres/chronicles/CHR-001/npc-disposition/STATE_V004.json"
+    ],
+    "unreviewed_source_paths": [
+      "novydres/chronicles/CHR-001/historical/legacy-diary/part_001..023.source.txt",
+      "novydres/chronicles/CHR-001/episodes/shards/M2.03_v008_part_001..007.source.txt",
+      "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V1..V9.json",
+      "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V1..V4.json",
+      "novydres/chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json",
+      "novydres/chronicles/CHR-001/character/state_v001..v042.source.txt"
+    ],
+    "gaps": [
+      "Índice M1 é somente localizador; conferência original por afirmação pendente.",
+      "Cartões M2.01–M2.02 usam marcadores legados, não ledger COMMITTED.",
+      "Extração lexical dos atores não comprova interação ou conhecimento; revisão por evento necessária.",
+      "Censo parte de 46 registros operacionais e 26 entidades de índice M1; total de figurantes ainda não auditado.",
+      "Autoria editorial original não aferida por commits cronológicos anteriores.",
+      "Datas diegéticas, vida/morte, localização e objetivos não comprovados permanecem UNKNOWN.",
+      "Shards, versões históricas dos dossiês, atribuições NPC-NPC e clocks devem ser auditados individualmente.",
+      "Causas clínicas e identidade dos envolvidos em M3.01.C04 não estão confirmadas.",
+      "O atlas não contém eventos jogados do período até 2010."
+    ],
+    "conflicts": [
+      "Krauser é grafia corrigida; Krause histórico.",
+      "M1.06: interlocutora correta é Mary, não Mikahel.",
+      "M3.01.C04.08: tentativa de impor verificação obrigatória foi anulada; C04.09 é o teste válido.",
+      "M3.01.C04.18: sucesso de reparo aceito pelo jogador, RNG Python não verificado.",
+      "Relato de Marta não prova causa de morte de Yelena.",
+      "Jonas, Oleg, Nadezhda e Gromov: identidade/natureza nem sempre confirmadas."
+    ],
+    "validation_status": "SEMANTIC_PARTIAL",
+    "metrics": {
+      "historical_m1_markers": 27,
+      "event_cards": 391,
+      "played_cards": 382,
+      "unverified_cards": 9,
+      "npc_entities": 55,
+      "entities_total": 58,
+      "directed_edges": 49,
+      "npc_npc_edges": 13,
+      "story_arcs": 7,
+      "solo_seeds": 5
+    }
+  },
+  "method": "Indexação sintática assistida por fonte original, análise semântica parcial",
+  "claim": "Não certifica censo exaustivo, autoria original nem transcrição integral",
+  "supersedes": "novydres/chronicles/CHR-001/narrative-atlas/COVERAGE_REPORT_V001.json",
+  "diagram_validation": {
+    "status": "PASS_SNAPSHOT_CROSSREFERENCE_PARTIAL_SEMANTICS",
+    "diagram_path": "novydres/chronicles/CHR-001/narrative-atlas/diagrams/TRAMAS_PLAYER_SAFE_V002.mmd",
+    "audit_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_DIAGRAM_VALIDATION_V002.json",
+    "checked": 12,
+    "unsupported_cross_arc_links": 0
+  },
+  "limitations": [
+    "Verificação editorial original de todos os fatos ainda pendente.",
+    "Primeiro diagrama de tramas V001 é histórico substituído; usar V002.",
+    "Índice M1 é somente localizador; conferência original por afirmação pendente.",
+    "Cartões M2.01–M2.02 usam marcadores legados, não ledger COMMITTED.",
+    "Extração lexical dos atores não comprova interação ou conhecimento; revisão por evento necessária.",
+    "Censo parte de 46 registros operacionais e 26 entidades de índice M1; total de figurantes ainda não auditado.",
+    "Autoria editorial original não aferida por commits cronológicos anteriores.",
+    "Datas diegéticas, vida/morte, localização e objetivos não comprovados permanecem UNKNOWN.",
+    "Shards, versões históricas dos dossiês, atribuições NPC-NPC e clocks devem ser auditados individualmente.",
+    "Causas clínicas e identidade dos envolvidos em M3.01.C04 não estão confirmadas.",
+    "O atlas não contém eventos jogados do período até 2010."
+  ]
+}

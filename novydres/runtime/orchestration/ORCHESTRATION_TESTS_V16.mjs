@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {validateC42,validateLatestV16} from './ORCHESTRATION_VALIDATOR_V16.mjs';
+const root=new URL('../../chronicles/CHR-001/orchestration/',import.meta.url);
+const load=p=>JSON.parse(readFileSync(new URL(p,root),'utf8'));
+const src=load('CYCLE_V0042.json'),prior=load('CYCLE_V0041.json');
+const clone=()=>JSON.parse(JSON.stringify(src));
+const reject=(fn,rx)=>{const x=clone();fn(x);assert.throws(()=>validateC42(x,prior),rx)};
+test('new administrative transition valid but narrator cannot continue without reconciliation',()=>{const x=validateC42(clone(),prior);assert.equal(x.active_permission,false)});
+test('cannot alter last event or box source via administrative gate',()=>reject(x=>x.refs.threads.blob_sha='0'.repeat(40),/protected historical field/));
+test('cannot falsify G28 as recorded',()=>reject(x=>x.transition_readiness.g28_scene_event_recorded=true,/chat fact erased/));
+test('cannot claim old chat opening never occurred',()=>reject(x=>x.transition_readiness.chat_opening_observed=false,/chat fact erased/));
+test('cannot turn gate READY before review',()=>reject(x=>x.transition_readiness.effective_narrator_permission=true,/permission not blocked/));
+test('cannot silently replace historical preparation',()=>reject(x=>x.plan.dossier.blob_sha='f'.repeat(40),/protected historical field/));
+test('cannot silently change architecture D07',()=>reject(x=>x.architecture.d07.blob_sha='f'.repeat(40),/non-successor arch/));
+test('cannot remove transition packet pin',()=>reject(x=>delete x.architecture.temporal_transition_packet,/architecture size/));
+test('complete 42-link source chain / SHA pins / JSON packet / effective gate',()=>{
+ const r=validateLatestV16(process.cwd());assert.equal(r.ok,true);assert.equal(r.ready_for_narrator,false);assert.equal(r.source_threads,44);
+});

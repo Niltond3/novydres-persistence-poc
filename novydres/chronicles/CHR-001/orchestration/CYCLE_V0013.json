@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V1",
+  "cycle_id": "CHR001-CYCLE-0013",
+  "sequence": 13,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M2.04",
+  "manifest_path": "novydres/MANIFEST_V38.json",
+  "source_head_sha": "f3c901489ccf9b4be862008d42cb4040b3a545f3",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0012.json",
+    "blob_sha": "24cf4b9100651c795b2cca7d09d374a2c2110e81"
+  },
+  "transition": "SCENE_COMMITTED",
+  "status": "READY_FOR_DRAMATURGO",
+  "next_role": "DRAMATURGO",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-C15-22-20261106-001",
+    "last_closed_scene": "C15",
+    "next_scene": "C16",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v028.json",
+      "blob_sha": "86c45e07c0b8637df6363fb4435ef7e7f4502153"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v028.json",
+      "blob_sha": "c9bbe20ffb5197062a76e4e87f15b4a12e8a4239"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+      "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v034.source.txt",
+      "blob_sha": "05d8ada7194b94e3e208a7d48276cfdb0a5119c3"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V14.json",
+      "blob_sha": "a9530c302c07a9dd08710a967c6ab638fff57d6a"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V15.json",
+      "blob_sha": "4ac2900e712136039f9d82c0120c46cce5b1274d"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M204-20261105-V7",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V7.json",
+      "blob_sha": "e3b12c4577d11010c59f0505ac7a8a3ef1cf531c"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V6.json",
+      "blob_sha": "7f6f91ac01229c811f53662515a3a9157fd7e696"
+    },
+    "validity": "STALE",
+    "reviewed_against_event_id": "CHR001-M204-C14-24-20261105-001"
+  },
+  "review": {
+    "decision": "NOT_REVIEWED",
+    "against_last_event_id": null,
+    "public_rationale": "A C15 terminou por solicitação explícita do jogador após excesso de exploração técnica. Dramaturgo deve reavaliar M2.04 integralmente e melhorar relevância, ritmo, elipses e aproveitamento de oportunidade extraordinária; não escrever retrospectivamente surpresa sobrenatural ou desfechos presumidos. C16 não autorizada."
+  },
+  "blocking": {
+    "code": "NEEDS_DRAMATURGO_REVIEW",
+    "reason": "C15 encerrada com feedback de ritmo e potencial dramático subaproveitado; revisão integral obrigatória antes de C16."
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}

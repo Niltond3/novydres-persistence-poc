@@ -1,0 +1,148 @@
+{
+  "schema_id": "CHR001_M2_FORMAL_MARCO_CLOSURE_V1",
+  "status": "OFFICIALLY_CLOSED_BY_EXPLICIT_PLAYER_REQUEST",
+  "chronicle_id": "CHR-001",
+  "marco_id": "M2",
+  "marco_name": "A Fissura",
+  "closure_admin_id": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+  "player_authorization": {
+    "kind": "EXPLICIT",
+    "turn": "Current player instruction before M3",
+    "requests": [
+      "CLOSE_M2_OFFICIALLY",
+      "CORRECT_US_SOVIET_RUSSIAN_NAME_BIAS",
+      "DO_NOT_GENERATE_INITIAL_M3_PROVOCATION",
+      "ISSUE_NEW_CHAT_DRAMATURGO_PROMPT"
+    ]
+  },
+  "source_head_sha": "7db3746f919e1fb6f4376319c904872877658b22",
+  "source_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0020.json",
+    "blob_sha": "74989a2046a9e9a01abe4ffb710326b230419cee"
+  },
+  "source_live": {
+    "path": "novydres/chronicles/CHR-001/LIVE_v031.json",
+    "blob_sha": "5fe68f821cc72082ec41950b3d76e6f2ec7f7c3f"
+  },
+  "source_evidence": [
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_C17_CLOSURE_SCREENING_V1.json",
+      "blob_sha": "cac758681cd46333ba7fea4643477cffde758ebe"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v037.source.txt",
+      "blob_sha": "6f91f0ad62e533dc64fac92f519990bb40c33a89"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+      "blob_sha": "740e584430db113a52c505acc02c9aab3ce91ece"
+    }
+  ],
+  "scope": {
+    "M1": "CLOSED_NO_CHANGE",
+    "M2_01": "CLOSED",
+    "M2_02": "CLOSED",
+    "M2_03": "CLOSED",
+    "M2_04": "CLOSED_AFTER_C17_AND_WORKSHOP_DOWNTIME",
+    "M2": "CLOSED",
+    "M3": "NOT_STARTED",
+    "M4": "NOT_STARTED",
+    "M5": "NOT_STARTED",
+    "C18": "NOT_STARTED_NOT_TO_BE_OPENED"
+  },
+  "d1_sufficiency": {
+    "functional_target": "Rupture of Bartholomeu's confidence that he can fully control professional, family and moral stability through strength and discipline; preserve fissures and meaningful growth without forced punishments",
+    "coverage": {
+      "verdict": "PASS",
+      "evidence": [
+        "M2.01–M2.02: trabalho, assinatura contestada, vínculo pai/filho, risco de imagem e autoridade",
+        "M2.03: confronto inesperado, violência excessiva, cuidado, Nadezhda, sinais anômalos não comprovados, Volnaya",
+        "M2.04 C01–C14: família e confiança, dever profissional, pressão institucional, documentação, escola, autonomia",
+        "M2.04 C15–C17: degradação subterrânea, violência e compromisso em poupar/evacuar, consequências ainda abertas",
+        "Downtime autorizado: Oficina Krauser realmente aberta em escala modesta, como alternativa identitária, sem riqueza automática"
+      ]
+    },
+    "coherence": {
+      "verdict": "PASS_WITH_OPEN_CAUSAL_DEBTS",
+      "reason": "Escolhas de Bart e reações existentes têm causalidade e conflito; narrativas anteriores não exigem uma conspiração única, fraudes ou causalidade sobrenatural retrospectiva. Os déficits de NPC cordial e tom gótico-punk foram tratados apenas como regras prospectivas, não como edição dos acontecimentos consolidados."
+    },
+    "consequence": {
+      "verdict": "PASS_WITH_UNRESOLVED_EFFECTS",
+      "reason": "Fissura moral, risco para família/emprego, dependência de instituições, primeira experiência extraordinária e livre iniciativa dão consequências históricas reais. Resolver clínicos, antagonistas, empresa, canalizações, dívida salarial e Abraço não é condição do fechamento M2."
+    },
+    "formal_verdict": "M2_SATISFIES_COVERAGE_COHERENCE_CONSEQUENCE_CLOSED"
+  },
+  "consolidation_package": {
+    "historical_period": "LATE_1970S_EXACT_CIVIL_DATE_UNKNOWN",
+    "concept": "Bartolomeu Krauser permanece mortal, judeu e pai, trabalhador técnico, ex-agente violento procurando agir com palavra/responsabilidade sob um mundo predatório; força extrema e suas justificativas são dilema, não solução",
+    "aspirations_and_identity": [
+      "Oficina Krauser agora existe como pequeno negócio alugado e precário",
+      "Manter responsabilidade para com Mary, Mikahel e Sara sem governar suas vontades",
+      "Desejo de proteger inocentes convive com capacidade de crueldade e preocupação sobre abuso de força"
+    ],
+    "relationships": [
+      "Mary mantém autonomia, confiança condicionada e responsabilidades próprias; não é assistente automática",
+      "Mikahel tem julgamento próprio, escolhas escolares e consequências",
+      "Pavel e colegas conhecem apenas fatos observáveis, sem onisciência sobre Volnaya ou oficina"
+    ],
+    "supernatural": "Anomalias e alegações de NPC foram percebidas/ouvidas, mas não são prova completa de clãs, poderes ou vínculos; Abraço NÃO OCORREU. Futura Senhora aprovada é decisão meta, não encontro nem evento na vida do PJ.",
+    "resources": {
+      "xp_cap": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0,
+      "willpower_max": 6,
+      "willpower_superficial_damage": 6,
+      "willpower_available": 0,
+      "target_roll_policy": "TARGET_V2_PROVISIONAL_GUIDED_CREATION_UNCHANGED",
+      "no_new_xp_fv_or_abilities_on_closure": true
+    },
+    "world_and_names": {
+      "locale": "American city with strong Slavic/Soviet historical influence and mixed American, Jewish, German and other rooted communities",
+      "canon_faith_pillars": [
+        "Orthodoxy",
+        "Islam",
+        "Judaism"
+      ],
+      "additional_christian_traditions": "Catholic, Anglican, others present within Christian pillar; no new official pillar",
+      "renames_of_existing_npcs": false
+    }
+  },
+  "preserved_debts": {
+    "volnaya": "Investigation and documentary leads unresolved; players can pursue in future play; no contacts or discoveries by Marco closing",
+    "supernatural": "Important new contacts to be played, not offscreen; avoid fixed outcome, no automatic Embrace",
+    "m203": "Ilya's health, Nadezhda's situation, alleged supernatural identity and Gromov unknown as documented",
+    "m204": "Oleg's claims/location, unidentified rescued man outcome, damaged underground heat pipe and responsibility, missing registry, institutional outcome, school consequences remain open",
+    "workshop": "Opened small without owned tow truck or Resources dots, actual profit, expansion and long-term survival unknown",
+    "family_and_job": "Individual NPC agendas, trust, owed overtime alleged but not paid, employment continues unless new action"
+  },
+  "future_scope": {
+    "marco": "M3",
+    "marco_status": "NOT_STARTED",
+    "initial_provocation": "NOT_CREATED",
+    "initial_dossier": null,
+    "review_role": "DRAMATURGO",
+    "narration_allowed": false,
+    "ready_for_narrator": false,
+    "sequence_constraints": "No instant segue from C17, no next scene, no narrative beat; M3 must have its own prospective dossier, role review, status READY_FOR_NARRATOR and separate player handoff"
+  },
+  "integrity": {
+    "event_last_confirmed_unchanged": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+    "episode_source_unchanged": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+    "scene_history_C01_to_C17_immutable": true,
+    "no_new_diegetic_event": true,
+    "no_retroactive_names": true,
+    "no_new_xp_fv_purchase": true,
+    "no_new_NPC_facts": true,
+    "no_2010": true,
+    "culture_only_prospective": true
+  }
+}

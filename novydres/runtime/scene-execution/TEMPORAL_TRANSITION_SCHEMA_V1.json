@@ -1,0 +1,404 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "NOVYDRES_TEMPORAL_TRANSITION_SCHEMA_V1",
+  "title": "NOVYDRES CHR-001 temporal transition coverage packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "status",
+    "classification",
+    "chronicle_id",
+    "target_scene",
+    "mode",
+    "source_checkpoint",
+    "source_refs",
+    "interval",
+    "thread_dispositions",
+    "salient_bridges",
+    "contexts",
+    "prelude",
+    "scene_affordances",
+    "opening",
+    "no_story_delta",
+    "chat_opening_status"
+  ],
+  "$defs": {
+    "pin": {
+      "type": "object",
+      "required": [
+        "path",
+        "blob_sha"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 10
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "source_event_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "status": {
+          "enum": [
+            "CARRY_UNCHANGED",
+            "WORLD_EVENT_PROSPECTIVE",
+            "PLAYER_CHOICE_REQUIRED",
+            "CONTINUITY_SCENE",
+            "UNKNOWN_PRESERVED"
+          ]
+        },
+        "source_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "bridge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "opening_treatment",
+        "provenance"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "opening_treatment": {
+          "type": "string",
+          "minLength": 12
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 8
+        }
+      }
+    }
+  },
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_TEMPORAL_TRANSITION_V1"
+    },
+    "status": {
+      "enum": [
+        "REVIEW_REQUIRED",
+        "READY"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "PLAYER_SAFE",
+        "GM_HIDDEN"
+      ]
+    },
+    "chronicle_id": {
+      "const": "CHR-001"
+    },
+    "target_scene": {
+      "const": "M3.02.C01"
+    },
+    "mode": {
+      "enum": [
+        "CONTINUITY",
+        "ABSTRACTION",
+        "MONTAGE",
+        "ELLIPSIS"
+      ]
+    },
+    "source_checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "last_event_id",
+        "scene_status"
+      ],
+      "properties": {
+        "last_event_id": {
+          "type": "string"
+        },
+        "scene_status": {
+          "type": "string"
+        }
+      }
+    },
+    "source_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "live",
+        "history_index",
+        "episode",
+        "character",
+        "knowledge",
+        "threads"
+      ],
+      "properties": {
+        "live": {
+          "$ref": "#/$defs/pin"
+        },
+        "history_index": {
+          "$ref": "#/$defs/pin"
+        },
+        "episode": {
+          "$ref": "#/$defs/pin"
+        },
+        "character": {
+          "$ref": "#/$defs/pin"
+        },
+        "knowledge": {
+          "$ref": "#/$defs/pin"
+        },
+        "threads": {
+          "$ref": "#/$defs/pin"
+        }
+      }
+    },
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "period",
+        "relative_label",
+        "min_nights",
+        "max_nights",
+        "civil_date"
+      ],
+      "properties": {
+        "period": {
+          "const": "1970"
+        },
+        "relative_label": {
+          "type": "string",
+          "minLength": 8
+        },
+        "min_nights": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_nights": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "civil_date": {
+          "type": "null"
+        }
+      }
+    },
+    "thread_dispositions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/disposition"
+      }
+    },
+    "salient_bridges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/bridge"
+      }
+    },
+    "contexts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "material_custody",
+        "family_knowledge",
+        "workshop"
+      ],
+      "properties": {
+        "material_custody": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "thread_id",
+            "last_confirmed_location",
+            "current_frame_status",
+            "pc_choice_status"
+          ],
+          "properties": {
+            "thread_id": {
+              "type": "string"
+            },
+            "last_confirmed_location": {
+              "type": "string"
+            },
+            "current_frame_status": {
+              "enum": [
+                "UNKNOWN",
+                "CARRIED_WITH_SOURCE",
+                "PLAYER_DECLARED"
+              ]
+            },
+            "pc_choice_status": {
+              "enum": [
+                "PENDING",
+                "NOT_REQUIRED",
+                "DECLARED_AND_VERIFIED"
+              ]
+            }
+          }
+        },
+        "family_knowledge": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mary_box_knowledge",
+            "contact_claimed"
+          ],
+          "properties": {
+            "mary_box_knowledge": {
+              "enum": [
+                "UNKNOWN",
+                "KNOWN_FROM_EVENT",
+                "NOT_REVEALED_BY_PLAYER"
+              ]
+            },
+            "contact_claimed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "workshop": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "established_open",
+            "shared_access",
+            "revenue_delta_claimed"
+          ],
+          "properties": {
+            "established_open": {
+              "type": "boolean"
+            },
+            "shared_access": {
+              "type": "boolean"
+            },
+            "revenue_delta_claimed": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "prelude": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_player_decisions",
+        "distinct_test_count",
+        "all_essential_decisions_resolved"
+      ],
+      "properties": {
+        "required_player_decisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "distinct_test_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "all_essential_decisions_resolved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "scene_affordances": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "obstacle_type",
+        "position",
+        "main_entrance_effect",
+        "lateral_access_effect",
+        "movement_options",
+        "ownership_status"
+      ],
+      "properties": {
+        "obstacle_type": {
+          "type": "string",
+          "minLength": 3
+        },
+        "position": {
+          "type": "string",
+          "minLength": 3
+        },
+        "main_entrance_effect": {
+          "type": "string",
+          "minLength": 3
+        },
+        "lateral_access_effect": {
+          "type": "string",
+          "minLength": 3
+        },
+        "movement_options": {
+          "type": "string",
+          "minLength": 3
+        },
+        "ownership_status": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "opening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "interval_and_life",
+        "pending_carryovers",
+        "physical_stakes",
+        "ready"
+      ],
+      "properties": {
+        "interval_and_life": {
+          "type": "string"
+        },
+        "pending_carryovers": {
+          "type": "string"
+        },
+        "physical_stakes": {
+          "type": "string"
+        },
+        "ready": {
+          "type": "boolean"
+        }
+      }
+    },
+    "no_story_delta": {
+      "const": true
+    },
+    "chat_opening_status": {
+      "const": "PLAYER_VISIBLE_OPENING_PAUSED_NOT_G28_PERSISTED"
+    }
+  }
+}

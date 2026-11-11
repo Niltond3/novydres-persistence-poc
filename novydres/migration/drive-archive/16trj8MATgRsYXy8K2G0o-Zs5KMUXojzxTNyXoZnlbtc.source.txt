@@ -1,0 +1,133 @@
+"""NOVYDRES V3.2 IO gate candidate: readback-driven orchestration, NOT ACTIVE.
+This module has NO Drive credentials or network calls. Caller must retrieve raw Google
+Docs text + revision IDs via connector, execute its conditional plan, and provide a
+new independent readback. This gate is a procedural aid, not a guarantee that an
+LLM sourced PC choices or resolved narrative accurately. Sandbox only until approved.
+"""
+from __future__ import annotations
+from dataclasses import dataclass
+from copy import deepcopy
+import json
+from typing import Mapping
+from webfirst_v31_candidate import (
+    canon, digest, validate, append, prepare_segment, rotate_after_readback,
+    plan_cas, Violation, require,
+)
+from verify_external_archives_v31 import strict_restore
+@dataclass(frozen=True)
+class RemoteDoc:
+    doc_id: str
+    revision: str
+    text: str
+    def __post_init__(self):
+        require(bool(self.doc_id and self.revision and self.text), 'Missing remote id/revision/text')
+    def parsed(self) -> dict:
+        try:
+            data = json.loads(self.text)
+        except (json.JSONDecodeError, TypeError) as exc:
+            raise Violation('Invalid readback JSON') from exc
+        require(isinstance(data, dict), 'Expected object JSON')
+        return data
+def readback_gate(active: RemoteDoc, archives: Mapping[str, RemoteDoc]) -> dict:
+    """Fail closed if an archive cannot be independently reconstructed from supplied readbacks.
+    The caller must compare each RemoteDoc to an actual current Google Docs read and
+    must not send fabricated/predicted contents as though they were remote readbacks.
+    """
+    cur = active.parsed()
+    needed = {m['doc_id'] for m in cur.get('archives', [])}
+    if len(needed) != len(cur.get('archives', [])):
+        raise Violation('Duplicate archive document pointer')
+    if not needed.issubset(set(archives)):
+        raise Violation('Missing archive readback: ' + ','.join(sorted(needed-set(archives))))
+    parsed = {}
+    for doc_id in needed:
+        item = archives[doc_id]
+        require(item.doc_id == doc_id, 'Wrong archive ID in readback')
+        parsed[doc_id] = item.parsed()
+    result = strict_restore(cur, parsed)
+    require(result['next_seq'] == cur['next_seq'], 'Seam mismatch')
+    return result
+def _index(active: RemoteDoc, archives: Mapping[str, RemoteDoc]) -> dict:
+    current = active.parsed()
+    readback_gate(active, archives)
+    out = {}
+    for m in current['archives']:
+        for e in archives[m['doc_id']].parsed()['events']:
+            require(e['id'] not in out, 'Duplicate event across history')
+            out[e['id']] = e
+    for e in current['events']:
+        require(e['id'] not in out, 'Duplicate event across history')
+        out[e['id']] = e
+    return out
+def prepare_append_from_readbacks(active: RemoteDoc, archives: Mapping[str, RemoteDoc], command: dict) -> dict:
+    """Produces a CAS plan. It does not write or authorize narrative evolution."""
+    existing = _index(active, archives)
+    wanted = command.get('id')
+    require(isinstance(wanted, str) and wanted.startswith('S3-EVT-'),
+            'Explicit event ID required for safe replay after lost ACK')
+    if wanted in existing:
+        old = existing[wanted]
+        payload = {k:v for k,v in old.items() if k not in {'seq', 'prev_hash', 'hash'}}
+        proposed = {k:v for k,v in command.items() if k not in {'seq', 'prev_hash', 'hash'}}
+        if payload != proposed:
+            raise Violation('Idempotency key reused with conflicting payload')
+        return {'status':'ALREADY_COMMITTED_READBACK', 'event_id':wanted, 'event_hash':old['hash'],
+                'active_doc_id':active.doc_id, 'revision':active.revision, 'write':None}
+    current = active.parsed()
+    next_state, result = append(current, command)
+    require(result == 'APPEND_READY_FOR_DRIVE_CAS','Append not ready')
+    strict_restore(next_state, {k:v.parsed() for k,v in archives.items()})
+    plan = plan_cas(active.text, active.revision, next_state)
+    e = next_state['events'][-1]
+    return {'status':'READY_CAS','event_id':e['id'],'event_hash':e['hash'],
+            'active_doc_id':active.doc_id,'revision':active.revision,
+            'write':plan, 'expected_text':canon(next_state)}
+def prepare_rotation_from_readbacks(active: RemoteDoc, archives: Mapping[str,RemoteDoc],
+                                    staged_archive:RemoteDoc, next_provocation:str) -> dict:
+    """Passes only after staged archive was read back independently.
+    To avoid truncating the only active history, the staged document must already
+    exist, contain exactly prepare_segment(current), and pass readback verification.
+    """
+    readback_gate(active, archives)
+    current = active.parsed()
+    expected = prepare_segment(current)
+    observed = staged_archive.parsed()
+    require(observed == expected, 'Staged archive not identical to active segment')
+    require(staged_archive.doc_id not in archives, 'Reuse of archive ID')
+    rotated = rotate_after_readback(current, expected, staged_archive.doc_id,
+                                    observed, next_provocation)
+    complete = dict(archives)
+    complete[staged_archive.doc_id] = staged_archive
+    readback_gate(RemoteDoc(active.doc_id,active.revision,canon(rotated)), complete)
+    plan = plan_cas(active.text,active.revision,rotated)
+    return {'status':'READY_ROTATION_CAS','active_doc_id':active.doc_id,
+            'archive_doc_id':staged_archive.doc_id, 'write':plan,
+            'expected_text':canon(rotated),'next_seq':rotated['next_seq']}
+def evaluate_ack(plan:dict, observed:RemoteDoc, archives:Mapping[str,RemoteDoc],
+                 occurrences_changed:int|None=None) -> dict:
+    """Do not trust a response alone. Read and replay remote state first.
+    When ACK was lost, exact readback of expected state is sufficient to confirm
+    current value, regardless of whether API acknowledgment was delivered.
+    """
+    require(plan.get('status') in ('READY_CAS','READY_ROTATION_CAS'), 'Not a write plan')
+    require(plan['active_doc_id'] == observed.doc_id, 'Readback of wrong active document')
+    verified = readback_gate(observed, archives)
+    if observed.text == plan['expected_text']:
+        if occurrences_changed not in (None,1):
+            raise Violation('ReplaceAllText occurrences must equal exactly 1')
+        return {'status':'COMMITTED_AND_VERIFIED' if occurrences_changed==1 else 'ACK_LOST_BUT_READBACK_VERIFIED',
+                'next_seq':verified['next_seq'], 'event_count':verified['event_count']}
+    if occurrences_changed == 1:
+        return {'status':'CONFLICT_AFTER_REPORTED_WRITE','advance_allowed':False}
+    return {'status':'PENDING_OR_CONCURRENT_CHANGE','advance_allowed':False}
+def plan_for_uncertain_ack(active:RemoteDoc, archives:Mapping[str,RemoteDoc],
+                           pending:dict) -> str:
+    """Search all shards before retry; never guess success on timeout."""
+    events = _index(active,archives)
+    key = pending['event_id']
+    if key not in events:
+        return 'NOT_FOUND_STOP_AND_RECONCILE'
+    return 'FOUND_VERIFIED_NO_RETRY' if events[key]['hash']==pending['event_hash'] else 'CONFLICT_STOP_AND_RECONCILE'
+def preflight_operational_v3(status:str) -> None:
+    """Deliberately fail closed: this code has no authority to activate V3."""
+    raise Violation('V3.2 NOT PROMOTED; operational preflight remains governed by V2')

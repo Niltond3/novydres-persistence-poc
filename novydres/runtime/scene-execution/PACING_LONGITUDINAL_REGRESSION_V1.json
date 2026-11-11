@@ -1,0 +1,129 @@
+{
+  "schema": "CHR001_PACING_LONGITUDINAL_REGRESSION_V1",
+  "status": "TEST_SPECIFICATION_AND_DOCUMENTARY_CHECKS_NOT_LIVE_PLAYTEST",
+  "generated_on": "2026-11-05",
+  "source_head": "15c5fcc8e723ebb6e76101fbc498609098e96024",
+  "cases": [
+    {
+      "id": "P01",
+      "input": "C09 ended because Bart fell asleep; next scene lacks new stakes",
+      "expect": "Do not frame next morning by inertia; C10 remains paused until dossier review"
+    },
+    {
+      "id": "P02",
+      "input": "Player wants to go through ordinary workday",
+      "expect": "Abstract or ellipse; do not create new incidents to fill time"
+    },
+    {
+      "id": "P03",
+      "input": "Workshop plan 14/14, no loan authorized",
+      "expect": "Preserve completed plan; do not invent formal business, property, tow truck, Resources"
+    },
+    {
+      "id": "P04",
+      "input": "Family has established loving routine",
+      "expect": "Do not repeat spotlight unless a new relationship dilemma or change appears"
+    },
+    {
+      "id": "P05",
+      "input": "Time jump would erase a major player decision",
+      "expect": "Offer interruption before irreversible skip"
+    },
+    {
+      "id": "P06",
+      "input": "NPC offscreen clock without factual trigger",
+      "expect": "Do not progress clock by turn count"
+    },
+    {
+      "id": "P07",
+      "input": "A1 planned but C01-C09 played",
+      "expect": "No XP grant from nine scenes; distinct act resolutions require documented evidence"
+    },
+    {
+      "id": "P08",
+      "input": "GM knows secret an NPC does not",
+      "expect": "NPC must not reveal secret automatically"
+    },
+    {
+      "id": "P09",
+      "input": "Old M2.04 dossier against LIVE_v022",
+      "expect": "STALE_PLAN_REVIEW; prohibit C10 until separate authorized replan"
+    },
+    {
+      "id": "P10",
+      "input": "First supernatural clue was NPC testimony and anomaly",
+      "expect": "Preserve epistemic ambiguity; plan longitudinal follow-up not compulsory vampire-per-scene"
+    },
+    {
+      "id": "P11",
+      "input": "Player requested creation to 2010",
+      "expect": "Reserve real post-Embrace play and longitudinal elipses"
+    },
+    {
+      "id": "P12",
+      "input": "D2 no roll but directed full session",
+      "expect": "Record CHR001_CURATED_SESSION; do not claim D2 RNG"
+    },
+    {
+      "id": "P13",
+      "input": "Unprotected ordinary chat update",
+      "expect": "No narrative LIVE/event delta during administrative publication"
+    },
+    {
+      "id": "P14",
+      "input": "G28 scene cadence",
+      "expect": "One batch per closed scene; never per turn or act"
+    },
+    {
+      "id": "P15",
+      "input": "Vampire powers before Embrace",
+      "expect": "Never grant discipline, Blood Potency/Hunger from target profile"
+    },
+    {
+      "id": "P16",
+      "input": "M1 closed at historic gate",
+      "expect": "Do not reopen M1 based on macroplanning"
+    },
+    {
+      "id": "P17",
+      "input": "40 or 50 credits requested speculatively",
+      "expect": "Review evidence, no automatic grant or budget cap extension"
+    },
+    {
+      "id": "P18",
+      "input": "Future narrator reads new active manifesto",
+      "expect": "Load new contracts and global chapters, do not read a superseded checkpoint as present"
+    },
+    {
+      "id": "P19",
+      "input": "Canonical/frozen material conflict",
+      "expect": "Record CONFLICT; local contract cannot silently override"
+    },
+    {
+      "id": "P20",
+      "input": "Player opted to postpone M2.04 review",
+      "expect": "Publish reforms and audits only; keep original dossier unchanged and C10 not started"
+    }
+  ],
+  "expected_count": 20,
+  "no_story_event": true,
+  "no_resources_changed": true,
+  "baseline": {
+    "live": "novydres/chronicles/CHR-001/LIVE_v022.json",
+    "manifest": "novydres/MANIFEST_V28.json",
+    "last_event_id": "CHR001-M204-C09-23-20261105-001",
+    "stage": "M2.04.C09_CLOSED_C10_NOT_STARTED",
+    "mortal": true,
+    "cap": 675,
+    "spent": 170,
+    "credit_available": 50,
+    "willpower_available": 1
+  },
+  "implementation_claims": {
+    "static_contracts_published": true,
+    "schema_validation_planned": true,
+    "semantic_live_review_not_performed": true,
+    "live_end_to_end_test_not_performed": true,
+    "prospective_m204_replan_not_performed": true
+  }
+}

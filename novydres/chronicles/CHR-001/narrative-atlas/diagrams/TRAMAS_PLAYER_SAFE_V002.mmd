@@ -1,0 +1,34 @@
+flowchart LR
+  %% Diagrama V002: somente vínculos ARC -> EVENT presentes no snapshot; sem ligações conspiratórias inferidas.
+  %% Linhas contínuas = cartões jogados; pontilhadas = localizadores históricos não auditados como ledger.
+  ARC_familia["Família e identidade"]
+  EV_HIST_IDX_EV_001["M1.01 (registro jogado)"]
+  ARC_familia -->|evidência| EV_HIST_IDX_EV_001
+  EV_HIST_IDX_EV_013["M1.07 (registro jogado)"]
+  ARC_familia -->|evidência| EV_HIST_IDX_EV_013
+  ARC_aquecimento["Aquecimento e rubrica"]
+  EV_HIST_IDX_EV_007["M1.04 (registro jogado)"]
+  ARC_aquecimento -->|evidência| EV_HIST_IDX_EV_007
+  EV_CHR001_M201_ZERO_20261101_001["M2.01 (localizador)"]
+  ARC_aquecimento -.->|evidência| EV_CHR001_M201_ZERO_20261101_001
+  ARC_volnaya["Volnaya, papéis e Yelena"]
+  EV_CHR001_M301_C04_04_20261108_001["M3.01.C04.04 (registro jogado)"]
+  ARC_volnaya -->|evidência| EV_CHR001_M301_C04_04_20261108_001
+  EV_CHR001_M203_ESCAPE_124_20261103_001["M2.03.124 (registro jogado)"]
+  ARC_volnaya -->|evidência| EV_CHR001_M203_ESCAPE_124_20261103_001
+  ARC_lev_nikolai["Coerção, queixa e consequências"]
+  EV_HIST_IDX_EV_009["M1.05 (registro jogado)"]
+  ARC_lev_nikolai -->|evidência| EV_HIST_IDX_EV_009
+  EV_HIST_IDX_EV_025["M1.09 (registro jogado)"]
+  ARC_lev_nikolai -->|evidência| EV_HIST_IDX_EV_025
+  ARC_escola["Escola e escolhas de Mikahel"]
+  EV_HIST_IDX_EV_005["M1.03 (registro jogado)"]
+  ARC_escola -->|evidência| EV_HIST_IDX_EV_005
+  EV_HIST_IDX_EV_011["M1.06 (registro jogado)"]
+  ARC_escola -->|evidência| EV_HIST_IDX_EV_011
+  ARC_oficina["Oficina, escopo e ética"]
+  EV_CHR001_M204_DOWNTIME_OFICINA_OPEN_20261106_001["M2.04.DOWNTIME (registro jogado)"]
+  ARC_oficina -->|evidência| EV_CHR001_M204_DOWNTIME_OFICINA_OPEN_20261106_001
+  ARC_anomalia["Anomalias, contato e palavra"]
+  EV_CHR001_M203_INITIAL_20261101_001["M2.03.START (registro jogado)"]
+  ARC_anomalia -->|evidência| EV_CHR001_M203_INITIAL_20261101_001

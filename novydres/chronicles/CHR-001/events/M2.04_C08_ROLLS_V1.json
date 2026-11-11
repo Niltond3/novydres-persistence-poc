@@ -1,0 +1,474 @@
+{
+  "schema": "CHR001_M204_C08_CHAT_ROLLS_V1",
+  "source_episode": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+  "scene_last_event_id": "CHR001-M204-C08-27-20261104-001",
+  "random_provenance": "CHAT_PRESENTATION_UNVERIFIED_RNG",
+  "note": "Mensagens anteriores atribuem aleatoriedade ao Python secrets, mas esta sessao de persistencia nao possui logs de execucao das rolagens. Transcricao fiel de faces aceitas; nao alegar RNG verificado.",
+  "take_half": "Apenas WATCH_HALF e STOCK_HALF sem RNG",
+  "extended": {
+    "office": [
+      4,
+      3,
+      3,
+      4
+    ],
+    "office_total": 14,
+    "office_target": 12,
+    "cabinet": [
+      5,
+      6,
+      3
+    ],
+    "cabinet_total": 14,
+    "cabinet_target": 12
+  },
+  "wp": {
+    "start": 4,
+    "spent_surveillance": 1,
+    "spent_wall": 1,
+    "spent_office_sneak": 1,
+    "end": 1,
+    "max": 6,
+    "superficial_end": 5
+  },
+  "rolls": [
+    {
+      "key": "WATCH_HALF",
+      "pool": 7,
+      "difficulty": 3,
+      "faces": null,
+      "successes": 3,
+      "wp_spent": 0
+    },
+    {
+      "key": "GUARD_SURVEY",
+      "pool": 7,
+      "difficulty": null,
+      "faces": [
+        7,
+        2,
+        4,
+        1,
+        6,
+        8,
+        8
+      ],
+      "successes": 6,
+      "wp_spent": 1,
+      "npc": [
+        6,
+        6,
+        9,
+        3
+      ],
+      "reroll_positions": [
+        2,
+        3,
+        4
+      ],
+      "reroll_new": [
+        8,
+        10,
+        1
+      ],
+      "final": [
+        7,
+        8,
+        10,
+        1,
+        6,
+        8,
+        8
+      ],
+      "npc_successes": 3
+    },
+    {
+      "key": "WALL_ENTRY",
+      "pool": 7,
+      "difficulty": null,
+      "faces": [
+        5,
+        8,
+        9,
+        1,
+        3,
+        5,
+        6
+      ],
+      "successes": 4,
+      "wp_spent": 1,
+      "npc": [
+        7,
+        5,
+        8,
+        10
+      ],
+      "reroll_positions": [
+        1,
+        4,
+        5
+      ],
+      "reroll_new": [
+        3,
+        10,
+        3
+      ],
+      "final": [
+        3,
+        8,
+        9,
+        10,
+        3,
+        5,
+        6
+      ],
+      "npc_successes": 3
+    },
+    {
+      "key": "SIDE_DOOR",
+      "pool": 8,
+      "difficulty": 4,
+      "faces": [
+        5,
+        10,
+        10,
+        2,
+        9,
+        10,
+        7,
+        8
+      ],
+      "successes": 8,
+      "wp_spent": 0,
+      "normal_critical": true
+    },
+    {
+      "key": "STOCK_HALF",
+      "pool": 6,
+      "difficulty": 3,
+      "faces": null,
+      "successes": 3,
+      "wp_spent": 0
+    },
+    {
+      "key": "STOCK_EXAM",
+      "pool": 6,
+      "difficulty": 4,
+      "faces": [
+        4,
+        8,
+        4,
+        9,
+        6,
+        8
+      ],
+      "successes": 4,
+      "wp_spent": 0
+    },
+    {
+      "key": "CRATE_OPEN",
+      "pool": 7,
+      "difficulty": 4,
+      "faces": [
+        9,
+        3,
+        6,
+        2,
+        9,
+        1,
+        8
+      ],
+      "successes": 4,
+      "wp_spent": 0
+    },
+    {
+      "key": "FALSE_BOTTOM_FAIL",
+      "pool": 6,
+      "difficulty": 4,
+      "faces": [
+        7,
+        6,
+        1,
+        4,
+        8,
+        1
+      ],
+      "successes": 3,
+      "wp_spent": 0
+    },
+    {
+      "key": "FALSE_BOTTOM_REPEAT",
+      "pool": 7,
+      "difficulty": 4,
+      "faces": [
+        1,
+        10,
+        2,
+        8,
+        8,
+        8,
+        5
+      ],
+      "successes": 4,
+      "wp_spent": 0
+    },
+    {
+      "key": "OFFICE_SNEAK",
+      "pool": 7,
+      "difficulty": null,
+      "faces": [
+        9,
+        4,
+        2,
+        6,
+        4,
+        6,
+        10
+      ],
+      "successes": 6,
+      "wp_spent": 1,
+      "npc": [
+        7,
+        8,
+        10,
+        9
+      ],
+      "reroll_positions": [
+        2,
+        3,
+        5
+      ],
+      "reroll_new": [
+        9,
+        9,
+        1
+      ],
+      "final": [
+        9,
+        9,
+        9,
+        6,
+        1,
+        6,
+        10
+      ],
+      "npc_successes": 4
+    },
+    {
+      "key": "GRAPPLE_SURPRISE",
+      "pool": 14,
+      "difficulty": null,
+      "faces": [
+        8,
+        10,
+        2,
+        10,
+        8,
+        1,
+        8,
+        1,
+        4,
+        3,
+        5,
+        2,
+        3,
+        2
+      ],
+      "successes": 7,
+      "wp_spent": 0,
+      "npc": [
+        5,
+        6,
+        10
+      ],
+      "npc_successes": 2,
+      "normal_critical": true
+    },
+    {
+      "key": "GRAPPLE_HOLD",
+      "pool": 13,
+      "difficulty": null,
+      "faces": [
+        5,
+        1,
+        5,
+        8,
+        5,
+        10,
+        5,
+        3,
+        10,
+        8,
+        1,
+        4,
+        1
+      ],
+      "successes": 6,
+      "wp_spent": 0,
+      "npc": [
+        6,
+        5,
+        3
+      ],
+      "npc_successes": 1,
+      "normal_critical": true
+    },
+    {
+      "key": "OFFICE_INTERVAL1",
+      "pool": 6,
+      "difficulty": 12,
+      "faces": [
+        5,
+        6,
+        9,
+        7,
+        6,
+        5
+      ],
+      "successes": 4,
+      "wp_spent": 0
+    },
+    {
+      "key": "OFFICE_INTERVAL2",
+      "pool": 6,
+      "difficulty": 12,
+      "faces": [
+        7,
+        2,
+        5,
+        1,
+        6,
+        6
+      ],
+      "successes": 3,
+      "wp_spent": 0
+    },
+    {
+      "key": "OFFICE_INTERVAL3",
+      "pool": 6,
+      "difficulty": 12,
+      "faces": [
+        7,
+        1,
+        1,
+        7,
+        9,
+        1
+      ],
+      "successes": 3,
+      "wp_spent": 0
+    },
+    {
+      "key": "OFFICE_INTERVAL4",
+      "pool": 6,
+      "difficulty": 12,
+      "faces": [
+        2,
+        6,
+        8,
+        10,
+        5,
+        9
+      ],
+      "successes": 4,
+      "wp_spent": 0,
+      "extended_total": 14
+    },
+    {
+      "key": "FIRST_AID",
+      "pool": 7,
+      "difficulty": 4,
+      "faces": [
+        9,
+        8,
+        3,
+        8,
+        4,
+        2,
+        9
+      ],
+      "successes": 4,
+      "wp_spent": 0
+    },
+    {
+      "key": "CABINET_INTERVAL1",
+      "pool": 8,
+      "difficulty": 12,
+      "faces": [
+        10,
+        3,
+        9,
+        8,
+        4,
+        9,
+        3,
+        7
+      ],
+      "successes": 5,
+      "wp_spent": 0,
+      "prepared_bonus": 2
+    },
+    {
+      "key": "CABINET_INTERVAL2",
+      "pool": 8,
+      "difficulty": 12,
+      "faces": [
+        9,
+        8,
+        7,
+        3,
+        3,
+        9,
+        9,
+        7
+      ],
+      "successes": 6,
+      "wp_spent": 0,
+      "prepared_bonus": 2
+    },
+    {
+      "key": "CABINET_INTERVAL3",
+      "pool": 8,
+      "difficulty": 12,
+      "faces": [
+        2,
+        1,
+        6,
+        1,
+        5,
+        6,
+        10,
+        4
+      ],
+      "successes": 3,
+      "wp_spent": 0,
+      "prepared_bonus": 2,
+      "extended_total": 14
+    },
+    {
+      "key": "YARD_ESCAPE",
+      "pool": 7,
+      "difficulty": null,
+      "faces": [
+        8,
+        10,
+        7,
+        4,
+        10,
+        1,
+        7
+      ],
+      "successes": 7,
+      "wp_spent": 0,
+      "npc": [
+        1,
+        1,
+        8,
+        4
+      ],
+      "npc_successes": 1,
+      "normal_critical": true,
+      "margin": 6
+    }
+  ]
+}

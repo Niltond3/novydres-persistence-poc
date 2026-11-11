@@ -1,0 +1,145 @@
+{
+  "schema": "novydres-history-index-v1",
+  "status": "POC_ONLY",
+  "simulation_only": true,
+  "chronicle_id": "CHR-SIM-002",
+  "revision": 1,
+  "description": "Indice de acesso, não fonte primária da verdade. Conciliação com eventos originais quando necessário.",
+  "active_scene": "SC-M001-03",
+  "entrypoints": {
+    "live": "poc/memory-v1/LIVE.json",
+    "scene_context": "poc/memory-v1/SCENE_CONTEXT.md",
+    "event_archive": "poc/memory-v1/episodes/M0.01/events-001-004.json"
+  },
+  "entities": {
+    "pc-iris": {
+      "kind": "PLAYER_CHARACTER",
+      "aliases": [
+        "Íris"
+      ],
+      "tags": [
+        "bomba",
+        "assinatura",
+        "inspeção"
+      ],
+      "history_refs": [
+        "SIM-M001-E001",
+        "SIM-M001-E003"
+      ],
+      "memory_ref": null,
+      "arc_ids": [
+        "arc-pump"
+      ]
+    },
+    "npc-ivo": {
+      "kind": "NPC",
+      "aliases": [
+        "Ivo"
+      ],
+      "tags": [
+        "manutenção",
+        "alarme",
+        "bomba",
+        "confiança"
+      ],
+      "memory_ref": "poc/memory-v1/entities/npc-ivo.json",
+      "history_refs": [
+        "SIM-M001-E001",
+        "SIM-M001-E003",
+        "SIM-M001-E004"
+      ],
+      "arc_ids": [
+        "arc-pump"
+      ],
+      "scene_priority": "high"
+    },
+    "npc-vale": {
+      "kind": "NPC",
+      "aliases": [
+        "Vale"
+      ],
+      "tags": [
+        "relatório",
+        "segurança",
+        "declaração"
+      ],
+      "memory_ref": null,
+      "history_refs": [
+        "SIM-M001-E002"
+      ],
+      "arc_ids": [
+        "arc-pump"
+      ]
+    }
+  },
+  "arcs": {
+    "arc-pump": {
+      "tags": [
+        "bomba",
+        "relatório",
+        "segurança",
+        "pressão",
+        "assinatura"
+      ],
+      "memory_ref": "poc/memory-v1/arcs/arc-pump.json",
+      "event_refs": [
+        "SIM-M001-E001",
+        "SIM-M001-E002",
+        "SIM-M001-E003",
+        "SIM-M001-E004"
+      ],
+      "status": "OPEN"
+    }
+  },
+  "locations": {
+    "loc-workshop": {
+      "aliases": [
+        "galpão de manutenção",
+        "oficina"
+      ],
+      "entity_ids": [
+        "npc-ivo",
+        "pc-iris"
+      ],
+      "arc_ids": [
+        "arc-pump"
+      ]
+    }
+  },
+  "event_batches": [
+    {
+      "first_seq": 1,
+      "last_seq": 4,
+      "path": "poc/memory-v1/episodes/M0.01/events-001-004.json",
+      "immutability": "logical_archive",
+      "hash_status": "git_blob_integrity_only"
+    }
+  ],
+  "retrieval_policy": {
+    "primary_match": [
+      "explicit_entity_id",
+      "location_id",
+      "open_arc_id",
+      "recent_causal_event_ids"
+    ],
+    "secondary_match": [
+      "aliases",
+      "tags"
+    ],
+    "source_precedence": [
+      "approved_canon",
+      "valid_operational_decision",
+      "verified_event_record",
+      "entity_projection",
+      "scene_context"
+    ],
+    "require_evidence_for": [
+      "previous_exact_dialogue",
+      "npc_knowledge",
+      "high_stakes_outcome",
+      "conflicting_claim"
+    ],
+    "unknown_behavior": "DO_NOT_INFER"
+  },
+  "notice": "Todos os valores são simulados. Não são eventos reais, não migram o CHRONICLE_STORE_V0_2 e não alteram a autoridade do Drive."
+}

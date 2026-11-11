@@ -1,0 +1,1336 @@
+# NOVYDRES — PROJECT BOOTSTRAP
+
+Você está iniciando a nova estrutura operacional do projeto **NOVYDRES** no ChatGPT Work.
+
+## Ambiente e destino obrigatórios
+
+O bootstrap deve ser executado na máquina/ambiente de arquivos do **aplicativo Web do ChatGPT**, com esta pasta como raiz absoluta do projeto:
+
+`/home/nilton_neto/Documentos/Backup/Notas/Personal Stuffs/RPG stuffs/NOVYDRES`
+
+Não crie a estrutura em outro caminho, em uma pasta temporária/sandbox, na Library ou no ambiente do ChatGPT Desktop. Antes de gravar, confirme que o ambiente atual consegue acessar o diretório pai e que pode criar ou ler arquivos no destino. Se esse caminho não estiver acessível neste ambiente, pare e informe isso; não use um caminho alternativo nem declare o bootstrap concluído.
+
+Se a pasta já existir, inspecione seu conteúdo e leia os `.AGENT.md` e `.CONTEXTG.md` aplicáveis antes de agir. Preserve todos os arquivos existentes; não sobrescreva, mova ou apague conteúdo sem autorização explícita. A árvore abaixo é relativa à raiz absoluta indicada: não crie uma segunda pasta `NOVYDRES` dentro dela.
+
+## Fonte de migração
+
+Use o handoff anexado cujo título interno é **NOVYDRES — MASTER HANDOFF V1** (o nome do anexo pode incluir sufixos como `(1)`). Ele possui aproximadamente **2.008 linhas** e consolida o desenvolvimento anterior de Novydres em múltiplas frentes.
+
+Ele é a fonte primária para esta migração.
+
+Sua primeira tarefa NÃO é continuar desenvolvendo Novydres.
+
+Sua primeira tarefa é:
+
+> **transformar o MASTER HANDOFF V1 em uma estrutura de projeto modular, persistente, auditável e adequada para desenvolvimento contínuo por múltiplas frentes, sem perder nenhuma informação relevante.**
+
+---
+
+# 1. PRINCÍPIO CENTRAL
+
+O `MASTER HANDOFF V1` deve permanecer **íntegro e imutável**.
+
+Não:
+- reescreva o original;
+- compacte o original;
+- "melhore" o original;
+- harmonize conflitos;
+- resolva decisões abertas;
+- elimine informações aparentemente redundantes;
+- desenvolva conteúdo novo;
+- faça retcons;
+- altere números;
+- modifique artefatos visuais;
+- abra o GIMP para editar o mapa nesta etapa.
+
+O handoff é o **snapshot histórico da migração**.
+
+A nova estrutura será derivada dele.
+
+---
+
+# 2. OBJETIVO DA NOVA ARQUITETURA
+
+Novydres não deve mais depender de um único documento gigantesco.
+
+O projeto possui várias frentes de desenvolvimento independentes, mas interligadas.
+
+Cada frente deve possuir:
+
+- responsabilidade claramente delimitada;
+- documentação própria;
+- estado atual próprio;
+- decisões próprias;
+- pendências próprias;
+- dependências explícitas;
+- contexto mínimo necessário;
+- regras específicas para o agente;
+- referências claras às fontes originais.
+
+Nenhum agente trabalhando em um capítulo deve precisar carregar 2.008 linhas de handoff apenas para executar uma tarefa local.
+
+Ao mesmo tempo:
+
+> **fragmentação nunca pode significar perda de informação.**
+
+---
+
+# 3. MODELO DE AUTORIDADE
+
+Adote esta hierarquia:
+
+1. decisões explicitamente marcadas como CANÔNICAS / FECHADAS / CONGELADAS;
+2. arquivos canônicos da nova estrutura;
+3. registros de decisão;
+4. estado atual do capítulo;
+5. MASTER HANDOFF V1;
+6. materiais históricos anteriores;
+7. hipóteses, experimentos e propostas.
+
+Essa hierarquia só vale quando não contradizer uma indicação explícita do próprio Handoff.
+
+Se houver conflito de autoridade:
+
+**não escolha silenciosamente.**
+
+Registre o conflito.
+
+---
+
+# 4. ESTRUTURA RAIZ
+
+Use como pasta raiz, sem criar uma segunda pasta interna com o mesmo nome:
+
+```text
+/home/nilton_neto/Documentos/Backup/Notas/Personal Stuffs/RPG stuffs/NOVYDRES/
+```
+
+Estruture inicialmente desta forma (a árvore é relativa à pasta raiz acima):
+
+```text
+NOVYDRES/
+│
+├── .AGENT.md
+├── .CONTEXTG.md
+├── README.md
+├── PROJECT_STATE.md
+├── CHANGELOG.md
+│
+├── 00_SOURCE/
+│   ├── NOVYDRES_MASTER_HANDOFF_V1.md
+│   ├── HANDOFF_MANIFEST.md
+│   └── MIGRATION_COVERAGE.md
+│
+├── 01_GOVERNANCE/
+│   ├── .AGENT.md
+│   ├── .CONTEXTG.md
+│   ├── SOURCE_OF_TRUTH.md
+│   ├── STATUS_MODEL.md
+│   ├── DECISIONS.md
+│   ├── CONFLICTS.md
+│   ├── GLOSSARY.md
+│   └── PROJECT_RULES.md
+│
+├── 10_CHAPTERS/
+│   ├── 01_WORLD_CANON/
+│   ├── 02_POLITICS_DOMAIN_FACTIONS/
+│   ├── 03_SYSTEM_MECHANICS/
+│   ├── 04_CHARACTER_CREATION_A_K/
+│   ├── 05_NPCS_POWER_SCALE/
+│   ├── 06_CAMPAIGN_ARCHITECTURE/
+│   ├── 07_PROVOCATIONS_MARCOS/
+│   ├── 08_CARTOGRAPHY_GEOGRAPHY/
+│   ├── 09_MOBILITY_INFRASTRUCTURE/
+│   ├── 10_MASTER_MAP/
+│   ├── 11_POI_REGISTRY/
+│   ├── 12_VISUAL_LANGUAGE/
+│   ├── 13_PRODUCTION_PIPELINE/
+│   └── 14_PLAYTEST_QA/
+│
+├── 20_ASSETS/
+│   ├── references/
+│   ├── maps/
+│   ├── pois/
+│   ├── generated/
+│   └── approved/
+│
+├── 30_GIMP/
+│   ├── working/
+│   ├── exports/
+│   ├── scripts/
+│   └── pipeline/
+│
+├── 40_OUTPUTS/
+│   ├── maps/
+│   ├── tiles/
+│   ├── documents/
+│   └── releases/
+│
+├── 90_ARCHIVE/
+│
+└── 99_INBOX/
+```
+
+Não crie diretórios adicionais sem necessidade concreta.
+
+Se o Handoff revelar uma frente de desenvolvimento que não cabe corretamente nesses capítulos:
+
+**não force seu conteúdo no capítulo errado.**
+
+Crie um novo capítulo somente quando houver justificativa clara e registre a criação em `01_GOVERNANCE/DECISIONS.md`.
+
+---
+
+# 5. PADRÃO INTERNO DE CADA CAPÍTULO
+
+Todo diretório dentro de `10_CHAPTERS/` deve possuir inicialmente:
+
+```text
+<CHAPTER>/
+│
+├── .AGENT.md
+├── .CONTEXTG.md
+├── README.md
+├── CANON.md
+├── STATE.md
+├── DECISIONS.md
+├── OPEN.md
+└── SOURCES.md
+```
+
+Arquivos adicionais só devem existir quando o domínio realmente exigir.
+
+Exemplo:
+
+```text
+11_POI_REGISTRY/
+├── .AGENT.md
+├── .CONTEXTG.md
+├── README.md
+├── CANON.md
+├── STATE.md
+├── DECISIONS.md
+├── OPEN.md
+├── SOURCES.md
+├── POI_INDEX.md
+├── APPROVED.md
+├── FROZEN.md
+├── REVIEW.md
+└── DISCARDED.md
+```
+
+Não transforme todos os capítulos em estruturas enormes apenas por simetria.
+
+---
+
+# 6. RESPONSABILIDADE DOS ARQUIVOS
+
+## `.AGENT.md`
+
+Define **como um agente deve trabalhar naquele escopo**.
+
+Não deve funcionar como enciclopédia.
+
+Deve conter apenas:
+
+```text
+# Mission
+# Scope
+# Authority
+# Required Reading
+# Invariants
+# Allowed Changes
+# Forbidden Changes
+# Dependencies
+# Update Contract
+# Definition of Done
+```
+
+O `.AGENT.md` deve responder:
+
+> "Quais regras eu preciso obedecer para trabalhar neste capítulo sem quebrar Novydres?"
+
+Não copie o conteúdo inteiro do `CANON.md`.
+
+---
+
+## `.CONTEXTG.md`
+
+É o **context gateway** daquele escopo.
+
+Sua função é permitir que um novo agente compreenda rapidamente onde está entrando.
+
+Estrutura preferida:
+
+```text
+# Purpose
+# Current State
+# Canonical Anchors
+# Hard Constraints
+# Dependencies
+# Active Work
+# Open Issues
+# Restart Point
+# Last Updated
+```
+
+Ele deve ser **curto e operacional**.
+
+Não é:
+- arquivo de lore;
+- histórico completo;
+- dump do Handoff;
+- changelog;
+- substituto de CANON.md.
+
+Meta:
+
+- normalmente 40–100 linhas;
+- evitar passar de aproximadamente 150 linhas;
+- remover prosa ornamental;
+- preferir referências aos arquivos corretos.
+
+O agente deve conseguir ler `.CONTEXTG.md` e saber **onde procurar**, não necessariamente aprender todo o capítulo ali.
+
+---
+
+## `CANON.md`
+
+Contém apenas material efetivamente vigente.
+
+Não misturar:
+- proposta;
+- brainstorming;
+- hipótese;
+- pendência;
+- conteúdo rejeitado.
+
+---
+
+## `STATE.md`
+
+Snapshot operacional atual.
+
+Deve registrar:
+- estágio atual;
+- último trabalho concluído;
+- trabalho ativo;
+- bloqueios;
+- dependências;
+- próximo passo conhecido.
+
+Não guardar história longa.
+
+---
+
+## `DECISIONS.md`
+
+Registro local das decisões relevantes do capítulo.
+
+Use registros identificáveis, por exemplo:
+
+```text
+DEC-POI-001
+Status:
+Data:
+Escopo:
+Decisão:
+Motivo:
+Substitui:
+Impacta:
+Fonte:
+```
+
+Não invente datas quando elas não estiverem disponíveis.
+
+---
+
+## `OPEN.md`
+
+Somente assuntos realmente não fechados.
+
+Cada item deve indicar quando possível:
+
+```text
+ID
+Questão
+Estado
+Dependências
+Impacto
+Fonte
+```
+
+Não tente resolver as questões durante o bootstrap.
+
+---
+
+## `SOURCES.md`
+
+Mapa de rastreabilidade.
+
+Deve indicar de quais partes do:
+
+`NOVYDRES_MASTER_HANDOFF_V1.md`
+
+o capítulo foi derivado.
+
+Também pode registrar imagens, mapas, prompts ou artefatos citados no Handoff.
+
+---
+
+# 7. RESPONSABILIDADE DOS CAPÍTULOS
+
+## 01_WORLD_CANON
+
+Responsável por:
+- premissa global;
+- história;
+- cronologia;
+- geopolítica histórica;
+- cultura;
+- sociedade;
+- bairros quando tratados conceitualmente;
+- fatos estruturais do cenário.
+
+Não assumir responsabilidade sobre mecânicas ou desenho gráfico do mapa.
+
+---
+
+## 02_POLITICS_DOMAIN_FACTIONS
+
+Responsável por:
+- domínio vampírico;
+- Camarilla;
+- relação jurídica/política;
+- Concílio;
+- poder institucional;
+- Dominique Mishkin;
+- Vladmir;
+- Ordens;
+- facções;
+- organizações;
+- estruturas religiosas/políticas relevantes;
+- relações de poder.
+
+---
+
+## 03_SYSTEM_MECHANICS
+
+Responsável por:
+- regras V5 utilizadas;
+- homebrew;
+- Power Envelope;
+- geração;
+- gateways;
+- XP;
+- Geração;
+- Beckoning;
+- Marcos mecânicos;
+- Touchstones especiais;
+- Loresheets;
+- regras gerais aplicáveis aos personagens.
+
+Não duplicar internamente o detalhamento procedural de criação A–K quando este pertencer ao capítulo 04.
+
+---
+
+## 04_CHARACTER_CREATION_A_K
+
+Responsável pelo sistema completo de criação de personagens:
+
+- módulos A–K;
+- modo Rápido;
+- modo Guiado;
+- arrays;
+- budgets;
+- procedimentos;
+- paridade PC/NPC;
+- D1/D2/E/F;
+- Coterie;
+- integração;
+- regras já fechadas;
+- dependências entre etapas.
+
+Valores numéricos devem ser preservados exatamente.
+
+---
+
+## 05_NPCS_POWER_SCALE
+
+Responsável por:
+- NPCs;
+- critérios de construção;
+- power scale;
+- relação PC/NPC;
+- perfis de teste;
+- regras para NPCs;
+- posicionamento relativo de poder.
+
+Não inventar fichas ausentes.
+
+---
+
+## 06_CAMPAIGN_ARCHITECTURE
+
+Responsável por:
+- campanha principal;
+- mini-campanhas;
+- arquitetura narrativa;
+- integração entre experiência e campanha;
+- estrutura episódica que não pertença especificamente ao sistema de Provocações.
+
+---
+
+## 07_PROVOCATIONS_MARCOS
+
+Responsável pelo Workstream L e sistemas relacionados:
+
+- Provocação;
+- Experiência;
+- Episódio;
+- Marco;
+- tabelas;
+- sorteios;
+- progressão;
+- playtests específicos;
+- M1, M2 e demais Marcos existentes;
+- Predator Type quando integrado;
+- decisões e aprendizados derivados dos testes.
+
+---
+
+## 08_CARTOGRAPHY_GEOGRAPHY
+
+Responsável por:
+- geografia;
+- distritos;
+- posição relativa;
+- água;
+- ermo;
+- tundra;
+- gelo;
+- relevo;
+- vegetação;
+- pântanos;
+- terrenos;
+- distribuição territorial.
+
+Separar rigorosamente:
+
+**geografia lógica**
+
+de
+
+**aparência gráfica**.
+
+A aparência pertence prioritariamente ao capítulo 12.
+
+---
+
+## 09_MOBILITY_INFRASTRUCTURE
+
+Responsável por:
+- malha viária;
+- autoestradas;
+- ruas;
+- ferrovia;
+- metrô;
+- estações;
+- portos;
+- aeroporto;
+- continuidade das redes;
+- regras de interseção;
+- hierarquia de mobilidade.
+
+---
+
+## 10_MASTER_MAP
+
+Responsável pelo artefato espacial principal.
+
+Deve preservar explicitamente a regra:
+
+> O Master Map é a fonte espacial principal; tiles e produtos derivados devem nascer dele.
+
+Responsável por:
+- versões;
+- estado atual;
+- integração das camadas;
+- problemas;
+- prioridades;
+- implantação dos elementos;
+- relação com POIs;
+- relação com transporte;
+- relação com geografia;
+- rastreabilidade das alterações.
+
+Não deve absorver o cânone completo dos capítulos que alimentam o mapa.
+
+Deve referenciá-los.
+
+---
+
+## 11_POI_REGISTRY
+
+Responsável pelo registro de TODOS os POIs.
+
+Nenhum POI conhecido pode desaparecer.
+
+Preservar:
+- número;
+- nome;
+- estado;
+- função;
+- distrito;
+- representação;
+- arquitetura;
+- perspectiva;
+- obrigatórios;
+- proibidos;
+- correções;
+- anti-patterns;
+- aprovação;
+- congelamento;
+- descarte.
+
+POIs rejeitados/descartados continuam registrados.
+
+---
+
+## 12_VISUAL_LANGUAGE
+
+Responsável por:
+- linguagem visual;
+- gravura/carimbo;
+- oxblood;
+- contraste;
+- transparência;
+- textura;
+- categorias de representação;
+- monumental;
+- territorial;
+- linear;
+- distribuído;
+- infraestrutura;
+- arquitetura;
+- anti-patterns;
+- termos problemáticos em prompts;
+- legibilidade.
+
+Não guardar o estado individual de cada POI além das regras gerais reutilizáveis.
+
+---
+
+## 13_PRODUCTION_PIPELINE
+
+Responsável pelo processo técnico:
+
+- ChatGPT Work;
+- Desktop;
+- geração de imagens;
+- arquivos;
+- GIMP;
+- XCF;
+- PNG;
+- composição;
+- pós-processamento;
+- exportação;
+- tiles;
+- versionamento;
+- eventual MCP;
+- eventual CLI;
+- automações futuras.
+
+Distinguir sempre:
+
+**IMPLEMENTADO**
+
+de
+
+**PLANEJADO**.
+
+Não declarar MCP/GIMP automatizado como existente se ainda estiver apenas planejado.
+
+---
+
+## 14_PLAYTEST_QA
+
+Responsável por:
+- procedimentos de validação;
+- testes;
+- perfis de teste;
+- QA;
+- regressões;
+- verificações cruzadas;
+- critérios para declarar uma frente fechada;
+- auditoria de consistência entre módulos.
+
+---
+
+# 8. GOVERNANÇA GLOBAL
+
+`01_GOVERNANCE/` guarda somente aquilo que atravessa múltiplos capítulos.
+
+## `SOURCE_OF_TRUTH.md`
+
+Definir:
+- hierarquia de autoridade;
+- arquivos canônicos;
+- tratamento de conflitos;
+- tratamento de material legado.
+
+---
+
+## `STATUS_MODEL.md`
+
+Preservar as categorias:
+
+- CANÔNICO / FECHADO
+- APROVADO / CONGELADO
+- APROVADO COM CONDIÇÕES
+- EM DESENVOLVIMENTO
+- PROVISÓRIO
+- PENDENTE DE DECISÃO
+- REJEITADO / DESCARTADO
+- SUPERADO
+
+Definir brevemente o significado operacional de cada uma.
+
+---
+
+## `CONFLICTS.md`
+
+Registrar conflitos ainda existentes.
+
+Especial atenção aos conflitos já identificados entre:
+- Atlas;
+- Master Map;
+- camada visual;
+- quaisquer outras versões concorrentes.
+
+Não harmonizar silenciosamente.
+
+Formato recomendado:
+
+```text
+CONFLICT-XXX
+
+Assunto:
+Fonte A:
+Fonte B:
+Natureza:
+Impacto:
+Capítulos afetados:
+Estado:
+Decisão necessária:
+```
+
+---
+
+## `DECISIONS.md`
+
+Somente decisões verdadeiramente globais.
+
+Decisões locais ficam nos capítulos.
+
+---
+
+## `GLOSSARY.md`
+
+Somente termos cujo significado próprio seja necessário para impedir interpretação errada.
+
+Não transformar em enciclopédia.
+
+---
+
+# 9. CONTEXTO GLOBAL
+
+Crie:
+
+`NOVYDRES/.CONTEXTG.md`
+
+Ele deve ser deliberadamente curto.
+
+Deve informar somente:
+
+- o que é Novydres;
+- situação geral atual;
+- fonte da verdade;
+- taxonomia de estados;
+- capítulos existentes;
+- frentes atualmente ativas;
+- dependências globais críticas;
+- regra de congelamento;
+- regra de anti-regressão;
+- ponto global de retomada;
+- onde buscar detalhes.
+
+Não replique o Handoff.
+
+Não replique capítulos.
+
+Objetivo:
+
+> um agente deve entender a arquitetura inteira do projeto em poucos minutos e depois carregar somente os capítulos necessários.
+
+---
+
+# 10. AGENTE GLOBAL
+
+Crie:
+
+`NOVYDRES/.AGENT.md`
+
+Esse arquivo governa qualquer trabalho executado na raiz.
+
+Inclua regras como:
+
+1. Ler `.CONTEXTG.md` antes de agir.
+2. Identificar quais capítulos serão afetados.
+3. Ler `.AGENT.md` e `.CONTEXTG.md` desses capítulos antes de modificá-los.
+4. Não alterar material congelado sem ordem explícita.
+5. Não transformar proposta em cânone.
+6. Não resolver conflito silenciosamente.
+7. Não duplicar cânone entre capítulos.
+8. Preferir referências relativas entre documentos.
+9. Atualizar `STATE.md` quando o estado operacional mudar.
+10. Atualizar `DECISIONS.md` quando houver decisão real.
+11. Atualizar `OPEN.md` quando uma pendência nascer ou fechar.
+12. Atualizar `PROJECT_STATE.md` quando a frente ativa mudar.
+13. Atualizar `CHANGELOG.md` apenas para mudanças significativas.
+14. Preservar rastreabilidade com o Handoff ou decisões subsequentes.
+15. Nunca modificar o Handoff original.
+
+---
+
+# 11. NÃO DUPLICAR CONHECIMENTO
+
+Adote a regra:
+
+> **uma informação possui um proprietário canônico. Outros capítulos apontam para ela.**
+
+Exemplo:
+
+A posição geográfica de Sulfok pertence à cartografia.
+
+O POI Aeroporto pode precisar dessa informação, mas `POI_REGISTRY` não deve manter uma segunda versão independente da posição de Sulfok.
+
+Use links relativos Markdown.
+
+---
+
+# 12. DEPENDÊNCIAS ENTRE CAPÍTULOS
+
+Toda dependência relevante deve ser explícita.
+
+Exemplo:
+
+```text
+10_MASTER_MAP
+depends_on:
+- 08_CARTOGRAPHY_GEOGRAPHY
+- 09_MOBILITY_INFRASTRUCTURE
+- 11_POI_REGISTRY
+- 12_VISUAL_LANGUAGE
+```
+
+Não esconda dependências em texto narrativo.
+
+---
+
+# 13. MIGRAÇÃO DO HANDOFF
+
+Faça a migração em passes.
+
+## PASSO A — Inventário
+
+Leia integralmente `NOVYDRES_MASTER_HANDOFF_V1.md`.
+
+Extraia:
+- todos os headings;
+- subheadings;
+- workstreams;
+- decisões;
+- números;
+- estados;
+- conflitos;
+- pendências;
+- artefatos;
+- referências.
+
+Não comece a desenvolver Novydres.
+
+---
+
+## PASSO B — Mapeamento
+
+Crie:
+
+`00_SOURCE/MIGRATION_COVERAGE.md`
+
+Cada bloco relevante do Handoff deve possuir destino.
+
+Formato:
+
+```text
+| Origem | Conteúdo | Destino principal | Destinos relacionados | Estado |
+```
+
+Estados permitidos:
+
+```text
+MIGRATED
+CROSS-REFERENCED
+CONFLICT-REGISTERED
+ARCHIVED
+UNMAPPED
+```
+
+Antes do bootstrap ser considerado concluído:
+
+**UNMAPPED deve ser zero.**
+
+---
+
+# 14. NÃO PERDER INFORMAÇÃO POR FRAGMENTAÇÃO
+
+Quando um bloco do Handoff envolver vários capítulos:
+
+não copie integralmente o mesmo texto para todos.
+
+Escolha:
+- proprietário principal;
+- referências cruzadas;
+- dependências.
+
+Se houver informação que não tenha proprietário claro, coloque temporariamente em:
+
+`99_INBOX/`
+
+e registre como `UNMAPPED`.
+
+O bootstrap NÃO termina enquanto houver itens não classificados em `99_INBOX/`.
+
+---
+
+# 15. PRESERVAÇÃO DOS CONFLITOS
+
+O Handoff registra conflitos deliberadamente não harmonizados.
+
+Preserve-os.
+
+Em particular, não tente reconciliar automaticamente diferenças entre:
+- Atlas;
+- representação territorial;
+- Master Map;
+- linguagem visual;
+- versões intermediárias;
+- regras históricas posteriormente modificadas.
+
+Quando houver evidência clara de que uma decisão substituiu outra:
+
+a versão antiga pode ser marcada como SUPERADA.
+
+Quando isso não estiver claro:
+
+registre o conflito.
+
+---
+
+# 16. ANTI-REGRESSÃO
+
+Todas as lições decorrentes de erros anteriores devem sobreviver à migração.
+
+Quando aplicável, preserve:
+
+```text
+REGRA
+MOTIVO
+ERRO QUE EVITA
+```
+
+Especialmente para:
+- prompts de geração;
+- POIs;
+- arquitetura;
+- tecido urbano;
+- cartografia;
+- ferrovia;
+- vias;
+- transparência;
+- linguagem visual.
+
+---
+
+# 17. ARTEFATOS
+
+Não presuma que um artefato citado está disponível.
+
+Classifique cada referência como:
+
+```text
+AVAILABLE
+REFERENCED_NOT_AVAILABLE
+SUPERSEDED
+ARCHIVED
+UNKNOWN
+```
+
+Crie referências aos artefatos nos capítulos correspondentes.
+
+Não invente arquivos.
+
+---
+
+# 18. ASSETS VISUAIS
+
+Nesta etapa:
+
+**não modificar imagens.**
+
+Somente:
+- organizar;
+- indexar;
+- classificar;
+- associar ao capítulo responsável.
+
+Nunca mova destrutivamente um arquivo original se uma cópia segura for necessária para o novo workspace.
+
+---
+# 19. GIMP
+
+Prepare `30_GIMP/`, mas NÃO execute pós-processamento ainda.
+
+O capítulo `13_PRODUCTION_PIPELINE` deve documentar:
+
+- o fluxo atual conhecido;
+- o fluxo pretendido;
+- o papel futuro do GIMP;
+- XCF como arquivo de trabalho visual;
+- PNG como exportação;
+- eventual MCP/CLI.
+
+Automação ainda não comprovada deve permanecer como:
+
+`PLANNED`
+
+e não:
+
+`IMPLEMENTED`.
+
+---
+
+# 20. VERSIONAMENTO
+
+Se o workspace já utilizar Git, respeite-o.
+
+Se Git estiver disponível e não houver repositório, você pode inicializar versionamento somente se isso não interferir no ambiente existente.
+
+Nunca destrua histórico.
+
+Não faça commits gigantes misturando migração e desenvolvimento criativo.
+
+Preferir etapas distinguíveis:
+
+```text
+bootstrap/source
+bootstrap/scaffold
+bootstrap/migration
+bootstrap/audit
+```
+
+Se Git não estiver disponível, prossiga normalmente com versionamento documental.
+
+---
+
+# 21. PROJECT_STATE.md
+
+Crie um painel textual muito curto.
+
+Estrutura:
+
+```text
+# Project State
+
+Handoff:
+Bootstrap:
+Active Chapter:
+Active Workstream:
+Current Master Map:
+Current POI State:
+Current Campaign State:
+Blocking Conflicts:
+Next Known Action:
+Last Updated:
+```
+
+Não transformar isso em relatório.
+
+---
+
+# 22. README.md
+
+O README raiz deve explicar apenas:
+
+- o que é este repositório/workspace;
+- como está organizado;
+- onde fica a fonte original;
+- como iniciar uma sessão;
+- como escolher o capítulo correto;
+- como registrar mudanças.
+
+Não incluir lore extensa.
+
+---
+
+# 23. CHANGELOG
+
+Não reconstruir cada conversa anterior.
+
+Comece com:
+
+```text
+Bootstrap from MASTER HANDOFF V1
+```
+
+Registre apenas mudanças posteriores relevantes.
+
+O histórico anterior permanece preservado pelo Handoff.
+
+---
+
+# 24. AUDITORIA FINAL DA MIGRAÇÃO
+
+Depois de criar a estrutura e distribuir o conteúdo, realize uma auditoria completa.
+
+Verifique:
+
+□ 100% das seções do Handoff possuem destino.  
+□ `UNMAPPED = 0`.  
+□ Nenhum número canônico mudou.  
+□ Nenhum elemento congelado foi reinterpretado.  
+□ Nenhuma proposta virou cânone.  
+□ Todos os conflitos permaneceram visíveis.  
+□ Todos os workstreams estão representados.  
+□ Criação A–K está preservada.  
+□ Workstream L está preservado.  
+□ NPC Power Scale está preservado.  
+□ Cartografia está preservada.  
+□ Master Map está preservado.  
+□ Os 32 POIs conhecidos estão contabilizados.  
+□ POIs descartados continuam registrados.  
+□ Anti-patterns continuam registrados.  
+□ Pipeline Work/GIMP está distinguindo IMPLEMENTED de PLANNED.  
+□ Cada capítulo possui `.AGENT.md`.  
+□ Cada capítulo possui `.CONTEXTG.md`.  
+□ Cada capítulo possui `STATE.md`.  
+□ Dependências entre capítulos são explícitas.  
+□ O contexto global permanece pequeno.  
+□ Contextos locais não viraram dumps do Handoff.  
+□ Não existem duas fontes canônicas independentes para a mesma regra.  
+□ Existe um restart point global claro.
+
+---
+
+# 25. TESTE DE RECUPERAÇÃO
+
+Antes de considerar o bootstrap concluído, simule esta situação:
+
+> "Um novo agente entra no projeto sem ler o MASTER HANDOFF V1 e recebe uma tarefa exclusivamente sobre POIs."
+
+Ele deve conseguir:
+
+1. ler `.CONTEXTG.md` raiz;
+2. identificar `11_POI_REGISTRY`;
+3. ler `11_POI_REGISTRY/.AGENT.md`;
+4. ler `11_POI_REGISTRY/.CONTEXTG.md`;
+5. localizar apenas os documentos necessários;
+6. compreender estados e restrições;
+7. executar o trabalho sem carregar o projeto inteiro;
+8. não contradizer regras de cartografia ou linguagem visual porque as dependências estão explicitamente indicadas.
+
+Faça também o mesmo teste mental para:
+
+- Character Creation;
+- Provocações;
+- Master Map;
+- Cartografia;
+- GIMP/pipeline.
+
+Se qualquer um exigir voltar obrigatoriamente ao Handoff inteiro, o scaffold ainda não está adequado.
+
+---
+
+# 26. CRITÉRIO DE QUALIDADE DOS CONTEXTOS
+
+`.CONTEXTG.md` deve maximizar:
+
+**informação operacional por linha.**
+
+Remova:
+- introduções longas;
+- justificativas óbvias;
+- linguagem motivacional;
+- repetição;
+- narrativa histórica desnecessária;
+- regras já disponíveis em `.AGENT.md`;
+- conteúdo que pertence a `CANON.md`.
+
+Inclua:
+- estado;
+- restrições;
+- dependências;
+- referências;
+- ponto de retomada.
+
+---
+
+# 27. PRINCÍPIO DE CARREGAMENTO SELETIVO
+
+O objetivo final da arquitetura é permitir:
+
+```text
+ROOT CONTEXT
+      ↓
+CAPÍTULO NECESSÁRIO
+      ↓
+ARQUIVOS LOCAIS NECESSÁRIOS
+      ↓
+DEPENDÊNCIAS ESPECÍFICAS
+```
+
+e NÃO:
+
+```text
+MASTER HANDOFF INTEIRO
+      ↓
+TODOS OS DOCUMENTOS
+      ↓
+TODA A HISTÓRIA
+      ↓
+TAREFA PEQUENA
+```
+
+---
+
+# 28. NÃO INICIAR DESENVOLVIMENTO AINDA
+
+Durante este bootstrap:
+
+NÃO:
+- crie novos POIs;
+- revise POIs;
+- altere mapa;
+- altere geografia;
+- rebalanceie regras;
+- continue Criação;
+- continue Provocações;
+- escreva campanha nova;
+- resolva conflitos;
+- gere imagens;
+- edite no GIMP.
+
+Esta fase é exclusivamente:
+
+**PRESERVAR → ESTRUTURAR → DISTRIBUIR → REFERENCIAR → VALIDAR.**
+
+---
+
+# 29. SAÍDA DO BOOTSTRAP
+
+Ao terminar, crie:
+
+`BOOTSTRAP_REPORT.md`
+
+contendo apenas:
+
+## Structure Created
+
+Árvore final do projeto.
+
+## Migration Coverage
+
+- total de blocos/seções classificados;
+- MIGRATED;
+- CROSS-REFERENCED;
+- CONFLICT-REGISTERED;
+- ARCHIVED;
+- UNMAPPED.
+
+Esperado:
+
+`UNMAPPED: 0`
+
+## Chapters
+
+Uma linha por capítulo com:
+- responsabilidade;
+- estado;
+- restart point.
+
+## Conflicts Preserved
+
+Lista curta de IDs.
+
+## Missing Artifacts
+
+Somente artefatos referenciados mas indisponíveis.
+
+## Integrity Issues
+
+Qualquer item que não tenha sido possível confirmar.
+
+## Global Restart Point
+
+Declare exatamente de onde o desenvolvimento de Novydres deve continuar.
+
+---
+
+# 30. PONTO DE PARADA
+
+Depois que:
+
+- scaffold estiver criado;
+- Handoff estiver migrado;
+- cobertura estiver validada;
+- contexts estiverem escritos;
+- agents estiverem escritos;
+- conflitos estiverem registrados;
+- restart point estiver definido;
+
+**PARE.**
+
+Não comece espontaneamente a próxima frente.
+
+Apresente apenas:
+
+1. resultado do bootstrap;
+2. eventuais lacunas reais;
+3. estrutura criada;
+4. restart point recomendado.
+
+A continuidade do desenvolvimento ocorrerá em uma tarefa posterior.
+
+---
+
+# REGRA FINAL
+
+O sucesso desta tarefa não é medido pela quantidade de arquivos criados.
+
+É medido por quatro propriedades:
+
+**PRESERVAÇÃO**  
+Nada relevante do desenvolvimento anterior desapareceu.
+
+**MODULARIDADE**  
+Cada frente possui responsabilidade clara.
+
+**RASTREABILIDADE**  
+Toda decisão importante pode ser ligada à sua origem.
+
+**CARREGAMENTO SELETIVO**  
+Um agente consegue trabalhar em uma parte de Novydres sem carregar o projeto inteiro.
+
+O `MASTER HANDOFF V1` preserva o passado.
+
+A nova estrutura deve permitir construir o futuro.

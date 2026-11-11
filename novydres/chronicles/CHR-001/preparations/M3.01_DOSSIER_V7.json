@@ -1,0 +1,210 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V4",
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.01",
+  "preparation_id": "CHR001-PREP-M301-20261111-V7",
+  "dossier_version": 7,
+  "preparation_status": "HANDOFF_PENDING_PLAYER_DECISION",
+  "status": "HANDOFF_PENDING_PLAYER_DECISION",
+  "audience": "PLAYER_SAFE",
+  "simulation_only": false,
+  "story_preparation_ready": false,
+  "scene_ready": false,
+  "SCENE_READY": false,
+  "NARRATOR_PERMISSION": false,
+  "provocation_status": "OPEN",
+  "last_closed_scene": "C05",
+  "next_scene_status": "NOT_STARTED",
+  "source_checkpoint": {
+    "base_commit_sha": "735fe5d52e2761c4d492fe873a4b6bbcce17654a",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+    "cycle_blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "manifest_path": "novydres/MANIFEST_V48.json",
+    "manifest_blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5",
+    "live_path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+    "live_blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+    "history_index_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+    "history_index_blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+    "episode_path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+    "episode_blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42",
+    "state_path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+    "state_blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57",
+    "last_confirmed_event_id": "CHR001-M301-C05-22-20261109-001",
+    "provocation_status": "OPEN",
+    "last_closed_scene": "C05",
+    "next_scene": "C06",
+    "next_scene_status": "NOT_STARTED",
+    "protagonist_mortal": true,
+    "embrace_occurred": false
+  },
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+      "role": "OPERATIONAL_CYCLE"
+    },
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5",
+      "role": "ACTIVE_MANIFEST"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+      "role": "LIVE_CHECKPOINT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+      "role": "HISTORY_CHECKPOINT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42",
+      "role": "CONFIRMED_EPISODE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57",
+      "role": "CONFIRMED_STATE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79",
+      "role": "PLOT_ADMISSION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V022.json",
+      "blob_sha": "65391d32db7f12164338a8b250e9b4b44b016ad5",
+      "role": "AUTHORIAL_ARCHITECTURE"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V015_GM_HIDDEN.md",
+      "blob_sha": "1a2dfcc536cb9146ed5cc5f9875a432be2ff5f27",
+      "role": "AUTHORIAL_TRUTH_REF"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
+      "blob_sha": "64768b468aacd35d4528b43e563142cd0588d6fa",
+      "role": "STORY_PREPARATION_REF"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V017_PLAYER_SAFE.json",
+      "blob_sha": "34c8acce905c31e1cc59cc9ff73170b6c5d4dc9f",
+      "role": "PLAYER_SAFE_PROGRESSION"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+      "blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769",
+      "role": "C03_19_PLAYER_DECISION"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1",
+      "role": "CURRENT_PLAYER_AUTHORIZATION"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V4.json",
+      "blob_sha": "1e3828b9bc52124a9fe9387ea7c1989839714deb",
+      "role": "CURRENT_DOSSIER_SCHEMA"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V3.json",
+      "blob_sha": "56107b5f64d8167d5cd68805307327bec6ba38bf",
+      "role": "CURRENT_SIDECAR_SCHEMA"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V6.json",
+      "blob_sha": "89c32e542facb7875cf48b627e0ecaf5f8333e11",
+      "role": "HISTORICAL_PREDECESSOR_ONLY"
+    }
+  ],
+  "review_basis": {
+    "cycle_status": "READY_FOR_DRAMATURGO",
+    "reviewed_against_event_id": "CHR001-M301-C05-22-20261109-001",
+    "confirmed_state": [
+      "C05 está encerrada por G28.",
+      "C06 permanece não iniciada.",
+      "Bartholomeu está dentro do próprio carro no último checkpoint confirmado; não há destino, partida, viagem ou decurso de tempo registrado.",
+      "A caixa cinza permanece fechada; seu conteúdo continua desconhecido.",
+      "Bartholomeu permanece mortal; Abraço não ocorreu."
+    ],
+    "review_is_administrative_only": true,
+    "no_new_event": true,
+    "no_state_or_resource_delta": true
+  },
+  "handoff": {
+    "kind": "PLAYER_CHOICE_HANDOFF",
+    "status": "HANDOFF_PENDING_PLAYER_DECISION",
+    "diegetic_why_now": null,
+    "editorial_basis": "CYCLE_V0034 encaminha o estado reconciliado para revisão do Dramaturgo; esse motivo é administrativo e não cria urgência ou causa ficcional. D04 V010 não admite causa para C06, então a espera quieta é o caminho padrão até surgir causa independente realmente disponível e admitida.",
+    "cause": null,
+    "actors": [],
+    "entry_condition": null,
+    "stakes": null,
+    "prepared_scenes": [],
+    "acts": [],
+    "player_decision_pending": true,
+    "npc_knowledge_delta": [],
+    "knowledge_boundary": [
+      "Nenhum agente está presente, convocado ou em contato neste handoff; nenhum conhecimento de NPC é atualizado.",
+      "Daniel tem somente o conhecimento registrado pelo contato comercial da oficina em C05-19; nenhum outro conhecimento individual é acrescentado por este handoff.",
+      "Pensamentos privados do protagonista não são transmitidos a NPCs."
+    ],
+    "current_player_safe_handoff": "O último registro deixa Bartholomeu no próprio carro, com a caixa ainda fechada; qualquer destino, partida ou passagem de tempo continua sem confirmação.",
+    "next_decision": {
+      "cause_status": "NO_C06_CAUSE_ADMITTED_OR_AVAILABLE",
+      "default_if_no_action": "KEEP_OPEN_QUIET",
+      "decision_recorded": false,
+      "choices": [
+        {
+          "choice_id": "KEEP_OPEN_QUIET",
+          "availability": "AVAILABLE_NOW",
+          "effect": "M3.01 remains open and quiet. No scene, time advance, contact, or event is created; re-review only after an admissible independent cause exists."
+        },
+        {
+          "choice_id": "CONTINUE_AFTER_ADMISSION",
+          "availability": "UNAVAILABLE_UNTIL_CAUSE_ADMITTED_AND_AVAILABLE",
+          "effect": "Reconsider continuation only after an independent cause is actually available and D04 authoritatively admits it; all entry and scene gates still apply."
+        },
+        {
+          "choice_id": "REQUEST_ALTERNATE_CLOSURE",
+          "availability": "AVAILABLE_ON_EXPLICIT_PLAYER_REQUEST",
+          "effect": "Route a closure review. This request does not close M3.01; reconcile evidence and satisfy closure gates before any separate authorized transition."
+        }
+      ]
+    }
+  },
+  "professional_code_guard": {
+    "source_event_id": "CHR001-M301-C03-19-20261107-001",
+    "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+    "source_blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769",
+    "rule": "Permanece vigente a decisão do jogador: preço justo por todo serviço, somente trabalho solicitado, revelar defeitos sem ocultação, nunca explorar cliente ou receber dinheiro para mentir, e aceitar profissionalmente apenas oficina mecânica ou reboque (com equipamento de reboque alugado quando necessário).",
+    "no_change_from_c05_banter": true,
+    "no_service_or_fee_inferred": true
+  },
+  "closure_routing": {
+    "recommendation": "PROVOCATION_CLOSURE_PENDING",
+    "effect": "ROUTING_ONLY",
+    "player_decision_required": true,
+    "provocation_closed": false,
+    "scene_started": false,
+    "event_created": false,
+    "cycle_transition_created": false,
+    "reason": "D04 V010 não admite causa para C06 e o checkpoint não contém causa, agente, entrada ou stakes. Sem nova causa admissível, M3.01 permanece aberta e quieta por padrão; pedido expresso de fechamento alternativo segue para revisão e gates, sem fechar automaticamente."
+  },
+  "governance": {
+    "no_story_event_created": true,
+    "no_time_advanced": true,
+    "no_live_episode_canon_or_cycle_edit": true,
+    "no_xp_fv_or_other_resource_delta": true,
+    "no_npc_knowledge_delta": true,
+    "g28_scene_end_only": true,
+    "no_player_spoilers": true,
+    "no_scene_entry_or_stakes_invented": true
+  },
+  "predecessor_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V6.json",
+    "blob_sha": "89c32e542facb7875cf48b627e0ecaf5f8333e11"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "document_id": "D12_VALIDATE_V019_RESULT",
+  "validator": "D12_VALIDATE_V019.py",
+  "version": "V019",
+  "status": "PASS",
+  "checks_passed": 13,
+  "checks_total": 13,
+  "failed_check_ids": [],
+  "checks": [
+    {
+      "id": "D12-01",
+      "label": "source checkpoint hashes match C36 and M51",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-02",
+      "label": "candidate records only episode closure",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-03",
+      "label": "candidate distinguishes route and persistent threads",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-04",
+      "label": "D10 V024 passes against exact current inventory",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-05",
+      "label": "registry and adapters bind current inventory",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-06",
+      "label": "inventory lists every successor output but does not self-pin",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-07",
+      "label": "historical checkpoint and thread ledger remain read-only inputs",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-08",
+      "label": "candidate records the completed D10 and D12 gates",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-09",
+      "label": "all pinned source artifacts exist and match",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-10",
+      "label": "candidate outputs exist",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-11",
+      "label": "no story, scene, Marco, or Narrator authority",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-12",
+      "label": "D11 remains historical and is not represented as closure validation",
+      "result": "PASS"
+    },
+    {
+      "id": "D12-13",
+      "label": "transition waits for runtime tests and readback",
+      "result": "PASS"
+    }
+  ],
+  "artifact_blobs": {
+    "inventory": "a020cd2aee23786fc2ce5f161591b67bb6c454d2",
+    "candidate": "a23ea5cb19b64407ddb82f5efabd6e9e69c19eef",
+    "D10_validator": "2ac55e20af4768c266ce24d4d1162280c1b9b026",
+    "D10_result": "75166f70e9863473a92f56ee75707add701aa6ea",
+    "D12_validator": "5b3901369645b8c448ed1e1f8b58a5744da4336f",
+    "registry": "1ee5f18905902b93fb83db4d702526aeda52b1c9",
+    "adapters": "54a7b3877dde1a2dcb9e556289cdfd9641b9f876"
+  },
+  "operational_state": {
+    "source_cycle": "CYCLE_V0036",
+    "event_id": "CHR001-M301-C05-22-20261109-001",
+    "C06": "NOT_STARTED_NOT_DECLINED",
+    "M3.01_episode": "CLOSURE_CANDIDATE",
+    "guided_creation_route": "PENDING",
+    "scene_ready": false,
+    "narrator_permission": false
+  },
+  "D11": "HISTORICAL_ONLY_NOT_A_CLOSURE_GATE",
+  "result_detail_disclosed": false
+}

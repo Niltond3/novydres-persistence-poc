@@ -1,0 +1,39 @@
+# NOVYDRES / CHR-001 — Atlas Narrativo, Relações e Tramas V1
+Status: CONTRATO PROPOSTO / ORDEM DE TRABALHO RETROATIVO AUTORIZADA PELO JOGADOR em 2026-11-08. Não ativado no manifesto nem no ciclo narrativo vigente; sua primeira aplicação requer o mandato de próxima execução, preflight e publicação versionada. Não altera D1/D2/H/K/L, .AGENT/.CONTEXTG, arquivos CANÔNICO/FECHADO ou APROVADO/CONGELADO.
+
+## Propósito
+Preservar a história JOGADA, o planejamento editorial autenticado e as relações dos personagens para (a) criar tramas persistentes, (b) sustentar autonomia NPC-NPC e NPC-mundo, (c) reconstruir de modo auditável M1–M3 sem retrocanonização e (d) permitir narrativas derivadas e solos paralelos a partir de snapshots históricos. O atlas organiza, não substitui, LIVE, episódio, ledger, NPC_KNOWLEDGE_PROVENANCE, OPEN_THREADS, disposição NPC ou planejamento de provocação.
+
+## Unidades de dados e fonte de verdade
+1. CARTÃO DE EVENTO: acontecimento efetivamente confirmado, decisão do jogador, resultado do Narrador, reivindicação de NPC ou hipótese explicitamente diferenciados. Sempre relacionar source_path, blob_sha, evento ou âncora e proveniência. Índice de M1 é só localizador histórico, nunca fato técnico COMMITTED.
+2. ELENCO: uma entidade estável por pessoa identificada ou desconhecida individualizável, com aliases; organização/grupo são entidades distintas. Cobrir todo NPC com interação DIRETA em cena, comunicação MEDIADA ou IMPACTO MATERIAL comprovado por ação do protagonista. Pessoas apenas MENCIONADAS ficam numa fila separada de candidatos; não rotular contato inexistente. Incluir identidades desconhecidas com rótulo neutro; fusão de aliases apenas com prova.
+3. ESTADOS DE NPC: snapshots datados por evento, nunca uma biografia onisciente. Objetivos próprios, medo/limites, lealdades, capacidade de agir, posição, vínculos, recursos, constrangimentos, mudanças, conhecimento, vida/morte e localização somente onde sustentados. UNKNOWN é obrigatório quando não há prova. Distinguir declaração do NPC de observação e plano GM. Não transplantar estado de 1970 para 2010 sem intervalo auditado.
+4. GRAFO DIRECIONADO DE RELAÇÕES: Bart->NPC, NPC->Bart e NPC->NPC são arestas independentes. Relação objetiva (parentesco, emprego, dívida formal), percepção subjetiva (confiança, ressentimento, medo, respeito), segredo, conhecimento recíproco, dependência, poder, pertencimento e histórico de transição têm proveniências próprias. Reciprocidade NUNCA é automática. Nível relacional estável B de -5 a +5 só quando autorizado/evidenciado pelo contrato NPC; humor circunstancial H, composto P e rolagens não são reescritos nem presumidos neutros. Arestas qualitativas podem existir com escore UNKNOWN.
+5. TRAMA PERSISTENTE: conflito causal com agentes independentes, interesses, recursos e barreiras, incidente inaugural, eventos efetivos, dívida, estado (LATENTE/ATIVA/EM_ESCALADA/SUSPENSA/RESOLVIDA/ABANDONADA/UNKNOWN), pressão temporal e respostas possíveis sem intervenção do PC. Separar passado CANON_CONFIRMED de PREPARATION_ONLY e reconstrução editorial. Não atribuir a toda trama um antagonista único ou revelar falsa conspiração.
+6. PACOTE DERIVADO: diagramas históricos e mapa de enredos, mais sementes de narrativa paralela com snapshot as-of, limite epistemológico e autorização de cânone. Um novo PC pode viver um ponto de vista paralelo em crônica/branch próprios, sem alterar CHR-001 automaticamente.
+
+## Proveniência e autoria — campos independentes
+- Natureza do registro: CONFIRMED_EVENT, PLAYER_DECLARATION, NPC_CLAIM, NARRATOR_ADJUDICATION, CANON_SOURCE, GM_PREPARED, EDITORIAL_RECONSTRUCTION ou UNKNOWN.
+- Origem da criação: PLAYER, NARRATOR, DRAMATURGO, SHARED_EMERGENT ou AUTHOR_UNKNOWN; indicar SOURCE_EVIDENCE para qualquer atribuição. Um evento narrado não prova que o Dramaturgo o planejou; um dossiê posterior não prova plano prévio.
+- Conhecimento: PLAYER_KNOWN, CHARACTER_KNOWN, NPC_SPECIFIC, GM_HIDDEN, UNKNOWN. Não confundir narrativa observada com conhecimento universal.
+- Tempo: data diegética comprovada ou UNKNOWN; ordem parcial por event_id e precedências. Timestamps administrativos não viram datas do mundo.
+- Discrepâncias: CONFLICT registrado com alternativas e fontes, não harmonização silenciosa.
+
+## Fluxo novo de dramaturgia (após implantação formal)
+Mapa global de objetivos + mapa de TRAMAS ativas e latentes + mapa de NPCs/organizações e suas iniciativas + contrato de Marco + eventos jogados e dívidas + proposta de provocação. Cada nova provocação deve declarar: arco(s) tocado(s), possível deslocamento causal de cada arco, pressão independente, motivos de NPCs, custo do não envolvimento, outros desenlaces, POR_QUE_AGORA, possível elipse, eixos de horror, construção e relevância longitudinal. A provocação NÃO é obrigada a usar um arco existente: novos conflitos podem emergir quando causalmente justificados.
+Após G28 da cena, a próxima revisão do Dramaturgo confronta eventos reais com os arcos e publica deltas versionados; relógios só disparam por condições reais e agentes capazes. Ausência de evento NÃO é prova de ação offscreen. Mantenha narrador e Dramaturgo separados conforme ORCHESTRATION_CONTRACT_V1; nunca abrir cena, dar XP/FV ou narrar por causa do atlas.
+
+## Diagramas e reuso
+Gerar Markdown/Mermaid legível, com IDs estáveis: (a) rede social em duas vistas: Bart central e relações NPC-NPC, (b) trilhas de histórias e interseções, (c) linha histórica M1–M3; opcional mapa de poder, organizações e territórios. Cada aresta pública deve ser ancorável no JSON, e GM_HIDDEN não aparece em PLAYER_SAFE. Não criar ligação gráfica apenas por proximidade geográfica, menção ou conjectura. Artefatos são versões derivadas e regeneráveis.
+Para solo derivado, produzir pacote as-of com recorte temporal, elenco/objetivos, conflitos em curso, quais informações o novo protagonista pode saber, fatos imutáveis, margens abertas e divergências que exigem branch; nunca copiar memória futura do NPC para uma época anterior.
+
+## Gates de qualidade
+- Inventário de fontes primeiro; cobertura explícita por período, cena e personagem, inclusive GAP/UNKNOWN e versões legadas inválidas.
+- Toda afirmação de evento, relacionamento, mudança de NPC ou resolução de trama: pelo menos uma evidência localizável. Preparação e hipótese não satisfazem regra de evento confirmado.
+- Unicidade de IDs e aliases, direção/epistemologia nas arestas, nenhuma reciprocidade implícita, nenhum escore B fabricado, nenhum conhecimento indevido, nenhuma identidade futura retroprojetada.
+- Grafo/diagramas espelham o snapshot fonte; ausência de arcos independentes ou de possíveis iniciativas fora do PC deve ser reportada como lacuna, não mascarada.
+- Auditoria anti-retcon de M1 CLOSED, M2 CLOSED e C01–C03 CLOSED, sem alterar episódios/ledger/XP/FV; M3.01 C04 segue não iniciada na base consultada, sujeito a checkpoint posterior.
+- Segredos: marcadores GM_HIDDEN são disciplina de apresentação, NÃO controle real de acesso no GitHub. O repositório privado não substitui permissões por arquivo; não gerar exportação pública de conteúdo secreto.
+- Primeira passagem pode ser PARTIAL se extensa: publicar matriz completa de cobertura e razão de cada lacuna, sem declarar COMPLETE. Uma publicação de planejamento não atualiza o cursor CYCLE. Contrato deve ser ativado prospectivamente por mudança versionada e orquestrada, não por edição in-place.
+
+Referências obrigatórias: novydres/.AGENT.md; novydres/.CONTEXTG.md; runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md; runtime/orchestration/DRAMATURGO_ROLE_V2.md; runtime/provocation-prep/DRAMATURGO_CONTRACT_V3.md; runtime/provocation-prep/LONGITUDINAL_PROGRESS_GATE_V1.md; chronicles/CHR-001/npc-disposition/CONTRACT_V2.md; LIVE/ciclo corrente; KNOWLEDGE e OPEN_THREADS; arquivos históricos e dossiês versionados.

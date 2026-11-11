@@ -1,0 +1,23 @@
+NOVYDRES / CRÔNICA — .CONTEXTG.md
+Context Gateway V1 · 28/10/2026 · Operacional na preparação da crônica
+Purpose
+Porta de entrada para qualquer novo Narrador/ChatGPT que retome a primeira crônica longa de Novydres. Este arquivo não é lore nem substitui o cânone: só aponta autoridades, invariantes, estado e passos de retomada. Documento nativo Google Docs chamado .CONTEXTG.md; NÃO é fisicamente um arquivo Markdown.
+Current State
+FASE = PREPARAÇÃO. Sem personagem, ficha, sessão, rolagem ou evento de campanha iniciado. Guardrails narrativos V1 documentados e vigentes como política de trabalho; validador de código, motor V5 e registro transacional de crônica ainda NÃO IMPLEMENTADOS. Não declarar sistema técnico pronto por causa destes Docs.
+Mandatory Reading — nesta ordem
+1) .AGENT.md — Contrato do Narrador V1: https://docs.google.com/document/d/1QvcAY_DCHUNrE3YFDmd5SH9ZWmNdG47oG8uxWE5j-xs/edit
+2) EVENT_PROTOCOL_V1 — máquina de estado, eventos, rolagens, validação e persistência: https://docs.google.com/document/d/1iibkasTYCFF5g-u96CX7R9e5Id7n5u92s6wE8cC7weI/edit
+3) DECISIONS_STATE_V1 — decisões, readiness gates e ponto de retomada: https://docs.google.com/document/d/1mwjEw-9qVGeocWsrR8jvu90jF0GjxjmheAAm82ZXaRk/edit
+4) Snapshot de continuidade provisório (histórico, NÃO cânone): https://docs.google.com/document/d/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU/edit
+5) Protocolo anterior provisório (histórico, subordinado à V1): https://docs.google.com/document/d/1z6aoibnbZGGC3I_tk4v70VL68iwpr2gj_ZOEGRu0lzc/edit
+6) Para regras/fatos de cenário, localizar NOVYDRES/.AGENT.md, NOVYDRES/.CONTEXTG.md e equivalentes nos capítulos no workspace canônico, mais arquivos atuais de V5/Novydres. Ainda não verificados no Drive; não inferir versão/estado.
+Invariants / 6 regras inegociáveis
+I. O Narrador nunca decide ações voluntárias, falas ou gastos opcionais do PC. II. Intenção/tentativa não equivale a execução/sucesso. III. O histórico confirmado governa o passado; nenhum retcon silencioso. IV. Plano, segredo e alegação de NPC não equivalem a fato ocorrido. V. Toda rolagem real tem motor, dados brutos e fonte de regra. VI. Toda alteração persistente exige evento, validação, escrita confirmada e readback; falha é PENDENTE.
+Authority / Hard Constraints
+Este domínio governa como narrar a crônica, não altera o universo. Os artefatos canônicos e congelados de NOVYDRES permanecem intocados. Conflitos entre Atlas/MasterMap/arquivos de criação não podem ser resolvidos silenciosamente. Ausência de fonte oficial bloqueia afirmações canônicas de alto impacto. Segredos do Narrador não são ocultos tecnicamente do proprietário do Drive.
+Active Work / Open Issues
+Falta validar fontes canônicas locais atuais; escolher ou criar PC; criar fichas e logs próprios da crônica; implementar/testar gerador V5 e validador determinístico; executar suite T01–T12; verificar recuperação de estado em nova conversa.
+Restart Point
+Instrução de retomada: 'Continue a preparação de Novydres usando a pasta 00_GOVERNANCA_DA_CRONICA no Drive. Leia .CONTEXTG.md, .AGENT.md, EVENT_PROTOCOL_V1 e DECISIONS_STATE_V1; verifique fontes canônicas; não presuma ações de PC, resultados ou fatos; prossiga pela criação/importação da ficha. Ainda não há crônica iniciada.'
+Last Updated
+2026-10-28. Status: DOCUMENTADO E VERIFICADO NO DRIVE. Limite: não há enforcement de software além do contrato textual até implementação e testes.

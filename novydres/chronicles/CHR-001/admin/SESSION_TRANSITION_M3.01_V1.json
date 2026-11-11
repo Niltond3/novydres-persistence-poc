@@ -1,0 +1,41 @@
+{
+  "schema_id": "CHR001_M301_SESSION_TRANSITION_V1",
+  "status": "SCOPED_EXCEPTION_APPLIED_AT_REAL_SESSION_OPEN",
+  "session_id": "CHR001-M3.01",
+  "previous_session_id": "CHR001-M2.04",
+  "provocation_id": "M3.01",
+  "recovery_id": "REC-CHR001-M301-20261107-001",
+  "idempotency_key": "CHR-001:M3.01:START:WP_RECOVERY",
+  "source_event_id": "CHR001-M301-C01-01-20261107-001",
+  "final_scene_event_id": "CHR001-M301-C01-08-20261107-001",
+  "player_explicit_request": "New provocation after downtime; expects full FV",
+  "narrator_declared_before_scene": "Baseline V1 normally 3 superficial healed; accepted player-requested special exception to full 6/6",
+  "governing_rule": "novydres/runtime/scene-execution/SESSION_TRANSITION_V2.md",
+  "before": {
+    "max": 6,
+    "superficial": 6,
+    "aggravated": 0,
+    "available": 0
+  },
+  "baseline": {
+    "standard_healed": 3,
+    "after_superficial": 3,
+    "after_available": 3
+  },
+  "specific_exception": {
+    "additional_healed": 3,
+    "limited_to_session": "CHR001-M3.01",
+    "no_global_rule_change": true
+  },
+  "after": {
+    "max": 6,
+    "superficial": 0,
+    "aggravated": 0,
+    "available": 6
+  },
+  "no_exp_since_last_balance": true,
+  "no_cliffhanger_recovery_block_identified": true,
+  "no_xp_delta": true,
+  "no_unearned_power": true,
+  "source_head_sha": "537398867571d0a87a14b4aefce5457b86b531c4"
+}

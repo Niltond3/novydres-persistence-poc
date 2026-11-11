@@ -1,0 +1,30 @@
+CHRONICLE_001 — V3 / PREPARACAO E GATE DE PROMOCAO (31/10/2026)
+STATUS: STAGING_ONLY / NOT_ACTIVE. Nem o narrador nem o motor V0.2 devem interpretar estes arquivos como versão vigente.
+Objetivo: evitar leituras de 220 mil caracteres em todo turno, mantendo Drive como memória persistente e ChatGPT Web como interface exclusiva.
+ARQUIVOS:
+1) Contrato V3 proposto, verificado (versão ASCII legível): https://docs.google.com/document/d/1sHhzqBQh_221-XUHAf8nwOpOrC-gG_N5KiU3XMjCvQU/edit
+2) Engine Python V3 candidato (30 testes locais): https://docs.google.com/document/d/1mIhtaDJM9Mwp108FGydp9XQyt3KGXUvi7w7GYg4rb0w/edit
+3) Suíte de testes candidata: https://docs.google.com/document/d/1MrSm-q4JLom2NqvDjzplL0d2iX07f68Hx-Ostp9Zk0w/edit
+4) Manifesto histórico M1.01–M1.09: https://docs.google.com/document/d/1xtuNowtY8IrQchrr3CC2TV9Aq_DiknzcZw5nrQ9DfCQ/edit
+5) ACTIVE_STAGING_V3 derivado e NÃO vigente: https://docs.google.com/document/d/1Ai0ed-yICnmgEX_7Dba3Yxnei1U0zblDLW9yVG43XXA/edit
+6) Relatório da Etapa 4: https://docs.google.com/document/d/1SLltagiqPZsEfnHCuDI4-QK1srmL96RRjkTb7EcaJd0/edit
+FONTES VIGENTES, INALTERADAS:
+.AGENT V2: https://docs.google.com/document/d/1TAZmn3pn5BT8LEZocAPPmjMx7DJShubcglXc6puuZUc/edit
+.CONTEXTG V1.3: https://docs.google.com/document/d/13aw8j3rC8eMAbf5IDOrrPoe6UHt0_VLmdSO9JcU0An4/edit
+DECISIONS V2: https://docs.google.com/document/d/1ZUUDBgjCaZlXh_o9PYGewJb2NlxXUOOZ_oSNVINUQGk/edit
+character.md (memória narrativa): https://docs.google.com/document/d/1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE/edit
+CHRONICLE_STORE_V0_2 (events=[], rolls=[]): https://docs.google.com/document/d/1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98/edit
+Checkpoint futuro apenas quando narrado: M1.09 aberta, Bartholomeu Krauser conta a Mary sua intenção de encerrar serviços e aguarda sua resposta. Não inventar reação de Mary. XP 519 / gasto 44 / crédito 140 / disponível 96; 3 FV históricos sem consolidação técnica.
+PRÓXIMOS GATES: auditoria de replay cross-shard com arquivos reais; CAS/ACK incerto/recuperação em novo chat; V5 regras e rolagens; reconciliação fontes A–K; aprovação explícita do novo preflight; promoção e readback. Sem isso V3 não é fonte de verdade.
+IMPORTANTE: Importações de minuta com falha de codificação foram colocadas em pasta de quarentena; utilizar somente a minuta legível do item 1.
+ADENDO 31/10/2026 — ROTACAO 2 E V3.1
+SEGUNDA ROTACAO NO SANDBOX: CONFIRMADA POR CAS, READBACK E AUDITORIA DE ARQUIVOS REMOTOS; 2 segmentos arquivados e evento seq 4 confirmado em TEST-P03. MOTOR V3.1 ADICIONA REGRA DE AUTORIA (PLAYER_DECLARATION requer actor=pc), 33 TESTES DE MOTOR + 12 DE AUDITORIA APROVADOS LOCALMENTE. NAO FOI PROMOVIDO.
+RELATORIO ATUALIZADO: https://docs.google.com/document/d/15PSjO058uYSsUKhptf56VA94hxKozsM4467IZW_3bjI/edit
+PASTA V3.1: https://drive.google.com/drive/folders/1zamS6zZta6tn_G1FU8XYu5VkGKqgke8q
+GATE RESTANTE: ligar strict_restore a cada escrita com arquivos externos, validar V5, provenance original de CHAT/XP, nova conversa, medir latencia; aprovar explicitamente o novo preflight. V2 CONTINUA VIGENTE; CHRONICLE_STORE_V0_2 CONTINUA VAZIO.
+ADENDO 31/10/2026 — INTEGRACAO STRICT_RESTORE V3.2
+V3.2 STAGING: gate de leitura integral dos arquivos historicos antes de gravacao e rotacao; CAS + readback + recuperacao de ACK incerto testados. 79 TESTES LOCAIS (33 motor V3.1 + 12 auditor + 34 porta IO). ENSAIO REMOTO: 2 archives, 5 eventos sintéticos, next_seq=6, restaurados por bootstrap isolado somente com o gateway de TESTE; nao um chat novo. Nenhum evento de Bartholomeu foi importado.
+RELATORIO: https://docs.google.com/document/d/1DiH1qU-m3RM3H2SvCqZ-HrJN6tMF4-nahODuQQmmTAo/edit
+GATEWAY DE SANDBOX: https://docs.google.com/document/d/1dERbp2J-fvHPCeWlBv01HWUfA2uG01jaqRPBPhZL_JQ/edit
+CONTROLE V3.2: https://docs.google.com/document/d/16trj8MATgRsYXy8K2G0o-Zs5KMUXojzxTNyXoZnlbtc/edit
+CONTINUA NAO VIGENTE: novos guardrails V3 e otimizacao do preflight ainda nao foram formalmente aprovados; os documentos .AGENT V1/V2, .CONTEXTG V1.3, DECISIONS V2 e EVENT_PROTOCOL_V1 seguem autoritativos. Falta V5 end-to-end, validacao de fonte da autorizacao e teste em nova conversa real.

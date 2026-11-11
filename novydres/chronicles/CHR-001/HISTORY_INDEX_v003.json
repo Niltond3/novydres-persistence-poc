@@ -1,0 +1,248 @@
+{
+  "schema": "NOVYDRES_HISTORY_INDEX_V1_1_REAL_ACTIVE_V3",
+  "chronicle_id": "CHR-001",
+  "simulation_only": false,
+  "activation_status": "ACTIVE_PRIMARY_WITH_PARTIAL_HISTORICAL_INDEX",
+  "index_coverage": "PARTIAL_SPARSE_NEEDS_COMPLETE_HISTORY_AUDIT",
+  "entrypoints": {
+    "live": "novydres/chronicles/CHR-001/LIVE_v003.json",
+    "current_episode": "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+    "current_character_state": "novydres/chronicles/CHR-001/character/state_v009.source.txt",
+    "full_legacy_diary": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+    "history_index": "novydres/chronicles/CHR-001/HISTORY_INDEX_v003.json",
+    "manifest": "novydres/MANIFEST_V5.json",
+    "operational_contract": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V2.md"
+  },
+  "entities": {
+    "pc-bartholomeu-krauser": {
+      "aliases": [
+        "Bartholomeu Krauser",
+        "Bart"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/state_v009.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "history_status": "MORTAL"
+    },
+    "npc-mary-krauser": {
+      "aliases": [
+        "Mary"
+      ],
+      "relation": "WIFE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    },
+    "npc-mikahel-krauser": {
+      "aliases": [
+        "Mikahel"
+      ],
+      "relation": "SON",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "npc-sara-krauser": {
+      "aliases": [
+        "Sara"
+      ],
+      "relation": "DAUGHTER_TOUCHSTONE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "npc-gray-apron-hospital-worker": {
+      "aliases": [
+        "gray-apron hospital staff member"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "identity": "UNKNOWN"
+    },
+    "npc-unnamed-injured-stranger": {
+      "aliases": [
+        "unknown severely injured man"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ],
+      "identity": "UNKNOWN"
+    },
+    "npc-nadezhda-claimed": {
+      "aliases": [
+        "Nadezhda Sokolova"
+      ],
+      "evidence_class": "NPC_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    },
+    "npc-gromov-claimed": {
+      "aliases": [
+        "Gromov"
+      ],
+      "evidence_class": "NPC_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "arcs": {
+    "guided-creation": {
+      "status": "ACTIVE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/character/state_v008.source.txt"
+      ]
+    },
+    "m2-03-unknown-man": {
+      "status": "ACTIVE",
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt"
+      ]
+    },
+    "help-nadezhda": {
+      "status": "PLAYER_INTENT_OPEN",
+      "source_event_ids": [
+        "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "history_batches": [
+    {
+      "episode_range": "M1.01-M1.09, M2.01-M2.02",
+      "path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "provenance": "ORIGINAL_DRIVE_OPERATIONAL_DIARY_NOT_AUDITED_LEDGER"
+    },
+    {
+      "episode_range": "M2.03.001-M2.03.074",
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+      "provenance": "DRIVE_EPISODE_CUMULATIVE_V008_OPERATIONAL_DIARY"
+    }
+  ],
+  "version_history": {
+    "episode_m203_dir": "novydres/chronicles/CHR-001/episodes/history/",
+    "character_state_dir": "novydres/chronicles/CHR-001/character/history/",
+    "invalid_v007": "novydres/chronicles/CHR-001/episodes/history/M2.03_v007_invalid_partial.source.txt"
+  },
+  "locations": {
+    "hospital-staff-changing-room": {
+      "entity_ids": [
+        "pc-bartholomeu-krauser",
+        "npc-gray-apron-hospital-worker"
+      ],
+      "source_refs": [
+        "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+        "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+      ]
+    }
+  },
+  "unindexed_historic_entities_and_promises": "PENDING_EXTRACTION; do not assume absent",
+  "last_event_id": "CHR001-M203-STAFF-TAKE-HALF-20261102-001",
+  "retrieval_policy": {
+    "primary": [
+      "entity_id",
+      "location_id",
+      "arc_id",
+      "open_thread"
+    ],
+    "secondary": [
+      "aliases",
+      "tags"
+    ],
+    "unknown": "NEEDS_EVIDENCE_NOT_FALSE",
+    "original_sources_are_required_for_decisive_details": true,
+    "additional_required_checks": [
+      "Always use original source and corrections before deciding an event is true",
+      "Roll-related markers are not proof of RNG or COMMITTED ledger"
+    ],
+    "bootstrap_suggested": [
+      "LIVE.json",
+      "HISTORY_INDEX.json"
+    ],
+    "followup_on_mention": [
+      "knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+      "knowledge/OPEN_THREADS_V1.json"
+    ],
+    "preferred_original_read": "Find identifier/name in VERIFIED_SHARD_CATALOG_V1.json; fetch 1-2 matching source chunks; for decisive assertions check original and later corrections",
+    "long_source_shards_are_factual_original_copies": true
+  },
+  "technical_ledger_status": "HISTORICALLY_UNPOPULATED_NOT_RECONSTRUCTED",
+  "poc_data_imported": false,
+  "historical_auxiliary_indexes": [
+    {
+      "index_id": "LEGACY_M1_V01_SEARCH_ONLY",
+      "path": "novydres/chronicles/CHR-001/episodes/historical/M1_INDEX_V01_DERIVED.json",
+      "coverage": {
+        "narrative_milestones": 27,
+        "entities": 26,
+        "relationships": 12,
+        "locations": 10
+      },
+      "epistemic_status": "DERIVED_FROM_HISTORICAL_PROVISIONAL_INDEX_NOT_CURRENT_STATE",
+      "must_validate_original_diary": true,
+      "old_source_checkpoint": "M1.09",
+      "current_checkpoint": "M2.03.073"
+    }
+  ],
+  "mechanical_projection_ref": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json",
+  "historical_unindexed_relationships": "M1 historical search index now available, M2.01-M2.03 and post-M1 status still require field-by-field verification",
+  "m2_source_marker_index": {
+    "path": "novydres/chronicles/CHR-001/events/M2_SOURCE_MARKER_LOCATORS.json",
+    "unique_identifiers": 87,
+    "status": "TEXT_LOCATORS_ONLY_NOT_AUDITED_LEDGER",
+    "source_refs": [
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt"
+    ],
+    "exact_checkpoint": "M2.03.073"
+  },
+  "knowledge_index_ref": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V1.json",
+  "open_threads_ref": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V1.json",
+  "knowledge_index_status": "PARTIAL_M1_M2_CLAIM_GUARDRAILS_NOT_COMPLETE_ENTITY_COVERAGE",
+  "mechanical_roll_convention_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V1.json",
+  "verbatim_shard_catalog_ref": "novydres/chronicles/CHR-001/historical/VERIFIED_SHARD_CATALOG_V1.json",
+  "history_retrieval_status": "LOSSLESS_SHARDS_FOR_LEGACY_AND_M203_VERIFIED_BUT_SEMANTIC_GRAPH_PARTIAL",
+  "migration_recovery_handoff_ref": "novydres/migration/RECOVERY_HANDOFF_20261102_V4.md",
+  "shard_retrieval_recommended_for_historical_lookup": true,
+  "operational_activation": {
+    "decision": "MIG-DEC-002",
+    "date": "2026-11-02",
+    "previous_path": "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
+    "previous_blob_sha": "e68dca15a5e66e5305f187f3056898a86b2d5e44",
+    "coverage_unmodified": true
+  },
+  "current_event": {
+    "event_id": "CHR001-M203-STAFF-TAKE-HALF-20261102-001",
+    "checkpoint": "M2.03.074",
+    "method": "TAKE_HALF",
+    "successes": 3,
+    "difficulty": 3,
+    "source": "novydres/chronicles/CHR-001/episodes/M2.03_v009.source.txt",
+    "player_speech": "Sim",
+    "npc_outcome": "ENDS_QUESTIONING_THIS_MOMENT",
+    "wp_change": 0,
+    "technical_ledger_committed": false
+  },
+  "versioning": {
+    "parent": "novydres/chronicles/CHR-001/HISTORY_INDEX_v002.json",
+    "parent_blob_sha": "b9a6881559c6351b1cf5eaaf5e6a03a5b307280d",
+    "source_head_sha": "c67717764670e96d578df37865dd71bab125f346"
+  }
+}

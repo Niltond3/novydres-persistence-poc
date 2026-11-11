@@ -1,0 +1,104 @@
+{
+  "schema": "NOVYDRES_ACTIVE_PROJECTION_V0_3_DRAFT",
+  "status": "CANDIDATE_NOT_PROMOTED",
+  "authoritative": false,
+  "chronicle_id": "CHR-001",
+  "mode": "GUIDED_CREATION_IN_PROGRESS",
+  "phase": "M1_ACTIVE",
+  "closed_provocations": [
+    "M1.01",
+    "M1.02",
+    "M1.03",
+    "M1.04",
+    "M1.05",
+    "M1.06",
+    "M1.07",
+    "M1.08"
+  ],
+  "active_provocation": "M1.09",
+  "diegetic_period": "final dos anos 1970",
+  "diegetic_date": null,
+  "phase2010": "NOT_STARTED",
+  "player_character": {
+    "name": "Bartholomeu Krauser",
+    "mortality": "MORTAL_AT_THIS_SCENE",
+    "location": "residência familiar, junto de Mary; cômodo exato não estabelecido",
+    "last_declared_action": "recolhe bilhete; despede-se do intermediário; procura Mary e explica intenção de encerrar serviços à noite",
+    "voluntary_action_source_anchor": "M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR",
+    "inventory_relevant": [
+      "bilhete dobrado com endereço escrito; texto literal não transcrito"
+    ],
+    "unapproved_optional_spends": []
+  },
+  "scene": {
+    "decision_window": "GM_NPC_RESPONSE_DUE",
+    "present": [
+      "Bartholomeu Krauser",
+      "Mary Krauser"
+    ],
+    "npc_mary": {
+      "player_character_explanation_heard": true,
+      "reaction": "NOT_RESOLVED",
+      "exact_position": "UNKNOWN"
+    },
+    "intermediary": {
+      "last_position": "exterior da casa durante entrega",
+      "response_to_goodbye": "NOT_RESOLVED",
+      "actual_name": null
+    },
+    "children": {
+      "whereabouts": "NOT_RECONFIRMED_IN_CURRENT_BEAT"
+    },
+    "meeting": {
+      "reported_local_time": "20:00",
+      "reported_place": "sala dos fundos de depósito comercial de carvão, entrada lateral",
+      "information_class": "NPC_CLAIM",
+      "exact_address": null,
+      "actual_intent": "UNKNOWN",
+      "attendance": "NOT_OCCURRED"
+    }
+  },
+  "xp": {
+    "total": 519,
+    "spent": 44,
+    "remaining": 475,
+    "credit_granted": 140,
+    "credit_available": 96,
+    "new_spend_authorized": false
+  },
+  "willpower": {
+    "historical_spent": 3,
+    "technical_sheet_consolidation": "PENDING",
+    "no_new_spend": true
+  },
+  "mechanic": {
+    "blood_hunger": "NOT_APPLICABLE_IN_MORTAL_SCENE",
+    "generation": "UNKNOWN",
+    "sire": "UNKNOWN",
+    "future_clan": "GANGREL_TARGET",
+    "rolls_technical_confirmed": 0
+  },
+  "sources": {
+    "character_doc": "https://docs.google.com/document/d/1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE/edit",
+    "character_revision_checked": "AHj4eMQMwlr1Kz1WPW9fPP1POAPjXwj1is8sClzcfAqhBU8kglFj8Os789oNunPyhVMFHjjiyI-oV0Ma14g1pPzU8mgDMEtUeevmh5lJzw",
+    "index_doc": "https://docs.google.com/document/d/19eWhy-5mmznXq_o6Aw1EYcGdm65bQUrp6J0RtyZxopA/edit",
+    "contract_doc": "https://docs.google.com/document/d/1TAZmn3pn5BT8LEZocAPPmjMx7DJShubcglXc6puuZUc/edit",
+    "context_doc": "https://docs.google.com/document/d/13aw8j3rC8eMAbf5IDOrrPoe6UHt0_VLmdSO9JcU0An4/edit",
+    "decisions_doc": "https://docs.google.com/document/d/1ZUUDBgjCaZlXh_o9PYGewJb2NlxXUOOZ_oSNVINUQGk/edit"
+  },
+  "technical_ledger": {
+    "doc": "https://docs.google.com/document/d/1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98/edit",
+    "events": 0,
+    "rolls": 0,
+    "import_status": "NOT_MIGRATED"
+  },
+  "missing_or_disputed": [
+    "datas diegéticas exatas",
+    "motivações do contratante",
+    "resultados posteriores da queixa",
+    "validade da retratação",
+    "consolidação técnica de três FV",
+    "proveniência de eventos individuais de M1.01–M1.08"
+  ],
+  "warning": "PROJEÇÃO DERIVADA; não substituir character.md, contratos ou store nem avançar jogo usando-a como única autoridade."
+}

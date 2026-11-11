@@ -1,0 +1,47 @@
+name: NOVYDRES CHR-001 Temporal Source Reconciliation V16
+# V16 is historical and asserts exactly 42 cycles. C43/V17 and later successors
+# have their own mandatory CI. Only V16 artifacts can trigger this archival gate;
+# no V16 validator/test/schema or confirmed narrative source is changed.
+on:
+  push:
+    paths:
+      - 'novydres/runtime/orchestration/*V16*'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_*_V1*'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0042.json'
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V1_PLAYER_SAFE.json'
+      - 'novydres/MANIFEST_V57.json'
+  pull_request:
+    paths:
+      - 'novydres/runtime/orchestration/*V16*'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_*_V1*'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0042.json'
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V1_PLAYER_SAFE.json'
+      - 'novydres/MANIFEST_V57.json'
+permissions:
+  contents: read
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install JSON schema
+        run: python -m pip install 'jsonschema>=4.18,<5'
+      - name: Validate 44-thread reconciliation and adversarial cases
+        run: node --test novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V1.mjs
+      - name: Validate temporal packet JSON schema
+        run: python novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V1.py
+      - name: Validate successor cycle 42 regression and SHA chain
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V16.mjs
+      - name: Validate V16 cycle JSON schema
+        run: python novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V16.py
+      - name: Verify active manifest and all pins with readback
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V16.mjs --root .

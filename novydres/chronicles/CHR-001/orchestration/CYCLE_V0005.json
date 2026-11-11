@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V1",
+  "cycle_id": "CHR001-CYCLE-0005",
+  "sequence": 5,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M2.04",
+  "manifest_path": "novydres/MANIFEST_V34.json",
+  "source_head_sha": "68ce4fe44fb93bb613561aee3e5e1b6f557f700a",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0004.json",
+    "blob_sha": "ee31daf0a37f7cd8945ea9c6c352d94f7d33efe9"
+  },
+  "transition": "SCENE_COMMITTED",
+  "status": "READY_FOR_DRAMATURGO",
+  "next_role": "DRAMATURGO",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-C11-18-20261105-001",
+    "last_closed_scene": "C11",
+    "next_scene": "C12",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v024.json",
+      "blob_sha": "d59fb826d3ff73e593824e23da7b7f50ac6d6747"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v024.json",
+      "blob_sha": "169a22984c5b62dd6afd77088c306b6acfda30dd"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+      "blob_sha": "88fb084df412897b659f65a436b8fcd957fcf369"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v030.source.txt",
+      "blob_sha": "66055eaaba1919aef25b72ed5a23b145a7b9be0d"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V10.json",
+      "blob_sha": "46bb49a8d7d1b3f0e534ffe3fabb101d3586aa23"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V11.json",
+      "blob_sha": "9d19207968ef632019debed2cd4d3e3f22abe4af"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M204-20261105-V3",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V3.json",
+      "blob_sha": "0f796ce9c2a874127c44d705fa9663238dd495f3"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V2.json",
+      "blob_sha": "8dae1494a925518a6792af15a9277d2d20d90e42"
+    },
+    "validity": "STALE",
+    "reviewed_against_event_id": "CHR001-M204-C10-16-20261105-001"
+  },
+  "review": {
+    "decision": "NOT_REVIEWED",
+    "against_last_event_id": "CHR001-M204-C11-18-20261105-001",
+    "public_rationale": "C11 encerrada com ramal interditado, exame técnico documentado e peça destinada a análise, sem reparo ou liberação. Plano V3 anterior foi revisto somente até C10; cabe ao Dramaturgo reavaliar M2.04 após a C11. Sem XP/FV ou mudança canônica."
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}

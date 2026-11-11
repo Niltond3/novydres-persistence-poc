@@ -1,0 +1,658 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V031",
+  "document_id": "D06_CHRONICLE_BIBLE_V031",
+  "status": "EPISODE_CLOSED_ROUTE_AND_PERSISTENT_THREADS_PRESERVED",
+  "authority": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP",
+  "spoiler_class": "GM_HIDDEN",
+  "checkpoint": {
+    "cycle": "CYCLE_V0036 is the reconciled source checkpoint; CYCLE_V0037 records the authorized episode boundary",
+    "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920",
+    "last_played": "C05",
+    "next_scene": "C06 remains NOT_STARTED",
+    "bartolomeu": "mortal",
+    "embrace_recorded": false,
+    "story_boundary": {
+      "M3.01": "C05 remains last played, C06 not started; all existing M3.01 scenes keep Bart mortal and without Embrace.",
+      "M3.02": "prospective follow-on only after actual M3.01 closure and an authorized, recorded transition; no scene or cycle started.",
+      "Embrace": "authorial target only, after C05 and before 1970-12-25; not recorded as occurred."
+    },
+    "last_confirmed_event_id": "CHR001-M301-C05-22-20261109-001",
+    "review_decision": "CLOSE_M3_01_EPISODIC_ALTERNATE",
+    "closure_scope": "M3.01 episode only; route status and all persistent-thread dispositions remain unchanged."
+  },
+  "horizon": "Guided creation through a player-selected review window in 2010; no exact future dates are invented.",
+  "architecture": [
+    "CHRONICLE",
+    "STRUCTURAL MILESTONES/ACTS",
+    "STORIES/PROVOCATIONS",
+    "SCENES",
+    "CONDITIONAL_BEATS"
+  ],
+  "chronicle": {
+    "title": "Bartholomeu Krauser: guided creation to the 2010 threshold",
+    "dramatic_engine": "A mortal craftsman tries to keep responsibility, family, and self-determination under pressure from hidden systems; after an imposed transformation, survival and status demand compromises whose costs remain his to choose.",
+    "genre": "Personal horror with gothic-punk social pressure, human-scale family stakes, industrial atmosphere, and Cainite political conflict.",
+    "design_principles": [
+      "Consequences travel through observable actions and named channels.",
+      "Silence, refusal, flight, failure, and abandonment close local units without being punished by an infinite hook chain.",
+      "NPCs pursue independent goals on their own clocks; no NPC knows untransmitted information.",
+      "A forced Embrace is a future authorial target, never a reward or an already-played outcome.",
+      "No story grants XP, dots, damage, Hunger, Humanity, or state changes automatically."
+    ],
+    "play_preparation": "D07 V018 remains the current prospective truth contract. D08 V021 is the prepared successor for finite M3.01 episode closure and thread continuity, integrated through D06 V030. D04 V010 remains unchanged and admits no C06 cause. No scene, future action, event, state change or route classification is recorded."
+  },
+  "milestones": [
+    {
+      "id": "M1-ORIGINS",
+      "window": "Reconciled past through C05; no reopening.",
+      "purpose": "Preserve canon, family ties, work ties and the player-approved character direction.",
+      "required_stories": [
+        "Played source material through C05",
+        "ST-C06-REENTRY after operational authorization"
+      ],
+      "optional_stories": [
+        "ST-MEASURE-DISPOSITION",
+        "ST-VOLNAYA-BOUNDARY"
+      ],
+      "exit": "After authorized M3.01 closure, no story unit or later milestone starts automatically. M3.01 closes only its episode-local sequence; unresolved persistent-thread records, relationships, consequences, and knowledge carry forward unchanged. A later story may engage a carried thread only under its own authored admission, actual cause, player choice, reconciled state/knowledge, and separate Marco/cycle gates. An M3.01 story-unit identity does not reopen, and no contact, relay, invitation, or event is presumed.",
+      "required_scope": "The listed story is required only for the preferred target route; route-specific alternatives are defined in progression_routes."
+    },
+    {
+      "id": "M2-ATTENTION",
+      "window": "Relative interval after the authorized M3.01 closure; no elapsed time is presumed.",
+      "purpose": "Make attention arise from visible events or an explicit player request.",
+      "required_stories": [
+        "ST-GANGREL-ATTENTION on target route"
+      ],
+      "optional_stories": [],
+      "exit": "After authorized M3.01 closure, no later milestone or story starts automatically. Preserve unresolved threads, relationships, consequences, knowledge, uncertainty, and dispositions unchanged. A later story may engage a carried thread only through a distinct authored and admitted unit, an actual causal entry, player choice, current state/knowledge reconciliation, and separate authorized Marco/cycle gates. The original M3.01 story-unit identities do not reopen; no contact, invitation, or event is inferred.",
+      "required_scope": "ST-GANGREL-ATTENTION is required only on the preferred target route; the same existing unit can be entered by its independently caused route defined in progression_routes."
+    },
+    {
+      "id": "M3-COERCION",
+      "window": "Separate M3.02 after M3.01 closes; relative intervals, before the target deadline only if play leaves sufficient time.",
+      "purpose": "Build a first meeting and a later coercive encounter without forcing Bart to attend.",
+      "required_stories": [
+        "ST-KUTHULUN-PRECEDENCE",
+        "ST-KUTHULUN-COERCION on target route"
+      ],
+      "optional_stories": [],
+      "exit": "Reconcile the played result. The authorial target is a forced near-death Embrace against Bart’s will only if actual mechanics permit it; attendance, transformation, survival, and any specific roll are not guaranteed. A valid refusal, nonlethal failure, successful escape, or delay closes only its local unit and leaves a recoverable route pending/quiet; no repeated invitation, fudging, or replacement event. Preserve actual lethal or other irreversible results. A reconciled irreversible result that materially blocks the target opens a finite review; it does not erase the result or automatically assign a route disposition.",
+      "required_scope": "Target-route sequence only; each story still requires its actual entry evidence and player choice."
+    },
+    {
+      "id": "M4-AFTERMATH",
+      "window": "First nights then relative weeks/months after an actually recorded Embrace; later development can elide only by player choice.",
+      "purpose": "Give concrete space to loss, social entry, resentment, survival and interdependence.",
+      "required_stories": [
+        "ST-FIRST-NIGHTS",
+        "ST-GRIEF-AND-BOUNDARIES",
+        "ST-CAINITE-ENTRY on target route"
+      ],
+      "optional_stories": [
+        "ST-ETHICAL-COST"
+      ],
+      "exit": "Each started unit closes on its actual result; a valid refusal may close only the local unit as CLOSED_REFUSAL and is not treated as playing or fulfilling its content. No reoffer or route classification is automatic. Preserve family unknowns. A recoverable refusal, failure, or delay keeps the route pending/quiet; an irreversibility that materially blocks the target opens the finite player review governed by D09."
+    },
+    {
+      "id": "M5-2010-THRESHOLD",
+      "window": "Player-selected review within year 2010; no exact day invented.",
+      "purpose": "End guided creation and make a real choice to enter the principal chronicle.",
+      "required_stories": [
+        "ST-2010-TRANSITION"
+      ],
+      "optional_stories": [
+        "Any bounded thread the player elects to revisit"
+      ],
+      "exit": "Persisted evidence supports COMPLETE/ALTERNATE/INCOMPLETE and player chooses whether to enter the principal chronicle."
+    }
+  ],
+  "story_units": [
+    {
+      "id": "ST-C06-REENTRY",
+      "episode": "M3.01",
+      "route_class": "required-on-preferred-route-only",
+      "required_for_route": true,
+      "status": "handoff anchor only; C06 not started; D04 V010 admits no cause; episode boundary is closed without treating this unit as played",
+      "closure": "This unit recorded only the C05-22 handoff. It remains unplayed and does not prevent episode-only closure. No C06 story or scene opens from this anchor; future use requires source-backed D04 admission and fresh authorization.",
+      "requirement_scope": "ROUTE-GUIDED-TO-2010 preferred branch; not a universal prerequisite for all finite outcomes."
+    },
+    {
+      "id": "ST-MEASURE-DISPOSITION",
+      "episode": "M3.01",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively",
+      "closure": "Local close per D07 V018 / D08 V018. Optional; may support a player-chosen continuation only when its own documented cause is actually present. It does not create Cainite knowledge or satisfy ST-C06-REENTRY."
+    },
+    {
+      "id": "ST-VOLNAYA-BOUNDARY",
+      "episode": "M3.01",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively; contains a new, conditional evidence path",
+      "closure": "Local close per D07 V018 / D08 V018. Optional; may support a player-chosen continuation only when its own documented cause is actually present. It does not create Cainite knowledge or satisfy ST-C06-REENTRY."
+    },
+    {
+      "id": "ST-GANGREL-ATTENTION",
+      "episode": "M3.02",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-KUTHULUN-PRECEDENCE",
+      "episode": "M3.02",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional procedural prerequisite within the admitted coercion arc; not a separate D04 plot admission or event",
+      "closure": "Defined in D07 V018 and prepared in D08 V018; it begins only after a cause leads to an actual first invitation delivery and Bart chooses to attend. The D04 broad trigger alone does not begin this story."
+    },
+    {
+      "id": "ST-KUTHULUN-COERCION",
+      "episode": "M3.02",
+      "route_class": "target-on-route",
+      "required_for_route": true,
+      "status": "authorial target; never a past event",
+      "closure": "Defined in D07 V018 and prepared in D08 V018; future event only. Requires its own later delivered invitation after precedence and Bart’s chosen attendance; actual mechanics and all outcomes prevail."
+    },
+    {
+      "id": "ST-POST-EMBRACE",
+      "episode": "M4",
+      "route_class": "umbrella",
+      "required_for_route": false,
+      "status": "umbrella only; contains four child story units",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-FIRST-NIGHTS",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-GRIEF-AND-BOUNDARIES",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-CAINITE-ENTRY",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-ETHICAL-COST",
+      "episode": "M4",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    },
+    {
+      "id": "ST-2010-TRANSITION",
+      "episode": "M5",
+      "route_class": "required-for-graduation-review",
+      "required_for_route": true,
+      "status": "authored prospectively",
+      "closure": "Defined in D07 V018 and prepared for play in D08 V018; future event only."
+    }
+  ],
+  "transverse_threads": [
+    {
+      "id": "THREAD-FAMILY",
+      "status": "open and protected",
+      "exists_for": "Maintain human ties and the character cost of losing them.",
+      "progression": "Only actual contact or player choice creates an event.",
+      "closure": "player-selected boundary, actual contact, or explicit quiet/unknown status; no family response is assigned."
+    },
+    {
+      "id": "THREAD-WORKSHOP",
+      "status": "open through C06 and later choices",
+      "exists_for": "The human trade and unfinished obligations remain an independent life strand.",
+      "progression": "work decisions and their actual costs.",
+      "closure": "orders corrected, accepted, refused, or abandoned; no Cainite plot required."
+    },
+    {
+      "id": "THREAD-VOLNAYA",
+      "status": "optional and bounded",
+      "exists_for": "A local records discrepancy offers an investigation and a limited piece of future evidence.",
+      "progression": "copies, index, clerk, scope of documentary proof.",
+      "closure": "corrected, proven, declined or quiet; no hidden system explanation required."
+    },
+    {
+      "id": "THREAD-CAINITE-STATUS",
+      "status": "future conditional",
+      "exists_for": "Gangrel attention and entry into Cainite society.",
+      "progression": "direct observation → sourced relay/invitation → voluntary attendance → actual confrontation/aftermath.",
+      "closure": "Membership/standing or a local refusal/quiet disposition based on played choices; route-level ALTERNATE requires explicit player choice, and INCOMPLETE requires reconciled evidence of a material blocker under D09."
+    }
+  ],
+  "causality_policy": {
+    "no_omniscience": true,
+    "required_relay_fields": [
+      "sender",
+      "recipient",
+      "content_scope",
+      "channel",
+      "delivery_status",
+      "relative_time"
+    ],
+    "family_boundary": "No NPC may know family identity/location/response unless a recorded source or future observed event supplies that exact fact. The prepared threat at confrontation is generic unless a valid source exists.",
+    "variant_boundary": "D12 V001 is used literally; no preexisting details of Mary’s knowledge are added.",
+    "box_boundary": "C05 box contents remain UNKNOWN and are not required by the route."
+  },
+  "finite_progression": {
+    "max_structural_milestones": 5,
+    "all_world_plot_resolution_required": false,
+    "test_success_required": false,
+    "scene_queue": "Episode-local sequence may close after its actual played scenes reach recorded local outcomes and an explicit episode-only player decision at a reconciled checkpoint. The episode close does not require all-world resolution or target-route completion. Unstarted optional units remain quiet/not started. Persistent threads and their records carry forward unchanged.",
+    "target_window": "Authorial target: forced Embrace after the played C05 checkpoint and before 1970-12-25, only after actual M3.01 closure and an authorized, recorded transition; no exact date. If a played result irreversibly blocks the target, preserve it and open a finite reconciled review; do not assign ALTERNATE/INCOMPLETE automatically or invent a replacement cause.",
+    "episode_closure_gate": {
+      "episode": "M3.01",
+      "status": "SATISFIED_FOR_M3_01_EPISODE_ONLY",
+      "scope": "Finite episode boundary only. Separate from guided-creation route disposition, D04 target completion, graduation, CHARACTER_READY and global plot resolution.",
+      "required_evidence": [
+        "Every scene actually played in C01-C05 has its recorded local G28 closure; no started M3.01 unit remains locally unresolved.",
+        "The latest confirmed event is C05-22 and the live/history/episode/character/knowledge/thread and mechanical pins reconcile to that checkpoint.",
+        "The player expressly selected episodic alternate closure after reviewing the actual state; no route-level ALTERNATE or INCOMPLETE choice is inferred.",
+        "The current contract supports an explicit episode-closure transition, and the new highest cycle records it with the source checkpoint, choice receipt and exact unchanged source pins.",
+        "Every persistent-thread record and its relationship, consequence, knowledge, uncertainty and current disposition is preserved without modification.",
+        "C06 and all other optional unstarted units remain NOT_STARTED/QUIET, not treated as declined; no cause, contact, event, time passage, scene or offscreen action is invented."
+      ],
+      "not_required": [
+        "Resolving all persistent plots.",
+        "Completing the preferred guided-creation target or the D04 post-Embrace adaptation objective.",
+        "Starting or closing C06 when no cause is admitted.",
+        "A fixed scene count beyond the actually played local closures.",
+        "A test success or new event."
+      ],
+      "satisfied_evidence": [
+        "C01-C05 have recorded local G28 closures; C05-22 is the latest confirmed event.",
+        "The six operational state refs and mechanical refs match CYCLE_V0036 and remain unchanged in the closure transition.",
+        "The player expressly chose episodic alternate closure at C05-22.",
+        "The OPEN_THREADS_V23 ledger is preserved byte-for-byte; related state and knowledge pins are unchanged.",
+        "C06 remains NOT_STARTED, with no admitted cause; no future event is inferred."
+      ],
+      "pending_or_not_implied": [
+        "The D04 post-Embrace adaptation target and the preferred guided-creation route remain pending.",
+        "No route-level ALTERNATE/INCOMPLETE disposition, graduation, 2010 review or CHARACTER_READY state is recorded.",
+        "M3.02, a scene and Narrator permission remain unauthorized."
+      ],
+      "result": "M3.01 may close legitimately as an episode at C05-22. The episode boundary preserves, rather than resolves, any persistent thread."
+    },
+    "quiet_route_exit_gate": {
+      "route_ref": "#/progression_routes/finite_quiet_exit_without_cause",
+      "status": "PREPARED_NOT_SATISFIED",
+      "evidence": [
+        "No story started by this exit; reconcile the latest actual checkpoint and persistence.",
+        "The player explicitly chooses to end the guided-creation route as ALTERNATE.",
+        "Record unmet target conditions and unresolved questions without changing character, episode, cycle, or NPC state."
+      ],
+      "denial_conditions": [
+        "No explicit player choice.",
+        "Current checkpoint or persistence is in conflict."
+      ],
+      "result": "A finite editorial route ending may be recorded as ALTERNATE at a reconciled checkpoint. It does not determine M3.01 episode status, open M3.02, satisfy graduation, or imply an event."
+    },
+    "post_embrace_adaptation_target_gate": {
+      "authority": "D04_PLOT_ADMISSIONS_V010.json#PLOT-POST-EMBRACE-ADAPTATION; preserved verbatim as the target outcome.",
+      "required_story_units": [
+        "ST-FIRST-NIGHTS",
+        "ST-GRIEF-AND-BOUNDARIES",
+        "ST-CAINITE-ENTRY"
+      ],
+      "closure_condition": "Preserve D04 V010 literally: all three named stories have evidence-backed local conclusions and at least one actual adaptation choice by Bartholomeu is recorded. No exact scene count or test result is required.",
+      "alternative_entry_rule": "D07/D08 V018 alternatives may begin only from a post-Embrace real state plus a distinct current choice/action by Bartholomeu and a genuinely available channel; no automatic invitation, NPC action, event, or time passage.",
+      "pre_start_refusal": "Closing a delivered offer as CLOSED_REFUSAL does not conclude its unplayed story and does not satisfy the D04 target. Keep the target pending/quiet unless another already-authored path begins from a distinct actual protagonist action and the real prerequisites.",
+      "summary_rule": "A player-consented summary after state/prerequisite reconciliation is recorded as CONSENTED_SUMMARY with scene_played=false and event_played=false. It can evidence closure only for facts/outcomes selected by the player and supported by current state; it never fabricates a scene or event.",
+      "no_false_completion": "Do not count an unplayed unit as concluded. If any required unit remains pending, the D04 target is not complete; retain pending/quiet or an explicit route-level disposition under D09.",
+      "operational_effect": "Authorial target tracking only; does not activate M4, mark SCENE_READY, grant NARRATOR_PERMISSION, or certify CHARACTER_READY.",
+      "route_disposition": "An explicit route-level ALTERNATE or an evidence-backed material blocker is reported separately from this target; neither is reported as satisfying D04 closure."
+    },
+    "episode_thread_boundary_policy": "Episode closure is finite at the episode boundary, not a global plot resolution: preserve all unresolved thread records and carried state unchanged. A later story may engage a carried thread only through a distinct authored/admitted unit, an actual cause, player choice, current reconciliation and separate Marco/cycle gates."
+  },
+  "knowledge_policy": {
+    "agent_knowledge": "Full author package accessible to authorized agents under the current player decision.",
+    "player_knowledge": "No secret truth is surfaced in PLAYER_SAFE reports or prompts.",
+    "pc_knowledge": "Only what Bart observes, is told, or can infer from an actually available source.",
+    "npc_knowledge": "Individual ledger; no transfer without recorded action and channel."
+  },
+  "source_refs": [
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5"
+    },
+    {
+      "path": "novydres/MANIFEST_V51.json",
+      "blob_sha": "2a315f5593068e8ff8031cc6b3ca68846d926077"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0036.json",
+      "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V002_PLAYER_SAFE.json",
+      "blob_sha": "f3471f8f9e803273f616fd5030cd1740b2e9cd5d",
+      "reference_role": "HISTORICAL_AGENT_PACKAGE_ACCESS_ACTIVE_ONLY"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V003_PLAYER_SAFE.json",
+      "blob_sha": "ee5b8f9c715d4856b36eb1c5d12f98d09ad74eb2",
+      "reference_role": "SUPERSEDED_CANDIDATE_RUNTIME_ACTIVATION_FOR_D07_V017"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
+      "blob_sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55",
+      "reference_role": "CANDIDATE_RUNTIME_ACTIVATION_FOR_D07_V018_NOT_EFFECTIVE_UNTIL_CYCLE_AND_MANIFEST_PIN"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V015_GM_HIDDEN.md",
+      "blob_sha": "1a2dfcc536cb9146ed5cc5f9875a432be2ff5f27",
+      "reference_role": "HISTORICAL_TRUTH_BASELINE",
+      "note": "Historical snapshot only. D07 V018 is the current operative truth contract and consumes D06 V026; this source is not current authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V016_GM_HIDDEN.md",
+      "blob_sha": "844398c7df3dbbd84ff77a1cb6edb7125aeedb56",
+      "reference_role": "HISTORICAL_PREVIOUS_OPERATIVE_TRUTH_CONTRACT",
+      "note": "Historical previous operative version; superseded by D07 V018, which preserves its later successor chain."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V017_GM_HIDDEN.md",
+      "blob_sha": "f138f205b18268614e6542f7d31640924c489b4b",
+      "reference_role": "PREVIOUS_OPERATIVE_TRUTH_CONTRACT",
+      "note": "Immediate predecessor to current D07 V018; retained for version lineage, not current operative authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8",
+      "reference_role": "OPERATIVE_PROSPECTIVE_TRUTH_CONTRACT"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
+      "blob_sha": "64768b468aacd35d4528b43e563142cd0588d6fa",
+      "reference_role": "HISTORICAL_PREPARATION_BASELINE",
+      "note": "Historical snapshot only. D08 V018 is the current operative preparation contract and consumes D06 V026; this source is not current authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V016_GM_HIDDEN.md",
+      "blob_sha": "3c9867f7e7ec08f91ef801c29d8844bde4790155",
+      "reference_role": "HISTORICAL_PREVIOUS_OPERATIVE_PREPARATION_CONTRACT",
+      "note": "Historical previous operative version; superseded by D08 V018, which preserves its later successor chain."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V017_GM_HIDDEN.md",
+      "blob_sha": "070269800d4e53a82fb23e85b2a79d9c304be9f9",
+      "reference_role": "PREVIOUS_OPERATIVE_PREPARATION_CONTRACT",
+      "note": "Immediate predecessor to current D08 V018; retained for version lineage, not current operative authority."
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V018_GM_HIDDEN.md",
+      "blob_sha": "91189ae85de0fe1dc96d79c3d94bed9f8abd33f5",
+      "reference_role": "OPERATIVE_PROSPECTIVE_PREPARATION_CONTRACT"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+      "blob_sha": "b7c1060c4ed2af54aa3e908ccac8d13c3c2748bf"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b"
+    }
+  ],
+  "authorial_decisions": {
+    "forced_embrace": "Player-approved future target after checkpoint C05 and before 1970-12-25; no event/date is recorded.",
+    "Kuthulun": "Player-selected future Gangrel sire; reputation/culture are declared direction, not historical proof.",
+    "C05_box": "Contents remain UNKNOWN and are not authored here.",
+    "delegated_prospective_authorship": {
+      "decision": "Player authorized the CHR-001 post-D12 closeout, prospective corrections, and full GM_HIDDEN access for authorized agents under V004.",
+      "ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "scope": "Complete and correct prospective D06-D12 materials; selectively promote validated artifacts after gates; activate only after validation. No retcon, change to approved decisions, alteration of played results, C06 start during Dramaturgo work, or scene start without the player Narrator prompt.",
+      "supersedes": "PLAYER_DECISION_AGENT_ACCESS_V001.json for agent access and prospective authorship scope."
+    },
+    "episode_boundary": {
+      "decision": "Close M3.01 episodically at C05-22 by the explicit player choice.",
+      "authority": "PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "scope": "Episode only; no route-level disposition, D04 completion, C06 scene, M3.02, Narrator permission or state delta.",
+      "decision_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+        "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+      }
+    }
+  },
+  "readiness": {
+    "authorial_architecture": "C05-22 is the latest reconciled event. The player explicitly approved episode-only closure. D04 V010 still admits no C06 cause; C06 remains unstarted. The D04 adaptation target, route disposition, graduation and CHARACTER_READY remain pending. Scene and Narrator gates remain false.",
+    "play_preparation": "D08 V021 is the prepared successor; it carries the actual C05-22 state and preserves future uncertainty. It creates no event, NPC action, route outcome, scene or readiness.",
+    "SCENE_READY": false,
+    "NARRATOR_PERMISSION": false,
+    "D07_agent_package_access": "D07_ACTIVATION_V004 is the runtime-active record pinned by the current validated cycle/manifest; it grants no scene readiness or Narrator permission. Historical V002 remains limited to D07 V016.",
+    "D07_runtime_activation": "D07_ACTIVATION_V004 is runtime-active under the current validated cycle/manifest. SCENE_READY=false and NARRATOR_PERMISSION=false."
+  },
+  "prohibitions": [
+    "No retcon or reopening of C05.",
+    "No scene execution or prompt permission.",
+    "No exact future dates beyond relative windows and the stated deadline target.",
+    "No predetermined reactions by Mary, Mikahel, Sara, or Bart.",
+    "No forced XP, traits, or dice outcomes."
+  ],
+  "architecture_notes": "A finite episode can end while its persistent threads remain active or unresolved. The episode boundary does not require global plot resolution, target-route completion, or status changes to carried records.",
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V030.json",
+    "blob_sha": "66b7be7d69b6b13614fec4a0511c0b4115919150"
+  },
+  "decision_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+    "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+  },
+  "progression_routes": {
+    "preferred_route": {
+      "id": "ROUTE-GUIDED-TO-2010",
+      "status": "AUTHORIAL_TARGET_NOT_EVENT",
+      "sequence": [
+        "ST-C06-REENTRY",
+        "ST-GANGREL-ATTENTION",
+        "ST-KUTHULUN-PRECEDENCE",
+        "ST-KUTHULUN-COERCION"
+      ],
+      "rule": "The target path keeps all existing entry, relay, attendance, deadline, mechanics, and closure conditions. No particular test result or Embrace is guaranteed; no C06 scene is offered while its causal entry is unadmitted.",
+      "entry_gate": "ST-C06-REENTRY has no admitted cause in D04 V010 and is not ready. The preferred route may use it only after a source-backed D04 admission and fresh authorization; an orchestration cycle alone does not supply the cause."
+    },
+    "finite_alternative_after_c06_decline": {
+      "id": "ROUTE-M3-01-DECLINED-CONTINUATION",
+      "entry_condition": "Use only after an actually presented C06 offer is declined before start, or after the player separately chooses whether to continue/close M3.01 once the Dramaturgo confirms no admitted C06 cause. Absence of a cause or offer is not a player refusal.",
+      "local_continuity": [
+        "If the player actually declines a valid C06 offer, record only that disposition; do not mark ST-C06-REENTRY as played or complete and do not send a second or renamed summons. If there is no valid offer, record no refusal.",
+        "ST-VOLNAYA-BOUNDARY is available only if the player actually chooses to resume the existing paper trail, asks an already known participant, or brings the existing copy; its evidence remains bounded and does not automatically reach any Cainite.",
+        "ST-MEASURE-DISPOSITION is available only if its own current request/disposition condition is actually opened; do not manufacture a customer, work order, defect, or follow-up to replace C06.",
+        "Any other M3.01 story already started must reach its actual local outcome. Unstarted units may remain quiet/declined."
+      ],
+      "macro_close": "M3.01 may be explicitly closed ALTERNATE after all actually started units have recorded outcomes, source/state reconciliation passes, the player expressly chooses closure, and the orchestration contract records an authorized transition. The refusal itself never closes the episode or starts M3.02.",
+      "next_causal_entry": "After a valid separate transition, no story begins automatically. All unresolved M3.01 persistent-thread records and their reconciled consequences, relationships, knowledge, and unknowns carry forward unchanged. A later story may engage a carried thread only through a separately authored/admitted unit, an actual causal entry, player choice, reconciled state/knowledge, and its own authorized Marco/cycle gates. The original M3.01 story-unit identities remain closed or unplayed; no thread resolution, contact, or event is inferred.",
+      "quiet_result": "If no independent cause, request, or transmission occurs, the Cainite thread stays quiet. A recoverable local refusal/failure/deviation/delay also leaves the route pending/quiet. The player may explicitly select ROUTE-QUIET-ALTERNATE-EXIT at a reconciled checkpoint; absence, refusal, or local closure alone never assigns route ALTERNATE or INCOMPLETE."
+    },
+    "irreversible_divergence": {
+      "id": "ROUTE-IRREVERSIBLE-DIVERGENCE",
+      "rule": "Preserve actual death/Final Death, deadline miss, refusal, successful escape, mechanical failure, and other results exactly as played. Recoverable refusal, nonlethal failure, deviation, escape, or delay closes only its local unit and leaves the route pending/quiet. A real irreversible result that materially blocks the target opens a finite, source-reconciled review; no alternative erases it or guarantees transformation. Assign route-level ALTERNATE only after the player explicitly chooses that disposition; assign INCOMPLETE only when reconciled evidence proves a required target is materially blocked and the player selects/disposes the route under D09. Continue only through a materially compatible already-authored cause that actually occurs; invent no replacement thread, summons, rescue, or event."
+    },
+    "finite_quiet_exit_without_cause": {
+      "id": "ROUTE-QUIET-ALTERNATE-EXIT",
+      "status": "PREPARED_PLAYER_CHOICE_NOT_EVENT",
+      "entry_condition": "At the latest reconciled checkpoint, C06 has no admitted cause, or no independent entry cause has occurred for the next target story. The player explicitly chooses to end the guided-creation route without waiting for a new scene.",
+      "choice": "The player may instead keep the route pending/quiet; no refusal, elapsed time, contact, invitation, or transition is inferred.",
+      "finite_result": "Record the guided-creation route as ALTERNATE at the latest reconciled checkpoint, list the target-route requirements not met and unresolved questions, and preserve all current state and ledgers. This is a route-level end, not story closure, episode closure, graduation, 2010 review, or CHARACTER_READY.",
+      "no_new_fiction": "No story, test, time skip, NPC action, cycle, scene, contact, or state change is required or created by this choice. M3.01 remains open unless its separate episode-closure gate is actually satisfied.",
+      "resumption": "Any later continuation requires a new explicit player choice, real causal entry, current source reconciliation, and applicable operational gates; no repeated or renamed summon."
+    }
+  },
+  "admission_story_crosswalk": {
+    "authority": "D04_PLOT_ADMISSIONS_V010.json is preserved byte-for-byte. Each direct mapping below follows its exact contract_ref fragment; similar names do not create mappings.",
+    "direct_mappings": [
+      {
+        "plot_id": "PLOT-TECH-DISPOSITION",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-MEASURE-DISPOSITION",
+        "current_story_id": "ST-MEASURE-DISPOSITION"
+      },
+      {
+        "plot_id": "PLOT-VOLNAYA-BOUNDARY",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-VOLNAYA-BOUNDARY",
+        "current_story_id": "ST-VOLNAYA-BOUNDARY"
+      },
+      {
+        "plot_id": "PLOT-GANGREL-ATTENTION",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-GANGREL-ATTENTION",
+        "current_story_id": "ST-GANGREL-ATTENTION"
+      },
+      {
+        "plot_id": "PLOT-KUTHULUN-COERCION",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+        "current_story_id": "ST-KUTHULUN-COERCION",
+        "conditional_procedural_prerequisite": "ST-KUTHULUN-PRECEDENCE",
+        "prerequisite_is_separate_d04_admission": false,
+        "trigger_semantics": "The variant-bounded knowledge premise and/or a report with source and transfer is an eligible causal basis for a future NPC action. It is not itself a delivered invitation, Bart’s attendance, a scene start, or SCENE_READY. The prerequisite begins only after an actual first invitation is delivered and Bart chooses to attend; coercion requires a distinct later invitation delivered after that story."
+      },
+      {
+        "plot_id": "PLOT-POST-EMBRACE-ADAPTATION",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-POST-EMBRACE",
+        "current_story_id": "ST-POST-EMBRACE",
+        "mapping_note": "Editorial umbrella only; its child units remain conditional on an actually recorded transformation."
+      },
+      {
+        "plot_id": "PLOT-2010-TRANSITION",
+        "d04_contract_ref": "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md#ST-2010-TRANSITION",
+        "current_story_id": "ST-2010-TRANSITION"
+      }
+    ],
+    "kuthulun_sequence": "D04 directly admits only ST-KUTHULUN-COERCION. ST-KUTHULUN-PRECEDENCE is a conditional procedural prerequisite within the approved target sequence, not a separate plot admission or event. The broad D04 trigger authorizes preparation of a possible causal path; actual action, delivery, attendance, and all operational gates remain separate."
+  },
+  "operative_contract_pins": {
+    "d08": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+      "blob_sha": "b7c1060c4ed2af54aa3e908ccac8d13c3c2748bf"
+    },
+    "decision": {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+    },
+    "source_cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0036.json",
+      "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920"
+    },
+    "source_manifest": {
+      "path": "novydres/MANIFEST_V51.json",
+      "blob_sha": "2a315f5593068e8ff8031cc6b3ca68846d926077"
+    },
+    "preserved_threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    }
+  },
+  "review_context": {
+    "status": "PLAYER_APPROVED_EPISODIC_CLOSURE_RECORDED_IN_CYCLE_V0037; route and target remain pending; scene and Narrator gates false",
+    "reviewed_against": "CYCLE_V0036",
+    "cycle_blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920",
+    "manifest_blob_sha": "2a315f5593068e8ff8031cc6b3ca68846d926077",
+    "decision_ref": {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+    },
+    "preserved_thread_ref": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    "result": "Evidence supports finite episode closure at C05-22; route, D04 target and persistent conflicts remain separate and pending."
+  },
+  "episode_thread_boundary_policy": {
+    "rule": "A finite episode close is distinct from global plot resolution and guided-route disposition.",
+    "episode_closure_scope": "M3.01 closes at the last reconciled C05-22 checkpoint after the played scenes have local closure evidence and the player expressly chose episodic alternate closure.",
+    "carry_forward": "Carry every persistent-thread record and its reconciled relationships, consequences, knowledge, uncertainty and current disposition unchanged. Episode closure alone never resolves, deletes, retcons or forgets a thread.",
+    "unstarted_units": "C06 and prospective optional units remain NOT_STARTED/QUIET, not treated as declined; the C06 handoff anchor is not a played story or cause.",
+    "later_engagement": "A later story may engage a carried thread only through a distinct authored/admitted unit, an actual causal entry, current state/knowledge reconciliation, player choice and every applicable Marco/cycle gate.",
+    "no_automatic_transition": "This closure does not classify the creation route, complete the D04 target, graduate the character, authorize a scene, open M3.02 or grant Narrator permission."
+  },
+  "authorial_architecture": "The guided-creation target is separate from the finite M3.01 episode boundary. D04 V010 admits no C06 cause and C06 was not started. The player chose episode-only closure, not route-level ALTERNATE/INCOMPLETE. The D04 target and route remain pending; scene and Narrator gates remain false.",
+  "play_preparation": "D07 V018 remains the operative prospective truth contract. D08 V021 is the prepared operative preparation successor, derived through D06 V030. D04 V010 remains unchanged and admits no C06 cause. No future action, event, state change, route classification or readiness is recorded.",
+  "closure_provenance": {
+    "source_cycle_ref": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0036.json",
+      "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920"
+    },
+    "source_manifest_ref": {
+      "path": "novydres/MANIFEST_V51.json",
+      "blob_sha": "2a315f5593068e8ff8031cc6b3ca68846d926077"
+    },
+    "decision_ref": {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+    },
+    "preserved_threads_ref": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    "episode_closure_scope": "M3.01 episode only",
+    "authorization": "explicit player choice; no retcon or state mutation",
+    "publication_gate": "The successor is operational only when a validated current cycle and manifest pin it."
+  }
+}

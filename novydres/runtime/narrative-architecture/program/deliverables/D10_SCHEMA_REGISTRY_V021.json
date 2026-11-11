@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "D10_SCHEMA_REGISTRY_V021",
+  "document_id": "D10_SCHEMA_REGISTRY_V021",
+  "version": "V021",
+  "status": "CURRENT_EXACT_SOURCE_REGISTRY_FOR_D06_V028_D07_D08_V018_D09_V021_D11_V019_AND_ORCHESTRATION_V9",
+  "authority": "PROGRAM_CONTRACT_SUCCESSOR",
+  "spoiler_class": "PLAYER_SAFE_INDEX",
+  "parent_registry_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V020.json",
+    "blob_sha": "a19a460cf584eb8e61a2afa919d04eb592fa7444"
+  },
+  "version_gates": {
+    "D07": "D07 V018 truth package is pinned; ACTIVE candidate record V004 is separate from cycle readiness and takes runtime effect only when the validated cycle and manifest pin it.",
+    "D08": "D08 V018 preparation is pinned; no prospective event is treated as played.",
+    "D09": "D09 V021 preserves the literal D04 target while keeping recoverable refusal/failure pending and distinguishing irreversible outcomes from player choice.",
+    "D10": "Registry V021 and adapters V016 discover exact current authoring, mechanical, and V9 orchestration sources through inventory V005 and START_HERE_V6.",
+    "D11": "D11 V019 is PASS 58/58 with independent review V011 PASS_WITH_LIMITATION and no current findings.",
+    "D12": "Release candidate V019 and validation V018 result are separate outputs; inventory V005 records their paths without circular hashes."
+  },
+  "knowledge_levels": [
+    "AGENT_KNOWLEDGE",
+    "PLAYER_KNOWLEDGE",
+    "PC_KNOWLEDGE",
+    "NPC_KNOWLEDGE"
+  ],
+  "required_story_contract": [
+    "story_id",
+    "dramatic_function",
+    "entry_cause",
+    "entry_state",
+    "participants",
+    "knowledge_by_participant",
+    "conflict_and_choices",
+    "conditional_beats",
+    "escalation_conditions",
+    "local_exits",
+    "closure_evidence",
+    "source_or_authority"
+  ],
+  "runner": "D10_VALIDATE_V023.py",
+  "test_report": "D10_TEST_RESULTS_V023.json",
+  "catalog": [
+    "D04_PLOT_ADMISSIONS_V010.json",
+    "D05_PLAYER_APPROVAL_QUEUE_V013.json",
+    "D06_CHRONICLE_BIBLE_V028.json",
+    "D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+    "D08_STORY_PREPARATION_V018_GM_HIDDEN.md",
+    "D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
+    "D06_SOURCE_VALIDATE_V003.py",
+    "D06_SOURCE_RECONCILIATION_V003.json",
+    "D07_ACTIVATION_V004_PLAYER_SAFE.json",
+    "D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
+    "D11_EXECUTE_ADVERSARIAL_V019.py",
+    "D11_TEST_RESULTS_V019_PLAYER_SAFE.json",
+    "D11_INDEPENDENT_REVIEW_V011_GM_HIDDEN.json",
+    "D11_REVIEW_STATUS_V012_PLAYER_SAFE.json",
+    "D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
+    "D12_MECHANICAL_GATES_MATRIX_V003_PLAYER_SAFE.md",
+    "D12_PROMOTION_INVENTORY_V005_PLAYER_SAFE.json",
+    "D10_SCHEMA_REGISTRY_V021.json",
+    "D10_ROLE_ADAPTERS_V016.json",
+    "D10_VALIDATE_V023.py",
+    "D10_TEST_RESULTS_V023.json",
+    "D12_RELEASE_CANDIDATE_V019.json",
+    "D12_VALIDATE_V018.py",
+    "D12_VALIDATE_V018_RESULT.json",
+    "../orchestration/CYCLE_SCHEMA_V9.json",
+    "../orchestration/ORCHESTRATION_CONTRACT_V7.md",
+    "../orchestration/ORCHESTRATION_SCHEMA_TESTS_V9.py",
+    "../orchestration/ORCHESTRATION_TESTS_V9.mjs",
+    "../orchestration/ORCHESTRATION_VALIDATOR_V9.mjs",
+    "../orchestration/START_HERE_V6.md"
+  ],
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V020.json",
+    "blob_sha": "a19a460cf584eb8e61a2afa919d04eb592fa7444"
+  },
+  "adversarial_contract_binding": {
+    "required_fields": [
+      "contract_ref",
+      "pass_criterion",
+      "assert"
+    ],
+    "markdown_anchor": "must resolve to an existing heading or explicit contract marker",
+    "json_pointer": "must resolve to a non-null node",
+    "execution_boundary": "reducer-only; no scene, dice, or persistent state mutation",
+    "state_fixture": "initial_state is merged with the known baseline before each branch; persistent ledgers remain explicit.",
+    "assertion_operators": [
+      "$unchanged_from_initial",
+      "$absent",
+      "$in",
+      "$equals"
+    ]
+  },
+  "source_refs": [
+    {
+      "path": "novydres/.AGENT_V4.md",
+      "blob_sha": "28ec5230de70541aec6d555a04cb382fc03141cf"
+    },
+    {
+      "path": "novydres/.CONTEXTG_V3.md",
+      "blob_sha": "cc4827858e95b6046f4ceda3203610f9facd0790"
+    },
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_SCOPE_AND_XP100_PLAYER_AUTHORIZATION_V1.json",
+      "blob_sha": "1b6264fdcae172244e2ea13e2c68458f6259010c"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_PLAYER_PURCHASE_SELECTION_V1.json",
+      "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V2.json",
+      "blob_sha": "285e206f4ad956e1d6bdb6315366429aeb4d9bdf"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V7.json",
+      "blob_sha": "7e808836ed71412ba1175c48eb62b1da50130395"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V7.json",
+      "blob_sha": "38076281b9e1049bd621fd86700dc03bd1b27906"
+    },
+    {
+      "path": "novydres/governance/decisions/DECISIONS_STATE_V10.source.txt",
+      "blob_sha": "02b9caa2718464293b051e6cb0b12cbbb4e1f029"
+    },
+    {
+      "path": "novydres/runtime/NARRATOR_LED_ADJUDICATION_G27_V1.md",
+      "blob_sha": "6ebcbb1796c0407438d30a096a4d6fe365a645c5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json",
+      "blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V025.json",
+      "blob_sha": "1ac6b9d8f64872bcf0526c32a926091b178b0c2e"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V026.json",
+      "blob_sha": "761f99f1e6d42d2a6a175c83d992c67424b914b8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V027.json",
+      "blob_sha": "6ce4f106a72f0752a668d391d0ff7fbe0b291563"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V028.json",
+      "blob_sha": "269658dc87cf0e2ff9966a9e62d560b78ce75aa9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+      "blob_sha": "a9ca553f72d48f5bd5e204252151ab54f5764f89"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003.py",
+      "blob_sha": "faf3b330edcad824bdc3b264dce401277daad7f5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V002_PLAYER_SAFE.json",
+      "blob_sha": "f3471f8f9e803273f616fd5030cd1740b2e9cd5d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V003_PLAYER_SAFE.json",
+      "blob_sha": "ee5b8f9c715d4856b36eb1c5d12f98d09ad74eb2"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
+      "blob_sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md",
+      "blob_sha": "e4ad7e885891ab1cd2f70997d4c51afc65ec9435"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V015_GM_HIDDEN.md",
+      "blob_sha": "1a2dfcc536cb9146ed5cc5f9875a432be2ff5f27"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V016_GM_HIDDEN.md",
+      "blob_sha": "844398c7df3dbbd84ff77a1cb6edb7125aeedb56"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V017_GM_HIDDEN.md",
+      "blob_sha": "f138f205b18268614e6542f7d31640924c489b4b"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
+      "blob_sha": "64768b468aacd35d4528b43e563142cd0588d6fa"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V016_GM_HIDDEN.md",
+      "blob_sha": "3c9867f7e7ec08f91ef801c29d8844bde4790155"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V017_GM_HIDDEN.md",
+      "blob_sha": "070269800d4e53a82fb23e85b2a79d9c304be9f9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V018_GM_HIDDEN.md",
+      "blob_sha": "91189ae85de0fe1dc96d79c3d94bed9f8abd33f5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
+      "blob_sha": "f3c2d40573183e473d328e64cebdd04448d253b7"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V023.py",
+      "blob_sha": "3649a989845f27d3c6b76cf4f58ed3816c5bf49f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
+      "blob_sha": "3a2aaa0a24e4cc215e01ca4c334782fea265ce34"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_EXECUTE_ADVERSARIAL_V019.py",
+      "blob_sha": "87020ddcbb717fd4551a076c442ce21e5b0d2e6d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_INDEPENDENT_REVIEW_V011_GM_HIDDEN.json",
+      "blob_sha": "981111b81a3627d57df3a14a1bb51571642a88f1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_STATUS_V012_PLAYER_SAFE.json",
+      "blob_sha": "4682748dcfc07d3a9934fd4ce9b459ded7cba8a2"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_TEST_RESULTS_V019_PLAYER_SAFE.json",
+      "blob_sha": "350ce9355bb44638ea5dbc23777d1a7e6e25f025"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_GATES_MATRIX_V003_PLAYER_SAFE.md",
+      "blob_sha": "8480ed36a6f8e7034fcbecfdbe8f892b5b0fc840"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
+      "blob_sha": "c4934e97101134ee012c08133c9bf0ea63be76ea"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V003_PLAYER_SAFE.json",
+      "blob_sha": "373d3a1c9046be4cc631ca2ad2ac2a88bc3debc0"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V004_PLAYER_SAFE.json",
+      "blob_sha": "00422b7c9cf96f138a94bcded5a661d8e6acff96"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V005_PLAYER_SAFE.json",
+      "blob_sha": "9c7e17fc21431b6ac6d434b35d3a40e1b2f407c9"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V018.py",
+      "blob_sha": "528da716adf6ccfe681b829d5be6d093e67a4dc1"
+    },
+    {
+      "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V9.json",
+      "blob_sha": "fd7bc047ff1452de0e3545d4018a926b807c0141"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V7.md",
+      "blob_sha": "80dadd58cabe373337431296fed949da39b5ffa8"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V9.py",
+      "blob_sha": "e435037c173a5679a22f1c41fd4c2cd57908feb7"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V9.mjs",
+      "blob_sha": "359a9857b039a26dc601977da2d2a3a178c5d20c"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V9.mjs",
+      "blob_sha": "66688d83e7e2fb91dc00b42e7d0ca8f47d01a7e8"
+    },
+    {
+      "path": "novydres/runtime/orchestration/START_HERE_V6.md",
+      "blob_sha": "b66296780c982a66ca5ef476d9133b53dec95c73"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V6.json",
+      "blob_sha": "be8116095c686c81429203572f7c2eacbae44766"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V5.json",
+      "blob_sha": "95bcd7471828bdb6f4d829b4f1ec8d4919bf754c"
+    },
+    {
+      "path": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
+      "blob_sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7"
+    },
+    {
+      "path": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
+      "blob_sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6"
+    },
+    {
+      "path": "novydres/runtime/xp/XP_ACT_CREDIT_AUDIT_V1.md",
+      "blob_sha": "602e901aa64c0f54783d755a9e14f982d887cf9f"
+    },
+    {
+      "path": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "blob_sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce"
+    },
+    {
+      "path": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "blob_sha": "461af62f9404a6e895950843b39a596b0b73b7ab"
+    },
+    {
+      "path": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "blob_sha": "668ccd0f9b40a858189162600c700bdd149c6792"
+    },
+    {
+      "path": "novydres/systems/webfirst-legacy/README.md",
+      "blob_sha": "fd402fe0236b473b24562332f022e4a910712bcb"
+    },
+    {
+      "path": "novydres/systems/webfirst-legacy/webfirst_core.py",
+      "blob_sha": "8f0c2515496c6ccf8251782a8a90c376c5513215"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b"
+    }
+  ],
+  "source_topology": {
+    "authoring_dag": [
+      "D04/D05 approvals and admissions",
+      "D06 V028 chronicle authority",
+      "D07 V018 truth",
+      "D08 V018 preparation",
+      "D09 V021 progression"
+    ],
+    "promotion_dag": [
+      "D12 inventory V005 pins source inputs and validator V023",
+      "D10 registry V021 pins inventory V005 and exact sources",
+      "D10 adapter V016 pins registry V021, inventory V005 and operational contracts",
+      "D10 result V023 is an execution leaf",
+      "D12 candidate V019 pins inventory, registry, adapter, D10 result and validator source",
+      "D12 result V018 is an execution leaf"
+    ],
+    "cycle_rule": "No output hash is placed upstream of its own dependency. Inventory records registry, adapter, execution results and candidate by path only. Cycle, manifest and readback are later separate transitions."
+  },
+  "readiness_boundaries": {
+    "mortal_next_scene": "Mechanically conditional on concrete action and source coverage; this does not set SCENE_READY.",
+    "future_vampire_development": "Not eligible while protagonist remains mortal; reassess after an actual, confirmed transformation and applicable rules.",
+    "final_2010_sheet": "Pending full primary rulebook and remaining creation-gate/cost certification; does not block a covered mortal scene."
+  },
+  "pending_gate_dependencies": [
+    "D12_RELEASE_CANDIDATE_V019.json",
+    "D12_VALIDATE_V018.py",
+    "D12_VALIDATE_V018_RESULT.json",
+    "D07_ACTIVATION_V004_PLAYER_SAFE.json exact cycle/manifest pin",
+    "CYCLE_V0035/CYCLE_V0036 and MANIFEST_V49/V50",
+    "post-C35 M3.01 dossier/sidecar V8"
+  ],
+  "historical_missing_reference_policy": "PLAYER_DECISION_AGENT_ACCESS_V001 is an unavailable historical reference retained in D05 provenance only. Current authority is V004, pinned here; no current D10/D12 gate depends on the unavailable V001 object."
+}

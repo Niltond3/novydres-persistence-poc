@@ -1,0 +1,1119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V18",
+  "title": "NOVYDRES CHR001 V18 G28 scene-end handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "cycle_id",
+    "sequence",
+    "chronicle_id",
+    "provocation_id",
+    "manifest_path",
+    "manifest_ref",
+    "source_head_sha",
+    "previous_cycle",
+    "transition",
+    "status",
+    "next_role",
+    "checkpoint",
+    "refs",
+    "architecture",
+    "plan",
+    "review",
+    "blocking",
+    "guards",
+    "activation",
+    "operational_gates",
+    "pending_player_decision",
+    "scene_commit"
+  ],
+  "$defs": {
+    "blobRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "blob_sha"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    }
+  },
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V18"
+    },
+    "cycle_id": {
+      "type": "string",
+      "pattern": "^CHR001-CYCLE-[0-9]{4}$"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "chronicle_id": {
+      "const": "CHR-001"
+    },
+    "provocation_id": {
+      "type": "string",
+      "pattern": "^M[1-5]\\.[0-9]{2}$"
+    },
+    "manifest_path": {
+      "type": "string",
+      "pattern": "^novydres/MANIFEST_V[0-9]+\\.json$"
+    },
+    "manifest_ref": {
+      "$ref": "#/$defs/blobRef"
+    },
+    "source_head_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "previous_cycle": {
+      "$ref": "#/$defs/blobRef"
+    },
+    "transition": {
+      "const": "SCENE_COMMITTED"
+    },
+    "status": {
+      "const": "READY_FOR_DRAMATURGO"
+    },
+    "next_role": {
+      "const": "DRAMATURGO"
+    },
+    "checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "last_event_id",
+        "last_closed_scene",
+        "next_scene",
+        "next_scene_status",
+        "pending_persistence",
+        "mortal",
+        "embrace_occurred"
+      ],
+      "properties": {
+        "last_event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "last_closed_scene": {
+          "type": "string",
+          "pattern": "^C[0-9]{2}$"
+        },
+        "next_scene": {
+          "type": "string",
+          "pattern": "^C[0-9]{2}$"
+        },
+        "next_scene_status": {
+          "const": "NOT_STARTED"
+        },
+        "pending_persistence": {
+          "const": false
+        },
+        "mortal": {
+          "type": "boolean"
+        },
+        "embrace_occurred": {
+          "type": "boolean"
+        }
+      }
+    },
+    "refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "live",
+        "history_index",
+        "episode",
+        "character",
+        "knowledge",
+        "threads"
+      ],
+      "properties": {
+        "live": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "history_index": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "episode": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "character": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "knowledge": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "threads": {
+          "$ref": "#/$defs/blobRef"
+        }
+      }
+    },
+    "architecture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "d04_plot_admissions",
+        "d05_approval_queue",
+        "d06",
+        "d07",
+        "d08",
+        "d09",
+        "d10_schema_registry",
+        "d10_role_adapters",
+        "d10_validator",
+        "d10_results",
+        "d11_cases",
+        "d11_results",
+        "d11_review",
+        "d12_candidate",
+        "d12_mechanical_source_refs",
+        "d12_validator",
+        "d12_results",
+        "promotion_inventory",
+        "start_here",
+        "agent_entry",
+        "context_gateway",
+        "player_authorization",
+        "orchestration_contract",
+        "cycle_schema",
+        "cycle_validator",
+        "cycle_tests",
+        "preparation_dossier_schema",
+        "preparation_sidecar_schema",
+        "cycle_schema_tests",
+        "player_episode_closure_decision",
+        "player_next_provocation_authorization",
+        "preparation_eligibility_audit",
+        "causal_entry_review",
+        "player_spotlight_direction",
+        "role_dramaturgo",
+        "role_narrador",
+        "handoff_to_narrador",
+        "pacing_policy",
+        "ellipsis_prelude_protocol",
+        "player_living_ellipsis_decision",
+        "temporal_review",
+        "temporal_transition_gate_contract",
+        "temporal_transition_schema",
+        "temporal_transition_validator",
+        "temporal_transition_tests",
+        "temporal_transition_schema_tests",
+        "temporal_transition_packet",
+        "player_immersion_comment",
+        "narrative_immersion_gate",
+        "reconciliation_only_handoff"
+      ],
+      "properties": {
+        "d04_plot_admissions": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d05_approval_queue": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d06": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V032.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "d07": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "d08": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V022_GM_HIDDEN.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "d09": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V026_PLAYER_SAFE.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "d10_schema_registry": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d10_role_adapters": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d10_validator": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d10_results": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d11_cases": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d11_results": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d11_review": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d12_candidate": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d12_mechanical_source_refs": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d12_validator": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "d12_results": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "promotion_inventory": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "start_here": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/START_HERE_V15.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "agent_entry": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/.AGENT_V4.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "context_gateway": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/.CONTEXTG_V3.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "player_authorization": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "orchestration_contract": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V17.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "cycle_schema": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/CYCLE_SCHEMA_V18.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "cycle_validator": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V18.mjs"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "cycle_tests": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V18.mjs"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "preparation_dossier_schema": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V8.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "preparation_sidecar_schema": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V8.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "cycle_schema_tests": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V18.py"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "player_episode_closure_decision": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "player_next_provocation_authorization": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "preparation_eligibility_audit": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "causal_entry_review": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/chronicles/CHR-001/preparations/M3.02_ENTRY_REVIEW_V2_PLAYER_SAFE.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "player_spotlight_direction": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_SIGNIFICANT_SCENE_SPOTLIGHT_V001_PLAYER_SAFE.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "role_dramaturgo": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/DRAMATURGO_ROLE_V4.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "role_narrador": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/NARRADOR_ROLE_V4.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "handoff_to_narrador": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V4.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "pacing_policy": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/scene-execution/PACING_TEMPORAL_FRAMING_V3.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "ellipsis_prelude_protocol": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/scene-execution/ELLIPSIS_PRELUDE_PROTOCOL_V1.md"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "player_living_ellipsis_decision": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_LIVING_ELLIPSES_V001_PLAYER_SAFE.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "temporal_review": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_REVIEW_V1_GM_HIDDEN.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "temporal_transition_gate_contract": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "temporal_transition_schema": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "temporal_transition_validator": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "temporal_transition_tests": {
+          "$ref": "#/$defs/blobRef",
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "temporal_transition_schema_tests": {
+          "$ref": "#/$defs/blobRef",
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "temporal_transition_packet": {
+          "$ref": "#/$defs/blobRef",
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          ]
+        },
+        "player_immersion_comment": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "narrative_immersion_gate": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "reconciliation_only_handoff": {
+          "$ref": "#/$defs/blobRef"
+        }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preparation_id",
+        "dossier",
+        "sidecar",
+        "validity",
+        "reviewed_against_event_id"
+      ],
+      "properties": {
+        "preparation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dossier": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "sidecar": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "validity": {
+          "const": "STALE"
+        },
+        "reviewed_against_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "against_last_event_id",
+        "public_rationale"
+      ],
+      "properties": {
+        "decision": {
+          "const": "SCENE_COMMITTED"
+        },
+        "against_last_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "public_rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "blocking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "reason"
+      ],
+      "properties": {
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "no_story_delta_in_prep",
+        "no_xp_fv_delta_in_prep",
+        "g28_scene_only",
+        "frozen_unchanged",
+        "no_public_spoilers"
+      ],
+      "properties": {
+        "no_story_delta_in_prep": {
+          "const": true
+        },
+        "no_xp_fv_delta_in_prep": {
+          "const": true
+        },
+        "g28_scene_only": {
+          "const": true
+        },
+        "frozen_unchanged": {
+          "const": true
+        },
+        "no_public_spoilers": {
+          "const": true
+        }
+      }
+    },
+    "activation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authorization",
+        "d07_activation",
+        "truth_package",
+        "architecture_contract"
+      ],
+      "properties": {
+        "authorization": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json"
+                }
+              }
+            }
+          ]
+        },
+        "d07_activation": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/blobRef"
+            },
+            {
+              "properties": {
+                "path": {
+                  "const": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json"
+                }
+              }
+            }
+          ]
+        },
+        "truth_package": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "architecture_contract": {
+          "$ref": "#/$defs/blobRef"
+        }
+      }
+    },
+    "operational_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "architecture_active",
+        "d07_active",
+        "story_preparation_ready",
+        "mechanical_scene_ready",
+        "scene_ready",
+        "narrator_permission",
+        "mechanical_matrix_ref",
+        "mechanical_sources"
+      ],
+      "properties": {
+        "architecture_active": {
+          "type": "boolean"
+        },
+        "d07_active": {
+          "type": "boolean"
+        },
+        "story_preparation_ready": {
+          "const": false
+        },
+        "mechanical_scene_ready": {
+          "const": false
+        },
+        "scene_ready": {
+          "const": false
+        },
+        "narrator_permission": {
+          "const": false
+        },
+        "mechanical_matrix_ref": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "mechanical_sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rules_provenance",
+            "target_sheet",
+            "adjudication_gate",
+            "motor_manual",
+            "xp_policy",
+            "xp_audit",
+            "act_resolution_schema",
+            "xp_envelope",
+            "settlement_record"
+          ],
+          "properties": {
+            "rules_provenance": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "target_sheet": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "adjudication_gate": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "motor_manual": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "xp_policy": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "xp_audit": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "act_resolution_schema": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "xp_envelope": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "settlement_record": {
+              "$ref": "#/$defs/blobRef"
+            }
+          }
+        }
+      }
+    },
+    "pending_player_decision": {
+      "const": null
+    },
+    "scene_commit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scene",
+        "event_id",
+        "source_event_before",
+        "event_count",
+        "episode",
+        "g28_persisted",
+        "no_dice",
+        "no_xp_fv_delta",
+        "player_disengaged",
+        "next_scene_gate"
+      ],
+      "properties": {
+        "scene": {
+          "const": "M3.02.C01"
+        },
+        "event_id": {
+          "const": "CHR001-M302-C01-05-20261111-001"
+        },
+        "source_event_before": {
+          "const": "CHR001-M301-C05-22-20261109-001"
+        },
+        "event_count": {
+          "const": 5
+        },
+        "episode": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "g28_persisted": {
+          "const": true
+        },
+        "no_dice": {
+          "const": true
+        },
+        "no_xp_fv_delta": {
+          "const": true
+        },
+        "player_disengaged": {
+          "const": true
+        },
+        "next_scene_gate": {
+          "const": "DRAMATURGO_REVIEW_REQUIRED"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "transition": {
+          "const": "SCENE_COMMITTED"
+        },
+        "status": {
+          "const": "READY_FOR_DRAMATURGO"
+        },
+        "next_role": {
+          "const": "DRAMATURGO"
+        },
+        "provocation_id": {
+          "const": "M3.02"
+        },
+        "sequence": {
+          "const": 44
+        },
+        "cycle_id": {
+          "const": "CHR001-CYCLE-0044"
+        }
+      }
+    },
+    {
+      "properties": {
+        "checkpoint": {
+          "properties": {
+            "last_event_id": {
+              "const": "CHR001-M302-C01-05-20261111-001"
+            },
+            "last_closed_scene": {
+              "const": "C01"
+            },
+            "next_scene": {
+              "const": "C02"
+            },
+            "next_scene_status": {
+              "const": "NOT_STARTED"
+            },
+            "mortal": {
+              "const": true
+            },
+            "embrace_occurred": {
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "episode_closure"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "administrative_opening"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "causal_handoff"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "causal_handoff"
+        ]
+      }
+    }
+  ]
+}

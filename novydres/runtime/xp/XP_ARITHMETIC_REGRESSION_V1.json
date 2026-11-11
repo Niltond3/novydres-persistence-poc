@@ -1,0 +1,182 @@
+{
+  "schema": "NOVYDRES_XP_ACT_CREDIT_ARITHMETIC_REGRESSION_V1",
+  "method": "Pure JS synthetic state simulation, not a real XP ledger or scene",
+  "date": "2026-11-03",
+  "status": "PRECOMMIT_PASS",
+  "test_count": 28,
+  "passed": 28,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "E01_BASE_LEGACY_NORMALIZATION",
+      "pass": true,
+      "observed": {
+        "cap": 675,
+        "spent": 170,
+        "credit": 20,
+        "remaining": 505
+      }
+    },
+    {
+      "id": "E02_CAPACITY_485",
+      "pass": true,
+      "observed": 485
+    },
+    {
+      "id": "E03_FIVE_ACTS_50",
+      "pass": true,
+      "observed": {
+        "sum": 50,
+        "credit": 70
+      }
+    },
+    {
+      "id": "E04_TOTAL_UNCHANGED_AFTER_ACTS",
+      "pass": true,
+      "observed": {
+        "cap": 675,
+        "spent": 170
+      }
+    },
+    {
+      "id": "E05_SIXTH_ACT_BLOCKED",
+      "pass": true,
+      "observed": 70
+    },
+    {
+      "id": "E06_REPEAT_ACT_BLOCKED",
+      "pass": true,
+      "observed": 70
+    },
+    {
+      "id": "E07_PREP_ONLY_ZERO",
+      "pass": true,
+      "observed": 20
+    },
+    {
+      "id": "E08_UNVERIFIED_EVENT_ZERO",
+      "pass": true,
+      "observed": 20
+    },
+    {
+      "id": "E09_REFUSAL_RESOLVES",
+      "pass": true,
+      "observed": 30
+    },
+    {
+      "id": "E10_REFUSAL_NOT_DUPLICATED",
+      "pass": true,
+      "observed": 30
+    },
+    {
+      "id": "E11_ALTERNATE_ACT_WITHIN_LIMIT",
+      "pass": true,
+      "observed": 40
+    },
+    {
+      "id": "E12_PARTIAL_CAP_10",
+      "pass": true,
+      "observed": 15
+    },
+    {
+      "id": "E13_CAP_ZERO_AFTER_ALL_UNLOCKED",
+      "pass": true,
+      "observed": 15
+    },
+    {
+      "id": "E14_PARTIAL_LAST_3",
+      "pass": true,
+      "observed": 5
+    },
+    {
+      "id": "E15_CAP_FULL_SPENT_ZERO",
+      "pass": true,
+      "observed": 0
+    },
+    {
+      "id": "E16_CAP_FULL_UNLOCKED_ZERO",
+      "pass": true,
+      "observed": 75
+    },
+    {
+      "id": "E17_PREP_DOES_NOT_AUTO_FV",
+      "pass": true,
+      "observed": {
+        "cap": 675,
+        "credit": 30
+      }
+    },
+    {
+      "id": "E18_SPEND_15_ALLOWED",
+      "pass": true,
+      "observed": {
+        "spent": 185,
+        "credit": 55,
+        "remaining": 490
+      }
+    },
+    {
+      "id": "E19_SPEND_SUM_INVARIANT",
+      "pass": true,
+      "observed": 240
+    },
+    {
+      "id": "E20_SPEND_WITHOUT_AUTH_BLOCKED",
+      "pass": true,
+      "observed": 185
+    },
+    {
+      "id": "E21_SPEND_TOO_MUCH_BLOCKED",
+      "pass": true,
+      "observed": 55
+    },
+    {
+      "id": "E22_INDEPENDENT_EPISODES",
+      "pass": true,
+      "observed": 70
+    },
+    {
+      "id": "E23_MANY_SESSIONS_ZERO",
+      "pass": true,
+      "observed": {
+        "credit": 10,
+        "cap": 675
+      }
+    },
+    {
+      "id": "E24_LEGACY_CREDIT_CAPPED",
+      "pass": true,
+      "observed": {
+        "historical": 30,
+        "credit": 50
+      }
+    },
+    {
+      "id": "E25_NO_RETRO_GRANT",
+      "pass": true,
+      "observed": 20
+    },
+    {
+      "id": "E26_FIVE_RESOLVED_LIMIT",
+      "pass": true,
+      "observed": 5
+    },
+    {
+      "id": "E27_REMAINING_ONLY_AFTER_SPEND",
+      "pass": true,
+      "observed": 505
+    },
+    {
+      "id": "E28_UNSPENT_CAPACITY_TRACKS",
+      "pass": true,
+      "observed": 435
+    }
+  ],
+  "notes": [
+    "Explicit user cap 675 is predetermined TARGET V2, NOT added by any act",
+    "Act counts paid once only on confirmed resolution",
+    "At total spent+available_credit >=675 later acts award 0",
+    "Historical M2.03 credit remains pending, not awarded by this test",
+    "G28 unchanged"
+  ]
+}

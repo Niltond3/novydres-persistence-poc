@@ -1,0 +1,1107 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V2",
+  "simulation_only": false,
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.01",
+  "preparation_id": "CHR001-PREP-M301-20261107-V2",
+  "dossier_version": 2,
+  "status": "PUBLISHED_NOT_STARTED",
+  "source_checkpoint": {
+    "base_commit_sha": "418834f097883bf24b270f42fd54d286d490a8b8",
+    "manifest_path": "novydres/MANIFEST_V46.json",
+    "live_path": "novydres/chronicles/CHR-001/LIVE_v033.json",
+    "live_blob_sha": "2bb6cee1375020fb5665acae43d7ac988be2315b",
+    "history_index_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v033.json",
+    "last_confirmed_event_id": "CHR001-M301-C01-08-20261107-001",
+    "m203_status": "CLOSED",
+    "next_episode_status": "NOT_STARTED"
+  },
+  "sources": [
+    {
+      "path": "novydres/MANIFEST_V44.json",
+      "sha": "421c206ec7ded01a2067748e9443a306f3a7fb02",
+      "role": "MANIFEST"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v032.json",
+      "sha": "6091d43bfff1ddf9c1ab7301ee4f414f96a61322",
+      "role": "LIVE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v032.json",
+      "sha": "a63082ca0594913db9380891e3a010482287aba2",
+      "role": "HISTORY_INDEX"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json",
+      "sha": "e2e6acb4c9c7604e903dcfd6fc10ad62726d7ec6",
+      "role": "DECISION"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+      "sha": "740e584430db113a52c505acc02c9aab3ce91ece",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "sha": "5da9719103088a792847036973386926815bf292",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v038.source.txt",
+      "sha": "4d0e7e28bfff47161acb7f9810ca13a1474f1208",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "role": "DECISION"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "role": "DECISION"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/world/CIVIC_CULTURAL_NAMING_LENS_V1.md",
+      "sha": "7cd1179f403bebb81ea4abbb95ff19b28577b718",
+      "role": "CANON"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/npc-disposition/CONTRACT_V2.md",
+      "sha": "08ec4a22e67f5799168a67bfc17e9a25a29213aa",
+      "role": "DECISION"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/narrative-tone/GOTHIC_PUNK_HORROR_GUARDRAILS_V1.md",
+      "sha": "9c2b2cd975f531b4ad5e71fc1823a19dd66b3e9c",
+      "role": "DECISION"
+    },
+    {
+      "path": "novydres/world/politics/05_concilio_leis_status_prestacoes_v0_2_2.source.md",
+      "sha": "d476f5d3ed8ca7fea0888381fecc4618b1dcc03c",
+      "role": "CANON"
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "role": "CANON"
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_v0_1.md",
+      "sha": "5c972b08c70187e883bc6da7d4ad964cb165612f",
+      "role": "CANON"
+    },
+    {
+      "path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "role": "CANON"
+    },
+    {
+      "path": "novydres/MANIFEST_V46.json",
+      "sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+      "role": "MANIFEST"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v033.json",
+      "sha": "2bb6cee1375020fb5665acae43d7ac988be2315b",
+      "role": "LIVE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v033.json",
+      "sha": "d7127ef1a23b820b42a6c71e1effd425253ff83d",
+      "role": "HISTORY_INDEX"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v039.source.txt",
+      "sha": "2b79894d3edbedcf95cf6c16ec2ff7c6b85ef1fe",
+      "role": "HISTORICAL_EVENT"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V17.json",
+      "sha": "5b457fea3041e875c8f6cd1f6cec17dc433bc50b",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V19.json",
+      "sha": "207885210cf82e1cf5523ead269a44771afbc56c",
+      "role": "KNOWLEDGE"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M3.01_V1.json",
+      "sha": "635d1720a7680586d4947259cada17539eed67fd",
+      "role": "DECISION"
+    }
+  ],
+  "dramatic_core": {
+    "premise": "M3.01 após C01: Bartholomeu já recusou claramente guarda, remoção e intervenção na disputa Price–Haddad. Esta escolha delimita responsabilidades, não encerra a provocação nem cria dívida de salvamento. Próximas oportunidades podem testar proteção, poder e custos por causalidade independente, sem insistir que ele volte à disputa.",
+    "theme": "Negociação com o Abismo: responsabilidade sem domínio, força sem impunidade, instituições interessadas em extrair preço e a fronteira entre proteger e possuir.",
+    "pressure": "Oficina Krauser modesta e emprego no aquecimento coexistem com responsabilidades familiares, desigualdades da Novydres americana e dívidas de M2 não resolvidas. A recusa em C01 é fato moral e social, não mecanismo para gerar perseguição, ligação ou desastre compensatório; antagonismos civis, violência e anomalia dependem de agentes e causas autônomos.",
+    "open_questions": [
+      "Como proteger sem assumir domínio ou dívida ilimitada, após já ter recusado um pedido concreto?",
+      "Que consequências legítimas das escolhas pessoais podem surgir sem punição de roteiro pela recusa?",
+      "Quais custos e interesses independentes movem pessoas e instituições, mesmo quando Bart permanece fora?",
+      "Que limites da força e da palavra de Bart resistem a um poder material ou extraordinário assimétrico?",
+      "Como oferecer progresso moral, social e sobrenatural causal sem resolver boatos como fatos?",
+      "Como preservar experiências caínitas jogáveis antes de 2010 sem antecipar Abraço?"
+    ],
+    "agency_contract": "PLAYER_CHOICES_NEVER_SCRIPTED",
+    "narrative_constraints": [
+      "C01 é evento histórico CLOSED e integralmente imutável; C02 NOT_STARTED, sem ação ou deslocamento presumido do PJ.",
+      "A recusa a Eleanor e Samir foi inequívoca; telefone da oficina é contato condicional, não serviço prometido, adesão à causa, guarda, acompanhamento ou ligação futura garantida.",
+      "Nenhum contato Price/Haddad ou desfecho de disputa é obrigatório. Sem retorno, eles podem agir por seus próprios meios e informações, sem resolução automaticamente inscrita.",
+      "Eleanor e Samir foram introduzidos em C01, mas os direitos contratuais, titularidade, dívidas e descontos são versões conflitantes NPC_CLAIM não verificadas.",
+      "Desgaste visível do pneu não comprova suspensão empenada; aliança, banco vazio e objetos não estabelecem vida privada.",
+      "Não impor arrependimento, culpa, heroísmo, curiosidade, violência, decisões, compras ou movimentos ao PJ.",
+      "NPCs têm objetivos próprios, hierarquia, medo, limites de conhecimento, disposição V2 e direito de resistir sem serem sempre cordiais.",
+      "Preflight de toda possibilidade de spotlight: WHY_NOW independente, conflito novo, mudança verificável, decisão real, função M3 e modo temporal adequado; sem reciclar C01 como segundo pedido de guarda.",
+      "Rutinas de oficina, aquecimento e família exigem fricção transformadora nova; do contrário usar abstração, montagem ou elipse sem inventar atos do PJ.",
+      "Horror gótico-punk é causal: assimetria social, exploração, custo moral, precariedade física e/ou ruptura existencial; não crueldade ou vampiro por quota.",
+      "Combate tático somente com oposição capaz e motivo real, sem vitória sem custo nem dano arbitrário por recusa; adversários autônomos.",
+      "Não cruzar automaticamente Price/Haddad com Volnaya, Gromov, Nadezhda, Oleg, paciente M2.03, Ilya ou o mundo caínita.",
+      "Observações anômalas de M2 e alegações de Oleg sobre Brujah e Disciplinas continuam epistemicamente separadas.",
+      "Mortal sem Fome, Disciplinas nem Abraço; 2010 não iniciado, futura Senhora em metajogo não gera revelação, encontro ou genealogia.",
+      "Novydres é cidade americana com heranças eslavas, judaicas, alemãs e outras; preservar pilares Ortodoxia, Islã, Judaísmo e competência da Cruz e Espada distinta da Camarilla.",
+      "FV max6/disponível6/dano superficial0/agravado0; recuperação padrão3 + excepcional3 apenas NA ABERTURA M3.01, sem recuperação por próximo chat.",
+      "XP teto675 gasto270 capacidade405 crédito liberado0; nenhum A1–A4 de M3.01 creditado ou resolvido; cada ato futuro 10 crédito POTENCIAL sob auditoria, sem aumentar teto.",
+      "Oficina é baia alugada, sem guincho, renda garantida, imóvel próprio ou aquisições automáticas.",
+      "G28 só no fim de uma cena real; revisão de Dramaturgo nunca acrescenta fato, NPC knowledge, recompensa, relógio disparado, sessão ou ato concluído.",
+      "Plano descreve possibilidades e gatilhos, não ordem, datas, cenas ou resultados inevitáveis; Narrador pode elidir ou recomendar fechamento se não houver material novo."
+    ]
+  },
+  "established_facts": [
+    {
+      "claim_id": "F01",
+      "text": "M2 está oficialmente CLOSED. M3.01 foi autorizada e entrou em jogo; C01 CLOSED pelo evento final e C02 ainda NOT_STARTED.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "source_event_id": "CHR001-M301-C01-08-20261107-001",
+      "visibility": "SYSTEM_AUDIT"
+    },
+    {
+      "claim_id": "F02",
+      "text": "Bart mortal, nenhum Abraço, nenhuma Disciplina, nenhuma Fome ou experiência caínita adquirida.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/LIVE_v032.json",
+      "source_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F03",
+      "text": "Oficina Krauser aberta em pequena baia ALUGADA após meses de trabalho lícito; emprego no aquecimento mantido, sem guincho ou riqueza automática.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "source_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F04",
+      "text": "C16 teve força incomum observada e opção voluntária de poupar e deixar sair o interlocutor. Oleg, Brujah e poderes são NPC_CLAIM.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "source_event_id": "CHR001-M204-C16-26-20261106-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F05",
+      "text": "C17 concluiu evacuação de trabalhadores e homem consciente. Lesões, destino clínico, dano final e reparo seguem incertos.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "source_event_id": "CHR001-M204-C17-08-20261106-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F06",
+      "text": "Volnaya, Nadezhda, Gromov, Ilya, paciente M2.03, autoria do documento, ramal, escola e resultados de C17 têm dívidas separadas.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+      "source_event_id": null,
+      "visibility": "SYSTEM_AUDIT"
+    },
+    {
+      "claim_id": "F07",
+      "text": "Mary, Mikahel e Sara mantêm interesses autônomos. Relações históricas não são automaticamente Touchstones válidas em 2010.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/LIVE_v032.json",
+      "source_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F08",
+      "text": "No fechamento da C01: FV máximo6, superficial0, agravado0, disponível6 por recuperação específica (3 padrão + 3 excepcional só para início de M3.01); XP cap675 gasto270 capacidade405 crédito0; nenhum ato desta provocação pago.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/LIVE_v033.json",
+      "source_event_id": "CHR001-M301-C01-08-20261107-001",
+      "visibility": "SYSTEM_AUDIT"
+    },
+    {
+      "claim_id": "F09",
+      "text": "Bartholomeu recusou expressamente a segurança/remoção e envolvimento civil, ofereceu exame automotivo não contratado e entregou somente telefone condicional da oficina a Samir; Eleanor partiu de sedã e Samir saiu a pé. Não há promessa de intervenção ou ligação.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "source_event_id": "CHR001-M301-C01-08-20261107-001",
+      "visibility": "PLAYER_KNOWN"
+    },
+    {
+      "claim_id": "F10",
+      "text": "Eleanor alega controle contratual e despesas; Samir alega salários pendentes e descontos por equipamentos. Existência e validade material destas alegações NÃO foram verificadas; nenhum acordo, pagamento, apreensão, reparo ou decisão foi confirmado.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "source_event_id": "CHR001-M301-C01-03-20261107-001",
+      "visibility": "SYSTEM_AUDIT"
+    },
+    {
+      "claim_id": "F11",
+      "text": "Em C01 não ocorreu teste, perda de FV, crédito de XP, solução da disputa ou ato M3.01 resolvido. A cena anterior e o pacote formal de encerramento M2 permanecem historicamente fechados.",
+      "source_type": "CONFIRMED_EVENT",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "source_event_id": "CHR001-M301-C01-08-20261107-001",
+      "visibility": "SYSTEM_AUDIT"
+    }
+  ],
+  "prepared_truths": [
+    {
+      "prep_id": "PT01",
+      "text": "Núcleo de M3.01: a oferta de proteção pode converter-se em posse ou cobrança; a pessoa afetada tem desejos próprios, inclusive recusar a ajuda.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Uma parte real acessível é introduzida por causa independente"
+      ]
+    },
+    {
+      "prep_id": "PT02",
+      "text": "Uma autoridade cívica, contratante ou intermediário humano pode lucrar com obediência, silêncio ou prejuízo alheio sem ligação automática a Volnaya/caínitas.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Definir competência, acesso, risco e interesse por evidência"
+      ]
+    },
+    {
+      "prep_id": "PT03",
+      "text": "A pessoa vulnerável pode errar, mentir, ser orgulhosa ou escolher outro risco; não funciona como testemunha grata ou ferramenta da redenção do protagonista.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "NPC com informação, motivação, meios e limites"
+      ]
+    },
+    {
+      "prep_id": "PT04",
+      "text": "Uma luta física tática pode surgir de oposição material real. Adversário pode reagir, retirar-se ou vencer; vitória de Bart não apaga testemunhas, dano e consequências.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Oposição independente e geografia plausível de contato"
+      ]
+    },
+    {
+      "prep_id": "PT05",
+      "text": "Uma assimetria sobrenatural tem potencial de custo e terror sem exposição obrigatória de clã, sire, Volnaya ou Oleg.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Rota causal verificável, contato ou evidência, oportunidade de recusa"
+      ]
+    },
+    {
+      "prep_id": "PT06",
+      "text": "Incidências D2 potenciais: descoberta de tutela, complicação pelo preço, aprofundamento nas consequências. NÃO são três cenas ou uma sequência garantida.",
+      "epistemic_status": "PREPARED",
+      "visibility": "PLAYER_SAFE",
+      "preconditions": [
+        "Somente futuros episódios qualificados D1/D2"
+      ]
+    },
+    {
+      "prep_id": "PT07",
+      "text": "O Concílio da Cruz e Espada tem autoridade caínita própria; polícia, sindicato, tradição religiosa e governo civil não fundem suas competências.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Contexto canônico demonstrado"
+      ]
+    },
+    {
+      "prep_id": "PT08",
+      "text": "Kuthulun é Senhora futura escolhida em meta, com Primogenitura e genealogia ainda a auditar. Não fixar encontro, data ou Abraço.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Horizonte prospectivo apenas"
+      ]
+    },
+    {
+      "prep_id": "PT09",
+      "text": "A recusa C01 não cria dívida nem gatilho de punição compensatória. Outras pessoas podem tomar decisões próprias em tempo diegético, porém nenhuma ligação, retaliação, intervenção ou resolução do conflito Price/Haddad existe como fato até evidência jogada.",
+      "epistemic_status": "PREPARED",
+      "visibility": "GM_HIDDEN",
+      "preconditions": [
+        "Cada fato novo deve emergir de ação autônoma com acesso, tempo e informação sustentados."
+      ]
+    }
+  ],
+  "npc_dossiers": [
+    {
+      "entity_id": "npc-mary-krauser",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "personal_goal": "Defender filhos, limites próprios e orçamento; amar não significa colaborar ou perdoar sem condições.",
+      "resources": [
+        "Casa e finanças familiares com limites reais",
+        "Informação parcial sobre acontecimentos de M2"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece que a oficina foi aberta, não os atos secretos todos",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001"
+        },
+        {
+          "statement": "Não verificou natureza de Oleg",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Pode tomar decisões sobre família sem servir de assistente investigativa de Bart."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Nova exposição de risco",
+          "possible_response": "Questiona, condiciona, nega ou participa segundo limites próprios.",
+          "status": "CONDITIONAL"
+        },
+        {
+          "trigger": "Bart silencia",
+          "possible_response": "Não adivinha fatos; age só sobre observável.",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-mikahel-krauser",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "personal_goal": "Formar julgamento sobre justiça e figura paterna, com hesitação e erros próprios de sua idade.",
+      "resources": [
+        "Relações escolares e familiares"
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece conversa moral e episódio escolar anterior",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C14-05-20261105-001"
+        },
+        {
+          "statement": "Desconhece Volnaya e a conversa com Oleg",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Vai à escola e constrói vínculos sem depender de uma fala do pai por cena."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Novo conflito com consequência real",
+          "possible_response": "Pode discordar, errar, resistir ou procurar ajuda por conta própria.",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-pavel-heating-supervisor",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "personal_goal": "Proteger emprego e equipe, com autoridade limitada, hierarquia e medo de responsabilização.",
+      "resources": [
+        "Responsabilidade parcial por escalas",
+        "Acesso técnico e relatórios, não comando ilimitado"
+      ],
+      "knowledge": [
+        {
+          "statement": "Presenciou resgate C17, não a conversa reservada com Oleg",
+          "status": "KNOWN",
+          "event_id": "CHR001-M204-C17-08-20261106-001"
+        },
+        {
+          "statement": "Não sabe automaticamente sobre a Oficina Krauser",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Pode seguir apurações de ramal sem concluir autoria/reparo por decreto."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Pedido para ausentar-se",
+          "possible_response": "Avalia custo real, nega ou negocia, não libera automaticamente.",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-m3-eleanor-price-candidate",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "personal_goal": "Objetivos próprios ligados ao estabelecimento e à retirada que propôs, sob disputa civil; interesses efetivos além de suas alegações ainda exigem fonte, não presumir titularidade ou direito.",
+      "resources": [
+        "Sedã verde-escuro observado; capacidade de deslocar-se.",
+        "Alegação de contrato/propriedade NÃO equivale a documento ou autoridade comprovada."
+      ],
+      "knowledge": [
+        {
+          "statement": "Conhece que Bart é mecânico da Oficina Krauser, recusou segurança/mudança e propôs exame não contratado.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M301-C01-05-20261107-001"
+        },
+        {
+          "statement": "Ouviu contestação de Samir sobre salários e equipamento; não tem direito comprovado pelo narrador.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M301-C01-03-20261107-001"
+        },
+        {
+          "statement": "Conhecimento de endereço familiar, segredos M2, Volnaya e mundo caínita não sustentado.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Pode continuar a enfrentar a disputa por vias e relações próprias se houver gatilho e meios sustentados; não contratar outro, vencer, desaparecer, denunciar Bart ou provocar contato por decreto do plano.",
+        "Não presumir retorno à oficina após recusa nem ameaça por vingança roteirizada."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Nova interação causada por evento verificado e interesse real",
+          "possible_response": "Pode negar, barganhar, pedir provas, proteger sua posição, encerrar conversa ou negociar segundo custo, competência e conhecimento.",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    },
+    {
+      "entity_id": "npc-m3-samir-haddad-candidate",
+      "entity_origin": "ESTABLISHED_ENTITY",
+      "source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "personal_goal": "Busca defender interesses que alegou serem de trabalhadores, mas legitimidade e apoio representativo ainda são desconhecidos; ele não recebe por default serviço de Bartholomeu.",
+      "resources": [
+        "Número da Oficina Krauser recebido em papel, sem compromisso de resposta.",
+        "Capacidade social e documental além de sua alegação ainda não estabelecida."
+      ],
+      "knowledge": [
+        {
+          "statement": "Sabe que Bart tem dois empregos e família, recusou participar do conflito e apenas ofereceu telefone da oficina para uma emergência eventual.",
+          "status": "KNOWN",
+          "event_id": "CHR001-M301-C01-07-20261107-001"
+        },
+        {
+          "statement": "Afirmou salários não pagos e descontos de equipamentos; não há prova independente.",
+          "status": "CLAIMED",
+          "event_id": "CHR001-M301-C01-03-20261107-001"
+        },
+        {
+          "statement": "Não conhece necessariamente residência, família por identidade, Volnaya, Oleg ou caínitas; ligação futura não ocorreu.",
+          "status": "UNKNOWN",
+          "event_id": null
+        }
+      ],
+      "when_pc_absent": [
+        "Tem liberdade para buscar outras alternativas, discordar de outros trabalhadores, abandonar controvérsia ou manter-se no conflito conforme evidências e meios; nenhum resultado offscreen determinado.",
+        "Não ligar automaticamente por possuir telefone, nem interpretar condição de emergência como promessa de vigilância/defesa."
+      ],
+      "conditional_responses": [
+        {
+          "trigger": "Caso futuro realmente motive contato e ele tenha meios de ligar",
+          "possible_response": "Pode ligar ou não, informar sua versão sem prova implícita; Bart permanece livre para recusar, negociar ou não atender.",
+          "status": "CONDITIONAL"
+        }
+      ],
+      "secrets_visibility": "GM_HIDDEN"
+    }
+  ],
+  "clues": [
+    {
+      "clue_id": "CL01",
+      "meaning_if_discovered": "Consentimento da pessoa protegida não decorre do pedido de terceiro.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL01R1",
+          "conditions": "Ouvir pessoalmente sem coação",
+          "holder_or_location": "Pessoa afetada"
+        },
+        {
+          "route_id": "CL01R2",
+          "conditions": "Verificar escolhas concretas",
+          "holder_or_location": "Cena e testemunhas limitadas"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL02",
+      "meaning_if_discovered": "Distinguir o lucro, competência e riscos de cada instituição de suspeita não provada.",
+      "critical": true,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL02R1",
+          "conditions": "Confrontar contrato ou representante",
+          "holder_or_location": "Fonte civil competente"
+        },
+        {
+          "route_id": "CL02R2",
+          "conditions": "Cotejar versão de outra parte",
+          "holder_or_location": "Trabalhador ou destinatário do serviço"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL03",
+      "meaning_if_discovered": "Separar anomalia testemunhada de alegação sobre clã, magia ou uma organização.",
+      "critical": false,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL03R1",
+          "conditions": "Ter contato/vestígio alcançável",
+          "holder_or_location": "Lugar e fonte causal"
+        },
+        {
+          "route_id": "CL03R2",
+          "conditions": "Comparar testemunhos",
+          "holder_or_location": "Fontes independentes com limites"
+        }
+      ]
+    },
+    {
+      "clue_id": "CL04",
+      "meaning_if_discovered": "Uma vitória física pode gerar fuga, dano secundário e reação institucional sem culpa automática.",
+      "critical": false,
+      "revelation_status": "PREPARED",
+      "discovery_routes": [
+        {
+          "route_id": "CL04R1",
+          "conditions": "Observar reação e condições",
+          "holder_or_location": "Cena da disputa"
+        },
+        {
+          "route_id": "CL04R2",
+          "conditions": "Ouvir parte afetada posteriormente",
+          "holder_or_location": "Pessoa com percepção direta"
+        }
+      ]
+    }
+  ],
+  "offscreen_clocks": [
+    {
+      "clock_id": "K01",
+      "trigger": "Tempo diegético e interesse autônomo comprovado da pessoa em risco.",
+      "possible_consequence": "A pessoa tenta proteger-se e pode afastar-se ou ceder sem aguardar Bart.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K02",
+      "trigger": "Autoridade civil toma decisão por competência e custo real.",
+      "possible_consequence": "Uma instituição pode negar, barganhar ou retaliar segundo meios limitados.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K03",
+      "trigger": "Violência ou ferimento é observado por alguém com meios de ação.",
+      "possible_consequence": "Reação, testemunho, denúncia ou fuga podem decorrer, sem punição de roteiro.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K04",
+      "trigger": "Contato fenomenológico/sobrenatural tem fonte e oportunidade causal.",
+      "possible_consequence": "Informação parcial, recuo ou negociação, nunca abraço/lore automáticos.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K05",
+      "trigger": "Família recebe notícia verificável ou testemunha decisão do PJ.",
+      "possible_consequence": "Relação pode mudar por autonomia; não há leitura mental.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    },
+    {
+      "clock_id": "K06",
+      "trigger": "Somente ação verificável das partes da controvérsia Price/Haddad com meios, informação, prazo diegético e motivo independente; telefone em si não dispara.",
+      "possible_consequence": "A controvérsia pode mudar, perder relevância ou permanecer aberta, sem inferência de contato com Bart, decisão jurídica ou violência.",
+      "status": "CONDITIONAL",
+      "runs_on_turn_count": false
+    }
+  ],
+  "acts": [
+    {
+      "act_id": "A1",
+      "dramatic_function": "Descoberta — fronteiras do cuidado e da palavra após recusa consciente, sem transformar o telefone em juramento.",
+      "entry_options": [
+        "Um conflito novo, acessível e independente exige delimitar autorização, custos e interesses da pessoa afetada.",
+        "O próprio mundo apresenta consequência observável de M2 ou assunto distinto; não repetir oferta de guarda de C01.",
+        "A1 permanece PLANNED_NOT_GRANTED: a recusa de C01 participa do tema, mas não encerrou pergunta substantiva nem pagou ato."
+      ],
+      "frames": [
+        {
+          "frame_id": "A1F",
+          "purpose": "Descoberta — fronteiras do cuidado e da palavra após recusa consciente, sem transformar o telefone em juramento.",
+          "location_options": [
+            "Oficina Krauser se contato justificado",
+            "Local civil/coletivo alcançável"
+          ],
+          "possible_entry_conditions": [
+            "Apenas quando conflito e pessoa alcançável dispõem de motivo novo com causa verificável.",
+            "WHY_NOW / POTENTIAL_TRANSFORMATION / REAL_PC_CHOICE / TIME_JUMP_OR_SPOTLIGHT examinados antes de abrir C02; cena editorial não é cena real."
+          ],
+          "scenes": [
+            {
+              "scene_id": "S11",
+              "possible_entry": [
+                "Apenas quando conflito e pessoa alcançável dispõem de motivo novo com causa verificável."
+              ],
+              "conflict": "Uma pessoa pode demandar algo que outra não autorizou; o protagonista pode dizer não sem que surja punição obrigatória.",
+              "stakes": "Consentimento, responsabilidade limitada, acesso à verdade e custos de terceiros.",
+              "npc_active_goals": [
+                "Interessado pode querer proteção sem abrir mão do controle.",
+                "Terceiro afetado pode recusar tutela e seguir outro caminho."
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "A1B0",
+                  "prompt_or_npc_action": "Confrontar conhecimento real, posição desigual e objetivos próprios dos atores, sem coerção de roteiro.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                },
+                {
+                  "beat_id": "A1B1",
+                  "prompt_or_npc_action": "Oferecer recusa e mudança causal; separar observação, alegação, hipótese e preparação.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "A1O0",
+                  "trigger": "Negociação realmente delimitada e sustentada",
+                  "possible_consequence": "Recalcular relação, custo e provas apenas com decisão jogada e consequência causal.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "A1O1",
+                  "trigger": "Recusa, retirada ou desvio sem obrigação de retorno",
+                  "possible_consequence": "Atores agem apenas com seus meios; ausência de recompensa, coerção ou penalidade predeterminadas.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Encerrar após escolha real e fato novo; não solucionar outros fios por transição ou elipse."
+              ],
+              "clue_ids": [
+                "CL01",
+                "CL02"
+              ],
+              "test_preflight_refs": [
+                "NPC_DISPOSITION_CONTRACT_V2",
+                "NPC_KNOWLEDGE_GATE_V1",
+                "G25_G27_WHEN_APPLICABLE",
+                "G28_ON_SCENE_END"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Alteração significativa pela ação dos agentes; caso contrário interromper repetição ou elidir."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Resolver somente com evento efetivo e evidência independente, não por chamada/recusa C01 ou contagem de cenas.",
+        "Alternativa legítima: elipse, escolha inesperada ou fechamento de oportunidade sem crédito se pergunta dramática não foi resolvida."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A2",
+      "dramatic_function": "Complicação — força, limite e oposição autônoma sob custo, não um combate exigido para preencher ato.",
+      "entry_options": [
+        "Ameaça física objetiva com agência de oponente distinto, meios e posição alcançável.",
+        "Oposição pode vir de fio com causalidade própria ou situação social nova; não imputar agressão a Price/Haddad pela recusa.",
+        "Ausente oposição, usar outra oportunidade ou elipse; não criar duelo por quota."
+      ],
+      "frames": [
+        {
+          "frame_id": "A2F",
+          "purpose": "Complicação — força, limite e oposição autônoma sob custo, não um combate exigido para preencher ato.",
+          "location_options": [
+            "Via ou ambiente de serviço causal",
+            "Terreno com rotas de saída e terceiros"
+          ],
+          "possible_entry_conditions": [
+            "Somente após ameaça material verificável e escolha real de desescalar, lutar, sair ou proteger.",
+            "WHY_NOW / POTENTIAL_TRANSFORMATION / REAL_PC_CHOICE / TIME_JUMP_OR_SPOTLIGHT examinados antes de abrir C02; cena editorial não é cena real."
+          ],
+          "scenes": [
+            {
+              "scene_id": "S21",
+              "possible_entry": [
+                "Somente após ameaça material verificável e escolha real de desescalar, lutar, sair ou proteger."
+              ],
+              "conflict": "A força do PJ pode impedir um mal e simultaneamente ferir interesses de inocentes ou mobilizar forças mais poderosas.",
+              "stakes": "Integridade, reputação, testemunhas, danos verificáveis, limite moral.",
+              "npc_active_goals": [
+                "Oponente tenta atingir seu interesse e preservar-se, com reação e possibilidade de falha ou vitória.",
+                "Terceiros independentes protegem prioridades, não são plateia gratuita."
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "A2B0",
+                  "prompt_or_npc_action": "Confrontar conhecimento real, posição desigual e objetivos próprios dos atores, sem coerção de roteiro.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                },
+                {
+                  "beat_id": "A2B1",
+                  "prompt_or_npc_action": "Oferecer recusa e mudança causal; separar observação, alegação, hipótese e preparação.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "A2O0",
+                  "trigger": "Oposição contida segundo mecânica, com efeitos limitados",
+                  "possible_consequence": "Recalcular relação, custo e provas apenas com decisão jogada e consequência causal.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "A2O1",
+                  "trigger": "Desescalada, saída ou derrota com causa e consequências limitadas",
+                  "possible_consequence": "Atores agem apenas com seus meios; ausência de recompensa, coerção ou penalidade predeterminadas.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Encerrar após escolha real e fato novo; não solucionar outros fios por transição ou elipse."
+              ],
+              "clue_ids": [
+                "CL04"
+              ],
+              "test_preflight_refs": [
+                "NPC_DISPOSITION_CONTRACT_V2",
+                "NPC_KNOWLEDGE_GATE_V1",
+                "G25_G27_WHEN_APPLICABLE",
+                "G28_ON_SCENE_END"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Alteração significativa pela ação dos agentes; caso contrário interromper repetição ou elidir."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Resolver somente com evento efetivo e evidência independente, não por chamada/recusa C01 ou contagem de cenas.",
+        "Alternativa legítima: elipse, escolha inesperada ou fechamento de oportunidade sem crédito se pergunta dramática não foi resolvida."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A3",
+      "dramatic_function": "Negociação com o abismo — testar realidade extraordinária e poder assimétrico por rota causal demonstrável, sem Abraço automático.",
+      "entry_options": [
+        "Fonte observável independente ou fio antigo com oportunidade verificável de novo conhecimento.",
+        "Rumores de M2 são ponto de atenção, não prova nem licença para conectar todas as redes.",
+        "Se não houver causa, manter dívida sobrenatural com revisão do horizonte e não inserir criatura por coincidência."
+      ],
+      "frames": [
+        {
+          "frame_id": "A3F",
+          "purpose": "Negociação com o abismo — testar realidade extraordinária e poder assimétrico por rota causal demonstrável, sem Abraço automático.",
+          "location_options": [
+            "Espaço de contato anômalo justificado",
+            "Local de poder humano com consequências"
+          ],
+          "possible_entry_conditions": [
+            "Apenas quando um fenômeno/ator possui motivo e acesso comprováveis, sem promessa de revelação.",
+            "WHY_NOW / POTENTIAL_TRANSFORMATION / REAL_PC_CHOICE / TIME_JUMP_OR_SPOTLIGHT examinados antes de abrir C02; cena editorial não é cena real."
+          ],
+          "scenes": [
+            {
+              "scene_id": "S31",
+              "possible_entry": [
+                "Apenas quando um fenômeno/ator possui motivo e acesso comprováveis, sem promessa de revelação."
+              ],
+              "conflict": "Experiência de violência mortal não garante compreensão de ameaça ou poder extraordinário.",
+              "stakes": "Certeza, autonomia, segurança corporal, segredo, possibilidade de recuo.",
+              "npc_active_goals": [
+                "Agente extraordinário tem agenda, limites e risco próprios e pode negar exposição.",
+                "Observadores humanos não adquirem conhecimento vampírico automático."
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "A3B0",
+                  "prompt_or_npc_action": "Confrontar conhecimento real, posição desigual e objetivos próprios dos atores, sem coerção de roteiro.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                },
+                {
+                  "beat_id": "A3B1",
+                  "prompt_or_npc_action": "Oferecer recusa e mudança causal; separar observação, alegação, hipótese e preparação.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "A3O0",
+                  "trigger": "Contato oferece observação parcial sem genealogia ou certeza instantânea",
+                  "possible_consequence": "Recalcular relação, custo e provas apenas com decisão jogada e consequência causal.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "A3O1",
+                  "trigger": "Recuo, ausência de prova ou negociação mantém dívida aberta sem Abraço",
+                  "possible_consequence": "Atores agem apenas com seus meios; ausência de recompensa, coerção ou penalidade predeterminadas.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Encerrar após escolha real e fato novo; não solucionar outros fios por transição ou elipse."
+              ],
+              "clue_ids": [
+                "CL03"
+              ],
+              "test_preflight_refs": [
+                "NPC_DISPOSITION_CONTRACT_V2",
+                "NPC_KNOWLEDGE_GATE_V1",
+                "G25_G27_WHEN_APPLICABLE",
+                "G28_ON_SCENE_END"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Alteração significativa pela ação dos agentes; caso contrário interromper repetição ou elidir."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Resolver somente com evento efetivo e evidência independente, não por chamada/recusa C01 ou contagem de cenas.",
+        "Alternativa legítima: elipse, escolha inesperada ou fechamento de oportunidade sem crédito se pergunta dramática não foi resolvida."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    },
+    {
+      "act_id": "A4",
+      "dramatic_function": "Aprofundamento — consequências humanas e institucionais de escolhas realmente conhecidas por quem reage.",
+      "entry_options": [
+        "Instituição ou pessoa recebe fato por canal demonstrado e sofre consequência específica.",
+        "Família tem mudança genuína de confiança ou responsabilidade, não lição doméstica repetida.",
+        "Ausente comunicação real, não fazer Mary, Pavel, Eleanor ou Samir conhecerem a disputa por onisciência."
+      ],
+      "frames": [
+        {
+          "frame_id": "A4F",
+          "purpose": "Aprofundamento — consequências humanas e institucionais de escolhas realmente conhecidas por quem reage.",
+          "location_options": [
+            "Oficina ou casa se fato novo",
+            "Instituição local de competência comprovada"
+          ],
+          "possible_entry_conditions": [
+            "Somente quando repercussão ou contraste de novo custo alcançou sujeito autônomo.",
+            "WHY_NOW / POTENTIAL_TRANSFORMATION / REAL_PC_CHOICE / TIME_JUMP_OR_SPOTLIGHT examinados antes de abrir C02; cena editorial não é cena real."
+          ],
+          "scenes": [
+            {
+              "scene_id": "S41",
+              "possible_entry": [
+                "Somente quando repercussão ou contraste de novo custo alcançou sujeito autônomo."
+              ],
+              "conflict": "Promessa, recusa e silêncio têm significado diferente para cada pessoa, que pode impor limites sem validar o protagonista.",
+              "stakes": "Relações, estabilidade profissional, solidariedade e segurança, sem culpa automática.",
+              "npc_active_goals": [
+                "Mary e familiares protegem interesses próprios e podem discordar sem punir Bart arbitrariamente.",
+                "Agentes institucionais preservam competência, salário, reputação e regras, podendo conceder ou negar."
+              ],
+              "optional_beats": [
+                {
+                  "beat_id": "A4B0",
+                  "prompt_or_npc_action": "Confrontar conhecimento real, posição desigual e objetivos próprios dos atores, sem coerção de roteiro.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                },
+                {
+                  "beat_id": "A4B1",
+                  "prompt_or_npc_action": "Oferecer recusa e mudança causal; separar observação, alegação, hipótese e preparação.",
+                  "optional": true,
+                  "epistemic_status": "PREPARED"
+                }
+              ],
+              "conditional_outcomes": [
+                {
+                  "outcome_id": "A4O0",
+                  "trigger": "Reparação ou desacordo causa mudança efetiva comprovada",
+                  "possible_consequence": "Recalcular relação, custo e provas apenas com decisão jogada e consequência causal.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": false
+                },
+                {
+                  "outcome_id": "A4O1",
+                  "trigger": "Sem mudança e sem conhecimento, a cena é elidida ou a pessoa se afasta",
+                  "possible_consequence": "Atores agem apenas com seus meios; ausência de recompensa, coerção ou penalidade predeterminadas.",
+                  "status": "CONDITIONAL",
+                  "supports_refusal_or_diversion": true
+                }
+              ],
+              "possible_exit_conditions": [
+                "Encerrar após escolha real e fato novo; não solucionar outros fios por transição ou elipse."
+              ],
+              "clue_ids": [
+                "CL01",
+                "CL02",
+                "CL04"
+              ],
+              "test_preflight_refs": [
+                "NPC_DISPOSITION_CONTRACT_V2",
+                "NPC_KNOWLEDGE_GATE_V1",
+                "G25_G27_WHEN_APPLICABLE",
+                "G28_ON_SCENE_END"
+              ],
+              "pc_decisions_unwritten": true
+            }
+          ],
+          "possible_exit_conditions": [
+            "Alteração significativa pela ação dos agentes; caso contrário interromper repetição ou elidir."
+          ],
+          "is_mandatory": false
+        }
+      ],
+      "possible_exit_conditions": [
+        "Resolver somente com evento efetivo e evidência independente, não por chamada/recusa C01 ou contagem de cenas.",
+        "Alternativa legítima: elipse, escolha inesperada ou fechamento de oportunidade sem crédito se pergunta dramática não foi resolvida."
+      ],
+      "nonlinear": true,
+      "xp_credit_nominal": 10,
+      "xp_credit_status": "PLANNED_NOT_GRANTED",
+      "act_is_substantive": true
+    }
+  ],
+  "fallback_routes": [
+    {
+      "kind": "REFUSAL",
+      "npc_reaction_basis": "Bart e a parte vulnerável podem negar e agir autonomamente.",
+      "possible_routes": [
+        "A recusa da C01 é completa e não precisa ser renegociada; não impor chamado, dívida ou salvamento.",
+        "Price e Samir podem buscar rotas próprias, com resultados UNKNOWN até evidência; caso não haja novo conflito, deslocar foco da provocação."
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "UNPLANNED_ACTION",
+      "npc_reaction_basis": "O plano não bloqueia ação criativa do jogador.",
+      "possible_routes": [
+        "Recalcular stakes e meios com fontes.",
+        "Revisar prospectivamente no próximo ciclo após G28."
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "FAILURE",
+      "npc_reaction_basis": "Fracasso depende de oposição real e regras, não roteiro de humilhação.",
+      "possible_routes": [
+        "Fuga, informação incompleta ou lesão podem ocorrer causalmente.",
+        "Não reclassificar falha como vitória escondida nem morte automática."
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "DEPARTURE",
+      "npc_reaction_basis": "O mundo não congela se Bart sai.",
+      "possible_routes": [
+        "Clocks só por tempo/causa.",
+        "O foco pode deslocar-se, preservando agência."
+      ],
+      "pc_forced": false
+    },
+    {
+      "kind": "DELAY",
+      "npc_reaction_basis": "A vida mortal não deve empurrar o Abraço até 2010 por inércia.",
+      "possible_routes": [
+        "Pular rotinas sem novos stakes; a recusa da C01 não deve ser imediatamente revertida por urgência fabricada.",
+        "Revisar viabilidade de exposição extraordinária e vida pós-Abraço jogada, sem impor encontro, ano ou transformação."
+      ],
+      "pc_forced": false
+    }
+  ],
+  "mechanical_preparation": {
+    "engine_ref": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+    "take_half_ref": "novydres/runtime/PRE_ROLL_TAKE_HALF_GATE_V1.md",
+    "narrator_gate_ref": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
+    "provisional_rules_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+    "only_proposed_tests": true,
+    "rng_performed": false,
+    "xp_fv_modified": false
+  },
+  "guards": {
+    "does_not_change_g28": true,
+    "does_not_start_session": true,
+    "does_not_advance_m204": true,
+    "does_not_modify_history": true,
+    "no_forced_pc_action": true,
+    "player_handoff_contains_no_spoilers": true,
+    "does_not_award_xp_on_preparation": true,
+    "does_not_increase_budget_per_act": true
+  },
+  "xp_credit_plan": {
+    "policy_id": "DEC-CR-021",
+    "cap_source": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+    "cap_xp": 675,
+    "nominal_per_act": 10,
+    "planned_act_count": 4,
+    "planned_credit_potential": 40,
+    "grant_automatically_on_preparation": false,
+    "reward_is_new_xp": false,
+    "act_eligibility_event_required": true,
+    "cap_is_absolute": true
+  }
+}

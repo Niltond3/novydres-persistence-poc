@@ -1,0 +1,51 @@
+{
+  "schema": "novydres-arc-memory-v1",
+  "simulation_only": true,
+  "arc_id": "arc-pump",
+  "title": "Inspeção e pressão da bomba",
+  "status": "OPEN",
+  "causal_chain": [
+    {
+      "event_id": "SIM-M001-E001",
+      "type": "PLAYER_DECLARATION",
+      "effect": "Compromisso de inspecionar antes da assinatura"
+    },
+    {
+      "event_id": "SIM-M001-E002",
+      "type": "NPC_CLAIM",
+      "effect": "Versão de Vale; não confirma segurança"
+    },
+    {
+      "event_id": "SIM-M001-E003",
+      "type": "WORLD_EVENT",
+      "effect": "Alarme observado; causa UNKNOWN"
+    },
+    {
+      "event_id": "SIM-M001-E004",
+      "type": "NPC_ACTION",
+      "effect": "Ivo pergunta, aguardando jogador"
+    }
+  ],
+  "confirmed_facts": [
+    "Alarme de pressão soou",
+    "Íris declarou intenção de vistoriar"
+  ],
+  "unverified_claims": [
+    "Vale afirmou segurança da bomba"
+  ],
+  "unknowns": [
+    "Resultado da inspeção",
+    "Causa real do alarme",
+    "Conteúdo verdadeiro do relatório"
+  ],
+  "open_threads": [
+    "thread-signature",
+    "thread-alarm"
+  ],
+  "involved_entities": [
+    "pc-iris",
+    "npc-ivo",
+    "npc-vale"
+  ],
+  "source_events_path": "poc/memory-v1/episodes/M0.01/events-001-004.json"
+}

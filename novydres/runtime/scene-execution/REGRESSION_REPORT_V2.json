@@ -1,0 +1,289 @@
+{
+  "schema": "NOVYDRES_SCENE_EXECUTION_POSTCOMMIT_AUDIT_V2",
+  "date": "2026-11-03",
+  "scope": "INDEPENDENT_POSTCOMMIT_REGRESSION_AND_GITHUB_READBACK",
+  "baseline_commit": "78c1524307197f73db44f9f0faedd3c6df89ecdb",
+  "implementation_commit": "ea3c1a7f4cba7887544dcef674304d449e549629",
+  "implementation_tree_sha": "736f0861defb72985f352433092fd8b45e5d1f28",
+  "github_branch": "master",
+  "status": "PASS_POSTCOMMIT_READBACK_CONFIRMED",
+  "quality_boundaries": {
+    "method": "Connected GitHub fetch_file on specific immutable implementation commit; JS vector predicates and subset recursive JSON Schema constraint checks",
+    "not": "NOT_FULL_JSON_SCHEMA_CONFORMANCE_CERTIFICATION_OR_LIVE_NARRATOR_E2E",
+    "synthetic_fixtures_only": true,
+    "no_play_events": true,
+    "no_real_dice_rolls": true,
+    "not_technical_v5_ledger": true
+  },
+  "results": {
+    "independent_regression_vectors": {
+      "total": 24,
+      "passed": 24,
+      "failed": 0,
+      "source": "novydres/runtime/scene-execution/REGRESSION_VECTORS_V1.json",
+      "details": [
+        {
+          "id": "T01",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T02",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T03",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T04",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T05",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T06",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T07a",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T07b",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T07c",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T08",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T09",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T10",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T11",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "T12",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S01",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S02",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S03",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S04",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S05",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S06",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S07",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S08",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S09",
+          "result": "DENY",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        },
+        {
+          "id": "S10",
+          "result": "ALLOW",
+          "regression_reexecution": "PASS",
+          "provenance": "INDEPENDENT_JS_CONTRACT_PREDICATE"
+        }
+      ]
+    },
+    "scene_packet_schema_fixture_tests": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "tests": [
+        "valid_pre_session_packet",
+        "missing_scene",
+        "negative_xp",
+        "unauthorized_wp",
+        "unsupported_fact",
+        "extra_property",
+        "bad_commit_hash",
+        "invalid_role",
+        "invalid_status"
+      ]
+    },
+    "g28_and_scene_guards": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "checks": [
+        "G28 norm written one commit per closed scene",
+        "atomic GitHub commit/CAS/readback",
+        "no write per in-scene turn",
+        "manifest preserves G28",
+        "no automatic scene start",
+        "M2.03 closed and M2.04 not started"
+      ]
+    },
+    "snapshot_integrity": {
+      "M2_03": "CLOSED",
+      "M2_04": "NOT_STARTED",
+      "mortal": true,
+      "embrace_occurred": false,
+      "main_chronicle_2010_started": false,
+      "xp_total": 519,
+      "xp_spent": 170,
+      "xp_remaining": 349,
+      "xp_credit_available": 20,
+      "fv_max_provisional": 6,
+      "fv_superficial": 5,
+      "fv_aggravated": 0,
+      "fv_available": 1
+    },
+    "immutable_readback": {
+      "target_sheet_path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "target_sheet_blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "live_path": "novydres/chronicles/CHR-001/LIVE_v012.json",
+      "live_blob_sha": "87ab0ac25bb5df36dd11af56b876ff1826e74495",
+      "g28_path": "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
+      "g28_blob_sha": "231cb78d712c4c7d2be88a41a4058d21e1cf88ea"
+    },
+    "implementation_files_readback": {
+      "count": 11,
+      "ref": "ea3c1a7f4cba7887544dcef674304d449e549629",
+      "items": [
+        {
+          "path": "novydres/runtime/scene-execution/GOVERNANCE_AUDIT_V1.md",
+          "sha": "971ce9620f40e71bdc46186e891e73a812906ba4"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/SCENE_EXECUTION_PROTOCOL_V1.md",
+          "sha": "2885a04f17270045c450faf22ee014dc693c2164"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/SCENE_PACKET_SCHEMA_V1.json",
+          "sha": "bad017f7a53606ea2ae63e71bc7f541a0db40a49"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/NPC_KNOWLEDGE_GATE_V1.md",
+          "sha": "eaf6256b8027992e92e7c9dfdd071afac5063771"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
+          "sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/SESSION_TRANSITION_V1.md",
+          "sha": "ecb67c617366fd895c06374d1a1cb211cbc3aa89"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/SCENE_AUDIT_CHECKLIST_V1.json",
+          "sha": "18fc590cc4e963ed3239003e56d027ed84b9612e"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/REGRESSION_VECTORS_V1.json",
+          "sha": "ebf92fcf4bcb5a47ee2b6ae24c5f22f43eadd0f3"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/REGRESSION_REPORT_V1.json",
+          "sha": "b39d41087eda33b674bb7cca5c1ae1e9edf3d336"
+        },
+        {
+          "path": "novydres/runtime/scene-execution/CHATGPT_WEB_BOOTSTRAP_V1.md",
+          "sha": "b1e53bfe82ea66590ef6fc94e24777bb2281991e"
+        },
+        {
+          "path": "novydres/MANIFEST_V15.json",
+          "sha": "c7ada203629742f554968a4e99eaf69d559fccf7"
+        }
+      ]
+    }
+  },
+  "publication_guards": {
+    "implementation_commit_is_one_fast_forward_from_baseline": true,
+    "implementation_diff_only_additions_11": true,
+    "frozen_file_modified": false,
+    "historical_episode_modified": false,
+    "no_character_state_changes": true,
+    "report_postcommit_status_exceeds_initial_v1_pending": true
+  },
+  "pending_future_validation": [
+    "Live ChatGPT Web new-chat independent reenactment not executed; do not claim E2E passed",
+    "Full JSON Schema draft 2020-12 validator not executed; custom keyword test subset only",
+    "Future narrator must perform each NPC/mechanical gate; contract alone is not an independent agent",
+    "G28 buffer open in chat is not durable until scene-end commit",
+    "XP credit and FV simulated only; SESSION_TRANSITION not executed"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "validator": "ORCHESTRATION_TESTS_V4.mjs",
+  "version": "V4",
+  "status": "PASS",
+  "passed": 7,
+  "total": 7,
+  "failed": 0,
+  "validator_blob_sha": "7b0b096a4803034bfdaab2f784d3650004c65c8a",
+  "cases": [
+    "latest SOURCE_RECONCILED cycle validates refs/cursor",
+    "C05 preserved and C06 unstarted",
+    "reject changed narrative event",
+    "reject scene start",
+    "reject Embrace or mortality change",
+    "reject XP/FV change",
+    "reject Narrator role/executable scene"
+  ]
+}

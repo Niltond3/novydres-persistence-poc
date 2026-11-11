@@ -1,0 +1,55 @@
+{
+  "schema_id": "CHR001_NARRATIVE_ATLAS_BACKFILL_QUEUE_V2",
+  "chronicle_id": "CHR-001",
+  "status": "OPEN_PARTIAL",
+  "execution_status": "PARTIAL_V001_PUBLISHED",
+  "source_head": "d64b1213c1531af512c15ad7082e90c9593c0947",
+  "parent_path": "novydres/chronicles/CHR-001/admin/ATLAS_BACKFILL_QUEUE_V1.json",
+  "observed_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0031.json",
+  "observed_cycle_status": "READY_FOR_DRAMATURGO",
+  "observed_event": "CHR001-M301-C04-20-20261108-001",
+  "atlas_snapshot_path": "novydres/chronicles/CHR-001/narrative-atlas/ATLAS_SNAPSHOT_V001.json",
+  "coverage_report_path": "novydres/chronicles/CHR-001/narrative-atlas/COVERAGE_REPORT_V001.json",
+  "priority_work": [
+    {
+      "id": "P0",
+      "status": "PARTIAL",
+      "remaining": "auditoria semântica de fontes M1–M2.02; autoria original"
+    },
+    {
+      "id": "P1",
+      "status": "PARTIAL",
+      "remaining": "varredura completa dos figurantes e relações recíprocas"
+    },
+    {
+      "id": "P2",
+      "status": "PARTIAL",
+      "remaining": "iniciativas autônomas com confirmações e clocks"
+    },
+    {
+      "id": "P3",
+      "status": "PARTIAL",
+      "remaining": "validar todos os grafos contra evidência evento a evento"
+    },
+    {
+      "id": "P4",
+      "status": "PARTIAL",
+      "remaining": "seeds as-of com conhecimentos limitados"
+    },
+    {
+      "id": "P5",
+      "status": "PENDING",
+      "remaining": "versão sucessora do contrato/validador e ativação formal"
+    }
+  ],
+  "guards": {
+    "no_live_or_cycle_change": true,
+    "no_story_event_retrocanonization": true,
+    "no_frozen_edits": true,
+    "no_xp_fv": true,
+    "no_next_role_override": true,
+    "no_spoiler_in_player_safe": true,
+    "no_background_execution": true,
+    "record_unknown_instead_of_invention": true
+  }
+}

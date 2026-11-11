@@ -1,0 +1,122 @@
+{
+  "document_id": "D10_TEST_RESULTS_V024",
+  "validator": "D10_VALIDATE_V024.py",
+  "version": "V024",
+  "status": "PASS",
+  "checks_passed": 16,
+  "checks_total": 16,
+  "failed_check_ids": [],
+  "checks": [
+    {
+      "id": "D10-01",
+      "label": "source HEAD is approved master parent",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-02",
+      "label": "C36 is latest source cycle",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-03",
+      "label": "C36 manifest and checkpoint reconcile",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-04",
+      "label": "decision is explicit and episode-only",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-05",
+      "label": "decision preserves exact thread ledger",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-06",
+      "label": "D06 episode gate evidence is satisfied",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-07",
+      "label": "D06 keeps route disposition independent",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-08",
+      "label": "D08 has no admitted C06 cause or scene",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-09",
+      "label": "D09 route target remains pending",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-10",
+      "label": "D09 scene and Narrator gates remain closed",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-11",
+      "label": "D09 leaves C06 unstarted and not declined",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-12",
+      "label": "D10 registry pins every current source exactly",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-13",
+      "label": "D10 adapters pin exact registry and V9/V11 runtime/docs",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-14",
+      "label": "inventory binds exact source checkpoint",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-15",
+      "label": "no scene, state change, or next Marco is authorized",
+      "result": "PASS"
+    },
+    {
+      "id": "D10-16",
+      "label": "runtime V11 schema declares the new cycle id",
+      "result": "PASS"
+    }
+  ],
+  "inputs": {
+    "novydres/.AGENT_V4.md": "28ec5230de70541aec6d555a04cb382fc03141cf",
+    "novydres/.CONTEXTG_V3.md": "cc4827858e95b6046f4ceda3203610f9facd0790",
+    "novydres/MANIFEST_V51.json": "2a315f5593068e8ff8031cc6b3ca68846d926077",
+    "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+    "novydres/chronicles/CHR-001/orchestration/CYCLE_V0036.json": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920",
+    "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json": "474a5f64987ac220de0d92214898df32842d3bd8",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V031.json": "ee28dcc81940389382654e70b7e4591ae3bc675d",
+    "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md": "d29922e5b58f34d7c424b9a8332645abb8a16dae",
+    "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V024_PLAYER_SAFE.json": "367818c676a844922967bd62f35a6c371fdfd98a",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V017.json": "54a7b3877dde1a2dcb9e556289cdfd9641b9f876",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V022.json": "1ee5f18905902b93fb83db4d702526aeda52b1c9",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V024.py": "2ac55e20af4768c266ce24d4d1162280c1b9b026",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V006_PLAYER_SAFE.json": "a020cd2aee23786fc2ce5f161591b67bb6c454d2",
+    "novydres/runtime/orchestration/CYCLE_SCHEMA_V11.json": "eb7961d278dca60723ef8508fb6490e0bcb365a4",
+    "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V9.md": "bb082e6df91b9ae407f385f51c51274d0b281beb",
+    "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V11.py": "d4647bf4c4950bbeebaf72711a7ac57d9698270d",
+    "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V11.mjs": "a6a0437c9e2e72d3a1b749ae2dc5ce9bf4b4c55f",
+    "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V11.mjs": "2c4a5c76abc6e69e161eb876c186d023ebea54d3",
+    "novydres/runtime/orchestration/START_HERE_V8.md": "72533db95d8803ab707ca53e2cfde5922daef63d"
+  },
+  "operational_state": {
+    "cycle": "CYCLE_V0036",
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "C06": "NOT_STARTED",
+    "episode_closure": "AUTHORIZED_PENDING_CYCLE_VALIDATION",
+    "guided_creation_route": "PENDING",
+    "scene_ready": false,
+    "narrator_permission": false
+  },
+  "result_detail_disclosed": false
+}
