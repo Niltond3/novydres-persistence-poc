@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "chr001-state-checkpoint",
+  "kind": "chronicle",
+  "owner_scope": "novydres/cronicas/CHR-001/estado",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    }
+  ],
+  "related_subject_ids": [
+    "story-m301-c01"
+  ]
+}

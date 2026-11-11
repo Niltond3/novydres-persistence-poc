@@ -1,0 +1,22 @@
+{
+  "subject_id": "chr001-npc-samir-haddad",
+  "relations": [
+    {
+      "relation_id": "rel-chr001-samir-bart-contact",
+      "from_subject_id": "npc-samir-haddad",
+      "to_subject_id": "pc-bartholomeu-krauser",
+      "predicate": "RECEIVED_CONDITIONAL_WORKSHOP_PHONE_CONTACT",
+      "owner_subject_id": "chr001-npc-samir-haddad",
+      "scope": "CHR-001/M3.01.C01",
+      "source_text_markers": [
+        "CHR001-M301-C01-06-20261107-001",
+        "CHR001-M301-C01-07-20261107-001"
+      ],
+      "epistemic_status": "CONFIRMED",
+      "visibility": "PC_KNOWN",
+      "future_call": "UNKNOWN",
+      "inverse_is_derived": true
+    }
+  ],
+  "external_target_id_not_migrated_in_phase_b": true
+}

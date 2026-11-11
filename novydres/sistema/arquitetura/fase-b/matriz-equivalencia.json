@@ -1,0 +1,92 @@
+{
+  "source_master_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+  "records": [
+    {
+      "case": "NPC",
+      "source_id": "npc-m3-samir-haddad-candidate",
+      "target_id": "npc-samir-haddad",
+      "original_fields": [
+        "aliases",
+        "status",
+        "confirmed",
+        "claims",
+        "unknown"
+      ],
+      "mapped_paths": [
+        "novydres/personagens/npc-samir-haddad",
+        "novydres/cronicas/CHR-001/elenco/npc-samir-haddad"
+      ],
+      "limitation": "historical identity + selected C01 knowledge only"
+    },
+    {
+      "case": "TRAMA",
+      "source_id": "m301-c01-samir-krauser-office-phone",
+      "target_id": "plot-contato-condicional-samir",
+      "original_fields": [
+        "id",
+        "kind",
+        "topic",
+        "anchor",
+        "unknown",
+        "updated_by_event_id"
+      ],
+      "mapped_paths": [
+        "novydres/cronicas/CHR-001/tramas/contato-condicional-samir"
+      ],
+      "limitation": "source is thread; plot candidate classification only"
+    },
+    {
+      "case": "HISTORIA",
+      "source_id": "M3.01.C01",
+      "target_id": "story-m301-c01",
+      "original_fields": [
+        "8 played textual markers"
+      ],
+      "mapped_paths": [
+        "novydres/cronicas/CHR-001/historias/m301-c01"
+      ],
+      "limitation": "source text not a committed technical event ledger"
+    },
+    {
+      "case": "ESTADO",
+      "source_id": "CHR001-CYCLE-0041",
+      "target_id": "chr001-state-checkpoint",
+      "original_fields": [
+        "cycle checkpoint",
+        "xp",
+        "fv",
+        "workshop"
+      ],
+      "mapped_paths": [
+        "novydres/cronicas/CHR-001/estado"
+      ],
+      "limitation": "candidate mirror no replay, live cursor drift declared"
+    }
+  ],
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    }
+  ]
+}
