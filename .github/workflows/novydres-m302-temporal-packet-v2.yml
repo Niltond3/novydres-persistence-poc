@@ -1,0 +1,34 @@
+name: NOVYDRES M3.02 Temporal Packet V2 (candidate)
+on:
+  push:
+    paths:
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py'
+      - '.github/workflows/novydres-m302-temporal-packet-v2.yml'
+  pull_request:
+    paths:
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py'
+permissions:
+  contents: read
+jobs:
+  temporal_packet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'jsonschema>=4.18,<5'
+      - name: Exact 44-thread deterministic validation and adversarial cases
+        run: node --test novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs
+      - name: Schema and negative test cases
+        run: python novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py
+      - name: Pinned ready packet standalone
+        run: node novydres/runtime/scene-execution/TEMPORAL_TRANSITION_VALIDATOR_V1.mjs --root . --packet novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json
