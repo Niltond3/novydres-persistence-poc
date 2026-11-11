@@ -1,0 +1,363 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V12",
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.02",
+  "preparation_id": "CHR001-PREP-M302-20261111-V6",
+  "dossier_version": 6,
+  "classification": "GM_HIDDEN",
+  "status": "SCENE_CAUSAL_ENTRY_READY_NO_EVENT",
+  "source_checkpoint": {
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0044.json",
+      "blob_sha": "5bc4f59519fb7e7e3f017eea975a154e84e7efc1"
+    },
+    "manifest": {
+      "path": "novydres/MANIFEST_V59.json",
+      "blob_sha": "6c1458fa2b72924d60e06f893f5211b695733443"
+    },
+    "last_event_id": "CHR001-M302-C01-05-20261111-001",
+    "last_closed_scene": "M3.02.C01",
+    "next_scene": "M3.02.C02",
+    "next_scene_status": "NOT_STARTED",
+    "state_refs": {
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+        "blob_sha": "04277d399330181b2cc029f5132dda38b6457c2f"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+        "blob_sha": "8a00eeaea0ceba59245a34c9da1992a03635b625"
+      },
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+        "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+        "blob_sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+        "blob_sha": "a5da61e00c5e29a4941d5697b2010743313f9007"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+        "blob_sha": "05ce76898d2757c1e270e9c3b1282712df123d13"
+      }
+    }
+  },
+  "authority_refs": {
+    "admission": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    "truth": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md",
+      "blob_sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4"
+    },
+    "preparation": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V022_GM_HIDDEN.md",
+      "blob_sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37"
+    },
+    "progression": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V026_PLAYER_SAFE.json",
+      "blob_sha": "f86e8882f1458e5ea4cfe946a51a9ba6e9dce006"
+    },
+    "immersion": {
+      "path": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
+      "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+    },
+    "player_comment": {
+      "path": "novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md",
+      "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+    }
+  },
+  "selection_method": "CHR001_CURATED_SESSION",
+  "player_decisions_preserved": true,
+  "c02_causal_entry": {
+    "admission_id": "PLOT-KUTHULUN-COERCION",
+    "source_type": "INDEPENDENT_NPC_PROSPECTIVE_INQUIRY_NOT_PREEXISTING_EVENT",
+    "prior_authority": "D04_V010_AND_D07_V019_D08_V022_WITH_D12_BOUNDED_PREMISE",
+    "performer": "RADA_INDEPENDENT_SCOUT_CHOICE",
+    "commissioning_actor": "KUTHULUN_OPTIONAL_INDEPENDENT_INITIATIVE",
+    "initiative_trigger": "NPC_MOTIVE_BOUNDED_BY_EXISTING_APPROVED_PLAYER_VARIANT",
+    "physical_route": "PUBLIC_FRONTAGE_ACCESSIBLE_FROM_RADA_KNOWN_LOCAL_WALKING_ROUTE",
+    "scene_focus": "INQUIRY_ATTEMPT_NOT_FIRST_INVITATION_NOT_MEETING",
+    "historical_instruction_occurred": false,
+    "previously_sent_message": false,
+    "invitation_delivered": false,
+    "target_identity_verified": false,
+    "target_workplace_known": false,
+    "npc_believes_target_identified": false,
+    "actual_scene_event": false,
+    "c01_replay": false,
+    "reporter_from_c01": false,
+    "performer_can_fail_or_leave": true,
+    "pc_action_assumed": false,
+    "knowledge_delta": false,
+    "why_now": "Dramatic first contact opportunity independently pursued by authorized NPCs; not a reaction to C01",
+    "required_preopening_checks": [
+      "No unrecorded informed contact or messenger knowledge",
+      "Local route public and traversable",
+      "No extra elapsed interval or extra PC decision",
+      "NPCs can choose not to proceed; absent plausible independent initiative return BLOCKED"
+    ],
+    "narrative_scope": "Narrator may initiate only the public inquiry attempt after actual C45 READY and player prompt; any realized action is recorded later through G28",
+    "source_provenance_reviewed": true,
+    "authored_contact_attempt_only": true,
+    "must_allow_failed_search": true
+  },
+  "temporal_decision": {
+    "mode": "CONTINUITY",
+    "rationale": "No necessary elapsed time or time jump after C01; scene can open at the next immediate interaction",
+    "last_event_id": "CHR001-M302-C01-05-20261111-001",
+    "elapsed_after_c01": "NOT_ADVANCED",
+    "significant_ellipsis": false,
+    "world_changes": false,
+    "pc_choices": false,
+    "prelude_tests": 0,
+    "threads": [
+      {
+        "id": "m201-report-authorship",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m201-ramal-condition",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m201-pavel-commitment",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m201-liev-colleagues",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m202-school-rumor",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-patient-prognosis",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-woman-identity-location",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-gromov-threat",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-help-woman",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-changes-and-worker",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "family-armin-support",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-nadezhda-departure",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-van-cargo",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-npc-name-provenance",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m203-oficios-specialization",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-family-safety",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-volnaya-papers",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-mary-bart-trust",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-volnaya-clerk-ilya-condition",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-volnaya-documents-stolen",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-os219-circulation",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-krauser-workshop-plan",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-volnaya-fleet-tracing",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-heating-overtime-claim",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c11-component-analysis",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c12-old-city-heat-transfer-study",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c13-preliminary-note-followup",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c14-school-followup",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c15-underground-survey",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c15-makarov-pavel-trust",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c16-oleg-identity",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c16-pipe-safety",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c16-man-rescued",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m204-c16-pact-with-oleg",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c01-price-haddad-contract-pay-dispute",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c01-samir-krauser-office-phone",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c02-jonas-identity",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c02-jonas-agreement",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c03-daniel-truck-safety",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c04-yelena-baranova",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c04-unopened-box",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c04-marta-and-funeral-address",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c05-daniel-contact-and-envelope",
+        "disposition": "CARRY_UNCHANGED"
+      },
+      {
+        "id": "m301-c05-professional-scope-contradiction",
+        "disposition": "CARRY_UNCHANGED"
+      }
+    ],
+    "family": "UNCHANGED_UNKNOWN_PRESERVED",
+    "box": "UNCHANGED_UNKNOWN_PRESERVED",
+    "workshop": "SMALL_RENTED_BAY_NO_AUTO_BUSINESS_DELTA"
+  },
+  "act_contracts": [
+    {
+      "id": "A1",
+      "status": "OPEN_PENDING_ACT_RESOLUTION",
+      "played_consequence_preserved": true,
+      "record": "C01 scene closed G28; A1 act has NO recorded resolution, no XP credit. Preserve distinction."
+    },
+    {
+      "id": "A2",
+      "status": "CONDITIONAL_NOT_REALIZED",
+      "played_consequence_preserved": true,
+      "record": "Not activated; admissible independently sourced C02 cause required."
+    },
+    {
+      "id": "A3",
+      "status": "CONDITIONAL_NOT_REALIZED",
+      "played_consequence_preserved": true
+    },
+    {
+      "id": "A4",
+      "status": "CONDITIONAL_NOT_REALIZED",
+      "played_consequence_preserved": true
+    }
+  ],
+  "mechanics": {
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_remaining": 405,
+    "xp_credit": 0,
+    "willpower": {
+      "max": 6,
+      "superficial": 2,
+      "aggravated": 0,
+      "available": 4
+    },
+    "mortality": "MORTAL",
+    "embrace_occurred": false
+  },
+  "guards": {
+    "no_new_event": true,
+    "no_pc_decision": true,
+    "no_knowledge_delta": true,
+    "no_xp_fv_delta": true,
+    "no_frozen_edit": true,
+    "meta_comment_not_diegetic": true,
+    "narrator_handoff_ready": true,
+    "prompt_still_required": true
+  },
+  "predecessor_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.02_DOSSIER_V5.json",
+    "blob_sha": "e7a67fafce4a4d5de485fb9ac06600b57c73b53c"
+  },
+  "correction_note": "V3 incorrectly conflated C01 scene closure with A1 act closure; versioned correction, never retroactive result.",
+  "operational_gates": {
+    "architecture_active": true,
+    "d07_active": true,
+    "story_preparation_ready": true,
+    "mechanical_scene_ready": true,
+    "scene_ready": true,
+    "narrator_permission": true,
+    "permission_effective_only_after_c45_promoted": true
+  }
+}

@@ -1,0 +1,48 @@
+name: NOVYDRES CHR-001 C02 C45 Final Gate V23
+on:
+  push:
+    paths:
+      - '.github/workflows/novydres-m302-c02-final-v23.yml'
+      - 'novydres/runtime/orchestration/*V23*'
+      - 'novydres/runtime/orchestration/CYCLE_SCHEMA_V22.json'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json'
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_*_V6.json'
+      - 'novydres/runtime/provocation-prep/*V12*'
+      - 'novydres/MANIFEST_V63.json'
+  pull_request:
+    paths:
+      - '.github/workflows/novydres-m302-c02-final-v23.yml'
+      - 'novydres/runtime/orchestration/*V23*'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json'
+      - 'novydres/MANIFEST_V63.json'
+permissions:
+  contents: read
+jobs:
+  ready_gate_v23:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'jsonschema>=4.18,<5'
+      - name: Exact candidate SHA
+        run: test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - name: V23 source, agency and adversarial regression
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V23.mjs
+      - name: V12 and C45 schema negatives
+        run: python novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V23.py
+      - name: Current C44 V20 regression remains immutable
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V20.mjs
+      - name: V23 exact successor pins and G28 readback
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V23.mjs
+      - name: Temporal V2 source regression
+        run: |
+          node --test novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs
+          python novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py

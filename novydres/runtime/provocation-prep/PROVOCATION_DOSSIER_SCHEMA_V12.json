@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "status",
+    "source_checkpoint",
+    "c02_causal_entry",
+    "temporal_decision",
+    "mechanics",
+    "guards",
+    "operational_gates"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_DOSSIER_V12"
+    },
+    "status": {
+      "const": "SCENE_CAUSAL_ENTRY_READY_NO_EVENT"
+    },
+    "c02_causal_entry": {
+      "type": "object",
+      "required": [
+        "admission_id",
+        "actual_scene_event",
+        "invitation_delivered",
+        "target_identity_verified",
+        "c01_replay",
+        "source_provenance_reviewed",
+        "authored_contact_attempt_only"
+      ],
+      "properties": {
+        "admission_id": {
+          "const": "PLOT-KUTHULUN-COERCION"
+        },
+        "actual_scene_event": {
+          "const": false
+        },
+        "invitation_delivered": {
+          "const": false
+        },
+        "target_identity_verified": {
+          "const": false
+        },
+        "c01_replay": {
+          "const": false
+        },
+        "source_provenance_reviewed": {
+          "const": true
+        },
+        "authored_contact_attempt_only": {
+          "const": true
+        }
+      }
+    },
+    "temporal_decision": {
+      "type": "object",
+      "required": [
+        "mode",
+        "threads",
+        "significant_ellipsis"
+      ],
+      "properties": {
+        "mode": {
+          "const": "CONTINUITY"
+        },
+        "threads": {
+          "type": "array",
+          "minItems": 44,
+          "maxItems": 44
+        },
+        "significant_ellipsis": {
+          "const": false
+        }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "required": [
+        "no_new_event",
+        "no_pc_decision",
+        "no_knowledge_delta",
+        "no_xp_fv_delta",
+        "narrator_handoff_ready",
+        "prompt_still_required"
+      ],
+      "properties": {
+        "no_new_event": {
+          "const": true
+        },
+        "no_pc_decision": {
+          "const": true
+        },
+        "no_knowledge_delta": {
+          "const": true
+        },
+        "no_xp_fv_delta": {
+          "const": true
+        },
+        "narrator_handoff_ready": {
+          "const": true
+        },
+        "prompt_still_required": {
+          "const": true
+        }
+      }
+    },
+    "operational_gates": {
+      "type": "object",
+      "required": [
+        "story_preparation_ready",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "story_preparation_ready": {
+          "const": true
+        },
+        "scene_ready": {
+          "const": true
+        },
+        "narrator_permission": {
+          "const": true
+        }
+      }
+    }
+  }
+}
