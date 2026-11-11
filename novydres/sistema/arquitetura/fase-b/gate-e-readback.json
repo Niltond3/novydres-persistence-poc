@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_READBACK_AND_GATE",
+  "classification": "PLAYER_SAFE",
+  "phase": "B",
+  "status": "B_REMEDIATION_REQUIRED",
+  "cutover": false,
+  "authoritative_prototype": false,
+  "source_snapshot": {
+    "master": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "design_approved_A": "7ea35d59855e82fbc2abb0937337841f8f2d4e09",
+    "design_candidate_commit": "cef04faa7e8e9c015a1cb3c7b5b3e607ebfcea73",
+    "design_test_commit": "b9604385d4dcf5f46c2e2446352f889effa62abf",
+    "design_test_tree": "d7c1486189bb64b215494a928e116851cc8313c1"
+  },
+  "readback": {
+    "master_ref_at_test_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "design_ref_at_test_commit": "b9604385d4dcf5f46c2e2446352f889effa62abf",
+    "commit_test_parent": "cef04faa7e8e9c015a1cb3c7b5b3e607ebfcea73",
+    "selected_file_readback_count": 9,
+    "selected_file_hash_matched": 9,
+    "selected_file_json_parse_valid": 9,
+    "all_four_candidate_types_present": true,
+    "full_historical_chain_and_replay": "NOT_EXECUTED",
+    "current_cycle_direct_pins_checked": 75,
+    "current_cycle_direct_pins_matched": 75,
+    "previous_cycle_sha_match": true
+  },
+  "test_gates": {
+    "fixed_paired_field_queries": {
+      "result": "PASS_SCOPED",
+      "matched": 30,
+      "total": 30,
+      "method": "SOURCE_AND_TARGET_JSON_TEXT_FIELD_COMPARISON_NOT_MODEL_CONVERSATION"
+    },
+    "local_adversarial_negative": {
+      "result": "PASS_SCOPED",
+      "rejected": 12,
+      "total": 12,
+      "method": "JS_PREDICATE_CHECKS_OF_OBJECT_MUTATIONS"
+    },
+    "mutation_journeys": {
+      "result": "SIMULATION_ONLY",
+      "passed": 12,
+      "total": 12,
+      "method": "LOGICAL_SIMULATION_NO_ACTUAL_CAS_WRITES"
+    },
+    "web_latency": {
+      "result": "MEASURED_PARTIAL",
+      "read_count": 3,
+      "repetitions": 3,
+      "p50_ms": 421,
+      "p95_ms": 443,
+      "measured_content_characters": 14034,
+      "real_tokens": "NOT_EXPOSED",
+      "http_bytes": "NOT_EXPOSED"
+    },
+    "codex": {
+      "result": "NOT_EXECUTED"
+    },
+    "web_full_question_repetitions": {
+      "result": "NOT_EXECUTED"
+    },
+    "real_concurrency_write_test": {
+      "result": "NOT_EXECUTED"
+    },
+    "ci": {
+      "result": "NOT_EXECUTED"
+    },
+    "privacy_and_canon": {
+      "result": "PASS_SCOPED",
+      "master_untouched": true,
+      "no_runtime_promoted": true,
+      "no_secret_content_in_report": true
+    }
+  },
+  "editorial_guards": {
+    "plot_derived_from_open_thread": "CANDIDATE_ONLY_NOT_ADMITTED_D04_PLOT",
+    "played_text_markers": "NOT_A_COMMITTED_TECHNICAL_EVENT_LEDGER",
+    "legacy_live_cursor": "RETAINED_AND_CONFLICT_VISIBLE",
+    "stable_path_policy": "NOT_ACTIVATED_BEFORE_E"
+  },
+  "outstanding": [
+    "Three independent full retrieval suites on Codex and three on ChatGPT Web with genuine token budgets, navigation comparisons and p95",
+    "Real safe idempotency/CAS/concurrency test, source/hash/ownership and referential validation at more than sampled scope",
+    "CI or supported validator reproducibility and full predecessor-chain validation before declaring operational authority",
+    "Player/editorial acceptance for candidate plot classification if eventual promotion is desired; never infer acceptance"
+  ],
+  "next_action": "CONTINUE_PHASE_B_ONLY",
+  "phase_c_authorized": false
+}
