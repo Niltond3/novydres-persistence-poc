@@ -1,0 +1,44 @@
+name: NOVYDRES CHR-001 Significant Scene Frame V14 Gate
+on:
+  push:
+    paths:
+      - 'novydres/runtime/orchestration/**'
+      - 'novydres/runtime/provocation-prep/**'
+      - 'novydres/runtime/narrative-architecture/program/deliverables/**'
+      - 'novydres/chronicles/CHR-001/orchestration/**'
+      - 'novydres/chronicles/CHR-001/preparations/**'
+      - 'novydres/MANIFEST_V*.json'
+      - '.github/workflows/novydres-scene-frame-v14.yml'
+  pull_request:
+    paths:
+      - 'novydres/runtime/orchestration/**'
+      - 'novydres/runtime/provocation-prep/**'
+      - 'novydres/runtime/narrative-architecture/program/deliverables/**'
+      - 'novydres/chronicles/CHR-001/orchestration/**'
+      - 'novydres/chronicles/CHR-001/preparations/**'
+      - 'novydres/MANIFEST_V*.json'
+      - '.github/workflows/novydres-scene-frame-v14.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Draft 2020-12 validator
+        run: python3 -m pip install 'jsonschema>=4.18,<5'
+      - name: Causal agency dramaturgy and chronological gap regression
+        run: node --test novydres/runtime/orchestration/ORCHESTRATION_TESTS_V14.mjs
+      - name: Validate V14 scene frames with rejected fixtures
+        run: python3 novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V14.py .
+      - name: Verify 40 cycles, immutable state refs, exact pins and Git tree
+        run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V14.mjs --root .

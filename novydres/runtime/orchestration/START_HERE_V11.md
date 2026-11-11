@@ -1,0 +1,8 @@
+# NOVYDRES / CHR-001 — Start Here V11
+Bootstrap historical `novydres/.AGENT.md` and `novydres/.CONTEXTG.md`; then read exactly pinned current `.AGENT_V4.md`, `.CONTEXTG_V3.md`, CYCLE_V0040, MANIFEST_V55 and ORCHESTRATION_CONTRACT_V12. Verify complete predecessor chain and all refs. Read D04 V010, D06 V032, D07 V019 GM_HIDDEN, D08 V022 GM_HIDDEN, D09 V026 PLAYER_SAFE, dossier/sidecar M3.02 V2, pacing V1, mechanical rules and V14 schema/validator/tests.
+
+A CHR-001 guided-creation chapter is a curated sequence of significant life/undeath scenes, not continuous real-time calendar simulation. Dramaturgo chooses next dramatic event and can frame a later hour/day/week/month/decade, subject to state continuity, causal NPC capacity and no erased meaningful PC choice. Narrator introduces the authored world conflict; player chooses Bart's consequential actions. Neither asking "what do you do right now" from the last car checkpoint nor mechanically narrating each drive to workshop is a mandatory gate.
+
+C39 B_INTENTION_FIRST was a valid administrative pause, superseded prospectively by C40 A_SCENE_FRAME_READY upon readback and passing CI. C40 does not declare a moved PC, real elapsed time, NPC contact or played event. Last played C05-22, C06 NOT_STARTED, M3.02.C01 NOT_STARTED, mortal, no Embrace, unchanged XP/FV and threads. Future scene begins ONLY upon explicit player Narrator prompt. The Narrator must open with a meaningful situation at the prepared later frame and allow real decisions; no routine filler or GM_HIDDEN disclosure.
+
+If pins, remote tests, scene gate, timing, or agency fail, stop and report a PLAYER_SAFE specific blocker instead of an invented PASS.
