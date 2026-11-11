@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_REMEDIATION_READBACK",
+  "classification": "PLAYER_SAFE",
+  "captured_at_utc": "2026-11-11T18:28:05Z",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "B",
+  "refs_observed": {
+    "design_branch": "design/subject-oriented-migration",
+    "design_head_before_remediation": "6b56f907a3ca4683e010f654f212df16aa86af52",
+    "design_parent": "22c2c6389738120888899c09a90ab190f59b3c19",
+    "design_tree": "8123281a86f18e47664bfa9c916f61fb90b6d492",
+    "master_read_only": true,
+    "master_head_at_initial_observation": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "master_head_reverified": "d14e1a90de81f0348f2fd07062427b0602de3eb0",
+    "master_tree_reverified": "eb5a98b5fc2935eb8009e2b21bd921a001a9ddd2",
+    "master_advanced_during_remediation": true
+  },
+  "operational_snapshot": {
+    "recursive_tree_truncated": false,
+    "latest_manifest": {
+      "path": "novydres/MANIFEST_V57.json",
+      "sha": "c516d0e596a2cc8eb8da9e723d3b114d1dd0bf39",
+      "version": 57,
+      "status": "GITHUB_ACTIVE_PRIMARY_FULL_MIGRATION_PENDING",
+      "operational_cutover": true
+    },
+    "current_cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0042.json",
+      "sha": "47e9334b4c1696b8334c63ba938da25cf4f8e644",
+      "cycle_id": "CHR001-CYCLE-0042",
+      "sequence": 42,
+      "status": "TEMPORAL_RECONCILIATION_REQUIRED",
+      "previous_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "previous_cycle_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    "current_cycle_manifest_sha_match": true,
+    "previous_cycle_sha_match": true,
+    "direct_operational_path_sha_pairs_checked": 165,
+    "direct_operational_path_sha_pairs_matched": 165,
+    "full_cycle_chain_and_replay": "NOT_EXECUTED",
+    "master_tree_entry_count": 1021
+  },
+  "candidate_readback": {
+    "files_checked": 11,
+    "files_present": 11,
+    "tree_blob_sha_matches": 11,
+    "json_parse_valid": 11,
+    "candidate_types": [
+      "NPC",
+      "TRAMA",
+      "HISTORIA",
+      "ESTADO"
+    ],
+    "source_snapshot_master_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "unique_source_refs": 6,
+    "unique_source_refs_sha_matched_current_master": 6,
+    "candidate_source_ref_rows": 21,
+    "candidate_source_ref_rows_sha_matched_current_master": 21,
+    "candidate_refs_still_pinned_to_original_snapshot": true,
+    "all_routes_remain_candidate_only": true,
+    "plot_classification_remains_provisional": true,
+    "story_technical_ledger_proven": false
+  },
+  "tests": {
+    "prior_scoped_comparisons": {
+      "paired_fields": "30/30",
+      "deterministic_negative_assertions": "12/12",
+      "mutation_journeys": "12/12_SIMULATION_ONLY"
+    },
+    "chatgpt_web": {
+      "completed_real_temporary_model_turns": 3,
+      "each_turn_model_reported_counts": [
+        {
+          "run": 1,
+          "retrieval_pass": 30,
+          "retrieval_total": 30,
+          "negative_rejected": 12,
+          "negative_total": 12,
+          "journeys_safe": 12,
+          "journeys_total": 12,
+          "authority_violations": 0,
+          "spoiler_leaks": 0,
+          "latency_ms": 92868,
+          "latency_measurement": "CUA_TOOL_WALL_TIME_SUM_APPROX"
+        },
+        {
+          "run": 2,
+          "retrieval_pass": 30,
+          "retrieval_total": 30,
+          "negative_rejected": 12,
+          "negative_total": 12,
+          "journeys_safe": 12,
+          "journeys_total": 12,
+          "authority_violations": 0,
+          "spoiler_leaks": 0,
+          "latency_ms": 54579,
+          "latency_measurement": "CUA_TOOL_WALL_TIME_SUM_APPROX"
+        },
+        {
+          "run": 3,
+          "retrieval_pass": 30,
+          "retrieval_total": 30,
+          "negative_rejected": 12,
+          "negative_total": 12,
+          "journeys_safe": 12,
+          "journeys_total": 12,
+          "authority_violations": 0,
+          "spoiler_leaks": 0,
+          "latency_ms": 82408,
+          "latency_measurement": "BROWSER_DATE_NOW_END_TO_END"
+        }
+      ],
+      "evidence_quality": "MODEL_SELF_REPORT_NO_PER_CASE_CITATIONS_OR_INDEPENDENT_ANSWER_READBACK",
+      "source_retrieval_independently_verified": false,
+      "actual_tokens": "NOT_EXPOSED",
+      "http_bytes": "NOT_EXPOSED",
+      "latency_p50_ms": 82408,
+      "latency_p95_ms_nearest_rank": 92868,
+      "latency_samples_ms": [
+        {
+          "run": 1,
+          "elapsed_ms": 92868,
+          "measurement": "CUA_TOOL_WALL_TIME_SUM_APPROX"
+        },
+        {
+          "run": 2,
+          "elapsed_ms": 54579,
+          "measurement": "CUA_TOOL_WALL_TIME_SUM_APPROX"
+        },
+        {
+          "run": 3,
+          "elapsed_ms": 82408,
+          "measurement": "BROWSER_DATE_NOW_END_TO_END"
+        }
+      ],
+      "latency_note": "End-to-end UI/tool wall time; two samples approximate, one browser timer."
+    },
+    "codex": {
+      "full_independent_runs_per_category": 0,
+      "status": "NOT_EXECUTED"
+    },
+    "concurrency_and_idempotency": {
+      "stale_expected_sha_request": "REJECTED",
+      "stale_sha_readback_head_unchanged": true,
+      "same_head_expected_sha_noop_calls": 2,
+      "both_noop_calls_succeeded": true,
+      "ref_unchanged_after_both": true,
+      "concurrent_writers": "NOT_EXECUTED",
+      "mutation_journeys": "SIMULATION_ONLY",
+      "concurrent_same_head_noop_requests": 2,
+      "concurrent_requests_succeeded": true,
+      "concurrent_request_readback_head_unchanged": true,
+      "distinct_competing_commit_writers": "NOT_EXECUTED"
+    },
+    "ci": {
+      "baseline_commit": "6b56f907a3ca4683e010f654f212df16aa86af52",
+      "combined_statuses": 0,
+      "commit_check_runs": 0,
+      "pull_request_workflow_runs": 0,
+      "result": "NO_RUNS_REPORTED; CI_NOT_EXECUTED"
+    }
+  },
+  "safety": {
+    "master_modified": false,
+    "runtime_modified": false,
+    "canon_or_frozen_material_modified": false,
+    "candidate_routes_activated": false,
+    "phase_c_authorized": false
+  },
+  "status": "B_REMEDIATION_REQUIRED"
+}
