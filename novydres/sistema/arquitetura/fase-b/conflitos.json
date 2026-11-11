@@ -51,6 +51,11 @@
       "id": "B-05",
       "type": "web_codex_completeness",
       "status": "B_REMEDIATION_REQUIRED"
+    },
+    {
+      "id": "B-06",
+      "type": "source_pin_path_not_present_on_design_tree",
+      "status": "RESOLVES_BY_EXACT_C26_SOURCE_SNAPSHOT_SHA; NOT_COPIED"
     }
   ],
   "manifest_fork": {
@@ -60,5 +65,12 @@
     "M59_supersedes": "MANIFEST_V58",
     "resolution": "NOT_ATTEMPTED"
   },
-  "candidate_provenance": "candidate C41 snapshot and six original source blobs remain pinned; 16 candidate blob pins unchanged; master changes are recorded as later operational context only"
+  "candidate_provenance": "candidate C41 snapshot and six original source blobs remain pinned; 16 candidate blob pins unchanged; master changes are recorded as later operational context only",
+  "source_snapshot_lookup": {
+    "commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "tree": "4d480c57b6f3497a766e2b25b9dd3afd92395a75",
+    "paths_verified": "6/6",
+    "paths_also_in_design": "5/6",
+    "absent_design_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json"
+  }
 }

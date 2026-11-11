@@ -6,7 +6,7 @@
 
 ## Evidências e limites
 
-- Os quatro candidatos já existentes foram preservados. 16/16 blobs e 21/21 refs de origem conferem; 5/5 envelopes passam schema da Fase A. Relações: 7/8 resolvidas e uma explicitamente fora do escopo. UNKNOWN e proveniência continuam. Trama provisória, história sem prova de ledger técnico COMMITTED, estado é snapshot C41; todas as rotas permanecem inativas.
+- Os seis pins de fonte conferem no snapshot original c26 e no master atual; cinco paths também existem em design. CYCLE_V0041 não existe na árvore design e não foi copiado; sua referência se resolve pelo snapshot original.\n- Os quatro candidatos já existentes foram preservados. 16/16 blobs e 21/21 refs de origem conferem; 5/5 envelopes passam schema da Fase A. Relações: 7/8 resolvidas e uma explicitamente fora do escopo. UNKNOWN e proveniência continuam. Trama provisória, história sem prova de ledger técnico COMMITTED, estado é snapshot C41; todas as rotas permanecem inativas.
 - Master avançou 11 commits/55 caminhos desde c26. Não houve alteração direta em caminhos dos candidatos ou das fontes pinadas. O contexto operacional C44/M59 é posterior; a linhagem divergente dos manifestos foi preservada sem reconciliar fatos.
 - Codex CLI: 3 rodadas reais × 30 consultas = 51/90 correspondências. Gate de precisão falhou (30/30 exigido); B-Q29 e B-Q30 falharam em todas as rodadas. Evidência por caso de R1/R2 não foi retida; R3 registrou citações por caso, mas locadores de fonte conferiram 17/30.
 - Negativos e jornadas: 0 novas execuções por rodada. Os fixtures descrevem rótulos, sem operações/payloads de teste ou readback de aceitação. Os antigos 12/12 predicados locais e 12/12 simulações não contam como execução real do agente/sistema.

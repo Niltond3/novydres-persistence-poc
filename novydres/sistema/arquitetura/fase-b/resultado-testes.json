@@ -1926,5 +1926,15 @@
       "status": "PASS_SCOPED"
     }
   ],
-  "answer_values_omitted": true
+  "answer_values_omitted": true,
+  "source_pin_readback": {
+    "source_snapshot_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "source_snapshot_tree": "4d480c57b6f3497a766e2b25b9dd3afd92395a75",
+    "exact_path_sha_matches_at_original_snapshot": "6/6",
+    "exact_path_sha_matches_at_current_master": "6/6",
+    "source_paths_also_present_in_design_tree": "5/6",
+    "absent_from_design_tree": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+    "handling": "candidate provenance remains pinned to original master snapshot; no source file copied into design"
+  },
+  "candidate_source_integrity": "21/21 against the six source blobs in original c26 snapshot; 6/6 source path/SHA pins independently matched c26 tree and current master"
 }

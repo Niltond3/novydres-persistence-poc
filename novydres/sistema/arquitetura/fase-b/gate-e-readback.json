@@ -56,14 +56,21 @@
     {
       "gate": "master/canon/runtime protection",
       "status": "PASS_SCOPED"
+    },
+    {
+      "gate": "source pin resolution across branches",
+      "status": "PASS_SCOPED_WITH_DECLARED_LOCATION_GAP",
+      "detail": "All six exact source pins resolve in c26 and current master. CYCLE_V0041 is absent from design tree, preserved in source snapshot; it was not copied."
     }
   ],
   "readback_scope": {
     "candidate_envelopes": "5/5 schema valid",
     "candidate_blobs": "16/16 pins exact",
-    "source_refs": "21/21 rows and six unique SHA pins exact",
+    "source_refs": "21/21 rows resolve against six exact blobs at original source snapshot c26; 6/6 path/SHA pins match c26 and current master; 5/6 paths also exist in design tree; CYCLE_V0041 is intentionally not copied to design.",
     "relations": "7/8 resolved; one explicitly out of scope",
-    "operational_cycle": "C42-C44 predecessor links and 9/9 manifest/cycle operational pins checked"
+    "operational_cycle": "C42-C44 predecessor links and 9/9 manifest/cycle operational pins checked",
+    "current_design_tree_source_paths": "5/6",
+    "original_source_snapshot_path_sha": "6/6"
   },
   "failing_or_incomplete": [
     "Codex response accuracy 51/90 against required 30/30; critical B-Q29/B-Q30 mismatch in all three rounds.",
@@ -71,7 +78,8 @@
     "No three new independent ChatGPT Web sessions with per-case evidence; older reports are insufficient.",
     "Negative and journey fixtures lack executable operations/payloads and acceptance readback; historic predicate checks/simulation are not equivalent.",
     "No design-branch CI runs; remote distinct competing-writer test absent; stale remote expected_sha rejection is indeterminate.",
-    "Full Codex run latency p50/p95, Web tokens and HTTP bytes are not observable."
+    "Full Codex run latency p50/p95, Web tokens and HTTP bytes are not observable.",
+    "Design tree is not a self-contained copy of all six source paths (5/6 present); source refs remain valid through original c26 source snapshot."
   ],
   "exception_proposal": {
     "scope": "Only ChatGPT Web actual token counts and HTTP bytes, if the product UI does not expose them.",

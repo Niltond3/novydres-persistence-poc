@@ -11,24 +11,24 @@ Não escrever no Git, não ativar rotas, não alterar dados operacionais, não r
 ## Preparação
 
 1. Abra três chats novos e separados no ChatGPT Web: R1, R2 e R3. Não reutilize contexto nem resultado de outra rodada.
-2. Fixe candidatos e fontes em `35862b10000883ac8e607f9de1a87d945b21c1a5`. Leia os anexos sanitizados `fixtures-remediacao-consultas-sem-gabarito.json` e `fixtures-remediacao-negativos-mutuacoes.json` da branch final da remediação. Um facilitador deve confirmar antes da rodada que o blob SHA dos anexos corresponde ao readback de GitHub.
+2. Fixe os candidatos em `35862b10000883ac8e607f9de1a87d945b21c1a5` e as fontes no snapshot original `c26c0fbf15fff6c817182c06e6208e302b954f3a`. Leia os anexos sanitizados `fixtures-remediacao-consultas-sem-gabarito.json` e `fixtures-remediacao-negativos-mutuacoes.json` da branch final da remediação. Um facilitador deve confirmar antes da rodada que o blob SHA dos anexos corresponde ao readback de GitHub.
 3. O avaliador mantém o fixture original `fixtures-consultas.json` e seu gabarito fora da conversa Web. Não os anexar ao modelo. Fazer scoring independente das respostas privadas depois da sessão e guardar somente ID + PASS/FAIL + citações, sem valores.
 4. Para cada leitura, confirmar path e blob SHA; usar locator preciso (linha ou JSON Pointer). Se o conector não expuser SHA ou locator, marcar `NOT_OBSERVABLE` e não contar como evidência completa.
 5. Cronometrar cada sessão do primeiro caso ao último por relógio da UI. Registrar chamadas, caracteres e latências somente quando a UI realmente os mostrar. Não chamar caracteres de bytes. Não estimar tokens.
 
 ## Prompt integral
 
-Copie o bloco abaixo para cada chat novo, trocando `R1` por `R2` e `R3`. Anexe os dois fixtures sanitizados. A tabela de pins faz parte do prompt e fixa os 16 arquivos candidatos e seis fontes originais.
+Copie o bloco abaixo para cada chat novo, trocando `R1` por `R2` e `R3`. Anexe os dois fixtures sanitizados. A tabela de pins faz parte do prompt e fixa 16 arquivos candidatos e seis fontes do snapshot original c26. Cinco fontes também aparecem na árvore de design; `CYCLE_V0041.json` não foi copiado para lá e deve ser lido em c26.
 
 ```text
 Você é avaliador técnico isolado da Fase B do NOVYDRES. Execute somente o protocolo desta sessão; não promova candidatos, não escreva no repositório e não inicie Fase C.
 
 **Sessão:** substitua `R1`, `R2` ou `R3`. Esta deve ser uma conversa ChatGPT Web nova, sem histórico das outras sessões.
-**Design commit fixado:** `35862b10000883ac8e607f9de1a87d945b21c1a5` para candidatos e fontes.
+**Commit fixado para candidatos:** `35862b10000883ac8e607f9de1a87d945b21c1a5`. **Snapshot original fixado para fontes:** `c26c0fbf15fff6c817182c06e6208e302b954f3a`.
 **Oráculo:** não carregue nem revele campos esperados do fixture original. O avaliador independente os consulta fora desta conversa.
 
 1. Leia os dois fixtures PLAYER_SAFE anexados: `fixtures-remediacao-consultas-sem-gabarito.json` e `fixtures-remediacao-negativos-mutuacoes.json`. Confirme que a contagem é 30 perguntas, 12 negativos e 12 jornadas. Não complete payload ausente por inferência.
-2. Para toda pergunta, consulte os candidatos e fontes fixados abaixo, usando o commit indicado (não a branch atual/default). Leia cada arquivo citado pela pergunta. Registre path, blob SHA, locator lido e resultado. Se uma fonte não puder ser aberta ou SHA não conferir, marque o caso `BLOCKED`; não use fonte substituta.
+2. Para toda pergunta, consulte os candidatos e fontes fixados abaixo, usando o commit de design para arquivos candidatos e o snapshot c26 para fontes (nunca use branch default). Leia cada arquivo citado pela pergunta. Registre path, blob SHA, locator lido e resultado. Se uma fonte não puder ser aberta ou SHA não conferir, marque o caso `BLOCKED`; não use fonte substituta.
 3. Faça as 30 consultas em ordem de ID. Responda com o valor factual apenas dentro desta sessão privada de avaliação. Não copie respostas, conteúdo de fonte, conhecimento restrito ou spoilers para relatórios PLAYER_SAFE, handoff ou outra conversa. Forneça citações por caso com path, blob SHA e locator; um revisor independente pontuará as respostas contra o oráculo local.
 4. Para B-N01..B-N12, e B-M01..B-M12, use exclusivamente o payload e os critérios já presentes no fixture integral aprovado. Os anexos são sanitizados e não incluem esses payloads. Se o payload ou critério não estiver no material disponível, registre `NOT_TESTABLE_NO_EXECUTABLE_PAYLOAD` por ID. Não invente estímulos, não execute mutações Git e não reporte PASS por raciocínio hipotético.
 5. Registre início/fim por relógio da interface, chamadas de navegação que a UI mostrar e caracteres transferidos que forem observáveis. Não estime tokens, bytes HTTP nem latência de serviço. Use `NOT_OBSERVABLE` quando a interface não expuser o valor.
