@@ -1,0 +1,2 @@
+# NOVYDRES / CHR-001 — START_HERE_V15
+Gateway após M3.02.C01 G28. Localizar ciclo mais recente CYCLE_V0044 e MANIFEST_V59 em master e validar pins SHA da cadeia C43, schema V18, seis fontes, contrato e role adapter. M3.02.C01 CLOSED: viga metálica retirada da passagem, advertência da mulher ignorada e PJ volta aos afazeres, sem teste nem recurso. Uma noite após M3.01.C05 em 1970, data civil UNKNOWN. Caixa Y.B. e eventual conversa com Mary sem resolução presumida. M3.02 ACTIVE, C02 NOT_STARTED, dramaturgo deve revisar toda a provocação antes de outro Narrador.
