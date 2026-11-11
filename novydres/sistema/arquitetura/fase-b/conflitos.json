@@ -1,38 +1,64 @@
 {
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_CONFLICTS_AND_PROVENANCE_REMEDIATION",
+  "classification": "PLAYER_SAFE",
   "phase": "B",
-  "source_master": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
-  "design_initial": "7ea35d59855e82fbc2abb0937337841f8f2d4e09",
-  "divergence": {
-    "ahead_design": 4,
-    "behind_design": 5,
-    "merge_base": "cb9aa9e422fb0327e04e9eb0929e4ab678785405"
+  "source_candidate_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+  "design_head_before_persist": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+  "master_reverified": "0418f70ca0f01827de993273da191453a16d9857",
+  "master_comparison": {
+    "commit_count": 11,
+    "changed_path_count": 55,
+    "candidate_paths_changed": 0,
+    "source_pin_paths_changed": 0,
+    "commits": [
+      "368b636e63a34e7bce78bf52bb627d16c4165be3",
+      "bbbe402a99f706e90c2126e151f897cf3fc39e9f",
+      "d14e1a90de81f0348f2fd07062427b0602de3eb0",
+      "94324d3cd33504476db248b5fc965d2ce120c505",
+      "8e27fd5db00c7ca1c1821f4de3d6eb3bf3fa7c76",
+      "79e6406fec343e9c5d39862e20fad6beaeb79763",
+      "fbdb191b193e523ecf75791cfce9f162652da966",
+      "27652bc35755086ebbbdfd9749cb521e3e76c517",
+      "d7c883758d7fcb7fb03b6f97f3d3698ed9c58420",
+      "71d7e6fbd1a2ab173c60406fdff82785ca983976",
+      "0418f70ca0f01827de993273da191453a16d9857"
+    ],
+    "impact": "newer operational cycle/manifests/projections/governance affect candidate freshness and chronology; no source payload copied, no facts reconciled"
   },
-  "reconciliation": "NO_MERGE_OR_CHERRY_PICK; PIN_MASTER_SOURCE; DESIGN_ONLY_CANDIDATES",
-  "conflicts": [
+  "conflicts_preserved": [
     {
       "id": "B-01",
-      "type": "C36_DESIGN_VS_C41_MASTER",
-      "status": "ISOLATED"
+      "type": "master_advanced_after_candidate_snapshot",
+      "status": "PRESERVED_NO_REBASE_OR_RECONCILIATION"
     },
     {
       "id": "B-02",
-      "type": "SOURCE_THREAD_TARGET_PLOT",
-      "status": "CANDIDATE_ONLY_NOT_AUTHORITATIVELY_RECLASSIFIED"
+      "type": "provisional_plot_classification",
+      "status": "CANDIDATE_ONLY_NOT_D04_ADMITTED"
     },
     {
       "id": "B-03",
-      "type": "LIVE_STALE_CURSOR_VS_VALIDATED_CYCLE",
-      "status": "SOURCE_CONFLICT_PRESERVED_CYCLE_CURSOR_AUTHORITY"
+      "type": "operational_cycle_and_manifest_lineage",
+      "status": "C42-C44_CHAIN_VERIFIED; manifest M57/M58/M59 fork preserved"
     },
     {
       "id": "B-04",
-      "type": "G24_COPY_ON_WRITE_VS_STABLE_PATH",
-      "status": "POLICY_SUCCESSOR_PENDING_E"
+      "type": "historical_cursor_or_path_governance",
+      "status": "PRESERVED_NO_SILENT_REWRITE"
     },
     {
       "id": "B-05",
-      "type": "WEB_CODEX_TEST_COMPLETENESS",
-      "status": "PENDING"
+      "type": "web_codex_completeness",
+      "status": "B_REMEDIATION_REQUIRED"
     }
-  ]
+  ],
+  "manifest_fork": {
+    "M57_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M58_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M59_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M59_supersedes": "MANIFEST_V58",
+    "resolution": "NOT_ATTEMPTED"
+  },
+  "candidate_provenance": "candidate C41 snapshot and six original source blobs remain pinned; 16 candidate blob pins unchanged; master changes are recorded as later operational context only"
 }

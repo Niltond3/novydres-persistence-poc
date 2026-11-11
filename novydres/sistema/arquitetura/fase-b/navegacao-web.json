@@ -1,55 +1,57 @@
 {
   "schema_version": "1.0",
+  "artifact_type": "PHASE_B_NAVIGATION_MEASUREMENTS",
+  "classification": "PLAYER_SAFE",
   "phase": "B",
-  "status": "MEASURED_WEB_NAVIGATION_SNAPSHOT_ONLY",
-  "source_master_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
-  "candidate_design_commit": "22c2c6389738120888899c09a90ab190f59b3c19",
-  "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
-  "experiment": "ONE_SAMIR_NPC_KNOWLEDGE_LOOKUP_3_REPETITIONS",
-  "baseline": {
-    "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
-    "calls_per_repetition": 1,
-    "p50_ms": 438,
-    "p95_ms": 500,
-    "characters_per_repetition": 58743,
-    "measurement_ms": [
-      500,
-      432,
-      438
-    ]
-  },
-  "candidate": {
-    "source_paths": [
-      "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/index.md",
-      "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/assunto.json",
-      "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json"
+  "warning": "Historical retrieval/navigation samples only. Not a 30-query model suite and not a full-session Web latency benchmark.",
+  "connector_source_reads": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "actual_reads": 3,
+    "samples_ms": [
+      421,
+      403,
+      443
     ],
-    "calls_per_repetition": 3,
-    "p50_ms": 1247,
-    "p95_ms": 1353,
-    "characters_per_repetition": 2064,
-    "measurement_ms": [
-      1247,
-      1353,
-      1192
-    ]
+    "p50_ms": 421,
+    "p95_ms_nearest_rank": 443,
+    "total_chars": 14034,
+    "wire_bytes": "NOT_OBSERVABLE",
+    "tokens": "NOT_OBSERVABLE"
   },
-  "interpretation": {
-    "less_text_read_in_candidate": true,
-    "more_tool_calls_and_latency": true,
-    "source_content_only_not_wire_bytes": true,
-    "actual_tokens": "NOT_EXPOSED",
-    "same_information_scope": "SAMIR_SITUATED_KNOWLEDGE_NOT_WHOLE_SOURCE",
-    "not_30_question_benchmark": true,
-    "not_codex": true,
-    "repeats": 3
+  "baseline_candidate_lookup": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "baseline": {
+      "reads_per_repetition": 1,
+      "samples_ms": [
+        500,
+        432,
+        438
+      ],
+      "p50_ms": 438,
+      "p95_ms_nearest_rank": 500,
+      "chars_per_rep": 58743
+    },
+    "candidate": {
+      "reads_per_repetition": 3,
+      "samples_ms": [
+        1247,
+        1353,
+        1192
+      ],
+      "p50_ms": 1247,
+      "p95_ms_nearest_rank": 1353,
+      "chars_per_rep": 2064
+    },
+    "scope": "one situated NPC lookup; paths directly supplied; not the full fixed query suite"
   },
-  "limitations": [
-    "No bootstrap/catalogue implementation until phase C",
-    "Per-request network conditions/cache not controlled",
-    "Three samples insufficient for statistically robust performance threshold",
-    "No actual model input token accounting or transport byte counts",
-    "Source file contains many NPCs; candidate isolates one NPC",
-    "Candidate path directly known in this experiment; not measured as search discovery"
-  ]
+  "codex_suite": "No web navigation: local Codex CLI. Full-run latency p50/p95 unavailable because run 1 latency not retained.",
+  "previous_web_model_timing": {
+    "samples_ms": [
+      92868,
+      54579,
+      82408
+    ],
+    "status": "SELF_REPORTED_OR_APPROXIMATE; INSUFFICIENT_FOR_GATE"
+  },
+  "interpretation": "Character counts are not bytes. Do not aggregate these independent experiments or infer actual token savings."
 }

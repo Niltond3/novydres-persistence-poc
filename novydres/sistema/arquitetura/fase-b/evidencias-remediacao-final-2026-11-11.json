@@ -1,0 +1,2043 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_TECHNICAL_REMEDIATION_EVIDENCE",
+  "classification": "PLAYER_SAFE",
+  "captured_at_utc": "2026-11-11T21:52:21Z",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "phase": "B",
+  "branch": "design/subject-oriented-migration",
+  "gate_status": "B_REMEDIATION_REQUIRED",
+  "refs_before_persistence": {
+    "design": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+    "design_tree": "ad26b61a557acf89f7a131cadb743a925e54d20b",
+    "master_read_only": "0418f70ca0f01827de993273da191453a16d9857"
+  },
+  "operational_state": {
+    "manifest": {
+      "path": "novydres/MANIFEST_V59.json",
+      "blob_sha": "6c1458fa2b72924d60e06f893f5211b695733443",
+      "status": "GITHUB_ACTIVE_PRIMARY_FULL_MIGRATION_PENDING"
+    },
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0044.json",
+      "blob_sha": "5bc4f59519fb7e7e3f017eea975a154e84e7efc1",
+      "cycle_id": "CHR001-CYCLE-0044",
+      "sequence": 44,
+      "status": "READY_FOR_DRAMATURGO",
+      "source_head_sha": "27652bc35755086ebbbdfd9749cb521e3e76c517"
+    },
+    "verification": {
+      "manifest_cycle_and_operational_refs": "9/9_SHA_MATCH",
+      "cycle_predecessor_links": "C42_TO_C43_TO_C44_VERIFIED",
+      "full_cycle_chain": "C1_TO_C41_CARRIED_FORWARD_FROM_PRIOR_AUDIT_NOT_RERUN",
+      "source_head_lag": "C44 source_head is three master commits behind current master; preserved, not reconciled"
+    },
+    "manifests": {
+      "M57_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+      "M58_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+      "M59_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+      "M59_supersedes": "novydres/MANIFEST_V58.json",
+      "status": "FORK_PRESERVED_NOT_LINEARIZED"
+    }
+  },
+  "master_change_review": {
+    "comparison_base": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "current_head": "0418f70ca0f01827de993273da191453a16d9857",
+    "commits": [
+      "368b636e63a34e7bce78bf52bb627d16c4165be3",
+      "bbbe402a99f706e90c2126e151f897cf3fc39e9f",
+      "d14e1a90de81f0348f2fd07062427b0602de3eb0",
+      "94324d3cd33504476db248b5fc965d2ce120c505",
+      "8e27fd5db00c7ca1c1821f4de3d6eb3bf3fa7c76",
+      "79e6406fec343e9c5d39862e20fad6beaeb79763",
+      "fbdb191b193e523ecf75791cfce9f162652da966",
+      "27652bc35755086ebbbdfd9749cb521e3e76c517",
+      "d7c883758d7fcb7fb03b6f97f3d3698ed9c58420",
+      "71d7e6fbd1a2ab173c60406fdff82785ca983976",
+      "0418f70ca0f01827de993273da191453a16d9857"
+    ],
+    "commits_count": 11,
+    "changed_paths": 55,
+    "candidate_subject_paths_changed": 0,
+    "original_source_pin_paths_changed": 0,
+    "effect_on_candidates": "Freshness and chronology only: newer operational cycle, manifest, projections and governance. Candidate C41 snapshot and original source provenance remain pinned; no facts merged or reconciled.",
+    "master_write": "NONE"
+  },
+  "candidate_audit": {
+    "logical_subject_types": [
+      "NPC",
+      "TRAMA",
+      "HISTORIA",
+      "ESTADO"
+    ],
+    "subject_envelopes_schema_valid": "5/5",
+    "candidate_files_pinned": "16/16",
+    "source_ref_rows_matching": "21/21",
+    "unique_source_blobs": 6,
+    "relation_refs": {
+      "total": 8,
+      "resolved": 7,
+      "explicitly_out_of_scope": 1
+    },
+    "knowledge_counts": {
+      "confirmed": 3,
+      "claim": 1,
+      "suspected": 0,
+      "unknown": 3,
+      "unknown_preserved": true
+    },
+    "owner_scopes_verified": 5,
+    "visibility": {
+      "PLAYER_SAFE": 3,
+      "SYSTEM_AUDIT": 2
+    },
+    "status": "all CANDIDATE; no authority promotion; routes inactive",
+    "payload_schemas": "Six content JSON payloads have no applicable domain schema defined by Phase A; those schemas were deferred. Generic immutable record schema is not applicable because no EVENT/ROLL/DECISION/APPROVAL/CORRECTION envelope is present.",
+    "plot": "provisional open-thread classification; not D04-admitted",
+    "story": "textual markers do not establish technical COMMITTED ledger",
+    "state": "C41 candidate snapshot; no operational replay"
+  },
+  "codex_cli": {
+    "execution": "three actual independent CLI runs for the 30-query suite; negative and journey fixtures were not executable as system tests",
+    "runs": [
+      {
+        "run": 1,
+        "matched": 13,
+        "failed": [
+          "B-Q11",
+          "B-Q12",
+          "B-Q13",
+          "B-Q14",
+          "B-Q15",
+          "B-Q16",
+          "B-Q17",
+          "B-Q18",
+          "B-Q19",
+          "B-Q20",
+          "B-Q21",
+          "B-Q22",
+          "B-Q23",
+          "B-Q24",
+          "B-Q25",
+          "B-Q29",
+          "B-Q30"
+        ],
+        "evidence": "AGGREGATE_ONLY; per-case outputs/citations not retained",
+        "group": {
+          "world": "10/10",
+          "npc": "0/10",
+          "chronology": "3/10"
+        },
+        "tokens": {
+          "input": 1269577,
+          "cached_input": 1184896,
+          "output": 18307,
+          "reasoning": 8016
+        },
+        "event_bytes": 241371,
+        "output_bytes": 16632,
+        "local_calls": 20,
+        "latency_ms": "NOT_RETAINED"
+      },
+      {
+        "run": 2,
+        "matched": 12,
+        "failed": [
+          "B-Q06",
+          "B-Q11",
+          "B-Q12",
+          "B-Q13",
+          "B-Q14",
+          "B-Q15",
+          "B-Q16",
+          "B-Q17",
+          "B-Q18",
+          "B-Q19",
+          "B-Q20",
+          "B-Q21",
+          "B-Q22",
+          "B-Q23",
+          "B-Q24",
+          "B-Q25",
+          "B-Q29",
+          "B-Q30"
+        ],
+        "evidence": "AGGREGATE_ONLY; per-case outputs/citations not retained",
+        "group": {
+          "world": "9/10",
+          "npc": "0/10",
+          "chronology": "3/10"
+        },
+        "tokens": {
+          "input": 1012215,
+          "cached_input": 940160,
+          "output": 18678,
+          "reasoning": 8094
+        },
+        "event_bytes": 210184,
+        "output_bytes": "NOT_OBSERVABLE",
+        "local_calls": 18,
+        "latency_ms": 379960.590228
+      },
+      {
+        "run": 3,
+        "matched": 26,
+        "failed": [
+          "B-Q01",
+          "B-Q07",
+          "B-Q29",
+          "B-Q30"
+        ],
+        "evidence": "PER_CASE_OUTPUT_AND_PINNED_CITATIONS; factual answer text omitted from PLAYER_SAFE report",
+        "group": {
+          "world": "8/10",
+          "npc": "10/10",
+          "chronology": "8/10"
+        },
+        "tokens": {
+          "input": 247781,
+          "cached_input": 199424,
+          "output": 8233,
+          "reasoning": 732
+        },
+        "event_bytes": 393738,
+        "output_bytes": 20619,
+        "local_calls": 6,
+        "latency_ms": 164780,
+        "event_sha256": "dd91ffd161700b610c21df9bc1e7cf10d058d5d5bad953d13c2f2eb739a340f5",
+        "output_sha256": "04a97ba4dcbab6e97ae19aac9b29c98b7e0d836ae1fa56a2ca9cfcd2e2314b23",
+        "candidate_path_sha_locator": "30/30",
+        "source_path_sha": "30/30",
+        "source_locator": "17/30",
+        "authority": "30/30",
+        "unknown": "30/30",
+        "candidate_fact_locator_shape": "30/30",
+        "spoiler_safety": "model_asserted_30/30_not_independent_review"
+      }
+    ],
+    "query_accuracy": {
+      "matched": 51,
+      "total": 90,
+      "precision": 0.5666666667,
+      "required": 1,
+      "status": "FAIL",
+      "grouped": {
+        "world": "27/30",
+        "npc_relations_knowledge": "10/30",
+        "chronology_state": "14/30"
+      },
+      "critical_fail_ids": [
+        "B-Q29",
+        "B-Q30"
+      ],
+      "critical_fail_runs": "3/3 each"
+    },
+    "per_case": [
+      {
+        "run": 1,
+        "case_id": "B-Q01",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q01",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q01",
+        "group": "world-rules",
+        "reported_result": "MISMATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/unknowns/0"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 2"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q02",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q02",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q02",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/workshop/service_bay"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 11"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q03",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q03",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q03",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/pc_action_boundaries/security_work_refused"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 17"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q04",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q04",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q04",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/event_text_markers/4/source_type"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 20"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q05",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q05",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q05",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/claims/0"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 14"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q06",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q06",
+        "group": "world-rules",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q06",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/unknowns/2"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 14"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q07",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q07",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q07",
+        "group": "world-rules",
+        "reported_result": "MISMATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/unknown/2"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 23"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q08",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q08",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q08",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/pc_action_boundaries/no_future_call_confirmed"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 29"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q09",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q09",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q09",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/pc_action_boundaries/handshake_reply_unconfirmed"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 26"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q10",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q10",
+        "group": "world-rules",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q10",
+        "group": "world-rules",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+            "blob_sha": "1aa7682911a572d0e391e90d19f3af46ed34ba0d",
+            "locator": "/pc_obligation_created"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 23"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q11",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q11",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q11",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+            "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+            "locator": "/historical_actor_id"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/entity"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q12",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q12",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q12",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+            "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+            "locator": "/aliases"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+            "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+            "locator": "/entities/npc-m3-samir-haddad-candidate/aliases"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q13",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q13",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q13",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+            "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+            "locator": "/historical_status"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+            "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+            "locator": "/entities/npc-m3-samir-haddad-candidate/status"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q14",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q14",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q14",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/scope"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/scope"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q15",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q15",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q15",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/confirmed"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/confirmed"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q16",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q16",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q16",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/confirmed/0"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/confirmed/0"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q17",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q17",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q17",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/confirmed/1"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/confirmed/1"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q18",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q18",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q18",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/confirmed/2"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/confirmed/2"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q19",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q19",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q19",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/claims/0"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/claims/0"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q20",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q20",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q20",
+        "group": "npc-relations-knowledge",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+            "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+            "locator": "/unknown/2"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+            "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+            "locator": "/records/39/unknown/2"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q21",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q21",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q21",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/event_text_markers"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 28"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q22",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q22",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q22",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/event_text_markers/0/event_marker"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 7"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q23",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q23",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q23",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+            "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+            "locator": "/event_text_markers/7/event_marker"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+            "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+            "locator": "line 28"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": false,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q24",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q24",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q24",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/checkpoint/last_event_id"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+            "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+            "locator": "/checkpoint/last_event_id"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q25",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q25",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q25",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/checkpoint/provocation"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+            "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+            "locator": "/provocation_id"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q26",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q26",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q26",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/checkpoint/scene_started"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+            "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+            "locator": "/checkpoint/next_scene_status"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q27",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q27",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q27",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/checkpoint/mortal"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+            "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+            "locator": "/checkpoint/mortal"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q28",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q28",
+        "group": "chronology-state",
+        "reported_result": "MATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q28",
+        "group": "chronology-state",
+        "reported_result": "MATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/checkpoint/embrace_occurred"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+            "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+            "locator": "/checkpoint/embrace_occurred"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q29",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q29",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q29",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/resources"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+            "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+            "locator": "/character/resources"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      },
+      {
+        "run": 1,
+        "case_id": "B-Q30",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 2,
+        "case_id": "B-Q30",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH_REPORTED",
+        "evidence_level": "AGGREGATE_RECONSTRUCTED",
+        "answer_text_omitted": true,
+        "individual_answer_retained": false,
+        "citation_readback": "NOT_RETAINED_PER_CASE"
+      },
+      {
+        "run": 3,
+        "case_id": "B-Q30",
+        "group": "chronology-state",
+        "reported_result": "MISMATCH",
+        "evidence_level": "RAW_RESPONSE_AND_PINNED_CITATIONS",
+        "answer_text_omitted": true,
+        "candidate_evidence": [
+          {
+            "path": "novydres/cronicas/CHR-001/estado/atual.json",
+            "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+            "locator": "/resources"
+          }
+        ],
+        "source_evidence": [
+          {
+            "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+            "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+            "locator": "/character/resources"
+          }
+        ],
+        "checks": {
+          "candidate_path": true,
+          "candidate_sha": true,
+          "candidate_locator": true,
+          "candidate_fact_locator_shape": true,
+          "source_path": true,
+          "source_sha": true,
+          "source_locator": true,
+          "authority": true,
+          "unknown": true,
+          "spoiler_safe_model_assertion": true
+        }
+      }
+    ],
+    "additional_checks": {
+      "candidate_path_sha_locator_shape": "30/30 in R3",
+      "source_path_sha": "30/30 in R3",
+      "source_locator_readback": "17/30 in R3",
+      "authority": "30/30 R3",
+      "unknown_handling": "30/30 R3",
+      "spoiler_safety": "model self-assertion only; independent review not established"
+    },
+    "non_query_suites": {
+      "negatives": {
+        "case_ids": [
+          "B-N01",
+          "B-N02",
+          "B-N03",
+          "B-N04",
+          "B-N05",
+          "B-N06",
+          "B-N07",
+          "B-N08",
+          "B-N09",
+          "B-N10",
+          "B-N11",
+          "B-N12"
+        ],
+        "required_runs": 3,
+        "executed_new_runs": 0,
+        "status": "NOT_EXECUTABLE_FIXTURE_HAS_NO_OPERATION_PAYLOAD_OR_ACCEPTANCE_READBACK"
+      },
+      "journeys": {
+        "case_ids": [
+          "B-M01",
+          "B-M02",
+          "B-M03",
+          "B-M04",
+          "B-M05",
+          "B-M06",
+          "B-M07",
+          "B-M08",
+          "B-M09",
+          "B-M10",
+          "B-M11",
+          "B-M12"
+        ],
+        "required_runs": 3,
+        "executed_new_runs": 0,
+        "status": "NOT_EXECUTABLE_FIXTURE_HAS_NO_TRANSACTION_OR_JOURNEY_PAYLOAD"
+      },
+      "historical_local_checks": {
+        "negative_predicates": "12/12, local deterministic predicate only",
+        "mutation_journeys": "12/12 simulation only; not a write"
+      }
+    },
+    "direct_field_comparison": {
+      "matched": 30,
+      "total": 30,
+      "status": "PASS_SCOPED",
+      "method": "direct equality of fixture fields; not an agent response"
+    }
+  },
+  "metrics": {
+    "codex_tokens_instrumented": {
+      "input": 2529573,
+      "cached_input": 2324480,
+      "output": 45218,
+      "reasoning": 16842
+    },
+    "codex_local_trace_bytes": 845293,
+    "codex_captured_output_json_bytes_known": 37251,
+    "codex_run2_output_bytes": "NOT_OBSERVABLE",
+    "codex_local_tool_calls": 44,
+    "codex_http_bytes": "NOT_OBSERVABLE",
+    "full_three_run_latency_p50_p95": "NOT_OBSERVABLE",
+    "partial_latency_ms": {
+      "n": 2,
+      "p50_nearest_rank": 164780,
+      "p95_nearest_rank": 379960.590228,
+      "note": "one run absent; mixed wall-time capture; not valid full-suite metric"
+    },
+    "chatgpt_web_tokens": "NOT_OBSERVABLE",
+    "chatgpt_web_http_bytes": "NOT_OBSERVABLE",
+    "chatgpt_web_full_suite_latency": "NOT_OBSERVABLE",
+    "historical_navigation_samples": "See navegacao-web.json; direct connector reads and candidate-vs-baseline lookup are separate from full QA suite."
+  },
+  "web_audit": {
+    "prior_three_sessions": "INSUFFICIENT_EVIDENCE: model-reported totals only, no per-case source/results/readback",
+    "new_sessions_executed_here": 0,
+    "sessions_required": 3,
+    "token_and_http_metrics": "NOT_OBSERVABLE",
+    "executable_protocol": "novydres/sistema/arquitetura/fase-b/protocolo-chatgpt-web-3-sessoes.md"
+  },
+  "git_safety": {
+    "isolated_local_bare_repo": {
+      "status": "PASS_LOCAL_SCOPED",
+      "two_distinct_commits_same_parent": true,
+      "cas_winner_count": 1,
+      "stale_writer_rejected": true,
+      "stale_retry_rejected": true,
+      "no_op_at_current_head": true,
+      "design_or_master_changed": false
+    },
+    "github_current_head_noop": {
+      "status": "PASS_SCOPED",
+      "expected_sha": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+      "ref_readback_unchanged": true
+    },
+    "github_remote_stale_expected_sha": {
+      "status": "INDETERMINATE",
+      "readback_unchanged": true,
+      "tool_error": "generic UNKNOWN; rejection itself not proven"
+    },
+    "github_remote_distinct_competing_writers": "NOT_EXECUTED",
+    "final_protected_promotion": "to be verified by branch update with expected_sha and independent readback"
+  },
+  "ci": {
+    "design_pre_remediation_head": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+    "workflow_runs": 0,
+    "status": "NOT_EXECUTED_NO_RUNS",
+    "current_master_runs": "two successful and two failed operational workflow runs; not candidate-design validation",
+    "master_ci_details": "V16 and V17 failed on unexpected cycle-count regression; V18 and V15 succeeded"
+  },
+  "gate_evaluation": [
+    {
+      "gate": "candidate schemas and pins",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "gate": "relations, ownership, authority and UNKNOWN",
+      "status": "PASS_SCOPED_WITH_DECLARED_GAP"
+    },
+    {
+      "gate": "Codex query accuracy",
+      "status": "FAIL"
+    },
+    {
+      "gate": "Codex citation readback",
+      "status": "PARTIAL"
+    },
+    {
+      "gate": "Codex negatives and journeys",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "gate": "ChatGPT Web three runs",
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "gate": "tokens and bytes",
+      "status": "PARTIAL_AND_NOT_OBSERVABLE"
+    },
+    {
+      "gate": "Git local race/idempotency",
+      "status": "PASS_LOCAL_SCOPED"
+    },
+    {
+      "gate": "remote competing writers and stale SHA rejection",
+      "status": "NOT_PROVEN"
+    },
+    {
+      "gate": "CI on design",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "gate": "master/canon/runtime protection",
+      "status": "PASS_SCOPED"
+    }
+  ],
+  "unadopted_exception_proposal": {
+    "scope": "Only ChatGPT Web actual token counts and HTTP bytes, if the product UI does not expose them.",
+    "substitute": "Per-case result/citation/source readback, independently scored outside the model, plus UI elapsed-time samples with method recorded.",
+    "does_not_waive": [
+      "Codex query FAIL",
+      "missing Web per-case evidence",
+      "non-executable negative/journey test cases",
+      "CI requirement",
+      "independent scoring"
+    ],
+    "status": "PLAYER_DECISION_REQUIRED; not adopted; cannot by itself change gate"
+  },
+  "safety": {
+    "master_modified": false,
+    "runtime_canon_events_rolls_sheet_xp_fv_cycles_frozen_content_modified": false,
+    "candidate_reconciled": false,
+    "candidate_routes_activated": false,
+    "spoiler_values_included": false,
+    "phase_c_started": false
+  }
+}

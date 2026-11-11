@@ -1,27 +1,29 @@
-# NOVYDRES — Fase B, protótipo isolado
+# NOVYDRES — Fase B, remediação técnica
 
-**Gate B_REMEDIATION_REQUIRED.** Os quatro candidatos já publicados permanecem na branch de design, sem autoridade operacional, sem ativação de rotas e sem avanço para C.
+**Gate: B_REMEDIATION_REQUIRED.** Fase C não foi iniciada nem autorizada. Os quatro candidatos existentes permanecem em estado candidato, sem ativação de rotas.
 
-## Readback e remediação — 2026-11-11
+## Estado observado
 
-- A branch de escrita permaneceu em `6b56f907a3ca4683e010f654f212df16aa86af52` até a criação desta remediação. Master era somente leitura: observado inicialmente em `c26c0fbf15fff6c817182c06e6208e302b954f3a` e redescoberto em `d14e1a90de81f0348f2fd07062427b0602de3eb0` durante a tarefa; a árvore atual é `eb5a98b5fc2935eb8009e2b21bd921a001a9ddd2`. A mudança externa foi registrada sem reconciliação automática.
-- No master atual, MANIFEST V57 (`c516d0e596a2cc8eb8da9e723d3b114d1dd0bf39`) e CYCLE V0042 (`47e9334b4c1696b8334c63ba938da25cf4f8e644`) são as versões mais recentes observadas. O ciclo aponta ao manifesto e ao V0041 (`06398ed7cbc19e315fb7d59b08cc807b3e36c88d`); 165/165 pares de caminho/SHA operacionais conferem. O estado do ciclo é `TEMPORAL_RECONCILIATION_REQUIRED`; cadeia histórica completa e replay não foram executados.
-- A base de origem dos candidatos continua pinada em `c26c0fbf15fff6c817182c06e6208e302b954f3a`. Os 11 JSONs já publicados permanecem presentes, parseáveis e com SHA igual à árvore da branch. As 21 referências de seis fontes também correspondem por SHA ao master atual; o pin dos candidatos não foi reescrito.
-- Três conversas temporárias reais no ChatGPT Web retornaram, por autodeclaração do modelo, 30/30 consultas, 12/12 negativos e 12/12 jornadas em cada rodada. Não houve citações por caso nem readback independente das respostas. Tokens reais e bytes HTTP não são expostos.
-- Latência ponta a ponta observada: 92.868 ms (aprox.), 54.579 ms (aprox.) e 82.408 ms; p50 82.408 ms e p95 92.868 ms pelo método nearest-rank. A medição mistura duas somas aproximadas de ferramenta e um timer do navegador; não representa latência de serviço isolada.
-- Codex: suítes independentes não executadas. Para o commit-base consultado, GitHub não reportou status, check-runs ou workflows.
-- GitHub rejeitou uma atualização com expected SHA obsoleto sem mover a ref; duas chamadas protegidas de no-op no mesmo SHA preservaram a ref. Duas requisições protegidas concorrentes para o mesmo HEAD foram aceitas e a ref permaneceu intacta; escritores com commits concorrentes distintos não foram testados.
+- Escrita limitada à branch `design/subject-oriented-migration`, cujo parent esperado é `35862b10000883ac8e607f9de1a87d945b21c1a5`. Master somente leitura no SHA `0418f70ca0f01827de993273da191453a16d9857`.
+- A comparação do master desde c26 identificou 11 commits e 55 caminhos alterados; nenhum dos caminhos dos candidatos nem das seis fontes pinadas mudou. O efeito é de atualidade/cronologia. Não houve reconciliação factual.
+- MANIFEST V59 e CYCLE V0044 foram lidos no master atual. O manifesto, ciclo e seis pins operacionais conferem 9/9. Links de predecessor C42→C43→C44 conferem. A divergência de linhagem entre M57/M58/M59 foi preservada.
+- Candidatos: 5/5 envelopes válidos; 16/16 pins de candidato e 21/21 referências de fonte verificados. Sete de oito relações resolvem; uma está explicitamente fora do escopo. UNKNOWN permanece. A trama segue provisória e a história textual não comprova ledger técnico COMMITTED.
+- Codex CLI: três rodadas reais da suíte de 30 consultas; 51/90 correspondências agregadas. O requisito fixo é 30/30. B-Q29/B-Q30 falharam nas três rodadas. Negativos e jornadas não foram testados como operações reais: os fixtures não trazem payload executável e critério de readback.
+- ChatGPT Web: os três resultados antigos são autodeclarados, sem dados por caso nem readback independente. Nenhuma nova sessão Web foi executada aqui; estado INSUFFICIENT_EVIDENCE.
+- Concorrência real local no Git bare isolado: dois commits distintos no mesmo parent, um CAS vencedor e um escritor obsoleto rejeitado. Isso prova somente o comportamento local. GitHub remoto: um no-op protegido no HEAD passou; escritores remotos concorrentes não testados.
+- CI não tem execuções no HEAD de design consultado. Telemetria Codex registrou tokens e bytes locais de trace; p50/p95 das três rodadas não é observável. Tokens/bytes HTTP Web não são expostos.
 
-As comparações JSON locais continuam **PASS_SCOPED** (30/30), os negativos locais **PASS_SCOPED** (12/12) e as jornadas de mutação continuam **SIMULATION_ONLY** (12/12). Nenhum desses resultados substitui as execuções Codex faltantes, tokens reais, evidência Web por caso, teste entre escritores ou CI.
+## Artefatos de remediação
 
-## Estado dos candidatos e conflitos
+- [Evidências por caso e métricas](evidencias-remediacao-final-2026-11-11.json)
+- [Resultado de testes atualizado](resultado-testes.json)
+- [Gate e readback](gate-e-readback.json)
+- [Conflitos e proveniência](conflitos.json)
+- [Medições de navegação](navegacao-web.json)
+- [Protocolo reproduzível para três sessões Web](protocolo-chatgpt-web-3-sessoes.md)
 
-A classificação da trama permanece provisória e candidata; a história textual não equivale a ledger técnico COMMITTED; o cursor legado e as divergências seguem explícitos. Os quatro candidatos não foram recriados nem promovidos. Não houve alteração de master, runtime, cânone, eventos, rolagens, ficha, XP/FV, ciclos ou material congelado. Nenhuma rota foi ativada.
+Os fixtures novos são sanitizados: não contêm gabarito nem respostas factuais. Os relatórios omitem valores de respostas e conteúdo restrito.
 
-## Medição de navegação anterior
+## Decisão
 
-Três leituras diretas reais do conector Web: p50=421 ms, p95=443 ms, 14.034 caracteres. O ensaio de navegação complementar mediu legado em uma leitura (p50=438 ms, p95=500 ms, 58.743 caracteres) e candidato em três leituras (p50=1.247 ms, p95=1.353 ms, 2.064 caracteres). Houve menos texto e mais chamadas/latência naquele ensaio; não extrapolar para tokens ou para a suíte completa.
-
-## Próxima ação
-
-Continuar exclusivamente B: executar as três suítes Codex por categoria com medição observável, obter readback Web independente por caso, e executar CI/validator, concorrência e replay somente quando houver ambiente seguro e evidência reproduzível. **Fase C não autorizada.**
+B continua em remediação. Não promover candidatos, não ativar rotas, não alterar master/runtime/cânone/eventos/rolagens/ficha/XP/FV/ciclos/material congelado. A proposta de exceção é limitada à telemetria de tokens e bytes HTTP Web indisponível; não cobre falha de precisão, evidência Web ausente, casos não executáveis ou CI. Não adotar exceção silenciosamente.
