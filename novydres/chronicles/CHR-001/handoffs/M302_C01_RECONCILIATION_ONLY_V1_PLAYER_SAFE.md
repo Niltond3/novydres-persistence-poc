@@ -21,3 +21,7 @@ NÃO narrar, rolar, atribuir ações, executar C02, preparar novo dossier de C02
 ## Handoff posterior
 
 Somente depois de C44/V59 oficialmente publicados e verificados, o Dramaturgo operacional poderá reavaliar M3.02 após C01 e produzir novo ciclo prospectivo sem cena automática.
+
+## Evidência de CI — escopos separados
+Na tentativa anterior, V18 falhou em teste negativo “require restricted handoff”: o validador conferia caminho, mas não o blob SHA. O sucessor corrige essa checagem, mantendo teste adversarial.
+V16 falhou com `CHR001_V16_BLOCK:unexpected cycle count` por exigir 43 ciclos após a introdução do C44. Trata-se de teste histórico, não substituto para a validação V18 do novo ciclo; o contrato V16 foi preservado e a extensão da imersão foi movida para V17. Não alterar V16 nem seu validador. O **PASS relevante** para promoção é o V18 do SHA candidato corrente, com schema, negativos, 43 links, pins e readback; outros workflows obrigatórios e conflitos continuam sujeitos a auditoria, não devem ser descartados silenciosamente.
