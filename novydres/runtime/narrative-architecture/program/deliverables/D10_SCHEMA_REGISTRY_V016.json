@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "D10_SCHEMA_REGISTRY_V016",
+  "version": "V016",
+  "status": "CURRENT_SUCCESSOR_CONTRACT_WITH_SEPARATE_TEST_REPORT",
+  "authority": "PROGRAM_CONTRACT_SUCCESSOR",
+  "spoiler_class": "PLAYER_SAFE_INDEX",
+  "parent_registry_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V015.json",
+    "blob_sha": "ce51b78caae6ef4a53745c9f8e7e24ba507f8feb"
+  },
+  "version_gates": {
+    "D07": "truth contracts complete, source-provenance, no retcon, explicit NPC knowledge, local closure, independent review",
+    "D08": "playable entry/preconditions/participants/knowledge/choices/conditional beats/exits",
+    "D09": "finite progression, post-Embrace opportunities, no automatic XP/state, 2010 criteria",
+    "D10": "cross-reference validator and current test result",
+    "D11": "independent review and adversarial cases",
+    "D12": "all gates verified and read back; cycle separately permits operation"
+  },
+  "knowledge_levels": [
+    "AGENT_KNOWLEDGE",
+    "PLAYER_KNOWLEDGE",
+    "PC_KNOWLEDGE",
+    "NPC_KNOWLEDGE"
+  ],
+  "required_story_contract": [
+    "story_id",
+    "dramatic_function",
+    "entry_cause",
+    "entry_state",
+    "participants",
+    "knowledge_by_participant",
+    "conflict_and_choices",
+    "conditional_beats",
+    "escalation_conditions",
+    "local_exits",
+    "closure_evidence",
+    "source_or_authority"
+  ],
+  "runner": "D10_VALIDATE_V016.py",
+  "catalog": [
+    "D04_PLOT_ADMISSIONS_V010.json",
+    "D05_PLAYER_APPROVAL_QUEUE_V013.json",
+    "D06_CHRONICLE_BIBLE_V020.json",
+    "D06_CHRONICLE_BIBLE_V020_PLAYER_SAFE.md",
+    "D06_CHRONICLE_BIBLE_V021.json",
+    "D06_CHRONICLE_BIBLE_V021_PLAYER_SAFE.md",
+    "D06_SOURCE_RECONCILIATION_V003.json",
+    "D06_SOURCE_VALIDATE_V003.py",
+    "D06_SOURCE_VALIDATION_RESULT_V001_PLAYER_SAFE.json",
+    "D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md",
+    "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md",
+    "D08_STORY_PREPARATION_V013_GM_HIDDEN.md",
+    "D08_STORY_PREPARATION_V014_GM_HIDDEN.md",
+    "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json",
+    "D10_SCHEMA_REGISTRY_V016.json",
+    "D10_ROLE_ADAPTERS_V011.json",
+    "D10_VALIDATE_V016.py",
+    "D10_TEST_RESULTS_V016.json",
+    "D11_ADVERSARIAL_CASES_V014_GM_HIDDEN.json",
+    "D11_EXECUTE_ADVERSARIAL_V014.py",
+    "D11_TEST_RESULTS_V014_PLAYER_SAFE.json",
+    "D11_INDEPENDENT_REVIEW_V009_GM_HIDDEN.json",
+    "D11_REVIEW_STATUS_V010_PLAYER_SAFE.json",
+    "D12_RELEASE_CANDIDATE_V018.json",
+    "D12_VALIDATE_V014.py",
+    "D12_VALIDATE_V014_RESULT.json",
+    "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json"
+  ],
+  "test_report": "D10_TEST_RESULTS_V016.json",
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V015.json",
+    "blob_sha": "ce51b78caae6ef4a53745c9f8e7e24ba507f8feb"
+  },
+  "adversarial_contract_binding": {
+    "required_fields": [
+      "contract_ref",
+      "pass_criterion",
+      "assert"
+    ],
+    "markdown_anchor": "must resolve to an existing heading or explicit contract marker",
+    "json_pointer": "must resolve to a non-null node",
+    "execution_boundary": "reducer-only; no scene, dice, or persistent state mutation",
+    "state_fixture": "initial_state is merged with the known baseline before each branch; prior knowledge and sheet ledgers may be non-empty.",
+    "assertion_operators": [
+      "$unchanged_from_initial",
+      "$absent",
+      "$in",
+      "$equals"
+    ]
+  }
+}

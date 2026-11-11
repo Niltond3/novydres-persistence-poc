@@ -1,0 +1,21 @@
+{
+  "document_id": "D11_TEST_RESULTS_V014_PLAYER_SAFE",
+  "version": "V014",
+  "status": "PASS",
+  "execution_mode": "DETERMINISTIC_SEEDED_STATE_CONTRACT_REDUCER",
+  "cases_total": 29,
+  "passed": 29,
+  "failed": 0,
+  "scenes_played": 0,
+  "dice_simulated": false,
+  "persistent_state_mutated": false,
+  "result_detail_disclosed": false,
+  "input_artifact_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V014_GM_HIDDEN.json",
+      "blob_sha": "0b57ad587275012c5bff6704f4607663066eed4c"
+    }
+  ],
+  "runner_source_sha256": "2590687f284a0bca0f7ff4b0b5fac0d967d942e2220f3bb054cf8d09d64aed53",
+  "limitation": "The reducer checks prepared state-transition contracts with seeded ledgers. It is not the game engine and proves no live cycle transition, V5 roll result, or scene permission."
+}

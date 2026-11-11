@@ -1,0 +1,810 @@
+{
+  "document_id": "D11_ADVERSARIAL_CASES_V014_GM_HIDDEN",
+  "version": "V014",
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V013_GM_HIDDEN.json",
+    "blob_sha": "3b28ba83b5befe4eeb96ceec21295f3ccd06d2be"
+  },
+  "status": "CURRENT_CASES_PINNED_TO_SUCCESSOR_PACKAGE_AND_INDEPENDENT_REVIEW_PENDING",
+  "authority": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP_AND_PROGRAM_TEST_PLAN",
+  "spoiler_class": "GM_HIDDEN",
+  "scope": "Deterministic seeded-state contract branches; assertions compare complete participant knowledge and event-supplied contact channels to supplied state. No scenes, dice, or persistent mutation.",
+  "cases": [
+    {
+      "id": "ADV-C06-BOX",
+      "attack": "Bart examina a caixa ainda desconhecida.",
+      "expected_control": "O conteúdo permanece UNKNOWN e a decisão de retomada pode prosseguir por outra prioridade; nenhuma pista é fabricada.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-C06-REENTRY",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "box_search"
+      },
+      "assert": {
+        "pc_knowledge.box_contents": "UNKNOWN",
+        "scene_started": false
+      }
+    },
+    {
+      "id": "ADV-ATTENTION-NO-OBSERVATION",
+      "attack": "A cena de rua termina sem demonstração de capacidade extraordinária e sem pedido de contato.",
+      "expected_control": "A batedora relata apenas a obstrução, se de fato o fizer; Kuthulun não recebe rumor de combate nem convite automático.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-GANGREL-ATTENTION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "unobserved_contact"
+      },
+      "assert": {
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge_delta": [],
+        "route": "TARGET_PENDING",
+        "invitation.status": "NOT_EMITTED",
+        "invitation.reason": "NO_OBSERVATION",
+        "location_disclosed": false
+      },
+      "initial_state": {
+        "npc_knowledge": {
+          "observer_A": {
+            "known_fact": "prior_fact"
+          }
+        },
+        "invitation": {
+          "status": "UNDECIDED"
+        },
+        "location_disclosed": null
+      }
+    },
+    {
+      "id": "ADV-RELAY-REFUSAL",
+      "attack": "A testemunha vê um confronto, mas decide não transmitir o relato.",
+      "expected_control": "O destinatário não adquire conhecimento; a rota de aproximação fecha em quietude.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-GANGREL-ATTENTION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "relay_refused"
+      },
+      "assert": {
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge_delta": [],
+        "delivery_attempt.status": "REFUSED",
+        "delivery_attempt.delivery_id": {
+          "$unchanged_from_initial": true
+        },
+        "invitation.status": "NOT_EMITTED",
+        "invitation.reason": "RELAY_REFUSED",
+        "location_disclosed": false
+      },
+      "initial_state": {
+        "npc_knowledge": {
+          "witness_A": {
+            "known_fact": "prior_fact"
+          }
+        },
+        "delivery_attempt": {
+          "status": "NOT_ATTEMPTED",
+          "delivery_id": null
+        },
+        "invitation": {
+          "status": "UNDECIDED"
+        },
+        "location_disclosed": null
+      }
+    },
+    {
+      "id": "ADV-RELAY-DELAY",
+      "attack": "A reunião regular é adiada por tempo indeterminado durante a janela jogada.",
+      "expected_control": "O relato ainda não chega; nenhum convite ou localização de Bart aparece por conveniência.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-GANGREL-ATTENTION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "relay_delayed"
+      },
+      "assert": {
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge_delta": [],
+        "delivery_attempt.status": "PENDING",
+        "delivery_attempt.delivery_id": {
+          "$unchanged_from_initial": true
+        },
+        "invitation.status": "NOT_EMITTED_PENDING_RELAY",
+        "invitation.reason": "RELAY_PENDING",
+        "location_disclosed": false
+      },
+      "initial_state": {
+        "npc_knowledge": {
+          "recipient_A": {
+            "known_fact": "prior_fact"
+          }
+        },
+        "delivery_attempt": {
+          "status": "NOT_ATTEMPTED",
+          "delivery_id": null
+        },
+        "invitation": {
+          "status": "UNDECIDED"
+        },
+        "location_disclosed": null
+      }
+    },
+    {
+      "id": "ADV-VOLNAYA-EARLY-DISCOVERY",
+      "attack": "Bart encontra antecipadamente o campo nominal sobre a transportadora.",
+      "expected_control": "Pode registrar somente a associação escrita; não ganha mecanismo, rota, responsáveis ou explicação histórica.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-VOLNAYA-BOUNDARY",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "early_document_discovery"
+      },
+      "assert": {
+        "pc_knowledge.document_scope": "TEXTUAL_ASSOCIATION_ONLY",
+        "pc_knowledge.hidden_mechanism": "__MISSING__"
+      }
+    },
+    {
+      "id": "ADV-VOLNAYA-ABANDONMENT",
+      "attack": "Bart abandona a consulta documental.",
+      "expected_control": "O erro local pode ficar sem correção; outras histórias continuam sem retaliação automática.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-VOLNAYA-BOUNDARY",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "abandon_optional",
+        "story": "ST-VOLNAYA-BOUNDARY"
+      },
+      "assert": {
+        "optional_story.status": "CLOSED",
+        "optional_story.disposition": "ABANDONED"
+      }
+    },
+    {
+      "id": "ADV-PRECEDENCE-REFUSAL",
+      "attack": "Bart recusa ou ignora o cartão da primeira aproximação.",
+      "expected_control": "A cena não acontece e não há captura ou perseguição; qualquer contato novo exige nova causa.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-KUTHULUN-PRECEDENCE",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "decline_invitation"
+      },
+      "assert": {
+        "route": "ALTERNATE",
+        "scene_started": false
+      }
+    },
+    {
+      "id": "ADV-PRECEDENCE-FLIGHT",
+      "attack": "Bart sai durante a primeira conversa.",
+      "expected_control": "A retirada é processada pelo acesso e oposição presentes; a próxima conversa só existe se for efetivamente convidada e transmitida.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-KUTHULUN-PRECEDENCE",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "leave_first_contact"
+      },
+      "assert": {
+        "route": "CONTACT_CLOSED",
+        "new_invitation_emitted": false,
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge_delta": []
+      },
+      "initial_state": {
+        "npc_knowledge": {
+          "Kuthulun": {
+            "known_fact": "prior_fact"
+          },
+          "other_NPC": {
+            "known_fact": "unrelated_fact"
+          }
+        }
+      }
+    },
+    {
+      "id": "ADV-M302-BEFORE-M301-CLOSE",
+      "attack": "Uma sessão tenta iniciar a história M3.02 com M3.01 ainda aberta.",
+      "expected_control": "O gate rejeita a transição; C06 e o estado mortal seguem intactos.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "attempt_transition"
+      },
+      "assert": {
+        "m302_unlocked": false,
+        "episode_m301_open": true,
+        "bart.mortal": true
+      }
+    },
+    {
+      "id": "ADV-FINAL-NO-ATTENDANCE",
+      "attack": "Bart não comparece ao encontro final convidado.",
+      "expected_control": "A coerção não inicia, não há captura fora de cena, e a meta autoral passa a alternativa/incompleta conforme o tempo efetivo.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "do_not_attend"
+      },
+      "assert": {
+        "scene_started": false,
+        "route": "ALTERNATE"
+      }
+    },
+    {
+      "id": "ADV-FINAL-ESCAPE",
+      "attack": "Bart tenta e consegue sair durante o confronto final.",
+      "expected_control": "Fuga válida é honrada; não ocorre Abraço naquele ramo e perseguição exige causa nova.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "escape"
+      },
+      "assert": {
+        "route": "ESCAPED",
+        "bart.embrace_recorded": false
+      }
+    },
+    {
+      "id": "ADV-FINAL-MECHANICAL-DIVERGENCE",
+      "attack": "Uma rolagem real produz resultado incompatível com derrota/Abraço no alvo autoral.",
+      "expected_control": "A mecânica prevalece; a rota fecha como divergente sem rerrolagem, fraude ou ressurreição.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "mechanical_divergence",
+        "actual_outcome": "not_embraced"
+      },
+      "assert": {
+        "route": "DIVERGED",
+        "actual_outcome": "not_embraced",
+        "bart.embrace_recorded": false
+      }
+    },
+    {
+      "id": "ADV-FAMILY-THREAT-SCOPE",
+      "attack": "Gangrel não possuem cadeia adquirida sobre os familiares, mas Bart permanece no encontro.",
+      "expected_control": "Pode haver ameaça genérica na situação descrita; nenhum nome, endereço, ação ou resposta familiar é inventado.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "generic_threat"
+      },
+      "assert": {
+        "family.identity": {
+          "$unchanged_from_initial": true
+        },
+        "family.location": {
+          "$unchanged_from_initial": true
+        },
+        "family.response": {
+          "$unchanged_from_initial": true
+        },
+        "pc_knowledge.family": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge.Kuthulun": {
+          "$unchanged_from_initial": true
+        },
+        "family_threat.scope": "GENERIC_FAMILY",
+        "family_threat.names_added": [],
+        "family_threat.locations_added": [],
+        "family_threat.actions_added": [],
+        "family_threat.responses_added": [],
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        }
+      },
+      "initial_state": {
+        "family": {
+          "identity": [
+            "Mary",
+            "Mikahel",
+            "Sara"
+          ],
+          "location": "UNKNOWN",
+          "response": "UNKNOWN"
+        },
+        "pc_knowledge": {
+          "family": {
+            "Mary": "wife",
+            "Mikahel": "child",
+            "Sara": "child"
+          }
+        },
+        "npc_knowledge": {
+          "Kuthulun": {
+            "prior_fact": "known",
+            "family_details": {
+              "names": [],
+              "locations": [],
+              "actions": [],
+              "responses": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ADV-POST-EMBRACE-WITHOUT-EMBRACE",
+      "attack": "O ramo jogado não registra Abraço.",
+      "expected_control": "Nenhuma história pós-Abraço abre; nenhuma luto, adaptação, fome ou estado vampírico é presumido.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "no_actual_embrace"
+      },
+      "assert": {
+        "bart.embrace_recorded": false,
+        "bart.mortal": "UNKNOWN",
+        "post_embrace_story": {
+          "$unchanged_from_initial": true
+        }
+      },
+      "initial_state": {
+        "bart": {
+          "mortal": "UNKNOWN",
+          "embrace_recorded": false
+        },
+        "post_embrace_story": {
+          "status": "NOT_STARTED"
+        }
+      }
+    },
+    {
+      "id": "ADV-FAMILY-UNKNOWN-AFTERMATH",
+      "attack": "Bart tenta contato após transformação e a família não está disponível.",
+      "expected_control": "Registrar tentativa e canal; ausência não vira rejeição, resposta ou decisão da família.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-GRIEF-AND-BOUNDARIES",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "family_unavailable",
+        "channel": "PHONE"
+      },
+      "assert": {
+        "family_contact_attempt.attempted": true,
+        "family_contact_attempt.channel": "PHONE",
+        "family_contact_attempt.result": "NO_CONTACT_ESTABLISHED_THIS_ATTEMPT",
+        "family.identity": {
+          "$unchanged_from_initial": true
+        },
+        "family.location": {
+          "$unchanged_from_initial": true
+        },
+        "family.response": {
+          "$unchanged_from_initial": true
+        },
+        "pc_knowledge.family": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        }
+      },
+      "initial_state": {
+        "family": {
+          "identity": [
+            "Mary",
+            "Mikahel",
+            "Sara"
+          ],
+          "location": "UNKNOWN",
+          "response": "UNKNOWN"
+        },
+        "pc_knowledge": {
+          "family": {
+            "Mary": "wife",
+            "Mikahel": "child",
+            "Sara": "child"
+          }
+        },
+        "npc_knowledge": {
+          "Ilja": {
+            "prior_fact": "known"
+          }
+        }
+      }
+    },
+    {
+      "id": "ADV-CAINITE-ENTRY-REFUSAL",
+      "attack": "Bart recusa turno ou pede divisão na primeira prova social.",
+      "expected_control": "NPCs respondem conforme objetivos; saída e resultado ficam locais; nenhuma obediência ou sentimento é imposto.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-CAINITE-ENTRY",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "refuse_social_task",
+        "task_id": "watch_assignment"
+      },
+      "assert": {
+        "story_task.watch_assignment.status": "REFUSED",
+        "story_task.watch_assignment.local_scene_status": "CLOSED",
+        "story_units.ST-CAINITE-ENTRY": {
+          "$unchanged_from_initial": true
+        },
+        "route": {
+          "$unchanged_from_initial": true
+        },
+        "route_abandoned": false,
+        "route_advanced": false
+      },
+      "initial_state": {
+        "route": "IN_PROGRESS",
+        "story_units": {
+          "ST-CAINITE-ENTRY": {
+            "status": "ACTIVE"
+          }
+        },
+        "story_task": {
+          "watch_assignment": {
+            "status": "OFFERED",
+            "local_scene_status": "OPEN"
+          }
+        }
+      }
+    },
+    {
+      "id": "ADV-ETHICAL-COST-REFUSAL",
+      "attack": "Bart recusa a tarefa moral opcional.",
+      "expected_control": "A cópia mantém o estado de entrada; família não sofre punição automática e a revisão de 2010 continua disponível.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-ETHICAL-COST",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "refuse_optional_ethics"
+      },
+      "assert": {
+        "optional_stories.ST-ETHICAL-COST.status": "CLOSED",
+        "optional_stories.ST-ETHICAL-COST.disposition": "REFUSED",
+        "graduation_review_available": {
+          "$unchanged_from_initial": true
+        },
+        "family.identity": {
+          "$unchanged_from_initial": true
+        },
+        "family.location": {
+          "$unchanged_from_initial": true
+        },
+        "family.response": {
+          "$unchanged_from_initial": true
+        },
+        "pc_knowledge.family": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        }
+      },
+      "initial_state": {
+        "family": {
+          "identity": [
+            "Mary",
+            "Mikahel",
+            "Sara"
+          ],
+          "location": "UNKNOWN",
+          "response": "UNKNOWN"
+        },
+        "pc_knowledge": {
+          "family": {
+            "Mary": "wife",
+            "Mikahel": "child",
+            "Sara": "child"
+          }
+        },
+        "npc_knowledge": {
+          "Kuthulun": {
+            "prior_fact": "known"
+          }
+        },
+        "optional_stories": {
+          "ST-ETHICAL-COST": {
+            "status": "ACTIVE",
+            "disposition": "NONE"
+          }
+        },
+        "graduation_review_available": true
+      }
+    },
+    {
+      "id": "ADV-UNKNOWN-NPC-KNOWLEDGE",
+      "attack": "Um NPC não presente pede informação transmitida em outra cena.",
+      "expected_control": "Sem fonte e canal registrados, o NPC não sabe; o Narrador preserva o ledger individual.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#D08-ADVERSARIAL-CONTRACT-ROOT",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "uninformed_npc",
+        "recipient": "uninformed_NPC",
+        "fact_id": "requested_fact"
+      },
+      "assert": {
+        "npc_knowledge": {
+          "$unchanged_from_initial": true
+        },
+        "npc_knowledge_delta": [],
+        "npc_knowledge.uninformed_NPC.requested_fact": {
+          "$absent": true
+        }
+      },
+      "initial_state": {
+        "npc_knowledge": {
+          "uninformed_NPC": {
+            "unrelated_fact": "known"
+          }
+        }
+      }
+    },
+    {
+      "id": "ADV-2010-OPTIONAL-THREADS",
+      "attack": "O jogador pede encerrar em 2010 com fios opcionais ainda abertos.",
+      "expected_control": "A revisão termina COMPLETE, ALTERNATE ou INCOMPLETE conforme critérios verificáveis; nenhuma trama opcional bloqueia nem cria fila infinita.",
+      "contract_ref": "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json#graduation_gate",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "review_with_optional_open",
+        "evidence": {
+          "route_critical_closures": true,
+          "player_choice_recorded": true,
+          "sheet_and_xp_reconciled": true,
+          "player_chooses_principal_2010": true,
+          "optional_threads": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      },
+      "assert": {
+        "graduation_review_available": true,
+        "graduation_status": "COMPLETE"
+      },
+      "initial_state": {
+        "optional_story": {
+          "status": "OPEN",
+          "disposition": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      }
+    },
+    {
+      "id": "ADV-2010-DATE-AND-ELISION",
+      "attack": "Bart chega ao horizonte 2010 por uma elipse solicitada, sem datas intermediárias definidas.",
+      "expected_control": "Resumo lista mudanças aprovadas e UNKNOWN restantes; nenhum dia, relação ou evento retroativo é criado.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "elide_to_2010"
+      },
+      "assert": {
+        "exact_intermediate_dates": "UNKNOWN",
+        "graduation_review_available": true
+      }
+    },
+    {
+      "id": "ADV-XP-AND-SHEET",
+      "attack": "Ocorre uma oportunidade de consolidar ficha após a transformação.",
+      "expected_control": "XP, compras e atributos dependem do ledger, regras e escolha do jogador; nenhum ponto é concedido automaticamente.",
+      "contract_ref": "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json#advancement",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "xp_review"
+      },
+      "assert": {
+        "xp_review_available": true,
+        "xp_awarded_delta": 0,
+        "xp_spent_delta": 0,
+        "xp_ledger": {
+          "$unchanged_from_initial": true
+        },
+        "character_sheet": {
+          "$unchanged_from_initial": true
+        }
+      },
+      "initial_state": {
+        "xp_ledger": {
+          "earned": 12,
+          "spent": 7,
+          "available": 5
+        },
+        "character_sheet": {
+          "existing_dot_count": 14
+        },
+        "xp_review_available": false
+      }
+    },
+    {
+      "id": "ADV-CURRENT-CURSOR",
+      "attack": "Um Narrador tenta iniciar C06 usando apenas o pacote de autoria.",
+      "expected_control": "Operação é rejeitada enquanto ciclo/scene-ready/permissão não autorizarem; sem evento nem mudança de estado.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-C06-REENTRY",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "narrator_attempt"
+      },
+      "assert": {
+        "transition.allowed": false,
+        "transition.reason": "NO_OPERATIONAL_PERMISSION",
+        "scene_started": false
+      }
+    },
+    {
+      "id": "ADV-M301-CLOSURE-INCOMPLETE",
+      "attack": "A transition is attempted while one required evidence element is absent.",
+      "expected_control": "M3.02 remains blocked; C06 and the current character state are untouched.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#/finite_progression/episode_closure_gate",
+      "pass_criterion": "The future transition gate requires all listed evidence and leaves the current checkpoint open otherwise.",
+      "event": {
+        "type": "attempt_transition",
+        "closure": {
+          "required_units_closed": true,
+          "optional_started_closed": true,
+          "player_confirmed": true,
+          "sources_reconciled": false,
+          "supported_cycle_transition": false
+        }
+      },
+      "assert": {
+        "transition.allowed": false,
+        "transition.reason": "MISSING_OR_UNSUPPORTED_EVIDENCE",
+        "episode_m301_open": true,
+        "bart.mortal": true,
+        "bart.embrace_recorded": false
+      }
+    },
+    {
+      "id": "ADV-M301-CLOSURE-COMPLETE-EVIDENCE",
+      "attack": "A future target-route transition is checked with all closure evidence present, including a played and reconciled C06.",
+      "expected_control": "Only the in-memory future guard opens; it is not a real cycle change or scene start.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#/finite_progression/episode_closure_gate",
+      "pass_criterion": "The deterministic reducer opens only when all explicit future evidence and the C06 play/closure flags are true; it does not mutate a real cycle.",
+      "event": {
+        "type": "attempt_transition",
+        "closure": {
+          "required_units_closed": true,
+          "optional_started_closed": true,
+          "player_confirmed": true,
+          "sources_reconciled": true,
+          "supported_cycle_transition": true,
+          "c06_started": true,
+          "c06_closed": true
+        }
+      },
+      "assert": {
+        "transition.allowed": true,
+        "episode_m301_open": false,
+        "persistent_state_mutated": false,
+        "scene_started": false,
+        "m302_unlocked": true
+      }
+    },
+    {
+      "id": "ADV-GENERATION-UNKNOWN",
+      "attack": "An authorial Blood Potency profile is used to infer Kuthulun’s Generation.",
+      "expected_control": "Generation remains UNKNOWN; the profile value does not become a historical character-sheet change.",
+      "contract_ref": "D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md#D07-ADVERSARIAL-CONTRACT-ROOT",
+      "pass_criterion": "The profile explicitly keeps Generation unknown and marks its values as prospective, separate authorial preparation.",
+      "event": {
+        "type": "read_prospective_profile",
+        "blood_potency": 2
+      },
+      "assert": {
+        "npc_generation": "UNKNOWN",
+        "npc_blood_potency": 2,
+        "persistent_state_mutated": false,
+        "scene_started": false
+      }
+    },
+    {
+      "id": "ADV-EMBRACE-AFTER-FINAL-DEATH",
+      "attack": "A resolution reaches Final Death before a legal Embrace sequence is completed.",
+      "expected_control": "No Embrace is recorded after Final Death; no resurrection is used to force the authorial target.",
+      "contract_ref": "D08_STORY_PREPARATION_V014_GM_HIDDEN.md#ST-KUTHULUN-COERCION",
+      "pass_criterion": "The prepared sequence requires an actual legal Embrace before Final Death and disallows resurrection or post-death conversion.",
+      "event": {
+        "type": "final_death_before_embrace"
+      },
+      "assert": {
+        "bart.final_death": true,
+        "bart.embrace_recorded": false,
+        "route": "DIVERGED",
+        "persistent_state_mutated": false
+      }
+    },
+    {
+      "id": "ADV-M301-C06-NOT-STARTED",
+      "attack": "A transition is attempted while C06/ST-C06-REENTRY was never started, although generic closure flags are asserted.",
+      "expected_control": "The target route remains blocked; record only an alternate/incomplete disposition if the player declined C06.",
+      "contract_ref": "D06_CHRONICLE_BIBLE_V021.json#/finite_progression/episode_closure_gate",
+      "pass_criterion": "C06 is an explicit required target-route closure item; no vacuous transition is allowed.",
+      "event": {
+        "type": "attempt_transition",
+        "closure": {
+          "required_units_closed": true,
+          "optional_started_closed": true,
+          "player_confirmed": true,
+          "sources_reconciled": true,
+          "supported_cycle_transition": true,
+          "c06_started": false,
+          "c06_closed": false
+        }
+      },
+      "assert": {
+        "transition.allowed": false,
+        "transition.reason": "MISSING_OR_UNSUPPORTED_EVIDENCE",
+        "episode_m301_open": true,
+        "m302_unlocked": false,
+        "bart.mortal": true,
+        "bart.embrace_recorded": false
+      }
+    },
+    {
+      "id": "ADV-2010-CRITICAL-CLOSURE-MISSING",
+      "attack": "Player requests 2010 review while a route-critical closure lacks evidence.",
+      "expected_control": "A revisão termina COMPLETE, ALTERNATE ou INCOMPLETE conforme critérios verificáveis; nenhuma trama opcional bloqueia nem cria fila infinita.",
+      "contract_ref": "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json#graduation_gate",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "review_with_optional_open",
+        "evidence": {
+          "route_critical_closures": false,
+          "player_choice_recorded": true,
+          "sheet_and_xp_reconciled": true,
+          "player_chooses_principal_2010": true,
+          "optional_threads": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      },
+      "assert": {
+        "graduation_review_available": true,
+        "graduation_status": "INCOMPLETE"
+      },
+      "initial_state": {
+        "optional_story": {
+          "status": "OPEN",
+          "disposition": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      }
+    },
+    {
+      "id": "ADV-2010-DECLINES-PRINCIPAL-CHRONICLE",
+      "attack": "Player declines entry to the principal 2010 chronicle.",
+      "expected_control": "A revisão termina COMPLETE, ALTERNATE ou INCOMPLETE conforme critérios verificáveis; nenhuma trama opcional bloqueia nem cria fila infinita.",
+      "contract_ref": "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json#graduation_gate",
+      "pass_criterion": "The referenced source explicitly supports the expected control; no unrecorded event, NPC knowledge transfer, player action, or mechanical result is added.",
+      "event": {
+        "type": "review_with_optional_open",
+        "evidence": {
+          "route_critical_closures": true,
+          "player_choice_recorded": true,
+          "sheet_and_xp_reconciled": true,
+          "player_chooses_principal_2010": false,
+          "optional_threads": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      },
+      "assert": {
+        "graduation_review_available": true,
+        "graduation_status": "ALTERNATE"
+      },
+      "initial_state": {
+        "optional_story": {
+          "status": "OPEN",
+          "disposition": "CARRIED_BY_PLAYER_CHOICE"
+        }
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V021.json",
+      "blob_sha": "60f853bb0a062b9f991a6e820535ef2d240d3b60"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md",
+      "blob_sha": "69c3be7f74f28e38933c7d1d8f35234d5e431164"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V014_GM_HIDDEN.md",
+      "blob_sha": "1333384fb3b4bd36d8eac73dc519485452ce3017"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json",
+      "blob_sha": "cb67dc9d128fa5d4b5d4cfc7c891473e88f8a4e4"
+    }
+  ]
+}

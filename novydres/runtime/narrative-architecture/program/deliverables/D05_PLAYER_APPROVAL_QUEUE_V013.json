@@ -1,0 +1,214 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D05",
+  "version": "V013",
+  "status": "CURRENT_AUTHORIZATION_RECORDED; AUTHORIAL_GATES_REVALIDATED; INDEPENDENT_REVIEW_PENDING; SCENE_AND_MASTER_GATES_CLOSED",
+  "authority": "EDITORIAL_ONLY",
+  "spoiler_class": "PLAYER_SAFE",
+  "input_head": "9148095a273f9fa72a54a49a48651ebf4a54615e",
+  "cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+    "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "sequence": 34,
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "operational_state": "READY_FOR_DRAMATURGO"
+  },
+  "gate": {
+    "authorial_scope": "PASS",
+    "independent_review": "PENDING",
+    "scene_execution": "NOT_AUTHORIZED",
+    "master_promotion": "NOT_AUTHORIZED"
+  },
+  "purpose": "Record the current versioned player authorization for authorized-agent access and completion of prospective CHR-001 authoring and validation while preserving closed scene and promotion gates.",
+  "decisions": [
+    {
+      "id": "APPROVAL-D05-001",
+      "decision": "Adjudicar a divergência de ponteiros entre ciclo V0033 e MANIFEST_V46 para qualquer uso operacional.",
+      "when_required": "Antes de promoção ou transição ao Narrador.",
+      "options": [
+        "confirmar autoridade do ciclo com evidência e revisão adequada",
+        "confirmar autoridade do manifesto com evidência e revisão adequada",
+        "manter bloqueio e solicitar nova reconciliação"
+      ],
+      "default": "nenhuma; pendente",
+      "status": "CURRENT_POINTER_RECONCILED_TO_CYCLE_V0034; PRIOR_V47_TO_V0033_RETAINED_AS_HISTORY",
+      "response": "Autorizo investigação; o ciclo numérico mais recente é a autoridade do cursor conforme o contrato.",
+      "investigation_result": {
+        "contract": "ORCHESTRATION_CONTRACT_V1.md define o maior CYCLE numérico validado como autoridade do cursor e de next_role; MANIFEST não é segundo cursor e checkpoints nele podem ser históricos.",
+        "contract_blocker": "O mesmo contrato diz que campos de checkpoint do manifesto devem ser reconciliados com LIVE/ciclo e que divergência entre manifesto e ciclo produz BLOCKED_CONFLICT.",
+        "current_cycle": {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+          "sequence": 34,
+          "status": "READY_FOR_DRAMATURGO",
+          "next_role": "DRAMATURGO",
+          "last_event_id": "CHR001-M301-C05-22-20261109-001"
+        },
+        "chain_audit": {
+          "range": "CYCLE_V0001–CYCLE_V0033",
+          "sequence_gaps": 0,
+          "previous_cycle_blob_matches": true,
+          "source_refs_and_live_event_matches": true
+        },
+        "manifest": {
+          "path": "novydres/MANIFEST_V46.json",
+          "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba",
+          "current_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0024.json",
+          "last_touched_commit": "418834f097883bf24b270f42fd54d286d490a8b8",
+          "disposition": "Registro histórico superado pelo MANIFEST_V47 no HEAD atual de master."
+        },
+        "disposition": "The V1 checkpoint divergence and old embedded manifest are historical. The current source-reconciled manifest points to CYCLE_V0034. This is administrative source/pointer reconciliation only.",
+        "current_manifest": {
+          "path": "novydres/MANIFEST_V48.json",
+          "current_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+          "master_head_before_write": "735fe5d52e2761c4d492fe873a4b6bbcce17654a"
+        },
+        "contract_blocker_disposition": "RESOLVED_FOR_CURRENT_PUBLIC_POINTERS_BY_CYCLE_V0034_AND_ORCHESTRATION_CONTRACT_V2; the V1 conflict statement is retained as historical evidence only."
+      },
+      "evidence_refs": [
+        {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0033.json",
+          "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+        },
+        {
+          "path": "novydres/MANIFEST_V46.json",
+          "blob_sha": "be1c859bf5ae3f954cb9f0e07caab5c4800728ba"
+        },
+        {
+          "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
+          "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c"
+        }
+      ]
+    },
+    {
+      "id": "APPROVAL-D05-002",
+      "decision": "Autorizar eventual promoção de arquitetura documental para uso operacional/master.",
+      "when_required": "D12, depois de auditoria, validação e readback.",
+      "options": [
+        "aprovar promoção explicitamente",
+        "rejeitar/solicitar remediação",
+        "manter apenas como proposta documental"
+      ],
+      "default": "manter apenas como proposta documental",
+      "status": "MASTER_PROMOTION_NOT_AUTHORIZED_IN_CURRENT_EXECUTION",
+      "response": "Sim para todos.",
+      "scope": "Historical conditional promotion request retained for provenance; superseded in this execution by the explicit design-branch-only scope. No master write/promotion is authorized.",
+      "promotion_performed": false,
+      "condition": "Current publication is authorized to the private development branch only. Master write/promotion requires a separate explicit authorization."
+    },
+    {
+      "id": "APPROVAL-D05-003",
+      "decision": "Fornecer ou aprovar ambiente de verdade autoral efetivamente segregado, caso D07 necessite solução secreta jogável.",
+      "when_required": "Historical ACL gate; superseded for authorized-agent access by V002. Specific frozen variants remain bounded.",
+      "options": [
+        "prover ambiente segregado com acesso negativo verificado",
+        "escolher variante aberta antes da narração",
+        "manter a investigação bloqueada"
+      ],
+      "default": "manter bloqueada",
+      "status": "SUPERSEDED_BY_PLAYER_DECISION_AGENT_ACCESS_V002_FOR_AGENT_ACCESS",
+      "response": "Não precisa; comprometo-me a não olhar segredos.",
+      "disposition": "The former ACL-based access gate is superseded for authorized agents by V002. The preexisting carrier/Mary knowledge variant remains bounded exactly as written; V002 does not expand that variant or alter frozen canon."
+    },
+    {
+      "id": "APPROVAL-D05-004",
+      "decision": "Autorizar cena/retomada do Narrador conforme os contratos operacionais vigentes.",
+      "when_required": "Somente quando ciclo, SCENE_READY e NARRATOR_PERMISSION satisfizerem seus próprios gates.",
+      "options": [
+        "autorizar por mecanismo vigente após validação",
+        "não autorizar ainda"
+      ],
+      "default": "não autorizar ainda",
+      "status": "NOT_GRANTED",
+      "response": "A resposta D12 não concede permissão de cena."
+    },
+    {
+      "id": "APPROVAL-D05-005",
+      "decision": "Approve a bounded PLAYER_OPEN_VARIANT from the player text, for Dramaturge planning only.",
+      "status": "BOUNDED_PREEXISTING_VARIANT_RETAINED; AGENT_ACCESS_GOVERNED_BY_V002",
+      "variant_ref": {
+        "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+        "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+      },
+      "limits": "Use the approved wording literally for preexisting carrier/Mary knowledge. Do not add what Mary knows, how/when she learned or told it, or other prior details. V002 authorizes agent access to hidden source material generally but does not itself expand this specific variant.",
+      "authority_ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "when_required": "Preserve exact limits of the preexisting carrier/Mary variant; no expansion from V002 alone.",
+      "authority_ref_blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    },
+    {
+      "id": "PLAYER_DECISION_AGENT_ACCESS_2026-11-10",
+      "decision": "Agents authorized for this project may access GM_HIDDEN/SECRET materials as needed; these labels govern disclosure to the player and character-knowledge boundaries, not agent access. Prospective story authorship is delegated within frozen canon and approved variants.",
+      "when_required": "Before authoring or validating successor content that requires GM_HIDDEN access.",
+      "status": "RECORDED_IN_SUCCESSOR_DECISION_WITH_SOURCE_PIN",
+      "response": "PLAYER_DECISION_AGENT_ACCESS_V001.json",
+      "scope": "D07-D12 narrative authoring and validation; no retcon, no scene activation, no operational permission, no expansion of open variants.",
+      "provenance": "Explicit player authorization in the current Codex conversation, dated 2026-11-10.",
+      "limits": [
+        "Preserve four ledgers: AGENT_KNOWLEDGE, PLAYER_KNOWLEDGE, PC_KNOWLEDGE, NPC_KNOWLEDGE.",
+        "Do not expose hidden story content in PLAYER_SAFE materials or chat.",
+        "Do not alter C05/C06 checkpoint, past canon, or frozen authority."
+      ],
+      "decision_id": "PLAYER_DECISION_CHR001_AGENT_ACCESS_2026-11-10_V001",
+      "authority_ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V001.json",
+      "evidence_refs": [
+        {
+          "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V001.json",
+          "blob_sha": "5f54b7eff5deb6b8350f05d5b909a070180e1a58"
+        }
+      ]
+    },
+    {
+      "decision_id": "PLAYER_DECISION_CHR001_PROSPECTIVE_AUTHORSHIP_2026-11-10_V001",
+      "status": "AUTHORIZED_FOR_COMPLETE_PROSPECTIVE_AUTHORSHIP_AND_PRIVATE_VERSIONED_DELIVERY",
+      "scope": "Conclude D07 and dependent D06/D08/D09/D10/D11/D12 authoring, use authorized GM_HIDDEN material, run required validators and adversarial review, publish private-repository editorial successors.",
+      "authority_ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V001.json",
+      "exclusions": [
+        "No retcon of confirmed history",
+        "No new detail added to the bounded D12 open variant",
+        "No C06 or other scene execution",
+        "No SCENE_READY or NARRATOR_PERMISSION without operational gates",
+        "No master write or promotion without authorization"
+      ]
+    },
+    {
+      "id": "PLAYER_DECISION_CHR001_AGENT_ACCESS_2026-11-10_V002",
+      "decision": "Clarificar que GM_HIDDEN/SECRET/HIDDEN restringem divulgação ao jogador, não o acesso dos agentes autorizados.",
+      "status": "RECORDED_AND_APPLIED_TO_SUCCESSOR_WORK",
+      "authority_ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "scope": "Leitura, autoria, auditoria, validação e integração prospectiva D07-D12; preserva canon congelado e quatro níveis de conhecimento.",
+      "limits": [
+        "Nenhum retcon de fato confirmado.",
+        "Nenhum segredo em relatório PLAYER_SAFE ou chat.",
+        "Nenhuma cena ou ciclo iniciado.",
+        "Sem SCENE_READY/NARRATOR_PERMISSION sem gates próprios."
+      ],
+      "authority_ref_blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    }
+  ],
+  "promotion_disposition": {
+    "approval": "No master promotion granted for this continuation.",
+    "gate": "Private development-branch publication only; operational state untouched.",
+    "scope": "Prospective authoring and validation successors, including editorial GM_HIDDEN material in the private repository.",
+    "master_promotion": "NOT_AUTHORIZED",
+    "performed": false
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V012.json",
+    "blob_sha": "b2b68235bb966a36890e2dfd8a915070a58d5a7a"
+  },
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V001.json",
+      "blob_sha": "5f54b7eff5deb6b8350f05d5b909a070180e1a58",
+      "authority": "HISTORICAL_PLAYER_DECISION_SUPERSEDED_FOR_AGENT_ACCESS"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1",
+      "authority": "CURRENT_PLAYER_EXPLICIT_DECISION"
+    }
+  ],
+  "document_id": "D05_PLAYER_APPROVAL_QUEUE_V013",
+  "decision_refs": [
+    "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json"
+  ]
+}

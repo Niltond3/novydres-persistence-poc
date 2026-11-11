@@ -1,0 +1,324 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D09",
+  "version": "V016",
+  "document_id": "D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE",
+  "status": "FINITE_AUTHORIAL_ROUTE_COMPLETE_INDEPENDENT_REVIEW_PENDING_OPERATIONAL_GATES_CLOSED",
+  "authority": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP",
+  "spoiler_class": "PLAYER_SAFE",
+  "decision_refs": [
+    "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json"
+  ],
+  "checkpoint": {
+    "cycle": "CYCLE_V0034",
+    "last_played": "C05",
+    "next_scene": "C06 not started",
+    "character_state": "mortal; no Embrace",
+    "operational_role": "DRAMATURGO",
+    "episode_boundary": "M3.01 remains open until its explicit player/evidence/cycle gate; C06 has not started."
+  },
+  "target_route": {
+    "id": "ROUTE-GUIDED-TO-2010",
+    "status": "AUTHORIAL_TARGET_NOT_EVENT",
+    "target": "A forced Embrace after C05 and before 1970-12-25, followed by playable adaptation and a finite 2010 readiness review.",
+    "dates": "Relative windows only; exact dates remain open except the approved deadline.",
+    "fallback": "If actual play diverges or C06/ST-C06-REENTRY is declined before play, record the true outcome as alternate/incomplete; the M3.02 target route remains blocked. Never bypass the finite episode-closure evidence, falsify mechanics, or rewrite a result."
+  },
+  "progression_contract": {
+    "finite": true,
+    "no_fixed_scene_quota": true,
+    "no_mandatory_all_plot_resolution": true,
+    "no_required_test_success": true,
+    "no_automatic_xp_or_state_change": true,
+    "each_story_requires": "Entry state, cause, allowed knowledge, choices, local exit, closure evidence.",
+    "elision": "Only with player choice and explicit summary of what changes and what remains unknown.",
+    "early_stop": "Player may request review; award complete, alternate, or incomplete status against evidence without adding endless provocations."
+  },
+  "phases": [
+    {
+      "id": "P0-RECONCILED-PAST",
+      "window": "Completed through C05; no reopening.",
+      "stories": [
+        "Existing played M2/M3 sections"
+      ],
+      "purpose": "Preserve confirmed history and mortal checkpoint.",
+      "exit": "C05 is closed; C06 remains unstarted."
+    },
+    {
+      "id": "P1-REENTRY",
+      "window": "At the next separately authorized C06 scene; no time passes by default.",
+      "stories": [
+        "ST-C06-REENTRY"
+      ],
+      "purpose": "Return initiative and establish a played next step.",
+      "exit": "On the target route, ST-C06-REENTRY is actually played, locally closed with evidence, and reconciled. If declined before play, record alternate/incomplete; Marco 2 / episódio episódio M3.02 do not unlock.",
+      "alternate": "Choose another priority or stop; no story event is forced. A decline before C06 starts closes this route as alternate/incomplete and does not authorize episódio M3.02."
+    },
+    {
+      "id": "P2-LOCAL-PRESSURE",
+      "window": "Relative weeks after reentry only if a real cause arises.",
+      "stories": [
+        "ST-GANGREL-ATTENTION",
+        "optional ST-MEASURE-DISPOSITION",
+        "optional ST-VOLNAYA-BOUNDARY"
+      ],
+      "purpose": "Offer one concrete Gangrel conflict and a traceable report route.",
+      "exit": "Contact and any relay are recorded; no-report/no-contact closes as quiet and moves target route to alternate/incomplete.",
+      "alternate": "Player may request a meeting; only actual transmission opens next phase."
+    },
+    {
+      "id": "P3-PRECEDENCE-AND-COERCION",
+      "window": "Separate episódio M3.02, after M3.01 closure; target before 1970-12-25 only if actual play leaves time.",
+      "stories": [
+        "ST-KUTHULUN-PRECEDENCE",
+        "ST-KUTHULUN-COERCION"
+      ],
+      "purpose": "Present limited first contact and a later coercive choice.",
+      "exit": "Played outcome, mechanics and state reconcile.",
+      "alternate": "Declining invitations, flight, lethal result or deadline miss closes as alternate/incomplete; no capture offscreen."
+    },
+    {
+      "id": "P4-ADAPTATION",
+      "window": "First nights then relative weeks/months after an actually registered transformation.",
+      "stories": [
+        "ST-FIRST-NIGHTS",
+        "ST-GRIEF-AND-BOUNDARIES",
+        "ST-CAINITE-ENTRY"
+      ],
+      "purpose": "Cover survival, family grief/boundaries, Cainite entry and social resentment.",
+      "exit": "Three local closures plus one observed adaptation choice; no fixed scene count inside each story.",
+      "alternate": "Player may end, elide with explicit consent or decline a story; record alternate/incomplete without endless prompts."
+    },
+    {
+      "id": "P5-OPTIONAL-DEVELOPMENT",
+      "window": "Relative years through 2010, only by player-approved elision or played scenes.",
+      "stories": [
+        "optional ST-ETHICAL-COST",
+        "optional technical/family/investigation threads"
+      ],
+      "purpose": "Offer additional moral choice and sufficient development/target-sheet review opportunities.",
+      "exit": "Actual sheet, earned XP ledger and optional threads reviewed.",
+      "alternate": "No optional plot blocks the 2010 review."
+    },
+    {
+      "id": "P6-2010-REVIEW",
+      "window": "Player-selected review within 2010; no exact day invented.",
+      "stories": [
+        "ST-2010-TRANSITION"
+      ],
+      "purpose": "Close guided creation and offer real entry to the principal chronicle.",
+      "exit": "Criteria checked against persisted evidence and player choice.",
+      "alternate": "Stop at incomplete/alternate with finite listed gaps."
+    }
+  ],
+  "advancement": {
+    "current_reference": {
+      "target_sheet": "Approved target sheet is a goal, not a purchased sheet.",
+      "xp_cap": 675,
+      "xp_spent": 270,
+      "credit": 0,
+      "locked_capacity_remaining": 405
+    },
+    "opportunities": [
+      "At each ACT_RESOLUTION supported by played evidence, reconcile any earned XP credit under the governing ledger; story closure alone does not grant credit.",
+      "After the first post-Embrace adaptation story, offer a sheet and ledger review. A purchase is available only if valid ACT_RESOLUTION credit exists and current rules permit it.",
+      "Before the 2010 handoff, compare current sheet, approvals, ledger, and target sheet; spend only through explicit player choice, valid credit, and current rules."
+    ],
+    "prohibitions": [
+      "No automatic XP grants.",
+      "No spending, dots, Disciplines, merits, flaws, or state changes without player choice and legal review.",
+      "No manipulated rolls or guaranteed advancement."
+    ],
+    "consolidation": "At least two separate post-transformation sheet-and-ledger review windows are built into the route. They may find no spendable credit; awards and purchases require actual play, valid ACT_RESOLUTION credit, current system rules, and player choice.",
+    "purchase_credit_policy": "Review windows are guaranteed by the prepared route; funded purchases are not. A story or act closure by itself grants no XP. Credit requires a valid ACT_RESOLUTION and governing ledger validation."
+  },
+  "graduation_gate": {
+    "status": "PREPARED_NOT_OPERATIONAL",
+    "criteria": [
+      "Current history, state and source ledger reconcile with no future event pre-recorded.",
+      "Every route-critical story that actually ran has a local closure and actual outcome; declined routes are recorded as alternate/incomplete, not silently treated as complete.",
+      "For a transformation route, ST-FIRST-NIGHTS, ST-GRIEF-AND-BOUNDARIES and ST-CAINITE-ENTRY each have evidence of local closure and at least one adaptation choice is demonstrated.",
+      "At least two post-transformation review windows for legal development are offered; each purchase requires valid ACT_RESOLUTION credit, current rules, and explicit player choice. No minimum spend is required.",
+      "Family and NPC relationships reflect only played evidence; unknowns remain labeled.",
+      "Optional plots are resolved, abandoned, quiet or carried by player choice; no all-world-plot requirement.",
+      "The sheet and XP ledger reconcile without automatic grants, manipulated rolls, or unapproved purchases. Claim a fully V5-legal sheet only after generation, eligibility, clan/Embrace, freebies, cost, and approval gates pass against current rules and system sources; otherwise completion is creation-review only and the sheet remains explicitly partial, not CHARACTER_READY.",
+      "The player chooses whether to enter the principal 2010 chronicle.",
+      "No single test is required for graduation; the finite outcome is COMPLETE, ALTERNATE or INCOMPLETE."
+    ]
+  },
+  "protected_unknowns": [
+    "Exact spacing between scenes.",
+    "Exact future dates and Embrace date.",
+    "C05 box contents.",
+    "Mary, Mikahel, and Sara future responses.",
+    "Any historical source or transmission outside the open variant."
+  ],
+  "operational_gate": {
+    "scene_ready": false,
+    "narrator_permission": false,
+    "d07_activation": "NOT_GRANTED; prospective authoring is not scene-use activation.",
+    "reason": "C05 closed; C06 not started; M3.01 remains open. C06 closure evidence is required for the target-route M3.02 transition; no cycle advance or scene permission is supplied."
+  },
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b"
+    },
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V021.json",
+      "blob_sha": "60f853bb0a062b9f991a6e820535ef2d240d3b60"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md",
+      "blob_sha": "69c3be7f74f28e38933c7d1d8f35234d5e431164"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V014_GM_HIDDEN.md",
+      "blob_sha": "1333384fb3b4bd36d8eac73dc519485452ce3017"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/admin/M2_XP100_PLAYER_PURCHASE_SELECTION_V1.json",
+      "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json",
+      "blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+    }
+  ],
+  "branch_policies": {
+    "contact_policy": {
+      "report_requires": "Rada directly observes relevant conduct or receives Bart’s explicit request; she carries it personally to Kuthulun at a recorded group meeting.",
+      "on_no_report": "quiet; no Kuthulun knowledge/invitation",
+      "on_refusal": "close contact; no automatic capture or second invitation"
+    },
+    "invitation_policy": {
+      "sender": "Rada",
+      "channel": "in-person delivery at the Workshop",
+      "precondition": "actual report or explicitly transmitted request",
+      "on_decline": "no scene; no pursuit/capture"
+    },
+    "early_discovery_policy": {
+      "source": "only evidence actually examined or shown",
+      "effect": "close the bounded local question early; later beats are skipped or adapted without withholding proof"
+    },
+    "failure_policy": {
+      "test_failure": "apply only declared risk/consequence; preserve other evidence paths",
+      "social_failure": "NPC may refuse/leave; a second path requires a new causal event"
+    },
+    "abandonment_policy": {
+      "player_may_stop": true,
+      "effect": "close local story with actual evidence and unresolved questions explicitly listed; do not add a replacement queue"
+    },
+    "unexpected_action_policy": {
+      "response": "resolve the attempted action under source and rules; if a canonical unknown is involved, preserve it and continue independent story strands"
+    },
+    "family_information_policy": {
+      "default": "no NPC has additional family identity/location/response without a recorded source",
+      "threat": "generic only unless a future played event supports specificity"
+    },
+    "episode_policy": {
+      "M3.01": "all existing scenes keep Bart mortal; C06 unstarted",
+      "M3.02": "separate prospective story only after actual M3.01 closure and authorized, recorded transition; no scene/cycle activated"
+    },
+    "deadline_policy": {
+      "target": "before 1970-12-25, after C05 and M3.01 closure",
+      "if_unreachable": "record target miss; do not falsify timeline or compress consequences"
+    }
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V015_PLAYER_SAFE.json",
+    "blob_sha": "ec27f0f71098f38244ae28fffb83c93fa493fb7a"
+  },
+  "episode_closure_gate_ref": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V021.json#/finite_progression/episode_closure_gate",
+  "xp_provenance": {
+    "source_refs": [
+      {
+        "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+        "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+        "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c"
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+        "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7"
+      },
+      {
+        "path": "novydres/chronicles/CHR-001/admin/M2_XP100_PLAYER_PURCHASE_SELECTION_V1.json",
+        "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45"
+      }
+    ],
+    "current_values": {
+      "cap": 675,
+      "spent": 270,
+      "credit": 0,
+      "locked_capacity_remaining": 405
+    },
+    "rule": "Planning projection only. Grant/spend only from actual play, explicit player selection and current ledger validation; no automatic award or purchase."
+  },
+  "architecture_note": "Marco 1–Marco 5 são marcos estruturais; identificadores Mx.yy nomeiam episódios. Eles não são intercambiáveis. The approved target-sheet snapshot remains a historical target, not the purchased current sheet; current ledger values are taken from LIVE_v038 and are not overridden by that snapshot.",
+  "v5_legality_gate": {
+    "status": "NOT_VERIFIED_IN_THIS_WORKSPACE",
+    "scope": "The target sheet is a goal, not a purchased sheet. Generation legality, final costs, eligibility, freebies, and clan/Embrace gates require the active V5 engine and current rules sources.",
+    "completion_policy": "Do not label the sheet fully V5-legal or CHARACTER_READY until these checks are available and pass. Creation-review completion may be recorded separately with the sheet marked partial.",
+    "workspace_limitation": "The active V5 engine and current XP policy path referenced by the canonical records are absent from this workspace clone."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "document_id": "D10_ROLE_ADAPTERS_V011",
+  "version": "V011",
+  "status": "CURRENT_ROLE_CONTRACT_BOUND_TO_D10_V016",
+  "authority": "PROGRAM_CONTRACT_SUCCESSOR",
+  "spoiler_class": "PLAYER_SAFE_INDEX",
+  "source_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V016.json",
+      "blob_sha": "03f8fc59deb54d7fd229255b5d55bac612531d23"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    }
+  ],
+  "roles": {
+    "DRAMATURGO": {
+      "agent_access": "AGENT_KNOWLEDGE",
+      "outputs": [
+        "GM_HIDDEN design",
+        "PLAYER_SAFE index",
+        "provenance",
+        "auditable causal contracts"
+      ],
+      "must_not": [
+        "rewrite frozen canon",
+        "convert direction into played fact",
+        "issue narrator permission"
+      ]
+    },
+    "NARRATOR": {
+      "agent_access": "AGENT_KNOWLEDGE",
+      "outputs": [
+        "player-facing scene only through current operational gate"
+      ],
+      "must": [
+        "load source and hidden prep before scene",
+        "maintain PC/NPC ledgers",
+        "respect player action and real dice",
+        "stop if cycle/permission is absent"
+      ]
+    },
+    "PLAYER": {
+      "knowledge": "PLAYER_KNOWLEDGE",
+      "outputs": [
+        "PLAYER_SAFE reports and in-play discoveries"
+      ],
+      "must_not_receive": [
+        "unearned secret truth",
+        "NPC-only information absent a played reveal"
+      ]
+    },
+    "CHARACTER": {
+      "knowledge": "PC_KNOWLEDGE",
+      "must": [
+        "acquire only through observation, statement, or accessible evidence",
+        "retain uncertainty when source is insufficient"
+      ]
+    },
+    "NPC": {
+      "knowledge": "NPC_KNOWLEDGE per individual",
+      "must": [
+        "record source/action/channel/content",
+        "act only on acquired information",
+        "not receive ambient author knowledge"
+      ]
+    }
+  },
+  "global_rules": [
+    "GM_HIDDEN labels control disclosure, not authorized agent access.",
+    "No prompt or report may contain secret plot content unless the role is agent/Narrator and the artifact is explicitly hidden.",
+    "New prospective NPCs and events are not canon until played and persisted.",
+    "No automatic scene readiness, permission, XP, or state transition."
+  ],
+  "emergency_flow": "If canon conflict, retcon need, unavailable source, impossible mechanics, or true access failure arises, pause only the affected branch; finish independent work; record a spoiler-safe administrative blocker.",
+  "validation_behavior": {
+    "unknown": "Preserve historical unknowns unless the explicit open variant covers them.",
+    "failure": "Do not turn an unsuccessful test into hidden success; provide alternate or incomplete closure.",
+    "refusal": "Respect refusal; any later NPC action needs its own cause.",
+    "early_discovery": "Reveal only what source actually supports, with no extra detail.",
+    "abandonment": "No automatic retaliation or infinite hook.",
+    "contract_reference_validation": "Resolve Markdown anchors and JSON pointers before D11 passes; evaluate each pass criterion and its declared reducer assertions."
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V010.json",
+    "blob_sha": "b6bdb997c98d195f8ca2985e2dcb8a10c6baf92b"
+  },
+  "knowledge_ledgers": {
+    "AGENT_KNOWLEDGE": {
+      "scope": "AGENT_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires their own acquired knowledge."
+    },
+    "PLAYER_KNOWLEDGE": {
+      "scope": "PLAYER_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires their own acquired knowledge."
+    },
+    "PC_KNOWLEDGE": {
+      "scope": "PC_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires their own acquired knowledge."
+    },
+    "NPC_KNOWLEDGE": {
+      "scope": "NPC_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires their own acquired knowledge."
+    }
+  }
+}

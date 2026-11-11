@@ -1,0 +1,91 @@
+{
+  "document_id": "D11_INDEPENDENT_REVIEW_V009_GM_HIDDEN",
+  "version": "V009",
+  "status": "PASS_WITH_LIMITATION",
+  "authority": "EDITORIAL_REVIEW_ONLY",
+  "spoiler_class": "GM_HIDDEN",
+  "reviewer_role": "INDEPENDENT_READ_ONLY_REVIEWER",
+  "reviewed_artifact_refs": [
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json",
+      "blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V021.json",
+      "blob_sha": "60f853bb0a062b9f991a6e820535ef2d240d3b60"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V014_GM_HIDDEN.md",
+      "blob_sha": "69c3be7f74f28e38933c7d1d8f35234d5e431164"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V014_GM_HIDDEN.md",
+      "blob_sha": "1333384fb3b4bd36d8eac73dc519485452ce3017"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V016_PLAYER_SAFE.json",
+      "blob_sha": "cb67dc9d128fa5d4b5d4cfc7c891473e88f8a4e4"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V014_GM_HIDDEN.json",
+      "blob_sha": "0b57ad587275012c5bff6704f4607663066eed4c"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_EXECUTE_ADVERSARIAL_V014.py",
+      "blob_sha": "f6bb6e7970da492d9df096f4fbd2447799c72a50"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D11_TEST_RESULTS_V014_PLAYER_SAFE.json",
+      "blob_sha": "e4d9ec0d52c30ae49f2d3856eebeb144d6e5ce2d"
+    }
+  ],
+  "reviewed_case_ids": [
+    "ADV-2010-CRITICAL-CLOSURE-MISSING",
+    "ADV-2010-DATE-AND-ELISION",
+    "ADV-2010-DECLINES-PRINCIPAL-CHRONICLE",
+    "ADV-2010-OPTIONAL-THREADS",
+    "ADV-ATTENTION-NO-OBSERVATION",
+    "ADV-C06-BOX",
+    "ADV-CAINITE-ENTRY-REFUSAL",
+    "ADV-CURRENT-CURSOR",
+    "ADV-EMBRACE-AFTER-FINAL-DEATH",
+    "ADV-ETHICAL-COST-REFUSAL",
+    "ADV-FAMILY-THREAT-SCOPE",
+    "ADV-FAMILY-UNKNOWN-AFTERMATH",
+    "ADV-FINAL-ESCAPE",
+    "ADV-FINAL-MECHANICAL-DIVERGENCE",
+    "ADV-FINAL-NO-ATTENDANCE",
+    "ADV-GENERATION-UNKNOWN",
+    "ADV-M301-C06-NOT-STARTED",
+    "ADV-M301-CLOSURE-COMPLETE-EVIDENCE",
+    "ADV-M301-CLOSURE-INCOMPLETE",
+    "ADV-M302-BEFORE-M301-CLOSE",
+    "ADV-POST-EMBRACE-WITHOUT-EMBRACE",
+    "ADV-PRECEDENCE-FLIGHT",
+    "ADV-PRECEDENCE-REFUSAL",
+    "ADV-RELAY-DELAY",
+    "ADV-RELAY-REFUSAL",
+    "ADV-UNKNOWN-NPC-KNOWLEDGE",
+    "ADV-VOLNAYA-ABANDONMENT",
+    "ADV-VOLNAYA-EARLY-DISCOVERY",
+    "ADV-XP-AND-SHEET"
+  ],
+  "finding_ids": [],
+  "scene_played": false,
+  "state_mutated": false,
+  "review_scope": [
+    "Current D04/D05 reference integrity and D04 crosswalk anchors",
+    "D06-D09 causal architecture, agency, knowledge boundaries and finite completion route",
+    "All 29 D11 cases against their current contracts",
+    "Exact D11 case blob and runner source digest binding"
+  ],
+  "review_summary": "Independent read-only review found no material findings in the reviewed architecture or adversarial contracts. Current source pins and the baseline-to-integration version chain resolve; all 29 cases and their anchors resolve; the result binds the exact case Git blob and runner SHA-256. The reducer is limited to seeded state-contract checks and proves no live game-engine behavior, cycle transition, V5 rules outcome, or scene permission.",
+  "predecessor_ref": {
+    "path": "D11_INDEPENDENT_REVIEW_V008_GM_HIDDEN.json",
+    "blob_sha": "d6996f9ceb58ccab0e33117141976b03ac6f1c3e"
+  }
+}

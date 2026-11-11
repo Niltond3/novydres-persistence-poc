@@ -1,0 +1,387 @@
+{
+  "program_id": "NOVYDRES_CHR001_NARRATIVE_ARCHITECTURE",
+  "phase": "D06",
+  "version": "V020",
+  "document_id": "D06_CHRONICLE_BIBLE_V020",
+  "status": "AUTHORIAL_BIBLE_COMPLETE_INDEPENDENT_REVIEW_PENDING_OPERATIONAL_GATES_CLOSED",
+  "authority": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP",
+  "spoiler_class": "GM_HIDDEN",
+  "checkpoint": {
+    "cycle": "CYCLE_V0034",
+    "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559",
+    "last_played": "C05",
+    "next_scene": "C06 not started",
+    "bartolomeu": "mortal",
+    "embrace_recorded": false,
+    "story_boundary": {
+      "M3.01": "C05 remains last played, C06 not started; all existing M3.01 scenes keep Bart mortal and without Embrace.",
+      "M3.02": "prospective follow-on only after actual M3.01 closure and an authorized, recorded transition; no scene or cycle started.",
+      "Embrace": "authorial target only, after C05 and before 1970-12-25; not recorded as occurred."
+    }
+  },
+  "horizon": "Guided creation through a player-selected review window in 2010; no exact future dates are invented.",
+  "architecture": [
+    "CHRONICLE",
+    "STRUCTURAL MILESTONES/ACTS",
+    "STORIES/PROVOCATIONS",
+    "SCENES",
+    "CONDITIONAL_BEATS"
+  ],
+  "chronicle": {
+    "title": "Bartholomeu Krauser: guided creation to the 2010 threshold",
+    "dramatic_engine": "A mortal craftsman tries to keep responsibility, family, and self-determination under pressure from hidden systems; after an imposed transformation, survival and status demand compromises whose costs remain his to choose.",
+    "genre": "Personal horror with gothic-punk social pressure, human-scale family stakes, industrial atmosphere, and Cainite political conflict.",
+    "design_principles": [
+      "Consequences travel through observable actions and named channels.",
+      "Silence, refusal, flight, failure, and abandonment close local units without being punished by an infinite hook chain.",
+      "NPCs pursue independent goals on their own clocks; no NPC knows untransmitted information.",
+      "A forced Embrace is a future authorial target, never a reward or an already-played outcome.",
+      "No story grants XP, dots, damage, Hunger, Humanity, or state changes automatically."
+    ],
+    "play_preparation": "D07 V013 truth contracts and D08 V013 scene preparation are authored; current validation and adversarial review remain pending. C06 is unstarted and operationally gated."
+  },
+  "milestones": [
+    {
+      "id": "M1-ORIGINS",
+      "window": "Reconciled past through C05; no reopening.",
+      "purpose": "Preserve canon, family ties, work ties and the player-approved character direction.",
+      "required_stories": [
+        "Played source material through C05",
+        "ST-C06-REENTRY after operational authorization"
+      ],
+      "optional_stories": [
+        "ST-MEASURE-DISPOSITION",
+        "ST-VOLNAYA-BOUNDARY"
+      ],
+      "exit": "C05 remains closed. On the target route, ST-C06-REENTRY must be started, played to a recorded local outcome, and reconciled before M2 or M3.02 can proceed. If C06 is declined or abandoned before play, record M3.01 as alternate/incomplete and keep M3.02 locked."
+    },
+    {
+      "id": "M2-ATTENTION",
+      "window": "Relative weeks after reentry, if the target route is chosen.",
+      "purpose": "Make attention arise from visible events or an explicit player request.",
+      "required_stories": [
+        "ST-GANGREL-ATTENTION on target route"
+      ],
+      "optional_stories": [
+        "ST-MEASURE-DISPOSITION",
+        "ST-VOLNAYA-BOUNDARY"
+      ],
+      "exit": "Observed Gangrel contact and any relay are sourced, or contact/relay is declined and target route is recorded alternate/incomplete. No report means no Kuthulun invitation."
+    },
+    {
+      "id": "M3-COERCION",
+      "window": "Separate M3.02 after M3.01 closes; relative intervals, before the target deadline only if play leaves sufficient time.",
+      "purpose": "Build a first meeting and a later coercive encounter without forcing Bart to attend.",
+      "required_stories": [
+        "ST-KUTHULUN-PRECEDENCE",
+        "ST-KUTHULUN-COERCION on target route"
+      ],
+      "optional_stories": [],
+      "exit": "The played result is reconciled. Target is forced near-death Embrace against will, but only if actual mechanics permit it. Escape, absence, lethal result or deadline miss produces alternate/incomplete outcome; no fudging."
+    },
+    {
+      "id": "M4-AFTERMATH",
+      "window": "First nights then relative weeks/months after an actually recorded Embrace; later development can elide only by player choice.",
+      "purpose": "Give concrete space to loss, social entry, resentment, survival and interdependence.",
+      "required_stories": [
+        "ST-FIRST-NIGHTS",
+        "ST-GRIEF-AND-BOUNDARIES",
+        "ST-CAINITE-ENTRY on target route"
+      ],
+      "optional_stories": [
+        "ST-ETHICAL-COST"
+      ],
+      "exit": "Three required closures and one observed adaptation choice; if declined, annotate alternate/incomplete rather than repeatedly provoking. Family responses remain unknown until played."
+    },
+    {
+      "id": "M5-2010-THRESHOLD",
+      "window": "Player-selected review within year 2010; no exact day invented.",
+      "purpose": "End guided creation and make a real choice to enter the principal chronicle.",
+      "required_stories": [
+        "ST-2010-TRANSITION"
+      ],
+      "optional_stories": [
+        "Any bounded thread the player elects to revisit"
+      ],
+      "exit": "Persisted evidence supports COMPLETE/ALTERNATE/INCOMPLETE and player chooses whether to enter the principal chronicle."
+    }
+  ],
+  "story_units": [
+    {
+      "id": "ST-C06-REENTRY",
+      "episode": "M3.01",
+      "route_class": "required-for-return",
+      "required_for_route": true,
+      "status": "prepared prospectively; not scene-ready",
+      "closure": "D07 V013 and D08 V013 define local story closure; M3.01 macro-closure additionally requires the finite player/evidence/cycle gate in D06 V016."
+    },
+    {
+      "id": "ST-MEASURE-DISPOSITION",
+      "episode": "M3.01",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively",
+      "closure": "Local close per D07 V013 / D08 V013; optional and never blocks the macro episode unless the player started it and leaves it unresolved."
+    },
+    {
+      "id": "ST-VOLNAYA-BOUNDARY",
+      "episode": "M3.01",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively; contains a new, conditional evidence path",
+      "closure": "Local close per D07 V013 / D08 V013; optional and never blocks the macro episode unless the player started it and leaves it unresolved."
+    },
+    {
+      "id": "ST-GANGREL-ATTENTION",
+      "episode": "M3.02",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-KUTHULUN-PRECEDENCE",
+      "episode": "M3.02",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-KUTHULUN-COERCION",
+      "episode": "M3.02",
+      "route_class": "target-on-route",
+      "required_for_route": true,
+      "status": "authorial target; never a past event",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-POST-EMBRACE",
+      "episode": "M4",
+      "route_class": "umbrella",
+      "required_for_route": false,
+      "status": "umbrella only; contains four child story units",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-FIRST-NIGHTS",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-GRIEF-AND-BOUNDARIES",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-CAINITE-ENTRY",
+      "episode": "M4",
+      "route_class": "required-on-target-route",
+      "required_for_route": true,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-ETHICAL-COST",
+      "episode": "M4",
+      "route_class": "optional",
+      "required_for_route": false,
+      "status": "authored prospectively; conditional on an actual Embrace",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    },
+    {
+      "id": "ST-2010-TRANSITION",
+      "episode": "M5",
+      "route_class": "required-for-graduation-review",
+      "required_for_route": true,
+      "status": "authored prospectively",
+      "closure": "Defined in D07 V013 and prepared for play in D08 V013; future event only."
+    }
+  ],
+  "transverse_threads": [
+    {
+      "id": "THREAD-FAMILY",
+      "status": "open and protected",
+      "exists_for": "Maintain human ties and the character cost of losing them.",
+      "progression": "Only actual contact or player choice creates an event.",
+      "closure": "player-selected boundary, actual contact, or explicit quiet/unknown status; no family response is assigned."
+    },
+    {
+      "id": "THREAD-WORKSHOP",
+      "status": "open through C06 and later choices",
+      "exists_for": "The human trade and unfinished obligations remain an independent life strand.",
+      "progression": "work decisions and their actual costs.",
+      "closure": "orders corrected, accepted, refused, or abandoned; no Cainite plot required."
+    },
+    {
+      "id": "THREAD-VOLNAYA",
+      "status": "optional and bounded",
+      "exists_for": "A local records discrepancy offers an investigation and a limited piece of future evidence.",
+      "progression": "copies, index, clerk, scope of documentary proof.",
+      "closure": "corrected, proven, declined or quiet; no hidden system explanation required."
+    },
+    {
+      "id": "THREAD-CAINITE-STATUS",
+      "status": "future conditional",
+      "exists_for": "Gangrel attention and entry into Cainite society.",
+      "progression": "direct observation → sourced relay/invitation → voluntary attendance → actual confrontation/aftermath.",
+      "closure": "membership/standing or alternative/incomplete state based on played choices."
+    }
+  ],
+  "causality_policy": {
+    "no_omniscience": true,
+    "required_relay_fields": [
+      "sender",
+      "recipient",
+      "content_scope",
+      "channel",
+      "delivery_status",
+      "relative_time"
+    ],
+    "family_boundary": "No NPC may know family identity/location/response unless a recorded source or future observed event supplies that exact fact. The prepared threat at confrontation is generic unless a valid source exists.",
+    "variant_boundary": "D12 V001 is used literally; no preexisting details of Mary’s knowledge are added.",
+    "box_boundary": "C05 box contents remain UNKNOWN and are not required by the route."
+  },
+  "finite_progression": {
+    "max_structural_milestones": 5,
+    "all_world_plot_resolution_required": false,
+    "test_success_required": false,
+    "scene_queue": "Each story has a local closure and a no-contact/abandonment exit. The player can end guided creation at the 2010 review with COMPLETE, ALTERNATE or INCOMPLETE evidence; no infinite provocations.",
+    "target_window": "Authorial target: forced Embrace after the played C05 checkpoint and before 1970-12-25, only after actual M3.01 closure and an authorized, recorded transition; no exact date. If infeasible on the played timeline, retain an alternate/incomplete outcome.",
+    "episode_closure_gate": {
+      "episode": "M3.01",
+      "status": "FUTURE_GATE_NOT_SATISFIED",
+      "purpose": "Permit a future M3.02 only after the played M3.01 has a finite, player-confirmed and source-reconciled close; this does not close M3.01 now.",
+      "required_evidence": [
+        "For the target route, the required ST-C06-REENTRY has actually started and has a recorded outcome, explicit local closure evidence, and reconciled persistence. C06 not started, declined, or abandoned cannot be treated as a vacuous satisfied requirement.",
+        "Every required story unit actually started in M3.01 has a recorded local outcome and closure evidence; no required unit is left silently open.",
+        "Every optional M3.01 story that was started has an outcome; every unstarted optional story is explicitly left quiet/declined rather than treated as mandatory.",
+        "The player explicitly chooses to close M3.01 after reviewing the actual timeline and outcome; no closure is inferred from C06 labels or elapsed time.",
+        "The latest episode source, LIVE, HISTORY_INDEX and character state reconcile at the same event boundary; relevant blob hashes and pending persistence reconcile.",
+        "A new highest-numbered CYCLE valid under the current orchestration contract records the authorized transition and next role. Use only fields/statuses supported by that contract; if it has no supported closure/transition representation, stop and keep M3.02 blocked until an authorized contract successor exists."
+      ],
+      "denial_conditions": [
+        "C06/ST-C06-REENTRY has no played, recorded closure. A player-declared decline/abandonment may close only as alternate/incomplete and does not authorize M3.02.",
+        "Any required unit remains open without a player-declared alternate/abandonment disposition.",
+        "Timeline/source state conflict or unresolved persistence.",
+        "No explicit player closure choice.",
+        "Cycle contract lacks a supported transition record or the highest valid cycle does not reflect it."
+      ],
+      "result": "Only after every required target-route item, including played C06, has the evidence above may the player confirm M3.01 closure and an authorized cycle record a separate M3.02 transition. If C06 is declined or left unplayed, the finite result is alternate/incomplete and M3.02 stays blocked. Narrator use still requires its own cycle, SCENE_READY and permission gates.",
+      "current_checkpoint": "C05 remains closed; C06 not started; M3.01 remains open."
+    }
+  },
+  "knowledge_policy": {
+    "agent_knowledge": "Full author package accessible to authorized agents under the current player decision.",
+    "player_knowledge": "No secret truth is surfaced in PLAYER_SAFE reports or prompts.",
+    "pc_knowledge": "Only what Bart observes, is told, or can infer from an actually available source.",
+    "npc_knowledge": "Individual ledger; no transfer without recorded action and channel."
+  },
+  "source_refs": [
+    {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0034.json",
+      "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.03_v018.source.txt",
+      "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v018.source.txt",
+      "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+      "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+    },
+    {
+      "path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+    },
+    {
+      "path": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+      "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b"
+    },
+    {
+      "path": "novydres/MANIFEST_V48.json",
+      "blob_sha": "ef58c93566eb3968d574e727d2daedbe7a303bb5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md",
+      "blob_sha": "e4ad7e885891ab1cd2f70997d4c51afc65ec9435"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V013_GM_HIDDEN.md",
+      "blob_sha": "d07d7d4a98337e34624ca1c0683b53f921e2039d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+    }
+  ],
+  "authorial_decisions": {
+    "forced_embrace": "Player-approved future target after checkpoint C05 and before 1970-12-25; no event/date is recorded.",
+    "Kuthulun": "Player-selected future Gangrel sire; reputation/culture are declared direction, not historical proof.",
+    "C05_box": "Contents remain UNKNOWN and are not authored here.",
+    "delegated_prospective_authorship": {
+      "decision": "Player delegated prospective story authorship and full GM_HIDDEN access to authorized agents.",
+      "ref": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "scope": "D07-D12 authorship and validation with access to GM_HIDDEN material; no retcon, scene activation, operational permission, or expansion of the bounded preexisting open variant.",
+      "supersedes": "PLAYER_DECISION_AGENT_ACCESS_V001.json for agent access and prospective authorship scope."
+    },
+    "episode_boundary": {
+      "decision": "Separate M3.02 coercion target from frozen M3.01 scenes.",
+      "authority": "player continuity instruction plus prospective Dramaturgo architecture",
+      "scope": "M3.01 remains active until actual closure; existing scenes stay mortal and no cycle begins."
+    }
+  },
+  "readiness": {
+    "authorial_architecture": "complete; current successors pinned; independent review pending",
+    "play_preparation": "D07 V013 truth contracts and D08 V013 scene preparation are authored prospectively; C06 remains unstarted and operationally gated.",
+    "SCENE_READY": false,
+    "NARRATOR_PERMISSION": false,
+    "D07_activation": "NOT_GRANTED; requires separate operational approval."
+  },
+  "prohibitions": [
+    "No retcon or reopening of C05.",
+    "No scene execution or prompt permission.",
+    "No exact future dates beyond relative windows and the stated deadline target.",
+    "No predetermined reactions by Mary, Mikahel, Sara, or Bart.",
+    "No forced XP, traits, or dice outcomes."
+  ],
+  "architecture_notes": "{'hierarchy': 'Chronicle → structural milestones/acts → stories/provocations → scenes → conditional beats.', 'episode_boundary': 'M3.01 remains operationally active, and C06 is the next planned section. M3.02 is only a prospective follow-on after actual M3.01 closure and an authorized, recorded transition; if the played timeline makes the deadline infeasible, record the target as missed/alternate without compression.'} Os rótulos Marco 1–Marco 5 são estruturais; Mx.yy são episódios.",
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V019.json",
+    "blob_sha": "85d6a8f37e3fb4e2fd7559b3d1965e4fcc2c5296"
+  },
+  "decision_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+    "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+  }
+}
