@@ -1,0 +1,65 @@
+{
+  "phase": "B",
+  "source_master": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+  "prototype_design_commit": "cef04faa7e8e9c015a1cb3c7b5b3e607ebfcea73",
+  "paired": {
+    "total": 30,
+    "matched": 30,
+    "grouped": {
+      "world": 10,
+      "npc": 10,
+      "chronology": 10
+    },
+    "mode": "WEB_JS_PARSED_FIELD_EQUALITY_ONE_PASS",
+    "failed": []
+  },
+  "negative": {
+    "total": 12,
+    "passed": 12,
+    "method": "DETERMINISTIC_MUTATIONS_REAL_ASSERTIONS_LOCAL_NOT_GIT"
+  },
+  "mutation": {
+    "total": 12,
+    "passed": 12,
+    "method": "SIMULATED_LOGICAL_TRANSACTION_PRECONDITIONS"
+  },
+  "web_reads": {
+    "repetitions": 3,
+    "actual_connector_reads": 3,
+    "p50_ms": 421,
+    "p95_ms": 443,
+    "total_content_chars": 14034,
+    "samples": [
+      {
+        "run": 1,
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+        "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+        "elapsed_ms": 421,
+        "content_characters": 4678,
+        "hash_matches": true
+      },
+      {
+        "run": 2,
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+        "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+        "elapsed_ms": 403,
+        "content_characters": 4678,
+        "hash_matches": true
+      },
+      {
+        "run": 3,
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+        "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+        "elapsed_ms": 443,
+        "content_characters": 4678,
+        "hash_matches": true
+      }
+    ]
+  },
+  "codex": "NOT_EXECUTED",
+  "web_model_30_queries_x3": "NOT_EXECUTED",
+  "actual_tokens": "NOT_EXPOSED",
+  "http_bytes": "NOT_EXPOSED",
+  "live_concurrency_and_ci": "NOT_EXECUTED",
+  "overall_gate": "B_REMEDIATION_REQUIRED"
+}

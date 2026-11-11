@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "B-N01",
+      "mutation": "identity",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N02",
+      "mutation": "aliases",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N03",
+      "mutation": "claim-promotion",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N04",
+      "mutation": "unknown-suppression",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N05",
+      "mutation": "future-contact",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N06",
+      "mutation": "invent-pc-obligation",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N07",
+      "mutation": "forge-technical-ledger",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N08",
+      "mutation": "event-id-corruption",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N09",
+      "mutation": "xp-resource-change",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N10",
+      "mutation": "fv-resource-change",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N11",
+      "mutation": "unauthorized-scene-start",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    },
+    {
+      "id": "B-N12",
+      "mutation": "source-hash-change",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "mode": "ACTUAL_LOCAL_DETERMINISTIC_ASSERTION_NOT_REMOTE_ATTACK"
+    }
+  ]
+}
