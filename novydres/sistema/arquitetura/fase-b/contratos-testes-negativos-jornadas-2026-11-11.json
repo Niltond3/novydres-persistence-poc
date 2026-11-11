@@ -1,0 +1,629 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_ADVERSARIAL_CASE_PAYLOAD_SPEC",
+  "visibility": "PLAYER_SAFE",
+  "date": "2026-11-11",
+  "status": "SPEC_ONLY_NOT_EXECUTED",
+  "phase": "B",
+  "authoritative_runtime_validator": false,
+  "source_fixtures_preserved": [
+    "fixtures-negativos.json",
+    "fixtures-mutacoes.json"
+  ],
+  "preconditions": "Do not run hostile mutations on the operational master or shared design branch. Use an isolated disposable repository or equivalent sandbox with identical candidate blobs and a readback-capable validator. False-positive rejection from arbitrary API failure does not pass.",
+  "negative_cases": [
+    {
+      "case_id": "B-N01",
+      "label": "identity",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/personagens/npc-samir-haddad/perfil.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/historical_actor_id",
+            "value": "__UNSOURCED_ACTOR_ID__"
+          }
+        ]
+      },
+      "expected": "REJECT_AUTHORITY",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N02",
+      "label": "aliases",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/personagens/npc-samir-haddad/perfil.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/aliases",
+            "value": []
+          }
+        ]
+      },
+      "expected": "REJECT_UNSOURCED_IDENTITY",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N03",
+      "label": "claim-promotion",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "copy",
+            "from": "/claims/0",
+            "path": "/confirmed/-"
+          }
+        ]
+      },
+      "expected": "REJECT_CLAIM_TO_CONFIRMED",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N04",
+      "label": "unknown-suppression",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "remove",
+            "path": "/unknown/2"
+          }
+        ]
+      },
+      "expected": "REJECT_UNKNOWN_LOSS",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N05",
+      "label": "future-contact",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/future_contact_realized",
+            "value": true
+          }
+        ]
+      },
+      "expected": "REJECT_UNPLAYED_EVENT",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N06",
+      "label": "invent-pc-obligation",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/pc_obligation_created",
+            "value": true
+          }
+        ]
+      },
+      "expected": "REJECT_PLAYER_AGENCY",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N07",
+      "label": "forge-technical-ledger",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/technical_ledger_proven",
+            "value": true
+          }
+        ]
+      },
+      "expected": "REJECT_UNSOURCED_LEDGER",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N08",
+      "label": "event-id-corruption",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/estado/atual.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/checkpoint/last_event_id",
+            "value": "__NONEXISTENT_EVENT__"
+          }
+        ]
+      },
+      "expected": "REJECT_CURSOR_CORRUPTION",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N09",
+      "label": "xp-resource-change",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/estado/atual.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "test-increment",
+            "path": "/resources/xp_remaining",
+            "delta": 1
+          }
+        ]
+      },
+      "expected": "REJECT_UNAUTHORIZED_RESOURCE",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N10",
+      "label": "fv-resource-change",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/estado/atual.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "test-increment",
+            "path": "/resources/willpower_available",
+            "delta": 1
+          }
+        ]
+      },
+      "expected": "REJECT_UNAUTHORIZED_RESOURCE",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N11",
+      "label": "unauthorized-scene-start",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/estado/atual.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/checkpoint/scene_started",
+            "value": true
+          }
+        ]
+      },
+      "expected": "REJECT_UNAUTHORIZED_SCENE",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    },
+    {
+      "case_id": "B-N12",
+      "label": "source-hash-change",
+      "execution_scope": "ISOLATED_DISPOSABLE_TEST_FIXTURE_ONLY",
+      "target": "novydres/cronicas/CHR-001/estado/atual.json",
+      "operation": {
+        "type": "json_patch_plus_explicit_test_operator",
+        "operations": [
+          {
+            "op": "replace",
+            "path": "/source_refs/0/sha",
+            "value": "0000000000000000000000000000000000000000"
+          }
+        ]
+      },
+      "expected": "REJECT_PIN_MISMATCH",
+      "preconditions": [
+        "same_candidate_snapshot",
+        "source_pins_verified",
+        "test_only_no_master_or_live_candidate_write"
+      ],
+      "readback": [
+        "rejection_with_specific_reason",
+        "target_blob_unchanged",
+        "master_head_unchanged"
+      ],
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED"
+    }
+  ],
+  "mutation_journeys": [
+    {
+      "case_id": "B-M01",
+      "label": "identical-payload-idempotence",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "idempotent_replay": true,
+          "record_id": "__EXISTING_TEST_RECORD__",
+          "payload": "IDENTICAL",
+          "expected": "NO_NEW_COMMIT"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M02",
+      "label": "conflicting-same-id",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "record_id": "__EXISTING_TEST_RECORD__",
+          "payload": "DIFFERENT",
+          "expected": "STOP_CONFLICT"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M03",
+      "label": "stale-expected-head",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "expected_sha": "__STALE_PARENT__",
+          "target_sha": "__CURRENT_HEAD__",
+          "expected": "REJECT_LEASE"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": "INCONCLUSIVE_GENERIC_GITHUB_GRAPHQL_ERROR_AND_REF_UNCHANGED"
+    },
+    {
+      "case_id": "B-M04",
+      "label": "non-fast-forward",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "expected_sha": "__CURRENT_HEAD__",
+          "target_sha": "__OLDER_ANCESTOR__",
+          "force": false,
+          "expected": "REJECT_NON_FAST_FORWARD"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M05",
+      "label": "unauthorized-master",
+      "execution_scope": "POLICY_PREFLIGHT_MOCK_NO_MASTER_API_CALL",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "branch": "master",
+          "synthetic_change": true,
+          "expected": "PRE_FLIGHT_DENY_NO_REMOTE_CALL"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M06",
+      "label": "dangling-ref",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "reference": "__NONEXISTENT_SUBJECT__",
+          "expected": "REJECT_DANGLING_REFERENCE"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M07",
+      "label": "owner-duplication",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "owner_scope": "__DUPLICATE_OWNER_FOR_SAME_FIELD__",
+          "expected": "REJECT_MULTIPLE_AUTHORITIES"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M08",
+      "label": "frozen-file-edit",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "target": "__FROZEN_DOCUMENT__",
+          "mutation": "__TEST_ONLY__",
+          "expected": "REJECT_FROZEN_CHANGE"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M09",
+      "label": "invalid-visibility",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "visibility": "__INVALID_VISIBILITY__",
+          "expected": "REJECT_SCHEMA"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M10",
+      "label": "activate-candidate-route",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "route": "__CANDIDATE_RUNTIME_ROUTE__",
+          "activate": true,
+          "expected": "REJECT_CUTOVER_NOT_AUTHORIZED"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M11",
+      "label": "synthetic-event-roll",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "new_event_and_roll": "__WITHOUT_EVIDENCE__",
+          "expected": "REJECT_SYNTHETIC_LEDGER"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    },
+    {
+      "case_id": "B-M12",
+      "label": "parallel-old-sha-race",
+      "execution_scope": "ISOLATED_DISPOSABLE_REPOSITORY_OR_BRANCH_OUTSIDE_THIS_PROTECTED_DESIGN",
+      "operation": {
+        "type": "transaction_scenario",
+        "scenario": {
+          "writers": 2,
+          "same_parent": true,
+          "distinct_payloads": true,
+          "expected": "ONE_WINNER_ONE_STALE_REJECTION"
+        }
+      },
+      "expected_assertions": [
+        "explicit_result_or_reason",
+        "commit_parent_and_ref_readback",
+        "unchanged_for_rejected_transactions",
+        "no_mutation_to_master_or_frozen"
+      ],
+      "requires_real_executor": true,
+      "status": "SPECIFICATION_ONLY_NOT_EXECUTED",
+      "prior_probe": null
+    }
+  ],
+  "scoring_requirements": {
+    "negative": "12/12 real rejection with assertion-specific reasons plus unmodified SHA readback",
+    "mutation": "12/12 real full lifecycle evidence with Git parent, lease, CAS, branch unchanged and idempotence where applicable",
+    "not_counted": [
+      "local predicates",
+      "JSON comparisons",
+      "synthetic simulator results",
+      "generic API exceptions",
+      "unverified self-declared success"
+    ],
+    "status": "NOT_EXECUTED"
+  },
+  "note": "B-M03 no-op stale expected SHA attempt made in current Web session is recorded separately as non-diagnostic, not a completed journey."
+}
