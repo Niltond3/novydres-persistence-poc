@@ -1258,22 +1258,22 @@
     {
       "properties": {
         "transition": {
-          "const": "TEMPORAL_GATE_ACTIVATED_REVIEW_REQUIRED"
+          "const": "TEMPORAL_RECONCILIATION_PASS"
         },
         "status": {
-          "const": "TEMPORAL_RECONCILIATION_REQUIRED"
+          "const": "READY_FOR_NARRATOR"
         },
         "next_role": {
-          "const": "DRAMATURGO"
+          "const": "NARRADOR"
         },
         "provocation_id": {
           "const": "M3.02"
         },
         "sequence": {
-          "const": 42
+          "const": 43
         },
         "cycle_id": {
-          "const": "CHR001-CYCLE-0042"
+          "const": "CHR001-CYCLE-0043"
         }
       }
     },
