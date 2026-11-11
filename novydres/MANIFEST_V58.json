@@ -63,7 +63,8 @@
     "2026-11-11 CHR001 C40: jogador esclarece autoridade do Dramaturgo sobre saltos temporais e cenas significativas. C39 pedido genérico de intenção não é obrigatório. D06 V032 D07 V019 D08 V022 D09 V026, dossier+sidecar V2 e V14 permitem quadro prospectivo no futuro sem fato, deslocamento, XP/FV ou conhecimento já ocorrido. Autorização narrativa só após CI e prompt expresso do jogador.",
     "2026-11-11 C41: elenco de cenas pode permanecer na mesma continuidade por cenas/atos/provocações; elipse apenas se dramaturgicamente necessária. Quando selecionada, vida/não-vida, negócios, relações e mundo evoluem com causalidade; Narrador apresenta o avanço e permite prelúdio opcional de 0 a 2 testes antes do spotlight. Nenhum acontecimento C05-22 ou recurso foi alterado.",
     "2026-11-11 C42/V57: substitui autodeclaração de segurança temporal por gate que reconcilia 44 threads com LIVE; pausa editorialmente a abertura de M3.02.C01 já exibida em chat, ainda não fechada por G28. Caixa Y.B., duração relativa, conhecimento familiar e acessos não foram presumidos. Nenhum evento, XP, FV ou escolha do PJ foi criado.",
-    "2026-11-11 C43/V58: revisão TEMPORAL_TRANSITION_GATE_V1 aplicada prospectivamente à mesma abertura M3.02.C01 já exibida; 44/44 fios, 7 salientes, uma noite delimitada, caixa Y.B. e Mary sem escolhas presumidas, baia alugada e acessos definidos. C05-22, G28, XP/FV e cânone intactos. Narrador somente após CI PASS e novo prompt do jogador."
+    "2026-11-11 C43/V58: revisão TEMPORAL_TRANSITION_GATE_V1 aplicada prospectivamente à mesma abertura M3.02.C01 já exibida; 44/44 fios, 7 salientes, uma noite delimitada, caixa Y.B. e Mary sem escolhas presumidas, baia alugada e acessos definidos. C05-22, G28, XP/FV e cânone intactos. Narrador somente após CI PASS e novo prompt do jogador.",
+    "C43 CI forward compatibility: arquivado o gate V16 como validador exclusivo de 42 ciclos pela restrição de gatilho workflow; test/validator V16 e C42/V57 mantidos idênticos. CI V17 é o gate obrigatório do novo ciclo. Auditável em M3.02_CI_SUCCESSOR_SCOPE_V1_PLAYER_SAFE.json."
   ],
   "inventory_coverage": "PARTIAL_BEYOND_ENUMERATED_DRIVE_AND_20260928_LIBRARY_CATALOG",
   "copy_integrity": "148_EXTRACTED_TEXT_EQUAL_READBACK_9_RAW_BYTE_SHA_VERIFIED",
@@ -512,7 +513,8 @@
       "prelude_distinct_test_max": 2,
       "ellipsis_mandatory": false,
       "prelude_mandatory": false,
-      "temporal_gate_result": "PASS_READY_V2"
+      "temporal_gate_result": "PASS_READY_V2",
+      "ci_scope_audit": "novydres/chronicles/CHR-001/audits/M3.02_CI_SUCCESSOR_SCOPE_V1_PLAYER_SAFE.json"
     },
     "latest_baseline_source": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
     "administrative_downtime_last_event": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",

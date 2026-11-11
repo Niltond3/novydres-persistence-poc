@@ -1,21 +1,22 @@
 name: NOVYDRES CHR-001 Temporal Source Reconciliation V16
+# V16 is historical and asserts exactly 42 cycles. C43/V17 and later successors
+# have their own mandatory CI. Only V16 artifacts can trigger this archival gate;
+# no V16 validator/test/schema or confirmed narrative source is changed.
 on:
   push:
     paths:
-      - 'novydres/runtime/orchestration/**'
-      - 'novydres/runtime/scene-execution/**'
-      - 'novydres/chronicles/CHR-001/orchestration/**'
-      - 'novydres/chronicles/CHR-001/preparations/**'
-      - 'novydres/MANIFEST_V*.json'
-      - '.github/workflows/novydres-temporal-transition-v16.yml'
+      - 'novydres/runtime/orchestration/*V16*'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_*_V1*'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0042.json'
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V1_PLAYER_SAFE.json'
+      - 'novydres/MANIFEST_V57.json'
   pull_request:
     paths:
-      - 'novydres/runtime/orchestration/**'
-      - 'novydres/runtime/scene-execution/**'
-      - 'novydres/chronicles/CHR-001/orchestration/**'
-      - 'novydres/chronicles/CHR-001/preparations/**'
-      - 'novydres/MANIFEST_V*.json'
-      - '.github/workflows/novydres-temporal-transition-v16.yml'
+      - 'novydres/runtime/orchestration/*V16*'
+      - 'novydres/runtime/scene-execution/TEMPORAL_TRANSITION_*_V1*'
+      - 'novydres/chronicles/CHR-001/orchestration/CYCLE_V0042.json'
+      - 'novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V1_PLAYER_SAFE.json'
+      - 'novydres/MANIFEST_V57.json'
 permissions:
   contents: read
 jobs:
