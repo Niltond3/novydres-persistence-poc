@@ -7,7 +7,7 @@
   "manifest_path": "novydres/MANIFEST_V59.json",
   "manifest_ref": {
     "path": "novydres/MANIFEST_V59.json",
-    "blob_sha": "8fd1505597e6a7fae644d88b90c45489db311efc"
+    "blob_sha": "b51afb95fa8f842e9044249da4849645884aa961"
   },
   "source_head_sha": "27652bc35755086ebbbdfd9749cb521e3e76c517",
   "previous_cycle": {
@@ -127,7 +127,7 @@
     },
     "start_here": {
       "path": "novydres/runtime/orchestration/START_HERE_V15.md",
-      "blob_sha": "cbdd55815522d8241b6eab321b48183198e809ec"
+      "blob_sha": "f718772a79ee20121466b6138fba1158a6859bcf"
     },
     "agent_entry": {
       "path": "novydres/.AGENT_V4.md",
@@ -143,19 +143,19 @@
     },
     "orchestration_contract": {
       "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V16.md",
-      "blob_sha": "90ed9976fa0affbcdd862e1a1666f17886614224"
+      "blob_sha": "9656f36c24461134aef4fd6deb49ed3a17d73f49"
     },
     "cycle_schema": {
       "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V18.json",
-      "blob_sha": "0ee4f09e16a892af235b9a8d75462a21c6d046e5"
+      "blob_sha": "41fcd31509495c0648adf9581a8ff38c64827eff"
     },
     "cycle_validator": {
       "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V18.mjs",
-      "blob_sha": "6aad53ca34376380fe5dfaa93cdba307f7d5b813"
+      "blob_sha": "99d040c916449efc72d6078656cf24c09f509816"
     },
     "cycle_tests": {
       "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V18.mjs",
-      "blob_sha": "d1768f4e23ee44f331acbe305408c4a953b4e64d"
+      "blob_sha": "8a765ffe75017b7a5eec77615e335b40b31707fa"
     },
     "preparation_dossier_schema": {
       "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V8.json",
@@ -167,7 +167,7 @@
     },
     "cycle_schema_tests": {
       "path": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V18.py",
-      "blob_sha": "066ea5d19a023e9fe42e69490d4f5ce1d7be4461"
+      "blob_sha": "0005d93aa31c17739700e2c4eeddc65789a008f0"
     },
     "player_episode_closure_decision": {
       "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
@@ -240,6 +240,18 @@
     "temporal_transition_packet": {
       "path": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json",
       "blob_sha": "dca3e646bed186ddbce0448848bcbf66b1d60b31"
+    },
+    "player_immersion_comment": {
+      "path": "novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md",
+      "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+    },
+    "narrative_immersion_gate": {
+      "path": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
+      "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+    },
+    "reconciliation_only_handoff": {
+      "path": "novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md",
+      "blob_sha": "0e78fd94534d9db6d6c3880905204b9068ae19e6"
     }
   },
   "plan": {
@@ -258,7 +270,7 @@
   "review": {
     "decision": "SCENE_COMMITTED",
     "against_last_event_id": "CHR001-M302-C01-05-20261111-001",
-    "public_rationale": "M3.02.C01 encerrada por desengajamento voluntário: viga retirada do acesso, advertência ignorada, rotina retomada; nenhum resultado comercial, teste, alteração de recursos, diálogo familiar, queixa futura ou nova elipse. G28 commit único; Dramaturgo revisará antes de C02."
+    "public_rationale": "M3.02.C01 encerrada por desengajamento voluntário: viga retirada do acesso, advertência ignorada, rotina retomada; nenhum resultado comercial, teste, alteração de recursos, diálogo familiar, queixa futura ou nova elipse. G28 commit único; Dramaturgo revisará antes de C02. Comentário expresso do jogador registrado como meta PLAYER_SAFE e gate de imersão prospectivo; durante pendência de CI, Dramaturgo autorizado APENAS a reconciliação administrativa de G28, sem C02."
   },
   "blocking": {
     "code": null,

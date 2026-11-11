@@ -65,7 +65,8 @@
     "2026-11-11 C42/V57: substitui autodeclaração de segurança temporal por gate que reconcilia 44 threads com LIVE; pausa editorialmente a abertura de M3.02.C01 já exibida em chat, ainda não fechada por G28. Caixa Y.B., duração relativa, conhecimento familiar e acessos não foram presumidos. Nenhum evento, XP, FV ou escolha do PJ foi criado.",
     "2026-11-11 C43/V58: revisão TEMPORAL_TRANSITION_GATE_V1 aplicada prospectivamente à mesma abertura M3.02.C01 já exibida; 44/44 fios, 7 salientes, uma noite delimitada, caixa Y.B. e Mary sem escolhas presumidas, baia alugada e acessos definidos. C05-22, G28, XP/FV e cânone intactos. Narrador somente após CI PASS e novo prompt do jogador.",
     "C43 CI forward compatibility: arquivado o gate V16 como validador exclusivo de 42 ciclos pela restrição de gatilho workflow; test/validator V16 e C42/V57 mantidos idênticos. CI V17 é o gate obrigatório do novo ciclo. Auditável em M3.02_CI_SUCCESSOR_SCOPE_V1_PLAYER_SAFE.json.",
-    "2026-11-11 C44/V59: G28 M3.02.C01 CLOSED after PC moved steel beam from shared passage and ignored anonymous woman's warning; last event CHR001-M302-C01-05-20261111-001. One relative night in 1970 now diegetic; exact civil date UNKNOWN. 44 threads carried, box Y.B. and Mary unknowns preserved. No new business outcome, test, XP/FV, act, Embrace, canon or future. Next DRAMATURGO; C02 NOT_STARTED."
+    "2026-11-11 C44/V59: G28 M3.02.C01 CLOSED after PC moved steel beam from shared passage and ignored anonymous woman's warning; last event CHR001-M302-C01-05-20261111-001. One relative night in 1970 now diegetic; exact civil date UNKNOWN. 44 threads carried, box Y.B. and Mary unknowns preserved. No new business outcome, test, XP/FV, act, Embrace, canon or future. Next DRAMATURGO; C02 NOT_STARTED.",
+    "Player feedback M3.02.C01: no OOC technical rehash of resolved action during live narration. Narrative closure precedes optional administrative G28 status; repetition does not duplicate actions. Source: novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md. Reconciliation-only handoff pinned; master still C43/V58 until V18 PASS and protected update."
   ],
   "inventory_coverage": "PARTIAL_BEYOND_ENUMERATED_DRIVE_AND_20260928_LIBRARY_CATALOG",
   "copy_integrity": "148_EXTRACTED_TEXT_EQUAL_READBACK_9_RAW_BYTE_SHA_VERIFIED",
@@ -419,7 +420,7 @@
       "handoff_to_dramaturgo": "novydres/runtime/orchestration/HANDOFF_NARRADOR_TO_DRAMATURGO_V1.md",
       "discovery_rule": "HIGHEST_NUMERIC_CYCLE_WITH_PREDECESSOR_SHA_CHECK_AND_LIVE_LAST_EVENT",
       "next_role_at_activation": "DRAMATURGO",
-      "current_review_status": "M302_C01_CLOSED_G28_WAITING_DRAMATURGO",
+      "current_review_status": "M302_C01_G28_CANDIDATE_RECONCILIATION_ONLY_PENDING_CI",
       "next_scene_executable": false,
       "review_ownership": "DRAMATURGO_REVIEW_M302_AFTER_C01",
       "one_scene_per_narrator_chat": true,
@@ -431,7 +432,7 @@
       "local_d2_selection_method_unchanged": true,
       "implementation_audit": "novydres/runtime/orchestration/IMPLEMENTATION_AUDIT_V1.json",
       "ci_workflow": ".github/workflows/novydres-scene-end-v18.yml",
-      "ci_status_at_activation": "V18_CANDIDATE_CI_REQUIRED",
+      "ci_status_at_activation": "V18_REMEDIATED_CANDIDATE_CI_REQUIRED",
       "ci_is_branch_protection": "NOT_ASSERTED",
       "current_cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0044.json",
       "next_role": "DRAMATURGO",
@@ -448,13 +449,13 @@
       "source_reconciliation_transition": "SOURCE_RECONCILED",
       "next_scene": "C02",
       "next_scene_status": "NOT_STARTED",
-      "contract_blob_sha": "90ed9976fa0affbcdd862e1a1666f17886614224",
-      "cycle_schema_blob_sha": "0ee4f09e16a892af235b9a8d75462a21c6d046e5",
-      "validator_blob_sha": "6aad53ca34376380fe5dfaa93cdba307f7d5b813",
-      "tests_blob_sha": "d1768f4e23ee44f331acbe305408c4a953b4e64d",
+      "contract_blob_sha": "9656f36c24461134aef4fd6deb49ed3a17d73f49",
+      "cycle_schema_blob_sha": "41fcd31509495c0648adf9581a8ff38c64827eff",
+      "validator_blob_sha": "99d040c916449efc72d6078656cf24c09f509816",
+      "tests_blob_sha": "8a765ffe75017b7a5eec77615e335b40b31707fa",
       "schema_tests": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V18.py",
-      "schema_tests_blob_sha": "066ea5d19a023e9fe42e69490d4f5ce1d7be4461",
-      "entrypoint_blob_sha": "cbdd55815522d8241b6eab321b48183198e809ec",
+      "schema_tests_blob_sha": "0005d93aa31c17739700e2c4eeddc65789a008f0",
+      "entrypoint_blob_sha": "f718772a79ee20121466b6138fba1158a6859bcf",
       "operational_gates": {
         "architecture_active": true,
         "d07_active": true,
@@ -729,7 +730,7 @@
         },
         "start_here": {
           "path": "novydres/runtime/orchestration/START_HERE_V15.md",
-          "blob_sha": "cbdd55815522d8241b6eab321b48183198e809ec"
+          "blob_sha": "f718772a79ee20121466b6138fba1158a6859bcf"
         },
         "agent_entry": {
           "path": "novydres/.AGENT_V4.md",
@@ -745,19 +746,19 @@
         },
         "orchestration_contract": {
           "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V16.md",
-          "blob_sha": "90ed9976fa0affbcdd862e1a1666f17886614224"
+          "blob_sha": "9656f36c24461134aef4fd6deb49ed3a17d73f49"
         },
         "cycle_schema": {
           "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V18.json",
-          "blob_sha": "0ee4f09e16a892af235b9a8d75462a21c6d046e5"
+          "blob_sha": "41fcd31509495c0648adf9581a8ff38c64827eff"
         },
         "cycle_validator": {
           "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V18.mjs",
-          "blob_sha": "6aad53ca34376380fe5dfaa93cdba307f7d5b813"
+          "blob_sha": "99d040c916449efc72d6078656cf24c09f509816"
         },
         "cycle_tests": {
           "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V18.mjs",
-          "blob_sha": "d1768f4e23ee44f331acbe305408c4a953b4e64d"
+          "blob_sha": "8a765ffe75017b7a5eec77615e335b40b31707fa"
         },
         "preparation_dossier_schema": {
           "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V8.json",
@@ -769,7 +770,7 @@
         },
         "cycle_schema_tests": {
           "path": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V18.py",
-          "blob_sha": "066ea5d19a023e9fe42e69490d4f5ce1d7be4461"
+          "blob_sha": "0005d93aa31c17739700e2c4eeddc65789a008f0"
         },
         "d07_activation_record": {
           "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
@@ -846,6 +847,18 @@
         "temporal_transition_packet": {
           "path": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V2_PLAYER_SAFE.json",
           "blob_sha": "dca3e646bed186ddbce0448848bcbf66b1d60b31"
+        },
+        "player_immersion_comment": {
+          "path": "novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md",
+          "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+        },
+        "narrative_immersion_gate": {
+          "path": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
+          "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+        },
+        "reconciliation_only_handoff": {
+          "path": "novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md",
+          "blob_sha": "0e78fd94534d9db6d6c3880905204b9068ae19e6"
         }
       },
       "start_here": "novydres/runtime/orchestration/START_HERE_V13.md",
@@ -1038,6 +1051,29 @@
         "path": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V4.md",
         "blob_sha": "3041ab71d52827a9e4350b80c9ac27fafee98dad"
       }
+    },
+    "player_immersion_feedback": {
+      "status": "PLAYER_REPORTED_PROSPECTIVE_POLICY_PINNED_IN_CANDIDATE",
+      "source": {
+        "path": "novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md",
+        "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+      },
+      "gate": {
+        "path": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
+        "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+      },
+      "scope": "NARRATOR_SCENE_CONTINUITY_BEFORE_G28",
+      "not_diegetic": true,
+      "retroactive_event_change": false
+    },
+    "reconciliation_only_handoff": {
+      "status": "CANDIDATE_ONLY_PENDING_CI_PASS",
+      "ref": {
+        "path": "novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md",
+        "blob_sha": "0e78fd94534d9db6d6c3880905204b9068ae19e6"
+      },
+      "master_authority_unchanged": true,
+      "review_next_scene_prohibited_before_promotion": true
     }
   },
   "rules_activation": {

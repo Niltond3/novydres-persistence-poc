@@ -212,7 +212,10 @@
         "temporal_transition_validator",
         "temporal_transition_tests",
         "temporal_transition_schema_tests",
-        "temporal_transition_packet"
+        "temporal_transition_packet",
+        "player_immersion_comment",
+        "narrative_immersion_gate",
+        "reconciliation_only_handoff"
       ],
       "properties": {
         "d04_plot_admissions": {
@@ -736,6 +739,15 @@
               ]
             }
           ]
+        },
+        "player_immersion_comment": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "narrative_immersion_gate": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "reconciliation_only_handoff": {
+          "$ref": "#/$defs/blobRef"
         }
       }
     },

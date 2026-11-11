@@ -11,3 +11,7 @@ test('reject fake event',()=>reject(x=>x.checkpoint.last_event_id='FAKE'));
 test('reject altered previous SHA',()=>reject(x=>x.previous_cycle.blob_sha='0'.repeat(40)));
 test('reject fake G28',()=>reject(x=>x.scene_commit.g28_persisted=false));
 test('reject C02 started',()=>reject(x=>x.checkpoint.next_scene_status='STARTED'));
+
+test('require immersion gate',()=>reject(x=>{delete x.architecture.narrative_immersion_gate}));
+test('require player comment',()=>reject(x=>x.architecture.player_immersion_comment.path='novydres/wrong.md'));
+test('require restricted handoff',()=>reject(x=>x.architecture.reconciliation_only_handoff.blob_sha='0'.repeat(40)));

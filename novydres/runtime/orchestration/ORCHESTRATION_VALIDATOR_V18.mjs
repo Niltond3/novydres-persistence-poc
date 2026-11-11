@@ -23,6 +23,9 @@ export function validateC44(c,p){
  for(const k of ['story_preparation_ready','mechanical_scene_ready','scene_ready','narrator_permission'])ok(c.operational_gates[k]===false,'next scene gate '+k);
  ok(c.operational_gates.architecture_active===true&&c.operational_gates.d07_active===true,'architecture');
  ok(c.plan.validity==='STALE'&&c.review.decision==='SCENE_COMMITTED'&&c.pending_player_decision===null,'review');
+ ok(c.architecture.player_immersion_comment?.path==='novydres/chronicles/CHR-001/feedback/PLAYER_COMMENT_M302_C01_IMMERSION_V1_PLAYER_SAFE.md','player comment pin');
+ ok(c.architecture.narrative_immersion_gate?.path==='novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md','immersion gate pin');
+ ok(c.architecture.reconciliation_only_handoff?.path==='novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md','restricted handoff pin');
  return {ok:true};
 }
 export function validateLatestV18(root){

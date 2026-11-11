@@ -12,4 +12,6 @@ for key,value in [('status','READY_FOR_NARRATOR'),('next_role','NARRADOR'),('tra
 d=copy.deepcopy(cycle);d['scene_commit']['g28_persisted']=False;assert list(v.iter_errors(d))
 d=copy.deepcopy(cycle);d['operational_gates']['narrator_permission']=True;assert list(v.iter_errors(d))
 d=copy.deepcopy(cycle);del d['refs']['live'];assert list(v.iter_errors(d))
-print(json.dumps({'ok':True,'schema':'V18','negative_cases':6}))
+for key in ['player_immersion_comment','narrative_immersion_gate','reconciliation_only_handoff']:
+ d=copy.deepcopy(cycle);del d['architecture'][key];assert list(v.iter_errors(d)),key
+print(json.dumps({'ok':True,'schema':'V18','negative_cases':9}))
