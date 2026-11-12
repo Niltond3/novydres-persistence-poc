@@ -295,7 +295,7 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     const rejection=attempts[loser].reason;
     assert.equal(rejection.status,422,'loser rejected by GitHub REST HTTP 422');
     const staleProof=String(rejection.response?.message||'');
-    assert.match(staleProof,/fast.forward|not a fast forward/i,'explicit native non-fast-forward reason');
+    assert.ok(staleProof.length>0,'retain native rejection message; generic 422 is not an exact SHA-lease diagnostic');
     const racedStored=JSON.parse((await readPath(ownerPath)).content);
     assert.ok(Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][winners[0]]));
     assert.ok(!Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][loser]));
@@ -308,9 +308,10 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
       first_transaction:t1,duplicate_tx:duplicate.status,conflict_tx:'STOP_CONFLICT',
       rejected_guards:rejected,client_suppressed_ack_recovery:recovered.status,
       acknowledgement_failure_mode:'CLIENT_SUPPRESSED_AFTER_REAL_REMOTE_WRITE_NOT_NETWORK_INJECTION',
-      concurrent_writers:'ONE_WINNER_NATIVE_NON_FAST_FORWARD_422',
+      concurrent_writers:'ONE_WINNER_REMOTE_422_GENERIC_REJECTION',
       winner_commit:winning.sha,loser_commit:candidates[loser].sha,
       native_rejection_http:rejection.status,native_rejection_message:staleProof,
+      native_stale_lease_diagnostic:'NOT_PROVEN_BY_GENERIC_422',
       stale_precheck:'REMOTE_HEAD_MISMATCH',remote_head_readback:raceHead,
       requests_sample:timings.length,latency_p95:'NOT_REPORTED_SMALL_NONCOMPARABLE_SAMPLE',
       timings_ms:timings.filter(x=>x.http>=400 || x.operation.startsWith('PATCH')),
