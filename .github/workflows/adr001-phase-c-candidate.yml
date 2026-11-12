@@ -1,4 +1,4 @@
-name: ADR-001 C01 candidate validators (non-operational)
+name: ADR-001 C01-C02-C04 candidate checks (non-operational)
 on:
   push:
     branches:
@@ -8,6 +8,8 @@ on:
       - 'novydres/scripts/testar-validacao-assuntos.test.mjs'
       - 'novydres/scripts/catalogo-assuntos.mjs'
       - 'novydres/scripts/testar-catalogo-assuntos.test.mjs'
+      - 'novydres/scripts/retomar-estado.mjs'
+      - 'novydres/scripts/testar-retomada-estado.test.mjs'
       - 'novydres/catalogo.json'
       - 'novydres/AGENTS.md'
       - 'novydres/CONTEXT.md'
@@ -36,3 +38,7 @@ jobs:
         run: node novydres/scripts/catalogo-assuntos.mjs --check
       - name: Test V03 exact snapshot retrieval and V09 invalidation
         run: node --test novydres/scripts/testar-catalogo-assuntos.test.mjs
+      - name: Test V06-V07 fixed historical state and guarded recovery
+        run: node --test novydres/scripts/testar-retomada-estado.test.mjs
+      - name: Check C04 standalone candidate recovery from pinned source blobs
+        run: node novydres/scripts/retomar-estado.mjs

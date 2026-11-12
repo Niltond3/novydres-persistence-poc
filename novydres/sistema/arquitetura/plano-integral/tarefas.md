@@ -232,6 +232,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** estado atual por assunto com dono único, recursos/ficha, última intenção, cursor e conhecimento situado, vinculado às fontes pertinentes. Preservar lacunas históricas e acesso ao texto literal sem repetir toda a crônica na entrada. Conciliar inconsistências pelas fontes; sem exigir reconstrução universal por eventos ou auditoria de rolagens.
 - **Conclusão:** V06/V07: consistência e recuperação em contexto renovado mantêm os mesmos saldos, consequências materiais e ponto de retomada, sem rerrolar ou restaurar recursos antigos. Nenhuma prova técnica de RNG é exigida ou inventada. Escrita falha não é apresentada como atualização confirmada. Checkpoint de tarefa/fase suporta continuidade no mesmo chat e handoff quando necessário, sem outro arquivo por verificação.
 
+#### C04 — Implementação candidata; CI remoto pendente (2026-11-12)
+
+- **Entrada:** `design@7a332796496a487677f040a26422a42e742f0de5`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura; C03 `PASS_SCOPED`, A02/A03 consultados. Não interpretar fonte histórica C41 como cursor C45.
+- **Implementação não operacional:** `novydres/scripts/retomar-estado.mjs` relê `catalogo.json` no commit candidato, owner do checkpoint, dados de história/trama/conhecimento situados e fontes históricas pinadas `CYCLE_V0041`, `LIVE_v038` e texto literal. Confere recursos/ficha por aritmética e por fonte, materialidade, cursor, autoria, grau epistêmico, intenção ainda não recebida, não realização de fatos futuros, ausência de ledger técnico inventado e divergência temporal declarada. O retorno é mínimo, com localizadores, não entrega cena ou texto oculto. Retomada com HEAD divergente, fonte ausente/errada ou escrita não confirmada bloqueia.
+- **Prova preparada:** `testar-retomada-estado.test.mjs` cobre V06/V07 com run isolado do estado candidato, repetição em nova invocação e mutações adversariais de recursos, fontes, cursor, obrigações, texto, conhecimento, confirmação e erro de HEAD. Reutiliza workflow de validação C existente, sem criar manifestos por cena/rolagem, replay universal, RNG e sem alterar o arquivo histórico `estado/atual.json`.
+- **Limites:** `CI_PENDING` neste checkpoint; não há reconciliação C41→C45 nem reivindicação de prontidão para narrar. Fonte existente sustentar conclusão é revisão semântica separada, não decidida apenas por SHA. Prova de continuidade entre chats de DEC-25 é parcial: recuperação técnica reproduzível não verifica a memória/contexto de um modelo.
+- **Próximo:** publicar diff com lease; rodar CI, conferir readback remoto, registrar C04 conforme resultados. Dependente C05 não liberado antes de C04 PASS_SCOPED.
+
 ### C05 — Integrar contrato de mesa e preparação proporcional
 
 - **Depende de:** C02–C04 e A04.
