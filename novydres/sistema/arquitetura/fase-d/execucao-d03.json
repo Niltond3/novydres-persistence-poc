@@ -3,8 +3,8 @@
   "phase": "D03",
   "entry_head": "8b32081c9435c0864d42ac8679444539438a7c47",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-  "status": "D03_IMPLEMENTATION_IN_PROGRESS_DO_NOT_PROMOTE",
-  "gate": "D03_NOT_YET_PASS",
+  "status": "D03_CONSOLIDATED_GATE_PROOF_PREPUBLICATION",
+  "gate": "D03_CANDIDATE_EVIDENCE_PENDING_CI",
   "not_operational": true,
   "d03_sources_total": 64,
   "exact_source_blob_copies": 64,
@@ -145,5 +145,16 @@
     "local_resource_and_knowledge_not_copied": true,
     "existing_deferred_relation_resolved": true,
     "active_state_not_promoted": true
+  },
+  "consolidated_gate_evidence": {
+    "proof_script": "novydres/scripts/verificar-gate-d03.mjs",
+    "test_script": "novydres/scripts/testar-gate-d03.test.mjs",
+    "coverage": "64_OF_64_D03_SOURCES",
+    "semantic_equivalence_class": "SOURCE_LITERAL_EXACT_PLUS_OWNED_LOCATED_PROJECTIONS_NOT_FACT_PROMOTION",
+    "active_dangling_subject_references": 0,
+    "literal_publication_links_without_d03_subject_targets": 64,
+    "source_only_links_nonoperational": true,
+    "editorial_status": "UNRESOLVED_PRESERVED_NO_SELECTION",
+    "all_future_runtime_checks_required": true
   }
 }
