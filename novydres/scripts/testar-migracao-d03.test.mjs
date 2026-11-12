@@ -22,3 +22,8 @@ test('D03 rejects destination digest substitution',()=>{
  const x=read(dir+'/registro.json');x.source_records[0].source_blob_sha='0'.repeat(40);
  assert.throws(()=>verifyD03(process.cwd(),{ledgerOverrides:{[id]:x}}),{code:'D03_AUTHORITY_OR_SHA_MISMATCH'});
 });
+test('D03 global identities never assert local NPC knowledge or choose historical variants',()=>{
+ const x=verifyD03();assert.equal(x.ok,true);const r=read('novydres/personagens/npc-madame-zoya/perfil.json');
+ assert.equal(r.epistemic_status,'UNKNOWN');assert.equal(r.editorial_selection,'NO_VARIANT_SELECTED');
+ assert.equal(r.local_knowledge_transferred,false);assert.ok(r.variants.length>=3);
+});

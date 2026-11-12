@@ -54,6 +54,20 @@ export function verifyD03(root=process.cwd(),opts={}){
    records.push({id,path:row.target_path,blob_sha:git});
   }
  }
+ for(const id of ['npc-iskander-yasupov','npc-madame-zoya']){
+  const s=cat.subjects.find(x=>x.id===id);
+  const p=read(root,s.path+'/perfil.json');
+  if(p.subject_id!==id||p.scope!=='GLOBAL_IDENTITY_ONLY'||p.epistemic_status!=='UNKNOWN'||
+    p.operational_authority!=='NONE_GRANTED_BY_MIGRATION'||p.editorial_selection!=='NO_VARIANT_SELECTED'||
+    p.local_knowledge_transferred!==false||p.local_relations_transferred!==false)
+    fail('D03_GLOBAL_LOCAL_IDENTITY_PROMOTION');
+  if(!Array.isArray(p.variants)||!p.variants.length)fail('D03_GLOBAL_VARIANTS_MISSING');
+  for(const v of p.variants){
+    const original=byPath.get(v.source_path);
+    if(!original||original.source_blob_sha!==v.sha||!p.source_refs.some(x=>x.id===v.source_path&&x.sha===v.sha))
+      fail('D03_GLOBAL_VARIANT_PROVENANCE');
+  }
+ }
  if(seen.size!==64)fail('D03_INCOMPLETE_COVERAGE');
  return {ok:true,phase:'D03',originals:expected.length,identical_blobs:records.length,
    subject_portfolios:ids.length,gate:'STRUCTURAL_CUSTODY_ONLY_SEMANTIC_EQUIVALENCE_PENDING'};
