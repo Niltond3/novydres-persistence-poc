@@ -4034,7 +4034,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "TEXT",
+          "utf16_code_units": 63962,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001+personagens",
+        "proposed_target_root": "novydres/cronicas/CHR-001/estado|novydres/personagens",
+        "transformation_proposal": "SPLIT_LOCAL_GLOBAL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
@@ -4728,7 +4747,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "TEXT",
+          "utf16_code_units": 2468,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/episodios",
+        "transformation_proposal": "PRESERVE_LITERAL_HISTORICAL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/episodes/shards/M2.03_SHARD_INDEX_V1.json",
@@ -4985,7 +5023,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 2873,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 3,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "RETAIN_EDITORIAL_FEEDBACK_AS_SOURCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md",
@@ -5002,7 +5059,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 3986,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 5,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "PRESERVE_HISTORICAL_HANDOFF",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/historical/HISTORY_SHARD_INDEX_V1.json",
@@ -5949,7 +6025,67 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 45433,
+          "top_level_keys": [
+            "schema",
+            "chronicle_id",
+            "simulation_only",
+            "activation_status",
+            "index_coverage",
+            "entrypoints",
+            "entities",
+            "arcs",
+            "history_batches",
+            "version_history",
+            "locations",
+            "unindexed_historic_entities_and_promises",
+            "last_event_id",
+            "retrieval_policy",
+            "technical_ledger_status",
+            "poc_data_imported",
+            "historical_auxiliary_indexes",
+            "mechanical_projection_ref",
+            "historical_unindexed_relationships",
+            "m2_source_marker_index",
+            "knowledge_index_ref",
+            "open_threads_ref",
+            "knowledge_index_status",
+            "mechanical_roll_convention_ref",
+            "verbatim_shard_catalog_ref",
+            "history_retrieval_status",
+            "migration_recovery_handoff_ref",
+            "shard_retrieval_recommended_for_historical_lookup",
+            "operational_activation",
+            "current_event",
+            "versioning",
+            "character_target",
+            "previous_version",
+            "xp_budget_projection_ref",
+            "index_change",
+            "session_administration",
+            "marco_status",
+            "next_dramaturgo_required_for"
+          ],
+          "declared_source_metadata": {
+            "schema": "NOVYDRES_HISTORY_INDEX_V1_1_REAL_ACTIVE_V3"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "RECONCILE_HISTORICAL_INDEX",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/HISTORY_INDEX.json",
@@ -6191,7 +6327,39 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 59619,
+          "top_level_keys": [
+            "schema",
+            "status",
+            "source_boundary",
+            "epistemic_contract",
+            "last_event_id",
+            "records",
+            "notes",
+            "previous_version",
+            "epistemic_categories"
+          ],
+          "declared_source_metadata": {
+            "status": "ACTIVE_OPERATIONAL_PARTIAL",
+            "schema": "CHR001_KNOWLEDGE_AUDIT_V1"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/elenco",
+        "transformation_proposal": "PRESERVE_KNOWLEDGE_SCOPES",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V3.json",
@@ -6553,7 +6721,38 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 34297,
+          "top_level_keys": [
+            "schema",
+            "status",
+            "reference_checkpoint",
+            "threads",
+            "note",
+            "last_event_id",
+            "previous_version",
+            "notes"
+          ],
+          "declared_source_metadata": {
+            "status": "ACTIVE_OPERATIONAL_PARTIAL",
+            "schema": "CHR001_OPEN_THREADS_V1"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/fios",
+        "transformation_proposal": "PRESERVE_OPEN_THREADS_AND_EPISTEME",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V3.json",
@@ -7230,7 +7429,74 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 20386,
+          "top_level_keys": [
+            "schema",
+            "chronicle_id",
+            "simulation_only",
+            "activation_status",
+            "operational_source",
+            "projection_created_at",
+            "last_confirmed_event_id",
+            "stage",
+            "character",
+            "scene",
+            "recent_event_ids",
+            "event_buffer",
+            "event_buffer_status",
+            "roll_pending",
+            "last_roll_transcript",
+            "history_index_ref",
+            "persistence",
+            "rotation",
+            "operational_activation",
+            "versioning",
+            "pending_persistence_policy",
+            "narrator_adjudication_policy",
+            "metadata_decision_id",
+            "previous_version",
+            "provisional_roll_policy_ref",
+            "governance_scoped_exception",
+            "knowledge_current_ref",
+            "open_threads_current_ref",
+            "xp_policy_active_ref",
+            "governance_current_ref",
+            "state_reprojection",
+            "session_administration",
+            "admin_last_transition_ref",
+            "admin_transition_kind",
+            "g28_scene_end_checkpoint",
+            "xp_act_resolutions",
+            "last_take_half_resolution",
+            "npc_disposition_current_ref",
+            "xp_envelope_current_ref",
+            "xp_purchase_ledger_ref",
+            "xp_historical_m203_complement_ref",
+            "local_cultural_naming_lens_ref",
+            "marco_closure_ref",
+            "marco_closure_admin_id",
+            "stage_reprojection"
+          ],
+          "declared_source_metadata": {
+            "schema": "NOVYDRES_CONTEXTUAL_PROGRESSIVE_MEMORY_V1_1"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/estado",
+        "transformation_proposal": "RECONCILE_AUTHORITATIVE_CURSOR",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/LIVE.json",
@@ -8402,7 +8668,53 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 16486,
+          "top_level_keys": [
+            "schema_id",
+            "cycle_id",
+            "sequence",
+            "chronicle_id",
+            "provocation_id",
+            "manifest_path",
+            "manifest_ref",
+            "source_head_sha",
+            "previous_cycle",
+            "transition",
+            "status",
+            "next_role",
+            "checkpoint",
+            "refs",
+            "architecture",
+            "plan",
+            "review",
+            "blocking",
+            "guards",
+            "activation",
+            "operational_gates",
+            "pending_player_decision",
+            "scene_commit"
+          ],
+          "declared_source_metadata": {
+            "status": "READY_FOR_DRAMATURGO",
+            "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V18"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/orquestracao",
+        "transformation_proposal": "PRESERVE_PINNED_PREDECESSOR_HISTORY",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
@@ -9259,7 +9571,50 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 11657,
+          "top_level_keys": [
+            "schema_id",
+            "chronicle_id",
+            "episode_id",
+            "preparation_id",
+            "dossier_version",
+            "classification",
+            "status",
+            "source_checkpoint",
+            "authority_refs",
+            "selection_method",
+            "player_decisions_preserved",
+            "c02_causal_entry",
+            "temporal_decision",
+            "act_contracts",
+            "mechanics",
+            "guards",
+            "predecessor_ref",
+            "correction_note",
+            "operational_gates"
+          ],
+          "declared_source_metadata": {
+            "classification": "GM_HIDDEN",
+            "status": "SCENE_CAUSAL_ENTRY_READY_NO_EVENT",
+            "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V12"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/preparations/M3.02_ELIGIBILITY_AUDIT_V1_PLAYER_SAFE.json",
@@ -9276,7 +9631,48 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 4498,
+          "top_level_keys": [
+            "document_id",
+            "classification",
+            "status",
+            "chronicle_id",
+            "proposed_provocation",
+            "selection_method",
+            "lottery_claimed",
+            "authority",
+            "base_master_sha",
+            "source_refs",
+            "closure_reconciliation",
+            "eligibility",
+            "carried_state",
+            "blockers_to_scene",
+            "recommendation",
+            "scene_started",
+            "narrator_permission",
+            "canon_changed"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "status": "AUTHORIAL_ELIGIBLE_ADMIN_GATE_UNVALIDATED"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/preparations/M3.02_ENTRY_REVIEW_V1_PLAYER_SAFE.json",
@@ -9308,7 +9704,47 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 2203,
+          "top_level_keys": [
+            "document_id",
+            "classification",
+            "status",
+            "predecessor_ref",
+            "source_cycle",
+            "source_last_event_id",
+            "diagnosis",
+            "decision",
+            "selection",
+            "constraints",
+            "prior_decision",
+            "scene_started",
+            "elapsed_time_recorded",
+            "realized_incident",
+            "mechanics",
+            "next_role_after_validation",
+            "spoilers"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "status": "PROSPECTIVE_DRAMATIC_SCENE_FRAME_SELECTED"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/preparations/M3.02_LONGITUDINAL_SIDECAR_V1.json",
@@ -9400,7 +9836,48 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 9339,
+          "top_level_keys": [
+            "schema_id",
+            "chronicle_id",
+            "episode_id",
+            "preparation_id",
+            "classification",
+            "status",
+            "source_checkpoint",
+            "dossier_ref",
+            "scene_queue",
+            "causal_relays",
+            "temporal_policy",
+            "protected_state",
+            "operational_gates",
+            "immersion",
+            "predecessor_ref",
+            "act_state",
+            "correction_note"
+          ],
+          "declared_source_metadata": {
+            "classification": "GM_HIDDEN",
+            "status": "READY_ONLY_AFTER_C45_PROMOTION",
+            "schema_id": "NOVYDRES_PROVOCATION_LONGITUDINAL_SIDECAR_V12"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_HANDOFF_V2_PLAYER_SAFE.md",
@@ -9432,7 +9909,53 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 3777,
+          "top_level_keys": [
+            "document_id",
+            "status",
+            "classification",
+            "source_cycle",
+            "preparation",
+            "source_last_event_id",
+            "governance",
+            "current_scene_editorial_choice",
+            "current_interval",
+            "duration",
+            "prior_important_choice_erased",
+            "temporal_mode",
+            "world_threads",
+            "prelude",
+            "opening_contract",
+            "no_automatic_ellipse_next_scene",
+            "no_played_event",
+            "no_precommitted_time_delta",
+            "no_rolls",
+            "no_player_choice_assumed",
+            "no_resources_changed",
+            "no_npc_knowledge_changed",
+            "scene_started"
+          ],
+          "declared_source_metadata": {
+            "classification": "GM_HIDDEN",
+            "status": "AUTHORIAL_PROSPECTIVE_NOT_PLAYED"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "GM_HIDDEN"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/preparations/M3.02_TEMPORAL_TRANSITION_V1_PLAYER_SAFE.json",
@@ -9464,7 +9987,48 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 14209,
+          "top_level_keys": [
+            "schema_id",
+            "status",
+            "classification",
+            "chronicle_id",
+            "target_scene",
+            "mode",
+            "source_checkpoint",
+            "source_refs",
+            "interval",
+            "thread_dispositions",
+            "salient_bridges",
+            "contexts",
+            "prelude",
+            "scene_affordances",
+            "opening",
+            "no_story_delta",
+            "chat_opening_status"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "status": "READY",
+            "schema_id": "NOVYDRES_TEMPORAL_TRANSITION_V1"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_PROSPECTIVE_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/RECOVERY.md",
@@ -9496,7 +10060,38 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 7299,
+          "top_level_keys": [
+            "document_id",
+            "classification",
+            "source_cycle",
+            "selected_admission",
+            "decision",
+            "cause",
+            "temporal",
+            "guards",
+            "predecessor_ref"
+          ],
+          "declared_source_metadata": {
+            "classification": "GM_HIDDEN"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "GM_HIDDEN"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "RETAIN_REVIEW_PROVENANCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/reviews/M3.02_POST_C01_DRAMATURGO_REVIEW_V1_GM_HIDDEN.json",
@@ -9573,7 +10168,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 765,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "RETAIN_REVIEW_PROVENANCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/chronicles/CHR-001/sources/campaign_charter.source.txt",
@@ -10897,7 +11511,87 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 84025,
+          "top_level_keys": [
+            "schema_version",
+            "project",
+            "branch",
+            "policy",
+            "status",
+            "operational_cutover",
+            "primary_operational_source",
+            "poc_isolation",
+            "sources_registered",
+            "source_document_copies",
+            "inventory",
+            "progress",
+            "chronicle",
+            "generated_on",
+            "notes",
+            "inventory_coverage",
+            "copy_integrity",
+            "native_binary_copies",
+            "operational_source",
+            "candidate_memory_refs",
+            "migration_phase",
+            "character_latest_known_checkpoint",
+            "character_memory_status",
+            "raw_original_files_copied",
+            "raw_archives_copied",
+            "library_visuals_missing",
+            "folders_scanned",
+            "world_authority_matrix_ref",
+            "visual_asset_registry_ref",
+            "fresh_chat_test_ref",
+            "fresh_chat_test_status",
+            "knowledge_refs",
+            "verbatim_history_shard_catalog_ref",
+            "text_source_records_verified",
+            "verified_library_text_alias_records",
+            "zoya_variant_audit_ref",
+            "current_recovery_handoff_ref",
+            "current_fresh_chat_test_ref",
+            "media_storage_policy",
+            "drive_visuals_copied",
+            "media_registry",
+            "media_audit",
+            "recovery_handoff",
+            "supersedes",
+            "drive_role",
+            "cutover_decision",
+            "cutover_scope",
+            "fresh_chat_rubric",
+            "full_migration_complete",
+            "runtime",
+            "rules_activation",
+            "previous_manifest_sha",
+            "local_canon_override",
+            "administrative_transition",
+            "prepared_dossiers",
+            "preparation_publication_parent_commit",
+            "prospective_revision_parent_commit",
+            "candidate_only"
+          ],
+          "declared_source_metadata": {
+            "status": "GITHUB_ACTIVE_PRIMARY_FULL_MIGRATION_PENDING"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa+cronicas/CHR-001",
+        "proposed_target_root": "novydres/sistema/narrativa|novydres/cronicas/CHR-001",
+        "transformation_proposal": "SPLIT_BOOTSTRAP_AND_CYCLE_PROVENANCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/MANIFEST_V7.json",
@@ -12645,7 +13339,43 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 3688,
+          "top_level_keys": [
+            "id",
+            "classification",
+            "type",
+            "registered_on",
+            "scope",
+            "authority",
+            "predecessor",
+            "directive",
+            "duties",
+            "player_authority",
+            "strict_rules",
+            "entry_state",
+            "approval"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "scope": "CHR-001 guided creation and subsequent narrations; prospective only"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "PRESERVE_CHRONICLE_DECISIONS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_SIGNIFICANT_SCENE_SPOTLIGHT_V001_PLAYER_SAFE.json",
@@ -12662,7 +13392,40 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 2044,
+          "top_level_keys": [
+            "document_id",
+            "classification",
+            "date",
+            "source",
+            "scope",
+            "decision",
+            "interpretation",
+            "authority_boundary",
+            "previous_operational_pause",
+            "new_goal"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "scope": "CHR-001_GUIDED_CHARACTER_CREATION_PROSPECTIVE_OPERATIONAL_CORRECTION"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "PRESERVE_CHRONICLE_DECISIONS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
@@ -12679,7 +13442,43 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 1610,
+          "top_level_keys": [
+            "document_id",
+            "version",
+            "classification",
+            "decision",
+            "scope",
+            "checkpoint_event_id",
+            "authorization_basis",
+            "authorized_actions",
+            "explicit_boundaries",
+            "source_cycle_ref",
+            "source_manifest_ref",
+            "preserved_threads_ref",
+            "recording_status"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "scope": "M3.01_EPISODE_ONLY"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "PRESERVE_CHRONICLE_DECISIONS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M302_ADMIN_OPEN_V001_PLAYER_SAFE.json",
@@ -12696,7 +13495,38 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 1133,
+          "top_level_keys": [
+            "document_id",
+            "classification",
+            "chronicle_id",
+            "date",
+            "authorization",
+            "source_checkpoint",
+            "allowed",
+            "not_allowed",
+            "guard"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/registros",
+        "transformation_proposal": "PRESERVE_CHRONICLE_DECISIONS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V006.json",
@@ -12972,7 +13802,64 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 46223,
+          "top_level_keys": [
+            "program_id",
+            "phase",
+            "version",
+            "document_id",
+            "status",
+            "authority",
+            "spoiler_class",
+            "checkpoint",
+            "horizon",
+            "architecture",
+            "chronicle",
+            "milestones",
+            "story_units",
+            "transverse_threads",
+            "causality_policy",
+            "finite_progression",
+            "knowledge_policy",
+            "source_refs",
+            "authorial_decisions",
+            "readiness",
+            "prohibitions",
+            "architecture_notes",
+            "predecessor_ref",
+            "decision_ref",
+            "progression_routes",
+            "admission_story_crosswalk",
+            "operative_contract_pins",
+            "review_context",
+            "episode_thread_boundary_policy",
+            "authorial_architecture",
+            "play_preparation",
+            "closure_provenance",
+            "prospective_temporal_framing"
+          ],
+          "declared_source_metadata": {
+            "status": "M302_DRAMATIC_FRAME_SUCCESSOR_PREPARED_NO_PLAYED_EVENT",
+            "spoiler_class": "GM_HIDDEN",
+            "phase": "D06"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/biblia",
+        "transformation_proposal": "PRESERVE_BIBLE_AS_SOURCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V007.json",
@@ -13201,7 +14088,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 60539,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 33,
+          "classification_in_filename": "GM_HIDDEN"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/tramas",
+        "transformation_proposal": "PRESERVE_GM_TRUTH_AND_ACCESS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
@@ -13293,7 +14199,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 54707,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 33,
+          "classification_in_filename": "GM_HIDDEN"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/preparacao",
+        "transformation_proposal": "PRESERVE_GM_PREPARATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
@@ -13355,7 +14280,50 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 5700,
+          "top_level_keys": [
+            "program_id",
+            "phase",
+            "version",
+            "document_id",
+            "status",
+            "authority",
+            "spoiler_class",
+            "decision_refs",
+            "checkpoint",
+            "target_route",
+            "progression_contract",
+            "episode_closure",
+            "authorial_target_closure",
+            "operational_gate",
+            "persistent_state_refs",
+            "predecessor_ref",
+            "episode_closure_gate_ref",
+            "review_context",
+            "preparation_scope"
+          ],
+          "declared_source_metadata": {
+            "status": "M302_DRAMATIC_FRAME_GRANT_CANDIDATE_PENDING_CI",
+            "spoiler_class": "PLAYER_SAFE",
+            "phase": "D09"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/estado",
+        "transformation_proposal": "RECONCILE_GUIDED_CREATION",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V016.json",
@@ -13402,7 +14370,43 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 8941,
+          "top_level_keys": [
+            "document_id",
+            "version",
+            "status",
+            "authority",
+            "spoiler_class",
+            "source_refs",
+            "roles",
+            "knowledge_ledgers",
+            "global_rules",
+            "emergency_flow",
+            "validation_behavior",
+            "predecessor_ref",
+            "version_pins"
+          ],
+          "declared_source_metadata": {
+            "status": "CURRENT_ROLE_CONTRACT_BOUND_TO_V10_V12_ADMIN_ONLY",
+            "spoiler_class": "PLAYER_SAFE_INDEX"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "MIGRATE_NARRATIVE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V021.json",
@@ -13449,7 +14453,48 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 5966,
+          "top_level_keys": [
+            "$schema",
+            "$id",
+            "document_id",
+            "version",
+            "status",
+            "authority",
+            "spoiler_class",
+            "parent_registry_ref",
+            "runner",
+            "test_report",
+            "catalog",
+            "source_refs",
+            "version_gates",
+            "required_story_contract",
+            "source_topology",
+            "readiness_boundaries",
+            "pending_gate_dependencies",
+            "historical_missing_reference_policy"
+          ],
+          "declared_source_metadata": {
+            "status": "CURRENT_M302_ADMIN_OPENING_SOURCE_REGISTRY_CI_REQUIRED",
+            "spoiler_class": "PLAYER_SAFE"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "MIGRATE_NARRATIVE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V023.json",
@@ -13481,7 +14526,40 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 4745,
+          "top_level_keys": [
+            "document_id",
+            "validator",
+            "version",
+            "status",
+            "checks_passed",
+            "checks_total",
+            "failed_check_ids",
+            "checks",
+            "inputs",
+            "operational_state",
+            "result_detail_disclosed"
+          ],
+          "declared_source_metadata": {
+            "status": "PASS"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "PRESERVE_RELEASE_AND_TEST_EVIDENCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V023.py",
@@ -13513,7 +14591,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "PYTHON",
+          "utf16_code_units": 6334,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
@@ -13720,7 +14817,46 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 4654,
+          "top_level_keys": [
+            "document_id",
+            "version",
+            "classification",
+            "status",
+            "authority",
+            "base_head",
+            "source_cycle",
+            "source_manifest",
+            "last_event",
+            "pinned_acyclic_inputs",
+            "planned_outputs",
+            "guards",
+            "mandatory_tests",
+            "approval",
+            "publication_status",
+            "previous_ref"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "status": "M302_CONDITIONAL_ADMIN_OPENING_NO_SCENE"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "PLAYER_SAFE"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "PRESERVE_RELEASE_AND_TEST_EVIDENCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V008.json",
@@ -13782,7 +14918,50 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 2409,
+          "top_level_keys": [
+            "document_id",
+            "version",
+            "classification",
+            "status",
+            "scope",
+            "source_cycle",
+            "source_manifest",
+            "player_decision",
+            "inventory",
+            "role_adapter",
+            "schema_registry",
+            "eligibility",
+            "preparation",
+            "validation",
+            "authorized_publication",
+            "scene_ready",
+            "narrator_permission",
+            "route_status",
+            "predecessor_ref"
+          ],
+          "declared_source_metadata": {
+            "classification": "PLAYER_SAFE",
+            "status": "M302_ADMIN_OPEN_CANDIDATE_PENDING_CI",
+            "scope": "New M3.02 unit administratively prepared, separate from closed M3.01; no scene or event."
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "PRESERVE_RELEASE_AND_TEST_EVIDENCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008_RESULT.json",
@@ -13859,7 +15038,41 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 2677,
+          "top_level_keys": [
+            "document_id",
+            "validator",
+            "version",
+            "status",
+            "checks_passed",
+            "checks_total",
+            "failed_check_ids",
+            "checks",
+            "artifact_blobs",
+            "operational_state",
+            "D11",
+            "result_detail_disclosed"
+          ],
+          "declared_source_metadata": {
+            "status": "PASS"
+          },
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "cronicas/CHR-001",
+        "proposed_target_root": "novydres/cronicas/CHR-001/auditorias",
+        "transformation_proposal": "PRESERVE_RELEASE_AND_TEST_EVIDENCE",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V019.py",
@@ -13876,7 +15089,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "PYTHON",
+          "utf16_code_units": 5038,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/narrative-architecture/program/deliverables/DRAMATURGO_CONTINUITY_PROMPT_V003.md",
@@ -14253,7 +15485,32 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 4505,
+          "top_level_keys": [
+            "$schema",
+            "$id",
+            "type",
+            "required",
+            "properties"
+          ],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V3.json",
@@ -14360,7 +15617,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 1525,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V1.md",
@@ -14437,7 +15713,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 827,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/HANDOFF_NARRADOR_TO_DRAMATURGO_V1.md",
@@ -14544,7 +15839,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 1366,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
@@ -14711,7 +16025,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 1138,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V2.md",
@@ -14983,7 +16316,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "PYTHON",
+          "utf16_code_units": 1875,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V9.py",
@@ -15210,7 +16562,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JAVASCRIPT",
+          "utf16_code_units": 2353,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V3.mjs",
@@ -15497,7 +16868,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JAVASCRIPT",
+          "utf16_code_units": 8419,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs",
@@ -15694,7 +17084,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 504,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_GENERAL_AND_CHRONICLE_CONTRACT",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/orchestration/START_HERE_V6.md",
@@ -16116,7 +17525,31 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 2779,
+          "top_level_keys": [
+            "$schema",
+            "type",
+            "required",
+            "properties"
+          ],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "MIGRATE_PROVOCATION_SCHEMA",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V2.json",
@@ -16253,7 +17686,31 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 1882,
+          "top_level_keys": [
+            "$schema",
+            "type",
+            "required",
+            "properties"
+          ],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "MIGRATE_PROVOCATION_SCHEMA",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V5.json",
@@ -16405,7 +17862,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 4013,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 4,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_SCENE_PROTOCOL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/GOVERNANCE_AUDIT_V1.md",
@@ -16454,7 +17930,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 2848,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 3,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_SCENE_PROTOCOL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/NPC_KNOWLEDGE_GATE_V1.md",
@@ -16531,7 +18026,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 1041,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 1,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_SCENE_PROTOCOL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/REGRESSION_REPORT_V1.json",
@@ -16713,7 +18227,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "MARKDOWN",
+          "utf16_code_units": 4465,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 3,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_SCENE_PROTOCOL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V1.py",
@@ -16745,7 +18278,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "PYTHON",
+          "utf16_code_units": 909,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_V1.json",
@@ -16762,7 +18314,35 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JSON",
+          "utf16_code_units": 8816,
+          "top_level_keys": [
+            "$schema",
+            "$id",
+            "title",
+            "type",
+            "additionalProperties",
+            "required",
+            "$defs",
+            "properties"
+          ],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "sistema/narrativa",
+        "proposed_target_root": "novydres/sistema/narrativa",
+        "transformation_proposal": "RECONCILE_SCENE_PROTOCOL",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V1.mjs",
@@ -16794,7 +18374,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JAVASCRIPT",
+          "utf16_code_units": 4003,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_VALIDATOR_V1.mjs",
@@ -16811,7 +18410,26 @@
       "candidate_relation": "NO_SAME_PATH_IN_CANDIDATE",
       "conflict_refs": [],
       "pinned_by_operational_cycle": "PINNED_C45_SOURCE",
-      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE"
+      "current_cycle_candidate_reconciliation": "SOURCE_NOT_IN_CANDIDATE",
+      "c45_content_reconciliation": {
+        "inspection_status": "STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL",
+        "source_content_structure": {
+          "format": "JAVASCRIPT",
+          "utf16_code_units": 5665,
+          "top_level_keys": [],
+          "declared_source_metadata": {},
+          "heading_count": 0,
+          "classification_in_filename": "UNDECLARED"
+        },
+        "proposed_owner": "scripts",
+        "proposed_target_root": "novydres/scripts",
+        "transformation_proposal": "MIGRATE_VALIDATOR_WITH_SEPARATE_TESTS",
+        "derived_authority": "UNVERIFIED_SOURCE_DECLARATION",
+        "editorial_review": "PENDING",
+        "epistemic_and_visibility_review": "PENDING",
+        "target_materialized_in_candidate": false,
+        "content_equivalence_to_target": "NOT_PROVEN"
+      }
     },
     {
       "source_path": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
@@ -18777,7 +20395,8 @@
     "SOURCE_EXTERNAL_BYTES_AND_RIGHTS",
     "MASTER_VS_CANDIDATE_REFERENCE_RECONCILIATION",
     "KNOWN_CONFLICT_VERDICTS_WHERE_REQUIRED",
-    "DEPENDENCY_AND_IMPORT_MAP_REVIEW"
+    "DEPENDENCY_AND_IMPORT_MAP_REVIEW",
+    "C45_SOURCE_CONTENT_FIELD_EQUIVALENCE_PENDING_53"
   ],
   "denominators": {
     "master_blobs": 1029,
@@ -18794,6 +20413,8 @@
     "cycle_unique_pinned_paths": 73,
     "cycle_pinned_paths_missing_in_candidate": 53,
     "cycle_pinned_paths_same_blob": 20,
-    "cycle_pinned_paths_changed": 0
+    "cycle_pinned_paths_changed": 0,
+    "c45_missing_pin_content_inspections": 53,
+    "c45_missing_pin_routing_proposals": 53
   }
 }

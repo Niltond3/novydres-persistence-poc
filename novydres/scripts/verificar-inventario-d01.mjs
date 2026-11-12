@@ -29,7 +29,23 @@ export function collectPins(obj,into=[]) {
  for(const value of Object.values(obj))if(value&&typeof value==='object')collectPins(value,into);
  return into;
 }
-export function verifyD01(index,{masterTree,candidateTree,external,media,cycle}){
+export function describePinnedContent(path,content) {
+ need(typeof content==='string','D01_C45_CONTENT_NOT_READ');
+ const ext=path.split('.').at(-1).toLowerCase();
+ const format=({json:'JSON',md:'MARKDOWN',txt:'TEXT',py:'PYTHON',mjs:'JAVASCRIPT'})[ext]||'UNKNOWN';
+ let top_level_keys=[],declared_source_metadata={},heading_count=0;
+ if(format==='JSON'){
+  const value=JSON.parse(content);
+  need(value&&typeof value==='object'&&!Array.isArray(value),'D01_C45_INVALID_SOURCE_JSON');
+  top_level_keys=Object.keys(value);
+  for(const field of ['classification','visibility','status','schema','schema_id','spoiler_class','scope','phase'])
+   if(typeof value[field]==='string'&&value[field].length<=180)
+    declared_source_metadata[field]=value[field];
+ }else if(format==='MARKDOWN')heading_count=(content.match(/^#{1,6} /gm)||[]).length;
+ return {format,utf16_code_units:content.length,top_level_keys,declared_source_metadata,
+  heading_count,classification_in_filename:/(?:GM_HIDDEN|PLAYER_SAFE|SYSTEM_AUDIT)/.exec(path)?.[0]||'UNDECLARED'};
+}
+export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
   index.status==='D01_SOURCE_INDEX_COMPLETE_EDITORIAL_MAPPING_PENDING'&&
@@ -131,11 +147,51 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle})
    !Object.hasOwn(row,'current_cycle_candidate_reconciliation'),'D01_FALSE_CURRENT_PIN');
  }
  need(pinRows.size===cyclePinKeys.size,'D01_CURRENT_PIN_INCOMPLETE');
+ const pinnedMissing=index.source_files.filter(row=>row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE');
+ need(sourceContents instanceof Map,'D01_C45_CONTENT_COLLECTION_MISSING');
+ let structurallyInspected=0;
+ const targetPattern=/^novydres\/(?:cronicas\/CHR-001(?:\/.*)?|sistema\/narrativa(?:\/.*)?|personagens(?:\/.*)?|scripts(?:\/.*)?)$/;
+ for(const row of index.source_files){
+  const info=row.c45_content_reconciliation;
+  if(row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE'){
+   need(info?.inspection_status==='STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL',
+    'D01_C45_INSPECTION_MISSING');
+   need(info.derived_authority==='UNVERIFIED_SOURCE_DECLARATION'&&
+    info.editorial_review==='PENDING'&&info.epistemic_and_visibility_review==='PENDING'&&
+    info.target_materialized_in_candidate===false&&
+    info.content_equivalence_to_target==='NOT_PROVEN','D01_C45_FALSE_APPROVAL');
+   need(typeof info.proposed_owner==='string'&&info.proposed_owner.length>0&&
+    typeof info.transformation_proposal==='string'&&info.transformation_proposal.length>0,
+    'D01_C45_ROUTING_INCOMPLETE');
+   need(typeof info.proposed_target_root==='string'&&
+    info.proposed_target_root.split('|').every(x=>targetPattern.test(x)),
+    'D01_C45_LEGACY_OR_UNSAFE_DESTINATION');
+   if(row.source_path.includes('/knowledge/OPEN_THREADS_'))
+    need(info.proposed_target_root==='novydres/cronicas/CHR-001/fios',
+     'D01_C45_THREADS_OWNER_DRIFT');
+   if(row.source_path.includes('/knowledge/NPC_KNOWLEDGE_'))
+    need(info.proposed_target_root==='novydres/cronicas/CHR-001/elenco',
+     'D01_C45_KNOWLEDGE_OWNER_DRIFT');
+   if(row.source_path.includes('/D07_STORY_TRUTH_PACKAGE_'))
+    need(info.proposed_target_root==='novydres/cronicas/CHR-001/tramas',
+     'D01_C45_GM_TRUTH_OWNER_DRIFT');
+   const original=sourceContents.get(row.source_path);
+   need(typeof original==='string','D01_C45_CONTENT_NOT_READ');
+   need(equal(info.source_content_structure,describePinnedContent(row.source_path,original)),
+    'D01_C45_CONTENT_METADATA_DRIFT');
+   structurallyInspected++;
+  }else need(info===undefined,'D01_C45_NONMISSING_SPOOFED_INSPECTION');
+ }
+ need(sourceContents.size===pinnedMissing.length&&structurallyInspected===pinnedMissing.length,
+  'D01_C45_INSPECTION_COVERAGE_DRIFT');
  const summary=index.denominators;
  need(summary?.cycle_unique_pinned_paths===pinRows.size&&
   summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
   summary.cycle_pinned_paths_same_blob===pinRelations.same&&
   summary.cycle_pinned_paths_changed===pinRelations.different,'D01_PIN_SUMMARY_MISMATCH');
+ need(summary?.c45_missing_pin_content_inspections===structurallyInspected&&
+  summary.c45_missing_pin_routing_proposals===structurallyInspected,
+  'D01_C45_INSPECTION_DENOMINATOR_DRIFT');
  need(summary?.master_blobs===masterTree.length&&summary.candidate_blobs===candidateTree.length&&
   summary.same_path_equal_blob===counts.same&&summary.same_path_changed_blob===counts.different&&
   summary.master_without_candidate_same_path===counts.missing&&summary.candidate_only===only.length&&
@@ -151,6 +207,7 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle})
   external_items:external.items.length,media_items:media.entries.length,cycle_pins:pins.length,
   cycle_unique_pinned_paths:pinRows.size,cycle_pins_missing_candidate:pinRelations.missing,
   cycle_pins_same_candidate:pinRelations.same,
+  c45_missing_source_content_structurally_inspected:structurallyInspected,
   editorial_approval:'NOT_PROVEN',runtime_activation:false};
 }
 export function readAndVerifyD01(root=process.cwd()){
@@ -161,10 +218,14 @@ export function readAndVerifyD01(root=process.cwd()){
  const masterTree=listPinnedTree(root,index.source_snapshot.commit_sha);
  const candidateTree=listPinnedTree(root,index.candidate_snapshot.commit_sha);
  const read=path=>JSON.parse(git(root,['show',index.source_snapshot.commit_sha+':'+path]));
+ const sourceContents=new Map(index.source_files.filter(row=>
+  row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE').map(row=>[
+   row.source_path,execFileSync('git',['show',index.source_snapshot.commit_sha+':'+row.source_path],
+    {cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']})]));
  return verifyD01(index,{masterTree,candidateTree,
   external:read(index.controlled_external_registry.path),
   media:read(index.visual_registry.path),
-  cycle:read(index.authority_reference.cycle.path)});
+  cycle:read(index.authority_reference.cycle.path),sourceContents});
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))
  console.log(JSON.stringify(readAndVerifyD01()));

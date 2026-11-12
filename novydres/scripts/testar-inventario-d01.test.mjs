@@ -12,7 +12,11 @@ const data={masterTree:listPinnedTree(root,pinned),
  candidateTree:listPinnedTree(root,index.candidate_snapshot.commit_sha),
  external:read(index.controlled_external_registry.path),
  media:read(index.visual_registry.path),
- cycle:read(index.authority_reference.cycle.path)};
+ cycle:read(index.authority_reference.cycle.path),
+ sourceContents:new Map(index.source_files.filter(row=>
+  row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE').map(row=>[
+  row.source_path,execFileSync('git',['show',pinned+':'+row.source_path],
+  {encoding:'utf8',maxBuffer:32*1024*1024})]))};
 const clone=()=>structuredClone(index);
 const reject=(mutate,code)=>{const x=clone();mutate(x);assert.throws(()=>verifyD01(x,data),e=>e.code===code);};
 test('D01 whole-tree fixed baseline, 1029/923 blobs and no editorial PASS',()=>{
@@ -21,6 +25,7 @@ test('D01 whole-tree fixed baseline, 1029/923 blobs and no editorial PASS',()=>{
  assert.equal(r.source_blobs,1029);assert.equal(r.candidate_blobs,923);
  assert.equal(r.external_items,193);assert.equal(r.media_items,19);
  assert.equal(r.cycle_pins,77);assert.equal(r.runtime_activation,false);
+ assert.equal(r.c45_missing_source_content_structurally_inspected,53);
  assert.equal(r.editorial_approval,'NOT_PROVEN');
 });
 test('D01 missing original path fails, not a reduced denominator',()=>{
@@ -66,4 +71,44 @@ test('D01 C45 active pins uniquely reconciled and missing candidate paths cannot
 });
 test('D01 no false success when gate pending list disappears',()=>{
  reject(x=>x.gate_requirements_pending=[],'D01_FALSE_GATE_CLOSURE');
+});
+
+test('D01 all 53 absent operational pins require immutable content evidence',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation)?.source_path;
+ assert.ok(p);
+ reject(x=>delete x.source_files.find(row=>row.source_path===p).c45_content_reconciliation,
+  'D01_C45_INSPECTION_MISSING');
+});
+test('D01 content keys/status cannot drift from the exact master blob',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation?.source_content_structure.format==='JSON')?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.source_content_structure.top_level_keys.push('FAKE_KEY'),
+  'D01_C45_CONTENT_METADATA_DRIFT');
+});
+test('D01 cannot declare editorial equivalence or destination materialized',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation)?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.editorial_review='APPROVED',
+  'D01_C45_FALSE_APPROVAL');
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.target_materialized_in_candidate=true,
+  'D01_C45_FALSE_APPROVAL');
+});
+test('D01 forbids routing a new pinned source back into legacy paths',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation)?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/runtime',
+  'D01_C45_LEGACY_OR_UNSAFE_DESTINATION');
+});
+test('D01 distinguishes open plot threads from NPC knowledge owner',()=>{
+ const p=index.source_files.find(x=>x.source_path.includes('/knowledge/OPEN_THREADS_'))?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/cronicas/CHR-001/elenco',
+  'D01_C45_THREADS_OWNER_DRIFT');
+});
+test('D01 cannot fabricate source readback by deleting content',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation)?.source_path;
+ assert.ok(p);
+ const bad=new Map(data.sourceContents);
+ bad.delete(p);
+ assert.throws(()=>verifyD01(index,{...data,sourceContents:bad}),e=>e.code==='D01_C45_CONTENT_NOT_READ');
 });
