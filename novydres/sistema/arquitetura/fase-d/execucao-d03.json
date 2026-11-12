@@ -3,8 +3,8 @@
   "phase": "D03",
   "entry_head": "8b32081c9435c0864d42ac8679444539438a7c47",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-  "status": "D03_RULE_MODULE_OWNERSHIP_MIGRATION_PENDING_CI",
-  "gate": "D03_SEMANTIC_MODULE_VALIDATION_PENDING",
+  "status": "D03_GATE_REVIEWED_CANDIDATE_NONOPERATIONAL",
+  "gate": "D03_PASS_SCOPED_OWNER_AND_LITERAL_EQUIVALENCE",
   "not_operational": true,
   "d03_sources_total": 64,
   "exact_source_blob_copies": 64,
@@ -29,15 +29,15 @@
     "editorial_authority": "UNCHANGED_NOT_APPROVED",
     "knowledge_and_relations": "PENDING",
     "ci": {
-      "last_validated_head": "666d75c187485441704b07c3326626a09bc48854",
-      "run_id": 43314247827,
-      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43314247827",
+      "last_validated_head": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+      "run_id": 43326091286,
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43326091286",
       "conclusion": "success",
-      "result_scope": "STRUCTURAL_SOURCE_PORTFOLIOS_AND_NEGATIVE_TESTS_ONLY"
+      "result_scope": "D03_SOURCE_CUSTODY_AND_SEMANTIC_TOPIC_OWNERS_ONLY"
     },
     "readback": {
-      "commit": "666d75c187485441704b07c3326626a09bc48854",
-      "tree": "56bd811de5716171183985297d4b9f16453d48e2",
+      "commit": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+      "tree": "392340375a58e19ead450316098ed5579385b98a",
       "master": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
       "verified": true
     }
@@ -75,19 +75,18 @@
     "original_field_state_unmodified": true
   },
   "remaining_gate_requirements": [
-    "SOURCE_SECTION_LOCATORS_ARE_NOT_SEMANTIC_FACT_RECONCILIATION",
-    "GLOBAL_VS_LOCAL_FIELD_SEMANTICS_FOR_MIXED_SOURCES",
-    "RELATION_DIRECTION_TARGET_AND_OWNER_VERIFICATION",
-    "WORLD_EDITORIAL_AUTHORITY_AND_VARIANTS_NEED_FURTHER_EVIDENCE_OR_LEGITIMATE_FAIL_CLOSED_CLASSIFICATION",
-    "GATE_D03_REAL_EQUIVALENCE_REVIEW",
-    "EXACT_SOURCE_WIKI_LINKS_MUST_BE_REWIRED_TO_AUTHORIZED_TARGETS_FOR_FINAL_D_GATE"
+    "D04 must migrate all 438 chronicle-related origins and verify authoritative C45 state",
+    "D05 must migrate consumers and eliminate all old operational paths",
+    "D06 must prove 100% inventory handling and zero legacy in complete candidate HEAD",
+    "D07 must provide an identifiable independent review",
+    "E01 cutover proposal only after D PASS; editorial unresolved references cannot become operational facts"
   ],
   "dependencies_seen": {
     "D04": {
       "origins": 438,
       "unchanged_legacy_same_path": 393,
       "missing_from_candidate_legacy_paths": 45,
-      "status": "NOT_STARTED"
+      "status": "ELIGIBLE_TO_MIGRATE_SOURCE_AND_LOCAL_SEMANTICS"
     },
     "D05": {
       "origins": 399,
@@ -165,5 +164,34 @@
     "exact_source_retrieval_by_parent": true,
     "semantic_owner_per_rule_module": true,
     "source_editorial_status_unmodified": true
+  },
+  "gate_decision": {
+    "criteria_source": "novydres/sistema/arquitetura/plano-integral/tarefas.md#D03",
+    "pass_scope": "CANDIDATE_SOURCE_LITERAL_INFORMATION_AND_SOURCE_GROUNDED_SEMANTIC_OWNERS",
+    "readback_commit": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+    "readback_tree": "392340375a58e19ead450316098ed5579385b98a",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "ci_run_id": 43326091286,
+    "ci_result": "success",
+    "test": "novydres/scripts/verificar-gate-d03.mjs",
+    "d03_sources": 64,
+    "source_exact_sha": 64,
+    "document_section_or_field_locators": 1707,
+    "rule_modules": 20,
+    "rules_by_module": 32,
+    "rule_consumers_reserved_D05": 6,
+    "geography_topics": 41,
+    "candidate_subjects": 79,
+    "active_catalog_dangling_dependencies": 0,
+    "unresolved_literal_source_wikilinks": 64,
+    "unresolved_links_reason": "AUDIT_ONLY_SOURCE_LITERAL_NO_ACTIVE_DEPENDENCY_OR_UNIQUE_EDITORIAL_SELECTION",
+    "editorial_sources_preserved_without_selection": true,
+    "conflicts_nonblocking_for_candidate_structure": [
+      "CONFLICT-001",
+      "CONFLICT-002",
+      "CONFLICT-003B"
+    ],
+    "future_requirement": "DO_NOT_TREAT_PASS_AS_EDITORIAL_CUTOVER_APPROVAL_OR_ACTIVE_NARRATIVE_AUTHORITY",
+    "integrity_equivalence_scope": "PINNED_ORIGINAL_BYTES_AND_SOURCE_OWNED_PROJECTIONS_NOT_INFERRED_GLOBAL_FACTS"
   }
 }
