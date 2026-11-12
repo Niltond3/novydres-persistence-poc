@@ -195,6 +195,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Estado/proxima ação:** implementação preparada, **CI C02 ainda não executada** neste checkpoint. Publicar com expected SHA, reler commit/blobs, inspecionar CI real e registrar resultado na própria C02 antes de permitir C03/C06. Não fazer merge, cutover ou cena.
 
 
+#### C02 — Fechamento verificável (2026-11-12)
+
+- **Estado:** `C02_PASS_SCOPED`, não operacional. A primeira publicação `d1651727ca1600d859c92216d123ddd3fd87e1b0` falhou no Actions `43234885147` por rejeitar um `owner_scope` igual ao próprio diretório; causa corrigida em `1e9eaf25a8f78e0dd94f0d8d59b746cf134a8028`, sem alterar os dados.
+- **Evidência externa de execução:** Actions `43235094545`, job `131240227058`, commit corrigido: `completed/success`. Verificador de catálogo `ok=true`, 5 assuntos, 16 arquivos, `content_index_sha=fa13e82dcdd09afec0bd8bad5004b7caa744a0df`, bytes gerados iguais aos publicados; **15/15** testes V03/V09 e **13/13** testes C01 regressivos. Provas incluem leitura real de blobs por `git show` em commit pinado, correlação do catálogo com dados, cache por snapshot, invalidação por mudança de bytes, rejeição de ID aproximado, collisions, refs/targets indevidos, papéis sem permissão e catálogo de outro SHA.
+- **Readback Web/GitHub:** ref de design e commit exatos confirmados, com `catalogo.json@2d77610ebf825eab42370b0b9cfe8787ab9e822b`, `perfil.json@17a353ccbda595b99fbf909b7ecd9d91b0e723d9` e `conhecimento.json@64af21e9ca4c0ea625af3f7f7b3a93b7a241073e`; os dois últimos SHA coincidem com a lista no catálogo. `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` sem alteração.
+- **DEC-20/21/27 e limites:** reutilizada CI de C01, sem prova duplicada Codex. Catálogo tem somente os cinco subjects da fatia histórica C41, não representa toda a árvore ou o cursor master C45; vínculo externo `pc-bartholomeu-krauser` continua `DEFERRED`. Histórico, cenas, fontes ocultas e ausência universal de erro semântico não foram certificados; nenhuma transação de mesa, runtime ou cutover.
+- **Próxima elegível:** `C03` (transações Git atômicas) e `C06` (auditoria de fontes/legado) após C02, respeitando suas dependências; `C04/C05/C07/C08` aguardam os antecessores.
+
 ### C03 — Implementar gravação atômica e histórico preservado
 
 - **Depende de:** C01/C02 e A03/A05.
