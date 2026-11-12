@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "ff2dd5c15d0f1ac9ce78ee8b63c7b4f235f464cb",
+  "content_index_sha": "a8dac883d433fdf002719cc9f91d0b6b3c3a7ddc",
   "subjects": [
     {
       "id": "chr001-administrative-milestones",
@@ -3377,6 +3377,417 @@
       ]
     },
     {
+      "id": "chr001-runtime-story-architecture",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura",
+      "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/assunto.json",
+          "blob_sha": "65947722166f663a97a70e11aa943dd9b1146b9e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-001.source.txt",
+          "blob_sha": "1327a4b68be89b1d66b04a5340a49d4385cb2d46"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-002.source.txt",
+          "blob_sha": "95170168a3285236c43bd40297055d45f54665ca"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-003.source.txt",
+          "blob_sha": "e794222e70a11149a0fe8ce77cc802ebb604302a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-004.source.txt",
+          "blob_sha": "22cf5c17f0d6224c7bf0c15161d9a7fc8a76104e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-005.source.txt",
+          "blob_sha": "fd910b3f5b1a03db4b241c85bbae136283c1d71e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-006.source.txt",
+          "blob_sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-007.source.txt",
+          "blob_sha": "477cdc6f5ebb206a4660fde2d1e586d7dba14b89"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-008.source.txt",
+          "blob_sha": "9526af065467588c4c8ce5cb0013d199868542a1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-009.source.txt",
+          "blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-010.source.txt",
+          "blob_sha": "fa986a32c56ad2ea02dcb90aa998c6964321e526"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-011.source.txt",
+          "blob_sha": "ea0452110ca968ca89b4aeec6a526d82b63ef016"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-012.source.txt",
+          "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-013.source.txt",
+          "blob_sha": "f3f043704a4bf11c877f978f9d83c108bca3588f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-014.source.txt",
+          "blob_sha": "cd8d23c543514ecac2c8649ad9b7872cf0746370"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-015.source.txt",
+          "blob_sha": "4d042798cc8f6b81c12f36aa31d79babba07c16e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-016.source.txt",
+          "blob_sha": "1b680fd49b807830f4f78b60d014a42541a7dd1c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-017.source.txt",
+          "blob_sha": "06936d4b41989d5f3a8102dc17eaf5006f4f17c2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-018.source.txt",
+          "blob_sha": "fbaaf173ab34934475cf062cf201541ad930790b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-019.source.txt",
+          "blob_sha": "e79d35dab7dcd3e524e5162dab4d5daf8a83b829"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-020.source.txt",
+          "blob_sha": "9be927e445ab28377b197701b0418b9ec5d58c12"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-021.source.txt",
+          "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-022.source.txt",
+          "blob_sha": "6ac61743e3fc861e7f80930d0b549cce54fc9d00"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-023.source.txt",
+          "blob_sha": "da65b3587027cae4e89ebf72655a5b42238c3dd7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-024.source.txt",
+          "blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-025.source.txt",
+          "blob_sha": "75b923b5608bc8a5b44304041b8549a0bf0604ec"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-026.source.txt",
+          "blob_sha": "1ac6b9d8f64872bcf0526c32a926091b178b0c2e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-027.source.txt",
+          "blob_sha": "761f99f1e6d42d2a6a175c83d992c67424b914b8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-028.source.txt",
+          "blob_sha": "6ce4f106a72f0752a668d391d0ff7fbe0b291563"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-029.source.txt",
+          "blob_sha": "269658dc87cf0e2ff9966a9e62d560b78ce75aa9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-030.source.txt",
+          "blob_sha": "ee28dcc81940389382654e70b7e4591ae3bc675d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-031.source.txt",
+          "blob_sha": "ae151a67ae44fb777763986967f58533aa1aaf21"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-032.source.txt",
+          "blob_sha": "b7fa7d8881d989f172c68bc5bb14b8e8547d24c9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-033.source.txt",
+          "blob_sha": "a9ca553f72d48f5bd5e204252151ab54f5764f89"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-034.source.txt",
+          "blob_sha": "faf3b330edcad824bdc3b264dce401277daad7f5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-035.source.txt",
+          "blob_sha": "58887356489a282554f1fed66176b95bdebf3a55"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-036.source.txt",
+          "blob_sha": "cfcfb353ce61279bf5471cc9c472ebde95a95e39"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-037.source.txt",
+          "blob_sha": "f3471f8f9e803273f616fd5030cd1740b2e9cd5d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-038.source.txt",
+          "blob_sha": "ee5b8f9c715d4856b36eb1c5d12f98d09ad74eb2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-039.source.txt",
+          "blob_sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-040.source.txt",
+          "blob_sha": "ec91b2a7fe5142f2fea3e4586aacbde6ed00c3ca"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-041.source.txt",
+          "blob_sha": "e4ad7e885891ab1cd2f70997d4c51afc65ec9435"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-042.source.txt",
+          "blob_sha": "1a2dfcc536cb9146ed5cc5f9875a432be2ff5f27"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-043.source.txt",
+          "blob_sha": "844398c7df3dbbd84ff77a1cb6edb7125aeedb56"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-044.source.txt",
+          "blob_sha": "f138f205b18268614e6542f7d31640924c489b4b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-045.source.txt",
+          "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-046.source.txt",
+          "blob_sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-047.source.txt",
+          "blob_sha": "64768b468aacd35d4528b43e563142cd0588d6fa"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-048.source.txt",
+          "blob_sha": "3c9867f7e7ec08f91ef801c29d8844bde4790155"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-049.source.txt",
+          "blob_sha": "070269800d4e53a82fb23e85b2a79d9c304be9f9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-050.source.txt",
+          "blob_sha": "91189ae85de0fe1dc96d79c3d94bed9f8abd33f5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-051.source.txt",
+          "blob_sha": "d29922e5b58f34d7c424b9a8332645abb8a16dae"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-052.source.txt",
+          "blob_sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-053.source.txt",
+          "blob_sha": "f3c2d40573183e473d328e64cebdd04448d253b7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-054.source.txt",
+          "blob_sha": "367818c676a844922967bd62f35a6c371fdfd98a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-055.source.txt",
+          "blob_sha": "7d9d422551a5abf8dbce73e3b65785078a318b7e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-056.source.txt",
+          "blob_sha": "f86e8882f1458e5ea4cfe946a51a9ba6e9dce006"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-057.source.txt",
+          "blob_sha": "e7e7e553be90e967a31c59fae7e94ba1748aefcd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-058.source.txt",
+          "blob_sha": "54a7b3877dde1a2dcb9e556289cdfd9641b9f876"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-059.source.txt",
+          "blob_sha": "9196daf31ba5994c68b222490a0c325eec3abfdb"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-060.source.txt",
+          "blob_sha": "4bf979a3c5d9aad7d369ea5fc126d324f8394cff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-061.source.txt",
+          "blob_sha": "1ee5f18905902b93fb83db4d702526aeda52b1c9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-062.source.txt",
+          "blob_sha": "38bab1917d1c085791faf5a45c636755b882d6ef"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-063.source.txt",
+          "blob_sha": "77dbc7269ad696f7731eb56748471c0780cfb1cf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-064.source.txt",
+          "blob_sha": "75166f70e9863473a92f56ee75707add701aa6ea"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-065.source.txt",
+          "blob_sha": "3649a989845f27d3c6b76cf4f58ed3816c5bf49f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-066.source.txt",
+          "blob_sha": "2ac55e20af4768c266ce24d4d1162280c1b9b026"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-067.source.txt",
+          "blob_sha": "3a2aaa0a24e4cc215e01ca4c334782fea265ce34"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-068.source.txt",
+          "blob_sha": "87020ddcbb717fd4551a076c442ce21e5b0d2e6d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-069.source.txt",
+          "blob_sha": "981111b81a3627d57df3a14a1bb51571642a88f1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-070.source.txt",
+          "blob_sha": "4682748dcfc07d3a9934fd4ce9b459ded7cba8a2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-071.source.txt",
+          "blob_sha": "350ce9355bb44638ea5dbc23777d1a7e6e25f025"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-072.source.txt",
+          "blob_sha": "8480ed36a6f8e7034fcbecfdbe8f892b5b0fc840"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-073.source.txt",
+          "blob_sha": "c4934e97101134ee012c08133c9bf0ea63be76ea"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-074.source.txt",
+          "blob_sha": "911fc43d817ab82398704415a54001c28c57f37d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-075.source.txt",
+          "blob_sha": "373d3a1c9046be4cc631ca2ad2ac2a88bc3debc0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-076.source.txt",
+          "blob_sha": "00422b7c9cf96f138a94bcded5a661d8e6acff96"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-077.source.txt",
+          "blob_sha": "9c7e17fc21431b6ac6d434b35d3a40e1b2f407c9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-078.source.txt",
+          "blob_sha": "a020cd2aee23786fc2ce5f161591b67bb6c454d2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-079.source.txt",
+          "blob_sha": "5a5be4961a385ef8919e2fdbd3a7775a8b4f7f97"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-080.source.txt",
+          "blob_sha": "2255c2cb042ecd536ee66855c4433a95e7ea8fb6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-081.source.txt",
+          "blob_sha": "17a15fd0698c6a04c22e29883563609bb72f98ea"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-082.source.txt",
+          "blob_sha": "a23ea5cb19b64407ddb82f5efabd6e9e69c19eef"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-083.source.txt",
+          "blob_sha": "40b31bba2179d4ca25d8104a005340d9634639ca"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-084.source.txt",
+          "blob_sha": "e66bff4568f319bf34dffabd5662969f8a666399"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-085.source.txt",
+          "blob_sha": "611973d852b5e363c99c8516b8cb76f586dc31e0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-086.source.txt",
+          "blob_sha": "528da716adf6ccfe681b829d5be6d093e67a4dc1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-087.source.txt",
+          "blob_sha": "4a7ffc65a33e534d35051a0bc93754f263cdcaa4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-088.source.txt",
+          "blob_sha": "5b3901369645b8c448ed1e1f8b58a5744da4336f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-089.source.txt",
+          "blob_sha": "9db6b66cd893d1de8e01becfab45a49da0c4ee32"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-090.source.txt",
+          "blob_sha": "b620c3afa2a459d69608d56379011b98841c5f1f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-091.source.txt",
+          "blob_sha": "628e3013ef112b2917202510d1e9d3e5c2f7973d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-092.source.txt",
+          "blob_sha": "f43f034c569c28ce6cbe315e9442c30e7e89ce2e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-093.source.txt",
+          "blob_sha": "8f6dcd6319c47011315974b84034df4bae54a722"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-094.source.txt",
+          "blob_sha": "2e09ffb07de5a59bd5e3ab572c4ca1dacd94f949"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-095.source.txt",
+          "blob_sha": "1f4811b402d8f386059f8d02aa255b7f874acd9a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-096.source.txt",
+          "blob_sha": "294dadf6569dc40f6aede9b9a076e218e1155f63"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/fonte-097.source.txt",
+          "blob_sha": "528e90dd79a7d0d5a0bb586631f0c5447b795b6c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/index.md",
+          "blob_sha": "07c4037bc8f0670d1995b83382194abb2980e653"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/registro.json",
+          "blob_sha": "b269bdc7c096d8f0be5b868350a9b5b978972cc5"
+        }
+      ]
+    },
+    {
       "id": "chr001-state-checkpoint",
       "kind": "chronicle",
       "owner": "novydres/cronicas/CHR-001/estado",
@@ -5304,6 +5715,850 @@
       ]
     },
     {
+      "id": "rule-runtime-orchestration-sources",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/proveniencia-orquestracao",
+      "path": "novydres/sistema/regras/proveniencia-orquestracao",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/assunto.json",
+          "blob_sha": "39304ed703aec227666ac533fcab5fb46a0923b2"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-001.source.txt",
+          "blob_sha": "3f0301f41ea03252824abe6b86adcde122cf42bf"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-002.source.txt",
+          "blob_sha": "cd87fcbea314acc9772dcf185fb62c5a7c20f193"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-003.source.txt",
+          "blob_sha": "fc1f2fd5010d22e709e19ed493251685d24de5b0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-004.source.txt",
+          "blob_sha": "eb7961d278dca60723ef8508fb6490e0bcb365a4"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-005.source.txt",
+          "blob_sha": "59c2e5544eb2804ac513086718237751dc36693c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-006.source.txt",
+          "blob_sha": "569cb60f36360f27c64a3dd1da061cde96d6113c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-007.source.txt",
+          "blob_sha": "a590a69a0d2f5f87b09b8a96f67a8acb087835da"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-008.source.txt",
+          "blob_sha": "29be00790963f6d0627c404489455da52a957fa9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-009.source.txt",
+          "blob_sha": "f407c698388b8e015bd6af98b4a38a1d498aeaca"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-010.source.txt",
+          "blob_sha": "c3756137c035594337f55579eee86388b4acdcc8"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-011.source.txt",
+          "blob_sha": "b7504458b8bb330acb1d215ed0d90521a87afb4a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-012.source.txt",
+          "blob_sha": "2c0c3785c8f61053fadf40bfc4bede14a1643465"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-013.source.txt",
+          "blob_sha": "e8bda272c9cd160b6fb4d25dfd64a6f7c9a9bf04"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-014.source.txt",
+          "blob_sha": "f6813da88e73f18cfa5806365ef3e825812b8f9a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-015.source.txt",
+          "blob_sha": "ced559caee3e02a904c902538120ca620dc43b5e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-016.source.txt",
+          "blob_sha": "fd7bc047ff1452de0e3545d4018a926b807c0141"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-017.source.txt",
+          "blob_sha": "57f4220acf5502aed4a3cf24d592333735b81e29"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-018.source.txt",
+          "blob_sha": "f8d7b3a68e73c225f327c161eef0f7f1b616f0ad"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-019.source.txt",
+          "blob_sha": "6fa365043ec308850aa0029916361beeed4eafd7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-020.source.txt",
+          "blob_sha": "6e0d287c018ed5e0a731ddbd0638cc5b89358e51"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-021.source.txt",
+          "blob_sha": "a9ad197b1165adf54f05118f697ed50c775f0732"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-022.source.txt",
+          "blob_sha": "921bfd52a00c025f869273222f0e60abf2992ee3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-023.source.txt",
+          "blob_sha": "adaa05ce18c509338b8769566dd85ff5f9103397"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-024.source.txt",
+          "blob_sha": "3041ab71d52827a9e4350b80c9ac27fafee98dad"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-025.source.txt",
+          "blob_sha": "ce9d641baa4d0f1d0d39d53e8ab71dd9c59d8322"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-026.source.txt",
+          "blob_sha": "5ea41630da9c1cc7d7f78608b0398ae93b87bb11"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-027.source.txt",
+          "blob_sha": "50748633aac20572a073d614a292d64fc8757927"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-028.source.txt",
+          "blob_sha": "0abd0ea3efd3f1569ef742fc5a3c5e817d5faae0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-029.source.txt",
+          "blob_sha": "293ec803eeb86b5937b47213d31017e08c28fbe3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-030.source.txt",
+          "blob_sha": "ee869c43573f67cb63c78883b675283561b856fe"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-031.source.txt",
+          "blob_sha": "cd020f861859e4d99427fc34ec6a08b2ea20fded"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-032.source.txt",
+          "blob_sha": "4a53116d60924e1527f951e859cebd8c64fb6f4a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-033.source.txt",
+          "blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-034.source.txt",
+          "blob_sha": "7c6a396cce73daed99127e276c96393ff336b64d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-035.source.txt",
+          "blob_sha": "c7fd6991e2252a7e5387201150ba10410cb0cee1"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-036.source.txt",
+          "blob_sha": "b93567cd259e3ab40398050df49b9362e265bd5d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-037.source.txt",
+          "blob_sha": "432836eb13248498e47aaca3574ea645a2bafd1f"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-038.source.txt",
+          "blob_sha": "f5ee07751c8673cf4d8814dae67fc94cef41b36d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-039.source.txt",
+          "blob_sha": "83c03249c9152332dbbafae3fc487e621ca17003"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-040.source.txt",
+          "blob_sha": "90ed9976fa0affbcdd862e1a1666f17886614224"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-041.source.txt",
+          "blob_sha": "0c5d499721dbb9eb1b00288200322bca3e08539d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-042.source.txt",
+          "blob_sha": "f534088049e863b42714a539483b0ddfbb210436"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-043.source.txt",
+          "blob_sha": "bdb2657cb803aa682c5a7d50dc3be04bd0f77b61"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-044.source.txt",
+          "blob_sha": "ba3046f90c7e8de3b98130ea58fcd1c579103784"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-045.source.txt",
+          "blob_sha": "80dadd58cabe373337431296fed949da39b5ffa8"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-046.source.txt",
+          "blob_sha": "33124481976af4630c4631a85b31772d16c6cd87"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-047.source.txt",
+          "blob_sha": "bb082e6df91b9ae407f385f51c51274d0b281beb"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-048.source.txt",
+          "blob_sha": "98a2b9411510062a077cca81572a2da085ab6b76"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-049.source.txt",
+          "blob_sha": "1027190ff8be981a2766145c577cf8e761b4e4a7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-050.source.txt",
+          "blob_sha": "5223053b62b4f4a857962a42abe7318dd4abf97b"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-051.source.txt",
+          "blob_sha": "2365e985b0e13215d9cf85acf52e8e6b26454c53"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-052.source.txt",
+          "blob_sha": "d4647bf4c4950bbeebaf72711a7ac57d9698270d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-053.source.txt",
+          "blob_sha": "e0e8c1099758c2882d47bb1e531c1bf5529e85c5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-054.source.txt",
+          "blob_sha": "53e41fd71556d21c0b409a61a35621fd1ccb558a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-055.source.txt",
+          "blob_sha": "5dc35838954b8a2362498e02b6038f036fda1e74"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-056.source.txt",
+          "blob_sha": "8a37b1a6ac8ffaa83093c083cfa40d859d526ea2"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-057.source.txt",
+          "blob_sha": "65b2082d29995e10dd127b6ba0dee496f9a30a31"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-058.source.txt",
+          "blob_sha": "a36e5c1785f5fa3d50480415b9abd5faba0d8fdf"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-059.source.txt",
+          "blob_sha": "0005d93aa31c17739700e2c4eeddc65789a008f0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-060.source.txt",
+          "blob_sha": "90df830a9bc7af3c74cc538e78c1772eb18c5bf1"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-061.source.txt",
+          "blob_sha": "90a3d7d1c48024c79b3af2ce86fa4d0099e173f5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-062.source.txt",
+          "blob_sha": "e435037c173a5679a22f1c41fd4c2cd57908feb7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-063.source.txt",
+          "blob_sha": "c4d48d4b033033a630b4414bc5e9a57702fc86fb"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-064.source.txt",
+          "blob_sha": "d4838d5f2a832a955accc2ba8f041049b1b93229"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-065.source.txt",
+          "blob_sha": "a6a0437c9e2e72d3a1b749ae2dc5ce9bf4b4c55f"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-066.source.txt",
+          "blob_sha": "2d91e3b8d493aaee53201e58238115ac1e5eb82a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-067.source.txt",
+          "blob_sha": "9f46c1c64a91985d9cd3ec275f20696d97145aef"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-068.source.txt",
+          "blob_sha": "a20d1b3a95e6332903052073794a7a3e1a64e359"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-069.source.txt",
+          "blob_sha": "be78a8736a9fbc7736de43d58d7f014f5b4f59fc"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-070.source.txt",
+          "blob_sha": "a065c6c8b35051b9fc4f5caf93fac0c7b25429c0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-071.source.txt",
+          "blob_sha": "15b55db81c6f6d6a1e77b3dfcac2aea249f6021c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-072.source.txt",
+          "blob_sha": "8a765ffe75017b7a5eec77615e335b40b31707fa"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-073.source.txt",
+          "blob_sha": "da729fc8fbc08a2c7e85a811de7cb84540f930a9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-074.source.txt",
+          "blob_sha": "03974927839a8e29fa7183de801d985308920007"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-075.source.txt",
+          "blob_sha": "565ff357e6556c5b7159f29016eedc35efba82d3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-076.source.txt",
+          "blob_sha": "9928ea4bf3767db09e43e1b202ae664d1a823179"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-077.source.txt",
+          "blob_sha": "36b070c6a206d668bd3e6b03bfa416329e882070"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-078.source.txt",
+          "blob_sha": "7b0b096a4803034bfdaab2f784d3650004c65c8a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-079.source.txt",
+          "blob_sha": "5c041c51bc35cefcac3bf6ee9ebc918fd3f31b80"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-080.source.txt",
+          "blob_sha": "359a9857b039a26dc601977da2d2a3a178c5d20c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-081.source.txt",
+          "blob_sha": "81841f7178ce8216de0cae41fecee374561bae90"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-082.source.txt",
+          "blob_sha": "9654c2d5889e732aeacd21dac13ca66b91258e56"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-083.source.txt",
+          "blob_sha": "9c334b0c7671b5d5c06b1b2028f2b1ff303e3ad6"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-084.source.txt",
+          "blob_sha": "2c4a5c76abc6e69e161eb876c186d023ebea54d3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-085.source.txt",
+          "blob_sha": "6ba42458d5e723b34bd32c3e4fea58ba7cb0df5c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-086.source.txt",
+          "blob_sha": "6c777b6e1ccb8538ec4c62704f3939a27a3e9361"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-087.source.txt",
+          "blob_sha": "ea475c0df041ea69aaf7c6f4a27db794cdf71f6a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-088.source.txt",
+          "blob_sha": "3c3eab7dbae9d1cee94fb05b9a51c7567fe625e4"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-089.source.txt",
+          "blob_sha": "19f39a3eddda28413dc0d8fbb5915b10f5c7f4d9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-090.source.txt",
+          "blob_sha": "47f57507f91df1d17ce93f5f3c93b6f1d914b0ae"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-091.source.txt",
+          "blob_sha": "7a366637c40027582b9b1cf469722f8fb94ca1f8"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-092.source.txt",
+          "blob_sha": "351ec9e74a0e1973c86999952362c12a07cec74f"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-093.source.txt",
+          "blob_sha": "ae7c3bd84477371528d7447d67333a77b1d4d9bf"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-094.source.txt",
+          "blob_sha": "71b8f465cde30dc4899064e5e0a78a70381ed03c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-095.source.txt",
+          "blob_sha": "b51119a73d8d953f351ffee7e8c4e7697ee43651"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-096.source.txt",
+          "blob_sha": "a49cc85381d512adaac030dff50f43d0fae8ed5d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-097.source.txt",
+          "blob_sha": "4b3f05df24a3e51519c7db813d0eeb314ab0ca3f"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-098.source.txt",
+          "blob_sha": "66688d83e7e2fb91dc00b42e7d0ca8f47d01a7e8"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-099.source.txt",
+          "blob_sha": "23372a326ec6a7516e278449050776ed7d627b9e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-100.source.txt",
+          "blob_sha": "3e96616f4fb5f2688ecb9bf15264e5034a4ce25c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-101.source.txt",
+          "blob_sha": "89366d15d8bda633e6266c99b6c07d117b846bb8"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-102.source.txt",
+          "blob_sha": "38ee8deb0d4f59d45855d5e8bd9359bfda3a477d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-103.source.txt",
+          "blob_sha": "6127e473e123894768eba090c1e396902c194c2c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-104.source.txt",
+          "blob_sha": "83dde00240996e32cc9e4d527659e7b981d81787"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-105.source.txt",
+          "blob_sha": "f718772a79ee20121466b6138fba1158a6859bcf"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-106.source.txt",
+          "blob_sha": "75f984529be57deb05afaf0de16cb5e94b624d92"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-107.source.txt",
+          "blob_sha": "74153fac4503fa980f9b68ec166877274174450a"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-108.source.txt",
+          "blob_sha": "e7c9f7978215417b17a475711157e374b249e252"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-109.source.txt",
+          "blob_sha": "b66296780c982a66ca5ef476d9133b53dec95c73"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-110.source.txt",
+          "blob_sha": "da38c9b4f8104b1dd1021dd6c488250760fe7aa5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-111.source.txt",
+          "blob_sha": "72533db95d8803ab707ca53e2cfde5922daef63d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/fonte-112.source.txt",
+          "blob_sha": "72d5f808aeb62ab24e4a9b595828b48ab1fcdece"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/index.md",
+          "blob_sha": "842102615f0bcdd2b6c00d5547be0e74807217c3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-orquestracao/registro.json",
+          "blob_sha": "9e26aabd058a78e86d1061c3e66c58581c507c1f"
+        }
+      ]
+    },
+    {
+      "id": "rule-runtime-preparation-sources",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/proveniencia-preparacao",
+      "path": "novydres/sistema/regras/proveniencia-preparacao",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/assunto.json",
+          "blob_sha": "1c37b861b59a082212e5999636fab3fe045039a1"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-001.source.txt",
+          "blob_sha": "5129c6d75f05dcf2f045f26d89dc5cc0982a5c78"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-002.source.txt",
+          "blob_sha": "c841640335da2a8a4654d6591b831df212b53e62"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-003.source.txt",
+          "blob_sha": "a61e43f658eb040d95f216323fedb7b6f2938790"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-004.source.txt",
+          "blob_sha": "4503f7097db9b53dfc57b54a5b17c1dac0aea7ed"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-005.source.txt",
+          "blob_sha": "503540b7f6adc16128049848ef43965cb50a14b0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-006.source.txt",
+          "blob_sha": "e4862595cc30278452b42c3c3a77877ea6a0f625"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-007.source.txt",
+          "blob_sha": "a264d123f11ccf1ca89a5fc88932ce4800ced10b"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-008.source.txt",
+          "blob_sha": "5e93ef68649fa2f50c336a3ead0c69a2ce7d5984"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-009.source.txt",
+          "blob_sha": "04161f0618bf3a4a550405be3343bad7e32b4524"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-010.source.txt",
+          "blob_sha": "19305b2400712cd8c761a626d472b9c81755f6f6"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-011.source.txt",
+          "blob_sha": "f2d5aa0df2e68b22dd45ed587967e572a3be2b8e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-012.source.txt",
+          "blob_sha": "49b9c1d920fbae672b90f0a712d527cee2a1829d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-013.source.txt",
+          "blob_sha": "36be40b5ca22f7fbcfaf59df387fe18630ca2639"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-014.source.txt",
+          "blob_sha": "12cc185d353ee993a17187f9edcc8887d835c4d5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-015.source.txt",
+          "blob_sha": "94d5915b6ac2ed0a568c67c62fbe08a69db046a6"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-016.source.txt",
+          "blob_sha": "696e190faa786cddd438d5bb0e2b125e4bc45453"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-017.source.txt",
+          "blob_sha": "8e30bc192288554335013608dc36e85d599029b7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-018.source.txt",
+          "blob_sha": "4fae0dd1be149c1630ead5614d4d0cb89d793548"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-019.source.txt",
+          "blob_sha": "fad914ba44b33ba28142159d97638716a4635d53"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-020.source.txt",
+          "blob_sha": "978503ee0f9876dcd62fc220a2593a98412b4d67"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-021.source.txt",
+          "blob_sha": "fb8fdf1904a0fc158b56c84dc7ba3bce464d72b9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-022.source.txt",
+          "blob_sha": "1fb79b98575f0ff0cbd6143e429b201b584998dc"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-023.source.txt",
+          "blob_sha": "844509eac92c055f51a70f21d7ec27dfe70c8dcc"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-024.source.txt",
+          "blob_sha": "0a281c03238d42ce30ac13aa6c87d4da025de5ac"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-025.source.txt",
+          "blob_sha": "be8116095c686c81429203572f7c2eacbae44766"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-026.source.txt",
+          "blob_sha": "73f75e42cdfb8da4ee205e363b6f04d9017f0f66"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-027.source.txt",
+          "blob_sha": "d1f581a8ef69433302719c4ecd0fb4054ccfc6fa"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-028.source.txt",
+          "blob_sha": "707a5e2e5f9e2ea4f0a7640f3c90b5f87a7e1bd1"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-029.source.txt",
+          "blob_sha": "b3a3d32a591c38d2d03407795da743ae0aa78e99"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-030.source.txt",
+          "blob_sha": "5f570ab38e691083a5c3895adc115623e2eecb1f"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-031.source.txt",
+          "blob_sha": "a2a6d4e855abf3b1502cb273788567cef82e99a5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-032.source.txt",
+          "blob_sha": "e56ed47d0899a348818c421908a7f43245557c4c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-033.source.txt",
+          "blob_sha": "95bcd7471828bdb6f4d829b4f1ec8d4919bf754c"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-034.source.txt",
+          "blob_sha": "4ed7432e272cdfb9ebe5fc29ca85715eba47bfa9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-035.source.txt",
+          "blob_sha": "dc4ef39b4688f06e55076b3d252d0c64edbdc3aa"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-036.source.txt",
+          "blob_sha": "31b9798305ab609e1f53a3c16003196dd4a61357"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-037.source.txt",
+          "blob_sha": "167b7274ce04714bf68514d6fb537ef6acfdebd0"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-038.source.txt",
+          "blob_sha": "5fe5a20136bc78a3bcb268d5a1a25fc3c34775bf"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-039.source.txt",
+          "blob_sha": "41f7c5867dad6dec617793c774b5199a7feda699"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/fonte-040.source.txt",
+          "blob_sha": "a7d1167a8f85e203bc307acf316dc24d9126fe74"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/index.md",
+          "blob_sha": "a70bf8ae1bd41ce673a397d8c5ba13b205a60efb"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-preparacao/registro.json",
+          "blob_sha": "d8a3629eb324da7d11931c0f866fd095f928dd3c"
+        }
+      ]
+    },
+    {
+      "id": "rule-runtime-root-contract-sources",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/proveniencia-runtime",
+      "path": "novydres/sistema/regras/proveniencia-runtime",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/assunto.json",
+          "blob_sha": "5fd295570f3f3a236909f588088c349cff603283"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-001.source.txt",
+          "blob_sha": "491e3d9d059bb4277df121c5abce3297c24adee4"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-002.source.txt",
+          "blob_sha": "231cb78d712c4c7d2be88a41a4058d21e1cf88ea"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-003.source.txt",
+          "blob_sha": "764177e3618b83af2758393356722d45a9edcd3e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-004.source.txt",
+          "blob_sha": "d51a5f4e6e62be9d4b6f5607abcb0f1fcec335d1"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-005.source.txt",
+          "blob_sha": "de90b96c5cb941e4353b0ed842394ed6b4d58639"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-006.source.txt",
+          "blob_sha": "081a0ec51cbd5eb825bd97c22209d45e3f9683b7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-007.source.txt",
+          "blob_sha": "6ebcbb1796c0407438d30a096a4d6fe365a645c5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/fonte-008.source.txt",
+          "blob_sha": "17c5cf4501358844aad3959c9a88469caf37ed28"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/index.md",
+          "blob_sha": "8608a0a236baebc9bf9e2ef60fe02c1bea450d16"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-runtime/registro.json",
+          "blob_sha": "d6c062c201e3a89161e7434cf35a4fce3b0d4f44"
+        }
+      ]
+    },
+    {
+      "id": "rule-runtime-scene-execution-sources",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/proveniencia-execucao",
+      "path": "novydres/sistema/regras/proveniencia-execucao",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/assunto.json",
+          "blob_sha": "edd7f1c5bdc99535866b7deaf1e12ed0d985f9d7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-001.source.txt",
+          "blob_sha": "b1e53bfe82ea66590ef6fc94e24777bb2281991e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-002.source.txt",
+          "blob_sha": "40268a37f84d9ef8feb2e16a5d530261f98ed00d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-003.source.txt",
+          "blob_sha": "971ce9620f40e71bdc46186e891e73a812906ba4"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-004.source.txt",
+          "blob_sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-005.source.txt",
+          "blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-006.source.txt",
+          "blob_sha": "eaf6256b8027992e92e7c9dfdd071afac5063771"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-007.source.txt",
+          "blob_sha": "755b956f47f4a5f418510bbf03295511767f2d9e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-008.source.txt",
+          "blob_sha": "cd4219813b8509952997baffeaf7f5fb396fbed6"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-009.source.txt",
+          "blob_sha": "d247a31e7771b49d6fef6a72ce08b0f987b63bb3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-010.source.txt",
+          "blob_sha": "b994780ec914f51be243bb81f23ab3dfd94ad913"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-011.source.txt",
+          "blob_sha": "b39d41087eda33b674bb7cca5c1ae1e9edf3d336"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-012.source.txt",
+          "blob_sha": "3914be7ffc8c9cefd80da8b21970cd111bd11491"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-013.source.txt",
+          "blob_sha": "ebf92fcf4bcb5a47ee2b6ae24c5f22f43eadd0f3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-014.source.txt",
+          "blob_sha": "18fc590cc4e963ed3239003e56d027ed84b9612e"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-015.source.txt",
+          "blob_sha": "2885a04f17270045c450faf22ee014dc693c2164"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-016.source.txt",
+          "blob_sha": "aa2ef8af0ca41a64dee9af5a98e5fc08ff60f793"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-017.source.txt",
+          "blob_sha": "dfd1d3b13098333bb4f1b2fbcfd9c13b1a0262e5"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-018.source.txt",
+          "blob_sha": "c3b9d93bf1bf4b4f9488b515a1e9021dd9fc3354"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-019.source.txt",
+          "blob_sha": "bad017f7a53606ea2ae63e71bc7f541a0db40a49"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-020.source.txt",
+          "blob_sha": "ecb67c617366fd895c06374d1a1cb211cbc3aa89"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-021.source.txt",
+          "blob_sha": "146c14e0e4634429528d8de7fa8727bf3f1c4928"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-022.source.txt",
+          "blob_sha": "bc9d6c8d4da1ed993e880cfc8005769641543741"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-023.source.txt",
+          "blob_sha": "17435c2eb94b554ce3ed7ec9bb30f4e40e948752"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-024.source.txt",
+          "blob_sha": "935787efd99938f6bc46cc86aeba52903f066ff3"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-025.source.txt",
+          "blob_sha": "c16a5212bc7948e71991936872d94e5f62f803d9"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-026.source.txt",
+          "blob_sha": "889a83a5018960ecb578624d3cad756e03e915bb"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-027.source.txt",
+          "blob_sha": "2602cea8e6ffee2edf82d74a1bf6a661eff36d64"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/fonte-028.source.txt",
+          "blob_sha": "f0ca08c8b15adeeaa7e5b41194a4d890034600ef"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/index.md",
+          "blob_sha": "cc7290ffbd2c607510922e587aedb6ebc0c9dc2d"
+        },
+        {
+          "path": "novydres/sistema/regras/proveniencia-execucao/registro.json",
+          "blob_sha": "f07e1b559a6fe9548efce1fee90b082c84215a0d"
+        }
+      ]
+    },
+    {
       "id": "rule-social-territorial",
       "kind": "rule",
       "owner": "novydres/sistema/regras/criacao-de-personagens",
@@ -5874,7 +7129,12 @@
     "chr001-knowledge-npc-viktor-heating-mechanic": [],
     "chr001-knowledge-npc-viktor-sokolov": [],
     "chr001-knowledge-npc-volnaya-clerk-ilya-unverified-name": [],
-    "chr001-knowledge-npc-volnaya-night-workers": []
+    "chr001-knowledge-npc-volnaya-night-workers": [],
+    "chr001-runtime-story-architecture": [],
+    "rule-runtime-orchestration-sources": [],
+    "rule-runtime-preparation-sources": [],
+    "rule-runtime-scene-execution-sources": [],
+    "rule-runtime-root-contract-sources": []
   },
   "deferred": []
 }

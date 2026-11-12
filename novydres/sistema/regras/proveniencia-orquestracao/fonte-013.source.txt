@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V22",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "cycle_id",
+    "sequence",
+    "chronicle_id",
+    "provocation_id",
+    "manifest_path",
+    "manifest_ref",
+    "source_head_sha",
+    "previous_cycle",
+    "transition",
+    "status",
+    "next_role",
+    "checkpoint",
+    "refs",
+    "architecture",
+    "plan",
+    "review",
+    "blocking",
+    "guards",
+    "activation",
+    "operational_gates",
+    "causal_gate",
+    "temporal_gate",
+    "pending_player_decision",
+    "scene_commit",
+    "narrator_prompt_required"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V22"
+    },
+    "cycle_id": {
+      "const": "CHR001-CYCLE-0045"
+    },
+    "sequence": {
+      "const": 45
+    },
+    "chronicle_id": {
+      "const": "CHR-001"
+    },
+    "provocation_id": {
+      "const": "M3.02"
+    },
+    "manifest_path": {
+      "const": "novydres/MANIFEST_V63.json"
+    },
+    "transition": {
+      "const": "DRAMATURGO_REVIEW_COMPLETED"
+    },
+    "status": {
+      "const": "READY_FOR_NARRATOR"
+    },
+    "next_role": {
+      "const": "NARRADOR"
+    },
+    "narrator_prompt_required": {
+      "const": true
+    },
+    "checkpoint": {
+      "type": "object",
+      "required": [
+        "last_event_id",
+        "last_closed_scene",
+        "next_scene",
+        "next_scene_status",
+        "pending_persistence",
+        "mortal",
+        "embrace_occurred"
+      ],
+      "properties": {
+        "last_event_id": {
+          "const": "CHR001-M302-C01-05-20261111-001"
+        },
+        "last_closed_scene": {
+          "const": "C01"
+        },
+        "next_scene": {
+          "const": "C02"
+        },
+        "next_scene_status": {
+          "const": "NOT_STARTED"
+        },
+        "pending_persistence": {
+          "const": false
+        },
+        "mortal": {
+          "const": true
+        },
+        "embrace_occurred": {
+          "const": false
+        }
+      }
+    },
+    "operational_gates": {
+      "type": "object",
+      "required": [
+        "architecture_active",
+        "d07_active",
+        "story_preparation_ready",
+        "mechanical_scene_ready",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "architecture_active": {
+          "const": true
+        },
+        "d07_active": {
+          "const": true
+        },
+        "story_preparation_ready": {
+          "const": true
+        },
+        "mechanical_scene_ready": {
+          "const": true
+        },
+        "scene_ready": {
+          "const": true
+        },
+        "narrator_permission": {
+          "const": true
+        }
+      }
+    },
+    "causal_gate": {
+      "type": "object",
+      "required": [
+        "admission_id",
+        "inquiry_only",
+        "historical_message_delivered",
+        "identity_known",
+        "c01_recycled",
+        "new_event_in_preparation"
+      ],
+      "properties": {
+        "admission_id": {
+          "const": "PLOT-KUTHULUN-COERCION"
+        },
+        "inquiry_only": {
+          "const": true
+        },
+        "historical_message_delivered": {
+          "const": false
+        },
+        "identity_known": {
+          "const": false
+        },
+        "c01_recycled": {
+          "const": false
+        },
+        "new_event_in_preparation": {
+          "const": false
+        }
+      }
+    },
+    "temporal_gate": {
+      "type": "object",
+      "required": [
+        "mode",
+        "significant_ellipsis",
+        "threads_open",
+        "new_time_committed"
+      ],
+      "properties": {
+        "mode": {
+          "const": "CONTINUITY"
+        },
+        "significant_ellipsis": {
+          "const": false
+        },
+        "threads_open": {
+          "const": 44
+        },
+        "new_time_committed": {
+          "const": false
+        }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "required": [
+        "no_new_story_event",
+        "no_pc_decision",
+        "no_xp_fv_change",
+        "no_npc_knowledge_change",
+        "frozen_unchanged"
+      ],
+      "properties": {
+        "no_new_story_event": {
+          "const": true
+        },
+        "no_pc_decision": {
+          "const": true
+        },
+        "no_xp_fv_change": {
+          "const": true
+        },
+        "no_npc_knowledge_change": {
+          "const": true
+        },
+        "frozen_unchanged": {
+          "const": true
+        }
+      }
+    }
+  }
+}

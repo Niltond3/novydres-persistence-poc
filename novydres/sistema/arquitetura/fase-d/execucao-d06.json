@@ -1,0 +1,22 @@
+{
+  "schema": "ADR001_D06_INTEGRATED_GATE_PREP_V1",
+  "phase": "D06",
+  "status": "PREPARED_NOT_VALIDATED",
+  "gate": "D06_NOT_YET_PASS",
+  "candidate_only": true,
+  "proof_script": "novydres/scripts/verificar-integridade-d06.mjs",
+  "test": "novydres/scripts/testar-integridade-d06.test.mjs",
+  "full_tree_scanner": "novydres/scripts/auditar-legado-e-fontes.mjs --final",
+  "originals_expected": 1029,
+  "catalog_subjects_expected": 153,
+  "source_exact_custody_expected": 915,
+  "git_historical_only_expected": 114,
+  "active_consumer_successions_pending": 121,
+  "knowledge_actor_records": 47,
+  "open_threads": 44,
+  "external_optional_media_waiver": 5,
+  "semantic_signoff": false,
+  "ci": "PENDING_FINAL_FREEZE",
+  "no_master_change": true,
+  "no_E02": true
+}

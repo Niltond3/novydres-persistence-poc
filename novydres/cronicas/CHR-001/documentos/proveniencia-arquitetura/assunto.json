@@ -1,0 +1,496 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "chr001-runtime-story-architecture",
+  "kind": "chronicle",
+  "owner_scope": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/runtime/narrative-architecture/ATLAS_SNAPSHOT_SCHEMA_V1.json",
+      "sha": "1327a4b68be89b1d66b04a5340a49d4385cb2d46",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/NARRATIVE_ATLAS_CONTRACT_V1.md",
+      "sha": "95170168a3285236c43bd40297055d45f54665ca",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/ARCHITECTURE_PLAN_V1.md",
+      "sha": "e794222e70a11149a0fe8ce77cc802ebb604302a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/D01_MANDATE_V1.md",
+      "sha": "22cf5c17f0d6224c7bf0c15161d9a7fc8a76104e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/PROGRAM_HANDOFF_CONTRACT_V1.md",
+      "sha": "fd910b3f5b1a03db4b241c85bbae136283c1d71e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/PROGRAM_RUNBOOK_V1.md",
+      "sha": "bc6ebd8c44d49e1274788db7343ef70d83bc9b9b",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/START_HERE_PLAYER_SAFE_V1.md",
+      "sha": "477cdc6f5ebb206a4660fde2d1e586d7dba14b89",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V003.json",
+      "sha": "9526af065467588c4c8ce5cb0013d199868542a1",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_LIVING_ELLIPSES_V001_PLAYER_SAFE.json",
+      "sha": "fa986a32c56ad2ea02dcb90aa998c6964321e526",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_SIGNIFICANT_SCENE_SPOTLIGHT_V001_PLAYER_SAFE.json",
+      "sha": "ea0452110ca968ca89b4aeec6a526d82b63ef016",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "sha": "474a5f64987ac220de0d92214898df32842d3bd8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M302_ADMIN_OPEN_V001_PLAYER_SAFE.json",
+      "sha": "f3f043704a4bf11c877f978f9d83c108bca3588f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V006.json",
+      "sha": "cd8d23c543514ecac2c8649ad9b7872cf0746370",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V007.json",
+      "sha": "4d042798cc8f6b81c12f36aa31d79babba07c16e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V007.json",
+      "sha": "1b680fd49b807830f4f78b60d014a42541a7dd1c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D06_V008.json",
+      "sha": "06936d4b41989d5f3a8102dc17eaf5006f4f17c2",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D07_V003.json",
+      "sha": "fbaaf173ab34934475cf062cf201541ad930790b",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D11_V002.json",
+      "sha": "e79d35dab7dcd3e524e5162dab4d5daf8a83b829",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D12_V008.json",
+      "sha": "9be927e445ab28377b197701b0418b9ec5d58c12",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "sha": "260364032af2bd231b89c8fc7ac389f8543d4b79",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V005.json",
+      "sha": "6ac61743e3fc861e7f80930d0b549cce54fc9d00",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V006.json",
+      "sha": "da65b3587027cae4e89ebf72655a5b42238c3dd7",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V013.json",
+      "sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V007.json",
+      "sha": "75b923b5608bc8a5b44304041b8549a0bf0604ec",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V025.json",
+      "sha": "1ac6b9d8f64872bcf0526c32a926091b178b0c2e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V026.json",
+      "sha": "761f99f1e6d42d2a6a175c83d992c67424b914b8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V027.json",
+      "sha": "6ce4f106a72f0752a668d391d0ff7fbe0b291563",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V028.json",
+      "sha": "269658dc87cf0e2ff9966a9e62d560b78ce75aa9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V031.json",
+      "sha": "ee28dcc81940389382654e70b7e4591ae3bc675d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V032.json",
+      "sha": "ae151a67ae44fb777763986967f58533aa1aaf21",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V007.json",
+      "sha": "b7fa7d8881d989f172c68bc5bb14b8e8547d24c9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_RECONCILIATION_V003.json",
+      "sha": "a9ca553f72d48f5bd5e204252151ab54f5764f89",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003.py",
+      "sha": "faf3b330edcad824bdc3b264dce401277daad7f5",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_SOURCE_VALIDATE_V003_RESULT.json",
+      "sha": "58887356489a282554f1fed66176b95bdebf3a55",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D06_TRANSFORMATION_PATHS_V007.json",
+      "sha": "cfcfb353ce61279bf5471cc9c472ebde95a95e39",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V002_PLAYER_SAFE.json",
+      "sha": "f3471f8f9e803273f616fd5030cd1740b2e9cd5d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V003_PLAYER_SAFE.json",
+      "sha": "ee5b8f9c715d4856b36eb1c5d12f98d09ad74eb2",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
+      "sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V005.json",
+      "sha": "ec91b2a7fe5142f2fea3e4586aacbde6ed00c3ca",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V013_GM_HIDDEN.md",
+      "sha": "e4ad7e885891ab1cd2f70997d4c51afc65ec9435",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V015_GM_HIDDEN.md",
+      "sha": "1a2dfcc536cb9146ed5cc5f9875a432be2ff5f27",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V016_GM_HIDDEN.md",
+      "sha": "844398c7df3dbbd84ff77a1cb6edb7125aeedb56",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V017_GM_HIDDEN.md",
+      "sha": "f138f205b18268614e6542f7d31640924c489b4b",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "sha": "537c4260c1d024cea144511596a9b54599b737b8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md",
+      "sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
+      "sha": "64768b468aacd35d4528b43e563142cd0588d6fa",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V016_GM_HIDDEN.md",
+      "sha": "3c9867f7e7ec08f91ef801c29d8844bde4790155",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V017_GM_HIDDEN.md",
+      "sha": "070269800d4e53a82fb23e85b2a79d9c304be9f9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V018_GM_HIDDEN.md",
+      "sha": "91189ae85de0fe1dc96d79c3d94bed9f8abd33f5",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+      "sha": "d29922e5b58f34d7c424b9a8332645abb8a16dae",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V022_GM_HIDDEN.md",
+      "sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
+      "sha": "f3c2d40573183e473d328e64cebdd04448d253b7",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V024_PLAYER_SAFE.json",
+      "sha": "367818c676a844922967bd62f35a6c371fdfd98a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V025_PLAYER_SAFE.json",
+      "sha": "7d9d422551a5abf8dbce73e3b65785078a318b7e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V026_PLAYER_SAFE.json",
+      "sha": "f86e8882f1458e5ea4cfe946a51a9ba6e9dce006",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V016.json",
+      "sha": "e7e7e553be90e967a31c59fae7e94ba1748aefcd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V017.json",
+      "sha": "54a7b3877dde1a2dcb9e556289cdfd9641b9f876",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V018.json",
+      "sha": "9196daf31ba5994c68b222490a0c325eec3abfdb",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V021.json",
+      "sha": "4bf979a3c5d9aad7d369ea5fc126d324f8394cff",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V022.json",
+      "sha": "1ee5f18905902b93fb83db4d702526aeda52b1c9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V023.json",
+      "sha": "38bab1917d1c085791faf5a45c636755b882d6ef",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V023.json",
+      "sha": "77dbc7269ad696f7731eb56748471c0780cfb1cf",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V024.json",
+      "sha": "75166f70e9863473a92f56ee75707add701aa6ea",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V023.py",
+      "sha": "3649a989845f27d3c6b76cf4f58ed3816c5bf49f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V024.py",
+      "sha": "2ac55e20af4768c266ce24d4d1162280c1b9b026",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
+      "sha": "3a2aaa0a24e4cc215e01ca4c334782fea265ce34",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D11_EXECUTE_ADVERSARIAL_V019.py",
+      "sha": "87020ddcbb717fd4551a076c442ce21e5b0d2e6d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D11_INDEPENDENT_REVIEW_V011_GM_HIDDEN.json",
+      "sha": "981111b81a3627d57df3a14a1bb51571642a88f1",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_STATUS_V012_PLAYER_SAFE.json",
+      "sha": "4682748dcfc07d3a9934fd4ce9b459ded7cba8a2",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D11_TEST_RESULTS_V019_PLAYER_SAFE.json",
+      "sha": "350ce9355bb44638ea5dbc23777d1a7e6e25f025",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_GATES_MATRIX_V003_PLAYER_SAFE.md",
+      "sha": "8480ed36a6f8e7034fcbecfdbe8f892b5b0fc840",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
+      "sha": "c4934e97101134ee012c08133c9bf0ea63be76ea",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
+      "sha": "911fc43d817ab82398704415a54001c28c57f37d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V003_PLAYER_SAFE.json",
+      "sha": "373d3a1c9046be4cc631ca2ad2ac2a88bc3debc0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V004_PLAYER_SAFE.json",
+      "sha": "00422b7c9cf96f138a94bcded5a661d8e6acff96",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V005_PLAYER_SAFE.json",
+      "sha": "9c7e17fc21431b6ac6d434b35d3a40e1b2f407c9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V006_PLAYER_SAFE.json",
+      "sha": "a020cd2aee23786fc2ce5f161591b67bb6c454d2",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V007_PLAYER_SAFE.json",
+      "sha": "5a5be4961a385ef8919e2fdbd3a7775a8b4f7f97",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V008.json",
+      "sha": "2255c2cb042ecd536ee66855c4433a95e7ea8fb6",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V019.json",
+      "sha": "17a15fd0698c6a04c22e29883563609bb72f98ea",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V020.json",
+      "sha": "a23ea5cb19b64407ddb82f5efabd6e9e69c19eef",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V021.json",
+      "sha": "40b31bba2179d4ca25d8104a005340d9634639ca",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008.py",
+      "sha": "e66bff4568f319bf34dffabd5662969f8a666399",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008_RESULT.json",
+      "sha": "611973d852b5e363c99c8516b8cb76f586dc31e0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V018.py",
+      "sha": "528da716adf6ccfe681b829d5be6d093e67a4dc1",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V018_RESULT.json",
+      "sha": "4a7ffc65a33e534d35051a0bc93754f263cdcaa4",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V019.py",
+      "sha": "5b3901369645b8c448ed1e1f8b58a5744da4336f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V019_RESULT.json",
+      "sha": "9db6b66cd893d1de8e01becfab45a49da0c4ee32",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/DRAMATURGO_CONTINUITY_PROMPT_V003.md",
+      "sha": "b620c3afa2a459d69608d56379011b98841c5f1f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V007.json",
+      "sha": "628e3013ef112b2917202510d1e9d3e5c2f7973d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D05_V008.json",
+      "sha": "f43f034c569c28ce6cbe315e9442c30e7e89ce2e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V007.json",
+      "sha": "8f6dcd6319c47011315974b84034df4bae54a722",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D06_V008.json",
+      "sha": "2e09ffb07de5a59bd5e3ab572c4ca1dacd94f949",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D07_V002.json",
+      "sha": "1f4811b402d8f386059f8d02aa255b7f874acd9a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D11_V002.json",
+      "sha": "294dadf6569dc40f6aede9b9a076e218e1155f63",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/HANDOFF_D12_V008.json",
+      "sha": "528e90dd79a7d0d5a0bb586631f0c5447b795b6c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": []
+}

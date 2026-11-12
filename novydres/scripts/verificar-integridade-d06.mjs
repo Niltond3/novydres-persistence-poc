@@ -1,0 +1,56 @@
+// ADR-001 D06 whole-snapshot evidence; structural success is not editorial approval.
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {checkCatalog} from './catalogo-assuntos.mjs';
+import {verifyD04State} from './verificar-estado-d04.mjs';
+import {verifyD04Custody} from './verificar-custodia-d04.mjs';
+import {auditRepository} from './auditar-legado-e-fontes.mjs';
+const INVENTORY='novydres/sistema/arquitetura/fase-d/inventario-origens.json';
+const D05='novydres/sistema/arquitetura/fase-d/execucao-d05.json';
+const err=code=>{const e=new Error(code);e.code=code;throw e;};
+const sort=(a,b)=>a<b?-1:a>b?1:0;
+const ls=(commit)=>new Map(execFileSync('git',['ls-tree','-r','--full-tree',commit],{
+ encoding:'utf8',maxBuffer:64*1024*1024
+}).trim().split('\n').filter(Boolean).map(line=>{
+ const x=/^\d+ blob ([a-f0-9]{40})\t(.+)$/.exec(line);
+ if(!x)err('GIT_TREE_MALFORMED');return [x[2],x[1]];
+}));
+export function verifyD06({ledgerOverride=null}={}){
+ const inv=JSON.parse(readFileSync(INVENTORY,'utf8'));
+ const out=ledgerOverride||JSON.parse(readFileSync(D05,'utf8'));
+ const source=ls(inv.source_snapshot.commit_sha),head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree=ls(head);
+ if(inv.source_files.length!==1029||out.source_count!==399||out.source_records?.length!==399)err('SOURCE_COVERAGE_COUNT');
+ const seen=new Set(),counts={};
+ for(const x of inv.source_files){
+  if(seen.has(x.source_path)||source.get(x.source_path)!==x.source_blob_sha)err('SOURCE_PIN_DRIFT');
+  seen.add(x.source_path);
+  const phase=x.d01_origin_route?.handoff_phase;
+  counts[phase]=(counts[phase]||0)+1;
+  if(!['D02','D03','D04','D05'].includes(phase))err('UNROUTED_SOURCE');
+ }
+ if(counts.D02!==128||counts.D03!==64||counts.D04!==438||counts.D05!==399)err('SOURCE_PHASE_SPLIT_DRIFT');
+ const records=new Map();
+ for(const row of out.source_records){
+  if(records.has(row.origin)||!seen.has(row.origin)||row.original_git_blob_sha!==source.get(row.origin))err('D05_RETIREMENT_WRONG_PIN');
+  records.set(row.origin,row);
+ }
+ const sourceOwned=inv.source_files.filter(x=>x.d01_origin_route.handoff_phase!=='D05');
+ for(const x of sourceOwned)if(![...tree.values()].includes(x.source_blob_sha))err('D02_D04_SOURCE_NOT_COPIED');
+ const retainedD05=out.source_records.filter(x=>x.retirement_method==='EXACT_INERT_SOURCE_BLOB_REHOMED');
+ if(retainedD05.length!==285||retainedD05.some(x=>![...tree.values()].includes(x.original_git_blob_sha)))err('D05_EXACT_SOURCE_LOST');
+ const beforeCutover=out.source_records.filter(x=>x.active_original_reference===true);
+ if(beforeCutover.length!==121)err('D05_ACTIVE_REFERENCE_COUNT_DRIFT');
+ const cat=checkCatalog(),d04=verifyD04Custody(),state=verifyD04State(),zero=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL',expected_head:head});
+ if(!cat.ok||!d04.ok||!state.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
+ if(zero.gate==='ZERO_LEGACY_BLOCKED')err('D06_ZERO_LEGACY_FAIL');
+ return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,
+  git_only_historical_sources:114,active_successions_requiring_contextual_semantic_review:121,
+  zero_legacy_gate:zero.gate,media_optional_waived:zero.counters.media_optional_waived,
+  catalog_subjects:cat.entries,c45_cursor:state.cursor,structural:'PASS_SCOPED',
+  editorial:'PENDING_INDEPENDENT_EQUIVALENCE_REVIEW',
+  gate:'D06_NOT_YET_PASS'};
+}
+if(process.argv[1]?.endsWith('/verificar-integridade-d06.mjs')){
+ const x=verifyD06();console.log(JSON.stringify(x));
+ if(process.argv.includes('--require-pass')&&x.gate!=='D06_PASS')process.exitCode=1;
+}

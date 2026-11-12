@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "$defs": {
+    "blobRef": {
+      "type": "object",
+      "required": [
+        "path",
+        "blob_sha"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    }
+  },
+  "$id": "https://novydres.local/CHR-001/DOSSIER_SCHEMA_V10",
+  "required": [
+    "schema_id",
+    "chronicle_id",
+    "episode_id",
+    "preparation_id",
+    "classification",
+    "status",
+    "source_checkpoint",
+    "authority_refs",
+    "c02_causal_entry",
+    "temporal_decision",
+    "act_contracts",
+    "mechanics",
+    "guards",
+    "predecessor_ref"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_DOSSIER_V10"
+    },
+    "chronicle_id": {
+      "const": "CHR-001"
+    },
+    "episode_id": {
+      "const": "M3.02"
+    },
+    "classification": {
+      "const": "GM_HIDDEN"
+    },
+    "preparation_id": {
+      "const": "CHR001-PREP-M302-20261111-V4"
+    },
+    "status": {
+      "const": "PROSPECTIVE_REVIEW_ONLY_C02_NOT_READY"
+    },
+    "source_checkpoint": {
+      "type": "object",
+      "required": [
+        "cycle",
+        "manifest",
+        "last_event_id",
+        "last_closed_scene",
+        "next_scene",
+        "next_scene_status",
+        "state_refs"
+      ],
+      "properties": {
+        "cycle": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "manifest": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "last_event_id": {
+          "const": "CHR001-M302-C01-05-20261111-001"
+        },
+        "last_closed_scene": {
+          "const": "M3.02.C01"
+        },
+        "next_scene": {
+          "const": "M3.02.C02"
+        },
+        "next_scene_status": {
+          "const": "NOT_STARTED"
+        },
+        "state_refs": {
+          "type": "object",
+          "required": [
+            "episode",
+            "character",
+            "live",
+            "history_index",
+            "knowledge",
+            "threads"
+          ],
+          "properties": {
+            "episode": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "character": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "live": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "history_index": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "knowledge": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "threads": {
+              "$ref": "#/$defs/blobRef"
+            }
+          }
+        }
+      }
+    },
+    "authority_refs": {
+      "type": "object",
+      "required": [
+        "admission",
+        "truth",
+        "preparation",
+        "progression",
+        "immersion",
+        "player_comment"
+      ],
+      "properties": {
+        "admission": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "truth": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "preparation": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "progression": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "immersion": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "player_comment": {
+          "$ref": "#/$defs/blobRef"
+        }
+      }
+    },
+    "c02_causal_entry": {
+      "type": "object",
+      "required": [
+        "admission_id",
+        "source_state",
+        "independent_eligible_cause_confirmed",
+        "c01_replay_forbidden",
+        "actor_knowledge_verified",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "admission_id": {
+          "const": "PLOT-TECH-DISPOSITION"
+        },
+        "source_state": {
+          "const": "CONDITIONAL_NOT_REALIZED"
+        },
+        "independent_eligible_cause_confirmed": {
+          "const": false
+        },
+        "c01_replay_forbidden": {
+          "const": true
+        },
+        "actor_knowledge_verified": {
+          "const": false
+        },
+        "scene_ready": {
+          "const": false
+        },
+        "narrator_permission": {
+          "const": false
+        }
+      }
+    },
+    "temporal_decision": {
+      "type": "object",
+      "required": [
+        "mode",
+        "ellipsis_mandatory",
+        "elapsed_time_assumed",
+        "world_progress_materialized",
+        "gate_ready"
+      ],
+      "properties": {
+        "mode": {
+          "const": "REVIEW_REQUIRED"
+        },
+        "ellipsis_mandatory": {
+          "const": false
+        },
+        "elapsed_time_assumed": {
+          "const": false
+        },
+        "world_progress_materialized": {
+          "const": false
+        },
+        "gate_ready": {
+          "const": false
+        }
+      }
+    },
+    "act_contracts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "played_consequence_preserved"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "OPEN_PENDING_ACT_RESOLUTION",
+              "CONDITIONAL_NOT_REALIZED"
+            ]
+          },
+          "played_consequence_preserved": {
+            "const": true
+          }
+        }
+      }
+    },
+    "mechanics": {
+      "type": "object",
+      "required": [
+        "xp_total",
+        "xp_spent",
+        "xp_remaining",
+        "xp_credit",
+        "willpower",
+        "mortality",
+        "embrace_occurred"
+      ],
+      "properties": {
+        "xp_total": {
+          "const": 675
+        },
+        "xp_spent": {
+          "const": 270
+        },
+        "xp_remaining": {
+          "const": 405
+        },
+        "xp_credit": {
+          "const": 0
+        },
+        "mortality": {
+          "const": "MORTAL"
+        },
+        "embrace_occurred": {
+          "const": false
+        }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "required": [
+        "no_new_event",
+        "no_pc_decision",
+        "no_knowledge_delta",
+        "no_xp_fv_delta",
+        "no_frozen_edit",
+        "meta_comment_not_diegetic",
+        "narrator_handoff_ready"
+      ],
+      "properties": {
+        "no_new_event": {
+          "const": true
+        },
+        "no_pc_decision": {
+          "const": true
+        },
+        "no_knowledge_delta": {
+          "const": true
+        },
+        "no_xp_fv_delta": {
+          "const": true
+        },
+        "no_frozen_edit": {
+          "const": true
+        },
+        "meta_comment_not_diegetic": {
+          "const": true
+        },
+        "narrator_handoff_ready": {
+          "const": false
+        }
+      }
+    },
+    "predecessor_ref": {
+      "$ref": "#/$defs/blobRef"
+    }
+  }
+}

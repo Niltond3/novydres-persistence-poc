@@ -1,7 +1,0 @@
-# NOVYDRES — Recuperação GitHub-only em conversa nova V3 (READ ONLY)
-
-**AINDA NÃO EXECUTADO**. Abrir um chat ChatGPT Web realmente novo e usar somente o conector GitHub. Solicitação:
-
-> Recupere NOVYDRES e CHRONICLE_001 SOMENTE pelo GitHub `Niltond3/novydres-persistence-poc` branch master; não utilize memórias de ChatGPT, Drive nem chats anteriores. Leia `novydres/MANIFEST_V3.json`, `novydres/runtime/GITHUB_PRIMARY_CONTRACT_V1.md`, `novydres/migration/MIG-DEC-002_GITHUB_PRIMARY_ACTIVATION_V1.md`, .AGENT.md, .CONTEXTG.md, `novydres/chronicles/CHR-001/LIVE_v002.json` e `novydres/chronicles/CHR-001/HISTORY_INDEX_v002.json`; descubra possíveis sucessores validados. Use os índices de NPC, conhecimento, mecânica e até dois shards históricos pertinentes. Sem abrir a rubrica, reconstruir checkpoint, última declaração literal incompleta, pergunta do funcionário, roupas e faca, XP/FV, compras x ficha-alvo, três causas de M1/M2 com classificações de evidência, autoridade editorial, mídias 14/19, GitHub ACTIVE e Drive textual INACTIVE. Informar UNKNOWN onde for UNKNOWN, contar leituras e citar arquivos e event IDs. NÃO gravar, narrar ou rolar.
-
-Comparar resposta **depois** com `novydres/migration/FRESH_CHAT_ACCEPTANCE_RUBRIC_V2.json`, registrar desempenho sem reescrever fatos. O cutover operacional não equivale a teste independente aprovado.

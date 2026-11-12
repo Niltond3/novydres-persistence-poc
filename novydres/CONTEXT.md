@@ -1,9 +1,15 @@
 # NOVYDRES — navegação candidata por assunto (não operacional)
 
-Escopo deste checkpoint: 79 assuntos candidatos, incluindo a amostra histórica C41, fontes globais D03, 9 distritos, 32 locais e 20 módulos de regras; a identidade global do protagonista tem origem nominal aprovada, sem importar seu estado. **O checkpoint local da amostra C41 não equivale ao estado atual de master em C45.**
+Escopo da árvore candidata D05: 153 assuntos candidatos (incluindo os 79 do recorte D03), incluindo a amostra histórica C41, fontes globais D03, 9 distritos, 32 locais e 20 módulos de regras; a identidade global do protagonista tem origem nominal aprovada, sem importar seu estado. **O checkpoint local da amostra C41 não equivale ao estado atual de master em C45.**
 
 Entradas propostas para E: `AGENTS.md`, este `CONTEXT.md` e `catalogo.json`, todos lidos no mesmo commit. O catálogo é gerado de `cenario/**/assunto.json`, `personagens/**/assunto.json`, `cronicas/**/assunto.json` e `sistema/regras/**/assunto.json`, com arquivos e vínculos derivados. `novydres/scripts/catalogo-assuntos.mjs --check` rejeita divergência de bytes e IDs; o CI testa leitura por SHA e proteção de divulgação. Nenhum caminho antigo é fallback. O vínculo C41 para a identidade global do protagonista foi resolvido por ID, preservando a relação local; isso não migra recursos, conhecimento ou o checkpoint corrente de C45. A recuperação candidata C45 está pinada e agora distingue 38 escopos de conhecimento por ator (47 entradas) e 44 threads preservadas; C41 continua fixture histórica. D04–D07 dependem dos gates integrais e não concedem autorização operacional.
 
 O contrato único de condução **candidato** está em `novydres/sistema/narrativa/contrato.md`, com configuração local sob o subject `chr001-table-config` recuperável pelo catálogo. O contrato consolida DEC-01–15, 18, 20, 23–27 e A04, mas não é outro bootstrap nem herda autoridade operacional. Situações fictícias N-01–N-08/N-06-RESULT e sua revisão contextual anterior permanecem fontes históricas de teste, não cenas reais.
 
 **Não ativar este desenho** para a crônica: os contratos operacionais de `master` permanecem até E02 expressamente aprovado.
+
+## D05 — fontes de procedimento e escopos locais em candidatura
+
+A antiga árvore de runtime, os bootstraps versionados, manifestos e POC não são entradas operacionais nesta árvore. Seus bytes históricos continuam acessíveis por SHA Git. Os 285 arquivos do runtime migraram como fonte inerte para cinco assuntos de custódia, inclusive `chr001-runtime-story-architecture` (97 fontes locais restritas), e quatro assuntos de regras/contratos históricos (188 fontes). D05 ainda depende da comparação funcional e da revisão independente das 121 referências antigas marcadas como utilizadas.
+
+O cursor C45 fica em `chr001-state-checkpoint/recuperacao-c45.json`, com origem fixada no master histórico `c9fcfc0c558cd17d58ec8c8272da3ed70182ff37`. O `atual.json` C41 é fixture anterior e não deve orientar retomada. Há 38 assuntos de conhecimento por ator, 47 linhas preservadas e 44 threads restritas. Novas mudanças só podem usar as três entradas do mesmo snapshot, `retomar-cronica.mjs` como leitor candidato e a política de transação aprovada em E. **E02 não foi autorizado.**

@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "$defs": {
+    "blobRef": {
+      "type": "object",
+      "required": [
+        "path",
+        "blob_sha"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    }
+  },
+  "$id": "https://novydres.local/CHR-001/SIDECAR_SCHEMA_V9",
+  "required": [
+    "schema_id",
+    "chronicle_id",
+    "episode_id",
+    "classification",
+    "preparation_id",
+    "status",
+    "source_checkpoint",
+    "dossier_ref",
+    "scene_queue",
+    "causal_relays",
+    "temporal_policy",
+    "protected_state",
+    "operational_gates",
+    "immersion",
+    "predecessor_ref"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_LONGITUDINAL_SIDECAR_V9"
+    },
+    "chronicle_id": {
+      "const": "CHR-001"
+    },
+    "episode_id": {
+      "const": "M3.02"
+    },
+    "classification": {
+      "const": "GM_HIDDEN"
+    },
+    "preparation_id": {
+      "const": "CHR001-PREP-M302-20261111-V3"
+    },
+    "status": {
+      "const": "REVIEW_REQUIRED_NO_NARRATOR_HANDOFF"
+    },
+    "source_checkpoint": {
+      "type": "object",
+      "required": [
+        "cycle",
+        "manifest",
+        "last_event_id",
+        "last_closed_scene",
+        "next_scene",
+        "next_scene_status",
+        "state_refs"
+      ],
+      "properties": {
+        "cycle": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "manifest": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "last_event_id": {
+          "const": "CHR001-M302-C01-05-20261111-001"
+        },
+        "last_closed_scene": {
+          "const": "M3.02.C01"
+        },
+        "next_scene": {
+          "const": "M3.02.C02"
+        },
+        "next_scene_status": {
+          "const": "NOT_STARTED"
+        },
+        "state_refs": {
+          "type": "object",
+          "required": [
+            "episode",
+            "character",
+            "live",
+            "history_index",
+            "knowledge",
+            "threads"
+          ],
+          "properties": {
+            "episode": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "character": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "live": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "history_index": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "knowledge": {
+              "$ref": "#/$defs/blobRef"
+            },
+            "threads": {
+              "$ref": "#/$defs/blobRef"
+            }
+          }
+        }
+      }
+    },
+    "dossier_ref": {
+      "$ref": "#/$defs/blobRef"
+    },
+    "scene_queue": {
+      "type": "object",
+      "required": [
+        "closed",
+        "next",
+        "next_status",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "closed": {
+          "const": "M3.02.C01"
+        },
+        "next": {
+          "const": "M3.02.C02"
+        },
+        "next_status": {
+          "const": "NOT_STARTED"
+        },
+        "scene_ready": {
+          "const": false
+        },
+        "narrator_permission": {
+          "const": false
+        }
+      }
+    },
+    "causal_relays": {
+      "type": "array",
+      "minItems": 1
+    },
+    "temporal_policy": {
+      "type": "object",
+      "required": [
+        "year",
+        "civil_date",
+        "post_c01_elapsed_time",
+        "mode",
+        "ellipsis_allowed_only_if_justified",
+        "temporal_gate_ready"
+      ],
+      "properties": {
+        "year": {
+          "const": 1970
+        },
+        "civil_date": {
+          "const": "UNKNOWN"
+        },
+        "post_c01_elapsed_time": {
+          "const": "NOT_ADVANCED"
+        },
+        "mode": {
+          "const": "REVIEW_REQUIRED"
+        },
+        "ellipsis_allowed_only_if_justified": {
+          "const": true
+        },
+        "temporal_gate_ready": {
+          "const": false
+        }
+      }
+    },
+    "protected_state": {
+      "type": "object",
+      "required": [
+        "state_refs",
+        "threads_open",
+        "xp_unchanged",
+        "willpower_unchanged",
+        "npc_knowledge_unchanged"
+      ],
+      "properties": {
+        "state_refs": {
+          "type": "object",
+          "required": [
+            "episode",
+            "character",
+            "live",
+            "history_index",
+            "knowledge",
+            "threads"
+          ]
+        },
+        "threads_open": {
+          "const": 44
+        },
+        "xp_unchanged": {
+          "const": true
+        },
+        "willpower_unchanged": {
+          "const": true
+        },
+        "npc_knowledge_unchanged": {
+          "const": true
+        }
+      }
+    },
+    "operational_gates": {
+      "type": "object",
+      "required": [
+        "story_preparation_ready",
+        "mechanical_scene_ready",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "story_preparation_ready": {
+          "const": false
+        },
+        "mechanical_scene_ready": {
+          "const": false
+        },
+        "scene_ready": {
+          "const": false
+        },
+        "narrator_permission": {
+          "const": false
+        }
+      }
+    },
+    "immersion": {
+      "type": "object",
+      "required": [
+        "gate",
+        "player_comment",
+        "meta_not_event",
+        "no_double_action",
+        "no_redundant_closure"
+      ],
+      "properties": {
+        "gate": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "player_comment": {
+          "$ref": "#/$defs/blobRef"
+        },
+        "meta_not_event": {
+          "const": true
+        },
+        "no_double_action": {
+          "const": true
+        },
+        "no_redundant_closure": {
+          "const": true
+        }
+      }
+    },
+    "predecessor_ref": {
+      "$ref": "#/$defs/blobRef"
+    }
+  }
+}

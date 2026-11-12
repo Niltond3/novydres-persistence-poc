@@ -39,7 +39,7 @@ export function auditTree({files,contents={},mode='CANDIDATE',mediaRegistry=null
  const all=files.slice().sort((a,b)=>order(a.path,b.path));
  const issues=[],warnings=[];
  const counters={blobs:0,text_files:0,binary_files:0,legacy_paths:0,symlinks:0,
-  candidate_code_consumers:0,textual_legacy_mentions:0,unverified_media:0,media_pending:0,public_secret_marker_paths:0};
+  candidate_code_consumers:0,textual_legacy_mentions:0,unverified_media:0,media_pending:0,media_optional_waived:0,public_secret_marker_paths:0};
  const classified=[];
  for(const file of all) {
   const path=file.path;
@@ -95,7 +95,20 @@ export function auditTree({files,contents={},mode='CANDIDATE',mediaRegistry=null
    if(item.media_storage!=='GOOGLE_DRIVE' && item.raw_original_migrated_destination!=='GOOGLE_DRIVE')
     warnings.push({code:'MEDIA_LOCATION_UNCONFIRMED',path:mediaPath});
    if(item.drive_sha256_verified!==true)counters.unverified_media++;
-   if(item.raw_original_migrated!==true)counters.media_pending++;
+   if(item.raw_original_migrated!==true){
+     const dep=item.d02_dependency_evaluation||{};
+     const optionalIds=mediaRegistry.d02_optional_media_decision?.ids||[];
+     const listed=optionalIds.includes(item.library_id);
+     const noControlledReference=!Object.entries(contents).some(([p,value])=>
+       (isCode(p)||PUBLIC_ENTRY.has(p))&&typeof value==='string'&&value.includes(item.library_id));
+     const waived=mode==='ZERO_LEGACY_FINAL'&&listed&&
+       item.d02_gate_classification==='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02'&&
+       dep.operational_consumers_found===0&&dep.external_registry_dependencies===0&&
+       dep.binding_contract_found===false&&dep.authoritative_unique_content_proven===false&&
+       noControlledReference;
+     if(waived)counters.media_optional_waived++;
+     else counters.media_pending++;
+   }
    if(item.raw_original_migrated===true && (!item.drive_file_id||!item.drive_url))
      issues.push({code:'MEDIA_LINK_UNVERIFIED',path:mediaPath});
   }

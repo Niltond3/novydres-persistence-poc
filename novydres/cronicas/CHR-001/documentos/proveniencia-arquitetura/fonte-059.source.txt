@@ -1,0 +1,192 @@
+{
+  "document_id": "D10_ROLE_ADAPTERS_V018",
+  "version": "V018",
+  "status": "CURRENT_ROLE_CONTRACT_BOUND_TO_V10_V12_ADMIN_ONLY",
+  "authority": "PROGRAM_CONTRACT_SUCCESSOR",
+  "spoiler_class": "PLAYER_SAFE_INDEX",
+  "source_refs": [
+    {
+      "path": "novydres/.AGENT_V4.md",
+      "blob_sha": "28ec5230de70541aec6d555a04cb382fc03141cf"
+    },
+    {
+      "path": "novydres/.CONTEXTG_V3.md",
+      "blob_sha": "cc4827858e95b6046f4ceda3203610f9facd0790"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+      "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V031.json",
+      "blob_sha": "ee28dcc81940389382654e70b7e4591ae3bc675d"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+      "blob_sha": "d29922e5b58f34d7c424b9a8332645abb8a16dae"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V7.json",
+      "blob_sha": "73f75e42cdfb8da4ee205e363b6f04d9017f0f66"
+    },
+    {
+      "path": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V7.json",
+      "blob_sha": "dc4ef39b4688f06e55076b3d252d0c64edbdc3aa"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V10.md",
+      "blob_sha": "7c6a396cce73daed99127e276c96393ff336b64d"
+    },
+    {
+      "path": "novydres/runtime/orchestration/START_HERE_V9.md",
+      "blob_sha": "72d5f808aeb62ab24e4a9b595828b48ab1fcdece"
+    },
+    {
+      "path": "novydres/runtime/orchestration/CYCLE_SCHEMA_V12.json",
+      "blob_sha": "59c2e5544eb2804ac513086718237751dc36693c"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V12.mjs",
+      "blob_sha": "6ba42458d5e723b34bd32c3e4fea58ba7cb0df5c"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V12.mjs",
+      "blob_sha": "2d91e3b8d493aaee53201e58238115ac1e5eb82a"
+    },
+    {
+      "path": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V12.py",
+      "blob_sha": "e0e8c1099758c2882d47bb1e531c1bf5529e85c5"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V025_PLAYER_SAFE.json",
+      "blob_sha": "7d9d422551a5abf8dbce73e3b65785078a318b7e"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M302_ADMIN_OPEN_V001_PLAYER_SAFE.json",
+      "blob_sha": "f3f043704a4bf11c877f978f9d83c108bca3588f"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V007_PLAYER_SAFE.json",
+      "blob_sha": "5a5be4961a385ef8919e2fdbd3a7775a8b4f7f97"
+    },
+    {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V023.json",
+      "blob_sha": "38bab1917d1c085791faf5a45c636755b882d6ef"
+    }
+  ],
+  "roles": {
+    "DRAMATURGO": {
+      "agent_access": "AGENT_KNOWLEDGE",
+      "outputs": [
+        "GM_HIDDEN design",
+        "PLAYER_SAFE index",
+        "provenance",
+        "auditable causal contracts"
+      ],
+      "must_not": [
+        "rewrite frozen canon",
+        "convert direction into played fact",
+        "issue narrator permission",
+        "reopen a closed episode without new explicit gates",
+        "start C06 or M3.02 from an episode-closure record",
+        "resolve carried threads merely because the episode ended",
+        "claim M3.02.C01 started or scene-ready from a prospective incident; first cause must really occur"
+      ]
+    },
+    "NARRATOR": {
+      "agent_access": "AGENT_KNOWLEDGE",
+      "outputs": [
+        "player-facing scene only through current operational gate"
+      ],
+      "must": [
+        "load source and authorized hidden preparation before scene",
+        "maintain PC/NPC ledgers",
+        "respect player action and actual dice",
+        "stop if cycle or permission is absent",
+        "require a separately valid scene and explicit Narrator authorization; episode closure grants neither",
+        "refuse to start a new scene while C38 admin status has all scene gates false; player Narrator handoff is not available"
+      ]
+    },
+    "PLAYER": {
+      "knowledge": "PLAYER_KNOWLEDGE",
+      "outputs": [
+        "PLAYER_SAFE reports and in-play discoveries"
+      ],
+      "must_not_receive": [
+        "unearned secret truth",
+        "NPC-only information absent a played reveal"
+      ]
+    },
+    "CHARACTER": {
+      "knowledge": "PC_KNOWLEDGE",
+      "must": [
+        "acquire only through observation, statement, or accessible evidence",
+        "retain uncertainty when source is insufficient"
+      ]
+    },
+    "NPC": {
+      "knowledge": "NPC_KNOWLEDGE per individual",
+      "must": [
+        "record source/action/channel/content",
+        "act only on acquired information",
+        "not receive ambient author knowledge"
+      ]
+    }
+  },
+  "knowledge_ledgers": {
+    "AGENT_KNOWLEDGE": {
+      "scope": "AGENT_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires that individual’s acquired knowledge."
+    },
+    "PLAYER_KNOWLEDGE": {
+      "scope": "PLAYER_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires that individual’s acquired knowledge."
+    },
+    "PC_KNOWLEDGE": {
+      "scope": "PC_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires that individual’s acquired knowledge."
+    },
+    "NPC_KNOWLEDGE": {
+      "scope": "NPC_KNOWLEDGE",
+      "disclosure_rule": "Use only for the declared audience; NPC action requires that individual’s acquired knowledge."
+    }
+  },
+  "global_rules": [
+    "No player-facing prompt/report contains hidden plot content.",
+    "Planned NPC actions/events are not canon or played facts until actually played and persisted.",
+    "No automatic scene readiness, narrator permission, XP, or state transition.",
+    "GM_HIDDEN/SECRET/HIDDEN constrain disclosure to the player, not authorized agent access.",
+    "No cycle transition or scene permission is inferred from authoring or validation artifacts; use the exact active cycle and its validator."
+  ],
+  "emergency_flow": "If canon conflict, required retcon, indispensable source unavailable, impossible mechanics, or true access failure arises, pause only the affected branch; finish independent work and record a player-safe administrative blocker.",
+  "validation_behavior": {
+    "unknown": "Preserve historical unknowns unless an explicit currently admitted source and authorized variant resolve them.",
+    "failure": "Preserve actual failure. If recoverable, keep the route pending/quiet or use a supported causal alternative; only actual irreversible outcomes or explicit player choices may close it.",
+    "refusal": "Respect refusal. Do not count pre-start refusal as a completed story, force an incomplete outcome, or reissue an offer automatically; any later action needs an admissible cause and valid offer.",
+    "early_discovery": "Reveal only what an authorized source supports through play.",
+    "abandonment": "No automatic retaliation, new event, or infinite hook.",
+    "contract_reference_validation": "Resolve Markdown anchors and JSON pointers before adversarial tests pass; evaluate each criterion and declared reducer assertion.",
+    "episodic_closure": "Close only the finite episode at the approved checkpoint; carry all open threads and current state unchanged; keep route disposition independent."
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V017.json",
+    "blob_sha": "54a7b3877dde1a2dcb9e556289cdfd9641b9f876"
+  },
+  "version_pins": {
+    "schema_registry": "D10_SCHEMA_REGISTRY_V023.json",
+    "orchestration_contract": "ORCHESTRATION_CONTRACT_V10.md",
+    "cycle_schema": "CYCLE_SCHEMA_V12.json",
+    "cycle_validator": "ORCHESTRATION_VALIDATOR_V12.mjs",
+    "cycle_tests": "ORCHESTRATION_TESTS_V12.mjs",
+    "cycle_schema_tests": "ORCHESTRATION_SCHEMA_TESTS_V12.py",
+    "start_here": "START_HERE_V9.md",
+    "mechanical_source_index": "D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
+    "player_authorization": "PLAYER_DECISION_AGENT_ACCESS_V004.json",
+    "d07_activation": "D07_ACTIVATION_V004_PLAYER_SAFE.json",
+    "promotion_inventory": "D12_PROMOTION_INVENTORY_V007_PLAYER_SAFE.json",
+    "player_episode_closure": "PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+    "player_next_provocation_authorization": "PLAYER_DECISION_M302_ADMIN_OPEN_V001_PLAYER_SAFE.json",
+    "preparation_dossier_schema": "PROVOCATION_DOSSIER_SCHEMA_V7.json",
+    "preparation_sidecar_schema": "PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V7.json"
+  }
+}

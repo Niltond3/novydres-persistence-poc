@@ -1,0 +1,22 @@
+{
+  "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
+  "phase": "D07",
+  "status": "REVIEW_EXECUTOR_SEPARATE_CODE_PATH_NOT_INDEPENDENT_HUMAN",
+  "gate": "D07_NOT_YET_PASS",
+  "candidate_only": true,
+  "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
+  "negative_tests": "novydres/scripts/testar-revisao-d07.test.mjs",
+  "not_self_attested_d06": true,
+  "source_comparison_by_actor": 47,
+  "source_comparison_of_threads": 44,
+  "privacy_fail_closed": true,
+  "require_contextual_review_of_121_active_successions": true,
+  "editorial_conflicts_not_selected": [
+    "CONFLICT-001",
+    "CONFLICT-002",
+    "CONFLICT-003B"
+  ],
+  "no_false_independent_certification": true,
+  "ci": "PENDING_FINAL_FREEZE",
+  "no_master_change": true
+}

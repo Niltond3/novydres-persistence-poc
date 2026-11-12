@@ -1,0 +1,76 @@
+{
+  "document_id": "D12_RELEASE_CANDIDATE_V020",
+  "version": "V020",
+  "classification": "PLAYER_SAFE",
+  "status": "D12_VALIDATED_CANDIDATE_PENDING_CYCLE_VALIDATION_AND_READBACK",
+  "scope": "M3.01 episode-only closure at C05-22; persistent threads and all state preserved.",
+  "decision_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+    "blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+  },
+  "review_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.01_ALTERNATE_CLOSURE_REVIEW_V003_PLAYER_SAFE.md",
+    "blob_sha": "4310213730e1bd5663c40c7fbdc29eb3f4b418ed"
+  },
+  "source_cycle_ref": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0036.json",
+    "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920"
+  },
+  "source_manifest_ref": {
+    "path": "novydres/MANIFEST_V51.json",
+    "blob_sha": "2a315f5593068e8ff8031cc6b3ca68846d926077"
+  },
+  "thread_ledger_ref": {
+    "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+    "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+  },
+  "outputs": [
+    "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
+    "novydres/chronicles/CHR-001/preparations/M3.01_ALTERNATE_CLOSURE_REVIEW_V003_PLAYER_SAFE.md",
+    "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V031.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+    "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V024_PLAYER_SAFE.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V022.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V017.json",
+    "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V9.md",
+    "novydres/runtime/orchestration/CYCLE_SCHEMA_V11.json",
+    "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V11.mjs",
+    "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V11.mjs",
+    "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V11.py",
+    "novydres/runtime/orchestration/START_HERE_V8.md",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_PROMOTION_INVENTORY_V006_PLAYER_SAFE.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V024.py",
+    "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V024.json",
+    "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V019.py"
+  ],
+  "criteria": {
+    "episode_local_outcomes": "SATISFIED_FOR_STARTED_C01_TO_C05",
+    "player_choice": "RECORDED",
+    "persistent_threads": "UNCHANGED_AND_CARRIED_FORWARD",
+    "route_and_target": "PENDING_UNCHANGED",
+    "C06": "NOT_STARTED_NOT_DECLINED",
+    "scene_ready": false,
+    "narrator_permission": false,
+    "M3.02_started": false
+  },
+  "validation": {
+    "D10_V024": "PASS_16_OF_16",
+    "D12_V019": "PASS_13_OF_13",
+    "cycle_V11_tests": "PENDING_FINAL_ASSEMBLY",
+    "readback": "PENDING_CONDITIONAL_PUBLICATION"
+  },
+  "authorizations": {
+    "documentary_promotion": true,
+    "conditional_master_publication": true,
+    "scene_execution": false,
+    "C06_start": false,
+    "M3_02": false,
+    "narrator_permission": false,
+    "route_disposition_change": false
+  },
+  "predecessor_ref": {
+    "path": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V019.json",
+    "blob_sha": "17a15fd0698c6a04c22e29883563609bb72f98ea",
+    "reference_role": "HISTORICAL_PREDECESSOR"
+  }
+}

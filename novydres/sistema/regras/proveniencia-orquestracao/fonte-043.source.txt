@@ -1,0 +1,5 @@
+# ORCHESTRATION_CONTRACT_V19 — M3.02.C02 prospectivo
+
+Sucessor de V18; não altera cenas fechadas nem versões anteriores. D04–D12 autorizam preparar, sem registrar como acontecimento, um contato iniciado por NPC com motivação própria, conhecimento limitado, acesso público plausível e falha possível. A variante aprovada NÃO prova identidade/localização, NÃO cria transmissão e NÃO concede por si só permissão do Narrador. C01 é CLOSED/G28; nenhum personagem foi identificado retroativamente, a viga não se repete. O primeiro convite, se houver, exige entrega jogada. NARRATIVE_IMMERSION_GATE_V1 e feedback do jogador aplicam-se integralmente.
+
+Modo CONTINUITY sem período adicional, rotina ou decisões presumidas. 44 fios e 47 conhecimentos permanecem. A1 não foi resolvido; recursos 675/270/405, crédito 0, FV 6/2/0/4. Preparação editorial V5 NÃO é evento, SCENE_READY ou permissão de Narrador. Somente após schema/semântica/negativos PASS, CI final SHA PASS, C45 válido, proteção CAS de master e readback, o Narrador poderá iniciar C02 por prompt explícito do jogador. Se uma fonte/rota exigir adivinhação, bloquear em vez de inventar.

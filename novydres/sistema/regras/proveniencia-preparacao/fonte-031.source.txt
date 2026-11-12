@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "status",
+    "scene_queue",
+    "causal_relays",
+    "temporal_policy",
+    "protected_state"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_LONGITUDINAL_SIDECAR_V11"
+    },
+    "status": {
+      "const": "CAUSAL_PREFLIGHT_EDITORIAL_ONLY"
+    },
+    "scene_queue": {
+      "type": "object",
+      "properties": {
+        "next_status": {
+          "const": "NOT_STARTED"
+        },
+        "scene_ready": {
+          "const": false
+        },
+        "narrator_permission": {
+          "const": false
+        }
+      }
+    },
+    "temporal_policy": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "const": "CONTINUITY"
+        },
+        "significant_ellipsis": {
+          "const": false
+        },
+        "threads": {
+          "type": "array",
+          "minItems": 44,
+          "maxItems": 44
+        }
+      }
+    }
+  }
+}

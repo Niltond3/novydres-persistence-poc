@@ -1,0 +1,43 @@
+{
+  "id": "PLAYER_DECISION_CHR001_LIVING_ELLIPSES_V001_PLAYER_SAFE",
+  "classification": "PLAYER_SAFE",
+  "type": "EXPLICIT_PLAYER_DIRECTION",
+  "registered_on": "2026-11-11",
+  "scope": "CHR-001 guided creation and subsequent narrations; prospective only",
+  "authority": "PLAYER_EXPLICIT",
+  "predecessor": {
+    "path": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_SIGNIFICANT_SCENE_SPOTLIGHT_V001_PLAYER_SAFE.json",
+    "blob_sha": "ea0452110ca968ca89b4aeec6a526d82b63ef016"
+  },
+  "directive": "Time ellipses should meaningfully advance the protagonist's mortal or non-mortal life, relationships, business, adversaries, allies and independent world, not freeze them.",
+  "duties": {
+    "dramaturgo": [
+      "Choose meaningful time interval, its causes, and several grounded consequences across relevant world/character threads",
+      "Model business continuity/expansion/retraction as opportunities and tensions, with source, constraints, costs and alternative plausible outcomes",
+      "Indicate who is acting independently and what they can know, do or change",
+      "Distinguish NPC/world events not requiring player decision from player-significant choices requiring an interactive pre-scene micro-resolution",
+      "Prepare up to two distinct, consequential mechanical checks with state-specific stakes; never pre-roll, set player responses or alter current state",
+      "Author a spoiler-safe opening summary and handoff; map updates to ledgers/manifest at G28"
+    ],
+    "narrador": [
+      "Reconcile interval conditions with current status; enact offscreen independent world events at authorized opening, not retroactively as past checkpoint events",
+      "Resolve up to two significant offscreen decisions/checks before the spotlight opens, using G25/G27, real RNG, Take Half, WP windows and no dice fiction",
+      "Narrate a concise non-static opening passage of elapsed time and causal impacts in business/social/other relevant spheres, including uncertainty and consequences derived from any checks",
+      "Begin the planned main spotlight only after required micro-resolution is complete; if a decision actually needs a full scene or rules unavailable, do not compress it",
+      "Persist the time boundary, events, actor knowledge, tests and deltas with provenance as part of the authorized scene close, G28/G26"
+    ]
+  },
+  "player_authority": "Controls all consequential protagonist choices, tests/Take Half/FV and non-routine actions; cannot have consent, acts or successes imputed by ellipsis.",
+  "strict_rules": [
+    "No unearned XP, trait purchases, resources, contracts or victory; genuine business performance may improve or deteriorate from sourced causes and adjudication, subject to rules",
+    "No arbitrary misery, guaranteed positivity or inevitable scripted result",
+    "No new NPC epistemic knowledge without causal acquisition",
+    "No unrecorded character action disguised as offscreen world advancement",
+    "Avoid filling every interval with three rote updates; use 1–3 meaningful changes or explicitly justified stability",
+    "Max two distinct pre-spotlight checks, not two messages: each may require interactions for declaration, take half/roll and FV",
+    "Failed/missing check does not magically move protagonist, grant NPC knowledge, resolve plot or change XP",
+    "A future-scene preparation is not a played event; actualize only during authorized Narrador play"
+  ],
+  "entry_state": "CYCLE_V0040 ready for M3.02.C01; no scene played and no changes to C05-22 baseline",
+  "approval": "Scope-limited operational architecture correction; canonical/frozen artifacts remain unchanged"
+}

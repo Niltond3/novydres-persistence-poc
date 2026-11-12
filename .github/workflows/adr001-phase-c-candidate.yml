@@ -1,128 +1,45 @@
-name: ADR-001 C/D candidate checks (non-operational)
+name: ADR-001 D consolidated candidate validation
 on:
   push:
-    branches:
-      - design/subject-oriented-migration
+    branches: [design/subject-oriented-migration]
     paths:
-      - 'novydres/scripts/validar-assuntos.mjs'
-      - 'novydres/scripts/testar-validacao-assuntos.test.mjs'
-      - 'novydres/scripts/catalogo-assuntos.mjs'
-      - 'novydres/scripts/testar-catalogo-assuntos.test.mjs'
-      - 'novydres/scripts/retomar-estado.mjs'
-      - 'novydres/scripts/testar-retomada-estado.test.mjs'
-      - 'novydres/scripts/auditar-legado-e-fontes.mjs'
-      - 'novydres/scripts/testar-auditoria-legado.test.mjs'
-      - 'novydres/scripts/revisar-conducao-candidata.mjs'
-      - 'novydres/scripts/testar-conducao-candidata.test.mjs'
-      - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
-      - 'novydres/scripts/verificar-custodia-d04.mjs'
-      - 'novydres/scripts/testar-custodia-d04.test.mjs'
-      - 'novydres/scripts/verificar-estado-d04.mjs'
-      - 'novydres/scripts/testar-estado-d04.test.mjs'
-      - 'novydres/cronicas/CHR-001/estado/**'
-      - 'novydres/scripts/verificar-modulos-d03.mjs'
-      - 'novydres/scripts/testar-modulos-d03.test.mjs'
-      - 'novydres/scripts/verificar-gate-d03.mjs'
-      - 'novydres/scripts/testar-gate-d03.test.mjs'
-      - 'novydres/scripts/verificar-identidade-pc-d03.mjs'
-      - 'novydres/scripts/testar-identidade-pc-d03.test.mjs'
-      - 'novydres/scripts/verificar-relacoes-globais-d03.mjs'
-      - 'novydres/scripts/testar-relacoes-globais-d03.test.mjs'
-      - 'novydres/scripts/verificar-segmentos-distribuidos-d03.mjs'
-      - 'novydres/scripts/testar-segmentos-distribuidos-d03.test.mjs'
-      - 'novydres/scripts/verificar-conceitos-d03.mjs'
-      - 'novydres/scripts/testar-conceitos-d03.test.mjs'
-      - 'novydres/scripts/verificar-vinculos-d03.mjs'
-      - 'novydres/scripts/testar-vinculos-d03.test.mjs'
-      - 'novydres/scripts/verificar-fragmentos-d03.mjs'
-      - 'novydres/scripts/testar-fragmentos-d03.test.mjs'
-      - 'novydres/scripts/verificar-migracao-d03.mjs'
-      - 'novydres/scripts/testar-migracao-d03.test.mjs'
-      - 'novydres/scripts/verificar-inventario-d01.mjs'
-      - 'novydres/scripts/testar-inventario-d01.test.mjs'
-      - 'novydres/scripts/verificar-custodia-d02.mjs'
-      - 'novydres/scripts/testar-custodia-d02.test.mjs'
-      - 'novydres/sistema/governanca/**'
-      - 'novydres/fontes/**'
-      - 'novydres/cenario/**'
-      - 'novydres/personagens/**'
-      - 'novydres/sistema/regras/**'
-      - 'novydres/sistema/arquitetura/fase-d/**'
-      - 'novydres/sistema/narrativa/**'
-      - 'novydres/cronicas/CHR-001/configuracao/**'
-      - 'novydres/sistema/arquitetura/fase-b/resultado-testes.json'
-      - 'novydres/sistema/arquitetura/fase-b/gate-e-readback.json'
-      - 'novydres/catalogo.json'
-      - 'novydres/AGENTS.md'
-      - 'novydres/CONTEXT.md'
-      - 'novydres/sistema/arquitetura/fase-a/schemas/**'
-      - '.github/workflows/adr001-phase-c-candidate.yml'
+      - 'novydres/sistema/arquitetura/fase-d/d06-freeze.json'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  c01-validators:
+  integrated-D:
     if: github.ref == 'refs/heads/design/subject-oriented-migration'
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # read historical commit/path/blob; no source snapshots mixed
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate candidate source bindings and V01–V04
+      - name: Validate all subject owners and pinned sources
         run: node novydres/scripts/validar-assuntos.mjs
-      - name: Exercise deterministic and negative cases
-        run: node --test novydres/scripts/testar-validacao-assuntos.test.mjs
-      - name: Check derived catalog byte identity and V09 content hash
+      - name: Verify exact generated catalog
         run: node novydres/scripts/catalogo-assuntos.mjs --check
-      - name: Test V03 exact snapshot retrieval and V09 invalidation
-        run: node --test novydres/scripts/testar-catalogo-assuntos.test.mjs
-      - name: Test V06-V07 fixed historical state and guarded recovery
-        run: node --test novydres/scripts/testar-retomada-estado.test.mjs
-      - name: Check C04 standalone candidate recovery from pinned source blobs
-        run: node novydres/scripts/retomar-estado.mjs
-      - name: Audit all HEAD paths and pending source media without claiming cutover
-        run: node novydres/scripts/auditar-legado-e-fontes.mjs
-      - name: Test V08 V11 V12 strict final rejection and negative fixture coverage
-        run: node --test novydres/scripts/testar-auditoria-legado.test.mjs
-      - name: C05 optional fiction-risk diagnostics and reuse independent contextual review
-        run: node --test novydres/scripts/testar-conducao-candidata.test.mjs
-      - name: C07 integrated exact-snapshot flow and scoped local measurements
-        run: node --test novydres/scripts/testar-fluxo-integrado.test.mjs
-      - name: D01 verify source/candidate Git objects and external registry pins
-        run: node novydres/scripts/verificar-inventario-d01.mjs
-      - name: D01 negative regressions for full inventory, SHA and editorial gate
-        run: node --test novydres/scripts/testar-inventario-d01.test.mjs
-      - name: D03 verify all 64 source portfolios without authority promotion
-        run: node novydres/scripts/verificar-migracao-d03.mjs
-      - name: D03 negative tests for ownership, provenance and promotion
-        run: node --test novydres/scripts/testar-migracao-d03.test.mjs
-      - name: D03 verify all 64 semantic locators against pinned sources
-        run: node --test novydres/scripts/testar-fragmentos-d03.test.mjs
-      - name: D03 audit pinned world links without false target resolution
-        run: node --test novydres/scripts/testar-vinculos-d03.test.mjs
-      - name: D03 verify 41 semantic place owners and both original variants
-        run: node --test novydres/scripts/testar-conceitos-d03.test.mjs
-      - name: D03 crosscheck distributed per-subject semantic source locators
-        run: node --test novydres/scripts/testar-segmentos-distribuidos-d03.test.mjs
-      - name: D03 verify global directed relations, provenance and no knowledge promotion
-        run: node --test novydres/scripts/testar-relacoes-globais-d03.test.mjs
-      - name: D03 verify global PC identity, current name authority and resolved C41 reference
-        run: node --test novydres/scripts/testar-identidade-pc-d03.test.mjs
-      - name: D03 consolidated gate proof of source equivalence and fail-closed authority
-        run: node --test novydres/scripts/testar-gate-d03.test.mjs
-      - name: D03 prove 20 rule module owners and D05 executable handoffs
-        run: node --test novydres/scripts/testar-modulos-d03.test.mjs
-      - name: D04 verify C45 immutable cursor, resources and actor-source boundaries
+      - name: C45 source snapshot and resource readback
         run: node novydres/scripts/verificar-estado-d04.mjs
-      - name: D04 C45 negative tests for stale pins, status and resources
-        run: node --test novydres/scripts/testar-estado-d04.test.mjs
-      - name: D04 verify complete 438 local source bytes, unique owners and regressions
+      - name: D04 all 438 original sources and negatives
         run: node --test novydres/scripts/testar-custodia-d04.test.mjs
-      - name: D02 verify exact original custody and conservative external-media classification
-        run: node novydres/scripts/verificar-custodia-d02.mjs
-      - name: D02 negative regressions for authority, media integrity and origin loss
-        run: node --test novydres/scripts/testar-custodia-d02.test.mjs
+      - name: C45 current state and actors negative tests
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: Zero legacy final on entire HEAD
+        run: node novydres/scripts/auditar-legado-e-fontes.mjs --final
+      - name: D06 source and structural scope with negative tests
+        run: node --test novydres/scripts/testar-integridade-d06.test.mjs
+      - name: D07 separate direct source and actor review
+        run: node --test novydres/scripts/testar-revisao-d07.test.mjs
+      - name: D06 full factual report without false gate claim
+        run: node novydres/scripts/verificar-integridade-d06.mjs
+      - name: D07 independent structural review without editorial certification
+        run: node novydres/scripts/revisar-independente-d07.mjs
+      - name: D06 final gate requires semantic and runtime approval
+        run: node novydres/scripts/verificar-integridade-d06.mjs --require-pass
+      - name: D07 final independent gate
+        run: node novydres/scripts/revisar-independente-d07.mjs --require-pass

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "status",
+    "scene_queue",
+    "causal_relays",
+    "temporal_policy",
+    "protected_state",
+    "operational_gates",
+    "predecessor_ref"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NOVYDRES_PROVOCATION_LONGITUDINAL_SIDECAR_V12"
+    },
+    "status": {
+      "const": "READY_ONLY_AFTER_C45_PROMOTION"
+    },
+    "scene_queue": {
+      "type": "object",
+      "required": [
+        "next_status",
+        "scene_ready",
+        "narrator_permission",
+        "event_created_in_preparation"
+      ],
+      "properties": {
+        "next_status": {
+          "const": "NOT_STARTED"
+        },
+        "scene_ready": {
+          "const": true
+        },
+        "narrator_permission": {
+          "const": true
+        },
+        "event_created_in_preparation": {
+          "const": false
+        }
+      }
+    },
+    "temporal_policy": {
+      "type": "object",
+      "required": [
+        "mode",
+        "significant_ellipsis",
+        "threads"
+      ],
+      "properties": {
+        "mode": {
+          "const": "CONTINUITY"
+        },
+        "significant_ellipsis": {
+          "const": false
+        },
+        "threads": {
+          "type": "array",
+          "minItems": 44,
+          "maxItems": 44
+        }
+      }
+    },
+    "operational_gates": {
+      "type": "object",
+      "required": [
+        "story_preparation_ready",
+        "mechanical_scene_ready",
+        "scene_ready",
+        "narrator_permission"
+      ],
+      "properties": {
+        "story_preparation_ready": {
+          "const": true
+        },
+        "mechanical_scene_ready": {
+          "const": true
+        },
+        "scene_ready": {
+          "const": true
+        },
+        "narrator_permission": {
+          "const": true
+        }
+      }
+    }
+  }
+}

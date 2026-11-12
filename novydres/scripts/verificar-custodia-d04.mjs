@@ -11,8 +11,7 @@ export function verifyD04Custody({overrideSubject=null,overrideRecord=null}={}){
  const original=new Map(expected.map(x=>[x.source_path,x]));
  if(expected.length!==438||original.size!==438)err('D04_SOURCE_COUNT');
  const cat=get('novydres/catalogo.json');
- const subjects=cat.subjects.filter(s=>s.id.startsWith('chr001-')&&
- !['chr001-npc-samir-haddad','chr001-state-checkpoint','chr001-table-config'].includes(s.id));
+ const subjects=cat.subjects.filter(s=>s.id.startsWith('chr001-')&&s.id!=='chr001-runtime-story-architecture'&&s.files.some(f=>f.path.endsWith('/registro.json')));
  if(subjects.length!==31||new Set(subjects.map(s=>s.path)).size!==31)err('D04_OWNER_COUNT');
  const seen=new Set();let copied=0,historicalAbsent=0;
  for(const s of subjects){
