@@ -88,5 +88,20 @@
     ],
     "disposition": "Never rewrite historical C41 to C45 or promote candidate source; master C45 remains operational and immutable in this exercise.",
     "semantic_review": "PENDING"
+  },
+  "b04_b05_2026_11_12": {
+    "status": "B_REMEDIATION_REQUIRED",
+    "open": [
+      "B02_CODEX_EXECUTION_MISSING",
+      "B04_REMOTE_STALE_ERROR_UNCLASSIFIED",
+      "B04_SYNTHETIC_VS_REAL_RUNTIME_BOUNDARY",
+      "B03_INDEPENDENT_SEMANTIC_REVIEW_MISSING",
+      "DEC25_AUTO_SEMANTIC_RECOVERY_UNPROVEN"
+    ],
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_cursor": "C45",
+    "candidate_cursor": "C41",
+    "no_silent_resolution": true,
+    "sandbox_branch": "test/adr001-b04-20261112"
   }
 }

@@ -124,5 +124,106 @@
     "gate_b": "B_REMEDIATION_REQUIRED",
     "codex_new_run": "NOT_EXECUTED",
     "ci_new_run": "NOT_EXECUTED"
+  },
+  "b05_consolidation_2026_11_12": {
+    "checkpoint": "B05-WEB-20261112-01",
+    "head_before_gate_persistence": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "phase": "B",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "subtasks": {
+      "B01": {
+        "status": "PASS_SCOPED_HISTORICAL",
+        "evidence": "matriz-equivalencia.json#b01_reconciliation_2026_11_12",
+        "c41_to_c45": "DECLARED_NOT_REBASED"
+      },
+      "B02": {
+        "status": "CODEX_NOT_EXECUTED",
+        "historical_accuracy": "51/90",
+        "historical_critical_failures": [
+          "B-Q29",
+          "B-Q30"
+        ],
+        "new_codex_evidence": false
+      },
+      "B03": {
+        "status": "PASS_SCOPED_AUTOMATED_SCORING_WITHOUT_INDEPENDENT_SEMANTIC_REVIEW",
+        "cases": "30/30",
+        "critical_cases_matched": [
+          "B-Q29",
+          "B-Q30"
+        ],
+        "evidence": "resultado-testes.json#b03_web_2026_11_12"
+      },
+      "B04": {
+        "status": "PASS_SYNTHETIC_CI_AND_PARTIAL_REAL_REMOTE",
+        "ci": {
+          "run_id": 43155672041,
+          "job_id": 130974912090,
+          "head_sha": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43155672041",
+          "log_outcome": {
+            "negative_rejected": 12,
+            "negative_total": 12,
+            "synthetic_journeys_expected": 12,
+            "synthetic_journeys_total": 12,
+            "additional_evidence_guards_rejected": 7,
+            "lost_ack_recovery": "PASS_LOCAL_ONLY"
+          }
+        },
+        "real_http_404": 2,
+        "remote": {
+          "sandbox_ref": "refs/heads/test/adr001-b04-20261112",
+          "base_sha": "f41f8c580039d94b8334390b47d0945962f58619",
+          "writer_a": "UPDATE_REF_SUCCESS",
+          "writer_b": "22351f365effc21af7b8af8b6cb00c863dfd11bf",
+          "winner": "8c6e72a2f5f67e2813c60f67179e11c3c64e7d5a",
+          "readback_blob_sha": "b18217a954bbaded2feeb00c71fd0c208008ba94",
+          "concurrent_dispatch": true,
+          "writer_b_result": "GRAPHQL_UNKNOWN_ERROR",
+          "explicit_stale_retry_result": "GRAPHQL_UNKNOWN_ERROR",
+          "ref_and_blob_unchanged_after_error": true,
+          "claim": "SINGLE_REMOTE_WINNER_CONFIRMED; EXACT_STALE_SHA_ERROR_NOT_PROVEN",
+          "master_or_design_mutated_by_probe": false,
+          "disposable_ref_cleanup": "NOT_AVAILABLE_VIA_THIS_CONNECTOR"
+        },
+        "synthetic_network_loss_only": true
+      },
+      "B05": {
+        "status": "B_REMEDIATION_REQUIRED",
+        "critical_unmet": [
+          "actual_Codex_B02_run_and_independent_review",
+          "remote_explicit_stale_SHA_rejection_diagnostic_not_classified",
+          "functional_negative_mutations_on_real_future_write_route_not_yet_available",
+          "independent_semantic_answer_review",
+          "DEC25_general_semantic_detection_not_proven"
+        ]
+      }
+    },
+    "dec25": {
+      "status": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+      "checkpoint_recovered": true,
+      "source_git_sha_verified": true,
+      "source_missing_detected_via_real_404": true,
+      "c41_to_c45_drift_detected": true,
+      "synthetic_false_completion_rejected": true,
+      "synthetic_lost_confirmation_idempotent": true,
+      "remote_loss_of_ack_not_induced": true,
+      "semantic_independence_not_proven": true,
+      "dec26_applied_to_blocked_codex_unit": true
+    },
+    "metrics": {
+      "web_actual_token_count": "NOT_OBSERVABLE",
+      "web_http_wire_bytes": "NOT_OBSERVABLE",
+      "ci_run_and_log": "OBSERVED",
+      "case_response_source_locators": "RECORDED",
+      "web_latency_p95": "NOT_MEASURED_NOT_WAIVED"
+    },
+    "source_narrative_edited": false,
+    "master_changed": false
   }
 }

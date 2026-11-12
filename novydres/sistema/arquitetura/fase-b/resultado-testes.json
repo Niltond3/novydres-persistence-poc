@@ -2584,5 +2584,72 @@
     "independent_semantic_review": "NOT_EXECUTED",
     "codex": "CODEX_NOT_EXECUTED",
     "current_cursor_not_rebased": true
+  },
+  "b02_recheck_2026_11_12": {
+    "status": "CODEX_NOT_EXECUTED",
+    "reason": "No Codex executor/channel is exposed by the connected ChatGPT Web tool environment.",
+    "historical_runs_preserved": true,
+    "critical_open": [
+      "B-Q29",
+      "B-Q30"
+    ],
+    "web_check_not_substitute": true
+  },
+  "b04_execution_2026_11_12": {
+    "status": "PARTIAL_REAL_AND_SYNTHETIC",
+    "ci": {
+      "run_id": 43155672041,
+      "job_id": 130974912090,
+      "head_sha": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43155672041",
+      "log_outcome": {
+        "negative_rejected": 12,
+        "negative_total": 12,
+        "synthetic_journeys_expected": 12,
+        "synthetic_journeys_total": 12,
+        "additional_evidence_guards_rejected": 7,
+        "lost_ack_recovery": "PASS_LOCAL_ONLY"
+      }
+    },
+    "remote": {
+      "sandbox_ref": "refs/heads/test/adr001-b04-20261112",
+      "base_sha": "f41f8c580039d94b8334390b47d0945962f58619",
+      "writer_a": "UPDATE_REF_SUCCESS",
+      "writer_b": "22351f365effc21af7b8af8b6cb00c863dfd11bf",
+      "winner": "8c6e72a2f5f67e2813c60f67179e11c3c64e7d5a",
+      "readback_blob_sha": "b18217a954bbaded2feeb00c71fd0c208008ba94",
+      "concurrent_dispatch": true,
+      "writer_b_result": "GRAPHQL_UNKNOWN_ERROR",
+      "explicit_stale_retry_result": "GRAPHQL_UNKNOWN_ERROR",
+      "ref_and_blob_unchanged_after_error": true,
+      "claim": "SINGLE_REMOTE_WINNER_CONFIRMED; EXACT_STALE_SHA_ERROR_NOT_PROVEN",
+      "master_or_design_mutated_by_probe": false,
+      "disposable_ref_cleanup": "NOT_AVAILABLE_VIA_THIS_CONNECTOR"
+    },
+    "github_negative_missing_source": {
+      "count": 2,
+      "observed": "NOT_FOUND_404",
+      "did_not_mutate_repository": true
+    },
+    "limitations": [
+      "synthetic_guard_predicates_do_not_exercise_runtime",
+      "remote_stale_error_category_unknown",
+      "loss_of_confirmation_emulated_only",
+      "test_ref_remains",
+      "no_live_app_level_transaction_replay"
+    ]
+  },
+  "b05_status_2026_11_12": {
+    "gate": "B_REMEDIATION_REQUIRED",
+    "unmet": [
+      "actual_Codex_B02_run_and_independent_review",
+      "remote_explicit_stale_SHA_rejection_diagnostic_not_classified",
+      "functional_negative_mutations_on_real_future_write_route_not_yet_available",
+      "independent_semantic_answer_review",
+      "DEC25_general_semantic_detection_not_proven"
+    ],
+    "dec25_status": "PARTIAL_OBSERVED_NOT_CERTIFIED"
   }
 }

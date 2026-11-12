@@ -53,5 +53,18 @@
     ],
     "status": "SELF_REPORTED_OR_APPROXIMATE; INSUFFICIENT_FOR_GATE"
   },
-  "interpretation": "Character counts are not bytes. Do not aggregate these independent experiments or infer actual token savings."
+  "interpretation": "Character counts are not bytes. Do not aggregate these independent experiments or infer actual token savings.",
+  "b03_2026_11_12": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "actual_source_file_reads": 8,
+    "case_assessments": 30,
+    "scoring_fixture_read_after_answers_frozen": true,
+    "snapshot": "design@135e323f151a2942aaaeb19bc6467e3d4393569b",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "recovered_exact_git_blob_sha": true,
+    "actual_tokens": "NOT_OBSERVABLE",
+    "http_wire_bytes": "NOT_OBSERVABLE",
+    "latency_ms": "NOT_MEASURED",
+    "independent_semantic_review": false
+  }
 }

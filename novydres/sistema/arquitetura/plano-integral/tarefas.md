@@ -266,3 +266,11 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 ## Registro de execução
 
 Nenhuma tarefa concluída por esta elaboração documental. Registrar futuramente sob o ID correspondente: estado, snapshot, saídas, evidências, limites e decisão de gate quando aplicável. Não criar T31 de “terminar a migração” depois de E03; qualquer descoberta obrigatória deve entrar no escopo e impedir o encerramento até ser resolvida.
+
+### B01–B05 — Checkpoint de execução (2026-11-12; ChatGPT Web/GitHub)
+
+- B01 **PASS_SCOPED_HISTORICAL** — 4 assuntos, 7 grupos de mapeamento e fontes fixas, delta C41→C45 declarado; `fase-b/matriz-equivalencia.json`.
+- B02 **CODEX_NOT_EXECUTED** — ferramenta não disponível; preservar 51/90 e B-Q29/30, sem PASS substituto.
+- B03 **PASS_SCOPED_AUTO_GRADING** — 30/30, snapshot pinado, localizadores por caso; falta revisão semântica independente; `fase-b/resultado-testes.json`.
+- B04 **PARTIAL** — 12 negativos + 12 jornadas + 7 guardas sintéticas em CI real 43155672041 (`success`); 2 recusas 404 reais; corrida remota com vencedor único e falha concorrente sem motivo de stale classificado. Confirmação perdida simulada apenas localmente. Ref de teste não apagada.
+- B05 **B_REMEDIATION_REQUIRED** — `fase-b/gate-e-readback.json#b05_consolidation_2026_11_12`; Codex, revisão independente e diagnósticos/stale remotos pendentes. DEC-25 parcial e DEC-26 em unidade bloqueada; C01 não liberada. `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura. Próxima tarefa elegível: B02 com Codex real, revisão B03, complementação B04 e reavaliação B05.
