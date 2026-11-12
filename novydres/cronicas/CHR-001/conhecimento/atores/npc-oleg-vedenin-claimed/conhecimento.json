@@ -1,0 +1,48 @@
+{
+  "subject_id": "chr001-knowledge-npc-oleg-vedenin-claimed",
+  "actor_id": "npc-oleg-vedenin-claimed",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 31,
+      "record": {
+        "entity": "npc-oleg-vedenin-claimed",
+        "label": "Oleg Vedenin (identidade e clã alegados; homem da galeria C16)",
+        "scope": "M2.04.C16",
+        "confirmed": [
+          "Presenciou Bart atacá-lo, feri-lo, queimá-lo, persegui-lo e depois libertá-lo expressamente com instrução de afastar-se da equipe.",
+          "Ouviu Bart chamá-lo de vampiro e pedir informações sobre fraquezas, capacidades e organizações; percebeu que Bart declarou ter visto outro antes.",
+          "Ouviu o sobrenome Krauser quando Pavel gritou durante o conflito; sabe que Bart se declara homem de palavra."
+        ],
+        "claims": [
+          "Declarou nome Oleg Vedenin, clã Brujah e Disciplinas Potência/Rapidez/Presença.",
+          "Afirmou perseguir homem para evitar acesso a lugar que deve permanecer fechado; não revelou comprovação ou quem o incumbiu.",
+          "Falou de vampirismo, fraquezas, clãs e Camarilla exterior; não reivindicou governo camarillense de Novydres.",
+          "Afirmou ter compromissos com outros e que não pretende voltar à equipe ao partir."
+        ],
+        "suspected": [],
+        "unknown": [
+          "Identidade, linhagem e disciplinas efetivas sem validação independente.",
+          "Se conhece Volnaya/Gromov ou qualquer evento M2.03; nenhuma ligação autorizada.",
+          "Se tem Potência/Blood Surge ativos; os 10 dados de oposição prévios não são ficha nominal verificada.",
+          "Destino após sumir da vista, eventual retorno, relação com autoridades de Novydres ou ameaças futuras."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+        "anchor": "CHR001-M204-C16-23-20261106-001",
+        "evidence_class": "OBSERVED_CONFLICT_WITH_NPC_ASSERTIONS_UNVERIFIED"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

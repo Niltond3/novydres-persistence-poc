@@ -1,0 +1,36 @@
+{
+  "subject_id": "chr001-knowledge-npc-paramedics-unspecified",
+  "actor_id": "npc-paramedics-unspecified",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 9,
+      "record": {
+        "entity": "npc-paramedics-unspecified",
+        "label": "Ambulance/medical personnel",
+        "scope": "M2.03",
+        "confirmed": [
+          "Attended injured man, spoke with rescuer"
+        ],
+        "claims": [],
+        "unknown": [
+          "Name of Bartholomeu; not stated in recorded ambulance dialogue",
+          "His private plans"
+        ],
+        "suspected": []
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

@@ -1,0 +1,147 @@
+{
+  "subject_id": "chr001-knowledge-npc-pavel-heating-supervisor",
+  "actor_id": "npc-pavel-heating-supervisor",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 1,
+      "record": {
+        "entity": "npc-pavel-heating-supervisor",
+        "label": "Pavel (supervisor do aquecimento; homônimos não fundidos)",
+        "scope": "M2.01",
+        "confirmed": [
+          "Tem em custódia uma cópia do relatório, entregue com permissão expressa do PJ",
+          "Ouviu Bart contestar a assinatura/rubrica e discutir o teste do ramal",
+          "M2.04.C10: mostrou livro de controle com reparo encaminhado sem liberação, reconheceu chamada de Liev ao rádio e sua ordem de sinalização; ouviu contestação explícita de Bart.",
+          "M2.04.C10: corrigiu minuta de contestação após conferência de Bart, recebeu declaração assinada e providenciou protocolo com via carimbada entregue ao PJ.",
+          "M2.04.C10: ouviu Bart alegar registros pessoais e extras equivalentes a anos de salário; disse solicitar registros internos e que dívida ainda exige apuração.",
+          "C11: Pavel organiza inspeção e revezamento, recebe parecer sobre queda de pressão e luva adaptadora divergente dos desenhos, mantém ramal interditado e orienta guarda rastreável/remessa da peça e priorização de engenharia/material adequado. Não ocorreu reparo ou liberação.",
+          "C13: recebeu expressamente de Bart cópias de extras feitas por Mary; exame visual não equivale a auditoria ou pagamento.",
+          "C13: participou da reunião com Andreyev e soube da triagem e nota manuscrita de autoria de Bart."
+        ],
+        "claims": [
+          "Diz que pretende conferir a ordem de serviço e a autoria da liberação",
+          "M2.04.C10: Pavel declara não ter encontrado comprovação de reparo posterior e não ter verificado condição atual do ramal."
+        ],
+        "unknown": [
+          "Se Pavel sabia anteriormente do documento",
+          "Se verificou ou corrigiu registros",
+          "Autor da rubrica",
+          "Autoria da rubrica anterior, data/autor/regularidade de adaptação, causa técnica definitiva e adequação da luva continuam não confirmadas. Ramal atual conhecido como interditado após C11, sem solução ainda.",
+          "NÃO sabe da Oficina Krauser; fala errônea do Narrador anulada após correção expressa do jogador."
+        ],
+        "source": "legacy",
+        "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+        "evidence": {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "anchor": "CHR001-M201-PAVEL-COPIA-20261101-001",
+          "offset": 293015,
+          "evidence_excerpt": "no; não declarar COMMITTED técnico. M2.01 — AUTORIZAÇÃO PARA PAVEL RETER A CÓPIA — EVENTO CHR001-M201-PAVEL-COPIA-20261101-001 (01/11/2026, registro operacional). PLAYER_SPEECH literal: “Sem problemas Pavel, pode ficar. Você tem o itinerário, qualquer coisa sabe onde me"
+        },
+        "suspected": [],
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+        "last_event_id": "CHR001-M204-C13-18-20261105-001"
+      }
+    },
+    {
+      "source_row_index": 18,
+      "record": {
+        "entity": "npc-pavel-heating-supervisor",
+        "label": "Pavel (supervisor aquecimento)",
+        "scope": "M2.04.C12",
+        "confirmed": [
+          "Analisou esquemas gerais com Bart, conheceu hipótese de derivação Cidade Velha/Bukovie, assinou proposta de estudo prioritário e encaminhou ao protocolo administrativo.",
+          "Sabe que a inspeção C11 terminou ontem após 22h, conforme correção de Bart.",
+          "C13: recebeu expressamente de Bart cópias de extras feitas por Mary; exame visual não equivale a auditoria ou pagamento.",
+          "C13: participou da reunião com Andreyev e soube da triagem e nota manuscrita de autoria de Bart."
+        ],
+        "claims": [
+          "A rota candidata exige engenharia, inspeção, autorização e balanço hidráulico; nenhuma operação foi aprovada."
+        ],
+        "suspected": [],
+        "unknown": [
+          "Operacionalidade e capacidade da rota, retorno e efeitos em Bukovie, resposta da engenharia, autoria da rubrica C10 e laudo C11.",
+          "NÃO sabe da Oficina Krauser; fala errônea do Narrador anulada após correção expressa do jogador."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v011.source.txt",
+        "anchor": "CHR001-M204-C12-14-20261105-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v012.source.txt",
+        "last_event_id": "CHR001-M204-C13-18-20261105-001"
+      }
+    },
+    {
+      "source_row_index": 25,
+      "record": {
+        "entity": "npc-pavel-heating-supervisor",
+        "label": "Pavel",
+        "scope": "M2.04.C15",
+        "confirmed": [
+          "Participou de levantamento e viu Bart intimidar Makarov e chutar porta antes de avaliação completa; expressou risco para segurança e confiança na equipe.",
+          "Sabe que reconhecimento tem limites e interdição original permanece."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Consequências futuras de confiança e de eventual intervenção; não conhece Oficina Krauser por esta cena."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "anchor": "CHR001-M204-C15-22-20261106-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "last_event_id": "CHR001-M204-C15-22-20261106-001"
+      }
+    },
+    {
+      "source_row_index": 33,
+      "record": {
+        "entity": "npc-pavel-heating-supervisor",
+        "label": "Pavel (observador na galeria C16; sem acesso ao diálogo no corredor)",
+        "scope": "M2.04.C16",
+        "confirmed": [
+          "Observou desconhecido segurar homem suspenso e começo de ataque físico de Bart na galeria.",
+          "Presenciou vazamento violento e ordenou retirada de trabalhadores quando jato de água/vapor surgiu."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Não ouviu automaticamente conversa sobre vampiros/clãs, Oleg ou Kuthulun em corredor fora de vista.",
+          "Condição posterior dos trabalhadores, eventual avaliação operacional e repercussão técnica."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v015.source.txt",
+        "anchor": "CHR001-M204-C16-11-20261106-001"
+      }
+    },
+    {
+      "source_row_index": 34,
+      "record": {
+        "entity": "npc-pavel-heating-supervisor",
+        "label": "Pavel — C17",
+        "scope": "M2.04.C17",
+        "confirmed": [
+          "Orientou passagem seca e coordenou retirada da equipe; ouviu Bart dizer apenas que o fugitivo correu rapidamente.",
+          "Acompanhou homem carregado até acesso ventilado."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Detalhes privados ditos por Oleg, alcance do dano hidráulico e estado médico completo."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+        "anchor": "CHR001-M204-C17-08-20261106-001",
+        "last_event_id": "CHR001-M204-C17-08-20261106-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

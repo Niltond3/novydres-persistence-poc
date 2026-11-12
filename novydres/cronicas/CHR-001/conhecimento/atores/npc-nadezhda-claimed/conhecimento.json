@@ -1,0 +1,62 @@
+{
+  "subject_id": "chr001-knowledge-npc-nadezhda-claimed",
+  "actor_id": "npc-nadezhda-claimed",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 5,
+      "record": {
+        "entity": "npc-nadezhda-claimed",
+        "label": "Nadezhda Sokolova (nome relatado)",
+        "scope": "M2.03",
+        "confirmed": [
+          "Há uma mulher visível na rua no evento inicial, mas identidade civil não independente",
+          "Bart helped her leave Volnaya room4; she departed scene after cash and address M2.03.125",
+          "Bart gave FIRST NAME with 'foi Bartolomeu que te mandou' at M2.03.124"
+        ],
+        "claims": [
+          "O ferido a nomeia Nadezhda Sokolova e informa antiga pensão Travessa Volnaya 12, quarto 4"
+        ],
+        "unknown": [
+          "Se a mulher observada é Nadezhda Sokolova",
+          "Onde está agora",
+          "Se está segura ou viva",
+          "Relação real com Gromov",
+          "Bart surname and private history",
+          "Actual bus/contact or safe departure"
+        ],
+        "source": "episode",
+        "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+        "evidence": {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "anchor": "CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001",
+          "offset": 91375,
+          "evidence_excerpt": "tal. Nenhuma nova escolha de Bart; M2.03 ACTIVE, sem teste, gastos ou mudanca de FV e XP. CHR001-M203-REQUEST-WOMAN-ADDRESS-20261102-001: PLAYER_DECLARATION: Bartholomeu declara que assume responsabilidade pelos atos; reconhece que exagerou ao ferir o desconhecido. Pede"
+        },
+        "pc_name_knowledge": {
+          "before_m203_124": "UNKNOWN",
+          "after_m203_124": "FIRST_NAME_BARTHOLOMEU_ONLY",
+          "source_event_id": "CHR001-M203-ESCAPE-124-20261103-001",
+          "correction": "Premature narrator use at M2.03.117 has no diegetic force"
+        },
+        "last_event_id": "CHR001-M203-ESCAPE-125-20261103-001",
+        "suspected": [
+          "Em M2.03.123 Nadezhda considera a possibilidade de uma rede de motoristas/funcionários; isto é suspeita expressa em diálogo, não prova de operação ou autoria."
+        ]
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

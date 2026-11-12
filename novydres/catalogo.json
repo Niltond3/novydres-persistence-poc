@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "a5021d29f084d52806458d92ca4f628a9bf9ffd4",
+  "content_index_sha": "ff2dd5c15d0f1ac9ce78ee8b63c7b4f235f464cb",
   "subjects": [
     {
       "id": "chr001-administrative-milestones",
@@ -1347,6 +1347,880 @@
       ]
     },
     {
+      "id": "chr001-knowledge-npc-anna-morozova-vice-diretora",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anna-morozova-vice-diretora",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anna-morozova-vice-diretora",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anna-morozova-vice-diretora/assunto.json",
+          "blob_sha": "1340207de4234b1f5044776e4b7657f035f84fab"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anna-morozova-vice-diretora/conhecimento.json",
+          "blob_sha": "b93c58418995e16e4fcd57ca0f80f10ba0f2a702"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anna-morozova-vice-diretora/index.md",
+          "blob_sha": "6cf85ffe93ee0af3051700b27e96bbec006c8918"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-anton-c15-safety-inspector",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-c15-safety-inspector",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-c15-safety-inspector",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-c15-safety-inspector/assunto.json",
+          "blob_sha": "2a48edc78a2675e7bd88fc40d18a02cc3c8477a0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-c15-safety-inspector/conhecimento.json",
+          "blob_sha": "e537108a60348de7e3619fe916f95a9771793763"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-c15-safety-inspector/index.md",
+          "blob_sha": "80ae1b52b2b65ab7c861ebfc22317250688ef67e"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-anton-heating-mechanic",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-heating-mechanic",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-heating-mechanic",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-heating-mechanic/assunto.json",
+          "blob_sha": "2a8e20ace977848e34638fa264dc1bfa59e74c4b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-heating-mechanic/conhecimento.json",
+          "blob_sha": "fe347b81d76f7c7b6f7c21dc26d7eb95a1ca6a2b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-anton-heating-mechanic/index.md",
+          "blob_sha": "61bd563e0adee10e2d013c8df3ef0c13bd65d618"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-c12-housing-administrator-unnamed",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-c12-housing-administrator-unnamed",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-c12-housing-administrator-unnamed",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-c12-housing-administrator-unnamed/assunto.json",
+          "blob_sha": "e80bf4bfec87b8d7621d4142756fa32d4c1e7903"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-c12-housing-administrator-unnamed/conhecimento.json",
+          "blob_sha": "2392539157623c4b1c418d6a7fe553b58ef34be6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-c12-housing-administrator-unnamed/index.md",
+          "blob_sha": "85a9eaf6c7272e5d85e847ec9145e83dbea13045"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-distribution-representative-unnamed",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-distribution-representative-unnamed",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-distribution-representative-unnamed",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-distribution-representative-unnamed/assunto.json",
+          "blob_sha": "935d0c7285d68d7d8714573e64de9798e5e93e08"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-distribution-representative-unnamed/conhecimento.json",
+          "blob_sha": "7e760a954a9551d5a77fcb454e6346dc5d2fa992"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-distribution-representative-unnamed/index.md",
+          "blob_sha": "18ab82b2da68580ae415429d21a90a36024412d1"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-dmitri-return-maintenance",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-dmitri-return-maintenance",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-dmitri-return-maintenance",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-dmitri-return-maintenance/assunto.json",
+          "blob_sha": "3d40dc2395f271845fbb9c96e3e11a29307f2c14"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-dmitri-return-maintenance/conhecimento.json",
+          "blob_sha": "ecf3431dfb1582be12ac45b81fbb5f039c650b42"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-dmitri-return-maintenance/index.md",
+          "blob_sha": "ad9bd189029843a634b03f91f60b1b85e6f05c61"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-elena-heating-instrumentation",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-elena-heating-instrumentation",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-elena-heating-instrumentation",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-elena-heating-instrumentation/assunto.json",
+          "blob_sha": "829e9bd181d414064ab84512acfbf38bffe4190f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-elena-heating-instrumentation/conhecimento.json",
+          "blob_sha": "1bac0bdd2e2c2dfe827ae3cba338374421f0b445"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-elena-heating-instrumentation/index.md",
+          "blob_sha": "23d5fc30ee3420372b67950f43ec48f07d10f9b0"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-gray-apron-hospital-worker",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gray-apron-hospital-worker",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gray-apron-hospital-worker",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gray-apron-hospital-worker/assunto.json",
+          "blob_sha": "582c88393808a2bbf8dbc71fe386c1929e4e95c4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gray-apron-hospital-worker/conhecimento.json",
+          "blob_sha": "1f634d79087f587d1773a86f35a0cffd3db83ec5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gray-apron-hospital-worker/index.md",
+          "blob_sha": "038cbf52e2df559b5ddbe97be5c0e86009346172"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-grigori-makarov-technical-safety",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-grigori-makarov-technical-safety",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-grigori-makarov-technical-safety",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-grigori-makarov-technical-safety/assunto.json",
+          "blob_sha": "979e9502b44b74ecc5b6863869eb1ffa2572d9b5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-grigori-makarov-technical-safety/conhecimento.json",
+          "blob_sha": "671f89b8786cd10f8cbc225733f5ca60579ba691"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-grigori-makarov-technical-safety/index.md",
+          "blob_sha": "a89d7ca71658e0feed6a87b8478a61001f582fc5"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-gromov-claimed",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gromov-claimed",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gromov-claimed",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gromov-claimed/assunto.json",
+          "blob_sha": "1a72af7343ca48cdb2315b61881ad08fd269265d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gromov-claimed/conhecimento.json",
+          "blob_sha": "42dd1c5a2d43294a57bc20c5fc5f68a3f86d8260"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-gromov-claimed/index.md",
+          "blob_sha": "a8c8126a9b3b2f6c7589dad3ac84d9d6114b5c81"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-larissa-sokolova",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-larissa-sokolova",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-larissa-sokolova",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-larissa-sokolova/assunto.json",
+          "blob_sha": "84a06236d6159d2ed3789581d6cd2389dae93a72"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-larissa-sokolova/conhecimento.json",
+          "blob_sha": "06c8ce117ddd58116c1edbb14a1101962f456be1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-larissa-sokolova/index.md",
+          "blob_sha": "f05ae5d7d8e45aeba2650dde04315e7c81792d18"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-leonid-orlov-distribution",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-leonid-orlov-distribution",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-leonid-orlov-distribution",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-leonid-orlov-distribution/assunto.json",
+          "blob_sha": "e0252b2b4804ba4addb2143b2094cab5e5a36f9a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-leonid-orlov-distribution/conhecimento.json",
+          "blob_sha": "e238bd5017e9bf50fb553da9f8e936860ffe907a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-leonid-orlov-distribution/index.md",
+          "blob_sha": "f034c6c72d76acaba8f1d86806830d7d14f3a03f"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-lev-morozov",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-lev-morozov",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-lev-morozov",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-lev-morozov/assunto.json",
+          "blob_sha": "3ad7d551e3333bd65824222c219badc6f90633d6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-lev-morozov/conhecimento.json",
+          "blob_sha": "db680758edf48be5f981b9087ee890452c0cc8ac"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-lev-morozov/index.md",
+          "blob_sha": "3bbd11e3ae65af5a5690cce1114faf4c9fff6592"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-liev-heating-colleague",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-liev-heating-colleague",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-liev-heating-colleague",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-liev-heating-colleague/assunto.json",
+          "blob_sha": "616c1a915a7be73dd28196d391ef849ee2024592"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-liev-heating-colleague/conhecimento.json",
+          "blob_sha": "78b07b625b39d85bd176ade8abd3b824d29d4fd6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-liev-heating-colleague/index.md",
+          "blob_sha": "4b5e4284380a87ed4639ede4417c3d7e3ab17b7a"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m3-eleanor-price-candidate",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-eleanor-price-candidate",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-eleanor-price-candidate",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-eleanor-price-candidate/assunto.json",
+          "blob_sha": "33dfe80b1292bfb864000e4b573c09a28f127382"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-eleanor-price-candidate/conhecimento.json",
+          "blob_sha": "3b92f32f7db1a186edd4e751e3f6c5df096c147f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-eleanor-price-candidate/index.md",
+          "blob_sha": "767725e83bd56909c64e801b3d4391216dcd2329"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m3-samir-haddad-candidate",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-samir-haddad-candidate",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-samir-haddad-candidate",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-samir-haddad-candidate/assunto.json",
+          "blob_sha": "a5318b675ffc3421ea3775399733e9b234f72157"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-samir-haddad-candidate/conhecimento.json",
+          "blob_sha": "b9d4dd9cfb507a3060950de8033c40d82c3c0834"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m3-samir-haddad-candidate/index.md",
+          "blob_sha": "fd3d8c7f34cd46049beb6edfb5e64f47fd1ab958"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m301-daniel-foster",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-foster",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-foster",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-foster/assunto.json",
+          "blob_sha": "50f125da9cb53b40d44e2d124b281b09c7e343ff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-foster/conhecimento.json",
+          "blob_sha": "4a2660172591e5d359de4d36cb7cbf32e44f7e28"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-foster/index.md",
+          "blob_sha": "eae62bf71ad040d7a0d14226ab41c1f86618055e"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m301-daniel-son",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-son",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-son",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-son/assunto.json",
+          "blob_sha": "ad91da103a33f57f232bd5ef6caa44a02cb055f7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-son/conhecimento.json",
+          "blob_sha": "793d09a46e68313d62731dca6e3628447fb8f61d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-daniel-son/index.md",
+          "blob_sha": "3755d76b9a90cf63cd37e5e5d5e6e090a3f1c3ba"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m301-margaret-funeral",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-margaret-funeral",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-margaret-funeral",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-margaret-funeral/assunto.json",
+          "blob_sha": "ad87613bbf7c53f64c53ebbd7ca6abc7f0b452e6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-margaret-funeral/conhecimento.json",
+          "blob_sha": "1d58ff31c784485822430caa466e7f94a96bffd3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-margaret-funeral/index.md",
+          "blob_sha": "7a95ef442bc318beab5fd9e9f340651c46b8748f"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m301-marta-funeral",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-marta-funeral",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-marta-funeral",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-marta-funeral/assunto.json",
+          "blob_sha": "96bc942c1a5856e4fb95dd09b85d72ff1b8c256c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-marta-funeral/conhecimento.json",
+          "blob_sha": "a910adb7afb6beaea34f935a23f329198539e879"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-marta-funeral/index.md",
+          "blob_sha": "ba50d3c36377d9a0747915acfef6f2ef6ea2a3c5"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m301-richard-funeral",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-richard-funeral",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-richard-funeral",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-richard-funeral/assunto.json",
+          "blob_sha": "e7d68f5356c674aeb14ae7dc56aa542d5232ec52"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-richard-funeral/conhecimento.json",
+          "blob_sha": "120e527a43c3ae0b6b54c6e616f2162834422257"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m301-richard-funeral/index.md",
+          "blob_sha": "b2ea47cdd4183319c71bf065a756e88b6392851b"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-m302-anonymous-woman-passage",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m302-anonymous-woman-passage",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m302-anonymous-woman-passage",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m302-anonymous-woman-passage/assunto.json",
+          "blob_sha": "e03549749c7b9d1f0221a0f09b4ddd7d21479ca8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m302-anonymous-woman-passage/conhecimento.json",
+          "blob_sha": "c0ed66699ba9de88f6b5002e5c3765712d657695"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-m302-anonymous-woman-passage/index.md",
+          "blob_sha": "66d7c7b9f05cc5838c51346ae9885a072eb818f8"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-mary-krauser",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mary-krauser",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mary-krauser",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mary-krauser/assunto.json",
+          "blob_sha": "1532a0fd488930d90e0d1541f43dd4f388f5233f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mary-krauser/conhecimento.json",
+          "blob_sha": "bc2965b6232200260c3a0b441259bab8ca1bd841"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mary-krauser/index.md",
+          "blob_sha": "6383484d8d572fe7b152b1cb8a17a4110cbf1bb0"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-mikahel-krauser",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mikahel-krauser",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mikahel-krauser",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mikahel-krauser/assunto.json",
+          "blob_sha": "8571c51f196a29223a93b7fc772aff7f0c4d1a88"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mikahel-krauser/conhecimento.json",
+          "blob_sha": "41e3f35763390818be2133bfca6c63cafb7feb05"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-mikahel-krauser/index.md",
+          "blob_sha": "61fd7f13620f63d35b63217856b2b4b20905fedf"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-nadezhda-claimed",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-nadezhda-claimed",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-nadezhda-claimed",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-nadezhda-claimed/assunto.json",
+          "blob_sha": "2438fc1b510c9488eae5a389067568de8f83bad1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-nadezhda-claimed/conhecimento.json",
+          "blob_sha": "511d104ec20c5d68d78c9f4f054a6b889ab57eed"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-nadezhda-claimed/index.md",
+          "blob_sha": "e7152a21e2b4e090534699055fe0e9bf12286033"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-oleg-vedenin-claimed",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-oleg-vedenin-claimed",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-oleg-vedenin-claimed",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-oleg-vedenin-claimed/assunto.json",
+          "blob_sha": "98ff05e1c9a3575857d43a22ba8fedd90d95f08d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-oleg-vedenin-claimed/conhecimento.json",
+          "blob_sha": "d6b95dc8d241c97f44f4f6185af11ae36204c3c8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-oleg-vedenin-claimed/index.md",
+          "blob_sha": "e33177f87f6c2cd7bd21fca0fe628d8f67a793e3"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-paramedics-unspecified",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-paramedics-unspecified",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-paramedics-unspecified",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-paramedics-unspecified/assunto.json",
+          "blob_sha": "5feef8568c6badbec7529df02f060aec9cf0c804"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-paramedics-unspecified/conhecimento.json",
+          "blob_sha": "0355c202bcc8fbd605c0fe25589dd5c3de51ede6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-paramedics-unspecified/index.md",
+          "blob_sha": "7ea0a801a5f6452c0f03d958b8fc337e80c3a872"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-pavel-heating-supervisor",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-pavel-heating-supervisor",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-pavel-heating-supervisor",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-pavel-heating-supervisor/assunto.json",
+          "blob_sha": "0f274b40b54b75a44c6e919da841d06ef32c5053"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-pavel-heating-supervisor/conhecimento.json",
+          "blob_sha": "f06cb120dc87bb1f188460d1a4599c237bc2b14e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-pavel-heating-supervisor/index.md",
+          "blob_sha": "3cb92410d9455585a7e15aa91dff3518410bf97e"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-sara-krauser",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-sara-krauser",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-sara-krauser",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-sara-krauser/assunto.json",
+          "blob_sha": "f866ac8d87d5f976264da551dcd4f8ecd7221d1f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-sara-krauser/conhecimento.json",
+          "blob_sha": "4b800a67bbd87c2c277dcd2537badfb5e252a108"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-sara-krauser/index.md",
+          "blob_sha": "ea5dab50027847d57c950b5a81da49e29b93ab9f"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-unidentified-man-c16",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-man-c16",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-man-c16",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-man-c16/assunto.json",
+          "blob_sha": "43d3a699837466461dd5f55b6c6c8e281adb1740"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-man-c16/conhecimento.json",
+          "blob_sha": "3f231e1a0979f7da3b478af62aa4fe3fc34ba677"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-man-c16/index.md",
+          "blob_sha": "115288c60bae9a6e8f7816677194674eec2a7927"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-unidentified-sedan-occupant",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-sedan-occupant",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-sedan-occupant",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-sedan-occupant/assunto.json",
+          "blob_sha": "10467695ac672698c0132b8c85bb93fe4ec4129b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-sedan-occupant/conhecimento.json",
+          "blob_sha": "537301410e1d66232bb1c5895c143012517752fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unidentified-sedan-occupant/index.md",
+          "blob_sha": "d5907148d48c1141623ffaff858a96b040a7f9f4"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-unnamed-criminal-debtor",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-criminal-debtor",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-criminal-debtor",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-criminal-debtor/assunto.json",
+          "blob_sha": "bbb3f82dd81899905537228154aa9ab0b0ce7db2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-criminal-debtor/conhecimento.json",
+          "blob_sha": "dd068d3eb8d0d78b41f2b9c8f7d711b49fe2e8fc"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-criminal-debtor/index.md",
+          "blob_sha": "feb71de18db5ad04c51600bb821b8d5a802caf41"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-unnamed-injured-stranger",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-injured-stranger",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-injured-stranger",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-injured-stranger/assunto.json",
+          "blob_sha": "5a15c88973b0f597de1bff6596558c74a576ec49"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-injured-stranger/conhecimento.json",
+          "blob_sha": "b6bee4f89f2260aa51e9a486176251a4785d3c67"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-unnamed-injured-stranger/index.md",
+          "blob_sha": "b2ddb11da7e4c5bc6c29320f81f91fb370f64edb"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-viktor-andreyev-administrative-director",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-andreyev-administrative-director",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-andreyev-administrative-director",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-andreyev-administrative-director/assunto.json",
+          "blob_sha": "5bf4f05f38618f287c7a0820f3ebf787301c7098"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-andreyev-administrative-director/conhecimento.json",
+          "blob_sha": "bbab7df71b072e7bd6e53d730b03914fe4e72dd3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-andreyev-administrative-director/index.md",
+          "blob_sha": "45695a4db1d3e0175d698369a0dd6236f7bf7768"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-viktor-heating-mechanic",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-heating-mechanic",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-heating-mechanic",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-heating-mechanic/assunto.json",
+          "blob_sha": "461d6c13f09015f56809d3acdae1cfd7d674808a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-heating-mechanic/conhecimento.json",
+          "blob_sha": "873b3389e785c33151b036b048d0d570cfe68ad0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-heating-mechanic/index.md",
+          "blob_sha": "33260a5258c23ef1fd5f09dfe2166b9ad09a985e"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-viktor-sokolov",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-sokolov",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-sokolov",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-sokolov/assunto.json",
+          "blob_sha": "12359aa3c087d95ab85879f54695829b6b603ec8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-sokolov/conhecimento.json",
+          "blob_sha": "b8cd075f4be831f3e12066c346462afa2920dec7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-viktor-sokolov/index.md",
+          "blob_sha": "f321256bea571f4d7702f50e41b9f8c4da34d0f1"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-volnaya-clerk-ilya-unverified-name",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-clerk-ilya-unverified-name",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-clerk-ilya-unverified-name",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-clerk-ilya-unverified-name/assunto.json",
+          "blob_sha": "224cfee93c2dee1727c30990e5df86bc97013342"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-clerk-ilya-unverified-name/conhecimento.json",
+          "blob_sha": "f4c1f2abebc41c1c7d9f41926fabf309981d2bb3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-clerk-ilya-unverified-name/index.md",
+          "blob_sha": "e7f1684405b979975314e73bda1508e232260ac8"
+        }
+      ]
+    },
+    {
+      "id": "chr001-knowledge-npc-volnaya-night-workers",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-night-workers",
+      "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-night-workers",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-night-workers/assunto.json",
+          "blob_sha": "78b57f55e2fb47407933c3a8cb917467baf147e4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-night-workers/conhecimento.json",
+          "blob_sha": "41c1dc454327b99a42d60f7d4410ed5b5dea3992"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/atores/npc-volnaya-night-workers/index.md",
+          "blob_sha": "9e0506565624c237fcf7226c39b24d7f832c646c"
+        }
+      ]
+    },
+    {
       "id": "chr001-literal-external-sources",
       "kind": "chronicle",
       "owner": "novydres/cronicas/CHR-001/documentos",
@@ -1744,7 +2618,7 @@
         },
         {
           "path": "novydres/cronicas/CHR-001/conhecimento/npcs/index.md",
-          "blob_sha": "3cc7ed4fe8d1ba9ccb54e13fae0f358686af042a"
+          "blob_sha": "b29d45c39ad0c1351f3f2c3f22f78355c08637cc"
         },
         {
           "path": "novydres/cronicas/CHR-001/conhecimento/npcs/registro.json",
@@ -1793,6 +2667,10 @@
         {
           "path": "novydres/cronicas/CHR-001/tramas/abertas/assunto.json",
           "blob_sha": "5d94fd895f76d77781686a0818aa0d80817a7c59"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json",
+          "blob_sha": "2508a54118f0115f4f329b326a2811d573130035"
         },
         {
           "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-001.source.json",
@@ -1892,7 +2770,7 @@
         },
         {
           "path": "novydres/cronicas/CHR-001/tramas/abertas/index.md",
-          "blob_sha": "f478383525aad2b3ed08ed613c4f9dea145a959f"
+          "blob_sha": "f95f0b4f2f546998df30cda75253074f693215cc"
         },
         {
           "path": "novydres/cronicas/CHR-001/tramas/abertas/registro.json",
@@ -4958,7 +5836,45 @@
     "world-politics-novydres": [
       "org-concilio-cruz-espada",
       "org-legiao-coroa-ferro"
-    ]
+    ],
+    "chr001-knowledge-npc-anna-morozova-vice-diretora": [],
+    "chr001-knowledge-npc-anton-c15-safety-inspector": [],
+    "chr001-knowledge-npc-anton-heating-mechanic": [],
+    "chr001-knowledge-npc-c12-housing-administrator-unnamed": [],
+    "chr001-knowledge-npc-distribution-representative-unnamed": [],
+    "chr001-knowledge-npc-dmitri-return-maintenance": [],
+    "chr001-knowledge-npc-elena-heating-instrumentation": [],
+    "chr001-knowledge-npc-gray-apron-hospital-worker": [],
+    "chr001-knowledge-npc-grigori-makarov-technical-safety": [],
+    "chr001-knowledge-npc-gromov-claimed": [],
+    "chr001-knowledge-npc-larissa-sokolova": [],
+    "chr001-knowledge-npc-leonid-orlov-distribution": [],
+    "chr001-knowledge-npc-lev-morozov": [],
+    "chr001-knowledge-npc-liev-heating-colleague": [],
+    "chr001-knowledge-npc-m3-eleanor-price-candidate": [],
+    "chr001-knowledge-npc-m3-samir-haddad-candidate": [],
+    "chr001-knowledge-npc-m301-daniel-foster": [],
+    "chr001-knowledge-npc-m301-daniel-son": [],
+    "chr001-knowledge-npc-m301-margaret-funeral": [],
+    "chr001-knowledge-npc-m301-marta-funeral": [],
+    "chr001-knowledge-npc-m301-richard-funeral": [],
+    "chr001-knowledge-npc-m302-anonymous-woman-passage": [],
+    "chr001-knowledge-npc-mary-krauser": [],
+    "chr001-knowledge-npc-mikahel-krauser": [],
+    "chr001-knowledge-npc-nadezhda-claimed": [],
+    "chr001-knowledge-npc-oleg-vedenin-claimed": [],
+    "chr001-knowledge-npc-paramedics-unspecified": [],
+    "chr001-knowledge-npc-pavel-heating-supervisor": [],
+    "chr001-knowledge-npc-sara-krauser": [],
+    "chr001-knowledge-npc-unidentified-man-c16": [],
+    "chr001-knowledge-npc-unidentified-sedan-occupant": [],
+    "chr001-knowledge-npc-unnamed-criminal-debtor": [],
+    "chr001-knowledge-npc-unnamed-injured-stranger": [],
+    "chr001-knowledge-npc-viktor-andreyev-administrative-director": [],
+    "chr001-knowledge-npc-viktor-heating-mechanic": [],
+    "chr001-knowledge-npc-viktor-sokolov": [],
+    "chr001-knowledge-npc-volnaya-clerk-ilya-unverified-name": [],
+    "chr001-knowledge-npc-volnaya-night-workers": []
   },
   "deferred": []
 }

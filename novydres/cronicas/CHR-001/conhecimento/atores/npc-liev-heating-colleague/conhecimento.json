@@ -1,0 +1,87 @@
+{
+  "subject_id": "chr001-knowledge-npc-liev-heating-colleague",
+  "actor_id": "npc-liev-heating-colleague",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 0,
+      "record": {
+        "entity": "npc-liev-heating-colleague",
+        "label": "Liev (aquecimento; não confundir com Lev Morozov)",
+        "scope": "M2.01",
+        "confirmed": [
+          "Encontrou-se com Bart e apresentou uma cópia do relatório que traz o nome dele",
+          "O diálogo com Bart sobre sondagem de colegas está registrado"
+        ],
+        "claims": [
+          "Alega ter visto circulação de cópia liberando ramal"
+        ],
+        "unknown": [
+          "Se a equipe verificou ramal ou documento posteriormente",
+          "Origem da assinatura/rubrica"
+        ],
+        "source": "legacy",
+        "anchor": "M2.01 — OBSERVAÇÃO SILENCIOSA DE PAVEL",
+        "evidence": {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "anchor": "M2.01 — OBSERVAÇÃO SILENCIOSA DE PAVEL",
+          "offset": 289453,
+          "evidence_excerpt": "em, compra ou gasto de recurso; três FV históricas pendentes; ledger técnico não migrado. M2.01 — OBSERVAÇÃO SILENCIOSA DE PAVEL — EVENTO CHR001-M201-PAVEL-OBS-20261101-001 (01/11/2026, registro operacional). PLAYER_DECLARATION literal: “Olho pavel demoradamente, quero "
+        },
+        "suspected": []
+      }
+    },
+    {
+      "source_row_index": 26,
+      "record": {
+        "entity": "npc-liev-heating-colleague",
+        "label": "Liev",
+        "scope": "M2.04.C15",
+        "confirmed": [
+          "Auxiliou comparação de plantas antigas e reconheceu parte de corredores; presenciou arrombamento."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Destino e operação da derivação antiga."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "anchor": "CHR001-M204-C15-22-20261106-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "last_event_id": "CHR001-M204-C15-22-20261106-001"
+      }
+    },
+    {
+      "source_row_index": 35,
+      "record": {
+        "entity": "npc-liev-heating-colleague",
+        "label": "Liev — C17",
+        "scope": "M2.04.C17",
+        "confirmed": [
+          "Relatou homem consciente mas sem conseguir andar normalmente; saiu com equipe."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Diagnóstico e motivos do homem, alegações de Oleg, reparo."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+        "anchor": "CHR001-M204-C17-08-20261106-001",
+        "last_event_id": "CHR001-M204-C17-08-20261106-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

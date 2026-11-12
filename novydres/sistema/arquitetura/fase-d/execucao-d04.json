@@ -21,11 +21,11 @@
   "test": "novydres/scripts/testar-custodia-d04.test.mjs",
   "semantic_gate_pending": [
     "C45_SOURCE_PIN_RECORDED;_FULL_D04_STATE_EQUIVALENCE_AND_D05_CUTOVER_STILL_PENDING",
-    "PERSONALITY_AND_ACTOR_KNOWLEDGE_LOCAL_SCOPES",
     "EPISODIC_FACT_VS_PREPARATION",
     "XP_FV_RESOURCE_BALANCES",
     "CHRONICLE_RETRIEVAL_AND_RESUME",
-    "D05_CONSUMERS_AND_CATALOG_TRANSITION"
+    "D05_CONSUMERS_AND_CATALOG_TRANSITION",
+    "PER_ACTOR_C45_SOURCE_PROJECTION_HAS_SCOPE_BUT_REVIEW_OF_FACTS_VS_BELIEFS_PENDING"
   ],
   "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN",
   "current_C45_recovery": {
@@ -40,5 +40,22 @@
     "history_preserved_C41": true,
     "not_operational": true,
     "scope": "C45_POINTER_AND_SOURCE_INTEGRITY_ONLY"
+  },
+  "actor_scoped_current_projection": {
+    "actors": 38,
+    "record_rows": 47,
+    "source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+    "source_sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "nonoperational": true,
+    "unknown_status_preserved": true,
+    "no_cross_actor_inference": true
+  },
+  "open_threads_current_projection": {
+    "entries": 44,
+    "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+    "source_sha": "05ce76898d2757c1e270e9c3b1282712df123d13",
+    "target_path": "novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json",
+    "nonoperational": true
   }
 }

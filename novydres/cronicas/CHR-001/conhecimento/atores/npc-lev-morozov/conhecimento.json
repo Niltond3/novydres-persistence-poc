@@ -1,0 +1,47 @@
+{
+  "subject_id": "chr001-knowledge-npc-lev-morozov",
+  "actor_id": "npc-lev-morozov",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 8,
+      "record": {
+        "entity": "npc-lev-morozov",
+        "label": "Lev Morozov (M1; distinto do colega Liev)",
+        "scope": "M1.05-M1.08",
+        "confirmed": [
+          "Agressão por Bart registrada no histórico M1",
+          "Vínculo com esposa e hospital documentados"
+        ],
+        "claims": [],
+        "unknown": [
+          "Resultado clínico posterior",
+          "Situação pessoal atual após M1",
+          "Ligação com relatório de M2.01: NÃO EVIDENCIADA"
+        ],
+        "source": "legacy",
+        "anchor": "Lev Morozov",
+        "evidence": {
+          "source_path": "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+          "source_blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b",
+          "anchor": "Lev Morozov",
+          "offset": 98464,
+          "evidence_excerpt": "teira/documento do homem enquanto mantém sua tentativa de controle. O nome no documento é Lev Morozov; o bilhete do contato indica outra pessoa, Nikolai Serebryakov, no mesmo endereço. Isso comprova apenas que o homem alcançado não é a pessoa indicada nominalmente; não "
+        },
+        "suspected": []
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

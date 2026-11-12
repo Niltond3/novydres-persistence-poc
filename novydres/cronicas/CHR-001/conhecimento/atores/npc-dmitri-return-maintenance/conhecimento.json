@@ -1,0 +1,39 @@
+{
+  "subject_id": "chr001-knowledge-npc-dmitri-return-maintenance",
+  "actor_id": "npc-dmitri-return-maintenance",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 30,
+      "record": {
+        "entity": "npc-dmitri-return-maintenance",
+        "label": "Dmitri",
+        "scope": "M2.04.C15",
+        "confirmed": [
+          "Reportou condições do acesso externo e porta travada por rádio, sem ingresso anterior."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Configuração além da curva."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "anchor": "CHR001-M204-C15-22-20261106-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v014.source.txt",
+        "last_event_id": "CHR001-M204-C15-22-20261106-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

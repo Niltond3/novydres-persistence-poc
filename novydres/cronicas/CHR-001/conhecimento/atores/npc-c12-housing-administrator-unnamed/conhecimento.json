@@ -1,0 +1,42 @@
+{
+  "subject_id": "chr001-knowledge-npc-c12-housing-administrator-unnamed",
+  "actor_id": "npc-c12-housing-administrator-unnamed",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 19,
+      "record": {
+        "entity": "npc-c12-housing-administrator-unnamed",
+        "label": "Visitante administradora de edifícios (nome UNKNOWN)",
+        "scope": "M2.04.C12",
+        "confirmed": [
+          "Trouxe queixas de moradores, com preocupação especial por crianças/idosos.",
+          "Ouviu explicação de Bart e Pavel: ramal não pode ser liberado; alternativa técnica apenas submetida a estudo."
+        ],
+        "claims": [
+          "Há apartamentos com aquecimento insuficiente."
+        ],
+        "suspected": [],
+        "unknown": [
+          "Identidade/cargo exato, endereços e medições, causa da deficiência, viabilidade da derivação, decisão de engenharia."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v011.source.txt",
+        "anchor": "CHR001-M204-C12-14-20261105-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v011.source.txt",
+        "last_event_id": "CHR001-M204-C12-14-20261105-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

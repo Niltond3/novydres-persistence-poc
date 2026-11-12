@@ -1,0 +1,50 @@
+{
+  "subject_id": "chr001-knowledge-npc-m301-daniel-son",
+  "actor_id": "npc-m301-daniel-son",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 44,
+      "record": {
+        "entity": "npc-m301-daniel-son",
+        "label": "Daniel (sobrenome Baranova autodeclarado), filho de Yelena (não Daniel Foster)",
+        "scope": "M3.01.C04-C05",
+        "confirmed": [
+          "Estava no velório, sem interação direta com Bart.",
+          "C05: esteve no apartamento de Yelena após velório e saiu com envelope pardo NÃO VISÍVEL; não implica que deixou qualquer objeto específico no apartamento.",
+          "C05: conheceu motorista/mecânico que lhe disse chamar-se 'Krause, Bartolomeu Krauser' e lhe forneceu bilhete com número e endereço COMERCIAIS da Oficina Krauser; não foi informado de residência.",
+          "C05: observou que sedã não pegava, recebeu auxílio gratuito e recomendação legítima sobre correia do alternador gasta/frouxa. Motor voltou a funcionar; desconhece a intervenção deliberada anterior.",
+          "C05: ouviu ofertas condicionais de remoção/incineração de bens; RECUSOU queimar documentos sem triagem e consulta familiar. Nenhum contrato nem autorização de retirada."
+        ],
+        "claims": [
+          "C05: Daniel disse 'Daniel Baranova', sobrenome NÃO autenticado por documento.",
+          "C05: Daniel relatou pai falecido, conflitos antigos com mãe, pressões de tia e conselho de esposa, aluguel e possíveis dívidas/documentos; relatos atribuídos a NPC.",
+          "C05: ouviu PC declarar estar brigado com esposa e evitar casa; isso foi ficção afirmada pelo PJ, não uma verdade que Daniel possa verificar.",
+          "C05: ouviu de PJ explicação de mau contato na ignição para falha cuja causa deliberada só PC conhece."
+        ],
+        "suspected": [],
+        "unknown": [
+          "Não deu autorização e não conhece roubo da caixa; sobrenome não confirmado.",
+          "Desconhece sabotagem reversível, retirada da caixa por Bart, arrombamento/aparência da porta apto3, conteúdo caixa, relações Volnaya e presença PJ no velório/antecedentes.",
+          "Envelope pardo não estava visível quando voltou; o que ele fez com ele não foi testemunhado pelo PJ nem decidido explicitamente; não deduzir que a caixa Y.B. foi vista ou notada.",
+          "Contato futuro com Oficina Krauser NÃO iniciado; nenhuma promessa de incineração/retirada confirmada."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+        "anchor": "CHR001-M301-C05-19-20261109-001",
+        "last_event_id": "CHR001-M301-C05-22-20261109-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

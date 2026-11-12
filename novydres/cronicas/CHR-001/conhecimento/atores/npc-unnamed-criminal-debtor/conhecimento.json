@@ -1,0 +1,36 @@
+{
+  "subject_id": "chr001-knowledge-npc-unnamed-criminal-debtor",
+  "actor_id": "npc-unnamed-criminal-debtor",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 11,
+      "record": {
+        "entity": "npc-unnamed-criminal-debtor",
+        "label": "Unnamed criminal contact owing Bart favor per player",
+        "scope": "M2.03.124-125",
+        "confirmed": [],
+        "claims": [
+          "PJ states he gave woman address and that contact recognizes 'Bartholomeu'"
+        ],
+        "unknown": [
+          "Name and literal address, availability, real assistance"
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+        "suspected": []
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

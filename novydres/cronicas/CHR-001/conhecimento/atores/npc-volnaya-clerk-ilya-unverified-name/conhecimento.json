@@ -1,0 +1,44 @@
+{
+  "subject_id": "chr001-knowledge-npc-volnaya-clerk-ilya-unverified-name",
+  "actor_id": "npc-volnaya-clerk-ilya-unverified-name",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 13,
+      "record": {
+        "entity": "npc-volnaya-clerk-ilya-unverified-name",
+        "label": "Volnaya clerk (~50s), called Ilya by colleague",
+        "scope": "M2.04.C08",
+        "confirmed": [
+          "Working late in office with ledgers/files",
+          "Suddenly seized and lost consciousness under suffocating restraint",
+          "Received field first aid by PC; breathing appeared more regular but remained unconscious",
+          "Found breathing by responding worker, who sought ambulance"
+        ],
+        "claims": [
+          "One colleague called him Ilya; legal identity not verified"
+        ],
+        "unknown": [
+          "Full name, medical prognosis, ambulance arrival",
+          "Whether he recognized PC; no recognition was observed",
+          "Knowledge of OS-219 cargo or purpose"
+        ],
+        "suspected": [],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v007.source.txt",
+        "last_event_id": "CHR001-M204-C08-27-20261104-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}
