@@ -229,6 +229,98 @@ export function deriveC45ManifestRuntimeRefs(index,{masterTree,candidateTree,sou
   items};
 }
 
+export function classifyD01InformationKind(row) {
+ const p=row.source_path,f=row.source_family;
+ if(f==='WORKFLOW')return 'CI_WORKFLOW';
+ if(/\.(mjs|js|py)$/.test(p))return /(?:test|spec|suite|fixture)/i.test(p)?'EXECUTABLE_TEST':'EXECUTABLE_VALIDATOR';
+ if(/\.(zip|png|jpe?g|gif|webp|pdf|docx?|xlsx?)$/i.test(p))return 'BINARY_OR_ARCHIVE_SOURCE';
+ if(f==='EDITORIAL_GOVERNANCE')return 'EDITORIAL_AUTHORITY_OR_DECISION';
+ if(f==='SOURCE_MIGRATION_EVIDENCE')return 'SOURCE_PROVENANCE_OR_MIGRATION_RECORD';
+ if(f==='TEST_POC')return 'ISOLATED_SYNTHETIC_FIXTURE';
+ if(f.startsWith('WORLD_'))return 'WORLD_GLOBAL_SOURCE_PENDING_EDITORIAL';
+ if(f==='EPISODE_LITERAL'||f==='LITERAL_SOURCES')return 'NARRATIVE_TEXT_LITERAL';
+ if(f==='ACTOR_KNOWLEDGE')return 'CHRONICLE_SITUATED_KNOWLEDGE';
+ if(f==='CHARACTER_STATE_HISTORY'||f==='LEGACY_CURSOR_AND_HISTORY')return 'CHRONICLE_STATE_HISTORY';
+ if(f==='CHRONICLE_PREPARATION')return 'GM_PREPARATION_NOT_PLAYED';
+ if(f==='CHRONICLE_CYCLES')return 'CHRONICLE_ORCHESTRATION_CYCLE';
+ if(f==='RULES_AND_MECHANICS'||f==='OPERATIONAL_MECHANICS')return 'RULE_OR_MECHANICAL_CONTRACT';
+ if(f==='OPERATIONAL_NARRATIVE_MIXED')return 'MIXED_CONTRACT_AND_CHRONICLE_DATA';
+ if(f==='CHRONICLE_PLOT_ATLAS')return 'SITUATED_STORY_AND_PLOT';
+ return 'STRUCTURED_SOURCE_OR_HISTORICAL_RECORD';
+}
+export function deriveD01OriginRoute(row,index) {
+ const p=row.source_path,f=row.source_family,kind=classifyD01InformationKind(row);
+ const pin=index.authority_reference.pinned_references.filter(x=>x.path===p).length;
+ const mr=index.c45_manifest_runtime_references.items.filter(x=>x.path===p).length;
+ let roots=row.target_root_candidate.split('|');
+ if(kind==='EXECUTABLE_VALIDATOR')roots=['novydres/scripts/validadores'];
+ else if(kind==='EXECUTABLE_TEST')roots=['novydres/scripts/testes'];
+ else if(kind==='CI_WORKFLOW')roots=['.github/workflows'];
+ else if(kind==='BINARY_OR_ARCHIVE_SOURCE')roots=['novydres/fontes'];
+ const shape=(row.c45_content_reconciliation||row.noncurrent_missing_inspection||
+  row.priority_shared_content_review)?.source_content_structure;
+ const metadata=shape?.declared_source_metadata||{};
+ const visibility=metadata.classification||metadata.visibility||metadata.spoiler_class||null;
+ const marker=/(GM_HIDDEN|PLAYER_SAFE|SYSTEM_AUDIT|SECRET)/.exec(p)?.[0]||null;
+ const restricted=/GM_HIDDEN|SECRET|SYSTEM_AUDIT/.test(visibility||'')||
+  /GM_HIDDEN|SECRET|SYSTEM_AUDIT/.test(marker||'');
+ const chapter={WORKFLOW:'D05',OPERATIONAL_NARRATIVE_MIXED:'D05',
+  OPERATIONAL_RUNTIME_OTHER:'D05',OPERATIONAL_BOOTSTRAP_HISTORY:'D05',
+  LEGACY_NARRATIVE_TONE:'D05',LEGACY_NPC_MOOD:'D04',
+  RULES_AND_MECHANICS:'D03',OPERATIONAL_MECHANICS:'D03',
+  SOURCE_MIGRATION_EVIDENCE:'D02',EDITORIAL_GOVERNANCE:'D02',ASSET_REFERENCE:'D02',
+  TEST_POC:'D05',REPOSITORY_DOC:'D05'};
+ const phase=chapter[f]||(f.startsWith('WORLD_')?'D03':'D04');
+ const proof=row.c45_content_reconciliation||row.noncurrent_missing_inspection||
+  row.priority_shared_content_review?'GIT_BLOB_READBACK_AND_STRUCTURAL_INSPECTION':
+  row.candidate_relation==='SAME_PATH_SAME_BLOB'?'IMMUTABLE_EQUAL_GIT_BLOB_NO_FIELD_REVIEW':
+  'GIT_PATH_AND_SHA_ONLY';
+ const epistemic=['CHRONICLE_SITUATED_KNOWLEDGE','CHRONICLE_STATE_HISTORY',
+  'GM_PREPARATION_NOT_PLAYED','SITUATED_STORY_AND_PLOT'].includes(kind)?
+  'AGENT_PLAYER_PC_NPC_KNOWLEDGE_SEPARATE':
+  kind==='WORLD_GLOBAL_SOURCE_PENDING_EDITORIAL'?'CANDIDATE_CANON_UNLESS_APPROVED':
+  'NO_NARRATIVE_TRUTH_INFERRED';
+ return {information_kind:kind,source_format:shape?.format||p.split('.').at(-1).toUpperCase(),
+  source_authority_trace:pin?'CURRENT_C45_EXACT_CYCLE_PIN':
+   mr?'MANIFEST_RUNTIME_PATH_ONLY_NOT_USAGE_PROOF':
+   'MASTER_SNAPSHOT_NO_DIRECT_C45_OR_MANIFEST_REF',
+  current_cycle_pin_occurrences:pin,manifest_runtime_reference_occurrences:mr,
+  inspected_source_status:metadata.status||'UNDECLARED_OR_NOT_INSPECTED',
+  origin_proof:proof,
+  owner_routing:roots.length>1?'FIELD_SCOPE_SPLIT_REQUIRED':'SINGLE_SUBJECT_ROOT_PROPOSED_NOT_APPROVED',
+  owner_roots_proposed:roots,
+  destination_policy:'NO_COPY_OR_DELETE_UNTIL_SEMANTIC_EQUIVALENCE_AND_D06',
+  transformation:row.treatment_proposal,
+  disclosure_status:restricted?'RESTRICTED_DECLARED_OR_MARKED':
+   visibility==='PLAYER_SAFE'?'PLAYER_SAFE_DECLARATION_UNVERIFIED':'RESTRICTED_UNTIL_CLASSIFIED',
+  disclosed_metadata_classification:visibility,
+  epistemic_boundary:epistemic,explicit_conflicts:[...row.conflict_refs],
+  source_identity_conclusion:'ORIGINAL_BLOB_PINNED_AUTHORITY_AND_CANON_NOT_TRANSFERRED',
+  candidate_relation:row.candidate_relation,handoff_phase:phase,
+  handoff_requires:'CONTENT_OWNER_VISIBILITY_RIGHTS_AND_DEPENDENCY_PROOF',
+  external_original_bytes_not_inferred:true};
+}
+export function deriveD01OriginMappingCoverage(index) {
+ const rows=index.source_files;
+ const tally=k=>rows.reduce((a,row)=>{
+  const v=row.d01_origin_route[k];a[v]=(a[v]||0)+1;return a;},{});
+ return {status:'PER_ORIGIN_ROUTING_PLAN_COMPLETE_NOT_FINAL_SEMANTIC_APPROVAL',
+  source_snapshot:index.source_snapshot,
+  total_source_paths:rows.length,
+  mapped_source_paths:rows.filter(x=>x.d01_origin_route?.owner_roots_proposed.length>0).length,
+  unmapped_source_paths:rows.filter(x=>!x.d01_origin_route?.owner_roots_proposed.length).map(x=>x.source_path),
+  proven_blob_identity_not_semantic_equivalence:true,
+  source_proof_classes:tally('origin_proof'),owner_routing_classes:tally('owner_routing'),
+  authority_reference_classes:tally('source_authority_trace'),
+  visibility_risk_classes:tally('disclosure_status'),phase_handoff_counts:tally('handoff_phase'),
+  known_conflicted_source_rows:rows.filter(x=>x.conflict_refs.length>0).length,
+  source_without_current_direct_pin_or_manifest_reference:rows.filter(x=>!x.d01_origin_route.current_cycle_pin_occurrences&&!x.d01_origin_route.manifest_runtime_reference_occurrences).length,
+  external_registry_items:index.controlled_external_registry.items.length,
+  media_registry_items:index.visual_registry.entries.length,
+  external_original_content_verified:false,retained_editorial_conflicts:[...index.known_conflicts],
+  content_field_ownership_approved:false,every_target_root_is_proposal:true,
+  operational_activation:false};
+}
 export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState,workflowContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
@@ -259,6 +351,8 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
     typeof row.target_root_candidate==='string'&&row.target_root_candidate.length>0&&
     row.authority_status==='NOT_AUDITED_BY_PATH_INDEX'&&
     row.editorial_equivalence==='PENDING_FIELD_REVIEW','D01_PREMATURE_AUTHORITY');
+  need(equal(row.d01_origin_route,deriveD01OriginRoute(row,index)),
+   'D01_ORIGIN_MAPPING_FIELD_DRIFT');
   const samePath=other.get(row.source_path);
   const relation=samePath?(samePath.sha===actual.sha?'SAME_PATH_SAME_BLOB':'SAME_PATH_DIFFERENT_BLOB'):'NO_SAME_PATH_IN_CANDIDATE';
   need(row.candidate_relation===relation&&row.candidate_same_path_blob_sha===(samePath?.sha||null),'D01_CANDIDATE_COMPARISON_DRIFT');
@@ -482,6 +576,16 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   manifestRefs.summary.direct_cycle_pinned_missing===52&&
   manifestRefs.summary.directory_reference_occurrences===1,
   'D01_MANIFEST_REFERENCE_BASELINE_CHANGED');
+ const mapped=deriveD01OriginMappingCoverage(index);
+ need(equal(mapped,index.d01_origin_mapping_coverage),'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
+ need(mapped.total_source_paths===source.size&&mapped.mapped_source_paths===source.size&&
+  mapped.unmapped_source_paths.length===0&&
+  mapped.source_proof_classes.GIT_BLOB_READBACK_AND_STRUCTURAL_INSPECTION===236&&
+  mapped.source_proof_classes.IMMUTABLE_EQUAL_GIT_BLOB_NO_FIELD_REVIEW===792&&
+  mapped.source_proof_classes.GIT_PATH_AND_SHA_ONLY===1&&
+  mapped.external_original_content_verified===false&&
+  mapped.content_field_ownership_approved===false&&mapped.operational_activation===false,
+  'D01_ORIGIN_MAPPING_FALSE_CLOSURE');
  const summary=index.denominators;
  need(summary?.cycle_unique_pinned_paths===pinRows.size&&
   summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
@@ -517,6 +621,11 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
   current_checkpoint:expectedCrosswalk.source_cycle_id,
   state_precedence_mismatches:summary.c45_source_priority_mismatches,
+  origin_routes_mapped:mapped.mapped_source_paths,
+  origin_routes_field_scope_split:mapped.owner_routing_classes.FIELD_SCOPE_SPLIT_REQUIRED,
+  origin_routes_executable_implementation: index.source_files.filter(x=>
+   x.d01_origin_route.information_kind==='EXECUTABLE_VALIDATOR'||
+   x.d01_origin_route.information_kind==='EXECUTABLE_TEST').length,
   manifest_runtime_references:{occurrences:manifestRefs.summary.occurrences,
    distinct_missing_candidate:manifestRefs.summary.unique_missing_candidate_file_paths,
    missing_without_direct_pin:manifestRefs.summary.not_direct_cycle_pinned_missing},

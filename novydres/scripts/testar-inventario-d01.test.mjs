@@ -303,3 +303,34 @@ test('D01 no automatic activation from an arbitrary referenced manifest string',
  reject(x=>x.c45_manifest_runtime_references.full_field_owner_review='APPROVED',
   'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
 });
+
+test('D01 all 1029 origins have provenance-linked owner and destination proposals',()=>{
+ const r=verifyD01(index,data);
+ assert.equal(r.origin_routes_mapped,1029);
+ assert.equal(r.origin_routes_field_scope_split,463);
+ assert.equal(index.d01_origin_mapping_coverage.content_field_ownership_approved,false);
+});
+test('D01 mixed owner split must not be silently reduced to a file copy',()=>{
+ const source=index.source_files.find(x=>x.d01_origin_route.owner_routing==='FIELD_SCOPE_SPLIT_REQUIRED');
+ assert.ok(source);
+ reject(x=>x.source_files.find(y=>y.source_path===source.source_path).d01_origin_route.owner_roots_proposed.pop(),
+  'D01_ORIGIN_MAPPING_FIELD_DRIFT');
+});
+test('D01 executable validators are routed to scripts instead of narrative facts',()=>{
+ const source=index.source_files.find(x=>x.d01_origin_route.information_kind==='EXECUTABLE_VALIDATOR');
+ assert.ok(source);
+ assert.equal(source.d01_origin_route.owner_roots_proposed[0],'novydres/scripts/validadores');
+ reject(x=>x.source_files.find(y=>y.source_path===source.source_path).d01_origin_route.owner_roots_proposed[0]='novydres/cronicas/CHR-001',
+  'D01_ORIGIN_MAPPING_FIELD_DRIFT');
+});
+test('D01 source name cannot falsely grant PLAYER_SAFE to unreviewed content',()=>{
+ const source=index.source_files.find(x=>x.d01_origin_route.disclosure_status==='RESTRICTED_UNTIL_CLASSIFIED');
+ assert.ok(source);
+ reject(x=>x.source_files.find(y=>y.source_path===source.source_path).d01_origin_route.disclosure_status='PLAYER_SAFE',
+  'D01_ORIGIN_MAPPING_FIELD_DRIFT');
+});
+test('D01 no source omitted or field-level editorial authority accidentally approved',()=>{
+ reject(x=>x.d01_origin_mapping_coverage.mapped_source_paths-=1,'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
+ reject(x=>x.d01_origin_mapping_coverage.content_field_ownership_approved=true,
+  'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
+});
