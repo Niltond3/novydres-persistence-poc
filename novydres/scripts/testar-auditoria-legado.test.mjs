@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {auditRepository,auditTree} from './auditar-legado-e-fontes.mjs';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync,symlinkSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join,dirname} from 'node:path';
+import {execFileSync} from 'node:child_process';
 const sha='a'.repeat(40);
 const baseFiles=['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json',
  'novydres/personagens/synthetic/index.md','novydres/personagens/synthetic/assunto.json']
@@ -88,4 +92,47 @@ test('V11 missing originals and unverified SHA are recorded, never synthesized',
  assert.equal(a.counters.unverified_media,1);
  const final=audit([],{},'ZERO_LEGACY_FINAL',{policy:'DRIVE_BINARY_GITHUB_LINK_ONLY',entries:[asset]});
  assert.equal(final.gate,'ZERO_LEGACY_BLOCKED');
+});
+
+test('V08/V12 HEAD-pinned bytes cannot be masked by dirty checkout or false media JSON',()=>{
+ const dir=mkdtempSync(join(tmpdir(),'novydres-c07-audit-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:dir,stdio:['ignore','pipe','ignore'],encoding:'utf8'}).trim();
+ const put=(p,value)=>{const file=join(dir,p);mkdirSync(dirname(file),{recursive:true});writeFileSync(file,value);};
+ const save=()=>{git('add','.');git('-c','user.name=NOVYDRES-test','-c','user.email=test@example.invalid',
+   'commit','--quiet','-m','TEST_ONLY synthetic HEAD');return git('rev-parse','HEAD');};
+ try{
+  git('init','--quiet');
+  put('novydres/AGENTS.md','Candidate agent text without secret locator\n');
+  put('novydres/CONTEXT.md','Candidate context without legacy active links\n');
+  put('novydres/catalogo.json','{"subjects":[]}\n');
+  put('novydres/migration/VISUAL_ASSET_REGISTRY_V2.json',
+    '{"policy":"DRIVE_BINARY_GITHUB_LINK_ONLY","entries":[]}\n');
+  const goodHead=save();
+  put('novydres/AGENTS.md','open novydres/internal_GM_HIDDEN.json\n');
+  put('novydres/catalogo.json','{invalid json');
+  put('novydres/migration/VISUAL_ASSET_REGISTRY_V2.json','{invalid json');
+  const committed=auditRepository(dir,{expected_head:goodHead});
+  assert.equal(committed.gate,'C06_CANDIDATE_AUDIT_EXECUTED_WITH_LEGACY_PENDING');
+  assert.equal(committed.audited_commit,goodHead);
+  assert.equal(committed.source,'PINNED_GIT_TREE_BLOBS_NOT_WORKTREE');
+  assert.ok(!has(committed,'HIDDEN_SOURCE_IN_PUBLIC_ENTRY'));
+  assert.equal(committed.inventory_coverage.scanned,4);
+  assert.throws(()=>auditRepository(dir,{expected_head:'0'.repeat(40)}),
+    error=>error.code==='HEAD_DIFFERENT');
+  // Flip: a harmful committed entry cannot be excused by cleaning the working tree.
+  put('novydres/catalogo.json','{"subjects":[]}\n');
+  put('novydres/migration/VISUAL_ASSET_REGISTRY_V2.json',
+    '{"policy":"DRIVE_BINARY_GITHUB_LINK_ONLY","entries":[]}\n');
+  const badHead=save();
+  put('novydres/AGENTS.md','Candidate agent text without secret locator\n');
+  const bad=auditRepository(dir,{expected_head:badHead});
+  assert.equal(bad.gate,'C06_AUDIT_FAILED');
+  assert.ok(has(bad,'HIDDEN_SOURCE_IN_PUBLIC_ENTRY'));
+  // Git symlink points at an unavailable target. Scanner audits the link blob;
+  // it must not dereference a checkout symlink.
+  symlinkSync('TEST_ONLY_nonexistent_target',join(dir,'novydres','suspicious.md'));
+  const linkHead=save();
+  const link=auditRepository(dir,{expected_head:linkHead});
+  assert.ok(has(link,'SYMLINK_FORBIDDEN'));
+ }finally{rmSync(dir,{recursive:true,force:true});}
 });

@@ -1,7 +1,7 @@
 // ADR-001 C06 — whole-tree V08/V11/V12 audit, candidate-only until E.
 // Every HEAD entry is inventoried. Historical provenance and test negatives may
 // remain evidence; no legacy executable fallback may pass ZERO_LEGACY_FINAL.
-import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {resolve} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
@@ -17,8 +17,8 @@ const mediaPath='novydres/migration/VISUAL_ASSET_REGISTRY_V2.json';
 const fail=(code,detail='')=>{const e=new Error(code+(detail?': '+detail:''));e.code=code;throw e;};
 const order=(a,b)=>a<b?-1:a>b?1:0;
 
-function lsTree(root) {
- const raw=execFileSync('git',['ls-tree','-r','-z','--full-tree','HEAD'],
+function lsTree(root,commit) {
+ const raw=execFileSync('git',['ls-tree','-r','-z','--full-tree',commit],
   {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']});
  return raw.split('\0').filter(Boolean).map(line=>{
   const m=/^(\d{6}) (blob|commit|tree) ([a-f0-9]{40})\t(.+)$/.exec(line);
@@ -114,15 +114,34 @@ export function auditTree({files,contents={},mode='CANDIDATE',mediaRegistry=null
   media_integrity:'EXTERNAL_ORIGINAL_BYTES_NOT_FETCHED_NO_SHA_INVENTED',
   semantic_review:'REQUIRED_SEPARATELY_V08_V11_V12_NOT_AST_COMPLETE'};
 }
-export function auditRepository(root=process.cwd(),{mode='CANDIDATE'}={}) {
- const files=lsTree(root);
+export function auditRepository(root=process.cwd(),{mode='CANDIDATE',expected_head=null}={}) {
+ // V08/V12: read the Git object graph, NEVER the mutable checkout. A dirty,
+ // substituted or symlink-backed working-tree file must not hide an old route
+ // or a secret still committed in HEAD.
+ const git=(...args)=>execFileSync('git',args,
+  {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();
+ const head=git('rev-parse','HEAD');
+ if(!/^[a-f0-9]{40}$/.test(head))fail('HEAD_NOT_RESOLVED');
+ if(expected_head!==null&&expected_head!==head)fail('HEAD_DIFFERENT');
+ const files=lsTree(root,head);
  const contents={};
  for(const f of files){
   if(!isText(f.path))continue;
-  contents[f.path]=readFileSync(resolve(root,f.path),'utf8');
+  let bytes;
+  try {
+    bytes=execFileSync('git',['cat-file','blob',f.blob_sha],
+      {cwd:root,stdio:['ignore','pipe','ignore']});
+  } catch {fail('GIT_BLOB_UNAVAILABLE',f.path);}
+  const actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
+  if(actual!==f.blob_sha)fail('GIT_BLOB_INTEGRITY',f.path);
+  contents[f.path]=bytes.toString('utf8');
  }
- const mediaRegistry=JSON.parse(readFileSync(resolve(root,mediaPath),'utf8'));
- return auditTree({files,contents,mediaRegistry,mode});
+ let registry;
+ try {registry=JSON.parse(contents[mediaPath]);}
+ catch {fail('MEDIA_REGISTRY_INVALID',mediaPath);}
+ if(git('rev-parse','HEAD')!==head)fail('HEAD_DIFFERENT');
+ const result=auditTree({files,contents,mediaRegistry:registry,mode});
+ return {...result,audited_commit:head,source:'PINNED_GIT_TREE_BLOBS_NOT_WORKTREE'};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const mode=process.argv.includes('--final')?'ZERO_LEGACY_FINAL':'CANDIDATE';

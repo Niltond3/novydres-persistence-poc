@@ -320,6 +320,13 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Sem independência declarada:** análise de risco acima feita pelo próprio executor, não substitui revisor separado da implementação C05/C07, divulgação, escrita/rollback e cenário semanticamente enganoso. Este remédio melhora o controle mas não encerra gate: `C07_TECH_PASS_REVIEW_REQUIRED`; `C08_NOT_ELIGIBLE`, `D_NOT_STARTED`, `E_NOT_AUTHORIZED`. A revisão necessária pode ser feita em outra conversa ChatGPT Web com conector GitHub **somente leitura**, usando commits e casos já fixados, registrando falhas sem expor segredos. Nenhum ritual de chat limpo é imposto às etapas sem essa necessidade de independência.
 - **Estado de fontes:** `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura; auditoria de legado, originais Drive pendentes, conflitos editoriais e revisão completa de D não solucionados nem dispensados. Nenhuma cena, merge ou cutover.
 
+#### C07 — Auditoria adversarial de consistência HEAD/checkout (2026-11-12; CI pendente)
+
+- **Base antes da proposta:** `design@9cff3e9b7f2a2f0317dc35a4d12007cf42d37ac9`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura; CI `43251191127` sucessor C07 técnico `73/73` em código anterior. Revisão independente exigida permanece `PENDING`.
+- **Vulnerabilidade encontrada na própria ferramenta:** `auditar-legado-e-fontes.mjs` enumerava caminhos/SHA da árvore Git **HEAD**, mas lia o conteúdo de texto e o registro de mídia via `readFileSync` na área de trabalho mutável. Um checkout não limpo, arquivo substituído ou symlink poderia mascarar o conteúdo realmente publicado e induzir uma conclusão falsa de V08/V11/V12. Embora a Action verificada usasse checkout limpo, não equivale à garantia de auditoria do snapshot prometida.
+- **Correção proposta:** ler cada texto diretamente do blob Git `git cat-file blob <sha>` apontado por `git ls-tree <commit>`, verificar SHA Git dos bytes, usar registro de mídia do mesmo commit, comparar `expected_head` e `HEAD` antes/depois e inspecionar link simbólico como objeto, nunca seguir seu destino. Assim não misturar paths de HEAD com conteúdo do checkout. Acrescentar teste com repositório Git **TEST_ONLY** temporário: checkout adulterado não cobre segredo publicado; arquivo local não commitado não produz falso positivo; symlink não é dereferenciado; expected SHA stale bloqueia. Nenhum arquivo canônico/operacional será alterado.
+- **Status:** `C07_HEAD_AUDIT_REMEDIATION_CI_PENDING`. Após CI real e readback, manter o requisito de revisão **independente** de escrita/sigilo e falhas semânticas; não declarar C07 integral, C08 ou D PASS por correção técnica.
+
 ### C08 — Revisar e encerrar gate C
 
 - **Depende de:** C07.
