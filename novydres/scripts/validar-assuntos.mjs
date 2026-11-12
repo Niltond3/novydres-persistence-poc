@@ -77,14 +77,16 @@ export function validateCandidates(root = process.cwd(), { overrides = {} } = {}
     checked.push(p);
     if (!isText(doc.subject_id)) { push('V02_ID', p, 'missing subject_id'); continue; }
     const n = norm(doc.subject_id);
-    if (subjects.has(n)) push('V02_COLLISION', p, 'subject_id collides with ' + subjects.get(n).path);
+    const previous = subjects.get(n);
+    if (previous && !(dirname(previous.path) === dirname(p) && previous.isState !== isState))
+      push('V02_COLLISION', p, 'subject_id collides with ' + previous.path);
     if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(doc.subject_id)) push('V02_ID', p, 'subject_id must be stable lowercase kebab-case');
     if (!isState) {
       if (doc.status !== 'CANDIDATE') push('V04_PROMOTION', p, 'prototype cannot become active by schema edit');
       if (!isText(doc.owner_scope) || !p.startsWith(doc.owner_scope + '/'))
         push('V04_OWNER', p, 'owner_scope does not own this path');
     } else if (doc.not_operational !== true) push('V04_PROMOTION', p, 'historical checkpoint cannot become operational');
-    subjects.set(n, { doc, path:p, isState });
+    if (!previous) subjects.set(n, { doc, path:p, isState });
     items.push({ doc, path:p, isState });
   }
 
@@ -113,13 +115,15 @@ export function validateCandidates(root = process.cwd(), { overrides = {} } = {}
     }
   }
   for (const { doc, path:p, isState } of items) {
-    checkRefs(doc, p, isState ? doc.source_commit : null);
+    const historicalCommit = isState ? doc.source_commit : p.endsWith('/estado/assunto.json')
+      ? read(posix.join(dirname(p), 'atual.json')).source_commit : null;
+    checkRefs(doc, p, historicalCommit);
     if (!isState) {
       for (const linked of doc.related_subject_ids || []) {
         if (!subjects.has(norm(linked))) push('V03_SUBJECT_REF', p, linked);
       }
       const parent = dirname(p);
-      const others = readdirSync(resolve(root, parent)).filter(f => f.endsWith('.json') && f !== 'assunto.json');
+      const others = readdirSync(resolve(root, parent)).filter(f => f.endsWith('.json') && f !== 'assunto.json' && f !== 'atual.json');
       for (const file of others) {
         const childPath = posix.join(parent, file); let child;
         try { child = read(childPath); } catch(e) { push('V01_JSON', childPath, String(e)); continue; }
