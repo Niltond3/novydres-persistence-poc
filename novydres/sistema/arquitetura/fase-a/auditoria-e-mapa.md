@@ -19,7 +19,7 @@ Contratos confrontados: ADR-001, .AGENT.md, .CONTEXTG.md (bootstrap histórico),
 | novydres/governance | sistema/governanca | preservar decision IDs, escopo global/local e cadeia de autoridade; sucessor político explícito |
 | novydres/systems | sistema/regras | versão V5 semântica, perfil local não vira regra global |
 | novydres/runtime/{scene-execution,orchestration,provocation-prep,xp,narrative-architecture} | sistema/narrativa e sistema/regras para contratos; cronicas/{id}/orquestracao, preparacao, biblia e auditorias para instâncias | distinguir código e schema de contratos de preparação, resultados e ciclo efetivo |
-| novydres/chronicles/CHR-001/{LIVE*,HISTORY_INDEX*,character,episodes,events} | cronicas/CHR-001/{estado,episodios,registros,elenco} + personagens para identidade global | preservar eventos literais e RNG não verificado; deduplicação só com prova de igualdade |
+| novydres/chronicles/CHR-001/{LIVE*,HISTORY_INDEX*,character,episodes,events} | cronicas/CHR-001/{estado,episodios,registros,elenco} + personagens para identidade global | preservar texto e efeitos narrativos, estado e fontes históricas existentes; sem exigir faces/RNG ou conversão em ledger (DEC-23/DEC-24); deduplicação só com prova de igualdade |
 | novydres/chronicles/CHR-001/{knowledge,narrative-atlas,npc-disposition,preparations,world,orchestration} | cronicas/CHR-001/{elenco,tramas,fios,historias,biblia,preparacao,orquestracao} | segredos e epistemologia, decisões de D02–D12 e fios abertos não viram fatos inventados |
 | novydres/migration/{drive-archive,library-sources,binary-sources,...} | fontes/{originais-textuais,registro.json,midia} ou script/fixtures de migração | distinguir material probatório, cópia, metadados, prova histórica; binário original conforme política Drive |
 | novydres/assets/drive-links | fontes/midia/registro.json | manter links/IDs privados e integridade declarada, sem transferir imagem ao GitHub |
@@ -31,7 +31,7 @@ Contratos confrontados: ADR-001, .AGENT.md, .CONTEXTG.md (bootstrap histórico),
 2. CONFLICT-002: discrepância de version de mapa editorial; não reescrever.
 3. CONFLICT-003/003B: variantes de fonte de NPC com autoridade editorial pendente; não escolher silenciosamente.
 4. Dependência de mídia Drive: originais visuais no Drive por decisão vigente, metadados e links no GitHub, cinco originais informados como pendentes em inventário anterior; verificar números e status novamente em D.
-5. Registro textual histórico ≠ EVENT_LEDGER COMMITTED; rolagens não auditadas permanecem não auditadas.
+5. Texto histórico não comprova execução técnica de RNG ou ledger. DEC-23/DEC-24 dispensam essas reconstruções: conservar consequências, estado e fontes existentes, sem criar certificados nem registros por dado.
 6. G24/DEC-CR-014 e editorial governance v1.0 exigem versionamento por cópia/nome. ADR-001 prevê arquivos estáveis Git-native. Requer sucessor formal e aprovação antes da ativação.
 7. Design C36 e master C38 divergem: B exige reintegração explícita e validação contra HEAD atual, sem forçar master, sem regressar estado.
 

@@ -1,5 +1,7 @@
 # Protocolo reproduzível — três sessões independentes ChatGPT Web
 
+**Registro histórico, não instrução de execução vigente.** DEC-19 e DEC-21 do [ADR-001](../adr/001-subject-oriented.md) alteram os critérios futuros de métricas e dimensionamento da suíte. As quotas e os próximos passos abaixo pertencem ao snapshot original; a retomada deve usar [validação revisada](../fase-a/validacao-e-metricas.md) e [tarefas integrais](../plano-integral/tarefas.md). Preservam-se os resultados originais; esta nota não autoriza testes nem muda o gate.
+
 Classificação: PLAYER_SAFE. Estado atual: protocolo, não execução. Não há evidência nova de sessão Web neste commit.
 
 ## Objetivo e fronteiras

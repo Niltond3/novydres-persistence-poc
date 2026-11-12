@@ -1,5 +1,7 @@
 # Handoff PLAYER_SAFE — Fase B
 
+**Registro histórico, não instrução de execução vigente.** DEC-19 e DEC-21 do [ADR-001](../adr/001-subject-oriented.md) alteram os critérios futuros de métricas e dimensionamento da suíte. As quotas e os próximos passos abaixo pertencem ao snapshot original; a retomada deve usar [validação revisada](../fase-a/validacao-e-metricas.md) e [tarefas integrais](../plano-integral/tarefas.md). Preservam-se os resultados originais; esta nota não autoriza testes nem muda o gate.
+
 ## Estado
 
 `B_REMEDIATION_REQUIRED`. A branch de trabalho é `design/subject-oriented-migration`; o parent esperado para esta persistência é `35862b10000883ac8e607f9de1a87d945b21c1a5`. Master foi somente leitura e foi redescoberto em `0418f70ca0f01827de993273da191453a16d9857`. Este handoff não autoriza nem inicia Fase C.

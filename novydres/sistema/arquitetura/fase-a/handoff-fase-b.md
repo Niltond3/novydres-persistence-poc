@@ -7,6 +7,8 @@ source_approval: novydres/sistema/arquitetura/fase-a/aprovacao.json
 ---
 # NOVYDRES — Handoff da Fase A para B
 
+**Handoff histórico da aprovação original.** O regime futuro de transições segue DEC-22 do [ADR-001](../adr/001-subject-oriented.md): uma vez autorizada a implementação do plano, A–D avançam por critérios comprovados, sem nova confirmação apenas por fase. As instruções de parada abaixo pertencem ao snapshot original; consultar [tarefas integrais](../plano-integral/tarefas.md) e [contratos revisados](fases-b-e.md). Esta nota não autoriza execução nem altera a aprovação histórica.
+
 A arquitetura da Fase A do ADR-001 foi **aprovada expressamente pelo jogador em 2026-11-11** com a declaração literal "Aprovo a arquitetura". O escopo é desenho: não há cutover, nenhuma alteração do runtime, nenhuma política substituída em master e nenhuma narrativa alterada.
 
 ## Baseline comprovada no handoff

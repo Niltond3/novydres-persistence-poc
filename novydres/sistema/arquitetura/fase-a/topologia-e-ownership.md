@@ -42,13 +42,15 @@ classification: PLAYER_SAFE
           episodios/{episode-id}/
           cenas/{scene-id}/
           elenco/{personagem-id}/{estado.json,conhecimento.json,relacoes.json}
-          registros/{eventos/,rolagens/,decisoes/,aprovacoes/,correcoes/}
-          estado/{atual.json,projecoes/}
+          registros/               # decisões/correções/transações quando necessários; sem arquivo por dado
+          estado/atual.json         # estado corrente; sem motor universal de replay
           preparacao/
           orquestracao/{ciclo.json,historico-de-transicoes/}
           auditorias/
       fontes/{index.md,registro.json,originais-textuais/,midia/}
       scripts/{catalogo/,validadores/,testes/,migracao/,fixtures/}
+
+Aplicar DEC-23/DEC-24 do [ADR-001](../adr/001-subject-oriented.md): não impor ledger universal, projeções por replay ou trilha de faces de dados.
 
 Os diretórios exibidos são slots; criar somente assuntos materialmente existentes e autorizados. GitHub Actions permanece em .github/workflows e é infraestrutura fiscalizada pelo detector de legado. README raiz pode existir como descrição, mas não substitui AGENTS/CONTEXT/catálogo. A estrutura POC existente deve ser absorvida como fixtures de teste ou excluída da árvore operacional na E, com histórico Git preservado; é proibido deixar uma rota antiga ativa ou uma pasta legacy/archive no HEAD final.
 
