@@ -221,9 +221,9 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     if(e.audience==='PLAYER' && e.visibility!=='PLAYER_SAFE') throw new Error('DISCLOSURE_DENIED');
     if(e.actor!=='artificial-custodian') throw new Error('ACTOR_KNOWLEDGE_UNSUPPORTED');
     if(e.decision!=='ARTIFICIAL_DECISION_CURRENT') throw new Error('OBSOLETE_DECISION');
-    if(e.source_path!==sourcePath) throw new Error('WRONG_SOURCE_PATH');
     const real=await readPath(e.source_path);
     if(!real) throw new Error('SOURCE_NOT_FOUND');
+    if(e.source_path!==sourcePath) throw new Error('WRONG_SOURCE_PATH');
     if(real.blob_sha!==e.source_blob_sha) throw new Error('SOURCE_BLOB_MISMATCH');
     if(!real.content.includes(e.source_excerpt)) throw new Error('SOURCE_IRRELEVANT_TO_QUOTE');
     if(e.checkpoint!==await getHead()) throw new Error('CHECKPOINT_DIVERGED');

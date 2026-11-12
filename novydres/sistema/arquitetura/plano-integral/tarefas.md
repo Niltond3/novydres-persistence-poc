@@ -75,11 +75,11 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Prova:** quatro fontes mecânicas/estado foram confrontadas no master `c9fcfc0`: alvo aprovado integral versus aquisições parciais, 675 XP equivalentes ≠ crédito gastável, mortalidade/cursor e convenção de testes provisórios. Core Rulebook V5 integral e certificação de custos/idiomas/poderes/Touchstones seguem pendentes; não promover destino futuro a fato atual.
 - **Próximo:** A06 (A02–A05 agora documentalmente cumpridas), A07 após critérios/revisão, sem dispensar os bloqueios mecânicos pertinentes em B/C/D.
 
-### A05 — Especificar contratos reais de leitura e escrita Codex/Web
+### A05 — Especificar contratos reais de leitura e escrita no fluxo adotado
 
 - **Depende de:** A01; A02/A03 para fechar o contrato.
 - **Escopo/saída:** revisar `fase-a/git-e-roteadores.md`: descoberta das três entradas, lookup exato por ID, leitura por snapshot, catálogo gerado e hash sem circularidade, invalidação de cache, CAS, parent esperado, readback e erros. Conferir capacidades e limites das ferramentas disponíveis sem efetuar mutações nesta etapa documental. Não presumir shell ou API no Web. Especificar DEC-25 no contrato existente: entrada/checkpoint por commit, fontes decisivas, recuperação de divergência e evidência externa de conclusão. Verificar ações reais de leitura, escrita e acompanhamento de CI, sem assumir equivalência entre o ambiente Codex e o Web.
-- **Conclusão:** contratos de entrada/saída, erro e retomada equivalentes nos dois canais, NOT_FOUND explícito, sem fallback fuzzy ou overwrite silencioso. Capacidade de proteção de refs, CI e sandbox classificada como comprovada ou pendência concreta; limitações não viram garantias. O contrato distingue sinal objetivo de erro de comparação semântica assistida; aplicar DEC-26 à recuperação, ao risco residual e à renovação excepcional, sem dispensar a prova de DEC-25.
+- **Conclusão:** contratos de entrada/saída, erro e retomada no fluxo efetivamente adotado, sem exigir duplicação por canal, NOT_FOUND explícito, sem fallback fuzzy ou overwrite silencioso. Capacidade de proteção de refs, CI e sandbox classificada como comprovada ou pendência concreta; limitações não viram garantias. O contrato distingue sinal objetivo de erro de comparação semântica assistida; aplicar DEC-26 à recuperação, ao risco residual e à renovação excepcional, sem dispensar a prova de DEC-25.
 
 
 #### Execução de A05 — 2026-11-12
@@ -92,7 +92,7 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 ### A06 — Fechar critérios, gabaritos e fronteira B/C
 
 - **Depende de:** A02–A05; aplicar Q-03/Q-04 já aceitas (DEC-19/DEC-21).
-- **Escopo/saída:** revisar `fase-a/validacao-e-metricas.md` e contratos de B: casos com IDs, fontes, gabarito separado, bindings executáveis, isolamento, observabilidade, comparação antes/depois e revisão editorial independente. Definir quais ferramentas mínimas permitem provar B sem antecipar C. Aplicar DEC-21: dimensionar a suíte por riscos, preservando casos críticos e falhas históricas. Mapear funções/casos/provas, rotas reais dos dois canais e amostragem de comportamento variável, concorrência e falhas; justificar seleção, reutilização e repetições, sem quotas de 30/12/12 ou três rodadas obrigatórias. Não usar volume nem uma única resposta correta como prova de confiabilidade. Aplicar NOT_OBSERVABLE somente aos contadores Web abrangidos por DEC-19. Incorporar os casos DEC-25 de fonte inexistente/insuficiente, decisão superada, falsa conclusão, checkpoint divergente e recuperação no mesmo chat; reutilizar casos pertinentes e declarar limites de detecção, sem novo programa ou quota de testes.
+- **Escopo/saída:** revisar `fase-a/validacao-e-metricas.md` e contratos de B: casos com IDs, fontes, gabarito separado, bindings executáveis, isolamento, observabilidade, comparação antes/depois e revisão editorial independente. Definir quais ferramentas mínimas permitem provar B sem antecipar C. Aplicar DEC-21: dimensionar a suíte por riscos, preservando casos críticos e falhas históricas. Mapear funções/casos/provas, rotas reais necessárias ao fluxo de uso e amostragem de comportamento variável, concorrência e falhas; justificar seleção, reutilização e repetições, sem quotas de 30/12/12 ou três rodadas obrigatórias. Não usar volume nem uma única resposta correta como prova de confiabilidade. Aplicar NOT_OBSERVABLE somente aos contadores Web abrangidos por DEC-19. Incorporar os casos DEC-25 de fonte inexistente/insuficiente, decisão superada, falsa conclusão, checkpoint divergente e recuperação no mesmo chat; reutilizar casos pertinentes e declarar limites de detecção, sem novo programa ou quota de testes.
 - **Conclusão:** cada critério possui prova, responsável e reprovação definidos. Preservar a classificação crítico/não crítico e a precisão exigida: críticos sem divergência; não críticos ao menos equivalentes à baseline comparável, sem false CONFIRMED. A quota e a contagem histórica de 30/30 não são critério futuro; falhas factuais conhecidas continuam exigindo correção e nova evidência, sem apagamento ou reclassificação oportunista. Ausência de telemetria/teste não equivale a PASS; qualidade de escrita não se mede por palavras-chave. Matriz de cobertura completa, incluindo controles DEC-25 com executor/resultado externo e comparação contextual; não tratar autorrelato PASS como comprovação.
 
 
@@ -125,17 +125,17 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** revalidar fontes atuais e os candidatos existentes: um NPC (identidade global e contexto local), uma trama, uma história e um estado. Ajustar ao modelo/contrato revisados com mapa campo a campo, fontes pinadas, relações e UNKNOWN preservados. Exercícios narrativos adicionais são fixtures fictícias, não expansão da migração.
 - **Conclusão:** 100% dos campos dos casos têm equivalência ou transformação justificada; nenhuma cópia vira autoridade operacional. Texto histórico não vira ledger auditado, segredo não vaza e master não muda.
 
-### B02 — Reexecutar recuperação Codex com prova por caso
+### B02 — Recuperação factual com prova por caso
 
 - **Depende de:** B01 e contratos executáveis de A06.
-- **Escopo/saída:** corrigir causas das falhas registradas, inclusive Q29/Q30, e executar no canal Codex os casos comparáveis de recuperação definidos em A06, com repetição justificada conforme DEC-21, baseline/candidato com contexto controlado. Guardar pergunta, resposta, fonte/trecho localizado, leitura e métrica observável por operação; não fornecer o gabarito ao executor.
+- **Escopo/saída:** corrigir causas das falhas registradas, inclusive Q29/Q30, e executar ou aproveitar, quando ainda válida, a prova dos casos comparáveis de recuperação definidos em A06 no fluxo adotado, com repetição justificada conforme DEC-21, baseline/candidato com contexto controlado. Guardar pergunta, resposta, fonte/trecho localizado, leitura e métrica observável por operação; não fornecer o gabarito ao executor.
 - **Conclusão:** precisão, referências, recursos e conhecimento atendem os critérios acordados. Agregados antigos 51/90 ou citações sem localização não substituem evidência individual; resultados ausentes permanecem não executados.
 
-### B03 — Executar recuperação real no ChatGPT Web
+### B03 — Validar recuperação e integração na rota de uso
 
 - **Depende de:** B01 e A05/A06; Q-03 aceita como DEC-19.
 - **Escopo/saída:** casos comparáveis de recuperação definidos em A06, com amostragem justificada conforme DEC-21, por ferramenta realmente disponível no Web, com snapshot, consultas, respostas e fontes verificáveis. Preservar isolamento do gabarito e registrar métricas expostas; aplicar a exceção estrita DEC-19 de observabilidade, sem dispensar operações nem fontes.
-- **Conclusão:** revisão independente consegue conferir os resultados por caso. Autorrelato de execução ou um run Codex não é evidência Web; limitação de acesso é pendência, não simulação aprovada. Demonstrar a sequência DEC-25 na rota Web: recuperar tarefa/fontes, detectar divergência observável e retomar no mesmo chat a partir de checkpoint/evidência verificáveis.
+- **Conclusão:** revisão independente consegue conferir os resultados por caso. Autorrelato não é evidência. Não duplicar teste somente por trocar de produto; exigir prova adicional quando o uso real do conector, a integração, o contrato ou o comportamento diferir materialmente do já testado. Demonstrar a sequência DEC-25 na rota Web: recuperar tarefa/fontes, detectar divergência observável e retomar no mesmo chat a partir de checkpoint/evidência verificáveis.
 
 ### B04 — Executar negativos, mutações e concorrência no sandbox
 
@@ -152,7 +152,7 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 #### Retomada B02–B05 — checkpoint 2026-11-12 (Web)
 
 - Refs e cinco commits históricos conferidos; runs CI `43155672041` e `43155927667` em sucesso. B01 continua PASS histórico C41, master C45. B02 sem Codex real. B03: nova auditoria de 30 pins/localizadores e oito recursos críticos iguais, **não** avaliação semântica independente. B04: commit vencedor real e runner sintético CI; erro remoto sem classe stale demonstrada, testes reais de ID duplicado/conflitante e perda de confirmação pendentes. B05 `B_REMEDIATION_REQUIRED`, C bloqueada, DEC-25 `PARTIAL_OBSERVED_NOT_CERTIFIED`.
-- Evidências consolidadas nos arquivos existentes `../fase-b/resultado-testes.json#b03_locator_followup_2026_11_12` e `../fase-b/gate-e-readback.json#b05_followup_2026_11_12`. Próxima elegível: Codex real B02, revisão semântica independente B03 e integração B04 com rota efetiva, sem substituir essas provas por simulação.
+- Evidências consolidadas nos arquivos existentes `../fase-b/resultado-testes.json#b03_locator_followup_2026_11_12` e `../fase-b/gate-e-readback.json#b05_followup_2026_11_12`. Próxima elegível: revisão semântica independente e integração B04 com rota efetiva, sem substituir essas provas por simulação.
 
 ## C — Construir e verificar as ferramentas finais
 
@@ -165,8 +165,8 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 ### C02 — Implementar catálogo e recuperação por assunto
 
 - **Depende de:** C01 e A05.
-- **Escopo/saída:** geração determinística, lookup por ID e leitura seletiva em Codex/Web, índices/relacionamentos derivados, hashes sem autorreferência e cache por snapshot. As três entradas finais localizam o contrato; README não vira quarto bootstrap.
-- **Conclusão:** mesmos inputs geram mesmos bytes; alterações invalidam o que precisam invalidar, todos os destinos resolvem e NOT_FOUND não consulta rota antiga. V03/V09 comprovados nas duas rotas.
+- **Escopo/saída:** geração determinística, lookup por ID e leitura seletiva no fluxo efetivamente usado, índices/relacionamentos derivados, hashes sem autorreferência e cache por snapshot. As três entradas finais localizam o contrato; README não vira quarto bootstrap.
+- **Conclusão:** mesmos inputs geram mesmos bytes; alterações invalidam o que precisam invalidar, todos os destinos resolvem e NOT_FOUND não consulta rota antiga. V03/V09 comprovados na rota aplicável.
 
 ### C03 — Implementar gravação atômica e histórico preservado
 
@@ -192,17 +192,17 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** V08/V11/V12 sobre toda árvore: código, JSON, prosa operacional, URLs, CI, symlinks, aliases, wrappers e fallbacks. Distinguir citação de proveniência de rota executável por regra verificável; conferir localização/direitos de mídia sem inventar hashes.
 - **Conclusão:** resíduos operacionais e vazamentos nas fixtures são detectados, sem exclusão genérica de diretórios/documentação. Aprovar candidato isolado não significa que toda branch pré-cutover esteja ZERO LEGADO. Git histórico não vira fallback no HEAD.
 
-### C07 — Integrar CI, dois canais e regressões de produção
+### C07 — Integrar CI, fluxo de uso e regressões de produção
 
 - **Depende de:** C01–C06.
-- **Escopo/saída:** scripts e workflows finais, contratos Web/Codex equivalentes, suíte crítica, erros de integração, métricas pareadas e revisão independente de sigilo/escrita. Adaptar ou retirar workflows específicos antigos no candidato final; manter as provas necessárias.
-- **Conclusão:** runs reais com commit e resultados reproduzíveis em ambos os canais; custo e p95 julgados pelos critérios de A06, exceções expressas. Teste de texto/palavra-chave não substitui cenário narrado nem demonstra ausência de vazamento contextual. Provar os controles DEC-25 com resultados externos recuperáveis no Web e falhas induzidas/recuperação; revisão semântica registra limites e falhas que escapam. Sem evidência real, a condição da dispensa de chat por fase permanece não demonstrada.
+- **Escopo/saída:** scripts e workflows finais, contratos das rotas efetivamente usadas, suíte crítica, erros de integração e métricas comparáveis e revisão independente de sigilo/escrita. Adaptar ou retirar workflows específicos antigos no candidato final; manter as provas necessárias.
+- **Conclusão:** runs reais com commit e resultados reproduzíveis nas integrações efetivamente utilizadas; custo e p95 julgados pelos critérios de A06, exceções expressas. Teste de texto/palavra-chave não substitui cenário narrado nem demonstra ausência de vazamento contextual. Provar os controles DEC-25 com resultados externos recuperáveis no Web e falhas induzidas/recuperação; revisão semântica registra limites e falhas que escapam. Sem evidência real, a condição da dispensa de chat por fase permanece não demonstrada.
 
 ### C08 — Revisar e encerrar gate C
 
 - **Depende de:** C07.
 - **Escopo/saída:** conferir V01–V12, contratos implementados, regressões, limitações e readback. Relacionar cada requisito à prova, sem declarar equivalência integral ainda não migrada.
-- **Conclusão:** C PASS apenas sem lacuna bloqueante, com CI e duas rotas comprovadas; no plano futuramente autorizado, seguir para D conforme DEC-22, sem nova confirmação apenas pela fase. Runtime antigo continua operacional até E.
+- **Conclusão:** C PASS apenas sem lacuna bloqueante, com CI e rota funcional aplicável comprovada; no plano futuramente autorizado, seguir para D conforme DEC-22, sem nova confirmação apenas pela fase. Runtime antigo continua operacional até E.
 
 ## D — Migrar toda a árvore candidata
 

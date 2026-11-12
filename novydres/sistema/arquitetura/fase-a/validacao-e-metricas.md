@@ -6,7 +6,7 @@ classification: PLAYER_SAFE
 ---
 # Validadores, regressão e cutover ZERO LEGADO
 
-Emendas documentais em 2026-11-11 e 2026-11-12: aplicar DEC-16–DEC-26 do [ADR-001 §11](../adr/001-subject-oriented.md#11-revisão-do-harness-narrativo). DEC-19 aceita a exceção estrita de métricas Web; DEC-20 exige revisão dos limites excessivos. DEC-21 aceita a substituição das quotas fixas por cobertura de riscos, detalhada abaixo e no [plano integral](../plano-integral/index.md); não reescrever as evidências anteriores. DEC-23/DEC-24 substituem ledger/replay universal e auditoria de faces por estado atual, texto integral, Git e efeitos materiais. Nenhum teste ou gate é executado por esta emenda.
+Emendas documentais em 2026-11-11 e 2026-11-12: aplicar DEC-16–DEC-27 do [ADR-001 §11](../adr/001-subject-oriented.md#11-revisão-do-harness-narrativo). DEC-19 aceita a exceção estrita de métricas Web; DEC-20 exige revisão dos limites excessivos. DEC-21 aceita a substituição das quotas fixas por cobertura de riscos, detalhada abaixo e no [plano integral](../plano-integral/index.md); não reescrever as evidências anteriores. DEC-23/DEC-24 substituem ledger/replay universal e auditoria de faces por estado atual, texto integral, Git e efeitos materiais. Nenhum teste ou gate é executado por esta emenda.
 
 ## Validações determinísticas mínimas (fase C implementa)
 V01 schema: validação de JSON/YAML e version dos schemas; dados nunca coergidos silenciosamente.
@@ -37,7 +37,7 @@ Q-07 foi aceita com condição: o objetivo é executar A–E no ChatGPT Web com 
 | Divergência detectada | Suspender a alteração/avanço afetado; reler fontes e último checkpoint confirmado, identificar a causa, corrigir a proposta no escopo e repetir apenas as verificações afetadas. Retomar no mesmo chat quando a divergência estiver resolvida. Não repetir a mesma tentativa sem informação nova nem reverter fatos/recursos publicados para facilitar recuperação. | A05–A06, B04, C03–C05, C07 |
 | Conclusão de tarefa/fase e interrupção | Atualizar um checkpoint curto no registro de progresso existente: tarefa/fase, último commit confirmado, escolhas aplicáveis, provas, pendências e próxima unidade elegível. Handoff usa esses dados; não criar outro arquivo por teste ou obrigar transportar prompts entre fases. | A07, C04–C05, D05 |
 
-**Limites de automação.** Os scripts/CI precisam executar fora do raciocínio livre do chat e produzir resultados recuperáveis pela integração disponível. A05 verifica acesso real a refs/arquivos por SHA, escrita autorizada, disparo ou acompanhamento de CI e leitura dos resultados; não presume que qualquer conexão GitHub ofereça essas ações. B usa o executor mínimo isolado, C entrega a ferramenta final. Se um controle exigido não puder ser executado/observado no Web, registrar a lacuna: simulação Codex não satisfaz a condição. Nenhuma API nova, serviço permanente ou segundo agente obrigatório por tarefa está implícito.
+**Limites de automação.** Os scripts/CI precisam executar fora do raciocínio livre do chat e produzir resultados recuperáveis pela integração disponível. A05 verifica acesso real a refs/arquivos por SHA, escrita autorizada, disparo ou acompanhamento de CI e leitura dos resultados; não presume que qualquer conexão GitHub ofereça essas ações. B usa o executor mínimo isolado, C entrega a ferramenta final. Se um controle exigido não puder ser executado/observado no Web, registrar a lacuna: simulação em qualquer ferramenta não satisfaz a condição. Nenhuma API nova, serviço permanente ou segundo agente obrigatório por tarefa está implícito.
 
 **Casos de prova.** Integrar à cobertura por riscos de DEC-21: fonte inexistente; fonte existente que não sustenta a conclusão; decisão antiga usada contra a emenda; tarefa declarada concluída sem saída/run correspondente; checkpoint divergente do HEAD; correção e retomada no mesmo chat. Incluir revisão semântica contextual para o caso em que todos os campos são válidos, mas a interpretação é falsa. Medir quais falhas foram detectadas e quais passaram; não chamar isso de detector universal nem presumir equivalência a chat limpo sem comparação. Reutilizar os casos de B e os validadores existentes quando cobrirem o risco.
 
@@ -55,7 +55,7 @@ B estabelece baseline e candidato sobre casos e IDs comparáveis, com fontes fix
 
 - Cobrir recuperação de mundo/regras, personagem/relações/conhecimento e cronologia/episódios/estado; incluir as falhas históricas de B-Q29/B-Q30 e outros defeitos ainda pertinentes. Não excluir um caso porque falhou nem mudar seu gabarito para aprovar o candidato.
 - Cobrir autoria, UNKNOWN, segredos, retcon, recursos, persistência, correções, idempotência, concorrência, confirmação perdida e recuperação. Vincular cada risco a caso, resultado esperado e evidência. Quando procedimentos antigos forem substituídos, testar a função sucessora, sem ressuscitar o procedimento só para satisfazer o fixture.
-- Executar testes determinísticos uma vez por versão relevante; repetir após mudança que invalide a prova. Compartilhar evidência apenas quando a implementação e o contrato testados forem os mesmos. Exercitar as rotas reais de leitura/escrita e os riscos próprios de Codex e Web; resultado de um canal não comprova o outro.
+- Executar testes determinísticos uma vez por versão relevante; repetir após mudança que invalide a prova. Compartilhar evidência quando código, fontes, contrato e risco permanecerem válidos. Exercitar a rota real de leitura/escrita adotada; teste adicional de outro executor só é necessário se diferença concreta invalidar a prova, conforme DEC-27.
 - Justificar a amostragem dos comportamentos variáveis do agente e repetir seletivamente para concorrência, falhas e suspeita de intermitência. Uma resposta correta não demonstra confiabilidade geral. Não impor três rodadas indistintas nem declarar falhas intermitentes eliminadas por amostra pequena.
 
 A06 fecha essa cobertura antes da execução de B. Relatórios registram casos executados, falhas e limitações; não produzem novo PASS a partir da redução da suíte. Métricas antes/depois usam casos e condições comparáveis. Mediana/p95 só são relatados com dados suficientes e método explícito; amostra insuficiente é declarada, sem percentis inventados.
@@ -76,7 +76,7 @@ Quantidade absoluta de arquivos não é métrica de sucesso, mesmo que diminua o
 ## Gate de fases
 A: documentos e lacunas com readback, critérios completos e escolhas substantivas resolvidas. DEC-22 permite transições A–D pelos critérios comprovados depois da autorização futura de implementação do plano; nova confirmação apenas por fase não é exigida. A etapa atual continua documental.
 B: casos protótipos completos, sem ativação, equivalência e baseline da suíte comprovadas.
-C: validadores/roteadores executados com testes negativos em dois canais, sem regressão de integridade.
+C: validadores/roteadores executados com testes negativos no fluxo efetivamente adotado, sem regressão de integridade.
 D: cobertura de todas as fontes com provas de equivalência e owners; sem silenciar conflitos.
 E: auditoria final ZERO LEGADO + testes + aprovação + promoção atômica; FAIL absoluto se sobrar rota antiga.
 
