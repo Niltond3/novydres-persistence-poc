@@ -45,7 +45,75 @@ export function describePinnedContent(path,content) {
  return {format,utf16_code_units:content.length,top_level_keys,declared_source_metadata,
   heading_count,classification_in_filename:/(?:GM_HIDDEN|PLAYER_SAFE|SYSTEM_AUDIT)/.exec(path)?.[0]||'UNDECLARED'};
 }
-export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents}){
+export function deriveC45Precedence(index,{cycle,sourceContents,candidateState,candidateStateSha}){
+ need(candidateState?.not_operational===true,'D01_C41_CANDIDATE_ACTIVATION_NOT_DENIED');
+ const current=kind=>{
+  const p=cycle.refs?.[kind]?.path;
+  need(typeof p==='string'&&sourceContents.has(p),'D01_C45_SOURCE_POINTER_MISSING');
+  const value=JSON.parse(sourceContents.get(p));
+  need(value&&typeof value==='object'&&!Array.isArray(value),'D01_C45_SOURCE_POINTER_INVALID');
+  return value;
+ };
+ const live=current('live'),hist=current('history_index'),know=current('knowledge'),threads=current('threads');
+ const state=candidateState;
+ return {
+  status:'C45_CURRENT_C41_CANDIDATE_NOT_RECONCILED',
+  inspection:'EXACT_GITHUB_BLOB_READBACK_STRUCTURAL_PRIORITY_NOT_FACTUAL_EQUIVALENCE',
+  current_master_commit:index.source_snapshot.commit_sha,
+  source_cycle_id:cycle.cycle_id,
+  source_cycle_sha:index.authority_reference.cycle.blob_sha,
+  source_manifest_path:cycle.manifest_ref.path,
+  source_manifest_sha:cycle.manifest_ref.blob_sha,
+  candidate_state:{
+   path:'novydres/cronicas/CHR-001/estado/atual.json',
+   sha:candidateStateSha,
+   current_runtime:false,
+   declared_not_operational:state.not_operational,
+   source_cycle_id:state.cycle.id,
+   source_cycle_path:state.cycle.path,
+   source_cycle_sha:state.cycle.sha,
+   source_manifest_ref:state.manifest_ref,
+   original_source_commit:state.source_commit,
+   source_live:state.source_live
+  },
+  current_direct_references:Object.fromEntries(Object.entries(cycle.refs).map(([name,x])=>[name,{path:x.path,blob_sha:x.blob_sha}])),
+  live_internal_references:{
+   history_index_ref:live.history_index_ref,
+   knowledge_current_ref:live.knowledge_current_ref,
+   open_threads_current_ref:live.open_threads_current_ref
+  },
+  historical_index_references:{
+   knowledge_index_ref:hist.knowledge_index_ref,
+   open_threads_ref:hist.open_threads_ref,
+   index_coverage:hist.index_coverage,
+   technical_ledger_status:hist.technical_ledger_status
+  },
+  situated_data_counters:{
+   npc_knowledge_record_count:Array.isArray(know.records)?know.records.length:null,
+   open_threads_count:Array.isArray(threads.threads)?threads.threads.length:null,
+   knowledge_status:know.status,
+   open_threads_status:threads.status
+  },
+  reference_evaluation:{
+   cycle_live_matches_internal_history:cycle.refs.history_index.path===live.history_index_ref,
+   cycle_live_matches_internal_knowledge:cycle.refs.knowledge.path===live.knowledge_current_ref,
+   cycle_live_matches_internal_threads:cycle.refs.threads.path===live.open_threads_current_ref,
+   current_history_matches_cycle_knowledge:hist.knowledge_index_ref===cycle.refs.knowledge.path,
+   current_history_matches_cycle_threads:hist.open_threads_ref===cycle.refs.threads.path,
+   candidate_state_uses_current_cycle:state.cycle.id===cycle.cycle_id,
+   candidate_state_uses_current_manifest:state.manifest_ref.blob_sha===cycle.manifest_ref.blob_sha
+  },
+  rules:{
+   source_selection:'EXACT_C45_CYCLE_PIN_FIRST',
+   old_live_pointer_usage:'HISTORIC_REFERENCE_ONLY_UNLESS_RECONCILED',
+   runtime_activation:'PROHIBITED',
+   editorial_content_equivalence:'NOT_PROVEN',
+   local_knowledge_and_secret_access:'PENDING_EPISTEMIC_REVIEW',
+   historical_index_completeness:'PARTIAL_NOT_FULL_REPLAY'
+  }
+ };
+}
+export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
   index.status==='D01_SOURCE_INDEX_COMPLETE_EDITORIAL_MAPPING_PENDING'&&
@@ -184,6 +252,22 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
  }
  need(sourceContents.size===pinnedMissing.length&&structurallyInspected===pinnedMissing.length,
   'D01_C45_INSPECTION_COVERAGE_DRIFT');
+ const candidateStatePath='novydres/cronicas/CHR-001/estado/atual.json';
+ const candidateStateSha=other.get(candidateStatePath)?.sha;
+ need(SHA.test(candidateStateSha||''),'D01_C41_STATE_CANDIDATE_MISSING');
+ need(candidateState&&typeof candidateState==='object','D01_C41_STATE_SOURCE_NOT_READ');
+ const expectedCrosswalk=deriveC45Precedence(index,{cycle,sourceContents,candidateState,candidateStateSha});
+ need(equal(index.c45_candidate_state_precedence_crosswalk,expectedCrosswalk),
+  'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+ const evaluation=expectedCrosswalk.reference_evaluation;
+ need(evaluation.current_history_matches_cycle_knowledge===true&&
+  evaluation.current_history_matches_cycle_threads===true,'D01_C45_HISTORY_CHAIN_DRIFT');
+ need(evaluation.cycle_live_matches_internal_history===false&&
+  evaluation.cycle_live_matches_internal_knowledge===false&&
+  evaluation.cycle_live_matches_internal_threads===false&&
+  evaluation.candidate_state_uses_current_cycle===false&&
+  evaluation.candidate_state_uses_current_manifest===false,
+  'D01_C45_EXPECTED_HISTORY_DIFFERENCE_CHANGED');
  const summary=index.denominators;
  need(summary?.cycle_unique_pinned_paths===pinRows.size&&
   summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
@@ -192,6 +276,8 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
  need(summary?.c45_missing_pin_content_inspections===structurallyInspected&&
   summary.c45_missing_pin_routing_proposals===structurallyInspected,
   'D01_C45_INSPECTION_DENOMINATOR_DRIFT');
+ need(summary?.c45_source_priority_mismatches===Object.values(evaluation).filter(x=>x===false).length,
+  'D01_C45_PRIORITY_DENOMINATOR_DRIFT');
  need(summary?.master_blobs===masterTree.length&&summary.candidate_blobs===candidateTree.length&&
   summary.same_path_equal_blob===counts.same&&summary.same_path_changed_blob===counts.different&&
   summary.master_without_candidate_same_path===counts.missing&&summary.candidate_only===only.length&&
@@ -208,6 +294,9 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   cycle_unique_pinned_paths:pinRows.size,cycle_pins_missing_candidate:pinRelations.missing,
   cycle_pins_same_candidate:pinRelations.same,
   c45_missing_source_content_structurally_inspected:structurallyInspected,
+  candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
+  current_checkpoint:expectedCrosswalk.source_cycle_id,
+  state_precedence_mismatches:summary.c45_source_priority_mismatches,
   editorial_approval:'NOT_PROVEN',runtime_activation:false};
 }
 export function readAndVerifyD01(root=process.cwd()){
@@ -225,7 +314,9 @@ export function readAndVerifyD01(root=process.cwd()){
  return verifyD01(index,{masterTree,candidateTree,
   external:read(index.controlled_external_registry.path),
   media:read(index.visual_registry.path),
-  cycle:read(index.authority_reference.cycle.path),sourceContents});
+  cycle:read(index.authority_reference.cycle.path),sourceContents,
+  candidateState:JSON.parse(git(root,['show',index.candidate_snapshot.commit_sha+
+   ':novydres/cronicas/CHR-001/estado/atual.json']))});
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))
  console.log(JSON.stringify(readAndVerifyD01()));

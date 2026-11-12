@@ -8,11 +8,13 @@ const root=process.cwd();
 const index=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/inventario-origens.json','utf8'));
 const pinned=index.source_snapshot.commit_sha;
 const read=p=>JSON.parse(execFileSync('git',['show',pinned+':'+p],{encoding:'utf8',maxBuffer:32*1024*1024}));
+const readFromCandidateState=()=>JSON.parse(execFileSync('git',['show',index.candidate_snapshot.commit_sha+':novydres/cronicas/CHR-001/estado/atual.json'],{encoding:'utf8',maxBuffer:32*1024*1024}));
 const data={masterTree:listPinnedTree(root,pinned),
  candidateTree:listPinnedTree(root,index.candidate_snapshot.commit_sha),
  external:read(index.controlled_external_registry.path),
  media:read(index.visual_registry.path),
  cycle:read(index.authority_reference.cycle.path),
+ candidateState:readFromCandidateState(),
  sourceContents:new Map(index.source_files.filter(row=>
   row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE').map(row=>[
   row.source_path,execFileSync('git',['show',pinned+':'+row.source_path],
@@ -124,4 +126,38 @@ test('D01 restricted story truth cannot be routed into public chronicle state',(
  assert.ok(p);
  reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/cronicas/CHR-001/estado',
   'D01_C45_GM_TRUTH_OWNER_DRIFT');
+});
+
+test('D01 active C45 cycle has precedence over archived C41 candidate state',()=>{
+ const observed=verifyD01(index,data);
+ assert.equal(observed.candidate_checkpoint,'CHR001-CYCLE-0041');
+ assert.equal(observed.current_checkpoint,'CHR001-CYCLE-0045');
+ assert.equal(observed.state_precedence_mismatches,5);
+ assert.equal(observed.editorial_approval,'NOT_PROVEN');
+});
+test('D01 old LIVE refs cannot silently supersede C45 pinned knowledge and threads',()=>{
+ const x=index.c45_candidate_state_precedence_crosswalk.reference_evaluation;
+ assert.equal(x.cycle_live_matches_internal_knowledge,false);
+ assert.equal(x.cycle_live_matches_internal_threads,false);
+ assert.equal(x.current_history_matches_cycle_knowledge,true);
+ assert.equal(x.current_history_matches_cycle_threads,true);
+ reject(y=>y.c45_candidate_state_precedence_crosswalk.rules.source_selection='LIVE_INTERNAL_POINTER_FIRST',
+   'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+});
+test('D01 current knowledge/thread coverage counters cannot be invented',()=>{
+ reject(y=>y.c45_candidate_state_precedence_crosswalk.situated_data_counters.open_threads_count+=1,
+  'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+ reject(y=>y.c45_candidate_state_precedence_crosswalk.situated_data_counters.npc_knowledge_record_count-=1,
+  'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+});
+test('D01 C41 candidate state cannot be passed off as operational',()=>{
+ reject(y=>y.c45_candidate_state_precedence_crosswalk.candidate_state.current_runtime=true,
+  'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+ const state=structuredClone(data.candidateState);state.not_operational=false;
+ assert.throws(()=>verifyD01(index,{...data,candidateState:state}),
+  e=>e.code==='D01_C41_CANDIDATE_ACTIVATION_NOT_DENIED');
+});
+test('D01 no downgrade of current history partial coverage to full',()=>{
+ reject(y=>y.c45_candidate_state_precedence_crosswalk.historical_index_references.index_coverage='COMPLETE',
+  'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
 });

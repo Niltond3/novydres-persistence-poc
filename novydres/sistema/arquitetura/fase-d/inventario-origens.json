@@ -20396,7 +20396,8 @@
     "MASTER_VS_CANDIDATE_REFERENCE_RECONCILIATION",
     "KNOWN_CONFLICT_VERDICTS_WHERE_REQUIRED",
     "DEPENDENCY_AND_IMPORT_MAP_REVIEW",
-    "C45_SOURCE_CONTENT_FIELD_EQUIVALENCE_PENDING_53"
+    "C45_SOURCE_CONTENT_FIELD_EQUIVALENCE_PENDING_53",
+    "C45_C41_STATE_AND_LIVE_POINTER_SEMANTIC_RECONCILIATION_NOT_PROVEN"
   ],
   "denominators": {
     "master_blobs": 1029,
@@ -20415,6 +20416,94 @@
     "cycle_pinned_paths_same_blob": 20,
     "cycle_pinned_paths_changed": 0,
     "c45_missing_pin_content_inspections": 53,
-    "c45_missing_pin_routing_proposals": 53
+    "c45_missing_pin_routing_proposals": 53,
+    "c45_source_priority_mismatches": 5
+  },
+  "c45_candidate_state_precedence_crosswalk": {
+    "status": "C45_CURRENT_C41_CANDIDATE_NOT_RECONCILED",
+    "inspection": "EXACT_GITHUB_BLOB_READBACK_STRUCTURAL_PRIORITY_NOT_FACTUAL_EQUIVALENCE",
+    "current_master_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_cycle_id": "CHR001-CYCLE-0045",
+    "source_cycle_sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+    "source_manifest_path": "novydres/MANIFEST_V63.json",
+    "source_manifest_sha": "18b20257ad79c9b6a596c293f3445d28c64d8f71",
+    "candidate_state": {
+      "path": "novydres/cronicas/CHR-001/estado/atual.json",
+      "sha": "88317332db5691d764e4543c5648e537655e8e4b",
+      "current_runtime": false,
+      "declared_not_operational": true,
+      "source_cycle_id": "CHR001-CYCLE-0041",
+      "source_cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "source_cycle_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+      "source_manifest_ref": {
+        "path": "novydres/MANIFEST_V56.json",
+        "blob_sha": "82a2421d418ab60474520016f1e80f8672f73cd6"
+      },
+      "original_source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+      "source_live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+        "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+      }
+    },
+    "current_direct_references": {
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+        "blob_sha": "04277d399330181b2cc029f5132dda38b6457c2f"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+        "blob_sha": "8a00eeaea0ceba59245a34c9da1992a03635b625"
+      },
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+        "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+        "blob_sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+        "blob_sha": "a5da61e00c5e29a4941d5697b2010743313f9007"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+        "blob_sha": "05ce76898d2757c1e270e9c3b1282712df123d13"
+      }
+    },
+    "live_internal_references": {
+      "history_index_ref": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "knowledge_current_ref": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "open_threads_current_ref": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json"
+    },
+    "historical_index_references": {
+      "knowledge_index_ref": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "open_threads_ref": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+      "index_coverage": "PARTIAL_SPARSE_NEEDS_COMPLETE_HISTORY_AUDIT",
+      "technical_ledger_status": "HISTORICALLY_UNPOPULATED_NOT_RECONSTRUCTED"
+    },
+    "situated_data_counters": {
+      "npc_knowledge_record_count": 47,
+      "open_threads_count": 44,
+      "knowledge_status": "ACTIVE_OPERATIONAL_PARTIAL",
+      "open_threads_status": "ACTIVE_OPERATIONAL_PARTIAL"
+    },
+    "reference_evaluation": {
+      "cycle_live_matches_internal_history": false,
+      "cycle_live_matches_internal_knowledge": false,
+      "cycle_live_matches_internal_threads": false,
+      "current_history_matches_cycle_knowledge": true,
+      "current_history_matches_cycle_threads": true,
+      "candidate_state_uses_current_cycle": false,
+      "candidate_state_uses_current_manifest": false
+    },
+    "rules": {
+      "source_selection": "EXACT_C45_CYCLE_PIN_FIRST",
+      "old_live_pointer_usage": "HISTORIC_REFERENCE_ONLY_UNLESS_RECONCILED",
+      "runtime_activation": "PROHIBITED",
+      "editorial_content_equivalence": "NOT_PROVEN",
+      "local_knowledge_and_secret_access": "PENDING_EPISTEMIC_REVIEW",
+      "historical_index_completeness": "PARTIAL_NOT_FULL_REPLAY"
+    }
   }
 }
