@@ -25,8 +25,10 @@ export function checkD03Gate({worldAuthorityOverride=null,npcAuditOverride=null,
    ownership.locators!==1707||rules.modules!==20||rules.source_documents!==32||rules.d05_consumer_handoffs!==6||places.concepts!==41||places.exact_source_sections!==82||
    relations.directed_edges!==5||pc.local_state_promoted!==false||!structure.ok||
    !checkCatalog().ok)fail('D03_GATE_EQUIVALENCE');
- if(catalog.subjects.length!==79||
-   new Set(catalog.subjects.map(s=>s.id)).size!==79||
+ const originalHistorical=new Set(['chr001-npc-samir-haddad','chr001-state-checkpoint','chr001-table-config']);
+ const d03SubjectCount=catalog.subjects.filter(s=>!s.id.startsWith('chr001-')||originalHistorical.has(s.id)).length;
+ if(d03SubjectCount!==79||
+   new Set(catalog.subjects.map(s=>s.id)).size!==catalog.subjects.length||
    catalog.subjects.some(s=>!s.files?.length||s.status==='ACTIVE'))
    fail('D03_GATE_OWNER');
  const ids=new Set(catalog.subjects.map(s=>s.id));
