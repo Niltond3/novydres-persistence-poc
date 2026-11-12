@@ -72,5 +72,21 @@
     "paths_verified": "6/6",
     "paths_also_in_design": "5/6",
     "absent_design_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json"
+  },
+  "b01_reconciliation_2026_11_12": {
+    "status": "HISTORICAL_FIELD_MAPPING_VERIFIED_CURRENT_CURSOR_DRIFT_UNRESOLVED_BY_DESIGN",
+    "original_source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "current_master": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "canonical_changed": false,
+    "preserved_conflict_ids": [
+      "B-01",
+      "B-02",
+      "B-03",
+      "B-04",
+      "B-05",
+      "B-06"
+    ],
+    "disposition": "Never rewrite historical C41 to C45 or promote candidate source; master C45 remains operational and immutable in this exercise.",
+    "semantic_review": "PENDING"
   }
 }

@@ -88,5 +88,175 @@
       "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
       "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
     }
-  ]
+  ],
+  "b01_reconciliation_2026_11_12": {
+    "verification_id": "B01-WEB-20261112-01",
+    "status": "PASS_SCOPED_HISTORICAL_WITH_DECLARED_CURSOR_DRIFT",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "candidate_head_before_write": "8b85494980fc040260510dc58d528cd3c461ef1f",
+    "master_current": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "authority": "CANDIDATE_ONLY_NOT_RUNTIME",
+    "mappings": [
+      {
+        "case": "NPC",
+        "fields": "aliases,status",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+          "sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+          "locator": "/entities/npc-m3-samir-haddad-candidate"
+        },
+        "candidate": {
+          "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+          "sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+          "locator": "/aliases,/historical_status"
+        },
+        "classification": "EXACT",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "NPC",
+        "fields": "confirmed,claims,suspected,unknown,scope,anchor",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/confirmed,/claims,/suspected,/unknown,/scope,/source_anchor"
+        },
+        "classification": "EXACT_NPC_CLAIM_AND_UNKNOWN_RETAINED",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "NPC",
+        "fields": "relation markers, owner, foreign target",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.06-C01.07"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/relacoes.json",
+          "sha": "47663d84c869aa52a15967a163bad2a4ef1c4f95",
+          "locator": "/relations/0"
+        },
+        "classification": "SOURCE_MARKERS_VERIFIED_FOREIGN_TARGET_OUT_OF_SCOPE",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "TRAMA",
+        "fields": "id,kind,topic,anchor,unknown,updated_by_event_id",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+          "sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5",
+          "locator": "/threads/id=m301-c01-samir-krauser-office-phone"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+          "sha": "1aa7682911a572d0e391e90d19f3af46ed34ba0d",
+          "locator": "/source_thread_id,/source_thread_kind,/topic,/source_anchor,/unknown,/source_event_marker"
+        },
+        "classification": "EXACT_PLOT_PROVISIONAL",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "HISTORIA",
+        "fields": "eight scene markers and text provenance",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.01-C01.08"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers,/primary_literal"
+        },
+        "classification": "TEXT_NOT_TECHNICAL_LEDGER",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "ESTADO",
+        "fields": "checkpoint,cycle,manifest",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+          "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+          "locator": "/checkpoint,/cycle_id,/manifest_ref"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint,/cycle,/manifest_ref"
+        },
+        "classification": "EXACT_HISTORICAL_C41",
+        "result": "VERIFIED_SCOPED"
+      },
+      {
+        "case": "ESTADO",
+        "fields": "xp,fv,workshop",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/character/resources,/character/current_mortal_workshop"
+        },
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/resources,/workshop"
+        },
+        "classification": "EXACT_HISTORICAL_LIVE_V038",
+        "result": "VERIFIED_SCOPED"
+      }
+    ],
+    "checks": {
+      "profile_aliases": true,
+      "profile_status": true,
+      "knowledge_confirmed": true,
+      "knowledge_claims": true,
+      "knowledge_suspected": true,
+      "knowledge_unknown": true,
+      "plot_topic": true,
+      "plot_kind": true,
+      "plot_anchor": true,
+      "plot_unknown": true,
+      "plot_event": true,
+      "story_eight_markers": true,
+      "story_literal_markers": true,
+      "state_cycle": true,
+      "state_manifest": true,
+      "state_checkpoint": true,
+      "state_resources": true,
+      "state_workshop": "VERIFIED_IN_LIVE_V038_CHARACTER_CURRENT_MORTAL_WORKSHOP",
+      "npc_unchanged_between_V21_V22": true,
+      "thread_unchanged_between_V23_V24": true,
+      "resources_unchanged_LIVE_V038_V039": true,
+      "master_after_origin": "23_COMMITS_AHEAD_SOURCE_PIN_PATHS_UNCHANGED_BY_COMPARE",
+      "current_cursor_drift": "C41_TO_C45"
+    },
+    "current_context": {
+      "master_head": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "cycle_sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+      "manifest_path": "novydres/MANIFEST_V63.json",
+      "manifest_sha": "18b20257ad79c9b6a596c293f3445d28c64d8f71",
+      "live_path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "live_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19",
+      "historical_cursor": "C41",
+      "current_cursor": "C45",
+      "same_resource_projection": true,
+      "do_not_sync_candidate_to_runtime": true
+    },
+    "limits": [
+      "not_independent_semantic_review",
+      "not_full_D_migration",
+      "foreign_relation_target_out_of_scope",
+      "provisional_plot_not_admitted",
+      "unknown_and_claim_preserved",
+      "textual_scene_markers_not_ledger_commits",
+      "no_runtime_promotion"
+    ],
+    "method": "Real connector reads fixed to Git SHAs; direct structural comparisons and scoped exact field mapping; current source path change review via Git compare."
+  }
 }
