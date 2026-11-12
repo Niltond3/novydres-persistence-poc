@@ -20,11 +20,11 @@ test('V09 bytes are deterministic and equal the committed generated file',()=>{
 });
 test('V03 candidate subjects have exact single owners, files, derived reverse links',()=>{
  const c=buildCatalog(root);
- assert.equal(c.subjects.length,59);
+ assert.equal(c.subjects.length,79);
  assert.deepEqual(c.subjects.map(s=>s.id).filter(id=>!id.startsWith('world-')&&!id.startsWith('rule-')&&!id.startsWith('district-')&&!id.startsWith('poi-')&&!id.startsWith('org-')&&!id.startsWith('pc-')&&!['npc-iskander-yasupov','npc-madame-zoya'].includes(id)),[
   'chr001-npc-samir-haddad','chr001-state-checkpoint','chr001-table-config',
   'npc-samir-haddad','plot-contato-condicional-samir','story-m301-c01']);
- assert.equal(new Set(c.subjects.flatMap(s=>s.files.map(f=>f.path))).size,256);
+ assert.equal(new Set(c.subjects.flatMap(s=>s.files.map(f=>f.path))).size,316);
  assert.ok(c.inverse_dependencies['plot-contato-condicional-samir'].includes('story-m301-c01'));
  assert.equal(c.deferred.length,0);
  assert.ok(c.subjects.some(s=>s.id==='pc-bartholomeu-krauser'));

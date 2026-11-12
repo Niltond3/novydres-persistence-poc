@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-specialist-b",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_b_decisions_v0_1_1.md",
+      "sha": "f70270331487dc8009555f0d29a8b21a0534745c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

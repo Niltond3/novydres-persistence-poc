@@ -1,0 +1,377 @@
+{
+  "subject_id": "rule-power-envelope",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "power-envelope",
+  "semantic_owner": "rule-power-envelope",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_power_envelope_v0_1_1.md",
+      "source_sha": "8984af4a37e1c409c90ea67ba457e1493b3bafb5",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_power_envelope",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_power_envelope_for_pc_and_npc_creation",
+        "supersedes": "novydres_character_creation_power_envelope_v0_1.md"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 40,
+          "heading_level": 1,
+          "label": "Character Power Envelope — Novydres",
+          "line_end": 41
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 42,
+          "heading_level": 2,
+          "label": "A. Função",
+          "line_end": 64
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 65,
+          "heading_level": 2,
+          "label": "B. Invariantes",
+          "line_end": 81
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 82,
+          "heading_level": 2,
+          "label": "C. Estrutura interna de perfis",
+          "line_end": 91
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 92,
+          "heading_level": 3,
+          "label": "C.1 Relação com criação padrão",
+          "line_end": 103
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 104,
+          "heading_level": 2,
+          "label": "D. Matriz híbrida dos perfis ordinários",
+          "line_end": 122
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 123,
+          "heading_level": 3,
+          "label": "D.1 Sinais fora do espaço ordinário",
+          "line_end": 133
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 134,
+          "heading_level": 2,
+          "label": "E. Relação idade/estrato ↔ envelope",
+          "line_end": 146
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 147,
+          "heading_level": 2,
+          "label": "F. Geração na criação",
+          "line_end": 154
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 155,
+          "heading_level": 2,
+          "label": "G. Blood Potency inicial",
+          "line_end": 167
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 168,
+          "heading_level": 2,
+          "label": "H. Torpor e trajetória de BP",
+          "line_end": 185
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 186,
+          "heading_level": 2,
+          "label": "I. Discipline Depth",
+          "line_end": 199
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 200,
+          "heading_level": 2,
+          "label": "J. Discipline Breadth",
+          "line_end": 218
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 219,
+          "heading_level": 2,
+          "label": "K. Power Density",
+          "line_end": 233
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 234,
+          "heading_level": 2,
+          "label": "L. Prova causal para aquisições raras/out-of-clan",
+          "line_end": 255
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 256,
+          "heading_level": 2,
+          "label": "M. Mechanical Load Audit",
+          "line_end": 263
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 264,
+          "heading_level": 3,
+          "label": "M.1 Pré-ficha / pré-alocação",
+          "line_end": 269
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 270,
+          "heading_level": 3,
+          "label": "M.2 Pós-ficha / pós-alocação",
+          "line_end": 288
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 289,
+          "heading_level": 2,
+          "label": "N. Rarity Debt e excepcionalidade composta",
+          "line_end": 312
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 313,
+          "heading_level": 2,
+          "label": "O. Exceptional Start e Declared Outlier",
+          "line_end": 316
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 317,
+          "heading_level": 3,
+          "label": "O.1 Exceptional Start",
+          "line_end": 330
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 331,
+          "heading_level": 3,
+          "label": "O.2 Declared Outlier",
+          "line_end": 349
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 350,
+          "heading_level": 2,
+          "label": "P. Backgrounds e Asset Portfolio",
+          "line_end": 374
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 375,
+          "heading_level": 2,
+          "label": "Q. PCs versus raridade demográfica",
+          "line_end": 388
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 389,
+          "heading_level": 2,
+          "label": "R. Beckoning como derived flag",
+          "line_end": 406
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 407,
+          "heading_level": 2,
+          "label": "S. Provocações na criação Guiada",
+          "line_end": 440
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 441,
+          "heading_level": 2,
+          "label": "T. Envelope dinâmico controlado",
+          "line_end": 457
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 458,
+          "heading_level": 2,
+          "label": "U. Gatilhos de gateway",
+          "line_end": 476
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 477,
+          "heading_level": 2,
+          "label": "V. Demografia como contexto ativo",
+          "line_end": 502
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 503,
+          "heading_level": 2,
+          "label": "W. Contrato B → D1/D2",
+          "line_end": 506
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 507,
+          "heading_level": 3,
+          "label": "W.1 Estado atual obrigatório",
+          "line_end": 522
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 523,
+          "heading_level": 3,
+          "label": "W.2 Evento de provocação",
+          "line_end": 535
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 536,
+          "heading_level": 3,
+          "label": "W.3 Validação obrigatória",
+          "line_end": 546
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 547,
+          "heading_level": 3,
+          "label": "W.4 Gateway",
+          "line_end": 558
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 559,
+          "heading_level": 3,
+          "label": "W.5 Finalização",
+          "line_end": 571
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 572,
+          "heading_level": 2,
+          "label": "X. Iskander Yasupov e Madame Zoya — real testing profiles",
+          "line_end": 582
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 583,
+          "heading_level": 3,
+          "label": "X.1 Iskander Yasupov",
+          "line_end": 604
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 605,
+          "heading_level": 3,
+          "label": "X.2 Madame Zoya",
+          "line_end": 626
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 627,
+          "heading_level": 3,
+          "label": "X.3 Teste end-to-end futuro",
+          "line_end": 636
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 637,
+          "heading_level": 2,
+          "label": "Y. Closure matrix — CHAR-CREATE-Q-017–028",
+          "line_end": 653
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 654,
+          "heading_level": 2,
+          "label": "Z. Downstream interfaces, deferments and blockers",
+          "line_end": 655
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 656,
+          "heading_level": 3,
+          "label": "Z.1 B → D1/D2 — Played History Core / Finalization & Integration",
+          "line_end": 675
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 676,
+          "heading_level": 3,
+          "label": "Z.2 B → G — Quick Creation Interface",
+          "line_end": 694
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 695,
+          "heading_level": 3,
+          "label": "Z.3 B → H — Guided Creation Interface",
+          "line_end": 711
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 712,
+          "heading_level": 3,
+          "label": "Z.4 B → I — NPC Application & Depth Profiles Interface",
+          "line_end": 727
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 728,
+          "heading_level": 3,
+          "label": "Z.5 B → K — Final Integration Requirements",
+          "line_end": 749
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 750,
+          "heading_level": 3,
+          "label": "Z.6 Retro triggers",
+          "line_end": 755
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 756,
+          "heading_level": 3,
+          "label": "Z.7 Blockers",
+          "line_end": 767
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 768,
+          "heading_level": 2,
+          "label": "Final readiness verdict",
+          "line_end": 774
+        }
+      ],
+      "semantic_owner": "rule-power-envelope",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

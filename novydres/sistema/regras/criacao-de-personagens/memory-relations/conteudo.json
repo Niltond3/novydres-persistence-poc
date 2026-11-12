@@ -1,0 +1,480 @@
+{
+  "subject_id": "rule-memory-relations",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "memory-relations",
+  "semantic_owner": "rule-memory-relations",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_e_memory_relationships_temporal_persistence_decisions_v0_1_1.md",
+      "source_sha": "37f32b3277e63df0204b5a9ce9450863081c8cf3",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_e_memory_relationships_temporal_persistence_decisions",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "memory_relationships_temporal_persistence_decision_ledger"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 23,
+          "heading_level": 1,
+          "label": "E — Memory, Relationships & Temporal Persistence Decision Ledger v0.1.1",
+          "line_end": 24
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 25,
+          "heading_level": 2,
+          "label": "1. Existing decision ledger after Q-061 correction",
+          "line_end": 47
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 48,
+          "heading_level": 2,
+          "label": "2. Corrective Q-061 decisions",
+          "line_end": 59
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 60,
+          "heading_level": 2,
+          "label": "3. E decision lineage",
+          "line_end": 70
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 71,
+          "heading_level": 2,
+          "label": "4. Canonical memory vocabulary after correction",
+          "line_end": 84
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 85,
+          "heading_level": 2,
+          "label": "5. Closure matrix — Q-060–074",
+          "line_end": 104
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 105,
+          "heading_level": 2,
+          "label": "6. Downstream deferments and publication guard rails",
+          "line_end": 112
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 113,
+          "heading_level": 2,
+          "label": "7. C `CHAR-C-019` disposition",
+          "line_end": 118
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 119,
+          "heading_level": 2,
+          "label": "8. Blockers / retro triggers",
+          "line_end": 126
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 127,
+          "heading_level": 2,
+          "label": "9. Final verdict",
+          "line_end": 131
+        }
+      ],
+      "semantic_owner": "rule-memory-relations",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_e_memory_relationships_temporal_persistence_v0_1_1.md",
+      "source_sha": "743d001dd1382319aaa872a5ea8aafcefd3503fc",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_e_memory_relationships_temporal_persistence",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "memory_relationships_temporal_persistence"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 38,
+          "heading_level": 1,
+          "label": "E — Memory, Relationships & Temporal Persistence",
+          "line_end": 39
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 40,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 51
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 52,
+          "heading_level": 2,
+          "label": "B. Upstream contracts",
+          "line_end": 63
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 64,
+          "heading_level": 2,
+          "label": "C. Persistence principles",
+          "line_end": 73
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 74,
+          "heading_level": 2,
+          "label": "D. Historical truth vs current state",
+          "line_end": 85
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 86,
+          "heading_level": 2,
+          "label": "E. Memory architecture",
+          "line_end": 87
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 88,
+          "heading_level": 3,
+          "label": "E.1 Governing model",
+          "line_end": 97
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 98,
+          "heading_level": 3,
+          "label": "E.2 Verdade Histórica",
+          "line_end": 103
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 104,
+          "heading_level": 3,
+          "label": "E.3 Histórico vivo",
+          "line_end": 113
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 114,
+          "heading_level": 3,
+          "label": "E.4 Active recollection and faded/inactive recollection",
+          "line_end": 121
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 122,
+          "heading_level": 3,
+          "label": "E.5 External preservation",
+          "line_end": 127
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 128,
+          "heading_level": 3,
+          "label": "E.6 Grilhões — optional construction note",
+          "line_end": 137
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 138,
+          "heading_level": 3,
+          "label": "E.7 Vestígios",
+          "line_end": 145
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 146,
+          "heading_level": 2,
+          "label": "F. Memory capacity / forgetting disposition",
+          "line_end": 149
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 150,
+          "heading_level": 3,
+          "label": "F.1 No numerical capacity or hidden equivalent",
+          "line_end": 157
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 158,
+          "heading_level": 3,
+          "label": "F.2 What forgetting changes",
+          "line_end": 175
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 176,
+          "heading_level": 3,
+          "label": "F.3 Lacunas and recoverability",
+          "line_end": 185
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 186,
+          "heading_level": 3,
+          "label": "F.4 Memoriam interface",
+          "line_end": 195
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 196,
+          "heading_level": 2,
+          "label": "G. Post-creation memory fate",
+          "line_end": 211
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 212,
+          "heading_level": 2,
+          "label": "H. Relationship ontology",
+          "line_end": 231
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 232,
+          "heading_level": 2,
+          "label": "I. Relationship transitions",
+          "line_end": 246
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 247,
+          "heading_level": 2,
+          "label": "J. Narrative / mechanical mapping",
+          "line_end": 264
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 265,
+          "heading_level": 2,
+          "label": "K. Mortal death",
+          "line_end": 276
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 277,
+          "heading_level": 2,
+          "label": "L. Descendants and institutional continuity",
+          "line_end": 288
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 289,
+          "heading_level": 2,
+          "label": "M. Touchstone temporal validity",
+          "line_end": 306
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 307,
+          "heading_level": 2,
+          "label": "N. Identity / Mask continuity",
+          "line_end": 325
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 326,
+          "heading_level": 2,
+          "label": "O. Haven / resource persistence",
+          "line_end": 341
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 342,
+          "heading_level": 2,
+          "label": "P. Narrative-resource terminology",
+          "line_end": 351
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 352,
+          "heading_level": 2,
+          "label": "Q. Narrative-capability terminology",
+          "line_end": 361
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 362,
+          "heading_level": 2,
+          "label": "R. Supporting-character terminology",
+          "line_end": 369
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 370,
+          "heading_level": 2,
+          "label": "S. Lasting-consequence destinations",
+          "line_end": 391
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 392,
+          "heading_level": 2,
+          "label": "T. Intervalo de Continuidade persistence test",
+          "line_end": 405
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 406,
+          "heading_level": 2,
+          "label": "U. Marco-to-Marco continuity",
+          "line_end": 413
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 414,
+          "heading_level": 2,
+          "label": "V. Dívida Causal persistence",
+          "line_end": 426
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 427,
+          "heading_level": 2,
+          "label": "W. 2010 consolidation model",
+          "line_end": 443
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 444,
+          "heading_level": 2,
+          "label": "X. C-direction disposition",
+          "line_end": 456
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 457,
+          "heading_level": 2,
+          "label": "Y. E→F interface",
+          "line_end": 473
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 474,
+          "heading_level": 2,
+          "label": "Z. E→D2 interface",
+          "line_end": 486
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 487,
+          "heading_level": 2,
+          "label": "AA. E→J2 interface",
+          "line_end": 498
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 499,
+          "heading_level": 2,
+          "label": "AB. E→G interface",
+          "line_end": 510
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 511,
+          "heading_level": 2,
+          "label": "AC. E→H interface",
+          "line_end": 525
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 526,
+          "heading_level": 2,
+          "label": "AD. E→I interface",
+          "line_end": 537
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 538,
+          "heading_level": 2,
+          "label": "AE. E→K requirements",
+          "line_end": 554
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 555,
+          "heading_level": 2,
+          "label": "AF. Closure matrix",
+          "line_end": 574
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 575,
+          "heading_level": 2,
+          "label": "Temporal State Matrix",
+          "line_end": 588
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 589,
+          "heading_level": 2,
+          "label": "Relationship Transition Matrix",
+          "line_end": 597
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 598,
+          "heading_level": 2,
+          "label": "Historical-to-2010 Consolidation Matrix",
+          "line_end": 609
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 610,
+          "heading_level": 2,
+          "label": "AG. Blockers / retro triggers",
+          "line_end": 611
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 612,
+          "heading_level": 3,
+          "label": "Blockers",
+          "line_end": 615
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 616,
+          "heading_level": 3,
+          "label": "Potential retroactive triggers",
+          "line_end": 625
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 626,
+          "heading_level": 2,
+          "label": "AH. Readiness verdict",
+          "line_end": 646
+        }
+      ],
+      "semantic_owner": "rule-memory-relations",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

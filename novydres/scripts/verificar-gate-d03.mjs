@@ -9,6 +9,7 @@ import {validateAtlasConcepts} from './verificar-conceitos-d03.mjs';
 import {verifyWorldLinks} from './verificar-vinculos-d03.mjs';
 import {verifyGlobalRelationships} from './verificar-relacoes-globais-d03.mjs';
 import {verifyD03PC} from './verificar-identidade-pc-d03.mjs';
+import {verifyD03RuleModules} from './verificar-modulos-d03.mjs';
 const load=p=>JSON.parse(readFileSync(p,'utf8'));
 const fail=code=>{let e=new Error(code);e.code=code;throw e;};
 export function checkD03Gate({worldAuthorityOverride=null,npcAuditOverride=null,catalogOverride=null}={}){
@@ -18,10 +19,10 @@ export function checkD03Gate({worldAuthorityOverride=null,npcAuditOverride=null,
    fail('D03_GATE_INVENTORY_COVERAGE');
  const custody=verifyD03(),refs=verifyWorldLinks(),segments=verifyD03Segments(),
   ownership=validateD03DistributedSegments(),places=validateAtlasConcepts(),
-  relations=verifyGlobalRelationships(),pc=verifyD03PC(),structure=validateCandidates(),
+  relations=verifyGlobalRelationships(),pc=verifyD03PC(),rules=verifyD03RuleModules(),structure=validateCandidates(),
   catalog= catalogOverride||buildCatalog();
  if(!custody.ok||custody.identical_blobs!==64||!segments.ok||segments.documents!==64||
-   ownership.locators!==1707||places.concepts!==41||places.exact_source_sections!==82||
+   ownership.locators!==1707||rules.modules!==20||rules.source_documents!==32||rules.d05_consumer_handoffs!==6||places.concepts!==41||places.exact_source_sections!==82||
    relations.directed_edges!==5||pc.local_state_promoted!==false||!structure.ok||
    !checkCatalog().ok)fail('D03_GATE_EQUIVALENCE');
  if(catalog.subjects.length!==59||
@@ -56,7 +57,7 @@ export function checkD03Gate({worldAuthorityOverride=null,npcAuditOverride=null,
  return {
    status:'D03_SOURCE_INFORMATION_AND_OWNED_PROJECTION_VERIFIED_NONOPERATIONAL',
    source_origins:64,literal_equivalence_sha:64,source_locators:1707,
-   candidate_subjects:59,geographic_semantic_topics:41,organization_topics:2,
+   candidate_subjects:79,rule_module_subjects:20,rule_source_claims_owned:32,geographic_semantic_topics:41,organization_topics:2,
    global_character_profiles:4,source_npc_relations:5,
    graph_active_dangling_refs:0,source_publication_refs_deferred:64,
    editorial_conflicts_retained:['CONFLICT-001','CONFLICT-002','CONFLICT-003B'],

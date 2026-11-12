@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "41b0b756b98f5a54454eb9ccef62743fdc0457e8",
+  "content_index_sha": "ea6ece9d7559707233c90360bf381e0675af15e5",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -1340,6 +1340,81 @@
       ]
     },
     {
+      "id": "rule-architecture",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/architecture",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/architecture/assunto.json",
+          "blob_sha": "fb2a691c37d53886bf8f493764137ba7e2d8aa9e"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/architecture/conteudo.json",
+          "blob_sha": "fd7f9890acf771f0c60414a2c498633ce771c648"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/architecture/index.md",
+          "blob_sha": "95ad87774e59f0a6310209599535467578aea075"
+        }
+      ]
+    },
+    {
+      "id": "rule-coterie-architecture",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/coterie-architecture",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-architecture/assunto.json",
+          "blob_sha": "1ad06e3879cd651cf7317d1477dc0a54c98a0271"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-architecture/conteudo.json",
+          "blob_sha": "d6592cafad5339b72fd707e6bdf2069baf4dfb8b"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-architecture/index.md",
+          "blob_sha": "0d2ba7105365a5250d9b5cc3a64cbb53ef3eba4e"
+        }
+      ]
+    },
+    {
+      "id": "rule-coterie-baseline",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/coterie-baseline",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-baseline/assunto.json",
+          "blob_sha": "3ccc3ca7934df321658fc7bd038cd3f4a977e888"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-baseline/conteudo.json",
+          "blob_sha": "43bce3a258ea6e7a8c66f804a0f35fa903d9aefb"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/coterie-baseline/index.md",
+          "blob_sha": "b3e2bbcfaf94169533e0de672b12d4386def3040"
+        }
+      ]
+    },
+    {
       "id": "rule-creation-novydres",
       "kind": "rule",
       "owner": "novydres/sistema/regras",
@@ -1510,7 +1585,7 @@
         },
         {
           "path": "novydres/sistema/regras/criacao-de-personagens/registro.json",
-          "blob_sha": "5a0c959e38d04f034f64363b7af1948ea5f51a90"
+          "blob_sha": "cf0c2ca4e5f12a532c4fedd0e0859202415d72c2"
         },
         {
           "path": "novydres/sistema/regras/criacao-de-personagens/segmentos.json",
@@ -1578,6 +1653,431 @@
         {
           "path": "novydres/sistema/regras/experiencia/segmentos.json",
           "blob_sha": "88d60fb6e0021898b1837942dfb28d27c8642eb3"
+        }
+      ]
+    },
+    {
+      "id": "rule-gangrel-urbano",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/gangrel-urbano",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/gangrel-urbano/assunto.json",
+          "blob_sha": "2583f889126ccab2fd5aa517ac48e263764f29ec"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/gangrel-urbano/conteudo.json",
+          "blob_sha": "134706ec74d76b43c6e65d693ec718ee863c5707"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/gangrel-urbano/index.md",
+          "blob_sha": "592dfe85a16b1570b22a8ef26444da33b864bbcb"
+        }
+      ]
+    },
+    {
+      "id": "rule-guided-handoff",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/guided-handoff",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-handoff/assunto.json",
+          "blob_sha": "32cfef3b4f887f5455eb80d1e723c68126786c40"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-handoff/conteudo.json",
+          "blob_sha": "b38eaf386af21a88c9d835aaf58ee9f1488ed11c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-handoff/index.md",
+          "blob_sha": "2fa07f4941d8a98ba65b36bbc914a2ada310a2e7"
+        }
+      ]
+    },
+    {
+      "id": "rule-guided-mode",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/guided-mode",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-mode/assunto.json",
+          "blob_sha": "2cc1139ca25e1a297c0336af6c75c54be034d616"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-mode/conteudo.json",
+          "blob_sha": "372e0f7a145edeb3542d8efbb4da148c9b9a332c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/guided-mode/index.md",
+          "blob_sha": "0bd7da7bd6387bc5eab00c9c7e51cee41d6a6bdc"
+        }
+      ]
+    },
+    {
+      "id": "rule-history-revelation",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/history-revelation",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/history-revelation/assunto.json",
+          "blob_sha": "496ddf4fa81bff4e5fed29a835230e4e7b7b0ab5"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/history-revelation/conteudo.json",
+          "blob_sha": "ab93da6b26bc465004913bc0e363c6e705779862"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/history-revelation/index.md",
+          "blob_sha": "d63a75f5c6f69353f56f3539cce8bf3adf52f07b"
+        }
+      ]
+    },
+    {
+      "id": "rule-integration",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/integration",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/integration/assunto.json",
+          "blob_sha": "b80a017b81b9a46a1fead31f8e01af3d92e86bf6"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/integration/conteudo.json",
+          "blob_sha": "dfd657324566a5ac1494c77dcb8751d110eae748"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/integration/index.md",
+          "blob_sha": "b75cd3229a77256632fc4fd04e52730cf8bc9da7"
+        }
+      ]
+    },
+    {
+      "id": "rule-memory-relations",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/memory-relations",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/memory-relations/assunto.json",
+          "blob_sha": "b0ee4ba05219fd8e3e7ba552db694c10c9f511a8"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/memory-relations/conteudo.json",
+          "blob_sha": "7911a704d7875357847a3fd95627557bca4dc4d8"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/memory-relations/index.md",
+          "blob_sha": "18196f3d501d67c2f259503221234fccec466648"
+        }
+      ]
+    },
+    {
+      "id": "rule-motor-v5",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/motor-v5",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/motor-v5/assunto.json",
+          "blob_sha": "bdce92cd6e244a59f49eef409cb63ce0d636f9e7"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/motor-v5/conteudo.json",
+          "blob_sha": "8e2a3cf15ef0c11229494da89a18546a57063b8a"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/motor-v5/index.md",
+          "blob_sha": "4c2fae84ac436434a965498b331b7d811d8cd41e"
+        }
+      ]
+    },
+    {
+      "id": "rule-npc-depth",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/npc-depth",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/npc-depth/assunto.json",
+          "blob_sha": "a4a3c1a3b97184c2fd576b36ca44c5dff4982cfd"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/npc-depth/conteudo.json",
+          "blob_sha": "fb450bcb44ce97685aede0db1ebe53897ebb10f8"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/npc-depth/index.md",
+          "blob_sha": "d5f4e9611c632946de57f090d743358679c81f15"
+        }
+      ]
+    },
+    {
+      "id": "rule-played-history-core",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/played-history-core",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-core/assunto.json",
+          "blob_sha": "a45e93947ac9a4dc6fadae85211f54922c1e343b"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-core/conteudo.json",
+          "blob_sha": "94e2748f649659be0f73e190b2568dc262c551f0"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-core/index.md",
+          "blob_sha": "d70ba0eeddbeeb26c8f9374bdc877d986af05a04"
+        }
+      ]
+    },
+    {
+      "id": "rule-played-history-finalization",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/played-history-finalization",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-finalization/assunto.json",
+          "blob_sha": "dcaba45b8fd97e8643acea7fcfc62c63c2441e8a"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-finalization/conteudo.json",
+          "blob_sha": "abceff36d785e1e83ab2e5a5d5ae2a569bb57da5"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/played-history-finalization/index.md",
+          "blob_sha": "61f64e8bd831394a02bba42717a33913ce4a7c5e"
+        }
+      ]
+    },
+    {
+      "id": "rule-power-envelope",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/power-envelope",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/power-envelope/assunto.json",
+          "blob_sha": "bb4bdf4436cfd35528294b13a843319669996429"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/power-envelope/conteudo.json",
+          "blob_sha": "655b561e80b9491c8eab5d7d915dca6ffbfb8247"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/power-envelope/index.md",
+          "blob_sha": "d26fd42cfe7bc600f8f66b97f6425b309ecd2cb8"
+        }
+      ]
+    },
+    {
+      "id": "rule-quick-mode",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/quick-mode",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/quick-mode/assunto.json",
+          "blob_sha": "a74db02a564b9806b7ddfb7f20f0a4d553000f54"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/quick-mode/conteudo.json",
+          "blob_sha": "b9fdb4311e074ddca469e59cd1f212d85bd8cb08"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/quick-mode/index.md",
+          "blob_sha": "e89b4ea991bc2caef0a393733feeca4e47eb4419"
+        }
+      ]
+    },
+    {
+      "id": "rule-social-territorial",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/social-territorial",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/social-territorial/assunto.json",
+          "blob_sha": "b92180663f5cc868bf6d3c875ede352d11ce5f30"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/social-territorial/conteudo.json",
+          "blob_sha": "afe0e86957c95f9e214506b3768fb002d569857e"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/social-territorial/index.md",
+          "blob_sha": "c43333476b8557ac37d2b41b4ba3833d2d65270c"
+        }
+      ]
+    },
+    {
+      "id": "rule-specialist-a",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/specialist-a",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-a/assunto.json",
+          "blob_sha": "3bb4cb3fc4714fc8aac4d719c42e1ba0f43b485f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-a/conteudo.json",
+          "blob_sha": "95c159ea76d7b66a02550e6cb5a6b40f69042cc4"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-a/index.md",
+          "blob_sha": "e9864dee73f58898d6d70ba39345d957e49c2cad"
+        }
+      ]
+    },
+    {
+      "id": "rule-specialist-b",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/specialist-b",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-b/assunto.json",
+          "blob_sha": "4404111c99b23ecc786130d2b5832cee0b7b980f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-b/conteudo.json",
+          "blob_sha": "f0c438ae2efe97b03dff959d5db197f04ce886f1"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-b/index.md",
+          "blob_sha": "065b9a9c860c6d2afcaac04d60bec019c14e8ac5"
+        }
+      ]
+    },
+    {
+      "id": "rule-specialist-c",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/specialist-c",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-c/assunto.json",
+          "blob_sha": "23dfba577272db8a189beaead17afed0a5b701b4"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-c/conteudo.json",
+          "blob_sha": "f879680e0d5e0cbf7b1c3acca6b09f146dfafb13"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/specialist-c/index.md",
+          "blob_sha": "e12d98d52a1292bf310100f5f4cca2004cc8d0e2"
+        }
+      ]
+    },
+    {
+      "id": "rule-v5-baseline",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras/criacao-de-personagens",
+      "path": "novydres/sistema/regras/criacao-de-personagens/v5-baseline",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "rule-creation-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/v5-baseline/assunto.json",
+          "blob_sha": "bb4e2eb882561d790cb32b524b75e65d8a19685f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/v5-baseline/conteudo.json",
+          "blob_sha": "f792cd1275d47a012c4324779a96ee7b08fc7b0a"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/v5-baseline/index.md",
+          "blob_sha": "31931701c82188df9c3b5259f2de7b76197f06f6"
         }
       ]
     },
@@ -1862,8 +2362,49 @@
     "poi-30": [],
     "poi-31": [],
     "poi-32": [],
-    "rule-creation-novydres": [],
+    "rule-architecture": [],
+    "rule-coterie-architecture": [],
+    "rule-coterie-baseline": [],
+    "rule-creation-novydres": [
+      "rule-architecture",
+      "rule-coterie-architecture",
+      "rule-coterie-baseline",
+      "rule-gangrel-urbano",
+      "rule-guided-handoff",
+      "rule-guided-mode",
+      "rule-history-revelation",
+      "rule-integration",
+      "rule-memory-relations",
+      "rule-motor-v5",
+      "rule-npc-depth",
+      "rule-played-history-core",
+      "rule-played-history-finalization",
+      "rule-power-envelope",
+      "rule-quick-mode",
+      "rule-social-territorial",
+      "rule-specialist-a",
+      "rule-specialist-b",
+      "rule-specialist-c",
+      "rule-v5-baseline"
+    ],
     "rule-experience-novydres": [],
+    "rule-gangrel-urbano": [],
+    "rule-guided-handoff": [],
+    "rule-guided-mode": [],
+    "rule-history-revelation": [],
+    "rule-integration": [],
+    "rule-memory-relations": [],
+    "rule-motor-v5": [],
+    "rule-npc-depth": [],
+    "rule-played-history-core": [],
+    "rule-played-history-finalization": [],
+    "rule-power-envelope": [],
+    "rule-quick-mode": [],
+    "rule-social-territorial": [],
+    "rule-specialist-a": [],
+    "rule-specialist-b": [],
+    "rule-specialist-c": [],
+    "rule-v5-baseline": [],
     "story-m301-c01": [
       "chr001-state-checkpoint",
       "plot-contato-condicional-samir"

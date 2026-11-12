@@ -1,0 +1,376 @@
+{
+  "subject_id": "rule-coterie-baseline",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "coterie-baseline",
+  "semantic_owner": "rule-coterie-baseline",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_j1_coterie_canonical_baseline_research_v0_1.md",
+      "source_sha": "4c4ac12bac558fb4bfb9497b17c27f290ee8a334",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_j1_coterie_canonical_baseline_research",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_j1_coterie_canonical_baseline_research"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 1,
+          "label": "J1 — Coterie Canonical Baseline Research",
+          "line_end": 15
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 16,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 27
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 28,
+          "heading_level": 2,
+          "label": "B. Sources reviewed",
+          "line_end": 29
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 30,
+          "heading_level": 3,
+          "label": "B.1 Project normalization authorities",
+          "line_end": 36
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 37,
+          "heading_level": 3,
+          "label": "B.2 Canonical V5 sources and source posture",
+          "line_end": 49
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 50,
+          "heading_level": 3,
+          "label": "B.3 Canonical provenance matrix",
+          "line_end": 66
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 67,
+          "heading_level": 2,
+          "label": "C. Canonical coterie baseline",
+          "line_end": 68
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 69,
+          "heading_level": 3,
+          "label": "C.1 What a coterie is",
+          "line_end": 80
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 81,
+          "heading_level": 3,
+          "label": "C.2 Canonical Coterie System Matrix",
+          "line_end": 98
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 99,
+          "heading_level": 2,
+          "label": "D. Canonical creation procedure",
+          "line_end": 100
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 101,
+          "heading_level": 3,
+          "label": "D.1 Stable structure",
+          "line_end": 106
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 107,
+          "heading_level": 3,
+          "label": "D.2 What creation can produce canonically",
+          "line_end": 120
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 121,
+          "heading_level": 3,
+          "label": "D.3 PCs versus broader applicability",
+          "line_end": 131
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 132,
+          "heading_level": 3,
+          "label": "D.4 Session-zero / chronicle setup positioning",
+          "line_end": 135
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 136,
+          "heading_level": 2,
+          "label": "E. Coterie types",
+          "line_end": 139
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 140,
+          "heading_level": 3,
+          "label": "E.1 Coterie Type Matrix",
+          "line_end": 159
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 160,
+          "heading_level": 3,
+          "label": "E.2 Exhaustiveness warning",
+          "line_end": 163
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 164,
+          "heading_level": 2,
+          "label": "F. Shared mechanics",
+          "line_end": 165
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 166,
+          "heading_level": 3,
+          "label": "F.1 Shared Mechanics Matrix",
+          "line_end": 188
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 189,
+          "heading_level": 3,
+          "label": "F.2 What canon does not establish here",
+          "line_end": 194
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 195,
+          "heading_level": 2,
+          "label": "G. Domain-related mechanics",
+          "line_end": 196
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 197,
+          "heading_level": 3,
+          "label": "G.1 Domain structure",
+          "line_end": 208
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 209,
+          "heading_level": 3,
+          "label": "G.2 Domain is not mandatory for every coterie",
+          "line_end": 216
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 217,
+          "heading_level": 3,
+          "label": "G.3 Domain versus member ownership",
+          "line_end": 220
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 221,
+          "heading_level": 2,
+          "label": "H. Advantages / Flaws / shared assets",
+          "line_end": 222
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 223,
+          "heading_level": 3,
+          "label": "H.1 Coterie Advantages and shared Backgrounds",
+          "line_end": 228
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 229,
+          "heading_level": 3,
+          "label": "H.2 Coterie Flaws",
+          "line_end": 234
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 235,
+          "heading_level": 3,
+          "label": "H.3 Shared patron/enemy/obligation structures",
+          "line_end": 240
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 241,
+          "heading_level": 2,
+          "label": "I. Expansion and supersession audit",
+          "line_end": 242
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 243,
+          "heading_level": 3,
+          "label": "I.1 Source Supersession Matrix",
+          "line_end": 254
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 255,
+          "heading_level": 3,
+          "label": "I.2 No date-only supersession",
+          "line_end": 258
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 259,
+          "heading_level": 2,
+          "label": "J. Source Pointer Debt",
+          "line_end": 273
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 274,
+          "heading_level": 2,
+          "label": "K. Canonical/local terminology collisions",
+          "line_end": 275
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 276,
+          "heading_level": 3,
+          "label": "K.1 `Domain`",
+          "line_end": 283
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 284,
+          "heading_level": 3,
+          "label": "K.2 `Lien` versus Rootedness/Bairrismo",
+          "line_end": 291
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 292,
+          "heading_level": 3,
+          "label": "K.3 `Portillon` versus local territorial security/authority",
+          "line_end": 297
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 298,
+          "heading_level": 3,
+          "label": "K.4 Shared `Status`-like payloads versus Personal/Positional Status and office",
+          "line_end": 305
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 306,
+          "heading_level": 3,
+          "label": "K.5 Shared Haven/Domain versus refuge/ownership/feeding rights",
+          "line_end": 311
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 312,
+          "heading_level": 2,
+          "label": "L. J1 → J2 research interface",
+          "line_end": 315
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 316,
+          "heading_level": 3,
+          "label": "L.1 J1 → J2 Input Matrix",
+          "line_end": 329
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 330,
+          "heading_level": 3,
+          "label": "L.2 J2 DECISION INPUTS",
+          "line_end": 336
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 337,
+          "heading_level": 2,
+          "label": "M. J1 → D1 Research Interface",
+          "line_end": 351
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 352,
+          "heading_level": 2,
+          "label": "N. Potential retroactive triggers",
+          "line_end": 353
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 354,
+          "heading_level": 3,
+          "label": "N.1 Confirmed triggers",
+          "line_end": 359
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 360,
+          "heading_level": 3,
+          "label": "N.2 Watch items that are not triggers at J1 close",
+          "line_end": 372
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 373,
+          "heading_level": 2,
+          "label": "O. Unresolved canonical conflicts",
+          "line_end": 374
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 375,
+          "heading_level": 3,
+          "label": "O.1 Material conflicts",
+          "line_end": 380
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 381,
+          "heading_level": 3,
+          "label": "O.2 Unresolved source relationships that are not conflicts",
+          "line_end": 388
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 389,
+          "heading_level": 2,
+          "label": "P. Readiness verdict",
+          "line_end": 406
+        }
+      ],
+      "semantic_owner": "rule-coterie-baseline",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

@@ -1,0 +1,781 @@
+{
+  "subject_id": "rule-played-history-core",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "played-history-core",
+  "semantic_owner": "rule-played-history-core",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_decisions_v0_1.md",
+      "source_sha": "4aa45b3e804278b9f9e6471fcd6b05e93b3dea86",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_d1_played_history_core_decisions",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "played_history_core_decision_ledger"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 16,
+          "heading_level": 1,
+          "label": "D1 — Played History Core Decision Ledger",
+          "line_end": 17
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 18,
+          "heading_level": 2,
+          "label": "1. Decision ledger",
+          "line_end": 41
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 42,
+          "heading_level": 2,
+          "label": "2. Decision details",
+          "line_end": 43
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 44,
+          "heading_level": 3,
+          "label": "CHAR-D1-001 — Episode of History",
+          "line_end": 63
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 64,
+          "heading_level": 3,
+          "label": "CHAR-D1-002 — Significant resolution",
+          "line_end": 85
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 86,
+          "heading_level": 3,
+          "label": "CHAR-D1-003 — Flexible temporal advancement",
+          "line_end": 98
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 99,
+          "heading_level": 3,
+          "label": "CHAR-D1-004 — Significant Coverage scaling",
+          "line_end": 113
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 114,
+          "heading_level": 3,
+          "label": "CHAR-D1-005 — Interval of Continuity",
+          "line_end": 130
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 131,
+          "heading_level": 3,
+          "label": "CHAR-D1-006 — Marcos + eligibility by scope/state/incidence",
+          "line_end": 148
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 149,
+          "heading_level": 3,
+          "label": "CHAR-D1-007 — Protected premise + constrained discovery",
+          "line_end": 169
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 170,
+          "heading_level": 3,
+          "label": "CHAR-D1-008 — Provisional allocation inside Power Envelope",
+          "line_end": 181
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 182,
+          "heading_level": 3,
+          "label": "CHAR-D1-009 — Calibration as eligibility restriction",
+          "line_end": 196
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 197,
+          "heading_level": 3,
+          "label": "CHAR-D1-010 — Asymmetric collaborative authorship",
+          "line_end": 225
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 226,
+          "heading_level": 3,
+          "label": "CHAR-D1-011 — Marco as Construction Contract",
+          "line_end": 243
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 244,
+          "heading_level": 3,
+          "label": "CHAR-D1-012 — Recurrence Arc",
+          "line_end": 255
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 256,
+          "heading_level": 3,
+          "label": "CHAR-D1-013 — Causal, not arbitrary, direction",
+          "line_end": 272
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 273,
+          "heading_level": 3,
+          "label": "CHAR-D1-014 — Main chronology + controlled retrospective insertion",
+          "line_end": 282
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 283,
+          "heading_level": 3,
+          "label": "CHAR-D1-015 — Conceptual state surfaces",
+          "line_end": 300
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 301,
+          "heading_level": 3,
+          "label": "CHAR-D1-016 — Three-axis sufficiency + minimum structural coverage",
+          "line_end": 314
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 315,
+          "heading_level": 3,
+          "label": "CHAR-D1-017 — Marco Consolidation Package",
+          "line_end": 333
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 334,
+          "heading_level": 3,
+          "label": "CHAR-D1-018 — Functional Construction Target",
+          "line_end": 341
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 342,
+          "heading_level": 3,
+          "label": "CHAR-D1-019 — Pending consequence as causal debt",
+          "line_end": 362
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 363,
+          "heading_level": 2,
+          "label": "3. Specialist-C downstream dispositions",
+          "line_end": 370
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 371,
+          "heading_level": 2,
+          "label": "4. Closure matrix",
+          "line_end": 385
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 386,
+          "heading_level": 2,
+          "label": "5. Explicit downstream deferments",
+          "line_end": 399
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 400,
+          "heading_level": 2,
+          "label": "6. Potential retroactive triggers",
+          "line_end": 403
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 404,
+          "heading_level": 2,
+          "label": "7. Blockers",
+          "line_end": 407
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 408,
+          "heading_level": 2,
+          "label": "8. Final verdict",
+          "line_end": 410
+        }
+      ],
+      "semantic_owner": "rule-played-history-core",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "source_sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_d1_played_history_core",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "played_history_core"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 24,
+          "heading_level": 1,
+          "label": "D1 — Played History Core",
+          "line_end": 25
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 26,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 53
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 54,
+          "heading_level": 2,
+          "label": "B. Upstream contracts",
+          "line_end": 55
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 56,
+          "heading_level": 3,
+          "label": "B.1 Specialist A",
+          "line_end": 75
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 76,
+          "heading_level": 3,
+          "label": "B.2 Specialist B",
+          "line_end": 96
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 97,
+          "heading_level": 3,
+          "label": "B.3 Specialist C",
+          "line_end": 118
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 119,
+          "heading_level": 3,
+          "label": "B.4 J1",
+          "line_end": 130
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 131,
+          "heading_level": 2,
+          "label": "C. Played History design principles",
+          "line_end": 147
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 148,
+          "heading_level": 2,
+          "label": "D. Atomic history unit",
+          "line_end": 149
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 150,
+          "heading_level": 3,
+          "label": "D.1 Episode of History",
+          "line_end": 171
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 172,
+          "heading_level": 3,
+          "label": "D.2 Qualification threshold",
+          "line_end": 185
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 186,
+          "heading_level": 3,
+          "label": "D.3 Driver versus arbiter",
+          "line_end": 196
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 197,
+          "heading_level": 2,
+          "label": "E. Unit input/output contract",
+          "line_end": 221
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 222,
+          "heading_level": 2,
+          "label": "F. Chronological advancement",
+          "line_end": 223
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 224,
+          "heading_level": 3,
+          "label": "F.1 Flexible temporal advancement",
+          "line_end": 248
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 249,
+          "heading_level": 3,
+          "label": "F.2 Independent variables",
+          "line_end": 256
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 257,
+          "heading_level": 3,
+          "label": "F.3 Retrospective insertion",
+          "line_end": 276
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 277,
+          "heading_level": 2,
+          "label": "G. Age-scaling model",
+          "line_end": 299
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 300,
+          "heading_level": 2,
+          "label": "H. Quiet-period abstraction",
+          "line_end": 301
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 302,
+          "heading_level": 3,
+          "label": "H.1 Interval of Continuity",
+          "line_end": 329
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 330,
+          "heading_level": 2,
+          "label": "I. State eligibility prerequisites",
+          "line_end": 331
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 332,
+          "heading_level": 3,
+          "label": "I.1 Marcos de Fechamento",
+          "line_end": 353
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 354,
+          "heading_level": 3,
+          "label": "I.2 Functional construction target",
+          "line_end": 365
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 366,
+          "heading_level": 3,
+          "label": "I.3 Eligibility contract",
+          "line_end": 387
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 388,
+          "heading_level": 3,
+          "label": "I.4 Coverage before closure",
+          "line_end": 402
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 403,
+          "heading_level": 2,
+          "label": "J. Player/Storyteller agency model",
+          "line_end": 404
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 405,
+          "heading_level": 3,
+          "label": "J.1 Protected premise plus constrained discovery",
+          "line_end": 438
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 439,
+          "heading_level": 3,
+          "label": "J.2 Personal horror from creation",
+          "line_end": 459
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 460,
+          "heading_level": 2,
+          "label": "K. Mechanical-consequence interface",
+          "line_end": 461
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 462,
+          "heading_level": 3,
+          "label": "K.1 Provisional allocation inside the envelope",
+          "line_end": 479
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 480,
+          "heading_level": 3,
+          "label": "K.2 Later revision",
+          "line_end": 506
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 507,
+          "heading_level": 3,
+          "label": "K.3 Invariant",
+          "line_end": 510
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 511,
+          "heading_level": 3,
+          "label": "K.4 Mechanical categories exposed to the engine",
+          "line_end": 521
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 522,
+          "heading_level": 2,
+          "label": "L. Content-calibration interface",
+          "line_end": 543
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 544,
+          "heading_level": 2,
+          "label": "M. Collaborative execution model",
+          "line_end": 549
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 550,
+          "heading_level": 3,
+          "label": "Player",
+          "line_end": 559
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 560,
+          "heading_level": 3,
+          "label": "Storyteller",
+          "line_end": 571
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 572,
+          "heading_level": 3,
+          "label": "Engine",
+          "line_end": 586
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 587,
+          "heading_level": 3,
+          "label": "Other players",
+          "line_end": 598
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 599,
+          "heading_level": 2,
+          "label": "N. Core state model",
+          "line_end": 604
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 605,
+          "heading_level": 3,
+          "label": "N.1 Chronological state",
+          "line_end": 612
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 613,
+          "heading_level": 3,
+          "label": "N.2 Character premise",
+          "line_end": 619
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 620,
+          "heading_level": 3,
+          "label": "N.3 Supernatural state",
+          "line_end": 629
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 630,
+          "heading_level": 3,
+          "label": "N.4 Social/territorial state",
+          "line_end": 635
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 636,
+          "heading_level": 3,
+          "label": "N.5 Relationship references",
+          "line_end": 647
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 648,
+          "heading_level": 3,
+          "label": "N.6 Provisional mechanical state",
+          "line_end": 655
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 656,
+          "heading_level": 3,
+          "label": "N.7 Pending consequences",
+          "line_end": 675
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 676,
+          "heading_level": 3,
+          "label": "N.8 Eligibility state",
+          "line_end": 684
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 685,
+          "heading_level": 3,
+          "label": "N.9 Coverage state",
+          "line_end": 690
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 691,
+          "heading_level": 2,
+          "label": "O. Reincidence architecture",
+          "line_end": 700
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 701,
+          "heading_level": 3,
+          "label": "Initial incidence — construction",
+          "line_end": 709
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 710,
+          "heading_level": 3,
+          "label": "Later incidence — contestation",
+          "line_end": 719
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 720,
+          "heading_level": 3,
+          "label": "Critical incidence — rupture or transformation",
+          "line_end": 736
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 737,
+          "heading_level": 2,
+          "label": "P. Marco closure",
+          "line_end": 742
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 743,
+          "heading_level": 3,
+          "label": "P.1 Coverage",
+          "line_end": 746
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 747,
+          "heading_level": 3,
+          "label": "P.2 Coherence",
+          "line_end": 756
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 757,
+          "heading_level": 3,
+          "label": "P.3 Consequence",
+          "line_end": 773
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 774,
+          "heading_level": 2,
+          "label": "Q. Marco consolidation package",
+          "line_end": 802
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 803,
+          "heading_level": 2,
+          "label": "R. D1 → E interface",
+          "line_end": 836
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 837,
+          "heading_level": 2,
+          "label": "S. D1 → F interface",
+          "line_end": 856
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 857,
+          "heading_level": 2,
+          "label": "T. D1 → D2 interface",
+          "line_end": 858
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 859,
+          "heading_level": 3,
+          "label": "Frozen by D1",
+          "line_end": 882
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 883,
+          "heading_level": 3,
+          "label": "Still open for D2",
+          "line_end": 894
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 895,
+          "heading_level": 3,
+          "label": "User-approved D2 design direction — not D1-final",
+          "line_end": 918
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 919,
+          "heading_level": 2,
+          "label": "U. D1 → H interface",
+          "line_end": 922
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 923,
+          "heading_level": 3,
+          "label": "Required Played History inputs",
+          "line_end": 933
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 934,
+          "heading_level": 3,
+          "label": "Terminal Played History outputs",
+          "line_end": 951
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 952,
+          "heading_level": 2,
+          "label": "V. Specialist-C downstream direction dispositions",
+          "line_end": 953
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 954,
+          "heading_level": 3,
+          "label": "CHAR-C-015",
+          "line_end": 967
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 968,
+          "heading_level": 3,
+          "label": "CHAR-C-016",
+          "line_end": 988
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 989,
+          "heading_level": 3,
+          "label": "CHAR-C-019",
+          "line_end": 999
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1000,
+          "heading_level": 2,
+          "label": "W. Question closure matrix",
+          "line_end": 1016
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1017,
+          "heading_level": 2,
+          "label": "X. Validation matrix",
+          "line_end": 1038
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1039,
+          "heading_level": 2,
+          "label": "Y. Potential retroactive triggers",
+          "line_end": 1044
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1045,
+          "heading_level": 2,
+          "label": "Z. Blockers",
+          "line_end": 1048
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1049,
+          "heading_level": 2,
+          "label": "AA. Readiness verdict",
+          "line_end": 1051
+        }
+      ],
+      "semantic_owner": "rule-played-history-core",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

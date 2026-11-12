@@ -1,0 +1,356 @@
+{
+  "subject_id": "rule-v5-baseline",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "v5-baseline",
+  "semantic_owner": "rule-v5-baseline",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/novydres_character_creation_core_v5_baseline_v0_1.source.md",
+      "source_sha": "a657cb3f381fc090443270124189bc0231b3d5a0",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "draft_for_senior_editor_review",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_core_v5_baseline",
+        "version": "0.1",
+        "status": "draft_for_senior_editor_review",
+        "scope": "common_v5_legality_spine_and_admission_interface",
+        "supersedes": "null"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 18,
+          "heading_level": 1,
+          "label": "Core V5 Character-Creation Baseline — Novydres",
+          "line_end": 19
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 20,
+          "heading_level": 2,
+          "label": "1. Function",
+          "line_end": 37
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 38,
+          "heading_level": 2,
+          "label": "2. Core invariant",
+          "line_end": 64
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 65,
+          "heading_level": 2,
+          "label": "3. Publication invariant",
+          "line_end": 89
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 90,
+          "heading_level": 2,
+          "label": "4. Common character model",
+          "line_end": 93
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 94,
+          "heading_level": 3,
+          "label": "4.1 Identity and concept",
+          "line_end": 99
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 100,
+          "heading_level": 3,
+          "label": "4.2 Attributes",
+          "line_end": 111
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 112,
+          "heading_level": 3,
+          "label": "4.3 Skills",
+          "line_end": 124
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 125,
+          "heading_level": 3,
+          "label": "4.4 Specialties",
+          "line_end": 130
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 131,
+          "heading_level": 3,
+          "label": "4.5 Vampire lineage / condition",
+          "line_end": 141
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 142,
+          "heading_level": 3,
+          "label": "4.6 `CLAN MEMBERSHIP` contract",
+          "line_end": 161
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 162,
+          "heading_level": 3,
+          "label": "4.7 Caitiff",
+          "line_end": 172
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 173,
+          "heading_level": 3,
+          "label": "4.8 Thin Blood",
+          "line_end": 183
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 184,
+          "heading_level": 3,
+          "label": "4.9 Starting Disciplines and powers",
+          "line_end": 206
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 207,
+          "heading_level": 3,
+          "label": "4.10 Advantages, Backgrounds, Merits and Flaws",
+          "line_end": 218
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 219,
+          "heading_level": 3,
+          "label": "4.11 Predator Type",
+          "line_end": 233
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 234,
+          "heading_level": 3,
+          "label": "4.12 Convictions, Touchstones and Humanity",
+          "line_end": 245
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 246,
+          "heading_level": 3,
+          "label": "4.13 Loresheets",
+          "line_end": 257
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 258,
+          "heading_level": 3,
+          "label": "4.14 Generation",
+          "line_end": 271
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 272,
+          "heading_level": 3,
+          "label": "4.15 Blood Potency",
+          "line_end": 285
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 286,
+          "heading_level": 3,
+          "label": "4.16 Derived and starting state",
+          "line_end": 302
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 303,
+          "heading_level": 2,
+          "label": "5. Legality spine",
+          "line_end": 308
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 309,
+          "heading_level": 3,
+          "label": "5.1 Conceptual validation flow",
+          "line_end": 326
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 327,
+          "heading_level": 2,
+          "label": "6. Catalog and admission interface",
+          "line_end": 328
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 329,
+          "heading_level": 3,
+          "label": "6.1 Stable option identity",
+          "line_end": 336
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 337,
+          "heading_level": 3,
+          "label": "6.2 Admission granularity",
+          "line_end": 346
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 347,
+          "heading_level": 3,
+          "label": "6.3 Official admission presumption",
+          "line_end": 354
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 355,
+          "heading_level": 3,
+          "label": "6.4 Admission states",
+          "line_end": 369
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 370,
+          "heading_level": 3,
+          "label": "6.5 Specialized procedures",
+          "line_end": 384
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 385,
+          "heading_level": 3,
+          "label": "6.6 Supersession",
+          "line_end": 400
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 401,
+          "heading_level": 3,
+          "label": "6.7 Implementation gate",
+          "line_end": 412
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 413,
+          "heading_level": 3,
+          "label": "6.8 Mode support",
+          "line_end": 423
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 424,
+          "heading_level": 3,
+          "label": "6.9 Acquisition context",
+          "line_end": 435
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 436,
+          "heading_level": 3,
+          "label": "6.10 Eligibility",
+          "line_end": 443
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 444,
+          "heading_level": 3,
+          "label": "6.11 Effective selectability",
+          "line_end": 453
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 454,
+          "heading_level": 2,
+          "label": "7. Homebrew interface",
+          "line_end": 455
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 456,
+          "heading_level": 3,
+          "label": "7.1 Admission gate",
+          "line_end": 476
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 477,
+          "heading_level": 3,
+          "label": "7.2 Official replacement",
+          "line_end": 492
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 493,
+          "heading_level": 2,
+          "label": "8. Downstream interfaces",
+          "line_end": 494
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 495,
+          "heading_level": 3,
+          "label": "8.1 A → B",
+          "line_end": 510
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 511,
+          "heading_level": 3,
+          "label": "8.2 A → C",
+          "line_end": 522
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 523,
+          "heading_level": 3,
+          "label": "8.3 A → J1",
+          "line_end": 538
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 539,
+          "heading_level": 2,
+          "label": "9. Retroactive triggers and blockers",
+          "line_end": 540
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 541,
+          "heading_level": 3,
+          "label": "`RETRO-CHAR-A-001 — TWO-MODE DAG REVALIDATION`",
+          "line_end": 548
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 549,
+          "heading_level": 3,
+          "label": "`BLOCK-CHAR-A-001 — PAGE-LEVEL CANONICAL TRANSCRIPTION`",
+          "line_end": 556
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 557,
+          "heading_level": 2,
+          "label": "10. Verdict",
+          "line_end": 566
+        }
+      ],
+      "semantic_owner": "rule-v5-baseline",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

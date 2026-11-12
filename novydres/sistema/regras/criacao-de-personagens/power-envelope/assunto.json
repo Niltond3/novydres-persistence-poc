@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-power-envelope",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_power_envelope_v0_1_1.md",
+      "sha": "8984af4a37e1c409c90ea67ba457e1493b3bafb5",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

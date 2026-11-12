@@ -5,7 +5,7 @@ import {checkD03Gate} from './verificar-gate-d03.mjs';
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 test('D03 complete source equivalence and owner graph without semantic fact promotion',()=>{
  const result=checkD03Gate();
- assert.deepEqual([result.source_origins,result.source_locators,result.candidate_subjects],[64,1707,59]);
+ assert.deepEqual([result.source_origins,result.source_locators,result.candidate_subjects],[64,1707,79]);
  assert.equal(result.graph_active_dangling_refs,0);
  assert.equal(result.source_publication_refs_deferred,64);
  assert.equal(result.epistemic_promotion,false);

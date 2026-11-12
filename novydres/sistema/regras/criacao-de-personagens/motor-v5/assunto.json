@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-motor-v5",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_0.source.txt",
+      "sha": "aab0baf795a8b80c9a0aec5c8c82dd6a1e611cc6",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "subject_id": "rule-integration",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "integration",
+  "semantic_owner": "rule-integration",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/novydres_character_creation_k_final_integration_v0_1.source.md",
+      "source_sha": "d78cf689801f4f91c5ba6ec71f1a9f0a3d91f8e7",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_closure",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_k_final_integration",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_closure",
+        "scope": "character_creation_final_integration"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 1,
+          "label": "K — Final Character Creation Integration",
+          "line_end": 15
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 16,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 33
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 34,
+          "heading_level": 2,
+          "label": "B. Architecture closure conditions",
+          "line_end": 55
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 56,
+          "heading_level": 2,
+          "label": "C. Final common ontology",
+          "line_end": 83
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 84,
+          "heading_level": 2,
+          "label": "D. Final Field Ownership Matrix",
+          "line_end": 107
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 108,
+          "heading_level": 3,
+          "label": "D.1 Authority roles",
+          "line_end": 120
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 121,
+          "heading_level": 2,
+          "label": "E. Power integration",
+          "line_end": 147
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 148,
+          "heading_level": 2,
+          "label": "F. Cross-Mode Parity Matrix",
+          "line_end": 168
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 169,
+          "heading_level": 2,
+          "label": "G. PC/NPC common-core integration",
+          "line_end": 170
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 171,
+          "heading_level": 3,
+          "label": "G.1 PC/NPC Common-Core Matrix",
+          "line_end": 186
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 187,
+          "heading_level": 3,
+          "label": "G.2 PC/NPC verdict",
+          "line_end": 192
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 193,
+          "heading_level": 2,
+          "label": "H. Current 2010 endpoint",
+          "line_end": 211
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 212,
+          "heading_level": 2,
+          "label": "I. History, persistence and Revelation integration",
+          "line_end": 227
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 228,
+          "heading_level": 2,
+          "label": "J. Relationship Map",
+          "line_end": 241
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 242,
+          "heading_level": 2,
+          "label": "K. Coterie interfaces",
+          "line_end": 247
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 248,
+          "heading_level": 3,
+          "label": "Character → Coterie",
+          "line_end": 256
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 257,
+          "heading_level": 3,
+          "label": "Coterie → Character",
+          "line_end": 266
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 267,
+          "heading_level": 3,
+          "label": "Mode boundary",
+          "line_end": 273
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 274,
+          "heading_level": 3,
+          "label": "Collective Power Profile",
+          "line_end": 278
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 279,
+          "heading_level": 2,
+          "label": "L. Unknown / protected-state handling",
+          "line_end": 280
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 281,
+          "heading_level": 3,
+          "label": "L.1 Unknown/Protected Integration Matrix",
+          "line_end": 297
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 298,
+          "heading_level": 2,
+          "label": "M. Provenance contract",
+          "line_end": 299
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 300,
+          "heading_level": 3,
+          "label": "M.1 Minimum provenance requirement",
+          "line_end": 314
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 315,
+          "heading_level": 3,
+          "label": "M.2 Provenance form",
+          "line_end": 324
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 325,
+          "heading_level": 2,
+          "label": "N. Validation stack",
+          "line_end": 337
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 338,
+          "heading_level": 3,
+          "label": "N.1 Validation Routing Matrix",
+          "line_end": 356
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 357,
+          "heading_level": 2,
+          "label": "O. Correction routing",
+          "line_end": 380
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 381,
+          "heading_level": 2,
+          "label": "P. Player-facing versus internal structures",
+          "line_end": 382
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 383,
+          "heading_level": 3,
+          "label": "Internal/editorial",
+          "line_end": 395
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 396,
+          "heading_level": 3,
+          "label": "Publication-facing",
+          "line_end": 409
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 410,
+          "heading_level": 2,
+          "label": "Q. Standalone and source-debt readiness",
+          "line_end": 413
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 414,
+          "heading_level": 3,
+          "label": "Q.1 Source-Debt Matrix",
+          "line_end": 437
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 438,
+          "heading_level": 2,
+          "label": "R. Guided Content Implementation Contract",
+          "line_end": 441
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 442,
+          "heading_level": 3,
+          "label": "R.1 Provocation authoring contract",
+          "line_end": 459
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 460,
+          "heading_level": 3,
+          "label": "R.2 Guided Content Authoring Contract Matrix",
+          "line_end": 476
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 477,
+          "heading_level": 3,
+          "label": "R.3 Corpus-level requirements",
+          "line_end": 494
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 495,
+          "heading_level": 2,
+          "label": "S. Downstream implementation workstreams",
+          "line_end": 498
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 499,
+          "heading_level": 3,
+          "label": "L — Guided Content Design / Provocation Corpus",
+          "line_end": 507
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 508,
+          "heading_level": 3,
+          "label": "M — Guided Corpus Calibration / Playtest",
+          "line_end": 529
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 530,
+          "heading_level": 2,
+          "label": "T. Final closure matrix — K-owned questions",
+          "line_end": 547
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 548,
+          "heading_level": 2,
+          "label": "U. Retroactive trigger audit",
+          "line_end": 549
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 550,
+          "heading_level": 3,
+          "label": "U.1 Confirmed material contradictions",
+          "line_end": 554
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 555,
+          "heading_level": 3,
+          "label": "U.2 Non-triggers",
+          "line_end": 565
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 566,
+          "heading_level": 3,
+          "label": "U.3 Future trigger rule",
+          "line_end": 570
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 571,
+          "heading_level": 2,
+          "label": "V. Architecture readiness verdict",
+          "line_end": 572
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 573,
+          "heading_level": 3,
+          "label": "Architecture",
+          "line_end": 585
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 586,
+          "heading_level": 3,
+          "label": "Content implementation",
+          "line_end": 598
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 599,
+          "heading_level": 3,
+          "label": "NPC production",
+          "line_end": 605
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 606,
+          "heading_level": 2,
+          "label": "W. Blockers",
+          "line_end": 617
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 618,
+          "heading_level": 2,
+          "label": "X. Final validation checklist",
+          "line_end": 638
+        }
+      ],
+      "semantic_owner": "rule-integration",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_k_final_integration_decisions_v0_1.md",
+      "source_sha": "fad50d9f24e59d39437e849ca3d9f0a28f96ed4c",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_closure",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_k_final_integration_decisions",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_closure",
+        "scope": "character_creation_final_integration_decisions"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 11,
+          "heading_level": 1,
+          "label": "K — Final Character Creation Integration — Decision Ledger",
+          "line_end": 12
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 13,
+          "heading_level": 2,
+          "label": "1. Decisions",
+          "line_end": 23
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 24,
+          "heading_level": 2,
+          "label": "2. K question closure",
+          "line_end": 37
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 38,
+          "heading_level": 2,
+          "label": "3. Grill disposition",
+          "line_end": 45
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 46,
+          "heading_level": 2,
+          "label": "4. Final declarations",
+          "line_end": 62
+        }
+      ],
+      "semantic_owner": "rule-integration",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

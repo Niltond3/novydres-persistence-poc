@@ -36,10 +36,15 @@ export function verifyD03(root=process.cwd(),opts={}){
    if(!original||seen.has(row.source_path))fail('D03_SOURCE_UNMAPPED_OR_DUPLICATE');
    seen.add(row.source_path);
    if(row.source_blob_sha!==original.source_blob_sha||
+     (id==='rule-creation-novydres'?
+       !(row.source_custodian===id&&row.source_custody_not_semantic_authority===true&&
+         (row.owner_handoff_phase==='D05_CONSUMER'?row.semantic_owner===null:
+          row.owner_handoff_phase==='D03_RULE_MODULE'&&
+           typeof row.semantic_owner==='string'&&row.semantic_owner.startsWith('rule-'))):
      (id==='rule-experience-novydres'?
        !(row.semantic_owner===null&&row.source_custodian===id&&row.source_custody_not_semantic_authority===true&&
          ['D04','D05','D03_D04_SPLIT'].includes(row.owner_handoff_phase)):
-       row.semantic_owner!==id)||
+       row.semantic_owner!==id))||
      row.source_authority!=='UNCHANGED'||row.source_episteme!=='UNCHANGED_NOT_RECLASSIFIED'||
      row.field_semantics!=='PENDING_VERIFICATION'||row.exact_blob_copy!==true)
       fail('D03_AUTHORITY_OR_SHA_MISMATCH');

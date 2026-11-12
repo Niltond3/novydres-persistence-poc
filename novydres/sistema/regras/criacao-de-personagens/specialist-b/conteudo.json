@@ -1,0 +1,279 @@
+{
+  "subject_id": "rule-specialist-b",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "specialist-b",
+  "semantic_owner": "rule-specialist-b",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_b_decisions_v0_1_1.md",
+      "source_sha": "f70270331487dc8009555f0d29a8b21a0534745c",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_specialist_b_decisions",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "specialist_b_grill_decision_log",
+        "supersedes": "novydres_character_creation_specialist_b_decisions_v0_1.md"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 48,
+          "heading_level": 1,
+          "label": "Specialist B — Decision Log",
+          "line_end": 49
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 50,
+          "heading_level": 2,
+          "label": "1. Function",
+          "line_end": 55
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 56,
+          "heading_level": 2,
+          "label": "2. Approved decisions",
+          "line_end": 85
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 86,
+          "heading_level": 2,
+          "label": "2.1 Canonical provenance mapping — CHAR-B-001–025",
+          "line_end": 119
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 120,
+          "heading_level": 3,
+          "label": "2.2 Provenance validation",
+          "line_end": 132
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 133,
+          "heading_level": 2,
+          "label": "3. Decision details",
+          "line_end": 134
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 135,
+          "heading_level": 3,
+          "label": "CHAR-B-001 — Arquitetura de perfis reutilizáveis",
+          "line_end": 148
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 149,
+          "heading_level": 3,
+          "label": "CHAR-B-002 — Relação idade/estrato ↔ perfil",
+          "line_end": 154
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 155,
+          "heading_level": 3,
+          "label": "CHAR-B-003 — Geração",
+          "line_end": 160
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 161,
+          "heading_level": 3,
+          "label": "CHAR-B-004 — Blood Potency inicial",
+          "line_end": 168
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 169,
+          "heading_level": 3,
+          "label": "CHAR-B-005 — Torpor",
+          "line_end": 174
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 175,
+          "heading_level": 3,
+          "label": "CHAR-B-006 — Discipline Depth",
+          "line_end": 180
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 181,
+          "heading_level": 3,
+          "label": "CHAR-B-007 — Discipline Breadth",
+          "line_end": 186
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 187,
+          "heading_level": 3,
+          "label": "CHAR-B-008 — Power Density",
+          "line_end": 197
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 198,
+          "heading_level": 3,
+          "label": "CHAR-B-009 — Prova causal de aquisição",
+          "line_end": 212
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 213,
+          "heading_level": 3,
+          "label": "CHAR-B-010 — Mechanical Load",
+          "line_end": 221
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 222,
+          "heading_level": 3,
+          "label": "CHAR-B-011 — Rarity Debt",
+          "line_end": 235
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 236,
+          "heading_level": 3,
+          "label": "CHAR-B-012 — Backgrounds/Assets",
+          "line_end": 243
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 244,
+          "heading_level": 3,
+          "label": "CHAR-B-013 — PJs e demografia",
+          "line_end": 249
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 250,
+          "heading_level": 3,
+          "label": "CHAR-B-014 — Matriz híbrida",
+          "line_end": 259
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 260,
+          "heading_level": 3,
+          "label": "CHAR-B-015 — Valores concretos dos perfis",
+          "line_end": 293
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 294,
+          "heading_level": 3,
+          "label": "CHAR-B-016 — Exceptional Start / Declared Outlier",
+          "line_end": 303
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 304,
+          "heading_level": 3,
+          "label": "CHAR-B-017 — Iskander/Zoya como real testing profiles",
+          "line_end": 312
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 313,
+          "heading_level": 3,
+          "label": "CHAR-B-018 — Beckoning + adendo global de provocações",
+          "line_end": 320
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 321,
+          "heading_level": 3,
+          "label": "CHAR-B-019 — Provocações e envelope",
+          "line_end": 330
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 331,
+          "heading_level": 3,
+          "label": "CHAR-B-020 — Momento do envelope",
+          "line_end": 338
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 339,
+          "heading_level": 3,
+          "label": "CHAR-B-021 — Gatilhos de gateway",
+          "line_end": 351
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 352,
+          "heading_level": 3,
+          "label": "CHAR-B-022 — Demografia durante a storyline",
+          "line_end": 364
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 365,
+          "heading_level": 3,
+          "label": "CHAR-B-023 — Contrato B→D1/D2",
+          "line_end": 376
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 377,
+          "heading_level": 3,
+          "label": "CHAR-B-024 — Default e crônicas avançadas",
+          "line_end": 382
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 383,
+          "heading_level": 3,
+          "label": "CHAR-B-025 — Fechamento",
+          "line_end": 399
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 400,
+          "heading_level": 2,
+          "label": "4. Closure matrix",
+          "line_end": 416
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 417,
+          "heading_level": 2,
+          "label": "5. Deferred decisions — explicitly not B blockers",
+          "line_end": 424
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 425,
+          "heading_level": 2,
+          "label": "5.1 Corrective-patch preservation",
+          "line_end": 432
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 433,
+          "heading_level": 2,
+          "label": "6. Final verdict",
+          "line_end": 437
+        }
+      ],
+      "semantic_owner": "rule-specialist-b",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

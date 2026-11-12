@@ -15,6 +15,8 @@ on:
       - 'novydres/scripts/revisar-conducao-candidata.mjs'
       - 'novydres/scripts/testar-conducao-candidata.test.mjs'
       - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
+      - 'novydres/scripts/verificar-modulos-d03.mjs'
+      - 'novydres/scripts/testar-modulos-d03.test.mjs'
       - 'novydres/scripts/verificar-gate-d03.mjs'
       - 'novydres/scripts/testar-gate-d03.test.mjs'
       - 'novydres/scripts/verificar-identidade-pc-d03.mjs'
@@ -107,6 +109,8 @@ jobs:
         run: node --test novydres/scripts/testar-identidade-pc-d03.test.mjs
       - name: D03 consolidated gate proof of source equivalence and fail-closed authority
         run: node --test novydres/scripts/testar-gate-d03.test.mjs
+      - name: D03 prove 20 rule module owners and D05 executable handoffs
+        run: node --test novydres/scripts/testar-modulos-d03.test.mjs
       - name: D02 verify exact original custody and conservative external-media classification
         run: node novydres/scripts/verificar-custodia-d02.mjs
       - name: D02 negative regressions for authority, media integrity and origin loss
