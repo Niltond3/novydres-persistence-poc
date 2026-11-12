@@ -100,7 +100,7 @@ test('D01 forbids routing a new pinned source back into legacy paths',()=>{
   'D01_C45_LEGACY_OR_UNSAFE_DESTINATION');
 });
 test('D01 distinguishes open plot threads from NPC knowledge owner',()=>{
- const p=index.source_files.find(x=>x.source_path.includes('/knowledge/OPEN_THREADS_'))?.source_path;
+ const p=index.source_files.find(x=>x.c45_content_reconciliation&&x.source_path.includes('/knowledge/OPEN_THREADS_'))?.source_path;
  assert.ok(p);
  reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/cronicas/CHR-001/elenco',
   'D01_C45_THREADS_OWNER_DRIFT');
@@ -111,4 +111,17 @@ test('D01 cannot fabricate source readback by deleting content',()=>{
  const bad=new Map(data.sourceContents);
  bad.delete(p);
  assert.throws(()=>verifyD01(index,{...data,sourceContents:bad}),e=>e.code==='D01_C45_CONTENT_NOT_READ');
+});
+
+test('D01 keeps local NPC knowledge separate from the open-plot-threads owner',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation&&x.source_path.includes('/knowledge/NPC_KNOWLEDGE_'))?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/cronicas/CHR-001/fios',
+  'D01_C45_KNOWLEDGE_OWNER_DRIFT');
+});
+test('D01 restricted story truth cannot be routed into public chronicle state',()=>{
+ const p=index.source_files.find(x=>x.c45_content_reconciliation&&x.source_path.includes('/D07_STORY_TRUTH_PACKAGE_'))?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).c45_content_reconciliation.proposed_target_root='novydres/cronicas/CHR-001/estado',
+  'D01_C45_GM_TRUTH_OWNER_DRIFT');
 });
