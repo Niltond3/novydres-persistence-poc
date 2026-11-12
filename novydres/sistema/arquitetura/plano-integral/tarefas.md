@@ -218,6 +218,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Próximo:** conferir diff, publicar somente em design, executar CI remoto, recuperar provas e registrar resultado em C03; C04 permanece dependente de C03 PASS.
 
 
+#### C03 — Fechamento verificável do mecanismo isolado (2026-11-12)
+
+- **Estado:** `C03_PASS_SCOPED` com implementação não operacional em `design@5f1c15dde738ecc7983ef994f9115212e1c00829`. `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura e sem alteração. A03/A05 e a prova de C02 seguem fontes fixadas.
+- **Evidência real:** GitHub Actions `43236381679`, job `131244735495`, `completed/success`, teste remoto V05/V10 `1/1` cenário composto com múltiplas invariantes. Na ref descartável `test/adr001-c03-43236381679-1`, uma transação publicou **dois blobs** no mesmo commit `f942ac1610a6a9ee8a2a97af949f35b064695ffa`, com pai exato `5f1c15dde738ecc7983ef994f9115212e1c00829`, tree/blobs relidos; duplicata `NO_OP_VERIFIED`, mesmo ID divergente `STOP_CONFLICT_SAME_ID`, stale `STALE_HEAD_PRECHECK`, dois escritores com único vencedor `cd15dff384253cebddd8bc1999c141caf17f1a84` e perdedor `STOP_CONFLICT_STALE_REMOTE`. Criar objeto sem promover manteve ref; leitura adversarial detectou `READBACK_BLOB_MISMATCH`. Supressão de ACK **após publicação real** foi recuperada por `NO_OP_VERIFIED` sem duplicar. Limpeza da ref confirmada por leitura 404.
+- **Contrato/DEC-20/23/24/27:** apenas texto/estado TEST_ONLY em `tmp/adr001-c03/*`, fingerprint e `tx_id` em trailer Git, sem ledger universal, arquivo por rolagem, reconstrução por replay, cenas, mutação de fichas ou Codex duplicado. Operações Git efetivamente executadas no Actions, auditadas também pelo readback Web do commit/arquivos.
+- **Limitações explícitas:** cliente restringe escrita a ref/paths artificiais; integração com owners, políticas sucessoras, segredo editorial e real runtime ainda não comprovada (C04/C05/C07/D/E). Perda de ACK foi induzida pelo cliente, **não** queda real da rede; erro de blob foi injeção adversarial de expectativa e não corrupção de objeto Git. `force:false` e rejeição remota na ref descartável foram comprovados, sem afirmar ruleset administrativo instalado ou proteção universal. Não ativar em master.
+- **Próximas elegíveis:** C04 (estado atual e retomada) e C06 (auditoria de fontes/legado); depois C05/C07/C08 conforme dependências. Gate C geral permanece aberto; E01 continua dependente de D07 PASS e aprovação expressa antes de E02.
+
 ### C04 — Implementar estado atual e retomada fiel
 
 - **Depende de:** C03 e A02/A03.
