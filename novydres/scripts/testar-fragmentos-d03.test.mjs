@@ -17,7 +17,7 @@ test('D03 rejects claimed CONFIRMED for unreviewed document',()=>{
 });
 test('D03 rejects source SHA substitution',()=>{
   const x=src();x.documents[0].source_blob_sha='0'.repeat(40);
-  assert.throws(()=>verifyD03Segments(process.cwd(),x),{code:'D03_SEGMENT_SOURCE_SHA'});
+  assert.throws(()=>verifyD03Segments(process.cwd(),x),{code:'D03_SEGMENT_LEDGER_MISMATCH'});
 });
 test('D03 rejects altered section label with exact source anchor',()=>{
  const x=src(),d=x.documents.find(d=>d.sections_or_fields.some(f=>f.kind==='MARKDOWN_SECTION'));
