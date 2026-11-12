@@ -136,13 +136,19 @@ export function resolveSubject(catalog, subjectId, {snapshot_sha,role=null,cache
   const matches=catalog.subjects.filter(s=>norm(s.id)===id);
   if(matches.length!==1 || matches[0].id!==subjectId) fail(matches.length>1?'AMBIGUOUS_ID':'NOT_FOUND',subjectId);
   const s=matches[0];
-  const key=snapshot_sha+'|'+s.id+'|'+s.kind+'|'+catalog.content_index_sha+'|'+role;
-  if(cache.has(key))return structuredClone(cache.get(key));
+  // Validate role/scope BEFORE consulting the optional caller-supplied cache.
+  // A poisoned cache entry must never override an authoritative subject ACL,
+  // owner or blob pointer, even when the snapshot/key happens to be correct.
   const canRead=role!=='PLAYER'||s.visibility==='PLAYER_SAFE'||s.visibility==='PC_KNOWN';
   if(!canRead) fail('DISCLOSURE_DENIED',s.id);
   const resolved={snapshot_sha,subject_id:s.id,kind:s.kind,owner_path:s.path,
     files:s.files.map(x=>({...x})),source_ids:s.source_ids.slice(),visibility:s.visibility,
     dependencies:s.dependencies.slice()};
+  const key=snapshot_sha+'|'+s.id+'|'+s.kind+'|'+catalog.content_index_sha+'|'+role;
+  if(cache.has(key)) {
+    if(JSON.stringify(cache.get(key))!==JSON.stringify(resolved)) fail('CACHE_INTEGRITY',s.id);
+    return structuredClone(resolved);
+  }
   cache.set(key,structuredClone(resolved));
   return resolved;
 }

@@ -101,6 +101,28 @@ test('V03 selected paths must be declared by that exact subject, no legacy or tr
    expectCode(()=>readSelected(root,c,'npc-samir-haddad',{snapshot_sha:snap,role:'AUDITOR',selected_paths:[path]}),'UNDECLARED_PATH');
  }
 });
+test('V04 poisoned PLAYER cache cannot return restricted metadata or text',()=>{
+ const c=buildCatalog(root), id='chr001-npc-samir-haddad';
+ const privateMeta=resolveSubject(c,id,{snapshot_sha:snap,role:'AUDITOR'});
+ const key=[snap,id,privateMeta.kind,c.content_index_sha,'PLAYER'].join('|');
+ const injected=new Map([[key,privateMeta]]);
+ expectCode(()=>resolveSubject(c,id,{snapshot_sha:snap,role:'PLAYER',cache:injected}),
+  'DISCLOSURE_DENIED');
+ expectCode(()=>readSelected(root,c,id,{snapshot_sha:snap,role:'PLAYER',cache:injected,
+  selected_paths:[p+'elenco/npc-samir-haddad/conhecimento.json']}),'DISCLOSURE_DENIED');
+});
+test('V09 externally supplied cache cannot change authorized owner/file list',()=>{
+ const c=buildCatalog(root), id='npc-samir-haddad';
+ const known=resolveSubject(c,id,{snapshot_sha:snap,role:'PLAYER'});
+ const key=[snap,id,known.kind,c.content_index_sha,'PLAYER'].join('|');
+ const tampered=structuredClone(known);
+ tampered.files=[{path:'novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json',
+   blob_sha:'0'.repeat(40)}];
+ const injected=new Map([[key,tampered]]);
+ expectCode(()=>resolveSubject(c,id,{snapshot_sha:snap,role:'PLAYER',cache:injected}),'CACHE_INTEGRITY');
+ expectCode(()=>readSelected(root,c,id,{snapshot_sha:snap,role:'PLAYER',cache:injected,
+  selected_paths:[tampered.files[0].path]}),'CACHE_INTEGRITY');
+});
 test('V09 cache is snapshot keyed (never borrows entry from new commit)',()=>{
  const c=buildCatalog(root),cache=new Map();
  resolveSubject(c,'npc-samir-haddad',{snapshot_sha:snap,role:'AUDITOR',cache});
