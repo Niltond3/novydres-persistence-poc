@@ -115,7 +115,7 @@ console.log(JSON.stringify({status:'NEW_PAIRED_REST_NAVIGATION_SAMPLE',
   comparable_to_historical_web_p95:false,
   actual_web_token_count:'NOT_OBSERVABLE',
   actual_web_http_wire_bytes:'NOT_OBSERVABLE',
-  observed_bytes_are_API_JSON_BODY_NOT_WIRE,
+  observed_bytes_are_API_JSON_BODY_NOT_WIRE:true,
   limitations:'small nonrandom sample, server cache/network variance, different source/candidate blob sizes, snapshot semantics C41 not master C45'}));
 
 console.log(JSON.stringify({status:'PASS_DETERMINISTIC_POST_FREEZE_ONLY',
