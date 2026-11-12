@@ -1,16 +1,12 @@
 {
-  "schema": "ADR001_D06_FINAL_GATE_FREEZE_V1",
-  "phase": "D06_D07",
-  "status": "CANDIDATE_FROZEN_FOR_INTEGRATED_CI_NOT_GATE_PASS",
-  "parent_head": "3bb5cc83216dc1aee346b9b3bf8d8fd93cc4aa82",
-  "parent_tree": "13710c981e461c18b6b85363b2ec1de14cb1b31d",
-  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-  "workflow": ".github/workflows/adr001-phase-c-candidate.yml",
-  "scope": "ENTIRE_CANDIDATE_HEAD_D03_D07",
-  "authorizations": {
-    "E02": false,
-    "E03": false,
-    "master_writes": false
-  },
-  "expected_result": "STRUCTURAL_AND_SEMANTIC_EVIDENCE_REQUIRED_NO_STATUS_PRESUMED"
+  "schema": "ADR001_D06_GATE_FREEZE_V2",
+  "status": "INTEGRATED_CI_REQUESTED_NOT_APPROVED",
+  "parent_head": "77129974d9a62786da3775d2f46301b7ebf7be5b",
+  "parent_tree": "26c18e84d48f57700b8de7040009526a3014809d",
+  "prior_run": 43332630110,
+  "corrections": [
+    "EXPLICIT_HISTORICAL_C41_SOURCE_COMMIT_8_FILES",
+    "C45_ACTOR_SOURCE_SCOPE_VALIDATION"
+  ],
+  "no_cutover": true
 }
