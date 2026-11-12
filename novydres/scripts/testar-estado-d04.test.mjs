@@ -13,7 +13,7 @@ test('D04 C45 readback verifies immutable master pins and stays non-operational'
 });
 test('D04 refuses stale C41/cursor swap and wrong C45 blob',()=>{
  assert.throws(edited(x=>x.cursor.next_scene='C01'),{code:'D04_C45_CURSOR_DRIFT'});
- assert.throws(edited(x=>x.source_refs.cycle.sha='0'.repeat(40)),{code:'D04_SOURCE_DRIFT'});
+ assert.throws(edited(x=>x.pinned_sources.cycle.sha='0'.repeat(40)),{code:'D04_SOURCE_DRIFT'});
 });
 test('D04 rejects resource rewriting, disclosure and editor promotion',()=>{
  assert.throws(edited(x=>x.resources.xp_spent++),{code:'D04_RESOURCE_DRIFT'});

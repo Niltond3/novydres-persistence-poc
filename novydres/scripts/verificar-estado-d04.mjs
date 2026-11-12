@@ -13,10 +13,10 @@ export function verifyD04State({override=null}={}){
  if(b.source_commit!=='c26c0fbf15fff6c817182c06e6208e302b954f3a'||b.cycle.id!=='CHR001-CYCLE-0041')fail('D04_HISTORICAL_C41_CORRUPTED');
  if(c.subject_id!=='chr001-state-checkpoint'||c.operational!==false||c.visibility!=='SYSTEM_AUDIT'||c.source_commit!=='c9fcfc0c558cd17d58ec8c8272da3ed70182ff37')fail('D04_UNAUTHORIZED_PROMOTION');
  const needed=['cycle','manifest','live','history','character','episode','knowledge','threads'];
- if(Object.keys(c.source_refs||{}).sort().join(',')!==needed.slice().sort().join(','))fail('D04_MISSING_PIN');
+ if(Object.keys(c.pinned_sources||{}).sort().join(',')!==needed.slice().sort().join(','))fail('D04_MISSING_PIN');
  const data={};
  for(const name of needed){
-  const ref=c.source_refs[name];
+  const ref=c.pinned_sources[name];
   if(ref.source_commit!==c.source_commit||!/^[a-f0-9]{40}$/.test(ref.sha)||!ref.path.startsWith('novydres/')||ref.path.includes('..'))fail('D04_INVALID_PIN');
   if(git('rev-parse',c.source_commit+':'+ref.path)!==ref.sha)fail('D04_SOURCE_DRIFT');
   const body=execFileSync('git',['show',c.source_commit+':'+ref.path],{encoding:'utf8',stdio:['ignore','pipe','ignore']});
@@ -24,13 +24,13 @@ export function verifyD04State({override=null}={}){
   data[name]=name==='character'||name==='episode'?body:JSON.parse(body);
  }
  const cy=data.cycle,li=data.live,ko=data.knowledge,th=data.threads,ev=c.cursor,r=c.resources;
- if(cy.cycle_id!=='CHR001-CYCLE-0045'||cy.manifest_ref.path!==c.source_refs.manifest.path||
-   cy.manifest_ref.blob_sha!==c.source_refs.manifest.sha||
-   cy.refs.character.blob_sha!==c.source_refs.character.sha||
-   cy.refs.episode.blob_sha!==c.source_refs.episode.sha||
-   cy.refs.live.blob_sha!==c.source_refs.live.sha||
-   cy.refs.knowledge.blob_sha!==c.source_refs.knowledge.sha||
-   cy.refs.threads.blob_sha!==c.source_refs.threads.sha)fail('D04_CYCLE_PIN_MISMATCH');
+ if(cy.cycle_id!=='CHR001-CYCLE-0045'||cy.manifest_ref.path!==c.pinned_sources.manifest.path||
+   cy.manifest_ref.blob_sha!==c.pinned_sources.manifest.sha||
+   cy.refs.character.blob_sha!==c.pinned_sources.character.sha||
+   cy.refs.episode.blob_sha!==c.pinned_sources.episode.sha||
+   cy.refs.live.blob_sha!==c.pinned_sources.live.sha||
+   cy.refs.knowledge.blob_sha!==c.pinned_sources.knowledge.sha||
+   cy.refs.threads.blob_sha!==c.pinned_sources.threads.sha)fail('D04_CYCLE_PIN_MISMATCH');
  if(ev.last_event_id!==cy.checkpoint.last_event_id||ev.last_event_id!==li.last_confirmed_event_id||
    ev.next_scene!==cy.checkpoint.next_scene||ev.next_scene_status!=='NOT_STARTED'||
    ev.last_closed_scene!==cy.checkpoint.last_closed_scene||ev.status!==cy.status||
