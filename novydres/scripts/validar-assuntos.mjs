@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const S = 'novydres/sistema/arquitetura/fase-a/schemas/';
 const EPISTEMIC = new Set(['CONFIRMED', 'NPC_CLAIM', 'GM_PREPARED', 'CONDITIONAL', 'UNKNOWN']);
 const VISIBILITY = new Set(['PLAYER_SAFE', 'PC_KNOWN', 'NPC_BELIEF', 'GM_HIDDEN', 'SYSTEM_AUDIT']);
-const OWNERS = ['novydres/personagens/', 'novydres/cronicas/'];
+const OWNERS = ['novydres/cenario/', 'novydres/personagens/', 'novydres/cronicas/', 'novydres/sistema/regras/'];
 const norm = id => id.normalize('NFC').toLocaleLowerCase('und');
 const isText = v => typeof v === 'string' && v.trim().length > 0;
 const gitBlob = bytes => createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');

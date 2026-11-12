@@ -7,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 export const CATALOG_PATH = 'novydres/catalogo.json';
-const SUBJECT_ROOTS = ['novydres/personagens', 'novydres/cronicas'];
+const SUBJECT_ROOTS = ['novydres/cenario', 'novydres/personagens', 'novydres/cronicas', 'novydres/sistema/regras'];
 const SHA = /^[a-f0-9]{40}$/;
 const ID = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/;
 const norm = s => s.normalize('NFC').toLowerCase();

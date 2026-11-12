@@ -1,0 +1,43 @@
+{
+  "subject_id": "world-history-novydres",
+  "schema": "ADR001_D03_SOURCE_LEDGER_V1",
+  "source_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "not_operational": true,
+  "originals_exact": true,
+  "epistemic_promotion": false,
+  "editorial_promotion": false,
+  "source_records": [
+    {
+      "source_path": "novydres/world/history/01_introducao_v0_2_1.source.md",
+      "source_blob_sha": "714afe5acee5cee65191c8fec764402985fec008",
+      "target_path": "novydres/cenario/historia-global/fonte-001.source.md",
+      "source_role": "WORLD_HISTORY",
+      "conflict_refs": [
+        "CONFLICT-001"
+      ],
+      "semantic_owner": "world-history-novydres",
+      "source_authority": "UNCHANGED",
+      "source_episteme": "UNCHANGED_NOT_RECLASSIFIED",
+      "source_visibility": "SYSTEM_AUDIT",
+      "field_semantics": "PENDING_VERIFICATION",
+      "exact_blob_copy": true
+    },
+    {
+      "source_path": "novydres/world/history/02_historia_e_cronologia_v0_2_2.source.md",
+      "source_blob_sha": "33a58778c7afd347cea3fb088cc04ae7d42dcccd",
+      "target_path": "novydres/cenario/historia-global/fonte-002.source.md",
+      "source_role": "WORLD_HISTORY",
+      "conflict_refs": [
+        "CONFLICT-001"
+      ],
+      "semantic_owner": "world-history-novydres",
+      "source_authority": "UNCHANGED",
+      "source_episteme": "UNCHANGED_NOT_RECLASSIFIED",
+      "source_visibility": "SYSTEM_AUDIT",
+      "field_semantics": "PENDING_VERIFICATION",
+      "exact_blob_copy": true
+    }
+  ],
+  "field_level_equivalence": "NOT_YET_PROVEN",
+  "local_chronicle_ownership": "DEFERRED_TO_D04_WHERE_APPLICABLE"
+}

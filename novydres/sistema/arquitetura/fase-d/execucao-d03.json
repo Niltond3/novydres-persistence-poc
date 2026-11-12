@@ -1,0 +1,40 @@
+{
+  "schema": "ADR001_D03_EXECUTION_V1",
+  "phase": "D03",
+  "entry_head": "8b32081c9435c0864d42ac8679444539438a7c47",
+  "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "status": "CANDIDATE_SOURCE_PORTFOLIOS_PENDING_SEMANTIC_EQUIVALENCE",
+  "gate": "D03_NOT_YET_PASS",
+  "not_operational": true,
+  "d03_sources_total": 64,
+  "exact_source_blob_copies": 64,
+  "source_portfolios": 9,
+  "subject_ids": [
+    "world-atlas-novydres",
+    "world-history-novydres",
+    "world-politics-novydres",
+    "world-lineage-urban-gangrel",
+    "npc-iskander-yasupov",
+    "npc-madame-zoya",
+    "world-npc-power-scale",
+    "rule-creation-novydres",
+    "rule-experience-novydres"
+  ],
+  "global_local_boundary": "SOURCE_CUSTODY_ONLY_LOCAL_STATES_RESERVED_D04",
+  "proof": {
+    "byte_identical_sources": true,
+    "unique_source_ownership": true,
+    "subject_catalog": "GENERATED_AT_STAGED_TREE",
+    "field_semantics": "PENDING",
+    "editorial_authority": "UNCHANGED_NOT_APPROVED",
+    "knowledge_and_relations": "PENDING",
+    "ci": "PENDING",
+    "readback": "PENDING"
+  },
+  "unresolved_conflicts": [
+    "CONFLICT-001",
+    "CONFLICT-002",
+    "CONFLICT-003B"
+  ],
+  "media_waiver": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA_UNCHANGED"
+}

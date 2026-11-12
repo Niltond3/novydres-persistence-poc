@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "6661668a2f002609b64b991d228b61a972b6a9b2",
+  "content_index_sha": "1fa11ac2e11a09f684aa0a6aa092cce576ad07d8",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -84,6 +84,76 @@
       ]
     },
     {
+      "id": "npc-iskander-yasupov",
+      "kind": "character",
+      "owner": "novydres/personagens",
+      "path": "novydres/personagens/npc-iskander-yasupov",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/personagens/npc-iskander-yasupov/assunto.json",
+          "blob_sha": "0d4c22cb388a9325ebafb7724320e98eaef631e7"
+        },
+        {
+          "path": "novydres/personagens/npc-iskander-yasupov/fonte-001.source.md",
+          "blob_sha": "e269fce9515a9e18962c6a650bb7a151e5f26207"
+        },
+        {
+          "path": "novydres/personagens/npc-iskander-yasupov/index.md",
+          "blob_sha": "0bb439742f297c8843c293338e3533c628b84a7f"
+        },
+        {
+          "path": "novydres/personagens/npc-iskander-yasupov/registro.json",
+          "blob_sha": "0d1548f1e2a93a7a6f1d92745864c5b77cb418a2"
+        }
+      ]
+    },
+    {
+      "id": "npc-madame-zoya",
+      "kind": "character",
+      "owner": "novydres/personagens",
+      "path": "novydres/personagens/npc-madame-zoya",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/personagens/npc-madame-zoya/assunto.json",
+          "blob_sha": "1919c646aa31c6b06b3b6b4f66a19705d556f177"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/fonte-001.source.txt",
+          "blob_sha": "ccc456a0a83e249d3a165936a62c9a0cfe8249f8"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/fonte-002.source.txt",
+          "blob_sha": "32e66f3b0aa7cbe417aa31d348f9968028a38c1d"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/fonte-003.source.md",
+          "blob_sha": "f89e9e429b87a7590afc2f93fd828a8bece6562e"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/fonte-004.source.md",
+          "blob_sha": "c88527f90c6016064b35f6ae0b791f7079587f66"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/fonte-005.source.md",
+          "blob_sha": "0d77a9f1cc13c47bc9afb7db43846b4a4b2210be"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/index.md",
+          "blob_sha": "1da131a1fef84e7c7cd4fdaefcf754e23deba636"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/registro.json",
+          "blob_sha": "e13bf0ab4db73b33c4cadf5c6a2114e0958ad726"
+        }
+      ]
+    },
+    {
       "id": "npc-samir-haddad",
       "kind": "character",
       "owner": "novydres/personagens",
@@ -143,6 +213,236 @@
       ]
     },
     {
+      "id": "rule-creation-novydres",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras",
+      "path": "novydres/sistema/regras/criacao-de-personagens",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/assunto.json",
+          "blob_sha": "5ad27dd8e6672984c2f8cebf01e33431d610956c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-001.source.txt",
+          "blob_sha": "7b0e3419721fd2ceb6914031fdc947c984a7f857"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-002.source.md",
+          "blob_sha": "a657cb3f381fc090443270124189bc0231b3d5a0"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-003.source.md",
+          "blob_sha": "d78cf689801f4f91c5ba6ec71f1a9f0a3d91f8e7"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-004.source.md",
+          "blob_sha": "cc63250ddb029fa4840cc241cd443a0810e5dc8a"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-005.source.md",
+          "blob_sha": "4aa45b3e804278b9f9e6471fcd6b05e93b3dea86"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-006.source.md",
+          "blob_sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-007.source.md",
+          "blob_sha": "774698ddd36c86b53fc6217f2beadd3f59cc7c01"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-008.source.md",
+          "blob_sha": "5c972b08c70187e883bc6da7d4ad964cb165612f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-009.source.md",
+          "blob_sha": "37f32b3277e63df0204b5a9ce9450863081c8cf3"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-010.source.md",
+          "blob_sha": "743d001dd1382319aaa872a5ea8aafcefd3503fc"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-011.source.md",
+          "blob_sha": "ed4785c583561470f117193d5d1879ae6a8b96d8"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-012.source.md",
+          "blob_sha": "1b374b5001afd9922ceec464d407648dd69075c9"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-013.source.md",
+          "blob_sha": "918cfa1ecaf7d7675ca34a32a5fea50c6336387f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-014.source.md",
+          "blob_sha": "a8b0fbd3c1c27d09224bd7535f856369f05ddc1e"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-015.source.md",
+          "blob_sha": "c72fbe83c0cd834b72e8b9e37a7b75e77bbba1f6"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-016.source.md",
+          "blob_sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-017.source.md",
+          "blob_sha": "0d6659207097db0e7d9c59fa0aa73b09cb851010"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-018.source.md",
+          "blob_sha": "0ce4fc086be25a0d07d3dde048aa647361b62869"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-019.source.md",
+          "blob_sha": "4c4ac12bac558fb4bfb9497b17c27f290ee8a334"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-020.source.md",
+          "blob_sha": "9a0271ca9ceed5f3b2a0a9cc66c4f249ed456540"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-021.source.md",
+          "blob_sha": "8380ab1382483c1ac81e7ebdbea2320c303d9e6e"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-022.source.md",
+          "blob_sha": "fad50d9f24e59d39437e849ca3d9f0a28f96ed4c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-023.source.md",
+          "blob_sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-024.source.md",
+          "blob_sha": "71c0183609a385baaa3a49b885461ec33caf6a44"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-025.source.md",
+          "blob_sha": "8984af4a37e1c409c90ea67ba457e1493b3bafb5"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-026.source.md",
+          "blob_sha": "39d4731276fb0f7502f80097b720e8dea3055ecc"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-027.source.md",
+          "blob_sha": "3ecfd00bb16f8a7d4350e25072ce5fa3654e6bb9"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-028.source.md",
+          "blob_sha": "59b8663aadd6ed50371da6e15095a5978f31edaf"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-029.source.md",
+          "blob_sha": "f70270331487dc8009555f0d29a8b21a0534745c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-030.source.md",
+          "blob_sha": "19b1e5a5b572edf52046e2bd98aa7aa65e2cbd69"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-031.source.txt",
+          "blob_sha": "aab0baf795a8b80c9a0aec5c8c82dd6a1e611cc6"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-032.source.txt",
+          "blob_sha": "668ccd0f9b40a858189162600c700bdd149c6792"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-033.source.md",
+          "blob_sha": "fd402fe0236b473b24562332f022e4a910712bcb"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-034.source.md",
+          "blob_sha": "b9db2b4c2a4bff24021c410405ecfa133eaf8c16"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-035.source.txt",
+          "blob_sha": "23782f44c7a2bc0096f0c3668789b6a92e3ab23f"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-036.source.txt",
+          "blob_sha": "defa299911fd0548fd350609a0dde879453a156d"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-037.source.txt",
+          "blob_sha": "e107f64ee46a2f8479ae682de93f8d8e8d732cc0"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/fonte-038.source.txt",
+          "blob_sha": "8f0c2515496c6ccf8251782a8a90c376c5513215"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/index.md",
+          "blob_sha": "a095bb86ce39daa659c8459f604a54b67685206c"
+        },
+        {
+          "path": "novydres/sistema/regras/criacao-de-personagens/registro.json",
+          "blob_sha": "5a0c959e38d04f034f64363b7af1948ea5f51a90"
+        }
+      ]
+    },
+    {
+      "id": "rule-experience-novydres",
+      "kind": "rule",
+      "owner": "novydres/sistema/regras",
+      "path": "novydres/sistema/regras/experiencia",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/sistema/regras/experiencia/assunto.json",
+          "blob_sha": "b67c02d2d0db89d53ad446c0e34910d0e7eeb094"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-001.source.txt",
+          "blob_sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-002.source.md",
+          "blob_sha": "602e901aa64c0f54783d755a9e14f982d887cf9f"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-003.source.md",
+          "blob_sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-004.source.txt",
+          "blob_sha": "26d651b5da9cb158cbd759550534df95a7340726"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-005.source.txt",
+          "blob_sha": "d5b59da66faa321580432f82c15e990012b08b6d"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-006.source.txt",
+          "blob_sha": "d4a15919048a6dd46ab845f9559e20cd0057a39b"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-007.source.txt",
+          "blob_sha": "461af62f9404a6e895950843b39a596b0b73b7ab"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/fonte-008.source.txt",
+          "blob_sha": "71855c995f47616fc93f80bfd49fb1bc5bfc0dce"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/index.md",
+          "blob_sha": "8e3d122e1fab4529d62c645da8270f936afac4ba"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/registro.json",
+          "blob_sha": "bfadbdafb6a8cd112a2120daabcedaad716ded91"
+        }
+      ]
+    },
+    {
       "id": "story-m301-c01",
       "kind": "story",
       "owner": "novydres/cronicas/CHR-001/historias",
@@ -169,6 +469,169 @@
           "blob_sha": "98d3782aee4ad7fff06c771a889074dbac8f1e8e"
         }
       ]
+    },
+    {
+      "id": "world-atlas-novydres",
+      "kind": "world-location",
+      "owner": "novydres/cenario",
+      "path": "novydres/cenario/atlas-novydres",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/atlas-novydres/assunto.json",
+          "blob_sha": "55f5af1eed94291350bb5d0ad2502470542dd47e"
+        },
+        {
+          "path": "novydres/cenario/atlas-novydres/fonte-001.source.md",
+          "blob_sha": "90174f8f5726cb2b188ef2db66531acbf6898c93"
+        },
+        {
+          "path": "novydres/cenario/atlas-novydres/fonte-002.source.md",
+          "blob_sha": "e6392e2208b2dff5457c22c700d3d0702da092fe"
+        },
+        {
+          "path": "novydres/cenario/atlas-novydres/index.md",
+          "blob_sha": "9e8e32a980c50de95c73a69b321f6af60952deee"
+        },
+        {
+          "path": "novydres/cenario/atlas-novydres/registro.json",
+          "blob_sha": "91679e52766496cddfdc7575f713278fa03851be"
+        }
+      ]
+    },
+    {
+      "id": "world-history-novydres",
+      "kind": "history-topic",
+      "owner": "novydres/cenario",
+      "path": "novydres/cenario/historia-global",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/historia-global/assunto.json",
+          "blob_sha": "45397cb2d3fa13df0540be9afc59d95553529c63"
+        },
+        {
+          "path": "novydres/cenario/historia-global/fonte-001.source.md",
+          "blob_sha": "714afe5acee5cee65191c8fec764402985fec008"
+        },
+        {
+          "path": "novydres/cenario/historia-global/fonte-002.source.md",
+          "blob_sha": "33a58778c7afd347cea3fb088cc04ae7d42dcccd"
+        },
+        {
+          "path": "novydres/cenario/historia-global/index.md",
+          "blob_sha": "517352801ca6e0840141fbd36a79eb401a4d9c99"
+        },
+        {
+          "path": "novydres/cenario/historia-global/registro.json",
+          "blob_sha": "608c4a71417a320c5c25987c359e808188de8cec"
+        }
+      ]
+    },
+    {
+      "id": "world-lineage-urban-gangrel",
+      "kind": "lineage",
+      "owner": "novydres/cenario/linhagens",
+      "path": "novydres/cenario/linhagens/gangrel-urbano",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/linhagens/gangrel-urbano/assunto.json",
+          "blob_sha": "a29405ed40401b14f237fbd3982d0ad79e422977"
+        },
+        {
+          "path": "novydres/cenario/linhagens/gangrel-urbano/fonte-001.source.md",
+          "blob_sha": "4129858b8cc1d360189df7bf34c2be8adaac769b"
+        },
+        {
+          "path": "novydres/cenario/linhagens/gangrel-urbano/index.md",
+          "blob_sha": "acd4643fc6b2b553b21f6c8c73bd2d876578cb98"
+        },
+        {
+          "path": "novydres/cenario/linhagens/gangrel-urbano/registro.json",
+          "blob_sha": "9414c4851fd4de7322e6dec5639eba87287d1608"
+        }
+      ]
+    },
+    {
+      "id": "world-npc-power-scale",
+      "kind": "organization",
+      "owner": "novydres/cenario/organizacoes",
+      "path": "novydres/cenario/organizacoes/escala-de-poder",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/assunto.json",
+          "blob_sha": "b04db30fadf54d3a8c9abafa13a943c88e2c8fa1"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/fonte-001.source.md",
+          "blob_sha": "ab5ef918b2bbc99b9bcf2a6777f086928ae9ca9d"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/fonte-002.source.md",
+          "blob_sha": "d585fa9dba58767428bf9ef3eb76b49aa760c5dc"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/fonte-003.source.md",
+          "blob_sha": "4cff5f769dcc3d7d730eb0d499b5e70e9191ec2f"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/fonte-004.source.md",
+          "blob_sha": "cbe3389560d1aa2cf806ba2b1779c0049cc80b30"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/index.md",
+          "blob_sha": "fbbee523d2bb5a6b3e4b9ee76508abcd666ff54b"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/escala-de-poder/registro.json",
+          "blob_sha": "cbcc5a65a7aea145f760042dfc728dd45a12ebe4"
+        }
+      ]
+    },
+    {
+      "id": "world-politics-novydres",
+      "kind": "organization",
+      "owner": "novydres/cenario",
+      "path": "novydres/cenario/politica-global",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/politica-global/assunto.json",
+          "blob_sha": "56b37c304ecb88657e27ee271a58bcb92a71cdd9"
+        },
+        {
+          "path": "novydres/cenario/politica-global/fonte-001.source.md",
+          "blob_sha": "e1f0ce6d6e47804760933f283985a2ce96f463eb"
+        },
+        {
+          "path": "novydres/cenario/politica-global/fonte-002.source.md",
+          "blob_sha": "d476f5d3ed8ca7fea0888381fecc4618b1dcc03c"
+        },
+        {
+          "path": "novydres/cenario/politica-global/fonte-003.source.md",
+          "blob_sha": "6eade634d0d85442b4f5149e8391e1738a740bfb"
+        },
+        {
+          "path": "novydres/cenario/politica-global/index.md",
+          "blob_sha": "cb3647469c78082c1c2f0ff7da69a680ff30fb80"
+        },
+        {
+          "path": "novydres/cenario/politica-global/registro.json",
+          "blob_sha": "960253f026ca9a9a71319576f6a451ee62678456"
+        }
+      ]
     }
   ],
   "inverse_dependencies": {
@@ -179,6 +642,8 @@
       "chr001-table-config"
     ],
     "chr001-table-config": [],
+    "npc-iskander-yasupov": [],
+    "npc-madame-zoya": [],
     "npc-samir-haddad": [
       "chr001-npc-samir-haddad",
       "plot-contato-condicional-samir"
@@ -187,10 +652,17 @@
       "npc-samir-haddad",
       "story-m301-c01"
     ],
+    "rule-creation-novydres": [],
+    "rule-experience-novydres": [],
     "story-m301-c01": [
       "chr001-state-checkpoint",
       "plot-contato-condicional-samir"
-    ]
+    ],
+    "world-atlas-novydres": [],
+    "world-history-novydres": [],
+    "world-lineage-urban-gangrel": [],
+    "world-npc-power-scale": [],
+    "world-politics-novydres": []
   },
   "deferred": [
     {

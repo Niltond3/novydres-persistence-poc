@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-creation-novydres",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/local-profiles/GANGREL_URBANO_NOVYDRES_V1.json",
+      "sha": "7b0e3419721fd2ceb6914031fdc947c984a7f857",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/novydres_character_creation_core_v5_baseline_v0_1.source.md",
+      "sha": "a657cb3f381fc090443270124189bc0231b3d5a0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/novydres_character_creation_k_final_integration_v0_1.source.md",
+      "sha": "d78cf689801f4f91c5ba6ec71f1a9f0a3d91f8e7",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_architecture_decision_inventory_v0_1_3.md",
+      "sha": "cc63250ddb029fa4840cc241cd443a0810e5dc8a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_decisions_v0_1.md",
+      "sha": "4aa45b3e804278b9f9e6471fcd6b05e93b3dea86",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_d1_played_history_core_v0_1.md",
+      "sha": "69b7dbebfd476d27dbac146b2f1da7bf0b5ddb59",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_decisions_v0_1.md",
+      "sha": "774698ddd36c86b53fc6217f2beadd3f59cc7c01",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_d2_played_history_finalization_integration_v0_1.md",
+      "sha": "5c972b08c70187e883bc6da7d4ad964cb165612f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_e_memory_relationships_temporal_persistence_decisions_v0_1_1.md",
+      "sha": "37f32b3277e63df0204b5a9ce9450863081c8cf3",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_e_memory_relationships_temporal_persistence_v0_1_1.md",
+      "sha": "743d001dd1382319aaa872a5ea8aafcefd3503fc",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_decisions_v0_1.md",
+      "sha": "ed4785c583561470f117193d5d1879ae6a8b96d8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_integration_v0_1.md",
+      "sha": "1b374b5001afd9922ceec464d407648dd69075c9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_g_quick_creation_mode_decisions_v0_1_1.md",
+      "sha": "918cfa1ecaf7d7675ca34a32a5fea50c6336387f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_g_quick_creation_mode_v0_1_1.md",
+      "sha": "a8b0fbd3c1c27d09224bd7535f856369f05ddc1e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_decisions_v0_1_1.md",
+      "sha": "c72fbe83c0cd834b72e8b9e37a7b75e77bbba1f6",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_decisions_v0_1.md",
+      "sha": "0d6659207097db0e7d9c59fa0aa73b09cb851010",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_v0_1.md",
+      "sha": "0ce4fc086be25a0d07d3dde048aa647361b62869",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_j1_coterie_canonical_baseline_research_v0_1.md",
+      "sha": "4c4ac12bac558fb4bfb9497b17c27f290ee8a334",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_j2_coterie_creation_architecture_decisions_v0_1.md",
+      "sha": "9a0271ca9ceed5f3b2a0a9cc66c4f249ed456540",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_j2_coterie_creation_architecture_v0_1.md",
+      "sha": "8380ab1382483c1ac81e7ebdbea2320c303d9e6e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_k_final_integration_decisions_v0_1.md",
+      "sha": "fad50d9f24e59d39437e849ca3d9f0a28f96ed4c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_l_guided_content_handoff_v0_1(1).md",
+      "sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_novydres_architecture_audit_v0_1_4.md",
+      "sha": "71c0183609a385baaa3a49b885461ec33caf6a44",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_power_envelope_v0_1_1.md",
+      "sha": "8984af4a37e1c409c90ea67ba457e1493b3bafb5",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_social_territorial_political_integration_v0_1_1.md",
+      "sha": "39d4731276fb0f7502f80097b720e8dea3055ecc",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_a_decisions_v0_1.md",
+      "sha": "3ecfd00bb16f8a7d4350e25072ce5fa3654e6bb9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_a_v5_baseline_research_v0_1.md",
+      "sha": "59b8663aadd6ed50371da6e15095a5978f31edaf",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_b_decisions_v0_1_1.md",
+      "sha": "f70270331487dc8009555f0d29a8b21a0534745c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_c_decisions_v0_1_1.md",
+      "sha": "19b1e5a5b572edf52046e2bd98aa7aa65e2cbd69",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_0.source.txt",
+      "sha": "aab0baf795a8b80c9a0aec5c8c82dd6a1e611cc6",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/README.md",
+      "sha": "fd402fe0236b473b24562332f022e4a910712bcb",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/RELEASE_NOTES.md",
+      "sha": "b9db2b4c2a4bff24021c410405ecfa133eaf8c16",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/SHA256SUMS.txt",
+      "sha": "23782f44c7a2bc0096f0c3668789b6a92e3ab23f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/bridge_cli.py",
+      "sha": "defa299911fd0548fd350609a0dde879453a156d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/tests_test_webfirst.py",
+      "sha": "e107f64ee46a2f8479ae682de93f8d8e8d732cc0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/webfirst-legacy/webfirst_core.py",
+      "sha": "8f0c2515496c6ccf8251782a8a90c376c5513215",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": []
+}

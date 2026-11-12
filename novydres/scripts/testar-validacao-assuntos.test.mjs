@@ -14,7 +14,7 @@ const has=(r,code)=>r.errors.some(x=>x.code===code);
 test('V01–V04: historical C41 subjects plus isolated table config, intact sources and deferred external target',()=>{
  const r=validateCandidates();
  assert.equal(r.ok,true,JSON.stringify(r.errors));
- assert.equal(r.subjects,6); // Five historical C41 subjects + separate C05 local config
+ assert.equal(r.subjects,15); // Six historical subjects plus nine D03 source portfolios
  assert.ok(r.checked>=10);
  assert.ok(r.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
 });
