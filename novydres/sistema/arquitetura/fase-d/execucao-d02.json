@@ -3,9 +3,9 @@
   "classification": "SYSTEM_AUDIT_DO_NOT_EXPOSE_SOURCE_CONTENT",
   "phase": "D02",
   "date": "2026-11-12",
-  "status": "BLOCKED_NOT_PASS",
-  "gate": "D02_RECOVERY_REQUIRED_EXTERNAL_MEDIA_RAW_BYTES",
-  "gate_basis": "ADR-001 plano-integral tarefas D02 conclusion unchanged; custody test PASS is not editorial/transfer gate PASS",
+  "status": "D02_SCOPED_PASS_SUBJECT_TO_CURRENT_CI",
+  "gate": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA",
+  "gate_basis": "ADR001_D02_CONCLUSION_ALL_ORIGINS_PRESERVED_AND_FIVE_EXTERNAL_MEDIA_LEGITIMATELY_OPTIONAL_ON_PRESENT_DEPENDENCY_EVIDENCE; NO_EDITORIAL_PROMOTION",
   "continuity": "DEC25_RECOVERABLE_CHECKPOINT_DEC26_EXTERNAL_SOURCE_BYTES_UNAVAILABLE",
   "entry": {
     "branch": "design/subject-oriented-migration",
@@ -22,15 +22,16 @@
   "evidence": {
     "governance_registry": {
       "path": "novydres/sistema/governanca/registro.json",
-      "blob_sha": "4399163777e51ad9e1f3fae747171535dde372a1",
+      "blob_sha": "659ffcd097fe324569f5ffe780635fd26a428e18",
       "preserved_originals": 27,
       "identical_git_sha": 27,
       "operational_approval": false,
-      "frozen_changed": 0
+      "frozen_changed": 0,
+      "status": "CANDIDATE_NOT_OPERATIONAL_D02_CUSTODY_PASS"
     },
     "source_registry": {
       "path": "novydres/fontes/registro.json",
-      "blob_sha": "4b94c392623392ab921fafb37f836ea02f8a4341",
+      "blob_sha": "ba7fec87b3eef9af9f35f83a8c8094bb23f40478",
       "d02_source_originals": 128,
       "rehomed_identical_blobs": 128,
       "external_controlled_items": 193,
@@ -39,7 +40,8 @@
       "non_drive_file_ids": 16,
       "google_drive_title_mismatches": 0,
       "google_drive_mime_history_differences": 16,
-      "source_revisions_verified_current": 0
+      "source_revisions_verified_current": 0,
+      "status": "CANDIDATE_D02_CUSTODY_PASS_NOT_OPERATIONAL"
     },
     "partition": {
       "d01_total_flagged": 463,
@@ -66,7 +68,16 @@
     "upload_file_uri": "NOT_OBTAINABLE_FROM_CURRENT_LIBRARY_BACKING",
     "rights_or_distribution_permissions": "NOT_AUDITED_OR_INFERRED",
     "binary_uploaded_to_github": 0,
-    "required_recovery": "Obtain authorized raw-byte file references for five exact Library originals, retain source, upload verified originals to protected Google Drive storage under existing media policy; read back MIME, byte count and SHA-256 without inventing source-destination equivalence."
+    "required_recovery": "NOT_REQUIRED_TO_CLOSE_D02_FOR_FIVE_SPECIFIC_OPTIONAL_ITEMS; REOPEN_IF_CONCRETE_OPERATIONAL_OR_AUTHORITATIVE_DEPENDENCY_IS_DISCOVERED",
+    "d02_transfer_mandatory_now": 0,
+    "d02_optional_missing": 5,
+    "d02_classifications": {
+      "unavailable_optional": 5,
+      "drive_destination_integrity_proven_source_match": 1,
+      "drive_destination_integrity_proven_source_equivalence_unknown": 13,
+      "mandatory_missing_found": 0
+    },
+    "no_claim_of_unique_content_inspection": true
   },
   "conflicts": [
     {
@@ -120,7 +131,8 @@
         "correction": "LIBRARY_RECOVERY_REGISTRY_TRANSITION"
       }
     ],
-    "test_scope": "STRUCTURAL_SOURCE_PROVENANCE_AND_NEGATIVE_REGRESSIONS_NOT_INDEPENDENT_EDITORIAL_CERTIFICATION"
+    "test_scope": "STRUCTURAL_SOURCE_PROVENANCE_AND_NEGATIVE_REGRESSIONS_NOT_INDEPENDENT_EDITORIAL_CERTIFICATION",
+    "current_gate_validation": "PENDING_NEW_PUSH_ACTIONS_AND_REMOTE_READBACK"
   },
   "safety": {
     "master_written": false,
@@ -132,12 +144,76 @@
     "d03_executed": false
   },
   "unreleased_dependencies": {
-    "D03": "NOT_STARTED; canon/variant editorial only when duly authorized",
+    "D03": "ELIGIBLE_AFTER_D02_CI_PASS_ONLY; CURRENTLY_NOT_STARTED; SPECIFIC_EDITORIAL_DECISIONS_REMAIN_D03_REQUIREMENTS",
     "D04": "NOT_STARTED",
     "D05": "NOT_STARTED",
     "D06": "NOT_STARTED",
     "D07": "NOT_STARTED"
   },
-  "next_safe_step": "Once reliable raw source bytes/fixed file_uri is available, resume D02 only; upload/verify five media or document an authorized policy-specific nonblocking disposition. Re-run CI and independent source/rights review. Do not declare PASS merely because D02 custody verifier passes.",
-  "no_silent_resolution": true
+  "next_safe_step": "Run current C/D candidate workflow; require success and remote readback; then finalize D02 scoped gate. Do not initiate D03 without separate mandate.",
+  "no_silent_resolution": true,
+  "previous_blocking_gate_preserved": {
+    "gate": "D02_RECOVERY_REQUIRED_EXTERNAL_MEDIA_RAW_BYTES",
+    "status": "BLOCKED_NOT_PASS",
+    "source_registry_sha": "4b94c392623392ab921fafb37f836ea02f8a4341",
+    "governance_registry_sha": "4399163777e51ad9e1f3fae747171535dde372a1"
+  },
+  "d02_decision": {
+    "date": "2026-11-12",
+    "authority": "EXPLICIT_PLAYER_EXCEPTION_D02_ONLY",
+    "five_media": [
+      {
+        "historical_id": "libfile_d41c6a5625f08191990794a0bdbcc093",
+        "name": "Farol Vintage em Gravura Borgonha.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "CANDIDATE_REPORTED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_8b331e2369b48191b12004d701f66fdc",
+        "name": "Gramática Visual Canônica de Novydres(1).png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_ba5a8ade17608191b85a5036b9e16a21",
+        "name": "Guia Visual Cartográfico de Novydres.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_1371b5c233108191a687b01a2e38a352",
+        "name": "Legenda Cartográfica Visual de Novydres.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_1e588c3c9b4881919bb99d52b60f410e",
+        "name": "novydres-tiles.zip",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      }
+    ],
+    "controlled_consumer_scan": "IN_CI_VERIFY_D02_GIT_ON_EXECUTABLE_AND_ENTRY_PATHS",
+    "external_dependencies_in_registry": 0,
+    "unique_source_information": "NOT_EXAMINED; AUTHORITY_UNPROVEN; MUST_NOT_INFER_EQUIVALENCE",
+    "textual_source_and_governance": "27_GOV_BLOBS_AND_128_SOURCE_BLOBS_PRESERVED_EXACT",
+    "conflicts": "EDITORIAL_DECISIONS_DEFERRED_NO_FALSE_RESOLUTION",
+    "rights": "UNVERIFIED",
+    "condition": "D03_D07_OR_E_MUST_BLOCK_IF_REQUIRED_SOURCE_DEPENDENCY_LATER_PROVEN"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D02_GOVERNANCE_CUSTODY_V1",
   "classification": "SYSTEM_AUDIT",
-  "status": "CANDIDATE_NOT_OPERATIONAL_D02_OPEN",
+  "status": "CANDIDATE_NOT_OPERATIONAL_D02_CUSTODY_PASS",
   "authority_rule": "Read source status/owner and current master at pinned SHA. An archived or rehomed copy creates no policy authority. No policy succession becomes operative before explicit E authorization.",
   "source_snapshot": {
     "branch": "master",
@@ -434,5 +434,13 @@
   ],
   "successor_policy": "NO_INFERRED_SUC​CESSOR_FROM_VERSION_NUMBER",
   "frozen_sources_modified": false,
-  "residual_conflict_handling": "D02_PRESERVES_CANDIDATES_NO_EDITS; D03 MUST BLOCK CANONICAL_PROMOTION_UNTIL_DECISION. D02 SOURCE_CUSTODY_DOES_NOT_DECIDE_EDITORIAL_VARIANTS."
+  "residual_conflict_handling": "D02_PRESERVES_CANDIDATES_NO_EDITS; D03 MUST BLOCK CANONICAL_PROMOTION_UNTIL_DECISION. D02 SOURCE_CUSTODY_DOES_NOT_DECIDE_EDITORIAL_VARIANTS.",
+  "d02_completion_note": {
+    "date": "2026-11-12",
+    "scope": "EXACT_BLOB_CUSTODY_AND_AUTHORITY_HANDOFF_ONLY",
+    "frozen_changed": false,
+    "conflicts": "CONFLICT-001_AND_CONFLICT-003B_EDITORIAL_SELECTION_EXPLICITLY_DEFERRED_TO_D03",
+    "policy": "HISTORICAL_APPROVALS_PRESERVED_NO_OPERATIONAL_SUCCESSOR_ACTIVATED",
+    "no_silent_resolution": true
+  }
 }

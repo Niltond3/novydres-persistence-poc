@@ -2,7 +2,7 @@
   "schema": "ADR001_D02_SOURCE_AND_MEDIA_CUSTODY_V1",
   "classification": "SYSTEM_AUDIT",
   "policy": "DRIVE_BINARY_GITHUB_LINK_ONLY",
-  "status": "CANDIDATE_D02_PARTIAL_NOT_OPERATIONAL",
+  "status": "CANDIDATE_D02_CUSTODY_PASS_NOT_OPERATIONAL",
   "original_snapshot_sha": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
   "candidate_entry_sha": "321c9bfb3529054c356958123145c0fc208722a6",
   "source_inventory_ref": {
@@ -5356,7 +5356,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "7cedf4155ce6eb524071cfac1be5085f0857aa0d2f8a9001b9c0807d9fbb4188"
+      "drive_sha256": "7cedf4155ce6eb524071cfac1be5085f0857aa0d2f8a9001b9c0807d9fbb4188",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_a0b7c64e87188191b562b49c86f6fc61",
@@ -5389,7 +5390,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "21a733d5f44e7253f9ee78a0290296508cdeedd9d0009559371e564cf9a76f29"
+      "drive_sha256": "21a733d5f44e7253f9ee78a0290296508cdeedd9d0009559371e564cf9a76f29",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_251e6a0ba72c8191a90f547e352bac34",
@@ -5422,7 +5424,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "654decfe2815da198eb5f874e30346f057802a3ec5d679ef3c08a4138e85f358"
+      "drive_sha256": "654decfe2815da198eb5f874e30346f057802a3ec5d679ef3c08a4138e85f358",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_b99156a8718081919b24b9b2c944939c",
@@ -5455,7 +5458,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "c4e5408dc112bcc3908966bba13a7247748c89315672de591c19bb02b5104b3d"
+      "drive_sha256": "c4e5408dc112bcc3908966bba13a7247748c89315672de591c19bb02b5104b3d",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_8a0d44a956a88191a200a7f83818288c",
@@ -5488,7 +5492,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "8dffa5453892608c61caf0cae2b4095b756229484d12d04e5ed88671f9b7c139"
+      "drive_sha256": "8dffa5453892608c61caf0cae2b4095b756229484d12d04e5ed88671f9b7c139",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_d41c6a5625f08191990794a0bdbcc093",
@@ -5516,6 +5521,25 @@
         "source_integrity_verified": false,
         "drive_search_exact_name_found": false,
         "destination_original_uploaded_d02": false
+      },
+      "d02_gate_classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+      "d02_transfer_required_for_gate": false,
+      "d02_dependency_evaluation": {
+        "reported_status_preserved": "CANDIDATE_REPORTED",
+        "verified_operational_consumer": "NONE_IDENTIFIED_IN_GITHUB_CONTROLLED_CODE_AND_CANDIDATE_ENTRIES",
+        "operational_consumers_found": 0,
+        "external_registry_dependencies": 0,
+        "recovery_or_state_required": "NOT_DEMONSTRATED",
+        "authoritative_unique_content_proven": false,
+        "editorial_authority_verified": false,
+        "binding_contract_found": false,
+        "integrity_status": "SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED",
+        "materialization_status": "RAW_BYTES_UNAVAILABLE_NO_SUBSTITUTE",
+        "consumer_scan": "CHECKED_BY_VERIFY_D02_GIT_EXCLUDING_PROVENANCE_AND_SELF_TESTS",
+        "source_custody": "LIBRARY_ID_AND_HISTORICAL_REPORT_PRESERVED",
+        "downstream_requirement": "REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS",
+        "post_d02_owner": "D03_D05_SUBJECT_OWNERS_AND_D07_EQUIVALENCE_AUDITOR",
+        "limitation": "NO_RAW_BYTES_INSPECTION_NO_PROOF_OF_CONTENT_EQUIVALENCE_NO_ABSOLUTE_NO_DEPENDENCY_CLAIM"
       }
     },
     {
@@ -5544,6 +5568,25 @@
         "source_integrity_verified": false,
         "drive_search_exact_name_found": false,
         "destination_original_uploaded_d02": false
+      },
+      "d02_gate_classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+      "d02_transfer_required_for_gate": false,
+      "d02_dependency_evaluation": {
+        "reported_status_preserved": "AUTHORITY_UNVERIFIED",
+        "verified_operational_consumer": "NONE_IDENTIFIED_IN_GITHUB_CONTROLLED_CODE_AND_CANDIDATE_ENTRIES",
+        "operational_consumers_found": 0,
+        "external_registry_dependencies": 0,
+        "recovery_or_state_required": "NOT_DEMONSTRATED",
+        "authoritative_unique_content_proven": false,
+        "editorial_authority_verified": false,
+        "binding_contract_found": false,
+        "integrity_status": "SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED",
+        "materialization_status": "RAW_BYTES_UNAVAILABLE_NO_SUBSTITUTE",
+        "consumer_scan": "CHECKED_BY_VERIFY_D02_GIT_EXCLUDING_PROVENANCE_AND_SELF_TESTS",
+        "source_custody": "LIBRARY_ID_AND_HISTORICAL_REPORT_PRESERVED",
+        "downstream_requirement": "REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS",
+        "post_d02_owner": "D03_D05_SUBJECT_OWNERS_AND_D07_EQUIVALENCE_AUDITOR",
+        "limitation": "NO_RAW_BYTES_INSPECTION_NO_PROOF_OF_CONTENT_EQUIVALENCE_NO_ABSOLUTE_NO_DEPENDENCY_CLAIM"
       }
     },
     {
@@ -5577,7 +5620,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "8028ecbfb24cc2aa8fe69bbc738a804cd14f7a3b1b5ee8e23da9183d0569818d"
+      "drive_sha256": "8028ecbfb24cc2aa8fe69bbc738a804cd14f7a3b1b5ee8e23da9183d0569818d",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_1bbab104bc6c81919cc328b9dbdc50a4",
@@ -5610,7 +5654,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "b4b765392a554bc2af96dbc3014a7714e59a88c96a6da7d77c34b47f02d3bdd8"
+      "drive_sha256": "b4b765392a554bc2af96dbc3014a7714e59a88c96a6da7d77c34b47f02d3bdd8",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_ba5a8ade17608191b85a5036b9e16a21",
@@ -5638,6 +5683,25 @@
         "source_integrity_verified": false,
         "drive_search_exact_name_found": false,
         "destination_original_uploaded_d02": false
+      },
+      "d02_gate_classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+      "d02_transfer_required_for_gate": false,
+      "d02_dependency_evaluation": {
+        "reported_status_preserved": "AUTHORITY_UNVERIFIED",
+        "verified_operational_consumer": "NONE_IDENTIFIED_IN_GITHUB_CONTROLLED_CODE_AND_CANDIDATE_ENTRIES",
+        "operational_consumers_found": 0,
+        "external_registry_dependencies": 0,
+        "recovery_or_state_required": "NOT_DEMONSTRATED",
+        "authoritative_unique_content_proven": false,
+        "editorial_authority_verified": false,
+        "binding_contract_found": false,
+        "integrity_status": "SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED",
+        "materialization_status": "RAW_BYTES_UNAVAILABLE_NO_SUBSTITUTE",
+        "consumer_scan": "CHECKED_BY_VERIFY_D02_GIT_EXCLUDING_PROVENANCE_AND_SELF_TESTS",
+        "source_custody": "LIBRARY_ID_AND_HISTORICAL_REPORT_PRESERVED",
+        "downstream_requirement": "REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS",
+        "post_d02_owner": "D03_D05_SUBJECT_OWNERS_AND_D07_EQUIVALENCE_AUDITOR",
+        "limitation": "NO_RAW_BYTES_INSPECTION_NO_PROOF_OF_CONTENT_EQUIVALENCE_NO_ABSOLUTE_NO_DEPENDENCY_CLAIM"
       }
     },
     {
@@ -5666,6 +5730,25 @@
         "source_integrity_verified": false,
         "drive_search_exact_name_found": false,
         "destination_original_uploaded_d02": false
+      },
+      "d02_gate_classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+      "d02_transfer_required_for_gate": false,
+      "d02_dependency_evaluation": {
+        "reported_status_preserved": "AUTHORITY_UNVERIFIED",
+        "verified_operational_consumer": "NONE_IDENTIFIED_IN_GITHUB_CONTROLLED_CODE_AND_CANDIDATE_ENTRIES",
+        "operational_consumers_found": 0,
+        "external_registry_dependencies": 0,
+        "recovery_or_state_required": "NOT_DEMONSTRATED",
+        "authoritative_unique_content_proven": false,
+        "editorial_authority_verified": false,
+        "binding_contract_found": false,
+        "integrity_status": "SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED",
+        "materialization_status": "RAW_BYTES_UNAVAILABLE_NO_SUBSTITUTE",
+        "consumer_scan": "CHECKED_BY_VERIFY_D02_GIT_EXCLUDING_PROVENANCE_AND_SELF_TESTS",
+        "source_custody": "LIBRARY_ID_AND_HISTORICAL_REPORT_PRESERVED",
+        "downstream_requirement": "REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS",
+        "post_d02_owner": "D03_D05_SUBJECT_OWNERS_AND_D07_EQUIVALENCE_AUDITOR",
+        "limitation": "NO_RAW_BYTES_INSPECTION_NO_PROOF_OF_CONTENT_EQUIVALENCE_NO_ABSOLUTE_NO_DEPENDENCY_CLAIM"
       }
     },
     {
@@ -5699,7 +5782,8 @@
         "source_destination_sha256_equal_when_source_recorded": true,
         "source_equivalence_note": "HISTORICAL_VERIFIED_SOURCE_DIGEST_MATCH"
       },
-      "drive_sha256": "b0a78213ce7d57ea9249f9525f1ff07a058b49861dc2b2771fe660970874179a"
+      "drive_sha256": "b0a78213ce7d57ea9249f9525f1ff07a058b49861dc2b2771fe660970874179a",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_AND_HISTORICAL_SOURCE_DIGEST_MATCH"
     },
     {
       "library_id": "libfile_cffacbd4ed588191a352bd210ef166cc",
@@ -5732,7 +5816,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "9164819568b1203b79ff663c9d42c71e122f8eb992c89bfa4960fb4ed5846e47"
+      "drive_sha256": "9164819568b1203b79ff663c9d42c71e122f8eb992c89bfa4960fb4ed5846e47",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_1e588c3c9b4881919bb99d52b60f410e",
@@ -5760,6 +5845,25 @@
         "source_integrity_verified": false,
         "drive_search_exact_name_found": false,
         "destination_original_uploaded_d02": false
+      },
+      "d02_gate_classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+      "d02_transfer_required_for_gate": false,
+      "d02_dependency_evaluation": {
+        "reported_status_preserved": "AUTHORITY_UNVERIFIED",
+        "verified_operational_consumer": "NONE_IDENTIFIED_IN_GITHUB_CONTROLLED_CODE_AND_CANDIDATE_ENTRIES",
+        "operational_consumers_found": 0,
+        "external_registry_dependencies": 0,
+        "recovery_or_state_required": "NOT_DEMONSTRATED",
+        "authoritative_unique_content_proven": false,
+        "editorial_authority_verified": false,
+        "binding_contract_found": false,
+        "integrity_status": "SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED",
+        "materialization_status": "RAW_BYTES_UNAVAILABLE_NO_SUBSTITUTE",
+        "consumer_scan": "CHECKED_BY_VERIFY_D02_GIT_EXCLUDING_PROVENANCE_AND_SELF_TESTS",
+        "source_custody": "LIBRARY_ID_AND_HISTORICAL_REPORT_PRESERVED",
+        "downstream_requirement": "REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS",
+        "post_d02_owner": "D03_D05_SUBJECT_OWNERS_AND_D07_EQUIVALENCE_AUDITOR",
+        "limitation": "NO_RAW_BYTES_INSPECTION_NO_PROOF_OF_CONTENT_EQUIVALENCE_NO_ABSOLUTE_NO_DEPENDENCY_CLAIM"
       }
     },
     {
@@ -5793,7 +5897,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "007d9e3bbf52e3c9b92701f88da057120da60022a62178bab98e42bc96fbb15e"
+      "drive_sha256": "007d9e3bbf52e3c9b92701f88da057120da60022a62178bab98e42bc96fbb15e",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_a196298024e08191b01bc9dff0d14de1",
@@ -5826,7 +5931,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "14eebcd14bd185bb868c4a7f3b469f3b5a1b77e95b32846a751de9cdb07906ef"
+      "drive_sha256": "14eebcd14bd185bb868c4a7f3b469f3b5a1b77e95b32846a751de9cdb07906ef",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_c40c8861389c8191936e73d5db4b86d7",
@@ -5859,7 +5965,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "883a607594df74f1193b2cc9ff4688437cbfdbb79780863bf40aed8c5b5cdd57"
+      "drive_sha256": "883a607594df74f1193b2cc9ff4688437cbfdbb79780863bf40aed8c5b5cdd57",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_96a1ccdc6fbc8191a31468cf95fc6e6b",
@@ -5892,7 +5999,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "2fa12d2e04fad7828dc9ce946780bd196af8914502660d4764a4ef92c2e38287"
+      "drive_sha256": "2fa12d2e04fad7828dc9ce946780bd196af8914502660d4764a4ef92c2e38287",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     },
     {
       "library_id": "libfile_519c66396f288191b79365d7fccdc824",
@@ -5925,7 +6033,8 @@
         "source_destination_sha256_equal_when_source_recorded": false,
         "source_equivalence_note": "SOURCE_RAW_BYTES_NOT_DIRECTLY_AVAILABLE_NO_EQUIVALENCE_ASSERTED"
       },
-      "drive_sha256": "1d286d4fdc073fe06b1df6bf0ca38ad6d266cf1d2194a870a728960455d01c01"
+      "drive_sha256": "1d286d4fdc073fe06b1df6bf0ca38ad6d266cf1d2194a870a728960455d01c01",
+      "d02_gate_classification": "EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN"
     }
   ],
   "origin_custody": [
@@ -8798,7 +8907,7 @@
     "originals_missing_on_drive": 5,
     "source_destination_exact_copy_proven_for_all": false
   },
-  "gate": "D02_NOT_EVALUATED_AS_PASS",
+  "gate": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA",
   "external_metadata_audit": {
     "date": "2026-11-12",
     "total": 193,
@@ -8834,7 +8943,7 @@
     "drive_new_uploads": 0,
     "authorized_transfer_channel": "NOT_AVAILABLE_FROM_LIBRARY_RAW_FILE_BACKING",
     "priority": "MUST_NOT_TREAT_AS_ORIGINAL_RECOVERED_IN_DRIVE",
-    "gate_impact": "D02_EXTERNAL_MEDIA_COMPLETION_NOT_PROVEN"
+    "gate_impact": "FIVE_MISSING_RAW_BYTES_DECLARED_OPTIONAL_D02_ONLY_WITH_NO_DEPENDENCY_DEMONSTRATED"
   },
   "media_crypto_audit": {
     "date": "2026-11-12",
@@ -8865,5 +8974,25 @@
       "D03_D05": 7
     },
     "residual": "DOMAIN_SEMANTIC_FIELDS_NOT_MIGRATED_OR_AUTHORIZED_UNDER_D02"
+  },
+  "d02_optional_media_decision": {
+    "date": "2026-11-12",
+    "authority": "EXPLICIT_PLAYER_D02_SCOPED_WAIVER_NOT_CANON_OR_CUTOVER_APPROVAL",
+    "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+    "ids": [
+      "libfile_d41c6a5625f08191990794a0bdbcc093",
+      "libfile_8b331e2369b48191b12004d701f66fdc",
+      "libfile_ba5a8ade17608191b85a5036b9e16a21",
+      "libfile_1371b5c233108191a687b01a2e38a352",
+      "libfile_1e588c3c9b4881919bb99d52b60f410e"
+    ],
+    "result": "FIVE_NOT_TRANSFERRED_NO_OPERATIONAL_OR_AUTHORITATIVE_REQUIREMENT_DEMONSTRATED_IN_SCANNED_SCOPE",
+    "basis": "NO_EXPLICIT_CONTRACT_OR_CONSUMER_FOUND_IN_CONTROLLED_EXECUTABLE_PATHS_OR_EXTERNAL_SOURCE_DEPENDENCIES",
+    "preserved": "HISTORICAL_SOURCE_RECORDS_AND_FIVE_LIBRARY_IDS_AND_14_DRIVE_DESTINATION_HASHES",
+    "external_rights": "UNVERIFIED",
+    "source_integrity": "ZERO_OF_FIVE_SOURCE_DIGESTS_VERIFIED; ZERO_BYTES_COPIED",
+    "drive_copies": "14_DESTINATIONS_HASHED_1_HISTORICAL_SOURCE_DIGEST_MATCH_13_EQUIVALENCE_UNPROVEN",
+    "mandatory_reassessment": "ANY_NEW_PROVEN_DEPENDENCY_OR_AUTHORITATIVE_UNIQUE_SOURCE_REOPENS_SPECIFIC_MEDIA_BLOCKER",
+    "not_allowed": "NEVER_INFER_CANONICAL_STATUS_OR_FAKE_ORIGINAL_OR_CHANGE_FROZEN_MATERIAL"
   }
 }

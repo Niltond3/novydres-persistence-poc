@@ -8,8 +8,8 @@ const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 export function verifyD02Model({inventory,governance,sources,external,visual}) {
  need(inventory.d01_scope_gate?.decision==='D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY','D02_INPUT_D01_GATE');
  need(governance.classification==='SYSTEM_AUDIT'&&sources.classification==='SYSTEM_AUDIT','D02_DISCLOSURE');
- need(governance.status==='CANDIDATE_NOT_OPERATIONAL_D02_OPEN'&&
-  sources.status==='CANDIDATE_D02_PARTIAL_NOT_OPERATIONAL'&&sources.gate==='D02_NOT_EVALUATED_AS_PASS','D02_FALSE_GATE');
+ need(governance.status==='CANDIDATE_NOT_OPERATIONAL_D02_CUSTODY_PASS'&&
+  sources.status==='CANDIDATE_D02_CUSTODY_PASS_NOT_OPERATIONAL'&&sources.gate==='D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA','D02_FALSE_GATE');
  need(governance.frozen_sources_modified===false&&
   governance.source_snapshot.sha===inventory.source_snapshot.commit_sha&&
   sources.original_snapshot_sha===inventory.source_snapshot.commit_sha,'D02_AUTHORITY_DRIFT');
@@ -99,6 +99,11 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
  }
  need(drive===109&&library===68&&file===16&&mimeDiff===16,'D02_METADATA_CLASSIFICATION');
  const mediaBy=by(sources.entries,'library_id');
+ const waiver=sources.d02_optional_media_decision;
+ need(waiver?.classification==='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02'&&
+  waiver.ids.length===5&&new Set(waiver.ids).size===5&&
+  waiver.authority==='EXPLICIT_PLAYER_D02_SCOPED_WAIVER_NOT_CANON_OR_CUTOVER_APPROVAL',
+ 'D02_MEDIA_WAIVER_AUTHORITY');
  need(visual.entries.length===19&&mediaBy.size===19,'D02_MEDIA_DENOMINATOR');
  let linked=0,pending=0;
  for(const e of visual.entries){
@@ -107,6 +112,10 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
     m.drive_file_id===e.drive_file_id&&m.drive_url===e.drive_url&&
     m.raw_original_migrated===e.raw_original_migrated,'D02_MEDIA_PROVENANCE');
   if(e.raw_original_migrated){
+   need(m.d02_gate_classification===(m.name==='MasterMap.png'?
+    'EXISTING_DRIVE_MEDIA_DESTINATION_HASH_AND_HISTORICAL_SOURCE_DIGEST_MATCH':
+    'EXISTING_DRIVE_MEDIA_DESTINATION_HASH_SOURCE_EQUIVALENCE_UNPROVEN'),
+    'D02_PRESENT_MEDIA_CLASSIFICATION');
    need(m.drive_sha256_verified===true&&/^[a-f0-9]{64}$/.test(m.drive_sha256||'')&&
     m.d02_observation.drive_sha256_computed===true&&
     m.d02_observation.drive_raw_original_bytes_read===true&&
@@ -114,6 +123,20 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
     m.d02_observation.drive_byte_length_matches_registry===true&&
     m.d02_observation.source_sha256_computed_d02===false,'D02_MEDIA_DIGEST_INVALID');
   }else{
+   const d=m.d02_dependency_evaluation;
+   const original=sources.external_sources.find(x=>x.id===e.library_id);
+   need(waiver.ids.includes(e.library_id)&&
+    m.d02_gate_classification==='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02'&&
+    m.d02_transfer_required_for_gate===false&&
+    original?.dependencies?.length===0&&original?.conflicts?.length===0&&
+    ['AUTHORITY_UNVERIFIED','CANDIDATE_REPORTED'].includes(m.reported_status)&&
+    d?.operational_consumers_found===0&&d.external_registry_dependencies===0&&
+    d.authoritative_unique_content_proven===false&&d.editorial_authority_verified===false&&
+    d.binding_contract_found===false&&
+    d.integrity_status==='SOURCE_BYTES_UNAVAILABLE_SHA256_NOT_VERIFIED'&&
+    d.downstream_requirement==='REASSESS_AT_D03_D07_OR_BEFORE_CUTOVER_IF_AN_ACTUAL_CONSUMER_OR_AUTHORITY_APPEARS'&&
+    d.limitation.startsWith('NO_RAW_BYTES_INSPECTION'),
+    'D02_OPTIONAL_MEDIA_DEPENDENCY_OR_INTEGRITY');
    need(m.drive_sha256_verified!==true&&m.d02_observation.drive_sha256_computed===false,'D02_PENDING_MEDIA_DIGEST');
   }
   if(e.raw_original_migrated) {
@@ -144,14 +167,15 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
  need(recovery&&recovery.pending_originals===5&&recovery.exact_library_metadata_found===5&&
   recovery.source_bytes_materialized===0&&recovery.source_bytes_sha256_computed===0&&
   recovery.google_drive_exact_name_search_matches===0&&recovery.drive_new_uploads===0&&
-  recovery.gate_impact==='D02_EXTERNAL_MEDIA_COMPLETION_NOT_PROVEN','D02_FALSE_MEDIA_RECOVERY');
+  recovery.gate_impact==='FIVE_MISSING_RAW_BYTES_DECLARED_OPTIONAL_D02_ONLY_WITH_NO_DEPENDENCY_DEMONSTRATED','D02_FALSE_MEDIA_RECOVERY');
   const known=new Set(governance.conflicts.map(x=>x.id));
  need(['CONFLICT-001','CONFLICT-002','CONFLICT-003B'].every(x=>known.has(x))&&
   governance.conflicts.find(x=>x.id==='CONFLICT-003B').status==='TEXT_DIFFERENCES_VERIFIED_EDITORIAL_VERDICT_OPEN',
  'D02_EDITORIAL_CONFLICT_SUPPRESSED');
- return {gate:'D02_PROVENANCE_CUSTODY_VALID_EDITORIAL_AND_EXTERNAL_OPEN',origins:128,governance:27,external:193,
+ return {gate:'D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA',origins:128,governance:27,external:193,
   media:19,linked,pending,split:originals.filter(x=>x.d01_origin_route.owner_routing==='FIELD_SCOPE_SPLIT_REQUIRED').length};
 }
+import {spawnSync} from 'node:child_process';
 const cmd=(...a)=>execFileSync('git',a,{encoding:'utf8',maxBuffer:64*1024*1024}).trim();
 export function verifyD02Git(root=process.cwd()) {
  const read=p=>JSON.parse(readFileSync(p,'utf8'));
@@ -174,7 +198,20 @@ export function verifyD02Git(root=process.cwd()) {
   'D02_SOURCE_BYTES_CHANGED');
  const editorial=JSON.parse(cmd('show',inventory.source_snapshot.commit_sha+':novydres/governance/sources/novydres_editorial_map_v0_9_4.json'));
  need(editorial.schema_version==='0.9.3','D02_CONFLICT_002_NOT_PRESERVED');
- return {...outcome,readback:'ALL_D02_ORIGIN_AND_27_GOVERNANCE_BLOBS_MATCH_HEAD',
+ const consumerPaths=cmd('ls-tree','-r','--name-only','HEAD','--',
+  '.github/workflows','novydres/scripts','novydres/runtime','novydres/systems',
+  'novydres/assets','novydres/AGENTS.md','novydres/CONTEXT.md',
+  'novydres/catalogo.json','novydres/cronicas','novydres/personagens').split('\\n')
+  .filter(p=>p&&p!=='novydres/scripts/verificar-custodia-d02.mjs'&&
+   p!=='novydres/scripts/testar-custodia-d02.test.mjs'&&!/\\.(png|jpg|zip|webp)$/.test(p));
+ const pending=sources.entries.filter(x=>x.d02_gate_classification==='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02');
+ need(pending.length===5,'D02_WAIVER_COUNT');
+ const needles=pending.flatMap(x=>[x.name,x.library_id]);
+ const scan=spawnSync('git',['grep','-n','-I','-F',...needles.flatMap(s=>['-e',s]),'HEAD','--',...consumerPaths],
+  {encoding:'utf8',maxBuffer:64*1024*1024});
+ need(scan.status===1,'D02_MEDIA_OPERATIONAL_CONSUMER_FOUND');
+ return {...outcome,consumer_scan:'NO_DIRECT_REFERENCE_IN_SCANNED_CONTROLLED_CONSUMER_PATHS',
+  readback:'ALL_D02_ORIGIN_AND_27_GOVERNANCE_BLOBS_MATCH_HEAD',
   external_bytes:'NOT_VERIFIED',cutover:false};
 }
 if(import.meta.url===new URL('file://'+process.argv[1]).href) {

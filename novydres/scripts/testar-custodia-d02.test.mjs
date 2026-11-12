@@ -13,7 +13,7 @@ const visual=show('novydres/migration/VISUAL_ASSET_REGISTRY_V2.json');
 const args=()=>structuredClone({inventory,governance,sources,external,visual});
 const fails=(fn,code)=>{let d=args();fn(d);assert.throws(()=>verifyD02Model(d),e=>e.code===code);};
 test('D02 full candidate HEAD preserves original governance blobs and references',()=>{
- let r=verifyD02Git();assert.equal(r.gate,'D02_PROVENANCE_CUSTODY_VALID_EDITORIAL_AND_EXTERNAL_OPEN');
+ let r=verifyD02Git();assert.equal(r.gate,'D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA');
  assert.equal(r.origins,128);assert.equal(r.governance,27);assert.equal(r.external,193);
  assert.equal(r.media,19);assert.equal(r.pending,5);assert.equal(r.split,96);
 });
@@ -80,4 +80,23 @@ test('D02 cannot conceal outstanding subject-field routing under artifact custod
 });
 test('D02 cannot introduce a rival authoritative owner on a routed historical source',()=>{
  fails(d=>d.sources.origin_custody.find(x=>x.field_split).field_owner_custody.no_field_fact_promoted_d02=false,'D02_FIELD_CONCURRENT_OWNER');
+});
+
+test('D02 waiver is exactly five concrete historical IDs, never a general media exemption',()=>{
+ fails(d=>d.sources.d02_optional_media_decision.ids.pop(),'D02_MEDIA_WAIVER_AUTHORITY');
+});
+test('D02 reblocks when a Library original has a declared operational dependency',()=>{
+ fails(d=>d.sources.external_sources.find(x=>x.id===d.sources.d02_optional_media_decision.ids[0]).dependencies.push('runtime-mandatory'),'D02_OPTIONAL_MEDIA_DEPENDENCY_OR_INTEGRITY');
+});
+test('D02 reblocks when a missing visual is declared to contain unique authoritative content',()=>{
+ fails(d=>d.sources.entries.find(x=>!x.raw_original_migrated).d02_dependency_evaluation.authoritative_unique_content_proven=true,'D02_OPTIONAL_MEDIA_DEPENDENCY_OR_INTEGRITY');
+});
+test('D02 cannot relabel optional loss as verified source integrity',()=>{
+ fails(d=>d.sources.entries.find(x=>!x.raw_original_migrated).d02_dependency_evaluation.integrity_status='SOURCE_SHA256_VERIFIED','D02_OPTIONAL_MEDIA_DEPENDENCY_OR_INTEGRITY');
+});
+test('D02 cannot waive one of fourteen present assets to obscure a hash mismatch',()=>{
+ fails(d=>d.sources.entries.find(x=>x.raw_original_migrated).d02_gate_classification='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02','D02_PRESENT_MEDIA_CLASSIFICATION');
+});
+test('D02 is a scoped decision, never a blank cheque for future new consumers',()=>{
+ fails(d=>d.sources.entries.find(x=>!x.raw_original_migrated).d02_dependency_evaluation.binding_contract_found=true,'D02_OPTIONAL_MEDIA_DEPENDENCY_OR_INTEGRITY');
 });
