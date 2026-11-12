@@ -337,7 +337,7 @@ test('D01 no source omitted or field-level editorial authority accidentally appr
 
 test('D01 safe scan token parsing is a textual hint, never authority or absence proof',()=>{
  const sha=index.source_snapshot.commit_sha;
- const sample=index.source_files.find(x=>x.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE');
+ const sample=index.source_files.find(x=>x.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'&&x.source_path.startsWith('novydres/'));
  assert.ok(sample);
  const text=sha+':'+sample.source_path+':1:'+sample.source_path+'\\n';
  const result=summarizeD01ObservedRefs(index,text.replace('\\n','\n'));
