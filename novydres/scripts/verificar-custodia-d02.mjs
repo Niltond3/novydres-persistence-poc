@@ -1,0 +1,99 @@
+// ADR-001 D02: candidate-only provenance, source custody and media contract verifier.
+// It does not decide editorial authority, prove external bytes or grant cutover.
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+const need=(ok,code)=>{if(!ok){let e=new Error(code);e.code=code;throw e;}};
+const by=(v,k)=>new Map(v.map(x=>[x[k],x]));
+const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+export function verifyD02Model({inventory,governance,sources,external,visual}) {
+ need(inventory.d01_scope_gate?.decision==='D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY','D02_INPUT_D01_GATE');
+ need(governance.classification==='SYSTEM_AUDIT'&&sources.classification==='SYSTEM_AUDIT','D02_DISCLOSURE');
+ need(governance.status==='CANDIDATE_NOT_OPERATIONAL_D02_OPEN'&&
+  sources.status==='CANDIDATE_D02_PARTIAL_NOT_OPERATIONAL'&&sources.gate==='D02_NOT_EVALUATED_AS_PASS','D02_FALSE_GATE');
+ need(governance.frozen_sources_modified===false&&
+  governance.source_snapshot.sha===inventory.source_snapshot.commit_sha&&
+  sources.original_snapshot_sha===inventory.source_snapshot.commit_sha,'D02_AUTHORITY_DRIFT');
+ need(sources.policy==='DRIVE_BINARY_GITHUB_LINK_ONLY','D02_MEDIA_POLICY');
+ const originals=inventory.source_files.filter(x=>x.d01_origin_route?.handoff_phase==='D02');
+ const gov=originals.filter(x=>x.source_family==='EDITORIAL_GOVERNANCE');
+ need(originals.length===128&&gov.length===27&&sources.origin_custody.length===128&&
+  governance.source_documents.length===27,'D02_ORIGIN_DENOMINATOR');
+ const sourceMap=by(originals,'source_path'),custody=by(sources.origin_custody,'original_path');
+ const governanceMap=by(governance.source_documents,'source_path');
+ need(custody.size===128&&governanceMap.size===27,'D02_DUPLICATE_ORIGIN');
+ for(const x of originals){
+  const y=custody.get(x.source_path);
+  need(y&&y.original_blob_sha===x.source_blob_sha&&y.source_family===x.source_family&&
+    y.original_preserved_in_git===true&&y.authority==='PRESERVED_SOURCE_NOT_PROMOTED'&&
+    y.visibility==='SYSTEM_AUDIT_UNTIL_REVIEW','D02_ORIGIN_CUSTODY');
+  const split=x.d01_origin_route.owner_routing==='FIELD_SCOPE_SPLIT_REQUIRED';
+  need(y.field_split===split&&(!split||y.cross_domain_content_handoff==='D03_D04_D05_SEMANTIC_REVIEW_REQUIRED'),'D02_FIELD_OWNER_HANDOFF');
+ }
+ for(const x of gov){
+  const y=governanceMap.get(x.source_path);
+  need(y&&y.source_sha===x.source_blob_sha&&y.candidate_original_blob_sha===x.source_blob_sha&&
+    y.copy==='GIT_BLOB_EXACT_UNMODIFIED'&&
+    y.operational_authority==='NOT_GRANTED_BY_CANDIDATE','D02_GOVERNANCE_CUSTODY');
+ }
+ const externalMap=by(external.items,'id'),mapped=by(sources.external_sources,'id');
+ need(external.items.length===193&&mapped.size===193&&mapped.size===externalMap.size,'D02_EXTERNAL_DENOMINATOR');
+ for(const [id,e] of externalMap){
+  const m=mapped.get(id),pin=inventory.controlled_external_registry.items.find(x=>x.source_id===id);
+  need(m&&pin&&m.title===e.title&&m.source_revision===(e.source_revision||null)&&
+    m.archived_source_path===(pin.archived_target||null)&&
+    m.archived_git_blob_sha===(pin.archived_target_sha||null)&&
+    m.drive_current_revision_verified_d02===false&&m.git_archive_blob_is_external_integrity_proof===false&&
+    m.rights_verified_d02===false,'D02_EXTERNAL_PROVENANCE');
+ }
+ const mediaBy=by(sources.entries,'library_id');
+ need(visual.entries.length===19&&mediaBy.size===19,'D02_MEDIA_DENOMINATOR');
+ let linked=0,pending=0;
+ for(const e of visual.entries){
+  const m=mediaBy.get(e.library_id);
+  need(m&&m.name===e.name&&m.reported_status===e.reported_status&&
+    m.drive_file_id===e.drive_file_id&&m.drive_url===e.drive_url&&
+    m.raw_original_migrated===e.raw_original_migrated&&
+    m.drive_sha256_verified===false&&m.d02_observation.drive_sha256_computed===false,'D02_MEDIA_PROVENANCE');
+  if(e.raw_original_migrated) {
+   linked++;need(!!m.drive_file_id&&m.d02_observation.name_mime_size_match===true,'D02_MEDIA_LINK');
+  }else{
+   pending++;need(m.d02_observation.matching_original_found===false&&
+    m.d02_observation.library_original_bytes_accessible==='NOT_PROVEN','D02_PENDING_MEDIA');
+  }
+ }
+ need(linked===14&&pending===5&&sources.media_integrity.unlocated_originals===5&&
+  sources.media_integrity.source_or_destination_sha256_verified_now===0,'D02_FALSE_MEDIA_INTEGRITY');
+ const known=new Set(governance.conflicts.map(x=>x.id));
+ need(['CONFLICT-001','CONFLICT-002','CONFLICT-003B'].every(x=>known.has(x))&&
+  governance.conflicts.find(x=>x.id==='CONFLICT-003B').status==='TEXT_DIFFERENCES_VERIFIED_EDITORIAL_VERDICT_OPEN',
+ 'D02_EDITORIAL_CONFLICT_SUPPRESSED');
+ return {gate:'D02_PROVENANCE_CUSTODY_VALID_EDITORIAL_AND_EXTERNAL_OPEN',origins:128,governance:27,external:193,
+  media:19,linked,pending,split:originals.filter(x=>x.d01_origin_route.owner_routing==='FIELD_SCOPE_SPLIT_REQUIRED').length};
+}
+const cmd=(...a)=>execFileSync('git',a,{encoding:'utf8',maxBuffer:64*1024*1024}).trim();
+export function verifyD02Git(root=process.cwd()) {
+ const read=p=>JSON.parse(readFileSync(p,'utf8'));
+ const inventory=read('novydres/sistema/arquitetura/fase-d/inventario-origens.json');
+ const governance=read('novydres/sistema/governanca/registro.json');
+ const sources=read('novydres/fontes/registro.json');
+ const external=JSON.parse(cmd('show',inventory.source_snapshot.commit_sha+':novydres/migration/INVENTORY.json'));
+ const visual=JSON.parse(cmd('show',inventory.source_snapshot.commit_sha+':novydres/migration/VISUAL_ASSET_REGISTRY_V2.json'));
+ const outcome=verifyD02Model({inventory,governance,sources,external,visual});
+ const gitBlob=(p)=>cmd('rev-parse','HEAD:'+p);
+ for(const g of governance.source_documents){
+  need(gitBlob(g.candidate_original_path)===g.source_sha,'D02_GOVERNANCE_BYTES_CHANGED');
+  need(gitBlob(g.source_path)===g.source_sha,'D02_ORIGINAL_REMOVED_EARLY');
+ }
+ for(const p of ['novydres/sistema/governanca/registro.json','novydres/fontes/registro.json'])
+  need(/^[a-f0-9]{40}$/.test(gitBlob(p)),'D02_REGISTRY_NOT_PINNED');
+ need(sources.origin_custody.every(x=>gitBlob(x.original_path)===x.original_blob_sha),
+  'D02_SOURCE_BYTES_CHANGED');
+ const editorial=JSON.parse(cmd('show',inventory.source_snapshot.commit_sha+':novydres/governance/sources/novydres_editorial_map_v0_9_4.json'));
+ need(editorial.schema_version==='0.9.3','D02_CONFLICT_002_NOT_PRESERVED');
+ return {...outcome,readback:'ALL_D02_ORIGIN_AND_27_GOVERNANCE_BLOBS_MATCH_HEAD',
+  external_bytes:'NOT_VERIFIED',cutover:false};
+}
+if(import.meta.url===new URL('file://'+process.argv[1]).href) {
+ try{console.log(JSON.stringify(verifyD02Git()));}
+ catch(e){console.error(e.code||e.message);process.exitCode=1;}
+}
