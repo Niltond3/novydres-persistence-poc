@@ -5,6 +5,10 @@ on:
       - design/subject-oriented-migration
     paths:
       - 'novydres/sistema/arquitetura/fase-b/**'
+      - 'novydres/sistema/arquitetura/adr/**'
+      - 'novydres/sistema/arquitetura/plano-integral/**'
+      - 'novydres/sistema/arquitetura/fase-a/**'
+      - 'novydres/sistema/arquitetura/simplificacao-narrativa/**'
       - '.github/workflows/adr001-phase-b-isolated.yml'
   workflow_dispatch:
 permissions:
@@ -24,3 +28,5 @@ jobs:
           ADR001_REMOTE_PROOF: '1'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node novydres/sistema/arquitetura/fase-b/executor-isolado.mjs
+      - name: Score frozen B03 outputs without exposing source answers in logs
+        run: node novydres/sistema/arquitetura/fase-b/avaliador-pos-congelamento.mjs
