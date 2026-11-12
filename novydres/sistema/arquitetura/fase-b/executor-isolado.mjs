@@ -94,4 +94,48 @@ for(const tc of journeys){
 }
 assert.equal(negativeResults.length,12);
 assert.equal(journeyResults.length,12);
-console.log(JSON.stringify({status:'PASS_SYNTHETIC_LOCAL_REFERENCE_IMPLEMENTATION',negative_total:12,negative_rejected:negativeResults.length,journey_total:12,journey_expected:journeyResults.length,remote_cas_test:'NOT_TESTED_BY_THIS_SCRIPT',independent_semantic_review:'NOT_EXECUTED',factual_canonicity:'NOT_EVALUATED'}));
+
+// DEC-25/B04 additional evidence guards (artificial payloads only).
+function evidenceGate(e) {
+  if(e.source_authority!=='SUBJECT_OWNER') throw new Error('invalid_authority');
+  if(!e.source_path || !e.source_locator) throw new Error('insufficient_source');
+  if(e.knowledge_subject!==e.actor_id) throw new Error('improper_npc_knowledge');
+  if(e.audience==='PLAYER' && ['GM_HIDDEN','SECRET','HIDDEN'].includes(e.visibility)) throw new Error('restricted_disclosure');
+  if(e.source_sha!==e.pinned_source_sha) throw new Error('source_mismatch');
+  if(e.checkpoint_sha!==e.remote_head_sha) throw new Error('checkpoint_drift');
+  if(e.completion_claimed && (!e.proof_commit || !e.proof_blob)) throw new Error('unproven_completion');
+  return 'ALLOW';
+}
+const goodEvidence={
+  source_authority:'SUBJECT_OWNER',source_path:'artificial/path.json',source_locator:'/fact/0',
+  actor_id:'synthetic-npc',knowledge_subject:'synthetic-npc',
+  audience:'PLAYER',visibility:'PLAYER_SAFE',
+  source_sha:'b'.repeat(40),pinned_source_sha:'b'.repeat(40),
+  checkpoint_sha:'c'.repeat(40),remote_head_sha:'c'.repeat(40),
+  completion_claimed:true,proof_commit:'c'.repeat(40),proof_blob:'b'.repeat(40)
+};
+assert.equal(evidenceGate(clone(goodEvidence)),'ALLOW');
+const extraCases=[
+  ['WRONG_AUTHORITY',x=>x.source_authority='OTHER_OWNER'],
+  ['INSUFFICIENT_SOURCE',x=>x.source_locator=null],
+  ['IMPROPER_NPC_KNOWLEDGE',x=>x.knowledge_subject='different-npc'],
+  ['FORBIDDEN_DISCLOSURE',x=>x.visibility='GM_HIDDEN'],
+  ['WRONG_SOURCE_SHA',x=>x.source_sha='0'.repeat(40)],
+  ['CHECKPOINT_HEAD_DRIFT',x=>x.checkpoint_sha='0'.repeat(40)],
+  ['UNPROVEN_COMPLETION',x=>x.proof_blob=null]
+];
+const extraResults=[];
+for(const [id,alter] of extraCases){const x=clone(goodEvidence);alter(x);
+  let outcome='ALLOW';try{evidenceGate(x)}catch{outcome='REJECT'}
+  assert.equal(outcome,'REJECT',id);extraResults.push({id,outcome});
+}
+// Synthetic lost-ack recovery: discard first return, read persisted state, retry with same ID/payload.
+// This is NOT an injected network failure and does NOT prove remote transaction idempotency.
+const afterLostAck=seed(),recoveryTx={...normal};
+transact(afterLostAck,recoveryTx);
+assert.equal(afterLostAck.transactions[recoveryTx.id],recoveryTx.payload);
+const recoveryHead=afterLostAck.head;
+assert.equal(transact(afterLostAck,recoveryTx),'NO_OP');
+assert.equal(afterLostAck.head,recoveryHead);
+
+console.log(JSON.stringify({status:'PASS_SYNTHETIC_LOCAL_REFERENCE_IMPLEMENTATION',negative_total:12,negative_rejected:negativeResults.length,journey_total:12,journey_expected:journeyResults.length,remote_cas_test:'NOT_TESTED_BY_THIS_SCRIPT',extra_guard_total:extraResults.length,synthetic_lost_ack_recovery:'PASS_LOCAL_ONLY',independent_semantic_review:'NOT_EXECUTED',factual_canonicity:'NOT_EVALUATED'}));
