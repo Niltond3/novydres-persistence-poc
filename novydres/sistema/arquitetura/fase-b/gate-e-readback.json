@@ -426,10 +426,9 @@
     },
     "historical_web_response_search": "inspected evidencia-chatweb-parcial-2026-11-11.json and evidencias-remediacao-final-2026-11-11.json; no old per-case raw Web answer text; insufficient historical evidence retained",
     "critical_unmet": [
-      "Independent semantic contextual review of new frozen factual Web responses, not merely deterministic source/checkpoint checks",
-      "Independent editorial contextual review of eight fictitious narrative scenes and N-06 consequential continuation; exercise output alone is not certification"
+      "Blind independent semantic/editorial review still lacks evidence of separation from existing self-score; scoped cross-session contextual check recorded, not treated as gate certification."
     ],
-    "next_eligible": "Independent contextual fact+fiction review against frozen source/rubric; remedy actual failures; rerun impacted cases and B05 without any Codex-only prerequisite.",
+    "next_eligible": "Blind reviewer of frozen B03 outputs and narrative N01–N08 plus N06 result; targeted corrections and B05.",
     "master_canon_campaign_runtime_unchanged": true,
     "last_code_validated_ci": {
       "commit": "09711519152385a6697c8561035fd832b1120c2a",
@@ -437,5 +436,92 @@
       "status": "completed",
       "conclusion": "success"
     }
+  },
+  "b05_independent_session_contextual_review_2026_11_12": {
+    "status": "SCOPED_CONTEXTUAL_REVIEW_COMPLETED_NOT_BLIND_CERTIFICATION",
+    "reviewer": "Separate ChatGPT Web conversation from recorded exercise-producing conversation; original author self-review also visible, so blind independence NOT claimed",
+    "review_base_commit": "49db5bfc62c6a1a6e999b69de5fab81e3a1335ce",
+    "facts": [
+      {
+        "id": "B-Q01",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned M3.01_v001.source.txt line 2 explicitly says exact civil date UNKNOWN, end of 1970s."
+      },
+      {
+        "id": "B-Q11",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned legacy knowledge actor ID and candidate perfil/conhecimento subject_id/actor_id read back; initial answer omitted full mapping."
+      },
+      {
+        "id": "B-Q21",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned M3.01_v001 has C01.01–C01.08 entries; not reinterpreted as new ledger events."
+      },
+      {
+        "id": "B-Q26",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned CYCLE_V0041 checkpoint last_closed_scene C05 and next_scene C01 NOT_STARTED; historic C41 only."
+      },
+      {
+        "id": "B-Q29",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned LIVE_v038 resources: 675 total/270 spent/405 remaining/0 available credit; historical not current master."
+      },
+      {
+        "id": "B-Q30",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned LIVE_v038 resources: provisional 6, superficial 2, aggravated 0, available 4."
+      }
+    ],
+    "narrative": [
+      {
+        "id": "N-01",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Courteous offer and refusal coexist; NPC has demonstrated contrary institutional incentive."
+      },
+      {
+        "id": "N-02",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Precisely bounded access delivered; allegiance and friendship not granted."
+      },
+      {
+        "id": "N-03",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Search intention continues after location change; refuge promise absent; player retains action."
+      },
+      {
+        "id": "N-04",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Repetitive activities compressed, causal missing protocol becomes decision point."
+      },
+      {
+        "id": "N-05",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Months-long leap stopped for player priorities."
+      },
+      {
+        "id": "N-06",
+        "result": "INITIAL_INSUFFICIENT_FOLLOWUP_PASS_CONTEXTUAL",
+        "basis": "Initial response merely established conflict; N-06-RESULT supplies previously specified fictional player action and material partial concession with unresolved balance."
+      },
+      {
+        "id": "N-07",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Prepared truth (correspondence) precedes consistent material clues; no forced revelation."
+      },
+      {
+        "id": "N-08",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Family solidarity and political threat preserve NPC and PC autonomy, no mandatory harm."
+      }
+    ],
+    "limitations": [
+      "Review used raw outputs already frozen and source pins, but reviewer had access to prior self-review; blind independent semantic/editorial check still unproven.",
+      "No runtime scene behavior certified; all narrative scenes are artificial and isolated.",
+      "The older missing Web replies cannot be reviewed retroactively.",
+      "All factual conclusions are scoped to fixed C41 source/candidate snapshots, not master C45."
+    ],
+    "gate_decision": "B_REMEDIATION_REQUIRED",
+    "next_eligible": "Obtain blinded independent editorial/semantic review against frozen prompts and source without previous self-score; remediate any discrepancy, then B05."
   }
 }

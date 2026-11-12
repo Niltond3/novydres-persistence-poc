@@ -80,3 +80,8 @@ Este checkpoint é prospectivo e não altera os vereditos históricos. `B_REMEDI
 | NPCs, social, intenção, ritmo, prioridades, drama, mistério e sigilo | Oito outputs TEST_ONLY, N-06 resultado fictício adicional, avaliação contextual interna registrada | Revisão editorial **independente PENDING**; não substituída por scanner/CI |
 | Métricas/custo | Telemetria real de chamadas e tempos REST Actions, coleta pareada nova implementada | Web tokens e bytes HTTP não observáveis (DEC-19); p95 histórico não medido e não inferido; comparar somente mesmo escopo |
 | Gate e cutover | `fase-b/gate-e-readback.json#b05_dec27_current` | `B_REMEDIATION_REQUIRED`; C bloqueada e E exige autorização própria |
+
+
+### Revisão contextual cruzada adicional — 2026-11-12
+
+Amostra fixa B-Q01/Q11/Q21/Q26/Q29/Q30 foi confrontada com blobs Git e perguntas/respostas congeladas, preservando falha inicial e retestes B-Q11/Q26/Q30. Oito cenas fictícias, mais N-06-RESULT, foram avaliadas pelo conteúdo e suas consequências; N-06 inicial apenas preparava a situação. Registros detalhados em `fase-b/gate-e-readback.json#b05_independent_session_contextual_review_2026_11_12`. Limitação: revisão de outra conversa, mas **não cega** porque a autoavaliação estava disponível. A independência editorial robusta continua pendente para o gate. Estado **B_REMEDIATION_REQUIRED**; não inferir comportamento real de runtime a partir de exercícios.
