@@ -6,9 +6,6 @@ on:
     paths:
       - 'novydres/sistema/arquitetura/fase-b/**'
       - 'novydres/sistema/arquitetura/adr/**'
-      - 'novydres/sistema/arquitetura/plano-integral/**'
-      - 'novydres/sistema/arquitetura/fase-a/**'
-      - 'novydres/sistema/arquitetura/simplificacao-narrativa/**'
       - '.github/workflows/adr001-phase-b-isolated.yml'
   workflow_dispatch:
 permissions:

@@ -308,8 +308,22 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     const winners=attempts.map((a,i)=>a.status==='fulfilled'?i:-1).filter(i=>i>=0);
     assert.equal(winners.length,1,'exactly one remote fast-forward writer');
     const loser=1-winners[0], winning=candidates[winners[0]];
-    const raceHead=await getHead();
-    assert.equal(raceHead,winning.sha);
+    // GitHub REST ref reads may temporarily disagree during concurrent writes.
+    // Require two successive matching remote HEAD reads; never waive a real mismatch.
+    const raceReadbacks=[];
+    let raceHead=null;
+    for(let attempt=0;attempt<8;attempt++) {
+      raceHead=await getHead();
+      raceReadbacks.push(raceHead);
+      if(raceReadbacks.length>=2 && raceReadbacks.slice(-2).every(sha=>sha===winning.sha)) break;
+      await new Promise(resolve=>setTimeout(resolve,350));
+    }
+    if(!raceReadbacks.slice(-2).every(sha=>sha===winning.sha)) {
+      console.error(JSON.stringify({error:'REMOTE_RACE_REF_MISMATCH',candidate_shas:candidates.map(c=>c.sha),
+        acknowledged_writer:winners[0],remote_readbacks:raceReadbacks}));
+    }
+    assert.ok(raceReadbacks.length>=2 && raceReadbacks.slice(-2).every(sha=>sha===winning.sha),
+      'two stable GitHub ref readbacks must match the acknowledged winner');
     const rejection=attempts[loser].reason;
     assert.equal(rejection.status,422,'loser rejected by GitHub REST HTTP 422');
     const staleProof=String(rejection.response?.message||'');
