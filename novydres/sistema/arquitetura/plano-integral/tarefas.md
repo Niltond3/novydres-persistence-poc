@@ -572,3 +572,8 @@ A condição do gate para C01 está atendida, mas esta alteração documental n�
 
 - Tentativa `8fd1a29ddda8913ca822b27dd16c7e98139369af`: Actions [43280923916](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43280923916) = `completed/failure`; auditor C06 identificou `LEGACY_CODE_CONSUMER` no novo verificador, antes da execução dos testes D01. Não é PASS nem evidência D01 válida.
 - Remediação prospectiva: manter a prova do comportamento dos workflows por evidência de conteúdo (marcadores do validador e gate condicional) sem embutir no verificador uma rota operacional legada como string de consumidor; corrigir a grafia do campo de resolução do conflito e a lógica de classificação de testes. Não modificar o scanner ou apagar o run falho. Nova publicação e CI requerem readback.
+
+#### D01 — Reteste negativo e ordem de diagnóstico
+
+- Actions [43281198443](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43281198443) no commit `88b46f7` = `completed/failure`: C01–C07, auditor anti-legado e verificador D01 passaram, porém 32/33 testes negativos D01 passaram. O teste legado de adulteração da relação de paths esperava `D01_CANDIDATE_COMPARISON_DRIFT`; o novo controle de revisão binária produziu primeiro `D01_SHARED_BLOB_FALSE_AUTHORITY`. A mutação foi rejeitada, mas a prioridade diagnóstica sofreu regressão.
+- Ajuste prospectivo: conferir primeiro caminho/SHA da árvore original e depois exigir a marcação de limite da evidência binária. Mantém ambos os bloqueios e o teste preexistente. Não reclassificar o run falho como PASS; verificar próxima execução CI.

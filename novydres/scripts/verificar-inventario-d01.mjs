@@ -162,13 +162,13 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
     typeof row.target_root_candidate==='string'&&row.target_root_candidate.length>0&&
     row.authority_status==='NOT_AUDITED_BY_PATH_INDEX'&&
     row.editorial_equivalence==='PENDING_FIELD_REVIEW','D01_PREMATURE_AUTHORITY');
-  const isBinaryEqual=row.candidate_relation==='SAME_PATH_SAME_BLOB';
-  need(isBinaryEqual?
-   row.binary_ownership_review==='GIT_BLOB_IDENTICAL_OWNER_AND_FIELD_AUTHORITY_NOT_PROVEN':
-   !Object.hasOwn(row,'binary_ownership_review'),'D01_SHARED_BLOB_FALSE_AUTHORITY');
   const samePath=other.get(row.source_path);
   const relation=samePath?(samePath.sha===actual.sha?'SAME_PATH_SAME_BLOB':'SAME_PATH_DIFFERENT_BLOB'):'NO_SAME_PATH_IN_CANDIDATE';
   need(row.candidate_relation===relation&&row.candidate_same_path_blob_sha===(samePath?.sha||null),'D01_CANDIDATE_COMPARISON_DRIFT');
+  const isBinaryEqual=relation==='SAME_PATH_SAME_BLOB';
+  need(isBinaryEqual?
+   row.binary_ownership_review==='GIT_BLOB_IDENTICAL_OWNER_AND_FIELD_AUTHORITY_NOT_PROVEN':
+   !Object.hasOwn(row,'binary_ownership_review'),'D01_SHARED_BLOB_FALSE_AUTHORITY');
   counts[!samePath?'missing':samePath.sha===actual.sha?'same':'different']++;
  }
  need(Array.isArray(index.candidate_only_files),'D01_CANDIDATE_ONLY_ABSENT');
