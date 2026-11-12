@@ -149,6 +149,11 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** comparar baseline, equivalência, precisão, custo/latência observáveis e resultados negativos; obter a execução CI aplicável às verificações do protótipo com run ID e commit. Revisar exceções aprovadas, relações fora do escopo e diffs de master.
 - **Conclusão:** todos os requisitos de B comprovados ou B continua em remediação. Evidência de CI não executada, métricas inventadas e casos faltantes impedem PASS. No plano futuramente autorizado, PASS comprovado libera C conforme DEC-22, sem nova confirmação apenas pela fase; não há promoção operacional.
 
+#### Retomada B02–B05 — checkpoint 2026-11-12 (Web)
+
+- Refs e cinco commits históricos conferidos; runs CI `43155672041` e `43155927667` em sucesso. B01 continua PASS histórico C41, master C45. B02 sem Codex real. B03: nova auditoria de 30 pins/localizadores e oito recursos críticos iguais, **não** avaliação semântica independente. B04: commit vencedor real e runner sintético CI; erro remoto sem classe stale demonstrada, testes reais de ID duplicado/conflitante e perda de confirmação pendentes. B05 `B_REMEDIATION_REQUIRED`, C bloqueada, DEC-25 `PARTIAL_OBSERVED_NOT_CERTIFIED`.
+- Evidências consolidadas nos arquivos existentes `../fase-b/resultado-testes.json#b03_locator_followup_2026_11_12` e `../fase-b/gate-e-readback.json#b05_followup_2026_11_12`. Próxima elegível: Codex real B02, revisão semântica independente B03 e integração B04 com rota efetiva, sem substituir essas provas por simulação.
+
 ## C — Construir e verificar as ferramentas finais
 
 ### C01 — Implementar schemas e validações de informação

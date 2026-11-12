@@ -2651,5 +2651,300 @@
       "DEC25_general_semantic_detection_not_proven"
     ],
     "dec25_status": "PARTIAL_OBSERVED_NOT_CERTIFIED"
+  },
+  "b03_locator_followup_2026_11_12": {
+    "audit_id": "B03-LOCATOR-AUDIT-20261112-02",
+    "kind": "SECOND_SESSION_DIRECT_GITHUB_SOURCE_AND_LOCATOR_AUDIT_NOT_BLINDED_SEMANTIC_REVIEW",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "design_snapshot": "0ce0d2155d4774f0096762a3622fc003a7dbda17",
+    "master_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "cases_checked": 30,
+    "source_blob_pins_matched": 30,
+    "candidate_blob_pins_matched": 30,
+    "source_locators_resolved": 30,
+    "candidate_locators_resolved": 30,
+    "case_locator_checks": [
+      {
+        "case_id": "B-Q01",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "LINE_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q02",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q03",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q04",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q05",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q06",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q07",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q08",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q09",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q10",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q11",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q12",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q13",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q14",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q15",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q16",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q17",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q18",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q19",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q20",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q21",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q22",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q23",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "TEXT_MARKER_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q24",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q25",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q26",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q27",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q28",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "EXACT_OR_ENTITY_SELECTOR_PRESENT",
+        "candidate_locator_result": "EXACT_JSON_POINTER_PRESENT"
+      },
+      {
+        "case_id": "B-Q29",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "WILDCARD_FIELDS_PRESENT",
+        "candidate_locator_result": "WILDCARD_FIELDS_PRESENT"
+      },
+      {
+        "case_id": "B-Q30",
+        "source_sha_and_path_audited": true,
+        "candidate_sha_and_path_audited": true,
+        "source_locator_result": "WILDCARD_FIELDS_PRESENT",
+        "candidate_locator_result": "WILDCARD_FIELDS_PRESENT"
+      }
+    ],
+    "critical_cases": [
+      "B-Q29",
+      "B-Q30"
+    ],
+    "critical_eight_fields": [
+      {
+        "field": "xp_total",
+        "candidate_pointer": "/resources/xp_total",
+        "source_pointer": "/character/resources/xp_total",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "xp_spent",
+        "candidate_pointer": "/resources/xp_spent",
+        "source_pointer": "/character/resources/xp_spent",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "xp_remaining",
+        "candidate_pointer": "/resources/xp_remaining",
+        "source_pointer": "/character/resources/xp_remaining",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "xp_credit_available",
+        "candidate_pointer": "/resources/xp_credit_available",
+        "source_pointer": "/character/resources/xp_credit_available",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "willpower_provisional_max",
+        "candidate_pointer": "/resources/willpower_provisional_max",
+        "source_pointer": "/character/resources/willpower_provisional_max",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "willpower_superficial_damage",
+        "candidate_pointer": "/resources/willpower_superficial_damage",
+        "source_pointer": "/character/resources/willpower_superficial_damage",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "willpower_aggravated_damage",
+        "candidate_pointer": "/resources/willpower_aggravated_damage",
+        "source_pointer": "/character/resources/willpower_aggravated_damage",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      },
+      {
+        "field": "willpower_available",
+        "candidate_pointer": "/resources/willpower_available",
+        "source_pointer": "/character/resources/willpower_available",
+        "source_LIVE_v038_equals_candidate": true,
+        "current_master_LIVE_v039_same_numeric_projection": true
+      }
+    ],
+    "caveats": [
+      "Two historical wildcard locators are selectors, not exact JSON Pointers; this audit supplies their eight strict source/candidate field pointers.",
+      "A valid locator does not establish the model supplied the correct contextual answer; previous scoring shared its executor process and omitted raw answers.",
+      "B-Q26 is a contextual transformation (preceding scene CLOSED vs next scene NOT_STARTED), not a literal field equality.",
+      "Candidate historical cursor C41 is not rebased to master operational C45."
+    ],
+    "semantic_independent_reviewer": "NOT_EXECUTED",
+    "codex_run": "NOT_EXECUTED",
+    "player_safe": true
   }
 }

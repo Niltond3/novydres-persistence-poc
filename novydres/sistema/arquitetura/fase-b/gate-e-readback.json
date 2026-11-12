@@ -225,5 +225,54 @@
     },
     "source_narrative_edited": false,
     "master_changed": false
+  },
+  "b05_followup_2026_11_12": {
+    "checkpoint_id": "B05-WEB-20261112-02",
+    "design_head_before_write": "0ce0d2155d4774f0096762a3622fc003a7dbda17",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "B01": "PASS_SCOPED_HISTORICAL_C41_TO_C45_DRIFT_PRESERVED",
+    "B02": "CODEX_NOT_EXECUTED_NO_CODEX_TOOL_AVAILABLE",
+    "B03": "THIRTY_PIN_LOCATOR_CHECKS_PLUS_EIGHT_CRITICAL_RESOURCES_MATCH_BUT_NOT_INDEPENDENT_SEMANTIC_PASS",
+    "B04": "SYNTHETIC_12_NEGATIVE_12_JOURNEYS_7_GUARDS_PLUS_REMOTE_SINGLE_WINNER; STALE_ERROR_GENERIC_UNCLASSIFIED",
+    "B05": "B_REMEDIATION_REQUIRED",
+    "audit_result_path": "resultado-testes.json#b03_locator_followup_2026_11_12",
+    "verified_ci_runs": [
+      {
+        "id": 43155672041,
+        "head_sha": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+        "conclusion": "success"
+      },
+      {
+        "id": 43155927667,
+        "head_sha": "0ce0d2155d4774f0096762a3622fc003a7dbda17",
+        "conclusion": "success"
+      }
+    ],
+    "sandbox": {
+      "ref": "test/adr001-b04-20261112",
+      "winner_commit": "8c6e72a2f5f67e2813c60f67179e11c3c64e7d5a",
+      "parent": "f41f8c580039d94b8334390b47d0945962f58619",
+      "error": "GRAPHQL_GENERIC_NOT_PROOF_OF_STALE_LEASE",
+      "cleanup": "NO_SAFE_DELETE_ACTION"
+    },
+    "real_tests": "REMOTE_REF_AND_COMMIT_READBACK; CI_RUN_COMPLETED; B03_REAL_SOURCE_READS",
+    "synthetic_tests": "12_NEGATIVE_12_JOURNEY_7_GUARD_AND_LOST_ACK_LOCAL_ONLY",
+    "not_executed": [
+      "B02_REAL_CODEX",
+      "B03_INDEPENDENT_BLIND_SEMANTIC_REVIEW",
+      "B04_REAL_DUPLICATE_CONFLICT_ID_WRITE_ROUTE",
+      "B04_REMOTE_LOST_CONFIRMATION_INJECTION",
+      "B04_REAL_RUNTIME_AUTHORITY_KNOWLEDGE_DISCLOSURE_MUTATIONS",
+      "B04_EXPLICIT_STALE_SHA_CLASSIFICATION"
+    ],
+    "dec25": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+    "dec26": "ONLY_UNRECOVERABLE_UNITS",
+    "next_eligible": "B02 real Codex and independent B03 review; B04 route integration once implementable",
+    "master_and_canon_unchanged": true,
+    "runtime_activated": false,
+    "no_new_synthetic_runner_change": true
   }
 }
