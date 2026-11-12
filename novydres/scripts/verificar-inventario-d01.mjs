@@ -329,7 +329,31 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
    otherStructurallyInspected++;
   }else need(info===undefined,'D01_NONCURRENT_SPOOFED_INSPECTION');
  }
- need(sourceContents.size===pinnedMissing.length+noncurrentMissing.length&&
+ const priorityShared=index.source_files.filter(row=>
+  row.candidate_relation==='SAME_PATH_SAME_BLOB'&&
+  (row.source_family==='EDITORIAL_GOVERNANCE'||row.pinned_by_operational_cycle));
+ const pSummary=index.priority_shared_content_summary;
+ need(pSummary?.total===priorityShared.length&&
+  pSummary.editorial_governance_sources===priorityShared.filter(x=>x.source_family==='EDITORIAL_GOVERNANCE').length&&
+  pSummary.c45_direct_pin_sources===priorityShared.filter(x=>x.pinned_by_operational_cycle).length&&
+  pSummary.source_authority==='NOT_APPROVED_BY_THIS_REVIEW'&&
+  pSummary.target_equivalence==='NOT_PROVEN'&&pSummary.unknown_episteme==='PENDING',
+  'D01_PRIORITY_SHARED_FALSE_AUTHORITY');
+ for(const row of index.source_files){
+  const eligible=row.candidate_relation==='SAME_PATH_SAME_BLOB'&&
+   (row.source_family==='EDITORIAL_GOVERNANCE'||row.pinned_by_operational_cycle);
+  const info=row.priority_shared_content_review;
+  if(eligible){
+   need(info?.inspection_status==='EXACT_GIT_BLOB_STRUCTURAL_READBACK_NOT_EDITORIAL_APPROVAL'&&
+    info.owner_and_epistemic_review==='PENDING'&&
+    info.destination_and_dependency_review==='PENDING','D01_PRIORITY_SHARED_FALSE_APPROVAL');
+   const original=sourceContents.get(row.source_path);
+   need(typeof original==='string','D01_PRIORITY_SHARED_READBACK_MISSING');
+   need(equal(info.source_content_structure,describePinnedContent(row.source_path,original)),
+    'D01_PRIORITY_SHARED_SOURCE_CONTENT_DRIFT');
+  }else need(info===undefined,'D01_PRIORITY_SHARED_FALSE_TAG');
+ }
+ need(sourceContents.size===pinnedMissing.length+noncurrentMissing.length+priorityShared.length&&
   otherStructurallyInspected===noncurrentMissing.length,
   'D01_NONCURRENT_COVERAGE_DRIFT');
 
@@ -380,6 +404,7 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   c45_missing_source_content_structurally_inspected:structurallyInspected,
   noncurrent_missing_structurally_inspected:otherStructurallyInspected,
   all_master_only_sources_inspected:structurallyInspected+otherStructurallyInspected,
+  shared_priority_content_inspected:priorityShared.length,
   candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
   current_checkpoint:expectedCrosswalk.source_cycle_id,
   state_precedence_mismatches:summary.c45_source_priority_mismatches,
@@ -394,7 +419,8 @@ export function readAndVerifyD01(root=process.cwd()){
  const candidateTree=listPinnedTree(root,index.candidate_snapshot.commit_sha);
  const read=path=>JSON.parse(git(root,['show',index.source_snapshot.commit_sha+':'+path]));
  const sourceContents=new Map(index.source_files.filter(row=>
-  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(row=>[
+  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'||
+  row.priority_shared_content_review).map(row=>[
    row.source_path,execFileSync('git',['show',index.source_snapshot.commit_sha+':'+row.source_path],
     {cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']})]));
  return verifyD01(index,{masterTree,candidateTree,

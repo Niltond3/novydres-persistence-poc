@@ -20,7 +20,8 @@ const data={masterTree:listPinnedTree(root,pinned),
   candidate:execFileSync('git',['show',index.candidate_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml'],{encoding:'utf8',maxBuffer:32*1024*1024})
  },
  sourceContents:new Map(index.source_files.filter(row=>
-  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(row=>[
+  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'||
+  row.priority_shared_content_review).map(row=>[
   row.source_path,execFileSync('git',['show',pinned+':'+row.source_path],
   {encoding:'utf8',maxBuffer:32*1024*1024})]))};
 const clone=()=>structuredClone(index);
@@ -219,4 +220,26 @@ test('D01 divergent historical workflow cannot be approved without resolution',(
 test('D01 external Git archived path does not prove original external bytes',()=>{
  reject(x=>x.controlled_external_registry.items[0].git_archive_pin_status='EXTERNAL_BYTES_VERIFIED',
   'D01_EXTERNAL_MAPPING_DRIFT');
+});
+
+test('D01 governance and shared C45 pins have immutable structural content evidence',()=>{
+ const r=verifyD01(index,data);
+ assert.equal(r.shared_priority_content_inspected,47);
+ const p=index.source_files.find(x=>x.priority_shared_content_review)?.source_path;
+ assert.ok(p);
+ reject(x=>delete x.source_files.find(y=>y.source_path===p).priority_shared_content_review,
+  'D01_PRIORITY_SHARED_FALSE_APPROVAL');
+});
+test('D01 shared priority content metadata cannot be invented',()=>{
+ const p=index.source_files.find(x=>x.priority_shared_content_review)?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(y=>y.source_path===p).priority_shared_content_review.source_content_structure.utf16_code_units+=3,
+  'D01_PRIORITY_SHARED_SOURCE_CONTENT_DRIFT');
+});
+test('D01 priority original bytes must exist and cannot be called approved',()=>{
+ const p=index.source_files.find(x=>x.priority_shared_content_review)?.source_path;
+ const bad=new Map(data.sourceContents);bad.delete(p);
+ assert.throws(()=>verifyD01(index,{...data,sourceContents:bad}),e=>e.code==='D01_PRIORITY_SHARED_READBACK_MISSING');
+ reject(x=>x.priority_shared_content_summary.source_authority='APPROVED',
+  'D01_PRIORITY_SHARED_FALSE_AUTHORITY');
 });
