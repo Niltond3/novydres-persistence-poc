@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_EM_CURSO_A01_A03_A05_PASS_A04_NEXT
+status: EXECUCAO_EM_CURSO_A01_A05_PASS_A06_NEXT
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -66,6 +66,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A01; compatibilidade com A02/A03.
 - **Escopo/saída:** contrato candidato em `sistema/narrativa`, exceções de CHR-001 e mapa IMP-01–IMP-15. Integrar DEC-01–DEC-15: funções no mesmo chat, preparação proporcional, texto integral, intenções, elipses, drama jogado, NPCs com interesses, stakes e verdades de mistérios. Conferir a ficha inteira e a progressão até 2010 contra regras/recursos, sem cena por ponto. Aplicar DEC-24: nas rolagens, preservar desenrolar narrativo e efeitos materiais, sem persistir faces, reproduzir o cálculo ou certificar RNG.
 - **Conclusão:** cada procedimento mantido, simplificado ou retirado tem destino e função preservada. Sem revisão obrigatória por cena, disposição numérica, roteiro obrigatório de beats ou imunidade automática da família no desenho sucessor. Não inventar XP, eventos futuros consumados ou risco incompatível com os destinos fixos.
+
+
+#### Execução de A04 — 2026-11-12
+
+- **Estado:** PASS de especificação narrativa candidata com **PENDING_EVIDENCE** de certificação V5/2010, sem alteração operacional. **Entrada:** `39da97c260c7a25d432de990b7fdd7342a7b8156`.
+- **Saída:** [simplificacao-narrativa/desenho.md](../simplificacao-narrativa/desenho.md#a04--condução-e-criação-guiada-contrato-sucessor-2026-11-12-candidato), DEC-01–15 e IMP-01–IMP-15 reconciliados; exemplos concretos de elipse, agência, oposição social, stakes, mistério, correções, horror e persistência.
+- **Prova:** quatro fontes mecânicas/estado foram confrontadas no master `c9fcfc0`: alvo aprovado integral versus aquisições parciais, 675 XP equivalentes ≠ crédito gastável, mortalidade/cursor e convenção de testes provisórios. Core Rulebook V5 integral e certificação de custos/idiomas/poderes/Touchstones seguem pendentes; não promover destino futuro a fato atual.
+- **Próximo:** A06 (A02–A05 agora documentalmente cumpridas), A07 após critérios/revisão, sem dispensar os bloqueios mecânicos pertinentes em B/C/D.
 
 ### A05 — Especificar contratos reais de leitura e escrita Codex/Web
 
