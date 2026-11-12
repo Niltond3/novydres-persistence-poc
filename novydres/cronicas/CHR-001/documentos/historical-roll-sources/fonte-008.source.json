@@ -1,0 +1,97 @@
+{
+  "schema_id": "CHR001_M301_C05_ROLL_AUDIT_V1",
+  "chronicle_id": "CHR-001",
+  "scene": "C05",
+  "source": "novydres/chronicles/CHR-001/episodes/M3.01_v005.source.txt",
+  "last_event_id": "CHR001-M301-C05-22-20261109-001",
+  "tests": [
+    {
+      "id": "C05_SABOTAGE",
+      "kind": "TAKE_HALF",
+      "pool": 6,
+      "components": {
+        "Raciocínio": 4,
+        "Ofícios": 2
+      },
+      "difficulty": 3,
+      "successes": 3,
+      "rng": false,
+      "fv": 0,
+      "effect": "Temporary reversible no-start condition, resolved if discreet"
+    },
+    {
+      "id": "C05_STEALTH",
+      "kind": "SIMPLE_WITH_WP_REROLL",
+      "pool": 7,
+      "components": {
+        "Destreza": 4,
+        "Furtividade": 3
+      },
+      "difficulty": 3,
+      "initial_faces": [
+        2,
+        5,
+        6,
+        6,
+        3,
+        2,
+        4
+      ],
+      "initial_successes": 2,
+      "rerolled_positions_one_based": [
+        1,
+        2,
+        5
+      ],
+      "reroll_faces": [
+        5,
+        1,
+        7
+      ],
+      "final_faces": [
+        5,
+        1,
+        6,
+        6,
+        7,
+        2,
+        4
+      ],
+      "successes": 3,
+      "margin": 0,
+      "fv": 1,
+      "origin": "UNVERIFIED_CHAT_PRESENTATION",
+      "provenance_note": "Narrator claimed Python SystemRandom for initial and reroll; no verifiable tool run in available chat. Subsequent player decisions accepted scene continuity. Preserve without re-rolling."
+    },
+    {
+      "id": "C05_MECHANICAL_DIAGNOSIS",
+      "kind": "TAKE_HALF",
+      "pool": 7,
+      "components": {
+        "Raciocínio": 4,
+        "Ofícios": 2,
+        "Ofícios_Mecânica_Automóveis_local_exception": 1
+      },
+      "difficulty": 3,
+      "successes": 3,
+      "rng": false,
+      "fv": 0,
+      "specialization_authorized_by_player": "ONE_TEST_ONLY_C05_DIAGNOSIS",
+      "specialization_purchased": false,
+      "findings": "Visible worn/slack alternator belt; no other exposed fault confirmed"
+    }
+  ],
+  "fv_before": 5,
+  "fv_after": 4,
+  "superficial_damage_before": 1,
+  "superficial_damage_after": 2,
+  "xp_credit_awarded": 0,
+  "act_resolutions": [],
+  "unknowns": [
+    "Exact envelope destination",
+    "Box contents",
+    "Independent RNG verification stealth",
+    "Any unseen street observer"
+  ],
+  "guard": "C04 events and accepted prior outcomes unchanged"
+}

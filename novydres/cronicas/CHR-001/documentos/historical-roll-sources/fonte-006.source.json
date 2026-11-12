@@ -1,0 +1,79 @@
+{
+  "schema_id": "CHR001_SCENE_ROLL_AUDIT_V1",
+  "scene_id": "CHR001-M301-C03",
+  "source_date": "2026-11-07",
+  "chronicle_id": "CHR-001",
+  "preparation_id": "CHR001-PREP-M301-20261107-V3",
+  "source_event_ids": [
+    "CHR001-M301-C03-06-20261107-001",
+    "CHR001-M301-C03-14-20261107-001",
+    "CHR001-M301-C03-15-20261107-001"
+  ],
+  "tests": [
+    {
+      "roll_id": "CHR001-M301-C03-MECHANIC-TAKE-HALF-001",
+      "source_event_id": "CHR001-M301-C03-06-20261107-001",
+      "type": "SIMPLE_TECHNICAL_TAKE_HALF",
+      "intent": "Avaliar freios/direção/peças acessíveis e identificar defeitos observáveis, sem atribuir culpa/sabotagem",
+      "provisional_attributes": {
+        "Raciocinio": 4
+      },
+      "provisional_skills": {
+        "Oficios": 2
+      },
+      "total_pool": 6,
+      "difficulty": 3,
+      "take_half_legal": true,
+      "player_choice": "PEGAR_METADE",
+      "half_successes": 3,
+      "raw_dice": null,
+      "rng_source": "NO_RNG_TAKE_HALF",
+      "willpower_spent": 0,
+      "result": "SUCCESS_LIMITED_OBSERVABLE_INSPECTION_NO_INTERNAL_DISASSEMBLY"
+    },
+    {
+      "roll_id": "CHR001-M301-C03-POLITICS-001",
+      "source_event_id": "CHR001-M301-C03-15-20261107-001",
+      "type": "SIMPLE_INTELLIGENCE_POLITICS",
+      "intent": "Recordar base e limites de proteções a trabalhadores que recusam atividade com perigo grave",
+      "provisional_attributes": {
+        "Inteligencia": 3
+      },
+      "provisional_skills": {
+        "Politica": 3
+      },
+      "total_pool": 6,
+      "difficulty": 4,
+      "take_half_legal_but_insufficient": true,
+      "half_successes": 3,
+      "player_choice": "ROLAR",
+      "rng_source": "python_user_visible.exec | Python secrets.SystemRandom | user-visible tool-emitted actual faces",
+      "rng_timestamp_utc": "2026-11-08T00:22:38.448610+00:00",
+      "raw_faces": [
+        7,
+        10,
+        6,
+        8,
+        2,
+        7
+      ],
+      "base_successes": 5,
+      "critical_pairs": 0,
+      "total_successes": 5,
+      "margin": 1,
+      "player_wp_decision": {
+        "choice": "KEEP",
+        "exact": "Confirmo os 5 sucessos do teste de Inteligência + Política sem gastar Força de Vontade. Continue a cena.",
+        "reroll": false,
+        "spent": 0,
+        "available_before": 6,
+        "available_after": 6
+      },
+      "result": "SUCCESS_GENERAL_PRINCIPLES_WITH_LIMITS_NO_LOCAL_LAW_CERTIFICATION"
+    }
+  ],
+  "all_results_player_confirmed": true,
+  "pc_willpower_after": 6,
+  "pc_xp_delta": 0,
+  "provenance": "C03 dice generated once in user-visible Python tool. G28 stores after scene. No reroll or invented faces."
+}

@@ -1,0 +1,23 @@
+flowchart LR
+  npc_mary_krauser["Mary Krauser"]
+  npc_mikahel_krauser["Mikahel Krauser"]
+  npc_mary_krauser -->|FAMILY| npc_mikahel_krauser
+  npc_mikahel_krauser -->|FAMILY| npc_mary_krauser
+  npc_sara_krauser["Sara Krauser"]
+  npc_mary_krauser -->|FAMILY| npc_sara_krauser
+  npc_sara_krauser -->|FAMILY| npc_mary_krauser
+  npc_mikahel_krauser -->|FAMILY| npc_sara_krauser
+  npc_pavel_heating_supervisor["Pavel (chefia do aquecimento)"]
+  npc_liev_heating_colleague["Liev"]
+  npc_pavel_heating_supervisor -->|AUTHORITY| npc_liev_heating_colleague
+  npc_m301_marta_funeral["Marta, amiga de Yelena"]
+  npc_yelena_baranova["Yelena Baranova"]
+  npc_m301_marta_funeral -.->|FRIENDSHIP (alegado)| npc_yelena_baranova
+  npc_m301_daniel_son["Daniel, filho de Yelena (não Daniel Foster)"]
+  npc_yelena_baranova -.->|FAMILY (alegado)| npc_m301_daniel_son
+  npc_m301_margaret_funeral["Margaret, atendente funerária"]
+  npc_m301_richard_funeral["Richard, funerária"]
+  npc_m301_margaret_funeral -->|AFFILIATION| npc_m301_richard_funeral
+  npc_m3_eleanor_price_candidate["Eleanor Price — M3.01.C01"]
+  npc_m3_samir_haddad_candidate["Samir Haddad — M3.01.C01"]
+  npc_m3_eleanor_price_candidate -.->|RIVALRY (alegado)| npc_m3_samir_haddad_candidate

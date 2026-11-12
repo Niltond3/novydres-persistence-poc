@@ -2,8 +2,1756 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "ea6ece9d7559707233c90360bf381e0675af15e5",
+  "content_index_sha": "21ceaa8365b580fe061487362cf169bf76a13686",
   "subjects": [
+    {
+      "id": "chr001-administrative-milestones",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/assunto.json",
+          "blob_sha": "1e25e83b00e05ff26a282116bd7ff923c956bbb8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-001.source.json",
+          "blob_sha": "ea2dd335c2c9b4b02f37e783cf670c45a7d18401"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-002.source.json",
+          "blob_sha": "7180dfb53259c9af48cd806626b79f08155adfb5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-003.source.json",
+          "blob_sha": "720342c74b96a65e70497ded5f504ba756b09d69"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-004.source.json",
+          "blob_sha": "e2e6acb4c9c7604e903dcfd6fc10ad62726d7ec6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-005.source.json",
+          "blob_sha": "1b6264fdcae172244e2ea13e2c68458f6259010c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-006.source.json",
+          "blob_sha": "e0bcdc36f05ad9c2bda9bc64e8def5e1aeffb5b7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-007.source.json",
+          "blob_sha": "bbf4e0b4faeab51dca27e91453edc5febfe97b45"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-008.source.json",
+          "blob_sha": "0efb76048c50c3a6be4da93f340cc98e9e808171"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-009.source.md",
+          "blob_sha": "9e2d116521aa3d00ec52cccd217582837462a255"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-010.source.md",
+          "blob_sha": "7243537f29261b80bdaa61396af413f489902485"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-011.source.json",
+          "blob_sha": "7b5393c3f09dea6c9a522bf1835744bf3c1dc25e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/fonte-012.source.json",
+          "blob_sha": "635d1720a7680586d4947259cada17539eed67fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/index.md",
+          "blob_sha": "46039fc17984f4a4107aa3c7f02f38be2d149d0e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/administrative-milestones/registro.json",
+          "blob_sha": "bba582bb373dabfc6febca925ad1ae1d037e84ce"
+        }
+      ]
+    },
+    {
+      "id": "chr001-character-state-versions",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/personagem",
+      "path": "novydres/cronicas/CHR-001/personagem/state-versions",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/assunto.json",
+          "blob_sha": "d1cafa7c67e2dbc5e94a9c6fcc2922ea0ede5191"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-001.source.txt",
+          "blob_sha": "a66837651647485d8f3d51c300a5db955c5ea153"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-002.source.txt",
+          "blob_sha": "c6f230f1394e6fae04cce783aedcd73faf0e4c8d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-003.source.txt",
+          "blob_sha": "6c19ce27a68188b5f0bbc538937ce4e94d77fc23"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-004.source.txt",
+          "blob_sha": "18edd2544ae57121a2a439f70d033140256e6352"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-005.source.txt",
+          "blob_sha": "445e3e1c7a536af03b484c7d0944bfca7434bb3b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-006.source.txt",
+          "blob_sha": "0019266c4e5854b92742dfd46b74cb51d08c84a4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-007.source.txt",
+          "blob_sha": "8639f8ae79c21f8f19803215290de2f4c762ca1c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-008.source.txt",
+          "blob_sha": "f96d8ad892799b24c2dc129a7cb707924febcd4b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-009.source.txt",
+          "blob_sha": "72b66063691c6b9c6d4f3353357c23303fc6caad"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-010.source.txt",
+          "blob_sha": "c45da1eca093b6baac85da6dc766bae814ff1231"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-011.source.txt",
+          "blob_sha": "0c99114f1ade3f1d9dd2e4d4678916ab6eb380ad"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-012.source.txt",
+          "blob_sha": "ebfa035bbfd0031470e8ca03edaa63fe9d2ed266"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-013.source.txt",
+          "blob_sha": "63095f71e18c5aca53e01ceb9c2632f85d5a2c97"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-014.source.txt",
+          "blob_sha": "ab08a6708dab18d713b2bccb61a6847f0343141a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-015.source.txt",
+          "blob_sha": "97b3ed7698de64ccf5fd589a54e870e7941bcc79"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-016.source.txt",
+          "blob_sha": "b2f049c9afdb0a6231fc97880970a2f3b69b9011"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-017.source.txt",
+          "blob_sha": "3030446fbe2cdf8f2744b11ebaf41742560b2946"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-018.source.txt",
+          "blob_sha": "4c1eb2763161ccefcaeed805701b1b61170e1768"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-019.source.txt",
+          "blob_sha": "c6b39a733868777c14d02097a874f9a58fce1ff9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-020.source.txt",
+          "blob_sha": "a27648c54c9c0484efd703478f991d4edab3746e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-021.source.txt",
+          "blob_sha": "8cbb704387d2c4090205cc6d40253aac2be414a3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-022.source.txt",
+          "blob_sha": "7b573e6627b9b855703245efa9d3a8c9543ea094"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-023.source.txt",
+          "blob_sha": "4d89643a679663b1933d4462e9584fee2520448f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-024.source.txt",
+          "blob_sha": "0486465975937adf230fcb45f23dec78e8af753f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-025.source.txt",
+          "blob_sha": "b62c4d481dce80fed593f7f9897d835a3ea84b6d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-026.source.txt",
+          "blob_sha": "7e03a0307844462a8428fa4a9167a51b1de2c879"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-027.source.txt",
+          "blob_sha": "7ef227bcab861f5f4f70a60eaa19a9916a9f6cf2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-028.source.txt",
+          "blob_sha": "8a192764655ac0d97461c5dc6fd51245d242de0b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-029.source.txt",
+          "blob_sha": "425240a30e50fd756b5ba7797cc750ac48b58c4b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-030.source.txt",
+          "blob_sha": "67bb50763e5c120e7901bdfb785aba698250f763"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-031.source.txt",
+          "blob_sha": "66055eaaba1919aef25b72ed5a23b145a7b9be0d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-032.source.txt",
+          "blob_sha": "21528e7ce11a99d3f7f22ca635e66a656df45ab8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-033.source.txt",
+          "blob_sha": "7607d26f0218294df74ebf19462da72b56c12a22"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-034.source.txt",
+          "blob_sha": "4bfb575890416d58a26a98a53e1b181ca807bd53"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-035.source.txt",
+          "blob_sha": "05d8ada7194b94e3e208a7d48276cfdb0a5119c3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-036.source.txt",
+          "blob_sha": "75e31330b4eb50169296b9d2f859d0c8bf74f56e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-037.source.txt",
+          "blob_sha": "8a982986cdceb0e223a1249930d9975175014ba7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-038.source.txt",
+          "blob_sha": "6f91f0ad62e533dc64fac92f519990bb40c33a89"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-039.source.txt",
+          "blob_sha": "4d0e7e28bfff47161acb7f9810ca13a1474f1208"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-040.source.txt",
+          "blob_sha": "2b79894d3edbedcf95cf6c16ec2ff7c6b85ef1fe"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-041.source.txt",
+          "blob_sha": "05cd328f51ecd4a5a3019e481a3526d3d97243c7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-042.source.txt",
+          "blob_sha": "36a6d80ada114bc523fa1df8490f9c4785f496ae"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-043.source.txt",
+          "blob_sha": "892688c82a56d9cd290325e49227db2fb24018c3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-044.source.txt",
+          "blob_sha": "46612796f44c9b75cbd7ab43854dcec33283804a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-045.source.txt",
+          "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/fonte-046.source.txt",
+          "blob_sha": "8a00eeaea0ceba59245a34c9da1992a03635b625"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/index.md",
+          "blob_sha": "df49e4510de9ec798e61c07e06eb97ce5a780452"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/state-versions/registro.json",
+          "blob_sha": "daf72c94c0e6d55b109554075bb89dbf1d570bcb"
+        }
+      ]
+    },
+    {
+      "id": "chr001-character-target-choices",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/personagem",
+      "path": "novydres/cronicas/CHR-001/personagem/target-choices",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/assunto.json",
+          "blob_sha": "c2ddae55675951ac8c3c548beebb13a5f76ac3f6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-001.source.json",
+          "blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-002.source.json",
+          "blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-003.source.json",
+          "blob_sha": "2c9f8dc83e2318e431ed7a120ee22529d80d8f38"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/index.md",
+          "blob_sha": "5d7b9679f2a2d1f7dd6686560c343f957429128b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/target-choices/registro.json",
+          "blob_sha": "77f48fa9ac4d745e00d73850274860ee2cdf3257"
+        }
+      ]
+    },
+    {
+      "id": "chr001-character-technical-projections",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/personagem",
+      "path": "novydres/cronicas/CHR-001/personagem/technical-projections",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/assunto.json",
+          "blob_sha": "68ad5c0602f657ac358cfec1ed3481bf6f517393"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/fonte-001.source.json",
+          "blob_sha": "c1f2c6acb67a8d0a11074ca7ebbcfffd142fcf89"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/fonte-002.source.json",
+          "blob_sha": "285e206f4ad956e1d6bdb6315366429aeb4d9bdf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/fonte-003.source.json",
+          "blob_sha": "f8f7cc1a561f29ffdb1d9d42ee77686fa3f40e67"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/fonte-004.source.json",
+          "blob_sha": "960fee2478523ff9ad6d6610d69db00ced36c884"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/fonte-005.source.json",
+          "blob_sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/index.md",
+          "blob_sha": "673bbaf5a7157cd9658742c44008591caf917160"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/personagem/technical-projections/registro.json",
+          "blob_sha": "52794b8efb754e55adafc659d9c2d720d8b43197"
+        }
+      ]
+    },
+    {
+      "id": "chr001-chronicle-recovery",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/assunto.json",
+          "blob_sha": "e08aaa31a2c021076935c3a5a48bb8bce6a24434"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/fonte-001.source.md",
+          "blob_sha": "9ecea98407fb3cb9c87a6df5d8d54c54c9b6f664"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/fonte-002.source.md",
+          "blob_sha": "dbb5c0294ba00e82b3b8fb39e722b123039aca10"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/index.md",
+          "blob_sha": "7570dc00db8c56f6db1d560590f020128659819d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/registro.json",
+          "blob_sha": "aa181933d58f137727b66fa621ff84dbba3c6b3f"
+        }
+      ]
+    },
+    {
+      "id": "chr001-disposition-code-historical",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/elenco/disposicao",
+      "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/assunto.json",
+          "blob_sha": "291326776b0800b9353340f929cbaa69f31e1c31"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-001.source.mjs",
+          "blob_sha": "3d2597695b5e37830dc4a5b5e2b55592f05dec23"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-002.source.mjs",
+          "blob_sha": "8c626b5cc6ee326e619b0b6e747b9c2e1485ee1e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-003.source.mjs",
+          "blob_sha": "b3b21296a296ceef20f6f661f991cc32cc7a7dfc"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-004.source.mjs",
+          "blob_sha": "452c955ef381ce685153bd8a7f5d44ad96329cf8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-005.source.mjs",
+          "blob_sha": "ba37e0343a49361a4e24afeb996087411375ab99"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-006.source.mjs",
+          "blob_sha": "e1d00250ade29a7e1a9644c0906dd915ba2d342e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/fonte-007.source.mjs",
+          "blob_sha": "d582781ce351c49e6356fd940d4832e688ce42ff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/index.md",
+          "blob_sha": "35cf459944e8ac92af7ae869cbc467111cb7ea2e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/code-historical/registro.json",
+          "blob_sha": "9471eda20b70501cf51dc602fe06d6282a826c29"
+        }
+      ]
+    },
+    {
+      "id": "chr001-disposition-governance",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/elenco/disposicao",
+      "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/assunto.json",
+          "blob_sha": "7798abd487737914b600bd980def1d6a39885ba9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-001.source.json",
+          "blob_sha": "1a5703d9e0e98a5572e40876424816bd11105db5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-002.source.md",
+          "blob_sha": "8c8ecf0b0a355108b341a5e4941543ce539a0f01"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-003.source.md",
+          "blob_sha": "e102aeb6c8c2cc42ae3a0225c0d330cc4918269b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-004.source.md",
+          "blob_sha": "d2a5bc557fbe1de7e906bd3d06a834a0ea1540c1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-005.source.md",
+          "blob_sha": "69ba9199250946efc5780760ffdd810ddd949030"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-006.source.md",
+          "blob_sha": "08ec4a22e67f5799168a67bfc17e9a25a29213aa"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-007.source.md",
+          "blob_sha": "45db86f5a2a91e457c290668be042bb2838b76d3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/fonte-008.source.json",
+          "blob_sha": "67f477c86bba871d43816bf37c0f60c321eb5d5b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/index.md",
+          "blob_sha": "b14263e1b0315243396c6c70d2a75cd563c45449"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/governance/registro.json",
+          "blob_sha": "1a029658b3460849f0b8274a78419a3653dadb00"
+        }
+      ]
+    },
+    {
+      "id": "chr001-disposition-state-history",
+      "kind": "history-topic",
+      "owner": "novydres/cronicas/CHR-001/elenco/disposicao",
+      "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/assunto.json",
+          "blob_sha": "60ad873c22cbcbb811f8c64a87d86e48a7f7bd81"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/fonte-001.source.json",
+          "blob_sha": "709746d4e6ea44ec57e54a6e895ac9ec49e79fc1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/fonte-002.source.json",
+          "blob_sha": "0f9fb5b6be43f2afb08667e7f7dceefc24e1234d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/fonte-003.source.json",
+          "blob_sha": "714bdcbc89b76861248c53e7f7df0df196a5b980"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/fonte-004.source.json",
+          "blob_sha": "d0d8873da5f961245e7e03eb080212d891856437"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/index.md",
+          "blob_sha": "8bd72980b5e1c4e271c65dc4dca03b4d3ad380c3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/elenco/disposicao/state-history/registro.json",
+          "blob_sha": "95350306c943e7d31124db20e650ea3969166923"
+        }
+      ]
+    },
+    {
+      "id": "chr001-episode-m1",
+      "kind": "story",
+      "owner": "novydres/cronicas/CHR-001/episodios",
+      "path": "novydres/cronicas/CHR-001/episodios/m1",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m1/assunto.json",
+          "blob_sha": "4045c4ad35fda58d333c5e94539039540e16ecba"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m1/fonte-001.source.json",
+          "blob_sha": "f1479f5673eb3921c57ed17b02d9880de6ba7152"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m1/index.md",
+          "blob_sha": "94d2748e415665e6e850faf5090c57a7c9a12bc5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m1/registro.json",
+          "blob_sha": "3a407456b3c53d1526cc87af928857e5d33acd7c"
+        }
+      ]
+    },
+    {
+      "id": "chr001-episode-m203",
+      "kind": "story",
+      "owner": "novydres/cronicas/CHR-001/episodios",
+      "path": "novydres/cronicas/CHR-001/episodios/m203",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/assunto.json",
+          "blob_sha": "1daa646b0c675a2d2cd202acc1ceb3833adc815a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-001.source.txt",
+          "blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-002.source.txt",
+          "blob_sha": "6b55a14aa6d293fb2a8ae7d7def3f79050e55f83"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-003.source.txt",
+          "blob_sha": "c8e270009c97a7ccb6f67a4623dd195f4d61e0c8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-004.source.txt",
+          "blob_sha": "665a4a279a55ffb6107d68fd53dd266fa0955f33"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-005.source.txt",
+          "blob_sha": "5d17a5cbfaa62b19fb9589e410f02882874fcb33"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-006.source.txt",
+          "blob_sha": "0efcf1467c6f5f4562a46bfcb57708bba51584d5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-007.source.txt",
+          "blob_sha": "22199016e2886eb0a84a404e031abd9040ae5d09"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-008.source.txt",
+          "blob_sha": "4c9093b903e4cdf6a2e57b217cbd5c0fd37b71a3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-009.source.txt",
+          "blob_sha": "83b93c6a8662d207690358efc832ca600fb9b994"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-010.source.txt",
+          "blob_sha": "d96b8ea06789c54f813342042570a10504dc0ce1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-011.source.txt",
+          "blob_sha": "81d2da178afc540003e1d96bc95da15d5cba6bac"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-012.source.txt",
+          "blob_sha": "1897afaca33946cabd0a99e6609b9825cbd36e76"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-013.source.txt",
+          "blob_sha": "be915950e35794bd15f9a8784a96b6397be376d0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-014.source.txt",
+          "blob_sha": "3f27c018906c138b69592da039ac6bb92923550e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-015.source.txt",
+          "blob_sha": "d1b940076a3539cc4f5d7c36a128c1611b19a052"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-016.source.txt",
+          "blob_sha": "2f16f4d6732518ee72df9acb6916e62e1ff10c76"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-017.source.txt",
+          "blob_sha": "78f392314262c6f93e048de2356bddc43feb31ff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-018.source.txt",
+          "blob_sha": "b35212d618a7aa195757d5d7bd28976c06d3c327"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-019.source.txt",
+          "blob_sha": "337c22eb273e4b81d30a0ed5d4122a0222568713"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-020.source.json",
+          "blob_sha": "34413811899a0c4081d4e59a82a984f4b61590b0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-021.source.txt",
+          "blob_sha": "a84ffb9dfdabba4b1b23668359cd43dac683b22f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-022.source.txt",
+          "blob_sha": "41f15ffcd26cdaaf66fb96a07a347988e3674f3b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-023.source.txt",
+          "blob_sha": "61be85730eeffac3aed21236456133b65cf27b44"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-024.source.txt",
+          "blob_sha": "17f02f9e3c0b3a0f734b80c9bd8851d21a76aa8d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-025.source.txt",
+          "blob_sha": "c83fc8f51d5b14ea63113b54fbe1ad753a67d1d7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-026.source.txt",
+          "blob_sha": "01397d613d04f8e2d56412127eb5464af45dffe5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/fonte-027.source.txt",
+          "blob_sha": "0219c761bd6fdb1136a695b22bd8cd77f614e753"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/index.md",
+          "blob_sha": "b03ad80bb055384dd2faa2fc9dd35f2e1f5a2d6d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m203/registro.json",
+          "blob_sha": "7fd4290d3cf9254b3504a701be12f3e96b1e649a"
+        }
+      ]
+    },
+    {
+      "id": "chr001-episode-m204",
+      "kind": "story",
+      "owner": "novydres/cronicas/CHR-001/episodios",
+      "path": "novydres/cronicas/CHR-001/episodios/m204",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/assunto.json",
+          "blob_sha": "49530aaa330d2b9bcd32c46b6a3c93a921aa673c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-001.source.txt",
+          "blob_sha": "07bcf1d83a55037b739fd55c9368fec49b7807df"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-002.source.txt",
+          "blob_sha": "31439630c00c48eb48c0e833e2477b01fe08a4c6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-003.source.txt",
+          "blob_sha": "df891101e92f9d1909a2d6d66356a9d8d01a8af4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-004.source.txt",
+          "blob_sha": "8a4f780622b75a62729a7d67e5c4c60645ef3606"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-005.source.txt",
+          "blob_sha": "bb9a2b7277736da69082e618248efdb9b3963a00"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-006.source.txt",
+          "blob_sha": "2dd4c1689c4f45f38f0f20fd17226679f338fbe8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-007.source.txt",
+          "blob_sha": "ef0ba5ddedba49140a6ee8f0c423e81a6a0db52e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-008.source.txt",
+          "blob_sha": "c80be2c5e0fbb918bb2c0f9386e64e3d2eafa6dd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-009.source.txt",
+          "blob_sha": "41eaf9909d33b30a9e3256ab4ecea864d4fd958b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-010.source.txt",
+          "blob_sha": "88fb084df412897b659f65a436b8fcd957fcf369"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-011.source.txt",
+          "blob_sha": "5b05de0a01b49a6f16504f238febafe3429b7021"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-012.source.txt",
+          "blob_sha": "dd032ed4ef95af9819038939118803a523a84740"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-013.source.txt",
+          "blob_sha": "c162d4c7e4df46486b02796bafd153f9e48c64ce"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-014.source.txt",
+          "blob_sha": "f67e614f1020658bf9448f6a01f28b611a110de9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-015.source.txt",
+          "blob_sha": "c8b65a0f5b0e1bc3b3c0df7c77457dcb18dfd9ed"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-016.source.txt",
+          "blob_sha": "64a92912d129c1964cb8727ec0ca54634853c788"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-017.source.txt",
+          "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/fonte-018.source.txt",
+          "blob_sha": "4059186c29a3c32ad7dcd0e9fdc74d0238c6ddc8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/index.md",
+          "blob_sha": "174e69f514db66258f6f2b94a322c26cb730b48f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m204/registro.json",
+          "blob_sha": "5f5cd960ee8b5e10729e7e22e209af3b4843aa3e"
+        }
+      ]
+    },
+    {
+      "id": "chr001-episode-m301",
+      "kind": "story",
+      "owner": "novydres/cronicas/CHR-001/episodios",
+      "path": "novydres/cronicas/CHR-001/episodios/m301",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/assunto.json",
+          "blob_sha": "9c770492b43efa40c9289d697df747ce5820c330"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-002.source.txt",
+          "blob_sha": "6e5a2680a34a05d7ddd21243a78a61b1ba4e001c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-003.source.txt",
+          "blob_sha": "6df92713ce5d161b078c3bf93e4cf16a0d7b6769"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-004.source.txt",
+          "blob_sha": "0e16201c7e77aa6312fd0fc4dd07be06a4989260"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-005.source.txt",
+          "blob_sha": "42fb8a8fe2b4b32f6d560f420c5b18710b0e011f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/fonte-006.source.txt",
+          "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/index.md",
+          "blob_sha": "bde2da4d8e45fa3161478373333a3ac1636addb3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m301/registro.json",
+          "blob_sha": "a615e64aa3f1792a8904eb972226676aa9435052"
+        }
+      ]
+    },
+    {
+      "id": "chr001-episode-m302",
+      "kind": "story",
+      "owner": "novydres/cronicas/CHR-001/episodios",
+      "path": "novydres/cronicas/CHR-001/episodios/m302",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m302/assunto.json",
+          "blob_sha": "5c71495c21c29fa550f7c2aeb30ac8346d7c95a8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m302/fonte-001.source.txt",
+          "blob_sha": "04277d399330181b2cc029f5132dda38b6457c2f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m302/index.md",
+          "blob_sha": "0bb604fac0a50be4ffe6789bb25186eabe084460"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/episodios/m302/registro.json",
+          "blob_sha": "45abe07c4f0873d1941a3d2ace68d20ba6abd792"
+        }
+      ]
+    },
+    {
+      "id": "chr001-historic-history-index",
+      "kind": "history-topic",
+      "owner": "novydres/cronicas/CHR-001/historico",
+      "path": "novydres/cronicas/CHR-001/historico/history-index",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/assunto.json",
+          "blob_sha": "4dff398d722bf2f2476dd1f420fb9fdad894493a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-001.source.json",
+          "blob_sha": "e68dca15a5e66e5305f187f3056898a86b2d5e44"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-002.source.json",
+          "blob_sha": "b9a6881559c6351b1cf5eaaf5e6a03a5b307280d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-003.source.json",
+          "blob_sha": "913fe649ae1597664206916edbcc21493064d516"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-004.source.json",
+          "blob_sha": "a452073fe6ea7945241302ac28130f4ee12b7097"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-005.source.json",
+          "blob_sha": "e803f35ac40067565e6587b11eb45e293d14046a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-006.source.json",
+          "blob_sha": "b3a080bfe33aba09e608722cae3560aa01e77793"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-007.source.json",
+          "blob_sha": "ec02d3878b21ec1f37473ecbff6ae4a606323686"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-008.source.json",
+          "blob_sha": "012d19c4fe77b5bdf9a1ae319db644a6dbce04d1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-009.source.json",
+          "blob_sha": "6b14088e025405531fc8100fc1a7c3475adf17ee"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-010.source.json",
+          "blob_sha": "79e00d9e52a9fce036f6b0fca47855d889040ddd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-011.source.json",
+          "blob_sha": "321675512b007ade6283a5f0acff79c3a50d36ed"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-012.source.json",
+          "blob_sha": "f19b1ce92a723415af905dfa62cd0798b8d3c844"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-013.source.json",
+          "blob_sha": "a226f2b6291a18ca90794aadac798b689ad33c24"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-014.source.json",
+          "blob_sha": "253277905b97ae3d5b9089ed1ce8d31a11940704"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-015.source.json",
+          "blob_sha": "48269bebe82a66555f506ea213e0ccc2a6f84de5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-016.source.json",
+          "blob_sha": "8de03eda194d0b47a80f19ab8eeadab973778120"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-017.source.json",
+          "blob_sha": "157efa2d8298e4cb9fc5d15d4f9c54be57e72088"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-018.source.json",
+          "blob_sha": "8b6bda5eeaa49002dd243e73c2079f248cacb5ab"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-019.source.json",
+          "blob_sha": "5f75cc9fcef7138d9683d982cf5f7950ccaec5ef"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-020.source.json",
+          "blob_sha": "30732e8a01205fc85db19bc708793b4559140f3c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-021.source.json",
+          "blob_sha": "43f06683f9ca45fd5f438dfdf23f7ba17fb4700d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-022.source.json",
+          "blob_sha": "587ec2c8450c0c55d5eb14dce844aac4db8bcd6e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-023.source.json",
+          "blob_sha": "7397959065251175e5e88898d4f90cf53e839fb8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-024.source.json",
+          "blob_sha": "169a22984c5b62dd6afd77088c306b6acfda30dd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-025.source.json",
+          "blob_sha": "0925f484395243ccc5afb598e1d2b5c28bb810bc"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-026.source.json",
+          "blob_sha": "7a67f53eff026e35f667b29839d4bff9ab780037"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-027.source.json",
+          "blob_sha": "8e9b014ba5da10a9ed21d8f619fc059a24749ebd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-028.source.json",
+          "blob_sha": "c9bbe20ffb5197062a76e4e87f15b4a12e8a4239"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-029.source.json",
+          "blob_sha": "cd7a2a85f5e63226242bd0eb0afe151d1db0fcdd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-030.source.json",
+          "blob_sha": "9d5564467443977510b9da0ef262e464bdfe44d8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-031.source.json",
+          "blob_sha": "e77231038137c7ad5fe5fd8f2a430e877cba80fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-032.source.json",
+          "blob_sha": "a63082ca0594913db9380891e3a010482287aba2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-033.source.json",
+          "blob_sha": "d7127ef1a23b820b42a6c71e1effd425253ff83d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-034.source.json",
+          "blob_sha": "ca4274c29e017d00f000845cf214b4f3b5d3d14f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-035.source.json",
+          "blob_sha": "c85c73723e1699f332cd5e730ddf7ee7a85c3e9a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-036.source.json",
+          "blob_sha": "fbfdb51e40a49958bcb7ae18980e2a8887877cce"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-037.source.json",
+          "blob_sha": "80e73aa4204c8844ff8e7dfa8a7bd3193586bbbf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-038.source.json",
+          "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-039.source.json",
+          "blob_sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/index.md",
+          "blob_sha": "7c86d0f00f8608f74c9807932a8ea8884e099dd0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/registro.json",
+          "blob_sha": "355b1f26d6d48b3aaf15b3cc9e9381d9e6688d50"
+        }
+      ]
+    },
+    {
+      "id": "chr001-historic-live",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/historico",
+      "path": "novydres/cronicas/CHR-001/historico/live",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/assunto.json",
+          "blob_sha": "6f8c077acb080846b86ef1c0f3269eefff2a5a23"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-001.source.json",
+          "blob_sha": "1b91140a686b77eb23dcdd22357e3b8e4cefc53d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-002.source.json",
+          "blob_sha": "ce8c3de0ff006d3e5569e286a636ff4f1bf08a58"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-003.source.json",
+          "blob_sha": "025a2120ee4fe04823bf73a30f599a2a119b1e8e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-004.source.json",
+          "blob_sha": "dc36345089d392ef90bf87f1001f426cd6025c7f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-005.source.json",
+          "blob_sha": "2e85e296cbc52a707b00802032ac633a32b11388"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-006.source.json",
+          "blob_sha": "4698fc8f16d9fa15a705fd207e4ac56bf69fe219"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-007.source.json",
+          "blob_sha": "72065044a1d6caa3dac04f5c20ef4b9c988c8175"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-008.source.json",
+          "blob_sha": "e87fec47050b4f974c56347f2d5feb2c97359404"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-009.source.json",
+          "blob_sha": "b506e945f43f2981f868bbe805a98eb6e94e9400"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-010.source.json",
+          "blob_sha": "389aeff81f8680348026aa68d9d9dbb755c394dd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-011.source.json",
+          "blob_sha": "c5c8f07b31120bc6dc14f13a875c958d80cf425d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-012.source.json",
+          "blob_sha": "87ab0ac25bb5df36dd11af56b876ff1826e74495"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-013.source.json",
+          "blob_sha": "879ecde7b1c6a11a8035f50b1de65d633b168366"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-014.source.json",
+          "blob_sha": "acdd221ef6f246e5688d0dfd6189634ef2a7b44a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-015.source.json",
+          "blob_sha": "347380e421d58343764d4f54c1a7d9bb2ef0d496"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-016.source.json",
+          "blob_sha": "ebddf3a678ca9db5024627006c8db901df97ca87"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-017.source.json",
+          "blob_sha": "1d63dd9d97c0d46d7bf5a04ea302858d9bfb2163"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-018.source.json",
+          "blob_sha": "a8d7c9f9797017a93f699e9cb8603f82e3cd7c75"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-019.source.json",
+          "blob_sha": "eb2a852230781573dc0201ede70ad9beb7e61fce"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-020.source.json",
+          "blob_sha": "13dfd718a1f1a6acc25a493f03f3ed18bef4efef"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-021.source.json",
+          "blob_sha": "08245c20aa60ec5d5f22913f3cdeaa0799110203"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-022.source.json",
+          "blob_sha": "30ddf3c3bdf163bd7fcc5afbcb046e9454963f1a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-023.source.json",
+          "blob_sha": "3393309b189afe1dc662a97ad99a278d495b3e49"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-024.source.json",
+          "blob_sha": "d59fb826d3ff73e593824e23da7b7f50ac6d6747"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-025.source.json",
+          "blob_sha": "36d16d9d19e8deebbd7e7e993b361efd47ce8900"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-026.source.json",
+          "blob_sha": "cdd9594c862a4f72d5e9157f9476d94d8f96427c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-027.source.json",
+          "blob_sha": "1d5e33da867681e2d86914f8aa6661c8404163c0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-028.source.json",
+          "blob_sha": "86c45e07c0b8637df6363fb4435ef7e7f4502153"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-029.source.json",
+          "blob_sha": "ce172a20f4dc3e0df0e84a5e3146ea8bfe789169"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-030.source.json",
+          "blob_sha": "86897bef9d3559193153baf8f88a3d7fef139f90"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-031.source.json",
+          "blob_sha": "5fe68f821cc72082ec41950b3d76e6f2ec7f7c3f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-032.source.json",
+          "blob_sha": "6091d43bfff1ddf9c1ab7301ee4f414f96a61322"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-033.source.json",
+          "blob_sha": "2bb6cee1375020fb5665acae43d7ac988be2315b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-034.source.json",
+          "blob_sha": "45fa26e37a5d8f76bd1a8e2ed4e4d1068b54d2bd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-035.source.json",
+          "blob_sha": "0c3568b02395ad193309e835be351d5a91b5dddd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-036.source.json",
+          "blob_sha": "11e4e5ff67d1713e6688eb49544c8328c45b9794"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-037.source.json",
+          "blob_sha": "3c51465d548484f0bbf5a42cd7d6611f0b3bb85e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-038.source.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/fonte-039.source.json",
+          "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/index.md",
+          "blob_sha": "ae94e94ed2b4840f713ccc5fa00a55c21cc81493"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/live/registro.json",
+          "blob_sha": "a082a1e11eb51d99f7189a4a01aa9b1fde9b8dbe"
+        }
+      ]
+    },
+    {
+      "id": "chr001-historical-audits",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/historical-audits",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/assunto.json",
+          "blob_sha": "f77099977a2963e3d2d2a21025b95af2b6ddf3cf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/fonte-001.source.json",
+          "blob_sha": "c896f83272a5b9084edc8eba21f770e704776d9f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/fonte-002.source.json",
+          "blob_sha": "3f976b299b31a97a2f08d53f047f648c9d12ee02"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/fonte-003.source.json",
+          "blob_sha": "a7e9cbe2a703f3405a919a4d2ffd6b7355838f84"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/fonte-004.source.json",
+          "blob_sha": "54f396b7ab179b11009885d38b6cbab6749938c2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/fonte-005.source.json",
+          "blob_sha": "0ece748231f662f21956c9101f654ed17d44a248"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/index.md",
+          "blob_sha": "c67edecf358e81ab4744d45ab692e22f54ff14ba"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-audits/registro.json",
+          "blob_sha": "6c903fbf3cfd337fe77c298e1113bf154dd05d0d"
+        }
+      ]
+    },
+    {
+      "id": "chr001-historical-handoff",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/historical-handoff",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-handoff/assunto.json",
+          "blob_sha": "df84c01dfb4c58d3912b565dc082a012b76fd94e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-handoff/fonte-001.source.md",
+          "blob_sha": "d7b3f9cef7e21e11d3b8f76662e3cb7072712e25"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-handoff/index.md",
+          "blob_sha": "1e516efa1cd85c72302b00de71ad19b35ba06c8e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-handoff/registro.json",
+          "blob_sha": "9adcb589ef11f13db20d18d23973f82bd9c4872a"
+        }
+      ]
+    },
+    {
+      "id": "chr001-historical-roll-sources",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/assunto.json",
+          "blob_sha": "fd8f1a609bea9704b92412a3fded908ffa410660"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-001.source.json",
+          "blob_sha": "354eb0b0bdb87af5c81eed20b730bad39e7202bd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-002.source.json",
+          "blob_sha": "de90d3031d298ed5fdf9d1f2f7ab046cb44503fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-003.source.json",
+          "blob_sha": "4f195dc71c87b5faef7024e07fe0086d764f4cdf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-004.source.json",
+          "blob_sha": "ac0660060cf38b2ec75e7d2d026b5e526cb9f37c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-005.source.json",
+          "blob_sha": "f236a74864531455bd74a518cfa919f64283e94e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-006.source.json",
+          "blob_sha": "520cbae504abbe8f9d1b36e0635e2555ce281702"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-007.source.json",
+          "blob_sha": "160ed383c9622afd45e5722d0e874bd00afb5c1f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/fonte-008.source.json",
+          "blob_sha": "f6300d5e0d745fdab24f7cb95a4addca9b73afde"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/index.md",
+          "blob_sha": "49cca5d6f579acbd6037d9079c9f56e50b7f4658"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/historical-roll-sources/registro.json",
+          "blob_sha": "6aa0b035697af876c386a7d3bfaff44f762b13ef"
+        }
+      ]
+    },
+    {
+      "id": "chr001-literal-external-sources",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources/assunto.json",
+          "blob_sha": "3147439c1fb5600090886f5c72d3deebc6d03c32"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources/fonte-001.source.txt",
+          "blob_sha": "20dc18eb84e406f4015bbd18711e720fc9526c77"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources/fonte-002.source.txt",
+          "blob_sha": "210e42f15c2d86859563b3cce08cd5ee8cfbdcd4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources/index.md",
+          "blob_sha": "8d391f0e03f10b94762d561afe77f53f99bbfb7f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/literal-external-sources/registro.json",
+          "blob_sha": "4b3c755907bf3fada3f1cdb72f39410b1a344cef"
+        }
+      ]
+    },
+    {
+      "id": "chr001-local-cultural-lens",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/local-cultural-lens",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/local-cultural-lens/assunto.json",
+          "blob_sha": "5833fd7568482d86d0ef622652aba786e69c1525"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/local-cultural-lens/fonte-001.source.md",
+          "blob_sha": "7cd1179f403bebb81ea4abbb95ff19b28577b718"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/local-cultural-lens/index.md",
+          "blob_sha": "0f6d57848cc5e82e10c3c338c49552bbb5d304bc"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/local-cultural-lens/registro.json",
+          "blob_sha": "2be95908300fb8456e7b6e03d239ebb1e2388a8b"
+        }
+      ]
+    },
+    {
+      "id": "chr001-narrative-atlas",
+      "kind": "plot",
+      "owner": "novydres/cronicas/CHR-001/tramas",
+      "path": "novydres/cronicas/CHR-001/tramas/atlas",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/assunto.json",
+          "blob_sha": "3ad435826011a98761595b070896362d63f61259"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-001.source.json",
+          "blob_sha": "504b97a8d7db6906bd1700bc52bac67ac3d280d7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-002.source.json",
+          "blob_sha": "516b1dd3ef9b1bfe1ec600da9b58ccc4887d1d30"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-003.source.json",
+          "blob_sha": "320501eab1f1f77cc0077fdc4c99d9713820195b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-004.source.json",
+          "blob_sha": "ab63ceadab183ff1b657bef8d5422afaf41ab552"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-005.source.md",
+          "blob_sha": "98f9842e42b17c2ecc79567c911c4f635ccdf4a0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-006.source.mmd",
+          "blob_sha": "07b1658f540c29f0fc14caad53596b4d9e986a64"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-007.source.mmd",
+          "blob_sha": "440584b6f9fdd86a8bdcef5620fe3014387425a0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-008.source.mmd",
+          "blob_sha": "f3482666a3e70323660f041be26c6f3507d8df75"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-009.source.mmd",
+          "blob_sha": "11046bc17809afbc8503343fd5ad5a1f1a6c4eff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-010.source.mmd",
+          "blob_sha": "c780e6b1887e8a95ab200b0fa4b9785b29cf4f06"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/fonte-011.source.json",
+          "blob_sha": "7f5233bb8529c57e224ac9b48df45e2306e8daec"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/index.md",
+          "blob_sha": "f6432c9cf997cf0a368cb18bd716e26395c7aaa5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/atlas/registro.json",
+          "blob_sha": "afba085c9b84e9ea0fa37eeb99981e17010fbec5"
+        }
+      ]
+    },
+    {
+      "id": "chr001-narrative-history-shards",
+      "kind": "history-topic",
+      "owner": "novydres/cronicas/CHR-001/historico",
+      "path": "novydres/cronicas/CHR-001/historico/fragmentos",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/assunto.json",
+          "blob_sha": "3b6248ef190908b38ee838c75572c19c348c8447"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-001.source.json",
+          "blob_sha": "bae45ad8c6916150d60c897aca6215dd179a380f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-002.source.json",
+          "blob_sha": "d5142216a18e984ff847a7729a5859e11d40f694"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-003.source.txt",
+          "blob_sha": "b4acdfcd19991530f70932eae4f5674acd055a1e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-004.source.txt",
+          "blob_sha": "0ffabc2d89a0607935ccb4930290ebd4f9b4ddb0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-005.source.txt",
+          "blob_sha": "73f6c5b05759fd86f827625d921fe792159e136f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-006.source.txt",
+          "blob_sha": "cada22228a036b815c6f019f919236f6304c53fb"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-007.source.txt",
+          "blob_sha": "fce17955429035edcf29934d6730b30f4e174554"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-008.source.txt",
+          "blob_sha": "9c44ddb8e2b0681d31430b2586a6741eb01b9dd0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-009.source.txt",
+          "blob_sha": "38b40e98ad6dbfee165ca253ec251797dc87d19c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-010.source.txt",
+          "blob_sha": "e32f4a835a430a1c83c574e43ea43c7415e5e213"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-011.source.txt",
+          "blob_sha": "9b0282609dace7961c9d7ad3f088165db192a830"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-012.source.txt",
+          "blob_sha": "ad68a70df9f79c9cc2fae421062de4bc98eb34bf"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-013.source.txt",
+          "blob_sha": "558e665df521d9a9478015476e219fc59413ab27"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-014.source.txt",
+          "blob_sha": "7ddbb043ca4fc38a9d1f1cf8d8ba1b89843522b5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-015.source.txt",
+          "blob_sha": "4e60d24a8e1c1f306c585c760110b9a840333018"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-016.source.txt",
+          "blob_sha": "c324a4f3e172cb8b3c7b145aaccf40f245518ac8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-017.source.txt",
+          "blob_sha": "76461e50d3930c50f20e459cf239db703e8fb297"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-018.source.txt",
+          "blob_sha": "136fa07584ae891f3fa834439e3b955d2c8ec65c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-019.source.txt",
+          "blob_sha": "1c3e3da3f8222179033ad051f1a0f7c6b392b8f4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-020.source.txt",
+          "blob_sha": "db42eaf9d37757408b21b19b26af179b33ed1680"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-021.source.txt",
+          "blob_sha": "74a4f1a24b70d9339b306b074570f48f42cd192f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-022.source.txt",
+          "blob_sha": "c28b5e754bed1f54242d7c6bd951433722ad2f6d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-023.source.txt",
+          "blob_sha": "b35298967b5b978674106230418e02975427a6d6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-024.source.txt",
+          "blob_sha": "7d1b93ed429bc0f08edf4450c26d56f14ea649e9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/fonte-025.source.txt",
+          "blob_sha": "6fdf161537f27ec2ec29e7d1f44b2b1113c30d11"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/index.md",
+          "blob_sha": "5ad1050c965843983731685810b4a45a783dca46"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/fragmentos/registro.json",
+          "blob_sha": "f491424643c80c5f6ab57af624b71861865830c1"
+        }
+      ]
+    },
+    {
+      "id": "chr001-narrative-reviews",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/assunto.json",
+          "blob_sha": "f30e99f72e53973102c65ca9802da354b8bed7ef"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-001.source.json",
+          "blob_sha": "baca16bdef460cfec4642252056e0d433cd36244"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-002.source.json",
+          "blob_sha": "136ef132f87d05afe6f699bc28070880c5b8184c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-003.source.md",
+          "blob_sha": "1ac2c9afedfb82cb7534a6b66ee16ddfafa8212f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-004.source.md",
+          "blob_sha": "449b9beca70d7defda64a73cf74f6ea49d81f66f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-005.source.md",
+          "blob_sha": "d631c5fcfb1f07f15d7742129faaca51dba13e15"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/fonte-006.source.md",
+          "blob_sha": "3a0218fcce59fb2b6a2c57f2c86048896caa0ad6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/index.md",
+          "blob_sha": "01cf516222df334b06a74b9215862298978cfe0a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/narrative-reviews/registro.json",
+          "blob_sha": "927b1ad9fea2a3db1a500a14a7085c1d87002aa2"
+        }
+      ]
+    },
+    {
+      "id": "chr001-npc-knowledge-versions",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/conhecimento",
+      "path": "novydres/cronicas/CHR-001/conhecimento/npcs",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/assunto.json",
+          "blob_sha": "55b6342914263c8e82b0b851cf7d577422f92281"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-001.source.json",
+          "blob_sha": "c32c9d70a0c73fabc4fc73a45d62e43c84994a77"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-002.source.json",
+          "blob_sha": "46bb49a8d7d1b3f0e534ffe3fabb101d3586aa23"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-003.source.json",
+          "blob_sha": "195ace527d269c6422af7f05c108c1bb0e3cf0a1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-004.source.json",
+          "blob_sha": "a51e20ad1b5b8df15f299ee8a6cce0b335c49ed7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-005.source.json",
+          "blob_sha": "b8b00f71b20573d12c2b46a74bf58009ed9c6bc6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-006.source.json",
+          "blob_sha": "a9530c302c07a9dd08710a967c6ab638fff57d6a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-007.source.json",
+          "blob_sha": "1a4eab00c08e1a6fd0148f1754aa029e035a7427"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-008.source.json",
+          "blob_sha": "5da9719103088a792847036973386926815bf292"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-009.source.json",
+          "blob_sha": "5b457fea3041e875c8f6cd1f6cec17dc433bc50b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-010.source.json",
+          "blob_sha": "649bb37e09b6e20fce2ad7f7d894a12d33e22ed8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-011.source.json",
+          "blob_sha": "259ce432941c5ac213b25aed0ea7867d27340443"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-012.source.json",
+          "blob_sha": "170eba262841d021c975ee69c02ffff6c4a2c203"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-013.source.json",
+          "blob_sha": "eaa941bb6f910151ba4f78d632758cfc5917d72a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-014.source.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-015.source.json",
+          "blob_sha": "a5da61e00c5e29a4941d5697b2010743313f9007"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-016.source.json",
+          "blob_sha": "2ead6d45c5e5cb354c9d7106fce93cc2fd724309"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-017.source.json",
+          "blob_sha": "bd6c4d6c88155a44957cd1cf62fa4cfa45f82599"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-018.source.json",
+          "blob_sha": "a4280244695c9e515d3e902cbe78803f2dc83dd3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-019.source.json",
+          "blob_sha": "7cac2deb08ddd191768bbb961e60107ec035b353"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-020.source.json",
+          "blob_sha": "81a028496cb819374d388fdf68c6fe6f702b8d35"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-021.source.json",
+          "blob_sha": "29900d1b15cb68cee8f1c4ac49b3379a9995d6ae"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/fonte-022.source.json",
+          "blob_sha": "f287ad72be87148c9e3966d950a9e30107fbdbe7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/index.md",
+          "blob_sha": "3cc7ed4fe8d1ba9ccb54e13fae0f358686af042a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/conhecimento/npcs/registro.json",
+          "blob_sha": "35bfa11edd0dc280a00206c3e166343c6c130327"
+        }
+      ]
+    },
     {
       "id": "chr001-npc-samir-haddad",
       "kind": "character",
@@ -30,6 +1778,723 @@
         {
           "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/relacoes.json",
           "blob_sha": "ceeeccdefff4a90aa92736852ff9b2fe2cc8cfe0"
+        }
+      ]
+    },
+    {
+      "id": "chr001-open-threads-versions",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/tramas",
+      "path": "novydres/cronicas/CHR-001/tramas/abertas",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/assunto.json",
+          "blob_sha": "5d94fd895f76d77781686a0818aa0d80817a7c59"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-001.source.json",
+          "blob_sha": "028fd2c85dd19ad079b464171faf7ae4afe20a06"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-002.source.json",
+          "blob_sha": "ad5b7c1291cfb514987b29fa4665b82274019345"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-003.source.json",
+          "blob_sha": "9d19207968ef632019debed2cd4d3e3f22abe4af"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-004.source.json",
+          "blob_sha": "ff5006ff333a62e06d3301adb21221ee176482ed"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-005.source.json",
+          "blob_sha": "60b468ea5fcb1dd1af00bfc95ec6f5ac0927b0aa"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-006.source.json",
+          "blob_sha": "41683c648423de27b0cb4032dd0cda999a698b8a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-007.source.json",
+          "blob_sha": "4ac2900e712136039f9d82c0120c46cce5b1274d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-008.source.json",
+          "blob_sha": "55c0aa3ddd70ce144d2899c39c80f16babf0431f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-009.source.json",
+          "blob_sha": "64ca70fa5a794609ddd9c0213e8559c3adabdc95"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-010.source.json",
+          "blob_sha": "740e584430db113a52c505acc02c9aab3ce91ece"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-011.source.json",
+          "blob_sha": "207885210cf82e1cf5523ead269a44771afbc56c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-012.source.json",
+          "blob_sha": "4a65b4c22150dd3378a076b3748798d6fb5bd786"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-013.source.json",
+          "blob_sha": "37ed5f10ba3f36bc604dfff9152770a05f0468fb"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-014.source.json",
+          "blob_sha": "b5637ede9af35938e2d337061b0d63aa8e882ffe"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-015.source.json",
+          "blob_sha": "1c10370c352ce78f0c8360c39d5621d4b3b72054"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-016.source.json",
+          "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-017.source.json",
+          "blob_sha": "05ce76898d2757c1e270e9c3b1282712df123d13"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-018.source.json",
+          "blob_sha": "128cddd61162969547f4cf775950957b418e5d1e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-019.source.json",
+          "blob_sha": "c495087c448d1fdf4dd6345a184499b972a7c380"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-020.source.json",
+          "blob_sha": "f4e56669740147796241a3969e3d7f4221c1c70e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-021.source.json",
+          "blob_sha": "a1ebb0667fb63278fc77ffd25711fc8b84e68042"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-022.source.json",
+          "blob_sha": "8af699d1c4fedb9fe403f39c50441280f0703199"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-023.source.json",
+          "blob_sha": "137b2a973cd79f8422c4729d09cf2766d352987f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/fonte-024.source.json",
+          "blob_sha": "3fc987cbf6ce5f8bb11658404712a43a961b407b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/index.md",
+          "blob_sha": "f478383525aad2b3ed08ed613c4f9dea145a959f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/tramas/abertas/registro.json",
+          "blob_sha": "c9d4d3289368a097ae59f465102213ff3bd24b3a"
+        }
+      ]
+    },
+    {
+      "id": "chr001-orchestration-cycles",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/orquestracao",
+      "path": "novydres/cronicas/CHR-001/orquestracao/cycles",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/assunto.json",
+          "blob_sha": "cdc8cd330c4dcac76b3bfe2e582c6d478e7e52c4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-001.source.json",
+          "blob_sha": "af96cb7ccb93833d7904d98bf925f3938d5aa71f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-002.source.json",
+          "blob_sha": "a101e8ff7562bee446d41c7ec733248cd076048b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-003.source.json",
+          "blob_sha": "687a570b6dbf25abd72bbc5800b63b54810a754b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-004.source.json",
+          "blob_sha": "ee31daf0a37f7cd8945ea9c6c352d94f7d33efe9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-005.source.json",
+          "blob_sha": "26c2532112d69b0a8452cf2b0d079abd99cd4456"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-006.source.json",
+          "blob_sha": "2bc8bd1b4389f5c5eed7298f81d47ec9aec23e11"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-007.source.json",
+          "blob_sha": "96745f3006e217a03b75bada7e29927649351cca"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-008.source.json",
+          "blob_sha": "0e55854916a9cd3969b487f8700fd2c3c7c81830"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-009.source.json",
+          "blob_sha": "cae78ea64691ac0dc012996226af26cec5d8e302"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-010.source.json",
+          "blob_sha": "d8d5b1809b727a41121982c765fa46533fcd96b6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-011.source.json",
+          "blob_sha": "42202c0f6a0ca3a87b4d5ad87976d83d6d2848b0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-012.source.json",
+          "blob_sha": "24cf4b9100651c795b2cca7d09d374a2c2110e81"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-013.source.json",
+          "blob_sha": "ecd65c88c89dfd94182ae6001303b3bb0b10a30e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-014.source.json",
+          "blob_sha": "8c798bee280d70a6ef607bfb383e11ed0a454ff0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-015.source.json",
+          "blob_sha": "f7f487a960a5d293f1f1d9a372d58cb4b78b8ceb"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-016.source.json",
+          "blob_sha": "20dc1b6b9261729162d3ddc0b4484b10e64a4b6e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-017.source.json",
+          "blob_sha": "d6e7fbf5c747a2117c5117957d6cddbed354b40a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-018.source.json",
+          "blob_sha": "d160bf4cd28f48c0c6616c90f4c7f250d0da6d72"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-019.source.json",
+          "blob_sha": "dc6c1a38e13b42edaa75595faf49b5d8673e4fe3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-020.source.json",
+          "blob_sha": "74989a2046a9e9a01abe4ffb710326b230419cee"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-021.source.json",
+          "blob_sha": "7f6090b60b81bd53ae1024c40a9e27d930b91475"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-022.source.json",
+          "blob_sha": "028f684a371307f67cce88be5823a91fa6673ddb"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-023.source.json",
+          "blob_sha": "2c9511ea97ffe116cfc160da0f9a8a106eeaf265"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-024.source.json",
+          "blob_sha": "fdfaf1d0d1c902df719acad8c3fcab32d09363a9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-025.source.json",
+          "blob_sha": "c228d35ff046f98c70a179ae4c5a6060da362551"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-026.source.json",
+          "blob_sha": "71d9db01b8a6a3467e7e9ba6e29b59ce75481398"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-027.source.json",
+          "blob_sha": "d92fb6de9ab4cb70e94a3b2f553fd2a6b8719df4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-028.source.json",
+          "blob_sha": "943e6bcf3475b2c99834abd2f46e725abecba913"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-029.source.json",
+          "blob_sha": "e5de8f9bb2f58e677455996f93712d892234f2e7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-030.source.json",
+          "blob_sha": "d6fce50348e7f5f8bb21d57ab8b81d2f134c9a31"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-031.source.json",
+          "blob_sha": "a99f3c6e389eaddff017bfcd8d4a9fb97ed0f11e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-032.source.json",
+          "blob_sha": "2a65c1c8f8cad3d4c891d7db36ff2751722f0eda"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-033.source.json",
+          "blob_sha": "51afa7fa15ba7dc49a863dfe6f6bb0c539014a6a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-034.source.json",
+          "blob_sha": "a06e545b41826c157e4583ec09fec2b7a2936559"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-035.source.json",
+          "blob_sha": "09aaf9a08244c1f3664a4e5a65a5766821301481"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-036.source.json",
+          "blob_sha": "213e0ba00bfcb75f7e37bd5be35fb1bd9495b920"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-037.source.json",
+          "blob_sha": "5ddd7ef3295eabcc1604c61143c1633cc92f68d6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-038.source.json",
+          "blob_sha": "093625ad8f67971b79efdf57c42b85203b39db29"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-039.source.json",
+          "blob_sha": "7e568f8a319fba457fd9097c9c045fe14a3121ff"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-040.source.json",
+          "blob_sha": "6cb23d46c63c7801d3b6d88b67c52e31ba6064a7"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-041.source.json",
+          "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-042.source.json",
+          "blob_sha": "47e9334b4c1696b8334c63ba938da25cf4f8e644"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-043.source.json",
+          "blob_sha": "cb7c44d5952a96e59322890a1c15185f50aa2ea3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-044.source.json",
+          "blob_sha": "5bc4f59519fb7e7e3f017eea975a154e84e7efc1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/fonte-045.source.json",
+          "blob_sha": "14f746139ab0dda35ee5de95cf8a4536631534fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/index.md",
+          "blob_sha": "56ac0b0f5bb9a0bb560fe3ae1c072678d4aea7d4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/orquestracao/cycles/registro.json",
+          "blob_sha": "25b0a156356ae8f90705ff35f806f5669ba276d3"
+        }
+      ]
+    },
+    {
+      "id": "chr001-player-feedback",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/documentos",
+      "path": "novydres/cronicas/CHR-001/documentos/player-feedback",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/player-feedback/assunto.json",
+          "blob_sha": "7fdb85712e49dec1c3d7fc48cc3ded5b2fbc872a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/player-feedback/fonte-001.source.md",
+          "blob_sha": "a4cc9e5886e71602a08239577cd75b39f32e7f65"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/player-feedback/index.md",
+          "blob_sha": "745323bfcc0724c173be528d377f834368570dc0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/documentos/player-feedback/registro.json",
+          "blob_sha": "2191fa3ee21705284d7802d0faffc522cb2556c3"
+        }
+      ]
+    },
+    {
+      "id": "chr001-preparation-longitudinal",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/preparacao",
+      "path": "novydres/cronicas/CHR-001/preparacao/longitudinal",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/assunto.json",
+          "blob_sha": "bfdb3cbc294ebf782e06c4c95a2ee754fac64233"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-001.source.md",
+          "blob_sha": "a718f0994cabb08828ed0bfeb00941d3b223ba7e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-002.source.md",
+          "blob_sha": "4a71134677f0e2598f79706c40aa3a92ddde5955"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-003.source.md",
+          "blob_sha": "780c51a9f81d7555d7907dab5fb0524cc3386860"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-004.source.md",
+          "blob_sha": "6083fe000673554064c3c7de1361c594dbd8ac74"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-005.source.md",
+          "blob_sha": "e696d283b16c5233dbdc4e6b0d50aa8bf4816644"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-006.source.md",
+          "blob_sha": "3dd98c623b0a04f44a04c5546269e89ec8f9d818"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-007.source.md",
+          "blob_sha": "88a2d597b7cf04dc9d89fba66ec2cf36eae5ebc5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/fonte-008.source.md",
+          "blob_sha": "c7a4645a82b58e589642941ae55121400dfc03e5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/index.md",
+          "blob_sha": "3047e6cbe99559ff7c4a834485b699b8a7285d67"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/longitudinal/registro.json",
+          "blob_sha": "19b01cdab98927b283fdd2b6c13f68046f4231f4"
+        }
+      ]
+    },
+    {
+      "id": "chr001-preparation-m2",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/preparacao",
+      "path": "novydres/cronicas/CHR-001/preparacao/m2",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/assunto.json",
+          "blob_sha": "ab11ebe58f550024ca21bf08972e4f918b6e1dd1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-001.source.json",
+          "blob_sha": "cac758681cd46333ba7fea4643477cffde758ebe"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-002.source.json",
+          "blob_sha": "70aa88a7f2ce867611bc63f96bffa4a55d3637d6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-003.source.json",
+          "blob_sha": "82ec86c89f65a9d52f8dc4d6172f6f018b87c540"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-004.source.json",
+          "blob_sha": "0f796ce9c2a874127c44d705fa9663238dd495f3"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-005.source.json",
+          "blob_sha": "13ae90e606dca5bbcbc989f00d5282f71e7ccc38"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-006.source.json",
+          "blob_sha": "5d74e5a6540602b12928982f9bc2828f873125e4"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-007.source.json",
+          "blob_sha": "7b79fdabf58354725c9b1d0cd31e463eb78d22c2"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-008.source.json",
+          "blob_sha": "e3b12c4577d11010c59f0505ac7a8a3ef1cf531c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-009.source.json",
+          "blob_sha": "779ad5366aa00b488ac49a91625f3fba9fa1f6be"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-010.source.json",
+          "blob_sha": "35d0a677ae5798bfbce713ff1d582ae7f1e77215"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-011.source.json",
+          "blob_sha": "2e0b577442bf4a15be0a406f0a6f1ff93e469009"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-012.source.json",
+          "blob_sha": "8dae1494a925518a6792af15a9277d2d20d90e42"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-013.source.json",
+          "blob_sha": "16505001e9732e55be59d8d8f71cce0dd27f0f29"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-014.source.json",
+          "blob_sha": "723a4b622e0c6344a42a86cc5acabff773f240ae"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-015.source.json",
+          "blob_sha": "b4e6b116d5068ec1c9d3e82b8f5f86d7698cb7cc"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-016.source.json",
+          "blob_sha": "7f6f91ac01229c811f53662515a3a9157fd7e696"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-017.source.json",
+          "blob_sha": "654896c7d8c432a2b43f55a3b7ce578275759632"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-018.source.json",
+          "blob_sha": "4770a033cb0d12b224966058641931c78b557414"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-019.source.json",
+          "blob_sha": "23f2f8410c3466e0d883ed97a7c3ec59a4590550"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-020.source.json",
+          "blob_sha": "e3350120043289928361c6ad6f745f46b06e106b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-021.source.json",
+          "blob_sha": "819d700819402f5f467b13558628004601ed7b89"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/fonte-022.source.json",
+          "blob_sha": "576739d289e0bde98b5d1dbf8b465dd1168ec87c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/index.md",
+          "blob_sha": "2a78c1d73eb4198e8795e08663f33b7a03668f80"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m2/registro.json",
+          "blob_sha": "978e940dcd768874fca2bf68808dfd4187d8a71a"
+        }
+      ]
+    },
+    {
+      "id": "chr001-preparation-m301",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/preparacao",
+      "path": "novydres/cronicas/CHR-001/preparacao/m301",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/assunto.json",
+          "blob_sha": "61e49d19078b8b5a8c21b79cd4902b595eeace43"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-001.source.md",
+          "blob_sha": "4310213730e1bd5663c40c7fbdc29eb3f4b418ed"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-002.source.json",
+          "blob_sha": "c5609834037cbc35d7969c0e9a841a29b2b2b6fd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-003.source.json",
+          "blob_sha": "552c251a9d4895a6a6a5211b125f7da50f8996b5"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-004.source.json",
+          "blob_sha": "42452ea370e083f2897643eba0ec81b4b6249164"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-005.source.json",
+          "blob_sha": "c85efa740363d9c8d4bd5ab862916e9372fd77f9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-006.source.json",
+          "blob_sha": "e5379c1a25ae65a2a10fcb5c7b36b5683bebcdd6"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-007.source.json",
+          "blob_sha": "e0e2ca03bd7517b96c29c9fb79bee7ccdd1a001d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-008.source.json",
+          "blob_sha": "7e808836ed71412ba1175c48eb62b1da50130395"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-009.source.json",
+          "blob_sha": "432a539e6083e5aec66fdad915d0fc666619a30b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-010.source.json",
+          "blob_sha": "5774c83c6ea092ce9cbfb2e03d342f560a856b4b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-011.source.json",
+          "blob_sha": "ad6cc8e1d565573ce83fbb96a68554fff3282317"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-012.source.json",
+          "blob_sha": "d396900322291c5ab7d07ed62da3789ee956e66b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-013.source.json",
+          "blob_sha": "2e3432854bf79dd007e2ef88a78b52c6227bf303"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-014.source.json",
+          "blob_sha": "37f0f74afda6c73f1d091b8a096088f10a0f4611"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-015.source.json",
+          "blob_sha": "38076281b9e1049bd621fd86700dc03bd1b27906"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-016.source.json",
+          "blob_sha": "321544b0e91fc6604e55aeab035b9d79c665d910"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-017.source.json",
+          "blob_sha": "bef6818432bddfe6beaf1d4ff095f9af03173a71"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-018.source.json",
+          "blob_sha": "b886e89a605f19f043ddeb1e3a721ced35046942"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-019.source.json",
+          "blob_sha": "1ea8b932893955359f8a912b734628768dbc6264"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/fonte-020.source.json",
+          "blob_sha": "b62b8a7f55a814a41c152056d3ec16d83f146164"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/index.md",
+          "blob_sha": "c43b03c023c94628f8d161502e87552a6018a111"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m301/registro.json",
+          "blob_sha": "1341a8048a6db04e402a0222bcc20c9118c7332d"
+        }
+      ]
+    },
+    {
+      "id": "chr001-preparation-m302",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/preparacao",
+      "path": "novydres/cronicas/CHR-001/preparacao/m302",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/assunto.json",
+          "blob_sha": "d0fb550360e988842f3c643d090d84b3dbbb8790"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-001.source.json",
+          "blob_sha": "3a76c24f489b402652a13e768521f9d0cb69357a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-002.source.json",
+          "blob_sha": "68b01d0b7c317b073e0485bc57f3578095453684"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-003.source.json",
+          "blob_sha": "fe59e4e3c607ede373ca4fe0a57ed4dec0b4856a"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-004.source.json",
+          "blob_sha": "3418fd76091f4dd14ccddbf1c8fd9a8de6c2de7d"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-005.source.json",
+          "blob_sha": "e7a67fafce4a4d5de485fb9ac06600b57c73b53c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-006.source.json",
+          "blob_sha": "9890e3a91987a2020c8376932c8df5b745a0ae29"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-007.source.json",
+          "blob_sha": "153e2cba5d8f5ee3b78a8e4a8d2d0504d28a8776"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-008.source.json",
+          "blob_sha": "a60705c44aa31d68cf67c2f30399666869e07bd8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-009.source.json",
+          "blob_sha": "1c4de535e9dafc0cd45b343f67c838729394dfa1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-010.source.json",
+          "blob_sha": "16bdef13e5c4396d5f782055536c11f48bac71ee"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-011.source.json",
+          "blob_sha": "477629a919039b0915e0f3eef3b2383912a1d52e"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-012.source.json",
+          "blob_sha": "c252a86b3cfb4fbb582693d8f0daa1b7f397edc8"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-013.source.json",
+          "blob_sha": "94a568e80b4ea2bf1b0c6fcca69f6924a0044cf1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-014.source.json",
+          "blob_sha": "0d76930122bfea1bc9b2c488d68201ebf5e7e672"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-015.source.json",
+          "blob_sha": "64c89fbbc6a3ef88d7552a03250a3ff1aa3046b9"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-016.source.md",
+          "blob_sha": "9de34b2f7f4e61df3a32a60f758697d7b4fd47bd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-017.source.json",
+          "blob_sha": "65b95702436fb2b6ea3110d282f816e4a5882d55"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-018.source.json",
+          "blob_sha": "35bcd7c3834a49141a52328ad3e477eaddb0f66b"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/fonte-019.source.json",
+          "blob_sha": "dca3e646bed186ddbce0448848bcbf66b1d60b31"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/index.md",
+          "blob_sha": "56921d5af819df82a4c7bf382fa98b6bb9f04d8f"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/preparacao/m302/registro.json",
+          "blob_sha": "01101ddeba62082f90ce260ed85298f0573d381c"
         }
       ]
     },
@@ -2294,9 +4759,40 @@
     }
   ],
   "inverse_dependencies": {
+    "chr001-administrative-milestones": [],
+    "chr001-character-state-versions": [],
+    "chr001-character-target-choices": [],
+    "chr001-character-technical-projections": [],
+    "chr001-chronicle-recovery": [],
+    "chr001-disposition-code-historical": [],
+    "chr001-disposition-governance": [],
+    "chr001-disposition-state-history": [],
+    "chr001-episode-m1": [],
+    "chr001-episode-m203": [],
+    "chr001-episode-m204": [],
+    "chr001-episode-m301": [],
+    "chr001-episode-m302": [],
+    "chr001-historic-history-index": [],
+    "chr001-historic-live": [],
+    "chr001-historical-audits": [],
+    "chr001-historical-handoff": [],
+    "chr001-historical-roll-sources": [],
+    "chr001-literal-external-sources": [],
+    "chr001-local-cultural-lens": [],
+    "chr001-narrative-atlas": [],
+    "chr001-narrative-history-shards": [],
+    "chr001-narrative-reviews": [],
+    "chr001-npc-knowledge-versions": [],
     "chr001-npc-samir-haddad": [
       "npc-samir-haddad"
     ],
+    "chr001-open-threads-versions": [],
+    "chr001-orchestration-cycles": [],
+    "chr001-player-feedback": [],
+    "chr001-preparation-longitudinal": [],
+    "chr001-preparation-m2": [],
+    "chr001-preparation-m301": [],
+    "chr001-preparation-m302": [],
     "chr001-state-checkpoint": [
       "chr001-table-config"
     ],

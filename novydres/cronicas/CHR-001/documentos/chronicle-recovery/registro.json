@@ -1,0 +1,45 @@
+{
+  "subject_id": "chr001-chronicle-recovery",
+  "schema": "ADR001_D04_LOCAL_SOURCE_PROVENANCE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "source_count": 2,
+  "local_chronicle_id": "CHR-001",
+  "semantic_scope": "chronicle-recovery",
+  "current_checkpoint": "C45_TO_BE_VALIDATED_SEPARATELY",
+  "source_custody": "EXACT_GIT_BLOB_REUSE",
+  "not_played_event_creation": true,
+  "no_editorial_or_epistemic_promotion": true,
+  "operational_ownership": "NOT_ACTIVATED",
+  "source_records": [
+    {
+      "source_path": "novydres/chronicles/CHR-001/CHARACTER_AUDIT_PENDING.md",
+      "original_git_blob_sha": "9ecea98407fb3cb9c87a6df5d8d54c54c9b6f664",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/fonte-001.source.md",
+      "semantic_group": "chr001-chronicle-recovery",
+      "source_family": "CHRONICLE_OTHER",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-chronicle-recovery",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    },
+    {
+      "source_path": "novydres/chronicles/CHR-001/RECOVERY.md",
+      "original_git_blob_sha": "dbb5c0294ba00e82b3b8fb39e722b123039aca10",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/documentos/chronicle-recovery/fonte-002.source.md",
+      "semantic_group": "chr001-chronicle-recovery",
+      "source_family": "CHRONICLE_OTHER",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-chronicle-recovery",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    }
+  ]
+}

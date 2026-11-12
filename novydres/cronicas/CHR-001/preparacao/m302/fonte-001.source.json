@@ -1,0 +1,254 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V7",
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.02",
+  "preparation_id": "CHR001-PREP-M302-20261111-V1",
+  "dossier_version": 1,
+  "classification": "GM_HIDDEN",
+  "status": "PROSPECTIVE_REVIEW_PENDING_VALIDATION",
+  "authorial_scope": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP",
+  "base_master_sha": "eb8233770d33959b59b37d45de1e633707e72cdd",
+  "source_checkpoint": {
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0037.json",
+      "blob_sha": "5ddd7ef3295eabcc1604c61143c1633cc92f68d6"
+    },
+    "manifest": {
+      "path": "novydres/MANIFEST_V52.json",
+      "blob_sha": "bfa0589a446d9d863764578335ce147c8cf86f56"
+    },
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "M3.01.C05",
+    "next_scene": "M3.02.C01",
+    "scene_started": false,
+    "player_in_own_car": true,
+    "travel_recorded": false,
+    "elapsed_time_recorded": false,
+    "mortal": true,
+    "embrace_occurred": false,
+    "state_refs": {
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+        "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+        "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+      },
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+        "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+        "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+        "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+      }
+    }
+  },
+  "authority_refs": {
+    "admission": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    "bible": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V031.json",
+      "blob_sha": "ee28dcc81940389382654e70b7e4591ae3bc675d"
+    },
+    "truth": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "blob_sha": "537c4260c1d024cea144511596a9b54599b737b8"
+    },
+    "preparation": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V021_GM_HIDDEN.md",
+      "blob_sha": "d29922e5b58f34d7c424b9a8332645abb8a16dae"
+    },
+    "progression": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V024_PLAYER_SAFE.json",
+      "blob_sha": "367818c676a844922967bd62f35a6c371fdfd98a"
+    }
+  },
+  "selection_method": "CHR001_CURATED_SESSION",
+  "d2_global_unchanged": true,
+  "marco": "M3",
+  "longitudinal_role": "Causal Cainite attention, bounded first contact and player-driven progress toward future guided-creation milestones. No outcome guaranteed.",
+  "first_incident": {
+    "story_id": "ST-GANGREL-ATTENTION",
+    "plot_admission": "PLOT-GANGREL-ATTENTION",
+    "status": "PLANNED_CONDITIONAL_NOT_OCCURRED",
+    "cause": "A real workshop unloading leaves a long piece blocking a passage genuinely used by Rada. Rada comes to clear her normal route; Borislav may challenge only under the conditions in D07/D08.",
+    "entry_guard": "Workshop unloading/obstruction must arise in actual authorized play; no movement from car, customer arrival, delivery, object, clock jump, or NPC encounter is pre-recorded.",
+    "actual_cause_present": false,
+    "scene_ready": false,
+    "actors": [
+      {
+        "id": "Rada",
+        "goal": "Keep her used passage open and leave",
+        "knowledge": "Only own observation/communicated facts",
+        "limits": "Does not know prior incident, family or workshop secret absent source"
+      },
+      {
+        "id": "Borislav",
+        "goal": "Defend face, seek challenge when Bart insists obstruction stays",
+        "knowledge": "Only firsthand observations",
+        "limits": "Provocation conditional; no automatic fight"
+      },
+      {
+        "id": "Bartholomeu",
+        "goal": "PLAYER_CHOICE_NOT_PREDICTED",
+        "knowledge": "Carried current PC knowledge only",
+        "limits": "Player controls own speech, action, attendance and conflict choices"
+      }
+    ],
+    "stakes": [
+      "Use of a real access path",
+      "Trust, reputation, possible physical harm if the player chooses and outcome warrants it",
+      "If observed, only traceable information transmission; no invisible rumor"
+    ]
+  },
+  "act_contracts": [
+    {
+      "id": "A1",
+      "title": "PASSAGE",
+      "status": "CONDITIONAL",
+      "dramatic_question": "What will Bartholomeu do when an actual space-use conflict affects his work?",
+      "start_condition": "Confirmed obstruction and NPC physical presence in authorized play",
+      "choices": [
+        "Move the obstruction personally or with assistance",
+        "Negotiate, request another path, delay or refuse",
+        "Withdraw or confront without assumed violence"
+      ],
+      "npc_autonomy": "Rada seeks exit, Borislav challenges only with a trigger; both can leave",
+      "closures": [
+        "Passage freed",
+        "Agreement or refusal recorded",
+        "Departure, interruption or confrontation resolved by actual mechanics"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A2",
+      "title": "WITNESS",
+      "status": "CONDITIONAL",
+      "dramatic_question": "What does a witness actually learn and choose to pass onward?",
+      "start_condition": "Real encounter; observation or express request to relay",
+      "choices": [
+        "Ask for a contact",
+        "Avoid the subject",
+        "Allow or oppose social scrutiny"
+      ],
+      "npc_autonomy": "Rada independently decides whether and when to report; content limited to observations",
+      "closures": [
+        "Traceable delivered report",
+        "Refused or delayed relay",
+        "No report; thread quiet"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A3",
+      "title": "FIRST_APPROACH",
+      "status": "CONDITIONAL",
+      "dramatic_question": "Does the protagonist respond to a properly delivered invitation?",
+      "start_condition": "Knowledge provenance and separately delivered first invitation; no inferred attendance",
+      "choices": [
+        "Attend or decline",
+        "Ask questions or postpone",
+        "Withdraw with consequences proportional to evidence"
+      ],
+      "npc_autonomy": "Invitation source decides within limits; no automatic summons",
+      "closures": [
+        "Meeting concluded by played outcome",
+        "Refusal or non-delivery; route quiet",
+        "Departure/interruption"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A4",
+      "title": "SECOND_THRESHOLD",
+      "status": "CONDITIONAL",
+      "dramatic_question": "Can the protagonist preserve control when an independent authority attempts coercion?",
+      "start_condition": "Earlier conditional story and distinct later delivered invitation, with voluntary PC attendance",
+      "choices": [
+        "Resist, leave, negotiate or engage",
+        "Attempt escape or defense",
+        "Pursue any legal mechanical option"
+      ],
+      "npc_autonomy": "Opposing agents act under their motives, limits, known facts and rules; no predestined defeat",
+      "closures": [
+        "Recorded actual local outcome",
+        "Recoverable divergence -> route pending/quiet",
+        "Evidence-backed irreversible divergence -> finite D09 review"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    }
+  ],
+  "mechanics": {
+    "baseline": "MORTAL_ONLY",
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_available_capacity": 405,
+    "xp_credit_available": 0,
+    "willpower": {
+      "max": 6,
+      "superficial_damage": 2,
+      "aggravated_damage": 0,
+      "available": 4
+    },
+    "power_status": "NO_VAMPIRIC_POWER",
+    "test_rule": "G25/G27; only on concrete declared action, validate pool/skill, difficulty, Take Half, possible roll and later WP choice; no fabricated RNG.",
+    "future_transformation": "Only if separately played, adjudicated and persisted; not an outcome of this dossier."
+  },
+  "causal_guards": {
+    "current_scene_available": false,
+    "first_scene_ready": false,
+    "story_preparation_ready": false,
+    "narrator_permission": false,
+    "no_new_event": true,
+    "no_pc_action": true,
+    "no_npc_knowledge_delta": true,
+    "no_elapsed_time": true,
+    "no_retroactive_canon": true,
+    "no_open_thread_resolution": true,
+    "no_xp_fv_change": true,
+    "no_unbounded_investigation": true,
+    "attribution": "Future plans GM_PLAN, never observed events"
+  },
+  "first_scene_review": {
+    "why_now": "Not yet established: contingent on real unloading/obstruction.",
+    "entry_conditions": [
+      "Existing character starts in his car as of C05-22",
+      "A lawful transition and actual scene entry must establish place, time and cause",
+      "Each NPC presence and knowledge must be validated then"
+    ],
+    "real_choices": true,
+    "authored_preparation_complete": true,
+    "mechanical_baseline_checked": true,
+    "scene_ready": false,
+    "narrator_permission": false,
+    "reason": "Cause not currently recorded and new transition not yet validated."
+  },
+  "retention": {
+    "persistent_threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    "story_checkpoint": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    }
+  },
+  "authoring_note": "GM_HIDDEN: no spoilers in PLAYER_SAFE outputs. Independent NPC agency and consequences. No re-opening M3.01, C06, or automatic target outcome."
+}

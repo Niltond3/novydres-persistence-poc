@@ -1,0 +1,30 @@
+{
+  "subject_id": "chr001-historical-handoff",
+  "schema": "ADR001_D04_LOCAL_SOURCE_PROVENANCE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "source_count": 1,
+  "local_chronicle_id": "CHR-001",
+  "semantic_scope": "historical-handoff",
+  "current_checkpoint": "C45_TO_BE_VALIDATED_SEPARATELY",
+  "source_custody": "EXACT_GIT_BLOB_REUSE",
+  "not_played_event_creation": true,
+  "no_editorial_or_epistemic_promotion": true,
+  "operational_ownership": "NOT_ACTIVATED",
+  "source_records": [
+    {
+      "source_path": "novydres/chronicles/CHR-001/handoffs/M302_C01_RECONCILIATION_ONLY_V1_PLAYER_SAFE.md",
+      "original_git_blob_sha": "d7b3f9cef7e21e11d3b8f76662e3cb7072712e25",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/documentos/historical-handoff/fonte-001.source.md",
+      "semantic_group": "chr001-historical-handoff",
+      "source_family": "HISTORICAL_HANDOFF",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-historical-handoff",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "schema": "NOVYDRES_CONTEXTUAL_PROGRESSIVE_MEMORY_V1_1",
+  "chronicle_id": "CHR-001",
+  "simulation_only": false,
+  "activation_status": "ACTIVE_PRIMARY_AUDIT_PARTIAL",
+  "operational_source": true,
+  "projection_created_at": "2026-11-02",
+  "last_confirmed_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+  "stage": {
+    "mode": "GUIDED_CHARACTER_CREATION",
+    "M1": "CLOSED",
+    "M2": "CLOSED",
+    "M2_01": "CLOSED",
+    "M2_02": "CLOSED",
+    "M2_03": "CLOSED",
+    "M3_to_M5": "NOT_STARTED",
+    "embrace_occurred": false,
+    "main_chronicle_2010_started": false,
+    "diegetic_period": "late 1970s, some months after C17; exact civil date UNKNOWN",
+    "diegetic_date_exact": null,
+    "last_closed_provocation": "M2.04",
+    "next_provocation": null,
+    "M2_04": "CLOSED_AFTER_C17_AND_PLAYER_AUTHORIZED_WORKSHOP_DOWNTIME",
+    "M3": "NOT_STARTED",
+    "next_marco": "M3",
+    "next_marco_status": "NOT_STARTED_PENDING_INITIAL_DRAMATURGO_PREPARATION",
+    "M2_closure_admin_id": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+    "M2_closure_package_ref": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json"
+  },
+  "character": {
+    "entity_id": "pc-bartholomeu-krauser",
+    "name": "Bartholomeu Krauser",
+    "family_surname": "Krauser",
+    "wife": "Mary Krauser",
+    "son": "Mikahel Krauser",
+    "daughter": "Sara Krauser",
+    "mortal": true,
+    "clan_planned": "Gangrel, future only",
+    "resources": {
+      "xp_total": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0,
+      "willpower_provisional_max": 6,
+      "willpower_superficial_damage": 6,
+      "willpower_aggravated_damage": 0,
+      "willpower_available": 0
+    },
+    "full_v5_sheet": "PARTIAL_ALLOCATIONS_VERIFIED_POST_M2_PUCHASE_XP100_FINAL_AUDIT_PENDING",
+    "sheet_source_refs": [
+      "novydres/chronicles/CHR-001/character/state_v008.source.txt",
+      "novydres/chronicles/CHR-001/character/legacy_character_full.source.txt",
+      "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V1.json"
+    ],
+    "target_sheet_not_equivalent_to_current": true,
+    "allocated_attributes": {
+      "Vigor": 3,
+      "Carisma": 2,
+      "Força": 4,
+      "Destreza": 2,
+      "Determinação": 1,
+      "Autocontrole": 1,
+      "Inteligência": 3
+    },
+    "allocated_skills": {
+      "Ofícios": 2,
+      "Briga": 5,
+      "Intimidação": 3,
+      "Condução": 2,
+      "Investigação": 3,
+      "Política": 2,
+      "Prontidão": 2,
+      "Furtividade": 1
+    },
+    "touchstones_historical": [
+      {
+        "name": "Sara Krauser",
+        "conviction_context": "inocência e cuidado"
+      },
+      {
+        "name": "Mary Krauser",
+        "conviction_context": "amor verdadeiro que tudo suporta, espera e perdoa"
+      },
+      {
+        "name": "Mikahel Krauser",
+        "relationship": "son",
+        "conviction_exact": "Nunca deixar para atrás aquilo que você é responsável",
+        "status": "NEW_EXPLICIT_PLAYER_M203_CLOSE",
+        "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001"
+      }
+    ],
+    "touchstones_2010_validation": "UNKNOWN",
+    "mechanical_projection_ref": "novydres/chronicles/CHR-001/character/ALLOCATED_SHEET_PROJECTION_V2.json",
+    "allocated_xp_breakdown": {
+      "attributes": 150,
+      "skills": 120,
+      "spent": 270,
+      "total": 675,
+      "remaining": 405,
+      "credit_available": 0
+    },
+    "future_predator_type": "GATO_DE_RUA_NO_CURRENT_VAMPIRE_EFFECT",
+    "provisional_roll_policy_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+    "roll_pool_basis_during_guided_creation": "TARGET_V2_PROVISIONAL_FROM_2026-11-03_PREVIOUS_ROLLS_UNCHANGED",
+    "target_sheet_ref": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+    "target_sheet_status": "APPROVED_NOT_BOUGHT",
+    "future_lineage_profile_ref": "novydres/systems/character-creation/local-profiles/GANGREL_URBANO_NOVYDRES_V1.json",
+    "future_lineage_lore_ref": "novydres/world/lineages/GANGREL_URBANO_NOVYDRES_V1.md",
+    "approved_exception_target_equivalent_cap_xp": 675,
+    "exception_ceiling_is_not_spendable_xp": true,
+    "lineage_ancestor_knowledge_for_pc": "UNKNOWN_NOT_GRANTED",
+    "convictions_declared": [
+      {
+        "touchstone": "Sara Krauser",
+        "description": "inocência e cuidado",
+        "status": "HISTORICAL"
+      },
+      {
+        "touchstone": "Mary Krauser",
+        "description": "amor e perdão",
+        "status": "HISTORICAL"
+      },
+      {
+        "touchstone": "Mikahel Krauser",
+        "text_exact": "Nunca deixar para atrás aquilo que você é responsável",
+        "status": "NEW_CURRENT",
+        "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001"
+      }
+    ],
+    "homecoming": {
+      "status": "RETURNED_HOME_WITH_FAMILY",
+      "family": [
+        "Mary Krauser",
+        "Mikahel Krauser",
+        "Sara Krauser"
+      ],
+      "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+      "disclosed_m203_to_family": "PARTIAL_TO_MARY_IN_M204_C01"
+    },
+    "xp_economy": {
+      "policy": "DEC-CR-021",
+      "status": "ONE_TIME_CLOSURE_CREDIT_RECONCILED_AND_100_XP_PURCHASED",
+      "contract": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "approved_target_ref": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "approved_target_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "budget_total_cap": 675,
+      "historical_baseline_total": 519,
+      "historical_baseline_spent": 170,
+      "historical_baseline_remaining": 349,
+      "audit_of_target_equivalent_cost": "PENDING_FINAL_AUDIT_NO_SILENT_CAP_CHANGE",
+      "budget_normalization": "ADMINISTRATIVE_RECLASSIFICATION_NOT_EARNED_XP",
+      "xp_spent": 270,
+      "xp_credit_available": 0,
+      "unlocked_budget_total": 270,
+      "locked_budget_capacity": 405,
+      "reward_per_resolved_act_credit": 10,
+      "max_prep_acts": 5,
+      "credit_from_policy_change": 0,
+      "credit_from_m203_closure_pending": 0,
+      "no_automatic_purchase": true,
+      "no_automatic_fv_recovery": true,
+      "no_scene_started": false,
+      "no_dice_rolled": true,
+      "historical_m203_credit_validated": 30,
+      "historical_m203_credit_record_ref": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M2.04_V1.json",
+      "player_spending_decision": "PURCHASE_FIRST_DISTRIBUTION_100_APPROVED_AND_SETTLED",
+      "purchase_ledger_ref": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "historic_m203_supplement_10": true,
+      "old_legacy_credit_30_preserved": true
+    },
+    "current_mortal_workshop": {
+      "status": "OPEN_SMALL_SCALE",
+      "source_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "financial_provenance_ref": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+      "service_bay": "LEASED",
+      "tow_vehicle_owned": false,
+      "heating_job_still_retained": true
+    }
+  },
+  "scene": {
+    "scene_id": "CHR001-M204-C17_A_SAIDA_DA_GALERIA",
+    "episode_id": "M2.04",
+    "status": "CLOSED",
+    "location": "Acesso ventilado da galeria da Cidade Velha, fora do jato imediato; data civil UNKNOWN",
+    "participants": [
+      "pc-bartholomeu-krauser",
+      "npc-pavel-heating-supervisor",
+      "npc-liev-heating-colleague",
+      "npc-anton-c15-safety-inspector",
+      "npc-unidentified-man-c16"
+    ],
+    "last_event_id": "CHR001-M204-C17-08-20261106-001",
+    "source_ref": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+    "closed_by": "RESCUE_AND_EVACUATION_COMPLETE",
+    "awaiting": "M3_INITIAL_DRAMATURGO_PROVOCATION_PREPARATION_NO_SCENE_OPEN",
+    "context_packet": {
+      "context_status": "G28_SCENE_END_CHECKPOINT",
+      "confirmed_facts": [
+        "Bart carregou homem resgatado consciente até acesso ventilado com Pavel, Liev e Anton por passagem seca conhecida.",
+        "Vazamento persistiu; não foi constatado reparo ou contenção."
+      ],
+      "npc_claims": [
+        "Oleg e suas alegações permanecem não verificados."
+      ],
+      "unknown": [
+        "Ferimentos específicos, prognóstico e identidade do homem.",
+        "Riscos hidráulicos e pessoas fora de vista.",
+        "Próxima ação de Bart; localização de Oleg."
+      ],
+      "pc_agency": "Retorno, transporte e evacuação foram decisões explícitas do jogador; nenhuma ação posterior presumida.",
+      "resources": "XP cap675 spent170 credit50; FV max6 superficial6 available0; sem crédito/atos",
+      "next_scene_requires": "FORMAL_M3_INITIAL_DOSSIER_AND_SUBSEQUENT_READY_FOR_NARRATOR_CYCLE",
+      "post_scene_admin_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "post_scene_resources": "XP675 cap/270 gasto/405 restante/0 credito. FV6/6 superficial. Oficina pequena aberta após C17 por downtime autorizado."
+    }
+  },
+  "recent_event_ids": [
+    "CHR001-M204-C17-01-20261106-001",
+    "CHR001-M204-C17-02-20261106-001",
+    "CHR001-M204-C17-03-20261106-001",
+    "CHR001-M204-C17-04-20261106-001",
+    "CHR001-M204-C17-05-20261106-001",
+    "CHR001-M204-C17-06-20261106-001",
+    "CHR001-M204-C17-07-20261106-001",
+    "CHR001-M204-C17-08-20261106-001",
+    "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001"
+  ],
+  "event_buffer": [
+    {
+      "event_id": "CHR001-M204-C17-01-20261106-001",
+      "entry": "M2.04.C17.01",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-02-20261106-001",
+      "entry": "M2.04.C17.02",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-03-20261106-001",
+      "entry": "M2.04.C17.03",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-04-20261106-001",
+      "entry": "M2.04.C17.04",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-05-20261106-001",
+      "entry": "M2.04.C17.05",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-06-20261106-001",
+      "entry": "M2.04.C17.06",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-07-20261106-001",
+      "entry": "M2.04.C17.07",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-C17-08-20261106-001",
+      "entry": "M2.04.C17.08",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "kind": "CONFIRMED_SCENE_EVENT",
+      "technical_ledger_committed": false
+    },
+    {
+      "event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+      "entry": "M2.04.DOWNTIME.01",
+      "source": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "kind": "PLAYER_AUTHORIZED_ONLY_WORKSHOP_NON_SCENE_MONTAGE",
+      "technical_ledger_committed": false
+    }
+  ],
+  "event_buffer_status": "C17_G28_CLOSED_THEN_ADMIN_PLAYER_AUTHORIZED_WORKSHOP_DOWNTIME_XP100",
+  "roll_pending": null,
+  "last_roll_transcript": {
+    "event_id": "CHR001-M204-C16-18-20261106-001",
+    "mechanic": "FORCA5_BRIGA5_AGARRAR1_ENCURRALADO1_POOL12_VS_NPC10_MINUS_INJURY2_POOL8",
+    "faces": [
+      10,
+      8,
+      5,
+      8,
+      7,
+      1,
+      10,
+      1,
+      5,
+      9,
+      6,
+      2
+    ],
+    "successes": 9,
+    "opponent_successes": 3,
+    "margin": 6,
+    "player_accepted": true,
+    "wp_spent": 0,
+    "rng_origin": "CHAT_UNVERIFIED"
+  },
+  "history_index_ref": "novydres/chronicles/CHR-001/HISTORY_INDEX_v030.json",
+  "persistence": {
+    "store": "GITHUB_ACTIVE_PRIMARY",
+    "operational_drives_source": "GOOGLE_DRIVE_INACTIVE_TEXT_ARCHIVE_ONLY",
+    "readback_required": true,
+    "cutover_complete": true,
+    "previous_technical_ledger_events": "NOT_BACKFILLED",
+    "previous_technical_ledger_rolls": "NOT_BACKFILLED"
+  },
+  "rotation": {
+    "max_chars_provisional": 30000,
+    "max_event_buffer_provisional": 20
+  },
+  "operational_activation": {
+    "decision": "MIG-DEC-002",
+    "date": "2026-11-02",
+    "previous_path": "novydres/chronicles/CHR-001/LIVE.json",
+    "previous_blob_sha": "1b91140a686b77eb23dcdd22357e3b8e4cefc53d",
+    "scope": "OPERATIONAL_ONLY_FULL_MIGRATION_PENDING",
+    "new_scene_events": 17,
+    "github_primary": true,
+    "drive_text_inactive": true,
+    "drive_visual_originals_active": true,
+    "independent_fresh_chat_verified": false
+  },
+  "versioning": {
+    "parent": "novydres/chronicles/CHR-001/LIVE_v031.json",
+    "parent_blob_sha": "5fe68f821cc72082ec41950b3d76e6f2ec7f7c3f",
+    "source_head_sha": "7db3746f919e1fb6f4376319c904872877658b22",
+    "current_version": 32,
+    "readback_required": true
+  },
+  "pending_persistence_policy": {
+    "event_grouping": "SCENE_END_ONLY",
+    "decision": "DEC-CR-020",
+    "path": "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
+    "with_G26_error_handling": true
+  },
+  "narrator_adjudication_policy": {
+    "decision": "DEC-CR-017",
+    "path": "novydres/runtime/NARRATOR_LED_ADJUDICATION_G27_V1.md",
+    "status": "ACTIVE"
+  },
+  "metadata_decision_id": "DEC-CR-018",
+  "previous_version": {
+    "ref": "novydres/chronicles/CHR-001/LIVE_v005.json",
+    "blob_sha": "2e85e296cbc52a707b00802032ac633a32b11388"
+  },
+  "provisional_roll_policy_ref": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+  "governance_scoped_exception": {
+    "decision": "DEC-CR-019",
+    "scope": "Briga (Agarrar) only during guided provisional applicable rolls from M2.03.099",
+    "no_xp": true
+  },
+  "knowledge_current_ref": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+  "open_threads_current_ref": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+  "xp_policy_active_ref": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+  "governance_current_ref": "novydres/governance/decisions/DECISIONS_STATE_V10.source.txt",
+  "state_reprojection": "M2.04_C17_CLOSED_WORKSHOP_ONLY_DOWNTIME_XP100_SETTLED_CLOSURE_PENDING",
+  "session_administration": {
+    "status": "OPEN",
+    "session_id": "CHR001-M2.04",
+    "episode_id": "M2.04",
+    "episode_status": "C17_CLOSED_DOWNTIME_COMPLETE_CLOSURE_PENDING",
+    "last_completed_session_id": "CHR001-M2.03",
+    "last_recovery_id": "REC-CHR001-M204-20261103-001",
+    "previous_recovery_id": "REC-CHR001-M203-ZERO-20261101-001",
+    "last_positive_recovery_id": "REC-CHR001-M204-20261103-001",
+    "recovery_applied": true,
+    "recovery_superficial_healed": 3,
+    "source_admin_event_id": "CHR001-ADMIN-M203-CREDIT-M204-OPEN-20261103-001",
+    "source_record": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M2.04_V1.json",
+    "xp_historical_credit_granted": 30,
+    "xp_credit_available": 0,
+    "player_spend_choice": "FIRST_DISTRIBUTION_XP100_APPLIED",
+    "narrative_authorization": true,
+    "scene_started": true,
+    "story_event_id_unchanged": null,
+    "does_not_modify_g28": true,
+    "first_narrative_event_id": "CHR001-M204-C01-01-20261103-001",
+    "last_scene_closed_event_id": "CHR001-M204-C17-08-20261106-001",
+    "workshop_downtime_record_ref": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+    "original_m203_credit30_preserved": true,
+    "marco_M2": "CLOSED_OFFICIAL",
+    "M2_04": "CLOSED",
+    "next_marco": "M3",
+    "next_marco_status": "NOT_STARTED",
+    "marco_closure_ref": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json",
+    "closure_admin_id": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+    "no_new_dramatic_event": true
+  },
+  "admin_last_transition_ref": "novydres/chronicles/CHR-001/admin/SESSION_TRANSITION_M2.04_V1.json",
+  "admin_transition_kind": "SESSION_OPEN_NOT_NARRATIVE",
+  "g28_scene_end_checkpoint": "M2.04.C16.27",
+  "xp_act_resolutions": [
+    {
+      "resolution_id": "CHR001-M204-A2-XP10-RESOLUTION-20261106-001",
+      "episode_id": "M2.04",
+      "preparation_id": "CHR001-PREP-M204-20261106-V9",
+      "act_id": "A2",
+      "source_scene_event_id": "CHR001-M204-C13-18-20261105-001",
+      "evidence_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "resolution_type": "ALTERNATE_RESOLUTION",
+      "dramatic_resolution": "Responsabilidade profissional e probatória: a formalização voluntária de autoria da nota após contestação e isolamento seguro do ramal é decisão substantiva, sem resolver autoria da rubrica ou Volnaya.",
+      "event_confirmed": true,
+      "previously_settled": false,
+      "replaces_prepared_act_id": null,
+      "status": "SETTLED_CREDIT",
+      "cap_xp": 675,
+      "nominal_credit": 10,
+      "credit_awarded": 10,
+      "xp_spent_before": 170,
+      "xp_spent_after": 170,
+      "credit_before": 60,
+      "credit_after": 70,
+      "xp_total_before": 675,
+      "xp_total_after": 675,
+      "xp_remaining_before": 505,
+      "xp_remaining_after": 505
+    },
+    {
+      "resolution_id": "CHR001-M204-A1-XP10-RESOLUTION-20261106-001",
+      "episode_id": "M2.04",
+      "preparation_id": "CHR001-PREP-M204-20261106-V9",
+      "act_id": "A1",
+      "source_scene_event_id": "CHR001-M204-C14-24-20261105-001",
+      "evidence_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "resolution_type": "ALTERNATE_RESOLUTION",
+      "dramatic_resolution": "Nova disputa escolar em C14, distinta da pergunta M2.02: autonomia de Mikahel, reconhecimento de seu próprio empurrão e regresso à aula autorizado pelo pai; não é recompensa por afeto de rotina.",
+      "event_confirmed": true,
+      "previously_settled": false,
+      "replaces_prepared_act_id": null,
+      "status": "SETTLED_CREDIT",
+      "cap_xp": 675,
+      "nominal_credit": 10,
+      "credit_awarded": 10,
+      "xp_spent_before": 170,
+      "xp_spent_after": 170,
+      "credit_before": 70,
+      "credit_after": 80,
+      "xp_total_before": 675,
+      "xp_total_after": 675,
+      "xp_remaining_before": 505,
+      "xp_remaining_after": 505
+    },
+    {
+      "resolution_id": "CHR001-M204-A3-XP10-RESOLUTION-20261106-001",
+      "episode_id": "M2.04",
+      "preparation_id": "CHR001-PREP-M204-20261106-V9",
+      "act_id": "A3",
+      "source_scene_event_id": "CHR001-M204-C17-08-20261106-001",
+      "evidence_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "resolution_type": "ALTERNATE_RESOLUTION",
+      "dramatic_resolution": "C16–C17: violência efetiva, decisão voluntária de libertar Oleg e salvar o homem ferido, sem presumir sua natureza ou desfecho clínico.",
+      "event_confirmed": true,
+      "previously_settled": false,
+      "replaces_prepared_act_id": null,
+      "status": "SETTLED_CREDIT",
+      "cap_xp": 675,
+      "nominal_credit": 10,
+      "credit_awarded": 10,
+      "xp_spent_before": 170,
+      "xp_spent_after": 170,
+      "credit_before": 80,
+      "credit_after": 90,
+      "xp_total_before": 675,
+      "xp_total_after": 675,
+      "xp_remaining_before": 505,
+      "xp_remaining_after": 505
+    },
+    {
+      "resolution_id": "CHR001-M204-A4-XP10-RESOLUTION-20261106-001",
+      "episode_id": "M2.04",
+      "preparation_id": "CHR001-PREP-M204-20261106-V9",
+      "act_id": "A4",
+      "source_scene_event_id": "CHR001-M204-C09-23-20261105-001",
+      "evidence_path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "resolution_type": "SUCCESS",
+      "dramatic_resolution": "Escolha profissional e plano 14/14 em C09 se efetivam somente com a abertura da oficina em downtime expressamente autorizado: CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001; não há guincho nem Recursos concedidos.",
+      "event_confirmed": true,
+      "previously_settled": false,
+      "replaces_prepared_act_id": null,
+      "status": "SETTLED_CREDIT",
+      "cap_xp": 675,
+      "nominal_credit": 10,
+      "credit_awarded": 10,
+      "xp_spent_before": 170,
+      "xp_spent_after": 170,
+      "credit_before": 90,
+      "credit_after": 100,
+      "xp_total_before": 675,
+      "xp_total_after": 675,
+      "xp_remaining_before": 505,
+      "xp_remaining_after": 505
+    }
+  ],
+  "last_take_half_resolution": {
+    "event_id": "CHR001-M204-C15-12-20261106-001",
+    "confirmed_at": "CHR001-M204-C15-12-20261106-001",
+    "pool": 6,
+    "attribute": "Inteligência",
+    "skill": "Ofícios",
+    "situational_bonus": 1,
+    "difficulty": 3,
+    "half_successes": 3,
+    "player_selected": true,
+    "random_origin": "NO_RNG_TAKE_HALF",
+    "willpower_spent": 0,
+    "achieved": true
+  },
+  "npc_disposition_current_ref": "novydres/chronicles/CHR-001/npc-disposition/STATE_V003.json",
+  "xp_envelope_current_ref": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+  "xp_purchase_ledger_ref": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+  "xp_historical_m203_complement_ref": "novydres/chronicles/CHR-001/admin/M2_XP100_CREDIT_PURCHASE_AND_OFFICE_DOWNTIME_V1.json",
+  "local_cultural_naming_lens_ref": "novydres/chronicles/CHR-001/world/CIVIC_CULTURAL_NAMING_LENS_V1.md",
+  "marco_closure_ref": "novydres/chronicles/CHR-001/admin/M2_FORMAL_MARCO_CLOSURE_V1.json",
+  "marco_closure_admin_id": "CHR001-ADMIN-M2-MARCO-CLOSED-20261106-001",
+  "stage_reprojection": "M2_CLOSED_M3_NOT_STARTED_PENDING_DRAMATURGO_INITIAL_PREPARATION"
+}

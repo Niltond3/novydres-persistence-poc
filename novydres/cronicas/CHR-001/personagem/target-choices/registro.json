@@ -1,0 +1,60 @@
+{
+  "subject_id": "chr001-character-target-choices",
+  "schema": "ADR001_D04_LOCAL_SOURCE_PROVENANCE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "source_count": 3,
+  "local_chronicle_id": "CHR-001",
+  "semantic_scope": "character-target-choices",
+  "current_checkpoint": "C45_TO_BE_VALIDATED_SEPARATELY",
+  "source_custody": "EXACT_GIT_BLOB_REUSE",
+  "not_played_event_creation": true,
+  "no_editorial_or_epistemic_promotion": true,
+  "operational_ownership": "NOT_ACTIVATED",
+  "source_records": [
+    {
+      "source_path": "novydres/chronicles/CHR-001/character/FUTURE_SIRE_PLAYER_SELECTION_V1.json",
+      "original_git_blob_sha": "046e275386e48924a404ce5f8fc5f96839cbcdc4",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-001.source.json",
+      "semantic_group": "chr001-character-target-choices",
+      "source_family": "CHARACTER_STATE_HISTORY",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-character-target-choices",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    },
+    {
+      "source_path": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "original_git_blob_sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-002.source.json",
+      "semantic_group": "chr001-character-target-choices",
+      "source_family": "CHARACTER_STATE_HISTORY",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-character-target-choices",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    },
+    {
+      "source_path": "novydres/chronicles/CHR-001/character/equipment/SARA_PLAYER_PROPOSAL_V1.json",
+      "original_git_blob_sha": "2c9f8dc83e2318e431ed7a120ee22529d80d8f38",
+      "source_snapshot_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "target_path": "novydres/cronicas/CHR-001/personagem/target-choices/fonte-003.source.json",
+      "semantic_group": "chr001-character-target-choices",
+      "source_family": "CHARACTER_STATE_HISTORY",
+      "status": "HISTORICAL_LITERAL_OR_CURRENT_SOURCE_NOT_SELECTED_BY_COPY",
+      "source_kind": "EXACT_ORIGINAL_BYTES",
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "local_owner": "chr001-character-target-choices",
+      "current_state_authority": "NOT_INFERRED_FROM_FILENAME",
+      "source_legacy_route_custody_only": true
+    }
+  ]
+}

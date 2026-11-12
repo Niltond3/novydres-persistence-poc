@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V1",
+  "cycle_id": "CHR001-CYCLE-0012",
+  "sequence": 12,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M2.04",
+  "manifest_path": "novydres/MANIFEST_V37.json",
+  "source_head_sha": "c0b6cad1739a8cbb8a91b84601edac4d03602f1b",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0011.json",
+    "blob_sha": "42202c0f6a0ca3a87b4d5ad87976d83d6d2848b0"
+  },
+  "transition": "PLAN_REVISED",
+  "status": "READY_FOR_NARRATOR",
+  "next_role": "NARRADOR",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-C14-24-20261105-001",
+    "last_closed_scene": "C14",
+    "next_scene": "C15",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v027.json",
+      "blob_sha": "1d5e33da867681e2d86914f8aa6661c8404163c0"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v027.json",
+      "blob_sha": "8e9b014ba5da10a9ed21d8f619fc059a24749ebd"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v013.source.txt",
+      "blob_sha": "c162d4c7e4df46486b02796bafd153f9e48c64ce"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v033.source.txt",
+      "blob_sha": "4bfb575890416d58a26a98a53e1b181ca807bd53"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V13.json",
+      "blob_sha": "b8b00f71b20573d12c2b46a74bf58009ed9c6bc6"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V14.json",
+      "blob_sha": "41683c648423de27b0cb4032dd0cda999a698b8a"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M204-20261105-V7",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V7.json",
+      "blob_sha": "e3b12c4577d11010c59f0505ac7a8a3ef1cf531c"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V6.json",
+      "blob_sha": "7f6f91ac01229c811f53662515a3a9157fd7e696"
+    },
+    "validity": "REVISED",
+    "reviewed_against_event_id": "CHR001-M204-C14-24-20261105-001"
+  },
+  "review": {
+    "decision": "REVISED",
+    "against_last_event_id": "CHR001-M204-C14-24-20261105-001",
+    "public_rationale": "M2.04 integralmente reavaliada após C14: encerramento da conciliação escolar e orientação familiar incorporados sem presumir resultado posterior, origem de boatos ou obrigação de repetir cena. Autonomia de menores e instituições preservada; técnica, documentos, vida familiar e anomalia permanecem causalmente independentes. A1–A4 ainda OPEN, sem crédito por ato, XP/FV, compra ou avanço de Marco. C01–C14 e histórico preservados; C15 NOT_STARTED."
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "schema_id": "NOVYDRES_PROVOCATION_DOSSIER_V8",
+  "chronicle_id": "CHR-001",
+  "episode_id": "M3.02",
+  "preparation_id": "CHR001-PREP-M302-20261111-V2",
+  "dossier_version": 2,
+  "classification": "GM_HIDDEN",
+  "status": "PROSPECTIVE_FRAME_READY_NOT_PLAYED",
+  "authorial_scope": "PLAYER_DELEGATED_PROSPECTIVE_AUTHORSHIP",
+  "base_master_sha": "d6f6904c3cb3f8b02b707bef41b36abe4a7c0950",
+  "source_checkpoint": {
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0039.json",
+      "blob_sha": "7e568f8a319fba457fd9097c9c045fe14a3121ff"
+    },
+    "manifest": {
+      "path": "novydres/MANIFEST_V54.json",
+      "blob_sha": "2c332a1b39834203941138e3d1c950dd670e314b"
+    },
+    "last_event_id": "CHR001-M301-C05-22-20261109-001",
+    "last_closed_scene": "M3.01.C05",
+    "next_scene": "M3.02.C01",
+    "scene_started": false,
+    "player_in_own_car": true,
+    "travel_recorded": false,
+    "elapsed_time_recorded": false,
+    "mortal": true,
+    "embrace_occurred": false,
+    "state_refs": {
+      "live": {
+        "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+        "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+      },
+      "history_index": {
+        "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+        "blob_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+      },
+      "episode": {
+        "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+        "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+      },
+      "character": {
+        "path": "novydres/chronicles/CHR-001/character/state_v044.source.txt",
+        "blob_sha": "1c7326ad534e3679e5b91d8ac5b6e2145e55fd57"
+      },
+      "knowledge": {
+        "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+        "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+      },
+      "threads": {
+        "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+        "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+      }
+    }
+  },
+  "authority_refs": {
+    "admission": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D04_PLOT_ADMISSIONS_V010.json",
+      "blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+    },
+    "bible": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V032.json",
+      "blob_sha": "ae151a67ae44fb777763986967f58533aa1aaf21"
+    },
+    "truth": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md",
+      "blob_sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4"
+    },
+    "preparation": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V022_GM_HIDDEN.md",
+      "blob_sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37"
+    },
+    "progression": {
+      "path": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V026_PLAYER_SAFE.json",
+      "blob_sha": "f86e8882f1458e5ea4cfe946a51a9ba6e9dce006"
+    }
+  },
+  "selection_method": "CHR001_CURATED_SESSION",
+  "d2_global_unchanged": true,
+  "marco": "M3",
+  "longitudinal_role": "Causal Cainite attention, bounded first contact and player-driven progress toward future guided-creation milestones. No outcome guaranteed.",
+  "first_incident": {
+    "story_id": "ST-GANGREL-ATTENTION",
+    "plot_admission": "PLOT-GANGREL-ATTENTION",
+    "status": "PLANNED_CONDITIONAL_NOT_OCCURRED",
+    "cause": "On a later ordinary evening at the already established small rented workshop, an independently handled long metal piece is left provisionally across the shared passage by another authorized user of the leased site; no unloading or decision is attributed to Bartholomeu. Rada uses that passage by her own established route and seeks to clear it; Borislav accompanies her on his own motive. Neither their arrival nor the placement is a preplayed event.",
+    "entry_guard": "The Dramaturgo chooses a later significant scene frame, not a literal next-turn car-to-workshop journey. The ordinary workshop presence, neutral background interval and third-party obstruction are introduced as scene-setting by the authorized Narrator, not falsely backfilled as actions of Bart or an already committed event. Before the first choice, establish who can move the object, whose passage it is, the NPCs' independent physical reach and why the issue arises now. If this frame is untenable under new play evidence, block and reprepare.",
+    "actual_cause_present": false,
+    "scene_ready": true,
+    "actors": [
+      {
+        "id": "Rada",
+        "goal": "Keep her used passage open and leave",
+        "knowledge": "Only what she directly observes upon reaching the shared passage; no knowledge of Bartholomeu's movements prior to the scene or of private history.",
+        "limits": "Does not know prior incident, family or workshop secret absent source"
+      },
+      {
+        "id": "Borislav",
+        "goal": "Defend face, seek challenge when Bart insists obstruction stays",
+        "knowledge": "Only firsthand observations",
+        "limits": "Provocation conditional; no automatic fight"
+      },
+      {
+        "id": "Bartholomeu",
+        "goal": "PLAYER_CHOICE_NOT_PREDICTED",
+        "knowledge": "Carried current PC knowledge only",
+        "limits": "Player controls own speech, action, attendance and conflict choices"
+      }
+    ],
+    "stakes": [
+      "Use of a real access path",
+      "Trust, reputation, possible physical harm if the player chooses and outcome warrants it",
+      "If observed, only traceable information transmission; no invisible rumor"
+    ]
+  },
+  "act_contracts": [
+    {
+      "id": "A1",
+      "title": "PASSAGE",
+      "status": "CONDITIONAL",
+      "dramatic_question": "What will Bartholomeu do when an actual space-use conflict affects his work?",
+      "start_condition": "Independent background obstruction and Rada's justified arrival are introduced when authorized opening starts. Neither is required as a PREVIOUS played event.",
+      "choices": [
+        "Move the obstruction personally or with assistance",
+        "Negotiate, request another path, delay or refuse",
+        "Withdraw or confront without assumed violence"
+      ],
+      "npc_autonomy": "Rada seeks exit, Borislav challenges only with a trigger; both can leave",
+      "closures": [
+        "Passage freed",
+        "Agreement or refusal recorded",
+        "Departure, interruption or confrontation resolved by actual mechanics"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A2",
+      "title": "WITNESS",
+      "status": "CONDITIONAL",
+      "dramatic_question": "What does a witness actually learn and choose to pass onward?",
+      "start_condition": "Real encounter; observation or express request to relay",
+      "choices": [
+        "Ask for a contact",
+        "Avoid the subject",
+        "Allow or oppose social scrutiny"
+      ],
+      "npc_autonomy": "Rada independently decides whether and when to report; content limited to observations",
+      "closures": [
+        "Traceable delivered report",
+        "Refused or delayed relay",
+        "No report; thread quiet"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A3",
+      "title": "FIRST_APPROACH",
+      "status": "CONDITIONAL",
+      "dramatic_question": "Does the protagonist respond to a properly delivered invitation?",
+      "start_condition": "Knowledge provenance and separately delivered first invitation; no inferred attendance",
+      "choices": [
+        "Attend or decline",
+        "Ask questions or postpone",
+        "Withdraw with consequences proportional to evidence"
+      ],
+      "npc_autonomy": "Invitation source decides within limits; no automatic summons",
+      "closures": [
+        "Meeting concluded by played outcome",
+        "Refusal or non-delivery; route quiet",
+        "Departure/interruption"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    },
+    {
+      "id": "A4",
+      "title": "SECOND_THRESHOLD",
+      "status": "CONDITIONAL",
+      "dramatic_question": "Can the protagonist preserve control when an independent authority attempts coercion?",
+      "start_condition": "Earlier conditional story and distinct later delivered invitation, with voluntary PC attendance",
+      "choices": [
+        "Resist, leave, negotiate or engage",
+        "Attempt escape or defense",
+        "Pursue any legal mechanical option"
+      ],
+      "npc_autonomy": "Opposing agents act under their motives, limits, known facts and rules; no predestined defeat",
+      "closures": [
+        "Recorded actual local outcome",
+        "Recoverable divergence -> route pending/quiet",
+        "Evidence-backed irreversible divergence -> finite D09 review"
+      ],
+      "xp": "PLANNED_NOT_GRANTED"
+    }
+  ],
+  "mechanics": {
+    "baseline": "MORTAL_ONLY",
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_available_capacity": 405,
+    "xp_credit_available": 0,
+    "willpower": {
+      "max": 6,
+      "superficial_damage": 2,
+      "aggravated_damage": 0,
+      "available": 4
+    },
+    "power_status": "NO_VAMPIRIC_POWER",
+    "test_rule": "G25/G27; only on concrete declared action, validate pool/skill, difficulty, Take Half, possible roll and later WP choice; no fabricated RNG.",
+    "future_transformation": "Only if separately played, adjudicated and persisted; not an outcome of this dossier."
+  },
+  "causal_guards": {
+    "current_scene_available": true,
+    "first_scene_ready": true,
+    "story_preparation_ready": true,
+    "narrator_permission": true,
+    "no_new_event": true,
+    "no_pc_action": true,
+    "no_npc_knowledge_delta": true,
+    "no_elapsed_time": true,
+    "no_retroactive_canon": true,
+    "no_open_thread_resolution": true,
+    "no_xp_fv_change": true,
+    "no_unbounded_investigation": true,
+    "attribution": "Future plans GM_PLAN, never observed events"
+  },
+  "first_scene_review": {
+    "why_now": "Later routine activity becomes a meaningful shared-passage dispute, initiated by separately capable NPCs; intervening everyday days do not require play.",
+    "entry_conditions": [
+      "C05-22 remains last REAL event: PJ in own car and unopened box, M3.01 closed",
+      "Narrator may elide ordinary intervening time and routine to a later 1970 workshop evening, absent explicit pending character commitment erased",
+      "Object placement arises from independent mundane handling in shared workspace, not a PC action; establish it at first scene framing",
+      "Rada's usual passage and physical presence have independent motive/reach; Borislav does not automatically provoke unless triggered",
+      "No scene, arrival, obstruction, combat, time change, or knowledge change is recorded UNTIL the authorized opening and later play"
+    ],
+    "real_choices": true,
+    "authored_preparation_complete": true,
+    "mechanical_baseline_checked": true,
+    "scene_ready": true,
+    "narrator_permission": true,
+    "reason": "Playable spotlight is in prospective future frame without simulating irrelevant daily steps; NPCs initiate external cause, while player retains all substantive choices."
+  },
+  "retention": {
+    "persistent_threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V23.json",
+      "blob_sha": "c33f7e48b9c4b5ef98e2b6ac998b8375502308f5"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    "story_checkpoint": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.01_v006.source.txt",
+      "blob_sha": "ff0efd6aafa05891c699fa23bc9b70a8baaadd42"
+    }
+  },
+  "authoring_note": "GM_HIDDEN: no spoilers in PLAYER_SAFE outputs. Independent NPC agency and consequences. No re-opening M3.01, C06, or automatic target outcome. V2 prospective time framing does not determine a player choice or event; retained V1 is historical, superseded on entry.",
+  "temporal_framing": {
+    "mode": "PROSPECTIVE_ELLIPSIS_SPOTLIGHT",
+    "planned_scene_time": "A LATER EVENING IN 1970; civil date still UNKNOWN",
+    "interval_boundary": "Routine-only; no unpaid/unplayed meaningful choice, consequences, XP/FV, secret, or purchase assumed",
+    "frame_location": "Already established small rented Krauser workshop and its independently used common passage",
+    "pc_routine": "Ordinary presence in established workshop operations, not a forced specific job, delivery, unloading, agreement, return order, or player-chosen destination",
+    "external_trigger": "Independent ordinary placing of passage obstacle by third-party user of shared space; legitimate Rada passage use and subsequent initiative, Borislav conditional",
+    "spotlight": "Immediate real conflict with player options including withdraw, question cause, request help, negotiate, move object, refuse, or any legal action",
+    "event_state": "ALL UNPLAYED; no elapsed time persisted by preparation",
+    "if_unavailable": "Do not stage a fake scene or coerce Bart; re-author a different independent dramatic trigger, and re-gate"
+  },
+  "predecessor_ref": {
+    "path": "novydres/chronicles/CHR-001/preparations/M3.02_DOSSIER_V1.json",
+    "blob_sha": "3a76c24f489b402652a13e768521f9d0cb69357a"
+  }
+}

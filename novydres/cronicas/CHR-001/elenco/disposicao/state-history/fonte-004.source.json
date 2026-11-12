@@ -1,0 +1,139 @@
+{
+  "schema_id": "CHR001_NPC_DISPOSITION_STATE_V1",
+  "chronicle_id": "CHR-001",
+  "status": "ACTIVE",
+  "checkpoint": {
+    "source_head_sha": "8187eb105b69c6f9e058162886a1f023e57e7f11",
+    "cycle_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0025.json",
+    "cycle_blob_sha": "c228d35ff046f98c70a179ae4c5a6060da362551",
+    "last_event_id": "CHR001-M301-C02-16-20261107-001"
+  },
+  "previous_version": "novydres/chronicles/CHR-001/npc-disposition/STATE_V003.json",
+  "activation_event_id": "CHR001-ADMIN-C15-20261106-001",
+  "actors": {
+    "npc-mary-krauser": {
+      "profile": {
+        "personal_goal": "Proteger filhos e preservar confiança adulta com autonomia.",
+        "negative_expression": "Pode falar menos, ser firme e exigir clareza; não precisa agredir para discordar.",
+        "positive_expression": "Afetuosa e colaborativa, mas examina riscos sem concordância automática.",
+        "boundaries": [
+          {
+            "rule": "Não comprometer reservas dos filhos sem avaliação e decisão compartilhada.",
+            "source_event_id": "CHR001-M204-C09-12-20261105-001"
+          }
+        ]
+      },
+      "relationships": {
+        "pc-bartholomeu-krauser": {
+          "baseline": 3,
+          "source_event_id": "CHR001-M204-C09-13-20261105-001",
+          "pressures": []
+        }
+      },
+      "mood_window": null
+    },
+    "npc-mikahel-krauser": {
+      "profile": {
+        "personal_goal": "Construir julgamento próprio sobre justiça, responsabilidade e a figura paterna.",
+        "negative_expression": "Pode manter dúvidas, afastar-se ou resistir à orientação; não é um porta-voz moral do pai.",
+        "positive_expression": "Procura proximidade e compartilha perguntas, conservando critérios próprios.",
+        "boundaries": [
+          {
+            "rule": "As escolhas de Mikahel na escola não podem ser substituídas por decisão do pai.",
+            "source_event_id": "CHR001-M204-C14-17-20261105-001"
+          }
+        ]
+      },
+      "relationships": {
+        "pc-bartholomeu-krauser": {
+          "baseline": 3,
+          "source_event_id": "CHR001-M204-C14-15-20261105-001",
+          "pressures": []
+        }
+      },
+      "mood_window": null
+    },
+    "npc-pavel-heating-supervisor": {
+      "profile": {
+        "personal_goal": "Manter segurança técnica e proteger responsabilidade própria e documental.",
+        "negative_expression": "Pode exigir prova, resistir à pressão e recusar decisões fora da competência.",
+        "positive_expression": "Compartilha o que verificou e coopera dentro das exigências técnicas.",
+        "boundaries": [
+          {
+            "rule": "Não liberar ramal sem inspeção, material e autorizações tecnicamente adequados.",
+            "source_event_id": "CHR001-M204-C11-18-20261105-001"
+          }
+        ]
+      },
+      "relationships": {
+        "pc-bartholomeu-krauser": {
+          "baseline": 0,
+          "source_event_id": "CHR001-M204-C10-06-20261105-001",
+          "pressures": [
+            {
+              "source_event_id": "CHR001-M204-C15-15-20261106-001",
+              "delta": -1,
+              "reason": "Pavel expressou preocupação profissional após intimidação e porta arrombada; não altera vínculo basal nem força hostilidade."
+            }
+          ]
+        }
+      },
+      "mood_window": null
+    },
+    "npc-anna-morozova-vice-diretora": {
+      "profile": {
+        "personal_goal": "Proteger alunos com apuração proporcional e autonomia escolar.",
+        "negative_expression": "Pode interromper, impor processo escolar ou recusar propostas insuficientemente supervisionadas.",
+        "positive_expression": "Escuta as partes e busca procedimentos viáveis, preservando autoridade profissional.",
+        "boundaries": [
+          {
+            "rule": "Atividades com crianças menores requerem supervisão e avaliação da escola.",
+            "source_event_id": "CHR001-M204-C14-09-20261105-001"
+          }
+        ]
+      },
+      "relationships": {
+        "pc-bartholomeu-krauser": {
+          "baseline": 0,
+          "source_event_id": "CHR001-M204-C14-05-20261105-001",
+          "pressures": []
+        }
+      },
+      "mood_window": null
+    },
+    "npc-unnamed-injured-stranger": {
+      "profile": {
+        "name_claim": "Jonas Mercer",
+        "clan_claim": "Ventrue",
+        "personal_goal": "Preservar sigilo e reputação ligados à humilhação de ter o braço arrancado; manter autonomia.",
+        "negative_expression": "Resistência, ressentimento, cálculo e recusa; não ajudar automaticamente.",
+        "positive_expression": "Pode dar aviso limitado quando souber de ameaça e isso atender ao acordo e aos próprios interesses.",
+        "boundaries": [
+          {
+            "rule": "Acordo obtido sob pressão: avisar fatos que vier a ouvir sobre riscos a Bart/família, sem investigação ativa, guarda ou proteção.",
+            "source_event_id": "CHR001-M301-C02-13-20261107-001"
+          }
+        ]
+      },
+      "relationships": {
+        "pc-bartholomeu-krauser": {
+          "baseline": -2,
+          "source_event_id": "CHR001-M301-C02-13-20261107-001",
+          "pressures": []
+        }
+      },
+      "mood_window": null,
+      "mechanical_snapshot": {
+        "roll_id": "CHR001-M301-C02-BART-JONAS-SOCIAL-001",
+        "roll_path": "novydres/chronicles/CHR-001/events/M3.01_C02_ROLLS_V1.json",
+        "wp_superficial_damage": 2,
+        "wp_max": "UNKNOWN",
+        "recovery": "NOT_APPLIED"
+      }
+    }
+  },
+  "notes": [
+    "Pressão contextual provisória; humor momentâneo não persistido pois não há continuidade garantida da janela. Sem perfil de Makarov criado retroativamente.",
+    "C02: o aceite de Jonas foi coagido e não constitui lealdade ou promessa de cobertura ativa. Clan/identidade são alegações NPC."
+  ]
+}

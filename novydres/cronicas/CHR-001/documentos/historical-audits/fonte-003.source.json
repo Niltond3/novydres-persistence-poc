@@ -1,0 +1,266 @@
+{
+  "schema_id": "CHR001_M2_XP100_SPEND_PROPOSAL_V1",
+  "status": "RECOMMENDATION_NOT_PURCHASED",
+  "source_head_sha": "26af365581de68ada2a2237f1497fbf47ad63d79",
+  "source_live_blob_sha": "86897bef9d3559193153baf8f88a3d7fef139f90",
+  "source_event_id": "CHR001-M204-C17-08-20261106-001",
+  "approved_credit_target": 100,
+  "currently_spendable_credit": 50,
+  "costs_reference": "Historical guided creation convention: attribute new level ×5; skill new level ×3; verify all baselines and final cost audit first.",
+  "current_verifiably_purchased": {
+    "attributes": {
+      "Força": 4,
+      "Destreza": 2,
+      "Vigor": 3,
+      "Carisma": 2,
+      "Inteligência": 1,
+      "Determinação": 1,
+      "Autocontrole": 1
+    },
+    "skills": {
+      "Ofícios": 1,
+      "Briga": 4,
+      "Intimidação": 1,
+      "Condução": 2
+    }
+  },
+  "uncertainty": "NOT ALLOCATED is not proven zero final. Investigation/Prontidão/Política/Furtividade cost calculations use 0 as a provisional starting assumption; no purchases or costs final until auditing full sheet, avoiding extra dots beyond purchased or starting allocations. Existing provisional TARGET V2 test pools do NOT count as actual dots.",
+  "recommendation": {
+    "name": "IDENTIDADE_PROFISSIONAL_E_INVESTIGATIVA_WITH_PHYSICAL_CONTINUITY",
+    "reason": "M2 repeatedly tested cognition, evidence, skilled technical work, coercion, institutional mediation, grappling and stealth. Force4 already purchased; prioritizing Intelligence3 accounts for unusually extensive analytical choices. Avoid supernatural power or free background.",
+    "budget_total": 100,
+    "rows": [
+      {
+        "trait": "Inteligência",
+        "base": 1,
+        "desired": 3,
+        "cost": 25,
+        "evidence": [
+          "CHR001-M203-ESCAPE-119-20261103-001",
+          "CHR001-M204-C09-22-20261105-001",
+          "CHR001-M204-C11-17-20261105-001",
+          "CHR001-M204-C13-15-20261105-001"
+        ],
+        "basis": "Reasoned inspection of a modified vehicle; four-interval lawful enterprise plan; diagnosis and safety/provenance; drafting a bounded technical note. Prior verified purchased Intelligence1."
+      },
+      {
+        "trait": "Briga",
+        "base": 4,
+        "desired": 5,
+        "cost": 15,
+        "evidence": [
+          "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+          "CHR001-M204-C08-14-20261104-001",
+          "CHR001-M204-C16-18-20261106-001"
+        ],
+        "basis": "Repeated decisive grapples and opposed unarmed fights, including choosing to end confrontation; purchased Briga4 established."
+      },
+      {
+        "trait": "Intimidação",
+        "base": 1,
+        "desired": 3,
+        "cost": 15,
+        "evidence": [
+          "CHR001-M204-C15-08-20261106-001",
+          "CHR001-M204-C15-09-20261106-001",
+          "CHR001-M204-C16-19-20261106-001"
+        ],
+        "basis": "Repeated explicit coercive pressure on Makarov plus high-stakes threat/interview of opponent; distinguish achieved compliance from NPC truth."
+      },
+      {
+        "trait": "Investigação",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 3,
+        "cost": 18,
+        "evidence": [
+          "CHR001-M203-ESCAPE-118-20261103-001",
+          "CHR001-M204-C07-03-20261104-001",
+          "CHR001-M204-C08-17-20261104-001",
+          "CHR001-M204-C09-09-20261105-001"
+        ],
+        "basis": "Volnaya document corroboration, catalogue research, record inspection and cross-vehicle findings; suspicion not proof."
+      },
+      {
+        "trait": "Ofícios",
+        "base": 1,
+        "desired": 2,
+        "cost": 6,
+        "evidence": [
+          "CHR001-M203-ESCAPE-120-20261103-001",
+          "CHR001-M204-C11-17-20261105-001",
+          "CHR001-M204-C12-13-20261105-001",
+          "CHR001-M204-C13-15-20261105-001"
+        ],
+        "basis": "Mechanical forensics, heat-system defect isolation, technical study and report, plus real plan for garage. Does not automatically grant specialization."
+      },
+      {
+        "trait": "Prontidão",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 2,
+        "cost": 9,
+        "evidence": [
+          "CHR001-M204-C08-03-20261104-001",
+          "CHR001-M204-C15-18-20261106-001",
+          "CHR001-M204-C16-14-20261106-001"
+        ],
+        "basis": "Observation, watchfulness and causal perception of physical hazards and pursuit traces, not supernatural senses."
+      },
+      {
+        "trait": "Política",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 2,
+        "cost": 9,
+        "evidence": [
+          "CHR001-M204-C09-22-20261105-001",
+          "CHR001-M204-C10-16-20261105-001",
+          "CHR001-M204-C12-13-20261105-001",
+          "CHR001-M204-C13-18-20261105-001"
+        ],
+        "basis": "Formal objections, chain of responsibility, priority negotiation and procedural plan. Does not automatically show permanent institutional influence."
+      },
+      {
+        "trait": "Furtividade",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 1,
+        "cost": 3,
+        "evidence": [
+          "CHR001-M203-ESCAPE-113-20261103-001",
+          "CHR001-M204-C08-12-20261104-001",
+          "CHR001-M204-C08-25-20261104-001"
+        ],
+        "basis": "Approach undetected to car, concealed entry and withdrawal; no inferred occult disappearance."
+      }
+    ],
+    "purchased_now": false
+  },
+  "alternative": {
+    "name": "PODER_FISICO_E_PROTECAO",
+    "reason": "Only swap Intelligence1→3 (25) for Força4→5 (25). Especially defensible after C16 grappling and impact; however lower coverage of M2 documentary/technical learning.",
+    "budget_total": 100,
+    "rows": [
+      {
+        "trait": "Força",
+        "base": 4,
+        "desired": 5,
+        "cost": 25,
+        "evidence": [
+          "CHR001-M204-C16-11-20261106-001",
+          "CHR001-M204-C16-18-20261106-001"
+        ],
+        "basis": "Demonstrated exceptional physical force in strikes and grapples under genuine risk; target5 but ability already was provisionally 5 and only 4 purchased."
+      },
+      {
+        "trait": "Briga",
+        "base": 4,
+        "desired": 5,
+        "cost": 15,
+        "evidence": [
+          "CHR001-M203-CONFLICT-CLOSE-TAKE-HALF-20261103-001",
+          "CHR001-M204-C08-14-20261104-001",
+          "CHR001-M204-C16-18-20261106-001"
+        ],
+        "basis": "Repeated decisive grapples and opposed unarmed fights, including choosing to end confrontation; purchased Briga4 established."
+      },
+      {
+        "trait": "Intimidação",
+        "base": 1,
+        "desired": 3,
+        "cost": 15,
+        "evidence": [
+          "CHR001-M204-C15-08-20261106-001",
+          "CHR001-M204-C15-09-20261106-001",
+          "CHR001-M204-C16-19-20261106-001"
+        ],
+        "basis": "Repeated explicit coercive pressure on Makarov plus high-stakes threat/interview of opponent; distinguish achieved compliance from NPC truth."
+      },
+      {
+        "trait": "Investigação",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 3,
+        "cost": 18,
+        "evidence": [
+          "CHR001-M203-ESCAPE-118-20261103-001",
+          "CHR001-M204-C07-03-20261104-001",
+          "CHR001-M204-C08-17-20261104-001",
+          "CHR001-M204-C09-09-20261105-001"
+        ],
+        "basis": "Volnaya document corroboration, catalogue research, record inspection and cross-vehicle findings; suspicion not proof."
+      },
+      {
+        "trait": "Ofícios",
+        "base": 1,
+        "desired": 2,
+        "cost": 6,
+        "evidence": [
+          "CHR001-M203-ESCAPE-120-20261103-001",
+          "CHR001-M204-C11-17-20261105-001",
+          "CHR001-M204-C12-13-20261105-001",
+          "CHR001-M204-C13-15-20261105-001"
+        ],
+        "basis": "Mechanical forensics, heat-system defect isolation, technical study and report, plus real plan for garage. Does not automatically grant specialization."
+      },
+      {
+        "trait": "Prontidão",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 2,
+        "cost": 9,
+        "evidence": [
+          "CHR001-M204-C08-03-20261104-001",
+          "CHR001-M204-C15-18-20261106-001",
+          "CHR001-M204-C16-14-20261106-001"
+        ],
+        "basis": "Observation, watchfulness and causal perception of physical hazards and pursuit traces, not supernatural senses."
+      },
+      {
+        "trait": "Política",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 2,
+        "cost": 9,
+        "evidence": [
+          "CHR001-M204-C09-22-20261105-001",
+          "CHR001-M204-C10-16-20261105-001",
+          "CHR001-M204-C12-13-20261105-001",
+          "CHR001-M204-C13-18-20261105-001"
+        ],
+        "basis": "Formal objections, chain of responsibility, priority negotiation and procedural plan. Does not automatically show permanent institutional influence."
+      },
+      {
+        "trait": "Furtividade",
+        "base": "UNALLOCATED_PROJECTION",
+        "costing_assumption": 0,
+        "desired": 1,
+        "cost": 3,
+        "evidence": [
+          "CHR001-M203-ESCAPE-113-20261103-001",
+          "CHR001-M204-C08-12-20261104-001",
+          "CHR001-M204-C08-25-20261104-001"
+        ],
+        "basis": "Approach undetected to car, concealed entry and withdrawal; no inferred occult disappearance."
+      }
+    ],
+    "purchased_now": false
+  },
+  "no_automatic_purchases": [
+    "Disciplines/Potência de Sangue/Fome while mortal",
+    "Recursos2 for workshop opening",
+    "Armas de Fogo merely from stored military guns without new M2 firearms training/test",
+    "Linguagens and specializations pending audit",
+    "Humanidade adjustments without a valid scene/rule"
+  ],
+  "post_choice_gate": "Only user can choose allocations. Full prior-baseline audit, cost eligibility and XP available in LIVE must be confirmed after settlement. Then publish COW purchased-state ledger with idempotent transaction readback.",
+  "integrity": {
+    "no_spend": true,
+    "no_resource_delta": true,
+    "no_story_delta": true,
+    "no_c18_start": true,
+    "no_marco_close": true,
+    "canon_unchanged": true
+  }
+}

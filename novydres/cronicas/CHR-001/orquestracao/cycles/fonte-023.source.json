@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V3",
+  "cycle_id": "CHR001-CYCLE-0023",
+  "sequence": 23,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M3.01",
+  "manifest_path": "novydres/MANIFEST_V45.json",
+  "source_head_sha": "525c8b5ef0517fbb3dfe872e62c35dc1b2b6cded",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0022.json",
+    "blob_sha": "028f684a371307f67cce88be5823a91fa6673ddb"
+  },
+  "transition": "PLAN_REVISED",
+  "status": "READY_FOR_NARRATOR",
+  "next_role": "NARRADOR",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+    "last_closed_scene": "C00",
+    "next_scene": "C01",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v032.json",
+      "blob_sha": "6091d43bfff1ddf9c1ab7301ee4f414f96a61322"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v032.json",
+      "blob_sha": "a63082ca0594913db9380891e3a010482287aba2"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v017.source.txt",
+      "blob_sha": "20ee61dac898ef0d2010725ed8787ab7fe667ecd"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v038.source.txt",
+      "blob_sha": "4d0e7e28bfff47161acb7f9810ca13a1474f1208"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "blob_sha": "5da9719103088a792847036973386926815bf292"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V18.json",
+      "blob_sha": "740e584430db113a52c505acc02c9aab3ce91ece"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M301-20261107-V1",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_DOSSIER_V1.json",
+      "blob_sha": "552c251a9d4895a6a6a5211b125f7da50f8996b5"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M3.01_LONGITUDINAL_SIDECAR_V1.json",
+      "blob_sha": "5774c83c6ea092ce9cbfb2e03d342f560a856b4b"
+    },
+    "validity": "REVISED",
+    "reviewed_against_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001"
+  },
+  "review": {
+    "decision": "REVISED",
+    "against_last_event_id": "CHR001-M204-DOWNTIME-OFICINA-OPEN-20261106-001",
+    "public_rationale": "Primeira provocação prospectiva M3.01 preparada e validada contra o último evento de M2 e seu pacote de fechamento. D1/D2/H, horror gótico-punk, fricção e autonomia NPC, oportunidade física, lente cultural americana e pilares Ortodoxia, Islã e Judaísmo foram examinados. Seleção em CHR001_CURATED_SESSION é desvio local documentado do sorteio D2; sem RNG alegado. Nenhum evento, cena, Abraço, XP/FV, ficha ou fio de M2 foi alterado. Narrador apenas após autorização expressa separada."
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V1",
+  "cycle_id": "CHR001-CYCLE-0018",
+  "sequence": 18,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M2.04",
+  "manifest_path": "novydres/MANIFEST_V40.json",
+  "source_head_sha": "f7dcd4a9839676ee31353de97b7a26f6d45f1405",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0017.json",
+    "blob_sha": "d6e7fbf5c747a2117c5117957d6cddbed354b40a"
+  },
+  "transition": "CLOSURE_RECOMMENDED",
+  "status": "PROVOCATION_CLOSURE_PENDING",
+  "next_role": "NONE",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-C17-08-20261106-001",
+    "last_closed_scene": "C17",
+    "next_scene": "C18",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v030.json",
+      "blob_sha": "86897bef9d3559193153baf8f88a3d7fef139f90"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v030.json",
+      "blob_sha": "9d5564467443977510b9da0ef262e464bdfe44d8"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v016.source.txt",
+      "blob_sha": "64a92912d129c1964cb8727ec0ca54634853c788"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v036.source.txt",
+      "blob_sha": "8a982986cdceb0e223a1249930d9975175014ba7"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V16.json",
+      "blob_sha": "5da9719103088a792847036973386926815bf292"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V17.json",
+      "blob_sha": "64ca70fa5a794609ddd9c0213e8559c3adabdc95"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M204-20261106-V9",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V9.json",
+      "blob_sha": "35d0a677ae5798bfbce713ff1d582ae7f1e77215"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V8.json",
+      "blob_sha": "4770a033cb0d12b224966058641931c78b557414"
+    },
+    "validity": "STALE",
+    "reviewed_against_event_id": "CHR001-M204-C16-27-20261106-001"
+  },
+  "review": {
+    "decision": "CLOSURE_RECOMMENDED",
+    "against_last_event_id": "CHR001-M204-C17-08-20261106-001",
+    "public_rationale": "Revisão integral C01–C17: a provocação apresenta cobertura, coerência e consequência dramatizadas, com resgate concluído e escolhas morais já jogadas. Recomenda-se fechamento de M2.04, não de M2; assuntos pendentes continuam sem resolução presumida. Sem motivo independente para C18, sem crédito de atos/XP/FV automático. Gate e autorização de fechamento ainda necessários. Registro prospectivo: novydres/chronicles/CHR-001/preparations/M2.04_C17_CLOSURE_SCREENING_V1.json"
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}

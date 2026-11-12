@@ -68,7 +68,8 @@ export function buildCatalog(root=process.cwd(), {overrides={}}={}) {
     }
     const located=files.map(name=>{
       const p=posix.join(path,name), buf=read(p);
-      if(name.endsWith('.json')) {
+      // Literal archived source JSON is verified by its pinned Git blob, not interpreted as subject claims.
+      if(name.endsWith('.json') && !name.endsWith('.source.json')) {
         const doc=JSON.parse(buf.toString('utf8'));
         if(doc.subject_id!==obj.subject_id) fail('SUBJECT_OWNER_MISMATCH',p);
         if(name==='relacoes.json') relationRecords.push({path:p,doc});

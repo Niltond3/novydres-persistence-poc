@@ -25,7 +25,7 @@ const quantile=(samples,p)=>{
 test('C07 integrated selective snapshot fixes one catalog+state+config at current candidate SHA',()=>{
  assert.equal(checkCatalog().ok,true);
  const c=buildCatalog();
- assert.equal(c.subjects.length,79);
+ assert.equal(c.subjects.length,110);
  assert.equal(catalogBytes(c),readFileSync('novydres/catalogo.json','utf8'));
  const resolved=resolveSubject(c,cfgId,{snapshot_sha:head,role:'AUDITOR'});
  assert.equal(resolved.owner_path,'novydres/cronicas/CHR-001/configuracao');

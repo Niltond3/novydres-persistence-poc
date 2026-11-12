@@ -1,0 +1,3 @@
+# M3.02 pós-C01 — revisão PLAYER_SAFE V4
+
+C01 CLOSED/G28, M3.02 ACTIVE, C02 NOT_STARTED. Seleção editorial de uma iniciativa NPC **prospectiva**, independente de C01; a abordagem ainda não aconteceu. Nenhuma testemunha, rumor, convite, identificação, informação familiar, tempo, lucro, XP/FV ou escolha do protagonista foi adicionada. A abordagem pode falhar; nada autoriza repetir a viga/advertência. O modo temporal proposto é CONTINUITY, com os mesmos 44 fios e 47 registros de conhecimento. A1 permanece OPEN. Comentário PLAYER_SAFE e NARRATIVE_IMMERSION_GATE_V1 são obrigatórios. Handoff e Narrador continuam BLOQUEADOS até CI do SHA final, C45 publicado, master promovido e readback. Predecessor V3 (blob d631c5fcfb1f07f15d7742129faaca51dba13e15) preservado.

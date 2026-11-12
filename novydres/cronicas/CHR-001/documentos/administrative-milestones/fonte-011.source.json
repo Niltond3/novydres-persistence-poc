@@ -1,0 +1,104 @@
+{
+  "schema": "NOVYDRES_CHR001_ADMIN_SESSION_TRANSITION_V1",
+  "administrative_event_id": "CHR001-ADMIN-M203-CREDIT-M204-OPEN-20261103-001",
+  "narrative_event": false,
+  "event_class": "ADMINISTRATIVE_PROGRESSION_AND_SESSION_OPEN",
+  "scope": "CHR-001",
+  "source_command": "USER_EXPLICIT_2026-11-03_CURRENT_CHAT",
+  "source_head_sha": "4ff12177add773a5fc1a1aa09ced7a219fffcbff",
+  "parent_paths": {
+    "manifest": "novydres/MANIFEST_V18.json",
+    "live": "novydres/chronicles/CHR-001/LIVE_v013.json",
+    "history": "novydres/chronicles/CHR-001/HISTORY_INDEX_v013.json",
+    "character": "novydres/chronicles/CHR-001/character/state_v019.source.txt",
+    "xp_envelope": "novydres/runtime/xp/XP_ENVELOPE_V1.json"
+  },
+  "parent_blob_shas": {
+    "manifest": "b3f2f94d73a4be8712919553b25a86ebbbd1a16e",
+    "live": "879ecde7b1c6a11a8035f50b1de65d633b168366",
+    "history": "a226f2b6291a18ca90794aadac798b689ad33c24",
+    "character": "a27648c54c9c0484efd703478f991d4edab3746e",
+    "xp_envelope": "d5b59da66faa321580432f82c15e990012b08b6d"
+  },
+  "previous_narrative_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+  "closed_episode": "M2.03",
+  "eligible_next_episode": "M2.04",
+  "credit": {
+    "credit_event_id": "CHR001-XP-HISTORIC-M203-30-20261103-001",
+    "origin": "M2.03_CLOSED",
+    "source_rule": "SESSION_TRANSITION_V1_LEGACY_LONG_30_NOT_DEC_CR_021_ACTS",
+    "source_event_id": "CHR001-M203-CLOSE-HOMECOMING-MIKAHEL-20261103-001",
+    "source_episode": "novydres/chronicles/CHR-001/episodes/M2.03_v017.source.txt",
+    "player_validation": "EXPRESSLY_VALIDATED_30",
+    "idempotency_key": "CHR-001:M2.03:LEGACY_CREDIT_30",
+    "pending_before": 30,
+    "granted": 30,
+    "pending_after": 0,
+    "xp_before": {
+      "cap": 675,
+      "spent": 170,
+      "remaining": 505,
+      "credit_available": 20,
+      "locked_capacity": 485
+    },
+    "xp_after": {
+      "cap": 675,
+      "spent": 170,
+      "remaining": 505,
+      "credit_available": 50,
+      "locked_capacity": 455
+    },
+    "no_act_credit_for_m203": true,
+    "no_extra_budget": true,
+    "no_purchase": true
+  },
+  "session": {
+    "session_id": "CHR001-M2.04",
+    "previous_session_id": "CHR001-M2.03",
+    "status": "OPEN_ADMINISTRATIVELY_NOT_NARRATIVELY",
+    "episode_status": "NOT_STARTED",
+    "narrative_scene_id": null,
+    "first_scene_requires_explicit_player_authorization": true,
+    "opened_by": "PLAYER_EXPLICIT_ADMINISTRATIVE_APPROVAL",
+    "recovery_id": "REC-CHR001-M204-20261103-001",
+    "recovery_source": "SESSION_START_ONLY",
+    "recovery_reference": "novydres/runtime/scene-execution/SESSION_TRANSITION_V1.md",
+    "prior_recovery_id": "REC-CHR001-M203-ZERO-20261101-001",
+    "prior_positive_recovery_id": "REC-CHR001-M109-20261101-001",
+    "idempotency_key": "CHR-001:M2.04:SESSION_START_WP_RECOVERY",
+    "willpower_calculation": {
+      "before": {
+        "maximum_provisional": 6,
+        "superficial_damage": 5,
+        "aggravated_damage": 0,
+        "available": 1
+      },
+      "provisional_composure": 3,
+      "provisional_resolve": 3,
+      "amount": "min(5,max(3,3))",
+      "recovered_superficial": 3,
+      "after": {
+        "maximum_provisional": 6,
+        "superficial_damage": 2,
+        "aggravated_damage": 0,
+        "available": 4
+      },
+      "cliffhanger_carryover_evidence": false
+    },
+    "no_other_resource_changes": true,
+    "no_diegetic_elapsed_time_assigned": true,
+    "no_narrative_event_created": true
+  },
+  "player_choices": {
+    "xp": "SAVE_ALL_50_AVAILABLE",
+    "spending_transactions": [],
+    "narrative_start": "NOT_AUTHORIZED"
+  },
+  "invariants": {
+    "approved_target_unchanged": true,
+    "g28_unchanged": true,
+    "prior_files_preserved": true,
+    "technical_event_ledger_not_backfilled": true,
+    "previous_story_event_unchanged": true
+  }
+}

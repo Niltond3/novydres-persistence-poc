@@ -1,0 +1,81 @@
+{
+  "schema_id": "CHR001_OPPOSED_SOCIAL_ROLL_AUDIT_V1",
+  "roll_id": "CHR001-M301-C02-BART-JONAS-SOCIAL-001",
+  "source_event_id": "CHR001-M301-C02-11-20261107-001",
+  "scene_id": "CHR001-M301-C02",
+  "source_date": "2026-11-07",
+  "rng_source": "python_user_visible.exec | Python secrets.SystemRandom | user-visible tool-emitted actual faces",
+  "rng_timestamp_utc": "2026-11-07T19:16:57.022038+00:00",
+  "pre_roll": {
+    "type": "FORMAL_OPPOSED_SOCIAL",
+    "player_intent": "Intimidar Jonas a aceitar acordo de fornecer avisos se ouvir risco contra Bart ou família, usando Vigor+Intimidação e a lembrança da amputação",
+    "pc": {
+      "Vigor_provisional": 5,
+      "Intimidacao_provisional": 4,
+      "situational_bonus": 2,
+      "bonus_reason": "Jonas pessoalmente sofreu amputação em M2.03",
+      "pool": 11
+    },
+    "npc": {
+      "Determinacao_contextual": 4,
+      "Autocontrole_contextual": 3,
+      "pool": 7,
+      "notes": "Resistência fixada somente para esta oposição, NÃO ficha completa certificada"
+    },
+    "take_half": {
+      "legal": false,
+      "reason": "Conflito dramático oposto"
+    },
+    "stakes": "Ceder sob pressão ao acordo verbal, nunca alterar futuro automaticamente",
+    "wp_damage": "2 superficial if margin4; ceil(margin/2)"
+  },
+  "raw": {
+    "pc": [
+      7,
+      7,
+      3,
+      4,
+      2,
+      7,
+      9,
+      8,
+      9,
+      6,
+      2
+    ],
+    "npc": [
+      10,
+      2,
+      4,
+      3,
+      8,
+      8,
+      1
+    ]
+  },
+  "calculation": {
+    "pc_successes": 7,
+    "npc_successes": 3,
+    "margin": 4,
+    "pc_critical_pairs": 0,
+    "npc_critical_pairs": 0
+  },
+  "player_wp_decision": {
+    "choice": "KEEP",
+    "exact": "Eu confirmo o resultado sem gastar força de vontade",
+    "reroll": false,
+    "spent": 0,
+    "available_before": 6,
+    "available_after": 6
+  },
+  "effect": {
+    "npc_superficial_wp_damage": 2,
+    "npc_max_wp": "UNKNOWN",
+    "npc_accepted_warning_pact": true,
+    "pact_is_coerced": true,
+    "active_search": false,
+    "permanent_control": false,
+    "no_guarantee_of_future_compliance": true
+  },
+  "provenance": "Tool-result dice were visible on the preceding turn; G28 records after scene end; original roll not regenerated for write."
+}

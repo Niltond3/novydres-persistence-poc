@@ -123,7 +123,7 @@ export function validateCandidates(root = process.cwd(), { overrides = {} } = {}
         if (!subjects.has(norm(linked))) push('V03_SUBJECT_REF', p, linked);
       }
       const parent = dirname(p);
-      const others = readdirSync(resolve(root, parent)).filter(f => f.endsWith('.json') && f !== 'assunto.json' && f !== 'atual.json');
+      const others = readdirSync(resolve(root, parent)).filter(f => f.endsWith('.json') && !f.endsWith('.source.json') && f !== 'assunto.json' && f !== 'atual.json');
       for (const file of others) {
         const childPath = posix.join(parent, file); let child;
         try { child = read(childPath); } catch(e) { push('V01_JSON', childPath, String(e)); continue; }

@@ -1,0 +1,31 @@
+{
+  "schema": "ADR001_D04_EXECUTION_V1",
+  "phase": "D04",
+  "status": "SOURCE_CUSTODY_STAGED_PENDING_CURRENT_STATE_SEMANTICS_AND_CI",
+  "gate": "D04_NOT_YET_PASS",
+  "candidate_only": true,
+  "entry_head": "2c38f763976ea5edb6522c1a1f451b0a6727d03b",
+  "original_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "source_origins": 438,
+  "exact_source_copies": 438,
+  "new_source_custodians": 31,
+  "no_current_state_claim_from_historical_files": true,
+  "per_actor_knowledge_partition": "PENDING",
+  "state_projection": "PENDING_C45",
+  "source_transcripts_not_invented": true,
+  "universal_ledger_introduced": false,
+  "roll_faces_required": false,
+  "authority_promotion": false,
+  "missing_required_originals": 0,
+  "provenance_proof": "GIT_EXACT_BLOB_REUSE_AND_EXECUTABLE_VALIDATOR",
+  "test": "novydres/scripts/testar-custodia-d04.test.mjs",
+  "semantic_gate_pending": [
+    "CURRENT_C45_SYNCHRONIZED_STATE_AND_READBACK",
+    "PERSONALITY_AND_ACTOR_KNOWLEDGE_LOCAL_SCOPES",
+    "EPISODIC_FACT_VS_PREPARATION",
+    "XP_FV_RESOURCE_BALANCES",
+    "CHRONICLE_RETRIEVAL_AND_RESUME",
+    "D05_CONSUMERS_AND_CATALOG_TRANSITION"
+  ],
+  "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_id": "NOVYDRES_CHR001_ORCHESTRATION_CYCLE_V1",
+  "cycle_id": "CHR001-CYCLE-0003",
+  "sequence": 3,
+  "chronicle_id": "CHR-001",
+  "provocation_id": "M2.04",
+  "manifest_path": "novydres/MANIFEST_V32.json",
+  "source_head_sha": "b73798b25f2de47f606534b51c4c406b39bd59a2",
+  "previous_cycle": {
+    "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0002.json",
+    "blob_sha": "a101e8ff7562bee446d41c7ec733248cd076048b"
+  },
+  "transition": "SCENE_COMMITTED",
+  "status": "READY_FOR_DRAMATURGO",
+  "next_role": "DRAMATURGO",
+  "checkpoint": {
+    "last_event_id": "CHR001-M204-C10-16-20261105-001",
+    "last_closed_scene": "C10",
+    "next_scene": "C11",
+    "next_scene_status": "NOT_STARTED",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false
+  },
+  "refs": {
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v023.json",
+      "blob_sha": "3393309b189afe1dc662a97ad99a278d495b3e49"
+    },
+    "history_index": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v023.json",
+      "blob_sha": "7397959065251175e5e88898d4f90cf53e839fb8"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M2.04_v009.source.txt",
+      "blob_sha": "41eaf9909d33b30a9e3256ab4ecea864d4fd958b"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v029.source.txt",
+      "blob_sha": "67bb50763e5c120e7901bdfb785aba698250f763"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V9.json",
+      "blob_sha": "f287ad72be87148c9e3966d950a9e30107fbdbe7"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V10.json",
+      "blob_sha": "ad5b7c1291cfb514987b29fa4665b82274019345"
+    }
+  },
+  "plan": {
+    "preparation_id": "CHR001-PREP-M204-20261105-V2",
+    "dossier": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_DOSSIER_V2.json",
+      "blob_sha": "82ec86c89f65a9d52f8dc4d6172f6f018b87c540"
+    },
+    "sidecar": {
+      "path": "novydres/chronicles/CHR-001/preparations/M2.04_LONGITUDINAL_SIDECAR_V1.json",
+      "blob_sha": "2e0b577442bf4a15be0a406f0a6f1ff93e469009"
+    },
+    "validity": "STALE",
+    "reviewed_against_event_id": "CHR001-M204-C09-23-20261105-001"
+  },
+  "review": {
+    "decision": "NOT_REVIEWED",
+    "against_last_event_id": null,
+    "public_rationale": "C10 encerrada com contestação administrativa da liberação do ramal. Cabe ao Dramaturgo reavaliar integralmente M2.04 antes de qualquer cena posterior."
+  },
+  "blocking": {
+    "code": null,
+    "reason": null
+  },
+  "guards": {
+    "no_story_delta_in_prep": true,
+    "no_xp_fv_delta_in_prep": true,
+    "g28_scene_only": true,
+    "frozen_unchanged": true,
+    "no_public_spoilers": true
+  }
+}
