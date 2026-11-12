@@ -146,10 +146,29 @@ export function validateCandidates(root = process.cwd(), { overrides = {} } = {}
           }
         }
         if (file === 'conhecimento.json') {
-          for (const e of validateShape(child, schemas.knowledge)) push('V01_SCHEMA', childPath, e);
-          if (!subjects.has(norm(child.actor_id || '')) || !doc.subject_id.endsWith('-' + child.actor_id))
-            push('V04_ACTOR', childPath, 'actor must match locally sourced NPC (C41 sample)');
-          if (child.claims_are_not_world_facts !== true) push('V04_CLAIM_PROMOTION', childPath, 'NPC_CLAIM cannot be CONFIRMED by copying');
+          if (child.status === 'CANDIDATE_C45_NOT_ACTIVE') {
+            const rows=child.records;
+            if (child.subject_id !== doc.subject_id ||
+                doc.subject_id !== 'chr001-knowledge-' + child.actor_id ||
+                doc.visibility !== 'SYSTEM_AUDIT' ||
+                !child.actor_id?.startsWith('npc-') ||
+                child.no_global_fact_promotion !== true ||
+                child.no_cross_actor_inference !== true ||
+                child.no_player_disclosure !== true ||
+                child.source_record_count !== 47 ||
+                !Array.isArray(rows) || rows.length === 0 ||
+                new Set(rows.map(x=>x.source_row_index)).size !== rows.length ||
+                rows.some(x=>!Number.isInteger(x.source_row_index) ||
+                  x.source_row_index < 0 || x.source_row_index >= 47 ||
+                  x.record?.entity !== child.actor_id ||
+                  !['confirmed','claims','suspected','unknown'].every(k=>Array.isArray(x.record[k]))))
+              push('V04_ACTOR_SOURCE_SCOPE', childPath, 'C45 actor slice must retain exact situated record indexes, classes and no promotion');
+          } else {
+            for (const e of validateShape(child, schemas.knowledge)) push('V01_SCHEMA', childPath, e);
+            if (!subjects.has(norm(child.actor_id || '')) || !doc.subject_id.endsWith('-' + child.actor_id))
+              push('V04_ACTOR', childPath, 'actor must match locally sourced NPC (C41 sample)');
+            if (child.claims_are_not_world_facts !== true) push('V04_CLAIM_PROMOTION', childPath, 'NPC_CLAIM cannot be CONFIRMED by copying');
+          }
         }
         if (file === 'trama.json' && (child.future_contact_realized !== false || child.pc_obligation_created !== false))
           push('V04_UNSOURCED_FUTURE', childPath, 'historical candidate does not attest future contact or obligation');
