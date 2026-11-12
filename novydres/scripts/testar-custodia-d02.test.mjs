@@ -60,3 +60,9 @@ test('D02 rejects pointing to old roots instead of rehomed exact source',()=>{
 test('D02 rejects provenance claiming transformation without proof',()=>{
  fails(d=>d.sources.origin_custody[0].transformation_evidence='UNKNOWN','D02_TARGET_OWNER');
 });
+test('D02 cannot claim Library original bytes were recovered without evidence',()=>{
+ fails(d=>d.sources.media_source_recovery.source_bytes_materialized=5,'D02_FALSE_MEDIA_RECOVERY');
+});
+test('D02 cannot pretend pending originals were uploaded to Drive',()=>{
+ fails(d=>d.sources.entries.find(x=>!x.raw_original_migrated).d02_observation.destination_original_uploaded_d02=true,'D02_PENDING_MEDIA');
+});

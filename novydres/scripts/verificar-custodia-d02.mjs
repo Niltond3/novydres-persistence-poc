@@ -91,12 +91,20 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
    linked++;need(!!m.drive_file_id&&m.d02_observation.name_mime_size_match===true,'D02_MEDIA_LINK');
   }else{
    pending++;need(m.d02_observation.matching_original_found===false&&
-    m.d02_observation.library_original_bytes_accessible==='NOT_PROVEN','D02_PENDING_MEDIA');
+    m.d02_observation.library_original_bytes_accessible==='RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED'&&
+    m.d02_observation.library_metadata_exact_id_found===true&&
+    m.d02_observation.source_integrity_verified===false&&
+    m.d02_observation.destination_original_uploaded_d02===false,'D02_PENDING_MEDIA');
   }
  }
  need(linked===14&&pending===5&&sources.media_integrity.unlocated_originals===5&&
   sources.media_integrity.source_or_destination_sha256_verified_now===0,'D02_FALSE_MEDIA_INTEGRITY');
- const known=new Set(governance.conflicts.map(x=>x.id));
+ const recovery=sources.media_source_recovery;
+ need(recovery&&recovery.pending_originals===5&&recovery.exact_library_metadata_found===5&&
+  recovery.source_bytes_materialized===0&&recovery.source_bytes_sha256_computed===0&&
+  recovery.google_drive_exact_name_search_matches===0&&recovery.drive_new_uploads===0&&
+  recovery.gate_impact==='D02_EXTERNAL_MEDIA_COMPLETION_NOT_PROVEN','D02_FALSE_MEDIA_RECOVERY');
+  const known=new Set(governance.conflicts.map(x=>x.id));
  need(['CONFLICT-001','CONFLICT-002','CONFLICT-003B'].every(x=>known.has(x))&&
   governance.conflicts.find(x=>x.id==='CONFLICT-003B').status==='TEXT_DIFFERENCES_VERIFIED_EDITORIAL_VERDICT_OPEN',
  'D02_EDITORIAL_CONFLICT_SUPPRESSED');
