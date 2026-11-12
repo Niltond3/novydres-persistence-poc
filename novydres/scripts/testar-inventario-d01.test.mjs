@@ -277,3 +277,29 @@ test('D01 C41 checkpoint cannot be promoted by rewriting historical comparison',
  assert.throws(()=>verifyD01(index,{...data,candidateState:altered}),
   e=>e.code==='D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
 });
+
+test('D01 manifest runtime referenced objects are classified by path and pin without promoting usage',()=>{
+ const observed=verifyD01(index,data);
+ assert.deepEqual(observed.manifest_runtime_references,
+  {occurrences:303,distinct_missing_candidate:90,missing_without_direct_pin:38});
+ assert.equal(index.c45_manifest_runtime_references.no_operational_activation,true);
+});
+test('D01 must not erase a manifest non-direct reference absent in the candidate',()=>{
+ const entry=index.c45_manifest_runtime_references.items.find(x=>
+  x.relation==='SOURCE_FILE_ABSENT_FROM_CANDIDATE'&&!x.directly_pinned_by_c45);
+ assert.ok(entry);
+ reject(x=>x.c45_manifest_runtime_references.items.find(y=>y.field===entry.field).relation='SOURCE_CANDIDATE_IDENTICAL_BLOB',
+  'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
+});
+test('D01 manifest directory prefix is not an absent file blob',()=>{
+ const row=index.c45_manifest_runtime_references.items.find(x=>x.relation==='SOURCE_DIRECTORY_PREFIX_EXISTS');
+ assert.ok(row);
+ reject(x=>x.c45_manifest_runtime_references.items.find(y=>y.field===row.field).relation='SOURCE_REFERENCE_NOT_IN_MASTER',
+  'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
+});
+test('D01 no automatic activation from an arbitrary referenced manifest string',()=>{
+ reject(x=>x.c45_manifest_runtime_references.items[0].authority='CURRENT_OPERATIONAL_DEPENDENCY_VERIFIED',
+  'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
+ reject(x=>x.c45_manifest_runtime_references.full_field_owner_review='APPROVED',
+  'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
+});

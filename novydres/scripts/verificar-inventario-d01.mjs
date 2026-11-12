@@ -183,6 +183,52 @@ export function deriveC45FieldValueCrosswalk(index,{cycle,sourceContents,candida
   runtime_activation:false};
 }
 
+
+export function deriveC45ManifestRuntimeRefs(index,{masterTree,candidateTree,sourceContents}){
+ const path=index.authority_reference.manifest.path;
+ const content=sourceContents.get(path);
+ need(typeof content==='string','D01_MANIFEST_SOURCE_NOT_READ');
+ const value=JSON.parse(content);
+ need(value?.runtime&&typeof value.runtime==='object'&&!Array.isArray(value.runtime),
+  'D01_MANIFEST_RUNTIME_NOT_FOUND');
+ const source=new Map(masterTree.map(x=>[x.path,x]));
+ const candidate=new Map(candidateTree.map(x=>[x.path,x]));
+ const pins=new Set(index.authority_reference.pinned_references.map(x=>x.path));
+ const collect=(node,field='',out=[])=>{
+  if(typeof node==='string'){
+   if(node.startsWith('novydres/'))out.push({field,path:node});
+  }else if(Array.isArray(node))node.forEach((item,i)=>collect(item,field+'['+i+']',out));
+  else if(node&&typeof node==='object')
+   Object.entries(node).forEach(([key,item])=>collect(item,field?field+'.'+key:key,out));
+  return out;
+ };
+ const fields=collect(value.runtime);
+ const items=fields.map(({field,path})=>{
+  const isDirectory=path.endsWith('/'),a=source.get(path),b=candidate.get(path);
+  const relation=isDirectory?
+    (masterTree.some(x=>x.path.startsWith(path))?'SOURCE_DIRECTORY_PREFIX_EXISTS':'SOURCE_DIRECTORY_PREFIX_MISSING'):
+    !a?'SOURCE_REFERENCE_NOT_IN_MASTER':!b?'SOURCE_FILE_ABSENT_FROM_CANDIDATE':
+    b.sha===a.sha?'SOURCE_CANDIDATE_IDENTICAL_BLOB':'SOURCE_CANDIDATE_CHANGED_BLOB';
+  return {field,path,relation,source_blob_sha:a?.sha||null,candidate_blob_sha:b?.sha||null,
+   directly_pinned_by_c45:pins.has(path),authority:'PATH_REFERENCE_ONLY_NOT_OPERATIONAL_PROOF',
+   editorial_owner:'PENDING',dependency_usage:'PENDING'};
+ });
+ const missing=[...new Set(items.filter(x=>x.relation==='SOURCE_FILE_ABSENT_FROM_CANDIDATE').map(x=>x.path))];
+ const direct=missing.filter(x=>pins.has(x)).length;
+ return {status:'EXACT_MASTER_MANIFEST_RUNTIME_PATH_REFERENCES_NOT_SEMANTIC_USAGE',
+  source_manifest_ref:index.authority_reference.manifest,
+  source_tree_ref:index.source_snapshot,candidate_tree_ref:index.candidate_snapshot,
+  no_operational_activation:true,full_field_owner_review:'PENDING',
+  summary:{occurrences:items.length,
+   unique_file_paths:new Set(items.filter(x=>!x.path.endsWith('/')).map(x=>x.path)).size,
+   unique_missing_candidate_file_paths:missing.length,
+   direct_cycle_pinned_missing:direct,not_direct_cycle_pinned_missing:missing.length-direct,
+   directory_reference_occurrences:items.filter(x=>x.path.endsWith('/')).length,
+   source_reference_missing:items.filter(x=>x.relation==='SOURCE_REFERENCE_NOT_IN_MASTER'||
+    x.relation==='SOURCE_DIRECTORY_PREFIX_MISSING').length},
+  items};
+}
+
 export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState,workflowContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
@@ -429,6 +475,13 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
  need(fieldCrosswalk.checkpoint.matched===6&&fieldCrosswalk.checkpoint.divergent===3&&
   fieldCrosswalk.resources.matched===8&&fieldCrosswalk.resources.divergent===0,
   'D01_C45_C41_EXPECTED_FIELD_RELATIONS_CHANGED');
+ const manifestRefs=deriveC45ManifestRuntimeRefs(index,{masterTree,candidateTree,sourceContents});
+ need(equal(index.c45_manifest_runtime_references,manifestRefs),'D01_MANIFEST_RUNTIME_REFERENCE_DRIFT');
+ need(manifestRefs.summary.source_reference_missing===0&&
+  manifestRefs.summary.not_direct_cycle_pinned_missing===38&&
+  manifestRefs.summary.direct_cycle_pinned_missing===52&&
+  manifestRefs.summary.directory_reference_occurrences===1,
+  'D01_MANIFEST_REFERENCE_BASELINE_CHANGED');
  const summary=index.denominators;
  need(summary?.cycle_unique_pinned_paths===pinRows.size&&
   summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
@@ -464,6 +517,9 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
   current_checkpoint:expectedCrosswalk.source_cycle_id,
   state_precedence_mismatches:summary.c45_source_priority_mismatches,
+  manifest_runtime_references:{occurrences:manifestRefs.summary.occurrences,
+   distinct_missing_candidate:manifestRefs.summary.unique_missing_candidate_file_paths,
+   missing_without_direct_pin:manifestRefs.summary.not_direct_cycle_pinned_missing},
   field_value_comparison:{checkpoint_match:fieldCrosswalk.checkpoint.matched,
    checkpoint_drift:fieldCrosswalk.checkpoint.divergent,
    resources_match:fieldCrosswalk.resources.matched,
