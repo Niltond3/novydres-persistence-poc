@@ -145,6 +145,7 @@ console.log(JSON.stringify({status:'PASS_SYNTHETIC_LOCAL_REFERENCE_IMPLEMENTATIO
 // Local synthetic assertions above remain historical regression checks, not remote proof.
 if (process.env.ADR001_REMOTE_PROOF === '1') {
   const { createHash } = await import('node:crypto');
+  const { spawnSync } = await import('node:child_process');
   const token = process.env.GITHUB_TOKEN;
   const repo = process.env.GITHUB_REPOSITORY;
   const base = process.env.GITHUB_SHA;
@@ -204,7 +205,9 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     const fingerprint=sha256(JSON.stringify(payload));
     if(Object.hasOwn(saved.transactions,txId)) {
       if(saved.transactions[txId]!==fingerprint) throw new Error('STOP_CONFLICT_SAME_TX_DIFFERENT_PAYLOAD');
-      return {status:'NO_OP_VERIFIED',head:await getHead()};
+      const head=await getHead(), commit=await getCommit(head), verified=await readPath(ownerPath);
+      assert.ok(commit.tree.sha && verified && JSON.parse(verified.content).transactions[txId]===fingerprint,'remote idempotent readback');
+      return {status:'NO_OP_VERIFIED',head,owner_blob:verified.blob_sha};
     }
     await validateEvidence(evidence);
     const observed=await getHead();
@@ -227,7 +230,13 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     if(real.blob_sha!==e.source_blob_sha) throw new Error('SOURCE_BLOB_MISMATCH');
     if(!real.content.includes(e.source_excerpt)) throw new Error('SOURCE_IRRELEVANT_TO_QUOTE');
     if(e.checkpoint!==await getHead()) throw new Error('CHECKPOINT_DIVERGED');
-    if(e.conclusion==='PASS' && !e.external_proof) throw new Error('CONCLUSION_WITHOUT_PROOF');
+    if(e.conclusion==='PASS') {
+      const claimed=e.external_proof;
+      if(!claimed?.commit_sha || !claimed?.owner_blob_sha || claimed.commit_sha!==await getHead()) throw new Error('CONCLUSION_WITHOUT_PROOF');
+      const proofCommit=await getCommit(claimed.commit_sha);
+      const proofOwner=await readPath(ownerPath);
+      if(!proofCommit.tree.sha || !proofOwner || proofOwner.blob_sha!==claimed.owner_blob_sha) throw new Error('CONCLUSION_WITHOUT_PROOF');
+    }
   }
   try {
     await api('POST','/git/refs',{ref:'refs/heads/'+branch,sha:base});
@@ -251,12 +260,14 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     await assert.rejects(transact(firstHead,'tx-artificial-01',{effect:'conflicting'},e1),/STOP_CONFLICT/);
     assert.equal(await getHead(),firstHead);
     const staleEvidence={...evidence(),checkpoint:firstHead};
+    await validateEvidence({...staleEvidence,conclusion:'PASS',external_proof:{commit_sha:firstHead,owner_blob_sha:(await readPath(ownerPath)).blob_sha}});
     const wrongs=[
       ['SOURCE_NOT_FOUND',{source_path:sourcePath+'-missing'}],
       ['SOURCE_IRRELEVANT_TO_QUOTE',{source_excerpt:'the artificial custodian owns the red tower'}],
       ['OBSOLETE_DECISION',{decision:'ARTIFICIAL_DECISION_OBSOLETE'}],
       ['CHECKPOINT_DIVERGED',{checkpoint:base}],
       ['CONCLUSION_WITHOUT_PROOF',{conclusion:'PASS'}],
+      ['CONCLUSION_BAD_PROOF',{conclusion:'PASS',external_proof:{commit_sha:base,owner_blob_sha:'0'.repeat(40)}}],
       ['ACTOR_KNOWLEDGE_UNSUPPORTED',{actor:'different-actor'}],
       ['DISCLOSURE_DENIED',{visibility:'GM_HIDDEN'}],
       ['AUTHORITY_DENIED',{role:'UNAUTHORIZED'}],
@@ -265,7 +276,7 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     const rejected=[];
     for(const [label,delta] of wrongs) {
       const before=await getHead();
-      await assert.rejects(validateEvidence({...staleEvidence,...delta}),new RegExp(label));
+      await assert.rejects(validateEvidence({...staleEvidence,...delta}),new RegExp(label==='CONCLUSION_BAD_PROOF'?'CONCLUSION_WITHOUT_PROOF':label));
       assert.equal(await getHead(),before,'guard rejection must not mutate ref: '+label);
       rejected.push(label);
     }
@@ -302,6 +313,14 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     await assert.rejects(transact(raceBase,'tx-stale-late',{effect:'obsolete'},
       {...evidence(),checkpoint:raceBase}),/CHECKPOINT_DIVERGED/);
     assert.equal(await getHead(),raceHead);
+    // Explicit stale-expected-SHA push: exercise Git transport's lease diagnostic,
+    // not just the generic REST HTTP 422 response. This is ONLY a disposable test ref.
+    const leaseArgs=['push','--force-with-lease=refs/heads/'+branch+':'+raceBase,'origin',base+':refs/heads/'+branch];
+    const leaseProbe=spawnSync('git',leaseArgs,{encoding:'utf8',timeout:20000});
+    const leaseOutput=(leaseProbe.stdout||'')+'\n'+(leaseProbe.stderr||'');
+    assert.notEqual(leaseProbe.status,0,'obsolete expected SHA push must fail');
+    assert.match(leaseOutput,/stale info/i,'explicit stale lease transport diagnostic');
+    assert.equal(await getHead(),raceHead,'real remote ref unchanged after explicit stale lease');
     console.log(JSON.stringify({status:'PASS_REAL_GITHUB_DISPOSABLE_REF',
       run_id:process.env.GITHUB_RUN_ID,head_under_test:base,sandbox_ref:branch,
       seed_commit:sourceCommit.sha,source_blob_sha:sourceBlob,
@@ -312,6 +331,8 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
       winner_commit:winning.sha,loser_commit:candidates[loser].sha,
       native_rejection_http:rejection.status,native_rejection_message:staleProof,
       native_stale_lease_diagnostic:'NOT_PROVEN_BY_GENERIC_422',
+      explicit_git_lease_result:'REJECTED_STALE_INFO',explicit_git_lease_exit:leaseProbe.status,
+      explicit_git_lease_message:leaseOutput.slice(0,450),
       stale_precheck:'REMOTE_CHECKPOINT_VALIDATOR_BLOCK',remote_head_readback:raceHead,
       requests_sample:timings.length,latency_p95:'NOT_REPORTED_SMALL_NONCOMPARABLE_SAMPLE',
       timings_ms:timings.filter(x=>x.http>=400 || x.operation.startsWith('PATCH')),
