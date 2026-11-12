@@ -153,15 +153,16 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
   assert.ok(token && repo && base && process.env.GITHUB_RUN_ID, 'CI token, repository, HEAD and run required');
   assert.ok(branch.startsWith('test/adr001-b04-ci-'));
   const sourcePath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-source.txt';
-  const decisionSourcePath='novydres/sistema/arquitetura/adr/001-subject-oriented.md';
-  const decisionSource=await api('GET','/contents/'+decisionSourcePath+'?ref='+encodeURIComponent(base));
-  const currentDecisions=Buffer.from(decisionSource.content.replace(/\s/g,''),'base64').toString('utf8');
-  assert.match(currentDecisions,/\| DEC-27 \|/,'read current decision from actual pinned ADR');
   const ownerPath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-transactions.json';
   const sourceText = 'TEST_ONLY; NOT_CAMPAIGN\nEvidence: the artificial custodian holds the blue key.\nUnrelated: there is ice on the street.\n';
   const sha256 = value => createHash('sha256').update(value).digest('hex');
   let disposableCreated = false, sourceBlob, sourceCommit, cleaned = false;
   const timings = [];
+  const decisionSourcePath='novydres/sistema/arquitetura/adr/001-subject-oriented.md';
+  const decisionSource=await api('GET','/contents/'+decisionSourcePath+'?ref='+encodeURIComponent(base));
+  const currentDecisions=Buffer.from(decisionSource.content.replace(/\s/g,''),'base64').toString('utf8');
+  assert.match(currentDecisions,/\| DEC-27 \|/,'read current decision from actual pinned ADR');
+
   async function api(method, endpoint, body) {
     const url = 'https://api.github.com/repos/' + repo + endpoint;
     const t0 = performance.now();
