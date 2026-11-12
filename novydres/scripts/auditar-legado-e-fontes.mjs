@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 
 const LEGACY_ROOT=/^(?:novydres\/(?:chronicles|runtime|world|governance|systems|migration|assets\/drive-links)\/|poc\/)/;
 const VERSIONED_ROOT=/^novydres\/(?:MANIFEST(?:_V\d+)?\.json|\.AGENT(?:_V\d+)?\.md|\.CONTEXTG(?:_V\d+)?\.md)$/;
-const ACTIONABLE=/\b(?:from\s+['"]|import\s*\(|require\s*\(|readFileSync\s*\(|fetch_file\s*\(|open\s*\(|run:\s*|node\s+|python\s+|execFileSync\s*\(|git\s+(?:show|rev-parse)|fallback|alias|redirect|symlink)\b/i;
+const ACTIONABLE=/\b(?:from\s+['"]|import\s*\(|require\s*\(|readFileSync\s*\(|fetch_file\s*\(|open\s*\(|run:\s*|node\s+|python\s+|execFileSync\s*\(|git\s+(?:show|rev-parse)\b|fallback\b|alias\b|redirect\b|symlink\b)/i;
 const OLD_LITERAL=/novydres\/(?:chronicles|runtime|world|governance|systems|migration|assets\/drive-links)\//i;
 const RELATIVE_OLD=/(?:\.\.\/)+(?:chronicles|runtime|world|governance|systems|migration)\//i;
 const PUBLIC_ENTRY=new Set(['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json']);
