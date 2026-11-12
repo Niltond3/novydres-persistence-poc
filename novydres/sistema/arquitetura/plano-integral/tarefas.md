@@ -261,6 +261,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Limites/estado:** `C05_CI_PENDING`; manter gates mecânicos V5, variantes editoriais e compatibilidade C41→C45 para D/C07. DEC-25 controles de recuperação de implantação não se tornam novo requisito por cena. CI C01/C02/C04/C06 existente foi estendida, sem workflow dedicado por cena. Nenhuma autoridade de `master` ou da crônica alterada.
 - **Próxima:** publicar com expected SHA/readback, testar no Actions e registrar resultado; C07 depende de C05 comprovada.
 
+#### C05 — Fechamento com CI e revisão contextual anterior (2026-11-12)
+
+- **Estado:** `C05_PASS_SCOPED` para contrato e configuração candidata, jamais execução de cena. Commit `47d6cd7d1a5d9e58e600d7db0bee045711795c09`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura.
+- **Prova externa GitHub:** Actions `43249190298`, job `131290018740`, `completed/success`, **9/9** testes IMP-01/02/04–11 + **13/13** C01, **15/15** C02, **15/15** C04 e **11/11** C06. Gerador do catálogo byte-a-byte passou com seis subjects e 19 arquivos; os owners C41 históricos permanecem sem alteração de bytes. Readback de ref e blobs do catálogo `b0f60c3513644011118a1ff15fa9f6a18892653f` e configuração `79a17a901f644d2dd72227a5c215116f013ff34c` realizado.
+- **Revisão contextual reaproveitada, não refeita como nova revisão cega:** saída N-01–N-08/N-06-RESULT em `fase-b/resultado-testes.json#narrative_exercises_2026_11_12`, com revisor em outra conversa conforme `fase-b/gate-e-readback.json#b05_independent_session_contextual_review_2026_11_12`. N-06 inicial `INSUFFICIENT` continua histórico, superado apenas pela continuação artificial. A avaliação separada não foi cega e não representa prova de prosa em jogo real; testes de código não pontuam qualidade literária.
+- **Escopo e pendências:** contrato único em `sistema/narrativa/contrato.md` localizável por `CONTEXT.md` e assunto privado de configuração; `AGENTS.md/CONTEXT.md/catalogo.json` continuam apenas três entradas candidatas. Configuração declara exceções mecânicas V5 pendentes de checagem autoritativa; não altera G19/G23/G24/G26/G28 operacionais. A varredura C06 no commit contou 922 blobs e manteve 835 caminhos legados, cinco consumidores antigos e cinco originais visuais pendentes como riscos explícitos. Não afirmar `ZERO_LEGADO`, equivalência C41→C45, revisão semântica independente C07 ou DEC-25 universal.
+- **Próxima elegível:** C07 para integração de CI, métricas observáveis e revisão de risco sobre o fluxo efetivo. C08/D ainda dependem da prova de C07.
+
 ### C06 — Implementar auditoria de fontes e detector de legado
 
 - **Depende de:** C01/C02 e inventário de A01.
