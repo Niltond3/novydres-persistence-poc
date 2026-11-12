@@ -30,6 +30,15 @@ export function verifyWorldLinks(root=process.cwd(),override=null){
         fail('D03_LINK_INVALID_TARGET');
     }
     resolved++;
+  }else if(link.resolution==='SOURCE_HEADING_SUBJECT_RESOLVED_NONAUTHORITATIVE'){
+    const target=cat.subjects.find(x=>x.id===link.target_subject_id);
+    if(!target||!target.path.startsWith('novydres/cenario/'))fail('D03_LINK_INVALID_TARGET');
+    const meta=JSON.parse(readFileSync(target.path+'/conteudo.json','utf8'));
+    const sourceSha=meta.source?.sha||meta.source_variants?.[0]?.source_blob_sha;
+    const heading=meta.source?.heading||meta.display_label_from_source;
+    if(link.target_source_sha!==sourceSha||link.target_source_heading!==heading||
+       !heading.includes(link.target_literal.split('|')[0]))fail('D03_LINK_INVALID_TARGET');
+    resolved++;
   }else if(['DEFERRED_SEMANTIC_TARGET_NO_ACTIVE_REFERENCE','REFERENCED_HISTORICAL_VARIANT_NOT_EXACTLY_PRESENT'].includes(link.resolution)&&link.target_subject_id===null){
     deferred++;
   }else fail('D03_LINK_SILENT_RESOLUTION');
