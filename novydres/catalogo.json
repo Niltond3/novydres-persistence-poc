@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "83edc28cc0ffcf68ba377d8cd7f9ee1c80c4a83b",
+  "content_index_sha": "41b0b756b98f5a54454eb9ccef62743fdc0457e8",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -29,7 +29,7 @@
         },
         {
           "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/relacoes.json",
-          "blob_sha": "47663d84c869aa52a15967a163bad2a4ef1c4f95"
+          "blob_sha": "ceeeccdefff4a90aa92736852ff9b2fe2cc8cfe0"
         }
       ]
     },
@@ -484,6 +484,29 @@
         {
           "path": "novydres/cenario/organizacoes/legiao-coroa-ferro/index.md",
           "blob_sha": "3f0e7be400ce350e876e2d63b536996afcf6eebb"
+        }
+      ]
+    },
+    {
+      "id": "pc-bartholomeu-krauser",
+      "kind": "character",
+      "owner": "novydres/personagens",
+      "path": "novydres/personagens/pc-bartholomeu-krauser",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/personagens/pc-bartholomeu-krauser/assunto.json",
+          "blob_sha": "14e80032a0a41c5b4408ed47ac6dceb4312666ff"
+        },
+        {
+          "path": "novydres/personagens/pc-bartholomeu-krauser/index.md",
+          "blob_sha": "8e5ad840f395c9f5964dc3018e50f9b977fa1a19"
+        },
+        {
+          "path": "novydres/personagens/pc-bartholomeu-krauser/perfil.json",
+          "blob_sha": "7fb739aa3b9ea7b7c3deaf4343aae0c8115afe1b"
         }
       ]
     },
@@ -1800,6 +1823,9 @@
     "org-legiao-coroa-ferro": [
       "npc-iskander-yasupov"
     ],
+    "pc-bartholomeu-krauser": [
+      "npc-samir-haddad"
+    ],
     "plot-contato-condicional-samir": [
       "npc-samir-haddad",
       "story-m301-c01"
@@ -1893,11 +1919,5 @@
       "org-legiao-coroa-ferro"
     ]
   },
-  "deferred": [
-    {
-      "from": "npc-samir-haddad",
-      "to": "pc-bartholomeu-krauser",
-      "reason": "EXTERNAL_NOT_MIGRATED_C41"
-    }
-  ]
+  "deferred": []
 }

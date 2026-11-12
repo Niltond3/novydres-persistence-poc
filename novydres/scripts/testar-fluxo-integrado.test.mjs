@@ -25,7 +25,7 @@ const quantile=(samples,p)=>{
 test('C07 integrated selective snapshot fixes one catalog+state+config at current candidate SHA',()=>{
  assert.equal(checkCatalog().ok,true);
  const c=buildCatalog();
- assert.equal(c.subjects.length,58);
+ assert.equal(c.subjects.length,59);
  assert.equal(catalogBytes(c),readFileSync('novydres/catalogo.json','utf8'));
  const resolved=resolveSubject(c,cfgId,{snapshot_sha:head,role:'AUDITOR'});
  assert.equal(resolved.owner_path,'novydres/cronicas/CHR-001/configuracao');
@@ -62,7 +62,7 @@ test('C07 state recovery C41 not C45, with NPC claim and unknowns preserved',()=
  assert.equal(output.publication.authority,'CANDIDATE_ONLY');
  const old=validateCandidates();
  assert.equal(old.errors.length,0,JSON.stringify(old.errors));
- assert.ok(old.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
+ assert.ok(!old.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
 });
 test('C07 transaction recovery decides publication separately from player text',()=>{
  const prepared={expected_head:head,actual_head:head,commit_sha:head,

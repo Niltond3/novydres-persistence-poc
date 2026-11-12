@@ -20,14 +20,15 @@ test('V09 bytes are deterministic and equal the committed generated file',()=>{
 });
 test('V03 candidate subjects have exact single owners, files, derived reverse links',()=>{
  const c=buildCatalog(root);
- assert.equal(c.subjects.length,58);
- assert.deepEqual(c.subjects.map(s=>s.id).filter(id=>!id.startsWith('world-')&&!id.startsWith('rule-')&&!id.startsWith('district-')&&!id.startsWith('poi-')&&!id.startsWith('org-')&&!['npc-iskander-yasupov','npc-madame-zoya'].includes(id)),[
+ assert.equal(c.subjects.length,59);
+ assert.deepEqual(c.subjects.map(s=>s.id).filter(id=>!id.startsWith('world-')&&!id.startsWith('rule-')&&!id.startsWith('district-')&&!id.startsWith('poi-')&&!id.startsWith('org-')&&!id.startsWith('pc-')&&!['npc-iskander-yasupov','npc-madame-zoya'].includes(id)),[
   'chr001-npc-samir-haddad','chr001-state-checkpoint','chr001-table-config',
   'npc-samir-haddad','plot-contato-condicional-samir','story-m301-c01']);
- assert.equal(new Set(c.subjects.flatMap(s=>s.files.map(f=>f.path))).size,253);
+ assert.equal(new Set(c.subjects.flatMap(s=>s.files.map(f=>f.path))).size,256);
  assert.ok(c.inverse_dependencies['plot-contato-condicional-samir'].includes('story-m301-c01'));
- assert.equal(c.deferred.length,1);
- assert.equal(c.deferred[0].to,'pc-bartholomeu-krauser');
+ assert.equal(c.deferred.length,0);
+ assert.ok(c.subjects.some(s=>s.id==='pc-bartholomeu-krauser'));
+ assert.ok(c.inverse_dependencies['pc-bartholomeu-krauser'].includes('npc-samir-haddad'));
 });
 test('V03 resolves exact metadata for player-known global NPC in pinned snapshot',()=>{
  const c=buildCatalog(root), cache=new Map();

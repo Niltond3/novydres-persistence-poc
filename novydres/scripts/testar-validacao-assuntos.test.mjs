@@ -11,12 +11,12 @@ const state=prefix+'estado/atual.json';
 const obj=p=>JSON.parse(readFileSync(p, 'utf8'));
 const mutation=(path, change)=>{const copy=obj(path); change(copy); return validateCandidates(process.cwd(),{overrides:{[path]:copy}});};
 const has=(r,code)=>r.errors.some(x=>x.code===code);
-test('V01–V04: historical C41 subjects plus isolated table config, intact sources and deferred external target',()=>{
+test('V01–V04: historical C41 subjects plus isolated table config, intact sources and now-resolved global target',()=>{
  const r=validateCandidates();
  assert.equal(r.ok,true,JSON.stringify(r.errors));
- assert.equal(r.subjects,58); // Six historical subjects plus nine D03 source portfolios
+ assert.equal(r.subjects,59); // Six historical subjects plus nine D03 source portfolios
  assert.ok(r.checked>=10);
- assert.ok(r.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
+ assert.ok(!r.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
 });
 test('V01 schema rejects missing type/status',()=>{
  const r=mutation(global,o=>{delete o.kind;});
