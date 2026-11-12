@@ -15,6 +15,8 @@ on:
       - 'novydres/scripts/revisar-conducao-candidata.mjs'
       - 'novydres/scripts/testar-conducao-candidata.test.mjs'
       - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
+      - 'novydres/scripts/verificar-conceitos-d03.mjs'
+      - 'novydres/scripts/testar-conceitos-d03.test.mjs'
       - 'novydres/scripts/verificar-vinculos-d03.mjs'
       - 'novydres/scripts/testar-vinculos-d03.test.mjs'
       - 'novydres/scripts/verificar-fragmentos-d03.mjs'
@@ -87,6 +89,8 @@ jobs:
         run: node --test novydres/scripts/testar-fragmentos-d03.test.mjs
       - name: D03 audit pinned world links without false target resolution
         run: node --test novydres/scripts/testar-vinculos-d03.test.mjs
+      - name: D03 verify 41 semantic place owners and both original variants
+        run: node --test novydres/scripts/testar-conceitos-d03.test.mjs
       - name: D02 verify exact original custody and conservative external-media classification
         run: node novydres/scripts/verificar-custodia-d02.mjs
       - name: D02 negative regressions for authority, media integrity and origin loss

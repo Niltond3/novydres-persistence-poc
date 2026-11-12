@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "3e725b1cb4fdb3f3764198fed5f5952d4d50c3b8",
+  "content_index_sha": "f8b9f6f703e54e063df1ce5d0c90fbfdf66dd1eb",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -80,6 +80,231 @@
         {
           "path": "novydres/cronicas/CHR-001/configuracao/index.md",
           "blob_sha": "85e3254c4753b94a74f874e8f03aba10856c8222"
+        }
+      ]
+    },
+    {
+      "id": "district-alexandria",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-alexandria",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-alexandria/assunto.json",
+          "blob_sha": "ac177fbd5e3d95cca4a398b9b86931e38cb0701b"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-alexandria/conteudo.json",
+          "blob_sha": "72aff37372e39f62722d2e76030bef0d09d9cb82"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-alexandria/index.md",
+          "blob_sha": "75a3f17f784beda0852804d6e6f6636671b8fd21"
+        }
+      ]
+    },
+    {
+      "id": "district-bukovie",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-bukovie",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-bukovie/assunto.json",
+          "blob_sha": "db07f0c2feb84952f3e840123e19aa100755f4e1"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-bukovie/conteudo.json",
+          "blob_sha": "0769811412adcff90764ebc943ba2f4933a5cf2a"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-bukovie/index.md",
+          "blob_sha": "aea27fa4adee3ffa89ed63deec2430dc9b5b7671"
+        }
+      ]
+    },
+    {
+      "id": "district-chelsea",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-chelsea",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-chelsea/assunto.json",
+          "blob_sha": "a90825faf39d8b60ac40ca6d83d3bb17ce6f2e4f"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-chelsea/conteudo.json",
+          "blob_sha": "94974a428b71b95e83c17b3c734ab6ba220e7ed5"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-chelsea/index.md",
+          "blob_sha": "9b36439739ea8f29943db54cea32c07c90a6fd1c"
+        }
+      ]
+    },
+    {
+      "id": "district-drevnigrad",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-drevnigrad",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-drevnigrad/assunto.json",
+          "blob_sha": "9e381eec9300e02549dda43b1a10b1ab7bd98727"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-drevnigrad/conteudo.json",
+          "blob_sha": "d3202863d1abe7b5c1f2a8aecd7f3639ce2c4bfd"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-drevnigrad/index.md",
+          "blob_sha": "b4f0825a9629cf0cf4521dab9a55354e37f59ccc"
+        }
+      ]
+    },
+    {
+      "id": "district-dunwich",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-dunwich",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-dunwich/assunto.json",
+          "blob_sha": "c20993ea33e03ea6aeeafca5b4f62f7ce6f0d5b6"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-dunwich/conteudo.json",
+          "blob_sha": "f07d222520c22eeffb8a0be355b79bb37b45a7ce"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-dunwich/index.md",
+          "blob_sha": "fe1671597f0bbe92ed14b06e6190fbbaae291c1b"
+        }
+      ]
+    },
+    {
+      "id": "district-levi",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-levi",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-levi/assunto.json",
+          "blob_sha": "c583c2780aff8e8901a6bdf8d2d4c556cd81aed6"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-levi/conteudo.json",
+          "blob_sha": "ab00e1c541ec6b8ca2f3e26d61bc358f11ab28de"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-levi/index.md",
+          "blob_sha": "4b8d8a3795a08340f9c18c8029be418025aec182"
+        }
+      ]
+    },
+    {
+      "id": "district-new-london",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-new-london",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-new-london/assunto.json",
+          "blob_sha": "1ce07bcf14d88f4664e2fea8312e567eb43b712f"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-new-london/conteudo.json",
+          "blob_sha": "e4744f252f50411debee651d3a160fdb8fd7545f"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-new-london/index.md",
+          "blob_sha": "094d6ff382d6c4ab77ca395b5903f6418c66f5df"
+        }
+      ]
+    },
+    {
+      "id": "district-sulfok",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-sulfok",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-sulfok/assunto.json",
+          "blob_sha": "a36490d7b10d0f47ebbff9fe446823b350f5d756"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-sulfok/conteudo.json",
+          "blob_sha": "c50507e1948ceb604d2fb411a1b30f33f95af595"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-sulfok/index.md",
+          "blob_sha": "c34854b1345205adb5f6c79b754085f49b681237"
+        }
+      ]
+    },
+    {
+      "id": "district-vasyl-bay",
+      "kind": "world-location",
+      "owner": "novydres/cenario/geografia",
+      "path": "novydres/cenario/geografia/district-vasyl-bay",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/geografia/district-vasyl-bay/assunto.json",
+          "blob_sha": "0b4a7bff853d22ed4aabeb39fd03299812b86a9b"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-vasyl-bay/conteudo.json",
+          "blob_sha": "6739af449843c8da03c933e6a3a2abbb9c4b0311"
+        },
+        {
+          "path": "novydres/cenario/geografia/district-vasyl-bay/index.md",
+          "blob_sha": "936c825bfe53afdd6254f1dc11c1cb3bcd036180"
         }
       ]
     },
@@ -217,6 +442,806 @@
         {
           "path": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
           "blob_sha": "1aa7682911a572d0e391e90d19f3af46ed34ba0d"
+        }
+      ]
+    },
+    {
+      "id": "poi-01",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-01",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-01/assunto.json",
+          "blob_sha": "86ca5dc5735aa032d06a6ae2365a612f613f89d3"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-01/conteudo.json",
+          "blob_sha": "9fe351eefdc4afd5cd0f1d3abecd07efeb01c06b"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-01/index.md",
+          "blob_sha": "0899dd0e1121b46612489627717b313fd832fb4e"
+        }
+      ]
+    },
+    {
+      "id": "poi-02",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-02",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-02/assunto.json",
+          "blob_sha": "eae5e00de9d547fa46ff0dc2bf7b8873c3ce54b6"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-02/conteudo.json",
+          "blob_sha": "1a92448f1900d7af1b1b7015e8b32d797fc419ab"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-02/index.md",
+          "blob_sha": "d7dd7f1cfd2cb7aef369ff73d5dbb8528146aa7c"
+        }
+      ]
+    },
+    {
+      "id": "poi-03",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-03",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-03/assunto.json",
+          "blob_sha": "b2d43f607e7745a89481b1c11e60f88a27291bf8"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-03/conteudo.json",
+          "blob_sha": "e4e55bf2dd18fbc5b95d951c4b17525bbe03f0af"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-03/index.md",
+          "blob_sha": "571eba9d642b71947e2778c7351d26cabdc43414"
+        }
+      ]
+    },
+    {
+      "id": "poi-04",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-04",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-04/assunto.json",
+          "blob_sha": "83f513f287e8edc501467d49286ffe73f3015f85"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-04/conteudo.json",
+          "blob_sha": "0b5868932c7694d094dca52e3fddfeafbc99bb6e"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-04/index.md",
+          "blob_sha": "c2b96a81c23732b7d222163051be798613ce0af6"
+        }
+      ]
+    },
+    {
+      "id": "poi-05",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-05",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-05/assunto.json",
+          "blob_sha": "5b450eef0652229b9376ee62767b722e2dee061e"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-05/conteudo.json",
+          "blob_sha": "57afbbb2d3b6138acc59bf625138c9000bef45d3"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-05/index.md",
+          "blob_sha": "1727967963fad3cb420c7c0e1f543309b60b92b2"
+        }
+      ]
+    },
+    {
+      "id": "poi-06",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-06",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-06/assunto.json",
+          "blob_sha": "a9cccaf41cba7ab0f925c3a76b8bd416e79260e8"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-06/conteudo.json",
+          "blob_sha": "4831fa9633ec67a89d571b1256c11cf8efa5a07a"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-06/index.md",
+          "blob_sha": "32457dba85aa81ecd31dd91aa005ef759d1bb6c1"
+        }
+      ]
+    },
+    {
+      "id": "poi-07",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-07",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-07/assunto.json",
+          "blob_sha": "8fd041d7af8e8a0a6b95e932deace97176ee7e84"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-07/conteudo.json",
+          "blob_sha": "62184ec4df3ec2a403a02ff857f09b5dba4a58af"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-07/index.md",
+          "blob_sha": "8bca0f76830c211f65c10dac3fb11bc6517ea50c"
+        }
+      ]
+    },
+    {
+      "id": "poi-08",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-08",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-08/assunto.json",
+          "blob_sha": "a440115fe24265bb0fad8d28cd2fb1acfda43794"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-08/conteudo.json",
+          "blob_sha": "b4dc880635119f68e5f57136938cda29270e012b"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-08/index.md",
+          "blob_sha": "a78db6b19e07a90956edb47b6b3f137960c72304"
+        }
+      ]
+    },
+    {
+      "id": "poi-09",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-09",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-09/assunto.json",
+          "blob_sha": "2d6dbb0c0bf8ffb292e5d087618ab20225e6a605"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-09/conteudo.json",
+          "blob_sha": "e0bb74eb419981f7142543c89df1b1a6376971e2"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-09/index.md",
+          "blob_sha": "08f1bc3a94206def2ab147df9ba831a4b086d8e6"
+        }
+      ]
+    },
+    {
+      "id": "poi-10",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-10",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-10/assunto.json",
+          "blob_sha": "9618b2cea06c08d3052a7363f4aeb62bff3b2b70"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-10/conteudo.json",
+          "blob_sha": "f8e439cc13283dcb11550ec5457909f9899072b8"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-10/index.md",
+          "blob_sha": "12f7bf67631e4eb49212547ef4ce715e1118c980"
+        }
+      ]
+    },
+    {
+      "id": "poi-11",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-11",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-11/assunto.json",
+          "blob_sha": "49342a91fe3bd6da1027b172e3beb6ff58f0e148"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-11/conteudo.json",
+          "blob_sha": "1183e57ca0d8f6009d2d38d5847b9aeb377a2fef"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-11/index.md",
+          "blob_sha": "56b9f59af64a8af9e8a9afe523828270ae2f730f"
+        }
+      ]
+    },
+    {
+      "id": "poi-12",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-12",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-12/assunto.json",
+          "blob_sha": "0f825bc79c6b8d1472657275b7018ce7055bfff1"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-12/conteudo.json",
+          "blob_sha": "2232243023d8e9828234dc9dac1d5b818f4b3d46"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-12/index.md",
+          "blob_sha": "8448af777c58825b7d41fbaf1d444e704d51e610"
+        }
+      ]
+    },
+    {
+      "id": "poi-13",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-13",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-13/assunto.json",
+          "blob_sha": "19703ef223955c20367914ac06928554f88bf98c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-13/conteudo.json",
+          "blob_sha": "5656a258e66cf4b362a5f89fc90973f432e420e8"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-13/index.md",
+          "blob_sha": "f0fec0371cb435d1f1603b9e88e5e46640f44013"
+        }
+      ]
+    },
+    {
+      "id": "poi-14",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-14",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-14/assunto.json",
+          "blob_sha": "4cb0ea99365e2c2182ca99e5c1bb1341dccbb664"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-14/conteudo.json",
+          "blob_sha": "1a071c2925fe899753dfdea019d5b17e0d463cf6"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-14/index.md",
+          "blob_sha": "5dff1b5c1caec50206f1ac38a023a904ebdf5c27"
+        }
+      ]
+    },
+    {
+      "id": "poi-15",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-15",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-15/assunto.json",
+          "blob_sha": "242b6737716ea1429ae19e83bb03ec9dc2192942"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-15/conteudo.json",
+          "blob_sha": "35a05a2607c63b8843a2e45169a1e444ab95b602"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-15/index.md",
+          "blob_sha": "500859c027b2a93262fa5bec438ff1d42badfbfc"
+        }
+      ]
+    },
+    {
+      "id": "poi-16",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-16",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-16/assunto.json",
+          "blob_sha": "e6ca672a95aa2eecd8d7e30dca7d23981012522c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-16/conteudo.json",
+          "blob_sha": "c8d5baa8e8376765ebf9f9203039aa739c31815e"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-16/index.md",
+          "blob_sha": "313d6b14c6f12cee43c8f0f73856fea34a93942a"
+        }
+      ]
+    },
+    {
+      "id": "poi-17",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-17",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-17/assunto.json",
+          "blob_sha": "cdd54989da09efb951774cfc24e760ffafcbacbc"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-17/conteudo.json",
+          "blob_sha": "4c339315542a0eb4bde7b807516f5c577eab06a1"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-17/index.md",
+          "blob_sha": "d9d7612bce6a642f46c085c7ed4f7eec387a3e9f"
+        }
+      ]
+    },
+    {
+      "id": "poi-18",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-18",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-18/assunto.json",
+          "blob_sha": "184f8152c8faa41d20ac2a43a724c62828e80a2e"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-18/conteudo.json",
+          "blob_sha": "8a06a7bd4058ff9754ff204209427dbd8bf4a4a2"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-18/index.md",
+          "blob_sha": "37c55a0ef10760f4fb1d058be1c48d341584c9d6"
+        }
+      ]
+    },
+    {
+      "id": "poi-19",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-19",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-19/assunto.json",
+          "blob_sha": "36446b14e704e3ca796085d4f461404014c14e61"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-19/conteudo.json",
+          "blob_sha": "e01aa21c9b972df0fba3359226a134bf07de29ce"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-19/index.md",
+          "blob_sha": "6373dbe89a01eb5d3fe40c5f0f838998d1cea97b"
+        }
+      ]
+    },
+    {
+      "id": "poi-20",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-20",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-20/assunto.json",
+          "blob_sha": "1c62c484382042aeee387f7f36a5ace003a14bf1"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-20/conteudo.json",
+          "blob_sha": "d1aaa1141a8a9fd089cd9a76568ccd2552eee4b7"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-20/index.md",
+          "blob_sha": "cfefa6435b153fa0bdd7b10a20436c62f014ff91"
+        }
+      ]
+    },
+    {
+      "id": "poi-21",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-21",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-21/assunto.json",
+          "blob_sha": "b4c63651ade073a9c2e4a454f9f6e5b5e6950a8d"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-21/conteudo.json",
+          "blob_sha": "0b7758c203961f0b10950111afc35b2d00809131"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-21/index.md",
+          "blob_sha": "73d9f4056564bcfe5c6a465d82d275af9336308d"
+        }
+      ]
+    },
+    {
+      "id": "poi-22",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-22",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-22/assunto.json",
+          "blob_sha": "ceb9dfccd9d02cfe4d8f3772ebb9f10ab282c6ab"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-22/conteudo.json",
+          "blob_sha": "e01c17757033f14c2cc39b35ba410a06f5ecf34c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-22/index.md",
+          "blob_sha": "64006205967507273e5f3c8b77f84493db302deb"
+        }
+      ]
+    },
+    {
+      "id": "poi-23",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-23",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-23/assunto.json",
+          "blob_sha": "a592758323791696d15b5131c280433d44d22ee5"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-23/conteudo.json",
+          "blob_sha": "0b25f87308150dfe12df2111028c48c919771e10"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-23/index.md",
+          "blob_sha": "11d386da45e496252c39992ff34020eeacadb42b"
+        }
+      ]
+    },
+    {
+      "id": "poi-24",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-24",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-24/assunto.json",
+          "blob_sha": "65c898a08dad9c7028ae7aaec2cb023664e0fe6d"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-24/conteudo.json",
+          "blob_sha": "a0daf9d030e69919cdd8c4380d9e95ca0a4be26c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-24/index.md",
+          "blob_sha": "5b7d1efbfbb32d385eae5e123a8c6c7507930a9b"
+        }
+      ]
+    },
+    {
+      "id": "poi-25",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-25",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-25/assunto.json",
+          "blob_sha": "c414a97448236741b8ca330b80a6c85d4138b13a"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-25/conteudo.json",
+          "blob_sha": "7e369797f0bf29f9c47727aff90c5f2b3c08f9e6"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-25/index.md",
+          "blob_sha": "b632764c7736b49a211900f17ab04cf11b7740ea"
+        }
+      ]
+    },
+    {
+      "id": "poi-26",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-26",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-26/assunto.json",
+          "blob_sha": "aba0e5d5ced3bd593fe220882525ca77f367a19c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-26/conteudo.json",
+          "blob_sha": "0ce28dc2934a110f97db76d9d1272717dbb3af1a"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-26/index.md",
+          "blob_sha": "aa304853e5d78b1afdc69ed79b3ba4ed749db676"
+        }
+      ]
+    },
+    {
+      "id": "poi-27",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-27",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-27/assunto.json",
+          "blob_sha": "0abaa9760fa61345fdae1c9c518ba7caba01f605"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-27/conteudo.json",
+          "blob_sha": "db5d461756e78dcaa3a9f98708953f5f9480c9d2"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-27/index.md",
+          "blob_sha": "b3f4d0eec20519fba34315212bf345a5cb96fe44"
+        }
+      ]
+    },
+    {
+      "id": "poi-28",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-28",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-28/assunto.json",
+          "blob_sha": "42b509d189c2bfa52e1f4aa55144f8163ab94d05"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-28/conteudo.json",
+          "blob_sha": "9137584b519202b47f509ca462405c14a6a0bbb8"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-28/index.md",
+          "blob_sha": "4814cc28e98fa12a65329d1b85db0a279bc825d6"
+        }
+      ]
+    },
+    {
+      "id": "poi-29",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-29",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-29/assunto.json",
+          "blob_sha": "3c42b3c7baeec0b716afec7c87d37f3e24b16e19"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-29/conteudo.json",
+          "blob_sha": "8c6e7de6fbbb5f8bb3d1f3d2593ed442658c4ef0"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-29/index.md",
+          "blob_sha": "e48d437d8ee75ae44c26d456bb0570dbafe7a04a"
+        }
+      ]
+    },
+    {
+      "id": "poi-30",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-30",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-30/assunto.json",
+          "blob_sha": "0aff418f97def01e2a4437e6727f7704391ca1a2"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-30/conteudo.json",
+          "blob_sha": "035faf80ad745c64beb150961a614aae8476dd4c"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-30/index.md",
+          "blob_sha": "c8a8b258663013a38eb8d44d4c8978c503a83280"
+        }
+      ]
+    },
+    {
+      "id": "poi-31",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-31",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-31/assunto.json",
+          "blob_sha": "1e6dacd3e673094d49140da93945c14679f490dd"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-31/conteudo.json",
+          "blob_sha": "892ff8c7b84a3568ad8e56b3f0012c1c3e6e3dad"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-31/index.md",
+          "blob_sha": "54c11c7657ed68c992af32ec0cbeb41a30ce21fd"
+        }
+      ]
+    },
+    {
+      "id": "poi-32",
+      "kind": "world-location",
+      "owner": "novydres/cenario/lugares",
+      "path": "novydres/cenario/lugares/poi-32",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-atlas-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/lugares/poi-32/assunto.json",
+          "blob_sha": "8ba599e5e8a722ea4cd043c9cb9af0f52f91753e"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-32/conteudo.json",
+          "blob_sha": "f397ba1dc56ee8010f50943da8b8762dcb23667f"
+        },
+        {
+          "path": "novydres/cenario/lugares/poi-32/index.md",
+          "blob_sha": "66536d9b77547d9a51a6635335c0b2e593487d98"
         }
       ]
     },
@@ -654,6 +1679,15 @@
       "chr001-table-config"
     ],
     "chr001-table-config": [],
+    "district-alexandria": [],
+    "district-bukovie": [],
+    "district-chelsea": [],
+    "district-drevnigrad": [],
+    "district-dunwich": [],
+    "district-levi": [],
+    "district-new-london": [],
+    "district-sulfok": [],
+    "district-vasyl-bay": [],
     "npc-iskander-yasupov": [],
     "npc-madame-zoya": [],
     "npc-samir-haddad": [
@@ -664,13 +1698,87 @@
       "npc-samir-haddad",
       "story-m301-c01"
     ],
+    "poi-01": [],
+    "poi-02": [],
+    "poi-03": [],
+    "poi-04": [],
+    "poi-05": [],
+    "poi-06": [],
+    "poi-07": [],
+    "poi-08": [],
+    "poi-09": [],
+    "poi-10": [],
+    "poi-11": [],
+    "poi-12": [],
+    "poi-13": [],
+    "poi-14": [],
+    "poi-15": [],
+    "poi-16": [],
+    "poi-17": [],
+    "poi-18": [],
+    "poi-19": [],
+    "poi-20": [],
+    "poi-21": [],
+    "poi-22": [],
+    "poi-23": [],
+    "poi-24": [],
+    "poi-25": [],
+    "poi-26": [],
+    "poi-27": [],
+    "poi-28": [],
+    "poi-29": [],
+    "poi-30": [],
+    "poi-31": [],
+    "poi-32": [],
     "rule-creation-novydres": [],
     "rule-experience-novydres": [],
     "story-m301-c01": [
       "chr001-state-checkpoint",
       "plot-contato-condicional-samir"
     ],
-    "world-atlas-novydres": [],
+    "world-atlas-novydres": [
+      "district-alexandria",
+      "district-bukovie",
+      "district-chelsea",
+      "district-drevnigrad",
+      "district-dunwich",
+      "district-levi",
+      "district-new-london",
+      "district-sulfok",
+      "district-vasyl-bay",
+      "poi-01",
+      "poi-02",
+      "poi-03",
+      "poi-04",
+      "poi-05",
+      "poi-06",
+      "poi-07",
+      "poi-08",
+      "poi-09",
+      "poi-10",
+      "poi-11",
+      "poi-12",
+      "poi-13",
+      "poi-14",
+      "poi-15",
+      "poi-16",
+      "poi-17",
+      "poi-18",
+      "poi-19",
+      "poi-20",
+      "poi-21",
+      "poi-22",
+      "poi-23",
+      "poi-24",
+      "poi-25",
+      "poi-26",
+      "poi-27",
+      "poi-28",
+      "poi-29",
+      "poi-30",
+      "poi-31",
+      "poi-32"
+    ],
     "world-history-novydres": [],
     "world-lineage-urban-gangrel": [],
     "world-npc-power-scale": [],
