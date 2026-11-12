@@ -16,7 +16,7 @@ const data={masterTree:listPinnedTree(root,pinned),
  cycle:read(index.authority_reference.cycle.path),
  candidateState:readFromCandidateState(),
  sourceContents:new Map(index.source_files.filter(row=>
-  row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE').map(row=>[
+  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(row=>[
   row.source_path,execFileSync('git',['show',pinned+':'+row.source_path],
   {encoding:'utf8',maxBuffer:32*1024*1024})]))};
 const clone=()=>structuredClone(index);
@@ -28,6 +28,8 @@ test('D01 whole-tree fixed baseline, 1029/923 blobs and no editorial PASS',()=>{
  assert.equal(r.external_items,193);assert.equal(r.media_items,19);
  assert.equal(r.cycle_pins,77);assert.equal(r.runtime_activation,false);
  assert.equal(r.c45_missing_source_content_structurally_inspected,53);
+ assert.equal(r.noncurrent_missing_structurally_inspected,136);
+ assert.equal(r.all_master_only_sources_inspected,189);
  assert.equal(r.editorial_approval,'NOT_PROVEN');
 });
 test('D01 missing original path fails, not a reduced denominator',()=>{
@@ -160,4 +162,31 @@ test('D01 C41 candidate state cannot be passed off as operational',()=>{
 test('D01 no downgrade of current history partial coverage to full',()=>{
  reject(y=>y.c45_candidate_state_precedence_crosswalk.historical_index_references.index_coverage='COMPLETE',
   'D01_C45_PRECEDENCE_CROSSWALK_DRIFT');
+});
+
+test('D01 all 136 sources missing from candidate but not directly pinned by C45 have content evidence',()=>{
+ const p=index.source_files.find(x=>x.noncurrent_missing_inspection)?.source_path;
+ assert.ok(p);
+ reject(x=>delete x.source_files.find(row=>row.source_path===p).noncurrent_missing_inspection,
+  'D01_NONCURRENT_FALSE_AUTHORITY');
+});
+test('D01 nonpinned cannot be promoted to unused or safe to delete',()=>{
+ const p=index.source_files.find(x=>x.noncurrent_missing_inspection)?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).noncurrent_missing_inspection.safe_to_remove_from_final_head=true,
+  'D01_NONCURRENT_FALSE_AUTHORITY');
+});
+test('D01 nonpinned source keys cannot change and still pass immutable source check',()=>{
+ const p=index.source_files.find(x=>x.noncurrent_missing_inspection?.source_content_structure.format==='JSON')?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(row=>row.source_path===p).noncurrent_missing_inspection.source_content_structure.top_level_keys.push('FAKE'),
+  'D01_NONCURRENT_CONTENT_METADATA_DRIFT');
+});
+test('D01 nonpinned source content absent is fail-closed',()=>{
+ const p=index.source_files.find(x=>x.noncurrent_missing_inspection)?.source_path;
+ assert.ok(p);
+ const sourceContents=new Map(data.sourceContents);
+ sourceContents.delete(p);
+ assert.throws(()=>verifyD01(index,{...data,sourceContents}),
+  e=>e.code==='D01_NONCURRENT_CONTENT_NOT_READ');
 });

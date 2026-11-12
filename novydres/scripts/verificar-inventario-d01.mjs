@@ -32,7 +32,7 @@ export function collectPins(obj,into=[]) {
 export function describePinnedContent(path,content) {
  need(typeof content==='string','D01_C45_CONTENT_NOT_READ');
  const ext=path.split('.').at(-1).toLowerCase();
- const format=({json:'JSON',md:'MARKDOWN',txt:'TEXT',py:'PYTHON',mjs:'JAVASCRIPT'})[ext]||'UNKNOWN';
+ const format=({json:'JSON',md:'MARKDOWN',txt:'TEXT',py:'PYTHON',mjs:'JAVASCRIPT',js:'JAVASCRIPT',yml:'YAML',yaml:'YAML'})[ext]||'UNKNOWN';
  let top_level_keys=[],declared_source_metadata={},heading_count=0;
  if(format==='JSON'){
   const value=JSON.parse(content);
@@ -250,8 +250,34 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
    structurallyInspected++;
   }else need(info===undefined,'D01_C45_NONMISSING_SPOOFED_INSPECTION');
  }
- need(sourceContents.size===pinnedMissing.length&&structurallyInspected===pinnedMissing.length,
-  'D01_C45_INSPECTION_COVERAGE_DRIFT');
+ need(structurallyInspected===pinnedMissing.length,'D01_C45_INSPECTION_COVERAGE_DRIFT');
+ const noncurrentMissing=index.source_files.filter(row=>row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'&&!row.pinned_by_operational_cycle);
+ let otherStructurallyInspected=0;
+ for(const row of index.source_files){
+  const info=row.noncurrent_missing_inspection;
+  const eligible=row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'&&!row.pinned_by_operational_cycle;
+  if(eligible){
+   need(info?.inspection_status==='STRUCTURAL_SOURCE_READBACK_NOT_SEMANTIC_APPROVAL'&&
+    info.cycle_pin_relation==='NOT_DIRECTLY_PINNED_BY_C45_OTHER_DEPENDENCIES_UNCHECKED'&&
+    info.proposed_target_root===row.target_root_candidate&&
+    info.owner_final==='NOT_DETERMINED'&&
+    info.history_or_current==='NOT_DETERMINED_BY_PIN_ABSENCE'&&
+    info.authority_review==='PENDING'&&
+    info.epistemic_and_visibility_review==='PENDING'&&
+    info.content_equivalence_to_target==='NOT_PROVEN'&&
+    info.safe_to_remove_from_final_head==='NOT_PROVEN',
+    'D01_NONCURRENT_FALSE_AUTHORITY');
+   const original=sourceContents.get(row.source_path);
+   need(typeof original==='string','D01_NONCURRENT_CONTENT_NOT_READ');
+   need(equal(info.source_content_structure,describePinnedContent(row.source_path,original)),
+    'D01_NONCURRENT_CONTENT_METADATA_DRIFT');
+   otherStructurallyInspected++;
+  }else need(info===undefined,'D01_NONCURRENT_SPOOFED_INSPECTION');
+ }
+ need(sourceContents.size===pinnedMissing.length+noncurrentMissing.length&&
+  otherStructurallyInspected===noncurrentMissing.length,
+  'D01_NONCURRENT_COVERAGE_DRIFT');
+
  const candidateStatePath='novydres/cronicas/CHR-001/estado/atual.json';
  const candidateStateSha=other.get(candidateStatePath)?.sha;
  need(SHA.test(candidateStateSha||''),'D01_C41_STATE_CANDIDATE_MISSING');
@@ -276,6 +302,9 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
  need(summary?.c45_missing_pin_content_inspections===structurallyInspected&&
   summary.c45_missing_pin_routing_proposals===structurallyInspected,
   'D01_C45_INSPECTION_DENOMINATOR_DRIFT');
+ need(summary?.noncurrent_missing_structurally_inspected===otherStructurallyInspected&&
+  summary.master_missing_structurally_inspected===otherStructurallyInspected+structurallyInspected,
+  'D01_ALL_MISSING_SOURCE_DENOMINATOR_DRIFT');
  need(summary?.c45_source_priority_mismatches===Object.values(evaluation).filter(x=>x===false).length,
   'D01_C45_PRIORITY_DENOMINATOR_DRIFT');
  need(summary?.master_blobs===masterTree.length&&summary.candidate_blobs===candidateTree.length&&
@@ -294,6 +323,8 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   cycle_unique_pinned_paths:pinRows.size,cycle_pins_missing_candidate:pinRelations.missing,
   cycle_pins_same_candidate:pinRelations.same,
   c45_missing_source_content_structurally_inspected:structurallyInspected,
+  noncurrent_missing_structurally_inspected:otherStructurallyInspected,
+  all_master_only_sources_inspected:structurallyInspected+otherStructurallyInspected,
   candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
   current_checkpoint:expectedCrosswalk.source_cycle_id,
   state_precedence_mismatches:summary.c45_source_priority_mismatches,
@@ -308,7 +339,7 @@ export function readAndVerifyD01(root=process.cwd()){
  const candidateTree=listPinnedTree(root,index.candidate_snapshot.commit_sha);
  const read=path=>JSON.parse(git(root,['show',index.source_snapshot.commit_sha+':'+path]));
  const sourceContents=new Map(index.source_files.filter(row=>
-  row.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE').map(row=>[
+  row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(row=>[
    row.source_path,execFileSync('git',['show',index.source_snapshot.commit_sha+':'+row.source_path],
     {cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']})]));
  return verifyD01(index,{masterTree,candidateTree,
