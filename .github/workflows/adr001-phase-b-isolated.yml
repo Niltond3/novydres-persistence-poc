@@ -1,0 +1,22 @@
+name: ADR-001 B04 isolated regression (non-operational)
+on:
+  push:
+    branches:
+      - design/subject-oriented-migration
+    paths:
+      - 'novydres/sistema/arquitetura/fase-b/**'
+      - '.github/workflows/adr001-phase-b-isolated.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-isolated-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run isolated B04 fixture regression
+        run: node novydres/sistema/arquitetura/fase-b/executor-isolado.mjs
