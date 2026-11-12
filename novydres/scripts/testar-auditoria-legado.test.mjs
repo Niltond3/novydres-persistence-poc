@@ -1,0 +1,91 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {auditRepository,auditTree} from './auditar-legado-e-fontes.mjs';
+const sha='a'.repeat(40);
+const baseFiles=['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json',
+ 'novydres/personagens/synthetic/index.md','novydres/personagens/synthetic/assunto.json']
+ .map(path=>({path,type:'blob',mode:'100644',blob_sha:sha}));
+const exampleSubject={id:'synthetic',kind:'character',path:'novydres/personagens/synthetic',
+ visibility:'PLAYER_SAFE',source_ids:[],files:[]};
+const baseCatalog=JSON.stringify({subjects:[exampleSubject]});
+const media=()=>({policy:'DRIVE_BINARY_GITHUB_LINK_ONLY',entries:[]});
+const audit=(extra=[],contents={},mode='CANDIDATE',registry=media())=>auditTree({
+ files:[...baseFiles,...extra],contents:{'novydres/catalogo.json':baseCatalog,...contents},
+ mode,mediaRegistry:registry});
+const has=(r,code)=>r.issues.some(x=>x.code===code);
+
+test('V08/V11/V12 actual HEAD entire file inventory; no false ZERO LEGADO in pre-cutover',()=>{
+ const a=auditRepository();
+ assert.equal(a.mode,'CANDIDATE');
+ assert.equal(a.gate,'C06_CANDIDATE_AUDIT_EXECUTED_WITH_LEGACY_PENDING');
+ assert.ok(a.inventory_coverage.scanned>850);
+ assert.equal(a.inventory_coverage.missing,0);
+ assert.ok(a.counters.legacy_paths>200,'pre-cutover old paths must be reported');
+ assert.equal(a.counters.symlinks,0);
+ assert.equal(a.counters.media_pending,5,'historical registry must be confirmed, not guessed');
+ assert.equal(a.counters.unverified_media,19,'do not invent hashes');
+ assert.equal(a.issues.length,0,JSON.stringify(a.issues.slice(0,3)));
+});
+test('V12 FINAL gate rejects entire actual pre-cutover HEAD, independently of C06 tool passing',()=>{
+ const a=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL'});
+ assert.equal(a.gate,'ZERO_LEGACY_BLOCKED');
+ assert.ok(a.issues.some(x=>x.code==='LEGACY_PATH_IN_FINAL'));
+ assert.ok(a.inventory_coverage.scanned>850);
+});
+test('V12 synthetic clean tree distinguishes permitted provenance from active route',()=>{
+ const path='novydres/personagens/synthetic/origem.json';
+ const x=audit([{path,mode:'100644',type:'blob',blob_sha:sha}],
+ {[path]:JSON.stringify({source_ref:{id:'novydres/chronicles/CHR-001/LIVE_v038.json',source_commit:sha,sha}})},
+ 'ZERO_LEGACY_FINAL');
+ assert.equal(x.gate,'ZERO_LEGACY_STRUCTURAL_PASS_WITH_EXTERNAL_REVIEW');
+ assert.equal(x.counters.textual_legacy_mentions,1);
+});
+test('V12 legacy physical paths may remain during design but cannot be hidden in final',()=>{
+ const path='novydres/runtime/old-handler.js', entry={path,type:'blob',mode:'100644',blob_sha:sha};
+ assert.equal(audit([entry]).gate,'C06_CANDIDATE_AUDIT_EXECUTED_WITH_LEGACY_PENDING');
+ const r=audit([entry],{},'ZERO_LEGACY_FINAL');
+ assert.equal(r.gate,'ZERO_LEGACY_BLOCKED');assert.ok(has(r,'LEGACY_PATH_IN_FINAL'));
+});
+test('V12 imports from an old runtime in NEW candidate scripts are blocked now',()=>{
+ const path='novydres/scripts/bridge.js',entry={path,type:'blob',mode:'100644',blob_sha:sha};
+ const r=audit([entry],{[path]:"import engine from 'novydres/runtime/legacy.js'\n"});
+ assert.ok(has(r,'LEGACY_CODE_CONSUMER'));
+ assert.equal(r.gate,'C06_AUDIT_FAILED');
+});
+test('V12 relative imports to legacy directories are also blocked',()=>{
+ const path='novydres/scripts/bridge.js',entry={path,type:'blob',mode:'100644',blob_sha:sha};
+ const r=audit([entry],{[path]:"const old = require('../runtime/legacy.js')"});
+ assert.ok(has(r,'LEGACY_CODE_CONSUMER'));
+});
+test('V12 detects symlinks and aliases, no blanket skip for fixtures',()=>{
+ const path='poc/synthetic-fixture-link',entry={path,type:'blob',mode:'120000',blob_sha:sha};
+ const r=audit([entry]);assert.ok(has(r,'SYMLINK_FORBIDDEN'));
+});
+test('V08 public entry must not list hidden source filenames',()=>{
+ const path='novydres/AGENTS.md';
+ const r=audit([],{[path]:'open: novydres/plan_GM_HIDDEN.json'});
+ assert.ok(has(r,'HIDDEN_SOURCE_IN_PUBLIC_ENTRY'));
+});
+test('V08 metadata index cannot expose private source IDs or mismatched file blobs',()=>{
+ const privateCatalog=JSON.stringify({subjects:[{...exampleSubject,visibility:'SYSTEM_AUDIT',
+ source_ids:['secret-ref'],files:[{path:'novydres/personagens/synthetic/index.md',blob_sha:'b'.repeat(40)}]}]});
+ const r=audit([],{['novydres/catalogo.json']:privateCatalog});
+ assert.ok(has(r,'CATALOG_PRIVATE_SOURCE_IDS_EXPOSED'));
+ assert.ok(has(r,'CATALOG_PIN_NOT_IN_TREE'));
+});
+test('V11 media linked originals require exact link/ID and policy; missing stays pending',()=>{
+ const asset={raw_original_migrated:true,drive_sha256_verified:false,drive_file_id:null,drive_url:null,
+  media_storage:'GOOGLE_DRIVE_ORIGINAL_FILE'};
+ const r=audit([],{},'CANDIDATE',{policy:'DRIVE_BINARY_GITHUB_LINK_ONLY',entries:[asset]});
+ assert.ok(has(r,'MEDIA_LINK_UNVERIFIED'));
+ assert.equal(r.counters.unverified_media,1);
+});
+test('V11 missing originals and unverified SHA are recorded, never synthesized',()=>{
+ const asset={raw_original_migrated:false,drive_sha256_verified:false,drive_file_id:null,drive_url:null,
+  media_storage:'PENDING_SOURCE_ORIGINAL'};
+ const a=audit([],{},'CANDIDATE',{policy:'DRIVE_BINARY_GITHUB_LINK_ONLY',entries:[asset]});
+ assert.equal(a.counters.media_pending,1);
+ assert.equal(a.counters.unverified_media,1);
+ const final=audit([],{},'ZERO_LEGACY_FINAL',{policy:'DRIVE_BINARY_GITHUB_LINK_ONLY',entries:[asset]});
+ assert.equal(final.gate,'ZERO_LEGACY_BLOCKED');
+});

@@ -1,4 +1,4 @@
-name: ADR-001 C01-C02-C04 candidate checks (non-operational)
+name: ADR-001 C01-C02-C04-C06 candidate checks (non-operational)
 on:
   push:
     branches:
@@ -10,6 +10,8 @@ on:
       - 'novydres/scripts/testar-catalogo-assuntos.test.mjs'
       - 'novydres/scripts/retomar-estado.mjs'
       - 'novydres/scripts/testar-retomada-estado.test.mjs'
+      - 'novydres/scripts/auditar-legado-e-fontes.mjs'
+      - 'novydres/scripts/testar-auditoria-legado.test.mjs'
       - 'novydres/catalogo.json'
       - 'novydres/AGENTS.md'
       - 'novydres/CONTEXT.md'
@@ -42,3 +44,7 @@ jobs:
         run: node --test novydres/scripts/testar-retomada-estado.test.mjs
       - name: Check C04 standalone candidate recovery from pinned source blobs
         run: node novydres/scripts/retomar-estado.mjs
+      - name: Audit all HEAD paths and pending source media without claiming cutover
+        run: node novydres/scripts/auditar-legado-e-fontes.mjs
+      - name: Test V08 V11 V12 strict final rejection and negative fixture coverage
+        run: node --test novydres/scripts/testar-auditoria-legado.test.mjs

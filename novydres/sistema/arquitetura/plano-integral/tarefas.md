@@ -259,6 +259,13 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** V08/V11/V12 sobre toda árvore: código, JSON, prosa operacional, URLs, CI, symlinks, aliases, wrappers e fallbacks. Distinguir citação de proveniência de rota executável por regra verificável; conferir localização/direitos de mídia sem inventar hashes.
 - **Conclusão:** resíduos operacionais e vazamentos nas fixtures são detectados, sem exclusão genérica de diretórios/documentação. Aprovar candidato isolado não significa que toda branch pré-cutover esteja ZERO LEGADO. Git histórico não vira fallback no HEAD.
 
+#### C06 — Implementação pré-cutover e prova a executar (2026-11-12)
+
+- **Entrada:** `design@f5a18cf499bc9cc936697f8a2ad82fdb29076d9c`, `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura; C01/C02 e A01 confirmados.
+- **Implementação:** `novydres/scripts/auditar-legado-e-fontes.mjs` enumera todos os blobs da árvore Git, symlinks, raízes antigas, textos, código/config/CI, scripts e entradas candidatas; distingue citação histórica de uso executável e checa os pinos do catálogo. O registo V2 de ativos visuais é inspecionado sem download e sem inventar SHA externo. Testes em `testar-auditoria-legado.test.mjs` cobrem import/fallback, symlink, proveniência, metadados públicos, mídia e exigência de ZERO LEGADO em HEAD final.
+- **Lacunas registradas:** fonte visual V2 possui 19 itens, 14 originais vinculados no Drive e 5 pendentes; 0 hashes externos verificados. A HEAD pré-cutover ainda contém caminhos legados e decisões editoriais pendentes. O resultado positivo da ferramenta é `C06_CANDIDATE_AUDIT_EXECUTED_WITH_LEGACY_PENDING`; a mesma árvore em `ZERO_LEGACY_FINAL` deve retornar `ZERO_LEGACY_BLOCKED`. Não tratar PASS da ferramenta como gate E.
+- **Limite:** `CI_PENDING`; scanner de padrões não é parser AST universal nem auditoria semântica de segredos, direitos, permissões ou mídia externa. Não mutar canon, histórico, master, fixtures ou fontes Drive. Próxima prova: Actions real e readback do commit; revisão contextual e D exigem completar inventário e migração.
+
 ### C07 — Integrar CI, fluxo de uso e regressões de produção
 
 - **Depende de:** C01–C06.
