@@ -1,0 +1,74 @@
+{
+  "subject_id": "npc-iskander-yasupov",
+  "schema": "ADR001_D03_GLOBAL_SOURCE_RELATIONSHIP_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "source_variants_examined": 1,
+  "no_local_knowledge_claim": true,
+  "no_chronicle_relation_claim": true,
+  "source_only_unknown_targets_not_promoted": true,
+  "relations": [
+    {
+      "relation_id": "npc-iskander-yasupov-source-affiliation-01",
+      "owner_subject_id": "npc-iskander-yasupov",
+      "from_subject_id": "npc-iskander-yasupov",
+      "to_subject_id": "org-concilio-cruz-espada",
+      "to_source_only_literal": null,
+      "relation_type": "SOURCE_ASSERTED_FACTION_AFFILIATION",
+      "direction": "FROM_GLOBAL_CHARACTER",
+      "inverse_is_derived": true,
+      "epistemic_status": "UNKNOWN",
+      "visibility": "SYSTEM_AUDIT",
+      "editorial_status": "SOURCE_VARIANT_LITERAL_NOT_APPROVED",
+      "scope": "GLOBAL_SOURCE_ONLY_NOT_CHRONICLE_LOCAL",
+      "source_evidence": [
+        {
+          "path": "novydres/world/organizations/npc-sources/iskander_yasupov_v0_9(2).md",
+          "sha": "e269fce9515a9e18962c6a650bb7a151e5f26207",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "relation_id": "npc-iskander-yasupov-source-affiliation-02",
+      "owner_subject_id": "npc-iskander-yasupov",
+      "from_subject_id": "npc-iskander-yasupov",
+      "to_subject_id": "org-legiao-coroa-ferro",
+      "to_source_only_literal": null,
+      "relation_type": "SOURCE_ASSERTED_FACTION_AFFILIATION",
+      "direction": "FROM_GLOBAL_CHARACTER",
+      "inverse_is_derived": true,
+      "epistemic_status": "UNKNOWN",
+      "visibility": "SYSTEM_AUDIT",
+      "editorial_status": "SOURCE_VARIANT_LITERAL_NOT_APPROVED",
+      "scope": "GLOBAL_SOURCE_ONLY_NOT_CHRONICLE_LOCAL",
+      "source_evidence": [
+        {
+          "path": "novydres/world/organizations/npc-sources/iskander_yasupov_v0_9(2).md",
+          "sha": "e269fce9515a9e18962c6a650bb7a151e5f26207",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "relation_id": "npc-iskander-yasupov-source-affiliation-03",
+      "owner_subject_id": "npc-iskander-yasupov",
+      "from_subject_id": "npc-iskander-yasupov",
+      "to_subject_id": null,
+      "to_source_only_literal": "Clã Gangrel",
+      "relation_type": "SOURCE_ASSERTED_FACTION_AFFILIATION",
+      "direction": "FROM_GLOBAL_CHARACTER",
+      "inverse_is_derived": true,
+      "epistemic_status": "UNKNOWN",
+      "visibility": "SYSTEM_AUDIT",
+      "editorial_status": "SOURCE_VARIANT_LITERAL_NOT_APPROVED",
+      "scope": "GLOBAL_SOURCE_ONLY_NOT_CHRONICLE_LOCAL",
+      "source_evidence": [
+        {
+          "path": "novydres/world/organizations/npc-sources/iskander_yasupov_v0_9(2).md",
+          "sha": "e269fce9515a9e18962c6a650bb7a151e5f26207",
+          "line": 32
+        }
+      ]
+    }
+  ]
+}

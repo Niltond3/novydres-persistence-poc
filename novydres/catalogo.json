@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "538bca189c58cdf4e19cebe3312e3756b8cf51fd",
+  "content_index_sha": "83edc28cc0ffcf68ba377d8cd7f9ee1c80c4a83b",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -314,12 +314,15 @@
       "owner": "novydres/personagens",
       "path": "novydres/personagens/npc-iskander-yasupov",
       "visibility": "SYSTEM_AUDIT",
-      "dependencies": [],
+      "dependencies": [
+        "org-concilio-cruz-espada",
+        "org-legiao-coroa-ferro"
+      ],
       "source_ids": [],
       "files": [
         {
           "path": "novydres/personagens/npc-iskander-yasupov/assunto.json",
-          "blob_sha": "0d4c22cb388a9325ebafb7724320e98eaef631e7"
+          "blob_sha": "c44ab69dbf87c6aab4b1cce23cbfd78de2995ccb"
         },
         {
           "path": "novydres/personagens/npc-iskander-yasupov/fonte-001.source.md",
@@ -340,6 +343,10 @@
         {
           "path": "novydres/personagens/npc-iskander-yasupov/segmentos.json",
           "blob_sha": "11a972ee93404ba4fafa6f598fcfb2a6128b4a5d"
+        },
+        {
+          "path": "novydres/personagens/npc-iskander-yasupov/vinculos.json",
+          "blob_sha": "b3b2e84cb8bdeefd229a6d63381fd3ce763b5e61"
         }
       ]
     },
@@ -349,12 +356,14 @@
       "owner": "novydres/personagens",
       "path": "novydres/personagens/npc-madame-zoya",
       "visibility": "SYSTEM_AUDIT",
-      "dependencies": [],
+      "dependencies": [
+        "org-concilio-cruz-espada"
+      ],
       "source_ids": [],
       "files": [
         {
           "path": "novydres/personagens/npc-madame-zoya/assunto.json",
-          "blob_sha": "1919c646aa31c6b06b3b6b4f66a19705d556f177"
+          "blob_sha": "24acf49cee09c59521ec604b30ac3b37dd2a0873"
         },
         {
           "path": "novydres/personagens/npc-madame-zoya/fonte-001.source.txt",
@@ -391,6 +400,10 @@
         {
           "path": "novydres/personagens/npc-madame-zoya/segmentos.json",
           "blob_sha": "e30e012b92dc6c34b23a5c560e072a394883d6a8"
+        },
+        {
+          "path": "novydres/personagens/npc-madame-zoya/vinculos.json",
+          "blob_sha": "b54cf41e282122781e409a45e8a38c4a884d3240"
         }
       ]
     },
@@ -421,6 +434,56 @@
         {
           "path": "novydres/personagens/npc-samir-haddad/perfil.json",
           "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9"
+        }
+      ]
+    },
+    {
+      "id": "org-concilio-cruz-espada",
+      "kind": "organization",
+      "owner": "novydres/cenario/organizacoes",
+      "path": "novydres/cenario/organizacoes/concilio-cruz-espada",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-politics-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/organizacoes/concilio-cruz-espada/assunto.json",
+          "blob_sha": "d27810c1454b1bcdbace5f0adac5c8236ae2524e"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/concilio-cruz-espada/conteudo.json",
+          "blob_sha": "bbccf6aa13bed5114749ad6f4b3cc531ccb4ad98"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/concilio-cruz-espada/index.md",
+          "blob_sha": "13ba2dd770a0359f205a970e897426b9a8874fd9"
+        }
+      ]
+    },
+    {
+      "id": "org-legiao-coroa-ferro",
+      "kind": "organization",
+      "owner": "novydres/cenario/organizacoes",
+      "path": "novydres/cenario/organizacoes/legiao-coroa-ferro",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "world-politics-novydres"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cenario/organizacoes/legiao-coroa-ferro/assunto.json",
+          "blob_sha": "0ec80f77727466e4afad3159ec6fae31efc90a2d"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/legiao-coroa-ferro/conteudo.json",
+          "blob_sha": "fd971c4c90a10e377035439e64edd39adb32a6f6"
+        },
+        {
+          "path": "novydres/cenario/organizacoes/legiao-coroa-ferro/index.md",
+          "blob_sha": "3f0e7be400ce350e876e2d63b536996afcf6eebb"
         }
       ]
     },
@@ -1730,6 +1793,13 @@
       "chr001-npc-samir-haddad",
       "plot-contato-condicional-samir"
     ],
+    "org-concilio-cruz-espada": [
+      "npc-iskander-yasupov",
+      "npc-madame-zoya"
+    ],
+    "org-legiao-coroa-ferro": [
+      "npc-iskander-yasupov"
+    ],
     "plot-contato-condicional-samir": [
       "npc-samir-haddad",
       "story-m301-c01"
@@ -1818,7 +1888,10 @@
     "world-history-novydres": [],
     "world-lineage-urban-gangrel": [],
     "world-npc-power-scale": [],
-    "world-politics-novydres": []
+    "world-politics-novydres": [
+      "org-concilio-cruz-espada",
+      "org-legiao-coroa-ferro"
+    ]
   },
   "deferred": [
     {

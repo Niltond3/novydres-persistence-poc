@@ -1,0 +1,73 @@
+{
+  "subject_id": "npc-madame-zoya",
+  "schema": "ADR001_D03_GLOBAL_SOURCE_RELATIONSHIP_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "source_variants_examined": 3,
+  "no_local_knowledge_claim": true,
+  "no_chronicle_relation_claim": true,
+  "source_only_unknown_targets_not_promoted": true,
+  "relations": [
+    {
+      "relation_id": "npc-madame-zoya-source-affiliation-01",
+      "owner_subject_id": "npc-madame-zoya",
+      "from_subject_id": "npc-madame-zoya",
+      "to_subject_id": "org-concilio-cruz-espada",
+      "to_source_only_literal": null,
+      "relation_type": "SOURCE_ASSERTED_FACTION_AFFILIATION",
+      "direction": "FROM_GLOBAL_CHARACTER",
+      "inverse_is_derived": true,
+      "epistemic_status": "UNKNOWN",
+      "visibility": "SYSTEM_AUDIT",
+      "editorial_status": "SOURCE_VARIANT_LITERAL_NOT_APPROVED",
+      "scope": "GLOBAL_SOURCE_ONLY_NOT_CHRONICLE_LOCAL",
+      "source_evidence": [
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9_original_library.source.md",
+          "sha": "0d77a9f1cc13c47bc9afb7db43846b4a4b2210be",
+          "line": 35
+        },
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(1)_library.source.md",
+          "sha": "f89e9e429b87a7590afc2f93fd828a8bece6562e",
+          "line": 40
+        },
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(2).md",
+          "sha": "c88527f90c6016064b35f6ae0b791f7079587f66",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "relation_id": "npc-madame-zoya-source-affiliation-02",
+      "owner_subject_id": "npc-madame-zoya",
+      "from_subject_id": "npc-madame-zoya",
+      "to_subject_id": null,
+      "to_source_only_literal": "Clã Nosferatu",
+      "relation_type": "SOURCE_ASSERTED_FACTION_AFFILIATION",
+      "direction": "FROM_GLOBAL_CHARACTER",
+      "inverse_is_derived": true,
+      "epistemic_status": "UNKNOWN",
+      "visibility": "SYSTEM_AUDIT",
+      "editorial_status": "SOURCE_VARIANT_LITERAL_NOT_APPROVED",
+      "scope": "GLOBAL_SOURCE_ONLY_NOT_CHRONICLE_LOCAL",
+      "source_evidence": [
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9_original_library.source.md",
+          "sha": "0d77a9f1cc13c47bc9afb7db43846b4a4b2210be",
+          "line": 36
+        },
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(1)_library.source.md",
+          "sha": "f89e9e429b87a7590afc2f93fd828a8bece6562e",
+          "line": 41
+        },
+        {
+          "path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(2).md",
+          "sha": "c88527f90c6016064b35f6ae0b791f7079587f66",
+          "line": 36
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ test('IMP-04/08/15 local CHR-001 configuration has independent owner and is cata
  assert.ok(meta);assert.equal(meta.path,confPath.slice(0,-1));
  assert.equal(meta.visibility,'SYSTEM_AUDIT');
  assert.deepEqual(meta.dependencies,['chr001-state-checkpoint']);
- assert.equal(c.subjects.length,56);
+ assert.equal(c.subjects.length,58);
  const pinned=resolveSubject(c,'chr001-table-config',{snapshot_sha:head,role:'AUDITOR'});
  assert.ok(pinned.files.some(f=>f.path===confPath+'configuracao.json'));
  const actual=JSON.parse(readSelected(process.cwd(),c,'chr001-table-config',{snapshot_sha:head,
