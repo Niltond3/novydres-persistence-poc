@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_EM_CURSO_A01_A06_PASS_A07_NEXT
+status: A_DESIGN_EXECUTION_PASS_B_REMEDIATION_REQUIRED
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -108,6 +108,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A01–A06.
 - **Escopo/saída:** diff consolidado revisável, decisões da entrevista e impacto sobre A/B; registrar a consolidação das escolhas já aceitas e obter decisão somente sobre questões residuais, sem substituir a aprovação histórica. Distinguir aprovação de desenho, de sucessores operacionais e de cutover. Aplicar DEC-22 ao regime futuro de transições A–D, sem confundir essa escolha documental com autorização de execução atual. Aplicar DEC-25 e DEC-26 já aceitas, mantendo a condição de prova Web antes de dispensar a troca por fase e a pausa/renovação excepcional quando a recuperação falhar.
 - **Conclusão:** escolhas aceitas incorporadas sem pedido repetido de aceitação; nenhum trade-off bloqueante escondido em tarefa técnica; baseline e critérios aceitos para retomar B. Somente decisão substantiva realmente pendente mantém PENDING_APPROVAL para o escopo afetado. Critério técnico incompleto exige remediação; não pedir confirmação apenas para iniciar a próxima fase já autorizada no plano.
+
+
+#### Execução de A07 e gate de desenho — 2026-11-12
+
+- **Estado:** `A_DESIGN_EXECUTION_PASS` com aprovação operacional em E **não concedida**; A01–A06 conferidos por diff GitHub e checkpoints. **Entrada:** `c8b282a4984851bd166b89af7d6b264c04dea87e`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura e idêntico à entrada.
+- **Saída:** [fases-b-e.md](../fase-a/fases-b-e.md#a07--revisão-consolidada-da-emenda-e-decisão-de-desenho-execução-2026-11-12) e [cobertura.md](cobertura.md#execução-de-a01a07--evidência-de-desenho-2026-11-12). Seis commits/9 paths `sistema/arquitetura/`, nenhum dado narrativo alterado. Aprovação histórica de A e gate B inalterados.
+- **Critérios:** DEC-01–DEC-26 incorporadas sem reabrir Q-01–Q-08; sucessores editoriais e ativação somente E; B precisa corrigir falhas 51/90, B-Q29/Q30, Web, CI, stale remoto, isolamento do gabarito e inconsistência C41/C45 antes de PASS.
+- **Próxima elegível:** B01, apenas protótipo isolado, depois B02/B03/B04 e gate B05; C não liberada. Controle DEC-25 em Web não comprovado — manter checkpoint/handoff e DEC-26 para renovação excepcional. **Nenhuma cena, cutover ou runtime.**
 
 ## B — Remediar e comprovar o protótipo isolado
 

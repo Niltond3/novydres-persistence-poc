@@ -59,3 +59,11 @@ Esta matriz vincula requisitos a tarefas e evidências esperadas. **Não é rela
 | IMP-15: campanha, harness e suplemento no mesmo repositório | A02/A04, C01–C02, D02–D05 |
 
 Todo IMP precisa de fonte/destino e função preservada; não implica preservar o procedimento antigo. DEC-01–DEC-26 não são reabertas pela decomposição; o desenho anterior é adaptado às escolhas aceitas. Avaliação em jogo posterior a E observa NPCs, continuidade, ritmo e carga operacional sem forçar acontecimentos, e pode motivar correções no sistema já migrado. Esse acompanhamento não esconde trabalho técnico obrigatório de E nem autoriza iniciar a crônica.
+
+## Execução de A01–A07 — evidência de desenho (2026-11-12)
+
+`A_DESIGN_EXECUTION_PASS` está descrito em [fases-b-e.md](../fase-a/fases-b-e.md#a07--revisão-consolidada-da-emenda-e-decisão-de-desenho-execução-2026-11-12). Comparação confirmada de `5b55c12f4d041187ee597eb786049e7dbe5a22fc` até `c8b282a4984851bd166b89af7d6b264c04dea87e`: seis commits, nove caminhos alterados **apenas em `sistema/arquitetura`**, sem fonte narrativa ou master tocada. O relatório de A01 inclui a árvore e pins; A02 produz limites de dono e schemas candidatos; A03/A05 definem escrita/continuidade, A04 define contrato narrativo/ficcional, A06 especifica riscos e provas B/C.
+
+Esta é prova de **desenho/persistência da documentação**, não da migração integral. Os validadores V01–V12, a equivalência Web/Codex, o CI, a concorrência remota e ZERO LEGADO seguem **NOT_EXECUTED**. O gate B existente continua `B_REMEDIATION_REQUIRED`. O Core Rulebook V5 integral e a certificação final da ficha-alvo 2010 permanecem `PENDING_EVIDENCE`, não são pré-condições para o escopo isolado B que não reescreve a ficha. Mídia externa e conflitos editoriais ficam como dependências de D/E. Antes de E, nenhuma entrada candidata é ativada; aprovação histórica A está preservada.
+
+A execução A–D foi autorizada pelo jogador em 2026-11-12; E ainda exige autorização expressa. Passar de A a B é permitido somente com checkpoint e autorização já registrados; **não** presume dispensada a troca de chat por DEC-25, cuja prova fica em B/C e cuja exceção de recuperação está em DEC-26.
