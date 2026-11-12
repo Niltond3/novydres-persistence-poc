@@ -3,7 +3,7 @@
   "phase": "D03",
   "entry_head": "8b32081c9435c0864d42ac8679444539438a7c47",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-  "status": "CANDIDATE_SOURCE_PORTFOLIOS_PENDING_SEMANTIC_EQUIVALENCE",
+  "status": "D03_IMPLEMENTATION_IN_PROGRESS_DO_NOT_PROMOTE",
   "gate": "D03_NOT_YET_PASS",
   "not_operational": true,
   "d03_sources_total": 64,
@@ -24,12 +24,23 @@
   "proof": {
     "byte_identical_sources": true,
     "unique_source_ownership": true,
-    "subject_catalog": "GENERATED_AT_STAGED_TREE",
+    "subject_catalog": "15_SUBJECTS_113_INDEXED_FILES_EXACT_SHA",
     "field_semantics": "PENDING",
     "editorial_authority": "UNCHANGED_NOT_APPROVED",
     "knowledge_and_relations": "PENDING",
-    "ci": "PENDING",
-    "readback": "CANDIDATE_STAGED_SOURCE_MIGRATION_READBACK_PASS"
+    "ci": {
+      "last_validated_head": "666d75c187485441704b07c3326626a09bc48854",
+      "run_id": 43314247827,
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43314247827",
+      "conclusion": "success",
+      "result_scope": "STRUCTURAL_SOURCE_PORTFOLIOS_AND_NEGATIVE_TESTS_ONLY"
+    },
+    "readback": {
+      "commit": "666d75c187485441704b07c3326626a09bc48854",
+      "tree": "56bd811de5716171183985297d4b9f16453d48e2",
+      "master": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "verified": true
+    }
   },
   "unresolved_conflicts": [
     "CONFLICT-001",
@@ -51,5 +62,37 @@
     "current_editorial_variant_selected": false,
     "local_chronicle_knowledge_copied": false,
     "unambiguous_name_only": true
+  },
+  "xp_field_boundary": {
+    "path": "novydres/sistema/regras/experiencia/escopos.json",
+    "total": 8,
+    "d04_only": 4,
+    "d05_only": 3,
+    "global_and_local_mixed": 1,
+    "field_semantics_fully_partitioned": false
+  },
+  "remaining_gate_requirements": [
+    "SOURCE_SECTION_LOCATORS_ARE_NOT_SEMANTIC_FACT_RECONCILIATION",
+    "GLOBAL_VS_LOCAL_FIELD_SEMANTICS_FOR_MIXED_SOURCES",
+    "RELATION_DIRECTION_TARGET_AND_OWNER_VERIFICATION",
+    "WORLD_EDITORIAL_AUTHORITY_AND_VARIANTS_NEED_FURTHER_EVIDENCE_OR_LEGITIMATE_FAIL_CLOSED_CLASSIFICATION",
+    "GATE_D03_REAL_EQUIVALENCE_REVIEW"
+  ],
+  "dependencies_seen": {
+    "D04": {
+      "origins": 438,
+      "unchanged_legacy_same_path": 393,
+      "missing_from_candidate_legacy_paths": 45,
+      "status": "NOT_STARTED"
+    },
+    "D05": {
+      "origins": 399,
+      "unchanged_legacy_same_path": 254,
+      "missing_from_candidate_legacy_paths": 144,
+      "changed_legacy_path": 1,
+      "status": "NOT_STARTED"
+    },
+    "D06": "NOT_STARTED_ZERO_LEGACY_NOT_PROVEN",
+    "D07": "NOT_STARTED_INDEPENDENT_REVIEW_NOT_PROVEN"
   }
 }

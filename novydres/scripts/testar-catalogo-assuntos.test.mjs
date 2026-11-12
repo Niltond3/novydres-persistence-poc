@@ -145,3 +145,16 @@ test('V09 cache is snapshot keyed (never borrows entry from new commit)',()=>{
  resolveSubject(c,'npc-samir-haddad',{snapshot_sha:'a'.repeat(40),role:'AUDITOR',cache});
  assert.equal(cache.size,2);
 });
+test('D03 private subject portfolios expose exact copied source only to authorized roles',()=>{
+ const c=buildCatalog(root), ids=['world-atlas-novydres','world-history-novydres','world-politics-novydres',
+ 'world-lineage-urban-gangrel','world-npc-power-scale','npc-iskander-yasupov','npc-madame-zoya',
+ 'rule-creation-novydres','rule-experience-novydres'];
+ for(const id of ids){
+  expectCode(()=>resolveSubject(c,id,{snapshot_sha:snap,role:'PLAYER'}),'DISCLOSURE_DENIED');
+  const result=resolveSubject(c,id,{snapshot_sha:snap,role:'AUDITOR'});
+  const source=result.files.find(f=>/\/fonte-\d+\.source\./.test(f.path));
+  assert.ok(source,'missing literal source '+id);
+  const read=readSelected(root,c,id,{snapshot_sha:snap,role:'AUDITOR',selected_paths:[source.path]});
+  assert.equal(read.files.length,1);assert.equal(read.files[0].blob_sha,source.blob_sha);
+ }
+});
