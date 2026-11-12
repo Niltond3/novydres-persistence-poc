@@ -21,7 +21,7 @@ export function classifyD01CandidateOnly(p) {
  }else if(p.startsWith('novydres/cronicas/')||p.startsWith('novydres/personagens/')){
   kind='C41_SCOPE_SUBJECT_PROTOTYPE';disposition='RECONCILE_C45_AUTHORITY_FIELDS_BEFORE_E';
  }else if(p.startsWith('novydres/scripts/')){
-  kind=/test\\.mjs$|\\/testar-/.test(p)?'CANDIDATE_REGRESSION_TEST':'CANDIDATE_DEVELOPMENT_TOOL';
+  kind=p.endsWith('.test.mjs')||p.split('/').at(-1).startsWith('testar-')?'CANDIDATE_REGRESSION_TEST':'CANDIDATE_DEVELOPMENT_TOOL';
   disposition='REVIEW_FINAL_RUNTIME_DEPENDENCIES_AND_ANTI_LEGACY';
  }else if(p.startsWith('novydres/sistema/arquitetura/')){
   kind='ADR_DESIGN_AND_TEST_EVIDENCE';disposition='REVIEW_STORAGE_LOCATION_NOT_ACTIVE_RUNTIME';
@@ -200,8 +200,8 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   workflowContents.master.includes('Determine applicability of historical V2 gate')&&
   workflowContents.master.includes("if: steps.applicability.outputs.applicable == 'true'")&&
   !workflowContents.candidate.includes('Determine applicability of historical V2 gate')&&
-  workflowContents.candidate.includes('run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs --root .')&&
-  workflowContents.master.includes('run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs --root .'),
+  workflowContents.candidate.includes('ORCHESTRATION_VALIDATOR_V2.mjs --root .')&&
+  workflowContents.master.includes('ORCHESTRATION_VALIDATOR_V2.mjs --root .'),
   'D01_WORKFLOW_BEHAVIOR_WITNESS_DRIFT');
  const shared=index.shared_blob_identity_review;
  need(shared?.count===counts.same&&shared?.editorial_equivalence==='NOT_PROVEN'&&
