@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_EM_CURSO_A01_A03_PASS_A04_A05_NEXT
+status: EXECUCAO_EM_CURSO_A01_A03_A05_PASS_A04_NEXT
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -72,6 +72,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A01; A02/A03 para fechar o contrato.
 - **Escopo/saída:** revisar `fase-a/git-e-roteadores.md`: descoberta das três entradas, lookup exato por ID, leitura por snapshot, catálogo gerado e hash sem circularidade, invalidação de cache, CAS, parent esperado, readback e erros. Conferir capacidades e limites das ferramentas disponíveis sem efetuar mutações nesta etapa documental. Não presumir shell ou API no Web. Especificar DEC-25 no contrato existente: entrada/checkpoint por commit, fontes decisivas, recuperação de divergência e evidência externa de conclusão. Verificar ações reais de leitura, escrita e acompanhamento de CI, sem assumir equivalência entre o ambiente Codex e o Web.
 - **Conclusão:** contratos de entrada/saída, erro e retomada equivalentes nos dois canais, NOT_FOUND explícito, sem fallback fuzzy ou overwrite silencioso. Capacidade de proteção de refs, CI e sandbox classificada como comprovada ou pendência concreta; limitações não viram garantias. O contrato distingue sinal objetivo de erro de comparação semântica assistida; aplicar DEC-26 à recuperação, ao risco residual e à renovação excepcional, sem dispensar a prova de DEC-25.
+
+
+#### Execução de A05 — 2026-11-12
+
+- **Estado:** PASS de contrato de interfaces e levantamento de capacidade; **não** comprova controle DEC-25 nem equivalência Codex/Web. **Entrada:** `0298e4837bf9a304857837c5639b2c74fc5a729b`.
+- **Saída:** [git-e-roteadores.md](../fase-a/git-e-roteadores.md#a05--contratos-webcodex-e-continuidade-com-prova-de-capacidade-2026-11-12) define `resolve/read_selected/commit_transaction/resume`, saídas, diagnósticos, recuperação, autoria, fallback proibido e checkpoints.
+- **Evidências:** Web GitHub fetch por ref, blobs, comparação, criação de tree/commit, atualização com `expected_sha` e readback A01–A03 reais. API de consulta CI existe, mas em `0298e48` retornou **0 runs, 0 check-runs, 0 statuses**. Sem shell/Codex executado; stale/ref remota e falha de confirmação ainda não provocadas em sandbox. Tokens/bytes Web `NOT_OBSERVABLE` (DEC-19).
+- **Próximo:** A04 pendente; A06 requer A04 e A02/A03/A05. DEC-25 depende B/C e DEC-26 mantém parada/renovação excepcional.
 
 ### A06 — Fechar critérios, gabaritos e fronteira B/C
 

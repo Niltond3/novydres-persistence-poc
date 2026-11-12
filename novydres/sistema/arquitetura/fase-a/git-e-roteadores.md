@@ -93,3 +93,49 @@ Sincronização entre branches é explícita: B começa de um snapshot novo de m
 - **Sucessões:** propostas de G19/G23/G24/G26/G28, contrato Git e governança editorial precisam de política sucessora expressamente autorizada antes de operação; A03 define consequências, não as aprova nem congela.
 
 **Provas desta etapa:** alterações documentais verificadas no GitHub por SHA/bytes, sem ativação. **Não provados:** endpoint remoto rejeitar stale, recuperação pós-perda de confirmação, performance por resposta, sigilo contextual e compatibilidade executada Web/Codex; mantidos como deveres de B04/C03/C07. Próximas A04 e A05; A06 depende das duas.
+
+## A05 — Contratos Web/Codex e continuidade com prova de capacidade (2026-11-12)
+
+**Estado:** A05 especificação concluída, implementação/ensaios C e B ainda não. Entrada `0298e4837bf9a304857837c5639b2c74fc5a729b` no mesmo ramo candidato. Os comportamentos testados abaixo são resultados reais do **ChatGPT Web + conector GitHub desta execução**; não são atribuídos ao Codex. A continuidade por fase de DEC-25 continua condicionada a prova B/C, e DEC-26 exige handoff quando a base não puder ser reconciliada.
+
+### Interface lógica única (sem exigir tecnologia idêntica)
+
+`resolve(subject_id, revision, role, purpose)`: entrada `{repo,branch,expected_head?,commit_sha,subject_id,role,visibility_ceiling}`. Fixar ref no início, ler **somente** `AGENTS.md`, `CONTEXT.md`, `catalogo.json` após E (antes de E: bootstrap pinado operacional antigo para a mesa; em A–D: documentação candidata explicitamente selecionada). Procurar subject ID por igualdade exata no catálogo daquela árvore, um owner; retornar `{snapshot_sha,subject_id,owner_path,files:[{path,blob_sha}],source_locators,epistemic_scope}`. Em `NOT_FOUND` ou ID ambíguo: erro explícito, sem aproximação, Git histórico como fallback ou inventar fonte.
+
+`read_selected(snapshot_sha, paths[], actor_scope)`: conferir cada path contra a tree do **mesmo commit**, blob correspondente e fonte/tempo/ator, aplicar política de **divulgação** adequada à resposta. Acesso técnico a GM_HIDDEN por papel autorizado não significa que esse conteúdo deve ir a um output público. Conteúdo não localizado ou não sustentado: `UNKNOWN`/`NOT_FOUND`, nunca `CONFIRMED`.
+
+`commit_transaction(expected_head,tx_id,changes[],authority)`: preparar deltas em owners existentes, verificar autorização+schema+fonte e `tx_id`; publicar **uma tree e um commit** cujo pai é `expected_head`; `update_ref(expected_sha=expected_head, force=false)`; recuperar ref/commit/tree/changed blobs e reconciliar `tx_id` e efeitos. Retornar `{status,commit_sha,tree_sha,base_head,changed_blobs,readback}` apenas se a publicação foi confirmada; resultados incertos retornam `PENDING_PERSISTENCE`. Nunca ocultar o fato de que create_blob/tree/commit sem update_ref não publicou a branch.
+
+`resume(checkpoint)`: `{task_id,branch,source_commit,source_refs,decisions_applied,outputs,tests,limit,next_step}` é registro no backlog existente, não substituto da consulta Git. Readback da ref atual e referências; `HEAD_DIFFERENT` requer comparação/reconciliação e reprova afirmações de conclusão stale. Caso divergência sem base confiável, pausar apenas a unidade afetada e fornecer handoff PLAYER_SAFE (DEC-26). Evitar refazer etapas já confirmadas ou reabrir decisões aceitas.
+
+### Mapeamento por canal e capacidades verificadas
+
+| Capacidade | ChatGPT Web nesta execução | Codex | Prova / cautela |
+|---|---|---|---|
+| Repositório privado e identidade | **COMPROVADO:** `get_repo`, `get_user_login`, `pull=true`, `push=true`; ref design lida | **NÃO EXERCITADO** neste canal | Permissão do repo não certifica proteção administrativa efetiva de branch |
+| Leitura fixada por SHA, diretório/tree e blob | **COMPROVADO:** `fetch_file(ref=SHA)`, REST `/git/trees/{sha}?recursive=1` não truncada, blob hash, `compare_commits` | **NÃO EXERCITADO** | Para árvore grande, paginar/inventariar se a resposta truncar; validar path e hash |
+| Escrita múltipla atômica e readback | **COMPROVADO no ramo autorizado:** `create_blob`, `create_tree(base_tree_sha)`, `create_commit(parent_sha)`, `update_ref(expected_sha,force=false)` e readback; commits A01–A03 | **NÃO EXERCITADO** | Sucesso sem disputa não prova rejeição de SHA stale; B04 deve provar isso em ref descartável |
+| Consulta de CI/Actions | **COMPROVADA API GET:** consultas a `/actions/runs`, `/commits/{sha}/check-runs`, statuses e acesso a jobs/logs pela integração | **NÃO EXERCITADO** | No commit de entrada de A05, `0298e48`, **0 workflow runs, 0 check-runs e 0 statuses** retornados; CI do plano não foi executado |
+| Disparo/edição de workflow, shell/clone local ou métricas HTTP/tokens | **NÃO COMPROVADO:** não há ferramenta GitHub de execução de shell nem autorização de presumir disparo manual de workflow; contadores HTTP/tokens não expostos por esse conector | **NÃO EXERCITADO** | Em Web `NOT_OBSERVABLE` só para bytes HTTP/tokens reais conforme DEC-19. CI pode ocorrer via workflow GitHub após commit, mas não afirmar que ocorreu sem run ID |
+| Proteção de branch e concorrência | `expected_sha` aplicado em updates normais; proteção admin/ruleset ainda não inspecionada nem rejeição negativa executada | **NÃO EXERCITADO** | B04/C03 devem testar stale ref, confirmação perdida e corrida em sandbox; E verifica ruleset real |
+
+**Equivalência exigida:** as duas rotas devem oferecer o mesmo resultado lógico por ID/commit/fonte e a mesma decisão de erro/stop, mesmo que Codex use Git/checkout local e Web use REST/conector. Equivalência não é inferida do mesmo documento, de uma resposta correta, nem de simulação. Comparar invocações/saídas/erros e resultados com gabarito isolado em B02/B03/B04 e C07. Não usar memória de chat como fonte de autoridade nem misturar refs de master e design.
+
+### Diagnósticos observáveis e reação
+
+| Código | Condição | Ação |
+|---|---|---|
+| `NOT_FOUND` | ID/path não localizado no snapshot fixo | Parar consulta afetada e informar ausência; sem fuzzy fallback |
+| `STALE_HEAD` | Branch HEAD mudou antes de publicar | Não promover; reler, comparar e reconciliar explicitamente |
+| `HASH_MISMATCH` | Path existe mas blob difere do pin | Bloquear fato/etapa afetados; recuperação pela fonte correta |
+| `AUTHORITY_CONFLICT` | Dois owners ou canon/política divergentes | Registrar CONFLICT, nenhuma fusão silenciosa |
+| `KNOWLEDGE_LEAK_RISK` | Informação de agente não autorizada para divulgação | Bloquear output público e rever escopo/ator |
+| `UNVERIFIED_WRITE` | Falha de atualização/readback ou resposta perdida | Consultar branch/commit/tx antes de repetir; `PENDING_PERSISTENCE` |
+| `EVIDENCE_MISSING` | PASS alegado sem CI/commit/readback quando exigido | Gate não passa; manter dependentes bloqueados |
+| `RECOVERY_FAILED` | Fontes ou checkpoint incoerentes após tentativa explícita | Pausar unidade, handoff com refs e limites (DEC-26) |
+
+### Checkpoint e condição de DEC-25
+
+Ao começar cada tarefa, **automaticamente onde possível**: (1) fetch HEAD, (2) recuperar linha da tarefa/backlog e decisões DEC pertinentes, (3) ler fontes exatas e validar SHA, (4) checar dependências/gates, (5) antes de escrever repetir HEAD/lease, (6) após escrever fazer readback de HEAD, commit/parent, blobs, status e CI quando exigido, (7) registrar checkpoint curto. Os passos objetivamente verificáveis podem virar validadores em C; a presente execução é ferramenta-orquestrada e **não certifica um detector semântico automático**. B03/B04/C07 devem demonstrar falha induzida: fonte inexistente, fonte presente que não sustenta conclusão, decisão antiga, checkpoint stale, falsa conclusão e recuperação na mesma conversa; incluir caso estruturalmente válido mas semanticamente falso. Comparação não deve expor informações GM_HIDDEN no relatório.
+
+**Limites atuais:** o Web já prova escrita/readback de documentação candidata. Nenhuma prova aqui demonstra recuperação de erro injetado, resiliência em sessão longa, medição de tokens ou equivalência com Codex. Portanto **DEC-25 AINDA NÃO SATISFEITA** para dispensar troca de chat por fase. Se o chat perder contexto recuperável, DEC-26 prevalece. A05 não concede PASS a B/C nem cutover.
