@@ -144,3 +144,30 @@ test('V08/V12 HEAD-pinned bytes cannot be masked by dirty checkout or false medi
   assert.ok(has(link,'SYMLINK_FORBIDDEN'));
  }finally{rmSync(dir,{recursive:true,force:true});}
 });
+
+test('V08 HEAD-pinned auditor accepts a valid >1MiB blob without skipping SHA verification',()=>{
+ const dir=mkdtempSync(join(tmpdir(),'novydres-c06-large-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:dir,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();
+ const put=(p,value)=>{const file=join(dir,p);mkdirSync(dirname(file),{recursive:true});writeFileSync(file,value);};
+ try{
+  git('init','--quiet');
+  put('novydres/AGENTS.md','Candidate only. No activation.\n');
+  put('novydres/CONTEXT.md','Candidate only. No runtime use.\n');
+  put('novydres/catalogo.json','{"subjects":[]}\n');
+  put('novydres/migration/VISUAL_ASSET_REGISTRY_V2.json',
+   '{"policy":"DRIVE_BINARY_GITHUB_LINK_ONLY","entries":[]}\n');
+  const large=JSON.stringify({kind:'TEST_ONLY_LARGE_INVENTORY',payload:'x'.repeat(1_300_000)});
+  assert.ok(Buffer.byteLength(large)>1024*1024);
+  put('novydres/sistema/arquitetura/fase-d/inventario-origens.json',large);
+  git('add','.');
+  git('-c','user.name=NOVYDRES-test','-c','user.email=test@example.invalid',
+   'commit','--quiet','-m','TEST_ONLY large Git blob audit');
+  const sha=git('rev-parse','HEAD');
+  const a=auditRepository(dir,{expected_head:sha});
+  assert.equal(a.gate,'C06_CANDIDATE_AUDIT_EXECUTED_WITH_LEGACY_PENDING');
+  assert.equal(a.inventory_coverage.scanned,5);
+  assert.equal(a.inventory_coverage.missing,0);
+  assert.equal(a.audited_commit,sha);
+  assert.equal(a.issues.length,0);
+ }finally{rmSync(dir,{recursive:true,force:true});}
+});

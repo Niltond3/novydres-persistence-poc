@@ -15,12 +15,13 @@ const PUBLIC_ENTRY=new Set(['novydres/AGENTS.md','novydres/CONTEXT.md','novydres
 const PRIVATELABEL=/(?:GM_HIDDEN|__GM_HIDDEN)/;
 const mediaPath='novydres/migration/VISUAL_ASSET_REGISTRY_V2.json';
 const finalMediaPath='novydres/fontes/registro.json'; // D02 must migrate the real register; no legacy fallback.
+const MAX_GIT_BUFFER=64*1024*1024; // Explicit upper bound; Node execFileSync defaults to only 1 MiB.
 const fail=(code,detail='')=>{const e=new Error(code+(detail?': '+detail:''));e.code=code;throw e;};
 const order=(a,b)=>a<b?-1:a>b?1:0;
 
 function lsTree(root,commit) {
  const raw=execFileSync('git',['ls-tree','-r','-z','--full-tree',commit],
-  {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']});
+  {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore'],maxBuffer:MAX_GIT_BUFFER});
  return raw.split('\0').filter(Boolean).map(line=>{
   const m=/^(\d{6}) (blob|commit|tree) ([a-f0-9]{40})\t(.+)$/.exec(line);
   if(!m)fail('MALFORMED_GIT_TREE');
@@ -122,7 +123,7 @@ export function auditRepository(root=process.cwd(),{mode='CANDIDATE',expected_he
  // substituted or symlink-backed working-tree file must not hide an old route
  // or a secret still committed in HEAD.
  const git=(...args)=>execFileSync('git',args,
-  {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();
+  {cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore'],maxBuffer:MAX_GIT_BUFFER}).trim();
  const head=git('rev-parse','HEAD');
  if(!/^[a-f0-9]{40}$/.test(head))fail('HEAD_NOT_RESOLVED');
  if(expected_head!==null&&expected_head!==head)fail('HEAD_DIFFERENT');
@@ -133,8 +134,11 @@ export function auditRepository(root=process.cwd(),{mode='CANDIDATE',expected_he
   let bytes;
   try {
     bytes=execFileSync('git',['cat-file','blob',f.blob_sha],
-      {cwd:root,stdio:['ignore','pipe','ignore']});
-  } catch {fail('GIT_BLOB_UNAVAILABLE',f.path);}
+      {cwd:root,stdio:['ignore','pipe','ignore'],maxBuffer:MAX_GIT_BUFFER});
+  } catch(error) {
+    if(error?.code==='ENOBUFS')fail('GIT_BLOB_AUDIT_LIMIT',f.path);
+    fail('GIT_BLOB_UNAVAILABLE',f.path);
+  }
   const actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
   if(actual!==f.blob_sha)fail('GIT_BLOB_INTEGRITY',f.path);
   contents[f.path]=bytes.toString('utf8');
