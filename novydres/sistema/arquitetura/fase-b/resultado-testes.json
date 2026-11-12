@@ -8302,5 +8302,154 @@
       "fictional_player_action": "TEST_ONLY: O protagonista põe sobre a mesa os comprovantes de pagamento e afirma que não deixará o ateliê até conferirem os valores.",
       "narrated_result": "O proprietário passa os recibos contra a janela. Dois carimbos têm o mesmo número. Ele fecha a boca antes de terminar a ameaça. — Aqui cobraram uma parcela duas vezes. A outra continua atrasada. — Rasga o aviso de despejo imediato e escreve um prazo de dez dias para conciliação. A aprendiz volta à bancada; ninguém precisa carregar as ferramentas hoje. O valor restante, porém, continua em disputa e o proprietário anuncia que trará o contador. O protagonista mantém a possibilidade de pagar, negociar ou contestar."
     }
+  },
+  "b03_postfreeze_scoring_dec27": {
+    "status": "PASS_DETERMINISTIC_SCOPED_NOT_INDEPENDENT_SEMANTIC_REVIEW",
+    "initial_frozen_commit": "00d163309b1fe8b87e9880aa1fc110d022a7df60",
+    "initial_blob_sha": "60ca588ab256c81322d73dc114645f1ef2493ee7",
+    "targeted_retest_commit": "c8afeab5096c5f4c6501469dabab6a19a3021bc8",
+    "original_questions_unchanged": true,
+    "preserved_first_round": {
+      "total": 6,
+      "complete": 3,
+      "incomplete": [
+        "B-Q11",
+        "B-Q26",
+        "B-Q30"
+      ],
+      "raw_record": "b03_new_web_round_2026_11_12.cases"
+    },
+    "targeted_retest": {
+      "total": 3,
+      "verified": 3,
+      "raw_record": "b03_new_web_round_2026_11_12.targeted_retest.cases"
+    },
+    "effective_scoped": {
+      "source_pin_check": 6,
+      "candidate_lookup": 6,
+      "corrected_cases": 3,
+      "critical_resources": [
+        "B-Q29",
+        "B-Q30"
+      ],
+      "result": "6/6 DETERMINISTIC_ONLY"
+    },
+    "scorer": {
+      "path": "novydres/sistema/arquitetura/fase-b/avaliador-pos-congelamento.mjs",
+      "commit": "72f39daaf1f46087267c014982861d4180e0379b",
+      "run_id": 43221036507,
+      "job_id": 131192310614,
+      "conclusion": "success",
+      "output_marker": "PASS_DETERMINISTIC_POST_FREEZE_ONLY"
+    },
+    "limitations": [
+      "Outputs first drafted from abbreviated case names, original complete requests checked post-freeze; three incompletes preserved.",
+      "Same-chat Web answers are not blinded against all prior case metadata.",
+      "Source 6/6 pin checks and deterministic candidate comparisons do not replace independent contextual interpretation.",
+      "Historical disappeared Web answers remain unavailable and are not retroactively approved."
+    ]
+  },
+  "dec25_scoped_real_integration_2026_11_12": {
+    "status": "SCOPED_EVIDENCE_NOT_GENERAL_SEMANTIC_DETECTOR",
+    "remote_github_run": 43220528637,
+    "remote_ref": "test/adr001-b04-ci-43220528637-1",
+    "remote_ref_cleaned": true,
+    "observed_failures": [
+      "SOURCE_NOT_FOUND",
+      "SOURCE_IRRELEVANT_TO_QUOTE",
+      "OBSOLETE_DECISION",
+      "CHECKPOINT_DIVERGED",
+      "CONCLUSION_WITHOUT_PROOF",
+      "CONCLUSION_BAD_PROOF",
+      "ACTOR_KNOWLEDGE_UNSUPPORTED",
+      "DISCLOSURE_DENIED",
+      "AUTHORITY_DENIED",
+      "SOURCE_BLOB_MISMATCH"
+    ],
+    "real_commit_and_blob_proof_checked": true,
+    "obsolete_decision_real_ADR_lookup": "INCLUDED_IN_SUBSEQUENT_CODE_PENDING_CI_ON_LATEST_COMMIT",
+    "recovery_same_conversation": {
+      "observed": true,
+      "sequence": [
+        "43217583577 FAIL source diagnostic ordering",
+        "43218222107 FAIL ambiguous REST 422 classification",
+        "43218475855 FAIL stale validator layer expectation",
+        "43219109670 PASS remote operations",
+        "43220528637 PASS explicit stale lease",
+        "43221036507 PASS postfreeze scorer"
+      ],
+      "limitations": "This is observed corrective work in one Web conversation and isolated CI execution, not proof against all semantic mistakes."
+    },
+    "semantic_escapes": [
+      "A source excerpt can be factually correct but semantically insufficient outside tested claim/locator mapping.",
+      "The scorer checks declared data and invariants, not natural-language truth universally.",
+      "The real lost acknowledgement was client-suppressed after remote write, not induced loss of network response."
+    ],
+    "dec26": "Continue independent work; pause only units whose sources or independent review cannot be restored."
+  },
+  "narrative_contextual_self_review_dec27": {
+    "status": "CONTEXTUAL_SELF_REVIEW_COMPLETED_INDEPENDENT_REVIEW_PENDING",
+    "basis": "8 preserved fictitious scenes + N-06 targeted played consequence, none from CHR-001",
+    "case_findings": [
+      {
+        "id": "N-01",
+        "finding": "NPC offers courtesy and explicit nonconcession on institutional grounds; passes self contextual check.",
+        "limitation": "Do not treat cordiality as automatic alliance."
+      },
+      {
+        "id": "N-02",
+        "finding": "Exact social concession is supplied while institutional allegiance remains; passes self contextual check."
+      },
+      {
+        "id": "N-03",
+        "finding": "Pending intention survives framing and no new PC agreement is assumed; passes self contextual check."
+      },
+      {
+        "id": "N-04",
+        "finding": "Nonessential days compressed before a specific causally meaningful obstacle; passes self contextual check."
+      },
+      {
+        "id": "N-05",
+        "finding": "Substantial month-scale jump is held pending PC priorities; passes self contextual check."
+      },
+      {
+        "id": "N-06",
+        "finding": "Initial output only set up a conflict; recorded insufficiency. N-06-RESULT then uses an explicitly supplied fictional PC action and plays a constrained consequential resolution; improvement observed, independent review pending."
+      },
+      {
+        "id": "N-07",
+        "finding": "Mystery central truth fixed in TEST_ONLY setup before clue; disclosure remains indirect and outcome open; passes self contextual check."
+      },
+      {
+        "id": "N-08",
+        "finding": "Family agency, solidarity and conditional political risk without mandatory harm or coercing PC choice; passes self contextual check."
+      }
+    ],
+    "assessed_dimensions": [
+      "NPC interests and limits",
+      "agency of PC",
+      "causal consequence",
+      "time and pending intention",
+      "social success scope",
+      "mystery truth fixed before clues",
+      "fictional isolation",
+      "gothic-punk institutional pressure"
+    ],
+    "absent_proof": [
+      "Independent narrative-editorial contextual review",
+      "Live runtime behavior after cutover; not authorized at this stage"
+    ],
+    "conclusion": "NO_EDITORIAL_INDEPENDENT_PASS"
+  },
+  "metrics_dec27_new": {
+    "status": "NEW_MEASUREMENT_IMPLEMENTED_IN_CI_PENDING_OBSERVABLE_RUN_RESULT",
+    "scorer": "fase-b/avaliador-pos-congelamento.mjs",
+    "design": "Six fixed case IDs, source and candidate GitHub REST contents GET, two interleaved rounds, paired runner/endpoint/auth, capture elapsed milliseconds and API JSON response-body bytes.",
+    "sample_size": "12 source and 12 candidate calls; n=2 per case per side",
+    "baseline": "Pinned historical source c26; candidate design current head (same C41 model, not master C45)",
+    "limitation": "Different payload sizes, cache/network variance, small n, candidate not yet operational; historical Web UI latencies absent.",
+    "actual_web_tokens": "NOT_OBSERVABLE_DEC19",
+    "actual_web_http_wire_bytes": "NOT_OBSERVABLE_DEC19",
+    "p95": "NOT_REPORTED; no historical baseline, small and heterogeneous samples"
   }
 }

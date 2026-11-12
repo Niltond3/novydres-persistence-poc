@@ -376,5 +376,47 @@
       "ref_unchanged": true,
       "stale_sha_rejection_proven": false
     }
+  },
+  "b05_dec27_current": {
+    "status": "B_REMEDIATION_REQUIRED",
+    "decision": "DEC-27 subsequent explicit player instruction supersedes DEC-21 two-channel clause; functional and risk coverage only.",
+    "baseline_master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "candidate_historical_cursor": "C41",
+    "operational_cursor": "C45; NOT_REBASED_OR_PROMOTED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "B01": "PASS_SCOPED_HISTORICAL_4_CANDIDATES_SOURCE_PINS_WITH_DECLARED_CURSOR_DRIFT",
+    "B02": "PASS_SCOPED_REUSABLE_30_OF_30_EFFECTIVE_CASES_WITH_HISTORICAL_INDEPENDENT_REVIEW; older 51/90 remains history; not requiring second channel",
+    "B03": "6/6 EFFECTIVE_DETERMINISTIC_POSTFREEZE; original 3/6 incomplete before 3/3 targeted retest; scorer run 43221036507; new raw Web answers independent semantics pending; historical responses not recovered",
+    "B04": {
+      "status": "PASS_SCOPED_REAL_GITHUB_DISPOSABLE_REF_WITH_DECLARED_LIMITATIONS",
+      "run_id": 43220528637,
+      "job_id": 131190597209,
+      "validated_run_id": 43221036507,
+      "real_publication_readback": true,
+      "duplicate_no_op": true,
+      "conflicting_same_tx_blocked": true,
+      "real_two_writers_one_winner": true,
+      "rest_loser_error": "HTTP_422_GENERIC_REFERENCE_CANNOT_BE_UPDATED_NOT_EXPLICIT_EXPECTED_SHA_PROOF",
+      "git_push_explicit_stale_lease": "REJECTED_STALE_INFO_EXIT_1_REF_UNCHANGED",
+      "client_suppressed_confirmation_recovered_without_duplicate": true,
+      "network_loss_not_injected": true,
+      "cleaned_disposable_ref": true,
+      "latest_implementation_revision": "a506354d2f170bfaeb7815bc7261752962646d05",
+      "latest_revision_CI": "NOT_YET_VERIFIED_AT_CHECKPOINT"
+    },
+    "DEC25": "LIMITED_REAL_SOURCE_AND_CHECKPOINT_GUARDS_OBSERVED; semantics can escape, DEC26 applies; newest real ADR decision test pending CI",
+    "narrative": "8 ISOLATED_SCENES_AND_ONE_CAUSAL_FOLLOWUP; SELF_CONTEXTUAL_REVIEW_NOT_INDEPENDENT",
+    "metrics": "PAIRED_SAMPLES_IMPLEMENTED_PENDING_RUN; HISTORICAL_WEB_P95_UNMEASURED_NOT_WAIVED",
+    "historical_web_response_search": "inspected evidencia-chatweb-parcial-2026-11-11.json and evidencias-remediacao-final-2026-11-11.json; no old per-case raw Web answer text; insufficient historical evidence retained",
+    "critical_unmet": [
+      "Independent contextual-semantic review of the newly frozen Web case responses and sources, preserving initial incomplete outputs",
+      "Independent editorial contextual review of fictional narrative scenarios (schemas and lexical checks not a substitute)",
+      "Confirm latest changed CI implementation and new comparable measurements by run, job and logs before closing the gate"
+    ],
+    "next_eligible": "Independent contextual review of six frozen Web queries and nine fictitious narrative outputs; reconcile findings and record latest CI metrics, then B05 reevaluation; no C01 yet",
+    "master_canon_campaign_runtime_unchanged": true
   }
 }

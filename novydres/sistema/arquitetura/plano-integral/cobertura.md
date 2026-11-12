@@ -67,3 +67,16 @@ Todo IMP precisa de fonte/destino e função preservada; não implica preservar 
 Esta é prova de **desenho/persistência da documentação**, não da migração integral. Os validadores V01–V12, a integração funcional efetiva, o CI, a concorrência remota e ZERO LEGADO seguem **NOT_EXECUTED**. O gate B existente continua `B_REMEDIATION_REQUIRED`. O Core Rulebook V5 integral e a certificação final da ficha-alvo 2010 permanecem `PENDING_EVIDENCE`, não são pré-condições para o escopo isolado B que não reescreve a ficha. Mídia externa e conflitos editoriais ficam como dependências de D/E. Antes de E, nenhuma entrada candidata é ativada; aprovação histórica A está preservada.
 
 A execução A–D foi autorizada pelo jogador em 2026-11-12; E ainda exige autorização expressa. Passar de A a B é permitido somente com checkpoint e autorização já registrados; **não** presume dispensada a troca de chat por DEC-25, cuja prova fica em B/C e cuja exceção de recuperação está em DEC-26.
+
+## Provas por função e risco — DEC-27, execução de B (2026-11-12)
+
+Este checkpoint é prospectivo e não altera os vereditos históricos. `B_REMEDIATION_REQUIRED` continua até encerramento independente.
+
+| Função / risco | Prova real publicada | Estado e limite |
+|---|---|---|
+| Recuperação factual, fonte, conhecimento e recursos | B02 30/30 efetivos com revisão independente histórica; B03 seis respostas Web congeladas, três incompletas e três retestadas; CI `43221036507` | PASS determinístico 6/6 efetivos; revisão semântica independente da nova rodada ainda pendente; C41 não igual a C45 |
+| Persistência, idempotência, concorrência e falhas | Actions `43220528637` e `43221036507`, ref descartável, HEAD/commit/blob readback, prova de `stale info` explícito | PASS_SCOPED no executor de B; REST 422 genérico distinto de rejeição por lease; perda de resposta de rede não injetada |
+| Autoridade/DEC-25/DEC-26 | Dez negativos ligados a fontes/ref reais, checkpoint e prova Git; leitura da DEC-27 vigente adicionada para CI | Proteções delimitadas; nenhuma certificação de detecção semântica geral |
+| NPCs, social, intenção, ritmo, prioridades, drama, mistério e sigilo | Oito outputs TEST_ONLY, N-06 resultado fictício adicional, avaliação contextual interna registrada | Revisão editorial **independente PENDING**; não substituída por scanner/CI |
+| Métricas/custo | Telemetria real de chamadas e tempos REST Actions, coleta pareada nova implementada | Web tokens e bytes HTTP não observáveis (DEC-19); p95 histórico não medido e não inferido; comparar somente mesmo escopo |
+| Gate e cutover | `fase-b/gate-e-readback.json#b05_dec27_current` | `B_REMEDIATION_REQUIRED`; C bloqueada e E exige autorização própria |
