@@ -14,6 +14,7 @@ const RELATIVE_OLD=/(?:\.\.\/)+(?:chronicles|runtime|world|governance|systems|mi
 const PUBLIC_ENTRY=new Set(['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json']);
 const PRIVATELABEL=/(?:GM_HIDDEN|__GM_HIDDEN)/;
 const mediaPath='novydres/migration/VISUAL_ASSET_REGISTRY_V2.json';
+const finalMediaPath='novydres/fontes/registro.json'; // D02 must migrate the real register; no legacy fallback.
 const fail=(code,detail='')=>{const e=new Error(code+(detail?': '+detail:''));e.code=code;throw e;};
 const order=(a,b)=>a<b?-1:a>b?1:0;
 
@@ -100,6 +101,8 @@ export function auditTree({files,contents={},mode='CANDIDATE',mediaRegistry=null
   if(mediaRegistry.policy!=='DRIVE_BINARY_GITHUB_LINK_ONLY')
    issues.push({code:'MEDIA_POLICY_MISMATCH',path:mediaPath});
  }
+ if(mode==='ZERO_LEGACY_FINAL'&&mediaRegistry===null)
+   issues.push({code:'MEDIA_REGISTRY_REQUIRED_IN_FINAL',path:finalMediaPath});
  const legal=issues.length===0;
  const gate=mode==='ZERO_LEGACY_FINAL'?
    (legal&&counters.legacy_paths===0&&counters.symlinks===0&&counters.media_pending===0?
@@ -136,9 +139,15 @@ export function auditRepository(root=process.cwd(),{mode='CANDIDATE',expected_he
   if(actual!==f.blob_sha)fail('GIT_BLOB_INTEGRITY',f.path);
   contents[f.path]=bytes.toString('utf8');
  }
- let registry;
- try {registry=JSON.parse(contents[mediaPath]);}
- catch {fail('MEDIA_REGISTRY_INVALID',mediaPath);}
+ // The old media register itself is a legacy path. Once D02 removes that
+ // subtree, the final audit must use the migrated, HEAD-pinned source. Missing
+ // final evidence is BLOCKED, never a successful empty media inventory.
+ const registryPath=mode==='ZERO_LEGACY_FINAL'?finalMediaPath:mediaPath;
+ let registry=null;
+ if(typeof contents[registryPath]==='string') {
+   try {registry=JSON.parse(contents[registryPath]);}
+   catch {fail('MEDIA_REGISTRY_INVALID',registryPath);}
+ } else if(mode!=='ZERO_LEGACY_FINAL') fail('MEDIA_REGISTRY_INVALID',registryPath);
  if(git('rev-parse','HEAD')!==head)fail('HEAD_DIFFERENT');
  const result=auditTree({files,contents,mediaRegistry:registry,mode});
  return {...result,audited_commit:head,source:'PINNED_GIT_TREE_BLOBS_NOT_WORKTREE'};

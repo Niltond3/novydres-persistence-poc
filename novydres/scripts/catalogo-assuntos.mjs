@@ -141,9 +141,18 @@ export function resolveSubject(catalog, subjectId, {snapshot_sha,role=null,cache
   // owner or blob pointer, even when the snapshot/key happens to be correct.
   const canRead=role!=='PLAYER'||s.visibility==='PLAYER_SAFE'||s.visibility==='PC_KNOWN';
   if(!canRead) fail('DISCLOSURE_DENIED',s.id);
+  // The subject may be PLAYER_SAFE while its technical owner manifest points to
+  // restricted local scopes. Do not export private relationship names, provenance
+  // locators or the raw owner manifest through a PLAYER lookup.
+  const player=role==='PLAYER';
+  const playerVisible=id=>{
+    const linked=catalog.subjects.find(x=>x.id===id);
+    return linked && ['PLAYER_SAFE','PC_KNOWN'].includes(linked.visibility);
+  };
   const resolved={snapshot_sha,subject_id:s.id,kind:s.kind,owner_path:s.path,
-    files:s.files.map(x=>({...x})),source_ids:s.source_ids.slice(),visibility:s.visibility,
-    dependencies:s.dependencies.slice()};
+    files:s.files.filter(x=>!player||!x.path.endsWith('/assunto.json')).map(x=>({...x})),
+    source_ids:player?[]:s.source_ids.slice(),visibility:s.visibility,
+    dependencies:player?s.dependencies.filter(playerVisible):s.dependencies.slice()};
   const key=snapshot_sha+'|'+s.id+'|'+s.kind+'|'+catalog.content_index_sha+'|'+role;
   if(cache.has(key)) {
     if(JSON.stringify(cache.get(key))!==JSON.stringify(resolved)) fail('CACHE_INTEGRITY',s.id);

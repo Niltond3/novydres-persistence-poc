@@ -123,6 +123,22 @@ test('V09 externally supplied cache cannot change authorized owner/file list',()
  expectCode(()=>readSelected(root,c,id,{snapshot_sha:snap,role:'PLAYER',cache:injected,
   selected_paths:[tampered.files[0].path]}),'CACHE_INTEGRITY');
 });
+test('V04 PLAYER cannot enumerate restricted dependencies or internal provenance via a public subject',()=>{
+ const c=buildCatalog(root),id='npc-samir-haddad',manifest=global+'assunto.json';
+ const auditor=resolveSubject(c,id,{snapshot_sha:snap,role:'AUDITOR'});
+ assert.ok(auditor.dependencies.includes('chr001-npc-samir-haddad'));
+ assert.ok(auditor.files.some(f=>f.path===manifest));
+ assert.ok(auditor.source_ids.length>0);
+ const player=resolveSubject(c,id,{snapshot_sha:snap,role:'PLAYER'});
+ assert.ok(!player.dependencies.includes('chr001-npc-samir-haddad'));
+ assert.ok(player.dependencies.every(x=>c.subjects.find(s=>s.id===x)?.visibility==='PLAYER_SAFE'));
+ assert.ok(!player.files.some(f=>f.path===manifest));
+ assert.deepEqual(player.source_ids,[]);
+ expectCode(()=>readSelected(root,c,id,{snapshot_sha:snap,role:'PLAYER',
+   selected_paths:[manifest]}),'UNDECLARED_PATH');
+ assert.equal(readSelected(root,c,id,{snapshot_sha:snap,role:'PLAYER',
+   selected_paths:[global+'perfil.json']}).files.length,1);
+});
 test('V09 cache is snapshot keyed (never borrows entry from new commit)',()=>{
  const c=buildCatalog(root),cache=new Map();
  resolveSubject(c,'npc-samir-haddad',{snapshot_sha:snap,role:'AUDITOR',cache});

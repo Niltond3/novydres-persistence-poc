@@ -94,6 +94,14 @@ test('V11 missing originals and unverified SHA are recorded, never synthesized',
  assert.equal(final.gate,'ZERO_LEGACY_BLOCKED');
 });
 
+test('V11/V12 final mode never passes without the migrated media registry',()=>{
+ const incomplete=audit([],{},'ZERO_LEGACY_FINAL',null);
+ assert.equal(incomplete.gate,'ZERO_LEGACY_BLOCKED');
+ assert.ok(has(incomplete,'MEDIA_REGISTRY_REQUIRED_IN_FINAL'));
+ const actual=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL'});
+ assert.equal(actual.gate,'ZERO_LEGACY_BLOCKED');
+ assert.ok(has(actual,'MEDIA_REGISTRY_REQUIRED_IN_FINAL'));
+});
 test('V08/V12 HEAD-pinned bytes cannot be masked by dirty checkout or false media JSON',()=>{
  const dir=mkdtempSync(join(tmpdir(),'novydres-c07-audit-'));
  const git=(...args)=>execFileSync('git',args,{cwd:dir,stdio:['ignore','pipe','ignore'],encoding:'utf8'}).trim();

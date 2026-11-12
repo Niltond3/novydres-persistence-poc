@@ -43,6 +43,15 @@ test('C07 integrated knowledge and private configuration cannot be disclosed to 
  err(()=>resolveSubject(c,'chr001-npc-samir-haddad',{snapshot_sha:head,role:'PLAYER'}),'DISCLOSURE_DENIED');
  err(()=>resolveSubject(c,'chr001-unknown-fiction',{snapshot_sha:head,role:'AUDITOR'}),'NOT_FOUND');
 });
+test('C07 public subject resolution does not expose private relation or owner manifest',()=>{
+ const c=buildCatalog();
+ const player=resolveSubject(c,'npc-samir-haddad',{snapshot_sha:head,role:'PLAYER'});
+ assert.ok(!player.dependencies.includes('chr001-npc-samir-haddad'));
+ assert.deepEqual(player.source_ids,[]);
+ assert.ok(player.files.every(f=>!f.path.endsWith('/assunto.json')));
+ err(()=>readSelected(root,c,'npc-samir-haddad',{snapshot_sha:head,role:'PLAYER',
+   selected_paths:['novydres/personagens/npc-samir-haddad/assunto.json']}),'UNDECLARED_PATH');
+});
 test('C07 state recovery C41 not C45, with NPC claim and unknowns preserved',()=>{
  const output=inspectCandidateResume(root,{snapshot_sha:head,expected_head:head});
  assert.equal(output.status,'CANDIDATE_HISTORICAL_ONLY');
