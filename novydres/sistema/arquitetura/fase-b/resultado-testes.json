@@ -2022,5 +2022,567 @@
     "status_contexts": 0,
     "check_runs": 0,
     "status": "NOT_EXECUTED_NO_RUNS"
+  },
+  "b03_web_2026_11_12": {
+    "execution_id": "B03-WEB-20261112-01",
+    "status": "MATCHED_BY_POST_HOC_FIXTURE_SCORER_NO_INDEPENDENT_SEMANTIC_REVIEW",
+    "queries_executed": 30,
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "design_snapshot": "135e323f151a2942aaaeb19bc6467e3d4393569b",
+    "scoring": "Answers frozen before fixture with gabarito was fetched. Automated exact-value comparison followed. Scorer and executor share an orchestration process, so independent reviewer requirement is NOT met.",
+    "read_calls_per_source": 8,
+    "critical_cases": [
+      "B-Q29",
+      "B-Q30"
+    ],
+    "previous_codex_failure_unresolved": true,
+    "results": [
+      {
+        "case_id": "B-Q01",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/unknowns"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "line 11"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q02",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/workshop/service_bay"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/character/current_mortal_workshop/service_bay"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q03",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/pc_action_boundaries/security_work_refused"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.04"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q04",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers/4"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.05"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q05",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/claims/0"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/claims/0"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q06",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers/2"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.03"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q07",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/unknowns"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.06"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q08",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+          "blob_sha": "1aa7682911a572d0e391e90d19f3af46ed34ba0d",
+          "locator": "/future_contact_realized"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.08"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q09",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/pc_action_boundaries/handshake_reply_unconfirmed"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.07"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q10",
+        "group": "world-rules",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/tramas/contato-condicional-samir/trama.json",
+          "blob_sha": "1aa7682911a572d0e391e90d19f3af46ed34ba0d",
+          "locator": "/pc_obligation_created"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.06"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q11",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+          "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+          "locator": "/historical_actor_id"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/entity"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q12",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "array",
+        "candidate": {
+          "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+          "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+          "locator": "/aliases"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/label"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q13",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+          "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+          "locator": "/historical_status"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.03"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q14",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/scope"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/scope"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q15",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "number",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/confirmed"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/confirmed"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q16",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/confirmed/0"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/confirmed/0"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q17",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/confirmed/1"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/confirmed/1"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q18",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/confirmed/2"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/confirmed/2"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q19",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/claims/0"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/claims/0"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q20",
+        "group": "npc-relations-knowledge",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+          "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+          "locator": "/unknown/2"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+          "locator": "/records/entity=npc-m3-samir-haddad-candidate/unknown/2"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q21",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "number",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.01-08"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q22",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers/0/event_marker"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.01"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q23",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/historias/m301-c01/historia.json",
+          "blob_sha": "c307277c91adf0c986e82d5d8f0714a1e4896ba7",
+          "locator": "/event_text_markers/7/event_marker"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "blob_sha": "43b461493b5470057ab54648c6f6d9055814e271",
+          "locator": "M3.01.C01.08"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q24",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint/last_event_id"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/last_confirmed_event_id"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q25",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "string",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint/provocation"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/stage/next_provocation"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q26",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint/scene_started"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/scene/status"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q27",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint/mortal"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/character/mortal"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q28",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "boolean",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/checkpoint/embrace_occurred"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/stage/embrace_occurred"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q29",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "array",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/resources/xp_*"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/character/resources/xp_*"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      },
+      {
+        "case_id": "B-Q30",
+        "group": "chronology-state",
+        "match": true,
+        "answer_type": "array",
+        "candidate": {
+          "path": "novydres/cronicas/CHR-001/estado/atual.json",
+          "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b",
+          "locator": "/resources/willpower_*"
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+          "locator": "/character/resources/willpower_*"
+        },
+        "result_visibility": "ANSWER_OMITTED_PLAYER_SAFE",
+        "execution": "CHATGPT_WEB_GITHUB_CONNECTOR_REAL_FETCH_AT_SHA"
+      }
+    ],
+    "failed_case_ids": [],
+    "web_tokens": "NOT_OBSERVABLE",
+    "http_wire_bytes": "NOT_OBSERVABLE",
+    "independent_semantic_review": "NOT_EXECUTED",
+    "codex": "CODEX_NOT_EXECUTED",
+    "current_cursor_not_rebased": true
   }
 }
