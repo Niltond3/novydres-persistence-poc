@@ -24,7 +24,7 @@ for(const x of first.cases) {
   assert.equal(x.source.path,q.evidence_source_path,x.id+' source path');
   assert.equal(x.source.sha,q.evidence_source_sha,x.id+' source blob');
   assert.equal(x.source_commit,q.snapshot.source_commit,x.id+' pinned snapshot');
-  assert.ok(x.source.locator?.length>0 && x.read_operation?.length>0);
+  assert.ok(x.locator?.length>0 && x.read_operation?.length>0);
   let complete=false;
   if(x.id==='B-Q01') complete=/UNKNOWN/.test(x.answer);
   if(x.id==='B-Q11') complete=typeof x.answer==='object' &&
