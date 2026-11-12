@@ -1,11 +1,11 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: PLANEJADO_NAO_EXECUTADO
+status: EXECUCAO_INICIADA_A01_PASS_A02_PENDENTE
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
 
-[Mandato, diagnóstico e entrevista](index.md). [Rastreabilidade dos requisitos](cobertura.md). **Todas as tarefas abaixo estão planejadas, não executadas.** A decomposição cobre A–E; Q-07 foi aceita condicionalmente como DEC-25: continuidade entre fases no Web exige controles automáticos e recuperação comprovados. Q-08 foi aceita como DEC-26 em 2026-11-12: risco residual aceito, com pausa da unidade afetada e renovação excepcional do chat se a recuperação falhar. Q-01–Q-06 estão aceitas (DEC-16/DEC-18/DEC-19/DEC-21–DEC-23), com a dispensa adicional de auditoria de rolagens em DEC-24; DEC-17 dá precedência às decisões da entrevista e DEC-20 exige revisar limites excessivos em todo o programa. Não iniciar implementação a partir deste rascunho.
+[Mandato, diagnóstico e entrevista](index.md). [Rastreabilidade dos requisitos](cobertura.md). **Baseline de elaboração:** as tarefas foram publicadas como planejadas; execução autorizada pelo jogador em 2026-11-12 para A–D somente na branch candidata. A01 encontra-se executada; tarefas seguintes seguem pendentes até prova e registro próprio. Trechos legados que falam de autorização somente documental descrevem a etapa de elaboração, anterior à nova autorização. A decomposição cobre A–E; Q-07 foi aceita condicionalmente como DEC-25: continuidade entre fases no Web exige controles automáticos e recuperação comprovados. Q-08 foi aceita como DEC-26 em 2026-11-12: risco residual aceito, com pausa da unidade afetada e renovação excepcional do chat se a recuperação falhar. Q-01–Q-06 estão aceitas (DEC-16/DEC-18/DEC-19/DEC-21–DEC-23), com a dispensa adicional de auditoria de rolagens em DEC-24; DEC-17 dá precedência às decisões da entrevista e DEC-20 exige revisar limites excessivos em todo o programa. A execução atual usa os critérios do backlog, sem habilitar runtime/cutover.
 
 ## Como executar futuramente
 
@@ -24,6 +24,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Entrada/dependência:** ADR §§1–10, aprovação original de A, gate de B, master/design e programa narrativo D00–D12; nenhuma tarefa anterior.
 - **Escopo/saída:** inventário inicial de consumidores e fontes por família, snapshots completos, divergências de branches, owners e políticas afetadas. Separar ativo/histórico/candidato e mapear o que de B precisa ser repetido. Não fazer merge indiscriminado nem inventário factual de segredos em documento público.
 - **Conclusão:** toda família do mapa de A, inclusive raiz, `.github`, mídia e dependências externas controladas, tem responsável e tratamento proposto. Autoridade da ficha e janela temporal conferidas; conflitos listados. Descoberta de refs não é reconciliação completa nem conclusão desta tarefa.
+
+
+#### Execução de A01 — 2026-11-12
+
+- **Estado:** PASS de reconciliação estrutural/snapshots e autoridade de entrada; fase A ainda aberta. **Origem:** design `5b55c12f4d041187ee597eb786049e7dbe5a22fc`; master `c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura.
+- **Saída/evidência:** adendo A01 em [auditoria-e-mapa.md](../fase-a/auditoria-e-mapa.md), com árvores Git não truncadas, `compare_commits`, 77/77 pins de caminho/blob C45 conferidos, owners por família, conflitos, mídia, ficha e janela temporal.
+- **Limites:** nenhuma migração, cena, alteração de cânone, promoção de A ou CI presumida. Design permanece diferente de master (189 origens master-only); B continua `B_REMEDIATION_REQUIRED` e deve refazer provas relevantes. Capacidade de CI consultada, mas 0 runs/status no commit de entrada da candidata.
+- **Publicação:** commit Git atômico e readback serão apontados pelo histórico da branch; este registro não se autocita com SHA circular. **Próxima:** A02; A03–A05 por dependências, A06 e A07 após suas provas.
 
 ### A02 — Fechar topologia, granularidade e modelo de informação
 
