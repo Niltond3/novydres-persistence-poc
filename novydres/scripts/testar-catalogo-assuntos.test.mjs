@@ -81,6 +81,11 @@ test('V04 restricted local actor knowledge is denied before selective retrieval'
  expectCode(()=>readSelected(root,c,'chr001-npc-samir-haddad',{snapshot_sha:snap,role:'PLAYER',
   selected_paths:[p+'elenco/npc-samir-haddad/conhecimento.json']}),'DISCLOSURE_DENIED');
 });
+test('V04 omitted actor role fails closed instead of defaulting to AUDITOR',()=>{
+ const c=buildCatalog(root);
+ expectCode(()=>resolveSubject(c,'chr001-table-config',{snapshot_sha:snap}),'ROLE_NOT_AUTHORIZED');
+ expectCode(()=>readSelected(root,c,'chr001-table-config',{snapshot_sha:snap}),'ROLE_NOT_AUTHORIZED');
+});
 test('V04 unknown roles cannot bypass disclosure control',()=>{
  expectCode(()=>resolveSubject(buildCatalog(root),'chr001-state-checkpoint',{snapshot_sha:snap,role:'UNAUTHORIZED'}),'ROLE_NOT_AUTHORIZED');
 });

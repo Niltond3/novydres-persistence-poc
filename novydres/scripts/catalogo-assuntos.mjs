@@ -128,7 +128,7 @@ export function checkCatalog(root=process.cwd()) {
 }
 
 // Only metadata (not full text) is cached; each snapshot is independent.
-export function resolveSubject(catalog, subjectId, {snapshot_sha,role='AUDITOR',cache=new Map()}={}) {
+export function resolveSubject(catalog, subjectId, {snapshot_sha,role=null,cache=new Map()}={}) {
   if(!SHA.test(snapshot_sha||'')) fail('SNAPSHOT_REQUIRED');
   if(!ID.test(subjectId||'')) fail('NOT_FOUND',String(subjectId));
   if(!['PLAYER','AUDITOR','DRAMATURGO','NARRADOR'].includes(role)) fail('ROLE_NOT_AUTHORIZED');
@@ -147,7 +147,7 @@ export function resolveSubject(catalog, subjectId, {snapshot_sha,role='AUDITOR',
   return resolved;
 }
 
-export function readSelected(root,catalog,subjectId,{snapshot_sha,role='AUDITOR',
+export function readSelected(root,catalog,subjectId,{snapshot_sha,role=null,
   selected_paths=[],cache}={}) {
   if(!SHA.test(snapshot_sha||'')) fail('SNAPSHOT_REQUIRED');
   const record=resolveSubject(catalog,subjectId,{snapshot_sha,role,cache});
