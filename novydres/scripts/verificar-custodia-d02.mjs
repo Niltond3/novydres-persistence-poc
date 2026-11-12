@@ -26,6 +26,11 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
   need(y&&y.original_blob_sha===x.source_blob_sha&&y.source_family===x.source_family&&
     y.original_preserved_in_git===true&&y.authority==='PRESERVED_SOURCE_NOT_PROMOTED'&&
     y.visibility==='SYSTEM_AUDIT_UNTIL_REVIEW','D02_ORIGIN_CUSTODY');
+  const newTarget=x.source_family==='EDITORIAL_GOVERNANCE'?
+   'novydres/sistema/governanca/originais/'+x.source_path.replace(/^novydres\/governance\//,''):
+   'novydres/fontes/originais/'+x.source_path.replace(/^novydres\//,'');
+  need(y.candidate_destination===newTarget&&
+   y.transformation_evidence==='EXACT_ORIGINAL_GIT_BLOB_SHA_REHOME_PRESERVE_SOURCE','D02_TARGET_OWNER');
   const split=x.d01_origin_route.owner_routing==='FIELD_SCOPE_SPLIT_REQUIRED';
   need(y.field_split===split&&(!split||y.cross_domain_content_handoff==='D03_D04_D05_SEMANTIC_REVIEW_REQUIRED'),'D02_FIELD_OWNER_HANDOFF');
  }
@@ -114,6 +119,8 @@ export function verifyD02Git(root=process.cwd()) {
  }
  for(const p of ['novydres/sistema/governanca/registro.json','novydres/fontes/registro.json'])
   need(/^[a-f0-9]{40}$/.test(gitBlob(p)),'D02_REGISTRY_NOT_PINNED');
+ need(sources.origin_custody.every(x=>gitBlob(x.candidate_destination)===x.original_blob_sha),
+  'D02_REHOMED_SOURCE_MISMATCH');
  need(sources.origin_custody.every(x=>gitBlob(x.original_path)===x.original_blob_sha),
   'D02_SOURCE_BYTES_CHANGED');
  const editorial=JSON.parse(cmd('show',inventory.source_snapshot.commit_sha+':novydres/governance/sources/novydres_editorial_map_v0_9_4.json'));

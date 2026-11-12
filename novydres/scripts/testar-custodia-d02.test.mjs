@@ -54,3 +54,9 @@ test('D02 does not suppress an observed Drive MIME difference',()=>{
 test('D02 does not fabricate current Drive content integrity',()=>{
  fails(d=>d.sources.external_metadata_audit.source_bytes_verified_now=109,'D02_METADATA_DENOMINATOR');
 });
+test('D02 rejects pointing to old roots instead of rehomed exact source',()=>{
+ fails(d=>d.sources.origin_custody[0].candidate_destination=d.sources.origin_custody[0].original_path,'D02_TARGET_OWNER');
+});
+test('D02 rejects provenance claiming transformation without proof',()=>{
+ fails(d=>d.sources.origin_custody[0].transformation_evidence='UNKNOWN','D02_TARGET_OWNER');
+});
