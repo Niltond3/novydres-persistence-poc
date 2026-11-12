@@ -68,6 +68,15 @@ export function verifyD03(root=process.cwd(),opts={}){
       fail('D03_GLOBAL_VARIANT_PROVENANCE');
   }
  }
+ const xp=read(root,'novydres/sistema/regras/experiencia/escopos.json');
+ if(xp.subject_id!=='rule-experience-novydres'||xp.not_operational!==true||xp.full_field_reconciliation!=='PENDING'||
+   !Array.isArray(xp.source_records)||xp.source_records.length!==8)fail('D03_XP_SCOPE_MISSING');
+ for(const row of xp.source_records){
+  const original=byPath.get(row.source_path);
+  if(!original||row.source_sha!==original.source_blob_sha||
+    row.semantic_owner_current!=='UNASSIGNED_UNTIL_APPLICABLE_PHASE'||
+    row.source_data_not_reclassified!==true)fail('D03_XP_SCOPE_AUTHORITY');
+ }
  if(seen.size!==64)fail('D03_INCOMPLETE_COVERAGE');
  return {ok:true,phase:'D03',originals:expected.length,identical_blobs:records.length,
    subject_portfolios:ids.length,gate:'STRUCTURAL_CUSTODY_ONLY_SEMANTIC_EQUIVALENCE_PENDING'};
