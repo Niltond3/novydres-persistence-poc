@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D04_EXECUTION_V1",
   "phase": "D04",
-  "status": "SOURCE_CUSTODY_STAGED_PENDING_CURRENT_STATE_SEMANTICS_AND_CI",
+  "status": "SOURCE_CUSTODY_AND_C45_RECOVERY_PIN_STAGED_PENDING_SEMANTIC_D04_GATE",
   "gate": "D04_NOT_YET_PASS",
   "candidate_only": true,
   "entry_head": "2c38f763976ea5edb6522c1a1f451b0a6727d03b",
@@ -20,12 +20,25 @@
   "provenance_proof": "GIT_EXACT_BLOB_REUSE_AND_EXECUTABLE_VALIDATOR",
   "test": "novydres/scripts/testar-custodia-d04.test.mjs",
   "semantic_gate_pending": [
-    "CURRENT_C45_SYNCHRONIZED_STATE_AND_READBACK",
+    "C45_SOURCE_PIN_RECORDED;_FULL_D04_STATE_EQUIVALENCE_AND_D05_CUTOVER_STILL_PENDING",
     "PERSONALITY_AND_ACTOR_KNOWLEDGE_LOCAL_SCOPES",
     "EPISODIC_FACT_VS_PREPARATION",
     "XP_FV_RESOURCE_BALANCES",
     "CHRONICLE_RETRIEVAL_AND_RESUME",
     "D05_CONSUMERS_AND_CATALOG_TRANSITION"
   ],
-  "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN"
+  "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN",
+  "current_C45_recovery": {
+    "path": "novydres/cronicas/CHR-001/estado/recuperacao-c45.json",
+    "proof_script": "novydres/scripts/verificar-estado-d04.mjs",
+    "negative_tests": "novydres/scripts/testar-estado-d04.test.mjs",
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_cycle": "CHR001-CYCLE-0045",
+    "cursor": "CHR001-M302-C01-05-20261111-001",
+    "actor_knowledge_rows": 47,
+    "open_threads": 44,
+    "history_preserved_C41": true,
+    "not_operational": true,
+    "scope": "C45_POINTER_AND_SOURCE_INTEGRITY_ONLY"
+  }
 }

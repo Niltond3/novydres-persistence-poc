@@ -7,4 +7,4 @@ visibility: SYSTEM_AUDIT
 ---
 # chr001-state-checkpoint
 
-Cópia candidata exclusivamente para Fase B; nunca usar como rota operacional. Arquivos: assunto.json, atual.json. Fontes e hashes em `assunto.json`.
+C41 permanece em `atual.json` exclusivamente como fixture histórica de B/C. `recuperacao-c45.json` é um retrato candidato não operacional do cursor C45, com fontes fixadas no commit de master; a execução e a readback são verificadas por `verificar-estado-d04.mjs`. Não confundir o snapshot com autorização de cena ou migração semântica final. Fontes em `assunto.json`.

@@ -17,6 +17,9 @@ on:
       - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
       - 'novydres/scripts/verificar-custodia-d04.mjs'
       - 'novydres/scripts/testar-custodia-d04.test.mjs'
+      - 'novydres/scripts/verificar-estado-d04.mjs'
+      - 'novydres/scripts/testar-estado-d04.test.mjs'
+      - 'novydres/cronicas/CHR-001/estado/**'
       - 'novydres/scripts/verificar-modulos-d03.mjs'
       - 'novydres/scripts/testar-modulos-d03.test.mjs'
       - 'novydres/scripts/verificar-gate-d03.mjs'
@@ -113,6 +116,10 @@ jobs:
         run: node --test novydres/scripts/testar-gate-d03.test.mjs
       - name: D03 prove 20 rule module owners and D05 executable handoffs
         run: node --test novydres/scripts/testar-modulos-d03.test.mjs
+      - name: D04 verify C45 immutable cursor, resources and actor-source boundaries
+        run: node novydres/scripts/verificar-estado-d04.mjs
+      - name: D04 C45 negative tests for stale pins, status and resources
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs
       - name: D04 verify complete 438 local source bytes, unique owners and regressions
         run: node --test novydres/scripts/testar-custodia-d04.test.mjs
       - name: D02 verify exact original custody and conservative external-media classification

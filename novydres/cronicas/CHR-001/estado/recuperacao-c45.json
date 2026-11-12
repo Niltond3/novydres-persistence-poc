@@ -1,0 +1,94 @@
+{
+  "subject_id": "chr001-state-checkpoint",
+  "schema": "ADR001_D04_C45_RECOVERY_PIN_V1",
+  "status": "CANDIDATE_NON_OPERATIONAL_C45_SOURCE_BACKED",
+  "visibility": "SYSTEM_AUDIT",
+  "operational": false,
+  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "source_cycle": "CHR001-CYCLE-0045",
+  "source_refs": {
+    "cycle": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "manifest": {
+      "path": "novydres/MANIFEST_V63.json",
+      "sha": "18b20257ad79c9b6a596c293f3445d28c64d8f71",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "live": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "history": {
+      "path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+      "sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "character": {
+      "path": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+      "sha": "8a00eeaea0ceba59245a34c9da1992a03635b625",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "episode": {
+      "path": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+      "sha": "04277d399330181b2cc029f5132dda38b6457c2f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "knowledge": {
+      "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    "threads": {
+      "path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+      "sha": "05ce76898d2757c1e270e9c3b1282712df123d13",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  },
+  "cursor": {
+    "provocation": "M3.02",
+    "last_event_id": "CHR001-M302-C01-05-20261111-001",
+    "last_closed_scene": "C01",
+    "next_scene": "C02",
+    "next_scene_status": "NOT_STARTED",
+    "status": "READY_FOR_NARRATOR",
+    "next_role": "NARRADOR",
+    "pending_persistence": false,
+    "mortal": true,
+    "embrace_occurred": false,
+    "diegetic_year": 1970,
+    "diegetic_civil_date": null
+  },
+  "resources": {
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_remaining": 405,
+    "xp_credit_available": 0,
+    "willpower_provisional_max": 6,
+    "willpower_superficial_damage": 2,
+    "willpower_aggravated_damage": 0,
+    "willpower_available": 4
+  },
+  "knowledge": {
+    "source_rows": 47,
+    "actor_ownership": "RECORDS_REMAIN_SCOPED_BY_ENTITY_AND_EVENT;_DUPLICATE_ENTITIES_NOT_MERGED",
+    "not_agent_to_player_disclosure": true
+  },
+  "open_threads": {
+    "source_rows": 44,
+    "closed_by_m302_c01": 0,
+    "prior_unknowns_preserved": true
+  },
+  "provenance_policy": {
+    "source_text_literal_not_new_event": true,
+    "no_new_roll_or_technical_ledger": true,
+    "source_histories_unmodified": true,
+    "pre_cutover_read_only": true,
+    "c41_historical_fixture_untouched": true,
+    "editorial_promotions": false
+  },
+  "pending": "D04_FULL_SEMANTIC_EQUIVALENCE_AND_D05_LEGACY_TRANSITION_NOT_PROVEN"
+}
