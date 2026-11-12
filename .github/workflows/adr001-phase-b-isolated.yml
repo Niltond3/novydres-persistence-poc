@@ -29,4 +29,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node novydres/sistema/arquitetura/fase-b/executor-isolado.mjs
       - name: Score frozen B03 outputs without exposing source answers in logs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node novydres/sistema/arquitetura/fase-b/avaliador-pos-congelamento.mjs

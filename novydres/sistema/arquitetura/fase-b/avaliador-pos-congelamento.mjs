@@ -64,6 +64,60 @@ const scenes=audit.narrative_exercises_2026_11_12;
 assert.equal(scenes.exercises.length,8);
 assert.ok(scenes.exercises.every(e=>e.classification==='TEST_ONLY_NOT_CAMPAIGN'));
 assert.equal(scenes.targeted_followup.id,'N-06-RESULT');
+
+// New paired navigation samples from GitHub Actions: real REST reads with the same
+// runner, endpoint, authentication and paired case ID. Different payload sizes;
+// not an historical Web p95, not token/wire bytes, and not a latency gate.
+const candidateByCase={
+  'B-Q01':'novydres/cronicas/CHR-001/historias/m301-c01/historia.json',
+  'B-Q11':'novydres/personagens/npc-samir-haddad/perfil.json',
+  'B-Q21':'novydres/cronicas/CHR-001/historias/m301-c01/historia.json',
+  'B-Q26':'novydres/cronicas/CHR-001/estado/atual.json',
+  'B-Q29':'novydres/cronicas/CHR-001/estado/atual.json',
+  'B-Q30':'novydres/cronicas/CHR-001/estado/atual.json'
+};
+const token=process.env.GITHUB_TOKEN,repo=process.env.GITHUB_REPOSITORY,head=process.env.GITHUB_SHA;
+if(!token||!repo||!head)throw new Error('paired measurement requires Actions token, repo and HEAD');
+const measures=[];
+async function timedRead(kind,caseId,path,ref) {
+  const address='https://api.github.com/repos/'+repo+'/contents/'+path+'?ref='+encodeURIComponent(ref);
+  const start=performance.now();
+  const response=await fetch(address,{headers:{
+    Authorization:'Bearer '+token,Accept:'application/vnd.github+json',
+    'X-GitHub-Api-Version':'2022-11-28','User-Agent':'novydres-adr001-metrics'
+  }});
+  const body=await response.text(), elapsed=Math.round(performance.now()-start);
+  assert.equal(response.status,200,'pinned case '+caseId+' '+kind);
+  measures.push({kind,id:caseId,ms:elapsed,json_body_bytes:Buffer.byteLength(body)});
+}
+for(let round=0;round<2;round++){
+  for(const original of first.cases){
+    const q=by.get(original.id);
+    const sides=[
+      ['source',q.evidence_source_path,q.snapshot.source_commit],
+      ['candidate',candidateByCase[q.id],head]
+    ];
+    if(round%2) sides.reverse();
+    for(const [kind,path,ref] of sides)await timedRead(kind,q.id,path,ref);
+  }
+}
+const summarize=kind=>{
+  const x=measures.filter(y=>y.kind===kind);
+  const ms=x.map(y=>y.ms).sort((a,b)=>a-b);
+  return {n:x.length,p50_ms:(ms[5]+ms[6])/2,json_body_bytes:x.reduce((z,y)=>z+y.json_body_bytes,0)};
+};
+console.log(JSON.stringify({status:'NEW_PAIRED_REST_NAVIGATION_SAMPLE',
+  run_id:process.env.GITHUB_RUN_ID,source_commit:first.source_commit,candidate_head:head,
+  method:'GET contents API paired by six fixed case IDs, two rounds, reversed order in round two, one Actions runner',
+  sample_sizes:'12 SOURCE AND 12 CANDIDATE',source:summarize('source'),candidate:summarize('candidate'),
+  per_case_samples:measures.map(x=>({id:x.id,kind:x.kind,ms:x.ms,json_body_bytes:x.json_body_bytes})),
+  p95:'NOT_REPORTED_N12_AND_DIFFERENT_PAYLOAD_SIZES',
+  comparable_to_historical_web_p95:false,
+  actual_web_token_count:'NOT_OBSERVABLE',
+  actual_web_http_wire_bytes:'NOT_OBSERVABLE',
+  observed_bytes_are_API_JSON_BODY_NOT_WIRE,
+  limitations:'small nonrandom sample, server cache/network variance, different source/candidate blob sizes, snapshot semantics C41 not master C45'}));
+
 console.log(JSON.stringify({status:'PASS_DETERMINISTIC_POST_FREEZE_ONLY',
   comparison:'RAW_FIRST_ROUND_SEPARATE_FROM_TARGETED_RETEST',
   first_round_complete:3,first_round_incomplete:status.filter(x=>x.initial!=='PASS_SCOPED').map(x=>x.id),
