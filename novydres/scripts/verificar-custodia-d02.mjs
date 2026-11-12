@@ -40,7 +40,27 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
     y.copy==='GIT_BLOB_EXACT_UNMODIFIED'&&
     y.operational_authority==='NOT_GRANTED_BY_CANDIDATE','D02_GOVERNANCE_CUSTODY');
  }
- const externalMap=by(external.items,'id'),mapped=by(sources.external_sources,'id');
+ const partitions=sources.field_partition_audit;
+ need(partitions&&partitions.d01_total_handed_over_other_phases===463&&
+  partitions.d02_flagged_for_split===96&&
+  partitions.d02_historical_source_custody_classified===96&&
+  partitions.d02_domain_fields_promoted===0&&
+  partitions.d02_unapproved_authority_claims===0&&
+  partitions.unmapped_external_link_cases===28&&
+  partitions.residual==='DOMAIN_SEMANTIC_FIELDS_NOT_MIGRATED_OR_AUTHORIZED_UNDER_D02','D02_PARTITION_AUDIT');
+ let splitCount=0;
+ for(const row of sources.origin_custody.filter(x=>x.field_split)) {
+  splitCount++;
+  const fields=row.field_owner_custody;
+  need(fields&&fields.original_document_sha_owner==='novydres/fontes/originais'&&
+   fields.identity_provenance_reference_owner==='novydres/fontes/registro.json'&&
+   fields.technical_audit_assertion_owner==='novydres/sistema/arquitetura'&&
+   fields.domain_semantics_in_original==='SOURCE_ONLY_NOT_CURRENT_AUTHORITY'&&
+   fields.no_field_fact_promoted_d02===true&&
+   fields.owner_collision_resolution.startsWith('ORIGINAL_BLOB_REHOMED_ONCE'),'D02_FIELD_CONCURRENT_OWNER');
+ }
+ need(splitCount===96,'D02_SPLIT_DENOMINATOR');
+  const externalMap=by(external.items,'id'),mapped=by(sources.external_sources,'id');
  need(external.items.length===193&&mapped.size===193&&mapped.size===externalMap.size,'D02_EXTERNAL_DENOMINATOR');
  for(const [id,e] of externalMap){
   const m=mapped.get(id),pin=inventory.controlled_external_registry.items.find(x=>x.source_id===id);

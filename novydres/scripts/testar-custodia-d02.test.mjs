@@ -75,3 +75,9 @@ test('D02 may not extrapolate one historical source-hash match to all media',()=
 test('D02 cannot replace the true source digest without exposing the discrepancy',()=>{
  fails(d=>d.sources.entries.find(x=>x.name==='MasterMap.png').source_sha256='0'.repeat(64),'D02_CRYPTO_SOURCE_CLAIM');
 });
+test('D02 cannot conceal outstanding subject-field routing under artifact custody',()=>{
+ fails(d=>d.sources.field_partition_audit.d02_domain_fields_promoted=96,'D02_PARTITION_AUDIT');
+});
+test('D02 cannot introduce a rival authoritative owner on a routed historical source',()=>{
+ fails(d=>d.sources.origin_custody.find(x=>x.field_split).field_owner_custody.no_field_fact_promoted_d02=false,'D02_FIELD_CONCURRENT_OWNER');
+});
