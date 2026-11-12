@@ -45,6 +45,34 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
     m.drive_current_revision_verified_d02===false&&m.git_archive_blob_is_external_integrity_proof===false&&
     m.rights_verified_d02===false,'D02_EXTERNAL_PROVENANCE');
  }
+ const audit=sources.external_metadata_audit;
+ need(audit&&audit.total===193&&audit.google_drive_ids_found===109&&
+  audit.google_drive_ids_unavailable===0&&audit.library_ids_not_drive===68&&
+  audit.file_ids_not_drive===16&&audit.drive_title_matches_historical===109&&
+  audit.drive_mime_differences===16&&audit.drive_name_differences===0&&
+  audit.source_bytes_verified_now===0&&audit.source_revision_readback_verified_now===0&&
+  audit.permissions_and_rights_verified_now===0,'D02_METADATA_DENOMINATOR');
+ let drive=0,library=0,file=0,mimeDiff=0;
+ for(const source of sources.external_sources) {
+  const isLib=source.id.startsWith('libfile_'),isFile=source.id.startsWith('file_');
+  const expected=isLib?'LIBRARY_REFERENCE':isFile?'FILE_REFERENCE':'GOOGLE_DRIVE_FILE_ID';
+  need(source.identifier_namespace===expected&&source.d02_metadata_observation&&
+   source.drive_current_revision_verified_d02===false,'D02_ID_NAMESPACE');
+  const obs=source.d02_metadata_observation;
+  if(isLib||isFile) {
+   isLib?library++:file++;
+   need(obs.status==='NOT_DRIVE_ID_NOT_QUERIED_AS_PROVIDER_ORIGINAL'&&
+    obs.rights_and_original_bytes_unverified===true,'D02_INVENTED_DRIVE_ACCESS');
+  } else {
+   drive++;
+   need(obs.source==='GOOGLE_DRIVE_GET_FILE_METADATA_2026_11_12'&&
+    obs.status==='METADATA_FOUND'&&obs.title_matches_historical===true&&
+    obs.checksum_or_permissions_not_proven===true,'D02_DRIVE_METADATA');
+   if(obs.mime_matches_historical===false)mimeDiff++;
+   else need(obs.mime_matches_historical===true,'D02_DRIVE_MIME_UNCLASSIFIED');
+  }
+ }
+ need(drive===109&&library===68&&file===16&&mimeDiff===16,'D02_METADATA_CLASSIFICATION');
  const mediaBy=by(sources.entries,'library_id');
  need(visual.entries.length===19&&mediaBy.size===19,'D02_MEDIA_DENOMINATOR');
  let linked=0,pending=0;

@@ -45,3 +45,12 @@ test('D02 must retain unresolved editorial authority',()=>{
 test('D02 cannot copy-source without exact SHA',()=>{
  fails(d=>d.governance.source_documents[0].candidate_original_blob_sha='0'.repeat(40),'D02_GOVERNANCE_CUSTODY');
 });
+test('D02 Library source IDs are not treated as Drive file IDs',()=>{
+ fails(d=>d.sources.external_sources.find(x=>x.identifier_namespace==='LIBRARY_REFERENCE').identifier_namespace='GOOGLE_DRIVE_FILE_ID','D02_ID_NAMESPACE');
+});
+test('D02 does not suppress an observed Drive MIME difference',()=>{
+ fails(d=>d.sources.external_sources.find(x=>x.identifier_namespace==='GOOGLE_DRIVE_FILE_ID'&&x.d02_metadata_observation.mime_matches_historical===false).d02_metadata_observation.mime_matches_historical=true,'D02_METADATA_CLASSIFICATION');
+});
+test('D02 does not fabricate current Drive content integrity',()=>{
+ fails(d=>d.sources.external_metadata_audit.source_bytes_verified_now=109,'D02_METADATA_DENOMINATOR');
+});
