@@ -3,7 +3,7 @@
   "classification": "SYSTEM_AUDIT_DO_NOT_EXPOSE_SOURCE_CONTENT",
   "phase": "D02",
   "date": "2026-11-12",
-  "status": "D02_SCOPED_PASS_SUBJECT_TO_CURRENT_CI",
+  "status": "PASS_SCOPED_NON_OPERATIONAL",
   "gate": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA",
   "gate_basis": "ADR001_D02_CONCLUSION_ALL_ORIGINS_PRESERVED_AND_FIVE_EXTERNAL_MEDIA_LEGITIMATELY_OPTIONAL_ON_PRESENT_DEPENDENCY_EVIDENCE; NO_EDITORIAL_PROMOTION",
   "continuity": "DEC25_RECOVERABLE_CHECKPOINT_DEC26_EXTERNAL_SOURCE_BYTES_UNAVAILABLE",
@@ -17,7 +17,8 @@
     "current_candidate_commit": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
     "current_candidate_tree": "4e1bd52534acf612b5a11a848a8e8853aa51678a",
     "current_master_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-    "original_unchanged": true
+    "original_unchanged": true,
+    "checkpoint_scope": "HISTORICAL_PRE_WAIVER_2026_11_12_NOT_CURRENT_HEAD"
   },
   "evidence": {
     "governance_registry": {
@@ -101,18 +102,20 @@
   ],
   "ci": {
     "last_full_pass": {
-      "id": 43302983184,
-      "sha": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+      "id": 43309547830,
+      "sha": "4ba838258103e7d2a470f487ded2211eb6464e0e",
       "conclusion": "success",
-      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43302983184",
-      "d02_negative_tests_passed": 22
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43309547830",
+      "d02_negative_tests_passed": 28,
+      "scope": "C_D_CANDIDATE_CHECKS_WITH_SOURCE_GIT_READBACK_AND_EXECUTABLE_CONSUMER_SCAN"
     },
     "additional_passes": [
       43299613547,
       43300505898,
       43300892920,
       43301691438,
-      43302377386
+      43302377386,
+      43309474795
     ],
     "historical_failures_preserved": [
       {
@@ -132,7 +135,14 @@
       }
     ],
     "test_scope": "STRUCTURAL_SOURCE_PROVENANCE_AND_NEGATIVE_REGRESSIONS_NOT_INDEPENDENT_EDITORIAL_CERTIFICATION",
-    "current_gate_validation": "PENDING_NEW_PUSH_ACTIONS_AND_REMOTE_READBACK"
+    "current_gate_validation": "PASSED_ON_EXACT_PARENT_COMMIT_SOURCE_AND_GOVERNANCE_BLOBS_RETAINED",
+    "historical_pre_waiver_last_full_pass": {
+      "id": 43302983184,
+      "sha": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43302983184",
+      "d02_negative_tests_passed": 22
+    }
   },
   "safety": {
     "master_written": false,
@@ -144,13 +154,13 @@
     "d03_executed": false
   },
   "unreleased_dependencies": {
-    "D03": "ELIGIBLE_AFTER_D02_CI_PASS_ONLY; CURRENTLY_NOT_STARTED; SPECIFIC_EDITORIAL_DECISIONS_REMAIN_D03_REQUIREMENTS",
-    "D04": "NOT_STARTED",
-    "D05": "NOT_STARTED",
-    "D06": "NOT_STARTED",
-    "D07": "NOT_STARTED"
+    "D03": "D02_SOURCE_DEPENDENCY_SATISFIED; D03_NOT_STARTED; CONFLICT-001_AND_003B_REQUIRE_AUTHORIZED_EDITORIAL_RESOLUTION_BEFORE_CANONICAL_PROMOTION; RECHECK_VISUALS_IF_NEW_DEPENDENCY",
+    "D04": "D03_DEPENDENT; NOT_STARTED",
+    "D05": "D03_D04_DEPENDENT; NOT_STARTED",
+    "D06": "D03_D04_D05_DEPENDENT; NOT_STARTED",
+    "D07": "D06_DEPENDENT; INDEPENDENT_REVIEW_NOT_STARTED"
   },
-  "next_safe_step": "Run current C/D candidate workflow; require success and remote readback; then finalize D02 scoped gate. Do not initiate D03 without separate mandate.",
+  "next_safe_step": "D02 gate closed with scoped provenance custody; D03 eligible only by independent later mandate and after resolving actual editorial dependencies; no D03 started by this report.",
   "no_silent_resolution": true,
   "previous_blocking_gate_preserved": {
     "gate": "D02_RECOVERY_REQUIRED_EXTERNAL_MEDIA_RAW_BYTES",
@@ -215,5 +225,31 @@
     "conflicts": "EDITORIAL_DECISIONS_DEFERRED_NO_FALSE_RESOLUTION",
     "rights": "UNVERIFIED",
     "condition": "D03_D07_OR_E_MUST_BLOCK_IF_REQUIRED_SOURCE_DEPENDENCY_LATER_PROVEN"
+  },
+  "latest_waiver_evidence": {
+    "validated_candidate_commit": "4ba838258103e7d2a470f487ded2211eb6464e0e",
+    "validated_tree": "d1800014364ae1fb7784bc5a3defe6b0b808285d",
+    "governance_registry_blob_sha": "659ffcd097fe324569f5ffe780635fd26a428e18",
+    "source_registry_blob_sha": "ba7fec87b3eef9af9f35f83a8c8094bb23f40478",
+    "d02_verifier_blob_sha": "895d160fa8c0565e39a31eab8952e08ab24d380b",
+    "tests_blob_sha": "99c610fc4a93113d60438f408a0a32b761dab93f",
+    "current_ci": {
+      "id": 43309547830,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43309547830",
+      "d02_tests": 28,
+      "d02_tests_passed": 28
+    },
+    "candidate_source_blob_integrity": "128_OF_128_AND_GOVERNANCE_27_OF_27_EXACT_GIT_SHAS_CONFIRMED",
+    "governed_split_handoff": "96_OF_96_SOURCE_CUSTODY_NOT_DOMAIN_SEMANTIC_PROMOTION",
+    "runtime_consumer_scan": "NO_DIRECT_REFERENCE_IN_REVIEWED_CONTROLLED_EXECUTABLE_AND_ENTRY_PATHS",
+    "media_optional": 5,
+    "media_present_hashed_at_destination": 14,
+    "known_source_destination_digest_equal": 1,
+    "other_source_destination_equality_unproven": 13,
+    "source_raw_bytes_of_five": "NOT_RECOVERED; INTEGRITY_UNPROVEN",
+    "cutover": false,
+    "note": "This report commit changes only evidence, not the validated source/governance/validator bytes; new CI on this report commit remains required for current HEAD attestation."
   }
 }
