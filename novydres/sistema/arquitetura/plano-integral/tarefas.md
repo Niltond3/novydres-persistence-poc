@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_EM_CURSO_A01_A05_PASS_A06_NEXT
+status: EXECUCAO_EM_CURSO_A01_A06_PASS_A07_NEXT
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -94,6 +94,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A02–A05; aplicar Q-03/Q-04 já aceitas (DEC-19/DEC-21).
 - **Escopo/saída:** revisar `fase-a/validacao-e-metricas.md` e contratos de B: casos com IDs, fontes, gabarito separado, bindings executáveis, isolamento, observabilidade, comparação antes/depois e revisão editorial independente. Definir quais ferramentas mínimas permitem provar B sem antecipar C. Aplicar DEC-21: dimensionar a suíte por riscos, preservando casos críticos e falhas históricas. Mapear funções/casos/provas, rotas reais dos dois canais e amostragem de comportamento variável, concorrência e falhas; justificar seleção, reutilização e repetições, sem quotas de 30/12/12 ou três rodadas obrigatórias. Não usar volume nem uma única resposta correta como prova de confiabilidade. Aplicar NOT_OBSERVABLE somente aos contadores Web abrangidos por DEC-19. Incorporar os casos DEC-25 de fonte inexistente/insuficiente, decisão superada, falsa conclusão, checkpoint divergente e recuperação no mesmo chat; reutilizar casos pertinentes e declarar limites de detecção, sem novo programa ou quota de testes.
 - **Conclusão:** cada critério possui prova, responsável e reprovação definidos. Preservar a classificação crítico/não crítico e a precisão exigida: críticos sem divergência; não críticos ao menos equivalentes à baseline comparável, sem false CONFIRMED. A quota e a contagem histórica de 30/30 não são critério futuro; falhas factuais conhecidas continuam exigindo correção e nova evidência, sem apagamento ou reclassificação oportunista. Ausência de telemetria/teste não equivale a PASS; qualidade de escrita não se mede por palavras-chave. Matriz de cobertura completa, incluindo controles DEC-25 com executor/resultado externo e comparação contextual; não tratar autorrelato PASS como comprovação.
+
+
+#### Execução de A06 — 2026-11-12
+
+- **Estado:** PASS de matriz de provas, sem execução de B/C. **Entrada:** `b22f03e7190e4bed39cdf6b1dce7b123a40aff01`.
+- **Saída:** [validacao-e-metricas.md](../fase-a/validacao-e-metricas.md#a06--cobertura-por-risco-gabarito-isolado-e-fronteira-de-execução-2026-11-12) inclui matriz risco→executor/oráculo/reprovação, casos B-Q/N/M existentes, isolamento de gabarito, operações negativas reais, revisão semântica, DEC-25/26 e critério de CI.
+- **Prova:** relidos os 30 B-Q, 12 B-N, 12 B-M, seis refs de quatro assuntos, resultados históricos e gate B; B-Q29/Q30 permanecem falhas históricas obrigatórias até correção. Os fixtures misturam pergunta/gabarito e precisam de projeção sem resposta ao executor; predicados locais e mutações simuladas não são testes remotos.
+- **Limite:** nenhum teste B/C passou nesta tarefa; `B_REMEDIATION_REQUIRED` e faltas de CI/execução Codex e Web intactas. Próximo: A07, preservando aprovação antiga.
 
 ### A07 — Revisar a emenda e registrar decisão de desenho
 
