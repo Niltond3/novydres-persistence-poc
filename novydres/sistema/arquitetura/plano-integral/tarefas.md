@@ -632,3 +632,9 @@ A condição do gate para C01 está atendida, mas esta alteração documental n�
 #### D01 — Correção da ordem de controles negativos (2026-11-12)
 
 - Actions [43289066420](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43289066420), commit `bc8fc88ba2eb27612946b3b7d6fb0ff4cf8a1d3c`, `completed/failure`: 46/50 regressões D01 passaram; 4 negativos antigos falharam porque `D01_ORIGIN_MAPPING_FIELD_DRIFT` interrompia a análise antes dos códigos específicos anteriores. Os quatro controles históricos permanecem necessários; mover a nova comparação ao fim do conjunto de verificações de conteúdo, sem reclassificar a rejeição como aprovação. Resultado histórico preservado e CI de reexecução exigido.
+
+### D01 — Varredura abrangente de referências textuais fixadas na árvore Git (2026-11-12)
+
+- O verificador D01 incorpora `scanD01StaticRefs`, que usa o próprio commit master pinado e `git grep -I -n -o` para buscar literais de caminhos `novydres/` em todos os arquivos textuais indexados; mapeia tokens ao path mais longo conhecido e agrega apenas contagens no resultado. Não modifica nenhum arquivo nem imprime narrativas ou segredos. A execução é no GitHub Actions, não em terminal local ou Codex.
+- Os novos negativos testam parsing do scanner e falha segura de formato; nenhum match textual vira prova de import dinâmico, uso atual, autorização narrativa ou direito de remover fonte. O scanner é adicional aos 77 pins C45 e 303 referências do manifesto; não substitui revisão específica de imports e links em D05/D06.
+- **Status:** CI inicial desta expansão a verificar. Os campos de owner por origem permanecem propostos; o bloco D01 continua aberto até uma decisão de gate apoiada na prova do conjunto e revisão dos 98 ausentes não pinados nem nomeados em `manifest.runtime`.

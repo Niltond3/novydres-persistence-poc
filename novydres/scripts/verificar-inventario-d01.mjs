@@ -636,6 +636,61 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
    resources_drift:fieldCrosswalk.resources.divergent},
   editorial_approval:'NOT_PROVEN',runtime_activation:false};
 }
+
+export function summarizeD01ObservedRefs(index,grepOutput){
+ need(typeof grepOutput==='string','D01_STATIC_GREP_OUTPUT_UNREADABLE');
+ const source=new Set(index.source_files.map(x=>x.source_path));
+ const missing=new Set(index.source_files.filter(x=>x.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(x=>x.source_path));
+ const pins=new Set(index.authority_reference.pinned_references.map(x=>x.path));
+ const manifest=new Set(index.c45_manifest_runtime_references.items.map(x=>x.path));
+ const hits=new Map(),senders=new Map();
+ let tokens=0,nonfile=0,unmatched=0;
+ for(const line of grepOutput.split('\n')){
+  if(!line)continue;
+  const match=/^[0-9a-f]{40}:(.*?):(\d+):(novydres\/[^\s]*)$/.exec(line);
+  need(!!match,'D01_STATIC_GREP_OUTPUT_MALFORMED');
+  const [,sender,,literal]=match;tokens++;
+  let p=literal;
+  while(p&&!source.has(p))p=p.slice(0,-1);
+  if(!p){unmatched++;continue;}
+  if(!source.has(sender)){nonfile++;continue;}
+  hits.set(p,(hits.get(p)||0)+1);
+  if(!senders.has(p))senders.set(p,new Set());
+  senders.get(p).add(sender);
+ }
+ const missingWith=[...missing].filter(p=>hits.has(p));
+ const unknownMissing=[...missing].filter(p=>!hits.has(p));
+ const nestedMissing=missingWith.filter(p=>!pins.has(p)&&!manifest.has(p));
+ return {
+  status:'TEXTUAL_OCCURRENCE_ONLY_NOT_DYNAMIC_OR_RUNTIME_PROOF',
+  scan_commit:index.source_snapshot.commit_sha,
+  source_files:index.source_files.length,
+  scanned_token_occurrences:tokens,
+  resolved_file_token_occurrences:[...hits.values()].reduce((a,b)=>a+b,0),
+  distinct_target_files: hits.size,
+  missing_candidate_sources_with_textual_refs:missingWith.length,
+  missing_candidate_sources_without_textual_refs:unknownMissing.length,
+  missing_candidate_sources_without_pin_or_manifest_but_textually_referenced:nestedMissing.length,
+  unmatched_strings_count:unmatched,non_source_sender_occurrences:nonfile,
+  no_dynamic_import_or_external_dependency_proof:true,
+  no_current_usage_proof:true,
+  original_content_not_printed:true
+ };
+}
+export function scanD01StaticRefs(root,index){
+ const sourceCommit=index.source_snapshot.commit_sha;
+ need(SHA.test(sourceCommit||''),'D01_SCAN_SOURCE_COMMIT_MISSING');
+ let output='';
+ try{
+  output=execFileSync('git',['grep','--no-color','-I','-n','-o','-E',
+   'novydres/[A-Za-z0-9_./()-]+',sourceCommit,'--'],
+   {cwd:root,encoding:'utf8',maxBuffer:64*1024*1024,stdio:['ignore','pipe','ignore']});
+ }catch(error){
+  if(error.status!==1)fail('D01_STATIC_GREP_EXECUTION_FAILED');
+ }
+ return summarizeD01ObservedRefs(index,output);
+}
+
 export function readAndVerifyD01(root=process.cwd()){
  const index=JSON.parse(readFileSync(resolve(root,INVENTORY),'utf8'));
  const sha=(commit)=>git(root,['rev-parse',commit+'^{tree}']);
@@ -649,7 +704,8 @@ export function readAndVerifyD01(root=process.cwd()){
   row.priority_shared_content_review).map(row=>[
    row.source_path,execFileSync('git',['show',index.source_snapshot.commit_sha+':'+row.source_path],
     {cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']})]));
- return verifyD01(index,{masterTree,candidateTree,
+ const staticGraph=scanD01StaticRefs(root,index);
+ const structured=verifyD01(index,{masterTree,candidateTree,
   external:read(index.controlled_external_registry.path),
   media:read(index.visual_registry.path),
   cycle:read(index.authority_reference.cycle.path),sourceContents,
@@ -659,6 +715,7 @@ export function readAndVerifyD01(root=process.cwd()){
    master:git(root,['show',index.source_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml']),
    candidate:git(root,['show',index.candidate_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml'])
   }});
+ return {...structured,static_reference_scan:staticGraph};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))
  console.log(JSON.stringify(readAndVerifyD01()));

@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {verifyD01,listPinnedTree,readAndVerifyD01} from './verificar-inventario-d01.mjs';
+import {verifyD01,listPinnedTree,readAndVerifyD01,summarizeD01ObservedRefs} from './verificar-inventario-d01.mjs';
 const root=process.cwd();
 const index=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/inventario-origens.json','utf8'));
 const pinned=index.source_snapshot.commit_sha;
@@ -333,4 +333,19 @@ test('D01 no source omitted or field-level editorial authority accidentally appr
  reject(x=>x.d01_origin_mapping_coverage.mapped_source_paths-=1,'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
  reject(x=>x.d01_origin_mapping_coverage.content_field_ownership_approved=true,
   'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
+});
+
+test('D01 safe scan token parsing is a textual hint, never authority or absence proof',()=>{
+ const sha=index.source_snapshot.commit_sha;
+ const sample=index.source_files.find(x=>x.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE');
+ assert.ok(sample);
+ const text=sha+':'+sample.source_path+':1:'+sample.source_path+'\\n';
+ const result=summarizeD01ObservedRefs(index,text.replace('\\n','\n'));
+ assert.equal(result.missing_candidate_sources_with_textual_refs,1);
+ assert.equal(result.no_current_usage_proof,true);
+ assert.equal(result.no_dynamic_import_or_external_dependency_proof,true);
+});
+test('D01 static scan rejects malformed output instead of claiming coverage',()=>{
+ assert.throws(()=>summarizeD01ObservedRefs(index,'not-git-grep-output'),
+  e=>e.code==='D01_STATIC_GREP_OUTPUT_MALFORMED');
 });
