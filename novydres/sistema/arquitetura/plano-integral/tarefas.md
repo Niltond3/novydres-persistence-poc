@@ -209,6 +209,15 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** transação dos donos afetados, texto histórico preservado, correção explícita, identidade mínima de transação, idempotência, expected SHA/parent, proteção de ref e readback. Estado corrente é editável com revisão; não exigir registro próprio por evento/rolagem ou certificado RNG. Exercitar stale update, repetição de ID, concorrência, blob corrompido e interrupções em sandbox. A transação da resposta reúne texto/deltas; nenhum texto ficcional é entregue antes do readback.
 - **Conclusão:** V05/V10 passam com rejeições comprovadas, sem sobrescrita/perda silenciosa; estado COMMITTED distinto de sincronização parcial. Provar também publicação concluída com confirmação perdida: recuperação encontra a mesma transação, sem duplicar texto, deltas ou consequências e sem rerrolar. Restrições administrativas efetivamente disponíveis conferidas; proteção não comprovada não é anunciada.
 
+#### C03 — Implementação isolada e prova pendente (2026-11-12)
+
+- **Entrada:** `design@7fcc60a9b6dd1848ecd3afc5258ca0cec2a636b7`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura. C01/C02 PASS_SCOPED verificados; A03/A05 governam transações e recuperação.
+- **Saída:** candidato `novydres/scripts/transacao-git.mjs`, testes `testar-transacao-git.test.mjs` e workflow isolado C03. A implementação exige ref `test/adr001-c03-*`, alteração simultânea somente de texto/JSON em `tmp/adr001-c03/*`, `expected_head`, `tx_id`, fingerprint de conteúdo, commit filho do esperado, `force=false` e readback de commit/tree/blobs. Identidade de transação fica no trailer Git, sem ledger universal nem auditoria de faces.
+- **Prova preparada:** GitHub Actions em ref descartável, com publicação real, duas alterações atômicas, duplicação NO_OP, mesmo ID divergente STOP_CONFLICT, stale, concorrência, commit não promovido, confirmação deliberadamente suprimida após publicação e verificação negativa de blob. A mutação de blob é teste de diagnóstico, não corrupção real; a perda é de confirmação simulada no cliente, não pane de rede injetada.
+- **Limite:** `NOT_TESTED` neste checkpoint; nada da crônica, `master`, canon ou runtime é editável por esse executor. Integração final com owners/autoridades, controle de sigilo e política operacional de E depende de C04/C05/C07/D/E. Não declarar C03 PASS antes de Actions e readback.
+- **Próximo:** conferir diff, publicar somente em design, executar CI remoto, recuperar provas e registrar resultado em C03; C04 permanece dependente de C03 PASS.
+
+
 ### C04 — Implementar estado atual e retomada fiel
 
 - **Depende de:** C03 e A02/A03.
