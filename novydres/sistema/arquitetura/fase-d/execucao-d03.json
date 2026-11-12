@@ -76,7 +76,8 @@
     "GLOBAL_VS_LOCAL_FIELD_SEMANTICS_FOR_MIXED_SOURCES",
     "RELATION_DIRECTION_TARGET_AND_OWNER_VERIFICATION",
     "WORLD_EDITORIAL_AUTHORITY_AND_VARIANTS_NEED_FURTHER_EVIDENCE_OR_LEGITIMATE_FAIL_CLOSED_CLASSIFICATION",
-    "GATE_D03_REAL_EQUIVALENCE_REVIEW"
+    "GATE_D03_REAL_EQUIVALENCE_REVIEW",
+    "EXACT_SOURCE_WIKI_LINKS_MUST_BE_REWIRED_TO_AUTHORIZED_TARGETS_FOR_FINAL_D_GATE"
   ],
   "dependencies_seen": {
     "D04": {
@@ -94,5 +95,13 @@
     },
     "D06": "NOT_STARTED_ZERO_LEGACY_NOT_PROVEN",
     "D07": "NOT_STARTED_INDEPENDENT_REVIEW_NOT_PROVEN"
+  },
+  "world_literal_references": {
+    "path": "novydres/sistema/arquitetura/fase-d/vinculos-literais-d03.json",
+    "total": 84,
+    "owner_resolved_nonoperational": 11,
+    "deferred_source_refs": 73,
+    "semantic_relations_equivalent": false,
+    "may_not_promote_to_operational_link": true
   }
 }
