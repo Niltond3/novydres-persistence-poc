@@ -1,0 +1,433 @@
+{
+  "subject_id": "npc-madame-zoya",
+  "schema": "ADR001_D03_SUBJECT_LOCAL_SOURCE_SEGMENTS_V1",
+  "not_operational": true,
+  "editorial_promotion": false,
+  "epistemic_promotion": false,
+  "source_document_count": 5,
+  "segment_count": 56,
+  "document_refs": [
+    {
+      "source_path": "novydres/world/organizations/npc-sources/MADAME_ZOYA_V09_VARIANT_AUDIT_V1.json",
+      "source_blob_sha": "ccc456a0a83e249d3a165936a62c9a0cfe8249f8",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [
+        "CONFLICT-003B"
+      ],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/source_refs"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/comparisons"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/authority"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/notes"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/MADAME_ZOYA_V09_VARIANT_AUDIT_VERIFIED_V2.json",
+      "source_blob_sha": "32e66f3b0aa7cbe417aa31d348f9968028a38c1d",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [
+        "CONFLICT-003B"
+      ],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/source_refs"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/comparisons"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/authority"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/notes"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/verification"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/independent_editorial_verdict"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(1)_library.source.md",
+      "source_blob_sha": "f89e9e429b87a7590afc2f93fd828a8bece6562e",
+      "declared_source_header": {
+        "version": "\"0.9\"",
+        "status": "",
+        "supersedes": ""
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [
+        "CONFLICT-003B"
+      ],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 418,
+          "heading_level": 1,
+          "label": "Madame Zoya",
+          "line_end": 423
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 424,
+          "heading_level": 2,
+          "label": "Verdade conhecida",
+          "line_end": 429
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 430,
+          "heading_level": 2,
+          "label": "Rumores e versões",
+          "line_end": 435
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 436,
+          "heading_level": 2,
+          "label": "História",
+          "line_end": 449
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 450,
+          "heading_level": 2,
+          "label": "Personalidade e interpretação",
+          "line_end": 455
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 456,
+          "heading_level": 2,
+          "label": "Relações",
+          "line_end": 465
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 466,
+          "heading_level": 2,
+          "label": "Ambição: reconstruir o Arquivo dos Mortos Vivos",
+          "line_end": 471
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 472,
+          "heading_level": 2,
+          "label": "Ficha V5",
+          "line_end": 473
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 474,
+          "heading_level": 3,
+          "label": "Atributos",
+          "line_end": 487
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 488,
+          "heading_level": 3,
+          "label": "Perícias",
+          "line_end": 495
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 496,
+          "heading_level": 3,
+          "label": "Disciplinas",
+          "line_end": 503
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 504,
+          "heading_level": 3,
+          "label": "Vantagens e Defeitos",
+          "line_end": 509
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 510,
+          "heading_level": 3,
+          "label": "Status",
+          "line_end": 528
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 529,
+          "heading_level": 2,
+          "label": "Aparência",
+          "line_end": 536
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9(2).md",
+      "source_blob_sha": "c88527f90c6016064b35f6ae0b791f7079587f66",
+      "declared_source_header": {
+        "version": "\"0.9\"",
+        "supersedes": "\"07_personagens/madame_zoya.md + 07_personagens/madame_zoya(1).md\"",
+        "status": ""
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [
+        "CONFLICT-003B"
+      ],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 416,
+          "heading_level": 1,
+          "label": "Madame Zoya",
+          "line_end": 421
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 422,
+          "heading_level": 2,
+          "label": "Verdade conhecida",
+          "line_end": 427
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 428,
+          "heading_level": 2,
+          "label": "Rumores e versões",
+          "line_end": 433
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 434,
+          "heading_level": 2,
+          "label": "História",
+          "line_end": 447
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 448,
+          "heading_level": 2,
+          "label": "Personalidade e interpretação",
+          "line_end": 453
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 454,
+          "heading_level": 2,
+          "label": "Relações",
+          "line_end": 463
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 464,
+          "heading_level": 2,
+          "label": "Ambição: reconstruir o Arquivo dos Mortos Vivos",
+          "line_end": 469
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 470,
+          "heading_level": 2,
+          "label": "Ficha V5",
+          "line_end": 471
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 472,
+          "heading_level": 3,
+          "label": "Atributos",
+          "line_end": 485
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 486,
+          "heading_level": 3,
+          "label": "Perícias",
+          "line_end": 493
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 494,
+          "heading_level": 3,
+          "label": "Disciplinas",
+          "line_end": 501
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 502,
+          "heading_level": 3,
+          "label": "Vantagens e Defeitos",
+          "line_end": 507
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 508,
+          "heading_level": 3,
+          "label": "Status",
+          "line_end": 526
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 527,
+          "heading_level": 2,
+          "label": "Aparência",
+          "line_end": 534
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/madame_zoya_v0_9_original_library.source.md",
+      "source_blob_sha": "0d77a9f1cc13c47bc9afb7db43846b4a4b2210be",
+      "declared_source_header": {
+        "version": "\"0.9\"",
+        "supersedes": "\"07_personagens/madame_zoya.md + 07_personagens/madame_zoya(1).md\"",
+        "status": ""
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [
+        "CONFLICT-003B"
+      ],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 416,
+          "heading_level": 1,
+          "label": "Madame Zoya",
+          "line_end": 421
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 422,
+          "heading_level": 2,
+          "label": "Verdade conhecida",
+          "line_end": 427
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 428,
+          "heading_level": 2,
+          "label": "Rumores e versões",
+          "line_end": 433
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 434,
+          "heading_level": 2,
+          "label": "História",
+          "line_end": 447
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 448,
+          "heading_level": 2,
+          "label": "Personalidade e interpretação",
+          "line_end": 453
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 454,
+          "heading_level": 2,
+          "label": "Relações",
+          "line_end": 463
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 464,
+          "heading_level": 2,
+          "label": "Ambição: reconstruir o Arquivo dos Mortos Vivos",
+          "line_end": 469
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 470,
+          "heading_level": 2,
+          "label": "Ficha V5",
+          "line_end": 471
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 472,
+          "heading_level": 3,
+          "label": "Atributos",
+          "line_end": 485
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 486,
+          "heading_level": 3,
+          "label": "Perícias",
+          "line_end": 493
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 494,
+          "heading_level": 3,
+          "label": "Disciplinas",
+          "line_end": 501
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 502,
+          "heading_level": 3,
+          "label": "Vantagens e Defeitos",
+          "line_end": 507
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 508,
+          "heading_level": 3,
+          "label": "Status",
+          "line_end": 526
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 527,
+          "heading_level": 2,
+          "label": "Aparência",
+          "line_end": 534
+        }
+      ]
+    }
+  ]
+}
