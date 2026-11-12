@@ -1,0 +1,143 @@
+{
+  "schema": "ADR001_D02_EXECUTION_AND_RECOVERY_GATE_V1",
+  "classification": "SYSTEM_AUDIT_DO_NOT_EXPOSE_SOURCE_CONTENT",
+  "phase": "D02",
+  "date": "2026-11-12",
+  "status": "BLOCKED_NOT_PASS",
+  "gate": "D02_RECOVERY_REQUIRED_EXTERNAL_MEDIA_RAW_BYTES",
+  "gate_basis": "ADR-001 plano-integral tarefas D02 conclusion unchanged; custody test PASS is not editorial/transfer gate PASS",
+  "continuity": "DEC25_RECOVERABLE_CHECKPOINT_DEC26_EXTERNAL_SOURCE_BYTES_UNAVAILABLE",
+  "entry": {
+    "branch": "design/subject-oriented-migration",
+    "entry_head": "321c9bfb3529054c356958123145c0fc208722a6",
+    "entry_d01_gate": "D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY",
+    "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+  },
+  "verified_base": {
+    "current_candidate_commit": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+    "current_candidate_tree": "4e1bd52534acf612b5a11a848a8e8853aa51678a",
+    "current_master_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "original_unchanged": true
+  },
+  "evidence": {
+    "governance_registry": {
+      "path": "novydres/sistema/governanca/registro.json",
+      "blob_sha": "4399163777e51ad9e1f3fae747171535dde372a1",
+      "preserved_originals": 27,
+      "identical_git_sha": 27,
+      "operational_approval": false,
+      "frozen_changed": 0
+    },
+    "source_registry": {
+      "path": "novydres/fontes/registro.json",
+      "blob_sha": "4b94c392623392ab921fafb37f836ea02f8a4341",
+      "d02_source_originals": 128,
+      "rehomed_identical_blobs": 128,
+      "external_controlled_items": 193,
+      "external_google_drive_ids_found": 109,
+      "non_drive_library_ids": 68,
+      "non_drive_file_ids": 16,
+      "google_drive_title_mismatches": 0,
+      "google_drive_mime_history_differences": 16,
+      "source_revisions_verified_current": 0
+    },
+    "partition": {
+      "d01_total_flagged": 463,
+      "d02_relevant_flagged": 96,
+      "d02_historical_source_custody_assigned": 96,
+      "domain_semantics_promoted": 0,
+      "downstream_review": "D03_D04_D05_D06"
+    }
+  },
+  "media": {
+    "total": 19,
+    "destination_links_existing": 14,
+    "original_library_identity_exact_found": 5,
+    "originals_stored_on_drive_confirmed": 14,
+    "originals_absent_from_drive_search_pending": 5,
+    "drive_binary_bytes_downloaded_and_sha256_computed": 14,
+    "drive_size_match": 14,
+    "historical_source_sha_match": 1,
+    "other_source_destination_equality_unproven": 13,
+    "pending_library_original_bytes_materialized": 0,
+    "pending_source_sha256_verified": 0,
+    "pending_upload_to_drive": 5,
+    "library_raw_materialize_error": "This Project file does not have an authorized raw-byte materialization path.",
+    "upload_file_uri": "NOT_OBTAINABLE_FROM_CURRENT_LIBRARY_BACKING",
+    "rights_or_distribution_permissions": "NOT_AUDITED_OR_INFERRED",
+    "binary_uploaded_to_github": 0,
+    "required_recovery": "Obtain authorized raw-byte file references for five exact Library originals, retain source, upload verified originals to protected Google Drive storage under existing media policy; read back MIME, byte count and SHA-256 without inventing source-destination equivalence."
+  },
+  "conflicts": [
+    {
+      "id": "CONFLICT-001",
+      "classification": "WORLD_EDITORIAL_AUTHORITY_UNDECIDED",
+      "technical_custody": "PRESERVED_CANDIDATE_AND_HANDOFF",
+      "blocking_for": "D03_CANONICAL_PROMOTION"
+    },
+    {
+      "id": "CONFLICT-002",
+      "classification": "SCHEMA_FILENAME_METADATA_MISMATCH",
+      "technical_custody": "PRESERVED_LITERAL_SOURCE_SCHEMA_0_9_3",
+      "blocking_for": "NONE_IF_SOURCE_UNMODIFIED"
+    },
+    {
+      "id": "CONFLICT-003_003B",
+      "classification": "NPC_HISTORICAL_VARIANT_EDITORIAL_VERDICT_PENDING",
+      "technical_custody": "ALL_VARIANTS_PRESERVED_WITHOUT_CANONICAL_SELECTION",
+      "blocking_for": "D03_NPC_AUTHORITY_SELECTION"
+    }
+  ],
+  "ci": {
+    "last_full_pass": {
+      "id": 43302983184,
+      "sha": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43302983184",
+      "d02_negative_tests_passed": 22
+    },
+    "additional_passes": [
+      43299613547,
+      43300505898,
+      43300892920,
+      43301691438,
+      43302377386
+    ],
+    "historical_failures_preserved": [
+      {
+        "id": 43298555230,
+        "result": "failure",
+        "correction": "REGISTRY_PRESENCE_TRANSITION"
+      },
+      {
+        "id": 43298913918,
+        "result": "failure",
+        "correction": "MISSING_HISTORIC_SHA_BOOLEAN"
+      },
+      {
+        "id": 43301552526,
+        "result": "failure",
+        "correction": "LIBRARY_RECOVERY_REGISTRY_TRANSITION"
+      }
+    ],
+    "test_scope": "STRUCTURAL_SOURCE_PROVENANCE_AND_NEGATIVE_REGRESSIONS_NOT_INDEPENDENT_EDITORIAL_CERTIFICATION"
+  },
+  "safety": {
+    "master_written": false,
+    "approved_frozen_source_changed": false,
+    "secret_visibility_broadened": false,
+    "narrative_created": false,
+    "runtime_activated": false,
+    "cutover": false,
+    "d03_executed": false
+  },
+  "unreleased_dependencies": {
+    "D03": "NOT_STARTED; canon/variant editorial only when duly authorized",
+    "D04": "NOT_STARTED",
+    "D05": "NOT_STARTED",
+    "D06": "NOT_STARTED",
+    "D07": "NOT_STARTED"
+  },
+  "next_safe_step": "Once reliable raw source bytes/fixed file_uri is available, resume D02 only; upload/verify five media or document an authorized policy-specific nonblocking disposition. Re-run CI and independent source/rights review. Do not declare PASS merely because D02 custody verifier passes.",
+  "no_silent_resolution": true
+}
