@@ -1,4 +1,4 @@
-name: ADR-001 C01-C02-C04-C05-C06-C07 candidate checks (non-operational)
+name: ADR-001 C/D candidate checks (non-operational)
 on:
   push:
     branches:
@@ -15,6 +15,9 @@ on:
       - 'novydres/scripts/revisar-conducao-candidata.mjs'
       - 'novydres/scripts/testar-conducao-candidata.test.mjs'
       - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
+      - 'novydres/scripts/verificar-inventario-d01.mjs'
+      - 'novydres/scripts/testar-inventario-d01.test.mjs'
+      - 'novydres/sistema/arquitetura/fase-d/**'
       - 'novydres/sistema/narrativa/**'
       - 'novydres/cronicas/CHR-001/configuracao/**'
       - 'novydres/sistema/arquitetura/fase-b/resultado-testes.json'
@@ -59,3 +62,7 @@ jobs:
         run: node --test novydres/scripts/testar-conducao-candidata.test.mjs
       - name: C07 integrated exact-snapshot flow and scoped local measurements
         run: node --test novydres/scripts/testar-fluxo-integrado.test.mjs
+      - name: D01 verify source/candidate Git objects and external registry pins
+        run: node novydres/scripts/verificar-inventario-d01.mjs
+      - name: D01 negative regressions for full inventory, SHA and editorial gate
+        run: node --test novydres/scripts/testar-inventario-d01.test.mjs
