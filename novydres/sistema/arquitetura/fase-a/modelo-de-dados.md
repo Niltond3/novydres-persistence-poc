@@ -45,3 +45,33 @@ História textual literal não é reconstruída a partir de resumo. Um arquivo h
 
 ## Schemas e normalização
 Os dois JSON Schema existentes ao lado são candidatos da baseline anterior, ainda não atualizados por esta revisão documental. A02/C01 devem adequar apenas os formatos efetivamente usados: assuntos, estado, relações/conhecimento e identificação de transações quando necessária. Retirar exigências herdadas de ledger universal, replay e roll por dado. Não criar schema por cena, beat ou teste sem função demonstrada. Validar referências e tipos sem coerção silenciosa. Nenhum schema é instalado ou ativado nesta etapa.
+
+## A02 — Execução de desenho (2026-11-12; NÃO OPERACIONAL)
+
+Fontes: ADR-001 DEC-16/17/23/24; A01 em `auditoria-e-mapa.md`. Estes limites substituem a parte excessiva do envelope anterior **somente no candidato**, sem alterar master, cânone ou fatos. Os schemas JSON adjacentes foram ajustados; validação real em B/C continua pendente.
+
+| Classe de informação | Proprietário e representação mínima | Proibição |
+|---|---|---|
+| Identidade global de NPC | `personagens/{id}`, proveniência e status editorial | Duplicar perfil em cada crônica ou promover NPC_CLAIM a fato global |
+| Conhecimento, relação e ação local | `cronicas/{id}/elenco/{npc-id}` ou seu assunto proprietário; ator, fonte, tempo e estado epistêmico | Atribuir conhecimento a outro NPC ou ao PJ só porque o agente leu a fonte |
+| Mundo, organizações e regras | `cenario/`, `sistema/regras/` e decisões editoriais autorizadas | Promover material `candidate`/homebrew a cânone por renomeação |
+| Preparo e evento futuro | `cronicas/{id}/tramas`/`preparacao`, `GM_PREPARED` ou `CONDITIONAL` | Tratar preparação como cena jogada, resultado ou XP concedido |
+| Estado, recursos, escolhas e pistas duráveis | Texto integral e delta no único owner correspondente, com proveniência | Criar arquivo por dado/rolagem/beat ou ledger/replay universal |
+| Detalhe incidental | Prosa integral recuperável pelo path + commit + localização textual | Exigir assertion/arquivo por frase, ou inferir ausência do fato por ausência de campo |
+| Decisão, aprovação ou correção | Registro referenciável apenas quando necessário, com autoridade/efeito/fonte | Sobrescrever originais, dispensar autoria ou inventar hashes |
+| Índices, catálogos e espelhos | Derivados determinísticos por snapshot | Fonte de verdade concorrente |
+| Mídia e fontes externas | Link/ID, direitos e integridade observada em `fontes/` | Presumir bytes ou SHA externo não verificável |
+
+**Granularidade:** uma fatia existe quando há assunto real e recuperação seletiva útil. `index.md` e arquivos por tipo são opcionais segundo necessidade, nunca um formulário completo por NPC, cena, beat ou teste. O limite de documento é sua coesão e custo de recuperar um fato, sem quota fixa de linhas/tokens. Relações usam ID, direção, âmbito temporal, owner e fonte; inversas são derivadas. Campos globais e locais não têm segundo dono. `schema_version` é formato, não revisão; o commit Git versiona documentos correntes. A ausência de `source_refs` no envelope vazio é sintaticamente aceita, mas **fatos duradouros CONFIRMED exigem fonte localizável** pela validação semântica de C01; uma fonte externa sem hash usa ID/URL e integridade desconhecida.
+
+**Casos para C01/B (fixtures abstratas, não acontecimentos de CHR-001):**
+1. Positivo — uma cena fictícia contém um símbolo no casaco apenas na prosa. Quando virar pista durável, a consulta localiza o trecho original por path/commit; a anotação posterior preserva quem realmente o viu e não cria acontecimento retroativo.
+2. Positivo — uma alegação feita por NPC em crônica permanece `NPC_CLAIM` e conhecida somente por fontes/ouvintes comprovados, enquanto o perfil global do NPC continua independente.
+3. Positivo — um acontecimento preparado continua `GM_PREPARED` até fonte de realização; eventual recusa do PJ não vira execução implícita.
+4. Negativo — rejeitar converter hipótese, claim, simulação ou capítulo `candidate` em `CONFIRMED` ou APROVADO sem fonte decisória.
+5. Negativo — rejeitar conhecimento telepático entre membros de organização e duplicação de owner de relação/recurso.
+6. Negativo — ausência no estado exige busca na prosa, jamais resposta conclusiva de que o detalhe não ocorreu.
+7. Negativo — não exigir `ROLL`, faces, seed, replay ou auditoria RNG para aceitar consequências materiais preservadas; não apagar fontes históricas de teste.
+8. Negativo — fonte não localizada retorna `NOT_FOUND`/`UNKNOWN`, sem fallback fuzzy ou SHA fabricado.
+
+**Limite de prova A02:** exemplos classificam fronteiras e ambos os schemas candidatos são JSON válido. Ainda não foram executados testes de instância, recuperação Web/Codex, CI nem equivalência factual integral. A02 não substitui C01/C02.

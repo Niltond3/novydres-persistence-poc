@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://novydres.invalid/schemas/subject-candidate.schema.json",
-  "title": "NOVYDRES candidate subject envelope - not active",
+  "title": "NOVYDRES selective subject candidate (NOT ACTIVE)",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,9 +10,7 @@
     "kind",
     "owner_scope",
     "status",
-    "visibility",
-    "source_refs",
-    "related_subject_ids"
+    "visibility"
   ],
   "properties": {
     "schema_version": {
@@ -37,12 +35,15 @@
         "scene",
         "beat",
         "event",
-        "roll",
         "decision",
         "approval",
         "correction",
         "source",
-        "orchestration-cycle"
+        "orchestration-cycle",
+        "rule",
+        "policy",
+        "architecture",
+        "media-asset"
       ]
     },
     "owner_scope": {
@@ -76,8 +77,7 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "id",
-          "sha"
+          "id"
         ],
         "properties": {
           "id": {
@@ -86,9 +86,22 @@
           "sha": {
             "type": "string",
             "pattern": "^[a-f0-9]{40}$"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
           }
         }
-      }
+      },
+      "description": "Envelope optional; confirmed durable claims still require located evidence via semantic validation C01. Do not fabricate an unavailable external SHA."
     },
     "related_subject_ids": {
       "type": "array",
@@ -103,5 +116,6 @@
     "summary": {
       "type": "string"
     }
-  }
+  },
+  "$comment": "A02 proposed shape, not an active schema; source, episteme and actor knowledge need independent semantic verification."
 }

@@ -80,3 +80,9 @@ Todo index.md existe somente para subject com conteúdo real e tem: subject_id i
 
 ## Questões de propriedade a revisar antes de migrar
 Mapeamento de namespaces world/organizations vs chronicles/.../world; governance versus runtime; NPCs duplicados em sources/atlas; narrativas históricas acumulativas versus evento comprovado; binary-sources e Drive visuais; material editorial com status candidate e documento posterior de fechamento não confirmado. Não decidir por nome, data de modificação, maior número ou preferência estética; rastrear authority decision + fonte e criar registro CONFLICT quando preciso.
+
+## A02 — Ownership e limites finais do candidato (2026-11-12)
+
+O owner é **por campo e por escopo**: identidade global em `personagens/`; relação, crença, conhecimento e estado locais em `cronicas/{id}/`; regra em `sistema/regras/`; cânone e instituições globais em `cenario/`; decisão editorial em `sistema/governanca/`. Uma referência cruzada não duplica autoridade. `AGENT_KNOWLEDGE` não concede `PLAYER_KNOWLEDGE`, `PC_KNOWLEDGE` ou `NPC_KNOWLEDGE`; `GM_HIDDEN` é classificação de divulgação, não ACL Git.
+
+A árvore acima é mapa de slots possíveis, não obrigatoriedade de diretórios vazios. Prosa incidente permanece íntegra e recuperável; um fato que se torne duradouro só é estruturado depois de consultar trecho/commit e verificar tempo, episteme, autor e conhecimento. Não existe limite fixo de tokens, obrigação de `index.md` para toda unidade ou arquivo por rolagem/cena/beat. Git é a versão; índices são derivados; variantes editoriais e mídia pendente não recebem autoridade por mera transferência. Implementação/verificação aguardam C01/C02.

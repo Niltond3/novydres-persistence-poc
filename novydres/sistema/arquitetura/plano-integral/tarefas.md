@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_INICIADA_A01_PASS_A02_PENDENTE
+status: EXECUCAO_EM_CURSO_A01_A02_PASS_A03_NEXT
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -38,6 +38,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A01; aplicar Q-01 já aceita (DEC-16).
 - **Escopo/saída:** revisar `fase-a/topologia-e-ownership.md`, `modelo-de-dados.md` e schemas candidatos: IDs, relações, índices por assunto, fronteiras global/local e campanha/suplemento, episteme, tempo, fonte e conhecimento por ator. Aplicar DEC-16 ao conteúdo estruturado e à prosa; definir limites de documento e registros adicionais somente por função necessária, conforme DEC-23/DEC-24. Os schemas existentes são baseline a adaptar: retirar obrigações de ledger universal, replay e auditoria por dado, sem reabrir escolhas aceitas. Arquivo opcional não vira formulário obrigatório por cena/beat/figurante.
 - **Conclusão:** exemplos positivos e negativos permitem decidir o destino de cada tipo de informação sem duplicar donos. Incluir recuperação de um detalhe originalmente só na prosa, com fonte e conhecimento preservados, sem tratá-lo como evento novo nem ausência factual. Arquitetura por assunto funciona para cenário, personagem, crônica e sistema; nenhuma afirmação vira CONFIRMED ou conhecimento de NPC só porque o agente a leu. Não estabelecer ACL inexistente para segredos acessíveis ao agente.
+
+
+#### Execução de A02 — 2026-11-12
+
+- **Estado:** PASS de desenho candidato; entrada `783f8616d0f2e42f61f41a0be2a02b3f6258fa03`; runtime e master intactos.
+- **Saída:** `fase-a/modelo-de-dados.md`, `topologia-e-ownership.md` e schemas `subject-candidate.schema.json` / `record-candidate.schema.json`. DEC-16/23/24 aplicadas: estrutura só para fatos duradouros, detalhe incidental na prosa, um owner, episteme/tempo/conhecimento por fonte, sem registro obrigatório de rolagem/replay.
+- **Prova/limite:** JSON parseável, exemplos positivos/negativos no modelo; nenhum teste executado de instância, C01, Web/Codex ou CI. Não ativar os schemas nem promover dados.
+- **Próximo elegível:** A03; A04/A05 conforme dependências.
 
 ### A03 — Especificar versões, imutabilidade e persistência
 
