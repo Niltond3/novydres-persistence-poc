@@ -111,7 +111,31 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle})
  const pins=collectPins(cycle);
  need(equal(pins,anchor.pinned_references),'D01_PINS_CHANGED');
  for(const pin of pins)need(source.get(pin.path)?.sha===pin.blob_sha,'D01_PIN_BLOB_MISSING');
+ const cyclePinKeys=new Map();
+ for(const p of pins){
+  const prior=cyclePinKeys.get(p.path);
+  need(prior===undefined||prior===p.blob_sha,'D01_CYCLE_PIN_CONFLICT');
+  cyclePinKeys.set(p.path,p.blob_sha);
+ }
+ const pinRelations={missing:0,same:0,different:0},pinRows=new Set();
+ for(const row of index.source_files){
+  if(cyclePinKeys.has(row.source_path)){
+   pinRows.add(row.source_path);
+   need(row.pinned_by_operational_cycle==='PINNED_C45_SOURCE','D01_CURRENT_PIN_UNTRACKED');
+   const relation=row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE'?'SOURCE_NOT_IN_CANDIDATE':
+    row.candidate_relation==='SAME_PATH_SAME_BLOB'?'SOURCE_SAME_BLOB':'SAME_PATH_DIFFERENT_CONTENT';
+   need(row.current_cycle_candidate_reconciliation===relation,'D01_CURRENT_PIN_MISCLASSIFIED');
+   pinRelations[relation==='SOURCE_NOT_IN_CANDIDATE'?'missing':
+    relation==='SOURCE_SAME_BLOB'?'same':'different']++;
+  }else need(!Object.hasOwn(row,'pinned_by_operational_cycle')&&
+   !Object.hasOwn(row,'current_cycle_candidate_reconciliation'),'D01_FALSE_CURRENT_PIN');
+ }
+ need(pinRows.size===cyclePinKeys.size,'D01_CURRENT_PIN_INCOMPLETE');
  const summary=index.denominators;
+ need(summary?.cycle_unique_pinned_paths===pinRows.size&&
+  summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
+  summary.cycle_pinned_paths_same_blob===pinRelations.same&&
+  summary.cycle_pinned_paths_changed===pinRelations.different,'D01_PIN_SUMMARY_MISMATCH');
  need(summary?.master_blobs===masterTree.length&&summary.candidate_blobs===candidateTree.length&&
   summary.same_path_equal_blob===counts.same&&summary.same_path_changed_blob===counts.different&&
   summary.master_without_candidate_same_path===counts.missing&&summary.candidate_only===only.length&&
@@ -125,6 +149,8 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle})
   same_path_same_blob:counts.same,same_path_changed_blob:counts.different,
   source_without_candidate_path:counts.missing,candidate_only:only.length,
   external_items:external.items.length,media_items:media.entries.length,cycle_pins:pins.length,
+  cycle_unique_pinned_paths:pinRows.size,cycle_pins_missing_candidate:pinRelations.missing,
+  cycle_pins_same_candidate:pinRelations.same,
   editorial_approval:'NOT_PROVEN',runtime_activation:false};
 }
 export function readAndVerifyD01(root=process.cwd()){

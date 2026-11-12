@@ -52,6 +52,18 @@ test('D01 media pending flag cannot be reported verified by convenience',()=>{
 test('D01 cannot silently detach the active operational cycle and source pins',()=>{
  reject(x=>x.authority_reference.pinned_references[0].blob_sha='0'.repeat(40),'D01_PINS_CHANGED');
 });
+test('D01 C45 active pins uniquely reconciled and missing candidate paths cannot be silently marked present',()=>{
+ const observed=verifyD01(index,data);
+ assert.equal(observed.cycle_pins,77);
+ assert.equal(observed.cycle_unique_pinned_paths,73);
+ assert.equal(observed.cycle_pins_missing_candidate,53);
+ assert.equal(observed.cycle_pins_same_candidate,20);
+ const i=index.source_files.findIndex(x=>x.current_cycle_candidate_reconciliation==='SOURCE_NOT_IN_CANDIDATE');
+ assert.ok(i>=0);
+ reject(x=>x.source_files[i].current_cycle_candidate_reconciliation='SOURCE_SAME_BLOB',
+  'D01_CURRENT_PIN_MISCLASSIFIED');
+ reject(x=>delete x.source_files[i].pinned_by_operational_cycle,'D01_CURRENT_PIN_UNTRACKED');
+});
 test('D01 no false success when gate pending list disappears',()=>{
  reject(x=>x.gate_requirements_pending=[],'D01_FALSE_GATE_CLOSURE');
 });
