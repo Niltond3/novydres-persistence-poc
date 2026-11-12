@@ -27,7 +27,7 @@ Esta matriz vincula requisitos a tarefas e evidências esperadas. **Não é rela
 | A/topologia: identidade global versus contexto local e proprietário único | A02, C01–C02, D03–D04 | Uma identidade, relações locais por escopo, sem cópias concorrentes de ficha/estado. |
 | A/auditoria: todas as origens, fontes conflitantes e mídia externa | A01, D01–D02, D06 | SHA/categoria/destino/prova por origem; conflitos conhecidos tratados; originais externos preservados conforme política, sem hashes inventados. |
 | A/git: proteção administrativa e rotas de leitura/escrita aplicáveis viáveis | A05, B04, C03/C07, E01–E03 | Capacidade observada, conflito stale rejeitado em sandbox, permissões/ref/parent conferidos, CI com run ID. |
-| A/validação: precisão/custo/latência e suíte pareada | A06, B02–B05, C07, D06, E03 | Cobertura de riscos/casos/provas e amostragem justificada conforme DEC-21; casos críticos e falhas históricas preservados, determinísticos sem repetição redundante e rotas reais do fluxo adotado comprovadas. Aplicar DEC-19 a métricas indisponíveis, com baseline comparável nos campos observáveis. Sem dispensar provas de precisão e integridade. |
+| A/validação: precisão/custo/latência e suíte comparável | A06, B02–B05, C07, D06, E03 | Cobertura de riscos/casos/provas e amostragem justificada conforme DEC-21; casos críticos e falhas históricas preservados, determinísticos sem repetição redundante e rotas reais do fluxo adotado comprovadas. Aplicar DEC-19 a métricas indisponíveis, com baseline comparável nos campos observáveis. Sem dispensar provas de precisão e integridade. |
 
 ## Validadores V01–V12 de A
 

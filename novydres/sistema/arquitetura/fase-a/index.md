@@ -17,7 +17,7 @@ A aprovação histórica está em [aprovacao.json](aprovacao.json). A formulaç�
 ## Documentos coesos
 - topologia-e-ownership.md: árvore de destino, responsabilidades e matriz de ownership.
 - modelo-de-dados.md: ontologia, registro por assunto, IDs, relações, alegações, estado atual e sigilo.
-- git-e-roteadores.md: snapshots, escrita concorrente, histórico, interfaces Codex/Web, cache e recuperação.
+- git-e-roteadores.md: snapshots, escrita concorrente, histórico, interfaces do fluxo adotado (Web/GitHub e executores alternativos quando pertinentes), cache e recuperação.
 - auditoria-e-mapa.md: auditoria estrutural, inventário de fronteiras, colisões e procedimento de equivalência.
 - validacao-e-metricas.md: validadores implementáveis, ensaios de regressão, qualidade, tempo, tokens e proibição de legados.
 - fases-b-e.md: contratos e gates detalhados de B, C, D e E; ponto de partida sem memória de chat.

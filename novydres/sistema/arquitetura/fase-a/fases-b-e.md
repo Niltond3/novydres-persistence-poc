@@ -73,3 +73,7 @@ Missão: NOVYDRES MIGRAÇÃO FASE B — Protótipo, exclusivamente. Repositório
 **Decisão de desenho A07:** A01–A06 possuem saída e fonte, nenhum trade-off novo exige repetição de Q-01–Q-08. Prosseguir **somente** a B01–B05 isolada, sem mudar `master`, sem ativar runtime e sem interpretar o PASS de desenho como equivalência factual. Quando B05 não tiver PASS, C01–C08 permanecem bloqueadas. Escolhas substantivas genuinamente novas seguem a autoridade aplicável, não um pedido automático de confirmação entre fases.
 
 **Readback de A07:** o commit que acrescentar este adendo será identificável no histórico Git da branch; não se insere SHA autorreferencial. As três entradas antigas permanecem inalteradas até E. A próxima sessão deve recuperar o HEAD e conferir o commit, este adendo, A06 e gate histórico B antes de qualquer escrita.
+
+## Sucessão de critérios por DEC-27 (2026-11-12)
+
+A07 e seu levantamento de lacunas permanecem históricos; cláusulas daquele momento sobre provar **ambos os canais** não são critérios vigentes. DEC-27 substitui a duplicação Codex/Web por cobertura funcional na rota adotada, preservando provas anteriormente válidas e exigindo revisão e CI reais. Para B05 consultar `../fase-b/gate-e-readback.json#b05_dec27_current`. C continua dependente de B05 PASS; E/cutover e cena precisam das aprovações próprias.

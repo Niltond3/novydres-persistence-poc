@@ -77,7 +77,7 @@ As referências indicam famílias concretas a revisar, não autorização genér
 | Fase | Parcela desta revisão | Condição de passagem |
 |---|---|---|
 | A — emenda de desenho | A01–A07: baseline, sucessores propostos, responsabilidades e casos afetados. | Consolidar escolhas aceitas e resolver somente decisões substantivas residuais; no plano futuramente autorizado, avançar por critérios comprovados (DEC-22), sem reescrever aprovação histórica. |
-| B — protótipo/remediação | B01–B05: testar o desenho nos quatro exemplos isolados já previstos e exercícios fictícios de condução. | Resolver B_REMEDIATION_REQUIRED; manter precisão/recuperação e evidência Web/Codex. Não dispensar falhas por trocar o fluxo. |
+| B — protótipo/remediação | B01–B05: testar o desenho nos quatro exemplos isolados já previstos e exercícios fictícios de condução. | Resolver B_REMEDIATION_REQUIRED; manter precisão/recuperação e evidência do fluxo efetivo conforme DEC-27. Não dispensar falhas por trocar o fluxo. |
 | C — ferramentas | C01–C08: implementar e verificar o mecanismo mínimo e os sucessores compatíveis. | B PASS e autorização inicial do plano; sem nova confirmação apenas pela transição (DEC-22), com critérios de C comprovados. |
 | D — migração candidata | D01–D07: aplicar a topologia e os contratos a todo o snapshot, com mapa de informação preservada e procedimentos substituídos. | C PASS; inventário integral, equivalência e conflitos resolvidos. |
 | E — cutover | E01–E03: revisão independente, autorização e um único HEAD sem legado. | D PASS; política sucessora aprovada, CI, promoção protegida e readback. |

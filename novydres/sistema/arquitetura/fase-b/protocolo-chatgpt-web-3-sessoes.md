@@ -83,3 +83,7 @@ Os casos B-N01..B-N12 e B-M01..B-M12 permanecem `NOT_TESTABLE_NO_EXECUTABLE_PAYL
 
 Uma sessão Web só pode ser chamada de execução real quando houver identificação da conversa, começo/fim observáveis, resposta por ID e readback independente de path/SHA/locator. Resultado agregado autodeclarado é `INSUFFICIENT_EVIDENCE`. Tokens reais e bytes HTTP devem permanecer `NOT_OBSERVABLE` quando a UI não os expuser. Três sessões não convertem automaticamente os gates Codex/CI/Git em PASS.
 
+
+## Nota de aplicabilidade após DEC-27 (2026-11-12)
+
+Este protocolo documenta o método **histórico** de três sessões, preservado para auditabilidade; a obrigatoriedade de duplicação por produto, três sessões ou quantidade fixa de rodadas foi superada pela decisão posterior DEC-27. Selecionar provas segundo função, risco, mudança concreta e revisão independente; não reduzir a exigência de execução real ou de congelamento anterior à pontuação.

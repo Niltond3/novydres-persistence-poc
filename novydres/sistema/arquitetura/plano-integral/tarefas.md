@@ -265,7 +265,7 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 ### E03 — Verificar o HEAD promovido e encerrar integralmente o ADR
 
 - **Depende de:** E02.
-- **Escopo/saída:** CI real no commit promovido, smoke tests de leitura/escrita/retomada nas duas rotas em ambiente seguro, revisão de sigilo e scanner de toda HEAD/dependências controladas. Atualizar matriz com evidência definitiva, documentação corrente e estado final dos gates; manter barreira anti-regressão para commits seguintes.
+- **Escopo/saída:** CI real no commit promovido, smoke tests de leitura/escrita/retomada no fluxo de uso efetivo em ambiente seguro, revisão de sigilo e scanner de toda HEAD/dependências controladas. Atualizar matriz com evidência definitiva, documentação corrente e estado final dos gates; manter barreira anti-regressão para commits seguintes.
 - **Conclusão:** todos os requisitos do ADR e sucessores aprovados implementados, migração completa, versões via Git, ZERO LEGADO e equivalência comprovados; nenhuma pendência bloqueante transferida a uma futura tarefa. Só então E PASS/ADR IMPLEMENTADO. Se houver falha, programa não encerrado. Isso não autoriza cena nem certifica eficácia narrativa ainda não observada em jogo.
 
 ## Registro de execução

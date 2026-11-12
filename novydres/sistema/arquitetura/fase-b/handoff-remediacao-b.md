@@ -24,3 +24,7 @@ Continuar apenas B: executar as três sessões independentes no ChatGPT Web segu
 A proposta de exceção ao jogador cobre apenas contadores Web de tokens e bytes HTTP que a interface não exponha. Ela **não** permite PASS enquanto persistirem falha Codex, evidência Web insuficiente, casos sem execução ou ausência de CI. Não foi adotada.
 
 **Recomendação de continuidade: ABRIR CHAT LIMPO**, usando este handoff e o SHA final da branch como contexto. Não fornecer prompt para C.
+
+## Sucessão da remediação (DEC-27; 2026-11-12)
+
+As recomendações anteriores de três sessões Web mais rodadas obrigatórias Codex são históricas, não são requisitos atuais. O teste vigente segue a função e os riscos, com evidência executável na rota ChatGPT Web + GitHub/Actions e revisão independente quando prevista. Consultar `gate-e-readback.json#b05_dec27_current`; preservar falhas antigas e não aprovar retroativamente respostas desaparecidas.

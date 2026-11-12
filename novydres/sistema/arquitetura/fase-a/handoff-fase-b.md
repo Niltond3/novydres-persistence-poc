@@ -44,3 +44,7 @@ A arquitetura da Fase A do ADR-001 foi **aprovada expressamente pelo jogador em 
 
 ## Gate de entrada
 FASE A: PASS_APPROVED. FASE B: NOT_STARTED. Ao iniciar B, tratar a reconciliação de HEADs/authority e os testes Web/Codex como tarefas a EXECUTAR, não como resultados já verificados.
+
+## Nota de sucessão DEC-27 (prospectiva, 2026-11-12)
+
+Este handoff registra a instrução histórica da fase A e **não** reabre seus resultados. A decisão posterior do jogador elimina testes obrigatórios duplicados Codex/Web e exige prova por função e risco na rota real. A execução corrente e B05 devem seguir o ADR §11/DEC-27, `plano-integral/tarefas.md` e `fase-b/gate-e-readback.json#b05_dec27_current`. Os mandatos históricos por dois canais e por pausa ritual não são gates vigentes.
