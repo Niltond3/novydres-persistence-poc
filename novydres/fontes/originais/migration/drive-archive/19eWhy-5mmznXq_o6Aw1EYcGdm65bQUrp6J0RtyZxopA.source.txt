@@ -1,0 +1,121 @@
+NOVYDRES — CHRONICLE_001 | ÍNDICE OPERACIONAL PROVISÓRIO V0.1
+Etapa 2: recuperação e indexação inicial · 31/10/2026 · SOMENTE REFERÊNCIAS, SEM EVENTOS TÉCNICOS COMMITTED
+00. Contrato de uso deste índice
+Este índice é PROJEÇÃO AUXILIAR RECONSTRUÍVEL para localizar informações do diário. Não é nova governança, ficha técnica, evento validado, narrativa canônica nem fonte que substitua documentos originais. A governança V1/V2 e EVENT_PROTOCOL_V1 seguem inalterados. Nenhum ID abaixo representa EVT-n, ROLL-n ou event_id do CHRONICLE_STORE_V0_2. IDs IDX-* são chaves de busca internas, PROVISÓRIAS e não autoritativas.
+Fonte de maior granularidade: character.md em https://docs.google.com/document/d/1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE/edit ; documento de inventário/conflitos: https://docs.google.com/document/d/1q1w9oYI3YqLWsd7jZ7p8_MhxNzzwR7zuWWvp7MnoLs4/edit . Conferido após recuperação do turno M1.09 com CAS/readback. Para comprovar uma afirmação, buscar o marcador de origem exato no documento-fonte, conferir eventual CORR/DEC posterior e distinguir a categoria epistêmica; jamais citar apenas este índice como prova primária.
+Regra de pesquisa: 1. Identificar pessoa/assunto por IDX-ENT; 2. consultar episódios M1.xx referenciados; 3. buscar chave IDX-EV e marcador literal do diário; 4. consultar correções e checkpoint; 5. verificar versão vigente. Sem prova = UNKNOWN. Segredos e planos não viram fatos.
+Estados: DOC_CONFIRMED = conteúdo observado no Google Doc com readback, não evento do store; CHAT_RECOVERED = declaração original recuperada e posteriormente confirmada no Doc; DOC_CORRECTED = trecho posterior corrige um anterior; NPC_CLAIM = alegação de NPC, não fato independente; PC_BELIEF = interpretação/expectativa pessoal; UNKNOWN = ainda não estabelecido; TECH_MISSING = não registrado em ledger técnico.
+01. Estado operacional vigente — leitura rápida, não autoridade de governo
+CHRONICLE=CHR-001 | MODE=GUIDED_CREATION_ACTIVE | JOB00–03=CLOSED | JOB04=PASS | M1=ACTIVE | M1.01–M1.08=CLOSED | M1.09=ACTIVE | M2–M5=NOT_STARTED | TEMPORALIDADE=fim dos anos 1970, dia exato UNKNOWN | FUTURA CRÔNICA PRINCIPAL=NOVYDRES 2010, ainda NÃO iniciada.
+Checkpoint documentado: Bartholomeu Krauser recebeu do intermediário um papel dobrado contendo endereço escrito; disse 'Tenha um bom dia' e foi procurar Mary, a quem expôs sua intenção de encerrar a situação naquela noite e seu temor subjetivo de que o convencessem a continuar. Mary ainda não teve resposta, gesto ou aceitação narrados. Personagem está na residência junto a Mary, localização precisa do cômodo UNKNOWN. NPC intermediário não tem reação posterior verificada. Não mover PJ para a reunião, não presumir fechamento da porta.
+Reunião 20h em sala dos fundos de depósito comercial de carvão, entrada lateral: informação atribuída ao intermediário (NPC_CLAIM), não garantia de segurança, identidade do contratante ou intenção real. Nome do intermediário, mandante e plano dos contratantes = UNKNOWN. Endereço literal do bilhete não transcrito no registro.
+XP_TOTAL=519 | XP_SPENT=44 | XP_REMAINING=475 | XP_CREDIT_GRANTED=140 | XP_CREDIT_AVAILABLE=96 | M1.09 novo crédito=0 | Compras pendentes=nenhuma autorizada. Três gastos de Força de Vontade descritos na narrativa, consolidação de ficha pendente; testes com atributos 5/5 na biografia eram provisórios. Geração, sire, Abraço e condição vampírica no tempo da cena = NÃO FIXADOS/NÃO OCORRIDOS.
+CHRONICLE_STORE_V0_2: chronicle_id CHR-001, phase CHARACTER_CREATION, events=[], rolls=[], state={}; portanto nenhuma linha de este índice representa COMMITTED técnico. Recuperação da última fala de Bartholomeu foi confirmada apenas em character.md. Referência: buscar 'M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR' (final do diário).
+02. Provocações e pontos de busca
+M1.01 | Pessach / A Noite das Perguntas | CLOSED | CRÉDITO 10 | GASTO 10 | BUSCA: "M1_ENTER = COMMITTED após gate PASS" | ENTIDADES/ASSUNTOS: Bartholomeu, Mary, Mikahel, Sara; mentor Habi Mikha em lembrança | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.02 | O calor do outro lado | CLOSED | CRÉDITO 10 | GASTO 10 | BUSCA: "M1.02 — PROVOCAÇÃO DE LOOP" | ENTIDADES/ASSUNTOS: Vera, filha de Vera, Mikhailov; aquecimento | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.03 | A primeira mão erguida | CLOSED | CRÉDITO 10 | GASTO 10 | BUSCA: "M1.03 — PROVOCAÇÃO DO LOOP" | ENTIDADES/ASSUNTOS: Mikahel, Yuri, Dima, Orlova, direção escolar, pai de Yuri | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.04 | O relatório em branco | CLOSED | CRÉDITO 10 | GASTO 8 | BUSCA: "M1.04 — O RELATÓRIO EM BRANCO" | ENTIDADES/ASSUNTOS: Pavel (chefia do aquecimento), Liev, ramal | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.05 | O preço do silêncio | CLOSED | CRÉDITO 30 | GASTO 6 | BUSCA: "M1.05 — O PREÇO DO SILÊNCIO" | ENTIDADES/ASSUNTOS: Intermediário, Lev e esposa, Nikolai; coação e denúncia | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.06 | Carta da escola | CLOSED | CRÉDITO 10 | GASTO 0 | BUSCA: "M1.06 — CARTA DA ESCOLA" | ENTIDADES/ASSUNTOS: Orlova, Mary, Mikahel (não presente na conversa corrigida); CORR-M1.06-001 | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.07 | O que Mary não pergunta | CLOSED | CRÉDITO 30 | GASTO 0 | BUSCA: "M1.07 — O QUE MARY NÃO PERGUNTA" | ENTIDADES/ASSUNTOS: Mary e Bartholomeu; revelação, limites, Touchstone histórica | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.08 | O homem no portão e desdobramentos | CLOSED | CRÉDITO 30 | GASTO 0 | BUSCA: "M1.08 — O HOMEM NO PORTÃO" | ENTIDADES/ASSUNTOS: Intermediário, Lev/esposa, Nikolai, moradores, hospital, registros, armazém, Mary; rolagens e retificações | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+M1.09 | O primeiro não | ACTIVE | CRÉDITO 0 | GASTO 0 | BUSCA: "M1.09 — ACEITAÇÃO DO ENCONTRO E ORIENTAÇÕES DO INTERMEDIÁRIO" | ENTIDADES/ASSUNTOS: Intermediário, Mary; último adendo recuperado no final de character.md | PROVENIÊNCIA: character.md (DOC_NARRATIVE e declarações registradas); consulte correções antes de usar.
+03. Catálogo de eventos narrativos / marcos documentais (NÃO ledger)
+Chaves IDX-EV são MARCOS DE BUSCA, não eventos atomizados com prova individual, timestamps exatos ou hashes técnicos. Cada linha conserva sua referência textual para futura decomposição e reconciliação.
+IDX-EV-001 | M1.01 | Pessach: atos/falas do PJ, memória materna, ensinamentos e vínculo com Sara | BUSCAR: "PRÓLOGO — REGISTRO DE CENA 001" | STATUS: DOC_CONFIRMED; reclassificação administrativa por GATE04 posterior.
+IDX-EV-002 | M1.01 | GATE04 PASS e autorização de Vigor+Carisma | BUSCAR: "JOB03 — FECHAMENTO OPERACIONAL E GATE04" | STATUS: DOC_CONFIRMED; não anteriorizar gate.
+IDX-EV-003 | M1.02 | Vera/filha, serviço de aquecimento e coerção no gabinete de Mikhailov | BUSCAR: "M1.02 — PROVOCAÇÃO DE LOOP" | STATUS: DOC_CONFIRMED; consequências mais amplas desconhecidas.
+IDX-EV-004 | M1.02 | Compra Força 1, Destreza 1, 10 XP | BUSCAR: "TRANSAÇÃO ATR-FORCA-001" | STATUS: DOC_CONFIRMED, autorização registrada.
+IDX-EV-005 | M1.03 | Conflito Mikahel, Yuri, Dima; escola, responsabilidade e testemunhos | BUSCAR: "M1.03 — PROVOCAÇÃO DO LOOP" | STATUS: DOC_CONFIRMED; sem reconciliação automática dos meninos.
+IDX-EV-006 | M1.03 | Compra Determinação 1, Autocontrole 1 | BUSCAR: "M1.03 — ENCERRAMENTO MECÂNICO" | STATUS: DOC_CONFIRMED, autorização registrada.
+IDX-EV-007 | M1.04 | Vistoria do ramal, perda de pressão e laudo não assinado | BUSCAR: "M1.04 — O RELATÓRIO EM BRANCO" | STATUS: DOC_CONFIRMED; reparo definitivo UNKNOWN.
+IDX-EV-008 | M1.04 | Compra Inteligência 1 e Ofícios 1, 8 XP | BUSCAR: "M1.04 — DECISÃO DE COMPRA" | STATUS: DOC_CONFIRMED.
+IDX-EV-009 | M1.05 | Agressão a Lev e esposa, Nikolai pressionado por denúncia, recusa de confirmação formal | BUSCAR: "M1.05 — O PREÇO DO SILÊNCIO" | STATUS: DOC_CONFIRMED; resultados médicos e retirada oficial então UNKNOWN.
+IDX-EV-010 | M1.05 | Compra Briga 1 e Intimidação 1; norma de crédito cumulativo proporcional | BUSCAR: "M1.05 — COMPRA CONFIRMADA" | STATUS: DOC_CONFIRMED; decisão local, não lei global V5.
+IDX-EV-011 | M1.06 | Carta da escola e erro de interlocutor | BUSCAR: "CORR-M1.06-001" | STATUS: DOC_CORRECTED: Bart falou com Mary; fala de Mikahel atribuída incorretamente invalidada.
+IDX-EV-012 | M1.07 | Confissão a Mary, revelações e limites autônomos da esposa | BUSCAR: "M1.07 — REVELAÇÃO A MARY" | STATUS: DOC_CONFIRMED; perdão/aceitação futura não presumidos.
+IDX-EV-013 | M1.07 | Mary escolhida Touchstone histórica e Convicção associada | BUSCAR: "DEC-CHAR-TOUCHSTONE-MARY-001" | STATUS: DOC_CONFIRMED; elegibilidade em 2010 pendente.
+IDX-EV-014 | M1.08 | Intermediário visita portão da oficina, pagamento/envelope, denúncia sem comprovação naquele ponto | BUSCAR: "M1.08 — O HOMEM NO PORTÃO" | STATUS: DOC_CONFIRMED; handoff antigo captura somente esta fase.
+IDX-EV-015 | M1.08 | Entrevistas com moradoras e uso do alias Sasha Rumyantsev | BUSCAR: "M1.08 — ALIAS SASHA RUMYANTSEV" | STATUS: DOC_CONFIRMED; alegações sobre papel de investigador não viram profissão real.
+IDX-EV-016 | M1.08 | Conversa com esposa de Lev sob marquise hospitalar | BUSCAR: "M1.08 — CONFISSÃO EMOCIONAL" | STATUS: NPC_CLAIM sobre estado de Lev; não diagnóstico independente.
+IDX-EV-017 | M1.08 | Consulta a pasta pública de queixa ainda 'EM APURAÇÃO' | BUSCAR: "M1.08 — CONSULTA DA PASTA DO PROTOCOLO" | STATUS: Documento observado naquele momento; não declarar arquivamento posterior.
+IDX-EV-018 | M1.08 | Ataque na portaria de registros e correção da rolagem | BUSCAR: "M1.08 — RETIFICAÇÃO AUDITÁVEL DO GOLPE" | STATUS: DOC_CORRECTED, primeiro resultado substituído; 1 FV, sem roll_id técnico.
+IDX-EV-019 | M1.08 | Armazém 3, contato com Viktor Belov e conversa telefônica com Irina | BUSCAR: "M1.08 — FIM DO TELEFONEMA E APRESENTAÇÃO DO ENCARREGADO" | STATUS: DOC_CONFIRMED; identidade/vínculo de Irina UNKNOWN.
+IDX-EV-020 | M1.08 | Tentativa e entrada em setor de Pessoal; consulta ao cadastro e endereço de Nikolai | BUSCAR: "M1.08 — CONSULTA AO CADASTRO DE NIKOLAI E SAÍDA" | STATUS: DOC_CONFIRMED; endereço fornecido no cadastro não comprova residência atual.
+IDX-EV-021 | M1.08 | Apartamento 16: tentativas, contenção, lesão no ombro, 2 usos adicionais de FV | BUSCAR: "M1.08 — RERROLAGEM AUTORIZADA E RESOLUÇÃO" | STATUS: DOC_CONFIRMED; dados brutos no diário, TECH_MISSING.
+IDX-EV-022 | M1.08 | Retratação escrita sob coerção; original postado e via carbonada mantida | BUSCAR: "M1.08 — ENCERRAMENTO DA VISITA E VOLTA PARA CASA" | STATUS: DOC_CONFIRMED; aceitação/arquivamento pelo órgão UNKNOWN.
+IDX-EV-023 | M1.08 | Relato integral a Mary, decisão de deixar serviços; fechamento de cena | BUSCAR: "CHECKPOINT M1.08 — ENCERRAMENTO AUTORIZADO" | STATUS: DOC_CONFIRMED; compromisso futuro não cumprido por antecipação.
+IDX-EV-024 | M1.09 | Intermediário pede encontro noturno; PJ aceita encontro, não outro serviço | BUSCAR: "M1.09 — ACEITAÇÃO DO ENCONTRO E ORIENTAÇÕES" | STATUS: PLAYER_DECLARATION + NPC_CLAIM, não presumir intenção real do mandante.
+IDX-EV-025 | M1.09 | PJ recolhe bilhete, despede-se e conversa com Mary; sem reação narrada de NPC | BUSCAR: "M1.09 — RECUPERAÇÃO DE DECLARAÇÃO DE JOGADOR" | STATUS: CHAT_RECOVERED→DOC_CONFIRMED por CAS/readback; não COMMITTED técnico.
+IDX-EV-026 | transversal | Retificação de sobrenome Krause→Krauser para toda a família | BUSCAR: "CORR-IDENTITY-002" | STATUS: DOC_CORRECTED; adendos antigos preservados.
+IDX-EV-027 | transversal | Créditos XP 140, gasto 44, disponível 96, meta de ficha não comprada | BUSCAR: "DEC-CR-008..011" | STATUS: DOC_CONFIRMED; metas/benefícios condicionados.
+04. Índice provisório de entidades
+Cada IDX-ENT representa um sujeito ou função encontrada nas fontes. PERSONAGEM não implica automaticamente sobrevida em 2010 ou conhecimento de cada episódio. IDs PROVISÓRIOS não substituem IDs canônicos da cartografia, ficha ou CRM relacional futuro.
+IDX-ENT-001 | Bartholomeu Krauser | PJ; trabalhador do aquecimento; Gangrel futuro | ONDE: M1.01–M1.09 | CAUTELA: nome retificado CORR-IDENTITY-002; condição mortal nas cenas M1.
+IDX-ENT-002 | Mary Krauser | Esposa; Touchstone histórica declarada | ONDE: M1.01, M1.03, M1.06–M1.09 | CAUTELA: conhece confissões conforme M1.07/M1.08; resposta M1.09 não narrada; futuro 2010 UNKNOWN.
+IDX-ENT-003 | Mikahel Krauser | Filho | ONDE: M1.01, M1.03, M1.06 | CAUTELA: fala errada em M1.06 invalidada por CORR-M1.06-001.
+IDX-ENT-004 | Sara Krauser | Filha; Touchstone histórica | ONDE: M1.01 | CAUTELA: vida/vínculo em 2010 UNKNOWN.
+IDX-ENT-005 | Mikha'el / Habi Mikha | Rabino, diretor escolar e mentor juvenil de Bart | ONDE: JOB03, M1.01 | CAUTELA: destino e vida em 2010 UNKNOWN.
+IDX-ENT-006 | Vera | Moradora afetada por corte do aquecimento | ONDE: M1.02 | CAUTELA: sobrenome/desfechos além de cena UNKNOWN.
+IDX-ENT-007 | Filha de Vera | Criança com problema de saúde relatado | ONDE: M1.02 | CAUTELA: nome/diagnóstico e desfecho UNKNOWN.
+IDX-ENT-008 | Mikhailov | Responsável/supervisor na repartição do aquecimento | ONDE: M1.02 | CAUTELA: religações e responsabilidade limitadas à cena.
+IDX-ENT-009 | Pavel (chefia do aquecimento) | Chefia local no trabalho de Bart | ONDE: M1.04, notas de profissão | CAUTELA: não fundir automaticamente ao 'Pavel' citado em M1.08 no armazém.
+IDX-ENT-010 | Liev | Colega do aquecimento | ONDE: M1.04 | CAUTELA: participa da inspeção do ramal.
+IDX-ENT-011 | Yuri | Aluno envolvido em conflito escolar | ONDE: M1.03, M1.06 | CAUTELA: não presumir amizade/reincidência.
+IDX-ENT-012 | Dima | Aluno alvo das provocações narradas | ONDE: M1.03, M1.06 | CAUTELA: não presumir consequências posteriores.
+IDX-ENT-013 | Orlova | Inspetora escolar | ONDE: M1.03, M1.06 | CAUTELA: registros escolares limitados ao narrado.
+IDX-ENT-014 | Diretora da escola (nome não confirmado) | Direção escolar | ONDE: M1.03 | CAUTELA: identidade e outros vínculos UNKNOWN.
+IDX-ENT-015 | Pai de Yuri (nome não confirmado) | Responsável de Yuri | ONDE: M1.03 | CAUTELA: não presumir reconciliação de famílias.
+IDX-ENT-016 | Lev Morozov | Morador agredido pelo PJ | ONDE: M1.05, M1.08 | CAUTELA: hospitalização relatada; estado clínico final UNKNOWN.
+IDX-ENT-017 | Esposa de Lev (nome não confirmado) | Testemunha/interlocutora | ONDE: M1.05, M1.08 | CAUTELA: alega estado grave de Lev; não converter relato em diagnóstico.
+IDX-ENT-018 | Nikolai Serebryakov | Denunciante ligado à queixa contra policial | ONDE: M1.05, M1.08 | CAUTELA: retratou-se sob coerção; desfecho oficial da queixa UNKNOWN.
+IDX-ENT-019 | Intermediário recorrente (nome desconhecido) | Mensageiro de serviços e encontro alegado | ONDE: M1.05, M1.08, M1.09 | CAUTELA: mandante/organização UNKNOWN; não imputar onisciência.
+IDX-ENT-020 | Moradora idosa do prédio de Lev | Testemunha local; nome UNKNOWN | ONDE: M1.05, M1.08 | CAUTELA: não assumir que sabe agressor/ligação completa.
+IDX-ENT-021 | Moradora mais jovem do prédio de Lev | Interlocutora local; nome UNKNOWN | ONDE: M1.08 | CAUTELA: não assumir conhecimento de crime.
+IDX-ENT-022 | Vigilante da repartição de registros | Guarda de portaria; nome UNKNOWN | ONDE: M1.08 | CAUTELA: condição final e consequências UNKNOWN.
+IDX-ENT-023 | Viktor Belov | Encarregado do turno no Armazém 3 | ONDE: M1.08 | CAUTELA: não forneceu endereço particular; conhecimento limitado ao contato.
+IDX-ENT-024 | Irina (identidade/parentesco não validado) | Pessoa atendendo telefonema ligado a Nikolai | ONDE: M1.08 | CAUTELA: papel/vínculo real não confirmado.
+IDX-ENT-025 | Funcionário da sala vizinha ao Pessoal / chamado 'Pavel' em trecho | Interlocutor no armazém | ONDE: M1.08 | CAUTELA: POTENCIAL CONFLITO DE IDENTIDADE: não fundir com IDX-ENT-009 sem reconciliação.
+IDX-ENT-026 | Contratante por trás do intermediário (não identificado) | Sujeito alegado por intermediário | ONDE: M1.09 | CAUTELA: identidade, plano e presença na reunião UNKNOWN; não tratar como agência confirmada.
+05. Relações e conhecimento — referências, não onisciência
+IDX-REL-001 | Bartholomeu ↔ Mary | casamento e vínculo afetivo declarados | ORIGEM: M1.01, M1.07, M1.08, M1.09 | LIMITE: Mary sabe do relato que Bart lhe fez nos episódios registrados; não há perdão irrestrito nem resposta nova em M1.09.
+IDX-REL-002 | Bartholomeu ↔ Mikahel | pai e filho; formação/proteção | ORIGEM: M1.01, M1.03, M1.06 | LIMITE: M1.06: Bart falou com Mary, não com Mikahel.
+IDX-REL-003 | Bartholomeu ↔ Sara | pai e filha; Touchstone histórica | ORIGEM: M1.01 | LIMITE: não inferir sobrevida/vínculo até 2010.
+IDX-REL-004 | Bartholomeu ↔ Mikha'el | discípulo/mentor no passado | ORIGEM: JOB03/M1.01 | LIMITE: não inventar reencontro.
+IDX-REL-005 | Bartholomeu ↔ Vera | ajuda oferecida no aquecimento | ORIGEM: M1.02 | LIMITE: não inferir proteção vitalícia nem extinção do problema sistêmico.
+IDX-REL-006 | Mikahel ↔ Yuri ↔ Dima | conflito na escola com apuração | ORIGEM: M1.03/M1.06 | LIMITE: não declarar amizade ou decisão fora das medidas narradas.
+IDX-REL-007 | Bartholomeu ↔ Lev/esposa | agressão anterior e encontro posterior | ORIGEM: M1.05/M1.08 | LIMITE: esposa de Lev reconhece PJ no hospital; seus conhecimentos específicos exigem fonte.
+IDX-REL-008 | Bartholomeu ↔ Nikolai | coerção, queixa, retratação sob pressão | ORIGEM: M1.05/M1.08 | LIMITE: a carta não demonstra arquivamento.
+IDX-REL-009 | Intermediário ↔ Bartholomeu | serviços anteriores, encontro alegado em M1.09 | ORIGEM: M1.05/M1.08/M1.09 | LIMITE: não prova poderes/contatos do intermediário nem aceitar novos serviços.
+IDX-REL-010 | Nikolai ↔ Irina | contato telefônico documentado | ORIGEM: M1.08 | LIMITE: relação pessoal, controle e localização UNKNOWN.
+IDX-REL-011 | Bartholomeu ↔ Viktor Belov | contato no armazém sob alias de entregador | ORIGEM: M1.08 | LIMITE: não presumir que Belov descobriu identidade real ou crime.
+IDX-REL-012 | Bartholomeu ↔ contratante não identificado | convite transmitido por intermediário | ORIGEM: M1.09 | LIMITE: NPC_CLAIM, não reunião realizada ou ameaça comprovada.
+06. Locais e referências espaciais
+IDX-LOC-001 | Residência da família Krauser | ORIGEM: M1.01, M1.07–M1.09 | LIMITE: casa, cozinha/quarto narrados em momentos diferentes; posição exata de Mary no último turno UNKNOWN.
+IDX-LOC-002 | Oficina de manutenção de aquecimento | ORIGEM: M1.04/M1.08 | LIMITE: portão/pátio; não confundir com casa.
+IDX-LOC-003 | Ramal de aquecimento sob vistoria | ORIGEM: M1.04 | LIMITE: reparo definitivo UNKNOWN.
+IDX-LOC-004 | Escola de Mikahel | ORIGEM: M1.03/M1.06 | LIMITE: nome/endereço exatos UNKNOWN.
+IDX-LOC-005 | Edifício dos Morozov | ORIGEM: M1.05/M1.08 | LIMITE: não presumir estado atual de moradores.
+IDX-LOC-006 | Hospital visitado após agressão | ORIGEM: M1.08 | LIMITE: nome/endereço clínico e prontuário direto UNKNOWN.
+IDX-LOC-007 | Repartição/arquivo público de protocolos | ORIGEM: M1.08 | LIMITE: pasta examinada em dado momento, queixa em apuração então.
+IDX-LOC-008 | Pátio Ferroviário de Mercadorias / Armazém 3 | ORIGEM: M1.08 | LIMITE: cadastro e visitas, testemunhas e consequências posteriores UNKNOWN.
+IDX-LOC-009 | Rua Arsenyev 41, bloco 2, apartamento 16, Drevnigrad | ORIGEM: M1.08 | LIMITE: endereço encontrado em cadastro; lugar da interação narrada com Nikolai.
+IDX-LOC-010 | Depósito comercial de carvão / sala dos fundos | ORIGEM: M1.09 | LIMITE: somente local alegado de encontro às 20h; endereço escrito no papel não transcrito.
+07. Pendências abertas e riscos para futura migração
+IDX-OPEN-001 | M1.09: resposta de Mary após a declaração recuperada | STATUS: AGUARDANDO NARRAÇÃO DO NPC; não inventar antes de aplicação do contrato e persistência.
+IDX-OPEN-002 | Intermediário e contratante: identidades, filiação, objetivo | STATUS: UNKNOWN; não elevar NPC_CLAIM a fato.
+IDX-OPEN-003 | Queixa de Nikolai: protocolo recebido, validade da retratação, arquivamento | STATUS: UNKNOWN; postagem não é deferimento.
+IDX-OPEN-004 | Estado clínico de Lev e esposa; vigilante; Nikolai após cenas | STATUS: UNKNOWN salvo observações/relatos situados.
+IDX-OPEN-005 | 3 FV historicamente gastos na M1.08 | STATUS: DOC_CONFIRMED narrativo, não consolidado na ficha técnica; evitar cobrar novamente.
+IDX-OPEN-006 | Rolagens e retificações M1.08 | STATUS: dados descritos no diário; não criar hashes, RNG, roll_id ou COMMITTED retroativos.
+IDX-OPEN-007 | Cópias Library/PENDENTE_DRIVE e trechos parciais | STATUS: não importar sem reconciliação específica e autorização quando necessária.
+IDX-OPEN-008 | Nome Pavel em contextos de aquecimento e armazém | STATUS: POTENCIAL COLISÃO; duas chaves provisórias distintas, não canonizar como pessoas necessariamente diferentes.
+IDX-OPEN-009 | Cânone original .AGENT/.CONTEXTG do workspace e Criação A–K | STATUS: fontes não integralmente verificadas; bloquear decisões de alto impacto no cânone.
+IDX-OPEN-010 | Metas TARGET-SHEET-V1, exceção de XP e benefícios Gato de Rua | STATUS: aprovadas em princípio sob auditoria; não executar compras nem conceder poderes.
+IDX-OPEN-011 | Nome Krauser | STATUS: CORR-IDENTITY-002 vigente; preservar grafias anteriores como transcrições históricas.
+IDX-OPEN-012 | Migração técnica histórica | STATUS: CHRONICLE_STORE_V0_2 intacto; nenhum item deste índice é evento técnico.
+08. Controle de versão e porta de saída
+Índice criado como projeção somente de leitura para futuras sessões; não alterar nem congelar fonte original por causa deste índice. Autoria/proveniência per-evento e decomposição das passagens resumidas seguem pendentes. Atualizações futuras devem manter histórico de versão do índice, conferir revisão de fonte e recalcular relações afetadas. Não usar este arquivo como substituto único de .AGENT, .CONTEXTG, DECISIONS ou event ledger.
+Verificações mínimas: nove provocações registradas; M1.01–M1.08 encerradas, M1.09 aberta; XP 519/44/475, crédito 140/96; correção de Mary/Mikahel, sobrenome Krauser e rolagem da portaria explicitadas; recuperação M1.09 apontada como DOC_CONFIRMED; nenhum COMMITTED técnico atribuído; plano do contratante UNKNOWN; fontes e marcadores literais indicados.
+ETAPA 2 = RECUPERAÇÃO CONFIRMADA + ÍNDICE INICIAL CRIADO. Etapa 3 (futura) = especificar e testar armazenamento ativo compacto/segmentação e rotina de sincronização, com autorização de governança e migração técnica separadas. NÃO IMPLEMENTADO AQUI.

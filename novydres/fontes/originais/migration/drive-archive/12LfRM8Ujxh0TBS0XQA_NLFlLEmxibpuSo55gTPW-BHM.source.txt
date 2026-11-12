@@ -1,0 +1,35 @@
+NOVYDRES / CHRONICLE_001 窶� CONTRATO OPERACIONAL V3 (MINUTA / Nﾃグ VIGENTE)
+Data de elaboraﾃｧﾃ｣o: 31/10/2026
+Estado: PROPOSTA PARA PROMOﾃ�ﾃグ, Nﾃグ APROVADA; Nﾃグ ALTERA .AGENT V1/V2, .CONTEXTG V1.3, DECISIONS_STATE_V2, EVENT_PROTOCOL_V1 ou cﾃ｢none global.
+1. OBJETIVO ﾃ哢ICO
+Reduzir leituras e escritas remotas e impedir perda de continuidade no ChatGPT Web, preservando eventos, correﾃｧﾃｵes, causalidade e agﾃｪncia. Drive ﾃｩ o repositﾃｳrio persistente, sem cliente desktop local, banco de dados local ou sincronizador em segundo plano.
+2. AUTORIDADES QUE PERMANECEM
+Cﾃ｢none fechado/congelado original > contratos da crﾃｴnica de ﾃ｢mbito local vﾃ｡lidos > decisﾃｵes expressas > eventos com proveniﾃｪncia confirmada > diﾃ｡rio histﾃｳrico > chat/cﾃｳpias nﾃ｣o reconciliadas.
+G01窶敵18 do .AGENT V1, G19窶敵23 do .AGENT V2, EVENT_PROTOCOL_V1 e DECISIONS_STATE_V2 continuam operantes atﾃｩ aprovaﾃｧﾃ｣o expressa desta minuta.
+Uma versﾃ｣o mais recente sﾃｳ supera uma anterior no escopo documentado e mediante decisﾃ｣o expressa e verificada; arquivos oficiais nﾃ｣o podem ser reescritos silenciosamente.
+3. TIPOS DE MEMﾃ迭IA
+SOURCE: character.md e documentos histﾃｳricos antigos, completos e preservados, com status tﾃｩcnico prﾃｳprio.
+ACTIVE: documento JSON pequeno contendo o snapshot/checkpoint, eventos NOVOS da provocaﾃｧﾃ｣o aberta, global_seq, prev_hash e referﾃｪncias a arquivos anteriores. Apenas apﾃｳs promoﾃｧﾃ｣o validada poderﾃ｡ ser autoridade para novos commits.
+ARCHIVES: documento individual para cada provocaﾃｧﾃ｣o fechada. Arquivo precisa ser lido e validado antes de trocar o ponteiro ativo. Eventos antigos nﾃ｣o se tornam comprometidos tecnicamente por estarem resumidos em um archive.
+INDEX: IDs de personagem/local/evento e relaﾃｧﾃｵes, indexaﾃｧﾃ｣o reconstruﾃｭvel, nunca competindo com fatos auditados.
+HISTORICAL_MANIFEST: um pacote de evidﾃｪncia por provocaﾃｧﾃ｣o M1.01窶溺1.09; contﾃｩm marcadores, status epistﾃｪmico, recursos e pendﾃｪncias. Nﾃ｣o equivale a eventos cripto-auditados.
+4. PROPOSTA DE PRE-FLIGHT MAIS CURTO (DEPENDE DE APROVAﾃ�ﾃグ)
+Ao iniciar nova conversa: ler gateway vigente, contrato V1/V2/V3, decisﾃｵes, protocolo, ACTIVE atual, manifesto e dados especﾃｭficos pertinentes; verificar version_id/checkpoint/source_revision. Em novos turnos da mesma sessﾃ｣o, ler ACTIVE por revisionId e validar delta antes de gravar; nﾃ｣o reler o inteiro character.md ou contratos imutados a cada fala, exceto por mudanﾃｧa de versﾃ｣o, conflito ou referﾃｪncia nﾃ｣o carregada. Nﾃ｣o se dispensa conferﾃｪncia de estado remoto. A leitura obrigatﾃｳria atualmente prevista no G19/V2 permanece atﾃｩ a promoﾃｧﾃ｣o formal.
+5. GATES DE NARRAﾃ�ﾃグ (ATﾃ熱ICOS NO DOCUMENTO ACTIVE)
+A. Validar origem da mensagem do jogador: literal e identificador se disponﾃｭvel; diferenciar fala, aﾃｧﾃ｣o, intenﾃｧﾃ｣o, crenﾃｧa, pergunta e metajogo.
+B. Conferir estado temporal, localizaﾃｧﾃ｣o, NPCs presentes, conhecimento local e ﾃｺltima janela de decisﾃ｣o; sem presumir fala/aﾃｧﾃ｣o/compra de Bartholomeu.
+C. Resolver aﾃｧﾃｵes NPC e mundo com causa observﾃ｡vel; registrar como fatos apenas efeitos realmente narrados ou resolvidos, separando NPC_CLAIM, GM_HYPOTHESIS, PC_BELIEF, UNKNOWN.
+D. Para gasto opcional de XP/FV, exigir aprovaﾃｧﾃ｣o literal com fonte, antes/depois, custo e regra. Uma autorizaﾃｧﾃ｣o de rolagem ﾃｩ diferente da execuﾃｧﾃ｣o do resultado, e resultados brutos anteriores nﾃ｣o podem ser recriados em retrospecto.
+E. Compilar evento+snapshot como uma ﾃｺnica atualizaﾃｧﾃ｣o controlada por revisionId; exigir occurrencesChanged=1; reler; validar hash e replay; narrar somente apﾃｳs confirmaﾃｧﾃ｣o. Falha e ACK ambﾃｭguo: ler antes de tentar repetir, buscar o mesmo ID e bloquear avanﾃｧo se nﾃ｣o reconcilia.
+F. Nunca converter texto de histﾃｳrico antigo em evento TECH_COMMITTED sem revisﾃ｣o de proveniﾃｪncia, evidﾃｪncia e decisﾃ｣o de migraﾃｧﾃ｣o prﾃｳpria.
+6. ROLAGENS
+Prﾃｩ-registrar pool, Fome, dificuldade e regra com fonte antes de sortear. Usar motor real; guardar faces originais, rerrolagens e regra de pontuaﾃｧﾃ｣o. Commit do resultado antes da narraﾃｧﾃ｣o mecﾃ｢nica. Se sorteio ocorreu mas confirmaﾃｧﾃ｣o remota falhou, nﾃ｣o rerrolar em silﾃｪncio; reconciliar ou pedir decisﾃ｣o em incidente aberto. Motor V3 candidato deste estﾃ｡gio Nﾃグ inclui implementaﾃｧﾃ｣o V5 final de produﾃｧﾃ｣o.
+7. SEQUﾃ劾CIA GLOBAL E ARQUIVAMENTO
+IDs e hashes de eventos futuros monotﾃｴnicos atravﾃｩs das provocaﾃｧﾃｵes (inclusive ao arquivar). Um shard inclui estado inicial, eventos, hash anterior, hash final, estado final, vﾃｭnculo com manifest. O ACTIVE contﾃｩm referﾃｪncia e prova de readback, mas nﾃ｣o ﾃｩ suficiente sem comparaﾃｧﾃ｣o com bytes reais dos arquivos. Em falha entre salvar shard e CAS do ACTIVE, manter evento no ACTIVE e permitir arquivo staged ﾃｳrfﾃ｣o; jamais remover eventos antes de confirmar ponteiro.
+8. CORREﾃ�ﾃ髭S, REGRAS E CANON
+Ajustes do jogador sﾃ｣o eventos de correﾃｧﾃ｣o com source/target sem reescrever eventos antigos. Nﾃ｣o resolver implicitamente sobrenome, datas, genealogia, crenﾃｧas, leis locais, resultado da queixa e fatos de NPCs. CORR-IDENTITY-002 confirma Krauser prospectivamente; falas antigas preservadas. Ficha TARGET-SHEET-V1 ﾃｩ objetivo, nﾃ｣o ficha atual. 96 XP crﾃｩdito nﾃ｣o sﾃ｣o gasto autorizado.
+9. LIMITES Tﾃ韻NICOS E PROMOﾃ�ﾃグ
+Casos da atual V3 candidata ainda nﾃ｣o garantem integridade externa de cada shard em todas as sessﾃｵes, proteﾃｧﾃ｣o criptogrﾃ｡fica independente da autoria, recuperaﾃｧﾃ｣o apﾃｳs perda simultﾃ｢nea de contexto e indisponibilidade do Drive, nem validaﾃｧﾃ｣o mecﾃ｢nica V5 integral. O cﾃｳdigo pode impedir inconsistﾃｪncias estruturais especﾃｭficas, mas o julgamento narrativo e a proveniﾃｪncia do chat continuam procedimentais. Antes da promoﾃｧﾃ｣o, exigir: replay real de arquivos, CAS + readback dos arquivos V3 em cenﾃ｡rio de falha, regressﾃｵes V1/V2, comparaﾃｧﾃ｣o M1.01窶溺1.09, reconciliaﾃｧﾃ｣o de 3 FV e rolagens, aprovaﾃｧﾃ｣o explﾃｭcita do jogador e atualizaﾃｧﾃ｣o de gateway/decisﾃｵes por revisﾃ｣o controlada.
+10. DECISﾃグ REQUERIDA (Nﾃグ TOMADA)
+Aprovar ou rejeitar formalmente o novo regime de leitura/gravaﾃｧﾃ｣o, a fonte de verdade para futuros eventos, o tratamento dos arquivos histﾃｳricos e o momento do corte. Nenhum arquivo CANﾃ年ICO/FECHADO ou APROVADO/CONGELADO do cenﾃ｡rio muda por esse acordo local.
+ESTADO NESTA MINUTA: DRAFT_NOT_ACTIVE / PRODUCTION_LEDGER_V0_2_UNCHANGED / NO_NARRATIVE_ADVANCE.

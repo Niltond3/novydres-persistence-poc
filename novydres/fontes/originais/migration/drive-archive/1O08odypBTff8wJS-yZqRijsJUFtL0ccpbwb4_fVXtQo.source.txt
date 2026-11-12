@@ -1,0 +1,29 @@
+NOVYDRES / CRÔNICA — .CONTEXTG.md V1.1
+Gateway de retomada, atualizado em 28/10/2026. NÃO modifica o contrato V1 nem o cânone do cenário.
+LEITURA OBRIGATÓRIA, EM ORDEM
+1. .AGENT.md (18 guardrails V1): https://docs.google.com/document/d/1QvcAY_DCHUNrE3YFDmd5SH9ZWmNdG47oG8uxWE5j-xs/edit
+2. EVENT_PROTOCOL_V1: https://docs.google.com/document/d/1iibkasTYCFF5g-u96CX7R9e5Id7n5u92s6wE8cC7weI/edit
+3. DECISIONS_STATE_V1 (marco anterior): https://docs.google.com/document/d/1mwjEw-9qVGeocWsrR8jvu90jF0GjxjmheAAm82ZXaRk/edit
+4. IMPLEMENTATION_STATUS_V0_1: https://docs.google.com/document/d/1x8z3aXAvMOA0TcimFxB8M9yVhqsGv2R9i7DO7RujOPU/edit
+5. ZIP do núcleo V0.1: https://drive.google.com/file/d/1xS8iLWsM0v5nlPQyQ9XvlxxMoFkSE-1m/view
+6. Snapshot do cenário (PROVISÓRIO): https://docs.google.com/document/d/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU/edit
+7. Consultar os verdadeiros .AGENT.md e .CONTEXTG.md do workspace canônico de Novydres e os capítulos relevantes assim que disponíveis.
+ESTADO ATUAL
+Narrador: contrato V1 VIGENTE; mudanças no cânone global: NENHUMA.
+Núcleo técnico: código Python + SQLite + Ed25519 + motor V5 básico implementado e testado (18/18). ZIP e relatório verificados no Drive.
+Integração execução do ChatGPT com esse código: NÃO IMPLEMENTADA.
+Sincronização automática banco SQLite ↔ Drive: NÃO IMPLEMENTADA.
+Crônica: PREPARAÇÃO; personagem não definido; evento 0; rolagem 0; nenhum fato ficcional ocorrido.
+GUARDRAILS ESSENCIAIS
+Somente jogador decide ações voluntárias do PC. Intenção ≠ ação ≠ resultado.
+Somente eventos confirmados com proveniência governam o passado.
+Plano de NPC e alegação não são acontecimentos objetivos.
+Rolagens via motor real com dados brutos e autorização para gastos opcionais.
+Não declarar 'salvo' sem escrita e leitura confirmadas.
+Conflitos entre documentos canônicos de Novydres exigem registro explícito.
+NEXT STEP
+Executar o ZIP num runtime acessível, configurar chave do jogador fora do alcance da IA, validar/importar ficha real, integrar os registros ao Google Drive por operações verificadas e testar recuperação ponta a ponta; só então iniciar primeira sessão.
+GOVERNANÇA
+Este V1.1 atualiza SOMENTE o resumo do estado operacional anterior. Não revoga .AGENT.md V1, EVENT_PROTOCOL_V1 ou o cânone do cenário. Conservar gateway V1 como histórico.
+CHECKPOINT TÉCNICO INICIAL (ADENDO)
+https://drive.google.com/file/d/1m7PAuUO3RW0h-mKHj9NTEScsU2dvOukL/view — base vazia do SQLite, no Drive, sem PC, eventos ou rolagens. A base não se sincroniza automaticamente após partidas; deve haver export/upload e confirmação.

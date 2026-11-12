@@ -1,0 +1,28 @@
+{
+  "schema": "NOVYDRES_V32_SANDBOX_BOOTSTRAP",
+  "status": "STAGING_ONLY_NOT_AUTHORIZED",
+  "purpose": "Fresh tool-session restore exclusively from Google Drive, not a live narrative nor production handoff",
+  "narrator_interface": "ChatGPT Web",
+  "runtime": "Google Drive connector, manual CAS+readback orchestration; no autonomous background service",
+  "sandbox": {
+    "active_doc_id": "1lGLAzJl3aCn9jz77oWleeZXL7ACXE4Ebmk10I0n_7TQ",
+    "expected_archives": 2,
+    "expected_total_events": 5,
+    "expected_next_seq": 6,
+    "no_live_character_history": true
+  },
+  "implementation": {
+    "io_gate_doc_id": "16trj8MATgRsYXy8K2G0o-Zs5KMUXojzxTNyXoZnlbtc",
+    "test_doc_id": "1wmZf4wlKHMTx7EK1Zot_6TCzhiKSrDTQHJrSoFfLG3k",
+    "engine_doc_id": "1Pg-gvxg1JJIzvOTe60aNsZ4p-_kbWH51QIgfGwY7Djg",
+    "auditor_doc_id": "1EhPCUdp5Mjd1ibc1takdVVzO8ZDXPCg0WC_6gXwtkGE"
+  },
+  "real_story": {
+    "active_source_doc_id": "1DIVG3stnBWF84iP76dvw1jjEzji58zA9vqelqk0cfJE",
+    "real_ledger_doc_id": "1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98",
+    "governance_v2_doc_id": "1TAZmn3pn5BT8LEZocAPPmjMx7DJShubcglXc6puuZUc",
+    "gateway_v1_3_doc_id": "13aw8j3rC8eMAbf5IDOrrPoe6UHt0_VLmdSO9JcU0An4",
+    "promotion": "NOT_APPROVED"
+  },
+  "instructions": "Read active, use its archive pointers to read ALL referenced archived Docs, validate each digest, all event hashes, global chain and replay before treating sandbox as internally consistent. Do not infer new character events; do not promote without user approval."
+}

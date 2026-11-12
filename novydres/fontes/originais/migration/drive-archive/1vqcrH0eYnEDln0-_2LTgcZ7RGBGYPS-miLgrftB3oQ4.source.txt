@@ -1,0 +1,32 @@
+NOVYDRES / CRÔNICA — .CONTEXTG.md V1.2 — WEB FIRST
+Data 28/10/2026. Gateway da crônica, não do cânone do cenário. Este documento substitui somente os gateways de estado V1 e V1.1. Contrato do Narrador V1 e EVENT_PROTOCOL_V1 preservados.
+PRIMEIRA LEITURA, SEMPRE
+1. .AGENT.md contrato Narrador V1 (18 guardrails): https://docs.google.com/document/d/1QvcAY_DCHUNrE3YFDmd5SH9ZWmNdG47oG8uxWE5j-xs/edit
+2. EVENT_PROTOCOL_V1: https://docs.google.com/document/d/1iibkasTYCFF5g-u96CX7R9e5Id7n5u92s6wE8cC7weI/edit
+3. RELATORIO_IMPLEMENTATION_STATUS_V0_2: https://docs.google.com/document/d/1g4oxXuN8kVCSbosQY_-6KXdAj2kvUspDuXUvEmAlhJc/edit
+4. README técnico Web First: https://drive.google.com/file/d/1ymAHC73T3HxCRfYyDujYYY-N5pBZWWgX/view
+5. Fonte única CHRONICLE_STORE_V0_2: https://docs.google.com/document/d/1-WSmz-xTI8St-Q2_Ruw9BvAVDQb4k9s0Ifs1GlYtT98/edit
+6. Código Python V0.2: https://drive.google.com/file/d/1QI_BczOexvi3uDHU7of19zTwTkAGf-F1/view
+7. ZIP completo de código e testes: https://drive.google.com/file/d/1P-ieKG9btnIzNh_kZKQ40GcTh1E2OLv9/view
+8. Snapshot histórico provisório do cenário: https://docs.google.com/document/d/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU/edit
+9. Para iniciar jogo, buscar originais do workspace Novydres: .AGENT.md, .CONTEXTG.md e capítulos atuais do cânone, incluindo Criação A–K. Não estão verificados no Drive.
+ESTADO NO CHECKPOINT
+CHATGPT WEB = ÚNICA INTERFACE DE JOGO. GOOGLE DRIVE = FONTE PERSISTENTE.
+Código stateless v0.2 desenvolvido e salvo. 24 testes unitários passaram.
+Escrita/leitura CAS do Google Docs e rejeição de revisão antiga comprovadas em sandbox.
+CHRONICLE_STORE_V0_2 real está em PREPARATION: chronicle_id=null; nenhum personagem; events=[]; rolls=[].
+Execução automática de ferramentas por turno = NÃO AUTOMÁTICA: cada ação relevante exige invocação das ferramentas pelo Narrador.
+Motor completo de Novydres A–K, proteção criptográfica da autoria só-web e shards para longa duração = AINDA NÃO IMPLEMENTADOS.
+GUARDRAILS
+G01 jogador é único responsável por suas ações/falas voluntárias e gastos opcionais.
+G02 tentativa/intenção não significa execução ou sucesso.
+G03 nenhum passado inventado; eventos e rolls confirmados têm prefixo imutável pelo programa e hashes.
+G04 plano de NPC e alegação são distintos de evento concluído.
+G05 sorteios d10 apenas por código real; registrar parâmetros ANTES do sorteio e dados brutos depois.
+G06 cada escrita deve usar requiredRevisionId + occurrencesChanged=1 + readback e validação. Falha = PENDING_PERSISTENCE.
+FLUXO OPERACIONAL
+Ler o JSON atual do Drive e revisionId -> validar com código Python recuperado do Drive -> classificar ato do usuário -> produzir novo JSON -> fazer batch_update_document com controle de revisão -> reler/verificar -> narrar. Para rolagens, primeiro persistir evento de preparação com pool, Fome e dificuldade; depois sorteio seguro em Python e persistência de faces; depois efeito/narração. É proibido tratar dados simulados do arquivo TESTE_TRANSACAO_V0_2 como pertencentes à campanha.
+PRÓXIMO PASSO
+Escolher/importar personagem; conferir cânone A–K e ficha; testar ciclo de estado do PC com autorização explícita. A crônica de jogo só começa após gates de preparação. Não modificar o cânone de Novydres ao estruturar a crônica.
+VERSÃO
+V1.2 deste gateway supersede apenas o estado de integração V1.1. Não modifica o contrato do Narrador, os guardrails, os registros passados ou os arquivos oficiais de cenário.

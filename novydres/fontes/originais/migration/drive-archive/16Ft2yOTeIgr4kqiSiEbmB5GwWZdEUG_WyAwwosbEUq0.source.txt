@@ -1,0 +1,76 @@
+"""NOVYDRES Stage 3 sandbox proof-of-concept. NOT an active engine, NOT scenario canon.
+Runs locally *within the ChatGPT tool session*. No persistent background process.
+Real Google Docs I/O is orchestrated by chat connector, not by this module.
+"""
+from __future__ import annotations
+import copy
+import hashlib
+import json
+from typing import Any
+SCHEMA = 'NOVYDRES_V03_TEST_ONLY'
+GENESIS = '0'*64
+class Rejected(ValueError):
+    pass
+def canonical(value: Any) -> str:
+    return json.dumps(value, ensure_ascii=False, separators=(',', ':'), sort_keys=True, allow_nan=False)
+def sha(value: Any) -> str:
+    return hashlib.sha256(canonical(value).encode('utf-8')).hexdigest()
+def new_sandbox() -> dict:
+    return {'schema':SCHEMA,'sandbox':True,'chronicle_id':'TEST-CHR-001','active_provocation':'TEST-P01','last_seq':0,'last_hash':GENESIS,'events':[],'checkpoint':{'phase':'TEST','flag':'INITIAL'},'archives':[]}
+def verify(a: dict) -> bool:
+    if a.get('schema')!=SCHEMA or a.get('sandbox') is not True or a.get('chronicle_id')!='TEST-CHR-001':
+        raise Rejected('Test-only namespace required')
+    if not isinstance(a.get('events'),list):raise Rejected('Missing events')
+    seen=set(); h=GENESIS; n=0
+    for e in a['events']:
+        if not isinstance(e,dict) or e.get('seq') != n+1 or e.get('event_id') in seen or e.get('prev_hash') != h:
+            raise Rejected('Sequence, duplicate, or hash predecessor invalid')
+        body={k:v for k,v in e.items() if k not in {'hash','prev_hash'}}
+        if e.get('hash')!=sha({'prev_hash':h,'event':body}):raise Rejected('Event hash mismatch')
+        seen.add(e['event_id']);n+=1;h=e['hash']
+    if a.get('last_seq')!=n or a.get('last_hash') != h: raise Rejected('Broken head')
+    if not isinstance(a.get('checkpoint'),dict):raise Rejected('Missing checkpoint')
+    return True
+def append(a:dict, *, event_id:str, actor:str, kind:str, text:str,
+           source_ref:str|None=None, update:dict|None=None)->tuple[dict,str]:
+    verify(a)
+    if any(e['event_id']==event_id for e in a['events']):
+        old=next(e for e in a['events'] if e['event_id']==event_id)
+        if (old['actor'],old['kind'],old['text'],old['source_ref'],old['checkpoint_delta']) == (actor,kind,text,source_ref,update or {}):
+            return copy.deepcopy(a),'ALREADY_COMMITTED'
+        raise Rejected('Conflicting duplicate event_id')
+    if not event_id.startswith('TEST-EVT-'):raise Rejected('Production event_id disallowed')
+    if actor=='pc' and (kind!='PLAYER_DECLARATION' or not source_ref):
+        raise Rejected('No PC action without quoted source reference')
+    if kind=='NPC_CLAIM' and update:raise Rejected('NPC claim cannot directly alter objective state')
+    if kind not in ('PLAYER_DECLARATION','NPC_CLAIM','SYSTEM_TEST') or not text:
+        raise Rejected('Invalid kind/text')
+    e={'seq':len(a['events'])+1,'event_id':event_id,'actor':actor,'kind':kind,'text':text,
+       'source_ref':source_ref,'checkpoint_delta':update or {},'prev_hash':a['last_hash']}
+    e['hash']=sha({'prev_hash':e['prev_hash'],'event':{k:v for k,v in e.items() if k not in ('hash','prev_hash')}})
+    b=copy.deepcopy(a);b['events'].append(e);b['last_seq']=e['seq'];b['last_hash']=e['hash'];b['checkpoint'].update(update or {})
+    verify(b)
+    return b,'APPENDED'
+def stage_archive(a:dict)->dict:
+    verify(a)
+    if not a['events']:raise Rejected('No events to archive')
+    s={'schema':'NOVYDRES_V03_TEST_SEGMENT','sandbox':True,
+       'chronicle_id':a['chronicle_id'],'provocation':a['active_provocation'],
+       'first_seq':1,'last_seq':a['last_seq'],'last_hash':a['last_hash'],
+       'events':copy.deepcopy(a['events']),'final_checkpoint':copy.deepcopy(a['checkpoint'])}
+    return s
+def archive_digest(segment:dict)->str:
+    if segment.get('schema')!='NOVYDRES_V03_TEST_SEGMENT' or segment.get('sandbox') is not True:raise Rejected('Not a sandbox segment')
+    return sha(segment)
+def plan_rotation(a:dict, segment:dict, doc_id:str, observed_segment_sha:str)->dict:
+    verify(a)
+    if segment.get('provocation')!=a['active_provocation'] or segment.get('last_hash')!=a['last_hash']:
+        raise Rejected('Segment does not match active head')
+    if archive_digest(segment)!=observed_segment_sha:raise Rejected('Archive readback mismatch')
+    if not isinstance(doc_id,str) or not doc_id:raise Rejected('Missing archived document id')
+    b=copy.deepcopy(a)
+    b['archives'].append({'provocation':a['active_provocation'],'doc_id':doc_id,
+                          'sha256':observed_segment_sha,'head':a['last_hash'],'last_seq':a['last_seq']})
+    b.update(active_provocation='TEST-P02',last_seq=0,last_hash=GENESIS,events=[])
+    b['checkpoint']={'phase':'TEST','flag':'ROTATED','from':a['active_provocation']}
+    verify(b);return b
