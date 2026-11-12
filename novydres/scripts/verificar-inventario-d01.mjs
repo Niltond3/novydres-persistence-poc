@@ -132,6 +132,57 @@ export function deriveC45Precedence(index,{cycle,sourceContents,candidateState,c
   }
  };
 }
+
+const C45_CHECKPOINT_FIELDS=[
+ ['provocation_id','provocation'],['status','status'],['next_role','next_role'],
+ ['checkpoint.last_event_id','last_event_id'],['checkpoint.last_closed_scene','last_closed_scene'],
+ ['checkpoint.next_scene','next_scene'],['checkpoint.next_scene_status','next_scene_status'],
+ ['checkpoint.mortal','mortal'],['checkpoint.embrace_occurred','embrace_occurred']
+];
+const C45_RESOURCE_FIELDS=[
+ 'xp_total','xp_spent','xp_remaining','xp_credit_available',
+ 'willpower_provisional_max','willpower_superficial_damage',
+ 'willpower_aggravated_damage','willpower_available'
+];
+export function deriveC45FieldValueCrosswalk(index,{cycle,sourceContents,candidateState,candidateStateSha}){
+ const livePath=cycle?.refs?.live?.path,liveSha=cycle?.refs?.live?.blob_sha;
+ need(typeof livePath==='string'&&SHA.test(liveSha||'')&&
+  typeof sourceContents.get(livePath)==='string','D01_FIELD_LIVE_SOURCE_MISSING');
+ const live=JSON.parse(sourceContents.get(livePath));
+ need(live?.character?.resources&&candidateState?.checkpoint&&candidateState?.resources,
+  'D01_FIELD_SOURCE_SCHEMA_INVALID');
+ need(equal(Object.keys(candidateState.resources).sort(),[...C45_RESOURCE_FIELDS].sort())&&
+  C45_RESOURCE_FIELDS.every(k=>typeof candidateState.resources[k]==='number'&&
+  typeof live.character.resources[k]==='number'),'D01_FIELD_RESOURCE_SCOPE_CHANGED');
+ const read=(o,p)=>p.split('.').reduce((acc,k)=>acc?.[k],o);
+ const compare=(section,source,target,sourceField,targetField,requiredType)=>{
+  const a=read(source,sourceField),b=read(target,targetField);
+  need(a!==undefined&&b!==undefined&&typeof a===requiredType&&typeof b===requiredType,
+   'D01_FIELD_TYPE_OR_PATH_MISSING');
+  return {section,source_field:sourceField,candidate_field:targetField,
+   owner_proposal:'novydres/cronicas/CHR-001/estado',value_type:requiredType,
+   value_relation:equal(a,b)?'SAME_VALUE_NOT_AUTHORITY_PROOF':'DRIFT_CURRENT_C45_PRECEDES_C41',
+   epistemic_review:'PENDING',target_materialized_from_C45:false};
+ };
+ const checkpoint=C45_CHECKPOINT_FIELDS.map(([sourceField,targetField])=>
+  compare('CHECKPOINT',cycle,candidateState.checkpoint,sourceField,targetField,
+   ['mortal','embrace_occurred'].includes(targetField)?'boolean':'string'));
+ const resources=C45_RESOURCE_FIELDS.map(k=>compare('RESOURCES',
+  live.character.resources,candidateState.resources,k,k,'number'));
+ const matches=xs=>xs.filter(x=>x.value_relation==='SAME_VALUE_NOT_AUTHORITY_PROOF').length;
+ const diffs=xs=>xs.filter(x=>x.value_relation==='DRIFT_CURRENT_C45_PRECEDES_C41').length;
+ return {status:'DIRECT_PIN_VALUE_COMPARISON_CURRENT_C45_VS_HISTORIC_C41',
+  authority:'CURRENT_C45_PINS_SUPERSEDE_HISTORICAL_C41_FOR_RECOVERY',
+  current_cycle_ref:index.authority_reference.cycle,
+  current_live_ref:{path:livePath,blob_sha:liveSha},
+  candidate_state_ref:{path:'novydres/cronicas/CHR-001/estado/atual.json',blob_sha:candidateStateSha},
+  source_values_stored:false,matching_values_are_approval:false,
+  checkpoint:{matched:matches(checkpoint),divergent:diffs(checkpoint),fields:checkpoint},
+  resources:{matched:matches(resources),divergent:diffs(resources),fields:resources},
+  unresolved:'REQUIRES_CURRENT_C45_FIELD_OWNER_MIGRATION_AND_EPISTEMIC_VALIDATION',
+  runtime_activation:false};
+}
+
 export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState,workflowContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
@@ -373,6 +424,11 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   evaluation.candidate_state_uses_current_cycle===false&&
   evaluation.candidate_state_uses_current_manifest===false,
   'D01_C45_EXPECTED_HISTORY_DIFFERENCE_CHANGED');
+ const fieldCrosswalk=deriveC45FieldValueCrosswalk(index,{cycle,sourceContents,candidateState,candidateStateSha});
+ need(equal(index.c45_field_value_reconciliation,fieldCrosswalk),'D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
+ need(fieldCrosswalk.checkpoint.matched===6&&fieldCrosswalk.checkpoint.divergent===3&&
+  fieldCrosswalk.resources.matched===8&&fieldCrosswalk.resources.divergent===0,
+  'D01_C45_C41_EXPECTED_FIELD_RELATIONS_CHANGED');
  const summary=index.denominators;
  need(summary?.cycle_unique_pinned_paths===pinRows.size&&
   summary.cycle_pinned_paths_missing_in_candidate===pinRelations.missing&&
@@ -408,6 +464,10 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   candidate_checkpoint:expectedCrosswalk.candidate_state.source_cycle_id,
   current_checkpoint:expectedCrosswalk.source_cycle_id,
   state_precedence_mismatches:summary.c45_source_priority_mismatches,
+  field_value_comparison:{checkpoint_match:fieldCrosswalk.checkpoint.matched,
+   checkpoint_drift:fieldCrosswalk.checkpoint.divergent,
+   resources_match:fieldCrosswalk.resources.matched,
+   resources_drift:fieldCrosswalk.resources.divergent},
   editorial_approval:'NOT_PROVEN',runtime_activation:false};
 }
 export function readAndVerifyD01(root=process.cwd()){

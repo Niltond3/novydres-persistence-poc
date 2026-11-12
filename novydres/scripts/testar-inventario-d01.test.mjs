@@ -243,3 +243,37 @@ test('D01 priority original bytes must exist and cannot be called approved',()=>
  reject(x=>x.priority_shared_content_summary.source_authority='APPROVED',
   'D01_PRIORITY_SHARED_FALSE_AUTHORITY');
 });
+
+test('D01 C45 versus C41 pinned checkpoint fields expose drift without disclosure',()=>{
+ const o=verifyD01(index,data);
+ assert.deepEqual(o.field_value_comparison,
+  {checkpoint_match:6,checkpoint_drift:3,resources_match:8,resources_drift:0});
+ assert.equal(index.c45_field_value_reconciliation.matching_values_are_approval,false);
+});
+test('D01 cannot disguise narrative checkpoint drift as field match',()=>{
+ const candidate=index.c45_field_value_reconciliation.checkpoint.fields.find(x=>x.value_relation==='DRIFT_CURRENT_C45_PRECEDES_C41');
+ assert.ok(candidate);
+ reject(x=>x.c45_field_value_reconciliation.checkpoint.fields.find(y=>y.source_field===candidate.source_field).value_relation='SAME_VALUE_NOT_AUTHORITY_PROOF',
+  'D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
+});
+test('D01 matching resources do not grant runtime authority',()=>{
+ reject(x=>x.c45_field_value_reconciliation.matching_values_are_approval=true,
+  'D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
+ const altered=structuredClone(data.candidateState);
+ altered.resources.xp_spent+=1;
+ assert.throws(()=>verifyD01(index,{...data,candidateState:altered}),
+  e=>e.code==='D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
+});
+test('D01 current pinned LIVE bytes cannot be omitted to fake comparisons',()=>{
+ const p=data.cycle.refs.live.path;
+ const omitted=new Map(data.sourceContents);
+ omitted.delete(p);
+ assert.throws(()=>verifyD01(index,{...data,sourceContents:omitted}),
+  e=>e.code==='D01_C45_SOURCE_POINTER_MISSING');
+});
+test('D01 C41 checkpoint cannot be promoted by rewriting historical comparison',()=>{
+ const altered=structuredClone(data.candidateState);
+ altered.checkpoint.next_scene=data.cycle.checkpoint.next_scene;
+ assert.throws(()=>verifyD01(index,{...data,candidateState:altered}),
+  e=>e.code==='D01_C45_FIELD_VALUE_CROSSWALK_DRIFT');
+});

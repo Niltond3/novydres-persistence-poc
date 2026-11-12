@@ -27091,7 +27091,8 @@
     "SHARED_839_IDENTICAL_BLOBS_REQUIRE_OWNER_FIELD_AND_DEPENDENCY_REVIEW",
     "CANDIDATE_ONLY_83_REQUIRE_FINAL_RUNTIME_DISPOSITION",
     "DIVERGENT_HISTORICAL_WORKFLOW_REQUIRES_FINAL_HEAD_POLICY_DECISION",
-    "SHARED_PRIORITY_47_FIELD_OWNER_AND_SEMANTIC_REVIEW"
+    "SHARED_PRIORITY_47_FIELD_OWNER_AND_SEMANTIC_REVIEW",
+    "C45_VS_C41_CHECKPOINT_THREE_DIVERGENT_FIELDS_REQUIRE_MIGRATION"
   ],
   "denominators": {
     "master_blobs": 1029,
@@ -27232,5 +27233,207 @@
     "source_authority": "NOT_APPROVED_BY_THIS_REVIEW",
     "target_equivalence": "NOT_PROVEN",
     "unknown_episteme": "PENDING"
+  },
+  "c45_field_value_reconciliation": {
+    "status": "DIRECT_PIN_VALUE_COMPARISON_CURRENT_C45_VS_HISTORIC_C41",
+    "authority": "CURRENT_C45_PINS_SUPERSEDE_HISTORICAL_C41_FOR_RECOVERY",
+    "current_cycle_ref": {
+      "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "blob_sha": "14f746139ab0dda35ee5de95cf8a4536631534fd"
+    },
+    "current_live_ref": {
+      "path": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "blob_sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19"
+    },
+    "candidate_state_ref": {
+      "path": "novydres/cronicas/CHR-001/estado/atual.json",
+      "blob_sha": "88317332db5691d764e4543c5648e537655e8e4b"
+    },
+    "source_values_stored": false,
+    "matching_values_are_approval": false,
+    "checkpoint": {
+      "matched": 6,
+      "divergent": 3,
+      "fields": [
+        {
+          "section": "CHECKPOINT",
+          "source_field": "provocation_id",
+          "candidate_field": "provocation",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "status",
+          "candidate_field": "status",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "next_role",
+          "candidate_field": "next_role",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.last_event_id",
+          "candidate_field": "last_event_id",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "DRIFT_CURRENT_C45_PRECEDES_C41",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.last_closed_scene",
+          "candidate_field": "last_closed_scene",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "DRIFT_CURRENT_C45_PRECEDES_C41",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.next_scene",
+          "candidate_field": "next_scene",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "DRIFT_CURRENT_C45_PRECEDES_C41",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.next_scene_status",
+          "candidate_field": "next_scene_status",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "string",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.mortal",
+          "candidate_field": "mortal",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "boolean",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "CHECKPOINT",
+          "source_field": "checkpoint.embrace_occurred",
+          "candidate_field": "embrace_occurred",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "boolean",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        }
+      ]
+    },
+    "resources": {
+      "matched": 8,
+      "divergent": 0,
+      "fields": [
+        {
+          "section": "RESOURCES",
+          "source_field": "xp_total",
+          "candidate_field": "xp_total",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "xp_spent",
+          "candidate_field": "xp_spent",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "xp_remaining",
+          "candidate_field": "xp_remaining",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "xp_credit_available",
+          "candidate_field": "xp_credit_available",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "willpower_provisional_max",
+          "candidate_field": "willpower_provisional_max",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "willpower_superficial_damage",
+          "candidate_field": "willpower_superficial_damage",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "willpower_aggravated_damage",
+          "candidate_field": "willpower_aggravated_damage",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        },
+        {
+          "section": "RESOURCES",
+          "source_field": "willpower_available",
+          "candidate_field": "willpower_available",
+          "owner_proposal": "novydres/cronicas/CHR-001/estado",
+          "value_type": "number",
+          "value_relation": "SAME_VALUE_NOT_AUTHORITY_PROOF",
+          "epistemic_review": "PENDING",
+          "target_materialized_from_C45": false
+        }
+      ]
+    },
+    "unresolved": "REQUIRES_CURRENT_C45_FIELD_OWNER_MIGRATION_AND_EPISTEMIC_VALIDATION",
+    "runtime_activation": false
   }
 }
