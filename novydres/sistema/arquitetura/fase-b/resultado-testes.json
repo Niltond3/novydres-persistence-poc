@@ -8367,7 +8367,7 @@
       "SOURCE_BLOB_MISMATCH"
     ],
     "real_commit_and_blob_proof_checked": true,
-    "obsolete_decision_real_ADR_lookup": "INCLUDED_IN_SUBSEQUENT_CODE_PENDING_CI_ON_LATEST_COMMIT",
+    "obsolete_decision_real_ADR_lookup": "VERIFIED_IN_REAL_GITHUB_RUN_43221967102_SOURCE_BLOB_cb9583e1b2adfef9210801afb78189f407828e49",
     "recovery_same_conversation": {
       "observed": true,
       "sequence": [
@@ -8385,7 +8385,8 @@
       "The scorer checks declared data and invariants, not natural-language truth universally.",
       "The real lost acknowledgement was client-suppressed after remote write, not induced loss of network response."
     ],
-    "dec26": "Continue independent work; pause only units whose sources or independent review cannot be restored."
+    "dec26": "Continue independent work; pause only units whose sources or independent review cannot be restored.",
+    "latest_pass_run": 43222461058
   },
   "narrative_contextual_self_review_dec27": {
     "status": "CONTEXTUAL_SELF_REVIEW_COMPLETED_INDEPENDENT_REVIEW_PENDING",
@@ -8442,7 +8443,7 @@
     "conclusion": "NO_EDITORIAL_INDEPENDENT_PASS"
   },
   "metrics_dec27_new": {
-    "status": "NEW_MEASUREMENT_IMPLEMENTED_IN_CI_PENDING_OBSERVABLE_RUN_RESULT",
+    "status": "COLLECTED_ACTUAL_PAIRED_REST_API_MEASUREMENTS_SCOPED",
     "scorer": "fase-b/avaliador-pos-congelamento.mjs",
     "design": "Six fixed case IDs, source and candidate GitHub REST contents GET, two interleaved rounds, paired runner/endpoint/auth, capture elapsed milliseconds and API JSON response-body bytes.",
     "sample_size": "12 source and 12 candidate calls; n=2 per case per side",
@@ -8450,6 +8451,42 @@
     "limitation": "Different payload sizes, cache/network variance, small n, candidate not yet operational; historical Web UI latencies absent.",
     "actual_web_tokens": "NOT_OBSERVABLE_DEC19",
     "actual_web_http_wire_bytes": "NOT_OBSERVABLE_DEC19",
-    "p95": "NOT_REPORTED; no historical baseline, small and heterogeneous samples"
+    "p95": "NOT_REPORTED; no historical baseline, small and heterogeneous samples",
+    "evidence": {
+      "commit": "a506354d2f170bfaeb7815bc7261752962646d05",
+      "run_id": 43221967102,
+      "job_id": 131195453604,
+      "source": {
+        "n": 12,
+        "p50_ms": 198,
+        "api_json_body_bytes": 393718
+      },
+      "candidate": {
+        "n": 12,
+        "p50_ms": 187,
+        "api_json_body_bytes": 49828
+      },
+      "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+      "methodology": "Paired GET /contents/ by six fixed case IDs, twice per side, alternating ordering; GitHub Actions Node22 runner, authenticated; each request measured by performance.now, payload from response.text UTF8 byte count.",
+      "interpretation": "New small REST API sample with differently sized payloads; no valid historical ChatGPT Web p95 comparison, no claimed percentage improvement.",
+      "p95": "NOT_REPORTED",
+      "web_tokens": "NOT_OBSERVABLE",
+      "web_http_wire_bytes": "NOT_OBSERVABLE"
+    }
+  },
+  "b04_real_2026_11_12_dec27_final": {
+    "status": "PASS_SCOPED_REAL_REF_WITH_EXPLICIT_STALE_LEASE",
+    "source_commit": "a506354d2f170bfaeb7815bc7261752962646d05",
+    "successful_runs": [
+      43221967102,
+      43222274637,
+      43222461058
+    ],
+    "checked_job_id": 131195453604,
+    "evidence": "Logs contain real GitHub API commits and blobs, actual disposable ref readback and cleanup, obsolete lease push rejected 'stale info', real source and DEC-27 source read, narrowed claim excerpt/guards, unknown-outcome client suppression recovered.",
+    "synthetic_local_test_independent_from_remote": true,
+    "remote_422_reason": "GENERIC_NOT_STALE_PROOF",
+    "no_network_fault_injected": true,
+    "no_live_campaign_changes": true
   }
 }

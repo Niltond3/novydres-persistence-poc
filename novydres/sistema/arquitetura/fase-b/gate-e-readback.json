@@ -405,18 +405,37 @@
       "network_loss_not_injected": true,
       "cleaned_disposable_ref": true,
       "latest_implementation_revision": "a506354d2f170bfaeb7815bc7261752962646d05",
-      "latest_revision_CI": "NOT_YET_VERIFIED_AT_CHECKPOINT"
+      "latest_revision_CI": "PASS_43221967102_AND_43222461058"
     },
-    "DEC25": "LIMITED_REAL_SOURCE_AND_CHECKPOINT_GUARDS_OBSERVED; semantics can escape, DEC26 applies; newest real ADR decision test pending CI",
+    "DEC25": "SCOPED_SOURCE_CHECKPOINT_GUARDS_AND_REAL_DEC27_ADR_LOOKUP_PASS_43221967102; known semantic escapes remain DEC26 scope",
     "narrative": "8 ISOLATED_SCENES_AND_ONE_CAUSAL_FOLLOWUP; SELF_CONTEXTUAL_REVIEW_NOT_INDEPENDENT",
-    "metrics": "PAIRED_SAMPLES_IMPLEMENTED_PENDING_RUN; HISTORICAL_WEB_P95_UNMEASURED_NOT_WAIVED",
+    "metrics": {
+      "status": "NEW_PAIRED_REST_SAMPLE_OBSERVED",
+      "run_id": 43221967102,
+      "job_id": 131195453604,
+      "methodology": "Same six queries source/candidate, two rounds, alternated reading order, real GitHub REST GET in Actions",
+      "source_p50_ms": 198,
+      "candidate_p50_ms": 187,
+      "n_per_side": 12,
+      "source_api_body_bytes": 393718,
+      "candidate_api_body_bytes": 49828,
+      "p95": "NOT_REPORTED_SMALL_HETEROGENEOUS_N12",
+      "real_web_tokens": "NOT_OBSERVABLE",
+      "real_web_http_wire_bytes": "NOT_OBSERVABLE",
+      "caution": "No historical comparable Web timings; no performance improvement asserted; API JSON body bytes are not HTTP wire bytes"
+    },
     "historical_web_response_search": "inspected evidencia-chatweb-parcial-2026-11-11.json and evidencias-remediacao-final-2026-11-11.json; no old per-case raw Web answer text; insufficient historical evidence retained",
     "critical_unmet": [
-      "Independent contextual-semantic review of the newly frozen Web case responses and sources, preserving initial incomplete outputs",
-      "Independent editorial contextual review of fictional narrative scenarios (schemas and lexical checks not a substitute)",
-      "Confirm latest changed CI implementation and new comparable measurements by run, job and logs before closing the gate"
+      "Independent semantic contextual review of new frozen factual Web responses, not merely deterministic source/checkpoint checks",
+      "Independent editorial contextual review of eight fictitious narrative scenes and N-06 consequential continuation; exercise output alone is not certification"
     ],
-    "next_eligible": "Independent contextual review of six frozen Web queries and nine fictitious narrative outputs; reconcile findings and record latest CI metrics, then B05 reevaluation; no C01 yet",
-    "master_canon_campaign_runtime_unchanged": true
+    "next_eligible": "Independent contextual fact+fiction review against frozen source/rubric; remedy actual failures; rerun impacted cases and B05 without any Codex-only prerequisite.",
+    "master_canon_campaign_runtime_unchanged": true,
+    "last_code_validated_ci": {
+      "commit": "09711519152385a6697c8561035fd832b1120c2a",
+      "run_id": 43222461058,
+      "status": "completed",
+      "conclusion": "success"
+    }
   }
 }
