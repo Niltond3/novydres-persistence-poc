@@ -98,9 +98,12 @@ test('V11/V12 final mode never passes without the migrated media registry',()=>{
  const incomplete=audit([],{},'ZERO_LEGACY_FINAL',null);
  assert.equal(incomplete.gate,'ZERO_LEGACY_BLOCKED');
  assert.ok(has(incomplete,'MEDIA_REGISTRY_REQUIRED_IN_FINAL'));
+ // D02 supplies the pinned final registry; missing-registry is still tested on the synthetic negative.
  const actual=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL'});
  assert.equal(actual.gate,'ZERO_LEGACY_BLOCKED');
- assert.ok(has(actual,'MEDIA_REGISTRY_REQUIRED_IN_FINAL'));
+ assert.ok(!has(actual,'MEDIA_REGISTRY_REQUIRED_IN_FINAL'));
+ assert.equal(actual.counters.media_pending,5);
+ assert.equal(actual.counters.unverified_media,19);
 });
 test('V08/V12 HEAD-pinned bytes cannot be masked by dirty checkout or false media JSON',()=>{
  const dir=mkdtempSync(join(tmpdir(),'novydres-c07-audit-'));
