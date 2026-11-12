@@ -351,8 +351,6 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
     typeof row.target_root_candidate==='string'&&row.target_root_candidate.length>0&&
     row.authority_status==='NOT_AUDITED_BY_PATH_INDEX'&&
     row.editorial_equivalence==='PENDING_FIELD_REVIEW','D01_PREMATURE_AUTHORITY');
-  need(equal(row.d01_origin_route,deriveD01OriginRoute(row,index)),
-   'D01_ORIGIN_MAPPING_FIELD_DRIFT');
   const samePath=other.get(row.source_path);
   const relation=samePath?(samePath.sha===actual.sha?'SAME_PATH_SAME_BLOB':'SAME_PATH_DIFFERENT_BLOB'):'NO_SAME_PATH_IN_CANDIDATE';
   need(row.candidate_relation===relation&&row.candidate_same_path_blob_sha===(samePath?.sha||null),'D01_CANDIDATE_COMPARISON_DRIFT');
@@ -576,6 +574,9 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   manifestRefs.summary.direct_cycle_pinned_missing===52&&
   manifestRefs.summary.directory_reference_occurrences===1,
   'D01_MANIFEST_REFERENCE_BASELINE_CHANGED');
+ for(const row of index.source_files)
+  need(equal(row.d01_origin_route,deriveD01OriginRoute(row,index)),
+   'D01_ORIGIN_MAPPING_FIELD_DRIFT');
  const mapped=deriveD01OriginMappingCoverage(index);
  need(equal(mapped,index.d01_origin_mapping_coverage),'D01_ORIGIN_MAPPING_COVERAGE_DRIFT');
  need(mapped.total_source_paths===source.size&&mapped.mapped_source_paths===source.size&&
