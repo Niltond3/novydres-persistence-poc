@@ -153,8 +153,12 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
   assert.ok(token && repo && base && process.env.GITHUB_RUN_ID, 'CI token, repository, HEAD and run required');
   assert.ok(branch.startsWith('test/adr001-b04-ci-'));
   const sourcePath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-source.txt';
+  const decisionSourcePath='novydres/sistema/arquitetura/adr/001-subject-oriented.md';
+  const decisionSource=await api('GET','/contents/'+decisionSourcePath+'?ref='+encodeURIComponent(base));
+  const currentDecisions=Buffer.from(decisionSource.content.replace(/\s/g,''),'base64').toString('utf8');
+  assert.match(currentDecisions,/\| DEC-27 \|/,'read current decision from actual pinned ADR');
   const ownerPath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-transactions.json';
-  const sourceText = 'TEST_ONLY; NOT_CAMPAIGN\nEvidence: the artificial custodian holds the blue key.\n';
+  const sourceText = 'TEST_ONLY; NOT_CAMPAIGN\nEvidence: the artificial custodian holds the blue key.\nUnrelated: there is ice on the street.\n';
   const sha256 = value => createHash('sha256').update(value).digest('hex');
   let disposableCreated = false, sourceBlob, sourceCommit, cleaned = false;
   const timings = [];
@@ -223,12 +227,14 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     if(e.role!=='SYSTEM_TEST') throw new Error('AUTHORITY_DENIED');
     if(e.audience==='PLAYER' && e.visibility!=='PLAYER_SAFE') throw new Error('DISCLOSURE_DENIED');
     if(e.actor!=='artificial-custodian') throw new Error('ACTOR_KNOWLEDGE_UNSUPPORTED');
-    if(e.decision!=='ARTIFICIAL_DECISION_CURRENT') throw new Error('OBSOLETE_DECISION');
+    if(e.decision!=='DEC-27' || !currentDecisions.includes('O aceite é por **função e risco**')) throw new Error('OBSOLETE_DECISION');
     const real=await readPath(e.source_path);
     if(!real) throw new Error('SOURCE_NOT_FOUND');
     if(e.source_path!==sourcePath) throw new Error('WRONG_SOURCE_PATH');
     if(real.blob_sha!==e.source_blob_sha) throw new Error('SOURCE_BLOB_MISMATCH');
-    if(!real.content.includes(e.source_excerpt)) throw new Error('SOURCE_IRRELEVANT_TO_QUOTE');
+    if(!real.content.includes(e.source_excerpt) ||
+      (e.claimed_fact==='CUSTODIAN_HOLDS_BLUE_KEY' &&
+       e.source_excerpt!=='Evidence: the artificial custodian holds the blue key.')) throw new Error('SOURCE_IRRELEVANT_TO_QUOTE');
     if(e.checkpoint!==await getHead()) throw new Error('CHECKPOINT_DIVERGED');
     if(e.conclusion==='PASS') {
       const claimed=e.external_proof;
@@ -247,7 +253,7 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     assert.equal(savedSource.content,sourceText);
     sourceBlob=savedSource.blob_sha;
     const evidence=()=>({role:'SYSTEM_TEST',audience:'PLAYER',visibility:'PLAYER_SAFE',
-      actor:'artificial-custodian',decision:'ARTIFICIAL_DECISION_CURRENT',
+      actor:'artificial-custodian',decision:'DEC-27',claimed_fact:'CUSTODIAN_HOLDS_BLUE_KEY',
       source_path:sourcePath,source_blob_sha:sourceBlob,
       source_excerpt:'Evidence: the artificial custodian holds the blue key.',
       checkpoint:null,conclusion:'PENDING',external_proof:null});
@@ -263,8 +269,8 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     await validateEvidence({...staleEvidence,conclusion:'PASS',external_proof:{commit_sha:firstHead,owner_blob_sha:(await readPath(ownerPath)).blob_sha}});
     const wrongs=[
       ['SOURCE_NOT_FOUND',{source_path:sourcePath+'-missing'}],
-      ['SOURCE_IRRELEVANT_TO_QUOTE',{source_excerpt:'the artificial custodian owns the red tower'}],
-      ['OBSOLETE_DECISION',{decision:'ARTIFICIAL_DECISION_OBSOLETE'}],
+      ['SOURCE_IRRELEVANT_TO_QUOTE',{source_excerpt:'Unrelated: there is ice on the street.'}],
+      ['OBSOLETE_DECISION',{decision:'DEC-21-TWO_CHANNEL_MANDATORY'}],
       ['CHECKPOINT_DIVERGED',{checkpoint:base}],
       ['CONCLUSION_WITHOUT_PROOF',{conclusion:'PASS'}],
       ['CONCLUSION_BAD_PROOF',{conclusion:'PASS',external_proof:{commit_sha:base,owner_blob_sha:'0'.repeat(40)}}],
@@ -323,7 +329,8 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     assert.equal(await getHead(),raceHead,'real remote ref unchanged after explicit stale lease');
     console.log(JSON.stringify({status:'PASS_REAL_GITHUB_DISPOSABLE_REF',
       run_id:process.env.GITHUB_RUN_ID,head_under_test:base,sandbox_ref:branch,
-      seed_commit:sourceCommit.sha,source_blob_sha:sourceBlob,
+      seed_commit:sourceCommit.sha,source_blob_sha:sourceBlob,decision_source_blob_sha:decisionSource.sha,
+      decision_precedence:'DEC-27_READ_FROM_REAL_PINNED_ADR',
       first_transaction:t1,duplicate_tx:duplicate.status,conflict_tx:'STOP_CONFLICT',
       rejected_guards:rejected,client_suppressed_ack_recovery:recovered.status,
       acknowledgement_failure_mode:'CLIENT_SUPPRESSED_AFTER_REAL_REMOTE_WRITE_NOT_NETWORK_INJECTION',
