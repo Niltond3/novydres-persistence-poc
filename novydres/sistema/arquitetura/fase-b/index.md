@@ -1,6 +1,6 @@
 # NOVYDRES — Fase B, remediação técnica
 
-**Gate: B_REMEDIATION_REQUIRED.** Fase C não foi iniciada nem autorizada. Os quatro candidatos existentes permanecem em estado candidato, sem ativação de rotas.
+**Gate: B_PASS_SCOPED.** A condição técnica para C01 foi atendida. A implementação da Fase C permanece não iniciada por esta atualização documental; runtime, autoridade do protótipo e cutover continuam desativados.
 
 ## Estado observado — snapshot histórico da remediação
 
@@ -75,3 +75,8 @@ Oito exercícios narrativos fictícios e um resultado causal adicional foram pre
 ### Evidência consolidada de medições e execução atual
 
 Run [`43221967102`](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43221967102) PASS: DEC-27 lida do ADR fixado, dez rejeições delimitadas, `stale info` via lease Git, confirmação suprimida e ref descartável limpa. Nova amostra pareada: 12 GET REST fontes (mediana 198 ms, 393718 bytes de corpo JSON da API) e 12 GET candidatos (mediana 187 ms, 49828 bytes); seis IDs, duas passagens, ordem alternada, arquivos de tamanho diferente. **Sem p95 Web histórico e sem inferência de ganho.** O run [`43222461058`](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43222461058) também passou com a documentação vigente. B05 continua `B_REMEDIATION_REQUIRED` pela revisão semântica/editorial independente não executada; C segue bloqueada.
+
+
+## Reavaliação corrente de B05 — 2026-11-12
+
+A revisão contextual separada verificou seis respostas factuais contra fontes pinadas e os exercícios N-01–N-08/N-06-RESULT. A autoavaliação anterior estava visível; o registro mantém essa limitação, pois o ADR exige revisão contextual independente, sem exigir cegamento. B05 é **B_PASS_SCOPED**. A insuficiência da primeira resposta N-06, as respostas Web antigas indisponíveis, o escopo TEST_ONLY e a diferença C41/C45 permanecem explícitos. O Actions [`43223477154`](https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43223477154) concluiu com sucesso a prova isolada e o scorer congelado. C01 é a próxima unidade elegível após o início explícito do trabalho; esta atualização não inicia implementação nem autoriza cutover. Fonte de decisão: `gate-e-readback.json#b05_gate_reassessment_2026_11_12`.

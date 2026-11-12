@@ -3,7 +3,7 @@
   "artifact_type": "PHASE_B_GATE_AND_READBACK",
   "classification": "PLAYER_SAFE",
   "phase": "B",
-  "status": "B_REMEDIATION_REQUIRED",
+  "status": "B_PASS_SCOPED",
   "cutover": false,
   "authoritative_prototype": false,
   "phase_c_authorized": false,
@@ -378,18 +378,18 @@
     }
   },
   "b05_dec27_current": {
-    "status": "B_REMEDIATION_REQUIRED",
+    "status": "B_PASS_SCOPED",
     "decision": "DEC-27 subsequent explicit player instruction supersedes DEC-21 two-channel clause; functional and risk coverage only.",
     "baseline_master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
     "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
     "candidate_historical_cursor": "C41",
     "operational_cursor": "C45; NOT_REBASED_OR_PROMOTED",
-    "phase_c_allowed": false,
+    "phase_c_allowed": true,
     "cutover_allowed": false,
     "runtime_activated": false,
     "B01": "PASS_SCOPED_HISTORICAL_4_CANDIDATES_SOURCE_PINS_WITH_DECLARED_CURSOR_DRIFT",
     "B02": "PASS_SCOPED_REUSABLE_30_OF_30_EFFECTIVE_CASES_WITH_HISTORICAL_INDEPENDENT_REVIEW; older 51/90 remains history; not requiring second channel",
-    "B03": "6/6 EFFECTIVE_DETERMINISTIC_POSTFREEZE; original 3/6 incomplete before 3/3 targeted retest; scorer run 43221036507; new raw Web answers independent semantics pending; historical responses not recovered",
+    "B03": "6/6 EFFECTIVE DETERMINISTIC POSTFREEZE; original 3/6 incomplete before 3/3 targeted retest; scorer run 43221036507; six selected factual outputs and N-01–N-08/N-06-RESULT received separate-session contextual review; review was not blind; historical Web responses remain unavailable",
     "B04": {
       "status": "PASS_SCOPED_REAL_GITHUB_DISPOSABLE_REF_WITH_DECLARED_LIMITATIONS",
       "run_id": 43220528637,
@@ -408,7 +408,7 @@
       "latest_revision_CI": "PASS_43221967102_AND_43222461058"
     },
     "DEC25": "SCOPED_SOURCE_CHECKPOINT_GUARDS_AND_REAL_DEC27_ADR_LOOKUP_PASS_43221967102; known semantic escapes remain DEC26 scope",
-    "narrative": "8 ISOLATED_SCENES_AND_ONE_CAUSAL_FOLLOWUP; SELF_CONTEXTUAL_REVIEW_NOT_INDEPENDENT",
+    "narrative": "8 ISOLATED_SCENES_AND_ONE_CAUSAL_FOLLOWUP; SEPARATE-SESSION CONTEXTUAL REVIEW COMPLETED; NOT BLIND; TEST_ONLY",
     "metrics": {
       "status": "NEW_PAIRED_REST_SAMPLE_OBSERVED",
       "run_id": 43221967102,
@@ -425,14 +425,12 @@
       "caution": "No historical comparable Web timings; no performance improvement asserted; API JSON body bytes are not HTTP wire bytes"
     },
     "historical_web_response_search": "inspected evidencia-chatweb-parcial-2026-11-11.json and evidencias-remediacao-final-2026-11-11.json; no old per-case raw Web answer text; insufficient historical evidence retained",
-    "critical_unmet": [
-      "Blind independent semantic/editorial review still lacks evidence of separation from existing self-score; scoped cross-session contextual check recorded, not treated as gate certification."
-    ],
-    "next_eligible": "Blind reviewer of frozen B03 outputs and narrative N01–N08 plus N06 result; targeted corrections and B05.",
+    "critical_unmet": [],
+    "next_eligible": "C01 when implementation is explicitly initiated; refresh current authoritative source snapshot and keep C41-to-C45 drift visible; this gate update does not start C or authorize cutover.",
     "master_canon_campaign_runtime_unchanged": true,
     "last_code_validated_ci": {
-      "commit": "09711519152385a6697c8561035fd832b1120c2a",
-      "run_id": 43222461058,
+      "commit": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+      "run_id": 43223477154,
       "status": "completed",
       "conclusion": "success"
     }
@@ -523,5 +521,35 @@
     ],
     "gate_decision": "B_REMEDIATION_REQUIRED",
     "next_eligible": "Obtain blinded independent editorial/semantic review against frozen prompts and source without previous self-score; remediate any discrepancy, then B05."
+  },
+  "b05_gate_reassessment_2026_11_12": {
+    "status": "B_PASS_SCOPED",
+    "source_head": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+    "basis": "The accepted requirement is a separate contextual semantic/editorial review. The ADR and accepted decisions do not require a blind review. The separate ChatGPT Web conversation reviewed the six frozen factual outputs against pinned sources and the isolated narrative exercises; prior self-review was visible, so anchoring risk remains recorded as a limitation.",
+    "factual_review": "B-Q01, B-Q11, B-Q21, B-Q26, B-Q29 and B-Q30 were reviewed against pinned sources; the initial omissions and targeted retests remain preserved.",
+    "narrative_review": "N-01 through N-08 and N-06-RESULT were reviewed contextually. N-06's initial insufficiency remains recorded; its fictional causal follow-up is not evidence of runtime behavior.",
+    "retained_limits": [
+      "Review was not blind; prior self-review was visible.",
+      "Older missing Web responses remain unavailable and are not retroactively certified.",
+      "Narrative outputs are isolated TEST_ONLY exercises; no live scene behavior is certified.",
+      "Factual findings use the historical C41 snapshot; current operational cursor C45 was not rebased or promoted.",
+      "Web tokens and HTTP wire bytes remain NOT_OBSERVABLE; no unsupported p95 or performance claim is made.",
+      "B04 network loss was not injected; no runtime activation or cutover is authorized."
+    ],
+    "b04_ci": {
+      "run_id": 43223477154,
+      "head_sha": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+      "job_id": 131200630517,
+      "status": "completed",
+      "conclusion": "success",
+      "proof": "synthetic regression and real GitHub disposable-ref proof; frozen B03 scorer"
+    },
+    "phase_c_gate_condition": "MET; C01 is next eligible when implementation is explicitly initiated.",
+    "phase_c_authorized": false,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "master_canon_campaign_unchanged": true,
+    "supersedes": "The current B05 blocker and next-step decision only. Earlier checkpoints and the separate-session review record retain their contemporaneous results.",
+    "historical_top_level_fields": "The root gate_results, failing_or_incomplete, exception_proposal, readback_scope, protected_write_and_final_readback, protected_promotion and readback_before_this_report describe the initial/pre-remediation snapshot. They remain as historical evidence; b05_dec27_current and this reassessment carry the current decision."
   }
 }

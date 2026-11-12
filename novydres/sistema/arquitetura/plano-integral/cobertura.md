@@ -74,14 +74,19 @@ Este checkpoint é prospectivo e não altera os vereditos históricos. `B_REMEDI
 
 | Função / risco | Prova real publicada | Estado e limite |
 |---|---|---|
-| Recuperação factual, fonte, conhecimento e recursos | B02 30/30 efetivos com revisão independente histórica; B03 seis respostas Web congeladas, três incompletas e três retestadas; CI `43221036507` | PASS determinístico 6/6 efetivos; revisão semântica independente da nova rodada ainda pendente; C41 não igual a C45 |
+| Recuperação factual, fonte, conhecimento e recursos | B02 30/30 efetivos; seis respostas Web congeladas com três retestes; revisão contextual cruzada contra pins e respostas | B_PASS_SCOPED; revisão não cega, com viés registrado; achados limitados ao snapshot C41, distinto de C45 |
 | Persistência, idempotência, concorrência e falhas | Actions `43220528637` e `43221036507`, ref descartável, HEAD/commit/blob readback, prova de `stale info` explícito | PASS_SCOPED no executor de B; REST 422 genérico distinto de rejeição por lease; perda de resposta de rede não injetada |
 | Autoridade/DEC-25/DEC-26 | Dez negativos ligados a fontes/ref reais, checkpoint e prova Git; leitura da DEC-27 vigente adicionada para CI | Proteções delimitadas; nenhuma certificação de detecção semântica geral |
-| NPCs, social, intenção, ritmo, prioridades, drama, mistério e sigilo | Oito outputs TEST_ONLY, N-06 resultado fictício adicional, avaliação contextual interna registrada | Revisão editorial **independente PENDING**; não substituída por scanner/CI |
+| NPCs, social, intenção, ritmo, prioridades, drama, mistério e sigilo | Oito outputs TEST_ONLY e N-06-RESULT revisados em conversa separada | Revisão contextual concluída, não cega; N-06 inicial permanece insuficiente e o follow-up é ficcional, sem certificar runtime |
 | Métricas/custo | Telemetria real de chamadas e tempos REST Actions, coleta pareada nova implementada | Web tokens e bytes HTTP não observáveis (DEC-19); p95 histórico não medido e não inferido; comparar somente mesmo escopo |
-| Gate e cutover | `fase-b/gate-e-readback.json#b05_dec27_current` | `B_REMEDIATION_REQUIRED`; C bloqueada e E exige autorização própria |
+| Gate e cutover | `fase-b/gate-e-readback.json#b05_dec27_current` e reavaliação de 2026-11-12 | `B_PASS_SCOPED`; condição técnica para C01 atendida; implementação não iniciada por esta atualização; E/cutover exige autorização própria |
 
 
 ### Revisão contextual cruzada adicional — 2026-11-12
 
 Amostra fixa B-Q01/Q11/Q21/Q26/Q29/Q30 foi confrontada com blobs Git e perguntas/respostas congeladas, preservando falha inicial e retestes B-Q11/Q26/Q30. Oito cenas fictícias, mais N-06-RESULT, foram avaliadas pelo conteúdo e suas consequências; N-06 inicial apenas preparava a situação. Registros detalhados em `fase-b/gate-e-readback.json#b05_independent_session_contextual_review_2026_11_12`. Limitação: revisão de outra conversa, mas **não cega** porque a autoavaliação estava disponível. A independência editorial robusta continua pendente para o gate. Estado **B_REMEDIATION_REQUIRED**; não inferir comportamento real de runtime a partir de exercícios.
+
+
+### Reavaliação do gate B05 — 2026-11-12
+
+A revisão ocorreu em sessão separada e cobriu respostas factuais congeladas, fontes fixadas e exercícios narrativos. A autoavaliação anterior estava visível; cegamento não é critério aceito, então o risco de ancoragem é uma limitação, não um bloqueio. A decisão corrente é **B_PASS_SCOPED**. A evidência não revisa retroativamente respostas Web ausentes, não elimina a diferença C41/C45 e não certifica comportamento de runtime. C01 torna-se elegível quando a implementação for explicitamente iniciada; esta atualização documental não a inicia. Detalhes e limites estão em `fase-b/gate-e-readback.json#b05_gate_reassessment_2026_11_12`.

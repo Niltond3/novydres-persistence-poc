@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: A_DESIGN_EXECUTION_PASS_B_REMEDIATION_REQUIRED
+status: A_DESIGN_EXECUTION_PASS_B_PASS_SCOPED
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -300,3 +300,12 @@ Nenhuma tarefa concluída por esta elaboração documental. Registrar futurament
 ### B05 — Revisão contextual cruzada delimitada (2026-11-12)
 
 Uma nova conversa Web conferiu separadamente as fontes Git fixadas de B-Q01/B-Q11/B-Q21/B-Q26/B-Q29/B-Q30 e avaliou o conteúdo narrado de N-01 a N-08 e N-06-RESULT. Os três pedidos factuais inicialmente incompletos só contam após reteste congelado. N-06 inicial continua INSUFFICIENT, com consequência causal na continuação fictícia. Evidência por caso: `fase-b/gate-e-readback.json#b05_independent_session_contextual_review_2026_11_12`. A conversa revisora teve acesso à autoavaliação anterior: **não se certifica revisão cega**. B05 permanece `B_REMEDIATION_REQUIRED`; a próxima unidade é revisão cega com prompts e fontes congelados antes da autoavaliação, correção das falhas e nova decisão B05. Nenhuma prova histórica foi reclassificada, e nenhuma alteração de runtime/campanha ocorreu.
+
+
+### Reavaliação do gate B05 — 2026-11-12
+
+A revisão factual e narrativa registrada em `fase-b/gate-e-readback.json#b05_independent_session_contextual_review_2026_11_12` ocorreu em conversa ChatGPT Web separada da produção dos exercícios. O revisor viu a autoavaliação anterior: a revisão não foi cega e esse risco de ancoragem fica explícito. Os critérios aceitos exigem revisão contextual independente, mas não cegamento; portanto a limitação não cria um bloqueio adicional.
+
+B-Q01/Q11/Q21/Q26/Q29/Q30 foram conferidas contra fontes fixadas, preservando as respostas iniciais incompletas e os retestes. N-01–N-08 e N-06-RESULT receberam avaliação contextual; a insuficiência inicial de N-06 continua registrada. Os exercícios são TEST_ONLY, não certificam cenas de runtime. Respostas Web antigas indisponíveis permanecem sem revisão. Com a evidência B02–B04, os controles DEC-25 no escopo testado, os limites aceitos por DEC-19/DEC-26 e o CI `43223477154` concluído com sucesso, **B05 passa como B_PASS_SCOPED**.
+
+A condição do gate para C01 está atendida, mas esta alteração documental não inicia a implementação nem autoriza cutover. Quando o trabalho for iniciado pelo prompt acordado, C01 é a próxima unidade elegível e deve atualizar a leitura das fontes atuais, preservando a diferença entre o snapshot C41 e o cursor operacional C45.
