@@ -1,4 +1,4 @@
-name: ADR-001 C01-C02-C04-C05-C06 candidate checks (non-operational)
+name: ADR-001 C01-C02-C04-C05-C06-C07 candidate checks (non-operational)
 on:
   push:
     branches:
@@ -14,6 +14,7 @@ on:
       - 'novydres/scripts/testar-auditoria-legado.test.mjs'
       - 'novydres/scripts/revisar-conducao-candidata.mjs'
       - 'novydres/scripts/testar-conducao-candidata.test.mjs'
+      - 'novydres/scripts/testar-fluxo-integrado.test.mjs'
       - 'novydres/sistema/narrativa/**'
       - 'novydres/cronicas/CHR-001/configuracao/**'
       - 'novydres/sistema/arquitetura/fase-b/resultado-testes.json'
@@ -56,3 +57,5 @@ jobs:
         run: node --test novydres/scripts/testar-auditoria-legado.test.mjs
       - name: C05 optional fiction-risk diagnostics and reuse independent contextual review
         run: node --test novydres/scripts/testar-conducao-candidata.test.mjs
+      - name: C07 integrated exact-snapshot flow and scoped local measurements
+        run: node --test novydres/scripts/testar-fluxo-integrado.test.mjs
