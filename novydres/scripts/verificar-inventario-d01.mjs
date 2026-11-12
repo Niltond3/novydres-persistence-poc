@@ -11,6 +11,25 @@ const fail=code=>{const error=new Error(code);error.code=code;throw error;};
 const need=(valid,code)=>{if(!valid)fail(code);};
 const git=(root,args)=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']}).trim();
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+export function classifyD01CandidateOnly(p) {
+ let kind,disposition;
+ if(p.startsWith('.github/workflows/')){
+  kind=p==='.github/workflows/novydres-orchestration.yml'?'LEGACY_WORKFLOW_CANDIDATE_ONLY':'ADR_TEST_WORKFLOW';
+  disposition='REWRITE_OR_REMOVE_AFTER_DEPENDENCY_REVIEW';
+ }else if(['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json'].includes(p)){
+  kind='PROPOSED_ENTRY_OR_DERIVED_CATALOG';disposition='REBUILD_AFTER_FULL_D_MIGRATION';
+ }else if(p.startsWith('novydres/cronicas/')||p.startsWith('novydres/personagens/')){
+  kind='C41_SCOPE_SUBJECT_PROTOTYPE';disposition='RECONCILE_C45_AUTHORITY_FIELDS_BEFORE_E';
+ }else if(p.startsWith('novydres/scripts/')){
+  kind=/test\\.mjs$|\\/testar-/.test(p)?'CANDIDATE_REGRESSION_TEST':'CANDIDATE_DEVELOPMENT_TOOL';
+  disposition='REVIEW_FINAL_RUNTIME_DEPENDENCIES_AND_ANTI_LEGACY';
+ }else if(p.startsWith('novydres/sistema/arquitetura/')){
+  kind='ADR_DESIGN_AND_TEST_EVIDENCE';disposition='REVIEW_STORAGE_LOCATION_NOT_ACTIVE_RUNTIME';
+ }else if(p==='novydres/sistema/narrativa/contrato.md'){
+  kind='CANDIDATE_NARRATIVE_CONTRACT';disposition='POLICY_SUCCESSION_AND_APPROVAL_PENDING';
+ }else{kind='UNCLASSIFIED_CANDIDATE_ARTIFACT';disposition='BLOCKED_PENDING_OWNER_REVIEW';}
+ return {kind,disposition,operational_authority:'NOT_GRANTED'};
+}
 export function listPinnedTree(root,commit) {
  need(SHA.test(commit||''),'D01_COMMIT_PIN_INVALID');
  const content=execFileSync('git',['ls-tree','-r','-z','--full-tree',commit],
@@ -113,7 +132,7 @@ export function deriveC45Precedence(index,{cycle,sourceContents,candidateState,c
   }
  };
 }
-export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState}){
+export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState,workflowContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
   index.status==='D01_SOURCE_INDEX_COMPLETE_EDITORIAL_MAPPING_PENDING'&&
@@ -143,6 +162,10 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
     typeof row.target_root_candidate==='string'&&row.target_root_candidate.length>0&&
     row.authority_status==='NOT_AUDITED_BY_PATH_INDEX'&&
     row.editorial_equivalence==='PENDING_FIELD_REVIEW','D01_PREMATURE_AUTHORITY');
+  const isBinaryEqual=row.candidate_relation==='SAME_PATH_SAME_BLOB';
+  need(isBinaryEqual?
+   row.binary_ownership_review==='GIT_BLOB_IDENTICAL_OWNER_AND_FIELD_AUTHORITY_NOT_PROVEN':
+   !Object.hasOwn(row,'binary_ownership_review'),'D01_SHARED_BLOB_FALSE_AUTHORITY');
   const samePath=other.get(row.source_path);
   const relation=samePath?(samePath.sha===actual.sha?'SAME_PATH_SAME_BLOB':'SAME_PATH_DIFFERENT_BLOB'):'NO_SAME_PATH_IN_CANDIDATE';
   need(row.candidate_relation===relation&&row.candidate_same_path_blob_sha===(samePath?.sha||null),'D01_CANDIDATE_COMPARISON_DRIFT');
@@ -155,8 +178,36 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   need(!o.has(row.path),'D01_CANDIDATE_ONLY_DUPLICATE');o.set(row.path,row);
  }
  need(o.size===only.length,'D01_CANDIDATE_ONLY_INCOMPLETE');
- for(const row of only)need(o.get(row.path)?.blob_sha===row.sha&&
-   o.get(row.path)?.git_mode===row.mode,'D01_CANDIDATE_ONLY_SHA_MISMATCH');
+ for(const row of only){
+  const recorded=o.get(row.path);
+  need(recorded?.blob_sha===row.sha&&recorded?.git_mode===row.mode,'D01_CANDIDATE_ONLY_SHA_MISMATCH');
+  const expectedReview=classifyD01CandidateOnly(row.path);
+  need(expectedReview.kind!=='UNCLASSIFIED_CANDIDATE_ARTIFACT'&&
+   equal(recorded.candidate_review,expectedReview),'D01_CANDIDATE_ONLY_CLASSIFICATION_DRIFT');
+ }
+ const wf=index.workflow_divergence;
+ need(wf?.path==='.github/workflows/novydres-marco-closure-v2.yml'&&
+  wf.source_blob_sha===source.get(wf.path)?.sha&&
+  wf.candidate_blob_sha===other.get(wf.path)?.sha&&
+  wf.source_blob_sha!==wf.candidate_blob_sha&&
+  wf.source_behavior==='V2_VALIDATOR_CONDITIONAL_ON_LATEST_CYCLE_SCHEMA'&&
+  wf.candidate_behavior==='V2_VALIDATOR_UNCONDITIONAL'&&
+  wf.conflict_class==='BLOCKING_FOR_FINAL_CUTOVER_IF_CANDIDATE_WORKFLOW_RETAINED'&&
+  wf.final_authority==='NOT_RECONCILED'&&wf.operational_master_modified===false&&
+  wf.resolution==='PRESERVE_MASTER_OPERATIONAL_WORKFLOW_UNMODIFIED;REWRITE_OR_REMOVE_LEGACY_WORKFLOW_BEFORE_E',
+  'D01_WORKFLOW_CONFLICT_NOT_TRACKED');
+ need(typeof workflowContents?.master==='string'&&typeof workflowContents?.candidate==='string'&&
+  workflowContents.master.includes('Determine applicability of historical V2 gate')&&
+  workflowContents.master.includes("if: steps.applicability.outputs.applicable == 'true'")&&
+  !workflowContents.candidate.includes('Determine applicability of historical V2 gate')&&
+  workflowContents.candidate.includes('run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs --root .')&&
+  workflowContents.master.includes('run: node novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs --root .'),
+  'D01_WORKFLOW_BEHAVIOR_WITNESS_DRIFT');
+ const shared=index.shared_blob_identity_review;
+ need(shared?.count===counts.same&&shared?.editorial_equivalence==='NOT_PROVEN'&&
+  shared.current_authority==='NO_AUTOMATIC_PROMOTION_FROM_BINARY_EQUALITY'&&
+  shared.dependency_mapping==='PENDING'&&shared.final_destination==='PENDING_RECONCILIATION',
+  'D01_SHARED_REVIEW_FALSE_CLOSURE');
  const er=index.controlled_external_registry;
  need(er?.discovery_status===external.discovery_status&&Array.isArray(er.items)&&
    er.items.length===external.items.length,'D01_EXTERNAL_INCOMPLETE');
@@ -169,7 +220,11 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
    actual.reported_migration_state===(expected.migration_state||null)&&
    actual.archived_target===(expected.target||null)&&
    actual.archived_target_sha===(expected.target?(source.get(expected.target)?.sha||null):null)&&
-   actual.source_byte_equivalence==='NOT_REVALIDATED_D01','D01_EXTERNAL_MAPPING_DRIFT');
+   actual.source_byte_equivalence==='NOT_REVALIDATED_D01'&&
+   actual.git_archive_pin_status===(!actual.archived_target?
+    'NO_ARCHIVED_TARGET_REPORTED':actual.archived_target_sha?
+    'ARCHIVE_PATH_GIT_SHA_PINNED_EXTERNAL_BYTES_UNVERIFIED':
+    'ARCHIVED_TARGET_NOT_IN_PINNED_GIT_TREE'),'D01_EXTERNAL_MAPPING_DRIFT');
  }
  const mr=index.visual_registry;
  need(source.get(mr?.path)?.sha===mr.blob_sha&&Array.isArray(mr.entries)&&
@@ -347,7 +402,11 @@ export function readAndVerifyD01(root=process.cwd()){
   media:read(index.visual_registry.path),
   cycle:read(index.authority_reference.cycle.path),sourceContents,
   candidateState:JSON.parse(git(root,['show',index.candidate_snapshot.commit_sha+
-   ':novydres/cronicas/CHR-001/estado/atual.json']))});
+   ':novydres/cronicas/CHR-001/estado/atual.json'])),
+  workflowContents:{
+   master:git(root,['show',index.source_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml']),
+   candidate:git(root,['show',index.candidate_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml'])
+  }});
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))
  console.log(JSON.stringify(readAndVerifyD01()));

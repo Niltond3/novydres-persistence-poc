@@ -15,6 +15,10 @@ const data={masterTree:listPinnedTree(root,pinned),
  media:read(index.visual_registry.path),
  cycle:read(index.authority_reference.cycle.path),
  candidateState:readFromCandidateState(),
+ workflowContents:{
+  master:execFileSync('git',['show',pinned+':.github/workflows/novydres-marco-closure-v2.yml'],{encoding:'utf8',maxBuffer:32*1024*1024}),
+  candidate:execFileSync('git',['show',index.candidate_snapshot.commit_sha+':.github/workflows/novydres-marco-closure-v2.yml'],{encoding:'utf8',maxBuffer:32*1024*1024})
+ },
  sourceContents:new Map(index.source_files.filter(row=>
   row.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE').map(row=>[
   row.source_path,execFileSync('git',['show',pinned+':'+row.source_path],
@@ -189,4 +193,30 @@ test('D01 nonpinned source content absent is fail-closed',()=>{
  sourceContents.delete(p);
  assert.throws(()=>verifyD01(index,{...data,sourceContents}),
   e=>e.code==='D01_NONCURRENT_CONTENT_NOT_READ');
+});
+
+test('D01 shared unchanged SHA is not proof of authority or destination',()=>{
+ const p=index.source_files.find(x=>x.binary_ownership_review)?.source_path;
+ assert.ok(p);
+ reject(x=>x.source_files.find(r=>r.source_path===p).binary_ownership_review='APPROVED',
+  'D01_SHARED_BLOB_FALSE_AUTHORITY');
+ reject(x=>x.shared_blob_identity_review.editorial_equivalence='PROVEN',
+  'D01_SHARED_REVIEW_FALSE_CLOSURE');
+});
+test('D01 candidate-only type and cutover disposition cannot be silently promoted',()=>{
+ const p=index.candidate_only_files.find(x=>x.candidate_review)?.path;
+ assert.ok(p);
+ reject(x=>x.candidate_only_files.find(r=>r.path===p).candidate_review.operational_authority='ACTIVE',
+  'D01_CANDIDATE_ONLY_CLASSIFICATION_DRIFT');
+});
+test('D01 divergent historical workflow cannot be approved without resolution',()=>{
+ reject(x=>x.workflow_divergence.final_authority='APPROVED',
+  'D01_WORKFLOW_CONFLICT_NOT_TRACKED');
+ const witness={...data.workflowContents,candidate:data.workflowContents.master};
+ assert.throws(()=>verifyD01(index,{...data,workflowContents:witness}),
+  e=>e.code==='D01_WORKFLOW_BEHAVIOR_WITNESS_DRIFT');
+});
+test('D01 external Git archived path does not prove original external bytes',()=>{
+ reject(x=>x.controlled_external_registry.items[0].git_archive_pin_status='EXTERNAL_BYTES_VERIFIED',
+  'D01_EXTERNAL_MAPPING_DRIFT');
 });
