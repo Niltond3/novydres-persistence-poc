@@ -54,9 +54,9 @@ test('V04 rejects foreign relation owner',()=>{
  const path=local+'relacoes.json';
  assert.ok(has(mutation(path,o=>o.relations[0].owner_subject_id='other-owner'),'V04_RELATION_OWNER'));
 });
-test('V03 rejects unregistered target when explicit Phase B deferment is absent',()=>{
+test('V03 rejects unregistered target after D03 resolved the former Phase B deferment',()=>{
  const path=local+'relacoes.json';
- assert.ok(has(mutation(path,o=>o.external_target_id_not_migrated_in_phase_b=false),'V03_TARGET_NOT_FOUND'));
+ assert.ok(has(mutation(path,o=>{o.relations[0].to_subject_id='pc-nonexistent';}),'V03_TARGET_NOT_FOUND'));
 });
 test('V04 rejects invented resource balances and future Embrace',()=>{
  assert.ok(has(mutation(state,o=>o.resources.xp_remaining+=1),'V04_RESOURCES'));
