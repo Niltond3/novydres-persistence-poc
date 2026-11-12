@@ -43,3 +43,53 @@ catalogo.json é determinístico: {schema_version, generated_from_tree, subjects
 
 ## Resiliência e migração
 Sincronização entre branches é explícita: B começa de um snapshot novo de master, compara e reconcilia os dois commits divergentes observados ou posteriores, e registra alterações novas antes de prototipar. Evitar merge automático de estado operacional em design. Tags de cutover e pré-cutover servem só como provas históricas para recuperação autorizada de incidente, nunca como rota alternativa de runtime.
+
+## A03 — Sucessão de persistência, histórico e falhas (2026-11-12)
+
+**Estado:** desenho candidato completo para A03; **NÃO OPERACIONAL**. Entrada em `582a627604b4350ec04a3573e272f28885a9e05d`, com A01/A02 já registrados. Este contrato aplica DEC-18/23/24 ao modelo A02, preserva a hierarquia editorial e não faz nenhum write de crônica, cânone, `master` ou runtime. A03 não testa CAS concorrente nem perda de confirmação; essas provas cabem a B04/C03.
+
+### Mapa explícito de sucessão — apenas após aprovação e E
+
+| Regra vigente / fonte | Função que fica preservada | Mudança proposta no sucessor | Limite de autoridade |
+|---|---|---|---|
+| G19 (inclusive sua sucessão vigente) | Fonte, autoria, delta e readback antes de dizer COMMITTED | **Uma transação verificada por resposta de jogo** em vez de gravações por microação ou somente ao fim da cena, DEC-18 | A fase A não altera G19 em produção |
+| G23 e editoração v1.0 | Cânone congelado, prioridade, conflitos e decisão editorial | Mantidos em substância; caminhos estáveis Git não promovem automaticamente `candidate` | Sucessor de política editorial exige aprovação própria |
+| G24 / DEC-CR-014 copy-on-write | Histórico intocado, revisões recuperáveis, sem retcon silencioso | Revisão Git de **mesmo caminho corrente** em commit novo; bytes antigos continuam no commit pai/tag | Sem reescrever arquivos canônicos/fechados; não ativar antes de E |
+| G26 / DEC-CR-016 (persistência não bloqueante) | Guardar escolhas, estados, autoria e evitar perda/duplicação | **Substituir** continuidade narrativa com buffer não publicado por pausa técnica em falha de transação, DEC-18; recuperação da mesma transação antes de qualquer continuação | G26 permanece vigente no runtime atual; nenhuma narrativa é afetada aqui |
+| G28 / DEC-CR-020 (batch ao fim da cena) | Uma transação coerente; consequência, risco, resolução dinâmica e limite de ação do PJ | Trocar **somente a cadência de escrita** para uma transação por resposta; não exigir commit por teste/microação nem novo documento por cena | G28 continua vigente até o cutover autorizado |
+| Registros de rolagem/ledger histórico | Consequência, proveniência e coerência mecânica do estado | Sem evento universal, replay obrigatório, face, seed, RNG ou arquivo por dado no sucessor, DEC-23/24 | G25 e as regras V5 de adjudicação continuam; não reexecutar rolagens antigas |
+| Ciclos, manifestos e bootstrap atual | Autoridade de estado, origem, permissão de Narrador e retomada | Estado corrente por assunto, fontes Git e três entradas `AGENTS.md`, `CONTEXT.md`, `catalogo.json` após E | Ciclos atuais continuam únicos válidos em master até E |
+
+### Contrato de transação e idempotência — para C03 implementar
+
+**Unidade:** uma resposta ficcional autorizada, composta de texto integral + efeitos materiais e intenções/recursos/conhecimento nos respectivos **owners** + derivados necessários. A preparação prévia e o texto ainda não publicado **não** são eventos jogados. Não incluir resultado de um teste anterior já aplicado, nem antecipar resposta seguinte. Nenhum arquivo extra é obrigatório por evento, turno, teste ou rolagem.
+
+1. **Ler** um commit `base_head` autorizado; verificar papel, documento/owner, versão, fontes decisivas, eventuais aprovações e cursor. Classificar decisões e fatos versus alegações e preparo. Se desconhecidos, bloquear a unidade, sem inferir.
+2. **Identificar** transação por `tx_id` estável no checkpoint/metadata de efeito (ou registro mínimo apenas se necessário), e fingerprint determinístico do mesmo conjunto texto+efeitos; o formato final não pode introduzir ledger narrativo por reflexo. Recuperar `tx_id` existente antes de tentar escrever. Mesmo `tx_id` com payload diferente é `STOP_CONFLICT`.
+3. **Preparar** deltas somente nos owners afetados; anexar texto original com fonte, manter correção material explícita ligada ao trecho/campo anterior e ao motivo. Atribuição e status epistêmico não se elevam por mera persistência. Gerar apenas derivados afetados, conforme A02.
+4. **Validar** mecanicamente campos, IDs, referências, autorização, precedência editorial, fontes, visibilidade, coerência de recursos e continuidade. Preservar texto histórico. Um validador de formato não substitui revisão semântica nem aprovações pendentes.
+5. **Publicar atomicamente** blobs e uma única tree Git, commit cujo **pai é `base_head`**, e mover exclusivamente a ref permitida com `expected_sha=base_head`, `force=false`. Criar blob/tree/commit sem mover a ref significa **NÃO PUBLICADO**. Sem fallback Drive, sobrescrita forçada ou atualização do master por rotina.
+6. **Reler** ref, parent do commit, tree e blobs correspondentes e comparar `tx_id`, texto e efeitos, além de sigilo. Só `CONFIRMED` após a confirmação remota inequívoca. A resposta de jogo só então pode ser entregue.
+7. **Em falha ou confirmação perdida**, congelar a continuação ficcional e classificar `PENDING_PERSISTENCE`; primeiro recuperar ref/commits/owners e comparar `tx_id`/fingerprint. Se o commit foi publicado, confirmar a transação **existente**, sem duplicá-la. Se não foi publicado, reconciliar com novos commits remotos antes de qualquer nova tentativa. Nunca rerrolar, atribuir nova decisão ao PJ ou restaurar recursos por conveniência.
+
+**Estados técnicos possíveis:** `PREPARED_LOCAL` (nenhum efeito operacional), `COMMIT_OBJECT_CREATED_UNPUBLISHED` (objetos órfãos possíveis), `REF_UPDATED_READBACK_PENDING` (não declarar confirmado), `CONFIRMED` (ref+commit+owners efetivamente verificados), `STOP_CONFLICT` (mesmo ID/delta divergente, owner/fonte conflitante ou lease concorrente), `PENDING_PERSISTENCE` (não existe prova de confirmação suficiente para entregar a ficção). O rótulo nunca substitui a leitura real do repositório.
+
+### Exercícios negativos exigidos na implementação
+
+- **Stale lease remoto:** dois escritores iniciam do mesmo parent numa ref descartável; só um pode promover. O segundo deve receber rejeição e preservar seu delta para reconciliação. `update_ref` sem disputa prova somente sucesso normal, não rejeição.
+- **Confirmação perdida:** o servidor publicou, mas a resposta de confirmação se perdeu; recuperação encontra `tx_id` e os exatos efeitos já vigentes, sem segundo commit narrativo.
+- **Mesmo ID, outro conteúdo:** corrigir a intenção do jogador em uma tentativa não autorizada deve parar, não sobrescrever texto.
+- **Preparo versus acontecimento:** referência `GM_PREPARED` ou cena não iniciada não gera evento, XP ou conhecimento por mudança de arquivo.
+- **Rollback incidental:** editar estado atual não pode apagar texto histórico, mudar aprovação ou desfazer recursos sem correção identificável.
+- **Blob e tree não promovidos:** criá-los não equivale a escrita no HEAD. Falha ou versão divergente exige readback antes de qualquer novo commit.
+- **Fato só na prosa:** buscar fonte original e materializar consequência somente ao ganhar relevância (A02), com conhecimento/tempo conservados.
+- **Fonte externa sem integridade:** não inventar hash para arquivos do Drive, nem reclassificar canon por arquivo copiado.
+
+### Separação entre história, estado e revisão
+
+- **História literal:** preservar fontes jogadas e decisões anteriores; conteúdo existente não é sintetizado como transcrição ausente. Referência histórica pode apontar a commit antigo, jamais virar rota operacional de fallback após E.
+- **Estado corrente:** só o owner do campo guarda a situação atual; não depende de replay de eventos; discrepância entre ele e a prosa pede reconciliação auditável de fontes, sem harmonização silenciosa.
+- **Correções:** manter marcador identificável no owner/registros necessários que explica fonte, escopo, decisão, efeito e anterioridade; não editar o texto histórico para parecer que sempre esteve corrigido.
+- **Sucessões:** propostas de G19/G23/G24/G26/G28, contrato Git e governança editorial precisam de política sucessora expressamente autorizada antes de operação; A03 define consequências, não as aprova nem congela.
+
+**Provas desta etapa:** alterações documentais verificadas no GitHub por SHA/bytes, sem ativação. **Não provados:** endpoint remoto rejeitar stale, recuperação pós-perda de confirmação, performance por resposta, sigilo contextual e compatibilidade executada Web/Codex; mantidos como deveres de B04/C03/C07. Próximas A04 e A05; A06 depende das duas.

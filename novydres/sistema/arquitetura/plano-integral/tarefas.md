@@ -1,6 +1,6 @@
 ---
 subject_id: architecture-adr001-implementation-plan
-status: EXECUCAO_EM_CURSO_A01_A02_PASS_A03_NEXT
+status: EXECUCAO_EM_CURSO_A01_A03_PASS_A04_A05_NEXT
 visibility: PLAYER_SAFE
 ---
 # Backlog integral — ADR-001
@@ -52,6 +52,14 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Depende de:** A01 e desenho compatível com A02; aplicar a cadência Q-02 já aceita (DEC-18). Aplicar DEC-23/DEC-24: sem reconstrução universal por eventos nem auditoria técnica por dado.
 - **Escopo/saída:** contrato de nomes estáveis/Git, preservação do texto histórico, correção explícita, transação atômica, idempotência e estado atual por assunto. Registros adicionais só por função necessária; nenhuma obrigação de arquivo por evento/rolagem ou motor universal de replay. Mapear sucessores de G19/G23/G24, DEC-CR-014 e políticas editoriais quando afetadas; explicitar quais permanecem. Aplicar uma transação por resposta de jogo, publicada e verificada antes da entrega, com pausa em falha; definir retenção de originais, texto literal novo e limites do histórico não auditado. Não reabrir essa cadência.
 - **Conclusão:** caminhos atuais não usam `_Vnnn` como mecanismo de revisão; um único dono por campo. Falha de escrita não confirma estado; risco entre gravações e recuperação definidos. Correção material não reescreve registro antigo. Proposta de sucessão e autoridade necessária identificadas, sem ativação.
+
+
+#### Execução de A03 — 2026-11-12
+
+- **Estado:** PASS de especificação candidata, sem sucessão ativada. **Entrada:** `582a627604b4350ec04a3573e272f28885a9e05d`.
+- **Saída:** [git-e-roteadores.md](../fase-a/git-e-roteadores.md#a03--sucessão-de-persistência-histórico-e-falhas-2026-11-12) com mapa G19/G23/G24/DEC-CR-014/G26/G28, cadência DEC-18, retenção de prosa, correção explícita, `tx_id`, idempotência, lease/parent/readback e estados técnicos em confirmação perdida.
+- **Limites:** Git-native no caminho estável ainda é somente desenho e exige sucessores/autorização de política em E; não testados cenário concorrente e recuperação de confirmação perdida (B04/C03). Nenhuma cena, evento, XP/FV, master ou runtime alterado.
+- **Próximas tarefas elegíveis:** A04/A05; A06 após ambas e A07 após A01–A06.
 
 ### A04 — Consolidar condução narrativa e criação guiada
 
