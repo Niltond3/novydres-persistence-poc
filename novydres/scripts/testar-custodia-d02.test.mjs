@@ -37,7 +37,7 @@ test('D02 may not invent a visual original link',()=>{
  fails(d=>{let x=d.sources.entries.find(x=>!x.raw_original_migrated);x.drive_file_id='invented';},'D02_MEDIA_PROVENANCE');
 });
 test('D02 may not inflate integrity to SHA verified',()=>{
- fails(d=>d.sources.entries[0].drive_sha256_verified=true,'D02_MEDIA_PROVENANCE');
+ fails(d=>d.sources.entries[0].drive_sha256='0'.repeat(64),'D02_MEDIA_DIGEST_INVALID');
 });
 test('D02 must retain unresolved editorial authority',()=>{
  fails(d=>d.governance.conflicts.find(x=>x.id==='CONFLICT-003B').status='RESOLVED','D02_EDITORIAL_CONFLICT_SUPPRESSED');
@@ -65,4 +65,13 @@ test('D02 cannot claim Library original bytes were recovered without evidence',(
 });
 test('D02 cannot pretend pending originals were uploaded to Drive',()=>{
  fails(d=>d.sources.entries.find(x=>!x.raw_original_migrated).d02_observation.destination_original_uploaded_d02=true,'D02_PENDING_MEDIA');
+});
+test('D02 cannot erase a proven destination SHA-256',()=>{
+ fails(d=>d.sources.entries.find(x=>x.raw_original_migrated).drive_sha256_verified=false,'D02_MEDIA_DIGEST_INVALID');
+});
+test('D02 may not extrapolate one historical source-hash match to all media',()=>{
+ fails(d=>d.sources.media_crypto_audit.source_previous_digest_matches=14,'D02_CRYPTO_COVERAGE');
+});
+test('D02 cannot replace the true source digest without exposing the discrepancy',()=>{
+ fails(d=>d.sources.entries.find(x=>x.name==='MasterMap.png').source_sha256='0'.repeat(64),'D02_CRYPTO_SOURCE_CLAIM');
 });

@@ -85,8 +85,17 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
   const m=mediaBy.get(e.library_id);
   need(m&&m.name===e.name&&m.reported_status===e.reported_status&&
     m.drive_file_id===e.drive_file_id&&m.drive_url===e.drive_url&&
-    m.raw_original_migrated===e.raw_original_migrated&&
-    m.drive_sha256_verified!==true&&m.d02_observation.drive_sha256_computed===false,'D02_MEDIA_PROVENANCE');
+    m.raw_original_migrated===e.raw_original_migrated,'D02_MEDIA_PROVENANCE');
+  if(e.raw_original_migrated){
+   need(m.drive_sha256_verified===true&&/^[a-f0-9]{64}$/.test(m.drive_sha256||'')&&
+    m.d02_observation.drive_sha256_computed===true&&
+    m.d02_observation.drive_raw_original_bytes_read===true&&
+    m.d02_observation.destination_sha256===m.drive_sha256&&
+    m.d02_observation.drive_byte_length_matches_registry===true&&
+    m.d02_observation.source_sha256_computed_d02===false,'D02_MEDIA_DIGEST_INVALID');
+  }else{
+   need(m.drive_sha256_verified!==true&&m.d02_observation.drive_sha256_computed===false,'D02_PENDING_MEDIA_DIGEST');
+  }
   if(e.raw_original_migrated) {
    linked++;need(!!m.drive_file_id&&m.d02_observation.name_mime_size_match===true,'D02_MEDIA_LINK');
   }else{
@@ -98,8 +107,20 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
   }
  }
  need(linked===14&&pending===5&&sources.media_integrity.unlocated_originals===5&&
-  sources.media_integrity.source_or_destination_sha256_verified_now===0,'D02_FALSE_MEDIA_INTEGRITY');
- const recovery=sources.media_source_recovery;
+  sources.media_integrity.source_or_destination_sha256_verified_now===14&&
+  sources.media_integrity.destination_sha256_verified_now===14&&
+  sources.media_integrity.source_original_sha256_computed_now===0&&
+  sources.media_integrity.source_destination_equivalence_unverified===13,'D02_FALSE_MEDIA_INTEGRITY');
+ const crypto=sources.media_crypto_audit;
+ need(crypto&&crypto.destination_originals_downloaded===14&&crypto.destination_sha256_computed===14&&
+  crypto.destination_length_matched===14&&crypto.source_raw_bytes_directly_hashed_in_d02===0&&
+  crypto.source_previous_digest_matches===1&&crypto.source_equivalence_unproven===13&&
+  crypto.drive_originals_unresolved===5&&crypto.source_and_destination_fully_equivalent_for_all_19===false,'D02_CRYPTO_COVERAGE');
+ const matched=sources.entries.filter(e=>e.drive_sha256_verified===true&&
+  typeof e.source_sha256==='string'&&e.source_sha256===e.drive_sha256);
+ need(matched.length===1&&matched[0].name==='MasterMap.png'&&
+  visual.storage_summary.mastermap_source_sha256_verified===1,'D02_CRYPTO_SOURCE_CLAIM');
+  const recovery=sources.media_source_recovery;
  need(recovery&&recovery.pending_originals===5&&recovery.exact_library_metadata_found===5&&
   recovery.source_bytes_materialized===0&&recovery.source_bytes_sha256_computed===0&&
   recovery.google_drive_exact_name_search_matches===0&&recovery.drive_new_uploads===0&&
