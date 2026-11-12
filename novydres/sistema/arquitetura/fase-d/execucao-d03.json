@@ -69,7 +69,10 @@
     "d04_only": 4,
     "d05_only": 3,
     "global_and_local_mixed": 1,
-    "field_semantics_fully_partitioned": false
+    "field_semantics_fully_partitioned": false,
+    "source_custody_only": true,
+    "local_ownership_not_claimed_by_global_rule": true,
+    "original_field_state_unmodified": true
   },
   "remaining_gate_requirements": [
     "SOURCE_SECTION_LOCATORS_ARE_NOT_SEMANTIC_FACT_RECONCILIATION",

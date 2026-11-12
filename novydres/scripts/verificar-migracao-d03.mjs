@@ -35,7 +35,11 @@ export function verifyD03(root=process.cwd(),opts={}){
    const original=byPath.get(row.source_path);
    if(!original||seen.has(row.source_path))fail('D03_SOURCE_UNMAPPED_OR_DUPLICATE');
    seen.add(row.source_path);
-   if(row.source_blob_sha!==original.source_blob_sha||row.semantic_owner!==id||
+   if(row.source_blob_sha!==original.source_blob_sha||
+     (id==='rule-experience-novydres'?
+       !(row.semantic_owner===null&&row.source_custodian===id&&row.source_custody_not_semantic_authority===true&&
+         ['D04','D05','D03_D04_SPLIT'].includes(row.owner_handoff_phase)):
+       row.semantic_owner!==id)||
      row.source_authority!=='UNCHANGED'||row.source_episteme!=='UNCHANGED_NOT_RECLASSIFIED'||
      row.field_semantics!=='PENDING_VERIFICATION'||row.exact_blob_copy!==true)
       fail('D03_AUTHORITY_OR_SHA_MISMATCH');
@@ -73,6 +77,9 @@ export function verifyD03(root=process.cwd(),opts={}){
    !Array.isArray(xp.source_records)||xp.source_records.length!==8)fail('D03_XP_SCOPE_MISSING');
  for(const row of xp.source_records){
   const original=byPath.get(row.source_path);
+  const custody=read(root,'novydres/sistema/regras/experiencia/registro.json').source_records.find(x=>x.source_path===row.source_path);
+  if(!custody||custody.semantic_owner!==null||custody.source_custodian!=='rule-experience-novydres'||
+     custody.owner_handoff_phase!==row.document_semantic_phase)fail('D03_XP_SCOPE_OWNER_CONFLICT');
   if(!original||row.source_sha!==original.source_blob_sha||
     row.semantic_owner_current!=='UNASSIGNED_UNTIL_APPLICABLE_PHASE'||
     row.source_data_not_reclassified!==true)fail('D03_XP_SCOPE_AUTHORITY');

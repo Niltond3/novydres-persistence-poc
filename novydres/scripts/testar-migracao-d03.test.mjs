@@ -27,3 +27,11 @@ test('D03 global identities never assert local NPC knowledge or choose historica
  assert.equal(r.epistemic_status,'UNKNOWN');assert.equal(r.editorial_selection,'NO_VARIANT_SELECTED');
  assert.equal(r.local_knowledge_transferred,false);assert.ok(r.variants.length>=3);
 });
+test('D03: XP local envelopes and test fixtures never acquire global rule-semantic ownership',()=>{
+ const ledger=read('novydres/sistema/regras/experiencia/registro.json');
+ const phases=ledger.source_records.map(x=>x.owner_handoff_phase);
+ assert.equal(phases.filter(x=>x==='D04').length,4);
+ assert.equal(phases.filter(x=>x==='D05').length,3);
+ assert.equal(phases.filter(x=>x==='D03_D04_SPLIT').length,1);
+ assert.ok(ledger.source_records.every(x=>x.semantic_owner===null&&x.source_custody_not_semantic_authority===true));
+});
