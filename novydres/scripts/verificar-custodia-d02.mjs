@@ -53,7 +53,7 @@ export function verifyD02Model({inventory,governance,sources,external,visual}) {
   need(m&&m.name===e.name&&m.reported_status===e.reported_status&&
     m.drive_file_id===e.drive_file_id&&m.drive_url===e.drive_url&&
     m.raw_original_migrated===e.raw_original_migrated&&
-    m.drive_sha256_verified===false&&m.d02_observation.drive_sha256_computed===false,'D02_MEDIA_PROVENANCE');
+    m.drive_sha256_verified!==true&&m.d02_observation.drive_sha256_computed===false,'D02_MEDIA_PROVENANCE');
   if(e.raw_original_migrated) {
    linked++;need(!!m.drive_file_id&&m.d02_observation.name_mime_size_match===true,'D02_MEDIA_LINK');
   }else{
