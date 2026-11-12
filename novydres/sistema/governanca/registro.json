@@ -409,21 +409,30 @@
       "id": "CONFLICT-001",
       "status": "PENDING_AUTHORITY",
       "phase": "D03",
-      "disposition": "DO_NOT_PROMOTE_CANDIDATE_CANON"
+      "disposition": "DO_NOT_PROMOTE_CANDIDATE_CANON",
+      "handoff": "D03_WORLD_EDITORIAL_AUTHORITY",
+      "custody_disposition": "SIX_CANDIDATE_FRONTMATTERS_PRESERVED_WITH_CLOSURE_REPORT_NO_APPROVAL_PROMOTED",
+      "editorial_authority_decision": "UNRESOLVED_CANNOT_BECOME_ACTIVE"
     },
     {
       "id": "CONFLICT-002",
       "status": "VERIFIED_METADATA_DIFFERENCE_PRESERVED",
       "phase": "D02",
-      "disposition": "KEEP_DECLARED_SCHEMA_VALUE_UNCHANGED"
+      "disposition": "KEEP_DECLARED_SCHEMA_VALUE_UNCHANGED",
+      "custody_disposition": "LITERAL_0_9_3_SCHEMA_FROM_v0_9_4_SOURCE_PRESERVED_EXACT_BLOB",
+      "substantive_decision": "NONE_REQUIRED_FOR_SOURCE_CUSTODY"
     },
     {
       "id": "CONFLICT-003B",
       "status": "TEXT_DIFFERENCES_VERIFIED_EDITORIAL_VERDICT_OPEN",
       "phase": "D03",
-      "disposition": "PRESERVE_ALL_VARIANTS_NO_PREFERRED_AUTHORITY"
+      "disposition": "PRESERVE_ALL_VARIANTS_NO_PREFERRED_AUTHORITY",
+      "handoff": "D03_NPC_VARIANT_EDITORIAL_AUTHORITY",
+      "custody_disposition": "ALL_FOUR_HISTORICAL_VARIANTS_RETAINED_NO_CANONICAL_SELECTION",
+      "editorial_authority_decision": "UNRESOLVED_CANNOT_BECOME_ACTIVE"
     }
   ],
   "successor_policy": "NO_INFERRED_SUC​CESSOR_FROM_VERSION_NUMBER",
-  "frozen_sources_modified": false
+  "frozen_sources_modified": false,
+  "residual_conflict_handling": "D02_PRESERVES_CANDIDATES_NO_EDITS; D03 MUST BLOCK CANONICAL_PROMOTION_UNTIL_DECISION. D02 SOURCE_CUSTODY_DOES_NOT_DECIDE_EDITORIAL_VARIANTS."
 }

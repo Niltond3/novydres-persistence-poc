@@ -5467,8 +5467,15 @@
       "d02_observation": {
         "method": "GOOGLE_DRIVE_FILENAME_SEARCH_2026_11_12",
         "matching_original_found": false,
-        "library_original_bytes_accessible": "NOT_PROVEN",
-        "drive_sha256_computed": false
+        "library_original_bytes_accessible": "RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED",
+        "drive_sha256_computed": false,
+        "library_metadata_exact_id_found": true,
+        "library_file_id": "file_00000000cf7c81f4b92f46548450057d",
+        "library_size_bytes": 806220,
+        "raw_file_materialization_result": "NO_AUTHORIZED_RAW_BYTE_PATH_FOR_THIS_PROJECT",
+        "source_integrity_verified": false,
+        "drive_search_exact_name_found": false,
+        "destination_original_uploaded_d02": false
       }
     },
     {
@@ -5488,8 +5495,15 @@
       "d02_observation": {
         "method": "GOOGLE_DRIVE_FILENAME_SEARCH_2026_11_12",
         "matching_original_found": false,
-        "library_original_bytes_accessible": "NOT_PROVEN",
-        "drive_sha256_computed": false
+        "library_original_bytes_accessible": "RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED",
+        "drive_sha256_computed": false,
+        "library_metadata_exact_id_found": true,
+        "library_file_id": "file_00000000075482119863e18194b58887",
+        "library_size_bytes": 1850331,
+        "raw_file_materialization_result": "NO_AUTHORIZED_RAW_BYTE_PATH_FOR_THIS_PROJECT",
+        "source_integrity_verified": false,
+        "drive_search_exact_name_found": false,
+        "destination_original_uploaded_d02": false
       }
     },
     {
@@ -5559,8 +5573,15 @@
       "d02_observation": {
         "method": "GOOGLE_DRIVE_FILENAME_SEARCH_2026_11_12",
         "matching_original_found": false,
-        "library_original_bytes_accessible": "NOT_PROVEN",
-        "drive_sha256_computed": false
+        "library_original_bytes_accessible": "RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED",
+        "drive_sha256_computed": false,
+        "library_metadata_exact_id_found": true,
+        "library_file_id": "file_00000000782c820eab371df879f87c9f",
+        "library_size_bytes": 2005248,
+        "raw_file_materialization_result": "NO_AUTHORIZED_RAW_BYTE_PATH_FOR_THIS_PROJECT",
+        "source_integrity_verified": false,
+        "drive_search_exact_name_found": false,
+        "destination_original_uploaded_d02": false
       }
     },
     {
@@ -5580,8 +5601,15 @@
       "d02_observation": {
         "method": "GOOGLE_DRIVE_FILENAME_SEARCH_2026_11_12",
         "matching_original_found": false,
-        "library_original_bytes_accessible": "NOT_PROVEN",
-        "drive_sha256_computed": false
+        "library_original_bytes_accessible": "RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED",
+        "drive_sha256_computed": false,
+        "library_metadata_exact_id_found": true,
+        "library_file_id": "file_00000000bd2c8209ac350d2670b1ae66",
+        "library_size_bytes": 1991363,
+        "raw_file_materialization_result": "NO_AUTHORIZED_RAW_BYTE_PATH_FOR_THIS_PROJECT",
+        "source_integrity_verified": false,
+        "drive_search_exact_name_found": false,
+        "destination_original_uploaded_d02": false
       }
     },
     {
@@ -5651,8 +5679,15 @@
       "d02_observation": {
         "method": "GOOGLE_DRIVE_FILENAME_SEARCH_2026_11_12",
         "matching_original_found": false,
-        "library_original_bytes_accessible": "NOT_PROVEN",
-        "drive_sha256_computed": false
+        "library_original_bytes_accessible": "RAW_FILE_MATERIALIZATION_NOT_AUTHORIZED",
+        "drive_sha256_computed": false,
+        "library_metadata_exact_id_found": true,
+        "library_file_id": "file_00000000233c820ead4c67c4a208514d",
+        "library_size_bytes": 38519207,
+        "raw_file_materialization_result": "NO_AUTHORIZED_RAW_BYTE_PATH_FOR_THIS_PROJECT",
+        "source_integrity_verified": false,
+        "drive_search_exact_name_found": false,
+        "destination_original_uploaded_d02": false
       }
     },
     {
@@ -7613,5 +7648,18 @@
     "no_original_drive_binary_copied": true,
     "authority_not_promoted": true,
     "fields_owned_by_d03_d05_not_resolved_by_copy": 96
+  },
+  "media_source_recovery": {
+    "date": "2026-11-12",
+    "source": "PERSONAL_LIBRARY_LIST_EXACT_ID_5_OF_5",
+    "pending_originals": 5,
+    "exact_library_metadata_found": 5,
+    "source_bytes_materialized": 0,
+    "source_bytes_sha256_computed": 0,
+    "google_drive_exact_name_search_matches": 0,
+    "drive_new_uploads": 0,
+    "authorized_transfer_channel": "NOT_AVAILABLE_FROM_LIBRARY_RAW_FILE_BACKING",
+    "priority": "MUST_NOT_TREAT_AS_ORIGINAL_RECOVERED_IN_DRIVE",
+    "gate_impact": "D02_EXTERNAL_MEDIA_COMPLETION_NOT_PROVEN"
   }
 }
