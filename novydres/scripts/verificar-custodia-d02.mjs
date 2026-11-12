@@ -201,9 +201,9 @@ export function verifyD02Git(root=process.cwd()) {
  const consumerPaths=cmd('ls-tree','-r','--name-only','HEAD','--',
   '.github/workflows','novydres/scripts','novydres/runtime','novydres/systems',
   'novydres/assets','novydres/AGENTS.md','novydres/CONTEXT.md',
-  'novydres/catalogo.json','novydres/cronicas','novydres/personagens').split('\\n')
+  'novydres/catalogo.json','novydres/cronicas','novydres/personagens').split('\n')
   .filter(p=>p&&p!=='novydres/scripts/verificar-custodia-d02.mjs'&&
-   p!=='novydres/scripts/testar-custodia-d02.test.mjs'&&!/\\.(png|jpg|zip|webp)$/.test(p));
+   p!=='novydres/scripts/testar-custodia-d02.test.mjs'&&!/\.(png|jpg|zip|webp)$/.test(p));
  const pending=sources.entries.filter(x=>x.d02_gate_classification==='EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02');
  need(pending.length===5,'D02_WAIVER_COUNT');
  const needles=pending.flatMap(x=>[x.name,x.library_id]);
