@@ -26,7 +26,7 @@ export function checkD03Gate({worldAuthorityOverride=null,npcAuditOverride=null,
    relations.directed_edges!==5||pc.local_state_promoted!==false||!structure.ok||
    !checkCatalog().ok)fail('D03_GATE_EQUIVALENCE');
  if(catalog.subjects.length!==79||
-   new Set(catalog.subjects.map(s=>s.id)).size!==59||
+   new Set(catalog.subjects.map(s=>s.id)).size!==79||
    catalog.subjects.some(s=>!s.files?.length||s.status==='ACTIVE'))
    fail('D03_GATE_OWNER');
  const ids=new Set(catalog.subjects.map(s=>s.id));
