@@ -8128,7 +8128,90 @@
       "This ChatGPT Web executor has previously viewed B02 result metadata; independence/blinding is limited.",
       "No Web API token/HTTP byte telemetry.",
       "No new run can retrospectively validate disappeared Web answers."
-    ]
+    ],
+    "targeted_retest": {
+      "status": "FROZEN_BEFORE_REEVALUATION",
+      "recorded_after_first_round": "00d163309b1fe8b87e9880aa1fc110d022a7df60",
+      "reason": "Full original requests require fields omitted by initial abbreviated names; these outputs are new records, not retrospective corrections of initial answers",
+      "cases": [
+        {
+          "id": "B-Q11",
+          "request": "What is Samir's historical actor ID and what is the candidate subject ID? State the explicit mapping.",
+          "answer": {
+            "legacy_actor_id": "npc-m3-samir-haddad-candidate",
+            "candidate_global_subject_id": "npc-samir-haddad",
+            "candidate_local_subject_id": "chr001-npc-samir-haddad",
+            "source_refs": [
+              {
+                "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+                "commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+                "blob_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a",
+                "locator": "records where entity=npc-m3-samir-haddad-candidate"
+              },
+              {
+                "path": "novydres/personagens/npc-samir-haddad/perfil.json",
+                "commit": "00d163309b1fe8b87e9880aa1fc110d022a7df60",
+                "blob_sha": "17a353ccbda595b99fbf909b7ecd9d91b0e723d9",
+                "locator": "/subject_id and /historical_actor_id"
+              },
+              {
+                "path": "novydres/cronicas/CHR-001/elenco/npc-samir-haddad/conhecimento.json",
+                "commit": "00d163309b1fe8b87e9880aa1fc110d022a7df60",
+                "blob_sha": "64af21e9ca4c0ea625af3f7f7b3a93b7a241073e",
+                "locator": "/subject_id and /actor_id"
+              }
+            ]
+          },
+          "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+          "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+          "score": "NOT_YET_EVALUATED",
+          "independent_semantic_review": "PENDING"
+        },
+        {
+          "id": "B-Q26",
+          "request": "Is the next scene already started in the C41 checkpoint? Distinguish it from the last closed scene.",
+          "answer": {
+            "last_closed_scene": "C05",
+            "next_scene": "C01",
+            "next_scene_status": "NOT_STARTED",
+            "source_refs": [
+              {
+                "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+                "commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+                "blob_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d",
+                "locator": "/checkpoint/last_closed_scene; /checkpoint/next_scene; /checkpoint/next_scene_status"
+              }
+            ]
+          },
+          "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+          "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+          "score": "NOT_YET_EVALUATED",
+          "independent_semantic_review": "PENDING"
+        },
+        {
+          "id": "B-Q30",
+          "request": "At the pinned C41 state, report provisional Willpower maximum, superficial damage, aggravated damage, and available Willpower. Do not use current master C45.",
+          "answer": {
+            "willpower_provisional_max": 6,
+            "willpower_superficial_damage": 2,
+            "willpower_aggravated_damage": 0,
+            "willpower_available": 4,
+            "source_refs": [
+              {
+                "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+                "commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+                "blob_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45",
+                "locator": "/snapshot/resources lines 44–47; verify /checkpoint path as source changes"
+              }
+            ]
+          },
+          "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+          "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+          "score": "NOT_YET_EVALUATED",
+          "independent_semantic_review": "PENDING"
+        }
+      ]
+    }
   },
   "narrative_exercises_2026_11_12": {
     "status": "EXECUTED_FICTIONAL_OUTPUTS_AWAITING_INDEPENDENT_CONTEXT_REVIEW",
@@ -8211,6 +8294,13 @@
     "coverage_rationale": "Oito riscos qualitativamente distintos; sem quota ou certificação por palavra-chave.",
     "campaign_events_created": 0,
     "editorial_independent_review": "PENDING",
-    "not_a_runtime_test": true
+    "not_a_runtime_test": true,
+    "targeted_followup": {
+      "status": "FICTIONAL_INPUT_AND_RESULT_FROZEN_UNREVIEWED",
+      "id": "N-06-RESULT",
+      "risk": "DRAMA_PLAYED_WITH_CAUSAL_CONSEQUENCES",
+      "fictional_player_action": "TEST_ONLY: O protagonista põe sobre a mesa os comprovantes de pagamento e afirma que não deixará o ateliê até conferirem os valores.",
+      "narrated_result": "O proprietário passa os recibos contra a janela. Dois carimbos têm o mesmo número. Ele fecha a boca antes de terminar a ameaça. — Aqui cobraram uma parcela duas vezes. A outra continua atrasada. — Rasga o aviso de despejo imediato e escreve um prazo de dez dias para conciliação. A aprendiz volta à bancada; ninguém precisa carregar as ferramentas hoje. O valor restante, porém, continua em disputa e o proprietário anuncia que trará o contador. O protagonista mantém a possibilidade de pagar, negociar ou contestar."
+    }
   }
 }
