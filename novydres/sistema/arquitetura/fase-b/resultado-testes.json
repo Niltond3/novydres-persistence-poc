@@ -2642,7 +2642,34 @@
       "loss_of_confirmation_emulated_only",
       "test_ref_remains",
       "no_live_app_level_transaction_replay"
-    ]
+    ],
+    "safe_expected_sha_probe_2026_11_12": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "operation": "github_update_ref",
+      "branch": "design/subject-oriented-migration",
+      "ref_before": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "requested_target_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "force": false,
+      "response_type": "GithubGraphQLAPIError",
+      "response": "Something went wrong while executing your query on 2026-11-12T11:51:58Z. Please include A086:195E00:1D58FFC:315EEEA:6AF5A85D when reporting this issue.",
+      "classification": "REMOTE_ERROR_UNCLASSIFIED",
+      "ref_after": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "master_before": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "master_after": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "ref_unchanged": true,
+      "stale_sha_rejection_proven": false,
+      "interpretation": "Generic GraphQL failure does not establish an expected-SHA mismatch."
+    },
+    "codex_evidence_commit_ci": {
+      "workflow": "ADR-001 B04 isolated regression (non-operational)",
+      "run_id": 43212545361,
+      "job_id": 131163549104,
+      "head_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "SYNTHETIC_ISOLATED_CI_ONLY"
+    }
   },
   "b05_status_2026_11_12": {
     "gate": "B_REMEDIATION_REQUIRED",
@@ -7900,20 +7927,74 @@
       "raw_answers_available": false,
       "new_pass_does_not_retroactively_identify_historical_cause": true
     },
-    "publication_state": "AWAITING_EXPECTED_SHA_PUBLICATION_AND_READBACK"
+    "publication_state": "PUBLISHED_AND_READ_BACK",
+    "publication_readback_2026_11_12": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "branch": "design/subject-oriented-migration",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "force": false,
+      "commit_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "parent_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "tree_sha": "caf812527437e53a9861a44cc4b26f7eea4229a4",
+      "ref_readback": "MATCHED_COMMIT",
+      "commit_parent_readback": "MATCHED",
+      "tree_readback": "MATCHED_NOT_TRUNCATED",
+      "master_readback": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "blobs_readback": [
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/fixtures-consultas.json",
+          "blob_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "tree_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/gate-e-readback.json",
+          "blob_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "tree_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/index.md",
+          "blob_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "tree_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/resultado-testes.json",
+          "blob_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "tree_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/plano-integral/tarefas.md",
+          "blob_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "tree_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "content_matches_local": true
+        }
+      ],
+      "ci": {
+        "workflow": "ADR-001 B04 isolated regression (non-operational)",
+        "run_id": 43212545361,
+        "job_id": 131163549104,
+        "head_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+        "status": "completed",
+        "conclusion": "success",
+        "classification": "SYNTHETIC_ISOLATED_CI_ONLY"
+      }
+    }
   },
   "b05_status_codex_real_followup_2026_11_12": {
     "gate": "B_REMEDIATION_REQUIRED",
     "B01": "PASS_SCOPED_HISTORICAL_C41_TO_C45_DRIFT_PRESERVED",
     "B02": "PASS_SCOPED_AFTER_TARGETED_RETEST_30_OF_30_EFFECTIVE_CASES",
     "B03": "RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW",
-    "B04": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC; app-level write-route tests unavailable before C",
+    "B04": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC; expected_sha probe returned generic GraphQL error with ref unchanged; stale rejection unproven; app write route absent.",
     "unmet": [
       "Independent review of the historical Web answers; raw responses are unavailable.",
       "No real app-level write route exists for idempotency, conflicting same-ID payloads, concurrent writer semantics, source/reference/authority/knowledge/disclosure/proof guards, or remote lost-ack recovery.",
       "DEC-25 general semantic detection is not certified.",
       "Historical Web latency p95 was not measured; DEC-19 exception applies only to actual Web token count and HTTP bytes.",
-      "New-commit CI and the expected-SHA stale probe remain pending publication/readback."
+      "The safe real remote expected-SHA probe returned a generic GraphQL error; stale-SHA rejection remains unproven."
     ],
     "dec25_status": "PARTIAL_OBSERVED_NOT_CERTIFIED",
     "dec26_scope": "ONLY_THE_UNRECOVERABLE_HISTORICAL_WEB_RESPONSE_REVIEW_UNIT",

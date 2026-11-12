@@ -289,37 +289,16 @@
       "master_cursor": "C45",
       "drift_preserved": true
     },
-    "B02": {
-      "status": "PASS_SCOPED_AFTER_TARGETED_RETEST",
-      "initial_run": "30 cases; independent semantic review 17 pass and 13 overclaim failures",
-      "targeted_retest": "13/13 independent semantic pass after prompt correction",
-      "effective_cases": "30/30 independently reviewed pass",
-      "critical_cases": [
-        "B-Q26",
-        "B-Q29",
-        "B-Q30"
-      ],
-      "historical_Q29_Q30_cause": "UNDETERMINED_RAW_RESPONSES_NOT_RETAINED",
-      "evidence": "resultado-testes.json#b02_codex_real_2026_11_12"
-    },
-    "B03": {
-      "historical_web_auto_grading": "30/30 PASS_SCOPED_AUTO_GRADING",
-      "independent_review": "RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW",
-      "answers_reconstructed": false
-    },
-    "B04": {
-      "status": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC",
-      "historical_synthetic": "12 negatives, 12 journeys, 7 guards; prior isolated CI success",
-      "application_route": "NOT_AVAILABLE_BEFORE_PHASE_C",
-      "remote_stale_sha_probe": "PENDING_AFTER_EVIDENCE_PUBLICATION",
-      "route_idempotency_conflict_concurrency_and_lost_ack": "NOT_EXECUTED"
-    },
+    "B02": "PASS_SCOPED_AFTER_TARGETED_RETEST_30_OF_30_EFFECTIVE_CASES",
+    "B03": "RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW",
+    "B04": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC; expected_sha probe returned generic GraphQL error with ref unchanged; stale rejection unproven; app write route absent.",
     "B05": "B_REMEDIATION_REQUIRED",
     "unmet": [
-      "Historical Web raw answers unavailable for independent semantic audit.",
-      "No operational write route exists for real application-level guards and idempotency/concurrency/lost-ack integration tests.",
-      "DEC-25 remains PARTIAL_OBSERVED_NOT_CERTIFIED.",
-      "Historical Web p95 latency was not measured and is not waived by DEC-19."
+      "Independent review of the historical Web answers; raw responses are unavailable.",
+      "No real app-level write route exists for idempotency, conflicting same-ID payloads, concurrent writer semantics, source/reference/authority/knowledge/disclosure/proof guards, or remote lost-ack recovery.",
+      "DEC-25 general semantic detection is not certified.",
+      "Historical Web latency p95 was not measured; DEC-19 exception applies only to actual Web token count and HTTP bytes.",
+      "The safe real remote expected-SHA probe returned a generic GraphQL error; stale-SHA rejection remains unproven."
     ],
     "metrics": {
       "Codex CLI aggregate token telemetry": "OBSERVED",
@@ -330,6 +309,72 @@
     "dec25": "PARTIAL_OBSERVED_NOT_CERTIFIED",
     "dec26": "SCOPED_ONLY_TO_UNRECOVERABLE_HISTORICAL_WEB_RESPONSE_REVIEW_UNIT",
     "master_and_canon_unchanged": true,
-    "next_eligible": "Publish this evidence with expected_sha/force=false, read back blobs, confirm CI on published SHA, run safe stale-SHA CAS probe, then re-evaluate B05; do not start C."
+    "next_eligible": "Recover original Web responses only if a preserved copy exists; otherwise keep that unit scoped under DEC-26. B04 application-route tests require an actual route; do not start C.",
+    "published_evidence_checkpoint": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "branch": "design/subject-oriented-migration",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "force": false,
+      "commit_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "parent_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "tree_sha": "caf812527437e53a9861a44cc4b26f7eea4229a4",
+      "ref_readback": "MATCHED_COMMIT",
+      "commit_parent_readback": "MATCHED",
+      "tree_readback": "MATCHED_NOT_TRUNCATED",
+      "master_readback": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "blobs_readback": [
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/fixtures-consultas.json",
+          "blob_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "tree_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/gate-e-readback.json",
+          "blob_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "tree_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/index.md",
+          "blob_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "tree_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/resultado-testes.json",
+          "blob_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "tree_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/plano-integral/tarefas.md",
+          "blob_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "tree_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "content_matches_local": true
+        }
+      ],
+      "ci": {
+        "workflow": "ADR-001 B04 isolated regression (non-operational)",
+        "run_id": 43212545361,
+        "job_id": 131163549104,
+        "head_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+        "status": "completed",
+        "conclusion": "success",
+        "classification": "SYNTHETIC_ISOLATED_CI_ONLY"
+      }
+    },
+    "safe_expected_sha_probe": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "classification": "REMOTE_ERROR_UNCLASSIFIED",
+      "ref_before": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "ref_after": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "requested_target_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "master_before": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "master_after": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "ref_unchanged": true,
+      "stale_sha_rejection_proven": false
+    }
   }
 }
