@@ -1,7 +1,9 @@
 # NOVYDRES — navegação candidata por assunto (não operacional)
 
-Escopo deste checkpoint: protótipo de cinco subjects de B/C, derivado do cursor **C41 histórico**, não equivalência corrente a `master` em **C45**. Fonte autoritativa de tarefas: `sistema/arquitetura/plano-integral/tarefas.md`; política aceita: `sistema/arquitetura/adr/001-subject-oriented.md` §11. Ambas são documentos de desenho, não novos bootstraps operacionais.
+Escopo deste checkpoint: cinco assuntos da amostra B/C derivados do cursor **C41 histórico**, além do assunto candidato de configuração local `chr001-table-config` acrescentado em C05; **nenhum** equivale ao estado corrente de `master` em **C45**. Fonte autoritativa de tarefas: `sistema/arquitetura/plano-integral/tarefas.md`; política aceita: `sistema/arquitetura/adr/001-subject-oriented.md` §11. Ambas são documentos de desenho, não novos bootstraps operacionais.
 
 Entradas propostas para E: `AGENTS.md`, este `CONTEXT.md` e `catalogo.json`, todos lidos no mesmo commit. O catálogo é gerado de `personagens/**/assunto.json` e `cronicas/**/assunto.json`, com arquivos e vínculos derivados. `novydres/scripts/catalogo-assuntos.mjs --check` rejeita divergência de bytes e IDs; o CI testa leitura por SHA e proteção de divulgação. Nenhum caminho antigo é fallback. O vínculo externo C41 ainda não migrado permanece `DEFERRED` até a migração completa de D.
+
+O contrato único de condução **candidato** está em `novydres/sistema/narrativa/contrato.md`, com configuração local sob o subject `chr001-table-config` recuperável pelo catálogo. O contrato consolida DEC-01–15, 18, 20, 23–27 e A04, mas não é outro bootstrap nem herda autoridade operacional. Situações fictícias N-01–N-08/N-06-RESULT e sua revisão contextual anterior permanecem fontes históricas de teste, não cenas reais.
 
 **Não ativar este desenho** para a crônica: os contratos operacionais de `master` permanecem até E02 expressamente aprovado.

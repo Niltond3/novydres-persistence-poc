@@ -1,0 +1,44 @@
+{
+  "subject_id": "chr001-table-config",
+  "not_operational": true,
+  "status": "CANDIDATE_ONLY_NOT_APPROVED",
+  "scope": "CHR-001_GUIDED_CREATION",
+  "general_contract_path": "novydres/sistema/narrativa/contrato.md",
+  "governance_source": "ADR-001 §11 DEC-01–27",
+  "state_subject_id": "chr001-state-checkpoint",
+  "authority_stage": "ACTIVATE_ONLY_AFTER_E02_AND_SUCCESSION_APPROVAL",
+  "roles": {
+    "dramaturgy_and_narration": "FUNCTIONS_NOT_REQUIRED_SEPARATE_CHATS",
+    "human_player": "SOLE_OWNER_OF_PC_CHOICES"
+  },
+  "narrative": {
+    "npc_autonomy": "CAUSAL_INTERESTS_NOT_NUMERIC_MOOD_QUOTA",
+    "ellipsis": "OPTIONAL_WHEN_CAUSAL_AND_PRIORITY_SAFE",
+    "material_losses": "PLAYER_CHOICE_BEFORE_CONSUMMATION",
+    "mysteries": "FIX_CORE_BEFORE_MATERIAL_CLUES_NO_RETROACTIVE_TRUTH",
+    "consequences": "PRESERVE_EARNED_SOCIAL_CONCESSION"
+  },
+  "mechanics": {
+    "ruleset": "V5_AUTHORIZED_SOURCES_REQUIRED",
+    "local_exceptions": "MUST_RESOLVE_FROM_PINNED_OPERATIONAL_AUTHORITIES",
+    "current_sheet_not_certified": true,
+    "xp_willpower": "MATERIAL_EFFECTS_MUST_MATCH_CURRENT_AUTHORITATIVE_SNAPSHOT",
+    "dice_faces_logging_required": false
+  },
+  "persistence": {
+    "cadence": "ONE_TRANSACTION_PER_NARRATED_RESPONSE_AFTER_E",
+    "readback_before_delivery": true,
+    "incomplete_write": "STOP_AND_RECOVER_SAME_TX_NO_REROLL"
+  },
+  "source_scope": {
+    "historical_sample": "C41_ONLY",
+    "current_master": "C45_DISTINCT_NOT_MERGED"
+  },
+  "unresolved": [
+    "MECHANICAL_V5_GATES_FROM_A04",
+    "CANON_OR_APPROVAL_CONFLICTS_FROM_A01",
+    "CURRENT_CURSOR_RECONCILIATION_IN_D",
+    "EXTERNAL_MIGRATION_MEDIA_PENDING"
+  ],
+  "no_campaign_events_created": true
+}

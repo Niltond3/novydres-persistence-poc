@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "chr001-table-config",
+  "kind": "chronicle",
+  "owner_scope": "novydres/cronicas/CHR-001/configuracao",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/sistema/arquitetura/simplificacao-narrativa/desenho.md",
+      "sha": "52e48289cbbf154c8a4fbea1b06fdba53b978b4d"
+    },
+    {
+      "id": "novydres/sistema/arquitetura/adr/001-subject-oriented.md",
+      "sha": "cb9583e1b2adfef9210801afb78189f407828e49"
+    }
+  ],
+  "related_subject_ids": [
+    "chr001-state-checkpoint"
+  ]
+}

@@ -11,10 +11,10 @@ const state=prefix+'estado/atual.json';
 const obj=p=>JSON.parse(readFileSync(p, 'utf8'));
 const mutation=(path, change)=>{const copy=obj(path); change(copy); return validateCandidates(process.cwd(),{overrides:{[path]:copy}});};
 const has=(r,code)=>r.errors.some(x=>x.code===code);
-test('V01–V04: four historical subjects, intact source blobs, candidate state and scoped external target',()=>{
+test('V01–V04: historical C41 subjects plus isolated table config, intact sources and deferred external target',()=>{
  const r=validateCandidates();
  assert.equal(r.ok,true,JSON.stringify(r.errors));
- assert.equal(r.subjects,5); // NPC global + NPC local + plot + story + checkpoint
+ assert.equal(r.subjects,6); // Five historical C41 subjects + separate C05 local config
  assert.ok(r.checked>=10);
  assert.ok(r.deferred.some(x=>x.target==='pc-bartholomeu-krauser'));
 });

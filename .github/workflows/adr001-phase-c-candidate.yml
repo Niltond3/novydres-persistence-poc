@@ -1,4 +1,4 @@
-name: ADR-001 C01-C02-C04-C06 candidate checks (non-operational)
+name: ADR-001 C01-C02-C04-C05-C06 candidate checks (non-operational)
 on:
   push:
     branches:
@@ -12,6 +12,12 @@ on:
       - 'novydres/scripts/testar-retomada-estado.test.mjs'
       - 'novydres/scripts/auditar-legado-e-fontes.mjs'
       - 'novydres/scripts/testar-auditoria-legado.test.mjs'
+      - 'novydres/scripts/revisar-conducao-candidata.mjs'
+      - 'novydres/scripts/testar-conducao-candidata.test.mjs'
+      - 'novydres/sistema/narrativa/**'
+      - 'novydres/cronicas/CHR-001/configuracao/**'
+      - 'novydres/sistema/arquitetura/fase-b/resultado-testes.json'
+      - 'novydres/sistema/arquitetura/fase-b/gate-e-readback.json'
       - 'novydres/catalogo.json'
       - 'novydres/AGENTS.md'
       - 'novydres/CONTEXT.md'
@@ -48,3 +54,5 @@ jobs:
         run: node novydres/scripts/auditar-legado-e-fontes.mjs
       - name: Test V08 V11 V12 strict final rejection and negative fixture coverage
         run: node --test novydres/scripts/testar-auditoria-legado.test.mjs
+      - name: C05 optional fiction-risk diagnostics and reuse independent contextual review
+        run: node --test novydres/scripts/testar-conducao-candidata.test.mjs

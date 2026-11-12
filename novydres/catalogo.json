@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "fa13e82dcdd09afec0bd8bad5004b7caa744a0df",
+  "content_index_sha": "6661668a2f002609b64b991d228b61a972b6a9b2",
   "subjects": [
     {
       "id": "chr001-npc-samir-haddad",
@@ -55,6 +55,31 @@
         {
           "path": "novydres/cronicas/CHR-001/estado/index.md",
           "blob_sha": "37a764d8ce6219f8c5bdc9732c18566b349f5ee1"
+        }
+      ]
+    },
+    {
+      "id": "chr001-table-config",
+      "kind": "chronicle",
+      "owner": "novydres/cronicas/CHR-001/configuracao",
+      "path": "novydres/cronicas/CHR-001/configuracao",
+      "visibility": "SYSTEM_AUDIT",
+      "dependencies": [
+        "chr001-state-checkpoint"
+      ],
+      "source_ids": [],
+      "files": [
+        {
+          "path": "novydres/cronicas/CHR-001/configuracao/assunto.json",
+          "blob_sha": "593fe0c9679bf02d4469984546c21e9ed3358fc1"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/configuracao/configuracao.json",
+          "blob_sha": "79a17a901f644d2dd72227a5c215116f013ff34c"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/configuracao/index.md",
+          "blob_sha": "85e3254c4753b94a74f874e8f03aba10856c8222"
         }
       ]
     },
@@ -150,7 +175,10 @@
     "chr001-npc-samir-haddad": [
       "npc-samir-haddad"
     ],
-    "chr001-state-checkpoint": [],
+    "chr001-state-checkpoint": [
+      "chr001-table-config"
+    ],
+    "chr001-table-config": [],
     "npc-samir-haddad": [
       "chr001-npc-samir-haddad",
       "plot-contato-condicional-samir"
