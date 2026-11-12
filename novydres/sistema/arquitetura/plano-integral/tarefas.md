@@ -162,6 +162,16 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** schemas especializados e validações V01–V04 para tipos efetivamente usados, IDs, relações, owner, tempo, episteme, proveniência e conhecimento. Reutilizar código adequado existente; não criar campos/arquivos sem função demonstrada. Retirar dos schemas antigos exigências de ledger universal, replay e registros/faces por rolagem (DEC-23/DEC-24).
 - **Conclusão:** fixtures válidas passam; conflitos de dono, fontes inválidas, ID ambíguo e promoção indevida falham com diagnóstico acionável. Texto livre preserva seus bytes e não é convertido em estrutura inventada.
 
+#### Execução de C01 — 2026-11-12 (implementação candidata; CI ainda não concluída neste registro)
+
+- **Tarefa/snapshot:** C01, design `53b15fd93e2db27419c10876757ca41e91d93889`; master somente leitura `c9fcfc0c558cd17d58ec8c8272da3ed70182ff37`. B05 corrente `B_PASS_SCOPED` com as limitações históricas preservadas; C41 é snapshot dos exemplos, C45 é cursor operacional diferente.
+- **Saída:** novos schemas especializados de relação/conhecimento/checkpoint junto aos dois schemas existentes de A02; implementação V01–V04 em `novydres/scripts/validar-assuntos.mjs`, suíte de mutações em `testar-validacao-assuntos.test.mjs` e workflow candidato `adr001-phase-c-candidate.yml`. Nenhum destes é entrada operacional de mesa.
+- **Prova real inicial:** HEADs e cinco blobs históricos verificados pelo conector GitHub; arquivos V56/C41 ausentes da árvore candidata, mas fixados em `master@c26c0fbf15fff6c817182c06e6208e302b954f3a` com SHA conferido. Os testes de validação ainda exigem execução no Actions; fonte por commit/caminho/blob é distinta de fallback operacional.
+- **DEC-20/21/23/24/27:** somente tipos efetivamente presentes nos casos C41; sem ledger universal, replay, arquivos por rolagem, quota de repetição ou executor Codex duplicado. Casos negativos dirigidos a owner, colisão, fonte, relação, episteme, conhecimento, recursos e promoção.
+- **Limites/risco:** a relação externa ainda não migrada é relatada como DEFERRED, não como resolvida; comportamento narrativo e fontes semânticas não são certificados por schema; CI pendente, logo C01 não pode ser declarada PASS definitivo nesta anotação.
+- **Próxima elegível:** concluir execução/readback do CI e registrar resultado em C01; somente depois C02 e, quando permitido pelas dependências, C03–C08. Sem runtime, cenas, master ou E02.
+
+
 ### C02 — Implementar catálogo e recuperação por assunto
 
 - **Depende de:** C01 e A05.

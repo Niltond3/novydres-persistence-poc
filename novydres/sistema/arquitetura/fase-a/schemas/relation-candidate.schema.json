@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/relation-candidate.schema.json",
+  "title": "NOVYDRES candidate relations (not operational)",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "relations"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relation_id",
+          "from_subject_id",
+          "to_subject_id",
+          "predicate",
+          "owner_subject_id",
+          "scope",
+          "epistemic_status",
+          "visibility"
+        ],
+        "properties": {
+          "relation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to_subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "predicate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner_subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "epistemic_status": {
+            "enum": [
+              "CONFIRMED",
+              "NPC_CLAIM",
+              "GM_PREPARED",
+              "CONDITIONAL",
+              "UNKNOWN"
+            ]
+          },
+          "visibility": {
+            "enum": [
+              "PLAYER_SAFE",
+              "PC_KNOWN",
+              "NPC_BELIEF",
+              "GM_HIDDEN",
+              "SYSTEM_AUDIT"
+            ]
+          },
+          "inverse_is_derived": {
+            "type": "boolean"
+          },
+          "source_text_markers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "external_target_id_not_migrated_in_phase_b": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true,
+  "$comment": "V03/V04: semantic validation resolves IDs, scope, owner, reference and historical pins. External Phase B target is reported DEFERRED, never silently counted as migrated."
+}

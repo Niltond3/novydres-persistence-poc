@@ -1,0 +1,29 @@
+name: ADR-001 C01 candidate validators (non-operational)
+on:
+  push:
+    branches:
+      - design/subject-oriented-migration
+    paths:
+      - 'novydres/scripts/validar-assuntos.mjs'
+      - 'novydres/scripts/testar-validacao-assuntos.test.mjs'
+      - 'novydres/sistema/arquitetura/fase-a/schemas/**'
+      - '.github/workflows/adr001-phase-c-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  c01-validators:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # read historical commit/path/blob; no source snapshots mixed
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate candidate source bindings and V01–V04
+        run: node novydres/scripts/validar-assuntos.mjs
+      - name: Exercise deterministic and negative cases
+        run: node --test novydres/scripts/testar-validacao-assuntos.test.mjs

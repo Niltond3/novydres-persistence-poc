@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/checkpoint-candidate.schema.json",
+  "title": "NOVYDRES historical isolated checkpoint (not operational)",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "not_operational",
+    "source_commit",
+    "checkpoint",
+    "resources",
+    "source_refs"
+  ],
+  "properties": {
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "not_operational": {
+      "type": "boolean"
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "checkpoint": {
+      "type": "object",
+      "required": [
+        "last_closed_scene",
+        "next_scene",
+        "mortal",
+        "embrace_occurred"
+      ],
+      "properties": {
+        "last_closed_scene": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_scene": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mortal": {
+          "type": "boolean"
+        },
+        "embrace_occurred": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "resources": {
+      "type": "object",
+      "required": [
+        "xp_total",
+        "xp_spent",
+        "xp_remaining",
+        "willpower_provisional_max",
+        "willpower_superficial_damage",
+        "willpower_aggravated_damage",
+        "willpower_available"
+      ],
+      "properties": {
+        "xp_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xp_spent": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xp_remaining": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "willpower_provisional_max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "willpower_superficial_damage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "willpower_aggravated_damage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "willpower_available": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$comment": "V04: remaining resources are checked arithmetically; historical C41 is not automatically current master C45. No event replay/RNG audit."
+}
