@@ -139,3 +139,187 @@ assert.equal(transact(afterLostAck,recoveryTx),'NO_OP');
 assert.equal(afterLostAck.head,recoveryHead);
 
 console.log(JSON.stringify({status:'PASS_SYNTHETIC_LOCAL_REFERENCE_IMPLEMENTATION',negative_total:12,negative_rejected:negativeResults.length,journey_total:12,journey_expected:journeyResults.length,remote_cas_test:'NOT_TESTED_BY_THIS_SCRIPT',extra_guard_total:extraResults.length,synthetic_lost_ack_recovery:'PASS_LOCAL_ONLY',independent_semantic_review:'NOT_EXECUTED',factual_canonicity:'NOT_EVALUATED'}));
+
+
+// B04 real integration: this mode runs exclusively on a disposable GitHub ref via Actions.
+// Local synthetic assertions above remain historical regression checks, not remote proof.
+if (process.env.ADR001_REMOTE_PROOF === '1') {
+  const { createHash } = await import('node:crypto');
+  const token = process.env.GITHUB_TOKEN;
+  const repo = process.env.GITHUB_REPOSITORY;
+  const base = process.env.GITHUB_SHA;
+  const branch = 'test/adr001-b04-ci-' + process.env.GITHUB_RUN_ID + '-' + process.env.GITHUB_RUN_ATTEMPT;
+  assert.ok(token && repo && base && process.env.GITHUB_RUN_ID, 'CI token, repository, HEAD and run required');
+  assert.ok(branch.startsWith('test/adr001-b04-ci-'));
+  const sourcePath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-source.txt';
+  const ownerPath = 'novydres/sistema/arquitetura/fase-b/artificial-b04-transactions.json';
+  const sourceText = 'TEST_ONLY; NOT_CAMPAIGN\nEvidence: the artificial custodian holds the blue key.\n';
+  const sha256 = value => createHash('sha256').update(value).digest('hex');
+  let disposableCreated = false, sourceBlob, sourceCommit, cleaned = false;
+  const timings = [];
+  async function api(method, endpoint, body) {
+    const url = 'https://api.github.com/repos/' + repo + endpoint;
+    const t0 = performance.now();
+    const res = await fetch(url, { method, headers: {
+      Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'User-Agent': 'novydres-adr001-b04-isolated'
+    }, body: body === undefined ? undefined : JSON.stringify(body) });
+    const content = await res.text();
+    timings.push({ operation: method + ' ' + endpoint.split('?')[0].split('/').slice(0,4).join('/'), milliseconds: Math.round(performance.now()-t0), http: res.status });
+    let obj; try { obj = JSON.parse(content); } catch { obj = { message: content.slice(0,160) }; }
+    if (!res.ok) { const error = new Error('GITHUB_HTTP_' + res.status + ': ' + String(obj.message).slice(0,250)); error.status = res.status; error.response = obj; throw error; }
+    return obj;
+  }
+  const refEndpoint = '/git/refs/heads/' + branch;
+  const getHead = async () => (await api('GET','/git/ref/heads/' + branch)).object.sha;
+  const getCommit = sha => api('GET','/git/commits/' + sha);
+  async function readPath(path) {
+    try {
+      const x=await api('GET','/contents/'+path+'?ref='+encodeURIComponent(branch));
+      return { content: Buffer.from(x.content.replace(/\s/g,''), 'base64').toString('utf8'), blob_sha:x.sha };
+    } catch(e) { if(e.status===404) return null; throw e; }
+  }
+  async function makeCommit(parent, changes, message) {
+    const parentObject = await getCommit(parent);
+    const tree = await api('POST','/git/trees',{base_tree:parentObject.tree.sha,
+      tree:changes.map(x=>({path:x.path,mode:'100644',type:'blob',content:x.content}))});
+    const commit = await api('POST','/git/commits',{message:'TEST_ONLY B04 '+message,tree:tree.sha,parents:[parent]});
+    return {sha:commit.sha,parent,tree_sha:tree.sha};
+  }
+  const push = candidate => api('PATCH',refEndpoint,{sha:candidate.sha,force:false});
+  async function verify(candidate, txId, fingerprint) {
+    assert.equal(await getHead(),candidate.sha,'promoted HEAD');
+    const obj=await getCommit(candidate.sha);
+    assert.equal(obj.parents[0].sha,candidate.parent,'parent');
+    assert.equal(obj.tree.sha,candidate.tree_sha,'tree');
+    const stored=await readPath(ownerPath);
+    assert.ok(stored,'owner exists in remote ref');
+    assert.equal(JSON.parse(stored.content).transactions[txId],fingerprint,'tx persisted');
+    return {head:candidate.sha,owner_blob:stored.blob_sha,parent:candidate.parent};
+  }
+  async function transact(expected, txId, payload, evidence, ackMode='normal') {
+    const existing=await readPath(ownerPath);
+    const saved=existing?JSON.parse(existing.content):{test_only:true,transactions:{}};
+    const fingerprint=sha256(JSON.stringify(payload));
+    if(Object.hasOwn(saved.transactions,txId)) {
+      if(saved.transactions[txId]!==fingerprint) throw new Error('STOP_CONFLICT_SAME_TX_DIFFERENT_PAYLOAD');
+      return {status:'NO_OP_VERIFIED',head:await getHead()};
+    }
+    await validateEvidence(evidence);
+    const observed=await getHead();
+    if(observed!==expected) throw new Error('STALE_HEAD_PRECHECK_REMOTE_' + observed);
+    saved.transactions[txId]=fingerprint;
+    const candidate=await makeCommit(expected,[{path:ownerPath,content:JSON.stringify(saved,null,2)+'\n'}],txId);
+    await push(candidate);
+    if(ackMode==='discard_after_remote_success') throw new Error('CLIENT_SUPPRESSED_ACK_AFTER_REAL_REMOTE_WRITE');
+    const verified=await verify(candidate,txId,fingerprint);
+    return {status:'CONFIRMED',...verified};
+  }
+  async function validateEvidence(e) {
+    if(e.role!=='SYSTEM_TEST') throw new Error('AUTHORITY_DENIED');
+    if(e.audience==='PLAYER' && e.visibility!=='PLAYER_SAFE') throw new Error('DISCLOSURE_DENIED');
+    if(e.actor!=='artificial-custodian') throw new Error('ACTOR_KNOWLEDGE_UNSUPPORTED');
+    if(e.decision!=='ARTIFICIAL_DECISION_CURRENT') throw new Error('OBSOLETE_DECISION');
+    if(e.source_path!==sourcePath) throw new Error('WRONG_SOURCE_PATH');
+    const real=await readPath(e.source_path);
+    if(!real) throw new Error('SOURCE_NOT_FOUND');
+    if(real.blob_sha!==e.source_blob_sha) throw new Error('SOURCE_BLOB_MISMATCH');
+    if(!real.content.includes(e.source_excerpt)) throw new Error('SOURCE_IRRELEVANT_TO_QUOTE');
+    if(e.checkpoint!==await getHead()) throw new Error('CHECKPOINT_DIVERGED');
+    if(e.conclusion==='PASS' && !e.external_proof) throw new Error('CONCLUSION_WITHOUT_PROOF');
+  }
+  try {
+    await api('POST','/git/refs',{ref:'refs/heads/'+branch,sha:base});
+    disposableCreated=true;
+    sourceCommit=await makeCommit(base,[{path:sourcePath,content:sourceText}], 'seed-artificial-source');
+    await push(sourceCommit);
+    const savedSource=await readPath(sourcePath);
+    assert.equal(savedSource.content,sourceText);
+    sourceBlob=savedSource.blob_sha;
+    const evidence=()=>({role:'SYSTEM_TEST',audience:'PLAYER',visibility:'PLAYER_SAFE',
+      actor:'artificial-custodian',decision:'ARTIFICIAL_DECISION_CURRENT',
+      source_path:sourcePath,source_blob_sha:sourceBlob,
+      source_excerpt:'Evidence: the artificial custodian holds the blue key.',
+      checkpoint:null,conclusion:'PENDING',external_proof:null});
+    const e1={...evidence(),checkpoint:await getHead()};
+    const t1=await transact(e1.checkpoint,'tx-artificial-01',{effect:'artificial-one'},e1);
+    const firstHead=await getHead();
+    const duplicate=await transact(e1.checkpoint,'tx-artificial-01',{effect:'artificial-one'},e1);
+    assert.equal(duplicate.status,'NO_OP_VERIFIED');
+    assert.equal(await getHead(),firstHead);
+    await assert.rejects(transact(firstHead,'tx-artificial-01',{effect:'conflicting'},e1),/STOP_CONFLICT/);
+    assert.equal(await getHead(),firstHead);
+    const staleEvidence={...evidence(),checkpoint:firstHead};
+    const wrongs=[
+      ['SOURCE_NOT_FOUND',{source_path:sourcePath+'-missing'}],
+      ['SOURCE_IRRELEVANT_TO_QUOTE',{source_excerpt:'the artificial custodian owns the red tower'}],
+      ['OBSOLETE_DECISION',{decision:'ARTIFICIAL_DECISION_OBSOLETE'}],
+      ['CHECKPOINT_DIVERGED',{checkpoint:base}],
+      ['CONCLUSION_WITHOUT_PROOF',{conclusion:'PASS'}],
+      ['ACTOR_KNOWLEDGE_UNSUPPORTED',{actor:'different-actor'}],
+      ['DISCLOSURE_DENIED',{visibility:'GM_HIDDEN'}],
+      ['AUTHORITY_DENIED',{role:'UNAUTHORIZED'}],
+      ['SOURCE_BLOB_MISMATCH',{source_blob_sha:'0'.repeat(40)}]
+    ];
+    const rejected=[];
+    for(const [label,delta] of wrongs) {
+      const before=await getHead();
+      await assert.rejects(validateEvidence({...staleEvidence,...delta}),new RegExp(label));
+      assert.equal(await getHead(),before,'guard rejection must not mutate ref: '+label);
+      rejected.push(label);
+    }
+    // A real remote commit is published; the client deliberately discards its ack.
+    // This models an unknown outcome, not an injected network outage.
+    const lost={...evidence(),checkpoint:await getHead()};
+    await assert.rejects(transact(lost.checkpoint,'tx-artificial-lost-ack',
+      {effect:'one-time-remote'},lost,'discard_after_remote_success'),/CLIENT_SUPPRESSED_ACK/);
+    const recoveredHead=await getHead();
+    const recovered=await transact(lost.checkpoint,'tx-artificial-lost-ack',
+      {effect:'one-time-remote'},lost);
+    assert.equal(recovered.status,'NO_OP_VERIFIED');
+    assert.equal(await getHead(),recoveredHead,'no duplicate commit after unknown outcome');
+    // Two sibling commits share the same real parent: exactly one may advance the ref.
+    const raceBase=await getHead();
+    const old=JSON.parse((await readPath(ownerPath)).content);
+    const candidates=await Promise.all(['writer-a','writer-b'].map(async label => {
+      const obj=structuredClone(old);obj.transactions['tx-'+label]=sha256(JSON.stringify({effect:label}));
+      return makeCommit(raceBase,[{path:ownerPath,content:JSON.stringify(obj,null,2)+'\n'}],label);
+    }));
+    const attempts=await Promise.allSettled(candidates.map(c=>push(c)));
+    const winners=attempts.map((a,i)=>a.status==='fulfilled'?i:-1).filter(i=>i>=0);
+    assert.equal(winners.length,1,'exactly one remote fast-forward writer');
+    const loser=1-winners[0], winning=candidates[winners[0]];
+    const raceHead=await getHead();
+    assert.equal(raceHead,winning.sha);
+    const rejection=attempts[loser].reason;
+    assert.equal(rejection.status,422,'loser rejected by GitHub REST HTTP 422');
+    const staleProof=String(rejection.response?.message||'');
+    assert.match(staleProof,/fast.forward|not a fast forward/i,'explicit native non-fast-forward reason');
+    const racedStored=JSON.parse((await readPath(ownerPath)).content);
+    assert.ok(Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][winners[0]]));
+    assert.ok(!Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][loser]));
+    await assert.rejects(transact(raceBase,'tx-stale-late',{effect:'obsolete'},
+      {...evidence(),checkpoint:raceBase}),/STALE_HEAD_PRECHECK_REMOTE/);
+    assert.equal(await getHead(),raceHead);
+    console.log(JSON.stringify({status:'PASS_REAL_GITHUB_DISPOSABLE_REF',
+      run_id:process.env.GITHUB_RUN_ID,head_under_test:base,sandbox_ref:branch,
+      seed_commit:sourceCommit.sha,source_blob_sha:sourceBlob,
+      first_transaction:t1,duplicate_tx:duplicate.status,conflict_tx:'STOP_CONFLICT',
+      rejected_guards:rejected,client_suppressed_ack_recovery:recovered.status,
+      acknowledgement_failure_mode:'CLIENT_SUPPRESSED_AFTER_REAL_REMOTE_WRITE_NOT_NETWORK_INJECTION',
+      concurrent_writers:'ONE_WINNER_NATIVE_NON_FAST_FORWARD_422',
+      winner_commit:winning.sha,loser_commit:candidates[loser].sha,
+      native_rejection_http:rejection.status,native_rejection_message:staleProof,
+      stale_precheck:'REMOTE_HEAD_MISMATCH',remote_head_readback:raceHead,
+      requests_sample:timings.length,latency_p95:'NOT_REPORTED_SMALL_NONCOMPARABLE_SAMPLE',
+      timings_ms:timings.filter(x=>x.http>=400 || x.operation.startsWith('PATCH')),
+      content_scope:'ARTIFICIAL_ONLY_NO_CAMPAIGN_WRITES'}));
+  } finally {
+    if(disposableCreated) {
+      try { await api('DELETE','/git/refs/heads/'+branch); cleaned=true; }
+      catch(e) { console.error('DISPOSABLE_REF_CLEANUP_FAILED '+e.message); }
+    }
+    console.log(JSON.stringify({disposable_ref:branch,cleanup:cleaned?'CONFIRMED':'NOT_CONFIRMED'}));
+  }
+}

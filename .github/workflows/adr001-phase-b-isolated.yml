@@ -8,15 +8,19 @@ on:
       - '.github/workflows/adr001-phase-b-isolated.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
-  synthetic-isolated-tests:
+  isolated-tests:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run isolated B04 fixture regression
+      - name: Run synthetic regression and real GitHub disposable-ref proof
+        env:
+          ADR001_REMOTE_PROOF: '1'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node novydres/sistema/arquitetura/fase-b/executor-isolado.mjs
