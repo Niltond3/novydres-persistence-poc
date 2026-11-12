@@ -186,6 +186,15 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** geração determinística, lookup por ID e leitura seletiva no fluxo efetivamente usado, índices/relacionamentos derivados, hashes sem autorreferência e cache por snapshot. As três entradas finais localizam o contrato; README não vira quarto bootstrap.
 - **Conclusão:** mesmos inputs geram mesmos bytes; alterações invalidam o que precisam invalidar, todos os destinos resolvem e NOT_FOUND não consulta rota antiga. V03/V09 comprovados na rota aplicável.
 
+#### C02 — Implementação candidata e prova em andamento (2026-11-12)
+
+- **Tarefa/entrada:** C02, snapshot `design@a0430cf15b0c0715e9572954dbf320c97374bfa8`; `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura. C01 `PASS_SCOPED` confirmado por CI `43231879039`; A05 especifica SHA de commit, ID exato, índice derivado e ausência de fallback.
+- **Implementação:** `novydres/scripts/catalogo-assuntos.mjs` gera/verifica `novydres/catalogo.json` a partir dos `assunto.json` candidatos reais e seus arquivos/índices, produz dependências inversas e `content_index_sha` Git dos pares caminho/blob ordenados (sem hash do commit/catálogo no próprio catálogo); lookup exato, restrição de divulgação, cache de metadados por snapshot e leitura seletiva de blobs com `git show <commit>:<path>`/verificação de SHA. `AGENTS.md` e `CONTEXT.md` novos são entradas explicitamente candidatas, **não** ativação da mesa.
+- **Prova preparada:** 5 assuntos / 16 arquivos da árvore Git candidata não truncada; índices e `assunto.json` existentes; test suite `testar-catalogo-assuntos.test.mjs` cobre V03/V09, determinismo de bytes, inversos, mudança de conteúdo, ID/owner, restrição por papel, snapshot antigo, catálogo forjado, refs ausentes e rejeição de caminhos não declarados. Integração à CI de C01, sem workflow por teste ou executor Codex obrigatório.
+- **Limites/DEC-20/21/25/27:** escopo somente cinco subjects C41, não catálogo global completo; o elo externo `pc-bartholomeu-krauser` permanece `DEFERRED`, não resolvido; origens históricas não viram fallback; tags `SYSTEM_AUDIT` restringem divulgação, mas não são ACL Git. Não se presume equivalência a C45 nem ausência universal de erros semânticos.
+- **Estado/proxima ação:** implementação preparada, **CI C02 ainda não executada** neste checkpoint. Publicar com expected SHA, reler commit/blobs, inspecionar CI real e registrar resultado na própria C02 antes de permitir C03/C06. Não fazer merge, cutover ou cena.
+
+
 ### C03 — Implementar gravação atômica e histórico preservado
 
 - **Depende de:** C01/C02 e A03/A05.

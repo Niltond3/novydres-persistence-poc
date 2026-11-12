@@ -6,6 +6,11 @@ on:
     paths:
       - 'novydres/scripts/validar-assuntos.mjs'
       - 'novydres/scripts/testar-validacao-assuntos.test.mjs'
+      - 'novydres/scripts/catalogo-assuntos.mjs'
+      - 'novydres/scripts/testar-catalogo-assuntos.test.mjs'
+      - 'novydres/catalogo.json'
+      - 'novydres/AGENTS.md'
+      - 'novydres/CONTEXT.md'
       - 'novydres/sistema/arquitetura/fase-a/schemas/**'
       - '.github/workflows/adr001-phase-c-candidate.yml'
   workflow_dispatch:
@@ -27,3 +32,7 @@ jobs:
         run: node novydres/scripts/validar-assuntos.mjs
       - name: Exercise deterministic and negative cases
         run: node --test novydres/scripts/testar-validacao-assuntos.test.mjs
+      - name: Check derived catalog byte identity and V09 content hash
+        run: node novydres/scripts/catalogo-assuntos.mjs --check
+      - name: Test V03 exact snapshot retrieval and V09 invalidation
+        run: node --test novydres/scripts/testar-catalogo-assuntos.test.mjs
