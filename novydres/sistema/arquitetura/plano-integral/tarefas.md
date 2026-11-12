@@ -240,6 +240,13 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Limites:** `CI_PENDING` neste checkpoint; não há reconciliação C41→C45 nem reivindicação de prontidão para narrar. Fonte existente sustentar conclusão é revisão semântica separada, não decidida apenas por SHA. Prova de continuidade entre chats de DEC-25 é parcial: recuperação técnica reproduzível não verifica a memória/contexto de um modelo.
 - **Próximo:** publicar diff com lease; rodar CI, conferir readback remoto, registrar C04 conforme resultados. Dependente C05 não liberado antes de C04 PASS_SCOPED.
 
+#### C04 — Validação remota concluída (2026-11-12)
+
+- **Estado:** `C04_PASS_SCOPED` exclusivamente para amostra histórica C41. Publicação `design@0ca990cd83283ebdeb5483a6632056c5932f59b4`, `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura. O checkpoint `CI_PENDING` acima é histórico, não apagado.
+- **Prova executada:** GitHub Actions `43237946940`, job `131250285182`, `completed/success`. V06/V07 `15/15` testes específicos e `28/28` regressões C01/C02; comando standalone `retomar-estado.mjs` retornou `CANDIDATE_HISTORICAL_ONLY` no snapshot do run, fonte `c26c0fbf15fff6c817182c06e6208e302b954f3a` e 8 marcadores textuais. O validador consultou blobs Git históricamente pinados e rejeitou recursos/cursor divergentes, fontes inválidas, evento futuro, alegação reclassificada, uso do snapshot como operacional e falta de confirmação de escrita.
+- **Restrições:** nenhum replay universal, auditoria RNG, atualização dos 5 assuntos, prova de que C41 coincide com C45, nem equivalência contextual irrestrita. Caso de alegação semanticamente errada porém estruturalmente válida foi isolado como risco de revisão contextual; hash não comprova verdade factual. Retomada técnica em nova invocação é determinística, mas não garante memória de modelo ou ausência de alucinação.
+- **Dependências:** C05 agora elegível após C02–C04/A04; C06 permanece elegível independentemente. C07/C08 e D aguardam provas. Continuar sem ativar mesa.
+
 ### C05 — Integrar contrato de mesa e preparação proporcional
 
 - **Depende de:** C02–C04 e A04.
