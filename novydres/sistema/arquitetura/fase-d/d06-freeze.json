@@ -1,0 +1,16 @@
+{
+  "schema": "ADR001_D06_FINAL_GATE_FREEZE_V1",
+  "phase": "D06_D07",
+  "status": "CANDIDATE_FROZEN_FOR_INTEGRATED_CI_NOT_GATE_PASS",
+  "parent_head": "3bb5cc83216dc1aee346b9b3bf8d8fd93cc4aa82",
+  "parent_tree": "13710c981e461c18b6b85363b2ec1de14cb1b31d",
+  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "workflow": ".github/workflows/adr001-phase-c-candidate.yml",
+  "scope": "ENTIRE_CANDIDATE_HEAD_D03_D07",
+  "authorizations": {
+    "E02": false,
+    "E03": false,
+    "master_writes": false
+  },
+  "expected_result": "STRUCTURAL_AND_SEMANTIC_EVIDENCE_REQUIRED_NO_STATUS_PRESUMED"
+}
