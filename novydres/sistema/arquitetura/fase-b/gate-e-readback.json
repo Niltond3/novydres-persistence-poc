@@ -274,5 +274,62 @@
     "master_and_canon_unchanged": true,
     "runtime_activated": false,
     "no_new_synthetic_runner_change": true
+  },
+  "b02_codex_real_checkpoint_2026_11_12": {
+    "checkpoint_id": "B05-CODEX-REAL-20261112-01",
+    "design_head_before_write": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "B01": {
+      "status": "PASS_SCOPED_HISTORICAL",
+      "cursor": "C41",
+      "master_cursor": "C45",
+      "drift_preserved": true
+    },
+    "B02": {
+      "status": "PASS_SCOPED_AFTER_TARGETED_RETEST",
+      "initial_run": "30 cases; independent semantic review 17 pass and 13 overclaim failures",
+      "targeted_retest": "13/13 independent semantic pass after prompt correction",
+      "effective_cases": "30/30 independently reviewed pass",
+      "critical_cases": [
+        "B-Q26",
+        "B-Q29",
+        "B-Q30"
+      ],
+      "historical_Q29_Q30_cause": "UNDETERMINED_RAW_RESPONSES_NOT_RETAINED",
+      "evidence": "resultado-testes.json#b02_codex_real_2026_11_12"
+    },
+    "B03": {
+      "historical_web_auto_grading": "30/30 PASS_SCOPED_AUTO_GRADING",
+      "independent_review": "RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW",
+      "answers_reconstructed": false
+    },
+    "B04": {
+      "status": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC",
+      "historical_synthetic": "12 negatives, 12 journeys, 7 guards; prior isolated CI success",
+      "application_route": "NOT_AVAILABLE_BEFORE_PHASE_C",
+      "remote_stale_sha_probe": "PENDING_AFTER_EVIDENCE_PUBLICATION",
+      "route_idempotency_conflict_concurrency_and_lost_ack": "NOT_EXECUTED"
+    },
+    "B05": "B_REMEDIATION_REQUIRED",
+    "unmet": [
+      "Historical Web raw answers unavailable for independent semantic audit.",
+      "No operational write route exists for real application-level guards and idempotency/concurrency/lost-ack integration tests.",
+      "DEC-25 remains PARTIAL_OBSERVED_NOT_CERTIFIED.",
+      "Historical Web p95 latency was not measured and is not waived by DEC-19."
+    ],
+    "metrics": {
+      "Codex CLI aggregate token telemetry": "OBSERVED",
+      "per-case latency": "NOT_OBSERVABLE",
+      "Web token count and HTTP wire bytes": "NOT_OBSERVABLE_PER_DEC19",
+      "historical Web latency p95": "NOT_MEASURED_NOT_WAIVED"
+    },
+    "dec25": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+    "dec26": "SCOPED_ONLY_TO_UNRECOVERABLE_HISTORICAL_WEB_RESPONSE_REVIEW_UNIT",
+    "master_and_canon_unchanged": true,
+    "next_eligible": "Publish this evidence with expected_sha/force=false, read back blobs, confirm CI on published SHA, run safe stale-SHA CAS probe, then re-evaluate B05; do not start C."
   }
 }

@@ -279,3 +279,10 @@ Nenhuma tarefa concluída por esta elaboração documental. Registrar futurament
 - B03 **PASS_SCOPED_AUTO_GRADING** — 30/30, snapshot pinado, localizadores por caso; falta revisão semântica independente; `fase-b/resultado-testes.json`.
 - B04 **PARTIAL** — 12 negativos + 12 jornadas + 7 guardas sintéticas em CI real 43155672041 (`success`); 2 recusas 404 reais; corrida remota com vencedor único e falha concorrente sem motivo de stale classificado. Confirmação perdida simulada apenas localmente. Ref de teste não apagada.
 - B05 **B_REMEDIATION_REQUIRED** — `fase-b/gate-e-readback.json#b05_consolidation_2026_11_12`; Codex, revisão independente e diagnósticos/stale remotos pendentes. DEC-25 parcial e DEC-26 em unidade bloqueada; C01 não liberada. `master@c9fcfc0c558cd17d58ec8c8272da3ed70182ff37` somente leitura. Próxima tarefa elegível: B02 com Codex real, revisão B03, complementação B04 e reavaliação B05.
+
+
+### B02–B05 — checkpoint Codex real (2026-11-12; evidência pronta para publicação)
+
+- B02: 30 casos executados por Codex CLI real. Revisão independente: 17/30 na rodada inicial; 13 afirmações genéricas de proveniência falharam. Após corrigir apenas o prompt, os 13 casos afetados passaram em nova execução e revisão independente; cobertura efetiva 30/30, incluindo B-Q26/B-Q29/B-Q30. Causa das falhas históricas Q29/Q30 segue indeterminada; respostas antigas ausentes. `fase-b/resultado-testes.json#b02_codex_real_2026_11_12`.
+- B03 antigo: `RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW`; não reconstruído. B04 permanece parcial; sem rota real para testes de escrita/idempotência/conflito/guards/perda de confirmação.
+- B05 `B_REMEDIATION_REQUIRED`; DEC-25 parcial, DEC-26 apenas para a unidade Web histórica irrecuperável. Próximo: publicar/readback, CI no SHA, CAS stale-SHA seguro e reavaliar B05. C bloqueada.
