@@ -321,10 +321,55 @@ export function deriveD01OriginMappingCoverage(index) {
   content_field_ownership_approved:false,every_target_root_is_proposal:true,
   operational_activation:false};
 }
+export function deriveD01ScopedGate(index) {
+ const rows=index.source_files,missing=rows.filter(x=>x.candidate_relation==='NO_SAME_PATH_IN_CANDIDATE');
+ const other=missing.filter(x=>!x.d01_origin_route.current_cycle_pin_occurrences&&
+  !x.d01_origin_route.manifest_runtime_reference_occurrences);
+ const map=index.d01_origin_mapping_coverage;
+ const scan=index.d01_static_reference_evidence;
+ return {
+  decision:'D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY',
+  decision_basis:'FULL_SOURCE_PATH_SHA_OWNER_BOUNDARY_ROUTING_AND_OBSERVED_REFERENCE_RISK_MAP',
+  baseline_master:index.source_snapshot.commit_sha,
+  baseline_candidate:index.candidate_snapshot.commit_sha,
+  source_origins_count:rows.length,source_origins_route_proposed:map.mapped_source_paths,
+  source_origins_without_proposed_route:map.unmapped_source_paths.length,
+  current_cycle_unique_pin_paths:index.denominators.cycle_unique_pinned_paths,
+  candidate_only_artifacts:index.candidate_only_files.length,
+  external_references:index.controlled_external_registry.items.length,
+  media_records:index.visual_registry.entries.length,
+  master_only_origins:missing.length,
+  master_only_without_direct_cycle_pin_or_manifest_path:other.length,
+  master_only_textually_referenced:scan.missing_candidate_sources_with_textual_refs,
+  master_only_without_textual_reference_observed:scan.missing_candidate_sources_without_textual_refs,
+  master_only_without_direct_pin_or_manifest_but_textually_referenced:scan.missing_candidate_sources_without_pin_or_manifest_but_textually_referenced,
+  field_scope_split_remaining:map.owner_routing_classes.FIELD_SCOPE_SPLIT_REQUIRED,
+  source_visibility_default_restricted:map.visibility_risk_classes.RESTRICTED_UNTIL_CLASSIFIED,
+  known_conflict_tags:index.known_conflicts.length,
+  exact_prior_CI_evidence:{tested_commit:'fae1a09fc82cde914cf758edc4117f41fa872c40',run_id:43290230167,tests:132,conclusion:'success'},
+  downstream_handoff:{
+   D02:'GOVERNANCE_SOURCE_RIGHTS_MEDIA_CONFLICT_RESOLUTION',
+   D03:'GLOBAL_SCENARIO_RULES_AND_CHARACTER_OWNER_FIELDS',
+   D04:'C45_CURRENT_STATE_CHRONICLE_TEXT_KNOWLEDGE_AND_THREE_CURSOR_FIELDS',
+   D05:'WORKFLOW_SCRIPTS_IMPORTS_AND_LEGACY_CONSUMERS',
+   D06:'DESTINATION_EQUIVALENCE_ZERO_LEGACY_AND_EXTERNAL_BYTES',
+   D07:'INDEPENDENT_REVIEW',
+   E:'EXPRESS_PLAYER_CUTOVER_AUTHORIZATION'
+  },
+  downstream_editorial_equivalence:'NOT_PROVEN',
+  binary_originals_external_verification:'NOT_COMPLETED',
+  fields_split_finalized:false,
+  semantic_content_approval:false,
+  no_migration_performed_by_D01:true,
+  no_operational_runtime_change:true,
+  no_master_write:true,
+  no_scene_or_xp_fv_delta:true
+ };
+}
 export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,sourceContents,candidateState,workflowContents}){
  need(index?.artifact_type==='ADR001_D01_SNAPSHOT_SOURCE_INVENTORY'&&
   index.classification==='SYSTEM_AUDIT_NOT_PLAYER_REPORT'&&
-  index.status==='D01_SOURCE_INDEX_COMPLETE_EDITORIAL_MAPPING_PENDING'&&
+  index.status==='D01_INVENTORY_SCOPE_COMPLETE_DOWNSTREAM_EDITORIAL_PENDING'&&
   index.operational_activation===false&&index.cutover_authorized===false,'D01_AUTHORITY_INVALID');
  const m=index.source_snapshot,d=index.candidate_snapshot;
  need(SHA.test(m?.commit_sha||'')&&SHA.test(m?.tree_sha||'')&&
@@ -609,7 +654,26 @@ export function verifyD01(index,{masterTree,candidateTree,external,media,cycle,s
   summary.cycle_pinned_refs===pins.length,'D01_SUMMARY_MISMATCH');
  need(Array.isArray(index.gate_requirements_pending)&&index.gate_requirements_pending.length>0,
   'D01_FALSE_GATE_CLOSURE');
- return {gate:'D01_STRUCTURE_VERIFIED_EDITORIAL_PENDING',source_blobs:source.size,candidate_blobs:other.size,
+ need(equal(index.d01_scope_gate,deriveD01ScopedGate(index))&&
+  index.d01_scope_gate.decision==='D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY'&&
+  index.d01_scope_gate.source_origins_without_proposed_route===0&&
+  index.d01_scope_gate.source_origins_route_proposed===source.size&&
+  index.d01_scope_gate.semantic_content_approval===false&&
+  index.d01_scope_gate.no_migration_performed_by_D01===true&&
+  index.d01_scope_gate.no_operational_runtime_change===true&&
+  index.d01_scope_gate.downstream_editorial_equivalence==='NOT_PROVEN',
+  'D01_SCOPED_GATE_FALSE_COMPLETION');
+ const observed=index.d01_static_reference_evidence;
+ need(observed?.status==='TEXTUAL_OCCURRENCE_ONLY_NOT_DYNAMIC_OR_RUNTIME_PROOF'&&
+  observed.scan_commit===m.commit_sha&&
+  observed.source_files===source.size&&observed.distinct_target_files===947&&
+  observed.missing_candidate_sources_with_textual_refs===174&&
+  observed.missing_candidate_sources_without_textual_refs===15&&
+  observed.missing_candidate_sources_without_pin_or_manifest_but_textually_referenced===83&&
+  observed.no_dynamic_import_or_external_dependency_proof===true&&
+  observed.no_current_usage_proof===true&&observed.original_content_not_printed===true,
+  'D01_STATIC_REFERENCE_BASELINE_INVALID');
+ return {gate:'D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY',source_blobs:source.size,candidate_blobs:other.size,
   same_path_same_blob:counts.same,same_path_changed_blob:counts.different,
   source_without_candidate_path:counts.missing,candidate_only:only.length,
   external_items:external.items.length,media_items:media.entries.length,cycle_pins:pins.length,
@@ -705,6 +769,7 @@ export function readAndVerifyD01(root=process.cwd()){
    row.source_path,execFileSync('git',['show',index.source_snapshot.commit_sha+':'+row.source_path],
     {cwd:root,encoding:'utf8',maxBuffer:32*1024*1024,stdio:['ignore','pipe','ignore']})]));
  const staticGraph=scanD01StaticRefs(root,index);
+ need(equal(staticGraph,index.d01_static_reference_evidence),'D01_STATIC_REFERENCE_EVIDENCE_DRIFT');
  const structured=verifyD01(index,{masterTree,candidateTree,
   external:read(index.controlled_external_registry.path),
   media:read(index.visual_registry.path),

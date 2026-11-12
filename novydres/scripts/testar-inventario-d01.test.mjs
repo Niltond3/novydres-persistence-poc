@@ -28,7 +28,7 @@ const clone=()=>structuredClone(index);
 const reject=(mutate,code)=>{const x=clone();mutate(x);assert.throws(()=>verifyD01(x,data),e=>e.code===code);};
 test('D01 whole-tree fixed baseline, 1029/923 blobs and no editorial PASS',()=>{
  const r=readAndVerifyD01(root);
- assert.equal(r.gate,'D01_STRUCTURE_VERIFIED_EDITORIAL_PENDING');
+ assert.equal(r.gate,'D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY');
  assert.equal(r.source_blobs,1029);assert.equal(r.candidate_blobs,923);
  assert.equal(r.external_items,193);assert.equal(r.media_items,19);
  assert.equal(r.cycle_pins,77);assert.equal(r.runtime_activation,false);
@@ -348,4 +348,26 @@ test('D01 safe scan token parsing is a textual hint, never authority or absence 
 test('D01 static scan rejects malformed output instead of claiming coverage',()=>{
  assert.throws(()=>summarizeD01ObservedRefs(index,'not-git-grep-output'),
   e=>e.code==='D01_STATIC_GREP_OUTPUT_MALFORMED');
+});
+
+test('D01 scoped inventory completion requires exact source paths and preserves D02-D07 decisions',()=>{
+ const r=verifyD01(index,data);
+ assert.equal(r.gate,'D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY');
+ assert.equal(index.d01_scope_gate.source_origins_route_proposed,1029);
+ assert.equal(index.d01_scope_gate.master_only_without_direct_cycle_pin_or_manifest_path,98);
+ assert.equal(index.d01_scope_gate.field_scope_split_remaining,463);
+ assert.equal(index.d01_scope_gate.semantic_content_approval,false);
+ assert.equal(index.d01_scope_gate.fields_split_finalized,false);
+});
+test('D01 inventory PASS cannot silently declare content or canon approved',()=>{
+ reject(x=>x.d01_scope_gate.semantic_content_approval=true,
+  'D01_SCOPED_GATE_FALSE_COMPLETION');
+ reject(x=>x.d01_scope_gate.no_migration_performed_by_D01=false,
+  'D01_SCOPED_GATE_FALSE_COMPLETION');
+});
+test('D01 static reference proof is not evidence that unobserved paths may be deleted',()=>{
+ reject(x=>x.d01_static_reference_evidence.missing_candidate_sources_without_textual_refs=0,
+  'D01_SCOPED_GATE_FALSE_COMPLETION');
+ reject(x=>x.d01_scope_gate.master_only_without_textual_reference_observed=0,
+  'D01_SCOPED_GATE_FALSE_COMPLETION');
 });
