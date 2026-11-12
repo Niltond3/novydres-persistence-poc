@@ -8002,5 +8002,215 @@
     "cutover_allowed": false,
     "runtime_activated": false,
     "master_changed": false
+  },
+  "b03_new_web_round_2026_11_12": {
+    "status": "RAW_FROZEN_UNSCORED",
+    "classification": "GM_HIDDEN",
+    "basis": "NEW_EXECUTION_NOT_RETROACTIVE",
+    "case_selection": "6 risk-targeted cases; covers UNKNOWN, NPC ID, historical prose, scene start, XP and FV; other critical risks reuse B02 Codex 30/30 evidence where still valid",
+    "question_source": "fixtures-remediacao-consultas-sem-gabarito.json; requests concretized from case names before evaluation",
+    "answer_source": "fixed GitHub source snapshot",
+    "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+    "cases": [
+      {
+        "id": "B-Q01",
+        "question": "Qual data civil exata está comprovada para M3.01.C01?",
+        "answer": "UNKNOWN; somente o período fim dos anos 1970 é estabelecido.",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "sha": "43b461493b5470057ab54648c6f6d9055814e271"
+        },
+        "locator": "line 2",
+        "epistemic_status": "UNKNOWN",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      },
+      {
+        "id": "B-Q11",
+        "question": "Qual identificador legado para o registro local de Samir Haddad aparece na fonte?",
+        "answer": "npc-m3-samir-haddad-candidate",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+          "sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+        },
+        "locator": "/records/39/entity",
+        "epistemic_status": "SOURCE_RECORDED_ID",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      },
+      {
+        "id": "B-Q21",
+        "question": "Quantas entradas marcadas C01.01 a C01.08 há na fonte jogada?",
+        "answer": "8 entradas, C01.01–C01.08, sem converter marcadores em novos eventos.",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+          "sha": "43b461493b5470057ab54648c6f6d9055814e271"
+        },
+        "locator": "lines 7–30",
+        "epistemic_status": "SOURCE_RECORDED_HISTORY",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      },
+      {
+        "id": "B-Q26",
+        "question": "No CYCLE_V0041, a próxima cena C01 já foi iniciada?",
+        "answer": "Não; /checkpoint/next_scene_status = NOT_STARTED.",
+        "source": {
+          "path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+          "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+        },
+        "locator": "/checkpoint/next_scene_status",
+        "epistemic_status": "NOT_STARTED",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      },
+      {
+        "id": "B-Q29",
+        "question": "No snapshot histórico LIVE_v038, quais são XP total, gasto, restante e crédito disponível?",
+        "answer": {
+          "xp_total": 675,
+          "xp_spent": 270,
+          "xp_remaining": 405,
+          "xp_credit_available": 0
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+        },
+        "locator": "lines 40–43",
+        "epistemic_status": "HISTORICAL_SNAPSHOT_ONLY",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/LIVE_v038.json)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      },
+      {
+        "id": "B-Q30",
+        "question": "No snapshot histórico LIVE_v038, quais são FV máximo provisório, dano superficial e disponível?",
+        "answer": {
+          "willpower_provisional_max": 6,
+          "willpower_superficial_damage": 2,
+          "willpower_available": 4
+        },
+        "source": {
+          "path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+          "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+        },
+        "locator": "lines 44–47",
+        "epistemic_status": "HISTORICAL_SNAPSHOT_ONLY",
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "read_operation": "GitHub.fetch_file(ref=c26c0fbf15fff6c817182c06e6208e302b954f3a,path=novydres/chronicles/CHR-001/LIVE_v038.json)",
+        "elapsed_ms": "NOT_OBSERVABLE",
+        "independent_review": "NOT_YET_CONDUCTED"
+      }
+    ],
+    "raw_responses_count": 6,
+    "score": "NOT_PERFORMED_BEFORE_FREEZE",
+    "independent_semantic_review": "PENDING",
+    "no_gabarito_supplied_to_executor": true,
+    "limitations": [
+      "Some question wording was derived from names rather than the complete original question.",
+      "This ChatGPT Web executor has previously viewed B02 result metadata; independence/blinding is limited.",
+      "No Web API token/HTTP byte telemetry.",
+      "No new run can retrospectively validate disappeared Web answers."
+    ]
+  },
+  "narrative_exercises_2026_11_12": {
+    "status": "EXECUTED_FICTIONAL_OUTPUTS_AWAITING_INDEPENDENT_CONTEXT_REVIEW",
+    "classification": "PLAYER_SAFE_TEST_ONLY",
+    "source": "ADR-001 DEC-07–DEC-15 and IMP-05–IMP-11",
+    "exercises": [
+      {
+        "id": "N-01",
+        "risk": "NPC_CORDIAL_CONTRARY_INTEREST",
+        "setup": "TEST_ONLY: síndica Lia deseja manter a licença do depósito; visitante pede abertura antecipada.",
+        "response": "Lia oferece uma cadeira e coloca o chá perto da borda da mesa. Seu sorriso permanece quando o pedido é feito. — Eu posso registrar sua reclamação agora e carimbar a cópia. Abrir o depósito antes da inspeção, não. Se a licença cair, trinta pessoas ficam sem trabalho. — Ela devolve o formulário, sem chamar segurança nem mudar de opinião por cortesia.",
+        "self_observation": "Cordialidade coexistiu com recusa fundamentada; não houve hostilidade automática.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-02",
+        "risk": "SOCIAL_SUCCESS_LIMITED_CONCESSION",
+        "setup": "TEST_ONLY: após sucesso social, a concessão acordada é consultar por dez minutos o livro público de entregas.",
+        "response": "O arquivista destranca a gaveta e põe o livro sobre a bancada. — Dez minutos. O que está aqui você pode conferir. Meu nome não vai na sua petição e não vou dizer que sua versão é a verdadeira. — A ampulheta pequena é virada; ele cumpre a concessão, mas continua servindo à repartição.",
+        "self_observation": "Concessão exata entregue sem conversão de lealdade ou amizade.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-03",
+        "risk": "INTENTION_CARRIED_BETWEEN_FRAMES",
+        "setup": "TEST_ONLY: intenção declarada pelo PJ: procurar a irmã de um ferido, sem prometer abrigo.",
+        "response": "Depois da caminhada até o bairro da estação, a porta indicada aparece entre uma padaria fechada e uma parede úmida. A carta continua no bolso do protagonista; nenhuma oferta de abrigo foi feita. Alguém se move atrás da porta, mas ainda não a abre. O que ele faz?",
+        "self_observation": "Intenção preservada; não atribui decisão ou compromisso novo ao PJ.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-04",
+        "risk": "ROUTINE_COMPRESSED_TO_SIGNIFICANT_OBSTACLE",
+        "setup": "TEST_ONLY: trabalho repetitivo e pesquisa de registros durante dias.",
+        "response": "As três manhãs seguintes passam entre recibos, ferramentas e o guichê do cartório. Os pedidos comuns encontram resposta; os que exigem assinatura ficam numa pilha cinzenta. Na quarta tarde, o funcionário identifica um número de protocolo apagado por alguém com acesso ao livro original. — Isso não some sozinho — diz, e fecha o armário. Há agora uma decisão concreta a tomar.",
+        "self_observation": "Rotina foi comprimida até obstáculo causal significativo.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-05",
+        "risk": "PRIORITIES_BEFORE_SUBSTANTIAL_LEAP",
+        "setup": "TEST_ONLY: intervalo provável de meses; prioridades do protagonista desconhecidas.",
+        "response": "A obra pode ficar parada até a chegada do degelo, diz o encarregado. No calendário, isso significa meses, não dias. A cidade continuará mudando nesse intervalo, mas ainda não sabemos o que o protagonista deseja priorizar. Antes de avançar esses meses: em que ele concentra seus esforços?",
+        "self_observation": "Não executa salto grande sem prioridades do personagem.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-06",
+        "risk": "DRAMA_PLAYED_WITH_CAUSAL_CONSEQUENCES",
+        "setup": "TEST_ONLY: ameaça concreta de perda de espaço comercial por dívida contestada.",
+        "response": "O proprietário encosta o aviso na bancada, de frente para o inquilino. — São duas parcelas. Trouxe os recibos? — Do outro lado, a aprendiz para de enrolar o fio de cobre: o ateliê onde trabalha pode fechar. Lá fora, o caminhão da mudança ainda não chegou. Os três aguardam uma resposta; a cobrança pode ser disputada, negociada ou recusada, mas não se tornou uma perda consumada fora de cena.",
+        "self_observation": "Consequência real em disputa dramatizada, com escolha e causalidade, sem resultado imposto.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-07",
+        "risk": "MYSTERY_FIXED_TRUTH_CAUSAL_CLUES",
+        "setup": "TEST_ONLY: verdade preparada e imutável para este exercício: o cofre guardava correspondência, não ouro.",
+        "response": "O metal do cofre está riscado perto da dobradiça. No chão, há fragmentos de lacre de papel, não pó de moedas; um antigo carteiro reconhece a marca da repartição. Ninguém ainda mostrou o conteúdo. A pista aponta para a correspondência sem decidir a investigação ou entregar automaticamente a verdade ao protagonista.",
+        "self_observation": "Pistas compatíveis com verdade pré-fixada; desfecho permanece aberto.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      },
+      {
+        "id": "N-08",
+        "risk": "SOLIDARITY_WITHOUT_FORCED_FAMILY_HARM",
+        "setup": "TEST_ONLY: irmã do protagonista decide entregar alimento a vizinhos em crise; possível risco político.",
+        "response": "— Sei o que podem fazer com quem distribui comida sem autorização — diz a irmã, ajustando a alça da cesta. — Também sei quem está passando fome. — Ela não exige companhia nem pede que decidam por ela. Da rua chega o som de botas, mas ninguém a deteve ainda; há espaço para conversar, acompanhar ou deixá-la agir.",
+        "self_observation": "Autonomia e risco sem punição automática, sem proteção sobrenatural do vínculo.",
+        "classification": "TEST_ONLY_NOT_CAMPAIGN",
+        "review_status": "SELF_CONTEXT_CHECK_ONLY_INDEPENDENT_REVIEW_PENDING"
+      }
+    ],
+    "coverage_rationale": "Oito riscos qualitativamente distintos; sem quota ou certificação por palavra-chave.",
+    "campaign_events_created": 0,
+    "editorial_independent_review": "PENDING",
+    "not_a_runtime_test": true
   }
 }

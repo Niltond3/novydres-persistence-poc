@@ -300,7 +300,7 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
     assert.ok(Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][winners[0]]));
     assert.ok(!Object.hasOwn(racedStored.transactions,'tx-'+['writer-a','writer-b'][loser]));
     await assert.rejects(transact(raceBase,'tx-stale-late',{effect:'obsolete'},
-      {...evidence(),checkpoint:raceBase}),/STALE_HEAD_PRECHECK_REMOTE/);
+      {...evidence(),checkpoint:raceBase}),/CHECKPOINT_DIVERGED/);
     assert.equal(await getHead(),raceHead);
     console.log(JSON.stringify({status:'PASS_REAL_GITHUB_DISPOSABLE_REF',
       run_id:process.env.GITHUB_RUN_ID,head_under_test:base,sandbox_ref:branch,
@@ -312,7 +312,7 @@ if (process.env.ADR001_REMOTE_PROOF === '1') {
       winner_commit:winning.sha,loser_commit:candidates[loser].sha,
       native_rejection_http:rejection.status,native_rejection_message:staleProof,
       native_stale_lease_diagnostic:'NOT_PROVEN_BY_GENERIC_422',
-      stale_precheck:'REMOTE_HEAD_MISMATCH',remote_head_readback:raceHead,
+      stale_precheck:'REMOTE_CHECKPOINT_VALIDATOR_BLOCK',remote_head_readback:raceHead,
       requests_sample:timings.length,latency_p95:'NOT_REPORTED_SMALL_NONCOMPARABLE_SAMPLE',
       timings_ms:timings.filter(x=>x.http>=400 || x.operation.startsWith('PATCH')),
       content_scope:'ARTIFICIAL_ONLY_NO_CAMPAIGN_WRITES'}));
