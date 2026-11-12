@@ -269,7 +269,7 @@ test('D01 current pinned LIVE bytes cannot be omitted to fake comparisons',()=>{
  const omitted=new Map(data.sourceContents);
  omitted.delete(p);
  assert.throws(()=>verifyD01(index,{...data,sourceContents:omitted}),
-  e=>e.code==='D01_C45_SOURCE_POINTER_MISSING');
+  e=>e.code==='D01_C45_CONTENT_NOT_READ');
 });
 test('D01 C41 checkpoint cannot be promoted by rewriting historical comparison',()=>{
  const altered=structuredClone(data.candidateState);
