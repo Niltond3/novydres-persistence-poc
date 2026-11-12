@@ -54,7 +54,7 @@ export function buildCatalog(root=process.cwd(), {overrides={}}={}) {
     const main=posix.join(path,'assunto.json');
     const obj=JSON.parse(read(main).toString('utf8'));
     if(!ID.test(obj.subject_id || '')) fail('INVALID_SUBJECT_ID',main);
-    if(!obj.owner_scope || !path.startsWith(obj.owner_scope+'/')) fail('OWNER_MISMATCH',main);
+    if(!obj.owner_scope || !(path===obj.owner_scope || path.startsWith(obj.owner_scope+'/'))) fail('OWNER_MISMATCH',main);
     if(obj.status!=='CANDIDATE') fail('CANDIDATE_ONLY',main);
     if(idMap.has(norm(obj.subject_id))) fail('SUBJECT_ID_COLLISION',obj.subject_id);
     const files=readdirSync(dir,{withFileTypes:true})
