@@ -1,8 +1,8 @@
 {
   "schema": "ADR001_D06_GATE_FREEZE_V2",
-  "status": "D04_EDITORIAL_SOURCE_PRECEDENCE_INCLUDED_FINAL_INTEGRATED_GATE",
-  "parent_head": "a1b3e617cb01d77e7814ad4db147a06f1953118d",
-  "parent_tree": "df12d0def969c486d7c2e3d6e88cd774fb81daa1",
+  "status": "FINAL_INTEGRATED_PROOF_AFTER_C03_GIT_READBACK_BOUNDED_RETRY_AND_D07_C45_AUTHORITY",
+  "parent_head": "106c869497c0d09ac683cba7545d812872fcbc1e",
+  "parent_tree": "99bd1831c0c64b27209ef83603d90979a59edb1d",
   "prior_run": 43332630110,
   "corrections": [
     "EXPLICIT_HISTORICAL_C41_SOURCE_COMMIT_8_FILES",
@@ -11,7 +11,7 @@
   "no_cutover": true,
   "workflow": ".github/workflows/adr001-phase-c-candidate.yml",
   "gates_not_preapproved": true,
-  "test_scope": "D03_XP_D04_STATE_C45_V018_V019_AUTHORITY_D05_SOURCE_REF_GIT_TRANSACTION_D06_ZERO_LEGACY_D07_NEGATIVES",
+  "test_scope": "ALL_D03_D07_SOURCE_INTEGRITY_XP_STORY_PRECEDENCE_ZERO_LEGACY_AND_REMOTE_TRANSACTION",
   "candidate_branch": "design/subject-oriented-migration",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
   "runtime_activation": false
