@@ -1,8 +1,8 @@
 {
   "schema": "ADR001_D06_GATE_FREEZE_V2",
-  "status": "FINAL_INTEGRATED_PROOF_AFTER_C03_GIT_READBACK_BOUNDED_RETRY_AND_D07_C45_AUTHORITY",
-  "parent_head": "106c869497c0d09ac683cba7545d812872fcbc1e",
-  "parent_tree": "99bd1831c0c64b27209ef83603d90979a59edb1d",
+  "status": "D04_MECHANICS_APPROVED_LOCAL_SCOPE_INCLUDED_IN_FINAL_BLOCK_VALIDATION",
+  "parent_head": "6a9072f9b31f909bf2fc1c802e78b115ebc09cd3",
+  "parent_tree": "5b8da38d5705ea50dae129289a642a55d101d692",
   "prior_run": 43332630110,
   "corrections": [
     "EXPLICIT_HISTORICAL_C41_SOURCE_COMMIT_8_FILES",
@@ -11,8 +11,9 @@
   "no_cutover": true,
   "workflow": ".github/workflows/adr001-phase-c-candidate.yml",
   "gates_not_preapproved": true,
-  "test_scope": "ALL_D03_D07_SOURCE_INTEGRITY_XP_STORY_PRECEDENCE_ZERO_LEGACY_AND_REMOTE_TRANSACTION",
+  "test_scope": "D03_D07_FULL_C45_MECHANICS_ACTUAL_VS_PROVISIONAL_TARGET_GUARDS_AND_GIT_CAS",
   "candidate_branch": "design/subject-oriented-migration",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
-  "runtime_activation": false
+  "runtime_activation": false,
+  "no_runtime_activation": true
 }
