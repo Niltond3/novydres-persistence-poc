@@ -56,3 +56,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-021.md` registra divulgação verbal de hábito documental e cópias de Bartolomeu, e pergunta de Rada sobre protocolo central; cursor `../../estado/recuperacao-c66.json`. C02 aberta, sem exame de papéis ou confirmação de nexo.
 
 `c02-interacao-022.md` preserva resposta protocolar do PJ, reação de Rada e pedido meta de adendo histórico. Cursor `../../estado/recuperacao-c67.json`; adendo ao resgatado está em `../m204/adendo-c17-conversa-001.md`, sem divulgação a Rada.
+
+`c02-interacao-023.md` preserva sigilo de Bartolomeu para Rada e sua iniciativa retroativa de investigar a Câmara Seis na noite do incidente de M2.04, com teste de localização preparado e decisão de método ainda pendente. Cursor `../../estado/recuperacao-c68.json`. C02 não avança.
