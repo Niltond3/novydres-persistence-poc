@@ -8,6 +8,10 @@ on:
       - 'novydres/scripts/testar-retomar-cronica.test.mjs'
       - 'novydres/scripts/testar-estado-d04.test.mjs'
       - 'novydres/scripts/verificar-semantica-c45.mjs'
+      - 'novydres/sistema/narrativa/contrato.md'
+      - 'novydres/cronicas/CHR-001/configuracao/**'
+      - 'novydres/catalogo.json'
+      - 'novydres/CONTEXT.md'
       - 'novydres/scripts/testar-semantica-c45.test.mjs'
       - 'novydres/cronicas/CHR-001/conhecimento/atores/**'
       - 'novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json'
@@ -28,6 +32,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Candidate subject catalog after local tone successor
+        run: node novydres/scripts/catalogo-assuntos.mjs --check
       - name: Explicit role and C45 handoff negative tests
         run: node --test novydres/scripts/testar-retomar-cronica.test.mjs
       - name: C45 state source and corruption negatives

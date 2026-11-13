@@ -4951,7 +4951,7 @@
       "ADR001_DEC_27"
     ],
     "current_c45_handoff": "SCENE_C01_HISTORIC_DRAMATURGO_GATE_SUPERSEDED_BY_CYCLE_V0045_READY_FOR_NARRATOR_FOR_C02;_CANDIDATE_NOT_ACTIVE",
-    "targeted_fix": "READ_C45_CANDIDATE_ROLE_MUST_BE_EXPLICIT;_CLI_CALLS_WITH_EXPLICIT_AUDITOR;_OMISSION_FAILS_CLOSED",
+    "targeted_fix": "READ_C45_CANDIDATE_ROLE_MUST_BE_EXPLICIT;_CLI_CALLS_WITH_EXPLICIT_AUDITOR;_OMISSION_FAILS_CLOSED;_LOCAL_CHR001_TONE_STAGED;_G25_G27_RULES_EXPLICIT",
     "grouped_results": [
       {
         "successor": "novydres/AGENTS.md",
@@ -4979,8 +4979,8 @@
         "reference_count": 3,
         "cycle_direct": 0,
         "manifest_only": 3,
-        "observed_candidate_evidence": "Contrato consolidado conserva princípios de sigilo e autonomia; não equivale automaticamente aos vetores contextuais originais",
-        "remaining_behavioral_proof": "Revisão contextual de horror, coerência de NPCs e regressões de imersão",
+        "observed_candidate_evidence": "Contrato genérico + tom local CHR-001 em chr001-table-config/tom-c45.md, com fontes de horror e autonomia NPC pinadas; sem burocracia de humor por cena.",
+        "remaining_behavioral_proof": "Revisão contextual e regressões por situação das três referências de tom e da agência de NPCs; a presença do arquivo não certifica a prosa.",
         "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
       },
       {
@@ -4999,8 +4999,8 @@
         "reference_count": 5,
         "cycle_direct": 0,
         "manifest_only": 5,
-        "observed_candidate_evidence": "DEC-18/23/24 substituem o batching G28 e ledger universal; mecânica C45 e transação candidata são fontes distintas",
-        "remaining_behavioral_proof": "Demonstração de transação por resposta e julgamento V5 local sem E02",
+        "observed_candidate_evidence": "DEC-18 substitui G26/G28; contrato candidato explicita julgamento G27 e pré-rolagem G25, com restrições de FV, Take Half e alvo provisório.",
+        "remaining_behavioral_proof": "Exercer preflight V5 e transação por resposta em candidato seguro; revisão contextual de consequências e casos negativos.",
         "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
       },
       {
