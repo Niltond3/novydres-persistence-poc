@@ -27,8 +27,8 @@ jobs:
         run: node novydres/scripts/verificar-estado-d04.mjs
       - name: D04 all 438 original sources and negatives
         run: node --test novydres/scripts/testar-custodia-d04.test.mjs
-      - name: C45 current state and actors negative tests
-        run: node --test novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: C45 current state, actor/thread semantic parity and resume negatives
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-semantica-c45.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
       - name: D04 authorized V018 truth and C45 prospective V019 pin lineage with denial tests
         run: node --test novydres/scripts/testar-autoridade-c45.test.mjs
       - name: D03 D04 XP scope, historical temporal ownership and anti-credit negatives
@@ -37,8 +37,8 @@ jobs:
         run: node --test novydres/scripts/testar-lotes-historicos-d04.test.mjs
       - name: D04 mechanics source approved grapple and provisional test traits without XP or new powers
         run: node --test novydres/scripts/testar-mecanica-c45.test.mjs
-      - name: D05 complete 399-consumer source custody and 121 unapproved successor crosswalk
-        run: node --test novydres/scripts/testar-consumidores-d05.test.mjs
+      - name: D05 399-source custody and 121-ref provenance (not behavioral certification)
+        run: node --test novydres/scripts/testar-consumidores-d05.test.mjs novydres/scripts/testar-vereditos-d05.test.mjs
       - name: Zero legacy final on entire HEAD
         run: node novydres/scripts/auditar-legado-e-fontes.mjs --final
       - name: D06 source and structural scope with negative tests
@@ -49,10 +49,10 @@ jobs:
         run: node novydres/scripts/verificar-integridade-d06.mjs
       - name: D07 independent structural review without editorial certification
         run: node novydres/scripts/revisar-independente-d07.mjs
-      - name: D06 final gate requires semantic and runtime approval
+      - name: D06 technical integrated gate with owner-accepted D04/D05 risk
         run: node novydres/scripts/verificar-integridade-d06.mjs --require-pass
-      - name: D07 final independent gate
-        run: node novydres/scripts/revisar-independente-d07.mjs --require-pass
+      # D07 requires an identifiable independent contextual assessment, never self-certified by this CI.
+      # Keep the D07 source/ACL/semantic comparison above; its independent gate remains NOT_YET_PASS.
 
   remote-transaction-proof:
     if: github.ref == 'refs/heads/design/subject-oriented-migration'

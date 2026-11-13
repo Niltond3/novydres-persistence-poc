@@ -1,6 +1,6 @@
 {
   "schema": "ADR001_D06_GATE_FREEZE_V2",
-  "status": "INTEGRATED_D04_27_HISTORICAL_BATCH_SOURCE_ROUTE_VALIDATION",
+  "status": "RECHECK_D06_AFTER_OWNER_ACCEPTED_D04_D05_AND_SIMPLIFIED_D07",
   "parent_head": "12d8d1bc818157989f2b447eef733b9733a4a038",
   "parent_tree": "fc384b3d7790df475367f65a800e8967dd315414",
   "prior_run": 43332630110,
@@ -15,5 +15,6 @@
   "candidate_branch": "design/subject-oriented-migration",
   "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
   "runtime_activation": false,
-  "no_runtime_activation": true
+  "no_runtime_activation": true,
+  "owner_acceptance_record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md"
 }

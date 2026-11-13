@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D06_INTEGRATED_GATE_PREP_V1",
   "phase": "D06",
-  "status": "TECHNICAL_GATES_PASS_SEMANTIC_EQUIVALENCE_AND_INDEPENDENT_REVIEW_PENDING",
+  "status": "D04_D05_OWNER_PASS_TECHNICAL_D06_GATE_RECHECK_REQUIRED",
   "gate": "D06_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/verificar-integridade-d06.mjs",
@@ -91,5 +91,24 @@
     "remote_transaction_job": "SUCCESS",
     "evidence_scope": "DISPOSABLE_TEST_BRANCH_ONLY_NO_CHRONICLE_OR_MASTER_WRITES"
   },
-  "next_gate_rule": "DO_NOT_TURN_INTEGRATED_TECHNICAL_PASS_INTO_D06_PASS_WITHOUT_FUNCTIONAL_EQUIVALENCE_EVIDENCE_AND_D07_REVIEW"
+  "next_gate_rule": "RUN_INTEGRATED_TECHNICAL_TESTS_ON_EXACT_HEAD; D07_IDENTIFIABLE_INDEPENDENT_CONTEXTUAL_REVIEW_REMAINS_REQUIRED; OWNER_ACCEPTANCE_IS_NOT_EQUIVALENCE_PROOF",
+  "simplified_gate_policy": {
+    "decision_record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "method": "ONE_INTEGRATED_WHOLE_TREE_AND_FUNCTION_RISK_CHECK_REUSE_PRIOR_CI_PROOFS",
+    "prerequisites": [
+      "D04_PASS_OWNER_RISK_ACCEPTANCE",
+      "D05_PASS_OWNER_RISK_ACCEPTANCE",
+      "1029_ORIGINS_PINNED_AND_ROUTED",
+      "ZERO_LEGACY_AND_CATALOG",
+      "C45_STATE_KNOWLEDGE_SECRETS_RESOURCES_TESTS",
+      "GIT_TRANSACTION_READBACK_AND_NEGATIVE_REGRESSIONS"
+    ],
+    "not_required": [
+      "RETEST_121_REFERENCES_INDIVIDUALLY",
+      "RECONSTRUCT_UNIVERSAL_HISTORICAL_LEDGER",
+      "REPEAT_UNCHANGED_DETERMINISTIC_TESTS"
+    ],
+    "separate_d07_independent_review_required": true,
+    "no_E02_authorized": true
+  }
 }

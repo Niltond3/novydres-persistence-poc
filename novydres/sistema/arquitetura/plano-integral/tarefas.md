@@ -390,6 +390,10 @@ Sequência: `A01 → A02/A03/A04/A05 → A06 → A07 → B01 → B02/B03/B04 →
 - **Escopo/saída:** revisão independente de equivalência, escrita, sigilo, sucessores e plano de promoção/incidente. Corrigir falhas no candidato e repetir somente provas afetadas; reconciliar qualquer drift antes de encerrar.
 - **Conclusão:** D PASS com revisão identificável, pendências não bloqueantes justificadas e snapshot de candidato exato. Não ativar a migração; apresentar a entrega concreta em E01 para aprovação expressa de cutover. Escolhas de política já aceitas não são perguntadas novamente; mudanças substantivas residuais devem ser resolvidas.
 
+#### Decisão posterior do jogador — 2026-11-13: gates D04–D07
+
+Por ordem expressa do proprietário, D04 e D05 recebem `PASS` **por aceite de risco documentado**, não por alegação de cobertura semântica universal nem equivalência de runtime. Permanecem explícitas as lacunas históricas não indexadas e as 119 referências com comportamento não certificado. Preservar cada fonte, status epistêmico e salvaguarda. D06 deve aproveitar provas técnicas atuais, testar por função e risco no snapshot integral e não exigir 121 atestações redundantes. D07 mantém **revisão independente identificável** dos cenários críticos e dos nove grupos de sucessores; não exigir novo exame individual de toda referência ou testes determinísticos já válidos. E02/E03 e qualquer uso operacional seguem sem autorização. Registro: [`aceite-de-risco-d04-d07-2026-11-13.md`](../fase-d/aceite-de-risco-d04-d07-2026-11-13.md).
+
 ## E — Promover e encerrar todo o ADR
 
 ### E01 — Preparar promoção final e obter autorização específica

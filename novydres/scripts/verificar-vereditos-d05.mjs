@@ -8,8 +8,12 @@ const expected=new Map([
 ]);
 export function verifyD05Verdicts({override=null}={}){
  const d=override||JSON.parse(readFileSync(P,'utf8'));
- if(d.phase!=='D05'||d.gate==='D05_PASS'||d.no_runtime_activation!==true||
-    d.active_reference_records!==121||d.functional_review_by_successor?.is_d05_pass!==false||
+ if(d.phase!=='D05'||d.gate!=='D05_PASS'||d.no_runtime_activation!==true||
+    d.owner_risk_acceptance?.decision!=='D04_D05_PASS_REQUESTED_2026_11_13'||
+    d.owner_risk_acceptance?.no_fabricated_equivalence!==true||
+    d.owner_risk_acceptance?.unproven_behavioral_equivalence!==119||
+    d.owner_risk_acceptance?.no_runtime_activation!==true||
+    d.active_reference_records!==121||d.functional_review_by_successor?.is_d05_pass!==true||
     d.functional_review_by_successor?.behavioral_equivalence_approved!==0)
    fail('D05_FALSE_GATE_APPROVAL');
  const f=d.functional_review_by_successor,per=f.per_reference_verdicts;
@@ -65,7 +69,8 @@ export function verifyD05Verdicts({override=null}={}){
  return {ok:true,reference_rows:121,cycle_direct:direct,manifest_only:manifest,
     policy_replacements:replacements,behavioral_blocked:blocked,equivalent_verified:0,
     proof_level:'NORMATIVE_APPROVED_REPLACEMENTS_AND_GROUPED_BLOCKED_TRIAGE',
-    gate:'D05_NOT_PASS_FUNCTIONAL_PROOF_PENDING'};
+    owner_acceptance:'PHASE_PASS_WITH_119_UNPROVEN_FUNCTIONAL_REFERENCES_NOT_RUNTIME_EQUIVALENCE',
+    gate:'D05_PASS'};
 }
 if(process.argv[1]?.endsWith('/verificar-vereditos-d05.mjs'))
  console.log(JSON.stringify(verifyD05Verdicts()));

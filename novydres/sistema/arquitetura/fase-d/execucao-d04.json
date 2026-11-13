@@ -1,8 +1,8 @@
 {
   "schema": "ADR001_D04_EXECUTION_V1",
   "phase": "D04",
-  "status": "SOURCE_CUSTODY_AND_C45_RECOVERY_PIN_STAGED_PENDING_SEMANTIC_D04_GATE",
-  "gate": "D04_NOT_YET_PASS",
+  "status": "PASS_BY_EXPLICIT_OWNER_ACCEPTANCE_WITH_DOCUMENTED_RESIDUAL_SEMANTIC_RISK",
+  "gate": "D04_PASS",
   "candidate_only": true,
   "entry_head": "2c38f763976ea5edb6522c1a1f451b0a6727d03b",
   "original_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
@@ -10,8 +10,8 @@
   "exact_source_copies": 438,
   "new_source_custodians": 31,
   "no_current_state_claim_from_historical_files": true,
-  "per_actor_knowledge_partition": "PENDING",
-  "state_projection": "PENDING_C45",
+  "per_actor_knowledge_partition": "47_EXACT_RECORDS_38_OWNERS_PROVEN",
+  "state_projection": "C45_SOURCE_PINNED_AND_REGRESSION_TESTED",
   "source_transcripts_not_invented": true,
   "universal_ledger_introduced": false,
   "roll_faces_required": false,
@@ -19,15 +19,6 @@
   "missing_required_originals": 0,
   "provenance_proof": "GIT_EXACT_BLOB_REUSE_AND_EXECUTABLE_VALIDATOR",
   "test": "novydres/scripts/testar-custodia-d04.test.mjs",
-  "semantic_gate_pending": [
-    "C45_SOURCE_PIN_RECORDED;_FULL_D04_STATE_EQUIVALENCE_AND_D05_CUTOVER_STILL_PENDING",
-    "XP_FV_RESOURCE_BALANCES",
-    "CHRONICLE_RETRIEVAL_AND_RESUME",
-    "D05_CONSUMERS_AND_CATALOG_TRANSITION",
-    "HISTORICAL_EPISODES_438_SOURCE_PROJECTED_BUT_EXHAUSTIVE_HISTORICAL_FACT_REVIEW_PENDING",
-    "HISTORICAL_NON_INDEXED_DURABLE_FACTS_AND_DECISIONS_PENDING_CONTEXTUAL_EQUIVALENCE",
-    "V5_CONTEXTUAL_ADJUDICATION_AND_SECRETS_PENDING_REVIEW"
-  ],
   "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN",
   "current_C45_recovery": {
     "path": "novydres/cronicas/CHR-001/estado/recuperacao-c45.json",
@@ -147,5 +138,27 @@
     "original_source_required_for_decisive_facts": true,
     "proof": "novydres/scripts/verificar-lotes-historicos-d04.mjs",
     "full_historical_semantic_coverage": "NOT_PROVEN"
-  }
+  },
+  "owner_risk_acceptance": {
+    "decision": "D04_D05_PASS_REQUESTED_2026_11_13",
+    "basis": "EXPLICIT_PROJECT_OWNER_DECISION_NOT_EXHAUSTIVE_HISTORY_ATTESTATION",
+    "record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "scope": "D04_PHASE_GATE_ONLY_NO_CANON_OR_CUTOVER_PROMOTION",
+    "material_limits": [
+      "SPARSE_27_BATCH_INDEX_NOT_COMPLETE_HISTORICAL_SEMANTIC_COVERAGE",
+      "NON_INDEXED_DURABLE_HISTORICAL_FACTS_NOT_EXHAUSTIVELY_ATTESTED",
+      "V5_CONTEXTUAL_BEHAVIOR_NOT_CERTIFIED"
+    ],
+    "source_pins_and_C45_tests_preserved": true,
+    "no_runtime_activation": true
+  },
+  "gaps_at_owner_acceptance": [
+    "C45_SOURCE_PIN_RECORDED;_FULL_D04_STATE_EQUIVALENCE_AND_D05_CUTOVER_STILL_PENDING",
+    "XP_FV_RESOURCE_BALANCES",
+    "CHRONICLE_RETRIEVAL_AND_RESUME",
+    "D05_CONSUMERS_AND_CATALOG_TRANSITION",
+    "HISTORICAL_EPISODES_438_SOURCE_PROJECTED_BUT_EXHAUSTIVE_HISTORICAL_FACT_REVIEW_PENDING",
+    "HISTORICAL_NON_INDEXED_DURABLE_FACTS_AND_DECISIONS_PENDING_CONTEXTUAL_EQUIVALENCE",
+    "V5_CONTEXTUAL_ADJUDICATION_AND_SECRETS_PENDING_REVIEW"
+  ]
 }

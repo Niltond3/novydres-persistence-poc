@@ -11,7 +11,8 @@ test('All 121 reference verdicts tracked; 2 approved policy replacements, 119 un
  assert.equal(r.policy_replacements,2);
  assert.equal(r.behavioral_blocked,119);
  assert.equal(r.equivalent_verified,0);
- assert.equal(r.gate,'D05_NOT_PASS_FUNCTIONAL_PROOF_PENDING');
+ assert.equal(r.gate,'D05_PASS');
+ assert.equal(r.owner_acceptance,'PHASE_PASS_WITH_119_UNPROVEN_FUNCTIONAL_REFERENCES_NOT_RUNTIME_EQUIVALENCE');
 });
 test('Cannot silently claim an unreviewed successor equivalent',()=>{
  const x=read();x.source_records.find(r=>r.active_original_reference&&r.functional_review.verdict==='BLOCKED').functional_review.verdict='EQUIVALENT_VERIFIED';
@@ -27,8 +28,8 @@ test('Cannot falsify original SHA or the DEC-18 authorization',()=>{
  const y=read();y.source_records.find(r=>r.origin==='novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md').functional_review.source_blob_sha='0'.repeat(40);
  assert.throws(()=>verifyD05Verdicts({override:y}),{code:'D05_VERDICT_MISSING_OR_UNTRUSTED'});
 });
-test('Cannot falsely declare D05 PASS or ignore manifest-only references',()=>{
- const x=read();x.functional_review_by_successor.is_d05_pass=true;
+test('Cannot falsify owner acceptance or ignore manifest-only references',()=>{
+ const x=read();x.owner_risk_acceptance.decision='INVENTED_APPROVAL';
  assert.throws(()=>verifyD05Verdicts({override:x}),{code:'D05_FALSE_GATE_APPROVAL'});
  const y=read();y.source_records.find(r=>r.reference_kind==='M63_MANIFEST_ONLY_NOT_PROVEN_INACTIVE').active_original_reference=false;
  assert.throws(()=>verifyD05Verdicts({override:y}),{code:'D05_ACTIVE_REFERENCE_COVERAGE'});

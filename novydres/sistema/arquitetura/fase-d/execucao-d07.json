@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
   "phase": "D07",
-  "status": "SEPARATE_SOURCE_COMPARISON_PASS_EXTERNAL_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING",
+  "status": "D07_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING_SIMPLIFIED_BY_FUNCTION_AND_RISK",
   "gate": "D07_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
@@ -10,7 +10,7 @@
   "source_comparison_by_actor": 47,
   "source_comparison_of_threads": 44,
   "privacy_fail_closed": true,
-  "require_contextual_review_of_121_active_successions": true,
+  "require_contextual_review_of_121_active_successions": false,
   "editorial_conflicts_not_selected": [
     "CONFLICT-001",
     "CONFLICT-002",
@@ -63,5 +63,25 @@
     "E01_start_permitted": false,
     "E02_or_E03_authorized": false
   },
-  "reviewer_requirement": "INDEPENDENT_IDENTIFIABLE_REVIEW_OF_D03_D06_IMPLEMENTATION_AND_CONTEXTUAL_PERMISSIONS"
+  "reviewer_requirement": "INDEPENDENT_IDENTIFIABLE_REVIEW_OF_D03_D06_IMPLEMENTATION_AND_CONTEXTUAL_PERMISSIONS",
+  "simplified_gate_policy": {
+    "decision_record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "method": "ONE_IDENTIFIABLE_INDEPENDENT_CONTEXTUAL_REVIEW_BY_FUNCTION_AND_RISK",
+    "nine_successor_groups": 9,
+    "not_required": [
+      "121_INDIVIDUAL_BEHAVIORAL_ATTESTATIONS",
+      "REPEATED_D04_D05_SOURCE_AUDITS_WITHOUT_DRIFT",
+      "DUPLICATE_DETERMINISTIC_CI_RUNS"
+    ],
+    "required": [
+      "INDEPENDENT_REVIEWER_ID_AND_ASSESSMENT",
+      "C45_STATE_KNOWLEDGE_SECRETS_AND_HISTORICAL_LIMITS",
+      "NARRATIVE_AGENCY_AND_V5_CRITICAL_SCENARIOS",
+      "PER_RESPONSE_ATOMICITY_AND_RECOVERY_EVIDENCE",
+      "DISCLOSURE_NEGATIVES_AND_ZERO_LEGACY",
+      "REPORT_UNRESOLVED_EDITORIAL_CONFLICTS_WITHOUT_SILENT_DECISION"
+    ],
+    "no_false_runtime_certification": true,
+    "no_cutover_without_E_APPROVAL": true
+  }
 }

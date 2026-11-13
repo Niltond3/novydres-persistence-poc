@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D05_CONSUMER_RETIREMENT_V1",
   "phase": "D05",
-  "status": "SOURCE_CUSTODY_PASS_REFERENCED_FUNCTIONAL_EQUIVALENCE_PENDING",
+  "status": "PASS_BY_EXPLICIT_OWNER_ACCEPTANCE_WITH_DOCUMENTED_RESIDUAL_FUNCTIONAL_RISK",
   "candidate_only": true,
   "source_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
   "source_count": 399,
@@ -5903,7 +5903,7 @@
     },
     "review_rule": "DO_NOT_DISMISS_M63_ONLY_OR_ACTIVATE_GM_SOURCE_WITHOUT_CONTEXTUAL_PROOF"
   },
-  "gate": "D05_NOT_YET_PASS",
+  "gate": "D05_PASS",
   "structural_proof": {
     "last_run": 43346213260,
     "last_head": "55aea6e2397caa077e2d4a92d5ec056ec12bf061",
@@ -5918,7 +5918,7 @@
     "current_head_retest": "REQUIRED_AFTER_CHANGED_PROOF_CODE"
   },
   "functional_review_by_successor": {
-    "status": "PARTIAL_CONTEXTUAL_TRIAGE_NOT_A_BEHAVIORAL_PASS",
+    "status": "OWNER_ACCEPTED_GROUPED_TRIAGE_WITH_119_UNPROVEN_BEHAVIORAL_REFERENCES",
     "reference_basis": "C45_CYCLE_48_DIRECT_PLUS_M63_73_MANIFEST_ONLY",
     "method": "ONE_PASS_GROUPED_REVIEW_OF_ORIGINAL_REFERENCES_AGAINST_APPROVED_SUCCESSOR_FUNCTIONS_NO_REENUMERATION_OF_399",
     "decisions_not_reopened": [
@@ -6026,7 +6026,7 @@
     ],
     "reviewed_reference_rows": 121,
     "behavioral_equivalence_approved": 0,
-    "is_d05_pass": false,
+    "is_d05_pass": true,
     "reviewer_independence": "NOT_CLAIMED",
     "no_operational_activation": true,
     "per_reference_verdicts": {
@@ -6040,6 +6040,20 @@
       "tests": "novydres/scripts/testar-vereditos-d05.test.mjs",
       "no_end_to_end_chronicle_runtime_proof": true,
       "note": "APPROVED_REPLACEMENT applies solely to authorized normative replacements G26/G28. C03 isolated Git transaction verifies underlying atomicity, but candidate post-E02 runtime has not been activated. Remaining 119 classifications are BLOCKED, not proof of absence of function."
-    }
+    },
+    "acceptance_basis": "EXPLICIT_OWNER_RISK_ACCEPTANCE_NOT_BEHAVIORAL_EQUIVALENCE"
+  },
+  "owner_risk_acceptance": {
+    "decision": "D04_D05_PASS_REQUESTED_2026_11_13",
+    "basis": "EXPLICIT_PROJECT_OWNER_DECISION_GROUPED_FUNCTION_AND_RISK_APPROACH",
+    "record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "scope": "D05_PHASE_GATE_ONLY_NO_LIVE_RUNTIME_OR_CUTOVER_ATTESTATION",
+    "active_references_reviewed": 121,
+    "successor_function_groups": 9,
+    "unproven_behavioral_equivalence": 119,
+    "approved_policy_replacements": 2,
+    "exhaustive_per_reference_retest_waived": true,
+    "no_fabricated_equivalence": true,
+    "no_runtime_activation": true
   }
 }
