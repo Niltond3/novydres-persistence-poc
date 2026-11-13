@@ -9,6 +9,10 @@ on:
       - 'novydres/scripts/testar-vereditos-d05.test.mjs'
       - 'novydres/scripts/testar-retomar-cronica.test.mjs'
       - 'novydres/scripts/testar-estado-d04.test.mjs'
+      - 'novydres/scripts/testar-escopo-xp.test.mjs'
+      - 'novydres/scripts/testar-mecanica-c45.test.mjs'
+      - 'novydres/scripts/testar-autoridade-c45.test.mjs'
+      - 'novydres/scripts/testar-lotes-historicos-d04.test.mjs'
       - 'novydres/scripts/verificar-semantica-c45.mjs'
       - 'novydres/sistema/narrativa/contrato.md'
       - 'novydres/cronicas/CHR-001/configuracao/**'
@@ -40,6 +44,13 @@ jobs:
         run: node --test novydres/scripts/testar-retomar-cronica.test.mjs
       - name: C45 state source and corruption negatives
         run: node --test novydres/scripts/testar-estado-d04.test.mjs
+      - name: Verify XP-FV, provisional mechanics, authorial precedence and partial historical index
+        run: |
+          node --test \
+            novydres/scripts/testar-escopo-xp.test.mjs \
+            novydres/scripts/testar-mecanica-c45.test.mjs \
+            novydres/scripts/testar-autoridade-c45.test.mjs \
+            novydres/scripts/testar-lotes-historicos-d04.test.mjs
       - name: Verify C45 actor-scoped facts and open threads against immutable source
         run: node --test novydres/scripts/testar-semantica-c45.test.mjs
       - name: Verify per-reference D05 verdict classification and false-PASS negatives
