@@ -2,6 +2,7 @@
 import {execFileSync} from 'node:child_process';
 import {buildCatalog,checkCatalog,readSelected} from './catalogo-assuntos.mjs';
 import {verifyD04State} from './verificar-estado-d04.mjs';
+import {verifyC45KnowledgeThreads} from './verificar-semantica-c45.mjs';
 import {verifyMechanics} from './verificar-mecanica-c45.mjs';
 import {verifyHistoryBatches} from './verificar-lotes-historicos-d04.mjs';
 const err=code=>{const e=new Error(code);e.code=code;throw e;};
@@ -23,8 +24,8 @@ export function readC45Candidate({root=process.cwd(),snapshot_sha,role=null,conf
  const story=obj(root,c,'chr001-runtime-story-architecture','novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json',head,role);
  const mechanics=obj(root,c,'chr001-table-config','novydres/cronicas/CHR-001/configuracao/mecanica-c45.json',head,role);
  const hist=obj(root,c,'chr001-historic-history-index','novydres/cronicas/CHR-001/historico/history-index/lotes-c45.json',head,role);
- const checked=verifyD04State(),checkedMechanics=verifyMechanics(),checkedHistory=verifyHistoryBatches();
- if(!checked.ok||!checkedMechanics.ok||!checkedHistory.ok||s.operational!==false||s.cursor.last_event_id!==t.last_event_id||t.threads.length!==44)err('C45_RECOVERY_NOT_VERIFIED');
+ const checked=verifyD04State(),checkedKnowledge=verifyC45KnowledgeThreads(),checkedMechanics=verifyMechanics(),checkedHistory=verifyHistoryBatches();
+ if(!checked.ok||!checkedKnowledge.ok||!checkedMechanics.ok||!checkedHistory.ok||s.operational!==false||s.cursor.last_event_id!==t.last_event_id||t.threads.length!==44)err('C45_RECOVERY_NOT_VERIFIED');
  if(last.last_event_id!==s.cursor.last_event_id || last.scene?.status!=='CLOSED'||last.scene?.last_event_id!==s.cursor.last_event_id||last.scene_starts_created!==0 || last.generated_transcript!==false)err('C45_SCENE_FACT_DRIFT');
  if(mechanics.application?.target_future_disciplines_unavailable_before_embrace!==true||mechanics.authority?.no_runtime_activation!==true||
     mechanics.current?.resources?.xp_spent!==s.resources.xp_spent)err('C45_MECHANICS_UNAPPROVED');

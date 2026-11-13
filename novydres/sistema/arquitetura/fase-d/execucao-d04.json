@@ -24,8 +24,9 @@
     "XP_FV_RESOURCE_BALANCES",
     "CHRONICLE_RETRIEVAL_AND_RESUME",
     "D05_CONSUMERS_AND_CATALOG_TRANSITION",
-    "PER_ACTOR_C45_SOURCE_PROJECTION_HAS_SCOPE_BUT_REVIEW_OF_FACTS_VS_BELIEFS_PENDING",
-    "HISTORICAL_EPISODES_438_SOURCE_PROJECTED_BUT_EXHAUSTIVE_HISTORICAL_FACT_REVIEW_PENDING"
+    "HISTORICAL_EPISODES_438_SOURCE_PROJECTED_BUT_EXHAUSTIVE_HISTORICAL_FACT_REVIEW_PENDING",
+    "HISTORICAL_NON_INDEXED_DURABLE_FACTS_AND_DECISIONS_PENDING_CONTEXTUAL_EQUIVALENCE",
+    "V5_CONTEXTUAL_ADJUDICATION_AND_SECRETS_PENDING_REVIEW"
   ],
   "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN",
   "current_C45_recovery": {
@@ -39,7 +40,7 @@
     "open_threads": 44,
     "history_preserved_C41": true,
     "not_operational": true,
-    "scope": "C45_POINTER_AND_SOURCE_INTEGRITY_ONLY"
+    "scope": "C45_POINTER_SOURCE_INTEGRITY_AND_ACTOR_THREAD_SEMANTIC_PARITY_NOT_FULL_HISTORICAL_D04_PASS"
   },
   "actor_scoped_current_projection": {
     "actors": 38,
@@ -49,14 +50,18 @@
     "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
     "nonoperational": true,
     "unknown_status_preserved": true,
-    "no_cross_actor_inference": true
+    "no_cross_actor_inference": true,
+    "semantic_parity": "47_EXACT_RECORDS_IN_38_OWNERS_CHECKED_AGAINST_MASTER_SOURCE",
+    "proof": "novydres/scripts/verificar-semantica-c45.mjs"
   },
   "open_threads_current_projection": {
     "entries": 44,
     "source_path": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
     "source_sha": "05ce76898d2757c1e270e9c3b1282712df123d13",
     "target_path": "novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json",
-    "nonoperational": true
+    "nonoperational": true,
+    "semantic_parity": "44_EXACT_THREAD_OBJECTS_CHECKED_AGAINST_MASTER_SOURCE",
+    "proof": "novydres/scripts/verificar-semantica-c45.mjs"
   },
   "current_C45_played_scene_projection": {
     "path": "novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json",

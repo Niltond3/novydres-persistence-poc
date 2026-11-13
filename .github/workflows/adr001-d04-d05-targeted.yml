@@ -7,6 +7,11 @@ on:
       - 'novydres/scripts/retomar-cronica.mjs'
       - 'novydres/scripts/testar-retomar-cronica.test.mjs'
       - 'novydres/scripts/testar-estado-d04.test.mjs'
+      - 'novydres/scripts/verificar-semantica-c45.mjs'
+      - 'novydres/scripts/testar-semantica-c45.test.mjs'
+      - 'novydres/cronicas/CHR-001/conhecimento/atores/**'
+      - 'novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json'
+      - 'novydres/sistema/arquitetura/fase-d/execucao-d04.json'
       - 'novydres/sistema/arquitetura/fase-d/execucao-d05.json'
   workflow_dispatch:
 permissions:
@@ -27,6 +32,8 @@ jobs:
         run: node --test novydres/scripts/testar-retomar-cronica.test.mjs
       - name: C45 state source and corruption negatives
         run: node --test novydres/scripts/testar-estado-d04.test.mjs
+      - name: Verify C45 actor-scoped facts and open threads against immutable source
+        run: node --test novydres/scripts/testar-semantica-c45.test.mjs
       - name: Verify grouped D05 evidence without enumerating originals
         run: |
           node --input-type=module <<'NODE'
