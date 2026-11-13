@@ -38,6 +38,18 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
     xpLocal.no_target_auto_purchase!==true||xpGlobal.operational_promotion!==false)
     err('D07_LOCAL_XP_SCOPE_OR_SOURCE_DRIFT');
  const live=sourceJson('novydres/chronicles/CHR-001/LIVE_v039.json');
+
+ const originalMechanical=sourceJson('novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json');
+ const localMechanical=read(root+'/configuracao/mecanica-c45.json');
+ if(localMechanical.subject_id!=='chr001-table-config'||
+    localMechanical.authority?.no_runtime_activation!==true||
+    JSON.stringify(localMechanical.source_distinctions)!==JSON.stringify(originalMechanical.distinctions)||
+    localMechanical.application?.grapple_provisional_bonus_dice!==1||
+    localMechanical.application?.target_dots_not_auto_purchased!==true||
+    localMechanical.application?.target_future_disciplines_unavailable_before_embrace!==true||
+    localMechanical.application?.historical_rolls_not_recomputed!==true)
+    err('D07_PROVISIONAL_MECHANICS_AUTHORITY_DRIFT');
+
  const playedScene=read(root+'/episodios/m302/fatos-c45.json');
  if(playedScene.subject_id!=='chr001-episode-m302'||playedScene.visibility!=='SYSTEM_AUDIT'||
     playedScene.status!=='CANDIDATE_C45_FACT_PROJECTION_NOT_OPERATIONAL'||
@@ -92,7 +104,7 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
  actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
- runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,story_activation_source_preserved:true,
+ runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,story_activation_source_preserved:true,provisional_mechanics_source_preserved:true,
  gate:'D07_NOT_YET_PASS'};
 }
 if(process.argv[1]?.endsWith('/revisar-independente-d07.mjs')){

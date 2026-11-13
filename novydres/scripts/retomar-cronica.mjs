@@ -2,6 +2,7 @@
 import {execFileSync} from 'node:child_process';
 import {buildCatalog,checkCatalog,readSelected} from './catalogo-assuntos.mjs';
 import {verifyD04State} from './verificar-estado-d04.mjs';
+import {verifyMechanics} from './verificar-mecanica-c45.mjs';
 const err=code=>{const e=new Error(code);e.code=code;throw e;};
 const obj=(root,catalog,id,path,sha,role)=>JSON.parse(readSelected(root,catalog,id,{
  snapshot_sha:sha,role,selected_paths:[path]
@@ -18,9 +19,12 @@ export function readC45Candidate({root=process.cwd(),snapshot_sha,role='AUDITOR'
  const t=obj(root,c,'chr001-open-threads-versions','novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json',head,role);
  const last=obj(root,c,'chr001-episode-m302','novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json',head,role);
  const story=obj(root,c,'chr001-runtime-story-architecture','novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json',head,role);
- const checked=verifyD04State();
- if(!checked.ok||s.operational!==false||s.cursor.last_event_id!==t.last_event_id||t.threads.length!==44)err('C45_RECOVERY_NOT_VERIFIED');
+ const mechanics=obj(root,c,'chr001-table-config','novydres/cronicas/CHR-001/configuracao/mecanica-c45.json',head,role);
+ const checked=verifyD04State(),checkedMechanics=verifyMechanics();
+ if(!checked.ok||!checkedMechanics.ok||s.operational!==false||s.cursor.last_event_id!==t.last_event_id||t.threads.length!==44)err('C45_RECOVERY_NOT_VERIFIED');
  if(last.last_event_id!==s.cursor.last_event_id || last.scene?.status!=='CLOSED'||last.scene?.last_event_id!==s.cursor.last_event_id||last.scene_starts_created!==0 || last.generated_transcript!==false)err('C45_SCENE_FACT_DRIFT');
+ if(mechanics.application?.target_future_disciplines_unavailable_before_embrace!==true||mechanics.authority?.no_runtime_activation!==true||
+    mechanics.current?.resources?.xp_spent!==s.resources.xp_spent)err('C45_MECHANICS_UNAPPROVED');
  if(story.c45_authority?.candidate_runtime_activation!==false||story.c45_authority?.last_confirmed_event_id!==s.cursor.last_event_id||story.boundaries?.gm_hidden_player_disclosure!==false||story.boundaries?.preparation_is_not_played_event!==true)err('C45_STORY_AUTHORITY_NOT_RECONCILED');
  const actorSubjects=c.subjects.filter(x=>x.id.startsWith('chr001-knowledge-npc-'));
  if(actorSubjects.length!==38)err('C45_ACTOR_SCOPE_INCOMPLETE');
@@ -35,7 +39,8 @@ export function readC45Candidate({root=process.cwd(),snapshot_sha,role='AUDITOR'
  }
  return {status:'CANDIDATE_NON_OPERATIONAL',snapshot_sha:head,source_commit:s.source_commit,
   cursor:s.cursor,resources:s.resources,last_scene:last.scene,actor_subjects:actorSubjects.length,open_threads:t.threads.length,
-  actor,story_authority:{activation:'SOURCE_V004_V018_BASE_V019_PROSPECTIVE',candidate_runtime_activation:false},write_authorized:false,next:'E02_SPECIFIC_APPROVAL_REQUIRED'};
+  actor,story_authority:{activation:'SOURCE_V004_V018_BASE_V019_PROSPECTIVE',candidate_runtime_activation:false},
+  local_mechanics:{source:'DEC-CR-019_TARGET_V2_PROVISIONAL_ONLY',grapple_bonus_dice:1,future_powers_active:false},write_authorized:false,next:'E02_SPECIFIC_APPROVAL_REQUIRED'};
 }
 if(process.argv[1]?.endsWith('/retomar-cronica.mjs'))
  console.log(JSON.stringify(readC45Candidate({snapshot_sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim()})));

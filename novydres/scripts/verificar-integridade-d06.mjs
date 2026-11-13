@@ -7,6 +7,7 @@ import {verifyD04Custody} from './verificar-custodia-d04.mjs';
 import {verifyD05} from './verificar-consumidores-d05.mjs';
 import {verifyXP} from './verificar-escopo-xp.mjs';
 import {verifyStoryAuthority} from './verificar-autoridade-c45.mjs';
+import {verifyMechanics} from './verificar-mecanica-c45.mjs';
 import {auditRepository} from './auditar-legado-e-fontes.mjs';
 const INVENTORY='novydres/sistema/arquitetura/fase-d/inventario-origens.json';
 const D05='novydres/sistema/arquitetura/fase-d/execucao-d05.json';
@@ -43,9 +44,9 @@ export function verifyD06({ledgerOverride=null}={}){
  if(retainedD05.length!==285||retainedD05.some(x=>![...tree.values()].includes(x.original_git_blob_sha)))err('D05_EXACT_SOURCE_LOST');
  const beforeCutover=out.source_records.filter(x=>x.active_original_reference===true);
  if(beforeCutover.length!==121)err('D05_ACTIVE_REFERENCE_COUNT_DRIFT');
- const cat=checkCatalog(),d04=verifyD04Custody(),state=verifyD04State(),d05=verifyD05(),xp=verifyXP(),story=verifyStoryAuthority(),zero=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL',expected_head:head});
+ const cat=checkCatalog(),d04=verifyD04Custody(),state=verifyD04State(),d05=verifyD05(),xp=verifyXP(),story=verifyStoryAuthority(),mechanics=verifyMechanics(),zero=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL',expected_head:head});
  if(d05.exact_blobs_inert!==285||d05.historical_git_only!==114||d05.active_source_successions_unproven!==121)err('D06_D05_CROSSCHECK_FAILED');
- if(!cat.ok||!d04.ok||!state.ok||!xp.ok||!story.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
+ if(!cat.ok||!d04.ok||!state.ok||!xp.ok||!story.ok||!mechanics.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
  if(zero.gate==='ZERO_LEGACY_BLOCKED')err('D06_ZERO_LEGACY_FAIL');
  return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,
   git_only_historical_sources:114,active_successions_requiring_contextual_semantic_review:121,
@@ -54,6 +55,8 @@ export function verifyD06({ledgerOverride=null}={}){
   xp_local_owner:'chr001-state-checkpoint',xp_current:xp.current,
   authorial_source_precedence:story.approval_chain,
   candidate_story_activation:false,
+  mechanical_scope_source:mechanics.source_commit,
+  approved_grapple_provisional_bonus_dice:mechanics.local_bonus_dice,
   direct_cycle_references_pending:d05.cycle_direct_functional_review_pending,
   manifest_only_references_pending:d05.manifest_only_not_proven_inactive,structural:'PASS_SCOPED',
   editorial:'PENDING_INDEPENDENT_EQUIVALENCE_REVIEW',

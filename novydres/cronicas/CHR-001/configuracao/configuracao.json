@@ -20,10 +20,11 @@
   },
   "mechanics": {
     "ruleset": "V5_AUTHORIZED_SOURCES_REQUIRED",
-    "local_exceptions": "MUST_RESOLVE_FROM_PINNED_OPERATIONAL_AUTHORITIES",
+    "local_exceptions": "SOURCE_BACKED_C45_MECHANICS_SCOPE_IN_mecanica-c45.json",
     "current_sheet_not_certified": true,
     "xp_willpower": "MATERIAL_EFFECTS_MUST_MATCH_CURRENT_AUTHORITATIVE_SNAPSHOT",
-    "dice_faces_logging_required": false
+    "dice_faces_logging_required": false,
+    "rule_source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
   },
   "persistence": {
     "cadence": "ONE_TRANSACTION_PER_NARRATED_RESPONSE_AFTER_E",
@@ -35,10 +36,14 @@
     "current_master": "C45_DISTINCT_NOT_MERGED"
   },
   "unresolved": [
-    "MECHANICAL_V5_GATES_FROM_A04",
     "CANON_OR_APPROVAL_CONFLICTS_FROM_A01",
-    "CURRENT_CURSOR_RECONCILIATION_IN_D",
-    "EXTERNAL_MIGRATION_MEDIA_PENDING"
+    "EXTERNAL_MIGRATION_MEDIA_PENDING",
+    "FULL_NARRATIVE_MECHANICAL_BEHAVIOR_AND_EDITORIAL_REVIEW_PENDING"
   ],
-  "no_campaign_events_created": true
+  "no_campaign_events_created": true,
+  "resolved_candidate_gaps": {
+    "mechanical_pins": "mecanica-c45.json",
+    "current_state_pins": "chr001-state-checkpoint/recuperacao-c45.json",
+    "no_runtime_activation": true
+  }
 }
