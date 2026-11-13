@@ -53,22 +53,25 @@ jobs:
             novydres/scripts/testar-lotes-historicos-d04.test.mjs
       - name: Verify C45 actor-scoped facts and open threads against immutable source
         run: node --test novydres/scripts/testar-semantica-c45.test.mjs
-      - name: Verify per-reference D05 verdict classification and false-PASS negatives
+      - name: Verify per-reference D05 verdict classification and unauthorized-PASS negatives
         run: node --test novydres/scripts/testar-vereditos-d05.test.mjs
-      - name: Verify grouped D05 evidence without enumerating originals
+      - name: Verify owner-accepted D05 gate and grouped evidence without fabricating equivalence
         run: |
           node --input-type=module <<'NODE'
           import {readFileSync} from 'node:fs';
           import assert from 'node:assert/strict';
           const d=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/execucao-d05.json','utf8'));
           const f=d.functional_review_by_successor;
-          assert.equal(f.status,'PARTIAL_CONTEXTUAL_TRIAGE_NOT_A_BEHAVIORAL_PASS');
+          assert.equal(d.gate,'D05_PASS');
+          assert.equal(d.owner_risk_acceptance.decision,'D04_D05_PASS_REQUESTED_2026_11_13');
+          assert.equal(f.status,'OWNER_ACCEPTED_GROUPED_TRIAGE_WITH_119_UNPROVEN_BEHAVIORAL_REFERENCES');
           assert.equal(f.grouped_results.length,9);
           assert.equal(f.reviewed_reference_rows,121);
           assert.equal(f.behavioral_equivalence_approved,0);
-          assert.equal(f.is_d05_pass,false);
+          assert.equal(f.is_d05_pass,true);
+          assert.equal(f.per_reference_verdicts.blocked,119);
           assert.equal(f.grouped_results.reduce((n,x)=>n+x.cycle_direct,0),48);
           assert.equal(f.grouped_results.reduce((n,x)=>n+x.manifest_only,0),73);
           assert.equal(f.grouped_results.reduce((n,x)=>n+x.reference_count,0),121);
-          console.log('D05 grouped provenance 121/121 accounted; behavioral equivalence intentionally pending');
+          console.log('D05 owner-accepted PASS: 121 references grouped, 119 behavioral equivalents still unproven');
           NODE
