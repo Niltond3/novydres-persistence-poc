@@ -46,3 +46,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-016.md` registra oferta condicional de ajuda e resposta autônoma e limitada de Rada sobre o propósito da procura; cursor `../../estado/recuperacao-c61.json`. C02 aberta; informações alegadas não são fatos externos.
 
 `c02-interacao-017.md` registra o intervalo pedido pelo PJ e a ligação pessoal a Pavel, que ainda não recebeu informações sobre Rada; cursor `../../estado/recuperacao-c62.json`. C02 aberta.
+
+`c02-interacao-018.md` preserva a pergunta sobre OS de desativação a Pavel, sem data, e a exigência dele de esclarecer o propósito. Cursor `../../estado/recuperacao-c63.json`; C02 aberta, sem consulta concluída.
