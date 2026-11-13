@@ -18,3 +18,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-002.md` registra a pergunta desconfiada de Bartolomeu e a resposta cautelosa da mulher. Estado correspondente: `../../estado/recuperacao-c47.json`. C02 continua aberta.
 
 `c02-interacao-003.md` registra a afirmação do PJ de que trabalhou nos ramais e a resposta da NPC; cursor `../../estado/recuperacao-c48.json`, sem testes nem alteração de XP/FV.
+
+`c02-interacao-004.md` registra os nomes fornecidos por Bartolomeu e a resposta da mulher que se apresentou como Rada; cursor `../../estado/recuperacao-c49.json`. C02 aberta, sem teste ou mudança de recursos.
