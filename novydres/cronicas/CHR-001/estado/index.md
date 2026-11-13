@@ -10,3 +10,7 @@ visibility: SYSTEM_AUDIT
 C41 permanece em `atual.json` exclusivamente como fixture histórica de B/C. `recuperacao-c45.json` é um retrato candidato não operacional do cursor C45, com fontes fixadas no commit de master; a execução e a readback são verificadas por `verificar-estado-d04.mjs`. Não confundir o snapshot com autorização de cena ou migração semântica final. Fontes em `assunto.json`.
 
 A projeção temporal `xp-autoridade-c45.json` preserva a diferença entre política inicial (170 XP gastos), envelope histórico V3 (270) e LIVE atual C45 (270), sem converter orçamento ou créditos em novo prêmio. Valores 675/270/405/0 permanecem locais e não são regra genérica.
+
+## Continuidade operacional pós-E03
+
+O registro histórico C45 permanece intacto. O cursor corrente da CHR-001, após autorização narrativa expressa de 13/11/2026, é `recuperacao-c46.json`: M3.02.C02 aberta, aguardando decisão do jogador. A prosa integral da abertura está em `../episodios/m302/c02-abertura-001.md`. O gateway E03 preserva o estado da ativação técnica; não substitui este cursor posterior. Em respostas seguintes, atualizar o ponteiro explicitamente e preservar os registros anteriores.

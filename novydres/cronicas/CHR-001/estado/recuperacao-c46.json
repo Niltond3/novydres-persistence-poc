@@ -1,0 +1,67 @@
+{
+  "subject_id": "chr001-state-checkpoint",
+  "schema": "NOVYDRES_GIT_NATIVE_CHR001_CURSOR_V1",
+  "status": "OPERATIONAL_AUTHORIZED_SCENE_OPEN",
+  "visibility": "SYSTEM_AUDIT",
+  "tx_id": "tx-chr001-m302-c02-open-20261113-001",
+  "expected_parent_sha": "a22268a842452ea792eb2c7c6458b320e8058e30",
+  "source_checkpoint_path": "novydres/cronicas/CHR-001/estado/recuperacao-c45.json",
+  "source_scene_path": "novydres/cronicas/CHR-001/episodios/m302/fonte-001.source.txt",
+  "source_preparation_subject": "chr001-preparation-m302",
+  "source_preparation_files": [
+    "fonte-006.source.json",
+    "fonte-015.source.json"
+  ],
+  "narrative_path": "novydres/cronicas/CHR-001/episodios/m302/c02-abertura-001.md",
+  "last_event_id": "CHR001-M302-C02-01-20261113-001",
+  "previous_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "cursor": {
+    "provocation": "M3.02",
+    "last_closed_scene": "C01",
+    "current_scene": "C02",
+    "current_scene_status": "OPEN_AWAITING_PLAYER",
+    "next_role": "PLAYER",
+    "mortal": true,
+    "embrace_occurred": false,
+    "diegetic_year": 1970,
+    "diegetic_civil_date": null,
+    "elapsed_since_c01": "NONE_ASSERTED"
+  },
+  "scene": {
+    "event_type": "SCENE_OPENING",
+    "player_choice_assumed": false,
+    "rolls": 0,
+    "confirmed": [
+      "C01 access remains open with beam against wall",
+      "A previously unseen woman approached the public workshop frontage and inquired about people familiar with old municipal heating branches",
+      "Woman did not enter or identify herself, did not leave a message or invitation"
+    ],
+    "unknown": [
+      "Woman identity and actual motivation to PC",
+      "Whether woman finds her sought contact",
+      "Box Y.B. current position, contents, opening, or conversation with Mary"
+    ],
+    "npc_information_limit": "INQUIRY_ONLY_NO_VERIFIED_TARGET_NAME_OR_WORKPLACE",
+    "hidden_prep_not_pc_knowledge": true
+  },
+  "resources": {
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_remaining": 405,
+    "xp_credit_available": 0,
+    "willpower_provisional_max": 6,
+    "willpower_superficial_damage": 2,
+    "willpower_aggravated_damage": 0,
+    "willpower_available": 4
+  },
+  "preserved": {
+    "open_threads": 44,
+    "actor_scopes": 38,
+    "actor_records": 47,
+    "original_c45_immutable": true,
+    "original_c01_immutable": true,
+    "no_earned_xp_or_fv_change": true,
+    "no_new_character_purchase": true
+  },
+  "chronicle_started": true
+}
