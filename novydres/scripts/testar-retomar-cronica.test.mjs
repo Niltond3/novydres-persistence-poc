@@ -35,3 +35,11 @@ test('C45 scene facts retain explicit unknowns and no invented future event',()=
  assert.equal(x.last_scene.unknown.length,4);
  assert.equal(x.cursor.next_scene,'C02');
 });
+
+test('C45 historical range lookup is exact and access-scoped, no fabricated ledger',()=>{
+ const x=readC45Candidate({snapshot_sha:sha,history_batch:1});
+ assert.equal(x.history_batch.ordinal,1);
+ assert.equal(x.history_batch.representation,'ORIGINAL_DIARY_NOT_AUDITED_LEDGER');
+ assert.equal(x.historical_index_coverage,'PARTIAL_SOURCE_BACKED_27_BATCHES');
+ assert.throws(()=>readC45Candidate({snapshot_sha:sha,history_batch:28}),{code:'HISTORY_BATCH_NOT_FOUND'});
+});

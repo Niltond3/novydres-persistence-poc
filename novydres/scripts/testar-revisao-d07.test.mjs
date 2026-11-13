@@ -12,6 +12,7 @@ test('D07 independently checks 47 records across 38 actors and 44 threads',()=>{
  assert.equal(x.xp_field_owner_preserved,true);
  assert.equal(x.story_activation_source_preserved,true);
  assert.equal(x.provisional_mechanics_source_preserved,true);
+ assert.equal(x.history_batches_source_preserved,27);
  assert.equal(x.gate,'D07_NOT_YET_PASS');
 });
 test('D07 independently rejects fabrication in an actor history',()=>{
@@ -35,4 +36,10 @@ test('D07 rejects invented authorial activation and hidden source exposure',()=>
  const s=JSON.parse(readFileSync('novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json','utf8'));
  s.c45_authority.candidate_runtime_activation=true;
  assert.throws(()=>reviewD07({storyOverride:s}),{code:'D07_STORY_AUTHORITY_SOURCE_MISMATCH'});
+});
+
+test('D07 rejects invented history or claim of complete historical ledger',()=>{
+ const a=JSON.parse(readFileSync('novydres/cronicas/CHR-001/historico/history-index/lotes-c45.json','utf8'));
+ a.source_rows[0].episode_range='INVENTED';
+ assert.throws(()=>reviewD07({historyOverride:a}),{code:'D07_HISTORICAL_BATCH_MISMATCH'});
 });

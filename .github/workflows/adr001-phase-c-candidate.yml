@@ -33,6 +33,8 @@ jobs:
         run: node --test novydres/scripts/testar-autoridade-c45.test.mjs
       - name: D03 D04 XP scope, historical temporal ownership and anti-credit negatives
         run: node --test novydres/scripts/testar-escopo-xp.test.mjs
+      - name: D04 27 historical batches exact source routing and incomplete ledger negatives
+        run: node --test novydres/scripts/testar-lotes-historicos-d04.test.mjs
       - name: D04 mechanics source approved grapple and provisional test traits without XP or new powers
         run: node --test novydres/scripts/testar-mecanica-c45.test.mjs
       - name: D05 complete 399-consumer source custody and 121 unapproved successor crosswalk

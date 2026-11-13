@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "a22e62a4f40645b2b6ed4db838c98bc3fb464dfa",
+  "content_index_sha": "f8f366e7eca45651fdf4617c91e55a712177a1a4",
   "subjects": [
     {
       "id": "chr001-administrative-milestones",
@@ -873,12 +873,18 @@
       "owner": "novydres/cronicas/CHR-001/historico",
       "path": "novydres/cronicas/CHR-001/historico/history-index",
       "visibility": "SYSTEM_AUDIT",
-      "dependencies": [],
+      "dependencies": [
+        "chr001-character-state-versions",
+        "chr001-episode-m203",
+        "chr001-episode-m204",
+        "chr001-episode-m301",
+        "chr001-episode-m302"
+      ],
       "source_ids": [],
       "files": [
         {
           "path": "novydres/cronicas/CHR-001/historico/history-index/assunto.json",
-          "blob_sha": "4dff398d722bf2f2476dd1f420fb9fdad894493a"
+          "blob_sha": "03ba39d8489cbfc535f790c5d94ed0ecb7c2c279"
         },
         {
           "path": "novydres/cronicas/CHR-001/historico/history-index/fonte-001.source.json",
@@ -1038,7 +1044,11 @@
         },
         {
           "path": "novydres/cronicas/CHR-001/historico/history-index/index.md",
-          "blob_sha": "7c86d0f00f8608f74c9807932a8ea8884e099dd0"
+          "blob_sha": "d9946826c9f1359e0387a885bc7704624946c7c0"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/historico/history-index/lotes-c45.json",
+          "blob_sha": "f8cbd963ef5f67f5a25d0f27ea5fdd5b941a67d7"
         },
         {
           "path": "novydres/cronicas/CHR-001/historico/history-index/registro.json",
@@ -6918,7 +6928,9 @@
   ],
   "inverse_dependencies": {
     "chr001-administrative-milestones": [],
-    "chr001-character-state-versions": [],
+    "chr001-character-state-versions": [
+      "chr001-historic-history-index"
+    ],
     "chr001-character-target-choices": [],
     "chr001-character-technical-projections": [],
     "chr001-chronicle-recovery": [],
@@ -6926,10 +6938,18 @@
     "chr001-disposition-governance": [],
     "chr001-disposition-state-history": [],
     "chr001-episode-m1": [],
-    "chr001-episode-m203": [],
-    "chr001-episode-m204": [],
-    "chr001-episode-m301": [],
-    "chr001-episode-m302": [],
+    "chr001-episode-m203": [
+      "chr001-historic-history-index"
+    ],
+    "chr001-episode-m204": [
+      "chr001-historic-history-index"
+    ],
+    "chr001-episode-m301": [
+      "chr001-historic-history-index"
+    ],
+    "chr001-episode-m302": [
+      "chr001-historic-history-index"
+    ],
     "chr001-historic-history-index": [],
     "chr001-historic-live": [],
     "chr001-historical-audits": [],

@@ -8,9 +8,26 @@ const err=c=>{const e=new Error(c);e.code=c;throw e;};
 const git=(...a)=>execFileSync('git',a,{encoding:'utf8',maxBuffer:16*1024*1024}).trim();
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const sourceJson=p=>JSON.parse(git('show',source+':'+p));
-export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride=null,storyOverride=null}={}){
+export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride=null,storyOverride=null,historyOverride=null}={}){
  const head=git('rev-parse','HEAD'),catalog=buildCatalog();
  const original=sourceJson('novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json');
+ const originalIndex=sourceJson('novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json');
+ const history=historyOverride||read(root+'/historico/history-index/lotes-c45.json');
+ const batches=history.source_rows||[];
+ if(history.subject_id!=='chr001-historic-history-index'||
+    history.index_coverage!==originalIndex.index_coverage||
+    history.last_event_id!==originalIndex.last_event_id||
+    history.no_claim_of_complete_history_index!==true||
+    batches.length!==originalIndex.history_batches.length||
+    batches.length!==27||
+    batches.some((r,i)=>r.ordinal!==i+1||
+       r.original_path!==originalIndex.history_batches[i].path||
+       r.episode_range!==originalIndex.history_batches[i].episode_range||
+       r.provenance!==originalIndex.history_batches[i].provenance||
+       r.candidate_sha!==r.original_sha||
+       r.not_automatic_fact_authority!==true))
+    err('D07_HISTORICAL_BATCH_MISMATCH');
+
  const authorial=storyOverride||read(root+'/documentos/proveniencia-arquitetura/autoridade-c45.json');
  const activation=sourceJson('novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json');
  const originalCycle=sourceJson('novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json');
@@ -104,7 +121,7 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
  actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
- runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,story_activation_source_preserved:true,provisional_mechanics_source_preserved:true,
+ runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,story_activation_source_preserved:true,provisional_mechanics_source_preserved:true,history_batches_source_preserved:27,
  gate:'D07_NOT_YET_PASS'};
 }
 if(process.argv[1]?.endsWith('/revisar-independente-d07.mjs')){
