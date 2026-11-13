@@ -10,6 +10,7 @@ test('D07 independently checks 47 records across 38 actors and 44 threads',()=>{
  assert.equal(x.scene_facts_exact,true);
  assert.equal(x.active_runtime_successions_unproven,121);
  assert.equal(x.xp_field_owner_preserved,true);
+ assert.equal(x.story_activation_source_preserved,true);
  assert.equal(x.gate,'D07_NOT_YET_PASS');
 });
 test('D07 independently rejects fabrication in an actor history',()=>{
@@ -27,4 +28,10 @@ test('D07 independently refuses a forged consumer succession pass',()=>{
  const x=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/execucao-d05.json','utf8'));
  x.source_records.find(r=>r.active_original_reference).semantic_equivalence='CONFIRMED';
  assert.throws(()=>reviewD07({ledgerOverride:x}),{code:'D07_RUNTIME_SUCCESSION_NOT_PROVEN'});
+});
+
+test('D07 rejects invented authorial activation and hidden source exposure',()=>{
+ const s=JSON.parse(readFileSync('novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json','utf8'));
+ s.c45_authority.candidate_runtime_activation=true;
+ assert.throws(()=>reviewD07({storyOverride:s}),{code:'D07_STORY_AUTHORITY_SOURCE_MISMATCH'});
 });

@@ -29,6 +29,8 @@ jobs:
         run: node --test novydres/scripts/testar-custodia-d04.test.mjs
       - name: C45 current state and actors negative tests
         run: node --test novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: D04 authorized V018 truth and C45 prospective V019 pin lineage with denial tests
+        run: node --test novydres/scripts/testar-autoridade-c45.test.mjs
       - name: D03 D04 XP scope, historical temporal ownership and anti-credit negatives
         run: node --test novydres/scripts/testar-escopo-xp.test.mjs
       - name: D05 complete 399-consumer source custody and 121 unapproved successor crosswalk

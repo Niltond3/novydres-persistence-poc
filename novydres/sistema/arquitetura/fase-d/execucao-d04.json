@@ -82,5 +82,19 @@
     "proof": "novydres/scripts/verificar-escopo-xp.mjs",
     "technical_gate": "PENDING_CI",
     "editorial_status": "NO_NEW_XP_FV_GRANTED"
+  },
+  "current_c45_authorial_precedence": {
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "STAGED_ORIGINAL_ACTIVATION_AND_C45_PROSPECTIVE_OVERLAY_NOT_RUNTIME",
+    "owner": "chr001-runtime-story-architecture",
+    "source": "novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json",
+    "source_activation": "D07_V004_RECORDED_ACTIVE_V018_BASE",
+    "current_cycle_overlay": "D07_V019_PROSPECTIVE_SCOPE_ONLY",
+    "conditions": "CI_AND_C45_NARRATOR_PROMPT_AND_E02_APPROVAL_REQUIRED",
+    "proof": "novydres/scripts/verificar-autoridade-c45.mjs",
+    "GM_HIDDEN_sources_not_public": true,
+    "original_truth_sources_untouched": true,
+    "editorial_decisions_not_reopened": true,
+    "gate": "PENDING_CI_AND_CONTEXTUAL_FUNCTIONAL_REVIEW"
   }
 }

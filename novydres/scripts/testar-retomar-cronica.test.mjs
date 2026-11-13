@@ -7,6 +7,7 @@ test('D05 read C45 without promoting historical C41',()=>{
  const x=readC45Candidate({snapshot_sha:sha});
  assert.equal(x.cursor.last_event_id,'CHR001-M302-C01-05-20261111-001');
  assert.equal(x.actor_subjects,38);
+ assert.equal(x.story_authority.candidate_runtime_activation,false);
  assert.equal(x.open_threads,44);
  assert.equal(x.resources.xp_spent,270);
  assert.equal(x.status,'CANDIDATE_NON_OPERATIONAL');

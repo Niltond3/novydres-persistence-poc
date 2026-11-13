@@ -8,9 +8,25 @@ const err=c=>{const e=new Error(c);e.code=c;throw e;};
 const git=(...a)=>execFileSync('git',a,{encoding:'utf8',maxBuffer:16*1024*1024}).trim();
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const sourceJson=p=>JSON.parse(git('show',source+':'+p));
-export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride=null}={}){
+export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride=null,storyOverride=null}={}){
  const head=git('rev-parse','HEAD'),catalog=buildCatalog();
  const original=sourceJson('novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json');
+ const authorial=storyOverride||read(root+'/documentos/proveniencia-arquitetura/autoridade-c45.json');
+ const activation=sourceJson('novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json');
+ const originalCycle=sourceJson('novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json');
+ const A=authorial.source_refs||[];
+ const get=(suffix)=>A.find(x=>x.id?.endsWith('/'+suffix));
+ if(A.length!==6||authorial.subject_id!=='chr001-runtime-story-architecture'||
+    authorial.visibility!=='SYSTEM_AUDIT'||
+    authorial.c45_authority?.candidate_runtime_activation!==false||
+    authorial.boundaries?.gm_hidden_player_disclosure!==false||
+    authorial.boundaries?.V018_activation_record_not_silently_rewritten_to_V019!==true||
+    activation.truth_package_ref?.blob_sha!=='537c4260c1d024cea144511596a9b54599b737b8'||
+    originalCycle.activation.truth_package?.blob_sha!=='105e4fca581e10ce28d85133c40bd5237d68cfb4'||
+    get('D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md')?.sha!==activation.truth_package_ref.blob_sha||
+    get('D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md')?.sha!==originalCycle.activation.truth_package.blob_sha)
+    err('D07_STORY_AUTHORITY_SOURCE_MISMATCH');
+
  const threads=sourceJson('novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json');
  const xpEnv=sourceJson('novydres/runtime/xp/XP_ENVELOPE_V3.json');
  const xpLocal=read(root+'/estado/xp-autoridade-c45.json');
@@ -76,7 +92,7 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
  actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
- runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,
+ runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,story_activation_source_preserved:true,
  gate:'D07_NOT_YET_PASS'};
 }
 if(process.argv[1]?.endsWith('/revisar-independente-d07.mjs')){

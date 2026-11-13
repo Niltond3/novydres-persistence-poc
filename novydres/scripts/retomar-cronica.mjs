@@ -17,9 +17,11 @@ export function readC45Candidate({root=process.cwd(),snapshot_sha,role='AUDITOR'
  const s=obj(root,c,'chr001-state-checkpoint','novydres/cronicas/CHR-001/estado/recuperacao-c45.json',head,role);
  const t=obj(root,c,'chr001-open-threads-versions','novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json',head,role);
  const last=obj(root,c,'chr001-episode-m302','novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json',head,role);
+ const story=obj(root,c,'chr001-runtime-story-architecture','novydres/cronicas/CHR-001/documentos/proveniencia-arquitetura/autoridade-c45.json',head,role);
  const checked=verifyD04State();
  if(!checked.ok||s.operational!==false||s.cursor.last_event_id!==t.last_event_id||t.threads.length!==44)err('C45_RECOVERY_NOT_VERIFIED');
  if(last.last_event_id!==s.cursor.last_event_id || last.scene?.status!=='CLOSED'||last.scene?.last_event_id!==s.cursor.last_event_id||last.scene_starts_created!==0 || last.generated_transcript!==false)err('C45_SCENE_FACT_DRIFT');
+ if(story.c45_authority?.candidate_runtime_activation!==false||story.c45_authority?.last_confirmed_event_id!==s.cursor.last_event_id||story.boundaries?.gm_hidden_player_disclosure!==false||story.boundaries?.preparation_is_not_played_event!==true)err('C45_STORY_AUTHORITY_NOT_RECONCILED');
  const actorSubjects=c.subjects.filter(x=>x.id.startsWith('chr001-knowledge-npc-'));
  if(actorSubjects.length!==38)err('C45_ACTOR_SCOPE_INCOMPLETE');
  let actor=null;
@@ -33,7 +35,7 @@ export function readC45Candidate({root=process.cwd(),snapshot_sha,role='AUDITOR'
  }
  return {status:'CANDIDATE_NON_OPERATIONAL',snapshot_sha:head,source_commit:s.source_commit,
   cursor:s.cursor,resources:s.resources,last_scene:last.scene,actor_subjects:actorSubjects.length,open_threads:t.threads.length,
-  actor,write_authorized:false,next:'E02_SPECIFIC_APPROVAL_REQUIRED'};
+  actor,story_authority:{activation:'SOURCE_V004_V018_BASE_V019_PROSPECTIVE',candidate_runtime_activation:false},write_authorized:false,next:'E02_SPECIFIC_APPROVAL_REQUIRED'};
 }
 if(process.argv[1]?.endsWith('/retomar-cronica.mjs'))
  console.log(JSON.stringify(readC45Candidate({snapshot_sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim()})));
