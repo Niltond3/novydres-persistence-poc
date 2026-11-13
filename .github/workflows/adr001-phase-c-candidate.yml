@@ -47,3 +47,21 @@ jobs:
         run: node novydres/scripts/verificar-integridade-d06.mjs --require-pass
       - name: D07 final independent gate
         run: node novydres/scripts/revisar-independente-d07.mjs --require-pass
+
+  remote-transaction-proof:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Real remote Git CAS readback concurrency idempotence and lost ack on disposable ref only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node --test novydres/scripts/testar-transacao-git.test.mjs
