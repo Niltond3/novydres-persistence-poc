@@ -4005,5 +4005,15 @@
   "no_canon_frozen_material_rewritten": true,
   "unproven_semantic_successions": "ALL_CURRENTLY_OPERATIVE_REFERENCE_ROWS_REQUIRE_INDEPENDENT_VERIFICATION",
   "no_runtime_activation": true,
-  "no_master_change": true
+  "no_master_change": true,
+  "proof": {
+    "script": "novydres/scripts/verificar-consumidores-d05.mjs",
+    "tests": "novydres/scripts/testar-consumidores-d05.test.mjs",
+    "source_origins": 399,
+    "exact_runtime_bytes": 285,
+    "git_history_only": 114,
+    "active_handoffs_to_review": 121,
+    "proof_limit": "SOURCE_AND_TARGET_CUSTODY_NO_BEHAVIORAL_EQUIVALENCE",
+    "gate": "D05_CUSTODY_PASS_BEHAVIORAL_GATE_PENDING"
+  }
 }

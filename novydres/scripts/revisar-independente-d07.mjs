@@ -8,7 +8,7 @@ const err=c=>{const e=new Error(c);e.code=c;throw e;};
 const git=(...a)=>execFileSync('git',a,{encoding:'utf8',maxBuffer:16*1024*1024}).trim();
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const sourceJson=p=>JSON.parse(git('show',source+':'+p));
-export function reviewD07({actorOverride=null,threadOverride=null}={}){
+export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride=null}={}){
  const head=git('rev-parse','HEAD'),catalog=buildCatalog();
  const original=sourceJson('novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json');
  const threads=sourceJson('novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json');
@@ -20,6 +20,18 @@ export function reviewD07({actorOverride=null,threadOverride=null}={}){
     playedScene.last_event_id!==live.last_confirmed_event_id||playedScene.generated_transcript!==false)
     err('D07_SCENE_SEMANTIC_REWRITE');
  const out=threadOverride||read(root+'/tramas/abertas/atual-c45.json');
+ const d05=ledgerOverride||read('novydres/sistema/arquitetura/fase-d/execucao-d05.json');
+ const current=git('ls-tree','-r','--full-tree','HEAD').split('\n').filter(Boolean).map(x=>x.split('\t')[1]);
+ if(current.some(p=>/^(?:novydres\/(?:runtime|chronicles|world|governance|systems|migration)\/|poc\/)/.test(p))||
+    !['novydres/AGENTS.md','novydres/CONTEXT.md','novydres/catalogo.json'].every(p=>current.includes(p)))
+    err('D07_OLD_ENTRY_OR_ROUTE');
+ const recs=d05.source_records;
+ if(recs?.length!==399||d05.source_count!==399||
+    recs.filter(x=>x.retirement_method==='EXACT_INERT_SOURCE_BLOB_REHOMED').length!==285||
+    recs.filter(x=>x.active_original_reference===true).length!==121||
+    recs.some(x=>x.active_original_reference===true&&x.semantic_equivalence!=='NOT_YET_PROVEN'))
+    err('D07_RUNTIME_SUCCESSION_NOT_PROVEN');
+
  if(out.subject_id!=='chr001-open-threads-versions'||out.visibility!=='SYSTEM_AUDIT'||
     JSON.stringify(out.threads)!==JSON.stringify(threads.threads)||out.last_event_id!==threads.last_event_id)
     err('D07_THREADS_SEMANTIC_REWRITE');
@@ -55,7 +67,7 @@ export function reviewD07({actorOverride=null,threadOverride=null}={}){
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
  actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
- runtime_semantic_review:'PENDING',
+ runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,
  gate:'D07_NOT_YET_PASS'};
 }
 if(process.argv[1]?.endsWith('/revisar-independente-d07.mjs')){

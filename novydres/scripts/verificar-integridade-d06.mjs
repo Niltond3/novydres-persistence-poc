@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {checkCatalog} from './catalogo-assuntos.mjs';
 import {verifyD04State} from './verificar-estado-d04.mjs';
 import {verifyD04Custody} from './verificar-custodia-d04.mjs';
+import {verifyD05} from './verificar-consumidores-d05.mjs';
 import {auditRepository} from './auditar-legado-e-fontes.mjs';
 const INVENTORY='novydres/sistema/arquitetura/fase-d/inventario-origens.json';
 const D05='novydres/sistema/arquitetura/fase-d/execucao-d05.json';
@@ -40,7 +41,8 @@ export function verifyD06({ledgerOverride=null}={}){
  if(retainedD05.length!==285||retainedD05.some(x=>![...tree.values()].includes(x.original_git_blob_sha)))err('D05_EXACT_SOURCE_LOST');
  const beforeCutover=out.source_records.filter(x=>x.active_original_reference===true);
  if(beforeCutover.length!==121)err('D05_ACTIVE_REFERENCE_COUNT_DRIFT');
- const cat=checkCatalog(),d04=verifyD04Custody(),state=verifyD04State(),zero=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL',expected_head:head});
+ const cat=checkCatalog(),d04=verifyD04Custody(),state=verifyD04State(),d05=verifyD05(),zero=auditRepository(process.cwd(),{mode:'ZERO_LEGACY_FINAL',expected_head:head});
+ if(d05.exact_blobs_inert!==285||d05.historical_git_only!==114||d05.active_source_successions_unproven!==121)err('D06_D05_CROSSCHECK_FAILED');
  if(!cat.ok||!d04.ok||!state.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
  if(zero.gate==='ZERO_LEGACY_BLOCKED')err('D06_ZERO_LEGACY_FAIL');
  return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,

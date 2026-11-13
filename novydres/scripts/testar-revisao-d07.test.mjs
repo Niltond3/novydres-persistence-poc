@@ -8,6 +8,7 @@ test('D07 independently checks 47 records across 38 actors and 44 threads',()=>{
  assert.equal(x.actor_rows_exact,47);
  assert.equal(x.actor_scopes,38);
  assert.equal(x.scene_facts_exact,true);
+ assert.equal(x.active_runtime_successions_unproven,121);
  assert.equal(x.gate,'D07_NOT_YET_PASS');
 });
 test('D07 independently rejects fabrication in an actor history',()=>{
@@ -19,4 +20,10 @@ test('D07 rejects a changed unresolved thread as equivalent',()=>{
  const t=JSON.parse(readFileSync(root+'tramas/abertas/atual-c45.json','utf8'));
  t.threads.pop();
  assert.throws(()=>reviewD07({threadOverride:t}),{code:'D07_THREADS_SEMANTIC_REWRITE'});
+});
+
+test('D07 independently refuses a forged consumer succession pass',()=>{
+ const x=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/execucao-d05.json','utf8'));
+ x.source_records.find(r=>r.active_original_reference).semantic_equivalence='CONFIRMED';
+ assert.throws(()=>reviewD07({ledgerOverride:x}),{code:'D07_RUNTIME_SUCCESSION_NOT_PROVEN'});
 });
