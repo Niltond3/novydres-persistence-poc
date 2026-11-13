@@ -24,3 +24,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-005.md` registra apresentação e cumprimento de Bartolomeu e a pergunta hipotética da NPC; cursor `../../estado/recuperacao-c50.json`. C02 aberta.
 
 `c02-interacao-006.md` documenta a explicação técnica de Bartolomeu e a pergunta sobre guarda de registros; cursor `../../estado/recuperacao-c51.json`. C02 aberta, sem mudanças de recursos.
+
+`c02-interacao-007.md` preserva integralmente a fala sobre cópias e a resposta de Rada; cursor `../../estado/recuperacao-c52.json`. C02 aberta, sem teste ou mudança XP/FV.
