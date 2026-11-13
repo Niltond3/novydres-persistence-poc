@@ -12,6 +12,15 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
  const head=git('rev-parse','HEAD'),catalog=buildCatalog();
  const original=sourceJson('novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json');
  const threads=sourceJson('novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json');
+ const xpEnv=sourceJson('novydres/runtime/xp/XP_ENVELOPE_V3.json');
+ const xpLocal=read(root+'/estado/xp-autoridade-c45.json');
+ const xpGlobal=read('novydres/sistema/regras/experiencia/principios-credito.json');
+ if(xpEnv.current.xp_total!==675||xpEnv.current.xp_spent!==270||
+    xpLocal.current.xp_total!==675||xpLocal.current.xp_spent!==270||
+    xpLocal.current.xp_remaining!==405||xpLocal.current.xp_credit_available!==0||
+    xpGlobal.local_owner_subject_id!=='chr001-state-checkpoint'||
+    xpLocal.no_target_auto_purchase!==true||xpGlobal.operational_promotion!==false)
+    err('D07_LOCAL_XP_SCOPE_OR_SOURCE_DRIFT');
  const live=sourceJson('novydres/chronicles/CHR-001/LIVE_v039.json');
  const playedScene=read(root+'/episodios/m302/fatos-c45.json');
  if(playedScene.subject_id!=='chr001-episode-m302'||playedScene.visibility!=='SYSTEM_AUDIT'||
@@ -67,7 +76,7 @@ export function reviewD07({actorOverride=null,threadOverride=null,ledgerOverride
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
  actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
- runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,
+ runtime_semantic_review:'PENDING',active_runtime_successions_unproven:121,xp_field_owner_preserved:true,
  gate:'D07_NOT_YET_PASS'};
 }
 if(process.argv[1]?.endsWith('/revisar-independente-d07.mjs')){

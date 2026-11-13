@@ -9,6 +9,7 @@ test('D07 independently checks 47 records across 38 actors and 44 threads',()=>{
  assert.equal(x.actor_scopes,38);
  assert.equal(x.scene_facts_exact,true);
  assert.equal(x.active_runtime_successions_unproven,121);
+ assert.equal(x.xp_field_owner_preserved,true);
  assert.equal(x.gate,'D07_NOT_YET_PASS');
 });
 test('D07 independently rejects fabrication in an actor history',()=>{

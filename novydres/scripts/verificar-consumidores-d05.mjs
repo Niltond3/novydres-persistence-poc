@@ -37,6 +37,25 @@ export function verifyD05({ledgerOverride=null,custodyOverride=null}={}){
       original.get(r.origin)!==r.original_git_blob_sha)fail('D05_ORIGIN_SHA_OR_OWNER_DRIFT');
    records.set(r.origin,r);
  }
+ 
+ const summary=ledger.reference_provenance_audit||{},evidenceKinds={direct:0,manifest_only:0,both:0};
+ for(const row of ledger.source_records.filter(x=>x.active_original_reference===true)){
+   const orig=byOriginal.get(row.origin);
+   const d=orig.d01_origin_route.current_cycle_pin_occurrences>0;
+   const m=orig.d01_origin_route.manifest_runtime_reference_occurrences>0;
+   if(!(d||m)||row.reference_kind!==(d?'C45_CYCLE_DIRECT':'M63_MANIFEST_ONLY_NOT_PROVEN_INACTIVE')||
+     row.reference_evidence?.cycle_occurrences!==orig.d01_origin_route.current_cycle_pin_occurrences||
+     row.reference_evidence?.manifest_occurrences!==orig.d01_origin_route.manifest_runtime_reference_occurrences||
+     row.reference_evidence?.source_commit!==inv.source_snapshot.commit_sha||
+     row.succession_verdict!=='FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY')
+     fail('D05_REFERENCE_PROVENANCE_DRIFT');
+   if(d){evidenceKinds.direct++;if(m)evidenceKinds.both++;}else evidenceKinds.manifest_only++;
+ }
+ if(evidenceKinds.direct!==48||evidenceKinds.manifest_only!==73||
+    evidenceKinds.both!==47||summary.cycle_direct_refs!==48||
+    summary.manifest_only_refs!==73||summary.direct_also_in_manifest!==47||
+    summary.semantic_equivalence_approved!==0)
+   fail('D05_REFERENCE_COVERAGE_DRIFT');
  let exact=0;const archived=new Set();
  for(const [id,root,count] of groups){
    const entry=cat.subjects.find(x=>x.id===id);
@@ -78,6 +97,8 @@ export function verifyD05({ledgerOverride=null,custodyOverride=null}={}){
  return {source_commit:inv.source_snapshot.commit_sha,exact_blobs_inert:exact,
   historical_git_only:historical.length,source_origins_covered:records.size,
   active_source_successions_unproven:active.length,
+  cycle_direct_functional_review_pending:evidenceKinds.direct,
+  manifest_only_not_proven_inactive:evidenceKinds.manifest_only,
   source_blobs_preserved:true,behavior_equivalence:'UNPROVEN_FOR_121_CURRENTLY_REFERENCED_SOURCES',
   gate:'D05_CUSTODY_PASS_BEHAVIORAL_GATE_PENDING'};
 }

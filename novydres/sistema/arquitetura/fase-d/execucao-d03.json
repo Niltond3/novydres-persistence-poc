@@ -193,5 +193,17 @@
     ],
     "future_requirement": "DO_NOT_TREAT_PASS_AS_EDITORIAL_CUTOVER_APPROVAL_OR_ACTIVE_NARRATIVE_AUTHORITY",
     "integrity_equivalence_scope": "PINNED_ORIGINAL_BYTES_AND_SOURCE_OWNED_PROJECTIONS_NOT_INFERRED_GLOBAL_FACTS"
+  },
+  "post_d03_xp_handoff": {
+    "status": "D04_LOCAL_SOURCE_BACKED_PROJECTION_STAGED",
+    "old_d03_gate_evidence_unchanged": true,
+    "global_rules": "novydres/sistema/regras/experiencia/principios-credito.json",
+    "local_state": "novydres/cronicas/CHR-001/estado/xp-autoridade-c45.json",
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "scope_records": 8,
+    "new_awards": 0,
+    "additional_cost_audit": "REMAINS_OPEN",
+    "proof": "novydres/scripts/verificar-escopo-xp.mjs",
+    "gate_effect": "DOES_NOT_UPGRADE_D03_HISTORICAL_GATE_OR_D04_SEMANTIC_APPROVAL"
   }
 }

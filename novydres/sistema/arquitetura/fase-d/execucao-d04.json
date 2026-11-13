@@ -69,5 +69,18 @@
     "source_fidelity_proof": "verificar-estado-d04.mjs; revisar-independente-d07.mjs",
     "fiction_created": false,
     "ledger_created": false
+  },
+  "current_c45_xp_field_owner": {
+    "owner_subject": "chr001-state-checkpoint",
+    "latest_source": "LIVE_v039",
+    "credit_policy": "DEC-CR-021_CHR001_ONLY",
+    "total": 675,
+    "spent": 270,
+    "remaining": 405,
+    "credit": 0,
+    "source_histories_untouched": true,
+    "proof": "novydres/scripts/verificar-escopo-xp.mjs",
+    "technical_gate": "PENDING_CI",
+    "editorial_status": "NO_NEW_XP_FV_GRANTED"
   }
 }

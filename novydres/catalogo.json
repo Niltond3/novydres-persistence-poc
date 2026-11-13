@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "kind": "DERIVED_SUBJECT_CATALOG",
   "status": "CANDIDATE_NOT_OPERATIONAL",
-  "content_index_sha": "f7f0f424130b6c5ed3ad89327425ff63f48538a6",
+  "content_index_sha": "c94e090ba89ecbed5adc5fd558c282f2a8c35f08",
   "subjects": [
     {
       "id": "chr001-administrative-milestones",
@@ -3798,13 +3798,14 @@
       "path": "novydres/cronicas/CHR-001/estado",
       "visibility": "SYSTEM_AUDIT",
       "dependencies": [
+        "rule-experience-novydres",
         "story-m301-c01"
       ],
       "source_ids": [],
       "files": [
         {
           "path": "novydres/cronicas/CHR-001/estado/assunto.json",
-          "blob_sha": "d808ae85f74608e8621ddf4a20d854c22f944981"
+          "blob_sha": "de26da9bcf4ee7c0327097aa25220f50477c0ea6"
         },
         {
           "path": "novydres/cronicas/CHR-001/estado/atual.json",
@@ -3812,11 +3813,15 @@
         },
         {
           "path": "novydres/cronicas/CHR-001/estado/index.md",
-          "blob_sha": "2880834fd912e64d6050f46fdc501b138e43e7d0"
+          "blob_sha": "38f2db8e44200a1e83ad6ed1272caa4c14086886"
         },
         {
           "path": "novydres/cronicas/CHR-001/estado/recuperacao-c45.json",
           "blob_sha": "4b117323a07f835deaff7c895f0550446cc824cd"
+        },
+        {
+          "path": "novydres/cronicas/CHR-001/estado/xp-autoridade-c45.json",
+          "blob_sha": "f97120796b92cc67ff53500d2588411e7d5ff050"
         }
       ]
     },
@@ -5370,7 +5375,7 @@
         },
         {
           "path": "novydres/sistema/regras/experiencia/escopos.json",
-          "blob_sha": "2fb591d44e8a4fdc250c0ed13022f5bef6b9bbbe"
+          "blob_sha": "659532c22a725010dde4ab98521b4bf3c5f30f88"
         },
         {
           "path": "novydres/sistema/regras/experiencia/fonte-001.source.txt",
@@ -5406,7 +5411,11 @@
         },
         {
           "path": "novydres/sistema/regras/experiencia/index.md",
-          "blob_sha": "8e3d122e1fab4529d62c645da8270f936afac4ba"
+          "blob_sha": "dc06bb0d7b0f20350784cb0fac4b50eee9cc9f1d"
+        },
+        {
+          "path": "novydres/sistema/regras/experiencia/principios-credito.json",
+          "blob_sha": "ffbe4517384399d2cd446607bd4d8b078dafb3ff"
         },
         {
           "path": "novydres/sistema/regras/experiencia/registro.json",
@@ -7063,7 +7072,9 @@
       "rule-specialist-c",
       "rule-v5-baseline"
     ],
-    "rule-experience-novydres": [],
+    "rule-experience-novydres": [
+      "chr001-state-checkpoint"
+    ],
     "rule-gangrel-urbano": [],
     "rule-guided-handoff": [],
     "rule-guided-mode": [],
