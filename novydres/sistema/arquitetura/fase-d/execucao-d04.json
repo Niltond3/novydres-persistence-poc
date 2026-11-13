@@ -96,5 +96,28 @@
     "original_truth_sources_untouched": true,
     "editorial_decisions_not_reopened": true,
     "gate": "PENDING_CI_AND_CONTEXTUAL_FUNCTIONAL_REVIEW"
+  },
+  "latest_integrated_partial_validation": {
+    "run_id": 43346857735,
+    "checked_candidate_head": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "checked_candidate_tree": "e033dc4455c1701d651735bf1760bcacb0d4fc9e",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "integrated_job_id": 131628178759,
+    "integrated_job_conclusion": "FAILURE_ON_INTENTIONAL_D06_SEMANTIC_GATE",
+    "remote_git_job_id": 131628178299,
+    "remote_git_job_conclusion": "SUCCESS",
+    "steps_before_terminal_gate": "ALL_PASS",
+    "D06_terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_NOT_PRESENT",
+    "D07_final_gate": "SKIPPED_DEPENDENCY_D06",
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false,
+    "stage_status": "D04_SOURCE_CUSTODY_AND_C45_SOURCE_FACTS_PROVEN_FULL_CONTEXTUAL_SEMANTICS_PENDING",
+    "source_copies": 438,
+    "actors": 38,
+    "knowledge_records": 47,
+    "threads": 44,
+    "authorial_source_lineage": "V018_AUTHORIZATION_WITH_C45_V019_PROSPECTIVE",
+    "xp": "675_270_405_0",
+    "no_new_played_events": true
   }
 }

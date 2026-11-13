@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
   "phase": "D07",
-  "status": "DISTINCT_EXECUTABLE_REVIEW_PASSED_PRIOR_SNAPSHOT_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING",
+  "status": "SEPARATE_SOURCE_COMPARISON_PASS_EXTERNAL_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING",
   "gate": "D07_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
@@ -37,11 +37,31 @@
     "actual_independent_reviewer_identity": "NOT_RECORDED",
     "semantic_editorial_assessment": "PENDING",
     "disclosure_risk_review": "TECHNICAL_ACL_TESTED_CONTEXTUAL_REVIEW_PENDING",
-    "no_CI_as_human_signoff": true
+    "no_CI_as_human_signoff": true,
+    "source_comparison_run_id": 43346857735,
+    "source_comparison_result": "SUCCESS_WITHOUT_EXTERNAL_REVIEWER",
+    "third_party_reviewer_identity": "NOT_RECORDED",
+    "does_not_attest_functional_successors": true
   },
   "material_pending": [
     "INDEPENDENT_EDITORIAL_AND_RUNTIME_EQUIVALENCE_NOT_ATTESTED",
     "D06_D05_FUNCTIONAL_GATE_OPEN",
     "CONFLICT_001_AND_003B_NOT_SELECTED_OR_ACTIVATED"
-  ]
+  ],
+  "latest_partial_evidence": {
+    "run_id": 43346857735,
+    "checked_candidate_head": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "checked_candidate_tree": "e033dc4455c1701d651735bf1760bcacb0d4fc9e",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "integrated_job_id": 131628178759,
+    "integrated_job_conclusion": "FAILURE_ON_INTENTIONAL_D06_SEMANTIC_GATE",
+    "remote_git_job_id": 131628178299,
+    "remote_git_job_conclusion": "SUCCESS",
+    "steps_before_terminal_gate": "ALL_PASS",
+    "D06_terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_NOT_PRESENT",
+    "D07_final_gate": "SKIPPED_DEPENDENCY_D06",
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false
+  },
+  "reviewer_requirement": "INDEPENDENT_IDENTIFIABLE_REVIEW_OF_D03_D06_IMPLEMENTATION_AND_CONTEXTUAL_PERMISSIONS"
 }

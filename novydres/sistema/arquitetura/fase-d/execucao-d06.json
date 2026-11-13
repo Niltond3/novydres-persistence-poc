@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D06_INTEGRATED_GATE_PREP_V1",
   "phase": "D06",
-  "status": "INTEGRATED_STRUCTURAL_PROOFS_PASS_SEMANTIC_GATE_PENDING",
+  "status": "TECHNICAL_GATES_PASS_SEMANTIC_EQUIVALENCE_AND_INDEPENDENT_REVIEW_PENDING",
   "gate": "D06_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/verificar-integridade-d06.mjs",
@@ -16,7 +16,7 @@
   "open_threads": 44,
   "external_optional_media_waiver": 5,
   "semantic_signoff": false,
-  "ci": "TECHNICAL_READBACK_PARTIAL_PRIOR_SNAPSHOTS_NEW_HEAD_NOT_VALIDATED",
+  "ci": "INTEGRATED_CHECKS_PASS_EXCEPT_INTENTIONAL_SEMANTIC_GATE_REMOTE_GIT_CAS_SUCCESS",
   "no_master_change": true,
   "no_E02": true,
   "integrated_runs": [
@@ -68,5 +68,28 @@
     "D07_IDENTIFIABLY_INDEPENDENT_CONTEXTUAL_REVIEW_NOT_COMPLETED",
     "E01_REQUIRES_D_PASS_BEFORE_CUTOVER_PROPOSAL",
     "XP_TARGET_COST_AUDIT_REMAINS_SEPARATE_NOT_AUTOMATIC_GRANT"
-  ]
+  ],
+  "latest_integrated_evidence": {
+    "run_id": 43346857735,
+    "checked_candidate_head": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "checked_candidate_tree": "e033dc4455c1701d651735bf1760bcacb0d4fc9e",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "integrated_job_id": 131628178759,
+    "integrated_job_conclusion": "FAILURE_ON_INTENTIONAL_D06_SEMANTIC_GATE",
+    "remote_git_job_id": 131628178299,
+    "remote_git_job_conclusion": "SUCCESS",
+    "steps_before_terminal_gate": "ALL_PASS",
+    "D06_terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_NOT_PRESENT",
+    "D07_final_gate": "SKIPPED_DEPENDENCY_D06",
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false
+  },
+  "previous_transient_remote_ref_failure_remediated": {
+    "failed_run_id": 43346213260,
+    "remediation_commit": "6be667738269f458ba1f8ff702e7da27c2729bb4",
+    "confirmation_run_id": 43346857735,
+    "remote_transaction_job": "SUCCESS",
+    "evidence_scope": "DISPOSABLE_TEST_BRANCH_ONLY_NO_CHRONICLE_OR_MASTER_WRITES"
+  },
+  "next_gate_rule": "DO_NOT_TURN_INTEGRATED_TECHNICAL_PASS_INTO_D06_PASS_WITHOUT_FUNCTIONAL_EQUIVALENCE_EVIDENCE_AND_D07_REVIEW"
 }
