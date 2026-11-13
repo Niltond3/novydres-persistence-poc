@@ -23,3 +23,12 @@ test('D05 fail closed on disclosure, wrong actor and unconfirmed writing',()=>{
  assert.throws(()=>readC45Candidate({snapshot_sha:'0'.repeat(40)}),{code:'HEAD_DIFFERENT'});
  assert.throws(()=>readC45Candidate({snapshot_sha:sha,confirmed_write:{status:'PENDING',snapshot_sha:sha,readback:false}}),{code:'PENDING_PERSISTENCE'});
 });
+
+test('C45 scene facts retain explicit unknowns and no invented future event',()=>{
+ const x=readC45Candidate({snapshot_sha:sha});
+ assert.equal(x.last_scene.scene_id,'CHR001-M302-C01_A_PASSAGEM');
+ assert.equal(x.last_scene.status,'CLOSED');
+ assert.equal(x.last_scene.confirmed.length,4);
+ assert.equal(x.last_scene.unknown.length,4);
+ assert.equal(x.cursor.next_scene,'C02');
+});

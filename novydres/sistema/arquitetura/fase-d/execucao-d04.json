@@ -21,11 +21,11 @@
   "test": "novydres/scripts/testar-custodia-d04.test.mjs",
   "semantic_gate_pending": [
     "C45_SOURCE_PIN_RECORDED;_FULL_D04_STATE_EQUIVALENCE_AND_D05_CUTOVER_STILL_PENDING",
-    "EPISODIC_FACT_VS_PREPARATION",
     "XP_FV_RESOURCE_BALANCES",
     "CHRONICLE_RETRIEVAL_AND_RESUME",
     "D05_CONSUMERS_AND_CATALOG_TRANSITION",
-    "PER_ACTOR_C45_SOURCE_PROJECTION_HAS_SCOPE_BUT_REVIEW_OF_FACTS_VS_BELIEFS_PENDING"
+    "PER_ACTOR_C45_SOURCE_PROJECTION_HAS_SCOPE_BUT_REVIEW_OF_FACTS_VS_BELIEFS_PENDING",
+    "HISTORICAL_EPISODES_438_SOURCE_PROJECTED_BUT_EXHAUSTIVE_HISTORICAL_FACT_REVIEW_PENDING"
   ],
   "external_media_waiver": "D02_OPTIONAL_MEDIA_NO_REOPEN",
   "current_C45_recovery": {
@@ -57,5 +57,17 @@
     "source_sha": "05ce76898d2757c1e270e9c3b1282712df123d13",
     "target_path": "novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json",
     "nonoperational": true
+  },
+  "current_C45_played_scene_projection": {
+    "path": "novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json",
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "EXACT_LIVE_SCENE_FIELDS_CLOSED_NOT_AUTHORIZED_FOR_RUNTIME",
+    "confirmed_facts": 4,
+    "unknowns": 4,
+    "actor_record_count": 47,
+    "thread_rows": 44,
+    "source_fidelity_proof": "verificar-estado-d04.mjs; revisar-independente-d07.mjs",
+    "fiction_created": false,
+    "ledger_created": false
   }
 }

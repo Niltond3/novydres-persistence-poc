@@ -7,7 +7,7 @@ const legacy='novydres/cronicas/CHR-001/estado/atual.json';
 const fail=code=>{const e=new Error(code);e.code=code;throw e;};
 const git=(...a)=>execFileSync('git',a,{encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();
 const blob=s=>createHash('sha1').update('blob '+Buffer.byteLength(s)+'\0').update(s).digest('hex');
-export function verifyD04State({override=null}={}){
+export function verifyD04State({override=null,sceneOverride=null}={}){
  const c=override||JSON.parse(readFileSync(P,'utf8'));
  const b=JSON.parse(readFileSync(legacy,'utf8'));
  if(b.source_commit!=='c26c0fbf15fff6c817182c06e6208e302b954f3a'||b.cycle.id!=='CHR001-CYCLE-0041')fail('D04_HISTORICAL_C41_CORRUPTED');
@@ -24,6 +24,11 @@ export function verifyD04State({override=null}={}){
   data[name]=name==='character'||name==='episode'?body:JSON.parse(body);
  }
  const cy=data.cycle,li=data.live,ko=data.knowledge,th=data.threads,ev=c.cursor,r=c.resources;
+ const scene=sceneOverride||JSON.parse(readFileSync('novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json','utf8'));
+ if(scene.subject_id!=='chr001-episode-m302'||scene.status!=='CANDIDATE_C45_FACT_PROJECTION_NOT_OPERATIONAL'||scene.visibility!=='SYSTEM_AUDIT'||
+    scene.last_event_id!==li.last_confirmed_event_id||JSON.stringify(scene.scene)!==JSON.stringify(li.scene)||
+    scene.scene_starts_created!==0||scene.generated_transcript!==false||scene.roll_rng_fabricated!==false)
+   fail('D04_PLAYED_SCENE_FACT_DRIFT');
  if(cy.cycle_id!=='CHR001-CYCLE-0045'||cy.manifest_ref.path!==c.pinned_sources.manifest.path||
    cy.manifest_ref.blob_sha!==c.pinned_sources.manifest.sha||
    cy.refs.character.blob_sha!==c.pinned_sources.character.sha||

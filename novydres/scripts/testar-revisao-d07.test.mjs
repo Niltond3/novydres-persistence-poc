@@ -7,6 +7,7 @@ test('D07 independently checks 47 records across 38 actors and 44 threads',()=>{
  const x=reviewD07();
  assert.equal(x.actor_rows_exact,47);
  assert.equal(x.actor_scopes,38);
+ assert.equal(x.scene_facts_exact,true);
  assert.equal(x.gate,'D07_NOT_YET_PASS');
 });
 test('D07 independently rejects fabrication in an actor history',()=>{

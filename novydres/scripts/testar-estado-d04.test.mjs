@@ -20,3 +20,9 @@ test('D04 rejects resource rewriting, disclosure and editor promotion',()=>{
  assert.throws(edited(x=>x.visibility='PLAYER_SAFE'),{code:'D04_UNAUTHORIZED_PROMOTION'});
  assert.throws(edited(x=>x.provenance_policy.editorial_promotions=true),{code:'D04_UNPROVEN_THREAD_OR_PROMOTION'});
 });
+
+test('D04 rejects changed C45 played scene facts or false future event',()=>{
+ const scene=JSON.parse(readFileSync('novydres/cronicas/CHR-001/episodios/m302/fatos-c45.json','utf8'));
+ scene.scene.confirmed[0]='Invented event';
+ assert.throws(()=>verifyD04State({sceneOverride:scene}),{code:'D04_PLAYED_SCENE_FACT_DRIFT'});
+});

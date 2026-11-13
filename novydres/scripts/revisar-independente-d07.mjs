@@ -12,6 +12,13 @@ export function reviewD07({actorOverride=null,threadOverride=null}={}){
  const head=git('rev-parse','HEAD'),catalog=buildCatalog();
  const original=sourceJson('novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json');
  const threads=sourceJson('novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json');
+ const live=sourceJson('novydres/chronicles/CHR-001/LIVE_v039.json');
+ const playedScene=read(root+'/episodios/m302/fatos-c45.json');
+ if(playedScene.subject_id!=='chr001-episode-m302'||playedScene.visibility!=='SYSTEM_AUDIT'||
+    playedScene.status!=='CANDIDATE_C45_FACT_PROJECTION_NOT_OPERATIONAL'||
+    JSON.stringify(playedScene.scene)!==JSON.stringify(live.scene)||
+    playedScene.last_event_id!==live.last_confirmed_event_id||playedScene.generated_transcript!==false)
+    err('D07_SCENE_SEMANTIC_REWRITE');
  const out=threadOverride||read(root+'/tramas/abertas/atual-c45.json');
  if(out.subject_id!=='chr001-open-threads-versions'||out.visibility!=='SYSTEM_AUDIT'||
     JSON.stringify(out.threads)!==JSON.stringify(threads.threads)||out.last_event_id!==threads.last_event_id)
@@ -46,7 +53,7 @@ export function reviewD07({actorOverride=null,threadOverride=null}={}){
    catch(e){if(e.code!=='DISCLOSURE_DENIED')throw e;}
  }
  return {head,review:'D07_DISTINCT_SOURCE_COMPARISON_NOT_EXTERNAL_EDITORIAL_CERTIFICATION',
- actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,
+ actor_rows_exact:covered.size,actor_scopes:actorSubjects.length,open_threads_exact:44,scene_facts_exact:true,
  privacy:'DENY_PLAYER_FOR_SYSTEM_AUDIT',source_commit:source,
  runtime_semantic_review:'PENDING',
  gate:'D07_NOT_YET_PASS'};
