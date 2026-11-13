@@ -28,3 +28,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-007.md` preserva integralmente a fala sobre cópias e a resposta de Rada; cursor `../../estado/recuperacao-c52.json`. C02 aberta, sem teste ou mudança XP/FV.
 
 `c02-interacao-008.md` registra pedido de clareza, propósito declarado por Rada e opção expressa de recusa; cursor `../../estado/recuperacao-c53.json`. Cena aberta.
+
+`c02-interacao-009.md` registra detalhes alegados por Rada e papel exibido sem validação; cursor `../../estado/recuperacao-c54.json`. C02 aberta.
