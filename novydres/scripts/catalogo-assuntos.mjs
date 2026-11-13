@@ -1,5 +1,5 @@
-// ADR-001 C02 candidate-only derived catalog / selective snapshot retrieval.
-// Not an operational bootstrap. No legacy path, alias or fallback resolution.
+// ADR-001: derived catalog and snapshot-pinned selective retrieval.
+// Effective authority is master plus E03_PASS; no secondary bootstrap or legacy fallback.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep, posix } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -55,7 +55,8 @@ export function buildCatalog(root=process.cwd(), {overrides={}}={}) {
     const obj=JSON.parse(read(main).toString('utf8'));
     if(!ID.test(obj.subject_id || '')) fail('INVALID_SUBJECT_ID',main);
     if(!obj.owner_scope || !(path===obj.owner_scope || path.startsWith(obj.owner_scope+'/'))) fail('OWNER_MISMATCH',main);
-    if(obj.status!=='CANDIDATE') fail('CANDIDATE_ONLY',main);
+    // CANDIDATE is the migrated manifest's historical metadata, not a runtime gate.
+    if(obj.status!=='CANDIDATE') fail('MIGRATION_STATUS_DRIFT',main);
     if(idMap.has(norm(obj.subject_id))) fail('SUBJECT_ID_COLLISION',obj.subject_id);
     const files=readdirSync(dir,{withFileTypes:true})
       .filter(x=>{if(x.isSymbolicLink())fail('SYMLINK_NOT_ALLOWED',x.name);return x.isFile();})
@@ -113,7 +114,7 @@ export function buildCatalog(root=process.cwd(), {overrides={}}={}) {
   // catalog file: edits invalidate this hash without introducing a circular hash.
   const content_index_sha=blobSha(Buffer.from(canon(inputs),'utf8'));
   deferred.sort((a,b)=>a.from<b.from?-1:a.from>b.from?1:a.to<b.to?-1:a.to>b.to?1:0);
-  return {schema_version:'1.0',kind:'DERIVED_SUBJECT_CATALOG',status:'CANDIDATE_NOT_OPERATIONAL',
+  return {schema_version:'1.0',kind:'DERIVED_SUBJECT_CATALOG',status:'OPERATIONAL_AFTER_E03_PASS',
     content_index_sha,subjects,
     inverse_dependencies:Object.fromEntries([...backlinks].sort(([a],[b])=>a<b?-1:a>b?1:0)
       .map(([id,inbound])=>[id,[...inbound].sort()])),deferred};

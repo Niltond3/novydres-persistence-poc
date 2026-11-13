@@ -1,0 +1,80 @@
+name: ADR-001 E03 master integrity and transaction
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  e03-integrity:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Gateway successor and C45 gate consistency
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          import assert from 'node:assert/strict';
+          const r=p=>readFileSync('novydres/'+p,'utf8'),j=p=>JSON.parse(r(p));
+          const a=r('AGENTS.md'),c=r('CONTEXT.md'),s=r('sistema/arquitetura/fase-e/sucessao-operacional.md');
+          const e2=j('sistema/arquitetura/fase-e/execucao-e02.json'),e3=j('sistema/arquitetura/fase-e/execucao-e03.json');
+          const cat=j('catalogo.json'),state=j('cronicas/CHR-001/estado/recuperacao-c45.json'),threads=j('cronicas/CHR-001/tramas/abertas/atual-c45.json');
+          assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),process.env.GITHUB_SHA);
+          assert.ok(a.includes('gateway Git-native')&&a.includes('E03_PASS'));
+          assert.ok(c.includes('contexto operacional por assuntos'));
+          assert.ok(s.includes('G19/G23/G24')&&s.includes('CONFLICT-003B'));
+          assert.equal(e2.gate,'E02_PASS');assert.equal(e2.promoted_tree,'4e08b9e4559922f711669294718fbdc74780d9d8');
+          assert.ok(['E03_PENDING_CI_AND_SMOKE','E03_PASS'].includes(e3.gate));
+          assert.equal(cat.status,'OPERATIONAL_AFTER_E03_PASS');
+          assert.equal(cat.subjects.length,153);
+          assert.equal(cat.subjects.filter(x=>x.id.startsWith('chr001-knowledge-npc-')).length,38);
+          assert.equal(state.cursor.last_closed_scene,'C01');assert.equal(state.cursor.next_scene,'C02');
+          assert.equal(state.cursor.next_scene_status,'NOT_STARTED');assert.equal(state.cursor.mortal,true);
+          assert.equal(state.cursor.embrace_occurred,false);
+          assert.equal(state.resources.xp_total,675);assert.equal(state.resources.xp_spent,270);
+          assert.equal(state.resources.xp_remaining,405);assert.equal(state.resources.xp_credit_available,0);
+          assert.equal(state.resources.willpower_available,4);
+          assert.equal(threads.threads.length,44);
+          assert.equal(state.cursor.last_event_id,threads.last_event_id);
+          assert.equal(e3.chronicle_started,false);
+          console.log('E03 gateway/C45/owner checks PASS');
+          NODE
+      - name: Validate owner schema catalog and all-head ZERO LEGADO
+        run: |
+          node novydres/scripts/validar-assuntos.mjs
+          node novydres/scripts/catalogo-assuntos.mjs --check
+          node novydres/scripts/auditar-legado-e-fontes.mjs --final
+      - name: D04 C45 source and semantic negative tests
+        run: |
+          node novydres/scripts/verificar-estado-d04.mjs
+          node --test novydres/scripts/testar-custodia-d04.test.mjs novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-semantica-c45.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: D05 functional risks mechanics XP FV provenance and independent scoped review
+        run: |
+          node --test novydres/scripts/testar-autoridade-c45.test.mjs novydres/scripts/testar-escopo-xp.test.mjs novydres/scripts/testar-mecanica-c45.test.mjs novydres/scripts/testar-lotes-historicos-d04.test.mjs novydres/scripts/testar-consumidores-d05.test.mjs novydres/scripts/testar-vereditos-d05.test.mjs novydres/scripts/testar-integridade-d06.test.mjs novydres/scripts/testar-revisao-d07.test.mjs
+          node novydres/scripts/verificar-integridade-d06.mjs --require-pass
+          node novydres/scripts/revisar-independente-d07.mjs
+  e03-remote-transaction:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Real CAS idempotence lost ack race on disposable ref only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node --test novydres/scripts/testar-transacao-git.test.mjs

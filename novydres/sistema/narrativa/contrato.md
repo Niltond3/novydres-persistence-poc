@@ -1,12 +1,12 @@
 ---
 id: adr001-candidate-table-contract
-status: CANDIDATE_NOT_OPERATIONAL
+status: APPROVED_SUCCESSOR_E03_GATED
 scope: NOVYDRES_TABLE_GENERIC
 authority: ADR-001_DEC-01_TO_DEC-27
 ---
-# Contrato consolidado de condução — candidato C05
+# Contrato consolidado de condução — sucessor aprovado E02
 
-**Não operacional.** Este arquivo não autoriza narrativa, cenas, rolagens, alterações de ficha, cutover, governança ou revisão de acontecimentos publicados. Até E02 expressamente aprovado, o contrato e os ciclos de `master` continuam vigentes. Não aplicar este texto como sucessão automática de G19/G23/G24/G26/G28. Suas referências decisórias são ADR-001 §11 e o desenho A04 em `simplificacao-narrativa/desenho.md`.
+**Sucessor aprovado pelo proprietário em 13/11/2026, após promoção E02.** Somente terá eficácia operacional com E03_PASS confirmado. G19/G23/G24 e DEC-CR-014 são sucedidos pelo protocolo Git-native; G26/G28 seguem DEC-18 e este contrato, conforme `sistema/arquitetura/fase-e/sucessao-operacional.md`. Nem E02 nem E03 autorizam iniciar cenas, alterar fatos, conceder XP/FV ou reescrever conteúdo protegido. Referências: ADR-001 §11 e desenho A04 em `simplificacao-narrativa/desenho.md`.
 
 ## Condução, agência e relevância
 
@@ -26,11 +26,11 @@ A ficção jogada permanece texto integral com fonte e versão Git. Mudanças du
 
 As regras de V5 e exceções locais **comprovadamente autorizadas** continuam aplicáveis. Não inventar XP, FV, compras, Abraço, pontos, segredos, mudanças de relação ou aprovação editorial. A futura chegada estrutural a 2010 e a ficha-alvo são limites de planejamento aceitos; percurso, custo e risco continuam abertos. A dispensa DEC-24 de trilha de faces/RNG não dispensa efeitos materiais, testes válidos ou decisões do jogador.
 
-Quando necessário retificar erro: correção textual mínima e transparente; se mudar escolha, pista, custo, autor ou verdade central, registrar conflito e obter a decisão necessária, sem retcon silencioso. A publicação futura será uma transação por resposta com prosa e mudanças materiais, readback inequívoco **antes** de narrar. Em confirmação perdida: verificar a transação já escrita e recuperá-la idempotentemente; não narrar, rerrolar, reviver a escolha ou restaurar recursos até confirmar.
+Quando necessário retificar erro: correção textual mínima e transparente; se mudar escolha, pista, custo, autor ou verdade central, registrar conflito e obter a decisão necessária, sem retcon silencioso. A publicação de qualquer resposta de jogo autorizada será uma transação por resposta com prosa e mudanças materiais, readback inequívoco **antes** de narrar. Em confirmação perdida: verificar a transação já escrita e recuperá-la idempotentemente; não narrar, rerrolar, reviver a escolha ou restaurar recursos até confirmar.
 
-Na migração, retomar de `AGENTS.md` → `CONTEXT.md` → `catalogo.json` do **mesmo commit**, escolhendo somente os assuntos necessários. A configuração local candidata de CHR-001 é localizada por assunto `chr001-table-config`. Nenhuma das entradas concede prerrogativas de leitura ao jogador ou substitui a autorização operacional. Se o contexto continuar irrecuperável, checkpoint no backlog e handoff seguro, conforme DEC-25/26. Não existe obrigação de novo chat por fase.
+Após E03 e autorização própria para jogo, retomar de `AGENTS.md` → `CONTEXT.md` → `catalogo.json` do **mesmo commit**, escolhendo somente os assuntos necessários. A configuração local de CHR-001 é localizada por assunto `chr001-table-config`. Nenhuma das entradas concede prerrogativas de leitura ao jogador ou substitui a autorização operacional. Se o contexto continuar irrecuperável, checkpoint no backlog e handoff seguro, conforme DEC-25/26. Não existe obrigação de novo chat por fase.
 
-Para CHR-001, o assunto chr001-table-config fornece mecanica-c45.json e tom-c45.md, ambos apenas candidatos e sujeitos a revisão contextual.
+Para CHR-001, o assunto chr001-table-config fornece mecanica-c45.json e tom-c45.md, ambos fontes migradas sujeitas a revisão contextual, sem alterar fato jogado.
 
 ## Evidência e limites
 

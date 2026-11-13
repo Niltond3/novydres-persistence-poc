@@ -1,0 +1,26 @@
+{
+  "schema": "ADR001_E03_GATE_V1",
+  "phase": "E03",
+  "gate": "E03_PENDING_CI_AND_SMOKE",
+  "status": "NOT_AUTHORIZED_FOR_GAME",
+  "promoted_commit": "74777a6328439eb02825cc09172fcb9244a1522f",
+  "active_runtime_gate": false,
+  "requirements": [
+    "MASTER_HEAD_CI_FULL_INTEGRITY",
+    "ZERO_LEGACY_HEAD",
+    "CATALOG_SCHEMA_OWNER",
+    "GATEWAYS_AND_SUCCESSORS",
+    "C45_ACTOR_THREAD_MECHANICS",
+    "SIGILO_NEGATIVES",
+    "NINE_FUNCTIONAL_GROUPS",
+    "DISPOSABLE_TRANSACTION_CAS_IDEMPOTENCE_RECOVERY",
+    "FINAL_HEAD_READBACK"
+  ],
+  "accepted_risks": [
+    "119_UNPROVEN_BEHAVIORAL",
+    "CONFLICT_001_002_003B",
+    "EXTERNAL_ACL",
+    "OPTIONAL_MEDIA"
+  ],
+  "chronicle_started": false
+}
