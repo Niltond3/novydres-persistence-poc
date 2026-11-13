@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/adr001-d04-d05-targeted.yml'
       - 'novydres/scripts/retomar-cronica.mjs'
+      - 'novydres/scripts/verificar-vereditos-d05.mjs'
+      - 'novydres/scripts/testar-vereditos-d05.test.mjs'
       - 'novydres/scripts/testar-retomar-cronica.test.mjs'
       - 'novydres/scripts/testar-estado-d04.test.mjs'
       - 'novydres/scripts/verificar-semantica-c45.mjs'
@@ -40,6 +42,8 @@ jobs:
         run: node --test novydres/scripts/testar-estado-d04.test.mjs
       - name: Verify C45 actor-scoped facts and open threads against immutable source
         run: node --test novydres/scripts/testar-semantica-c45.test.mjs
+      - name: Verify per-reference D05 verdict classification and false-PASS negatives
+        run: node --test novydres/scripts/testar-vereditos-d05.test.mjs
       - name: Verify grouped D05 evidence without enumerating originals
         run: |
           node --input-type=module <<'NODE'

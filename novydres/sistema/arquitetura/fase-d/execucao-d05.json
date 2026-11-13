@@ -165,7 +165,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/AGENTS.md",
+        "evidence_available": "Entrada por snapshot fixo e papel explícito substitui descoberta dinâmica; recusa omissão de papel no leitor C45",
+        "unverified_boundary": "Conferir fluxo completo por papel e transação após E02",
+        "source_blob_sha": "28ec5230de70541aec6d555a04cb382fc03141cf"
+      }
     },
     {
       "origin": "novydres/.AGENT.md",
@@ -192,7 +200,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/CONTEXT.md",
+        "evidence_available": "C45 derivado de ciclo validado, com C41 apenas histórico; handoff distingue fecho DRAMATURGO de READY_FOR_NARRATOR posterior",
+        "unverified_boundary": "Revisar continuação e efeitos da eliminação de bootstraps versionados",
+        "source_blob_sha": "cc4827858e95b6046f4ceda3203610f9facd0790"
+      }
     },
     {
       "origin": "novydres/.CONTEXTG.md",
@@ -219,7 +235,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/sistema/narrativa/contrato.md",
+        "evidence_available": "Contrato genérico + tom local CHR-001 em chr001-table-config/tom-c45.md, com fontes de horror e autonomia NPC pinadas; sem burocracia de humor por cena.",
+        "unverified_boundary": "Revisão contextual e regressões por situação das três referências de tom e da agência de NPCs; a presença do arquivo não certifica a prosa.",
+        "source_blob_sha": "bc2779c02324c2f74b46cf0a1a939fe5fe0fec4c"
+      }
     },
     {
       "origin": "novydres/chronicles/CHR-001/narrative-tone/GOTHIC_PUNK_HORROR_GUARDRAILS_V1.md",
@@ -236,7 +260,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/sistema/narrativa/contrato.md",
+        "evidence_available": "Contrato genérico + tom local CHR-001 em chr001-table-config/tom-c45.md, com fontes de horror e autonomia NPC pinadas; sem burocracia de humor por cena.",
+        "unverified_boundary": "Revisão contextual e regressões por situação das três referências de tom e da agência de NPCs; a presença do arquivo não certifica a prosa.",
+        "source_blob_sha": "9c2b2cd975f531b4ad5e71fc1823a19dd66b3e9c"
+      }
     },
     {
       "origin": "novydres/chronicles/CHR-001/narrative-tone/GUARDRAIL_ACTIVATION_AUDIT_V1.json",
@@ -253,7 +285,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/sistema/narrativa/contrato.md",
+        "evidence_available": "Contrato genérico + tom local CHR-001 em chr001-table-config/tom-c45.md, com fontes de horror e autonomia NPC pinadas; sem burocracia de humor por cena.",
+        "unverified_boundary": "Revisão contextual e regressões por situação das três referências de tom e da agência de NPCs; a presença do arquivo não certifica a prosa.",
+        "source_blob_sha": "c054d41244e5067d72a1c738b85b8bcec4261a99"
+      }
     },
     {
       "origin": "novydres/MANIFEST_V10.json",
@@ -330,7 +370,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/catalogo.json",
+        "evidence_available": "Catálogo derivado do mesmo commit com ID exato; provas estruturais anteriores de resolução e blobs",
+        "unverified_boundary": "Manifestos antigos com dependências funcionais ainda precisam de tratamento por contrato",
+        "source_blob_sha": "312fb3b1844ece116980c1db3c4f50285e1c5bb9"
+      }
     },
     {
       "origin": "novydres/MANIFEST_V17.json",
@@ -727,7 +775,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/catalogo.json",
+        "evidence_available": "Catálogo derivado do mesmo commit com ID exato; provas estruturais anteriores de resolução e blobs",
+        "unverified_boundary": "Manifestos antigos com dependências funcionais ainda precisam de tratamento por contrato",
+        "source_blob_sha": "bfa0589a446d9d863764578335ce147c8cf86f56"
+      }
     },
     {
       "origin": "novydres/MANIFEST_V53.json",
@@ -854,7 +910,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 0
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "novydres/catalogo.json",
+        "evidence_available": "Catálogo derivado do mesmo commit com ID exato; provas estruturais anteriores de resolução e blobs",
+        "unverified_boundary": "Manifestos antigos com dependências funcionais ainda precisam de tratamento por contrato",
+        "source_blob_sha": "18b20257ad79c9b6a596c293f3445d28c64d8f71"
+      }
     },
     {
       "origin": "novydres/MANIFEST_V7.json",
@@ -911,7 +975,21 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "APPROVED_REPLACEMENT",
+        "scope": "APPROVED_POLICY_REPLACEMENT_WITH_ISOLATED_ATOMICITY_PROOF_NOT_LIVE_RUNTIME_EQUIVALENCE",
+        "original_behavior": "PERSISTENCE_MAY_CONTINUE_DURING_FAILED_COMMIT",
+        "approved_substitute": "DEC18_PAUSE_UNTIL_ATOMIC_COMMIT_READBACK",
+        "decision": "ADR-001_DEC-18",
+        "decision_source": "novydres/sistema/arquitetura/adr/001-subject-oriented.md",
+        "implementation_contract": "novydres/sistema/narrativa/contrato.md",
+        "isolated_transaction_proof": "novydres/scripts/transacao-git.mjs",
+        "isolated_ci_run_id": 43236381679,
+        "isolated_ci_status": "SUCCESS",
+        "unverified_boundary": "E02_NOT_AUTHORIZED_REAL_CHRONICLE_RUNTIME_NOT_TESTED",
+        "source_blob_sha": "491e3d9d059bb4277df121c5abce3297c24adee4"
+      }
     },
     {
       "origin": "novydres/runtime/G28_SCENE_END_BATCH_AND_DYNAMIC_CONFLICT_V1.md",
@@ -928,7 +1006,21 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "APPROVED_REPLACEMENT",
+        "scope": "APPROVED_POLICY_REPLACEMENT_WITH_ISOLATED_ATOMICITY_PROOF_NOT_LIVE_RUNTIME_EQUIVALENCE",
+        "original_behavior": "SCENE_END_BUFFERED_COMMIT_CADENCE",
+        "approved_substitute": "DEC18_ONE_ATOMIC_TRANSACTION_PER_RESPONSE",
+        "decision": "ADR-001_DEC-18",
+        "decision_source": "novydres/sistema/arquitetura/adr/001-subject-oriented.md",
+        "implementation_contract": "novydres/sistema/narrativa/contrato.md",
+        "isolated_transaction_proof": "novydres/scripts/transacao-git.mjs",
+        "isolated_ci_run_id": 43236381679,
+        "isolated_ci_status": "SUCCESS",
+        "unverified_boundary": "E02_NOT_AUTHORIZED_REAL_CHRONICLE_RUNTIME_NOT_TESTED",
+        "source_blob_sha": "231cb78d712c4c7d2be88a41a4058d21e1cf88ea"
+      }
     },
     {
       "origin": "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V1.md",
@@ -975,7 +1067,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-root-contract-sources",
+        "evidence_available": "DEC-18 substitui G26/G28; contrato candidato explicita julgamento G27 e pré-rolagem G25, com restrições de FV, Take Half e alvo provisório.",
+        "unverified_boundary": "Exercer preflight V5 e transação por resposta em candidato seguro; revisão contextual de consequências e casos negativos.",
+        "source_blob_sha": "081a0ec51cbd5eb825bd97c22209d45e3f9683b7"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/ATLAS_SNAPSHOT_SCHEMA_V1.json",
@@ -1042,7 +1142,15 @@
         "cycle_occurrences": 2,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_LIVING_ELLIPSES_V001_PLAYER_SAFE.json",
@@ -1059,7 +1167,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "fa986a32c56ad2ea02dcb90aa998c6964321e526"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_CHR001_SIGNIFICANT_SCENE_SPOTLIGHT_V001_PLAYER_SAFE.json",
@@ -1076,7 +1192,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "ea0452110ca968ca89b4aeec6a526d82b63ef016"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M301_EPISODIC_CLOSURE_V001_PLAYER_SAFE.json",
@@ -1093,7 +1217,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "474a5f64987ac220de0d92214898df32842d3bd8"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_M302_ADMIN_OPEN_V001_PLAYER_SAFE.json",
@@ -1110,7 +1242,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "f3f043704a4bf11c877f978f9d83c108bca3588f"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/AUDIT_D05_V006.json",
@@ -1197,7 +1337,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "260364032af2bd231b89c8fc7ac389f8543d4b79"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D05_PLAYER_APPROVAL_QUEUE_V005.json",
@@ -1234,7 +1382,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "7922a86e2da9adc256bd624c4909f159bffcfcdd"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D06_CHRONICLE_BIBLE_V007.json",
@@ -1311,7 +1467,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "ae151a67ae44fb777763986967f58533aa1aaf21"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D06_PLAYER_APPROVAL_QUEUE_V007.json",
@@ -1398,7 +1562,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D07_PLAYER_APPROVAL_QUEUE_V005.json",
@@ -1475,7 +1647,15 @@
         "cycle_occurrences": 2,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V015_GM_HIDDEN.md",
@@ -1542,7 +1722,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D09_GUIDED_CREATION_PROGRESSION_V021_PLAYER_SAFE.json",
@@ -1589,7 +1777,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "f86e8882f1458e5ea4cfe946a51a9ba6e9dce006"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D10_ROLE_ADAPTERS_V016.json",
@@ -1626,7 +1822,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "9196daf31ba5994c68b222490a0c325eec3abfdb"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D10_SCHEMA_REGISTRY_V021.json",
@@ -1663,7 +1867,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "38bab1917d1c085791faf5a45c636755b882d6ef"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D10_TEST_RESULTS_V023.json",
@@ -1690,7 +1902,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "75166f70e9863473a92f56ee75707add701aa6ea"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D10_VALIDATE_V023.py",
@@ -1717,7 +1937,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "2ac55e20af4768c266ce24d4d1162280c1b9b026"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D11_ADVERSARIAL_CASES_V019_GM_HIDDEN.json",
@@ -1734,7 +1962,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "3a2aaa0a24e4cc215e01ca4c334782fea265ce34"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D11_EXECUTE_ADVERSARIAL_V019.py",
@@ -1761,7 +1997,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "981111b81a3627d57df3a14a1bb51571642a88f1"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D11_REVIEW_STATUS_V012_PLAYER_SAFE.json",
@@ -1788,7 +2032,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "350ce9355bb44638ea5dbc23777d1a7e6e25f025"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_GATES_MATRIX_V003_PLAYER_SAFE.md",
@@ -1805,7 +2057,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "8480ed36a6f8e7034fcbecfdbe8f892b5b0fc840"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_MECHANICAL_SOURCE_REFS_V001_PLAYER_SAFE.json",
@@ -1822,7 +2082,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "c4934e97101134ee012c08133c9bf0ea63be76ea"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_PLAYER_OPEN_VARIANT_V001.json",
@@ -1889,7 +2157,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "5a5be4961a385ef8919e2fdbd3a7775a8b4f7f97"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_RELEASE_CANDIDATE_V008.json",
@@ -1936,7 +2212,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "40b31bba2179d4ca25d8104a005340d9634639ca"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V008_RESULT.json",
@@ -1993,7 +2277,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "9db6b66cd893d1de8e01becfab45a49da0c4ee32"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/D12_VALIDATE_V019.py",
@@ -2010,7 +2302,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "chr001-runtime-story-architecture",
+        "evidence_available": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "unverified_boundary": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "source_blob_sha": "5b3901369645b8c448ed1e1f8b58a5744da4336f"
+      }
     },
     {
       "origin": "novydres/runtime/narrative-architecture/program/deliverables/DRAMATURGO_CONTINUITY_PROMPT_V003.md",
@@ -2137,7 +2437,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-root-contract-sources",
+        "evidence_available": "DEC-18 substitui G26/G28; contrato candidato explicita julgamento G27 e pré-rolagem G25, com restrições de FV, Take Half e alvo provisório.",
+        "unverified_boundary": "Exercer preflight V5 e transação por resposta em candidato seguro; revisão contextual de consequências e casos negativos.",
+        "source_blob_sha": "6ebcbb1796c0407438d30a096a4d6fe365a645c5"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CI_HISTORICAL_V2_SCOPE_RECONCILIATION_V1_PLAYER_SAFE.json",
@@ -2164,7 +2472,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "cd87fcbea314acc9772dcf185fb62c5a7c20f193"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CYCLE_SCHEMA_V10.json",
@@ -2241,7 +2557,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "f407c698388b8e015bd6af98b4a38a1d498aeaca"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CYCLE_SCHEMA_V17.json",
@@ -2268,7 +2592,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "b7504458b8bb330acb1d215ed0d90521a87afb4a"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CYCLE_SCHEMA_V2.json",
@@ -2285,7 +2617,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "2c0c3785c8f61053fadf40bfc4bede14a1643465"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CYCLE_SCHEMA_V22.json",
@@ -2302,7 +2642,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "e8bda272c9cd160b6fb4d25dfd64a6f7c9a9bf04"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/CYCLE_SCHEMA_V3.json",
@@ -2379,7 +2727,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "6e0d287c018ed5e0a731ddbd0638cc5b89358e51"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V1.md",
@@ -2416,7 +2772,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "adaa05ce18c509338b8769566dd85ff5f9103397"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V4.md",
@@ -2433,7 +2797,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "3041ab71d52827a9e4350b80c9ac27fafee98dad"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/HANDOFF_DRAMATURGO_TO_NARRADOR_V5.md",
@@ -2450,7 +2822,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "ce9d641baa4d0f1d0d39d53e8ab71dd9c59d8322"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/HANDOFF_NARRADOR_TO_DRAMATURGO_V1.md",
@@ -2467,7 +2847,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "5ea41630da9c1cc7d7f78608b0398ae93b87bb11"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/IMPLEMENTATION_AUDIT_V1.json",
@@ -2484,7 +2872,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "50748633aac20572a073d614a292d64fc8757927"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/MARCO_CLOSURE_CONTRACT_V1.md",
@@ -2501,7 +2897,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "0abd0ea3efd3f1569ef742fc5a3c5e817d5faae0"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/NARRADOR_ROLE_V1.md",
@@ -2548,7 +2952,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "4a53116d60924e1527f951e859cebd8c64fb6f4a"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V1.md",
@@ -2565,7 +2977,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "ead6deacf50b02cb3358c70acaf38b4304c5fd5c"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V10.md",
@@ -2622,7 +3042,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "f5ee07751c8673cf4d8814dae67fc94cef41b36d"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V15.md",
@@ -2659,7 +3087,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "0c5d499721dbb9eb1b00288200322bca3e08539d"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V18.md",
@@ -2676,7 +3112,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "f534088049e863b42714a539483b0ddfbb210436"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V19.md",
@@ -2693,7 +3137,15 @@
         "cycle_occurrences": 2,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "bdb2657cb803aa682c5a7d50dc3be04bd0f77b61"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V2.md",
@@ -2840,7 +3292,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "65b2082d29995e10dd127b6ba0dee496f9a30a31"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V17.py",
@@ -2867,7 +3327,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "0005d93aa31c17739700e2c4eeddc65789a008f0"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V19.py",
@@ -2884,7 +3352,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "90df830a9bc7af3c74cc538e78c1772eb18c5bf1"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V23.py",
@@ -2901,7 +3377,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "90a3d7d1c48024c79b3af2ce86fa4d0099e173f5"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_SCHEMA_TESTS_V9.py",
@@ -2998,7 +3482,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "a065c6c8b35051b9fc4f5caf93fac0c7b25429c0"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V17.mjs",
@@ -3025,7 +3517,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "8a765ffe75017b7a5eec77615e335b40b31707fa"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V19.mjs",
@@ -3042,7 +3542,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "da729fc8fbc08a2c7e85a811de7cb84540f930a9"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V2.mjs",
@@ -3069,7 +3577,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "565ff357e6556c5b7159f29016eedc35efba82d3"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V23.mjs",
@@ -3086,7 +3602,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "9928ea4bf3767db09e43e1b202ae664d1a823179"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_TESTS_V3.mjs",
@@ -3153,7 +3677,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "9654c2d5889e732aeacd21dac13ca66b91258e56"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V10.mjs",
@@ -3230,7 +3762,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "19f39a3eddda28413dc0d8fbb5915b10f5c7f4d9"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V17.mjs",
@@ -3257,7 +3797,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "7a366637c40027582b9b1cf469722f8fb94ca1f8"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V19.mjs",
@@ -3274,7 +3822,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "351ec9e74a0e1973c86999952362c12a07cec74f"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V2.mjs",
@@ -3291,7 +3847,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "ae7c3bd84477371528d7447d67333a77b1d4d9bf"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V20.mjs",
@@ -3308,7 +3872,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "71b8f465cde30dc4899064e5e0a78a70381ed03c"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V23.mjs",
@@ -3325,7 +3897,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "b51119a73d8d953f351ffee7e8c4e7697ee43651"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/ORCHESTRATION_VALIDATOR_V3.mjs",
@@ -3412,7 +3992,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "6127e473e123894768eba090c1e396902c194c2c"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/START_HERE_V14.md",
@@ -3449,7 +4037,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "75f984529be57deb05afaf0de16cb5e94b624d92"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/START_HERE_V17.md",
@@ -3466,7 +4062,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "74153fac4503fa980f9b68ec166877274174450a"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/START_HERE_V18.md",
@@ -3483,7 +4087,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-orchestration-sources",
+        "evidence_available": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "unverified_boundary": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "source_blob_sha": "e7c9f7978215417b17a475711157e374b249e252"
+      }
     },
     {
       "origin": "novydres/runtime/orchestration/START_HERE_V6.md",
@@ -3540,7 +4152,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-root-contract-sources",
+        "evidence_available": "DEC-18 substitui G26/G28; contrato candidato explicita julgamento G27 e pré-rolagem G25, com restrições de FV, Take Half e alvo provisório.",
+        "unverified_boundary": "Exercer preflight V5 e transação por resposta em candidato seguro; revisão contextual de consequências e casos negativos.",
+        "source_blob_sha": "17c5cf4501358844aad3959c9a88469caf37ed28"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/DRAMATURGO_CONTRACT_V1.md",
@@ -3577,7 +4197,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "a61e43f658eb040d95f216323fedb7b6f2938790"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/EXAMPLE_SYNTHETIC_DOSSIER_V1.json",
@@ -3604,7 +4232,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "503540b7f6adc16128049848ef43965cb50a14b0"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/HANDOFF_AND_SECRECY_V1.md",
@@ -3631,7 +4267,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "a264d123f11ccf1ca89a5fc88932ce4800ced10b"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/IMPLEMENTATION_PLAN_V1.md",
@@ -3648,7 +4292,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "5e93ef68649fa2f50c336a3ead0c69a2ce7d5984"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/LONGITUDINAL_PROGRESS_GATE_V1.md",
@@ -3665,7 +4317,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "04161f0618bf3a4a550405be3343bad7e32b4524"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/NARRATOR_PREPARATION_ADAPTER_V1.md",
@@ -3702,7 +4362,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "49b9c1d920fbae672b90f0a712d527cee2a1829d"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PREPARATION_AUDIT_V1.md",
@@ -3729,7 +4397,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "12cc185d353ee993a17187f9edcc8887d835c4d5"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PREPARATION_REGRESSION_REPORT_V1.json",
@@ -3746,7 +4422,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "94d5915b6ac2ed0a568c67c62fbe08a69db046a6"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PREPARATION_REGRESSION_REPORT_V2.json",
@@ -3763,7 +4447,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "696e190faa786cddd438d5bb0e2b125e4bc45453"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PREPARATION_SEMANTIC_GATE_V1.md",
@@ -3790,7 +4482,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "4fae0dd1be149c1630ead5614d4d0cb89d793548"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PREPARATION_SEMANTIC_VECTORS_V1.json",
@@ -3807,7 +4507,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "fad914ba44b33ba28142159d97638716a4635d53"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V1.json",
@@ -3834,7 +4542,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "fb8fdf1904a0fc158b56c84dc7ba3bce464d72b9"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V11.json",
@@ -3861,7 +4577,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "844509eac92c055f51a70f21d7ec27dfe70c8dcc"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V2.json",
@@ -3878,7 +4602,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "0a281c03238d42ce30ac13aa6c87d4da025de5ac"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V6.json",
@@ -3915,7 +4647,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "d1f581a8ef69433302719c4ecd0fb4054ccfc6fa"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_DOSSIER_SCHEMA_V9.json",
@@ -3942,7 +4682,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "b3a3d32a591c38d2d03407795da743ae0aa78e99"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V10.json",
@@ -3959,7 +4707,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "5f570ab38e691083a5c3895adc115623e2eecb1f"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V11.json",
@@ -3986,7 +4742,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "e56ed47d0899a348818c421908a7f43245557c4c"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V5.json",
@@ -4033,7 +4797,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "31b9798305ab609e1f53a3c16003196dd4a61357"
+      }
     },
     {
       "origin": "novydres/runtime/provocation-prep/PROVOCATION_LONGITUDINAL_SIDECAR_SCHEMA_V9.json",
@@ -4080,7 +4852,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-preparation-sources",
+        "evidence_available": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "unverified_boundary": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "source_blob_sha": "a7d1167a8f85e203bc307acf316dc24d9126fe74"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/CHATGPT_WEB_BOOTSTRAP_V1.md",
@@ -4097,7 +4877,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "b1e53bfe82ea66590ef6fc94e24777bb2281991e"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/ELLIPSIS_PRELUDE_PROTOCOL_V1.md",
@@ -4114,7 +4902,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "40268a37f84d9ef8feb2e16a5d530261f98ed00d"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/GOVERNANCE_AUDIT_V1.md",
@@ -4131,7 +4927,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "971ce9620f40e71bdc46186e891e73a812906ba4"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
@@ -4148,7 +4952,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/NARRATIVE_IMMERSION_GATE_V1.md",
@@ -4165,7 +4977,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "cbea713c1e11bbcb01e6c3b3e1901684acb0b7a9"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/NPC_KNOWLEDGE_GATE_V1.md",
@@ -4182,7 +5002,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "eaf6256b8027992e92e7c9dfdd071afac5063771"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/PACING_LONGITUDINAL_REGRESSION_V1.json",
@@ -4199,7 +5027,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "755b956f47f4a5f418510bbf03295511767f2d9e"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/PACING_TEMPORAL_FRAMING_V1.md",
@@ -4216,7 +5052,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "cd4219813b8509952997baffeaf7f5fb396fbed6"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/PACING_TEMPORAL_FRAMING_V2.md",
@@ -4243,7 +5087,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "b994780ec914f51be243bb81f23ab3dfd94ad913"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/REGRESSION_REPORT_V1.json",
@@ -4270,7 +5122,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "3914be7ffc8c9cefd80da8b21970cd111bd11491"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/REGRESSION_VECTORS_V1.json",
@@ -4287,7 +5147,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "ebf92fcf4bcb5a47ee2b6ae24c5f22f43eadd0f3"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SCENE_AUDIT_CHECKLIST_V1.json",
@@ -4304,7 +5172,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "18fc590cc4e963ed3239003e56d027ed84b9612e"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SCENE_EXECUTION_PROTOCOL_V1.md",
@@ -4321,7 +5197,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "2885a04f17270045c450faf22ee014dc693c2164"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SCENE_EXECUTION_PROTOCOL_V2.md",
@@ -4338,7 +5222,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "aa2ef8af0ca41a64dee9af5a98e5fc08ff60f793"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SCENE_EXECUTION_PROTOCOL_V3.md",
@@ -4365,7 +5257,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "c3b9d93bf1bf4b4f9488b515a1e9021dd9fc3354"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SCENE_PACKET_SCHEMA_V1.json",
@@ -4382,7 +5282,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "bad017f7a53606ea2ae63e71bc7f541a0db40a49"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SESSION_TRANSITION_V1.md",
@@ -4399,7 +5307,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "ecb67c617366fd895c06374d1a1cb211cbc3aa89"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/SESSION_TRANSITION_V2.md",
@@ -4416,7 +5332,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "146c14e0e4634429528d8de7fa8727bf3f1c4928"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_GATE_V1.md",
@@ -4433,7 +5357,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 4
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "bc9d6c8d4da1ed993e880cfc8005769641543741"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V1.py",
@@ -4450,7 +5382,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "17435c2eb94b554ce3ed7ec9bb30f4e40e948752"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_TESTS_V2.py",
@@ -4467,7 +5407,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "935787efd99938f6bc46cc86aeba52903f066ff3"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_SCHEMA_V1.json",
@@ -4484,7 +5432,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "c16a5212bc7948e71991936872d94e5f62f803d9"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V1.mjs",
@@ -4501,7 +5457,15 @@
         "cycle_occurrences": 0,
         "manifest_occurrences": 1
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "889a83a5018960ecb578624d3cad756e03e915bb"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_TESTS_V2.mjs",
@@ -4518,7 +5482,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 2
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "2602cea8e6ffee2edf82d74a1bf6a661eff36d64"
+      }
     },
     {
       "origin": "novydres/runtime/scene-execution/TEMPORAL_TRANSITION_VALIDATOR_V1.mjs",
@@ -4535,7 +5507,15 @@
         "cycle_occurrences": 1,
         "manifest_occurrences": 3
       },
-      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY"
+      "succession_verdict": "FUNCTIONAL_COMPARISON_REQUIRED_NOT_AUTHORITATIVE_FROM_CUSTODY",
+      "functional_review": {
+        "verdict": "BLOCKED",
+        "scope": "GROUPED_FUNCTIONAL_TRIAGE_ONLY_NO_PER_SOURCE_BEHAVIORAL_APPROVAL",
+        "successor": "rule-runtime-scene-execution-sources",
+        "evidence_available": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "unverified_boundary": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "source_blob_sha": "f0ca08c8b15adeeaa7e5b41194a4d890034600ef"
+      }
     },
     {
       "origin": "poc/chr-test-001/episodes/M2.03.md",
@@ -5048,6 +6028,18 @@
     "behavioral_equivalence_approved": 0,
     "is_d05_pass": false,
     "reviewer_independence": "NOT_CLAIMED",
-    "no_operational_activation": true
+    "no_operational_activation": true,
+    "per_reference_verdicts": {
+      "status": "121_ROWS_EXPLICITLY_CLASSIFIED_WITHOUT_D05_GATE_APPROVAL",
+      "reference_rows": 121,
+      "approved_replacements_policy_only": 2,
+      "equivalent_verified": 0,
+      "blocked": 119,
+      "classification_basis": "NINE_GROUPS_PLUS_ORIGINAL_CONTRACT_COMPARISON_FOR_G26_G28_AND_DEC18",
+      "proof": "novydres/scripts/verificar-vereditos-d05.mjs",
+      "tests": "novydres/scripts/testar-vereditos-d05.test.mjs",
+      "no_end_to_end_chronicle_runtime_proof": true,
+      "note": "APPROVED_REPLACEMENT applies solely to authorized normative replacements G26/G28. C03 isolated Git transaction verifies underlying atomicity, but candidate post-E02 runtime has not been activated. Remaining 119 classifications are BLOCKED, not proof of absence of function."
+    }
   }
 }
