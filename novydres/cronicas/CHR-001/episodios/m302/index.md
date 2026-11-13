@@ -54,3 +54,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-020.md` registra a autoria da descoberta física informada à Rada e a pergunta sobre registro institucional; cursor `../../estado/recuperacao-c65.json`. C02 aberta, sem confirmação de nexo com endereço.
 
 `c02-interacao-021.md` registra divulgação verbal de hábito documental e cópias de Bartolomeu, e pergunta de Rada sobre protocolo central; cursor `../../estado/recuperacao-c66.json`. C02 aberta, sem exame de papéis ou confirmação de nexo.
+
+`c02-interacao-022.md` preserva resposta protocolar do PJ, reação de Rada e pedido meta de adendo histórico. Cursor `../../estado/recuperacao-c67.json`; adendo ao resgatado está em `../m204/adendo-c17-conversa-001.md`, sem divulgação a Rada.
