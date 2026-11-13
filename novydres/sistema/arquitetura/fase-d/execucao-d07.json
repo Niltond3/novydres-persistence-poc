@@ -45,7 +45,7 @@
   },
   "material_pending": [
     "INDEPENDENT_EDITORIAL_AND_RUNTIME_EQUIVALENCE_NOT_ATTESTED",
-    "D06_D05_FUNCTIONAL_GATE_OPEN",
+    "D06_PASS_WITH_ACCEPTED_D05_RESIDUAL_RISK_NOT_LIVE_RUNTIME_EQUIVALENCE",
     "CONFLICT_001_AND_003B_NOT_SELECTED_OR_ACTIVATED"
   ],
   "latest_partial_evidence": {
@@ -83,5 +83,10 @@
     ],
     "no_false_runtime_certification": true,
     "no_cutover_without_E_APPROVAL": true
+  },
+  "prerequisite_d06": {
+    "gate": "D06_PASS",
+    "run_id": 43364072558,
+    "review_requirement": "INDEPENDENT_CONTEXTUAL_ASSESSMENT_NOT_SELF_ATTESTATION"
   }
 }
