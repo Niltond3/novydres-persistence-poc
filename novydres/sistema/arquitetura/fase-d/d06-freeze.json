@@ -1,8 +1,8 @@
 {
   "schema": "ADR001_D06_GATE_FREEZE_V2",
-  "status": "D03_D07_IMPLEMENTED_INTEGRATED_CI_REQUESTED_AFTER_CATALOG_ORDER_FIX",
-  "parent_head": "cf6e92fb4ad9b6bf61346cd2a5ff3043a77ea29d",
-  "parent_tree": "4ac95adcc96e7904eb2749a1c1f9bbfc8e091ed2",
+  "status": "D03_D07_CANDIDATE_IMPLEMENTATION_COMPLETE_ONE_INTEGRATED_REVALIDATION",
+  "parent_head": "645b752ab5c31964952e9972a1f3531f60dc629a",
+  "parent_tree": "b4af4bd2a8071b6f3d69f36466d184231438b74e",
   "prior_run": 43332630110,
   "corrections": [
     "EXPLICIT_HISTORICAL_C41_SOURCE_COMMIT_8_FILES",
@@ -10,5 +10,6 @@
   ],
   "no_cutover": true,
   "workflow": ".github/workflows/adr001-phase-c-candidate.yml",
-  "gates_not_preapproved": true
+  "gates_not_preapproved": true,
+  "test_scope": "C45_SCENE_AND_ACTORS_399_CONSUMER_SOURCE_CUSTODY_ZERO_LEGACY_D06_D07"
 }
