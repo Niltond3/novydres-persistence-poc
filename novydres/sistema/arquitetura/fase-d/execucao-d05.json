@@ -4936,5 +4936,118 @@
     "no_unapproved_live_successor_promotion": true,
     "functional_equivalence": "PENDING",
     "current_head_retest": "REQUIRED_AFTER_CHANGED_PROOF_CODE"
+  },
+  "functional_review_by_successor": {
+    "status": "PARTIAL_CONTEXTUAL_TRIAGE_NOT_A_BEHAVIORAL_PASS",
+    "reference_basis": "C45_CYCLE_48_DIRECT_PLUS_M63_73_MANIFEST_ONLY",
+    "method": "ONE_PASS_GROUPED_REVIEW_OF_ORIGINAL_REFERENCES_AGAINST_APPROVED_SUCCESSOR_FUNCTIONS_NO_REENUMERATION_OF_399",
+    "decisions_not_reopened": [
+      "ADR001_DEC_16",
+      "ADR001_DEC_18",
+      "ADR001_DEC_23",
+      "ADR001_DEC_24",
+      "ADR001_DEC_25",
+      "ADR001_DEC_26",
+      "ADR001_DEC_27"
+    ],
+    "current_c45_handoff": "SCENE_C01_HISTORIC_DRAMATURGO_GATE_SUPERSEDED_BY_CYCLE_V0045_READY_FOR_NARRATOR_FOR_C02;_CANDIDATE_NOT_ACTIVE",
+    "targeted_fix": "READ_C45_CANDIDATE_ROLE_MUST_BE_EXPLICIT;_CLI_CALLS_WITH_EXPLICIT_AUDITOR;_OMISSION_FAILS_CLOSED",
+    "grouped_results": [
+      {
+        "successor": "novydres/AGENTS.md",
+        "function": "bootstrap e autoridade",
+        "reference_count": 1,
+        "cycle_direct": 1,
+        "manifest_only": 0,
+        "observed_candidate_evidence": "Entrada por snapshot fixo e papel explícito substitui descoberta dinâmica; recusa omissão de papel no leitor C45",
+        "remaining_behavioral_proof": "Conferir fluxo completo por papel e transação após E02",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "novydres/CONTEXT.md",
+        "function": "recuperação do contexto C45",
+        "reference_count": 1,
+        "cycle_direct": 1,
+        "manifest_only": 0,
+        "observed_candidate_evidence": "C45 derivado de ciclo validado, com C41 apenas histórico; handoff distingue fecho DRAMATURGO de READY_FOR_NARRATOR posterior",
+        "remaining_behavioral_proof": "Revisar continuação e efeitos da eliminação de bootstraps versionados",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "novydres/sistema/narrativa/contrato.md",
+        "function": "tom e limites narrativos",
+        "reference_count": 3,
+        "cycle_direct": 0,
+        "manifest_only": 3,
+        "observed_candidate_evidence": "Contrato consolidado conserva princípios de sigilo e autonomia; não equivale automaticamente aos vetores contextuais originais",
+        "remaining_behavioral_proof": "Revisão contextual de horror, coerência de NPCs e regressões de imersão",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "novydres/catalogo.json",
+        "function": "manifesto e indexação",
+        "reference_count": 3,
+        "cycle_direct": 1,
+        "manifest_only": 2,
+        "observed_candidate_evidence": "Catálogo derivado do mesmo commit com ID exato; provas estruturais anteriores de resolução e blobs",
+        "remaining_behavioral_proof": "Manifestos antigos com dependências funcionais ainda precisam de tratamento por contrato",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "rule-runtime-root-contract-sources",
+        "function": "persistência, XP/FV e julgamento",
+        "reference_count": 5,
+        "cycle_direct": 0,
+        "manifest_only": 5,
+        "observed_candidate_evidence": "DEC-18/23/24 substituem o batching G28 e ledger universal; mecânica C45 e transação candidata são fontes distintas",
+        "remaining_behavioral_proof": "Demonstração de transação por resposta e julgamento V5 local sem E02",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "chr001-runtime-story-architecture",
+        "function": "preparação, autorizações e segredos",
+        "reference_count": 25,
+        "cycle_direct": 25,
+        "manifest_only": 0,
+        "observed_candidate_evidence": "D04 pinou ativação V004/V018 e sobreposição V019 futura, separando preparação de fato jogado",
+        "remaining_behavioral_proof": "25 fontes diretas requerem avaliação de sucessão dos contratos e permissões não apenas da custódia",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "rule-runtime-orchestration-sources",
+        "function": "permissões de papéis, ciclo e handoff",
+        "reference_count": 38,
+        "cycle_direct": 9,
+        "manifest_only": 29,
+        "observed_candidate_evidence": "Status C45 e handoff reconciliados; o novo fluxo consolida funções sem ciclo por cena",
+        "remaining_behavioral_proof": "Portões semânticos de retomada, escrita e encaminhamento ainda não exercitados no runtime sucessor",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "rule-runtime-preparation-sources",
+        "function": "preparação e escala de cena",
+        "reference_count": 20,
+        "cycle_direct": 2,
+        "manifest_only": 18,
+        "observed_candidate_evidence": "DEC-16 e contrato C05 autorizam preparação proporcional em lugar de dossiê obrigatório",
+        "remaining_behavioral_proof": "Provar preservação da verdade central, sigilo e decisões aprovadas em situações reais",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      },
+      {
+        "successor": "rule-runtime-scene-execution-sources",
+        "function": "rolagens, elipses e execução",
+        "reference_count": 25,
+        "cycle_direct": 9,
+        "manifest_only": 16,
+        "observed_candidate_evidence": "Projeção local C45 separa ficha comprada de pools provisórios e preserva elipses como decisão prospectiva",
+        "remaining_behavioral_proof": "Testes contextuais de V5, stakes, reação de NPC, consequência e atomicidade em resposta",
+        "verdict": "SOURCE_OR_DESIGN_LINK_FOUND_FULL_FUNCTIONAL_EQUIVALENCE_NOT_ATTESTED"
+      }
+    ],
+    "reviewed_reference_rows": 121,
+    "behavioral_equivalence_approved": 0,
+    "is_d05_pass": false,
+    "reviewer_independence": "NOT_CLAIMED",
+    "no_operational_activation": true
   }
 }
