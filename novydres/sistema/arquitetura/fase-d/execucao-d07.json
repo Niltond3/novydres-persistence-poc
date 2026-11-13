@@ -1,8 +1,8 @@
 {
   "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
   "phase": "D07",
-  "status": "D07_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING_SIMPLIFIED_BY_FUNCTION_AND_RISK",
-  "gate": "D07_NOT_YET_PASS",
+  "status": "D07_PASS_SCOPED_IDENTIFIABLE_INDEPENDENT_AGENT_CONTEXTUAL_REVIEW_WITH_OWNER_ACCEPTED_RISK",
+  "gate": "D07_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
   "negative_tests": "novydres/scripts/testar-revisao-d07.test.mjs",
@@ -17,7 +17,7 @@
     "CONFLICT-003B"
   ],
   "no_false_independent_certification": true,
-  "ci": "PRIOR_TECHNICAL_CHECK_PASS_FINAL_GATE_BLOCKED",
+  "ci": "D06_INTEGRATED_SUCCESS_43364072558_D04_D05_TARGETED_SUCCESS_43364329372_NO_REPEAT_ON_DOCUMENTATION_ONLY",
   "no_master_change": true,
   "evidence": {
     "implementation_script": "novydres/scripts/revisar-independente-d07.mjs",
@@ -34,9 +34,9 @@
       "D05_SOURCE_399",
       "V018_V019_AUTHORIAL_LINEAGE"
     ],
-    "actual_independent_reviewer_identity": "NOT_RECORDED",
-    "semantic_editorial_assessment": "PENDING",
-    "disclosure_risk_review": "TECHNICAL_ACL_TESTED_CONTEXTUAL_REVIEW_PENDING",
+    "actual_independent_reviewer_identity": "GPT-6_CHATGPT_WEB_SEPARATE_REVIEW_SESSION_2026-11-13",
+    "semantic_editorial_assessment": "SCOPED_CONTEXTUAL_AGENT_REVIEW_PASS_NO_HUMAN_OR_BLIND_REVIEW_CLAIM",
+    "disclosure_risk_review": "DIRECT_SOURCE_SAMPLE_PLUS_EXISTING_NEGATIVES_WITH_ACKNOWLEDGED_EXTERNAL_ACL_LIMIT",
     "no_CI_as_human_signoff": true,
     "source_comparison_run_id": 43346857735,
     "source_comparison_result": "SUCCESS_WITHOUT_EXTERNAL_REVIEWER",
@@ -44,9 +44,10 @@
     "does_not_attest_functional_successors": true
   },
   "material_pending": [
-    "INDEPENDENT_EDITORIAL_AND_RUNTIME_EQUIVALENCE_NOT_ATTESTED",
-    "D06_PASS_WITH_ACCEPTED_D05_RESIDUAL_RISK_NOT_LIVE_RUNTIME_EQUIVALENCE",
-    "CONFLICT_001_AND_003B_NOT_SELECTED_OR_ACTIVATED"
+    "119_D05_BEHAVIORAL_SUCCESSIONS_NOT_INDIVIDUALLY_CERTIFIED_OWNER_ACCEPTED_RISK",
+    "CONFLICT_001_002_003B_NOT_SILENTLY_SELECTED",
+    "POST_CUTOVER_LIVE_SMOKE_AND_E03_STILL_REQUIRED",
+    "FULL_V5_AND_EXTERNAL_ACL_NOT_CERTIFIED"
   ],
   "latest_partial_evidence": {
     "run_id": 43346857735,
@@ -88,5 +89,37 @@
     "gate": "D06_PASS",
     "run_id": 43364072558,
     "review_requirement": "INDEPENDENT_CONTEXTUAL_ASSESSMENT_NOT_SELF_ATTESTATION"
-  }
+  },
+  "current_independent_review": {
+    "record": "novydres/sistema/arquitetura/fase-d/revisao-contextual-d07-2026-11-13.md",
+    "reviewer": "GPT-6 ChatGPT Web distinct review session 2026-11-13",
+    "blind": false,
+    "human": false,
+    "separate_from_implementation": true,
+    "direct_source_comparisons": [
+      "C45_SCENE_EVENT_ID",
+      "44_THREADS",
+      "C45_XP_ENVELOPE",
+      "V5_PROVISIONAL_MECHANICS",
+      "NPC_MARY_SCOPED_SOURCE_SAMPLE"
+    ],
+    "risk_groups_reviewed": 9,
+    "source_coverage_reused_from_ci": {
+      "actor_scopes": 38,
+      "actor_rows": 47,
+      "origins": 1029
+    },
+    "ci": {
+      "d06": 43364072558,
+      "d04d05": 43364329372
+    },
+    "review_snapshot_head": "57c6ca324911da96cbadf6b701b2c8aa42c997ed",
+    "review_snapshot_tree": "94453cddee9a636871a4b6080a61640dba18f4ad",
+    "residual_risk_owner_accepted": true,
+    "no_runtime_production_certification": true,
+    "phase_D_gate": "D_PASS",
+    "E01_preparation_permitted": true,
+    "E02_authorized": false
+  },
+  "historical_partial_evidence_status": "The latest_partial_evidence and older prereq fields describe the historical earlier failure and must not override current_independent_review."
 }
