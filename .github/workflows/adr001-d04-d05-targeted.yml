@@ -1,0 +1,46 @@
+name: ADR-001 D04-D05 targeted regression
+on:
+  push:
+    branches: [design/subject-oriented-migration]
+    paths:
+      - '.github/workflows/adr001-d04-d05-targeted.yml'
+      - 'novydres/scripts/retomar-cronica.mjs'
+      - 'novydres/scripts/testar-retomar-cronica.test.mjs'
+      - 'novydres/scripts/testar-estado-d04.test.mjs'
+      - 'novydres/sistema/arquitetura/fase-d/execucao-d05.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  targeted-d04-d05:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Explicit role and C45 handoff negative tests
+        run: node --test novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: C45 state source and corruption negatives
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs
+      - name: Verify grouped D05 evidence without enumerating originals
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import assert from 'node:assert/strict';
+          const d=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/execucao-d05.json','utf8'));
+          const f=d.functional_review_by_successor;
+          assert.equal(f.status,'PARTIAL_CONTEXTUAL_TRIAGE_NOT_A_BEHAVIORAL_PASS');
+          assert.equal(f.grouped_results.length,9);
+          assert.equal(f.reviewed_reference_rows,121);
+          assert.equal(f.behavioral_equivalence_approved,0);
+          assert.equal(f.is_d05_pass,false);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.cycle_direct,0),48);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.manifest_only,0),73);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.reference_count,0),121);
+          console.log('D05 grouped provenance 121/121 accounted; behavioral equivalence intentionally pending');
+          NODE
