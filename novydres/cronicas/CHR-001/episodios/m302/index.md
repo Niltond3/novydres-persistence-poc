@@ -50,3 +50,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-018.md` preserva a pergunta sobre OS de desativação a Pavel, sem data, e a exigência dele de esclarecer o propósito. Cursor `../../estado/recuperacao-c63.json`; C02 aberta, sem consulta concluída.
 
 `c02-interacao-019.md` registra a despedida de Pavel e transmissão do relato completo à Rada, que pergunta pela origem de referência à derivação anterior; cursor `../../estado/recuperacao-c64.json`. C02 aberta, sem testes ou avanço temporal.
+
+`c02-interacao-020.md` registra a autoria da descoberta física informada à Rada e a pergunta sobre registro institucional; cursor `../../estado/recuperacao-c65.json`. C02 aberta, sem confirmação de nexo com endereço.
