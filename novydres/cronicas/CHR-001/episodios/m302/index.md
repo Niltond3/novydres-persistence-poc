@@ -36,3 +36,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-011.md` registra pergunta por identificação/endereço e referência oral de Rada; cursor `../../estado/recuperacao-c56.json`. C02 aberta, nexo com M2.04 desconhecido.
 
 `c02-teste-012.md` registra pergunta meta, cotejo histórico M2.04 e teste provisório com janela FV aberta; cursor `../../estado/recuperacao-c57.json`. C02 permanece aberta, nenhuma informação secreta divulgada à NPC.
+
+`c02-insight-013.md` registra a aceitação dos 7 sucessos e observação interna de omissões de origem documental nas falas de Rada; cursor `../../estado/recuperacao-c58.json`. C02 aberta; nenhum FV gasto.
