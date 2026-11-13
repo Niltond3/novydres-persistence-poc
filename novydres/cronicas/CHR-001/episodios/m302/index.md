@@ -38,3 +38,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-teste-012.md` registra pergunta meta, cotejo histórico M2.04 e teste provisório com janela FV aberta; cursor `../../estado/recuperacao-c57.json`. C02 permanece aberta, nenhuma informação secreta divulgada à NPC.
 
 `c02-insight-013.md` registra a aceitação dos 7 sucessos e observação interna de omissões de origem documental nas falas de Rada; cursor `../../estado/recuperacao-c58.json`. C02 aberta; nenhum FV gasto.
+
+`c02-interacao-014.md` registra o discurso técnico integral de Bartolomeu, a resposta de Rada e seu movimento inicial para sair. Cursor `../../estado/recuperacao-c59.json`. C02 permanece aberta, nenhuma alteração de XP/FV.
