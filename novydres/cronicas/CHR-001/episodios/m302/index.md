@@ -34,3 +34,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-010.md` registra percepção e memória de Bartolomeu sobre Cidade Velha, sem identificar papel/prédio de Rada como o caso anterior; cursor `../../estado/recuperacao-c55.json`. C02 aberta.
 
 `c02-interacao-011.md` registra pergunta por identificação/endereço e referência oral de Rada; cursor `../../estado/recuperacao-c56.json`. C02 aberta, nexo com M2.04 desconhecido.
+
+`c02-teste-012.md` registra pergunta meta, cotejo histórico M2.04 e teste provisório com janela FV aberta; cursor `../../estado/recuperacao-c57.json`. C02 permanece aberta, nenhuma informação secreta divulgada à NPC.
