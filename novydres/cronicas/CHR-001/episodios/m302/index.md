@@ -52,3 +52,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-019.md` registra a despedida de Pavel e transmissão do relato completo à Rada, que pergunta pela origem de referência à derivação anterior; cursor `../../estado/recuperacao-c64.json`. C02 aberta, sem testes ou avanço temporal.
 
 `c02-interacao-020.md` registra a autoria da descoberta física informada à Rada e a pergunta sobre registro institucional; cursor `../../estado/recuperacao-c65.json`. C02 aberta, sem confirmação de nexo com endereço.
+
+`c02-interacao-021.md` registra divulgação verbal de hábito documental e cópias de Bartolomeu, e pergunta de Rada sobre protocolo central; cursor `../../estado/recuperacao-c66.json`. C02 aberta, sem exame de papéis ou confirmação de nexo.
