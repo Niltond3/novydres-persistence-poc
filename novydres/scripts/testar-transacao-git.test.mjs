@@ -37,9 +37,13 @@ test('V05/V10 real remote atomicity, idempotence, stale, lost ack and concurrenc
   await reject(client.verify(first.head,floor,changes('tampered')),'READBACK_BLOB_MISMATCH');
   assert.equal(await client.head(),first.head);
   const lost=changes('suppressed-ack');
-  await reject(client.transact({expected_head:first.head,tx_id:'tx-c03-lost',changes:lost,
-   simulate_ack_loss:true}),'CLIENT_SUPPRESSED_ACK_AFTER_REMOTE_COMMIT');
-  const afterLost=await client.head();assert.notEqual(afterLost,first.head);
+  let suppressed;
+  await assert.rejects(client.transact({expected_head:first.head,tx_id:'tx-c03-lost',changes:lost,
+   simulate_ack_loss:true}),e=>{
+     suppressed=e;return e.code==='CLIENT_SUPPRESSED_ACK_AFTER_REMOTE_COMMIT'&&/^[a-f0-9]{40}$/.test(e.commit_sha||'');
+   });
+  const afterLost=await client.waitForPublished(suppressed.commit_sha,{previous:first.head});
+  assert.notEqual(afterLost,first.head);
   const recovered=await client.transact({expected_head:first.head,tx_id:'tx-c03-lost',changes:lost});
   assert.equal(recovered.status,'NO_OP_VERIFIED');assert.equal(recovered.head,afterLost);
   await reject(client.transact({expected_head:first.head,tx_id:'tx-c03-stale',changes:changes('stale')}),'STALE_HEAD_PRECHECK');
@@ -65,4 +69,15 @@ test('V05/V10 real remote atomicity, idempotence, stale, lost ack and concurrenc
    console.log(JSON.stringify({test_ref:branch,cleanup:'CONFIRMED'}));
   }
  }
+});
+
+test('bounded eventual-consistency ref readback never confirms stale or divergent HEAD',async()=>{
+ const c=Object.create(CandidateGitTransaction.prototype);
+ const old='a'.repeat(40),next='b'.repeat(40),other='c'.repeat(40);
+ let seq=0;c.head=async()=>++seq<3?old:next;
+ assert.equal(await c.waitForPublished(next,{previous:old,attempts:4,delayMs:0}),next);
+ c.head=async()=>old;
+ await assert.rejects(c.waitForPublished(next,{previous:old,attempts:3,delayMs:0}),e=>e.code==='PENDING_PERSISTENCE_READBACK');
+ c.head=async()=>other;
+ await assert.rejects(c.waitForPublished(next,{previous:old,attempts:3,delayMs:0}),e=>e.code==='STOP_CONFLICT_REF_MOVED');
 });

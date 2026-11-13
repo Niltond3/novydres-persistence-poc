@@ -37,7 +37,9 @@ export class CandidateGitTransaction {
   }
   async api(method,path,body) {
     const reply=await fetch('https://api.github.com/repos/'+this.repo+path,{
-      method,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+this.token,
+      method,cache:method==='GET'?'no-store':undefined,
+      headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+this.token,
+       'Cache-Control':'no-cache',
        'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},
       body:body===undefined?undefined:JSON.stringify(body)});
     const value=await reply.json().catch(()=>({}));
@@ -45,6 +47,19 @@ export class CandidateGitTransaction {
     return value;
   }
   async head(){return (await this.api('GET','/git/ref/heads/'+this.branch)).object.sha;}
+  // GitHub can return the previous ref briefly after an acknowledged PATCH.
+  // Bounded readback prevents false success and duplicate retries; no blind republish.
+  async waitForPublished(expected,{previous=null,attempts=12,delayMs=180}={}){
+    if(!SHA.test(expected)||previous!==null&&!SHA.test(previous)||!Number.isInteger(attempts)||
+       attempts<1||attempts>20)fail('READBACK_INVALID');
+    for(let i=0;i<attempts;i++){
+      const current=await this.head();
+      if(current===expected)return current;
+      if(previous!==null&&current!==previous)fail('STOP_CONFLICT_REF_MOVED',current);
+      if(i<attempts-1&&delayMs>0)await new Promise(resolve=>setTimeout(resolve,delayMs));
+    }
+    fail('PENDING_PERSISTENCE_READBACK',expected);
+  }
   async commit(sha){return this.api('GET','/git/commits/'+sha);}
   async getContent(path,sha) {
     const value=await this.api('GET','/contents/'+path+'?ref='+sha);
@@ -115,9 +130,13 @@ export class CandidateGitTransaction {
       if(e.status===422)fail('STOP_CONFLICT_STALE_REMOTE');
       fail('PENDING_PERSISTENCE_ACK_UNKNOWN');
     }
-    if(simulate_ack_loss)fail('CLIENT_SUPPRESSED_ACK_AFTER_REMOTE_COMMIT');
-    const currentAfter=await this.head();
-    if(currentAfter!==candidate.sha)fail('PENDING_PERSISTENCE_READBACK',currentAfter);
+    const currentAfter=await this.waitForPublished(candidate.sha,{previous:expected_head});
+    // Inject lost client acknowledgement only AFTER the remote ref was read back.
+    if(simulate_ack_loss){
+      const e=new Error('CLIENT_SUPPRESSED_ACK_AFTER_REMOTE_COMMIT');
+      e.code='CLIENT_SUPPRESSED_ACK_AFTER_REMOTE_COMMIT';e.commit_sha=candidate.sha;
+      throw e;
+    }
     const verified=await this.verify(candidate.sha,expected_head,canonical);
     if(verified.tree_sha!==tree.sha)fail('TREE_MISMATCH');
     return {status:'CONFIRMED',tx_id,head:currentAfter,verified};
