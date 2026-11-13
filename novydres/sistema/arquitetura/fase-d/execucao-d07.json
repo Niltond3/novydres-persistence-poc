@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
   "phase": "D07",
-  "status": "REVIEW_EXECUTOR_SEPARATE_CODE_PATH_NOT_INDEPENDENT_HUMAN",
+  "status": "DISTINCT_EXECUTABLE_REVIEW_PASSED_PRIOR_SNAPSHOT_INDEPENDENT_CONTEXTUAL_REVIEW_PENDING",
   "gate": "D07_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
@@ -17,6 +17,31 @@
     "CONFLICT-003B"
   ],
   "no_false_independent_certification": true,
-  "ci": "PENDING_FINAL_FREEZE",
-  "no_master_change": true
+  "ci": "PRIOR_TECHNICAL_CHECK_PASS_FINAL_GATE_BLOCKED",
+  "no_master_change": true,
+  "evidence": {
+    "implementation_script": "novydres/scripts/revisar-independente-d07.mjs",
+    "negative_tests": "novydres/scripts/testar-revisao-d07.test.mjs",
+    "prior_runs": [
+      43345251449,
+      43346213260
+    ],
+    "comparisons": [
+      "47_ACTOR_RECORDS_AGAINST_C45",
+      "44_THREADS_AGAINST_C45",
+      "C45_SCENE_FACTS",
+      "XP_LOCAL_TEMPORAL_OWNERSHIP",
+      "D05_SOURCE_399",
+      "V018_V019_AUTHORIAL_LINEAGE"
+    ],
+    "actual_independent_reviewer_identity": "NOT_RECORDED",
+    "semantic_editorial_assessment": "PENDING",
+    "disclosure_risk_review": "TECHNICAL_ACL_TESTED_CONTEXTUAL_REVIEW_PENDING",
+    "no_CI_as_human_signoff": true
+  },
+  "material_pending": [
+    "INDEPENDENT_EDITORIAL_AND_RUNTIME_EQUIVALENCE_NOT_ATTESTED",
+    "D06_D05_FUNCTIONAL_GATE_OPEN",
+    "CONFLICT_001_AND_003B_NOT_SELECTED_OR_ACTIVATED"
+  ]
 }

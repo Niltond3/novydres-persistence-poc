@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D06_INTEGRATED_GATE_PREP_V1",
   "phase": "D06",
-  "status": "PREPARED_NOT_VALIDATED",
+  "status": "INTEGRATED_STRUCTURAL_PROOFS_PASS_SEMANTIC_GATE_PENDING",
   "gate": "D06_NOT_YET_PASS",
   "candidate_only": true,
   "proof_script": "novydres/scripts/verificar-integridade-d06.mjs",
@@ -16,7 +16,57 @@
   "open_threads": 44,
   "external_optional_media_waiver": 5,
   "semantic_signoff": false,
-  "ci": "PENDING_FINAL_FREEZE",
+  "ci": "TECHNICAL_READBACK_PARTIAL_PRIOR_SNAPSHOTS_NEW_HEAD_NOT_VALIDATED",
   "no_master_change": true,
-  "no_E02": true
+  "no_E02": true,
+  "integrated_runs": [
+    {
+      "run_id": 43345251449,
+      "head": "e5dc6adf2ad597c0b56a92eb6bd15fc9559c29fe",
+      "integrated_checks": "PASS_THROUGH_D07_SOURCE_COMPARISON",
+      "terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_MISSING",
+      "remote_transaction": "PASS_REAL_DISPOSABLE"
+    },
+    {
+      "run_id": 43346213260,
+      "head": "55aea6e2397caa077e2d4a92d5ec056ec12bf061",
+      "integrated_checks": "PASS_THROUGH_D07_SOURCE_COMPARISON",
+      "terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_MISSING",
+      "remote_transaction": "FAIL_STALE_REF_READBACK_REPRODUCED",
+      "remediation_commit": "6be667738269f458ba1f8ff702e7da27c2729bb4",
+      "remediation": "BOUNDED_CONFIRMATION_AND_NO_STORE_WITH_LOST_ACK_COMMIT_REFERENCE",
+      "verification": "PENDING_REVALIDATION_AT_NEXT_FREEZE"
+    }
+  ],
+  "structural_proofs": {
+    "original_origins": 1029,
+    "d03_literals": 64,
+    "d04_histories": 438,
+    "d05_origins": 399,
+    "catalog_subjects": 153,
+    "actor_scopes": 38,
+    "actor_rows": 47,
+    "open_threads": 44,
+    "source_references": {
+      "cycle_direct": 48,
+      "manifest_only": 73
+    },
+    "C45_state": {
+      "xp_total": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0
+    },
+    "authorial_chain": "V004_ACTIVATES_V018;_C45_PINS_V019_PROSPECTIVE",
+    "zero_legacy": "PASSED_ON_PRECEDING_SNAPSHOTS",
+    "semantic_approval": "NOT_PROVEN",
+    "independent_editorial_review": "MISSING"
+  },
+  "material_pending": [
+    "D05_FUNCTIONAL_REVIEW_OF_48_C45_DIRECT_AND_73_MANIFEST_REFERENCES_BEYOND_SOURCE_PINS",
+    "D04_ALL_HISTORICAL_FACT_AUTHORITY_AND_LOCAL_STATE_RECONCILIATION_NOT_INDEPENDENTLY_ATTESTED",
+    "D07_IDENTIFIABLY_INDEPENDENT_CONTEXTUAL_REVIEW_NOT_COMPLETED",
+    "E01_REQUIRES_D_PASS_BEFORE_CUTOVER_PROPOSAL",
+    "XP_TARGET_COST_AUDIT_REMAINS_SEPARATE_NOT_AUTOMATIC_GRANT"
+  ]
 }

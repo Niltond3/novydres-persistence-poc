@@ -1,7 +1,7 @@
 {
   "schema": "ADR001_D05_CONSUMER_RETIREMENT_V1",
   "phase": "D05",
-  "status": "ROUTE_REWRITE_STAGED_NOT_GATE_PASS",
+  "status": "SOURCE_CUSTODY_PASS_REFERENCED_FUNCTIONAL_EQUIVALENCE_PENDING",
   "candidate_only": true,
   "source_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
   "source_count": 399,
@@ -4922,5 +4922,19 @@
       }
     },
     "review_rule": "DO_NOT_DISMISS_M63_ONLY_OR_ACTIVATE_GM_SOURCE_WITHOUT_CONTEXTUAL_PROOF"
+  },
+  "gate": "D05_NOT_YET_PASS",
+  "structural_proof": {
+    "last_run": 43346213260,
+    "last_head": "55aea6e2397caa077e2d4a92d5ec056ec12bf061",
+    "source_originals": 399,
+    "exact_inert_runtime_sources": 285,
+    "git_only_historical_sources": 114,
+    "cycle_direct": 48,
+    "manifest_only": 73,
+    "actor_knowledge_scopes": 38,
+    "no_unapproved_live_successor_promotion": true,
+    "functional_equivalence": "PENDING",
+    "current_head_retest": "REQUIRED_AFTER_CHANGED_PROOF_CODE"
   }
 }
