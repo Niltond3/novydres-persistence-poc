@@ -22,13 +22,13 @@ test('D05 read situated NPC knowledge without collapsing actor lines',()=>{
 });
 test('D05 fail closed on disclosure, wrong actor and unconfirmed writing',()=>{
  assert.throws(()=>readC45Candidate({snapshot_sha:sha,role:'PLAYER'}),{code:'DISCLOSURE_DENIED'});
- assert.throws(()=>readC45Candidate({snapshot_sha:sha,actor_id:'npc-no-one'}),{code:'NOT_FOUND'});
+ assert.throws(()=>readC45Candidate({snapshot_sha:sha,role:'AUDITOR',actor_id:'npc-no-one'}),{code:'NOT_FOUND'});
  assert.throws(()=>readC45Candidate({snapshot_sha:'0'.repeat(40),role:'AUDITOR'}),{code:'HEAD_DIFFERENT'});
  assert.throws(()=>readC45Candidate({snapshot_sha:sha,role:'AUDITOR',confirmed_write:{status:'PENDING',snapshot_sha:sha,readback:false}}),{code:'PENDING_PERSISTENCE'});
 });
 
 test('C45 scene facts retain explicit unknowns and no invented future event',()=>{
- const x=readC45Candidate({snapshot_sha:sha});
+ const x=readC45Candidate({snapshot_sha:sha,role:'AUDITOR'});
  assert.equal(x.last_scene.scene_id,'CHR001-M302-C01_A_PASSAGEM');
  assert.equal(x.last_scene.status,'CLOSED');
  assert.equal(x.last_scene.confirmed.length,4);
@@ -46,7 +46,7 @@ test('C45 historical range lookup is exact and access-scoped, no fabricated ledg
  assert.equal(x.history_batch.ordinal,1);
  assert.equal(x.history_batch.representation,'ORIGINAL_DIARY_NOT_AUDITED_LEDGER');
  assert.equal(x.historical_index_coverage,'PARTIAL_SOURCE_BACKED_27_BATCHES');
- assert.throws(()=>readC45Candidate({snapshot_sha:sha,history_batch:28}),{code:'HISTORY_BATCH_NOT_FOUND'});
+ assert.throws(()=>readC45Candidate({snapshot_sha:sha,role:'AUDITOR',history_batch:28}),{code:'HISTORY_BATCH_NOT_FOUND'});
 });
 
 test('D05 C45 reader requires an explicit authorized role',()=>{
