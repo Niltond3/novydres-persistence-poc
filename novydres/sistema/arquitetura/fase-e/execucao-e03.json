@@ -1,26 +1,103 @@
 {
   "schema": "ADR001_E03_GATE_V1",
   "phase": "E03",
-  "gate": "E03_PENDING_CI_AND_SMOKE",
-  "status": "NOT_AUTHORIZED_FOR_GAME",
-  "promoted_commit": "74777a6328439eb02825cc09172fcb9244a1522f",
-  "active_runtime_gate": false,
-  "requirements": [
-    "MASTER_HEAD_CI_FULL_INTEGRITY",
-    "ZERO_LEGACY_HEAD",
-    "CATALOG_SCHEMA_OWNER",
-    "GATEWAYS_AND_SUCCESSORS",
-    "C45_ACTOR_THREAD_MECHANICS",
-    "SIGILO_NEGATIVES",
-    "NINE_FUNCTIONAL_GROUPS",
-    "DISPOSABLE_TRANSACTION_CAS_IDEMPOTENCE_RECOVERY",
-    "FINAL_HEAD_READBACK"
+  "gate": "E03_PASS",
+  "phase_E": "E_PASS",
+  "adr": "ADR-001_IMPLEMENTED",
+  "status": "GIT_NATIVE_RUNTIME_RELEASED_CHRONICLE_NOT_STARTED",
+  "authorization": "OWNER_APROVO_2026_11_13_E01_TREE_POLICY_SUCCESSIONS_GATEWAYS_INCIDENT_PLAN",
+  "promotion": {
+    "candidate_head": "dfdded7490899402f9995d4dc724ae6c881a388e",
+    "candidate_tree": "4e08b9e4559922f711669294718fbdc74780d9d8",
+    "master_before": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "master_promotion_commit": "74777a6328439eb02825cc09172fcb9244a1522f",
+    "parent_count": 1,
+    "tree_exact_match": true,
+    "checkpoint_ref": "checkpoint/adr001-precutover-20261113",
+    "checkpoint_sha": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "safety_checkpoint_not_runtime_fallback": true
+  },
+  "activation": {
+    "pre_gate_master_head": "213c817d48798b591b65813b8a7a7df7f7300b9b",
+    "pre_gate_master_tree": "98ec1b18f3a8637154899ffdcd3f5b1e0474784c",
+    "ci_run_id": 43412978002,
+    "ci_run_head": "213c817d48798b591b65813b8a7a7df7f7300b9b",
+    "ci_conclusion": "success",
+    "jobs": [
+      {
+        "name": "e03-integrity",
+        "id": 131843739751,
+        "conclusion": "success"
+      },
+      {
+        "name": "e03-remote-transaction",
+        "id": 131843739393,
+        "conclusion": "success"
+      }
+    ],
+    "final_gate_record_requires_same_HEAD_CI_success": true,
+    "final_gate_commit_sha": "READ_FROM_MASTER_REF_AFTER_GATE_COMMIT_AND_CI",
+    "no_chronicle_activation": true
+  },
+  "verified": {
+    "master_ref_parent_tree_blob_readback": true,
+    "gateways": [
+      "novydres/AGENTS.md",
+      "novydres/CONTEXT.md",
+      "novydres/catalogo.json"
+    ],
+    "exact_subject_catalog_count": 153,
+    "catalog_generated_check": true,
+    "schemas_ownership_positive_and_negative": true,
+    "zero_legacy_whole_head_scanner": "SUCCESS",
+    "symlinks": 0,
+    "no_legacy_operational_fallback": true,
+    "recovery": {
+      "source_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "last_scene": "C01_CLOSED",
+      "next_scene": "C02_NOT_STARTED",
+      "next_role": "NARRADOR",
+      "mortal": true,
+      "embrace_occurred": false,
+      "xp_total": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0,
+      "willpower_provisional_max": 6,
+      "willpower_superficial_damage": 2,
+      "willpower_aggravated_damage": 0,
+      "willpower_available": 4,
+      "actor_scopes": 38,
+      "actor_records": 47,
+      "open_threads": 44
+    },
+    "grouped_successor_review_count": 9,
+    "no_121_individual_unproven_certification": true,
+    "explicit_role_disclosure_negatives": true,
+    "remote_disposable_transaction": {
+      "ci_run_id": 43412978002,
+      "success": true,
+      "one_parent_atomic_text_state": true,
+      "stale_and_race_rejection": true,
+      "idempotent_retry": true,
+      "lost_ack_recovery": true,
+      "readback": true,
+      "cleanup": true,
+      "master_campaign_unchanged_by_test": true
+    }
+  },
+  "residual_risks": [
+    "119_BEHAVIORAL_SUCCESSIONS_NOT_INDIVIDUALLY_CERTIFIED_ACCEPTED_RISK",
+    "CONFLICT_001_002_003B_UNRESOLVED",
+    "EXTERNAL_ACL_NOT_UNIVERSALLY_CERTIFIED",
+    "FIVE_OPTIONAL_MEDIA_WAIVED",
+    "HISTORICAL_SEMANTIC_INDEX_NOT_EXHAUSTIVE",
+    "CORE_V5_FULL_BEHAVIOR_NOT_CERTIFIED",
+    "NARRATIVE_QUALITY_NOT_CERTIFIED_BY_AUTOMATION"
   ],
-  "accepted_risks": [
-    "119_UNPROVEN_BEHAVIORAL",
-    "CONFLICT_001_002_003B",
-    "EXTERNAL_ACL",
-    "OPTIONAL_MEDIA"
-  ],
-  "chronicle_started": false
+  "no_canonical_frozen_rewrite": true,
+  "no_new_story_event": true,
+  "no_xp_fv_mutation": true,
+  "no_player_scene_authorization": true,
+  "incident_plan": "FREEZE_AND_RECONCILE_EXPLICITLY_NO_SILENT_ROLLBACK_NO_FORCE_NO_LEGACY_FALLBACK"
 }
