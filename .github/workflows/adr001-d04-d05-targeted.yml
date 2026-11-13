@@ -1,0 +1,77 @@
+name: ADR-001 D04-D05 targeted regression
+on:
+  push:
+    branches: [design/subject-oriented-migration]
+    paths:
+      - '.github/workflows/adr001-d04-d05-targeted.yml'
+      - 'novydres/scripts/retomar-cronica.mjs'
+      - 'novydres/scripts/verificar-vereditos-d05.mjs'
+      - 'novydres/scripts/testar-vereditos-d05.test.mjs'
+      - 'novydres/scripts/testar-retomar-cronica.test.mjs'
+      - 'novydres/scripts/testar-estado-d04.test.mjs'
+      - 'novydres/scripts/testar-escopo-xp.test.mjs'
+      - 'novydres/scripts/testar-mecanica-c45.test.mjs'
+      - 'novydres/scripts/testar-autoridade-c45.test.mjs'
+      - 'novydres/scripts/testar-lotes-historicos-d04.test.mjs'
+      - 'novydres/scripts/verificar-semantica-c45.mjs'
+      - 'novydres/sistema/narrativa/contrato.md'
+      - 'novydres/cronicas/CHR-001/configuracao/**'
+      - 'novydres/catalogo.json'
+      - 'novydres/CONTEXT.md'
+      - 'novydres/scripts/testar-semantica-c45.test.mjs'
+      - 'novydres/cronicas/CHR-001/conhecimento/atores/**'
+      - 'novydres/cronicas/CHR-001/tramas/abertas/atual-c45.json'
+      - 'novydres/sistema/arquitetura/fase-d/execucao-d04.json'
+      - 'novydres/sistema/arquitetura/fase-d/execucao-d05.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  targeted-d04-d05:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Candidate subject catalog after local tone successor
+        run: node novydres/scripts/catalogo-assuntos.mjs --check
+      - name: Explicit role and C45 handoff negative tests
+        run: node --test novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: C45 state source and corruption negatives
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs
+      - name: Verify XP-FV, provisional mechanics, authorial precedence and partial historical index
+        run: |
+          node --test \
+            novydres/scripts/testar-escopo-xp.test.mjs \
+            novydres/scripts/testar-mecanica-c45.test.mjs \
+            novydres/scripts/testar-autoridade-c45.test.mjs \
+            novydres/scripts/testar-lotes-historicos-d04.test.mjs
+      - name: Verify C45 actor-scoped facts and open threads against immutable source
+        run: node --test novydres/scripts/testar-semantica-c45.test.mjs
+      - name: Verify per-reference D05 verdict classification and unauthorized-PASS negatives
+        run: node --test novydres/scripts/testar-vereditos-d05.test.mjs
+      - name: Verify owner-accepted D05 gate and grouped evidence without fabricating equivalence
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import assert from 'node:assert/strict';
+          const d=JSON.parse(readFileSync('novydres/sistema/arquitetura/fase-d/execucao-d05.json','utf8'));
+          const f=d.functional_review_by_successor;
+          assert.equal(d.gate,'D05_PASS');
+          assert.equal(d.owner_risk_acceptance.decision,'D04_D05_PASS_REQUESTED_2026_11_13');
+          assert.equal(f.status,'OWNER_ACCEPTED_GROUPED_TRIAGE_WITH_119_UNPROVEN_BEHAVIORAL_REFERENCES');
+          assert.equal(f.grouped_results.length,9);
+          assert.equal(f.reviewed_reference_rows,121);
+          assert.equal(f.behavioral_equivalence_approved,0);
+          assert.equal(f.is_d05_pass,true);
+          assert.equal(f.per_reference_verdicts.blocked,119);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.cycle_direct,0),48);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.manifest_only,0),73);
+          assert.equal(f.grouped_results.reduce((n,x)=>n+x.reference_count,0),121);
+          console.log('D05 owner-accepted PASS: 121 references grouped, 119 behavioral equivalents still unproven');
+          NODE

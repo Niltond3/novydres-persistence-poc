@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-npc-depth",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_decisions_v0_1.md",
+      "sha": "0d6659207097db0e7d9c59fa0aa73b09cb851010",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_v0_1.md",
+      "sha": "0ce4fc086be25a0d07d3dde048aa647361b62869",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

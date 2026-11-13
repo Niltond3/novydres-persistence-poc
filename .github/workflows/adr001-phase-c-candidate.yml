@@ -1,0 +1,73 @@
+name: ADR-001 D consolidated candidate validation
+on:
+  push:
+    branches: [design/subject-oriented-migration]
+    paths:
+      - 'novydres/sistema/arquitetura/fase-d/d06-freeze.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrated-D:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate all subject owners and pinned sources
+        run: node novydres/scripts/validar-assuntos.mjs
+      - name: Verify exact generated catalog
+        run: node novydres/scripts/catalogo-assuntos.mjs --check
+      - name: C45 source snapshot and resource readback
+        run: node novydres/scripts/verificar-estado-d04.mjs
+      - name: D04 all 438 original sources and negatives
+        run: node --test novydres/scripts/testar-custodia-d04.test.mjs
+      - name: C45 current state, actor/thread semantic parity and resume negatives
+        run: node --test novydres/scripts/testar-estado-d04.test.mjs novydres/scripts/testar-semantica-c45.test.mjs novydres/scripts/testar-retomar-cronica.test.mjs
+      - name: D04 authorized V018 truth and C45 prospective V019 pin lineage with denial tests
+        run: node --test novydres/scripts/testar-autoridade-c45.test.mjs
+      - name: D03 D04 XP scope, historical temporal ownership and anti-credit negatives
+        run: node --test novydres/scripts/testar-escopo-xp.test.mjs
+      - name: D04 27 historical batches exact source routing and incomplete ledger negatives
+        run: node --test novydres/scripts/testar-lotes-historicos-d04.test.mjs
+      - name: D04 mechanics source approved grapple and provisional test traits without XP or new powers
+        run: node --test novydres/scripts/testar-mecanica-c45.test.mjs
+      - name: D05 399-source custody and 121-ref provenance (not behavioral certification)
+        run: node --test novydres/scripts/testar-consumidores-d05.test.mjs novydres/scripts/testar-vereditos-d05.test.mjs
+      - name: Zero legacy final on entire HEAD
+        run: node novydres/scripts/auditar-legado-e-fontes.mjs --final
+      - name: D06 source and structural scope with negative tests
+        run: node --test novydres/scripts/testar-integridade-d06.test.mjs
+      - name: D07 separate direct source and actor review
+        run: node --test novydres/scripts/testar-revisao-d07.test.mjs
+      - name: D06 full factual report without false gate claim
+        run: node novydres/scripts/verificar-integridade-d06.mjs
+      - name: D07 independent structural review without editorial certification
+        run: node novydres/scripts/revisar-independente-d07.mjs
+      - name: D06 technical integrated gate with owner-accepted D04/D05 risk
+        run: node novydres/scripts/verificar-integridade-d06.mjs --require-pass
+      # D07 requires an identifiable independent contextual assessment, never self-certified by this CI.
+      # Keep the D07 source/ACL/semantic comparison above; its independent gate remains NOT_YET_PASS.
+
+  remote-transaction-proof:
+    if: github.ref == 'refs/heads/design/subject-oriented-migration'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Real remote Git CAS readback concurrency idempotence and lost ack on disposable ref only
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node --test novydres/scripts/testar-transacao-git.test.mjs

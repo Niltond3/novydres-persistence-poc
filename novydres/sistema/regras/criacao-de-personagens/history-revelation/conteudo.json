@@ -1,0 +1,424 @@
+{
+  "subject_id": "rule-history-revelation",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "history-revelation",
+  "semantic_owner": "rule-history-revelation",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_decisions_v0_1.md",
+      "source_sha": "ed4785c583561470f117193d5d1879ae6a8b96d8",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_f_history_chronology_revelation_decisions",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "history_chronology_revelation_integration_decision_ledger"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 16,
+          "heading_level": 1,
+          "label": "F — History, Chronology & Revelation Integration Decision Ledger",
+          "line_end": 17
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 18,
+          "heading_level": 2,
+          "label": "1. Decision ledger",
+          "line_end": 42
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 43,
+          "heading_level": 2,
+          "label": "2. Decision summary",
+          "line_end": 56
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 57,
+          "heading_level": 2,
+          "label": "3. Final verdict",
+          "line_end": 59
+        }
+      ],
+      "semantic_owner": "rule-history-revelation",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_integration_v0_1.md",
+      "source_sha": "1b374b5001afd9922ceec464d407648dd69075c9",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_f_history_chronology_revelation_integration",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "history_chronology_revelation_integration"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 26,
+          "heading_level": 1,
+          "label": "F — History, Chronology & Revelation Integration",
+          "line_end": 27
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 28,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 51
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 52,
+          "heading_level": 2,
+          "label": "B. Upstream contracts",
+          "line_end": 64
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 65,
+          "heading_level": 2,
+          "label": "C. Historical integration principles",
+          "line_end": 77
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 78,
+          "heading_level": 2,
+          "label": "D. Canonical Historical Source Inventory",
+          "line_end": 79
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 80,
+          "heading_level": 3,
+          "label": "D.1 Purpose",
+          "line_end": 94
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 95,
+          "heading_level": 3,
+          "label": "D.2 Inventory",
+          "line_end": 113
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 114,
+          "heading_level": 3,
+          "label": "D.3 Historical source gaps",
+          "line_end": 121
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 122,
+          "heading_level": 2,
+          "label": "E. Historical-event usability model",
+          "line_end": 146
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 147,
+          "heading_level": 2,
+          "label": "F. Historical-position model",
+          "line_end": 148
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 149,
+          "heading_level": 3,
+          "label": "F.1 No mandatory taxonomy",
+          "line_end": 162
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 163,
+          "heading_level": 3,
+          "label": "F.2 Editorial Historical Position Matrix",
+          "line_end": 173
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 174,
+          "heading_level": 2,
+          "label": "G. Historical Reach interface",
+          "line_end": 190
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 191,
+          "heading_level": 2,
+          "label": "H. Historical truth / access / belief / player-information model",
+          "line_end": 209
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 210,
+          "heading_level": 2,
+          "label": "I. Protected-truth boundary",
+          "line_end": 229
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 230,
+          "heading_level": 2,
+          "label": "J. Storyteller-only mediation",
+          "line_end": 250
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 251,
+          "heading_level": 2,
+          "label": "K. 1917 stress-test boundary",
+          "line_end": 270
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 271,
+          "heading_level": 2,
+          "label": "L. Major-event participation eligibility",
+          "line_end": 284
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 285,
+          "heading_level": 2,
+          "label": "M. Arrival-in-Novydres architecture",
+          "line_end": 306
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 307,
+          "heading_level": 2,
+          "label": "N. Beckoning historical integration",
+          "line_end": 331
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 332,
+          "heading_level": 2,
+          "label": "O. Historical Peak versus 2010 state",
+          "line_end": 354
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 355,
+          "heading_level": 2,
+          "label": "P. Retroactive-insertion canon boundary",
+          "line_end": 367
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 368,
+          "heading_level": 2,
+          "label": "Q. Canon-contradiction classes",
+          "line_end": 383
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 384,
+          "heading_level": 2,
+          "label": "R. Canon-contradiction resolution procedure",
+          "line_end": 404
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 405,
+          "heading_level": 2,
+          "label": "S. Historical source gaps/conflicts",
+          "line_end": 406
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 407,
+          "heading_level": 3,
+          "label": "S.1 Historical Source Gap",
+          "line_end": 416
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 417,
+          "heading_level": 3,
+          "label": "S.2 Documentary Canon Conflict",
+          "line_end": 426
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 427,
+          "heading_level": 2,
+          "label": "T. F→D2 contract",
+          "line_end": 450
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 451,
+          "heading_level": 2,
+          "label": "U. F→G interface",
+          "line_end": 465
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 466,
+          "heading_level": 2,
+          "label": "V. F→H interface",
+          "line_end": 480
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 481,
+          "heading_level": 2,
+          "label": "W. F→I interface",
+          "line_end": 494
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 495,
+          "heading_level": 2,
+          "label": "X. F→J2 interface",
+          "line_end": 508
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 509,
+          "heading_level": 2,
+          "label": "Y. F→K requirements",
+          "line_end": 528
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 529,
+          "heading_level": 2,
+          "label": "Z. Question closure matrix",
+          "line_end": 549
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 550,
+          "heading_level": 2,
+          "label": "AA. Potential retroactive triggers",
+          "line_end": 551
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 552,
+          "heading_level": 3,
+          "label": "Confirmed triggers",
+          "line_end": 557
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 558,
+          "heading_level": 3,
+          "label": "Potential trigger condition",
+          "line_end": 569
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 570,
+          "heading_level": 2,
+          "label": "AB. Required editorial matrices — status",
+          "line_end": 571
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 572,
+          "heading_level": 3,
+          "label": "Historical Position Matrix",
+          "line_end": 575
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 576,
+          "heading_level": 3,
+          "label": "Historical Eligibility Matrix",
+          "line_end": 588
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 589,
+          "heading_level": 3,
+          "label": "Knowledge Matrix",
+          "line_end": 592
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 593,
+          "heading_level": 3,
+          "label": "Canon Contradiction Matrix",
+          "line_end": 596
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 597,
+          "heading_level": 2,
+          "label": "AC. 1917 stress-test disposition",
+          "line_end": 604
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 605,
+          "heading_level": 2,
+          "label": "AD. Arrival-in-Novydres interface",
+          "line_end": 614
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 615,
+          "heading_level": 2,
+          "label": "AE. Beckoning historical interface",
+          "line_end": 622
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 623,
+          "heading_level": 2,
+          "label": "AF. Historical Peak interface",
+          "line_end": 632
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 633,
+          "heading_level": 2,
+          "label": "AG. Blockers",
+          "line_end": 636
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 637,
+          "heading_level": 2,
+          "label": "AH. Validation",
+          "line_end": 658
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 659,
+          "heading_level": 2,
+          "label": "AI. Readiness verdict",
+          "line_end": 661
+        }
+      ],
+      "semantic_owner": "rule-history-revelation",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

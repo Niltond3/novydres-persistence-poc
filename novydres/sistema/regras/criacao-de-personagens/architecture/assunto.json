@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-architecture",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_architecture_decision_inventory_v0_1_3.md",
+      "sha": "cc63250ddb029fa4840cc241cd443a0810e5dc8a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_novydres_architecture_audit_v0_1_4.md",
+      "sha": "71c0183609a385baaa3a49b885461ec33caf6a44",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

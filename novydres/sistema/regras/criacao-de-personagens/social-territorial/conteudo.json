@@ -1,0 +1,461 @@
+{
+  "subject_id": "rule-social-territorial",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "social-territorial",
+  "semantic_owner": "rule-social-territorial",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_social_territorial_political_integration_v0_1_1.md",
+      "source_sha": "39d4731276fb0f7502f80097b720e8dea3055ecc",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_social_territorial_political_integration",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "social_territorial_political_integration_for_pc_and_npc_creation",
+        "supersedes": "novydres_character_creation_social_territorial_political_integration_v0_1.md"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 72,
+          "heading_level": 1,
+          "label": "Character Creation — Social, Territorial & Political Integration",
+          "line_end": 73
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 74,
+          "heading_level": 2,
+          "label": "A. Function and authority",
+          "line_end": 96
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 97,
+          "heading_level": 3,
+          "label": "A.1 Corrective ownership rule",
+          "line_end": 112
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 113,
+          "heading_level": 2,
+          "label": "B. TTRPG design invariant",
+          "line_end": 135
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 136,
+          "heading_level": 2,
+          "label": "C. Common creation-state invariants",
+          "line_end": 148
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 149,
+          "heading_level": 2,
+          "label": "D. Rootedness",
+          "line_end": 150
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 151,
+          "heading_level": 3,
+          "label": "D.1 States",
+          "line_end": 172
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 173,
+          "heading_level": 3,
+          "label": "D.2 Creation procedure",
+          "line_end": 186
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 187,
+          "heading_level": 3,
+          "label": "D.3 Political meaning",
+          "line_end": 196
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 197,
+          "heading_level": 2,
+          "label": "E. Bairrismo at creation",
+          "line_end": 198
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 199,
+          "heading_level": 3,
+          "label": "E.1 Nature",
+          "line_end": 210
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 211,
+          "heading_level": 3,
+          "label": "E.2 Creation-time progression",
+          "line_end": 230
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 231,
+          "heading_level": 3,
+          "label": "E.3 Quick and Guided",
+          "line_end": 238
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 239,
+          "heading_level": 2,
+          "label": "F. Marco Territorial",
+          "line_end": 240
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 241,
+          "heading_level": 3,
+          "label": "F.1 Timing",
+          "line_end": 250
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 251,
+          "heading_level": 3,
+          "label": "F.2 Relationship to Bairrismo and Touchstones",
+          "line_end": 264
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 265,
+          "heading_level": 2,
+          "label": "G. Territorial placement",
+          "line_end": 288
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 289,
+          "heading_level": 2,
+          "label": "H. Affiliation and institutional links",
+          "line_end": 312
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 313,
+          "heading_level": 2,
+          "label": "I. Personal Status at creation",
+          "line_end": 329
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 330,
+          "heading_level": 2,
+          "label": "J. Offices and Positional Status at creation",
+          "line_end": 352
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 353,
+          "heading_level": 2,
+          "label": "K. Dignitas at creation",
+          "line_end": 372
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 373,
+          "heading_level": 2,
+          "label": "L. Prestações at creation",
+          "line_end": 396
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 397,
+          "heading_level": 2,
+          "label": "M. Narrative relationships and mechanical representation",
+          "line_end": 423
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 424,
+          "heading_level": 2,
+          "label": "N. Complete-sheet invariant and numeric allocation deferment",
+          "line_end": 439
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 440,
+          "heading_level": 2,
+          "label": "O. Office Functional Fit",
+          "line_end": 470
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 471,
+          "heading_level": 2,
+          "label": "P. Exceptional social, political, institutional and territorial assets",
+          "line_end": 490
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 491,
+          "heading_level": 2,
+          "label": "Q. Rootedness × political legitimacy",
+          "line_end": 509
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 510,
+          "heading_level": 2,
+          "label": "R. Internal guardrails and player-facing gateways",
+          "line_end": 511
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 512,
+          "heading_level": 3,
+          "label": "R.1 C-owned approved invariant",
+          "line_end": 522
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 523,
+          "heading_level": 3,
+          "label": "R.2 User-approved downstream direction",
+          "line_end": 534
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 535,
+          "heading_level": 3,
+          "label": "R.3 Required downstream ratification",
+          "line_end": 541
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 542,
+          "heading_level": 3,
+          "label": "R.4 Escalation rule",
+          "line_end": 552
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 553,
+          "heading_level": 2,
+          "label": "S. Guided storyline: initial scope and mutability",
+          "line_end": 554
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 555,
+          "heading_level": 3,
+          "label": "S.1 C-owned approved invariant",
+          "line_end": 576
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 577,
+          "heading_level": 3,
+          "label": "S.2 User-approved downstream direction",
+          "line_end": 593
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 594,
+          "heading_level": 3,
+          "label": "S.3 Required downstream ratification",
+          "line_end": 600
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 601,
+          "heading_level": 3,
+          "label": "S.4 Escalation rule",
+          "line_end": 606
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 607,
+          "heading_level": 2,
+          "label": "T. Minimum final social/territorial state",
+          "line_end": 634
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 635,
+          "heading_level": 2,
+          "label": "U. V5 Relationship Map",
+          "line_end": 640
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 641,
+          "heading_level": 3,
+          "label": "U.1 C-owned approved invariant",
+          "line_end": 654
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 655,
+          "heading_level": 3,
+          "label": "U.2 User-approved downstream direction",
+          "line_end": 666
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 667,
+          "heading_level": 3,
+          "label": "U.3 Required downstream ratification",
+          "line_end": 673
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 674,
+          "heading_level": 3,
+          "label": "U.4 Escalation rule",
+          "line_end": 677
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 678,
+          "heading_level": 2,
+          "label": "V. Social-state matrix",
+          "line_end": 698
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 699,
+          "heading_level": 2,
+          "label": "W. Relationship mapping matrix",
+          "line_end": 715
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 716,
+          "heading_level": 2,
+          "label": "X. Downstream interfaces",
+          "line_end": 717
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 718,
+          "heading_level": 3,
+          "label": "X.1 C → D1/D2 — Played History state-transition interface",
+          "line_end": 731
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 732,
+          "heading_level": 3,
+          "label": "X.2 C → E — Relationship / temporal-persistence interface",
+          "line_end": 743
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 744,
+          "heading_level": 3,
+          "label": "X.3 C → F — History / revelation constraint interface",
+          "line_end": 749
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 750,
+          "heading_level": 3,
+          "label": "X.4 C → G — Quick Creation",
+          "line_end": 762
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 763,
+          "heading_level": 3,
+          "label": "X.5 C → H — Guided Creation",
+          "line_end": 775
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 776,
+          "heading_level": 3,
+          "label": "X.6 C → I — NPC application and depth",
+          "line_end": 781
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 782,
+          "heading_level": 3,
+          "label": "X.7 C → J2 — Coterie creation integration",
+          "line_end": 787
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 788,
+          "heading_level": 3,
+          "label": "X.8 C → K — Final integration / publication",
+          "line_end": 804
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 805,
+          "heading_level": 2,
+          "label": "X.9 Corrective governance validation",
+          "line_end": 819
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 820,
+          "heading_level": 2,
+          "label": "Y. Question closure matrix — CHAR-CREATE-Q-030–042",
+          "line_end": 839
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 840,
+          "heading_level": 2,
+          "label": "Z. Iskander/Zoya calibration",
+          "line_end": 865
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 866,
+          "heading_level": 2,
+          "label": "AA. Retro triggers",
+          "line_end": 881
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 882,
+          "heading_level": 2,
+          "label": "AB. Explicit deferments — not blockers",
+          "line_end": 901
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 902,
+          "heading_level": 2,
+          "label": "AC. Blockers",
+          "line_end": 907
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 908,
+          "heading_level": 2,
+          "label": "AD. Final verdict",
+          "line_end": 914
+        }
+      ],
+      "semantic_owner": "rule-social-territorial",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

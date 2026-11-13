@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-experience-novydres",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
+      "sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ACT_CREDIT_AUDIT_V1.md",
+      "sha": "602e901aa64c0f54783d755a9e14f982d887cf9f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ARITHMETIC_REGRESSION_V1.json",
+      "sha": "26d651b5da9cb158cbd759550534df95a7340726",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ENVELOPE_V1.json",
+      "sha": "d5b59da66faa321580432f82c15e990012b08b6d",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ENVELOPE_V2.json",
+      "sha": "d4a15919048a6dd46ab845f9559e20cd0057a39b",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_SCHEMA_REGRESSION_V1.json",
+      "sha": "71855c995f47616fc93f80bfd49fb1bc5bfc0dce",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": []
+}

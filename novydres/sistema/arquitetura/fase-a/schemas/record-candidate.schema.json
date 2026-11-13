@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/record-candidate.schema.json",
+  "title": "NOVYDRES optional provenance record candidate (NOT ACTIVE; no universal ledger)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_kind",
+    "owner_subject_id",
+    "scope",
+    "visibility",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 4
+    },
+    "record_kind": {
+      "enum": [
+        "EVENT",
+        "DECISION",
+        "APPROVAL",
+        "CORRECTION",
+        "TRANSACTION_MARKER"
+      ]
+    },
+    "owner_subject_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 3
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "CONFIRMED",
+        "NPC_CLAIM",
+        "GM_PREPARED",
+        "CONDITIONAL",
+        "UNKNOWN"
+      ],
+      "description": "Required semantically for factual claims, but not for all formal approvals/technical markers."
+    },
+    "visibility": {
+      "enum": [
+        "PLAYER_SAFE",
+        "PC_KNOWN",
+        "NPC_BELIEF",
+        "GM_HIDDEN",
+        "SYSTEM_AUDIT"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "corrects_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "diegetic_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "causal_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "corrects_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Existing document or source excerpt corrected when no record_id exists."
+    }
+  },
+  "$comment": "A02 candidate only. No mandatory per-roll files, replay, seed, RNG audit, or asserted event ledger."
+}

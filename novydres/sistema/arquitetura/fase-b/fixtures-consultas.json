@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0",
+  "questions": [
+    {
+      "id": "B-Q01",
+      "group": "world-rules",
+      "name": "Data UNKNOWN?",
+      "request": "For historical snapshot C41, what exact civil date does the source establish for scene M3.01.C01? Preserve UNKNOWN if none is recorded.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q02",
+      "group": "world-rules",
+      "name": "Baia alugada?",
+      "request": "Was the Krauser workshop in an owned space or a leased bay?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q03",
+      "group": "world-rules",
+      "name": "Recusa de segurança?",
+      "request": "Did Bart accept the security job? State the recorded action.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q04",
+      "group": "world-rules",
+      "name": "Eleanor não contratou?",
+      "request": "Does the source confirm Eleanor hired Bart for the proposed work?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q05",
+      "group": "world-rules",
+      "name": "Alegação de salários pendentes?",
+      "request": "What did Samir allege about wages and equipment? Keep it attributed to him.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q06",
+      "group": "world-rules",
+      "name": "Versões salariais conflitantes?",
+      "request": "What conflicting accounts about wages/equipment are recorded, and were they verified or resolved?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q07",
+      "group": "world-rules",
+      "name": "Número exato UNKNOWN?",
+      "request": "What exact wage amount is established in the source? Return UNKNOWN if no amount is stated.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q08",
+      "group": "world-rules",
+      "name": "Sem ligação futura comprovada?",
+      "request": "Did Samir later call, or does the source record only a conditional possibility/intent?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q09",
+      "group": "world-rules",
+      "name": "PJ não respondeu aperto de mão de modo comprovado?",
+      "request": "Is Bart's response to Samir's offered handshake confirmed?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q10",
+      "group": "world-rules",
+      "name": "Contato não obriga PJ?",
+      "request": "Did giving the workshop phone create a promise, duty to protect, or obligation for Bart?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q11",
+      "group": "npc-relations-knowledge",
+      "name": "ID legado?",
+      "request": "What is Samir's historical actor ID and what is the candidate subject ID? State the explicit mapping.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "npc-m3-samir-haddad-candidate",
+      "actual_from_candidate": "npc-m3-samir-haddad-candidate",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q12",
+      "group": "npc-relations-knowledge",
+      "name": "Aliases?",
+      "request": "Which aliases are recorded for Samir in the historical index and the candidate profile?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": [
+        "Samir Haddad"
+      ],
+      "actual_from_candidate": [
+        "Samir Haddad"
+      ],
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "evidence_source_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "id": "B-Q13",
+      "group": "npc-relations-knowledge",
+      "name": "Status introdução?",
+      "request": "What historical introduction status is recorded for Samir, and how is that distinct from the candidate subject's migration status?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "INTRODUCED_C01",
+      "actual_from_candidate": "INTRODUCED_C01",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "evidence_source_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "id": "B-Q14",
+      "group": "npc-relations-knowledge",
+      "name": "Escopo?",
+      "request": "What is the scope of the knowledge record attributed to Samir?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "M3.01.C01",
+      "actual_from_candidate": "M3.01.C01",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q15",
+      "group": "npc-relations-knowledge",
+      "name": "Quantidade de conhecimentos confirmados?",
+      "request": "How many entries are in Samir's confirmed knowledge list?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": 3,
+      "actual_from_candidate": 3,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q16",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 1?",
+      "request": "What is the first confirmed item in Samir's knowledge record?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "Ouviu recusa de Bart fundada nos dois empregos/família.",
+      "actual_from_candidate": "Ouviu recusa de Bart fundada nos dois empregos/família.",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q17",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 2?",
+      "request": "What is the second confirmed item in Samir's knowledge record?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "Recebeu número da oficina para emergência e reconheceu não haver obrigação futura.",
+      "actual_from_candidate": "Recebeu número da oficina para emergência e reconheceu não haver obrigação futura.",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q18",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 3?",
+      "request": "What is the third confirmed item in Samir's knowledge record?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "Observou Eleanor partir.",
+      "actual_from_candidate": "Observou Eleanor partir.",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q19",
+      "group": "npc-relations-knowledge",
+      "name": "Alegação salarial mantida como claim?",
+      "request": "Is Samir's wage account recorded as a claim or as a confirmed world fact?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "Alega falta de salários e descontos usados para pagar equipamentos.",
+      "actual_from_candidate": "Alega falta de salários e descontos usados para pagar equipamentos.",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q20",
+      "group": "npc-relations-knowledge",
+      "name": "Telefone sem número exato?",
+      "request": "Can the exact workshop phone number be recovered from these pinned records?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "Número de telefone exato não foi enunciado.",
+      "actual_from_candidate": "Número de telefone exato não foi enunciado.",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q21",
+      "group": "chronology-state",
+      "name": "Oito marcadores?",
+      "request": "How many textual event markers for M3.01.C01 are listed in the candidate story and primary source?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": 8,
+      "actual_from_candidate": 8,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q22",
+      "group": "chronology-state",
+      "name": "Primeiro marcador?",
+      "request": "What is the first event marker for M3.01.C01?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "CHR001-M301-C01-01-20261107-001",
+      "actual_from_candidate": "CHR001-M301-C01-01-20261107-001",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q23",
+      "group": "chronology-state",
+      "name": "Último marcador?",
+      "request": "What is the last event marker for M3.01.C01?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "CHR001-M301-C01-08-20261107-001",
+      "actual_from_candidate": "CHR001-M301-C01-08-20261107-001",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q24",
+      "group": "chronology-state",
+      "name": "Último evento operacional?",
+      "request": "In historical C41, what is the last event ID in the cycle checkpoint?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "CHR001-M301-C05-22-20261109-001",
+      "actual_from_candidate": "CHR001-M301-C05-22-20261109-001",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q25",
+      "group": "chronology-state",
+      "name": "Provocação administrativa?",
+      "request": "In C41, which provocation and next-role/status are recorded? Report only persisted state; do not create or narrate a scene.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": "M3.02",
+      "actual_from_candidate": "M3.02",
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q26",
+      "group": "chronology-state",
+      "name": "Próxima cena iniciada?",
+      "request": "Is the next scene already started in the C41 checkpoint? Distinguish it from the last closed scene.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": false,
+      "actual_from_candidate": false,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q27",
+      "group": "chronology-state",
+      "name": "Mortal?",
+      "request": "Does C41 record the character as mortal?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": true,
+      "actual_from_candidate": true,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q28",
+      "group": "chronology-state",
+      "name": "Abraço ocorrido?",
+      "request": "Does C41 record that an embrace occurred?",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": false,
+      "actual_from_candidate": false,
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q29",
+      "group": "chronology-state",
+      "name": "XP total/gasto/restante/crédito?",
+      "request": "At the pinned C41 state, report XP total, spent, remaining, and available credit. Do not use current master C45.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": [
+        675,
+        270,
+        405,
+        0
+      ],
+      "actual_from_candidate": [
+        675,
+        270,
+        405,
+        0
+      ],
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "evidence_source_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "id": "B-Q30",
+      "group": "chronology-state",
+      "name": "FV max/dano superficial/disponível?",
+      "request": "At the pinned C41 state, report provisional Willpower maximum, superficial damage, aggravated damage, and available Willpower. Do not use current master C45.",
+      "snapshot": {
+        "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+        "candidate_commit": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+        "master_read_only_excluded": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+      },
+      "expected_from_source": [
+        6,
+        2,
+        4
+      ],
+      "actual_from_candidate": [
+        6,
+        2,
+        4
+      ],
+      "pass": true,
+      "evidence_source_path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "evidence_source_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    }
+  ]
+}

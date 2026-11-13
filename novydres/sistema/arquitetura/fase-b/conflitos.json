@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_CONFLICTS_AND_PROVENANCE_REMEDIATION",
+  "classification": "PLAYER_SAFE",
+  "phase": "B",
+  "source_candidate_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+  "design_head_before_persist": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+  "master_reverified": "0418f70ca0f01827de993273da191453a16d9857",
+  "master_comparison": {
+    "commit_count": 11,
+    "changed_path_count": 55,
+    "candidate_paths_changed": 0,
+    "source_pin_paths_changed": 0,
+    "commits": [
+      "368b636e63a34e7bce78bf52bb627d16c4165be3",
+      "bbbe402a99f706e90c2126e151f897cf3fc39e9f",
+      "d14e1a90de81f0348f2fd07062427b0602de3eb0",
+      "94324d3cd33504476db248b5fc965d2ce120c505",
+      "8e27fd5db00c7ca1c1821f4de3d6eb3bf3fa7c76",
+      "79e6406fec343e9c5d39862e20fad6beaeb79763",
+      "fbdb191b193e523ecf75791cfce9f162652da966",
+      "27652bc35755086ebbbdfd9749cb521e3e76c517",
+      "d7c883758d7fcb7fb03b6f97f3d3698ed9c58420",
+      "71d7e6fbd1a2ab173c60406fdff82785ca983976",
+      "0418f70ca0f01827de993273da191453a16d9857"
+    ],
+    "impact": "newer operational cycle/manifests/projections/governance affect candidate freshness and chronology; no source payload copied, no facts reconciled"
+  },
+  "conflicts_preserved": [
+    {
+      "id": "B-01",
+      "type": "master_advanced_after_candidate_snapshot",
+      "status": "PRESERVED_NO_REBASE_OR_RECONCILIATION"
+    },
+    {
+      "id": "B-02",
+      "type": "provisional_plot_classification",
+      "status": "CANDIDATE_ONLY_NOT_D04_ADMITTED"
+    },
+    {
+      "id": "B-03",
+      "type": "operational_cycle_and_manifest_lineage",
+      "status": "C42-C44_CHAIN_VERIFIED; manifest M57/M58/M59 fork preserved"
+    },
+    {
+      "id": "B-04",
+      "type": "historical_cursor_or_path_governance",
+      "status": "PRESERVED_NO_SILENT_REWRITE"
+    },
+    {
+      "id": "B-05",
+      "type": "web_codex_completeness",
+      "status": "B_REMEDIATION_REQUIRED"
+    },
+    {
+      "id": "B-06",
+      "type": "source_pin_path_not_present_on_design_tree",
+      "status": "RESOLVES_BY_EXACT_C26_SOURCE_SNAPSHOT_SHA; NOT_COPIED"
+    }
+  ],
+  "manifest_fork": {
+    "M57_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M58_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M59_previous": "82a2421d418ab60474520016f1e80f8672f73cd6",
+    "M59_supersedes": "MANIFEST_V58",
+    "resolution": "NOT_ATTEMPTED"
+  },
+  "candidate_provenance": "candidate C41 snapshot and six original source blobs remain pinned; 16 candidate blob pins unchanged; master changes are recorded as later operational context only",
+  "source_snapshot_lookup": {
+    "commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "tree": "4d480c57b6f3497a766e2b25b9dd3afd92395a75",
+    "paths_verified": "6/6",
+    "paths_also_in_design": "5/6",
+    "absent_design_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json"
+  },
+  "b01_reconciliation_2026_11_12": {
+    "status": "HISTORICAL_FIELD_MAPPING_VERIFIED_CURRENT_CURSOR_DRIFT_UNRESOLVED_BY_DESIGN",
+    "original_source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "current_master": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "canonical_changed": false,
+    "preserved_conflict_ids": [
+      "B-01",
+      "B-02",
+      "B-03",
+      "B-04",
+      "B-05",
+      "B-06"
+    ],
+    "disposition": "Never rewrite historical C41 to C45 or promote candidate source; master C45 remains operational and immutable in this exercise.",
+    "semantic_review": "PENDING"
+  },
+  "b04_b05_2026_11_12": {
+    "status": "B_REMEDIATION_REQUIRED",
+    "open": [
+      "B02_CODEX_EXECUTION_MISSING",
+      "B04_REMOTE_STALE_ERROR_UNCLASSIFIED",
+      "B04_SYNTHETIC_VS_REAL_RUNTIME_BOUNDARY",
+      "B03_INDEPENDENT_SEMANTIC_REVIEW_MISSING",
+      "DEC25_AUTO_SEMANTIC_RECOVERY_UNPROVEN"
+    ],
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_cursor": "C45",
+    "candidate_cursor": "C41",
+    "no_silent_resolution": true,
+    "sandbox_branch": "test/adr001-b04-20261112"
+  }
+}

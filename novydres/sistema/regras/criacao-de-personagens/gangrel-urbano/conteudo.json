@@ -1,0 +1,144 @@
+{
+  "subject_id": "rule-gangrel-urbano",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "gangrel-urbano",
+  "semantic_owner": "rule-gangrel-urbano",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/local-profiles/GANGREL_URBANO_NOVYDRES_V1.json",
+      "source_sha": "7b0e3419721fd2ceb6914031fdc947c984a7f857",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "JSON_SOURCE",
+      "editorial_status_from_source": "APPROVED_LOCAL_ACTIVE",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {},
+      "section_or_field_locators": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/version"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/id"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/clan"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/not_new_clan"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/discipline_affinities"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/original_standard_affinities"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/animalism_status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/clan_bane"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/clan_compulsion"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/in_clan_xp_multiplier"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/out_of_clan_xp_multiplier"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/bonus_attribute_dots"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/bonus_skill_dots"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/granted_powers"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/sire_known"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/ancestor_role"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/ancestor_name"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/ancestor_gender"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/origin_dating"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/ancestor_secret_truth"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/future_use_only_after_embrace"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/pc_knowledge"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/special_predator_exception_not_universal"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/source"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/character_target"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/rule_authority"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/decision"
+        }
+      ],
+      "semantic_owner": "rule-gangrel-urbano",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

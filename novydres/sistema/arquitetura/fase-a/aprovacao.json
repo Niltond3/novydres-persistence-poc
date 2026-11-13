@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "id": "ARCH-A-APPROVAL-2026-11-11",
+  "artifact_type": "PLAYER_APPROVAL_RECORD",
+  "visibility": "PLAYER_SAFE",
+  "project": "NOVYDRES",
+  "phase": "A",
+  "status": "APPROVED_FOR_DESIGN_ONLY",
+  "approved_at": "2026-11-11",
+  "authorization_origin": "Mensagem direta do jogador no chat NOVYDRES - MIGRAÇÃO ARQUITETURAL FASE A",
+  "player_statement_exact": "Aprovo a arquitetura",
+  "scope": "Aprovação da especificação arquitetural candidata da Fase A do ADR-001; libera preparar a Fase B em chat independente, sem alterar runtime.",
+  "approval_is_not": [
+    "cutover",
+    "alterar master",
+    "ativar rotas candidatas",
+    "migrar arquivos operacionais",
+    "alterar canone ou governanca congelada",
+    "iniciar cena",
+    "autorizar edicao de ficha ou evento",
+    "aprovar sucessores de politica operacional sem decisão separada"
+  ],
+  "design_baseline_commit": "401d5706ef9f4967efc5d300652fd77d4edb3dae",
+  "master_head_observed_at_approval": "1af5e5549120be66115bc8c8c4c61d0ea3d7a3f2",
+  "authoritative_documents": [
+    "novydres/sistema/arquitetura/fase-a/index.md",
+    "novydres/sistema/arquitetura/fase-a/topologia-e-ownership.md",
+    "novydres/sistema/arquitetura/fase-a/modelo-de-dados.md",
+    "novydres/sistema/arquitetura/fase-a/git-e-roteadores.md",
+    "novydres/sistema/arquitetura/fase-a/auditoria-e-mapa.md",
+    "novydres/sistema/arquitetura/fase-a/validacao-e-metricas.md",
+    "novydres/sistema/arquitetura/fase-a/fases-b-e.md",
+    "novydres/sistema/arquitetura/fase-a/schemas/subject-candidate.schema.json",
+    "novydres/sistema/arquitetura/fase-a/schemas/record-candidate.schema.json"
+  ],
+  "supersedes_phase_gate_status_from": "novydres/sistema/arquitetura/fase-a/decisoes-e-gate.json",
+  "phase_gate": "PASS_APPROVED",
+  "following_phase": "B",
+  "following_phase_status": "NOT_STARTED",
+  "required_at_phase_b_start": [
+    "Read current master/design HEADs; do not rely on old SHA",
+    "Reconcile branch divergence explicitly without modifying master",
+    "Read .AGENT.md and .CONTEXTG.md bootstrap and verify current cycle/manifest lineage",
+    "Execute strictly isolated four-case prototype on design branch after new chat mandate",
+    "Preserve G19/G23/G24/G26/G28 and frozen material",
+    "Do not infer separate cutover authorization"
+  ],
+  "test_evidence": {
+    "a_commit": "401d5706ef9f4967efc5d300652fd77d4edb3dae",
+    "verified_proposal_files": 10,
+    "verified_readback": true,
+    "diff_only_additions": true,
+    "runtime_untouched": true,
+    "full_operational_chain_validation": "NOT_EXECUTED_PHASE_A",
+    "new_phase_b_tests": "NOT_EXECUTED"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "subject_id": "chr001-table-config",
+  "schema": "ADR001_D04_C45_GUIDED_MECHANICS_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "visibility": "SYSTEM_AUDIT",
+  "owner_scope": "novydres/cronicas/CHR-001/configuracao",
+  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/character/MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3.json",
+      "sha": "f3453fb5b88d52f8e1dd9b92562500c0268548b9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/character/TARGET_SHEET_V2_APPROVED.json",
+      "sha": "f8b62bf74f4f5f937a0f0d3b3462263d4a9d186c",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/scene-execution/MECHANICAL_ADJUDICATION_GATE_V1.md",
+      "sha": "a0b98bcd64c0f04a34ad9521f27350353f2707b7",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/v5/MOTOR_MECANICO_V5_V1_1.source.txt",
+      "sha": "668ccd0f9b40a858189162600c700bdd149c6792",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "authority": {
+    "ruleset": "V5_CURRENT_SOURCE_PIN",
+    "local_exception": "DEC-CR-019_APPROVED",
+    "source_authority": "MECHANICAL_GUIDED_CREATION_RULES_PROVENANCE_V3",
+    "supervised_by": "CHR001_CYCLE_V0045_AND_LIVE_V039",
+    "future_target_sheet": "APPROVED_LOCAL_TARGET_NOT_BOUGHT",
+    "no_runtime_activation": true
+  },
+  "source_distinctions": {
+    "allocated_actual": {
+      "attributes": {
+        "Vigor": 3,
+        "Carisma": 2,
+        "Força": 4,
+        "Destreza": 2,
+        "Determinação": 1,
+        "Autocontrole": 1,
+        "Inteligência": 1
+      },
+      "skills": {
+        "Ofícios": 1,
+        "Briga": 4,
+        "Intimidação": 1,
+        "Condução": 2
+      }
+    },
+    "provisional_testing_source": "TARGET_SHEET_V2_APPROVED",
+    "provisional_testing_values": {
+      "attributes": {
+        "Força": 5,
+        "Destreza": 4,
+        "Vigor": 5,
+        "Carisma": 2,
+        "Manipulação": 2,
+        "Autocontrole": 3,
+        "Inteligência": 3,
+        "Raciocínio": 4,
+        "Determinação": 3
+      },
+      "skills": {
+        "Briga": 5,
+        "Atletismo": 3,
+        "Investigação": 3,
+        "Política": 3,
+        "Ofícios": 2,
+        "Prontidão": 3,
+        "Intimidação": 4,
+        "Ladroagem": 2,
+        "Armas de Fogo": 3,
+        "Condução": 2,
+        "Sobrevivência": 3,
+        "Furtividade": 3
+      }
+    },
+    "temporary_roll_convention": "During guided creation use TARGET V2 provisional attributes and skills, plus Briga (Agarrar) specialization only for relevant rolls under explicit DEC-CR-019. Other unpurchased specializations disallowed. Completed prior rolls not recalculated.",
+    "forbidden_conclusions": [
+      "Do not mark provisional dots purchased",
+      "Do not spend XP automatically",
+      "Do not recalculate or reroll M2.03.072 previously accepted four-face roll",
+      "Do not call archived RNG unverified faces audited",
+      "Do not grant any other target specialization or discipline before acquisition, except scoped temporary Briga (Agarrar) per DEC-CR-019; no permanent purchase"
+    ],
+    "provisional_specialization_scope": {
+      "permitted": [
+        "Briga (Agarrar)"
+      ],
+      "scope": "provisional physical grab and grapple tests from pending M2.03.099 onward",
+      "bonus_dice": 1,
+      "other_target_specializations": "NOT_GRANTED",
+      "no_xp_spent": true,
+      "retroactive_closed_rolls": "NOT_MODIFIED"
+    }
+  },
+  "current": {
+    "mortal": true,
+    "embraced": false,
+    "resources": {
+      "xp_total": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0,
+      "willpower_provisional_max": 6,
+      "willpower_superficial_damage": 2,
+      "willpower_aggravated_damage": 0,
+      "willpower_available": 4
+    }
+  },
+  "application": {
+    "acquired_traits_distinct_from_provisional_test_pools": true,
+    "provisional_attributes_and_skills_for_guided_tests_only": true,
+    "target_dots_not_auto_purchased": true,
+    "target_future_disciplines_unavailable_before_embrace": true,
+    "grapple_specialization": "Briga (Agarrar)",
+    "grapple_provisional_bonus_dice": 1,
+    "other_target_specializations_unpurchased_do_not_apply": true,
+    "other_target_powers_not_activated": true,
+    "historical_rolls_not_recomputed": true,
+    "half_successes": "floor(final_pool/2)_only_when_legal_and_player_chooses",
+    "take_half_vs_roll_player_decides": true,
+    "oppose_take_half_not_automatically_legal": true,
+    "future_dice_face_or_seed_log_mandatory": false,
+    "no_fabricated_rng_results": true,
+    "willpower_requires_explicit_player_authorization": true,
+    "resources_change_only_on_confirmed_effect": true,
+    "no_unearned_xp_spend_or_award": true
+  },
+  "procedural_succession": {
+    "G28_scene_end_batch": "HISTORICAL_ONLY",
+    "DEC18_next_response": "ATOMIC_PROSE_AND_DELTA_WITH_READBACK_AFTER_E02",
+    "DEC23_no_universal_ledger": true,
+    "DEC24_no_mandatory_rng_faces": true,
+    "no_hidden_change_to_frozen_engine": true
+  },
+  "non_equivalence_flags": [
+    "FULL_V5_CONTEXTUAL_RULE_ADJUDICATION_NOT_MACHINE_PROVEN",
+    "TARGET_COST_AUDIT_SEPARATE"
+  ]
+}

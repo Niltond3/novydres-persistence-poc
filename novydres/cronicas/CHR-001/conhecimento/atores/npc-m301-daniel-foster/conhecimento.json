@@ -1,0 +1,46 @@
+{
+  "subject_id": "chr001-knowledge-npc-m301-daniel-foster",
+  "actor_id": "npc-m301-daniel-foster",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 40,
+      "record": {
+        "entity": "npc-m301-daniel-foster",
+        "label": "Daniel Foster — M3.01.C03",
+        "scope": "M3.01.C03",
+        "confirmed": [
+          "Solicitou avaliação preliminar do caminhão à Oficina Krauser; ouviu explicação de risco e recebeu relatório técnico assinado e duas fotografias; pagou US$15.",
+          "Recusou serviço completo de US$55, e não contratou reboque alugado oferecido por orçamento dependente de distância.",
+          "Ouviu aconselhamento de Bartholomeu para procurar sindicato; declarou intenção de procurar representante antes da chefia."
+        ],
+        "claims": [
+          "Relatou manutenção da empresa duas semanas antes, ordem verbal do encarregado para dirigir caminhão apesar do laudo e ameaça vaga ao emprego; conteúdo e autoridade NÃO verificados.",
+          "Alegou sindicalização, carga da distribuidora e restrição financeira pessoal."
+        ],
+        "suspected": [
+          "É possível ter havido serviço de manutenção mal executado; sabotagem não demonstrada."
+        ],
+        "unknown": [
+          "Se procurou sindicato, se a empresa puniu/acolheu a recusa, se caminhão foi removido ou reparado após saída da oficina.",
+          "Segredos M2, Jonas, Oleg, Price/Haddad, família ou identidade sobrenatural de Bart; sem transmissão."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M3.01_v003.source.txt",
+        "anchor": "CHR001-M301-C03-02-20261107-001",
+        "last_event_id": "CHR001-M301-C03-20-20261107-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

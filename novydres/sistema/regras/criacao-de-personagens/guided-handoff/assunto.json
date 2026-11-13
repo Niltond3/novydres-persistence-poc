@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-guided-handoff",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_l_guided_content_handoff_v0_1(1).md",
+      "sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

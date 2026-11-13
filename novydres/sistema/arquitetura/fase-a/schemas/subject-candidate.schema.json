@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novydres.invalid/schemas/subject-candidate.schema.json",
+  "title": "NOVYDRES selective subject candidate (NOT ACTIVE)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "subject_id",
+    "kind",
+    "owner_scope",
+    "status",
+    "visibility"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "kind": {
+      "enum": [
+        "world-location",
+        "history-topic",
+        "organization",
+        "lineage",
+        "character",
+        "chronicle",
+        "story",
+        "plot",
+        "thread",
+        "episode",
+        "scene",
+        "beat",
+        "event",
+        "decision",
+        "approval",
+        "correction",
+        "source",
+        "orchestration-cycle",
+        "rule",
+        "policy",
+        "architecture",
+        "media-asset"
+      ]
+    },
+    "owner_scope": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "CANDIDATE",
+        "APPROVED",
+        "ACTIVE",
+        "FROZEN",
+        "CLOSED",
+        "SUPERSEDED",
+        "UNKNOWN"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "PLAYER_SAFE",
+        "PC_KNOWN",
+        "NPC_BELIEF",
+        "GM_HIDDEN",
+        "SYSTEM_AUDIT"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "description": "Envelope optional; confirmed durable claims still require located evidence via semantic validation C01. Do not fabricate an unavailable external SHA."
+    },
+    "related_subject_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    }
+  },
+  "$comment": "A02 proposed shape, not an active schema; source, episteme and actor knowledge need independent semantic verification."
+}

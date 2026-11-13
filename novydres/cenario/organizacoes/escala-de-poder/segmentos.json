@@ -1,0 +1,738 @@
+{
+  "subject_id": "world-npc-power-scale",
+  "schema": "ADR001_D03_SUBJECT_LOCAL_SOURCE_SEGMENTS_V1",
+  "not_operational": true,
+  "editorial_promotion": false,
+  "epistemic_promotion": false,
+  "source_document_count": 4,
+  "segment_count": 95,
+  "document_refs": [
+    {
+      "source_path": "novydres/world/organizations/npc-sources/novydres_chapter_07_iskander_zoya_decision_ledger_v0_1(1).md",
+      "source_blob_sha": "ab5ef918b2bbc99b9bcf2a6777f086928ae9ca9d",
+      "declared_source_header": {
+        "document_id": "novydres_chapter_07_iskander_zoya_decision_ledger",
+        "version": "0.1",
+        "status": "ready_for_senior_editor_revalidation",
+        "scope": "chapter_07_iskander_zoya_grilled_corrective_patch"
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 9,
+          "heading_level": 1,
+          "label": "Decision Ledger — Iskander Yasupov & Madame Zoya",
+          "line_end": 12
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 13,
+          "heading_level": 2,
+          "label": "Iskander Yasupov",
+          "line_end": 22
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 23,
+          "heading_level": 2,
+          "label": "Madame Zoya",
+          "line_end": 38
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 39,
+          "heading_level": 2,
+          "label": "User safety/style directive for generated artifacts",
+          "line_end": 41
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/novydres_npc_power_scale_citywide_corrective_patch_report_v0_1.md",
+      "source_blob_sha": "d585fa9dba58767428bf9ef3eb76b49aa760c5dc",
+      "declared_source_header": {
+        "document_id": "novydres_npc_power_scale_citywide_corrective_patch_report",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "npc_power_scale_citywide_minimal_corrective_patch_report",
+        "supersedes": "null"
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 18,
+          "heading_level": 1,
+          "label": "Novydres NPC Power Scale — Minimal Corrective Patch Report v0.1",
+          "line_end": 19
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 20,
+          "heading_level": 2,
+          "label": "A. Verdict",
+          "line_end": 25
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 26,
+          "heading_level": 2,
+          "label": "B. Authorized defects",
+          "line_end": 32
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 33,
+          "heading_level": 2,
+          "label": "C. Provenance correction",
+          "line_end": 48
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 49,
+          "heading_level": 2,
+          "label": "D. Canonical/local distinction",
+          "line_end": 59
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 60,
+          "heading_level": 2,
+          "label": "E. Benchmark correction",
+          "line_end": 68
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 69,
+          "heading_level": 2,
+          "label": "F. Decision preservation",
+          "line_end": 84
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 85,
+          "heading_level": 2,
+          "label": "G. Architecture preservation",
+          "line_end": 109
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 110,
+          "heading_level": 2,
+          "label": "H. Changed paths/headings",
+          "line_end": 111
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 112,
+          "heading_level": 3,
+          "label": "`novydres_npc_power_scale_citywide_v0_1_1.md`",
+          "line_end": 140
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 141,
+          "heading_level": 3,
+          "label": "`novydres_npc_power_scale_citywide_corrective_patch_report_v0_1.md`",
+          "line_end": 144
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 145,
+          "heading_level": 2,
+          "label": "I. Blocking findings",
+          "line_end": 150
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 151,
+          "heading_level": 2,
+          "label": "Validation summary",
+          "line_end": 166
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 167,
+          "heading_level": 2,
+          "label": "Final state",
+          "line_end": 171
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/novydres_npc_power_scale_citywide_decisions_v0_1.md",
+      "source_blob_sha": "4cff5f769dcc3d7d730eb0d499b5e70e9191ec2f",
+      "declared_source_header": {
+        "document_id": "novydres_npc_power_scale_citywide_decisions",
+        "version": "0.1",
+        "status": "complete_grill_ledger_candidate_for_senior_editor_revalidation",
+        "scope": "npc_power_scale_citywide_decision_ledger"
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 10,
+          "heading_level": 1,
+          "label": "Novydres NPC Power Scale — Decisions Ledger v0.1",
+          "line_end": 11
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 12,
+          "heading_level": 2,
+          "label": "1. Purpose",
+          "line_end": 17
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 18,
+          "heading_level": 2,
+          "label": "2. Decision table",
+          "line_end": 128
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 129,
+          "heading_level": 2,
+          "label": "3. Complete drill ledger — consolidated results",
+          "line_end": 130
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 131,
+          "heading_level": 3,
+          "label": "3.1 Demographic and chronological architecture",
+          "line_end": 138
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 139,
+          "heading_level": 3,
+          "label": "3.2 Generation, Blood Potency, Disciplines, and mechanics",
+          "line_end": 151
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 152,
+          "heading_level": 3,
+          "label": "3.3 Political, social, institutional, and territorial power",
+          "line_end": 167
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 168,
+          "heading_level": 3,
+          "label": "3.4 Bairrismo and Beckoning",
+          "line_end": 178
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 179,
+          "heading_level": 3,
+          "label": "3.5 Outliers, rarity, and citywide governance",
+          "line_end": 193
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 194,
+          "heading_level": 3,
+          "label": "3.6 Historical, moral, and epistemic coherence",
+          "line_end": 205
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 206,
+          "heading_level": 3,
+          "label": "3.7 Governance and future character creation",
+          "line_end": 217
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 218,
+          "heading_level": 2,
+          "label": "4. Shared Character Invariants",
+          "line_end": 232
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 233,
+          "heading_level": 2,
+          "label": "5. NPC-only citywide controls",
+          "line_end": 247
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 248,
+          "heading_level": 2,
+          "label": "6. Final decision-state summary",
+          "line_end": 262
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/world/organizations/npc-sources/novydres_npc_power_scale_citywide_v0_1_1.md",
+      "source_blob_sha": "cbe3389560d1aa2cf806ba2b1779c0049cc80b30",
+      "declared_source_header": {
+        "document_id": "novydres_npc_power_scale_citywide",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "supersedes": "novydres_npc_power_scale_citywide_v0_1.md",
+        "scope": "npc_power_scale_citywide_minimal_corrective_patch"
+      },
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 21,
+          "heading_level": 1,
+          "label": "Novydres NPC Power Scale — Citywide Architecture v0.1.1",
+          "line_end": 22
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 23,
+          "heading_level": 2,
+          "label": "A. Purpose and authority",
+          "line_end": 37
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 38,
+          "heading_level": 3,
+          "label": "A.1 Authority and provenance classification",
+          "line_end": 50
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 51,
+          "heading_level": 4,
+          "label": "A.1.1 Section authority map",
+          "line_end": 66
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 67,
+          "heading_level": 2,
+          "label": "B. Canonical V5 baseline",
+          "line_end": 81
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 82,
+          "heading_level": 3,
+          "label": "B.1 Canonical-source boundary",
+          "line_end": 87
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 88,
+          "heading_level": 2,
+          "label": "C. Novydres-specific premises",
+          "line_end": 98
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 99,
+          "heading_level": 2,
+          "label": "D. Power dimensions",
+          "line_end": 127
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 128,
+          "heading_level": 2,
+          "label": "E. Population strata",
+          "line_end": 129
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 130,
+          "heading_level": 3,
+          "label": "E.1 Chronological/social strata",
+          "line_end": 143
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 144,
+          "heading_level": 3,
+          "label": "E.2 Rootedness",
+          "line_end": 151
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 152,
+          "heading_level": 3,
+          "label": "E.3 Presence State",
+          "line_end": 164
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 165,
+          "heading_level": 3,
+          "label": "E.4 Resident versus transient population",
+          "line_end": 170
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 171,
+          "heading_level": 2,
+          "label": "F. Generation architecture",
+          "line_end": 188
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 189,
+          "heading_level": 3,
+          "label": "F.1 Generation rarity",
+          "line_end": 202
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 203,
+          "heading_level": 2,
+          "label": "G. Blood Potency architecture",
+          "line_end": 219
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 220,
+          "heading_level": 2,
+          "label": "H. Discipline and power architecture",
+          "line_end": 228
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 229,
+          "heading_level": 3,
+          "label": "H.1 Soft benchmarks",
+          "line_end": 240
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 241,
+          "heading_level": 3,
+          "label": "H.2 Acquisition rules",
+          "line_end": 257
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 258,
+          "heading_level": 3,
+          "label": "H.3 Power Density",
+          "line_end": 268
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 269,
+          "heading_level": 2,
+          "label": "I. Historical-reach architecture",
+          "line_end": 284
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 285,
+          "heading_level": 2,
+          "label": "J. Political and institutional power architecture",
+          "line_end": 303
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 304,
+          "heading_level": 3,
+          "label": "J.1 Mobilizable Capacity",
+          "line_end": 317
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 318,
+          "heading_level": 3,
+          "label": "J.2 Domain Competence",
+          "line_end": 321
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 322,
+          "heading_level": 2,
+          "label": "K. Relationship hierarchy",
+          "line_end": 342
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 343,
+          "heading_level": 2,
+          "label": "L. Bairrismo integration",
+          "line_end": 368
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 369,
+          "heading_level": 2,
+          "label": "M. Beckoning integration",
+          "line_end": 402
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 403,
+          "heading_level": 2,
+          "label": "N. Bairrismo × Beckoning interaction",
+          "line_end": 416
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 417,
+          "heading_level": 3,
+          "label": "N.1 Diablerie suppression",
+          "line_end": 436
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 437,
+          "heading_level": 2,
+          "label": "O. Outlier architecture",
+          "line_end": 450
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 451,
+          "heading_level": 3,
+          "label": "O.1 Exceptionalities",
+          "line_end": 464
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 465,
+          "heading_level": 2,
+          "label": "P. Rarity controls",
+          "line_end": 466
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 467,
+          "heading_level": 3,
+          "label": "P.1 2010 demographic pyramid",
+          "line_end": 479
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 480,
+          "heading_level": 3,
+          "label": "P.2 Survival funnel",
+          "line_end": 494
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 495,
+          "heading_level": 3,
+          "label": "P.3 Clan/raion asymmetry",
+          "line_end": 516
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 517,
+          "heading_level": 3,
+          "label": "P.4 Caitiff and Thin-Blood presence",
+          "line_end": 528
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 529,
+          "heading_level": 3,
+          "label": "P.5 Ordinary Population Baseline",
+          "line_end": 544
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 545,
+          "heading_level": 3,
+          "label": "P.6 Functional Saturation",
+          "line_end": 562
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 563,
+          "heading_level": 3,
+          "label": "P.7 Citywide Exception Register",
+          "line_end": 581
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 582,
+          "heading_level": 2,
+          "label": "Q. History ↔ mechanics consistency rules",
+          "line_end": 593
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 594,
+          "heading_level": 3,
+          "label": "Q.1 Current profile versus historical peak",
+          "line_end": 606
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 607,
+          "heading_level": 3,
+          "label": "Q.2 Actual versus perceived capability",
+          "line_end": 616
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 617,
+          "heading_level": 3,
+          "label": "Q.3 Competence Profile",
+          "line_end": 629
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 630,
+          "heading_level": 3,
+          "label": "Q.4 Asset Portfolio",
+          "line_end": 643
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 644,
+          "heading_level": 3,
+          "label": "Q.5 Psychological Resilience",
+          "line_end": 655
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 656,
+          "heading_level": 3,
+          "label": "Q.6 No retrospective XP entitlement",
+          "line_end": 661
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 662,
+          "heading_level": 3,
+          "label": "Q.7 Mechanical Load Audit",
+          "line_end": 673
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 674,
+          "heading_level": 3,
+          "label": "Q.8 Counterweight, not Currency",
+          "line_end": 685
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 686,
+          "heading_level": 3,
+          "label": "Q.9 Defining Peak and Constraint",
+          "line_end": 697
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 698,
+          "heading_level": 2,
+          "label": "R. Existing NPC benchmark audit",
+          "line_end": 725
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 726,
+          "heading_level": 3,
+          "label": "R.1 Benchmark interpretation",
+          "line_end": 737
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 738,
+          "heading_level": 2,
+          "label": "S. Future NPC-generation requirements",
+          "line_end": 741
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 742,
+          "heading_level": 3,
+          "label": "S.1 Pre-sheet Power Envelope",
+          "line_end": 760
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 761,
+          "heading_level": 3,
+          "label": "S.2 Post-sheet audit",
+          "line_end": 776
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 777,
+          "heading_level": 3,
+          "label": "S.3 Collective power",
+          "line_end": 795
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 796,
+          "heading_level": 2,
+          "label": "T. Existing NPC revalidation requirements",
+          "line_end": 822
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 823,
+          "heading_level": 2,
+          "label": "U. Retroactive dependency signals",
+          "line_end": 824
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 825,
+          "heading_level": 3,
+          "label": "U.1 Mandatory next gate — character creation",
+          "line_end": 844
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 845,
+          "heading_level": 3,
+          "label": "U.2 Integration Contract for the future character-creation workstream",
+          "line_end": 861
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 862,
+          "heading_level": 3,
+          "label": "U.3 Institutional Battle interface",
+          "line_end": 867
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 868,
+          "heading_level": 3,
+          "label": "U.4 Editorial-map governance",
+          "line_end": 871
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 872,
+          "heading_level": 2,
+          "label": "V. Validation checklist",
+          "line_end": 906
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 907,
+          "heading_level": 2,
+          "label": "W. Final readiness verdict",
+          "line_end": 930
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_NAVIGATION_MEASUREMENTS",
+  "classification": "PLAYER_SAFE",
+  "phase": "B",
+  "warning": "Historical retrieval/navigation samples only. Not a 30-query model suite and not a full-session Web latency benchmark.",
+  "connector_source_reads": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "actual_reads": 3,
+    "samples_ms": [
+      421,
+      403,
+      443
+    ],
+    "p50_ms": 421,
+    "p95_ms_nearest_rank": 443,
+    "total_chars": 14034,
+    "wire_bytes": "NOT_OBSERVABLE",
+    "tokens": "NOT_OBSERVABLE"
+  },
+  "baseline_candidate_lookup": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "baseline": {
+      "reads_per_repetition": 1,
+      "samples_ms": [
+        500,
+        432,
+        438
+      ],
+      "p50_ms": 438,
+      "p95_ms_nearest_rank": 500,
+      "chars_per_rep": 58743
+    },
+    "candidate": {
+      "reads_per_repetition": 3,
+      "samples_ms": [
+        1247,
+        1353,
+        1192
+      ],
+      "p50_ms": 1247,
+      "p95_ms_nearest_rank": 1353,
+      "chars_per_rep": 2064
+    },
+    "scope": "one situated NPC lookup; paths directly supplied; not the full fixed query suite"
+  },
+  "codex_suite": "No web navigation: local Codex CLI. Full-run latency p50/p95 unavailable because run 1 latency not retained.",
+  "previous_web_model_timing": {
+    "samples_ms": [
+      92868,
+      54579,
+      82408
+    ],
+    "status": "SELF_REPORTED_OR_APPROXIMATE; INSUFFICIENT_FOR_GATE"
+  },
+  "interpretation": "Character counts are not bytes. Do not aggregate these independent experiments or infer actual token savings.",
+  "b03_2026_11_12": {
+    "environment": "CHATGPT_WEB_GITHUB_CONNECTOR",
+    "actual_source_file_reads": 8,
+    "case_assessments": 30,
+    "scoring_fixture_read_after_answers_frozen": true,
+    "snapshot": "design@135e323f151a2942aaaeb19bc6467e3d4393569b",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "recovered_exact_git_blob_sha": true,
+    "actual_tokens": "NOT_OBSERVABLE",
+    "http_wire_bytes": "NOT_OBSERVABLE",
+    "latency_ms": "NOT_MEASURED",
+    "independent_semantic_review": false
+  }
+}

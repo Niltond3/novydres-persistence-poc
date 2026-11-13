@@ -1,0 +1,28 @@
+{
+  "subject_id": "rule-experience-novydres",
+  "schema": "ADR001_D03_XP_FIELD_BOUNDARY_V1",
+  "status": "CANDIDATE_INACTIVE",
+  "visibility": "SYSTEM_AUDIT",
+  "owner_scope": "novydres/sistema/regras/experiencia",
+  "source_refs": [
+    {
+      "id": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "global_invariants": {
+    "no_xp_total_inflation_on_credit": true,
+    "award_only_on_confirmed_resolution": true,
+    "no_double_credit": true,
+    "preparation_does_not_award": true,
+    "expense_needs_explicit_authorization": true,
+    "source_provenance_required": true,
+    "current_state_reconciliation_before_action": true,
+    "no_invented_roll_ledger": true
+  },
+  "scope_disclaimer": "THE_SOURCE_POLICY_NUMBERS_675_AND_10_ARE_LOCAL_TO_CHR001_NOT_GLOBAL_V5_RULES",
+  "local_owner_subject_id": "chr001-state-checkpoint",
+  "deltas_from_approved_DEC23_DEC24": "NO_UNIVERSAL_EVENT_LEDGER_OR_DICE_FACES_REQUIRED",
+  "operational_promotion": false
+}

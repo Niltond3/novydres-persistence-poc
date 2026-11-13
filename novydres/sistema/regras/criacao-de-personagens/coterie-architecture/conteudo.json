@@ -1,0 +1,319 @@
+{
+  "subject_id": "rule-coterie-architecture",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "coterie-architecture",
+  "semantic_owner": "rule-coterie-architecture",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_j2_coterie_creation_architecture_decisions_v0_1.md",
+      "source_sha": "9a0271ca9ceed5f3b2a0a9cc66c4f249ed456540",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_j2_coterie_creation_architecture_decisions",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_j2_coterie_creation_architecture_decisions"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 12,
+          "heading_level": 1,
+          "label": "J2 — Coterie Creation Architecture — Decision Ledger",
+          "line_end": 13
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 2,
+          "label": "1. Decision table",
+          "line_end": 27
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 28,
+          "heading_level": 2,
+          "label": "2. Question closure",
+          "line_end": 41
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 42,
+          "heading_level": 2,
+          "label": "3. Source Pointer Debt disposition",
+          "line_end": 49
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 50,
+          "heading_level": 2,
+          "label": "4. Retroactive triggers / blockers",
+          "line_end": 55
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 56,
+          "heading_level": 2,
+          "label": "5. Final verdict",
+          "line_end": 58
+        }
+      ],
+      "semantic_owner": "rule-coterie-architecture",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_j2_coterie_creation_architecture_v0_1.md",
+      "source_sha": "8380ab1382483c1ac81e7ebdbea2320c303d9e6e",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_j2_coterie_creation_architecture",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_j2_coterie_creation_architecture"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 12,
+          "heading_level": 1,
+          "label": "J2 — Coterie Creation Architecture",
+          "line_end": 13
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 19
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 20,
+          "heading_level": 2,
+          "label": "B. Upstream contracts",
+          "line_end": 33
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 34,
+          "heading_level": 2,
+          "label": "C. Canonical/local coterie model",
+          "line_end": 50
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 51,
+          "heading_level": 2,
+          "label": "D. Coterie placement in creation",
+          "line_end": 70
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 71,
+          "heading_level": 2,
+          "label": "E. Coterie type admission/presentation",
+          "line_end": 80
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 81,
+          "heading_level": 2,
+          "label": "F. Shared Domain architecture",
+          "line_end": 99
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 100,
+          "heading_level": 2,
+          "label": "G. Domain/local territorial reconciliation",
+          "line_end": 115
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 116,
+          "heading_level": 2,
+          "label": "H. Shared Advantages/Flaws",
+          "line_end": 127
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 128,
+          "heading_level": 2,
+          "label": "I. Group versus individual ownership",
+          "line_end": 140
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 141,
+          "heading_level": 2,
+          "label": "J. Shared history architecture",
+          "line_end": 158
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 159,
+          "heading_level": 2,
+          "label": "K. D2 group-history interface",
+          "line_end": 173
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 174,
+          "heading_level": 2,
+          "label": "L. Shared patrons/enemies/obligations",
+          "line_end": 191
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 192,
+          "heading_level": 2,
+          "label": "M. Member Relationship Map architecture",
+          "line_end": 214
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 215,
+          "heading_level": 2,
+          "label": "N. Collective Power Profile interface",
+          "line_end": 247
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 248,
+          "heading_level": 2,
+          "label": "O. Membership-state considerations",
+          "line_end": 261
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 262,
+          "heading_level": 2,
+          "label": "P. Final coterie output model",
+          "line_end": 294
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 295,
+          "heading_level": 2,
+          "label": "Q. Play Guidance handoff",
+          "line_end": 309
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 310,
+          "heading_level": 2,
+          "label": "R. J2→G interface",
+          "line_end": 327
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 328,
+          "heading_level": 2,
+          "label": "S. J2→H interface",
+          "line_end": 340
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 341,
+          "heading_level": 2,
+          "label": "T. J2→I interface",
+          "line_end": 352
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 353,
+          "heading_level": 2,
+          "label": "U. J2→K requirements",
+          "line_end": 368
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 369,
+          "heading_level": 2,
+          "label": "V. J1 terminology-collision dispositions",
+          "line_end": 379
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 380,
+          "heading_level": 2,
+          "label": "W. J1 Source Pointer Debt disposition",
+          "line_end": 393
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 394,
+          "heading_level": 2,
+          "label": "X. Closure matrix",
+          "line_end": 407
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 408,
+          "heading_level": 2,
+          "label": "Required Matrix 1 — Coterie Component Ownership Matrix",
+          "line_end": 428
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 429,
+          "heading_level": 2,
+          "label": "Required Matrix 2 — Canonical ↔ Local Territorial Matrix",
+          "line_end": 440
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 441,
+          "heading_level": 2,
+          "label": "Required Matrix 3 — Shared Relationship Matrix",
+          "line_end": 454
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 455,
+          "heading_level": 2,
+          "label": "Required Matrix 4 — Shared History Routing Matrix",
+          "line_end": 467
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 468,
+          "heading_level": 2,
+          "label": "Required Matrix 5 — Coterie Final Output Matrix",
+          "line_end": 489
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 490,
+          "heading_level": 2,
+          "label": "Y. Retroactive triggers / blockers",
+          "line_end": 505
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 506,
+          "heading_level": 2,
+          "label": "Z. Readiness verdict",
+          "line_end": 508
+        }
+      ],
+      "semantic_owner": "rule-coterie-architecture",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

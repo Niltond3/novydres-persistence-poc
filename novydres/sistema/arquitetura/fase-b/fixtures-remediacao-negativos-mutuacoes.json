@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_REMEDIATION_NEGATIVE_MUTATION_FIXTURE_SANITIZED",
+  "classification": "PLAYER_SAFE",
+  "basis": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "design_head_before_final_remediation": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+    "negative_fixture_path": "novydres/sistema/arquitetura/fase-b/fixtures-negativos.json",
+    "negative_fixture_blob_sha": "2d76f9336a75ee1eb641d49091f89b6d63412d9",
+    "mutation_fixture_path": "novydres/sistema/arquitetura/fase-b/fixtures-mutacoes.json",
+    "mutation_fixture_blob_sha": "eb0f50b8684586c020797e6d1ed77266535c3b52"
+  },
+  "omitted_fields": [
+    "expected",
+    "observed",
+    "passed"
+  ],
+  "negative_cases": [
+    {
+      "id": "B-N01",
+      "label": "identity",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N02",
+      "label": "aliases",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N03",
+      "label": "claim-promotion",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N04",
+      "label": "unknown-suppression",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N05",
+      "label": "future-contact",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N06",
+      "label": "invent-pc-obligation",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N07",
+      "label": "forge-technical-ledger",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N08",
+      "label": "event-id-corruption",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N09",
+      "label": "xp-resource-change",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N10",
+      "label": "fv-resource-change",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N11",
+      "label": "unauthorized-scene-start",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-N12",
+      "label": "source-hash-change",
+      "execution_status": "NOT_TESTABLE"
+    }
+  ],
+  "mutation_cases": [
+    {
+      "id": "B-M01",
+      "label": "identical-payload-idempotence",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M02",
+      "label": "conflicting-same-id",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M03",
+      "label": "stale-expected-head",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M04",
+      "label": "non-fast-forward",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M05",
+      "label": "unauthorized-master",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M06",
+      "label": "dangling-ref",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M07",
+      "label": "owner-duplication",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M08",
+      "label": "frozen-file-edit",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M09",
+      "label": "invalid-visibility",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M10",
+      "label": "activate-candidate-route",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M11",
+      "label": "synthetic-event-roll",
+      "execution_status": "NOT_TESTABLE"
+    },
+    {
+      "id": "B-M12",
+      "label": "parallel-old-sha-race",
+      "execution_status": "NOT_TESTABLE"
+    }
+  ],
+  "reason": "rótulos sem payloads de teste executáveis e sem critério de readback remoto/local autorizado; não executar simulação como PASS",
+  "execution_boundary": "No executable operations/payloads are included; do not treat model-level discussion or simulation as a real mutation/write test.",
+  "design_commit_for_candidate_reads": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+  "original_source_snapshot_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a"
+}

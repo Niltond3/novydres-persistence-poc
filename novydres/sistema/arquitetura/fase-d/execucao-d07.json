@@ -1,0 +1,125 @@
+{
+  "schema": "ADR001_D07_INDEPENDENT_REVIEW_PREP_V1",
+  "phase": "D07",
+  "status": "D07_PASS_SCOPED_IDENTIFIABLE_INDEPENDENT_AGENT_CONTEXTUAL_REVIEW_WITH_OWNER_ACCEPTED_RISK",
+  "gate": "D07_PASS",
+  "candidate_only": true,
+  "proof_script": "novydres/scripts/revisar-independente-d07.mjs",
+  "negative_tests": "novydres/scripts/testar-revisao-d07.test.mjs",
+  "not_self_attested_d06": true,
+  "source_comparison_by_actor": 47,
+  "source_comparison_of_threads": 44,
+  "privacy_fail_closed": true,
+  "require_contextual_review_of_121_active_successions": false,
+  "editorial_conflicts_not_selected": [
+    "CONFLICT-001",
+    "CONFLICT-002",
+    "CONFLICT-003B"
+  ],
+  "no_false_independent_certification": true,
+  "ci": "D06_INTEGRATED_SUCCESS_43364072558_D04_D05_TARGETED_SUCCESS_43364329372_NO_REPEAT_ON_DOCUMENTATION_ONLY",
+  "no_master_change": true,
+  "evidence": {
+    "implementation_script": "novydres/scripts/revisar-independente-d07.mjs",
+    "negative_tests": "novydres/scripts/testar-revisao-d07.test.mjs",
+    "prior_runs": [
+      43345251449,
+      43346213260
+    ],
+    "comparisons": [
+      "47_ACTOR_RECORDS_AGAINST_C45",
+      "44_THREADS_AGAINST_C45",
+      "C45_SCENE_FACTS",
+      "XP_LOCAL_TEMPORAL_OWNERSHIP",
+      "D05_SOURCE_399",
+      "V018_V019_AUTHORIAL_LINEAGE"
+    ],
+    "actual_independent_reviewer_identity": "GPT-6_CHATGPT_WEB_SEPARATE_REVIEW_SESSION_2026-11-13",
+    "semantic_editorial_assessment": "SCOPED_CONTEXTUAL_AGENT_REVIEW_PASS_NO_HUMAN_OR_BLIND_REVIEW_CLAIM",
+    "disclosure_risk_review": "DIRECT_SOURCE_SAMPLE_PLUS_EXISTING_NEGATIVES_WITH_ACKNOWLEDGED_EXTERNAL_ACL_LIMIT",
+    "no_CI_as_human_signoff": true,
+    "source_comparison_run_id": 43346857735,
+    "source_comparison_result": "SUCCESS_WITHOUT_EXTERNAL_REVIEWER",
+    "third_party_reviewer_identity": "NOT_RECORDED",
+    "does_not_attest_functional_successors": true
+  },
+  "material_pending": [
+    "119_D05_BEHAVIORAL_SUCCESSIONS_NOT_INDIVIDUALLY_CERTIFIED_OWNER_ACCEPTED_RISK",
+    "CONFLICT_001_002_003B_NOT_SILENTLY_SELECTED",
+    "POST_CUTOVER_LIVE_SMOKE_AND_E03_STILL_REQUIRED",
+    "FULL_V5_AND_EXTERNAL_ACL_NOT_CERTIFIED"
+  ],
+  "latest_partial_evidence": {
+    "run_id": 43346857735,
+    "checked_candidate_head": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "checked_candidate_tree": "e033dc4455c1701d651735bf1760bcacb0d4fc9e",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "integrated_job_id": 131628178759,
+    "integrated_job_conclusion": "FAILURE_ON_INTENTIONAL_D06_SEMANTIC_GATE",
+    "remote_git_job_id": 131628178299,
+    "remote_git_job_conclusion": "SUCCESS",
+    "steps_before_terminal_gate": "ALL_PASS",
+    "D06_terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_NOT_PRESENT",
+    "D07_final_gate": "SKIPPED_DEPENDENCY_D06",
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false
+  },
+  "reviewer_requirement": "INDEPENDENT_IDENTIFIABLE_REVIEW_OF_D03_D06_IMPLEMENTATION_AND_CONTEXTUAL_PERMISSIONS",
+  "simplified_gate_policy": {
+    "decision_record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "method": "ONE_IDENTIFIABLE_INDEPENDENT_CONTEXTUAL_REVIEW_BY_FUNCTION_AND_RISK",
+    "nine_successor_groups": 9,
+    "not_required": [
+      "121_INDIVIDUAL_BEHAVIORAL_ATTESTATIONS",
+      "REPEATED_D04_D05_SOURCE_AUDITS_WITHOUT_DRIFT",
+      "DUPLICATE_DETERMINISTIC_CI_RUNS"
+    ],
+    "required": [
+      "INDEPENDENT_REVIEWER_ID_AND_ASSESSMENT",
+      "C45_STATE_KNOWLEDGE_SECRETS_AND_HISTORICAL_LIMITS",
+      "NARRATIVE_AGENCY_AND_V5_CRITICAL_SCENARIOS",
+      "PER_RESPONSE_ATOMICITY_AND_RECOVERY_EVIDENCE",
+      "DISCLOSURE_NEGATIVES_AND_ZERO_LEGACY",
+      "REPORT_UNRESOLVED_EDITORIAL_CONFLICTS_WITHOUT_SILENT_DECISION"
+    ],
+    "no_false_runtime_certification": true,
+    "no_cutover_without_E_APPROVAL": true
+  },
+  "prerequisite_d06": {
+    "gate": "D06_PASS",
+    "run_id": 43364072558,
+    "review_requirement": "INDEPENDENT_CONTEXTUAL_ASSESSMENT_NOT_SELF_ATTESTATION"
+  },
+  "current_independent_review": {
+    "record": "novydres/sistema/arquitetura/fase-d/revisao-contextual-d07-2026-11-13.md",
+    "reviewer": "GPT-6 ChatGPT Web distinct review session 2026-11-13",
+    "blind": false,
+    "human": false,
+    "separate_from_implementation": true,
+    "direct_source_comparisons": [
+      "C45_SCENE_EVENT_ID",
+      "44_THREADS",
+      "C45_XP_ENVELOPE",
+      "V5_PROVISIONAL_MECHANICS",
+      "NPC_MARY_SCOPED_SOURCE_SAMPLE"
+    ],
+    "risk_groups_reviewed": 9,
+    "source_coverage_reused_from_ci": {
+      "actor_scopes": 38,
+      "actor_rows": 47,
+      "origins": 1029
+    },
+    "ci": {
+      "d06": 43364072558,
+      "d04d05": 43364329372
+    },
+    "review_snapshot_head": "57c6ca324911da96cbadf6b701b2c8aa42c997ed",
+    "review_snapshot_tree": "94453cddee9a636871a4b6080a61640dba18f4ad",
+    "residual_risk_owner_accepted": true,
+    "no_runtime_production_certification": true,
+    "phase_D_gate": "D_PASS",
+    "E01_preparation_permitted": true,
+    "E02_authorized": false
+  },
+  "historical_partial_evidence_status": "The latest_partial_evidence and older prereq fields describe the historical earlier failure and must not override current_independent_review."
+}

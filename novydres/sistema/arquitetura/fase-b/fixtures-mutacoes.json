@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "B-M01",
+      "name": "identical-payload-idempotence",
+      "expected": "NO_OP",
+      "observed": "NO_OP",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M02",
+      "name": "conflicting-same-id",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M03",
+      "name": "stale-expected-head",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M04",
+      "name": "non-fast-forward",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M05",
+      "name": "unauthorized-master",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M06",
+      "name": "dangling-ref",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M07",
+      "name": "owner-duplication",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M08",
+      "name": "frozen-file-edit",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M09",
+      "name": "invalid-visibility",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M10",
+      "name": "activate-candidate-route",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M11",
+      "name": "synthetic-event-roll",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    },
+    {
+      "id": "B-M12",
+      "name": "parallel-old-sha-race",
+      "expected": "BLOCK",
+      "observed": "BLOCK",
+      "passed": true,
+      "mode": "SIMULATED_TRANSACTION_PREDICATE_NOT_REMOTE_GIT_WRITE"
+    }
+  ]
+}

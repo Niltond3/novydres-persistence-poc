@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "chr001-state-checkpoint",
+  "kind": "chronicle",
+  "owner_scope": "novydres/cronicas/CHR-001/estado",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/MANIFEST_V63.json",
+      "sha": "18b20257ad79c9b6a596c293f3445d28c64d8f71",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/HISTORY_INDEX_v039.json",
+      "sha": "a8cc5a2860e8bc5e7acbf5a48b3f98614c7469a0",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/character/state_v045.source.txt",
+      "sha": "8a00eeaea0ceba59245a34c9da1992a03635b625",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/episodes/M3.02_v001.source.txt",
+      "sha": "04277d399330181b2cc029f5132dda38b6457c2f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/OPEN_THREADS_V24.json",
+      "sha": "05ce76898d2757c1e270e9c3b1282712df123d13",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-experience-novydres",
+    "story-m301-c01"
+  ]
+}

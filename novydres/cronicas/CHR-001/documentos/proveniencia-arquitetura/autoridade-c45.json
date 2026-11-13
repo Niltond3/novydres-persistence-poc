@@ -1,0 +1,74 @@
+{
+  "subject_id": "chr001-runtime-story-architecture",
+  "schema": "ADR001_D04_C45_AUTHORIAL_PRECEDENCE_PROJECTION_V1",
+  "status": "CANDIDATE_NON_OPERATIONAL",
+  "visibility": "SYSTEM_AUDIT",
+  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "source_refs": [
+    {
+      "id": "novydres/runtime/narrative-architecture/program/decisions/PLAYER_DECISION_AGENT_ACCESS_V004.json",
+      "sha": "507eea0d797ddcafb0f19730c5dd20dd0d4594f1",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_ACTIVATION_V004_PLAYER_SAFE.json",
+      "sha": "9cb45c0944cf3dd41b744bd8d16a4a9a6c289e55",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V018_GM_HIDDEN.md",
+      "sha": "537c4260c1d024cea144511596a9b54599b737b8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D07_STORY_TRUTH_PACKAGE_V019_GM_HIDDEN.md",
+      "sha": "105e4fca581e10ce28d85133c40bd5237d68cfb4",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/narrative-architecture/program/deliverables/D08_STORY_PREPARATION_V022_GM_HIDDEN.md",
+      "sha": "b2c35cdd766ff11ebd38cb95904a8fe324031d37",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0045.json",
+      "sha": "14f746139ab0dda35ee5de95cf8a4536631534fd",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "editorial_authority": {
+    "underlying_player_approval": "RECORDED_IN_PLAYER_DECISION_AGENT_ACCESS_V004",
+    "original_activation_record": "D07_ACTIVATION_V004_ACTIVE_AS_SOURCE",
+    "base_authorized_truth": "D07_V018_BLOB_537c4260",
+    "prospective_amendment": "D07_V019_BOUND_TO_C45_CYCLE_ONLY",
+    "amendment_scope": "M302_TEMPORAL_ENTRY_ONLY_NO_RETROACTIVE_CHANGE",
+    "prose_history_authority": "PLAYED_EVENTS_ONLY_FROM_C45_LIVE_AND_EPISODE",
+    "frozen_canons_modified": false,
+    "source_versions_superseded_without_deletion": false
+  },
+  "c45_authority": {
+    "cycle": "CHR001-CYCLE-0045",
+    "last_confirmed_event_id": "CHR001-M302-C01-05-20261111-001",
+    "next_scene": "C02",
+    "next_scene_started": false,
+    "source_scene_ready": true,
+    "source_narrator_permission": true,
+    "source_narrator_prompt_required": true,
+    "candidate_runtime_activation": false,
+    "current_c45_cycle_does_not_authorize_candidate_scene": true
+  },
+  "boundaries": {
+    "gm_hidden_player_disclosure": false,
+    "actor_knowledge_not_promoted": true,
+    "preparation_is_not_played_event": true,
+    "not_a_new_approval": true,
+    "V018_activation_record_not_silently_rewritten_to_V019": true,
+    "V019_cycle_binding_not_silently_reverted_to_V018": true,
+    "no_new_time_or_event_during_migration": true
+  },
+  "unresolved": {
+    "future_editorial_variants": "PRESERVE_IN_SOURCE_CUSTODY",
+    "semantic_functional_consumer_check": "PENDING_D06_D07",
+    "runtime_promotion": "E02_SPECIFIC_APPROVAL_REQUIRED"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "subject_id": "rule-specialist-c",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "specialist-c",
+  "semantic_owner": "rule-specialist-c",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_specialist_c_decisions_v0_1_1.md",
+      "source_sha": "19b1e5a5b572edf52046e2bd98aa7aa65e2cbd69",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_specialist_c_decisions",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "specialist_c_grill_decision_log",
+        "supersedes": "novydres_character_creation_specialist_c_decisions_v0_1.md"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 44,
+          "heading_level": 1,
+          "label": "Specialist C — Decision Log",
+          "line_end": 45
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 46,
+          "heading_level": 2,
+          "label": "1. Function",
+          "line_end": 57
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 58,
+          "heading_level": 2,
+          "label": "2. Approved decisions",
+          "line_end": 82
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 83,
+          "heading_level": 2,
+          "label": "2.1 Canonical Decision Provenance Matrix — CHAR-C-001–020",
+          "line_end": 109
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 110,
+          "heading_level": 3,
+          "label": "2.2 Provenance validation",
+          "line_end": 119
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 120,
+          "heading_level": 2,
+          "label": "3. Decision details",
+          "line_end": 121
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 122,
+          "heading_level": 3,
+          "label": "CHAR-C-001 — Rootedness at creation",
+          "line_end": 141
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 142,
+          "heading_level": 3,
+          "label": "CHAR-C-002 — Local/locally formed Bairrismo",
+          "line_end": 163
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 164,
+          "heading_level": 3,
+          "label": "CHAR-C-003 — Newcomer Bairrismo acquisition",
+          "line_end": 185
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 186,
+          "heading_level": 3,
+          "label": "CHAR-C-004 — Marco Territorial selection timing",
+          "line_end": 199
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 200,
+          "heading_level": 3,
+          "label": "CHAR-C-005 — Raion/domain placement",
+          "line_end": 221
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 222,
+          "heading_level": 3,
+          "label": "CHAR-C-006 — Faction/sect/institution affiliation",
+          "line_end": 237
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 238,
+          "heading_level": 3,
+          "label": "CHAR-C-007 — Personal Status at creation",
+          "line_end": 256
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 257,
+          "heading_level": 3,
+          "label": "CHAR-C-008 — Office and Positional Status at creation",
+          "line_end": 277
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 278,
+          "heading_level": 3,
+          "label": "CHAR-C-009 — Dignitas at creation",
+          "line_end": 291
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 292,
+          "heading_level": 3,
+          "label": "CHAR-C-010 — Prestações at creation",
+          "line_end": 312
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 313,
+          "heading_level": 3,
+          "label": "CHAR-C-011 — Narrative relationships and mechanics",
+          "line_end": 326
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 327,
+          "heading_level": 3,
+          "label": "CHAR-C-012 — Office Functional Fit",
+          "line_end": 340
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 341,
+          "heading_level": 3,
+          "label": "CHAR-C-013 — Exceptional social/territorial asset interface",
+          "line_end": 362
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 363,
+          "heading_level": 3,
+          "label": "CHAR-C-014 — Rootedness and political legitimacy",
+          "line_end": 376
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 377,
+          "heading_level": 3,
+          "label": "CHAR-C-015 — Internal guardrails versus visible gateways",
+          "line_end": 380
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 381,
+          "heading_level": 4,
+          "label": "C-owned approved invariant",
+          "line_end": 391
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 392,
+          "heading_level": 4,
+          "label": "User-approved downstream direction",
+          "line_end": 401
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 402,
+          "heading_level": 4,
+          "label": "Required downstream ratification",
+          "line_end": 408
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 409,
+          "heading_level": 4,
+          "label": "Escalation rule",
+          "line_end": 412
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 413,
+          "heading_level": 3,
+          "label": "CHAR-C-016 — Mutability and initial scope of Guided history",
+          "line_end": 416
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 417,
+          "heading_level": 4,
+          "label": "C-owned approved invariant",
+          "line_end": 427
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 428,
+          "heading_level": 4,
+          "label": "User-approved downstream direction",
+          "line_end": 442
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 443,
+          "heading_level": 4,
+          "label": "Required downstream ratification",
+          "line_end": 449
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 450,
+          "heading_level": 4,
+          "label": "Escalation rule",
+          "line_end": 453
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 454,
+          "heading_level": 3,
+          "label": "CHAR-C-017 — Minimum final social/territorial state",
+          "line_end": 471
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 472,
+          "heading_level": 3,
+          "label": "CHAR-C-018 — Relationship Map paradigm correction",
+          "line_end": 483
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 484,
+          "heading_level": 3,
+          "label": "CHAR-C-019 — Relationship Map current-state contract and mode direction",
+          "line_end": 487
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 488,
+          "heading_level": 4,
+          "label": "C-owned approved invariant",
+          "line_end": 497
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 498,
+          "heading_level": 4,
+          "label": "User-approved downstream direction",
+          "line_end": 507
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 508,
+          "heading_level": 4,
+          "label": "Required downstream ratification",
+          "line_end": 514
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 515,
+          "heading_level": 4,
+          "label": "Escalation rule",
+          "line_end": 518
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 519,
+          "heading_level": 3,
+          "label": "CHAR-C-020 — Iskander/Zoya calibration",
+          "line_end": 541
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 542,
+          "heading_level": 2,
+          "label": "4. Question closure matrix",
+          "line_end": 559
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 560,
+          "heading_level": 3,
+          "label": "Closure validation",
+          "line_end": 566
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 567,
+          "heading_level": 2,
+          "label": "5. Cross-cutting decisions beyond the inventory rows",
+          "line_end": 582
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 583,
+          "heading_level": 2,
+          "label": "6. Explicit downstream deferments",
+          "line_end": 599
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 600,
+          "heading_level": 2,
+          "label": "7. TTRPG publication constraint",
+          "line_end": 609
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 610,
+          "heading_level": 2,
+          "label": "7.1 Ownership correction validation",
+          "line_end": 628
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 629,
+          "heading_level": 3,
+          "label": "Comparable-leakage audit",
+          "line_end": 641
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 642,
+          "heading_level": 2,
+          "label": "8. Blockers",
+          "line_end": 647
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 648,
+          "heading_level": 2,
+          "label": "9. Final verdict",
+          "line_end": 656
+        }
+      ],
+      "semantic_owner": "rule-specialist-c",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

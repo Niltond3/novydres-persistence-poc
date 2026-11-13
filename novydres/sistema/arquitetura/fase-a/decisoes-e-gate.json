@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "phase": "A",
+  "status": "PENDING_APPROVAL",
+  "classification": "PLAYER_SAFE",
+  "operational_activation": false,
+  "cutover_authorized": false,
+  "branch": "design/subject-oriented-migration",
+  "design_baseline_sha": "2d1b5ca7e9afeccef2af922fc8248a33154a3317",
+  "design_tree_sha": "b877b8abce845beaab09955e99a5f3fed6f02fd0",
+  "master_head_observed": "44b5c2348ccd3bb2ea5edaaa918f2f55b197321b",
+  "branch_divergence": {
+    "status": "diverged",
+    "ahead": 2,
+    "behind": 2
+  },
+  "current_master_discovery_observed": {
+    "manifest": "novydres/MANIFEST_V53.json",
+    "cycle": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0038.json",
+    "contract": "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V10.md"
+  },
+  "source_refs": [
+    "novydres/sistema/arquitetura/adr/001-subject-oriented.md",
+    "novydres/.AGENT.md",
+    "novydres/.CONTEXTG.md",
+    "novydres/.AGENT_V4.md",
+    "novydres/.CONTEXTG_V3.md",
+    "novydres/runtime/orchestration/START_HERE_V7.md",
+    "novydres/runtime/orchestration/ORCHESTRATION_CONTRACT_V8.md",
+    "novydres/runtime/GITHUB_PRIMARY_CONTRACT_V4.md",
+    "novydres/governance/sources/novydres_editorial_governance_v1_0.md",
+    "novydres/migration/MIG-DEC-002_GITHUB_PRIMARY_ACTIVATION_V1.md"
+  ],
+  "decisions": [
+    {
+      "id": "ARCH-A-001",
+      "topic": "stable-names-vs-existing-copy-on-write",
+      "recommendation": "approve architecture only now; issue and approve successor policy before operational cutover",
+      "requires_explicit_authority": true
+    },
+    {
+      "id": "ARCH-A-002",
+      "topic": "master-diverged-from-design",
+      "recommendation": "require revalidation/reconciliation before B, no silent merge",
+      "requires_explicit_authority": false
+    },
+    {
+      "id": "ARCH-A-003",
+      "topic": "external-media",
+      "recommendation": "preserve existing Git-metadata/Drive-original media contract; separately audit missing sources",
+      "requires_explicit_authority": false
+    },
+    {
+      "id": "ARCH-A-004",
+      "topic": "editorial-collisions",
+      "recommendation": "do not promote candidate documents without editorial verdict",
+      "requires_explicit_authority": true
+    }
+  ],
+  "audited_scope": {
+    "inventory_type": "GIT_TREE_STRUCTURAL",
+    "blobs_diagnostic": 842,
+    "trees_diagnostic": 81,
+    "revision_named_diagnostic": 687,
+    "success_metric": "NOT_FILE_COUNT",
+    "coverage_of_all_historical_assertions": "NOT_EXECUTED_PHASE_D"
+  },
+  "gates": {
+    "adr_read": "PASS",
+    "historical_bootstrap_read": "PASS",
+    "current_authority_scoped_discovery": "PASS_WITH_LIMITATION_NOT_FULL_CHAIN_VALIDATED",
+    "design_branch_read_only_audit": "PASS",
+    "architecture_documents": "PRESENT_AFTER_PUBLICATION",
+    "runtime_untouched": "INVARIANT_TO_VERIFY_BY_DIFF",
+    "git_readback": "PENDING_PUBLICATION",
+    "player_approval": "PENDING",
+    "phase_b_authorized": false
+  },
+  "risks": [
+    {
+      "id": "RA-01",
+      "type": "AUTHORITY_COLLISION",
+      "status": "OPEN",
+      "label": "editorial candidate versus closure evidence"
+    },
+    {
+      "id": "RA-02",
+      "type": "VERSIONING_POLICY",
+      "status": "OPEN",
+      "label": "successor policy needed at cutover"
+    },
+    {
+      "id": "RA-03",
+      "type": "SNAPSHOT_DRIFT",
+      "status": "OPEN",
+      "label": "design baseline older than master"
+    },
+    {
+      "id": "RA-04",
+      "type": "BINARY_DEPENDENCY",
+      "status": "OPEN",
+      "label": "some originals externally stored or pending"
+    },
+    {
+      "id": "RA-05",
+      "type": "HISTORIC_EVIDENCE",
+      "status": "OPEN",
+      "label": "not all narrative events have technical ledger proof"
+    }
+  ],
+  "next_phase": "B",
+  "next_phase_gate": "BLOCKED_PENDING_USER_APPROVAL",
+  "final_response_instruction": "RESPONDA AQUI: Aprova a especificação da Fase A apenas como desenho para liberar o protótipo isolado da Fase B, mantendo a substituição operacional condicionada à aprovação específica na Fase E?"
+}

@@ -1,0 +1,110 @@
+{
+  "subject_id": "rule-experience-novydres",
+  "schema": "ADR001_D03_MIXED_XP_FIELD_SCOPE_HANDOFF_V1",
+  "status": "SOURCE_SCOPES_PARTITIONED_D03_D04_D05_NOT_OPERATIONAL",
+  "source_authority": "UNCHANGED",
+  "not_operational": true,
+  "scope_policy": "GENERAL_RULES_MAY_NOT_ABSORB_CHR001_RESOURCES",
+  "source_snapshot": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "source_records": [
+    {
+      "source_path": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
+      "source_sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6",
+      "document_semantic_phase": "D05",
+      "reason": "SCHEMA_TEST_OR_TECHNICAL_FIXTURE_NOT_CAMPAIGN_EVENT",
+      "semantic_owner_current": "rule-experience-novydres/PROOF_FIXTURE_ONLY",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ACT_CREDIT_AUDIT_V1.md",
+      "source_sha": "602e901aa64c0f54783d755a9e14f982d887cf9f",
+      "document_semantic_phase": "D04",
+      "reason": "CHR001_RESOURCE_OR_AUDIT_CONTENT_DO_NOT_PROMOTE_TO_GENERAL_RULE",
+      "semantic_owner_current": "chr001-state-checkpoint/HISTORICAL_STATE",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "source_sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "document_semantic_phase": "D03_D04_SPLIT",
+      "reason": "RULE_EXPRESSIONS_AND_CHRONICLE_RESOURCE_EXAMPLES_MIXED",
+      "semantic_owner_current": "rule-experience-novydres+chr001-state-checkpoint",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ARITHMETIC_REGRESSION_V1.json",
+      "source_sha": "26d651b5da9cb158cbd759550534df95a7340726",
+      "document_semantic_phase": "D05",
+      "reason": "SCHEMA_TEST_OR_TECHNICAL_FIXTURE_NOT_CAMPAIGN_EVENT",
+      "semantic_owner_current": "rule-experience-novydres/PROOF_FIXTURE_ONLY",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V1.json",
+      "source_sha": "d5b59da66faa321580432f82c15e990012b08b6d",
+      "document_semantic_phase": "D04",
+      "reason": "CHR001_RESOURCE_OR_AUDIT_CONTENT_DO_NOT_PROMOTE_TO_GENERAL_RULE",
+      "semantic_owner_current": "chr001-state-checkpoint/HISTORICAL_STATE",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V2.json",
+      "source_sha": "d4a15919048a6dd46ab845f9559e20cd0057a39b",
+      "document_semantic_phase": "D04",
+      "reason": "CHR001_RESOURCE_OR_AUDIT_CONTENT_DO_NOT_PROMOTE_TO_GENERAL_RULE",
+      "semantic_owner_current": "chr001-state-checkpoint/HISTORICAL_STATE",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "source_sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "document_semantic_phase": "D04",
+      "reason": "CHR001_RESOURCE_OR_AUDIT_CONTENT_DO_NOT_PROMOTE_TO_GENERAL_RULE",
+      "semantic_owner_current": "chr001-state-checkpoint/HISTORICAL_STATE",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_SCHEMA_REGRESSION_V1.json",
+      "source_sha": "71855c995f47616fc93f80bfd49fb1bc5bfc0dce",
+      "document_semantic_phase": "D05",
+      "reason": "SCHEMA_TEST_OR_TECHNICAL_FIXTURE_NOT_CAMPAIGN_EVENT",
+      "semantic_owner_current": "rule-experience-novydres/PROOF_FIXTURE_ONLY",
+      "source_data_not_reclassified": true,
+      "physical_exact_source_custody": "novydres/sistema/regras/experiencia"
+    }
+  ],
+  "forward_handoffs": {
+    "D04": "CHR-001 credit state/audits",
+    "D05": "Executable schemas and regression fixtures"
+  },
+  "epistemic_promotions": 0,
+  "full_field_reconciliation": "SOURCE_BACKED_TEMPORAL_OWNER_SPLIT_ONLY_TARGET_COST_AUDIT_NOT_CONFIRMED",
+  "field_semantics_fully_partitioned": true,
+  "field_owners": {
+    "policy_invariants": {
+      "subject_id": "rule-experience-novydres",
+      "path": "novydres/sistema/regras/experiencia/principios-credito.json",
+      "authority": "D03_GENERAL_SCOPE_ONLY"
+    },
+    "local_xp_balance": {
+      "subject_id": "chr001-state-checkpoint",
+      "path": "novydres/cronicas/CHR-001/estado/xp-autoridade-c45.json",
+      "source_precedence": "LIVE_v039_CURRENT"
+    },
+    "historical_local_envelopes": {
+      "subject_id": "chr001-state-checkpoint",
+      "authority": "XP_ENVELOPE_V1_V2_V3_HISTORICAL"
+    },
+    "schemas_and_regression": {
+      "owner": "novydres/sistema/regras/experiencia",
+      "authority": "INERT_SOURCE_CUSTODY_NOT_MANDATORY_RUNTIME_FORMAT"
+    }
+  }
+}

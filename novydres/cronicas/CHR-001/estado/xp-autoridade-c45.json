@@ -1,0 +1,69 @@
+{
+  "subject_id": "chr001-state-checkpoint",
+  "schema": "ADR001_D04_CHR001_XP_LOCAL_OWNER_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/LIVE_v039.json",
+      "sha": "b7096d7fc44854d4964ae7bf6a052fcb948ebf19",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "owner_scope": "novydres/cronicas/CHR-001/estado",
+  "scope": "CHR-001_ONLY",
+  "temporal_precedence": [
+    {
+      "source": "XP_ACT_CREDIT_POLICY_V1",
+      "authority": "POLICY_SCOPE_2026_11_03",
+      "reported_spent": 170,
+      "latest_state": false
+    },
+    {
+      "source": "XP_ENVELOPE_V3",
+      "authority": "HISTORICAL_STATE_WITH_ADMIN_PURCHASES",
+      "reported_spent": 270,
+      "latest_state": false
+    },
+    {
+      "source": "LIVE_v039",
+      "authority": "CURRENT_C45_SOURCE_PIN",
+      "reported_spent": 270,
+      "latest_state": true
+    }
+  ],
+  "current": {
+    "xp_total": 675,
+    "xp_spent": 270,
+    "xp_remaining": 405,
+    "xp_credit_available": 0
+  },
+  "local_credit_rule": {
+    "nominal_per_eligible_resolved_act": 10,
+    "maximum_creditable_acts_per_provocation": 5,
+    "source_resolution_event_required": true,
+    "no_credit_on_preparation": true,
+    "credit_is_part_of_cap_not_extra": true,
+    "once_per_distinct_act": true,
+    "effective_credit_formula": "min(10,max(0,xp_total-xp_spent-xp_credit_available))",
+    "credit_does_not_modify_total_or_spent": true
+  },
+  "pending_historical_xp_claims": "NO_NEW_CREDIT_INFERRED_FROM_SOURCE_HISTORY",
+  "no_retroactive_spend": true,
+  "no_target_auto_purchase": true,
+  "source_of_record": "LIVE_v039",
+  "credits_derived_from_source_not_new_awards": true,
+  "separate_general_rule_subject": "rule-experience-novydres",
+  "mechanical_ambiguity_on_unverified_c45_costs": "BLOCK_AND_TRACE_TO_PLAYER_DECISION"
+}

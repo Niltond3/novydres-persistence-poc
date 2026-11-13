@@ -1,0 +1,555 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_GATE_AND_READBACK",
+  "classification": "PLAYER_SAFE",
+  "phase": "B",
+  "status": "B_PASS_SCOPED",
+  "cutover": false,
+  "authoritative_prototype": false,
+  "phase_c_authorized": false,
+  "refs_before_persistence": {
+    "design": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+    "tree": "ad26b61a557acf89f7a131cadb743a925e54d20b",
+    "master_read_only": "0418f70ca0f01827de993273da191453a16d9857"
+  },
+  "gate_results": [
+    {
+      "gate": "candidate schemas and pins",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "gate": "relations, ownership, authority and UNKNOWN",
+      "status": "PASS_SCOPED_WITH_DECLARED_GAP"
+    },
+    {
+      "gate": "Codex query accuracy",
+      "status": "FAIL"
+    },
+    {
+      "gate": "Codex citation readback",
+      "status": "PARTIAL"
+    },
+    {
+      "gate": "Codex negatives and journeys",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "gate": "ChatGPT Web three runs",
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "gate": "tokens and bytes",
+      "status": "PARTIAL_AND_NOT_OBSERVABLE"
+    },
+    {
+      "gate": "Git local race/idempotency",
+      "status": "PASS_LOCAL_SCOPED"
+    },
+    {
+      "gate": "remote competing writers and stale SHA rejection",
+      "status": "NOT_PROVEN"
+    },
+    {
+      "gate": "CI on design",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "gate": "master/canon/runtime protection",
+      "status": "PASS_SCOPED"
+    },
+    {
+      "gate": "source pin resolution across branches",
+      "status": "PASS_SCOPED_WITH_DECLARED_LOCATION_GAP",
+      "detail": "All six exact source pins resolve in c26 and current master. CYCLE_V0041 is absent from design tree, preserved in source snapshot; it was not copied."
+    }
+  ],
+  "readback_scope": {
+    "candidate_envelopes": "5/5 schema valid",
+    "candidate_blobs": "16/16 pins exact",
+    "source_refs": "21/21 rows resolve against six exact blobs at original source snapshot c26; 6/6 path/SHA pins match c26 and current master; 5/6 paths also exist in design tree; CYCLE_V0041 is intentionally not copied to design.",
+    "relations": "7/8 resolved; one explicitly out of scope",
+    "operational_cycle": "C42-C44 predecessor links and 9/9 manifest/cycle operational pins checked",
+    "current_design_tree_source_paths": "5/6",
+    "original_source_snapshot_path_sha": "6/6",
+    "protected_write": "initial promotion from 35862 to 4e76 succeeded with expected_sha, force=false; two documented fast-forward correction promotions also succeeded"
+  },
+  "failing_or_incomplete": [
+    "Codex response accuracy 51/90 against required 30/30; critical B-Q29/B-Q30 mismatch in all three rounds.",
+    "R1/R2 Codex per-case answer/citation records were not retained; R3 source locator readback is 17/30.",
+    "No three new independent ChatGPT Web sessions with per-case evidence; older reports are insufficient.",
+    "Negative and journey fixtures lack executable operations/payloads and acceptance readback; historic predicate checks/simulation are not equivalent.",
+    "No design-branch CI runs; remote distinct competing-writer test absent; stale remote expected_sha rejection is indeterminate.",
+    "Full Codex run latency p50/p95, Web tokens and HTTP bytes are not observable.",
+    "Design tree is not a self-contained copy of all six source paths (5/6 present); source refs remain valid through original c26 source snapshot."
+  ],
+  "exception_proposal": {
+    "scope": "Only ChatGPT Web actual token counts and HTTP bytes, if the product UI does not expose them.",
+    "substitute": "Per-case result/citation/source readback, independently scored outside the model, plus UI elapsed-time samples with method recorded.",
+    "does_not_waive": [
+      "Codex query FAIL",
+      "missing Web per-case evidence",
+      "non-executable negative/journey test cases",
+      "CI requirement",
+      "independent scoring"
+    ],
+    "status": "PLAYER_DECISION_REQUIRED; not adopted; cannot by itself change gate"
+  },
+  "protected_write_and_final_readback": "Three fast-forward promotions succeeded via expected_sha and force=false. Latest pre-final-report readback was cdf1d0330d4c7fc55730a4708537b29be7ff76e9 / tree b534ecfbac13931e4ca313a76a39355232f946aa: 10/10 report artifacts exact, 16/16 candidate pins exact, six source pins exact at c26, master unchanged. The final report-only commit is promoted with expected_sha=cdf1d0330d4c7fc55730a4708537b29be7ff76e9 and receives independent readback at task completion.",
+  "protected_promotion": {
+    "status": "PASS_SCOPED",
+    "updates": 3,
+    "method": "GitHub update_ref with exact expected_sha, fast-forward only (force=false)",
+    "latest_pre_final_report_head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+    "latest_pre_final_report_tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+    "latest_pre_final_report_readback": "10/10 report blobs and content exact; 16/16 candidate blob pins exact; six source pins exact at c26; master unchanged",
+    "safety": "No update to master; current final report commit requires separate final readback recorded in task completion."
+  },
+  "readback_before_this_report": {
+    "head": "cdf1d0330d4c7fc55730a4708537b29be7ff76e9",
+    "tree": "b534ecfbac13931e4ca313a76a39355232f946aa",
+    "artifacts": "10/10 blob SHA and content exact",
+    "candidate_pins": "16/16 exact",
+    "source_pins": "6/6 exact at c26 and current master",
+    "master_head": "0418f70ca0f01827de993273da191453a16d9857",
+    "master_tree": "be99334d5856c8483d5fb759529bbb0f06228caf",
+    "ci": "0 workflow runs, 0 status contexts, 0 check-runs on cdf1"
+  },
+  "b01_checkpoint_2026_11_12": {
+    "status": "PASS_SCOPED_HISTORICAL_WITH_DECLARED_CURSOR_DRIFT",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "master_current": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "mapped_groups": 7,
+    "six_original_source_pins": "SOURCE_PATHS_UNCHANGED_IN_MASTER_COMPARE",
+    "candidate_runtime_activation": false,
+    "gate_b": "B_REMEDIATION_REQUIRED",
+    "codex_new_run": "NOT_EXECUTED",
+    "ci_new_run": "NOT_EXECUTED"
+  },
+  "b05_consolidation_2026_11_12": {
+    "checkpoint": "B05-WEB-20261112-01",
+    "head_before_gate_persistence": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "phase": "B",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "subtasks": {
+      "B01": {
+        "status": "PASS_SCOPED_HISTORICAL",
+        "evidence": "matriz-equivalencia.json#b01_reconciliation_2026_11_12",
+        "c41_to_c45": "DECLARED_NOT_REBASED"
+      },
+      "B02": {
+        "status": "CODEX_NOT_EXECUTED",
+        "historical_accuracy": "51/90",
+        "historical_critical_failures": [
+          "B-Q29",
+          "B-Q30"
+        ],
+        "new_codex_evidence": false
+      },
+      "B03": {
+        "status": "PASS_SCOPED_AUTOMATED_SCORING_WITHOUT_INDEPENDENT_SEMANTIC_REVIEW",
+        "cases": "30/30",
+        "critical_cases_matched": [
+          "B-Q29",
+          "B-Q30"
+        ],
+        "evidence": "resultado-testes.json#b03_web_2026_11_12"
+      },
+      "B04": {
+        "status": "PASS_SYNTHETIC_CI_AND_PARTIAL_REAL_REMOTE",
+        "ci": {
+          "run_id": 43155672041,
+          "job_id": 130974912090,
+          "head_sha": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43155672041",
+          "log_outcome": {
+            "negative_rejected": 12,
+            "negative_total": 12,
+            "synthetic_journeys_expected": 12,
+            "synthetic_journeys_total": 12,
+            "additional_evidence_guards_rejected": 7,
+            "lost_ack_recovery": "PASS_LOCAL_ONLY"
+          }
+        },
+        "real_http_404": 2,
+        "remote": {
+          "sandbox_ref": "refs/heads/test/adr001-b04-20261112",
+          "base_sha": "f41f8c580039d94b8334390b47d0945962f58619",
+          "writer_a": "UPDATE_REF_SUCCESS",
+          "writer_b": "22351f365effc21af7b8af8b6cb00c863dfd11bf",
+          "winner": "8c6e72a2f5f67e2813c60f67179e11c3c64e7d5a",
+          "readback_blob_sha": "b18217a954bbaded2feeb00c71fd0c208008ba94",
+          "concurrent_dispatch": true,
+          "writer_b_result": "GRAPHQL_UNKNOWN_ERROR",
+          "explicit_stale_retry_result": "GRAPHQL_UNKNOWN_ERROR",
+          "ref_and_blob_unchanged_after_error": true,
+          "claim": "SINGLE_REMOTE_WINNER_CONFIRMED; EXACT_STALE_SHA_ERROR_NOT_PROVEN",
+          "master_or_design_mutated_by_probe": false,
+          "disposable_ref_cleanup": "NOT_AVAILABLE_VIA_THIS_CONNECTOR"
+        },
+        "synthetic_network_loss_only": true
+      },
+      "B05": {
+        "status": "B_REMEDIATION_REQUIRED",
+        "critical_unmet": [
+          "actual_Codex_B02_run_and_independent_review",
+          "remote_explicit_stale_SHA_rejection_diagnostic_not_classified",
+          "functional_negative_mutations_on_real_future_write_route_not_yet_available",
+          "independent_semantic_answer_review",
+          "DEC25_general_semantic_detection_not_proven"
+        ]
+      }
+    },
+    "dec25": {
+      "status": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+      "checkpoint_recovered": true,
+      "source_git_sha_verified": true,
+      "source_missing_detected_via_real_404": true,
+      "c41_to_c45_drift_detected": true,
+      "synthetic_false_completion_rejected": true,
+      "synthetic_lost_confirmation_idempotent": true,
+      "remote_loss_of_ack_not_induced": true,
+      "semantic_independence_not_proven": true,
+      "dec26_applied_to_blocked_codex_unit": true
+    },
+    "metrics": {
+      "web_actual_token_count": "NOT_OBSERVABLE",
+      "web_http_wire_bytes": "NOT_OBSERVABLE",
+      "ci_run_and_log": "OBSERVED",
+      "case_response_source_locators": "RECORDED",
+      "web_latency_p95": "NOT_MEASURED_NOT_WAIVED"
+    },
+    "source_narrative_edited": false,
+    "master_changed": false
+  },
+  "b05_followup_2026_11_12": {
+    "checkpoint_id": "B05-WEB-20261112-02",
+    "design_head_before_write": "0ce0d2155d4774f0096762a3622fc003a7dbda17",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "B01": "PASS_SCOPED_HISTORICAL_C41_TO_C45_DRIFT_PRESERVED",
+    "B02": "CODEX_NOT_EXECUTED_NO_CODEX_TOOL_AVAILABLE",
+    "B03": "THIRTY_PIN_LOCATOR_CHECKS_PLUS_EIGHT_CRITICAL_RESOURCES_MATCH_BUT_NOT_INDEPENDENT_SEMANTIC_PASS",
+    "B04": "SYNTHETIC_12_NEGATIVE_12_JOURNEYS_7_GUARDS_PLUS_REMOTE_SINGLE_WINNER; STALE_ERROR_GENERIC_UNCLASSIFIED",
+    "B05": "B_REMEDIATION_REQUIRED",
+    "audit_result_path": "resultado-testes.json#b03_locator_followup_2026_11_12",
+    "verified_ci_runs": [
+      {
+        "id": 43155672041,
+        "head_sha": "1565fb19f7efefb32d213eb6b5fdc99ebc3a9870",
+        "conclusion": "success"
+      },
+      {
+        "id": 43155927667,
+        "head_sha": "0ce0d2155d4774f0096762a3622fc003a7dbda17",
+        "conclusion": "success"
+      }
+    ],
+    "sandbox": {
+      "ref": "test/adr001-b04-20261112",
+      "winner_commit": "8c6e72a2f5f67e2813c60f67179e11c3c64e7d5a",
+      "parent": "f41f8c580039d94b8334390b47d0945962f58619",
+      "error": "GRAPHQL_GENERIC_NOT_PROOF_OF_STALE_LEASE",
+      "cleanup": "NO_SAFE_DELETE_ACTION"
+    },
+    "real_tests": "REMOTE_REF_AND_COMMIT_READBACK; CI_RUN_COMPLETED; B03_REAL_SOURCE_READS",
+    "synthetic_tests": "12_NEGATIVE_12_JOURNEY_7_GUARD_AND_LOST_ACK_LOCAL_ONLY",
+    "not_executed": [
+      "B02_REAL_CODEX",
+      "B03_INDEPENDENT_BLIND_SEMANTIC_REVIEW",
+      "B04_REAL_DUPLICATE_CONFLICT_ID_WRITE_ROUTE",
+      "B04_REMOTE_LOST_CONFIRMATION_INJECTION",
+      "B04_REAL_RUNTIME_AUTHORITY_KNOWLEDGE_DISCLOSURE_MUTATIONS",
+      "B04_EXPLICIT_STALE_SHA_CLASSIFICATION"
+    ],
+    "dec25": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+    "dec26": "ONLY_UNRECOVERABLE_UNITS",
+    "next_eligible": "B02 real Codex and independent B03 review; B04 route integration once implementable",
+    "master_and_canon_unchanged": true,
+    "runtime_activated": false,
+    "no_new_synthetic_runner_change": true
+  },
+  "b02_codex_real_checkpoint_2026_11_12": {
+    "checkpoint_id": "B05-CODEX-REAL-20261112-01",
+    "design_head_before_write": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+    "master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "status": "B_REMEDIATION_REQUIRED",
+    "phase_c_allowed": false,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "B01": {
+      "status": "PASS_SCOPED_HISTORICAL",
+      "cursor": "C41",
+      "master_cursor": "C45",
+      "drift_preserved": true
+    },
+    "B02": "PASS_SCOPED_AFTER_TARGETED_RETEST_30_OF_30_EFFECTIVE_CASES",
+    "B03": "RAW_RESPONSES_UNAVAILABLE_FOR_INDEPENDENT_REVIEW",
+    "B04": "PARTIAL_REAL_GITHUB_REMOTE_AND_SYNTHETIC; expected_sha probe returned generic GraphQL error with ref unchanged; stale rejection unproven; app write route absent.",
+    "B05": "B_REMEDIATION_REQUIRED",
+    "unmet": [
+      "Independent review of the historical Web answers; raw responses are unavailable.",
+      "No real app-level write route exists for idempotency, conflicting same-ID payloads, concurrent writer semantics, source/reference/authority/knowledge/disclosure/proof guards, or remote lost-ack recovery.",
+      "DEC-25 general semantic detection is not certified.",
+      "Historical Web latency p95 was not measured; DEC-19 exception applies only to actual Web token count and HTTP bytes.",
+      "The safe real remote expected-SHA probe returned a generic GraphQL error; stale-SHA rejection remains unproven."
+    ],
+    "metrics": {
+      "Codex CLI aggregate token telemetry": "OBSERVED",
+      "per-case latency": "NOT_OBSERVABLE",
+      "Web token count and HTTP wire bytes": "NOT_OBSERVABLE_PER_DEC19",
+      "historical Web latency p95": "NOT_MEASURED_NOT_WAIVED"
+    },
+    "dec25": "PARTIAL_OBSERVED_NOT_CERTIFIED",
+    "dec26": "SCOPED_ONLY_TO_UNRECOVERABLE_HISTORICAL_WEB_RESPONSE_REVIEW_UNIT",
+    "master_and_canon_unchanged": true,
+    "next_eligible": "Recover original Web responses only if a preserved copy exists; otherwise keep that unit scoped under DEC-26. B04 application-route tests require an actual route; do not start C.",
+    "published_evidence_checkpoint": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "branch": "design/subject-oriented-migration",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "force": false,
+      "commit_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "parent_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "tree_sha": "caf812527437e53a9861a44cc4b26f7eea4229a4",
+      "ref_readback": "MATCHED_COMMIT",
+      "commit_parent_readback": "MATCHED",
+      "tree_readback": "MATCHED_NOT_TRUNCATED",
+      "master_readback": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "blobs_readback": [
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/fixtures-consultas.json",
+          "blob_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "tree_sha": "e354c5fb5892019c68f259d1a496cf2fc36ea06b",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/gate-e-readback.json",
+          "blob_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "tree_sha": "4b26b14fa879dc489e2e0e6c5f15ae6dce1e985e",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/index.md",
+          "blob_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "tree_sha": "66ddcfdd99ab112d6231bfcf4e18b9106341d2d3",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/fase-b/resultado-testes.json",
+          "blob_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "tree_sha": "0347803c741bf3f243d2464e752451ee667f1057",
+          "content_matches_local": true
+        },
+        {
+          "path": "novydres/sistema/arquitetura/plano-integral/tarefas.md",
+          "blob_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "tree_sha": "681bf81f1bd1f9cc607db2b3032c53d3c809ced5",
+          "content_matches_local": true
+        }
+      ],
+      "ci": {
+        "workflow": "ADR-001 B04 isolated regression (non-operational)",
+        "run_id": 43212545361,
+        "job_id": 131163549104,
+        "head_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+        "status": "completed",
+        "conclusion": "success",
+        "classification": "SYNTHETIC_ISOLATED_CI_ONLY"
+      }
+    },
+    "safe_expected_sha_probe": {
+      "execution_type": "REAL_GITHUB_REMOTE",
+      "classification": "REMOTE_ERROR_UNCLASSIFIED",
+      "ref_before": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "ref_after": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "expected_sha": "0b74593611491e84c9e8d0fd70cadf44eb1ecda8",
+      "requested_target_sha": "b73eb0736d9491ae50b2417e7dd73f45cfb5023f",
+      "master_before": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "master_after": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "ref_unchanged": true,
+      "stale_sha_rejection_proven": false
+    }
+  },
+  "b05_dec27_current": {
+    "status": "B_PASS_SCOPED",
+    "decision": "DEC-27 subsequent explicit player instruction supersedes DEC-21 two-channel clause; functional and risk coverage only.",
+    "baseline_master_read_only": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "source_snapshot": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "candidate_historical_cursor": "C41",
+    "operational_cursor": "C45; NOT_REBASED_OR_PROMOTED",
+    "phase_c_allowed": true,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "B01": "PASS_SCOPED_HISTORICAL_4_CANDIDATES_SOURCE_PINS_WITH_DECLARED_CURSOR_DRIFT",
+    "B02": "PASS_SCOPED_REUSABLE_30_OF_30_EFFECTIVE_CASES_WITH_HISTORICAL_INDEPENDENT_REVIEW; older 51/90 remains history; not requiring second channel",
+    "B03": "6/6 EFFECTIVE DETERMINISTIC POSTFREEZE; original 3/6 incomplete before 3/3 targeted retest; scorer run 43221036507; six selected factual outputs and N-01–N-08/N-06-RESULT received separate-session contextual review; review was not blind; historical Web responses remain unavailable",
+    "B04": {
+      "status": "PASS_SCOPED_REAL_GITHUB_DISPOSABLE_REF_WITH_DECLARED_LIMITATIONS",
+      "run_id": 43220528637,
+      "job_id": 131190597209,
+      "validated_run_id": 43221036507,
+      "real_publication_readback": true,
+      "duplicate_no_op": true,
+      "conflicting_same_tx_blocked": true,
+      "real_two_writers_one_winner": true,
+      "rest_loser_error": "HTTP_422_GENERIC_REFERENCE_CANNOT_BE_UPDATED_NOT_EXPLICIT_EXPECTED_SHA_PROOF",
+      "git_push_explicit_stale_lease": "REJECTED_STALE_INFO_EXIT_1_REF_UNCHANGED",
+      "client_suppressed_confirmation_recovered_without_duplicate": true,
+      "network_loss_not_injected": true,
+      "cleaned_disposable_ref": true,
+      "latest_implementation_revision": "a506354d2f170bfaeb7815bc7261752962646d05",
+      "latest_revision_CI": "PASS_43221967102_AND_43222461058"
+    },
+    "DEC25": "SCOPED_SOURCE_CHECKPOINT_GUARDS_AND_REAL_DEC27_ADR_LOOKUP_PASS_43221967102; known semantic escapes remain DEC26 scope",
+    "narrative": "8 ISOLATED_SCENES_AND_ONE_CAUSAL_FOLLOWUP; SEPARATE-SESSION CONTEXTUAL REVIEW COMPLETED; NOT BLIND; TEST_ONLY",
+    "metrics": {
+      "status": "NEW_PAIRED_REST_SAMPLE_OBSERVED",
+      "run_id": 43221967102,
+      "job_id": 131195453604,
+      "methodology": "Same six queries source/candidate, two rounds, alternated reading order, real GitHub REST GET in Actions",
+      "source_p50_ms": 198,
+      "candidate_p50_ms": 187,
+      "n_per_side": 12,
+      "source_api_body_bytes": 393718,
+      "candidate_api_body_bytes": 49828,
+      "p95": "NOT_REPORTED_SMALL_HETEROGENEOUS_N12",
+      "real_web_tokens": "NOT_OBSERVABLE",
+      "real_web_http_wire_bytes": "NOT_OBSERVABLE",
+      "caution": "No historical comparable Web timings; no performance improvement asserted; API JSON body bytes are not HTTP wire bytes"
+    },
+    "historical_web_response_search": "inspected evidencia-chatweb-parcial-2026-11-11.json and evidencias-remediacao-final-2026-11-11.json; no old per-case raw Web answer text; insufficient historical evidence retained",
+    "critical_unmet": [],
+    "next_eligible": "C01 when implementation is explicitly initiated; refresh current authoritative source snapshot and keep C41-to-C45 drift visible; this gate update does not start C or authorize cutover.",
+    "master_canon_campaign_runtime_unchanged": true,
+    "last_code_validated_ci": {
+      "commit": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+      "run_id": 43223477154,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  },
+  "b05_independent_session_contextual_review_2026_11_12": {
+    "status": "SCOPED_CONTEXTUAL_REVIEW_COMPLETED_NOT_BLIND_CERTIFICATION",
+    "reviewer": "Separate ChatGPT Web conversation from recorded exercise-producing conversation; original author self-review also visible, so blind independence NOT claimed",
+    "review_base_commit": "49db5bfc62c6a1a6e999b69de5fab81e3a1335ce",
+    "facts": [
+      {
+        "id": "B-Q01",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned M3.01_v001.source.txt line 2 explicitly says exact civil date UNKNOWN, end of 1970s."
+      },
+      {
+        "id": "B-Q11",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned legacy knowledge actor ID and candidate perfil/conhecimento subject_id/actor_id read back; initial answer omitted full mapping."
+      },
+      {
+        "id": "B-Q21",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned M3.01_v001 has C01.01–C01.08 entries; not reinterpreted as new ledger events."
+      },
+      {
+        "id": "B-Q26",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned CYCLE_V0041 checkpoint last_closed_scene C05 and next_scene C01 NOT_STARTED; historic C41 only."
+      },
+      {
+        "id": "B-Q29",
+        "result": "PASS_SCOPED",
+        "basis": "Pinned LIVE_v038 resources: 675 total/270 spent/405 remaining/0 available credit; historical not current master."
+      },
+      {
+        "id": "B-Q30",
+        "result": "PASS_SCOPED_AFTER_RETEST",
+        "basis": "Pinned LIVE_v038 resources: provisional 6, superficial 2, aggravated 0, available 4."
+      }
+    ],
+    "narrative": [
+      {
+        "id": "N-01",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Courteous offer and refusal coexist; NPC has demonstrated contrary institutional incentive."
+      },
+      {
+        "id": "N-02",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Precisely bounded access delivered; allegiance and friendship not granted."
+      },
+      {
+        "id": "N-03",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Search intention continues after location change; refuge promise absent; player retains action."
+      },
+      {
+        "id": "N-04",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Repetitive activities compressed, causal missing protocol becomes decision point."
+      },
+      {
+        "id": "N-05",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Months-long leap stopped for player priorities."
+      },
+      {
+        "id": "N-06",
+        "result": "INITIAL_INSUFFICIENT_FOLLOWUP_PASS_CONTEXTUAL",
+        "basis": "Initial response merely established conflict; N-06-RESULT supplies previously specified fictional player action and material partial concession with unresolved balance."
+      },
+      {
+        "id": "N-07",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Prepared truth (correspondence) precedes consistent material clues; no forced revelation."
+      },
+      {
+        "id": "N-08",
+        "result": "PASS_CONTEXTUAL_TEST_ONLY",
+        "basis": "Family solidarity and political threat preserve NPC and PC autonomy, no mandatory harm."
+      }
+    ],
+    "limitations": [
+      "Review used raw outputs already frozen and source pins, but reviewer had access to prior self-review; blind independent semantic/editorial check still unproven.",
+      "No runtime scene behavior certified; all narrative scenes are artificial and isolated.",
+      "The older missing Web replies cannot be reviewed retroactively.",
+      "All factual conclusions are scoped to fixed C41 source/candidate snapshots, not master C45."
+    ],
+    "gate_decision": "B_REMEDIATION_REQUIRED",
+    "next_eligible": "Obtain blinded independent editorial/semantic review against frozen prompts and source without previous self-score; remediate any discrepancy, then B05."
+  },
+  "b05_gate_reassessment_2026_11_12": {
+    "status": "B_PASS_SCOPED",
+    "source_head": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+    "basis": "The accepted requirement is a separate contextual semantic/editorial review. The ADR and accepted decisions do not require a blind review. The separate ChatGPT Web conversation reviewed the six frozen factual outputs against pinned sources and the isolated narrative exercises; prior self-review was visible, so anchoring risk remains recorded as a limitation.",
+    "factual_review": "B-Q01, B-Q11, B-Q21, B-Q26, B-Q29 and B-Q30 were reviewed against pinned sources; the initial omissions and targeted retests remain preserved.",
+    "narrative_review": "N-01 through N-08 and N-06-RESULT were reviewed contextually. N-06's initial insufficiency remains recorded; its fictional causal follow-up is not evidence of runtime behavior.",
+    "retained_limits": [
+      "Review was not blind; prior self-review was visible.",
+      "Older missing Web responses remain unavailable and are not retroactively certified.",
+      "Narrative outputs are isolated TEST_ONLY exercises; no live scene behavior is certified.",
+      "Factual findings use the historical C41 snapshot; current operational cursor C45 was not rebased or promoted.",
+      "Web tokens and HTTP wire bytes remain NOT_OBSERVABLE; no unsupported p95 or performance claim is made.",
+      "B04 network loss was not injected; no runtime activation or cutover is authorized."
+    ],
+    "b04_ci": {
+      "run_id": 43223477154,
+      "head_sha": "6a23ddb4dff9552ba00062aab0109794ce3ab270",
+      "job_id": 131200630517,
+      "status": "completed",
+      "conclusion": "success",
+      "proof": "synthetic regression and real GitHub disposable-ref proof; frozen B03 scorer"
+    },
+    "phase_c_gate_condition": "MET; C01 is next eligible when implementation is explicitly initiated.",
+    "phase_c_authorized": false,
+    "cutover_allowed": false,
+    "runtime_activated": false,
+    "master_canon_campaign_unchanged": true,
+    "supersedes": "The current B05 blocker and next-step decision only. Earlier checkpoints and the separate-session review record retain their contemporaneous results.",
+    "historical_top_level_fields": "The root gate_results, failing_or_incomplete, exception_proposal, readback_scope, protected_write_and_final_readback, protected_promotion and readback_before_this_report describe the initial/pre-remediation snapshot. They remain as historical evidence; b05_dec27_current and this reassessment carry the current decision."
+  }
+}

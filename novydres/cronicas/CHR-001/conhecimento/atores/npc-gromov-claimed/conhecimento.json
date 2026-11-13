@@ -1,0 +1,48 @@
+{
+  "subject_id": "chr001-knowledge-npc-gromov-claimed",
+  "actor_id": "npc-gromov-claimed",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 6,
+      "record": {
+        "entity": "npc-gromov-claimed",
+        "label": "Gromov (nome alegado)",
+        "scope": "M2.03",
+        "confirmed": [],
+        "claims": [
+          "Ferido alega dever um favor a Gromov e ter transmitido o esconderijo da mulher",
+          "Ferido diz que Gromov costuma mandar pessoas atrás dela"
+        ],
+        "unknown": [
+          "Identidade civil, poderes, interesse e localização",
+          "Se mandou alguém à pensão",
+          "Se conhece Bartholomeu",
+          "Se o perigo alegado é verdadeiro"
+        ],
+        "source": "episode",
+        "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+        "evidence": {
+          "source_path": "novydres/chronicles/CHR-001/episodes/M2.03_v008.source.txt",
+          "source_blob_sha": "536a99c3972664cd1c7662fd2f719e0df1af8f34",
+          "anchor": "CHR001-M203-TO-WHOM-DANGER-20261102-001",
+          "offset": 89623,
+          "evidence_excerpt": " NPC: 'Se ele encontra-la, sim, ela corre perigo. Eu nao sei se ja a encontrou.' EVENT_ID CHR001-M203-TO-WHOM-DANGER-20261102-001. Tudo relatado e alegacao do NPC; nenhum fato confirmado fora da fala. M2.03 ativa, ambulancia em transito. Sem rolagem ou gastos. FV dispon"
+        },
+        "suspected": []
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

@@ -1,0 +1,474 @@
+{
+  "subject_id": "rule-guided-mode",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "guided-mode",
+  "semantic_owner": "rule-guided-mode",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_decisions_v0_1_1.md",
+      "source_sha": "c72fbe83c0cd834b72e8b9e37a7b75e77bbba1f6",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_h_guided_pc_integration_decisions",
+        "version": "0.1.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_h_complete_guided_pc_integration_decision_ledger_provenance_patch",
+        "supersedes": "novydres_character_creation_h_guided_pc_integration_decisions_v0_1.md"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 19,
+          "heading_level": 1,
+          "label": "H — Complete / Guided PC Integration Decision Ledger v0.1.1",
+          "line_end": 20
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 21,
+          "heading_level": 2,
+          "label": "1. Decision preservation",
+          "line_end": 26
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 27,
+          "heading_level": 2,
+          "label": "2. Decision ledger",
+          "line_end": 39
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 40,
+          "heading_level": 2,
+          "label": "3. Canonical H Decision Provenance Matrix",
+          "line_end": 52
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 53,
+          "heading_level": 3,
+          "label": "3.1 Provenance interpretation guard rail",
+          "line_end": 56
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 57,
+          "heading_level": 2,
+          "label": "4. Clarifying adenda — preserved",
+          "line_end": 58
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 59,
+          "heading_level": 3,
+          "label": "4.1 CHAR-H-001 adendum",
+          "line_end": 62
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 63,
+          "heading_level": 3,
+          "label": "4.2 CHAR-H-003 adenda",
+          "line_end": 70
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 71,
+          "heading_level": 3,
+          "label": "4.3 CHAR-H-004 adenda",
+          "line_end": 76
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 77,
+          "heading_level": 3,
+          "label": "4.4 CHAR-H-005 adendum — Caderno de Trajetória",
+          "line_end": 80
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 81,
+          "heading_level": 3,
+          "label": "4.5 CHAR-H-006 adendum",
+          "line_end": 84
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 85,
+          "heading_level": 2,
+          "label": "5. C downstream dispositions — preserved",
+          "line_end": 94
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 95,
+          "heading_level": 2,
+          "label": "6. H question-closure matrix — synchronized",
+          "line_end": 113
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 114,
+          "heading_level": 2,
+          "label": "7. H → I traceability",
+          "line_end": 128
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 129,
+          "heading_level": 2,
+          "label": "8. H → K traceability",
+          "line_end": 142
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 143,
+          "heading_level": 2,
+          "label": "9. Architecture synchronization audit",
+          "line_end": 148
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 149,
+          "heading_level": 2,
+          "label": "10. Validation summary",
+          "line_end": 167
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 168,
+          "heading_level": 2,
+          "label": "11. Final declarations",
+          "line_end": 177
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 178,
+          "heading_level": 2,
+          "label": "12. Final verdict",
+          "line_end": 180
+        }
+      ],
+      "semantic_owner": "rule-guided-mode",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_h_guided_pc_integration_v0_1.md",
+      "source_sha": "76b34b7e70d6c69fc0bbc70ee23ce8835e6eeed4",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_h_guided_pc_integration",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_h_complete_guided_pc_integration"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 27,
+          "heading_level": 1,
+          "label": "H — Complete / Guided PC Integration",
+          "line_end": 28
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 29,
+          "heading_level": 2,
+          "label": "1. Purpose",
+          "line_end": 42
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 43,
+          "heading_level": 2,
+          "label": "2. Normative upstream contracts",
+          "line_end": 57
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 58,
+          "heading_level": 2,
+          "label": "3. Governing invariants",
+          "line_end": 75
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 76,
+          "heading_level": 2,
+          "label": "4. Guided construction model",
+          "line_end": 77
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 78,
+          "heading_level": 3,
+          "label": "4.1 Before Played History",
+          "line_end": 94
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 95,
+          "heading_level": 3,
+          "label": "4.2 During Played History",
+          "line_end": 121
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 122,
+          "heading_level": 3,
+          "label": "4.3 Internal authoring rule for Provocations",
+          "line_end": 136
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 137,
+          "heading_level": 2,
+          "label": "5. Vocabulary boundary: internal architecture vs player-facing experience",
+          "line_end": 138
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 139,
+          "heading_level": 3,
+          "label": "5.1 Internal vocabulary",
+          "line_end": 152
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 153,
+          "heading_level": 3,
+          "label": "5.2 Player-facing vocabulary",
+          "line_end": 172
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 173,
+          "heading_level": 2,
+          "label": "6. G↔H Parity Matrix",
+          "line_end": 196
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 197,
+          "heading_level": 2,
+          "label": "7. Guided State Phase Matrix",
+          "line_end": 206
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 207,
+          "heading_level": 2,
+          "label": "8. Convictions and Touchstones",
+          "line_end": 208
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 209,
+          "heading_level": 3,
+          "label": "8.1 Convictions",
+          "line_end": 223
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 224,
+          "heading_level": 3,
+          "label": "8.2 Touchstones",
+          "line_end": 239
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 240,
+          "heading_level": 2,
+          "label": "9. Advanced / older Guided characters",
+          "line_end": 257
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 258,
+          "heading_level": 2,
+          "label": "10. Marco closure and Guided completion",
+          "line_end": 259
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 260,
+          "heading_level": 3,
+          "label": "10.1 Common narrative spine",
+          "line_end": 273
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 274,
+          "heading_level": 3,
+          "label": "10.2 Self-sufficient Marco design",
+          "line_end": 289
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 290,
+          "heading_level": 3,
+          "label": "10.3 No catalogue exhaustion",
+          "line_end": 295
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 296,
+          "heading_level": 3,
+          "label": "10.4 Final completion",
+          "line_end": 305
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 306,
+          "heading_level": 2,
+          "label": "11. Guided Flow Matrix",
+          "line_end": 321
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 322,
+          "heading_level": 2,
+          "label": "12. Mechanical loss and risk",
+          "line_end": 337
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 338,
+          "heading_level": 2,
+          "label": "13. Quick→Guided Migration Matrix — INTERNAL DESIGN / VALIDATION ONLY",
+          "line_end": 360
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 361,
+          "heading_level": 2,
+          "label": "14. Coterie / shared-history integration contract",
+          "line_end": 364
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 365,
+          "heading_level": 3,
+          "label": "14.1 Insertion point",
+          "line_end": 377
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 378,
+          "heading_level": 3,
+          "label": "14.2 Collective interpretation",
+          "line_end": 392
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 393,
+          "heading_level": 3,
+          "label": "14.3 Authority split",
+          "line_end": 402
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 403,
+          "heading_level": 2,
+          "label": "15. Final Output Matrix",
+          "line_end": 421
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 422,
+          "heading_level": 2,
+          "label": "16. Optional Caderno de Trajetória",
+          "line_end": 448
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 449,
+          "heading_level": 2,
+          "label": "17. Play Guidance handoff",
+          "line_end": 450
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 451,
+          "heading_level": 3,
+          "label": "17.1 Inputs to H",
+          "line_end": 466
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 467,
+          "heading_level": 3,
+          "label": "17.2 Outputs from H",
+          "line_end": 485
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 486,
+          "heading_level": 2,
+          "label": "18. C downstream dispositions",
+          "line_end": 493
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 494,
+          "heading_level": 2,
+          "label": "19. H→I contract",
+          "line_end": 508
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 509,
+          "heading_level": 2,
+          "label": "20. H→K requirements",
+          "line_end": 533
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 534,
+          "heading_level": 2,
+          "label": "21. Retroactive triggers",
+          "line_end": 550
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 551,
+          "heading_level": 2,
+          "label": "22. Blockers",
+          "line_end": 567
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 568,
+          "heading_level": 2,
+          "label": "23. Closure matrix",
+          "line_end": 585
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 586,
+          "heading_level": 2,
+          "label": "24. Final verdict",
+          "line_end": 592
+        }
+      ],
+      "semantic_owner": "rule-guided-mode",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

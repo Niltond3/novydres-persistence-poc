@@ -1,0 +1,511 @@
+{
+  "subject_id": "rule-experience-novydres",
+  "schema": "ADR001_D03_SUBJECT_LOCAL_SOURCE_SEGMENTS_V1",
+  "not_operational": true,
+  "editorial_promotion": false,
+  "epistemic_promotion": false,
+  "source_document_count": 8,
+  "segment_count": 99,
+  "document_refs": [
+    {
+      "source_path": "novydres/runtime/xp/ACT_RESOLUTION_SCHEMA_V1.json",
+      "source_blob_sha": "6d4a968a93d907a0be6a3bc87a68b7aa7b309db6",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/$schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/$id"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/title"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/description"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/type"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/additionalProperties"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/required"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/properties"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ACT_CREDIT_AUDIT_V1.md",
+      "source_blob_sha": "602e901aa64c0f54783d755a9e14f982d887cf9f",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1,
+          "heading_level": 1,
+          "label": "NOVYDRES — Auditoria de crédito de ato V1",
+          "line_end": 15
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ACT_CREDIT_POLICY_V1.md",
+      "source_blob_sha": "d22278b02d35b967045432b5d65bc7b13e3fd2ce",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 1,
+          "heading_level": 1,
+          "label": "NOVYDRES — Economia de crédito de XP por ato resolvido V1",
+          "line_end": 3
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 4,
+          "heading_level": 2,
+          "label": "1 — Semântica imutável",
+          "line_end": 10
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 11,
+          "heading_level": 2,
+          "label": "2 — Fórmula de liberação",
+          "line_end": 20
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 21,
+          "heading_level": 2,
+          "label": "3 — O que é ato elegível",
+          "line_end": 25
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 26,
+          "heading_level": 2,
+          "label": "4 — Compras",
+          "line_end": 33
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 34,
+          "heading_level": 2,
+          "label": "5 — Quando gravar",
+          "line_end": 37
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 38,
+          "heading_level": 2,
+          "label": "6 — Exemplos simulados, NÃO aplicados",
+          "line_end": 44
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ARITHMETIC_REGRESSION_V1.json",
+      "source_blob_sha": "26d651b5da9cb158cbd759550534df95a7340726",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/method"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/date"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/test_count"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/passed"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/failed"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/tests"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/notes"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V1.json",
+      "source_blob_sha": "d5b59da66faa321580432f82c15e990012b08b6d",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/scope"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/decision_id"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/date"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_sha"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/provenance_live_previous"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/historical_legacy_budget"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/current"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/formula"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status_of_pending_m203_credit"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/m204_status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_cost_audit_pending"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_credit_granted_in_normalization"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_purchase_or_fv_change"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_narrative_event"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/authority_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/policy_ref"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V2.json",
+      "source_blob_sha": "d4a15919048a6dd46ab845f9559e20cd0057a39b",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/scope"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/decision_id"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/date"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_sha"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/provenance_live_previous"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/historical_legacy_budget"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/current"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/formula"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status_of_pending_m203_credit"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/m204_status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_cost_audit_pending"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_credit_granted_in_normalization"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_purchase_or_fv_change"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_narrative_event"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/authority_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/policy_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/administrative_credit_delta"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/parent"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_ENVELOPE_V3.json",
+      "source_blob_sha": "461af62f9404a6e895950843b39a596b0b73b7ab",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/scope"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/decision_id"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/date"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_sha"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/provenance_live_previous"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/historical_legacy_budget"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/current"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/formula"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status_of_pending_m203_credit"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/m204_status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/target_cost_audit_pending"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_credit_granted_in_normalization"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_xp_purchase_or_fv_change"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_narrative_event"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/authority_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/policy_ref"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/administrative_credit_delta"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/parent"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/no_willpower_change"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/transaction_record"
+        }
+      ]
+    },
+    {
+      "source_path": "novydres/runtime/xp/XP_SCHEMA_REGRESSION_V1.json",
+      "source_blob_sha": "71855c995f47616fc93f80bfd49fb1bc5bfc0dce",
+      "declared_source_header": {},
+      "epistemic_status": "SOURCE_LITERAL_UNEVALUATED",
+      "visibility": "SYSTEM_AUDIT",
+      "conflicts": [],
+      "source_sections_or_fields": [
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/date"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/status"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/type"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/description"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/count"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/passed"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/failed"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/results"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/source_schema"
+        },
+        {
+          "kind": "JSON_TOP_LEVEL_FIELD",
+          "json_pointer": "/source_fixture"
+        }
+      ]
+    }
+  ]
+}

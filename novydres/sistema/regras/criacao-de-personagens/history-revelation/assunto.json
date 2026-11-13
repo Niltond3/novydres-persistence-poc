@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-history-revelation",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_decisions_v0_1.md",
+      "sha": "ed4785c583561470f117193d5d1879ae6a8b96d8",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_f_history_chronology_revelation_integration_v0_1.md",
+      "sha": "1b374b5001afd9922ceec464d407648dd69075c9",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

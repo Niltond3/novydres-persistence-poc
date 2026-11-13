@@ -1,0 +1,39 @@
+{
+  "subject_id": "chr001-knowledge-npc-elena-heating-instrumentation",
+  "actor_id": "npc-elena-heating-instrumentation",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 15,
+      "record": {
+        "entity": "npc-elena-heating-instrumentation",
+        "label": "Elena (instrumentista da unidade)",
+        "scope": "M2.04.C11",
+        "confirmed": [
+          "C11: participa da leitura dos desenhos e medições de pressão, interrompe progressão diante de anomalia e exige pessoal descansado."
+        ],
+        "claims": [],
+        "suspected": [],
+        "unknown": [
+          "Autoria da liberação contestada, data e instalador da luva, laudo final de engenharia."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+        "anchor": "CHR001-M204-C11-18-20261105-001",
+        "source_current": "novydres/chronicles/CHR-001/episodes/M2.04_v010.source.txt",
+        "last_event_id": "CHR001-M204-C11-18-20261105-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}

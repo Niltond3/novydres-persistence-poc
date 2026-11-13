@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "subject_id": "rule-quick-mode",
+  "kind": "rule",
+  "owner_scope": "novydres/sistema/regras/criacao-de-personagens",
+  "status": "CANDIDATE",
+  "visibility": "SYSTEM_AUDIT",
+  "source_refs": [
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_g_quick_creation_mode_decisions_v0_1_1.md",
+      "sha": "918cfa1ecaf7d7675ca34a32a5fea50c6336387f",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/systems/character-creation/sources/novydres_character_creation_g_quick_creation_mode_v0_1_1.md",
+      "sha": "a8b0fbd3c1c27d09224bd7535f856369f05ddc1e",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "related_subject_ids": [
+    "rule-creation-novydres"
+  ]
+}

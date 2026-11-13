@@ -1,0 +1,255 @@
+{
+  "schema": "ADR001_D02_EXECUTION_AND_RECOVERY_GATE_V1",
+  "classification": "SYSTEM_AUDIT_DO_NOT_EXPOSE_SOURCE_CONTENT",
+  "phase": "D02",
+  "date": "2026-11-12",
+  "status": "PASS_SCOPED_NON_OPERATIONAL",
+  "gate": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA",
+  "gate_basis": "ADR001_D02_CONCLUSION_ALL_ORIGINS_PRESERVED_AND_FIVE_EXTERNAL_MEDIA_LEGITIMATELY_OPTIONAL_ON_PRESENT_DEPENDENCY_EVIDENCE; NO_EDITORIAL_PROMOTION",
+  "continuity": "DEC25_RECOVERABLE_CHECKPOINT_DEC26_EXTERNAL_SOURCE_BYTES_UNAVAILABLE",
+  "entry": {
+    "branch": "design/subject-oriented-migration",
+    "entry_head": "321c9bfb3529054c356958123145c0fc208722a6",
+    "entry_d01_gate": "D01_PASS_SCOPED_ORIGIN_INVENTORY_ONLY",
+    "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+  },
+  "verified_base": {
+    "current_candidate_commit": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+    "current_candidate_tree": "4e1bd52534acf612b5a11a848a8e8853aa51678a",
+    "current_master_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "original_unchanged": true,
+    "checkpoint_scope": "HISTORICAL_PRE_WAIVER_2026_11_12_NOT_CURRENT_HEAD"
+  },
+  "evidence": {
+    "governance_registry": {
+      "path": "novydres/sistema/governanca/registro.json",
+      "blob_sha": "659ffcd097fe324569f5ffe780635fd26a428e18",
+      "preserved_originals": 27,
+      "identical_git_sha": 27,
+      "operational_approval": false,
+      "frozen_changed": 0,
+      "status": "CANDIDATE_NOT_OPERATIONAL_D02_CUSTODY_PASS"
+    },
+    "source_registry": {
+      "path": "novydres/fontes/registro.json",
+      "blob_sha": "ba7fec87b3eef9af9f35f83a8c8094bb23f40478",
+      "d02_source_originals": 128,
+      "rehomed_identical_blobs": 128,
+      "external_controlled_items": 193,
+      "external_google_drive_ids_found": 109,
+      "non_drive_library_ids": 68,
+      "non_drive_file_ids": 16,
+      "google_drive_title_mismatches": 0,
+      "google_drive_mime_history_differences": 16,
+      "source_revisions_verified_current": 0,
+      "status": "CANDIDATE_D02_CUSTODY_PASS_NOT_OPERATIONAL"
+    },
+    "partition": {
+      "d01_total_flagged": 463,
+      "d02_relevant_flagged": 96,
+      "d02_historical_source_custody_assigned": 96,
+      "domain_semantics_promoted": 0,
+      "downstream_review": "D03_D04_D05_D06"
+    }
+  },
+  "media": {
+    "total": 19,
+    "destination_links_existing": 14,
+    "original_library_identity_exact_found": 5,
+    "originals_stored_on_drive_confirmed": 14,
+    "originals_absent_from_drive_search_pending": 5,
+    "drive_binary_bytes_downloaded_and_sha256_computed": 14,
+    "drive_size_match": 14,
+    "historical_source_sha_match": 1,
+    "other_source_destination_equality_unproven": 13,
+    "pending_library_original_bytes_materialized": 0,
+    "pending_source_sha256_verified": 0,
+    "pending_upload_to_drive": 5,
+    "library_raw_materialize_error": "This Project file does not have an authorized raw-byte materialization path.",
+    "upload_file_uri": "NOT_OBTAINABLE_FROM_CURRENT_LIBRARY_BACKING",
+    "rights_or_distribution_permissions": "NOT_AUDITED_OR_INFERRED",
+    "binary_uploaded_to_github": 0,
+    "required_recovery": "NOT_REQUIRED_TO_CLOSE_D02_FOR_FIVE_SPECIFIC_OPTIONAL_ITEMS; REOPEN_IF_CONCRETE_OPERATIONAL_OR_AUTHORITATIVE_DEPENDENCY_IS_DISCOVERED",
+    "d02_transfer_mandatory_now": 0,
+    "d02_optional_missing": 5,
+    "d02_classifications": {
+      "unavailable_optional": 5,
+      "drive_destination_integrity_proven_source_match": 1,
+      "drive_destination_integrity_proven_source_equivalence_unknown": 13,
+      "mandatory_missing_found": 0
+    },
+    "no_claim_of_unique_content_inspection": true
+  },
+  "conflicts": [
+    {
+      "id": "CONFLICT-001",
+      "classification": "WORLD_EDITORIAL_AUTHORITY_UNDECIDED",
+      "technical_custody": "PRESERVED_CANDIDATE_AND_HANDOFF",
+      "blocking_for": "D03_CANONICAL_PROMOTION"
+    },
+    {
+      "id": "CONFLICT-002",
+      "classification": "SCHEMA_FILENAME_METADATA_MISMATCH",
+      "technical_custody": "PRESERVED_LITERAL_SOURCE_SCHEMA_0_9_3",
+      "blocking_for": "NONE_IF_SOURCE_UNMODIFIED"
+    },
+    {
+      "id": "CONFLICT-003_003B",
+      "classification": "NPC_HISTORICAL_VARIANT_EDITORIAL_VERDICT_PENDING",
+      "technical_custody": "ALL_VARIANTS_PRESERVED_WITHOUT_CANONICAL_SELECTION",
+      "blocking_for": "D03_NPC_AUTHORITY_SELECTION"
+    }
+  ],
+  "ci": {
+    "last_full_pass": {
+      "id": 43309547830,
+      "sha": "4ba838258103e7d2a470f487ded2211eb6464e0e",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43309547830",
+      "d02_negative_tests_passed": 28,
+      "scope": "C_D_CANDIDATE_CHECKS_WITH_SOURCE_GIT_READBACK_AND_EXECUTABLE_CONSUMER_SCAN"
+    },
+    "additional_passes": [
+      43299613547,
+      43300505898,
+      43300892920,
+      43301691438,
+      43302377386,
+      43309474795
+    ],
+    "historical_failures_preserved": [
+      {
+        "id": 43298555230,
+        "result": "failure",
+        "correction": "REGISTRY_PRESENCE_TRANSITION"
+      },
+      {
+        "id": 43298913918,
+        "result": "failure",
+        "correction": "MISSING_HISTORIC_SHA_BOOLEAN"
+      },
+      {
+        "id": 43301552526,
+        "result": "failure",
+        "correction": "LIBRARY_RECOVERY_REGISTRY_TRANSITION"
+      }
+    ],
+    "test_scope": "STRUCTURAL_SOURCE_PROVENANCE_AND_NEGATIVE_REGRESSIONS_NOT_INDEPENDENT_EDITORIAL_CERTIFICATION",
+    "current_gate_validation": "PASSED_ON_EXACT_PARENT_COMMIT_SOURCE_AND_GOVERNANCE_BLOBS_RETAINED",
+    "historical_pre_waiver_last_full_pass": {
+      "id": 43302983184,
+      "sha": "284b12ce15b98da3f936d09b97b2feeeae981ec8",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43302983184",
+      "d02_negative_tests_passed": 22
+    }
+  },
+  "safety": {
+    "master_written": false,
+    "approved_frozen_source_changed": false,
+    "secret_visibility_broadened": false,
+    "narrative_created": false,
+    "runtime_activated": false,
+    "cutover": false,
+    "d03_executed": false
+  },
+  "unreleased_dependencies": {
+    "D03": "D02_SOURCE_DEPENDENCY_SATISFIED; D03_NOT_STARTED; CONFLICT-001_AND_003B_REQUIRE_AUTHORIZED_EDITORIAL_RESOLUTION_BEFORE_CANONICAL_PROMOTION; RECHECK_VISUALS_IF_NEW_DEPENDENCY",
+    "D04": "D03_DEPENDENT; NOT_STARTED",
+    "D05": "D03_D04_DEPENDENT; NOT_STARTED",
+    "D06": "D03_D04_D05_DEPENDENT; NOT_STARTED",
+    "D07": "D06_DEPENDENT; INDEPENDENT_REVIEW_NOT_STARTED"
+  },
+  "next_safe_step": "D02 gate closed with scoped provenance custody; D03 eligible only by independent later mandate and after resolving actual editorial dependencies; no D03 started by this report.",
+  "no_silent_resolution": true,
+  "previous_blocking_gate_preserved": {
+    "gate": "D02_RECOVERY_REQUIRED_EXTERNAL_MEDIA_RAW_BYTES",
+    "status": "BLOCKED_NOT_PASS",
+    "source_registry_sha": "4b94c392623392ab921fafb37f836ea02f8a4341",
+    "governance_registry_sha": "4399163777e51ad9e1f3fae747171535dde372a1"
+  },
+  "d02_decision": {
+    "date": "2026-11-12",
+    "authority": "EXPLICIT_PLAYER_EXCEPTION_D02_ONLY",
+    "five_media": [
+      {
+        "historical_id": "libfile_d41c6a5625f08191990794a0bdbcc093",
+        "name": "Farol Vintage em Gravura Borgonha.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "CANDIDATE_REPORTED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_8b331e2369b48191b12004d701f66fdc",
+        "name": "Gramática Visual Canônica de Novydres(1).png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_ba5a8ade17608191b85a5036b9e16a21",
+        "name": "Guia Visual Cartográfico de Novydres.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_1371b5c233108191a687b01a2e38a352",
+        "name": "Legenda Cartográfica Visual de Novydres.png",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      },
+      {
+        "historical_id": "libfile_1e588c3c9b4881919bb99d52b60f410e",
+        "name": "novydres-tiles.zip",
+        "classification": "EXTERNAL_MEDIA_OPTIONAL_NOT_BLOCKING_D02",
+        "source_status": "AUTHORITY_UNVERIFIED",
+        "integrity": "NOT_VERIFIED",
+        "storage": "SOURCE_UNAVAILABLE",
+        "owner": "D03_D05_D07_ON_DEPENDENCY"
+      }
+    ],
+    "controlled_consumer_scan": "IN_CI_VERIFY_D02_GIT_ON_EXECUTABLE_AND_ENTRY_PATHS",
+    "external_dependencies_in_registry": 0,
+    "unique_source_information": "NOT_EXAMINED; AUTHORITY_UNPROVEN; MUST_NOT_INFER_EQUIVALENCE",
+    "textual_source_and_governance": "27_GOV_BLOBS_AND_128_SOURCE_BLOBS_PRESERVED_EXACT",
+    "conflicts": "EDITORIAL_DECISIONS_DEFERRED_NO_FALSE_RESOLUTION",
+    "rights": "UNVERIFIED",
+    "condition": "D03_D07_OR_E_MUST_BLOCK_IF_REQUIRED_SOURCE_DEPENDENCY_LATER_PROVEN"
+  },
+  "latest_waiver_evidence": {
+    "validated_candidate_commit": "4ba838258103e7d2a470f487ded2211eb6464e0e",
+    "validated_tree": "d1800014364ae1fb7784bc5a3defe6b0b808285d",
+    "governance_registry_blob_sha": "659ffcd097fe324569f5ffe780635fd26a428e18",
+    "source_registry_blob_sha": "ba7fec87b3eef9af9f35f83a8c8094bb23f40478",
+    "d02_verifier_blob_sha": "895d160fa8c0565e39a31eab8952e08ab24d380b",
+    "tests_blob_sha": "99c610fc4a93113d60438f408a0a32b761dab93f",
+    "current_ci": {
+      "id": 43309547830,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43309547830",
+      "d02_tests": 28,
+      "d02_tests_passed": 28
+    },
+    "candidate_source_blob_integrity": "128_OF_128_AND_GOVERNANCE_27_OF_27_EXACT_GIT_SHAS_CONFIRMED",
+    "governed_split_handoff": "96_OF_96_SOURCE_CUSTODY_NOT_DOMAIN_SEMANTIC_PROMOTION",
+    "runtime_consumer_scan": "NO_DIRECT_REFERENCE_IN_REVIEWED_CONTROLLED_EXECUTABLE_AND_ENTRY_PATHS",
+    "media_optional": 5,
+    "media_present_hashed_at_destination": 14,
+    "known_source_destination_digest_equal": 1,
+    "other_source_destination_equality_unproven": 13,
+    "source_raw_bytes_of_five": "NOT_RECOVERED; INTEGRITY_UNPROVEN",
+    "cutover": false,
+    "note": "This report commit changes only evidence, not the validated source/governance/validator bytes; new CI on this report commit remains required for current HEAD attestation."
+  }
+}

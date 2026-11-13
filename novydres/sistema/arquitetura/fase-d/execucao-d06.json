@@ -1,0 +1,126 @@
+{
+  "schema": "ADR001_D06_INTEGRATED_GATE_PREP_V1",
+  "phase": "D06",
+  "status": "INTEGRATED_TECHNICAL_PASS_WITH_EXPLICIT_OWNER_ACCEPTANCE_OF_D04_D05_RESIDUAL_RISKS",
+  "gate": "D06_PASS",
+  "candidate_only": true,
+  "proof_script": "novydres/scripts/verificar-integridade-d06.mjs",
+  "test": "novydres/scripts/testar-integridade-d06.test.mjs",
+  "full_tree_scanner": "novydres/scripts/auditar-legado-e-fontes.mjs --final",
+  "originals_expected": 1029,
+  "catalog_subjects_expected": 153,
+  "source_exact_custody_expected": 915,
+  "git_historical_only_expected": 114,
+  "active_consumer_successions_pending": 121,
+  "knowledge_actor_records": 47,
+  "open_threads": 44,
+  "external_optional_media_waiver": 5,
+  "semantic_signoff": false,
+  "ci": "INTEGRATED_CHECKS_PASS_EXCEPT_INTENTIONAL_SEMANTIC_GATE_REMOTE_GIT_CAS_SUCCESS",
+  "no_master_change": true,
+  "no_E02": true,
+  "integrated_runs": [
+    {
+      "run_id": 43345251449,
+      "head": "e5dc6adf2ad597c0b56a92eb6bd15fc9559c29fe",
+      "integrated_checks": "PASS_THROUGH_D07_SOURCE_COMPARISON",
+      "terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_MISSING",
+      "remote_transaction": "PASS_REAL_DISPOSABLE"
+    },
+    {
+      "run_id": 43346213260,
+      "head": "55aea6e2397caa077e2d4a92d5ec056ec12bf061",
+      "integrated_checks": "PASS_THROUGH_D07_SOURCE_COMPARISON",
+      "terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_MISSING",
+      "remote_transaction": "FAIL_STALE_REF_READBACK_REPRODUCED",
+      "remediation_commit": "6be667738269f458ba1f8ff702e7da27c2729bb4",
+      "remediation": "BOUNDED_CONFIRMATION_AND_NO_STORE_WITH_LOST_ACK_COMMIT_REFERENCE",
+      "verification": "PENDING_REVALIDATION_AT_NEXT_FREEZE"
+    }
+  ],
+  "structural_proofs": {
+    "original_origins": 1029,
+    "d03_literals": 64,
+    "d04_histories": 438,
+    "d05_origins": 399,
+    "catalog_subjects": 153,
+    "actor_scopes": 38,
+    "actor_rows": 47,
+    "open_threads": 44,
+    "source_references": {
+      "cycle_direct": 48,
+      "manifest_only": 73
+    },
+    "C45_state": {
+      "xp_total": 675,
+      "xp_spent": 270,
+      "xp_remaining": 405,
+      "xp_credit_available": 0
+    },
+    "authorial_chain": "V004_ACTIVATES_V018;_C45_PINS_V019_PROSPECTIVE",
+    "zero_legacy": "PASSED_ON_PRECEDING_SNAPSHOTS",
+    "semantic_approval": "NOT_PROVEN",
+    "independent_editorial_review": "MISSING"
+  },
+  "material_pending": [
+    "D05_FUNCTIONAL_REVIEW_OF_48_C45_DIRECT_AND_73_MANIFEST_REFERENCES_BEYOND_SOURCE_PINS",
+    "D04_ALL_HISTORICAL_FACT_AUTHORITY_AND_LOCAL_STATE_RECONCILIATION_NOT_INDEPENDENTLY_ATTESTED",
+    "D07_IDENTIFIABLY_INDEPENDENT_CONTEXTUAL_REVIEW_NOT_COMPLETED",
+    "E01_REQUIRES_D_PASS_BEFORE_CUTOVER_PROPOSAL",
+    "XP_TARGET_COST_AUDIT_REMAINS_SEPARATE_NOT_AUTOMATIC_GRANT"
+  ],
+  "latest_integrated_evidence": {
+    "run_id": 43346857735,
+    "checked_candidate_head": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "checked_candidate_tree": "e033dc4455c1701d651735bf1760bcacb0d4fc9e",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "integrated_job_id": 131628178759,
+    "integrated_job_conclusion": "FAILURE_ON_INTENTIONAL_D06_SEMANTIC_GATE",
+    "remote_git_job_id": 131628178299,
+    "remote_git_job_conclusion": "SUCCESS",
+    "steps_before_terminal_gate": "ALL_PASS",
+    "D06_terminal_gate": "D06_SEMANTIC_AND_RUNTIME_APPROVAL_NOT_PRESENT",
+    "D07_final_gate": "SKIPPED_DEPENDENCY_D06",
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false
+  },
+  "previous_transient_remote_ref_failure_remediated": {
+    "failed_run_id": 43346213260,
+    "remediation_commit": "6be667738269f458ba1f8ff702e7da27c2729bb4",
+    "confirmation_run_id": 43346857735,
+    "remote_transaction_job": "SUCCESS",
+    "evidence_scope": "DISPOSABLE_TEST_BRANCH_ONLY_NO_CHRONICLE_OR_MASTER_WRITES"
+  },
+  "next_gate_rule": "RUN_INTEGRATED_TECHNICAL_TESTS_ON_EXACT_HEAD; D07_IDENTIFIABLE_INDEPENDENT_CONTEXTUAL_REVIEW_REMAINS_REQUIRED; OWNER_ACCEPTANCE_IS_NOT_EQUIVALENCE_PROOF",
+  "simplified_gate_policy": {
+    "decision_record": "novydres/sistema/arquitetura/fase-d/aceite-de-risco-d04-d07-2026-11-13.md",
+    "method": "ONE_INTEGRATED_WHOLE_TREE_AND_FUNCTION_RISK_CHECK_REUSE_PRIOR_CI_PROOFS",
+    "prerequisites": [
+      "D04_PASS_OWNER_RISK_ACCEPTANCE",
+      "D05_PASS_OWNER_RISK_ACCEPTANCE",
+      "1029_ORIGINS_PINNED_AND_ROUTED",
+      "ZERO_LEGACY_AND_CATALOG",
+      "C45_STATE_KNOWLEDGE_SECRETS_RESOURCES_TESTS",
+      "GIT_TRANSACTION_READBACK_AND_NEGATIVE_REGRESSIONS"
+    ],
+    "not_required": [
+      "RETEST_121_REFERENCES_INDIVIDUALLY",
+      "RECONSTRUCT_UNIVERSAL_HISTORICAL_LEDGER",
+      "REPEAT_UNCHANGED_DETERMINISTIC_TESTS"
+    ],
+    "separate_d07_independent_review_required": true,
+    "no_E02_authorized": true
+  },
+  "current_integrated_evidence": {
+    "run_id": 43364072558,
+    "checked_head": "4ff7f62ae64823c7236d1fb657d43746a0c5d163",
+    "checked_tree": "c5bf880de66463dc5669da9476dfa229fce39ddb",
+    "integrated_job": "SUCCESS",
+    "remote_git_transaction_job": "SUCCESS",
+    "full_integrity_gate": "D06_PASS",
+    "validation_boundary": "FUNCTIONAL_RISK_ACCEPTED_BY_OWNER_NOT_EXHAUSTIVE_HISTORY_OR_RUNTIME_CERTIFICATION",
+    "D07_required": true,
+    "E01_start_permitted": false,
+    "E02_or_E03_authorized": false
+  }
+}

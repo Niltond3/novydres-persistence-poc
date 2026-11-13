@@ -1,0 +1,215 @@
+{
+  "schema": "ADR001_D03_EXECUTION_V1",
+  "phase": "D03",
+  "entry_head": "8b32081c9435c0864d42ac8679444539438a7c47",
+  "master_reference": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "status": "D03_GATE_REVIEWED_CANDIDATE_NONOPERATIONAL",
+  "gate": "D03_PASS_SCOPED_OWNER_AND_LITERAL_EQUIVALENCE",
+  "not_operational": true,
+  "d03_sources_total": 64,
+  "exact_source_blob_copies": 64,
+  "source_portfolios": 9,
+  "subject_ids": [
+    "world-atlas-novydres",
+    "world-history-novydres",
+    "world-politics-novydres",
+    "world-lineage-urban-gangrel",
+    "npc-iskander-yasupov",
+    "npc-madame-zoya",
+    "world-npc-power-scale",
+    "rule-creation-novydres",
+    "rule-experience-novydres"
+  ],
+  "global_local_boundary": "SOURCE_CUSTODY_ONLY_LOCAL_STATES_RESERVED_D04",
+  "proof": {
+    "byte_identical_sources": true,
+    "unique_source_ownership": true,
+    "subject_catalog": "79_SUBJECTS_316_INDEXED_FILES_EXACT_SHA",
+    "field_semantics": "PENDING",
+    "editorial_authority": "UNCHANGED_NOT_APPROVED",
+    "knowledge_and_relations": "PENDING",
+    "ci": {
+      "last_validated_head": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+      "run_id": 43326091286,
+      "url": "https://github.com/Niltond3/novydres-persistence-poc/actions/runs/43326091286",
+      "conclusion": "success",
+      "result_scope": "D03_SOURCE_CUSTODY_AND_SEMANTIC_TOPIC_OWNERS_ONLY"
+    },
+    "readback": {
+      "commit": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+      "tree": "392340375a58e19ead450316098ed5579385b98a",
+      "master": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+      "verified": true
+    }
+  },
+  "unresolved_conflicts": [
+    "CONFLICT-001",
+    "CONFLICT-002",
+    "CONFLICT-003B"
+  ],
+  "media_waiver": "D02_PASS_SCOPED_CUSTODY_OPTIONAL_MEDIA_UNCHANGED",
+  "source_section_index": {
+    "path": "novydres/sistema/arquitetura/fase-d/fragmentos-d03.json",
+    "source_origins": 64,
+    "source_locators": 1707,
+    "disclosure": "SYSTEM_AUDIT",
+    "source_status_promoted": false,
+    "semantic_claims_approved": false
+  },
+  "global_profiles": {
+    "count": 2,
+    "source_variants_preserved": true,
+    "current_editorial_variant_selected": false,
+    "local_chronicle_knowledge_copied": false,
+    "unambiguous_name_only": true
+  },
+  "xp_field_boundary": {
+    "path": "novydres/sistema/regras/experiencia/escopos.json",
+    "total": 8,
+    "d04_only": 4,
+    "d05_only": 3,
+    "global_and_local_mixed": 1,
+    "field_semantics_fully_partitioned": false,
+    "source_custody_only": true,
+    "local_ownership_not_claimed_by_global_rule": true,
+    "original_field_state_unmodified": true
+  },
+  "remaining_gate_requirements": [
+    "D04 must migrate all 438 chronicle-related origins and verify authoritative C45 state",
+    "D05 must migrate consumers and eliminate all old operational paths",
+    "D06 must prove 100% inventory handling and zero legacy in complete candidate HEAD",
+    "D07 must provide an identifiable independent review",
+    "E01 cutover proposal only after D PASS; editorial unresolved references cannot become operational facts"
+  ],
+  "dependencies_seen": {
+    "D04": {
+      "origins": 438,
+      "unchanged_legacy_same_path": 393,
+      "missing_from_candidate_legacy_paths": 45,
+      "status": "ELIGIBLE_TO_MIGRATE_SOURCE_AND_LOCAL_SEMANTICS"
+    },
+    "D05": {
+      "origins": 399,
+      "unchanged_legacy_same_path": 254,
+      "missing_from_candidate_legacy_paths": 144,
+      "changed_legacy_path": 1,
+      "status": "NOT_STARTED"
+    },
+    "D06": "NOT_STARTED_ZERO_LEGACY_NOT_PROVEN",
+    "D07": "NOT_STARTED_INDEPENDENT_REVIEW_NOT_PROVEN"
+  },
+  "world_literal_references": {
+    "path": "novydres/sistema/arquitetura/fase-d/vinculos-literais-d03.json",
+    "total": 84,
+    "owner_resolved_nonoperational": 20,
+    "deferred_source_refs": 64,
+    "semantic_relations_equivalent": false,
+    "may_not_promote_to_operational_link": true,
+    "exact_source_heading_resolutions": 9,
+    "unresolved_are_inert_source_literals_not_catalog_dependencies": true
+  },
+  "spatial_concept_transformation": {
+    "status": "CANDIDATE_NONOPERATIONAL",
+    "new_subjects": 41,
+    "district_subjects": 9,
+    "poi_subjects": 32,
+    "variant_sections_preserved": 82,
+    "source_documents": 2,
+    "source_authority_promoted": false,
+    "semantic_owner": "PER_DISTRICT_AND_PER_POI",
+    "source_atlas_roles": "CUSTODY_AND_WHOLE_DOCUMENT_CONTEXT_NOT_COMPETING_CONCEPT_OWNER",
+    "semantic_content": "SOURCE_LITERAL_SECTIONS_NO_CONFIRMED_FACT_PROJECTION"
+  },
+  "distributed_source_locators": {
+    "subjects": 9,
+    "source_documents": 64,
+    "locators": 1707,
+    "verified_against": "novydres/sistema/arquitetura/fase-d/fragmentos-d03.json",
+    "not_authoritative_world_facts": true
+  },
+  "global_source_relations": {
+    "global_characters": 2,
+    "original_variants_examined": 4,
+    "directed_edges": 5,
+    "exact_existing_targets": 3,
+    "source_only_unknown_targets": 2,
+    "all_status": "UNKNOWN",
+    "no_local_knowledge_copied": true,
+    "editorial_promotion": false
+  },
+  "global_pc_identity": {
+    "subject_id": "pc-bartholomeu-krauser",
+    "source": "APPROVED_LOCAL_TARGET_NAME_ONLY",
+    "identity_name_pinned": true,
+    "local_resource_and_knowledge_not_copied": true,
+    "existing_deferred_relation_resolved": true,
+    "active_state_not_promoted": true
+  },
+  "consolidated_gate_evidence": {
+    "proof_script": "novydres/scripts/verificar-gate-d03.mjs",
+    "test_script": "novydres/scripts/testar-gate-d03.test.mjs",
+    "coverage": "64_OF_64_D03_SOURCES",
+    "semantic_equivalence_class": "SOURCE_LITERAL_EXACT_PLUS_OWNED_LOCATED_PROJECTIONS_NOT_FACT_PROMOTION",
+    "active_dangling_subject_references": 0,
+    "literal_publication_links_without_d03_subject_targets": 64,
+    "source_only_links_nonoperational": true,
+    "editorial_status": "UNRESOLVED_PRESERVED_NO_SELECTION",
+    "all_future_runtime_checks_required": true
+  },
+  "rule_module_partition": {
+    "count": 20,
+    "rule_originals_owned": 32,
+    "legacy_consumer_origins_reserved_d05": 6,
+    "not_operational": true,
+    "exact_source_retrieval_by_parent": true,
+    "semantic_owner_per_rule_module": true,
+    "source_editorial_status_unmodified": true
+  },
+  "gate_decision": {
+    "criteria_source": "novydres/sistema/arquitetura/plano-integral/tarefas.md#D03",
+    "pass_scope": "CANDIDATE_SOURCE_LITERAL_INFORMATION_AND_SOURCE_GROUNDED_SEMANTIC_OWNERS",
+    "readback_commit": "a69cceddd33f7ff8ced2c0dc636cc5d224d8b42b",
+    "readback_tree": "392340375a58e19ead450316098ed5579385b98a",
+    "master_readonly": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "ci_run_id": 43326091286,
+    "ci_result": "success",
+    "test": "novydres/scripts/verificar-gate-d03.mjs",
+    "d03_sources": 64,
+    "source_exact_sha": 64,
+    "document_section_or_field_locators": 1707,
+    "rule_modules": 20,
+    "rules_by_module": 32,
+    "rule_consumers_reserved_D05": 6,
+    "geography_topics": 41,
+    "candidate_subjects": 79,
+    "active_catalog_dangling_dependencies": 0,
+    "unresolved_literal_source_wikilinks": 64,
+    "unresolved_links_reason": "AUDIT_ONLY_SOURCE_LITERAL_NO_ACTIVE_DEPENDENCY_OR_UNIQUE_EDITORIAL_SELECTION",
+    "editorial_sources_preserved_without_selection": true,
+    "conflicts_nonblocking_for_candidate_structure": [
+      "CONFLICT-001",
+      "CONFLICT-002",
+      "CONFLICT-003B"
+    ],
+    "future_requirement": "DO_NOT_TREAT_PASS_AS_EDITORIAL_CUTOVER_APPROVAL_OR_ACTIVE_NARRATIVE_AUTHORITY",
+    "integrity_equivalence_scope": "PINNED_ORIGINAL_BYTES_AND_SOURCE_OWNED_PROJECTIONS_NOT_INFERRED_GLOBAL_FACTS"
+  },
+  "post_d03_xp_handoff": {
+    "status": "D04_LOCAL_SOURCE_BACKED_PROJECTION_STAGED",
+    "old_d03_gate_evidence_unchanged": true,
+    "global_rules": "novydres/sistema/regras/experiencia/principios-credito.json",
+    "local_state": "novydres/cronicas/CHR-001/estado/xp-autoridade-c45.json",
+    "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+    "scope_records": 8,
+    "new_awards": 0,
+    "additional_cost_audit": "REMAINS_OPEN",
+    "proof": "novydres/scripts/verificar-escopo-xp.mjs",
+    "gate_effect": "DOES_NOT_UPGRADE_D03_HISTORICAL_GATE_OR_D04_SEMANTIC_APPROVAL"
+  },
+  "post_d03_xp_handoff_reconciliation": {
+    "latest_ci_run_id": 43346857735,
+    "latest_snapshot": "f4ff5b66e96350673bd0e6058424b51daefe07e7",
+    "scope_proofs": "XP_SOURCE_PIN_GLOBAL_LOCAL_8_FILES_PASS",
+    "historical_d03_gate_unchanged": true
+  }
+}

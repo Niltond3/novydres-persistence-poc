@@ -1,0 +1,86 @@
+{
+  "subject_id": "story-m301-c01",
+  "title": "O preço de ficar à porta",
+  "played_episode": "M3.01",
+  "played_scene": "C01",
+  "scene_closed": true,
+  "primary_literal": {
+    "source_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a",
+    "path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+    "sha": "43b461493b5470057ab54648c6f6d9055814e271"
+  },
+  "event_text_markers": [
+    {
+      "event_marker": "CHR001-M301-C01-01-20261107-001",
+      "scene_marker": "M3.01.C01.01",
+      "source_type": "PLAYER_AUTHORIZATION_AND_SESSION_ENTRY",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-02-20261107-001",
+      "scene_marker": "M3.01.C01.02",
+      "source_type": "OPENING_AND_PRICE_OFFER",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-03-20261107-001",
+      "scene_marker": "M3.01.C01.03",
+      "source_type": "SAMIR_CONTESTS",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-04-20261107-001",
+      "scene_marker": "M3.01.C01.04",
+      "source_type": "PLAYER_OBSERVATION_REFUSAL_CAR_SERVICE",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-05-20261107-001",
+      "scene_marker": "M3.01.C01.05",
+      "source_type": "PRICE_DECLINES_MECHANICAL_PROPOSAL",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-06-20261107-001",
+      "scene_marker": "M3.01.C01.06",
+      "source_type": "PLAYER_BOUNDARY_CONDITIONAL_PHONE",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-07-20261107-001",
+      "scene_marker": "M3.01.C01.07",
+      "source_type": "NPC_EXIT_AND_RECEIPT",
+      "ledger_proof": "NONE_FROM_TEXT"
+    },
+    {
+      "event_marker": "CHR001-M301-C01-08-20261107-001",
+      "scene_marker": "M3.01.C01.08",
+      "source_type": "SCENE_CLOSED_G28",
+      "ledger_proof": "NONE_FROM_TEXT"
+    }
+  ],
+  "technical_ledger_proven": false,
+  "pc_action_boundaries": {
+    "security_work_refused": true,
+    "phone_contact_conditional": true,
+    "no_future_call_confirmed": true,
+    "handshake_reply_unconfirmed": true
+  },
+  "unknowns": [
+    "exact_civil_date",
+    "exact_phone_number",
+    "contractual_wage_claims"
+  ],
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "sha": "43b461493b5470057ab54648c6f6d9055814e271",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    },
+    {
+      "id": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "sha": "9df68f771f430f8755b3d321a98a0b6c85288f36",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ]
+}

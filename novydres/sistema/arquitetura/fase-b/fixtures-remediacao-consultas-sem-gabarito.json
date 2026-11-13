@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "PHASE_B_REMEDIATION_QUERY_FIXTURE_SANITIZED",
+  "classification": "PLAYER_SAFE",
+  "basis": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "design_head_before_final_remediation": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+    "original_fixture_path": "novydres/sistema/arquitetura/fase-b/fixtures-consultas.json",
+    "original_fixture_blob_sha": "de99d2f74e7c7854af324ed97a99cde7ad706ad7"
+  },
+  "expected_answer_fields_included": false,
+  "excluded_fields": [
+    "expected_from_source",
+    "actual_from_candidate",
+    "pass"
+  ],
+  "questions": [
+    {
+      "id": "B-Q01",
+      "group": "world-rules",
+      "name": "Data UNKNOWN?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q02",
+      "group": "world-rules",
+      "name": "Baia alugada?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q03",
+      "group": "world-rules",
+      "name": "Recusa de segurança?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q04",
+      "group": "world-rules",
+      "name": "Eleanor não contratou?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q05",
+      "group": "world-rules",
+      "name": "Alegação de salários pendentes?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q06",
+      "group": "world-rules",
+      "name": "Versões salariais conflitantes?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q07",
+      "group": "world-rules",
+      "name": "Número exato UNKNOWN?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q08",
+      "group": "world-rules",
+      "name": "Sem ligação futura comprovada?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q09",
+      "group": "world-rules",
+      "name": "PJ não respondeu aperto de mão de modo comprovado?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q10",
+      "group": "world-rules",
+      "name": "Contato não obriga PJ?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q11",
+      "group": "npc-relations-knowledge",
+      "name": "ID legado?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q12",
+      "group": "npc-relations-knowledge",
+      "name": "Aliases?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "evidence_source_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "id": "B-Q13",
+      "group": "npc-relations-knowledge",
+      "name": "Status introdução?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/HISTORY_INDEX_v038.json",
+      "evidence_source_sha": "9df68f771f430f8755b3d321a98a0b6c85288f36"
+    },
+    {
+      "id": "B-Q14",
+      "group": "npc-relations-knowledge",
+      "name": "Escopo?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q15",
+      "group": "npc-relations-knowledge",
+      "name": "Quantidade de conhecimentos confirmados?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q16",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 1?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q17",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 2?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q18",
+      "group": "npc-relations-knowledge",
+      "name": "Conhecimento confirmado 3?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q19",
+      "group": "npc-relations-knowledge",
+      "name": "Alegação salarial mantida como claim?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q20",
+      "group": "npc-relations-knowledge",
+      "name": "Telefone sem número exato?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V21.json",
+      "evidence_source_sha": "679298fec1da012572f25cfd9b9ae0a37df8586a"
+    },
+    {
+      "id": "B-Q21",
+      "group": "chronology-state",
+      "name": "Oito marcadores?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q22",
+      "group": "chronology-state",
+      "name": "Primeiro marcador?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q23",
+      "group": "chronology-state",
+      "name": "Último marcador?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+      "evidence_source_sha": "43b461493b5470057ab54648c6f6d9055814e271"
+    },
+    {
+      "id": "B-Q24",
+      "group": "chronology-state",
+      "name": "Último evento operacional?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q25",
+      "group": "chronology-state",
+      "name": "Provocação administrativa?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q26",
+      "group": "chronology-state",
+      "name": "Próxima cena iniciada?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q27",
+      "group": "chronology-state",
+      "name": "Mortal?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q28",
+      "group": "chronology-state",
+      "name": "Abraço ocorrido?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/orchestration/CYCLE_V0041.json",
+      "evidence_source_sha": "06398ed7cbc19e315fb7d59b08cc807b3e36c88d"
+    },
+    {
+      "id": "B-Q29",
+      "group": "chronology-state",
+      "name": "XP total/gasto/restante/crédito?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "evidence_source_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    },
+    {
+      "id": "B-Q30",
+      "group": "chronology-state",
+      "name": "FV max/dano superficial/disponível?",
+      "evidence_source_path": "novydres/chronicles/CHR-001/LIVE_v038.json",
+      "evidence_source_sha": "9d2090a54fe60aeed3dc317aac8e6fd31433fd45"
+    }
+  ],
+  "session_instruction": "Only sanitized case IDs and names are included. Expected factual answers are excluded.",
+  "design_commit_for_candidate_reads": "35862b10000883ac8e607f9de1a87d945b21c1a5",
+  "original_source_snapshot_commit": "c26c0fbf15fff6c817182c06e6208e302b954f3a"
+}

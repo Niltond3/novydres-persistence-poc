@@ -1,0 +1,43 @@
+{
+  "schema": "ADR001_E01_CUTOVER_PREPARATION_V1",
+  "phase": "E01",
+  "status": "E01_PREPARATION_COMPLETE_PENDING_OWNER_APPROVAL",
+  "gate": "E01_READY_FOR_OWNER_CUTOVER_DECISION",
+  "candidate_branch": "design/subject-oriented-migration",
+  "reviewed_head": "57c6ca324911da96cbadf6b701b2c8aa42c997ed",
+  "reviewed_tree": "94453cddee9a636871a4b6080a61640dba18f4ad",
+  "master_baseline_head": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37",
+  "master_baseline_tree": "4894bebafcc872dcd7c772ea4d34e5d54079b810",
+  "promotion_candidate": "RE_READ_FINAL_REMOTE_HEAD_AND_TREE_AFTER_E01_DOCUMENTATION_COMMIT",
+  "report": "novydres/sistema/arquitetura/fase-e/proposta-cutover-e01-2026-11-13.md",
+  "gates": {
+    "A": "A_DESIGN_EXECUTION_PASS",
+    "B": "B_PASS_SCOPED",
+    "C": "C08_PASS_SCOPED",
+    "D": "D_PASS_WITH_ACCEPTED_RESIDUAL_RISKS_AND_SCOPED_AGENT_REVIEW"
+  },
+  "ci_runs": {
+    "integrated_d06": 43364072558,
+    "targeted_d04_d05": 43364329372
+  },
+  "zero_legacy_preliminary": {
+    "review_head": "57c6ca324911da96cbadf6b701b2c8aa42c997ed",
+    "legacy_operational_paths": 0,
+    "symlinks": 0,
+    "source": "FULL_GIT_TREE_PLUS_PRIOR_INTEGRATED_SCANNER"
+  },
+  "risks": [
+    "119_UNPROVEN_BEHAVIORS_ACCEPTED",
+    "CONFLICT_001_002_003B_UNSELECTED",
+    "POST_PROMOTION_E03_REQUIRED",
+    "EXTERNAL_ACL_AND_MEDIA_LIMITS"
+  ],
+  "authorization": {
+    "E01_preparation": true,
+    "E02": false,
+    "E03": false,
+    "master_write": false,
+    "chronicle_activation": false
+  },
+  "next": "OWNER_APPROVE_OR_REJECT_PROPOSED_E02_AND_POLICY_SUCCESSION"
+}

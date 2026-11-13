@@ -1,0 +1,347 @@
+{
+  "subject_id": "rule-npc-depth",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "npc-depth",
+  "semantic_owner": "rule-npc-depth",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_decisions_v0_1.md",
+      "source_sha": "0d6659207097db0e7d9c59fa0aa73b09cb851010",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_i_npc_application_depth_profiles_decisions",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_i_npc_application_depth_profiles_decisions"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 12,
+          "heading_level": 1,
+          "label": "I — NPC Creation Application & Depth Profiles — Decision Ledger",
+          "line_end": 13
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 2,
+          "label": "1. Decision ledger",
+          "line_end": 28
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 29,
+          "heading_level": 2,
+          "label": "2. Q-029 / Q-112 closure",
+          "line_end": 34
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 35,
+          "heading_level": 2,
+          "label": "3. H → I traceability",
+          "line_end": 47
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 48,
+          "heading_level": 2,
+          "label": "4. Question closure",
+          "line_end": 67
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 68,
+          "heading_level": 2,
+          "label": "5. Retroactive triggers",
+          "line_end": 73
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 74,
+          "heading_level": 2,
+          "label": "6. Final verdict",
+          "line_end": 76
+        }
+      ],
+      "semantic_owner": "rule-npc-depth",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    },
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_i_npc_application_depth_profiles_v0_1.md",
+      "source_sha": "0ce4fc086be25a0d07d3dde048aa647361b62869",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "candidate_for_senior_editor_revalidation",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_i_npc_application_depth_profiles",
+        "version": "0.1",
+        "status": "candidate_for_senior_editor_revalidation",
+        "scope": "character_creation_i_npc_application_depth_profiles"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 13,
+          "heading_level": 1,
+          "label": "I — NPC Creation Application & Depth Profiles",
+          "line_end": 14
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 15,
+          "heading_level": 2,
+          "label": "A. Scope and authority",
+          "line_end": 27
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 28,
+          "heading_level": 2,
+          "label": "B. Common ontology / two-mode invariant",
+          "line_end": 44
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 45,
+          "heading_level": 2,
+          "label": "C. I application model",
+          "line_end": 62
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 63,
+          "heading_level": 2,
+          "label": "D. NPC resolution-depth taxonomy",
+          "line_end": 73
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 74,
+          "heading_level": 2,
+          "label": "E. Mandatory state by depth",
+          "line_end": 77
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 78,
+          "heading_level": 3,
+          "label": "Common-Core by Depth Matrix",
+          "line_end": 110
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 111,
+          "heading_level": 2,
+          "label": "F. Quick versus Guided selection",
+          "line_end": 118
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 119,
+          "heading_level": 3,
+          "label": "Quick / Guided Application Matrix",
+          "line_end": 129
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 130,
+          "heading_level": 2,
+          "label": "G. Pre-sheet Power Envelope pass",
+          "line_end": 140
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 141,
+          "heading_level": 2,
+          "label": "H. Post-sheet Power Scale audit",
+          "line_end": 164
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 165,
+          "heading_level": 3,
+          "label": "Two-Pass Audit Matrix",
+          "line_end": 173
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 174,
+          "heading_level": 2,
+          "label": "I. Principal NPC history depth",
+          "line_end": 189
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 190,
+          "heading_level": 2,
+          "label": "J. Secondary NPC history depth",
+          "line_end": 203
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 204,
+          "heading_level": 2,
+          "label": "K. Legendary / Methuselah protected-envelope interface",
+          "line_end": 239
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 240,
+          "heading_level": 2,
+          "label": "L. Dependent / stat-block depth",
+          "line_end": 262
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 263,
+          "heading_level": 2,
+          "label": "M. Recurring officeholder Functional Fit",
+          "line_end": 279
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 280,
+          "heading_level": 2,
+          "label": "N. Unknown/protected data preservation",
+          "line_end": 296
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 297,
+          "heading_level": 2,
+          "label": "O. Coterie/group-state handling",
+          "line_end": 311
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 312,
+          "heading_level": 2,
+          "label": "P. Existing-profile revalidation protocol",
+          "line_end": 326
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 327,
+          "heading_level": 3,
+          "label": "Existing-Profile Revalidation Matrix",
+          "line_end": 339
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 340,
+          "heading_level": 2,
+          "label": "Q. Stress-test findings",
+          "line_end": 343
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 344,
+          "heading_level": 3,
+          "label": "Iskander Yasupov",
+          "line_end": 349
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 350,
+          "heading_level": 3,
+          "label": "Madame Zoya",
+          "line_end": 355
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 356,
+          "heading_level": 3,
+          "label": "Principal political officeholder",
+          "line_end": 361
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 362,
+          "heading_level": 3,
+          "label": "Secondary / dependent",
+          "line_end": 367
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 368,
+          "heading_level": 3,
+          "label": "Legendary / ancient",
+          "line_end": 373
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 374,
+          "heading_level": 2,
+          "label": "R. H → I traceability disposition",
+          "line_end": 384
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 385,
+          "heading_level": 2,
+          "label": "S. I → K contract",
+          "line_end": 400
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 401,
+          "heading_level": 2,
+          "label": "T. Chapter-07 revalidation handoff",
+          "line_end": 414
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 415,
+          "heading_level": 2,
+          "label": "U. Question closure matrix",
+          "line_end": 434
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 435,
+          "heading_level": 2,
+          "label": "V. Retroactive triggers / blockers",
+          "line_end": 436
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 437,
+          "heading_level": 3,
+          "label": "Potential retroactive triggers",
+          "line_end": 451
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 452,
+          "heading_level": 3,
+          "label": "Blockers",
+          "line_end": 457
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 458,
+          "heading_level": 2,
+          "label": "W. Readiness verdict",
+          "line_end": 477
+        }
+      ],
+      "semantic_owner": "rule-npc-depth",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

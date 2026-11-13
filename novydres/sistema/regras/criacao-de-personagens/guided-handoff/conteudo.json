@@ -1,0 +1,515 @@
+{
+  "subject_id": "rule-guided-handoff",
+  "schema": "ADR001_D03_RULE_MODULE_SOURCE_SCOPE_V1",
+  "status": "CANDIDATE_NOT_OPERATIONAL",
+  "module": "guided-handoff",
+  "semantic_owner": "rule-guided-handoff",
+  "source_custodian": "rule-creation-novydres",
+  "editorial_approval_inferred": false,
+  "source_records": [
+    {
+      "source_path": "novydres/systems/character-creation/sources/novydres_character_creation_l_guided_content_handoff_v0_1(1).md",
+      "source_sha": "75ce2d3f08a109d98c6d49578a26c6b7cfdbf41a",
+      "source_family": "RULES_AND_MECHANICS",
+      "source_type": "DOCUMENT_OR_CODE_SOURCE",
+      "editorial_status_from_source": "active_handoff",
+      "source_status_verified_without_promotion": false,
+      "declared_source_header": {
+        "document_id": "novydres_character_creation_l_guided_content_handoff",
+        "version": "0.1",
+        "status": "active_handoff"
+      },
+      "section_or_field_locators": [
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 12,
+          "heading_level": 1,
+          "label": "Novydres — Character Creation L Handoff v0.1",
+          "line_end": 13
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 14,
+          "heading_level": 2,
+          "label": "0. USE THIS DOCUMENT FIRST",
+          "line_end": 29
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 30,
+          "heading_level": 1,
+          "label": "1. FROZEN / BINDING — CHARACTER CREATION THROUGH K",
+          "line_end": 31
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 32,
+          "heading_level": 2,
+          "label": "1.1 K closure",
+          "line_end": 53
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 54,
+          "heading_level": 2,
+          "label": "1.2 Publication firewall",
+          "line_end": 77
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 78,
+          "heading_level": 1,
+          "label": "2. FROZEN / BINDING — ECONOMY AND PARITY",
+          "line_end": 79
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 80,
+          "heading_level": 2,
+          "label": "2.1 G economic authority",
+          "line_end": 107
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 108,
+          "heading_level": 2,
+          "label": "2.2 H parity",
+          "line_end": 124
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 125,
+          "heading_level": 1,
+          "label": "3. FROZEN / BINDING — MEMORY, HISTORY, CANON",
+          "line_end": 126
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 127,
+          "heading_level": 2,
+          "label": "3.1 E memory/persistence",
+          "line_end": 154
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 155,
+          "heading_level": 2,
+          "label": "3.2 F chronology/Revelation",
+          "line_end": 165
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 166,
+          "heading_level": 1,
+          "label": "4. L CURRENT / VALIDATED — REFERENCE ADAPTATION",
+          "line_end": 167
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 168,
+          "heading_level": 2,
+          "label": "4.1 In Memoriam / Oceans of Time",
+          "line_end": 188
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 189,
+          "heading_level": 2,
+          "label": "4.2 Thousand Year Old Vampire",
+          "line_end": 215
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 216,
+          "heading_level": 1,
+          "label": "5. L CURRENT / VALIDATED — PROVOCATION GRAMMAR",
+          "line_end": 249
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 250,
+          "heading_level": 1,
+          "label": "6. L CURRENT / VALIDATED — EXPERIENCE, MECHANICS, CAUSALITY",
+          "line_end": 251
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 252,
+          "heading_level": 2,
+          "label": "6.1 Experience",
+          "line_end": 266
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 267,
+          "heading_level": 2,
+          "label": "6.2 Mechanical accounting",
+          "line_end": 276
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 277,
+          "heading_level": 2,
+          "label": "6.3 Current playtest construction rule",
+          "line_end": 297
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 298,
+          "heading_level": 2,
+          "label": "6.4 Mechanical neutrality / causality",
+          "line_end": 307
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 308,
+          "heading_level": 1,
+          "label": "7. L CURRENT / VALIDATED — EROSION & CONTINUITY",
+          "line_end": 315
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 316,
+          "heading_level": 2,
+          "label": "7.1 Destructive loss",
+          "line_end": 327
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 328,
+          "heading_level": 2,
+          "label": "7.2 Economic Continuity",
+          "line_end": 346
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 347,
+          "heading_level": 2,
+          "label": "7.3 Experience of Continuity",
+          "line_end": 352
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 353,
+          "heading_level": 2,
+          "label": "7.4 Direct Erosion",
+          "line_end": 378
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 379,
+          "heading_level": 2,
+          "label": "7.5 Identity Continuity",
+          "line_end": 392
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 393,
+          "heading_level": 1,
+          "label": "8. L CURRENT / VALIDATED — DESTRUCTIVE AND COMPOSITE AUTHORING",
+          "line_end": 417
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 418,
+          "heading_level": 1,
+          "label": "9. L CURRENT / VALIDATED — MARCO FUNCTION",
+          "line_end": 443
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 444,
+          "heading_level": 1,
+          "label": "10. WORKING TAXONOMY — USER DIRECTIVE / RETROACTIVE TRIGGER",
+          "line_end": 463
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 464,
+          "heading_level": 3,
+          "label": "RETROACTIVE CONFLICT",
+          "line_end": 481
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 482,
+          "heading_level": 1,
+          "label": "11. WORKING DIRECTION — LIVING EPISODES",
+          "line_end": 496
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 497,
+          "heading_level": 1,
+          "label": "12. WORKING DIRECTION — GLOBAL PROVOCATION MALHA",
+          "line_end": 498
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 499,
+          "heading_level": 3,
+          "label": "NOT YET AUTHORIZED AS FINAL ARCHITECTURE",
+          "line_end": 517
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 518,
+          "heading_level": 3,
+          "label": "RETROACTIVE CONFLICT",
+          "line_end": 531
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 532,
+          "heading_level": 1,
+          "label": "13. SUPERSEDED / REJECTED — DO NOT REVIVE",
+          "line_end": 556
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 557,
+          "heading_level": 1,
+          "label": "14. HUMAN BENCHMARK — MICHAELA L'ANGELE",
+          "line_end": 564
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 565,
+          "heading_level": 2,
+          "label": "14.1 Character material established so far",
+          "line_end": 581
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 582,
+          "heading_level": 2,
+          "label": "14.2 Provocations rolled in the first benchmark",
+          "line_end": 592
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 593,
+          "heading_level": 2,
+          "label": "14.3 Benchmark findings",
+          "line_end": 612
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 613,
+          "heading_level": 2,
+          "label": "14.4 XP reconciliation note",
+          "line_end": 620
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 621,
+          "heading_level": 1,
+          "label": "15. CURRENT PRODUCTION CANDIDATES — M1-001–018",
+          "line_end": 626
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 627,
+          "heading_level": 2,
+          "label": "M1-001 — A Segurança Falha",
+          "line_end": 634
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 635,
+          "heading_level": 2,
+          "label": "M1-002 — Chamado a Resolver",
+          "line_end": 642
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 643,
+          "heading_level": 2,
+          "label": "M1-003 — A Razão da Escolha",
+          "line_end": 650
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 651,
+          "heading_level": 2,
+          "label": "M1-004 — Quem Ficou",
+          "line_end": 658
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 659,
+          "heading_level": 2,
+          "label": "M1-005 — Um Lugar com Condições",
+          "line_end": 666
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 667,
+          "heading_level": 2,
+          "label": "M1-006 — O Desejo se Aproxima",
+          "line_end": 674
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 675,
+          "heading_level": 2,
+          "label": "M1-007 — Espaço para Alguém",
+          "line_end": 682
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 683,
+          "heading_level": 2,
+          "label": "M1-008 — Aquilo que Seguiu sem Você",
+          "line_end": 690
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 691,
+          "heading_level": 2,
+          "label": "M1-009 — Um Lugar para Pertencer",
+          "line_end": 698
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 699,
+          "heading_level": 2,
+          "label": "M1-010 — Vidas Separadas",
+          "line_end": 706
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 707,
+          "heading_level": 2,
+          "label": "M1-011 — A Decisão é Sua",
+          "line_end": 714
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 715,
+          "heading_level": 2,
+          "label": "M1-012 — O Fracasso Absorvido",
+          "line_end": 722
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 723,
+          "heading_level": 2,
+          "label": "M1-013 — Aquilo que Parecia Permanente",
+          "line_end": 730
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 731,
+          "heading_level": 2,
+          "label": "M1-014 — Uma Chegada Favorável",
+          "line_end": 738
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 739,
+          "heading_level": 2,
+          "label": "M1-015 — Você Descobre que Pode",
+          "line_end": 746
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 747,
+          "heading_level": 2,
+          "label": "M1-016 — Alguém Quer o Mesmo",
+          "line_end": 754
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 755,
+          "heading_level": 2,
+          "label": "M1-017 — Sorte Inesperada",
+          "line_end": 762
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 763,
+          "heading_level": 2,
+          "label": "M1-018 — O Mundo Melhorou",
+          "line_end": 772
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 773,
+          "heading_level": 1,
+          "label": "16. L DECISION TRACE — CURRENT DISPOSITION",
+          "line_end": 776
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 777,
+          "heading_level": 2,
+          "label": "16.1 Accepted / retained L principles",
+          "line_end": 789
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 790,
+          "heading_level": 2,
+          "label": "16.2 Superseded / corrected L substance",
+          "line_end": 797
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 798,
+          "heading_level": 2,
+          "label": "16.3 Proposed after human playtest — not yet formalized/frozen",
+          "line_end": 814
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 815,
+          "heading_level": 1,
+          "label": "17. IMMEDIATE NEXT TASK IN THE NEW CHAT",
+          "line_end": 822
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 823,
+          "heading_level": 2,
+          "label": "RETROACTIVE INTERFACE REVIEW",
+          "line_end": 826
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 827,
+          "heading_level": 3,
+          "label": "A. Taxonomy conflict",
+          "line_end": 840
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 841,
+          "heading_level": 3,
+          "label": "B. Selection conflict",
+          "line_end": 865
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 866,
+          "heading_level": 1,
+          "label": "18. NEW-CHAT OPERATING INSTRUCTION",
+          "line_end": 882
+        },
+        {
+          "kind": "MARKDOWN_SECTION",
+          "line_start": 883,
+          "heading_level": 1,
+          "label": "19. HANDOFF VERDICT",
+          "line_end": 898
+        }
+      ],
+      "semantic_owner": "rule-guided-handoff",
+      "source_custodian": "rule-creation-novydres",
+      "source_episteme": "SOURCE_LITERAL_NOT_RECLASSIFIED",
+      "local_character_state_not_imported": true
+    }
+  ],
+  "source_literal_recovery": "OPEN_CUSTODIAN_BLOB_AT_PINNED_SHA",
+  "current_system_rule_active": false
+}

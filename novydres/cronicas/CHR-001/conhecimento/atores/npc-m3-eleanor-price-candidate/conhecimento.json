@@ -1,0 +1,43 @@
+{
+  "subject_id": "chr001-knowledge-npc-m3-eleanor-price-candidate",
+  "actor_id": "npc-m3-eleanor-price-candidate",
+  "status": "CANDIDATE_C45_NOT_ACTIVE",
+  "source_refs": [
+    {
+      "id": "novydres/chronicles/CHR-001/knowledge/NPC_KNOWLEDGE_PROVENANCE_V22.json",
+      "sha": "a5da61e00c5e29a4941d5697b2010743313f9007",
+      "source_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
+    }
+  ],
+  "source_last_event_id": "CHR001-M302-C01-05-20261111-001",
+  "source_record_count": 47,
+  "records": [
+    {
+      "source_row_index": 38,
+      "record": {
+        "entity": "npc-m3-eleanor-price-candidate",
+        "label": "Eleanor Price — M3.01.C01",
+        "scope": "M3.01.C01",
+        "confirmed": [
+          "Sabe que Bart oferece serviços de reparação automotiva e que recusou fazer segurança.",
+          "Ouviu parte da oposição de Samir; não obteve contrato nem deixou o veículo para revisão.",
+          "Saiu em seu sedã verde-escuro após conversa."
+        ],
+        "claims": [
+          "Alega controlar imóvel/equipamento e possuir contrato com despesas e danos."
+        ],
+        "suspected": [],
+        "unknown": [
+          "Verdade jurídica e contábil das alegações.",
+          "Conhecimento sobre família, Volnaya, Oleg ou caínitas não demonstrado."
+        ],
+        "source": "novydres/chronicles/CHR-001/episodes/M3.01_v001.source.txt",
+        "anchor": "CHR001-M301-C01-02-20261107-001",
+        "last_event_id": "CHR001-M301-C01-08-20261107-001"
+      }
+    }
+  ],
+  "no_global_fact_promotion": true,
+  "no_cross_actor_inference": true,
+  "no_player_disclosure": true
+}
