@@ -42,3 +42,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-014.md` registra o discurso técnico integral de Bartolomeu, a resposta de Rada e seu movimento inicial para sair. Cursor `../../estado/recuperacao-c59.json`. C02 permanece aberta, nenhuma alteração de XP/FV.
 
 `c02-observacao-015.md` documenta aparência externa e distinção de registro linguístico de Rada por pergunta meta do jogador; cursor `../../estado/recuperacao-c60.json`. Sem ação ou progressão adicional.
+
+`c02-interacao-016.md` registra oferta condicional de ajuda e resposta autônoma e limitada de Rada sobre o propósito da procura; cursor `../../estado/recuperacao-c61.json`. C02 aberta; informações alegadas não são fatos externos.
