@@ -14,3 +14,5 @@ A cena jogada C01 em M3.02 tem projeção literal de fatos e desconhecidos em `f
 ## Continuidade operacional pós-E03
 
 A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md` contém a primeira abertura autorizada de M3.02.C02, com transação em `estado/recuperacao-c46.json` e C02 aberta, sem decisão do protagonista, rolagem ou alteração de recursos.
+
+`c02-interacao-002.md` registra a pergunta desconfiada de Bartolomeu e a resposta cautelosa da mulher. Estado correspondente: `../../estado/recuperacao-c47.json`. C02 continua aberta.
