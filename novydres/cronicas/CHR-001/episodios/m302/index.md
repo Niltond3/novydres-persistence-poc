@@ -60,3 +60,5 @@ A C01 continua fechada e sua fonte histórica é imutável. `c02-abertura-001.md
 `c02-interacao-023.md` preserva sigilo de Bartolomeu para Rada e sua iniciativa retroativa de investigar a Câmara Seis na noite do incidente de M2.04, com teste de localização preparado e decisão de método ainda pendente. Cursor `../../estado/recuperacao-c68.json`. C02 não avança.
 
 A linha atual permanece em pausa durante o adendo noturno M2.04: `../m204/adendo-c17-retorno-noturno-004.md` e `../../estado/recuperacao-c69.json` documentam entrada VI localizada, sem qualquer informação compartilhada com Rada e sem avanço diegético de M3.02.C02.
+
+Retorno noturno retroativo prosseguiu com porta VI aberta e volume localizado, mas não adquirido, em `../m204/adendo-c17-retorno-noturno-005.md` e `../../estado/recuperacao-c70.json`. Rada continua sem receber conteúdo do passado, C02 permanece em pausa.

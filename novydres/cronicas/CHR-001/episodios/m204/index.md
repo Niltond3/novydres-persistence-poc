@@ -16,3 +16,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retificacao-002.md` substitui estritamente a fala anterior que indevidamente implicava referência a vampiros na conversa com Marek; perguntas do PJ foram indiretas, nenhuma revelação sobrenatural. `adendo-c17-retorno-noturno-003.md` narra retorno independente de Bart à galeria **na mesma noite**, com pré-teste de localização ainda aberto. Não garante localização, entrada ou obtenção do livro e não reabre fontes M2.04 fechadas. Estado: `../estado/recuperacao-c68.json`.
 
 `adendo-c17-retorno-noturno-004.md` resolve o teste de localização por Pegar Metade3 vs D3, encontra a porta metálica VI ainda fechada e não determina a existência nem a posse do livro. Cursor `../estado/recuperacao-c69.json`; C17 histórica permanece fechada.
+
+`adendo-c17-retorno-noturno-005.md` documenta abertura física da porta VI e entrada de Bartolomeu na câmara: volume com título correspondente ao procurado está à vista na caixa sobre banco; ainda não foi recolhido ou examinado. Cursor `../estado/recuperacao-c70.json`, sem alterar fonte histórica C17.
