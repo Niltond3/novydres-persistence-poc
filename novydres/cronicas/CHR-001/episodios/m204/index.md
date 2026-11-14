@@ -66,3 +66,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-028.md` preserva avaliação de Bart sobre vínculo institucional de Emil e empregado desconhecido: não há marca visível para comprovar vínculo do homem do carrinho, apenas operação de transporte pesado e não reparo técnico visível. Cursor `../estado/recuperacao-c93.json`; nenhum teste ou revelação confirmada.
 
 `adendo-c17-retorno-noturno-029.md` registra exposição voluntária de Bartolomeu, Sara guardada na mochila e oferta de ajuda ao trabalhador do carrinho; resposta cautelosa, sem agressão. Carga e vínculo do NPC desconhecidos. Cursor `../estado/recuperacao-c94.json`; sem teste nem recursos.
+
+`adendo-c17-retorno-noturno-030.md` registra ajuda física ao trabalhador com roda presa, inspeção por olfato da lona sem cheiro perceptível de decomposição e sem concluir conteúdo. A carga não foi aberta, e o trabalhador solicita identificação. Cursor `../estado/recuperacao-c95.json`; sem teste, XP ou FV.
