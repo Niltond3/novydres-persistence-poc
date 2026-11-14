@@ -82,3 +82,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-014.md` e `../../estado/recuperacao-c79.json` documentam encontro retroativo com desconhecido em câmara de carga. Sem conhecimento transmitido a Rada ou avanço de M3.02.C02.
 
 `../m204/adendo-c17-retorno-noturno-015.md` e `../../estado/recuperacao-c80.json` registram diálogo passado sobre Oleg Vedenin na câmara de carga, ainda sem prova de aliança. A cena M3.02.C02 e Rada permanecem sem conhecimento e pausadas.
+
+`../m204/adendo-c17-retorno-noturno-016.md` e `../../estado/recuperacao-c81.json` documentam ação intimidatória e resultado provisório aguardando decisão de FV; M3.02.C02 e conhecimento de Rada não avançam.

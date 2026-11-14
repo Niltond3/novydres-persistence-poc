@@ -38,3 +38,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-014.md` registra entrada no vão de carga com elevador e operador não identificado que questiona Bartolomeu; a batida decorre de haste do sistema auxiliar, sem provar finalidade ou vínculo sobrenatural. Cursor `../estado/recuperacao-c79.json`; sem combate.
 
 `adendo-c17-retorno-noturno-015.md` preserva abordagem armada verbal do PJ, usando o sobrenome **Vedenin**, e resposta cautelosa do operador desconhecido, que apenas alega reconhecer o nome. Cursor `../estado/recuperacao-c80.json`; nenhum teste/relação sobrenatural confirmado.
+
+`adendo-c17-retorno-noturno-016.md` registra ameaça do PJ e resultado provisório de teste para ruptura de trecho corroído da grade e acesso por intimidação, com janela de FV pendente antes dos efeitos. Cursor `../estado/recuperacao-c81.json`; nenhuma concessão ou ruptura final aplicada.
