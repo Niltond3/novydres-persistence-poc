@@ -24,3 +24,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-007.md` resolve Pegar Metade 3 sucessos D3: inspeção detalhada na Câmara VI encontra fichas recolhíveis e tampa de inspeção atrás da estante, ainda não aberta; nenhum fenômeno sobrenatural confirmado. Cursor `../estado/recuperacao-c72.json`; sem FV/XP/rolagem.
 
 `adendo-c17-retorno-noturno-008.md` registra remoção intacta da chapa VI com chave de fenda encontrada no local e vistoria final da sala antes de qualquer passagem; cursor `../estado/recuperacao-c73.json`, sem rolagem ou novos recursos.
+
+`adendo-c17-retorno-noturno-009.md` documenta entrada cuidadosa no vão, ausência de mecanismo interno de trava e observação dos degraus descendentes sem atravessá-los. Cursor `../estado/recuperacao-c74.json`; sem gasto, teste ou alteração dos fatos de C17.

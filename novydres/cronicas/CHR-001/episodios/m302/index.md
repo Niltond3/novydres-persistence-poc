@@ -68,3 +68,5 @@ Continuação retroativa na Câmara VI: `../m204/adendo-c17-retorno-noturno-006.
 Adendo noturno em `../m204/adendo-c17-retorno-noturno-007.md`, com cursor `../../estado/recuperacao-c72.json`, resolve a busca minuciosa por Pegar Metade. Rada e o presente de M3.02.C02 não recebem informação nem avançam.
 
 `../m204/adendo-c17-retorno-noturno-008.md` e `../../estado/recuperacao-c73.json` preservam abertura mecânica do vão e revisão da Câmara VI, sem atravessar, nem compartilhar dados com Rada. M3.02.C02 não avança.
+
+Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../estado/recuperacao-c74.json`: Bart atravessou abertura e procurou trava interna, sem encontrar. A cena de Rada em M3.02.C02 continua pausada, sem transferência de conhecimento.
