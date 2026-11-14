@@ -44,3 +44,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-017.md` resolve teste de C81 com 7 sucessos e sem FV: ruptura localizada da grade enferrujada e abertura da portinhola lateral por homem intimidado, sem transposição do PJ ou habilidade sobrenatural. Cursor `../estado/recuperacao-c82.json`.
 
 `adendo-c17-retorno-noturno-018.md` documenta PJ mascarado dentro da grade, diálogo de coerção com operador que se apresenta como Emil Novak e teste provisório de detalhes sobre Oleg, aguardando decisão de FV. Cursor `../estado/recuperacao-c83.json`; sem aplicação de efeitos da rolagem ou especialização não autorizada.
+
+`adendo-c17-retorno-noturno-019.md` publica correção auditável de teste C83: mantém os cinco sucessos do PJ e substitui D4 estática por oposição rolada de Emil (6d→3), margem +2 e 1 FV superficial social do NPC. Emil afirma viagens de Vedenin e indica quadro, tudo NPC_CLAIM. Cursor `../estado/recuperacao-c84.json`; C82 da grade preservado.
