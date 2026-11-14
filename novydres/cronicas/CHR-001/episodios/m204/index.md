@@ -50,3 +50,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-020.md` registra leitura de registros de operação física pelo protagonista e respostas do operador sobre função, empregador formal Serrat e possível coação de ordens por ramal; nomes das pessoas transportadas e mandantes não confirmados. Cursor `../estado/recuperacao-c85.json`, sem teste.
 
 `adendo-c17-retorno-noturno-021.md` preserva resposta de Emil sobre poço e patamar inferior, com placa INFERIOR e mecanismo sem acionamento. Cursor `../estado/recuperacao-c86.json`; natureza da instalação inferior desconhecida.
+
+`adendo-c17-retorno-noturno-022.md` documenta explicação de Emil sobre acionamento de plataforma pelo posto superior e retorno dependente de sinais/comandos. Cursor `../estado/recuperacao-c87.json`; nenhum acionamento.
