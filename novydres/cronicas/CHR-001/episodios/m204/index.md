@@ -22,3 +22,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-006.md` registra coleta do livro e dos papéis transportáveis com bolsa trazida pelo jogador, sem leitura dos conteúdos, e pré-teste para busca minuciosa; cursor `../estado/recuperacao-c71.json`. Sem rolagem ou alteração de XP/FV; M2.04.C17 original não é reaberta.
 
 `adendo-c17-retorno-noturno-007.md` resolve Pegar Metade 3 sucessos D3: inspeção detalhada na Câmara VI encontra fichas recolhíveis e tampa de inspeção atrás da estante, ainda não aberta; nenhum fenômeno sobrenatural confirmado. Cursor `../estado/recuperacao-c72.json`; sem FV/XP/rolagem.
+
+`adendo-c17-retorno-noturno-008.md` registra remoção intacta da chapa VI com chave de fenda encontrada no local e vistoria final da sala antes de qualquer passagem; cursor `../estado/recuperacao-c73.json`, sem rolagem ou novos recursos.

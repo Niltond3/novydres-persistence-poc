@@ -66,3 +66,5 @@ Retorno noturno retroativo prosseguiu com porta VI aberta e volume localizado, m
 Continuação retroativa na Câmara VI: `../m204/adendo-c17-retorno-noturno-006.md` e `../../estado/recuperacao-c71.json` registram posse do livro e papéis visíveis e teste minucioso ainda pendente. Cena contemporânea C02 e conhecimento de Rada não avançaram.
 
 Adendo noturno em `../m204/adendo-c17-retorno-noturno-007.md`, com cursor `../../estado/recuperacao-c72.json`, resolve a busca minuciosa por Pegar Metade. Rada e o presente de M3.02.C02 não recebem informação nem avançam.
+
+`../m204/adendo-c17-retorno-noturno-008.md` e `../../estado/recuperacao-c73.json` preservam abertura mecânica do vão e revisão da Câmara VI, sem atravessar, nem compartilhar dados com Rada. M3.02.C02 não avança.
