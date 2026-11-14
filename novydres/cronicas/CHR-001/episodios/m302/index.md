@@ -102,3 +102,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-024.md` e `../../estado/recuperacao-c89.json` registram abertura do portão inferior em episódio retroativo e nota meta não diegética de gênero. M3.02.C02 e conhecimento de Rada preservados sem avanço.
 
 `../m204/adendo-c17-retorno-noturno-025.md` e `../../estado/recuperacao-c90.json` preservam avanço cauteloso retroativo e teste de escuta com método pendente; nenhuma transferência de conhecimento a Rada nem avanço de M3.02.C02.
+
+`../m204/adendo-c17-retorno-noturno-026.md` e `../../estado/recuperacao-c91.json` documentam sucesso de escuta retroativo antes da curva, sem compartilhamento com Rada nem avanço de M3.02.C02.

@@ -58,3 +58,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-024.md` preserva comentários meta do jogador sobre repertório de poços e galerias no Mundo das Trevas, sem alterar história aprovada, além da escuta e abertura da porta inferior e cenário observado sem evidência sobrenatural. Cursor `../estado/recuperacao-c89.json`; sem testes.
 
 `adendo-c17-retorno-noturno-025.md` documenta avanço de Bartolomeu até antes da curva com Sara preparada e indícios auditivos ambíguos, oferecendo Pegar Metade ou rolar Prontidão sem presumir fonte. Cursor `../estado/recuperacao-c90.json`; decisão pendente, sem gastos.
+
+`adendo-c17-retorno-noturno-026.md` documenta resolução de Pegar Metade (3/D3) no som da curva, pista auditiva de metal arrastado à direita, sem identificação de responsável ou movimento do PJ além da curva. Cursor `../estado/recuperacao-c91.json`; sem rolagens, gastos ou descoberta sobrenatural.
