@@ -60,3 +60,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-025.md` documenta avanço de Bartolomeu até antes da curva com Sara preparada e indícios auditivos ambíguos, oferecendo Pegar Metade ou rolar Prontidão sem presumir fonte. Cursor `../estado/recuperacao-c90.json`; decisão pendente, sem gastos.
 
 `adendo-c17-retorno-noturno-026.md` documenta resolução de Pegar Metade (3/D3) no som da curva, pista auditiva de metal arrastado à direita, sem identificação de responsável ou movimento do PJ além da curva. Cursor `../estado/recuperacao-c91.json`; sem rolagens, gastos ou descoberta sobrenatural.
+
+`adendo-c17-retorno-noturno-027.md` apresenta avanço cauteloso controlado por Bart até abrigo na curva, origem visual do arrasto (carrinho, roda e corrente) e indivíduo desconhecido de costas junto a carga coberta; entrada escura adicional visível, PJ não detectado visivelmente mas sem sucesso furtivo mecânico além do ponto. Cursor `../estado/recuperacao-c92.json`.

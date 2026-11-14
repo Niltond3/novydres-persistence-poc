@@ -104,3 +104,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-025.md` e `../../estado/recuperacao-c90.json` preservam avanço cauteloso retroativo e teste de escuta com método pendente; nenhuma transferência de conhecimento a Rada nem avanço de M3.02.C02.
 
 `../m204/adendo-c17-retorno-noturno-026.md` e `../../estado/recuperacao-c91.json` documentam sucesso de escuta retroativo antes da curva, sem compartilhamento com Rada nem avanço de M3.02.C02.
+
+`../m204/adendo-c17-retorno-noturno-027.md` e `../../estado/recuperacao-c92.json` registram exploração retroativa da curva inferior e observação de trabalhador/carrinho, sem revelar conhecimento a Rada nem avançar M3.02.C02.
