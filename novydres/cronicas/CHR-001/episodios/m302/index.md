@@ -86,3 +86,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-016.md` e `../../estado/recuperacao-c81.json` documentam ação intimidatória e resultado provisório aguardando decisão de FV; M3.02.C02 e conhecimento de Rada não avançam.
 
 `../m204/adendo-c17-retorno-noturno-017.md` e `../../estado/recuperacao-c82.json` registram solução do confronto de intimidação na câmara de carga. M3.02.C02 permanece pausada, sem conhecimento de Rada sobre o adendo.
+
+`../m204/adendo-c17-retorno-noturno-018.md` e `../../estado/recuperacao-c83.json` registram diálogo passado na câmara de carga com NPC que se declara Emil Novak, sem divulgação automática a Rada. Cena M3.02.C02 segue pausada e coerção aguarda decisão de FV.

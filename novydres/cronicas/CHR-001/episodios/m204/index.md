@@ -42,3 +42,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-016.md` registra ameaça do PJ e resultado provisório de teste para ruptura de trecho corroído da grade e acesso por intimidação, com janela de FV pendente antes dos efeitos. Cursor `../estado/recuperacao-c81.json`; nenhuma concessão ou ruptura final aplicada.
 
 `adendo-c17-retorno-noturno-017.md` resolve teste de C81 com 7 sucessos e sem FV: ruptura localizada da grade enferrujada e abertura da portinhola lateral por homem intimidado, sem transposição do PJ ou habilidade sobrenatural. Cursor `../estado/recuperacao-c82.json`.
+
+`adendo-c17-retorno-noturno-018.md` documenta PJ mascarado dentro da grade, diálogo de coerção com operador que se apresenta como Emil Novak e teste provisório de detalhes sobre Oleg, aguardando decisão de FV. Cursor `../estado/recuperacao-c83.json`; sem aplicação de efeitos da rolagem ou especialização não autorizada.
