@@ -76,3 +76,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-011.md` e `../../estado/recuperacao-c76.json` documentam o avanço retroativo até a soleira de uma nova sala, com Sara preparada e porta aberta. M3.02.C02 e conhecimento de Rada permanecem pausados.
 
 `../m204/adendo-c17-retorno-noturno-012.md` e `../../estado/recuperacao-c77.json` registram investigação mecânica retroativa dos manômetros sem transmitir achados a Rada. A cena M3.02.C02 permanece pausada.
+
+`../m204/adendo-c17-retorno-noturno-013.md` e `../../estado/recuperacao-c78.json` acrescentam achados técnicos e documentais ao adendo passado, sem divulgá-los a Rada ou avançar M3.02.C02.

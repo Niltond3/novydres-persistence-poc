@@ -32,3 +32,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-011.md` registra equipamento declarado pelo PJ e abertura de porta inferior para sala de serviço, sem entrar ou fazer disparo, e sons não identificados além de outra porta. Cursor `../estado/recuperacao-c76.json`; nenhum fenômeno sobrenatural verificado.
 
 `adendo-c17-retorno-noturno-012.md` documenta exame técnico dos manômetros e conexões visíveis na sala inferior, com correlação observada entre batidas e ponteiro auxiliar; hipótese causal continua aberta. Cursor `../estado/recuperacao-c77.json`; sem teste ou alteração de recursos.
+
+`adendo-c17-retorno-noturno-013.md` registra investigação ampla da sala inferior, leitura dos registros recolhidos, circuito auxiliar pressurizado apesar de principais isolados e anotação de cópia atribuída a M. Varga. Origem/motivo sobrenatural não demonstrados; porta posterior fechada. Cursor `../estado/recuperacao-c78.json`.
