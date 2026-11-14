@@ -56,3 +56,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-023.md` documenta conflito interno de Bartolomeu declarado pelo jogador, instruções técnicas de Emil e descida da plataforma ao andar inferior. Portão inferior continua fechado, retorno não assegurado. Cursor `../estado/recuperacao-c88.json`, sem roladas ou FV.
 
 `adendo-c17-retorno-noturno-024.md` preserva comentários meta do jogador sobre repertório de poços e galerias no Mundo das Trevas, sem alterar história aprovada, além da escuta e abertura da porta inferior e cenário observado sem evidência sobrenatural. Cursor `../estado/recuperacao-c89.json`; sem testes.
+
+`adendo-c17-retorno-noturno-025.md` documenta avanço de Bartolomeu até antes da curva com Sara preparada e indícios auditivos ambíguos, oferecendo Pegar Metade ou rolar Prontidão sem presumir fonte. Cursor `../estado/recuperacao-c90.json`; decisão pendente, sem gastos.
