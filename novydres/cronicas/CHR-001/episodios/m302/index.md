@@ -70,3 +70,5 @@ Adendo noturno em `../m204/adendo-c17-retorno-noturno-007.md`, com cursor `../..
 `../m204/adendo-c17-retorno-noturno-008.md` e `../../estado/recuperacao-c73.json` preservam abertura mecânica do vão e revisão da Câmara VI, sem atravessar, nem compartilhar dados com Rada. M3.02.C02 não avança.
 
 Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../estado/recuperacao-c74.json`: Bart atravessou abertura e procurou trava interna, sem encontrar. A cena de Rada em M3.02.C02 continua pausada, sem transferência de conhecimento.
+
+`../m204/adendo-c17-retorno-noturno-010.md` e `../../estado/recuperacao-c75.json` mantêm investigação retroativa do corredor inferior, com arma do PJ presente, sem confirmação de qualquer nexo com Rada; M3.02.C02 permanece em pausa.
