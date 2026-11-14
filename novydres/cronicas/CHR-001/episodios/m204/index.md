@@ -40,3 +40,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-015.md` preserva abordagem armada verbal do PJ, usando o sobrenome **Vedenin**, e resposta cautelosa do operador desconhecido, que apenas alega reconhecer o nome. Cursor `../estado/recuperacao-c80.json`; nenhum teste/relação sobrenatural confirmado.
 
 `adendo-c17-retorno-noturno-016.md` registra ameaça do PJ e resultado provisório de teste para ruptura de trecho corroído da grade e acesso por intimidação, com janela de FV pendente antes dos efeitos. Cursor `../estado/recuperacao-c81.json`; nenhuma concessão ou ruptura final aplicada.
+
+`adendo-c17-retorno-noturno-017.md` resolve teste de C81 com 7 sucessos e sem FV: ruptura localizada da grade enferrujada e abertura da portinhola lateral por homem intimidado, sem transposição do PJ ou habilidade sobrenatural. Cursor `../estado/recuperacao-c82.json`.
