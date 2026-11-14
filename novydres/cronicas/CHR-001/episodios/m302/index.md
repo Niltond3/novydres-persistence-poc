@@ -78,3 +78,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-012.md` e `../../estado/recuperacao-c77.json` registram investigação mecânica retroativa dos manômetros sem transmitir achados a Rada. A cena M3.02.C02 permanece pausada.
 
 `../m204/adendo-c17-retorno-noturno-013.md` e `../../estado/recuperacao-c78.json` acrescentam achados técnicos e documentais ao adendo passado, sem divulgá-los a Rada ou avançar M3.02.C02.
+
+`../m204/adendo-c17-retorno-noturno-014.md` e `../../estado/recuperacao-c79.json` documentam encontro retroativo com desconhecido em câmara de carga. Sem conhecimento transmitido a Rada ou avanço de M3.02.C02.
