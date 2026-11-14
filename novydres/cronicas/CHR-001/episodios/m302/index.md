@@ -98,3 +98,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-022.md` e `../../estado/recuperacao-c87.json` acrescentam esclarecimento operacional passado, não compartilhado com Rada; cena M3.02.C02 pausada.
 
 `../m204/adendo-c17-retorno-noturno-023.md` e `../../estado/recuperacao-c88.json` registram descida noturna retroativa de Bartolomeu e sua reflexão de guerra e família, sem transmissão a Rada ou avanço da cena M3.02.C02.
+
+`../m204/adendo-c17-retorno-noturno-024.md` e `../../estado/recuperacao-c89.json` registram abertura do portão inferior em episódio retroativo e nota meta não diegética de gênero. M3.02.C02 e conhecimento de Rada preservados sem avanço.
