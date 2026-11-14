@@ -28,3 +28,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-009.md` documenta entrada cuidadosa no vão, ausência de mecanismo interno de trava e observação dos degraus descendentes sem atravessá-los. Cursor `../estado/recuperacao-c74.json`; sem gasto, teste ou alteração dos fatos de C17.
 
 `adendo-c17-retorno-noturno-010.md` registra avanço cauteloso a partir do vão com Sara declarada pelo PJ e munição transportada, passagem dos degraus e sinais físicos indeterminados antes de porta de ferro encostada. Sem conclusão sobre ameaça, vínculo com NPC ou sobrenatural. Cursor `../estado/recuperacao-c75.json`.
+
+`adendo-c17-retorno-noturno-011.md` registra equipamento declarado pelo PJ e abertura de porta inferior para sala de serviço, sem entrar ou fazer disparo, e sons não identificados além de outra porta. Cursor `../estado/recuperacao-c76.json`; nenhum fenômeno sobrenatural verificado.
