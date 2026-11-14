@@ -36,3 +36,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-013.md` registra investigação ampla da sala inferior, leitura dos registros recolhidos, circuito auxiliar pressurizado apesar de principais isolados e anotação de cópia atribuída a M. Varga. Origem/motivo sobrenatural não demonstrados; porta posterior fechada. Cursor `../estado/recuperacao-c78.json`.
 
 `adendo-c17-retorno-noturno-014.md` registra entrada no vão de carga com elevador e operador não identificado que questiona Bartolomeu; a batida decorre de haste do sistema auxiliar, sem provar finalidade ou vínculo sobrenatural. Cursor `../estado/recuperacao-c79.json`; sem combate.
+
+`adendo-c17-retorno-noturno-015.md` preserva abordagem armada verbal do PJ, usando o sobrenome **Vedenin**, e resposta cautelosa do operador desconhecido, que apenas alega reconhecer o nome. Cursor `../estado/recuperacao-c80.json`; nenhum teste/relação sobrenatural confirmado.
