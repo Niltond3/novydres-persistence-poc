@@ -48,3 +48,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-019.md` publica correção auditável de teste C83: mantém os cinco sucessos do PJ e substitui D4 estática por oposição rolada de Emil (6d→3), margem +2 e 1 FV superficial social do NPC. Emil afirma viagens de Vedenin e indica quadro, tudo NPC_CLAIM. Cursor `../estado/recuperacao-c84.json`; C82 da grade preservado.
 
 `adendo-c17-retorno-noturno-020.md` registra leitura de registros de operação física pelo protagonista e respostas do operador sobre função, empregador formal Serrat e possível coação de ordens por ramal; nomes das pessoas transportadas e mandantes não confirmados. Cursor `../estado/recuperacao-c85.json`, sem teste.
+
+`adendo-c17-retorno-noturno-021.md` preserva resposta de Emil sobre poço e patamar inferior, com placa INFERIOR e mecanismo sem acionamento. Cursor `../estado/recuperacao-c86.json`; natureza da instalação inferior desconhecida.
