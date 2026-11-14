@@ -52,3 +52,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-021.md` preserva resposta de Emil sobre poço e patamar inferior, com placa INFERIOR e mecanismo sem acionamento. Cursor `../estado/recuperacao-c86.json`; natureza da instalação inferior desconhecida.
 
 `adendo-c17-retorno-noturno-022.md` documenta explicação de Emil sobre acionamento de plataforma pelo posto superior e retorno dependente de sinais/comandos. Cursor `../estado/recuperacao-c87.json`; nenhum acionamento.
+
+`adendo-c17-retorno-noturno-023.md` documenta conflito interno de Bartolomeu declarado pelo jogador, instruções técnicas de Emil e descida da plataforma ao andar inferior. Portão inferior continua fechado, retorno não assegurado. Cursor `../estado/recuperacao-c88.json`, sem roladas ou FV.
