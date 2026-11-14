@@ -90,3 +90,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-018.md` e `../../estado/recuperacao-c83.json` registram diálogo passado na câmara de carga com NPC que se declara Emil Novak, sem divulgação automática a Rada. Cena M3.02.C02 segue pausada e coerção aguarda decisão de FV.
 
 `../m204/adendo-c17-retorno-noturno-019.md` e `../../estado/recuperacao-c84.json` registram teste social corrigido no episódio passado e depoimento atribuído a Emil (NPC_CLAIM), sem transmitir para Rada ou avançar M3.02.C02.
+
+`../m204/adendo-c17-retorno-noturno-020.md` e `../../estado/recuperacao-c85.json` registram achado retroativo do quadro de turnos e depoimento de Emil, sem divulgar informações a Rada ou avançar M3.02.C02.
