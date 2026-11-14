@@ -20,3 +20,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-005.md` documenta abertura física da porta VI e entrada de Bartolomeu na câmara: volume com título correspondente ao procurado está à vista na caixa sobre banco; ainda não foi recolhido ou examinado. Cursor `../estado/recuperacao-c70.json`, sem alterar fonte histórica C17.
 
 `adendo-c17-retorno-noturno-006.md` registra coleta do livro e dos papéis transportáveis com bolsa trazida pelo jogador, sem leitura dos conteúdos, e pré-teste para busca minuciosa; cursor `../estado/recuperacao-c71.json`. Sem rolagem ou alteração de XP/FV; M2.04.C17 original não é reaberta.
+
+`adendo-c17-retorno-noturno-007.md` resolve Pegar Metade 3 sucessos D3: inspeção detalhada na Câmara VI encontra fichas recolhíveis e tampa de inspeção atrás da estante, ainda não aberta; nenhum fenômeno sobrenatural confirmado. Cursor `../estado/recuperacao-c72.json`; sem FV/XP/rolagem.

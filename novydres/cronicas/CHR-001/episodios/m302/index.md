@@ -64,3 +64,5 @@ A linha atual permanece em pausa durante o adendo noturno M2.04: `../m204/adendo
 Retorno noturno retroativo prosseguiu com porta VI aberta e volume localizado, mas não adquirido, em `../m204/adendo-c17-retorno-noturno-005.md` e `../../estado/recuperacao-c70.json`. Rada continua sem receber conteúdo do passado, C02 permanece em pausa.
 
 Continuação retroativa na Câmara VI: `../m204/adendo-c17-retorno-noturno-006.md` e `../../estado/recuperacao-c71.json` registram posse do livro e papéis visíveis e teste minucioso ainda pendente. Cena contemporânea C02 e conhecimento de Rada não avançaram.
+
+Adendo noturno em `../m204/adendo-c17-retorno-noturno-007.md`, com cursor `../../estado/recuperacao-c72.json`, resolve a busca minuciosa por Pegar Metade. Rada e o presente de M3.02.C02 não recebem informação nem avançam.
