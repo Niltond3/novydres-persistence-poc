@@ -1,0 +1,54 @@
+{
+  "schema": "NOVYDRES_GEO_DESIGN_PROPOSAL_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-002.4",
+  "title": "Implantação do litoral e baía principal de Novydres — referência Port Clarence",
+  "canonical_status": "PROPOSED_OWNER_REVIEW",
+  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
+  "authored_on": "2026-11-15",
+  "scope": "Configuração macrorregional da baía, costa, interior e ilhas secundárias como pré-requisito à cartografia. Não desenhar aqui o mapa final, rotas ferroviárias, populações, poderes Cainitas ou limites dos raions.",
+  "reference_natural_geography": {
+    "suggested_anchor": "Setor ocidental da Península de Seward, no noroeste do Alasca, nas proximidades do Estreito de Bering.",
+    "real_geographic_analogy": "Port Clarence é uma grande baía naturalmente protegida nas proximidades do Estreito de Bering; serve como paradigma de porto abrigado, sem que Novydres tenha sido colocada obrigatoriamente no próprio Port Clarence.",
+    "geothermal_plausibility": "A Península de Seward possui sistemas termais reais associados a rochas profundas e falhas, como Pilgrim Hot Springs e Serpentine Hot Springs; a abundância e capacidade excepcionais de Novydres são premissas ficcionais canônicas, não atribuições automáticas aos sítios reais.",
+    "location_assignment": "NOT_CONFIRMED_UNTIL_OWNER_APPROVAL",
+    "indigenous_continuity": "As comunidades indígenas reais da região não são apagadas, subordinadas por definição ou renomeadas automaticamente pela proposta.",
+    "sources": [
+      "https://beringstraits.com/port-clarence/",
+      "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2024/Miller.pdf",
+      "https://www.nps.gov/articles/000/geology-of-serpentine-hot-springs.htm"
+    ]
+  },
+  "proposed_landform": {
+    "primary_landmass": "Continental, ocupando faixa costeira e hinterlândia para além da baía; não ilha-cidade.",
+    "bay": "Baía natural dominante, abrigada por um cabo ou espigão costeiro, com entrada navegável voltada para águas do Estreito/Mar de Bering; a configuração exata é de desenho futuro.",
+    "harbor_role": "Águas abrigadas como base para comércio e portos, sem fixar cais por raion nesta etapa.",
+    "interior": "Relevo não uniforme, bacias interiores e vales que abrigam nascentes termais; grandes Corredores do Ermo interrompem a continuidade urbana.",
+    "islands": "Pequenas áreas insulares secundárias próximas da costa e/ou entrada da baía, sem propor um arquipélago dominante.",
+    "rivers_and_lagoons": "Rios e lagoas naturais obrigatórios, incluindo futura coerência com o Rio Vasyl candidato; cursos, foz e nomes não ratificados aqui.",
+    "municipal_footprint": "Setor metropolitano extenso com múltiplos núcleos separados, não anel compacto de densidade homogênea ao redor da baía.",
+    "exact_orientations": "UNASSIGNED; evitar determinar já azimute da boca, direções internas do Rio Vasyl e posição individual dos nove raions"
+  },
+  "already_binding_constraints": [
+    "GEO-002.1: região do Estreito de Bering, Alasca, EUA; GEO-002.2: predominância continental; GEO-002.3: uma grande baía natural, rios, lagoas e ilhas secundárias.",
+    "GEO-003.1/GEO-014.1: geotermia natural abundante e concentração das termas na Cidade Velha/Chelsea, aquecimento distrital primário e desigual.",
+    "GEO-004.3: Corredores do Ermo como barreiras naturais reais, evitando conurbação contínua.",
+    "GEO-005.1/GEO-005.3: formação policêntrica e continuidade separada dos domínios Cainitas.",
+    "GEO-005.6/GEO-013.1: Expresso Transberíngio na periferia aquecida; exatamente duas paradas municipais, de passageiros em Sulfok e carga em local não definido."
+  ],
+  "must_not_infer": [
+    "Novydres ocupa ou substitui Teller, Brevig Mission, Port Clarence ou outro povoado real.",
+    "Localização exata ou área do município, dos portos e da baía.",
+    "Forma obrigatória da baía igual à do Port Clarence real.",
+    "Posições oficiais dos nove raions sugeridas por atlas-proposta.md (ainda não ratificadas).",
+    "Traçado de Rio Vasyl, lagoas, costa, portos ou terminais ferroviários.",
+    "Concentração de todos os 7 milhões de moradores nas margens da baía."
+  ],
+  "next_after_approval": [
+    "GEO-003: definir macro-relevo, rios, lagoas, nascentes e limites naturais dos Ermos.",
+    "GEO-004: posicionar os nove raions e suas zonas urbanas sem fixar transferências automáticas de domínios Cainitas.",
+    "GEO-012/GEO-013: depois, projetar estradas, ferrovias internas, metrô, bondes, cargas, as duas paradas do Expresso e conexões protegidas.",
+    "Somente então gerar o mapa visual consistente."
+  ],
+  "editorial_notice": "Proposta não aprovada. Para GEO-002.4, a decisão editorial principal ainda é se a macrorregião próxima a Port Clarence é a âncora de Novydres e quais traços gerais de baía/costa serão aceitos. Nenhum cânone fechado existente foi modificado."
+}
