@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO001_CLOSED_GEO002_TWO_SUBDECISIONS_CLOSED_REMAINDER_OPEN",
+  "register_status": "GEO001_CLOSED_GEO002_THREE_SUBDECISIONS_CLOSED_GEO003_GEO014_BASELINE_CONFIRMED",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 3,
+  "owner_approved_canon_decisions": 4,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -44,14 +44,14 @@
     {
       "id": "GEO-002",
       "title": "Localização, dimensão, coordenadas e escala",
-      "evidence_status": "MACROREGION_AND_CONTINENTAL_COASTAL_FORM_APPROVED",
-      "decision_state": "PARTIALLY_CLOSED_GEO-002.1_AND_GEO-002.2",
+      "evidence_status": "CONTINENTAL_COASTAL_BAY_RIVERS_LAGOONS_THERMAL_SPRINGS_APPROVED",
+      "decision_state": "PARTIALLY_CLOSED_GEO-002.1_TO_GEO-002.3",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
       },
       "answer": "Há referência histórica à travessia do Estreito de Bering e ambiente ártico, mas sem polígono, projeção, largura, área ou âncora cartográfica aprovada.",
       "recommendation": "Fixar primeiro domínio métrico local com origem, unidades e extensão; só depois adotar ancoragem real no Alasca e transformação apropriada, compatível com costeira, geologia e clima. Não fabricar latitude/longitude.",
-      "closure_criteria": "GEO-002.1 e GEO-002.2 fechados; GEO-002 continua aberto quanto a litoral detalhado, ilhas, coordenadas, extensão, área e projeção.",
+      "closure_criteria": "GEO-002.1–002.3 aprovados; ainda falta posição, forma detalhada da costa, baía/ilhas, área e projeção. Não é arquipélago.",
       "source_references": [
         "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
         "novydres/cenario/atlas-novydres/atlas-proposta.md"
@@ -64,27 +64,28 @@
       "macro_region_authority": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
       "approved_subdecision_ids": [
         "GEO-002.1",
-        "GEO-002.2"
+        "GEO-002.2",
+        "GEO-002.3"
       ],
       "outstanding_after_closure": [
-        "GEO-002.3",
-        "GEO-002 área e posição exata",
-        "GEO-003",
-        "GEO-004"
+        "GEO-002.4 desenho do litoral e ilhas",
+        "GEO-003 hidrografia e termas",
+        "GEO-014 mecanismo geológico de calor",
+        "GEO-002 área/coordenadas/projeção",
+        "GEO-004 limites"
       ]
     },
     {
       "id": "GEO-003",
       "title": "Litoral, relevo, Ermo e Rio Vasyl",
-      "evidence_status": "PARCIAL_DOCUMENTADO",
+      "evidence_status": "NATURAL_RIVERS_LAGOONS_AND_THERMAL_SPRINGS_EXISTENCE_APPROVED_GEOMETRY_OPEN",
       "decision_state": "RECOMMENDED_NOT_APPROVED",
       "canonical_value": null,
-      "answer": "Rio Vasyl morno em Chelsea, canais emergentes em New London, deságue em Sulfok; corredores do Ermo entre raions. Faltam geometria de costa, nascentes, baías, ilhas, pontes, solos e sazonalidade.",
+      "answer": "A existência de rios, lagoas naturais e fontes termais foi confirmada por GEO-002.3; traçados, bacias, quantidade, temperaturas e relação com Rio Vasyl dependem de GEO-003.",
       "recommendation": "Construir topologia hídrica e relevo em escala metropolitana antes de desenhar vias. Justificar fisicamente a comunicação entre cursos de água, canais subterrâneos e porto; distinguir água natural, artificial e geotérmica.",
       "closure_criteria": "Aprovar geometrias-mestras de costa, rios, cursos subterrâneos, gelo, Ermo, ilhas e grandes desníveis.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
-        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150"
+        "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -295,16 +296,14 @@
     {
       "id": "GEO-014",
       "title": "Geotermia, calefação, tubulações e zonas térmicas",
-      "evidence_status": "PARCIAL_DOCUMENTADO",
+      "evidence_status": "GEOTHERMAL_HEATING_MAIN_BASIS_CONFIRMED_MECHANISM_AND_NETWORK_OPEN",
       "decision_state": "RECOMMENDED_NOT_APPROVED",
       "canonical_value": null,
-      "answer": "Existe estação periférica em Chelsea, aquecimento privilegiado de Bukovie e alegações conflitantes de desvio térmico; a crônica apresenta manutenção real, sem rede municipal completa.",
+      "answer": "O proprietário confirmou fontes termais como principal base do aquecimento urbano. Natureza geológica do calor (vulcão, intrusão antiga ou circulação profunda), magnitude e rede urbana continuam pendentes.",
       "recommendation": "Criar grafo de geração→troca→bombeamento→distribuição→edifícios, com capacidade por zona, redundância e falhas; mapear **a desigualdade observável**, mas não converter rumor de sabotagem/desvio em verdade absoluta.",
       "closure_criteria": "Aprovar plantas, setores de aquecimento, prioridades de carga, corredores técnicos e estado de operação em 2010.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
-        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150",
-        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
+        "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
         "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
       ],
       "impact_subject_patterns": [
@@ -486,6 +485,7 @@
   "closed_subdecisions": [
     "GEO-001.1",
     "GEO-002.1",
-    "GEO-002.2"
+    "GEO-002.2",
+    "GEO-002.3"
   ]
 }

@@ -6,12 +6,12 @@ visibility: PLAYER_SAFE
 source_snapshot: 7ce8e88c122a5d80879e30a23b1f3be159cac727
 created_on: 2026-11-14
 census_year: 2010
-canonical_decisions_closed: 3
+canonical_decisions_closed: 4
 ---
 
 # Dossiê decisório GEO-001 a GEO-022 — Novydres
 
-> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1 e GEO-002.2 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
+> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2 e GEO-002.3 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
 
 > **Nenhuma recomendação deste dossiê é um fato canônico.** Os 22 tópicos são pacotes de decisão para aprovação expressa. Os estados técnicos dos arquivos de origem (`UNKNOWN`, `CANDIDATE`, `NOT_SELECTED`) não são convertidos em aprovação por este documento.
 
@@ -43,9 +43,9 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-002 — Localização, dimensão, coordenadas e escala
 
-**GEO-002.1 e GEO-002.2 FECHADOS (15/11/2026):** a única fonte de verdade para macrorregião e forma geral de ocupação é `../localizacao-geral-2010.json`. Novydres possui implantação principal continental e costeira, com ilhas secundárias. Posição exata, forma do litoral e das ilhas, área e projeção permanecem abertas.
+**GEO-002.1–GEO-002.3 FECHADOS (15/11/2026):** fonte única `../localizacao-geral-2010.json`. Novydres é majoritariamente continental e costeira, com grande baía natural, rios, lagoas e fontes termais. Não é ilha principal nem arquipélago; ilhas permanecem secundárias. A água termal é a base principal de seu aquecimento. Vulcanismo, forma das águas, dimensões e coordenadas ainda não estão definidos.
 
-- **Situação:** `PARTIALLY_CLOSED_GEO-002.1_AND_GEO-002.2` — região e configuração territorial geral aprovadas; geometrias e dimensões abertas.
+- **Situação:** `PARTIALLY_CLOSED_GEO-002.1_TO_GEO-002.3` — região e configuração territorial geral aprovadas; geometrias e dimensões abertas.
 - **Resposta ao inventário:** GEO-002.1 aprovou o noroeste do Alasca, região do Estreito de Bering, em `../localizacao-geral-2010.json`. Polígono, projeção, largura, área e ancoragem exata continuam em aberto.
 - **Recomendação:** Fixar primeiro domínio métrico local com origem, unidades e extensão; só depois adotar ancoragem real no Alasca e transformação apropriada, compatível com costeira, geologia e clima. Não fabricar latitude/longitude.
 - **Critério de fechamento:** Aprovar limite municipal, área habitável, extensão, orientação, datum/projeção ou plano local explícito.

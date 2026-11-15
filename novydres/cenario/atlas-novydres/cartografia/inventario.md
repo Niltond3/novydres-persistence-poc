@@ -14,7 +14,7 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
-> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1 e GEO-002.2 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
+> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2 e GEO-002.3 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
 
 > **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas a geometria específica de GEO-002, GEO-003, GEO-004 e GEO-010.
 
@@ -117,8 +117,8 @@ Em cada caso são conhecidos **nome e raion candidato**; faltam coordenadas, lot
 
 | Assunto | O que existe nas fontes candidatas (D) | O que falta para fechar (L/V) |
 |---|---|---|
-| Macroterritório | Ártico, relação com Alasca/Estreito de Bering, rio quente e costa | Posição/ancoragem exata, extensão, área terrestre/marítima e CRS |
-| Água | Rio Vasyl/Reka Vasilya: Chelsea, canais que emergem em New London, deságue em Sulfok | Nascentes, bacia, geometria, tributários, pontes, ilhas, baías, congelamento sazonal |
+| Macroterritório | **Aprovado:** noroeste do Alasca, Estreito de Bering; ocupação majoritariamente continental, faixa costeira e grande baía; ilhas secundárias, não arquipélago | Posição/ancoragem, extensão, área terrestre/marítima e CRS |
+| Água | **Aprovado em GEO-002.3:** rios, lagoas naturais, fontes termais e grande baía natural. O traçado do Rio Vasyl e o deságue em Sulfok ainda são candidatos. | Nascentes, bacias, geometria, tributários, pontes, ilhas e congelamento sazonal |
 | Ermo | Corredores entre raions, áreas de risco e limites da urbanização | Polígonos, travessias, classificação ambiental, riscos, infraestrutura, status jurisdicional |
 | Topografia | Colinas, costa ártica, antigas zonas urbanas | Modelo de relevo, desnível, substrato, áreas de inundação e proteção |
 | História | Fundação associada a 1423; etapas 1917, 1950–1989, 1990–1998, crise em 2010 | Transformação física por época, bairros por idade, cronologia das obras, reconciliação histórica |

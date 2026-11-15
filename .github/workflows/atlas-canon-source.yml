@@ -39,10 +39,17 @@ jobs:
           assert.equal(p.canonical_status,'CLOSED_CANON');
           assert.equal(l.fact_id,'GEO-002.1');
           assert.equal(l.canonical_status,'CLOSED_CANON');
-          assert.deepEqual(l.approved_subdecisions,['GEO-002.1','GEO-002.2']);
+          assert.deepEqual(l.approved_subdecisions,['GEO-002.1','GEO-002.2','GEO-002.3']);
           assert.equal(l.location.territorial_configuration.primary_urban_footprint,'continental');
           assert.equal(l.location.territorial_configuration.coastal_city,true);
           assert.equal(l.location.territorial_configuration.secondary_islands,true);
+          assert.equal(l.location.territorial_configuration.coastal_bays_or_peninsulas.main_feature,'grande baía natural de acesso marítimo');
+          assert.equal(l.location.territorial_configuration.coastal_bays_or_peninsulas.bay_is_secondary_to_continental_territory,true);
+          assert.equal(l.location.territorial_configuration.land_water_system.natural_rivers_present,true);
+          assert.equal(l.location.territorial_configuration.land_water_system.natural_lagoons_present,true);
+          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_springs_present,true);
+          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_hot_water_principal_basis_of_municipal_heating,true);
+          assert.equal(l.location.territorial_configuration.land_water_system.geological_heat_source,'UNDECIDED');
           assert.equal(l.location.coastline_geometry,null);
           assert.equal(existsSync(root+'atlas-proposta.md'),true);
           const proposal=readFileSync(root+'atlas-proposta.md','utf8');

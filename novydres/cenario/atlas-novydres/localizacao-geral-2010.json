@@ -22,20 +22,43 @@
       "coastal_city": true,
       "secondary_islands": true,
       "islands_role": "territórios insulares secundários; posição, número, área e ocupação ainda não definidos",
-      "coastal_bays_or_peninsulas": null,
-      "shapes_approved": false
+      "coastal_bays_or_peninsulas": {
+        "main_feature": "grande baía natural de acesso marítimo",
+        "bay_is_secondary_to_continental_territory": true,
+        "exact_outline": null,
+        "extent_km2": null,
+        "ports_placement": null,
+        "number_of_bays": null
+      },
+      "shapes_approved": false,
+      "land_water_system": {
+        "natural_rivers_present": true,
+        "natural_lagoons_present": true,
+        "geothermal_springs_present": true,
+        "geothermal_hot_water_principal_basis_of_municipal_heating": true,
+        "exact_number_locations_and_capacity": null,
+        "geological_heat_source": "UNDECIDED",
+        "active_volcano_required": "NOT_DECIDED"
+      },
+      "explicit_exclusions": [
+        "não é uma ilha principal",
+        "não é um arquipélago como configuração urbana predominante",
+        "uma baía não pode constituir a maior parte do território municipal"
+      ]
     }
   },
-  "scope_of_approval": "GEO-002.1: macrorregião; GEO-002.2: implantação principal continental e costeira, com ilhas secundárias; sem geometrias definidas",
+  "scope_of_approval": "GEO-002.1 macrorregião; GEO-002.2 predominância continental e costa com ilhas secundárias; GEO-002.3 grande baía natural, rios, lagoas e termas, sem configuração insular dominante. Fontes termais constituem base principal do aquecimento; mecanismo geológico ainda indeciso.",
   "pending": [
-    "GEO-002.3 forma do litoral e relação com baías, portos e rios",
-    "GEO-002 localização exata, área e projeção",
-    "GEO-003 relevo e hidrografia",
+    "GEO-002.4 posição, forma e dimensões do litoral/baía/ilhas",
+    "GEO-003 desenho de rios e lagoas naturais, fontes termais, relevo e Ermo",
+    "GEO-014 origem e capacidade da geotermia, rede de aquecimento",
+    "GEO-002 sistema de coordenadas, extensão e projeção",
     "GEO-004 limites dos raions"
   ],
   "unique_canonical_source": true,
   "approved_subdecisions": [
     "GEO-002.1",
-    "GEO-002.2"
+    "GEO-002.2",
+    "GEO-002.3"
   ]
 }
