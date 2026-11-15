@@ -1,0 +1,73 @@
+{
+  "schema": "NOVYDRES_HISTORY_CANON_FACT_V1",
+  "subject_id": "world-history-novydres",
+  "fact_id": "GEO-005.5",
+  "fact_kind": "occult_geography_and_alaska_political_continuity",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_DIRECTION",
+  "approval_date": "2026-11-15",
+  "editorial_policy": "Apenas marcos históricos que expliquem de modo causal a Novydres de 2010 e ofereçam conflitos jogáveis; suplemento gótico-punk, não enciclopédia.",
+  "ley_lines": {
+    "presence": "CONFIRMED — há linhas de ley e pontos de convergência relevantes sob e ao redor de Novydres.",
+    "effects": "Relacionadas à geomancia, aos ritos Nosferatu e a locais atravessados pela rede física de aquecimento; tubos não são linhas de ley, mas podem explorar ou perturbar sua distribuição.",
+    "zelios": "Precedente histórico da geomancia Nosferatu; presença pessoal ou autoria de obras em Novydres NÃO afirmada.",
+    "baba_yaga": "Influência regional e Nosferatu já reconhecida no cenário; não se atribui a ela automaticamente a origem das linhas.",
+    "nodes_and_routes": "UNASSIGNED"
+  },
+  "earthbound": {
+    "presence": "CONFIRMED — pelo menos um Earthbound poderoso associado ao solo ou subsolo da região.",
+    "impact": "Influência duradoura em práticas koldúnicas de Tzimisce locais e em determinados ritos ou efeitos de Nosferatu; não é a origem automática de todas as capacidades desses clãs.",
+    "conflict": "Gilgamesh e seus aliados combateram esse poder, mas o resultado e a natureza da contenção permanecem por definir.",
+    "ley_relationship": "CONFIRMED_AS_IMPORTANT_CONTEXT; funcionamento exato ainda não atribuído.",
+    "identity": "UNASSIGNED; não identificar automaticamente com Kupala da Transilvânia.",
+    "location": "UNASSIGNED"
+  },
+  "alaska_1867": {
+    "public_history": "Rússia cedeu o Alasca aos Estados Unidos em 1867 por US$ 7,2 milhões, com transferência formal em 18 de outubro. A cronologia pública real permanece válida.",
+    "cainite_participation": "CONFIRMED — pelo menos um Ventrue de Novydres influenciou os bastidores políticos, diplomáticos ou financeiros da transação.",
+    "ventrue_identity": "UNASSIGNED; selecionar segundo idade, capacidade operacional em 1867 e consequências para a política Ventrue de 2010. Não atribuir de forma automática a Gilgamesh, a Ekaterina ou aos Mishkin.",
+    "sovereignty": "Mudança da jurisdição estatal mortal para os EUA não transfere os domínios Cainitas, preservados por seus títulos e Leis de Sangue.",
+    "historical_visibility": "A cidade não é ocultada da administração ou dos censos por uma Máscara de escala metropolitana."
+  },
+  "city_scale": {
+    "real_2010_alaska_census": 710231,
+    "fictional_novydres_2010_residents": 7000000,
+    "consequence": "A existência pública de Novydres altera profunda e assumidamente a demografia, economia e história da região no Mundo das Trevas; não tratar os números do Alasca real como coexistentes sem alteração.",
+    "recognition": "Quando a cidade passou a ser reconhecida amplamente pelo mundo mortal, já tinha escala e infraestrutura atípicas. Ano e população naquele momento não definidos.",
+    "growth": "Justificar apenas por marcos: povoamento preexistente, patronato Cainita, calor geotérmico, infraestrutura, migrações e aceleração militar/industrial moderna. Não atribuir 7 milhões à fundação em 1423."
+  },
+  "milestone_filters": [
+    "1423: domínios e direito de Gilgamesh, sobre preparação urukiana já ratificada.",
+    "1632: Draco Pact integra Tzimisce conforme cânone existente.",
+    "1867: compra do Alasca e participação oculta Ventrue, sem alterar a jurisdição Cainita.",
+    "1917: desaparecimento do fundador e início de fragilidades políticas.",
+    "1959 e Guerra Fria: Alasca torna-se estado; expansão estratégica e migrações ajudam a explicar a escala urbana.",
+    "Década de 1990: reações à influência de Baba Yaga e crise das redes e do poder.",
+    "2010: cidade de 7 milhões, conflitos políticos e ocultos em andamento."
+  ],
+  "pending_only_if_playable": [
+    "nome e arco do Ventrue responsável pela operação de 1867",
+    "identidade, condição e consequências em 2010 do Earthbound",
+    "núcleos de ley que influenciam o funcionamento urbano ou tramas",
+    "marcos públicos suficientes para explicar a demografia de 2010",
+    "eventuais mudanças concretas de senhorio devidamente justificadas"
+  ],
+  "not_asserted": [
+    "Zelios esteve pessoalmente na cidade",
+    "Kupala é o Earthbound de Novydres",
+    "a rede de água quente coincide com cada linha de ley",
+    "a identidade do Ventrue de 1867",
+    "a existência de 7 milhões de habitantes em 1423 ou em 1867",
+    "a conclusão da luta contra o Earthbound"
+  ],
+  "references": {
+    "territory": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
+    "population": "novydres/cenario/atlas-novydres/populacao-2010.json",
+    "heat": "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+    "domains": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+    "public_history": "https://history.state.gov/milestones/1866-1898/alaska-purchase",
+    "real_census": "https://www.census.gov/quickfacts/fact/table/AK/LND110210"
+  },
+  "single_authoritative_source": true
+}
