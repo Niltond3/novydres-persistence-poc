@@ -61,11 +61,21 @@ jobs:
           assert.equal(ermo.cartographic_constraints.prohibit_default_continuous_urban_mass,true);
           assert.equal(ermo.cartographic_constraints.prohibit_radial_even_growth_by_default,true);
           assert.equal(ermo.transit_policy.crossing_does_not_imply_conurbation,true);
-          assert.equal(growth.fact_id,'GEO-005.1');
+          assert.deepEqual(growth.fact_ids,['GEO-005.1','GEO-005.2']);
           assert.equal(growth.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(growth.growth_model.single_radiating_city_center,false);
           assert.equal(growth.growth_model.some_conurbations_possible,true);
-          assert.equal(growth.historical_allocation_planning.status,'PROPOSTA_PENDENTE_GEO-005.2');
+          assert.equal(growth.historical_allocation_planning.status,'CANON_APPROVED_GEO-005.2');
+          assert.equal(growth.historical_allocation_planning.responsible_founder,'Gilgamesh');
+          assert.equal(growth.historical_allocation_planning.approved_assignment_of_individual_clans,false);
+          assert.equal(growth.historical_allocation_planning.approved_emissary_names,false);
+          assert.equal(growth.historical_allocation_planning.approved_exact_historical_fief_to_modern_raion_mapping,false);
+          assert.equal(growth.historical_allocation_planning.assignment_criteria.length,4);
+          for(const x of ['dunwich','levi','alexandria','chelsea','bukovie','new-london','sulfok','drevnigrad','vasyl-bay']){
+            const i=readFileSync('novydres/cenario/geografia/district-'+x+'/index.md','utf8');
+            assert.ok(i.includes('GEO-005.2'),x);
+            assert.ok(i.includes('formacao-policentrica-2010.json'),x);
+          }
           assert.equal(growth.growth_model.barriers_reference,root+'ermos-estrutura-territorial-2010.json');
           const raions=j('raions-oficiais-2010.json');
           assert.equal(raions.fact_id,'GEO-004.2');
