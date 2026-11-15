@@ -107,16 +107,44 @@
       "raion": "Sulfok",
       "sector": "franja logística periférica do raion, dentro da faixa urbana servida por aquecimento e infraestrutura protegida",
       "exact_coordinate": "UNASSIGNED",
-      "local_owner_file": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json"
+      "local_owner_file": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json",
+      "role": "ÚNICA parada internacional de passageiros do Expresso Transberíngio em Novydres; terminal principal da operação de passageiros, sem abrigar a parada dedicada às cargas."
     },
-    "city_traffic": "Novydres é parada e plataforma de intercâmbio primária, não mero túnel de passagem: embarque internacional, recepção de passageiros, alfândega, manutenção, triagem de mercadorias e conexão com transporte urbano; serviços ligam o terminal periférico aos demais raions sem exigir a entrada do trem intercontinental no centro.",
+    "city_traffic": "Em Novydres o Expresso Transberíngio realiza exatamente duas paradas fisicamente distintas: uma principal de passageiros em Sulfok, e outra de carga em local periférico aquecido a definir. O desembarque e embarque de passageiros e a entrada e saída de mercadorias são atendidos por redes urbanas e ferroviárias próprias, sem paradas extras do Expresso no centro.",
     "landscape": "Eixo aquecido não significa urbanização contínua dos Corredores do Ermo, nem ferrovia exposta sem proteção nos trechos perigosos.",
     "geopolitical_divergence": "Infraestrutura pública e mundialmente conhecida na linha temporal alternativa do Mundo das Trevas; sua conclusão até 2010 diverge dos projetos não realizados na história real.",
     "multi_clan_influence": "Ventrue associados a financiamento e acordos, Nosferatu relacionados a obras e corredores, e demais clãs envolvidos em competências e disputas; nenhum clã recebe domínio territorial novo apenas porque a linha o atravessa.",
     "eastern_connection": "Rússia oriental no território russo, não submetida ao governo dos EUA; o trajeto final ao sul alcança Canadá e Estados Unidos continentais.",
     "construction_chronology": "Malha local e aproximações surgiram antes da travessia intercontinental completa; anos de cada etapa e documentos de concessão ainda não fixados.",
-    "exact_route_and_facilities": "UNASSIGNED_ALIGNED_TO_FUTURE_GEO-012_GEO-013",
-    "canon_reference": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json"
+    "exact_route_and_facilities": "Duas paradas e funções canonizadas; localização exata das duas, raion do terminal de cargas e ligações internas pendentes de GEO-012/GEO-013 antes de visualização.",
+    "canon_reference": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json",
+    "novydres_stop_policy": {
+      "authority": "OWNER_EXPLICIT_APPROVAL",
+      "approved_on": "2026-11-15",
+      "total_express_stops_within_novydres": 2,
+      "passenger_stop": {
+        "role": "UNIQUE_INTERNATIONAL_PASSENGER_BOARDING_ALIGHTING_STOP",
+        "main_terminal": "Terminal Transberíngio de Novydres",
+        "known_raion": "Sulfok",
+        "general_placement": "franja aquecida e periférica de Sulfok, sem cruzar centro",
+        "authoritative_location_file": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json",
+        "map_position": "PENDING_GEO-012_GEO-013"
+      },
+      "freight_stop": {
+        "role": "UNIQUE_INTERNATIONAL_FREIGHT_LOADING_UNLOADING_STOP",
+        "physically_distinct_from_passenger_stop": true,
+        "city": "Novydres",
+        "general_placement": "corredor logístico periférico aquecido/protegido; fora do centro",
+        "raion": "UNASSIGNED_UNTIL_GEOGRAPHIC_PLANNING",
+        "official_terminal_name": "UNASSIGNED",
+        "map_position": "PENDING_GEO-012_GEO-013",
+        "includes": "entrada e saída de mercadorias, movimentação e despacho de cargas"
+      },
+      "exclusivity": "O Expresso Transberíngio tem exatamente essas duas paradas comerciais dentro do município; outras paradas, linhas e estações ferroviárias, de metrô e bondes pertencem às redes urbanas e regionais distintas.",
+      "transit_interchange": "Passageiros da estação principal e cargas do terminal logístico conectam-se às redes locais sem que o expresso transcontinental faça paradas adicionais no município.",
+      "pre_visualization_dependency": "Antes da cartografia visual final, definir a localização de ambas as paradas e a malha de ferrovias, metrô, bondes e corredores de mercadorias/passagens; não antecipar esse levantamento agora.",
+      "corridor_constraint": "O traçado do Expresso permanece nas bordas aquecidas e passagens protegidas através dos Corredores do Ermo; sem passagem pelo centro."
+    }
   },
   "required_approval_focus": [],
   "authority": "OWNER_EXPLICIT_APPROVAL",
