@@ -52,3 +52,10 @@ jobs:
           }
           console.log('Atlas single-current-source PASS');
           NODE
+      - name: No obsolete municipal population claims in current tree
+        run: |
+          if git grep -niE 'mais de (oito|8) milhões|>8 milhões' -- novydres; then
+            echo "Obsolete population claim remains in active HEAD" >&2
+            exit 1
+          fi
+          echo "No obsolete population statements in current HEAD"
