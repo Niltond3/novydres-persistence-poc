@@ -10,3 +10,5 @@ visibility: SYSTEM_AUDIT
 Assunto geográfico candidato. `conteudo.json` contém somente **uma projeção editorial** de [atlas-proposta.md](../../atlas-novydres/atlas-proposta.md). Essa projeção não aprova o conteúdo nem constitui uma segunda fonte geográfica.
 
 **GEO-004.2 — nome e existência ratificados:** consultar exclusivamente [raions-oficiais-2010.json](../../atlas-novydres/raions-oficiais-2010.json), que identifica `district-new-london` como raion administrativo oficial de 2010. O status `CANDIDATE` aplica-se às outras alegações — localização, fronteiras, funções urbanas e política Cainita — ainda não aprovadas.
+
+**Condicionantes de localização (ainda sem geometria):** os [Corredores do Ermo](../../atlas-novydres/ermos-estrutura-territorial-2010.json) e a [formação urbana policêntrica](../../historia-global/formacao-policentrica-2010.json) devem orientar a futura posição deste raion. A ligação entre núcleos não implica conurbação. Esta referência não define os limites do raion, seus fundadores ou seus domínios Cainitas.
