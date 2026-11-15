@@ -18,3 +18,5 @@ visibility: SYSTEM_AUDIT
 **Pertencimento territorial GEO-004.1:** o [assunto proprietário Chelsea](../geografia/district-chelsea/cidade-velha-2010.json) estabelece a Cidade Velha como seu núcleo histórico. A fonte geotérmica referencia esse fato sem duplicá-lo; a geometria ainda está aberta.
 
 As cópias históricas anteriores foram retiradas da árvore atual conforme diretriz do proprietário. O histórico de commits permite auditoria; não é rota de consulta editorial vigente. Metadados `CANDIDATE` são exigência técnica do manifesto ADR-001 e não representam uma segunda fonte de conteúdo.
+
+**GEO-004.3 — estrutura natural dos Ermos:** a fonte única é [ermos-estrutura-territorial-2010.json](ermos-estrutura-territorial-2010.json). Os Corredores do Ermo não são um décimo raion; são barreiras naturais que separam normalmente os núcleos urbanos e condicionam travessias. O modelo de crescimento histórico pertence exclusivamente ao [assunto de história](../historia-global/formacao-policentrica-2010.json). Geometrias e passagens continuam pendentes.

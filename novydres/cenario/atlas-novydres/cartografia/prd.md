@@ -113,6 +113,10 @@ O núcleo histórico Cidade Velha (Old Town) pertence ao raion Chelsea, conforme
 
 Os nove raions administrativos oficiais foram ratificados. A **fonte única** de seus nomes e existência é [`raions-oficiais-2010.json`](../raions-oficiais-2010.json). Nenhuma macroposição, fronteira, subbairro ou domínio Cainita foi aprovado nesta subdecisão.
 
+### Fechamentos GEO-004.3 e GEO-005.1 (15/11/2026)
+
+A posição dos núcleos urbanos e os mapas futuros **devem obedecer** à fonte territorial de Ermos `../ermos-estrutura-territorial-2010.json` e à fonte histórica `../../historia-global/formacao-policentrica-2010.json`. Não aplicar geração radial/contínua nem tratar Ermos como gradientes decorativos de arquitetura; a geometria real de barreiras naturais e travessias condicionará a urbanização. A estratégia específica de Gilgamesh na seleção de emissários ainda não foi aprovada.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:

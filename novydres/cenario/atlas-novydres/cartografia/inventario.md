@@ -14,7 +14,7 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
-> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1 e GEO-004.2 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
+> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1, GEO-004.2, GEO-004.3 e GEO-005.1 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
 
 > **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas a geometria específica de GEO-002, GEO-003, GEO-004 e GEO-010.
 
@@ -32,6 +32,8 @@ Arquivos associados:
 **GEO-004.1:** Cidade Velha (Old Town) é núcleo histórico do raion Chelsea. Única fonte canônica em [`district-chelsea/cidade-velha-2010.json`](../../geografia/district-chelsea/cidade-velha-2010.json). Os limites estão em aberto.
 
 **GEO-004.2:** os nove raions são oficiais em 2010. Seus nomes e IDs constam da fonte canônica única [`raions-oficiais-2010.json`](../raions-oficiais-2010.json). Posições e fronteiras continuam a definir.
+
+**GEO-004.3 e GEO-005.1:** foram fechados o caráter hostil e separador dos Corredores do Ermo e o crescimento histórico policêntrico e descontínuo. Fonte única da configuração dos Ermos: [`ermos-estrutura-territorial-2010.json`](../ermos-estrutura-territorial-2010.json); fonte única do crescimento histórico: [`formacao-policentrica-2010.json`](../../historia-global/formacao-policentrica-2010.json). Sem aprovar novas posições ou domínio de clãs. GEO-005.2 (escolha estratégica de emissários de Gilgamesh) permanece proposta.
 
 ## 1. Objetivo, limites e método
 

@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO001_CLOSED_GEO004_1_AND_2_CLOSED_BOUNDARIES_OPEN",
+  "register_status": "GEO004_3_AND_GEO005_1_CLOSED_ERMO_POLYCENTRIC_HISTORY_OTHER_GEO_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 8,
+  "owner_approved_canon_decisions": 10,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -100,18 +100,19 @@
     {
       "id": "GEO-004",
       "title": "Raions, bairros e fronteiras administrativas",
-      "evidence_status": "NINE_OFFICIAL_RAIONS_AND_OLD_TOWN_CHELSEA_APPROVED_BOUNDARIES_PENDING",
-      "decision_state": "PARTIALLY_CLOSED_GEO-004.1_AND_GEO-004.2",
+      "evidence_status": "OFFICIAL_RAIONS_OLD_TOWN_AND_ERMO_BARRIER_STATUS_APPROVED_BOUNDARIES_OPEN",
+      "decision_state": "PARTIALLY_CLOSED_GEO-004.1_TO_GEO-004.3",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
         "approved_subdecision": "GEO-004.1"
       },
-      "answer": "Em 2010, Novydres tem nove raions administrativos oficialmente nomeados: Dunwich, Levi, Alexandria, Chelsea, Bukovie, New London, Sulfok, Drevnigrad e Vasyl Bay. Cidade Velha fica em Chelsea conforme GEO-004.1. Geometria, posições, limites e poder Cainita não aprovados.",
-      "recommendation": "Nomes e existência canonizados; construir a geografia física e submeter macroposições e fronteiras em decisões separadas.",
-      "closure_criteria": "GEO-004.1 e GEO-004.2 fechados; restantes: geometrias, bairros, enclaves e divisão territorial exata.",
+      "answer": "Oficializados nove raions em 2010, Cidade Velha em Chelsea e Corredores do Ermo como zonas naturais especiais que normalmente separam núcleos urbanizados; Ermo não é um décimo raion. Ainda sem polígonos, posições relativas, rotas e divisões internas.",
+      "recommendation": "Modelo Ermo aprovado. Posicionar raions e projetar infraestrutura respeitando barreiras naturais; permitir conurbação apenas onde aprovada.",
+      "closure_criteria": "GEO-004.1–004.3 fechados; pendem posição e limites de raions/Ermos, bairros, áreas especiais e adjacências.",
       "source_references": [
         "novydres/cenario/atlas-novydres/raions-oficiais-2010.json",
-        "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json"
+        "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
+        "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -120,30 +121,38 @@
       ],
       "approved_subdecision_ids": [
         "GEO-004.1",
-        "GEO-004.2"
+        "GEO-004.2",
+        "GEO-004.3"
       ],
       "canonical_sources_by_subdecision": {
         "GEO-004.1": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
-        "GEO-004.2": "novydres/cenario/atlas-novydres/raions-oficiais-2010.json"
+        "GEO-004.2": "novydres/cenario/atlas-novydres/raions-oficiais-2010.json",
+        "GEO-004.3": "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
       }
     },
     {
       "id": "GEO-005",
       "title": "Formação histórica e expansão urbana",
-      "evidence_status": "PARCIAL_DOCUMENTADO",
-      "decision_state": "RECOMMENDED_NOT_APPROVED",
-      "canonical_value": null,
-      "answer": "Fontes discutem 1423/fundação, 1917, 1950–1989, 1990–1998 e 2010; não há mapa de expansão, idade construtiva ou implantação das grandes obras.",
-      "recommendation": "Usar fases espaciais rastreáveis: assentamentos antigos, núcleo fluvial, infraestrutura pré-industrial, militar/industrial na Guerra Fria, declínio e reforma. Vincular estilo de quarteirão à época, sem reescrever acontecimentos.",
-      "closure_criteria": "Aprovar linhas do tempo de implantação, mudanças de nome, principais obras e continuidade entre eras.",
+      "evidence_status": "POLYCENTRIC_DISCONTINUOUS_GROWTH_APPROVED_CHRONOLOGY_PENDING",
+      "decision_state": "PARTIALLY_CLOSED_GEO-005.1",
+      "canonical_value": {
+        "source_of_truth": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+        "approved_subdecision": "GEO-005.1"
+      },
+      "answer": "Aprovado crescimento urbano policêntrico, distribuído e descontínuo, originado em vários núcleos historicamente autônomos, limitados por Ermos e conectados apenas parcialmente por infraestrutura. A atribuição estratégica de emissários Cainitas por Gilgamesh permanece proposta não canonizada no GEO-005.2.",
+      "recommendation": "Aplicar este modelo histórico como restrição espacial obrigatória para definir posição dos raions; discutir no GEO-005.2 a seleção dos emissários de Gilgamesh, sem presumir clãs ou distâncias.",
+      "closure_criteria": "GEO-005.1 fechado; pendem GEO-005.2 e cronologia por raion, fundações, fases de obras, expansão e distribuição inicial dos clãs.",
       "source_references": [
-        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150",
-        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185"
+        "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+        "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
       ],
       "impact_subject_patterns": [
         "world-history-novydres",
         "world-atlas-novydres",
         "district-*"
+      ],
+      "approved_subdecision_ids": [
+        "GEO-005.1"
       ]
     },
     {
@@ -506,6 +515,8 @@
     "GEO-003.1",
     "GEO-014.1",
     "GEO-004.1",
-    "GEO-004.2"
+    "GEO-004.2",
+    "GEO-004.3",
+    "GEO-005.1"
   ]
 }
