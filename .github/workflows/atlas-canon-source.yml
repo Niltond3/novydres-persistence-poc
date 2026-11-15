@@ -100,6 +100,16 @@ jobs:
             assert.ok(idx.includes('ermos-estrutura-territorial-2010.json'),x.subject_id);
             assert.ok(idx.includes('formacao-policentrica-2010.json'),x.subject_id);
           }
+          const founding=JSON.parse(readFileSync('novydres/cenario/geografia/district-chelsea/origens-mortais-e-culto-fundador.json','utf8'));
+          assert.equal(founding.fact_id,'GEO-005.4.1');
+          assert.equal(founding.subject_id,'district-chelsea');
+          assert.equal(founding.demography.huge_population_1500_not_presupposed,true);
+          assert.equal(founding.demography.specific_population_1423,null);
+          assert.equal(founding.demography.specific_population_1500,null);
+          assert.equal(founding.cainite_social_rule.open_supernatural_authority_possible,true);
+          assert.equal(founding.cainite_social_rule.cult_centered_on_gilgamesh,'POSSIBLE_NOT_APPROVED');
+          assert.equal(founding.historical_frame.old_indigenous_place_name,null);
+          assert.equal(growth.first_local_study_reference.source_of_truth,'novydres/cenario/geografia/district-chelsea/origens-mortais-e-culto-fundador.json');
           const oldTown=JSON.parse(readFileSync('novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json','utf8'));
           assert.equal(oldTown.fact_id,'GEO-004.1');
           assert.equal(oldTown.canonical_status,'CLOSED_CANON_SCOPED');

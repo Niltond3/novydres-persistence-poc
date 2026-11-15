@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO005_1_TO_3_CANON_DOMAIN_CONTINUITY_AND_JOINT_HISTORY_GEOGRAPHY",
+  "register_status": "GEO005_4_1_OLD_TOWN_FOUNDING_CULT_AND_GRADUAL_GROWTH_APPROVED_DETAILS_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 12,
+  "owner_approved_canon_decisions": 13,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -133,22 +133,24 @@
     {
       "id": "GEO-005",
       "title": "Formação histórica e expansão urbana",
-      "evidence_status": "POLYCENTRIC_GILGAMESH_FOUNDATION_AND_DOMAIN_CONTINUITY_APPROVED_SPECIFIC_TRANSITIONS_PENDING",
-      "decision_state": "PARTIALLY_CLOSED_GEO-005.1_TO_GEO-005.3",
+      "evidence_status": "POLYCENTRIC_FOUNDATION_DOMAIN_CONTINUITY_AND_OLD_TOWN_SOCIAL_RELIGIOUS_FRAME_APPROVED",
+      "decision_state": "PARTIALLY_CLOSED_GEO-005.1_TO_GEO-005.4.1",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
         "approved_subdecisions": [
           "GEO-005.1",
           "GEO-005.2",
           "GEO-005.3"
-        ]
+        ],
+        "local_child_source_of_truth": "novydres/cenario/geografia/district-chelsea/origens-mortais-e-culto-fundador.json"
       },
-      "answer": "Nove raions modernos não exigem nove senhorios originais nem limites coincidentes. Mudança de senhor, clã dominante ou extensão de domínio vampírico não decorre automaticamente da evolução urbana: exige causa histórica forte documentada, período, agentes, mecanismo de legitimidade ou força, consequências e aprovação. Hipótese Ventrue/Chelsea/Bukovie não ratificada.",
-      "recommendation": "Ao propor geografia de cada localidade, construir em paralelo sua cronologia de ocupação e domínio; submeter cada transição real ao proprietário, começando por um núcleo histórico.",
-      "closure_criteria": "GEO-005.1–005.3 fechados; ainda abertas fundações individuais, senhorios originais, cronologia por núcleo, posições e eventos de transferência de domínio.",
+      "answer": "GEO-005.1–005.3: crescimento policêntrico, emissários de Gilgamesh e continuidade de domínio. GEO-005.4.1: Old Town evoluiu de comunidades mortais preexistentes e teve crescimento gradual, com domínio Cainita capaz de ser mais ostensivo e mediado por tributos de sangue, medo e benefícios; especificidades do culto, nome originário, clã e contingentes não estão aprovadas.",
+      "recommendation": "Desenvolver primeiro a política e culto locais da fase fundadora; manter autonomia e diversidade entre comunidades originárias. Não equiparar as crenças locais reais ao culto ficcional introduzido pelos Cainitas.",
+      "closure_criteria": "GEO-005.4.1 fechado como marco inicial de Old Town; ainda pendem nome antigo, líder/entidade cultuada, governo mortal, população por fase, cronologia de 1500 a 2010 e motivações de mudanças de poder.",
       "source_references": [
         "novydres/cenario/historia-global/formacao-policentrica-2010.json",
-        "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
+        "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
+        "novydres/cenario/geografia/district-chelsea/origens-mortais-e-culto-fundador.json"
       ],
       "impact_subject_patterns": [
         "world-history-novydres",
@@ -158,8 +160,15 @@
       "approved_subdecision_ids": [
         "GEO-005.1",
         "GEO-005.2",
-        "GEO-005.3"
-      ]
+        "GEO-005.3",
+        "GEO-005.4.1"
+      ],
+      "canonical_sources_by_subdecision": {
+        "GEO-005.1": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+        "GEO-005.2": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+        "GEO-005.3": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+        "GEO-005.4.1": "novydres/cenario/geografia/district-chelsea/origens-mortais-e-culto-fundador.json"
+      }
     },
     {
       "id": "GEO-006",
@@ -527,6 +536,7 @@
     "GEO-004.3",
     "GEO-005.1",
     "GEO-005.2",
-    "GEO-005.3"
+    "GEO-005.3",
+    "GEO-005.4.1"
   ]
 }

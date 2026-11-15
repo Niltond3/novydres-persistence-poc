@@ -121,6 +121,10 @@ A posição dos núcleos urbanos e os mapas futuros **devem obedecer** à fonte 
 
 Não exigir correspondência 1:1 entre senhorios e raions modernos, porém **não criar alterações de senhor, clã dominante ou extensão de domínios Cainitas apenas para preencher o mapa**. Cada mudança precisa ter causa histórica forte, período, atores, mecanismo e consequências, submetidas à aprovação. Ao construir a geografia de cada núcleo, desenvolver simultaneamente sua história. Fonte única `../../historia-global/formacao-policentrica-2010.json`. A hipótese Ventrue/Chelsea/Bukovie não é canônica.
 
+### Primeira camada de Old Town — GEO-005.4.1 (15/11/2026)
+
+A origem mortal e a presença de domínio ritual Cainita mais ostensivo, com crescimento populacional gradual, constam da [fonte canônica do assunto Chelsea](../../geografia/district-chelsea/origens-mortais-e-culto-fundador.json). Isso ainda não aprova nome original, religião indígena como culto de sangue, número inicial de vampiros, teônimo, senhor Cainita ou quantidades populacionais.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:

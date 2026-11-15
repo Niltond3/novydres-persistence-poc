@@ -37,6 +37,8 @@ Arquivos associados:
 
 **GEO-005.3:** não presumir equivalência entre senhorios e raions; para transferências reais de domínio Cainita exigir eventos fortes, atores, datas/épocas, mecanismos e consequências, com aprovação. A geografia e a história de cada núcleo devem ser desenvolvidas juntas. [Fonte única](../../historia-global/formacao-policentrica-2010.json). O exemplo Ventrue/Chelsea/Bukovie é hipotético.
 
+**GEO-005.4.1:** o primeiro estudo local de Old Town confirmou a evolução demográfica gradual sobre comunidades preexistentes e o potencial de culto Cainita fictício e tributos de sangue como forma de governo, sem fixar população, clã ou teônimo. [Fonte única](../../geografia/district-chelsea/origens-mortais-e-culto-fundador.json).
+
 ## 1. Objetivo, limites e método
 
 Inventariar **o que já foi documentado, o que pode ser aproveitado, o que diverge e o que exige decisão**, antes de criar a geografia oficial de 2010. Este registro não canoniza fatos, pessoas, domínio, medidas, facções, rotas nem coordenadas. É a **primeira passagem estrutural** de P0: cobertura de fontes do mundo, nove distritos, 32 POIs e referências políticas principais. Ainda será necessário auditar dependências da crônica e demais fontes dispersas para encerrar P0 exaustivamente.
