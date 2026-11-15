@@ -1,0 +1,54 @@
+name: Atlas canonical source consistency
+on:
+  push:
+    branches:
+      - design/atlas-unificar-fontes
+  pull_request:
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  atlas-consistency:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ADR-001 catalog and regression
+        run: |
+          node novydres/scripts/validar-assuntos.mjs
+          node novydres/scripts/catalogo-assuntos.mjs --check
+          node --test novydres/scripts/testar-integridade-d06.test.mjs
+      - name: Verify unique canonical values and absence of retired Atlas sources
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, existsSync } from 'node:fs';
+          import assert from 'node:assert/strict';
+          const root='novydres/cenario/atlas-novydres/';
+          const j=f=>JSON.parse(readFileSync(root+f,'utf8'));
+          for(const f of ['fonte-001.source.md','fonte-002.source.md','registro.json','segmentos.json'])
+            assert.equal(existsSync(root+f),false,f+' remains in HEAD');
+          const p=j('populacao-2010.json'),l=j('localizacao-geral-2010.json');
+          assert.equal(p.population.value,7000000);
+          assert.equal(p.canonical_status,'CLOSED_CANON');
+          assert.equal(l.fact_id,'GEO-002.1');
+          assert.equal(l.canonical_status,'CLOSED_CANON');
+          assert.equal(existsSync(root+'atlas-proposta.md'),true);
+          const proposal=readFileSync(root+'atlas-proposta.md','utf8');
+          assert.ok(!proposal.includes('mais de oito milhões'));
+          for(const f of ['alexandria','bukovie','chelsea','drevnigrad','dunwich','levi','new-london','sulfok','vasyl-bay']){
+            const d=JSON.parse(readFileSync('novydres/cenario/geografia/district-'+f+'/conteudo.json','utf8'));
+            assert.equal(d.source_variants?.length,1);
+            assert.equal(d.source_variants[0].source_path,root+'atlas-proposta.md');
+          }
+          for(let i=1;i<=32;i++){
+            const d=JSON.parse(readFileSync('novydres/cenario/lugares/poi-'+String(i).padStart(2,'0')+'/conteudo.json','utf8'));
+            assert.equal(d.source_variants?.length,1);
+            assert.equal(d.source_variants[0].source_path,root+'atlas-proposta.md');
+          }
+          console.log('Atlas single-current-source PASS');
+          NODE
