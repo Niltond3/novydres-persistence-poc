@@ -52,6 +52,21 @@ jobs:
           assert.equal(geo.geology.deep_groundwater_circulation,true);
           assert.equal(geo.geology.active_surface_volcano_required,false);
           assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
+          const ermo=j('ermos-estrutura-territorial-2010.json');
+          const growth=JSON.parse(readFileSync('novydres/cenario/historia-global/formacao-policentrica-2010.json','utf8'));
+          assert.equal(ermo.fact_id,'GEO-004.3');
+          assert.equal(ermo.canonical_status,'CLOSED_CANON_SCOPED');
+          assert.equal(ermo.territorial_structure.administrative_category,'zona territorial natural especial, não um raion');
+          assert.equal(ermo.territorial_structure.raion_count_unchanged,9);
+          assert.equal(ermo.cartographic_constraints.prohibit_default_continuous_urban_mass,true);
+          assert.equal(ermo.cartographic_constraints.prohibit_radial_even_growth_by_default,true);
+          assert.equal(ermo.transit_policy.crossing_does_not_imply_conurbation,true);
+          assert.equal(growth.fact_id,'GEO-005.1');
+          assert.equal(growth.canonical_status,'CLOSED_CANON_SCOPED');
+          assert.equal(growth.growth_model.single_radiating_city_center,false);
+          assert.equal(growth.growth_model.some_conurbations_possible,true);
+          assert.equal(growth.historical_allocation_planning.status,'PROPOSTA_PENDENTE_GEO-005.2');
+          assert.equal(growth.growth_model.barriers_reference,root+'ermos-estrutura-territorial-2010.json');
           const raions=j('raions-oficiais-2010.json');
           assert.equal(raions.fact_id,'GEO-004.2');
           assert.equal(raions.canonical_status,'CLOSED_CANON_SCOPED');
@@ -63,6 +78,9 @@ jobs:
             const d=JSON.parse(readFileSync('novydres/cenario/geografia/'+x.subject_id+'/conteudo.json','utf8'));
             assert.equal(d.canonical_identity_reference.source_of_truth,root+'raions-oficiais-2010.json',x.subject_id);
             assert.equal(x.geometry,null,x.subject_id);
+            const idx=readFileSync('novydres/cenario/geografia/'+x.subject_id+'/index.md','utf8');
+            assert.ok(idx.includes('ermos-estrutura-territorial-2010.json'),x.subject_id);
+            assert.ok(idx.includes('formacao-policentrica-2010.json'),x.subject_id);
           }
           const oldTown=JSON.parse(readFileSync('novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json','utf8'));
           assert.equal(oldTown.fact_id,'GEO-004.1');
