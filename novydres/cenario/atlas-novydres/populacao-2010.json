@@ -1,0 +1,59 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-001.1",
+  "fact_kind": "municipal_resident_population",
+  "canonical_status": "CLOSED_CANON",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "temporal_scope": {
+    "reference_year": 2010,
+    "exact_census_day": null
+  },
+  "territorial_scope": {
+    "territory": "Novydres - limites administrativos municipais",
+    "comprises_raions": [
+      "Dunwich",
+      "Levi",
+      "Alexandria",
+      "Chelsea",
+      "Bukovie",
+      "New London",
+      "Sulfok",
+      "Drevnigrad",
+      "Vasyl Bay"
+    ],
+    "raion_boundaries_status": "PENDING_GEO-004"
+  },
+  "population": {
+    "value": 7000000,
+    "unit": "residentes",
+    "scope": "município",
+    "reference_year": 2010
+  },
+  "supersession": {
+    "only_fact": "população residente municipal de 2010",
+    "archival_sources": [
+      {
+        "path": "novydres/cenario/atlas-novydres/fonte-001.source.md",
+        "line": 65,
+        "archival_wording": "mais de oito milhões de habitantes"
+      },
+      {
+        "path": "novydres/cenario/atlas-novydres/fonte-002.source.md",
+        "line": 56,
+        "archival_wording": "mais de oito milhões de habitantes"
+      }
+    ],
+    "historical_sources_immutable": true,
+    "authority_status": "SUPERSEDED_FOR_2010_POPULATION_ONLY",
+    "unrelated_legacy_conflicts": "NOT_RESOLVED"
+  },
+  "unresolved_related_decisions": [
+    "GEO-002 localização e extensão",
+    "GEO-004 limites geográficos dos nove raions",
+    "GEO-010 distribuição populacional entre raions"
+  ],
+  "policy": "Para população municipal residente de Novydres em 2010, esta é a única fonte vigente. Demais arquivos são documentação histórica ou projeções referenciadas; não constituem valores alternativos."
+}
