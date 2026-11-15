@@ -70,6 +70,14 @@ jobs:
             assert.equal(d.source_variants?.length,1);
             assert.equal(d.source_variants[0].source_path,root+'atlas-proposta.md');
           }
+          for(const sub of ['district-alexandria','district-bukovie','district-chelsea','district-drevnigrad','district-dunwich','district-levi','district-new-london','district-sulfok','district-vasyl-bay']){
+            const idx=readFileSync('novydres/cenario/geografia/'+sub+'/index.md','utf8');
+            assert.ok(!idx.includes('duas variantes'),sub);
+          }
+          for(let i=1;i<=32;i++){
+            const idx=readFileSync('novydres/cenario/lugares/poi-'+String(i).padStart(2,'0')+'/index.md','utf8');
+            assert.ok(!idx.includes('duas variantes'),'poi-'+i);
+          }
           console.log('Atlas single-current-source PASS');
           NODE
       - name: No obsolete municipal population claims in current tree

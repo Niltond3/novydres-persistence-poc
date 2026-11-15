@@ -7,4 +7,4 @@ visibility: SYSTEM_AUDIT
 ---
 # poi-01
 
-Assunto geográfico candidato. `conteudo.json` preserva literalmente as duas variantes com localização de linhas e SHA Git, sem escolher autoridade ou produzir conhecimento confirmado. O atlas é custodiante da fonte integral, não proprietário concorrente deste conceito.
+Assunto geográfico candidato. `conteudo.json` contém somente **uma projeção editorial** de [atlas-proposta.md](../../atlas-novydres/atlas-proposta.md). Essa projeção não aprova o conteúdo nem constitui uma segunda fonte geográfica.
