@@ -34,11 +34,7 @@
       "land_water_system": {
         "natural_rivers_present": true,
         "natural_lagoons_present": true,
-        "geothermal_springs_present": true,
-        "geothermal_hot_water_principal_basis_of_municipal_heating": true,
-        "exact_number_locations_and_capacity": null,
-        "geological_heat_source": "UNDECIDED",
-        "active_volcano_required": "NOT_DECIDED"
+        "geothermal_canon_ref": "geotermia-aquecimento-2010.json"
       },
       "explicit_exclusions": [
         "não é uma ilha principal",
@@ -47,11 +43,11 @@
       ]
     }
   },
-  "scope_of_approval": "GEO-002.1 macrorregião; GEO-002.2 predominância continental e costa com ilhas secundárias; GEO-002.3 grande baía natural, rios, lagoas e termas, sem configuração insular dominante. Fontes termais constituem base principal do aquecimento; mecanismo geológico ainda indeciso.",
+  "scope_of_approval": "GEO-002.1 macrorregião; GEO-002.2 predominância continental e costa com ilhas secundárias; GEO-002.3 grande baía natural, rios, lagoas e termas, sem configuração insular dominante. A autoridade da geotermia pertence exclusivamente a `geotermia-aquecimento-2010.json`.",
   "pending": [
     "GEO-002.4 posição, forma e dimensões do litoral/baía/ilhas",
     "GEO-003 desenho de rios e lagoas naturais, fontes termais, relevo e Ermo",
-    "GEO-014 origem e capacidade da geotermia, rede de aquecimento",
+    "GEO-014 capacidade e rede geotérmica ainda pendentes",
     "GEO-002 sistema de coordenadas, extensão e projeção",
     "GEO-004 limites dos raions"
   ],

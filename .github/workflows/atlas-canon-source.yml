@@ -47,9 +47,15 @@ jobs:
           assert.equal(l.location.territorial_configuration.coastal_bays_or_peninsulas.bay_is_secondary_to_continental_territory,true);
           assert.equal(l.location.territorial_configuration.land_water_system.natural_rivers_present,true);
           assert.equal(l.location.territorial_configuration.land_water_system.natural_lagoons_present,true);
-          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_springs_present,true);
-          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_hot_water_principal_basis_of_municipal_heating,true);
-          assert.equal(l.location.territorial_configuration.land_water_system.geological_heat_source,'UNDECIDED');
+          const geo=j('geotermia-aquecimento-2010.json');
+          assert.deepEqual(geo.fact_ids,['GEO-002.3/TERMAS','GEO-003.1','GEO-014.1']);
+          assert.equal(geo.geology.deep_groundwater_circulation,true);
+          assert.equal(geo.geology.active_surface_volcano_required,false);
+          assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
+          assert.equal(geo.resource_geography.administrative_mapping.canonical_status,'NOT_YET_CONFIRMED_GEO-004');
+          assert.equal(geo.district_heating.service_distribution,'UNEQUAL_CITYWIDE');
+          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_canon_ref,'geotermia-aquecimento-2010.json');
+          assert.equal(l.location.territorial_configuration.land_water_system.geothermal_springs_present,undefined);
           assert.equal(l.location.coastline_geometry,null);
           assert.equal(existsSync(root+'atlas-proposta.md'),true);
           const proposal=readFileSync(root+'atlas-proposta.md','utf8');

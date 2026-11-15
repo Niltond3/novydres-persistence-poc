@@ -1,0 +1,54 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_ids": [
+    "GEO-002.3/TERMAS",
+    "GEO-003.1",
+    "GEO-014.1"
+  ],
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "geology": {
+    "natural_geothermal_system": true,
+    "deep_groundwater_circulation": true,
+    "circulation_through_deep_faults_and_fractures": true,
+    "heat_origin": "calor crustal com contribuição de antigos corpos rochosos magmáticos em profundidade",
+    "active_surface_volcano_required": false,
+    "active_volcano_presence": "NOT_DECIDED",
+    "currently_molten_magma_required": false
+  },
+  "resource_geography": {
+    "natural_hot_springs_present": true,
+    "resource_abundance": "ABUNDANT",
+    "main_concentration_toponym": "Cidade Velha",
+    "administrative_mapping": {
+      "candidate": "Chelsea / Old Town",
+      "source_ref": "novydres/cenario/atlas-novydres/atlas-proposta.md",
+      "canonical_status": "NOT_YET_CONFIRMED_GEO-004"
+    },
+    "spring_locations": null,
+    "spring_count": null,
+    "temperatures": null,
+    "flow_rates": null
+  },
+  "district_heating": {
+    "geothermal_resource_is_primary": true,
+    "service_distribution": "UNEQUAL_CITYWIDE",
+    "service_regularity": "IRREGULAR",
+    "resource_abundance_does_not_imply_uniform_heating": true,
+    "deliberate_heat_diversion": "NOT_CONFIRMED",
+    "network_geometry": null,
+    "sector_priorities": null,
+    "heat_capacity": null
+  },
+  "pending": [
+    "GEO-004: vinculação administrativa Cidade Velha/Chelsea",
+    "GEO-003: geometria hídrica, aquíferos e fontes",
+    "GEO-014: capacidade energética, instalações e rede de distribuição",
+    "eventual vulcão superficial: existência não determinada"
+  ],
+  "single_authoritative_source": true
+}

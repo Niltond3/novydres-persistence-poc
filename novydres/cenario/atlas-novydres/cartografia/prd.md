@@ -101,6 +101,10 @@ O proprietário fixou em **7.000.000 residentes** a população municipal de Nov
 
 Localização regional e configuração principal continental e costeira, com grande baía natural, rios, lagoas naturais, fontes termais e ilhas apenas secundárias, aprovadas pelo proprietário. A cidade **não** será concebida como ilha ou arquipélago. A geotermia de águas termais é a base principal do aquecimento, mas sua origem geológica, capacidade e rede dependem de GEO-014. **Fonte única vigente:** `../localizacao-geral-2010.json`; formas, posição exata, área, escala e projeção seguem abertas.
 
+### Fechamentos GEO-003.1 e GEO-014.1 (15/11/2026)
+
+A origem geológica profunda da geotermia, sua concentração abundante na Cidade Velha e a distribuição de aquecimento irregular e desigual foram aprovadas. **Única fonte autoritativa:** `../geotermia-aquecimento-2010.json`. A vinculação administrativa da Cidade Velha a Chelsea e a rede detalhada ainda aguardam decisões.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:

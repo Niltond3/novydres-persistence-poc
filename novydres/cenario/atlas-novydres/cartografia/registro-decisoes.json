@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO001_CLOSED_GEO002_THREE_SUBDECISIONS_CLOSED_GEO003_GEO014_BASELINE_CONFIRMED",
+  "register_status": "ONE_GEO_PACKAGE_CLOSED_AND_SIX_APPROVED_SUBDECISIONS",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 4,
+  "owner_approved_canon_decisions": 6,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -54,7 +54,7 @@
       "closure_criteria": "GEO-002.1–002.3 aprovados; ainda falta posição, forma detalhada da costa, baía/ilhas, área e projeção. Não é arquipélago.",
       "source_references": [
         "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
-        "novydres/cenario/atlas-novydres/atlas-proposta.md"
+        "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -78,14 +78,17 @@
     {
       "id": "GEO-003",
       "title": "Litoral, relevo, Ermo e Rio Vasyl",
-      "evidence_status": "NATURAL_RIVERS_LAGOONS_AND_THERMAL_SPRINGS_EXISTENCE_APPROVED_GEOMETRY_OPEN",
-      "decision_state": "RECOMMENDED_NOT_APPROVED",
-      "canonical_value": null,
-      "answer": "A existência de rios, lagoas naturais e fontes termais foi confirmada por GEO-002.3; traçados, bacias, quantidade, temperaturas e relação com Rio Vasyl dependem de GEO-003.",
+      "evidence_status": "GEOLOGICAL_ORIGIN_CONFIRMED_WATER_GEOMETRY_OPEN",
+      "decision_state": "PARTIALLY_CLOSED_GEO-003.1",
+      "canonical_value": {
+        "source_of_truth": "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+        "closed_subdecision": "GEO-003.1"
+      },
+      "answer": "Origem geotérmica profunda natural aprovada, sem vulcão ativo superficial obrigatório. Hidrografia, relevo e localização exata das fontes seguem em aberto.",
       "recommendation": "Construir topologia hídrica e relevo em escala metropolitana antes de desenhar vias. Justificar fisicamente a comunicação entre cursos de água, canais subterrâneos e porto; distinguir água natural, artificial e geotérmica.",
-      "closure_criteria": "Aprovar geometrias-mestras de costa, rios, cursos subterrâneos, gelo, Ermo, ilhas e grandes desníveis.",
+      "closure_criteria": "Subdecisão GEO-003.1 fechada; geoformas, lagos, rios e fontes ainda abertos.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
+        "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -296,15 +299,17 @@
     {
       "id": "GEO-014",
       "title": "Geotermia, calefação, tubulações e zonas térmicas",
-      "evidence_status": "GEOTHERMAL_HEATING_MAIN_BASIS_CONFIRMED_MECHANISM_AND_NETWORK_OPEN",
-      "decision_state": "RECOMMENDED_NOT_APPROVED",
-      "canonical_value": null,
-      "answer": "O proprietário confirmou fontes termais como principal base do aquecimento urbano. Natureza geológica do calor (vulcão, intrusão antiga ou circulação profunda), magnitude e rede urbana continuam pendentes.",
+      "evidence_status": "ABUNDANT_OLD_TOWN_HEAT_RESOURCE_UNEQUAL_DISTRIBUTION_CONFIRMED",
+      "decision_state": "PARTIALLY_CLOSED_GEO-014.1",
+      "canonical_value": {
+        "source_of_truth": "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+        "closed_subdecision": "GEO-014.1"
+      },
+      "answer": "Recurso geotérmico natural abundante e concentrado na Cidade Velha, distribuído pelo sistema urbano de maneira desigual e irregular. Detalhes da rede, capacidades e causas específicas não aprovados.",
       "recommendation": "Criar grafo de geração→troca→bombeamento→distribuição→edifícios, com capacidade por zona, redundância e falhas; mapear **a desigualdade observável**, mas não converter rumor de sabotagem/desvio em verdade absoluta.",
-      "closure_criteria": "Aprovar plantas, setores de aquecimento, prioridades de carga, corredores técnicos e estado de operação em 2010.",
+      "closure_criteria": "Subdecisão GEO-014.1 fechada; rede, plantas, capacidades, setores e causas seguem em aberto.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
-        "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
+        "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -486,6 +491,8 @@
     "GEO-001.1",
     "GEO-002.1",
     "GEO-002.2",
-    "GEO-002.3"
+    "GEO-002.3",
+    "GEO-003.1",
+    "GEO-014.1"
   ]
 }

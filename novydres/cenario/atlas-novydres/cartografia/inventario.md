@@ -14,20 +14,20 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
-> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2 e GEO-002.3 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
+> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1 e GEO-014.1 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
 
 > **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas a geometria específica de GEO-002, GEO-003, GEO-004 e GEO-010.
 
 ## Complemento P0 — dossiê cruzado de decisões
 
-O inventário inicial foi ampliado por um dossiê com **22 respostas documentais, 22 recomendações e critérios específicos de fechamento**, pelo registro estruturado e por um contrato de propagação. **Ainda não há nova decisão canônica fechada.** O cruzamento inclui as fontes territoriais, políticas, históricas e referências episódicas localizadas; a varredura exaustiva de episódios e efeitos territoriais permanece dependência obrigatória por item, conforme o dossiê.
+O inventário inicial foi ampliado por um dossiê com **22 respostas documentais, 22 recomendações e critérios específicos de fechamento**, pelo registro estruturado e por um contrato de propagação. **Há subdecisões canônicas fechadas, sem fechamento completo de GEO-003 ou GEO-014.** O cruzamento inclui as fontes territoriais, políticas, históricas e referências episódicas localizadas; a varredura exaustiva de episódios e efeitos territoriais permanece dependência obrigatória por item, conforme o dossiê.
 
 Arquivos associados:
 - `cartografia/dossie-geografico.md`
 - `cartografia/registro-decisoes.json`
 - `cartografia/contrato-propagacao.md`
 
-`P0_CROSS_REFERENCE_IN_PROGRESS`; `1/22_CLOSED_CANON`. Dados históricos divergentes permanecem preservados como fontes de auditoria, não como autoridades ativas concorrentes.
+`P0_CROSS_REFERENCE_IN_PROGRESS`; `1/22_GEO_PACKAGES_CLOSED;_6_SUBDECISIONS_CLOSED`. Dados históricos divergentes permanecem preservados como fontes de auditoria, não como autoridades ativas concorrentes.
 
 ## 1. Objetivo, limites e método
 

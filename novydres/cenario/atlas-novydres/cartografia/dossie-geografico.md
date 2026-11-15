@@ -6,12 +6,12 @@ visibility: PLAYER_SAFE
 source_snapshot: 7ce8e88c122a5d80879e30a23b1f3be159cac727
 created_on: 2026-11-14
 census_year: 2010
-canonical_decisions_closed: 4
+canonical_decisions_closed: 6
 ---
 
 # Dossiê decisório GEO-001 a GEO-022 — Novydres
 
-> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2 e GEO-002.3 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
+> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1 e GEO-014.1 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
 
 > **Nenhuma recomendação deste dossiê é um fato canônico.** Os 22 tópicos são pacotes de decisão para aprovação expressa. Os estados técnicos dos arquivos de origem (`UNKNOWN`, `CANDIDATE`, `NOT_SELECTED`) não são convertidos em aprovação por este documento.
 
@@ -43,7 +43,7 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-002 — Localização, dimensão, coordenadas e escala
 
-**GEO-002.1–GEO-002.3 FECHADOS (15/11/2026):** fonte única `../localizacao-geral-2010.json`. Novydres é majoritariamente continental e costeira, com grande baía natural, rios, lagoas e fontes termais. Não é ilha principal nem arquipélago; ilhas permanecem secundárias. A água termal é a base principal de seu aquecimento. Vulcanismo, forma das águas, dimensões e coordenadas ainda não estão definidos.
+**GEO-002.1–GEO-002.3 FECHADOS (15/11/2026):** fonte única `../localizacao-geral-2010.json`. Novydres é majoritariamente continental e costeira, com grande baía natural, rios, lagoas e fontes termais. Não é ilha principal nem arquipélago; ilhas permanecem secundárias. A base termal e seu mecanismo estão registrados exclusivamente em `../geotermia-aquecimento-2010.json`. Geometrias, vazão, capacidade, dimensões e coordenadas ainda não estão definidos.
 
 - **Situação:** `PARTIALLY_CLOSED_GEO-002.1_TO_GEO-002.3` — região e configuração territorial geral aprovadas; geometrias e dimensões abertas.
 - **Resposta ao inventário:** GEO-002.1 aprovou o noroeste do Alasca, região do Estreito de Bering, em `../localizacao-geral-2010.json`. Polígono, projeção, largura, área e ancoragem exata continuam em aberto.
@@ -53,6 +53,8 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 - **Proprietários/dependências a conferir:** `world-atlas-novydres`, `district-*`.
 
 ### GEO-003 — Litoral, relevo, Ermo e Rio Vasyl
+
+**GEO-003.1 FECHADO:** origem geológica em `../geotermia-aquecimento-2010.json`. Demais questões permanecem abertas.
 
 - **Situação:** `PARCIAL_DOCUMENTADO` — decisão canônica **aberta**.
 - **Resposta ao inventário:** Rio Vasyl morno em Chelsea, canais emergentes em New London, deságue em Sulfok; corredores do Ermo entre raions. Faltam geometria de costa, nascentes, baías, ilhas, pontes, solos e sazonalidade.
@@ -153,6 +155,8 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-014 — Geotermia, calefação, tubulações e zonas térmicas
 
+**GEO-014.1 FECHADO:** concentração na Cidade Velha e distribuição desigual, conforme `../geotermia-aquecimento-2010.json`. Rede detalhada e capacidade continuam abertas.
+
 - **Situação:** `PARCIAL_DOCUMENTADO` — decisão canônica **aberta**.
 - **Resposta ao inventário:** Existe estação periférica em Chelsea, aquecimento privilegiado de Bukovie e alegações conflitantes de desvio térmico; a crônica apresenta manutenção real, sem rede municipal completa.
 - **Recomendação:** Criar grafo de geração→troca→bombeamento→distribuição→edifícios, com capacidade por zona, redundância e falhas; mapear **a desigualdade observável**, mas não converter rumor de sabotagem/desvio em verdade absoluta.
@@ -236,22 +240,8 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 Antes de qualquer `CLOSED_CANON`, executar a busca por dependências no snapshot atual: (i) todos os assuntos de raion e POI; (ii) personagens globais e fontes de política relacionadas; (iii) episódios e registros temporais da crônica com geografia ou personagens de interesse; (iv) fatos de fonte já aprovados por decisão expressa; (v) documentos e visualizações derivadas. Não reconstruir fatos antigos a partir de interpretações posteriores.
 
-**Status global:** `P0_CROSS_REFERENCE_IN_PROGRESS`, `22/22_TOPICS_RECOMMENDATIONS_DRAFTED`, `1/22_CANON_CLOSED`. Não liberar geração de arte definitiva. Protótipos sintéticos claramente identificados não alteram esse status.
+**Status global:** `P0_CROSS_REFERENCE_IN_PROGRESS`, `22/22_TOPICS_RECOMMENDATIONS_DRAFTED`, `1/22_GEO_PACKAGES_CLOSED;_6_SUBDECISIONS_CLOSED`. Não liberar geração de arte definitiva. Protótipos sintéticos claramente identificados não alteram esse status.
 
-## Nota técnica não canônica — GEO-003/GEO-014, origem das fontes termais (15/11/2026)
+## Fechamento GEO-003.1 e GEO-014.1 (15/11/2026)
 
-**Estado: ESTUDO_E_RECOMENDAÇÃO. NÃO APROVADO COMO CÂNONE.** GEO-002.3 já estabeleceu a existência de fontes termais naturais e seu papel como principal base do aquecimento urbano. Não estabeleceu o mecanismo geológico, a quantidade de fontes, as temperaturas, a capacidade de abastecimento ou a necessidade de vulcão.
-
-### Evidências geológicas externas verificadas
-
-- **Pilgrim Hot Springs, península de Seward:** levantamento geológico do Alasca descreve fontes superficiais de aproximadamente 63–71 °C; pesquisas de reservatório mostram água próxima de 90 °C em sistema raso e indicações de águas mais quentes em profundidade. Referências: [DGGS Pilgrim CSAMT](https://dggs.alaska.gov/pubs/gpdata/388); [Alaska Energy Authority, Renewable Energy Atlas](https://dggs.alaska.gov/pubs/id/31848); [Stanford, Geologic Model, 2013](https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=19093).
-- **Mecanismo regional não encerrado pela ciência:** circulação profunda de águas meteorológicas por falhas e rochas intrusivas antigas, possíveis contribuições radiogênicas e tectônicas; não há exigência de vulcão superficial ativo. Referência: [Miller e Craig, 2024, Regional Tectonic Setting](https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2024/Miller.pdf).
-- **Escala:** a existência de fontes termais naturais não demonstra, isoladamente, capacidade suficiente para aquecer sete milhões de habitantes. A energia útil, vazão, temperatura de retorno, perdas, redundância e aporte industrial precisam de modelagem em GEO-014; não extrapolar uma nascente isolada para abastecimento de toda a cidade.
-
-### Alternativas propostas — apenas uma pergunta por vez
-
-1. **Recomendada:** sistema geotérmico não vulcânico superficialmente, controlado por falhas profundas e aquecimento crustal, potencialmente associado a antigos corpos graníticos; sem vulcão ativo obrigatoriamente presente. Explica nascentes sem impor vulcão à paisagem e preserva a plausibilidade regional.
-2. Reservatório hidrotermal alimentado por intrusão magmática profunda ainda quente, sem edifício vulcânico superficial. Pode justificar temperaturas mais elevadas, mas exige maior excepcionalidade geológica e pesquisa coerente.
-3. Vulcão natural ativo ou potencialmente ativo em superfície. É a hipótese de maior impacto em relevo, risco, historia e expansão; não é necessária só para existir água termal.
-
-**Pergunta pendente (GEO-003.1, com dependência de GEO-014):** aprovar ou não a hipótese geológica recomendada. Não converter a alternativa em fato canônico antes da decisão do proprietário. Após aprovação, registrar a resposta na **mesma fonte única** `../localizacao-geral-2010.json` ou em único assunto geológico proprietário, mantendo as demais referências como consumidores e não como segunda autoridade.
+**Fonte única vigente:** [`../geotermia-aquecimento-2010.json`](../geotermia-aquecimento-2010.json). Foram aprovadas a origem geológica profunda natural, a concentração abundante na Cidade Velha e a distribuição térmica desigual e irregular. Chelsea/Old Town é uma associação candidata até GEO-004. A origem das falhas e as acusações de desvio deliberado continuam sem confirmação. Demais detalhes de engenharia seguem abertos.
