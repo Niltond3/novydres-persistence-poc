@@ -41,10 +41,11 @@
     "approved_specific_local_conflicts_or_conquests": false,
     "initial_territories_and_2010_raions": "relação histórica a estudar; não equiparar automaticamente os limites dos senhorios fundadores aos limites administrativos de 2010"
   },
-  "cartographic_mandate": "Qualquer mapa deverá nascer de múltiplos núcleos históricos distribuídos, situados segundo condições geográficas e aptidões dos emissários escolhidos estrategicamente por Gilgamesh, limitados pelos Ermos; não usar crescimento radial, manchas urbanas contínuas por padrão ou proximidade de clãs sem justificação.",
+  "cartographic_mandate": "Qualquer mapa deverá nascer de múltiplos núcleos históricos distribuídos, situados segundo condições geográficas e aptidões dos emissários escolhidos estrategicamente por Gilgamesh, limitados pelos Ermos; não usar crescimento radial, manchas urbanas contínuas por padrão ou proximidade de clãs sem justificação. Mudanças políticas Cainitas que influenciem a cartografia exigem narrativa histórica causal forte e aprovação antes de atribuir novos dominadores ou fronteiras.",
   "unresolved": [
+    "GEO-005 cartografia histórica e cronologia motivada de eventuais sucessões e mudanças de domínio Cainita",
+    "GEO-005.4 estudo localizado de geografia e história de um núcleo a selecionar",
     "GEO-005 critérios históricos para atribuir emissários, clãs e assentamentos específicos por território",
-    "GEO-005.3 relação espacial entre senhorios fundadores e os nove raions atuais",
     "GEO-005 cronologia da fundação, sucessão e crescimento por raion",
     "GEO-004 posições relativas e fronteiras dos nove raions",
     "GEO-006 domínios Cainitas por período",
@@ -53,6 +54,54 @@
   "single_authoritative_source": true,
   "fact_ids": [
     "GEO-005.1",
-    "GEO-005.2"
-  ]
+    "GEO-005.2",
+    "GEO-005.3"
+  ],
+  "historic_domains_and_modern_raions": {
+    "status": "CANON_APPROVED_GEO-005.3",
+    "decision": "Os nove raions modernos se desenvolveram historicamente de núcleos e senhorios antigos, sem correspondência obrigatória um-para-um entre senhorio fundador e raion de 2010.",
+    "number_of_original_fiefs": null,
+    "raion_count_modern": 9,
+    "automatic_modern_boundary_equals_foundation_domain": false,
+    "allow_nucleus_growth_division_merger_and_admin_reorganization": true,
+    "cainite_domain_continuity": "PRESUMED_UNLESS_STRONGLY_EXPLAINED_HISTORICAL_CHANGE",
+    "core_rule": "Território Cainita e direito de domínio constituem ativos políticos, sociais e jurídicos centrais; deslocamento de senhores, sucessão, perda, cessão, conquista, divisão ou mudança de clã dominante não são consequências automáticas de crescimento urbano ou alteração administrativa.",
+    "required_explanation_for_any_domain_transfer": {
+      "strong_historical_cause": true,
+      "specific_before_and_after_controller": true,
+      "period_or_date_with_source": true,
+      "causal_event_and_actors": true,
+      "mechanism_of_legitimacy_or_force": true,
+      "territorial_extent_and_nucleus_relation": true,
+      "political_consequences_and_remaining_claims": true,
+      "approval_required_before_canonical_assignment": true,
+      "possible_cause_types_not_events": [
+        "guerra ou conquista",
+        "pacto e cessão formal",
+        "sentença ou decreto do soberano",
+        "sucessão de senhorio e disputa de legitimidade",
+        "ruptura política ou rebelião",
+        "catástrofe ou transformação ambiental de grande impacto"
+      ]
+    },
+    "separate_dimension_layers": [
+      "senhorio Cainita fundador e sua continuidade jurídica",
+      "clã ou indivíduo com controle efetivo em cada período",
+      "jurisdição administrativa mortal e nomes dos raions",
+      "influência de outros clãs sem transferência do domínio",
+      "limites naturais dos Ermos e mudanças de infraestrutura"
+    ],
+    "interleaved_geography_history_workflow": "Ao determinar posição, relevo, hidrografia, bairros e limites de cada núcleo, elaborar simultaneamente a história de sua ocupação, domínios, disputas e alterações territoriais; não aprovar cartografia que pressuponha mudança Cainita sem justificativa histórica.",
+    "historical_case_study_contract": "Cada ponto territorial detalhado deverá cruzar geografia física, assentamento inicial, senhor inicial ou UNKNOWN, controle em marcos temporais, eventos de mudança com causas e consequências, paisagem urbana e vínculo com raion moderno.",
+    "example_only_not_canon": "A hipótese de Ventrue terem controlado Chelsea e transferido domínio a Bukovie é mera ilustração; NÃO foi aprovada como acontecimento, distribuição de clã ou cronologia da cidade.",
+    "periods_to_investigate_not_fixed_domain_events": [
+      "fundação e consolidação após a chegada de Gilgamesh",
+      "desaparecimento de Gilgamesh em 1917",
+      "modernização de meados do século XX",
+      "crises e mudanças no fim do século XX",
+      "2010"
+    ],
+    "no_individual_assignments_or_changes_approved": true,
+    "reference_to_political_details": "GEO-006 (jurisdição em 2010), GEO-007 (influência), futuras cronologias por núcleo"
+  }
 }
