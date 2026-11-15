@@ -14,6 +14,17 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
+## Complemento P0 — dossiê cruzado de decisões
+
+O inventário inicial foi ampliado por um dossiê com **22 respostas documentais, 22 recomendações e critérios específicos de fechamento**, pelo registro estruturado e por um contrato de propagação. **Ainda não há nova decisão canônica fechada.** O cruzamento inclui as fontes territoriais, políticas, históricas e referências episódicas localizadas; a varredura exaustiva de episódios e efeitos territoriais permanece dependência obrigatória por item, conforme o dossiê.
+
+Arquivos associados:
+- `cartografia/dossie-geografico.md`
+- `cartografia/registro-decisoes.json`
+- `cartografia/contrato-propagacao.md`
+
+`P0_CROSS_REFERENCE_IN_PROGRESS`; `0/22_CLOSED_CANON`. Dados históricos divergentes permanecem preservados como fontes de auditoria, não como autoridades ativas concorrentes.
+
 ## 1. Objetivo, limites e método
 
 Inventariar **o que já foi documentado, o que pode ser aproveitado, o que diverge e o que exige decisão**, antes de criar a geografia oficial de 2010. Este registro não canoniza fatos, pessoas, domínio, medidas, facções, rotas nem coordenadas. É a **primeira passagem estrutural** de P0: cobertura de fontes do mundo, nove distritos, 32 POIs e referências políticas principais. Ainda será necessário auditar dependências da crônica e demais fontes dispersas para encerrar P0 exaustivamente.
