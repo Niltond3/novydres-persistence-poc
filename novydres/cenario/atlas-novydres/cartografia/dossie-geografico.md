@@ -6,12 +6,12 @@ visibility: PLAYER_SAFE
 source_snapshot: 7ce8e88c122a5d80879e30a23b1f3be159cac727
 created_on: 2026-11-14
 census_year: 2010
-canonical_decisions_closed: 7
+canonical_decisions_closed: 8
 ---
 
 # Dossiê decisório GEO-001 a GEO-022 — Novydres
 
-> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
+> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1 e GEO-004.2 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
 
 > **Nenhuma recomendação deste dossiê é um fato canônico.** Os 22 tópicos são pacotes de decisão para aprovação expressa. Os estados técnicos dos arquivos de origem (`UNKNOWN`, `CANDIDATE`, `NOT_SELECTED`) não são convertidos em aprovação por este documento.
 
@@ -65,11 +65,13 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-004 — Raions, bairros e fronteiras administrativas
 
+**GEO-004.2 FECHADO (15/11/2026):** os nove nomes e a existência dos raions administrativos foram canonizados em [`raions-oficiais-2010.json`](../raions-oficiais-2010.json), sem ratificar posições, limites ou jurisdições Cainitas.
+
 **GEO-004.1 FECHADO (15/11/2026):** a Cidade Velha (Old Town) é o núcleo histórico de Chelsea. **Fonte canônica única:** [`district-chelsea/cidade-velha-2010.json`](../../geografia/district-chelsea/cidade-velha-2010.json). A equivalência administrativa não é mais candidata; os limites e a cronologia de Pristan Vasilieva permanecem em aberto.
 
-- **Situação:** `PARTIALLY_CLOSED_GEO-004.1` — vínculo Cidade Velha/Chelsea fechado, fronteiras abertas.
-- **Resposta ao inventário:** Nove raions têm nomes e macroposições na proposta corrente; todos os nove assuntos estão em UNKNOWN/NOT_SELECTED. Nenhuma fronteira territorial fechada foi observada.
-- **Recomendação:** Conservar provisoriamente os nove nomes do Atlas e gerar polígonos administrativamente contíguos ou deliberadamente descontínuos; cadastrar enclaves e território fora de raion. Manter grade de tiles independente.
+- **Situação:** `PARTIALLY_CLOSED_GEO-004.1_AND_GEO-004.2` — nove nomes oficiais e vínculo Cidade Velha/Chelsea fechados; fronteiras abertas.
+- **Resposta ao inventário:** Nove nomes oficiais estão canonizados. As macroposições da proposta são candidatas, assim como os contornos territoriais.
+- **Recomendação:** Preservar os nove nomes oficiais e propor polígonos administrativamente contíguos ou deliberadamente descontínuos; cadastrar enclaves e território fora de raion. Manter grade de tiles independente.
 - **Critério de fechamento:** Aprovar lista oficial, fronteiras, áreas especiais, hierarquia raion→bairro→quadra e topônimos/aliases.
 - **Fontes verificadas:** [AT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185) · [CAT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/catalogo.json).
 - **Proprietários/dependências a conferir:** `world-atlas-novydres`, `district-*`, `poi-*`.

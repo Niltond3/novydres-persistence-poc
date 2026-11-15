@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO001_CLOSED_GEO002_1TO3_GEO003_1_GEO014_1_GEO004_1_CLOSED_PARTIAL",
+  "register_status": "GEO001_CLOSED_GEO004_1_AND_2_CLOSED_BOUNDARIES_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 7,
+  "owner_approved_canon_decisions": 8,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -100,16 +100,17 @@
     {
       "id": "GEO-004",
       "title": "Raions, bairros e fronteiras administrativas",
-      "evidence_status": "OLD_TOWN_IN_CHELSEA_CONFIRMED_OTHER_BOUNDARIES_OPEN",
-      "decision_state": "PARTIALLY_CLOSED_GEO-004.1",
+      "evidence_status": "NINE_OFFICIAL_RAIONS_AND_OLD_TOWN_CHELSEA_APPROVED_BOUNDARIES_PENDING",
+      "decision_state": "PARTIALLY_CLOSED_GEO-004.1_AND_GEO-004.2",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
         "approved_subdecision": "GEO-004.1"
       },
-      "answer": "A Cidade Velha (Old Town) foi aprovada como núcleo histórico contido em Chelsea. Isso não renomeia todo o raion nem aprova seus limites internos, as demais fronteiras ou a cronologia de Pristan Vasilieva.",
-      "recommendation": "Aplicado GEO-004.1. Prosseguir para limites e tipologia das divisões territoriais, com origem canônica única no assunto Chelsea.",
-      "closure_criteria": "GEO-004.1 fechado; seguem pendentes os limites dos nove raions, bairros, enclaves e a forma cartográfica da Cidade Velha.",
+      "answer": "Em 2010, Novydres tem nove raions administrativos oficialmente nomeados: Dunwich, Levi, Alexandria, Chelsea, Bukovie, New London, Sulfok, Drevnigrad e Vasyl Bay. Cidade Velha fica em Chelsea conforme GEO-004.1. Geometria, posições, limites e poder Cainita não aprovados.",
+      "recommendation": "Nomes e existência canonizados; construir a geografia física e submeter macroposições e fronteiras em decisões separadas.",
+      "closure_criteria": "GEO-004.1 e GEO-004.2 fechados; restantes: geometrias, bairros, enclaves e divisão territorial exata.",
       "source_references": [
+        "novydres/cenario/atlas-novydres/raions-oficiais-2010.json",
         "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json"
       ],
       "impact_subject_patterns": [
@@ -118,8 +119,13 @@
         "poi-*"
       ],
       "approved_subdecision_ids": [
-        "GEO-004.1"
-      ]
+        "GEO-004.1",
+        "GEO-004.2"
+      ],
+      "canonical_sources_by_subdecision": {
+        "GEO-004.1": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
+        "GEO-004.2": "novydres/cenario/atlas-novydres/raions-oficiais-2010.json"
+      }
     },
     {
       "id": "GEO-005",
@@ -499,6 +505,7 @@
     "GEO-002.3",
     "GEO-003.1",
     "GEO-014.1",
-    "GEO-004.1"
+    "GEO-004.1",
+    "GEO-004.2"
   ]
 }

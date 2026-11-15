@@ -109,6 +109,10 @@ A origem geológica profunda da geotermia, sua concentração abundante na Cidad
 
 O núcleo histórico Cidade Velha (Old Town) pertence ao raion Chelsea, conforme [fonte canônica única](../../geografia/district-chelsea/cidade-velha-2010.json). Esse vínculo não canoniza os perímetros dos bairros, a totalidade das fronteiras nem a cronologia de Pristan Vasilieva.
 
+### Fechamento GEO-004.2 (15/11/2026)
+
+Os nove raions administrativos oficiais foram ratificados. A **fonte única** de seus nomes e existência é [`raions-oficiais-2010.json`](../raions-oficiais-2010.json). Nenhuma macroposição, fronteira, subbairro ou domínio Cainita foi aprovado nesta subdecisão.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:

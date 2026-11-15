@@ -52,6 +52,18 @@ jobs:
           assert.equal(geo.geology.deep_groundwater_circulation,true);
           assert.equal(geo.geology.active_surface_volcano_required,false);
           assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
+          const raions=j('raions-oficiais-2010.json');
+          assert.equal(raions.fact_id,'GEO-004.2');
+          assert.equal(raions.canonical_status,'CLOSED_CANON_SCOPED');
+          assert.equal(raions.official_raion_count,9);
+          const officialNames=['Dunwich','Levi','Alexandria','Chelsea','Bukovie','New London','Sulfok','Drevnigrad','Vasyl Bay'];
+          assert.deepEqual(raions.raions.map(x=>x.official_name),officialNames);
+          assert.equal(new Set(raions.raions.map(x=>x.subject_id)).size,9);
+          for(const x of raions.raions){
+            const d=JSON.parse(readFileSync('novydres/cenario/geografia/'+x.subject_id+'/conteudo.json','utf8'));
+            assert.equal(d.canonical_identity_reference.source_of_truth,root+'raions-oficiais-2010.json',x.subject_id);
+            assert.equal(x.geometry,null,x.subject_id);
+          }
           const oldTown=JSON.parse(readFileSync('novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json','utf8'));
           assert.equal(oldTown.fact_id,'GEO-004.1');
           assert.equal(oldTown.canonical_status,'CLOSED_CANON_SCOPED');

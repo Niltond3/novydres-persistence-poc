@@ -9,6 +9,8 @@ visibility: SYSTEM_AUDIT
 
 **Única fonte editorial candidata para conteúdos geográficos ainda não aprovados:** [atlas-proposta.md](atlas-proposta.md). Cada raion e lugar possui assunto próprio em `cenario/geografia/` ou `cenario/lugares/`, com uma única projeção desta fonte. A existência de um item na proposta não aprova automaticamente seu conteúdo.
 
+**GEO-004.2 — raions oficiais:** [raions-oficiais-2010.json](raions-oficiais-2010.json) é a fonte canônica única para a existência e os nomes dos nove raions em 2010. Os assuntos de raion apenas referenciam a lista. Não estão aprovadas as fronteiras, dimensões, macroposições ou jurisdições Cainitas.
+
 **Fato canônico de população municipal residente em 2010:** [populacao-2010.json](populacao-2010.json). A proposta geográfica não constitui fonte autônoma para o censo.
 
 **Localização e implantação territorial aprovadas GEO-002.1/GEO-002.2/GEO-002.3:** a fonte canônica única é [localizacao-geral-2010.json](localizacao-geral-2010.json). Configuração continental majoritária, acesso marítimo por grande baía natural, rios e lagoas naturais e fontes termais são diretrizes aprovadas; não se trata de arquipélago. A origem geológica, a concentração na Cidade Velha e a desigualdade de aquecimento estão definidas **exclusivamente** em [geotermia-aquecimento-2010.json](geotermia-aquecimento-2010.json); redes, vazão, geometrias, área e coordenadas permanecem abertas.
