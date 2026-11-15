@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO004_3_AND_GEO005_1_CLOSED_ERMO_POLYCENTRIC_HISTORY_OTHER_GEO_OPEN",
+  "register_status": "GEO005_1_AND_2_CANON_CLOSED_GILGAMESH_ALLOCATION_SPECIFICS_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 10,
+  "owner_approved_canon_decisions": 11,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -133,15 +133,18 @@
     {
       "id": "GEO-005",
       "title": "Formação histórica e expansão urbana",
-      "evidence_status": "POLYCENTRIC_DISCONTINUOUS_GROWTH_APPROVED_CHRONOLOGY_PENDING",
-      "decision_state": "PARTIALLY_CLOSED_GEO-005.1",
+      "evidence_status": "POLYCENTRIC_GROWTH_AND_GILGAMESH_STRATEGIC_EMISSARY_ALLOCATION_APPROVED_SPECIFICS_PENDING",
+      "decision_state": "PARTIALLY_CLOSED_GEO-005.1_AND_GEO-005.2",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
-        "approved_subdecision": "GEO-005.1"
+        "approved_subdecisions": [
+          "GEO-005.1",
+          "GEO-005.2"
+        ]
       },
-      "answer": "Aprovado crescimento urbano policêntrico, distribuído e descontínuo, originado em vários núcleos historicamente autônomos, limitados por Ermos e conectados apenas parcialmente por infraestrutura. A atribuição estratégica de emissários Cainitas por Gilgamesh permanece proposta não canonizada no GEO-005.2.",
-      "recommendation": "Aplicar este modelo histórico como restrição espacial obrigatória para definir posição dos raions; discutir no GEO-005.2 a seleção dos emissários de Gilgamesh, sem presumir clãs ou distâncias.",
-      "closure_criteria": "GEO-005.1 fechado; pendem GEO-005.2 e cronologia por raion, fundações, fases de obras, expansão e distribuição inicial dos clãs.",
+      "answer": "Crescimento urbano policêntrico e descontínuo, estruturado historicamente por Gilgamesh mediante envio de emissários Cainitas a núcleos distintos conforme aptidões, ambiente e estratégia, formando senhorios subordinados. Identidades, clãs por núcleo, proximidades, fronteiras e equivalência com raions de 2010 não foram aprovados.",
+      "recommendation": "Aplicar esse princípio estratégico à seleção futura de macroposições, depois da geografia física. Não impor distância fixa entre clãs nem inventar distribuições fundadoras.",
+      "closure_criteria": "GEO-005.1 e GEO-005.2 aprovados; continuar GEO-005.3 (relação senhorios/raions), cronologia por núcleo e fases históricas da infraestrutura.",
       "source_references": [
         "novydres/cenario/historia-global/formacao-policentrica-2010.json",
         "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
@@ -152,7 +155,8 @@
         "district-*"
       ],
       "approved_subdecision_ids": [
-        "GEO-005.1"
+        "GEO-005.1",
+        "GEO-005.2"
       ]
     },
     {
@@ -517,6 +521,7 @@
     "GEO-004.1",
     "GEO-004.2",
     "GEO-004.3",
-    "GEO-005.1"
+    "GEO-005.1",
+    "GEO-005.2"
   ]
 }

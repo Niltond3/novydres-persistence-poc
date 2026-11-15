@@ -6,12 +6,12 @@ visibility: PLAYER_SAFE
 source_snapshot: 7ce8e88c122a5d80879e30a23b1f3be159cac727
 created_on: 2026-11-14
 census_year: 2010
-canonical_decisions_closed: 10
+canonical_decisions_closed: 11
 ---
 
 # Dossiê decisório GEO-001 a GEO-022 — Novydres
 
-> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1, GEO-004.2, GEO-004.3 e GEO-005.1 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
+> **Emenda 15/11/2026:** GEO-001.1, GEO-002.1, GEO-002.2, GEO-002.3, GEO-003.1, GEO-014.1 e GEO-004.1, GEO-004.2, GEO-004.3, GEO-005.1 e GEO-005.2 fechados com fontes únicas e versões antigas removidas do HEAD. A interpretação de trechos de investigação anteriores deve seguir a autoridade mais recente.
 
 > **Nenhuma recomendação deste dossiê é um fato canônico.** Os 22 tópicos são pacotes de decisão para aprovação expressa. Os estados técnicos dos arquivos de origem (`UNKNOWN`, `CANDIDATE`, `NOT_SELECTED`) não são convertidos em aprovação por este documento.
 
@@ -80,9 +80,9 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-005 — Formação histórica e expansão urbana
 
-**GEO-005.1 FECHADO (15/11/2026):** crescimento urbano policêntrico, distribuído e descontínuo, com vários núcleos históricos distintos e limites naturais do Ermo. Fonte única: [`formacao-policentrica-2010.json`](../../historia-global/formacao-policentrica-2010.json). A escolha de emissários Cainitas por Gilgamesh segundo aptidões territoriais está proposta, **não aprovada**, como GEO-005.2. Não há cronologia ou alocações clã×raion aprovadas.
+**GEO-005.1 e GEO-005.2 FECHADOS (15/11/2026):** a [fonte única histórica](../../historia-global/formacao-policentrica-2010.json) estabelece crescimento policêntrico e envio estratégico por Gilgamesh de emissários Cainitas a núcleos separados, escolhidos conforme aptidões, recursos naturais e interesses políticos, para constituir senhorios subordinados. Não foram canonizados nomes de emissários, clãs por núcleo, posições, distâncias ou limites de senhorios.
 
-- **Situação:** `PARTIALLY_CLOSED_GEO-005.1` — formação policêntrica fechada; cronologia e fundações específicas abertas.
+- **Situação:** `PARTIALLY_CLOSED_GEO-005.1_AND_GEO-005.2` — formação policêntrica e política de fundação aprovadas; fundações e cronologia específicas abertas.
 - **Resposta ao inventário:** Fontes discutem 1423/fundação, 1917, 1950–1989, 1990–1998 e 2010; não há mapa de expansão, idade construtiva ou implantação das grandes obras.
 - **Recomendação:** Usar fases espaciais rastreáveis: assentamentos antigos, núcleo fluvial, infraestrutura pré-industrial, militar/industrial na Guerra Fria, declínio e reforma. Vincular estilo de quarteirão à época, sem reescrever acontecimentos.
 - **Critério de fechamento:** Aprovar linhas do tempo de implantação, mudanças de nome, principais obras e continuidade entre eras.
