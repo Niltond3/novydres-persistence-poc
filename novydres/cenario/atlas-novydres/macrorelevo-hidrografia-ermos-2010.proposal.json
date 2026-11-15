@@ -1,0 +1,174 @@
+{
+  "schema": "NOVYDRES_GEO_PHYSICAL_STRUCTURE_PROPOSAL_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_ids": [
+    "GEO-003.3",
+    "GEO-003.4",
+    "GEO-003.5"
+  ],
+  "decision_scope": "GEO-003 macrorelevo, rios e lagoas naturais, áreas do Ermo e conexões hidrotermais",
+  "canonical_status": "PROPOSED_OWNER_REVIEW",
+  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
+  "authored_on": "2026-11-15",
+  "editorial_goal": "Fechar só a topologia física indispensável para a distribuição dos raions e futuro mapa de 2010. Evitar coordenadas, desenho completo da malha, perfis técnicos, inventário exaustivo de lagos ou estações.",
+  "sources_of_binding_canon": [
+    "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
+    "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+    "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
+    "novydres/cenario/historia-global/formacao-policentrica-2010.json",
+    "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
+    "novydres/cenario/historia-global/crescimento-publico-e-geopolitico-2010.json"
+  ],
+  "reference_real_world": {
+    "geography": "Península de Seward é composta por serras, elevações onduladas, vales fluviais, tundra, planícies encharcadas e permafrost; a região de Port Clarence contém baía protegida, lagoas e ambiente costeiro vulnerável.",
+    "geothermal": "Áreas termais reais como Pilgrim e Serpentine Hot Springs são fenômenos geológicos localizados; Novydres tem concentração excepcionalmente abundante em Old Town por cânone ficcional, sem torná-la uma 'ilha de clima quente'.",
+    "hydrology": "Água superficial segue divisores de águas e declives até estuários. O calor geotérmico pode aquecer trechos sem determinar a vazão total ou tornar toda a baía morna.",
+    "sources": [
+      "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JF005355",
+      "https://www.nps.gov/articles/000/geology-of-serpentine-hot-springs.htm",
+      "https://pubs.usgs.gov/ha/ha730/ch_n/N-AKtext1.html",
+      "https://catalog.data.gov/dataset/topobathymetric-digital-elevation-model-of-teller-brevig-mission-and-port-clarence-al-2023"
+    ]
+  },
+  "macrorelief": {
+    "decision": "GEO-003.3",
+    "status": "PROPOSED",
+    "zones": [
+      {
+        "id": "terrain-thermal-valley",
+        "label": "Bacia/vale termal histórico",
+        "form": "Depressão e vale interior protegido por colinas, conectado hidrogeologicamente a falhas quentes profundas.",
+        "placement": "Abrange a Cidade Velha/Old Town de Chelsea, sem determinar a direção cartográfica exata do vale.",
+        "function": "Origem do núcleo histórico com abrigos, água, solos localmente descongelados e águas termais abundantes.",
+        "limit": "Não equivaler automaticamente a todo Chelsea nem ao centro cívico metropolitano de 2010."
+      },
+      {
+        "id": "terrain-rocky-uplands",
+        "label": "Serras e contrafortes rochosos",
+        "form": "Cadeias de cristas, elevações e vales encaixados, entre o litoral e as áreas interiores; espinha dorsal dos divisores de águas.",
+        "function": "Dificultam conurbação, favorecem mineração e justificam rotas de travessia restritas.",
+        "limit": "Sem altitude, nome de cadeia inventada ou posicionamento por raion nesta etapa."
+      },
+      {
+        "id": "terrain-tundra-lowlands",
+        "label": "Planícies de tundra e permafrost",
+        "form": "Áreas baixas, colinas suaves, turfeiras, solos encharcados no degelo, terreno instável e lagoas de depressão.",
+        "function": "Ermos extensos e obstáculos caros à construção de ferrovias, estradas, túneis e aquecimento.",
+        "limit": "Permafrost não implica terreno sempre coberto por gelo superficial ou água permanentemente congelada."
+      },
+      {
+        "id": "terrain-sheltered-bay",
+        "label": "Baía abrigada e zonas estuarinas",
+        "form": "Entrada marítima navegável protegida por ponta ou barreira costeira, com planícies de maré, trechos de talude rochoso e áreas portuárias viáveis.",
+        "function": "Nó histórico de comércio e logística, vinculado à grande baía natural já aprovada.",
+        "limit": "Ainda sem decidir onde ficam cais, portos, raions e docas."
+      },
+      {
+        "id": "terrain-exposed-coast",
+        "label": "Litoral externo exposto",
+        "form": "Trechos de costa varridos por ventos, tempestades, gelo marítimo sazonal, erosão e declives alternados.",
+        "function": "Barreira geográfica adicional, exigindo portos protegidos, quebra-gelos e infraestrutura de acesso.",
+        "limit": "Não afirmar que a baía inteira é permanentemente livre de gelo."
+      }
+    ],
+    "dependency": "Conservar posições relativas funcionais (vale, serras, baixadas, baía) antes de fixar azimutes absolutos, área e altitude."
+  },
+  "hydrology": {
+    "decision": "GEO-003.4",
+    "status": "PROPOSED",
+    "main_river": {
+      "name_candidate": "Rio Vasyl / Reka Vasilya",
+      "existence_as_named_feature": "PROPOSED_FROM_CANDIDATE_ATLAS_NOT_PREVIOUSLY_CLOSED",
+      "topology": "Rio de água doce alimentado por uma bacia em cotas superiores; recebe tributários e afluxos de nascentes geotérmicas quando percorre o Vale Termal de Old Town; desce para estuário na grande baía.",
+      "chelsea": "Curso principal atravessa a Cidade Velha, com trechos localmente mornos e margens favoráveis à ocupação histórica.",
+      "estuary": "Deságue em setor costeiro industrial/portuário ainda não delimitado. A associação com Sulfok é a principal hipótese editorial de 2010, sem aprovar sua foz, fronteiras ou rota.",
+      "temperature": "Trechos aquecidos ficam perto de entradas termais; jusante e afluentes podem esfriar, congelar parcialmente ou receber controle hidráulico humano. Nunca supor rio integralmente quente ou gelo ausente por toda a extensão.",
+      "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário."
+    },
+    "secondary_rivers": "Ao menos duas microbacias laterais independentes ou tributárias drenam serras e tundra para a baía, lagoas ou costa externa, sem convergir todas obrigatoriamente ao Rio Vasyl; seus nomes e cursos serão atribuídos na cartografia.",
+    "lakes_and_lagoons": [
+      {
+        "id": "freshwater-inland",
+        "kind": "lagoas e lagos interiores de água doce",
+        "position": "vales e depressões glacioperiglaciais em zonas de tundra",
+        "connection": "Alimentados por águas de degelo, chuva e tributários; drenagem sazonal ou permanente variável.",
+        "importance": "Reserva natural, habitat, áreas de várzea e obstáculos físicos."
+      },
+      {
+        "id": "coastal-lagoon",
+        "kind": "lagoas costeiras salobras e planícies de maré",
+        "position": "atrás de barreiras costeiras e na borda da grande baía",
+        "connection": "Mistura de água marinha, cursos fluviais e maré.",
+        "importance": "Mangues não; ambiente ártico de marés, sedimentação, erosão e áreas inadequadas à urbanização."
+      },
+      {
+        "id": "thermal-pools",
+        "kind": "piscinas e lagunas termais localizadas",
+        "position": "falhas e afloramentos no entorno da Cidade Velha e outras fontes esparsas",
+        "connection": "Água subterrânea quente; não equiparar todas ao sistema principal do Rio Vasyl.",
+        "importance": "Microambientes de vida, vapor e estrutura original do aquecimento."
+      }
+    ],
+    "subterranean_network": {
+      "interpretation": "Águas subterrâneas circulam por aquíferos e fraturas. Águas geotérmicas podem aflorar em áreas distantes e alimentar canais laterais naturais ou captados pela engenharia urbana.",
+      "new_london_candidate": "A proposta antiga do Atlas descreve canais subterrâneos que emergem em New London. Manter como hipótese plausível de afloramento de aquífero, não canalização comprovada do leito inteiro do Rio Vasyl por New London nem trajeto específico fechado.",
+      "nosferatu": "Galerias e linhas de ley podem atravessar o sistema, mas não se equivalem necessariamente a aquíferos ou dutos físicos."
+    }
+  },
+  "ermos": {
+    "decision": "GEO-003.5",
+    "status": "PROPOSED",
+    "types": [
+      {
+        "id": "rocky-pass",
+        "kind": "Ermos de cristas, desfiladeiros e vertentes",
+        "cause": "relevo rochoso, ventos, avalanches pontuais e travessias difíceis",
+        "map_effect": "formam divisas naturais e gargalos para passagens protegidas"
+      },
+      {
+        "id": "tundra-permafrost",
+        "kind": "Ermos de tundra e solos permanentemente congelados",
+        "cause": "exposição térmica, instabilidade do permafrost e vastas zonas sem infraestrutura",
+        "map_effect": "interrompem urbanização contínua e exigem corredores técnicos construídos"
+      },
+      {
+        "id": "wetlands",
+        "kind": "Ermos de várzeas, pântanos e lagoas",
+        "cause": "baixadas e saturação sazonal do solo",
+        "map_effect": "desviam caminhos, limitam fundações e podem inundar"
+      },
+      {
+        "id": "coastal",
+        "kind": "Ermos costeiros e de tempestades",
+        "cause": "gelo, marés, erosão, vento e risco marítimo",
+        "map_effect": "restringem litoral habitável e portos a setores protegidos"
+      }
+    ],
+    "isolation": "Boa parte dos núcleos urbanizados permanece separada por Ermos funcionais, não faixas decorativas, preservando GEO-004.3.",
+    "inhabitability": "Sem aquecimento, abrigo e proteção compatíveis com condições extremas, a exposição prolongada é letal; infraestrutura e nascentes produzem bolsões habitáveis.",
+    "routes": "Travessias artificiais protegidas, ferrovias, túneis e estradas com controle são possíveis; serão posicionadas somente nos GEO-012/GEO-013.",
+    "no_special_administrative_raion": "Ermos não formam um décimo raion."
+  },
+  "geothermal_rule": "Manter GEO-003.1 e GEO-003.2: maior abundância termal em Old Town, habitabilidade local, mais dependência de aquecimento fora das zonas termicamente protegidas. Não afirmar aquecimento do ar metropolitano uniforme nem gradiente radial matemático.",
+  "mapping_order": [
+    "Consolidar tipos de macrorrelevo e a relação da bacia termal com a baía.",
+    "Confirmar o modelo hidrológico do Rio Vasyl e o papel de rios secundários, lagoas e possíveis afloramentos.",
+    "Confirmar os quatro tipos de Ermo e identificar passagens viáveis apenas depois do relevo.",
+    "Escolher posições de raions GEO-004 em função da geografia e história, sem arbitrar clãs fundadores.",
+    "Detalhar redes de transporte GEO-012/GEO-013, inclusive exatamente duas paradas do Expresso, antes da arte visual."
+  ],
+  "important_still_unassigned": [
+    "contornos reais da baía, forma do litoral e ilhas",
+    "área, perímetro, coordenadas e sistema de projeção",
+    "nome/cotas/contorno das serras, vales e planícies do território fictício",
+    "exato traçado, largura, vazão e foz do Rio Vasyl",
+    "nomes, número e posições de lagoas e tributários",
+    "ligação física e localização dos canais subterrâneos citados no Atlas candidato",
+    "posições e limites dos Ermos, dos raions e de seus núcleos urbanos",
+    "linhas de transporte e dutos, estações, portos, hospitais, construções e bairros",
+    "associação de clã, personagem ou domínio Cainita a cada feição natural"
+  ],
+  "owner_decision_requested": "Aprovar ou corrigir a macroestrutura de cinco zonas, o Rio Vasyl com aquecimento localizado, as lagoas interiores e costeiras e quatro categorias de Ermo. Não fechar geometrias sem modelo cartográfico.",
+  "visibility": "player_safe_physical_geography_except_underground_supernatural_details",
+  "single_authoritative_proposal": true
+}
