@@ -2455,7 +2455,7 @@
       "source_url": "https://docs.google.com/document/d/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU/edit?usp=drivesdk",
       "scope": "HISTORICAL_TEST_OR_ENGINE",
       "reported_governance_status": "TO_BE_CLASSIFIED",
-      "reported_migration_state": "TEXT_READBACK_VERIFIED",
+      "reported_migration_state": "RETIRED_FROM_CURRENT_TREE_HISTORICAL_GIT_ONLY",
       "archived_source_path": "novydres/migration/drive-archive/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU.source.txt",
       "archived_git_blob_sha": "681e2286c2acb1e53c4b772a4b13bbdc9115844e",
       "source_revision": "AHj4eMSpHkZ9DAxXLkXbaiVeKuEvucL50tm6oBMMtyD3qJcLN4M8fpkzcVLNBZ-64wE7r61FH2cimrHoUAKQLSLxitAUL3ADi6nEL1nSFQ",
@@ -2476,7 +2476,8 @@
         "observed_size_bytes": "8366",
         "observed_modified_time": "2026-10-28T19:36:13.267Z",
         "checksum_or_permissions_not_proven": true
-      }
+      },
+      "current_tree_source_path": null
     },
     {
       "id": "16Ft2yOTeIgr4kqiSiEbmB5GwWZdEUG_WyAwwosbEUq0",
@@ -3772,7 +3773,7 @@
       "source_url": null,
       "scope": "NOVYDRES",
       "reported_governance_status": "HISTORICAL_REFERENCE_NOT_AUTHORITY",
-      "reported_migration_state": "TEXT_READBACK_VERIFIED",
+      "reported_migration_state": "RETIRED_FROM_CURRENT_TREE_HISTORICAL_GIT_ONLY",
       "archived_source_path": "novydres/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1.md",
       "archived_git_blob_sha": "230e992e66fb0a7ba0c19057f92f42fb90fa2964",
       "source_revision": null,
@@ -3789,7 +3790,8 @@
         "source": "REGISTRY_ID_NAMESPACE_RECONCILIATION_2026_11_12",
         "status": "NOT_DRIVE_ID_NOT_QUERIED_AS_PROVIDER_ORIGINAL",
         "rights_and_original_bytes_unverified": true
-      }
+      },
+      "current_tree_source_path": null
     },
     {
       "id": "file_00000000bcdc820eb5a1d8d4e448e0be",
@@ -3797,7 +3799,7 @@
       "source_url": null,
       "scope": "NOVYDRES",
       "reported_governance_status": "HISTORICAL_REFERENCE_NOT_AUTHORITY",
-      "reported_migration_state": "TEXT_READBACK_VERIFIED",
+      "reported_migration_state": "RETIRED_FROM_CURRENT_TREE_HISTORICAL_GIT_ONLY",
       "archived_source_path": "novydres/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1_duplicate.md",
       "archived_git_blob_sha": "230e992e66fb0a7ba0c19057f92f42fb90fa2964",
       "source_revision": null,
@@ -3814,7 +3816,8 @@
         "source": "REGISTRY_ID_NAMESPACE_RECONCILIATION_2026_11_12",
         "status": "NOT_DRIVE_ID_NOT_QUERIED_AS_PROVIDER_ORIGINAL",
         "rights_and_original_bytes_unverified": true
-      }
+      },
+      "current_tree_source_path": null
     },
     {
       "id": "libfile_89530d48d1488191987787be1a5fd60b",
@@ -7842,15 +7845,15 @@
       "source_family": "SOURCE_MIGRATION_EVIDENCE",
       "owner_proposal": "fontes/proveniencia",
       "original_preserved_in_git": true,
-      "candidate_destination": "novydres/fontes/originais/migration/drive-archive/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU.source.txt",
-      "disposition": "GIT_BLOB_EXACT_HISTORICAL_SOURCE_NO_OPERATIONAL_ALIAS",
+      "candidate_destination": null,
+      "disposition": "RETIRED_FROM_HEAD_AFTER_OWNER_GEO001_SINGLE_SOURCE_POLICY_GIT_HISTORY_ONLY",
       "field_split": true,
       "cross_domain_content_handoff": "D03_D04_D05_SEMANTIC_REVIEW_REQUIRED",
       "visibility": "SYSTEM_AUDIT_UNTIL_REVIEW",
       "authority": "PRESERVED_SOURCE_NOT_PROMOTED",
       "transformation_evidence": "EXACT_ORIGINAL_GIT_BLOB_SHA_REHOME_PRESERVE_SOURCE",
       "field_owner_custody": {
-        "original_document_sha_owner": "novydres/fontes/originais",
+        "original_document_sha_owner": "GIT_HISTORICAL_COMMIT_ONLY",
         "identity_provenance_reference_owner": "novydres/fontes/registro.json",
         "technical_audit_assertion_owner": "novydres/sistema/arquitetura",
         "domain_semantics_in_original": "SOURCE_ONLY_NOT_CURRENT_AUTHORITY",
@@ -7859,7 +7862,9 @@
         "source_scope_basis": "EXACT_ARCHIVED_SOURCE_PATH_MATCH_IN_D01_CONTROLLED_EXTERNAL_REGISTRY",
         "owner_collision_resolution": "ORIGINAL_BLOB_REHOMED_ONCE; OTHER_PHASES_LINK_TO_SOURCE_AND_MUST_APPROVE_FIELD_TRANSFORMATION",
         "no_field_fact_promoted_d02": true
-      }
+      },
+      "current_head_copy": false,
+      "historical_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
     },
     {
       "original_path": "novydres/migration/drive-archive/1wlFBiyBkY_GtkfjlC0A9pNPszrL350zUW9zXkPV7X0g.source.txt",
@@ -8392,15 +8397,15 @@
       "source_family": "SOURCE_MIGRATION_EVIDENCE",
       "owner_proposal": "fontes/proveniencia",
       "original_preserved_in_git": true,
-      "candidate_destination": "novydres/fontes/originais/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1_duplicate.md",
-      "disposition": "GIT_BLOB_EXACT_HISTORICAL_SOURCE_NO_OPERATIONAL_ALIAS",
+      "candidate_destination": null,
+      "disposition": "RETIRED_FROM_HEAD_AFTER_OWNER_GEO001_SINGLE_SOURCE_POLICY_GIT_HISTORY_ONLY",
       "field_split": true,
       "cross_domain_content_handoff": "D03_D04_D05_SEMANTIC_REVIEW_REQUIRED",
       "visibility": "SYSTEM_AUDIT_UNTIL_REVIEW",
       "authority": "PRESERVED_SOURCE_NOT_PROMOTED",
       "transformation_evidence": "EXACT_ORIGINAL_GIT_BLOB_SHA_REHOME_PRESERVE_SOURCE",
       "field_owner_custody": {
-        "original_document_sha_owner": "novydres/fontes/originais",
+        "original_document_sha_owner": "GIT_HISTORICAL_COMMIT_ONLY",
         "identity_provenance_reference_owner": "novydres/fontes/registro.json",
         "technical_audit_assertion_owner": "novydres/sistema/arquitetura",
         "domain_semantics_in_original": "SOURCE_ONLY_NOT_CURRENT_AUTHORITY",
@@ -8409,7 +8414,9 @@
         "source_scope_basis": "EXACT_ARCHIVED_SOURCE_PATH_MATCH_IN_D01_CONTROLLED_EXTERNAL_REGISTRY",
         "owner_collision_resolution": "ORIGINAL_BLOB_REHOMED_ONCE; OTHER_PHASES_LINK_TO_SOURCE_AND_MUST_APPROVE_FIELD_TRANSFORMATION",
         "no_field_fact_promoted_d02": true
-      }
+      },
+      "current_head_copy": false,
+      "historical_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
     },
     {
       "original_path": "novydres/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1.md",
@@ -8417,15 +8424,15 @@
       "source_family": "SOURCE_MIGRATION_EVIDENCE",
       "owner_proposal": "fontes/proveniencia",
       "original_preserved_in_git": true,
-      "candidate_destination": "novydres/fontes/originais/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1.md",
-      "disposition": "GIT_BLOB_EXACT_HISTORICAL_SOURCE_NO_OPERATIONAL_ALIAS",
+      "candidate_destination": null,
+      "disposition": "RETIRED_FROM_HEAD_AFTER_OWNER_GEO001_SINGLE_SOURCE_POLICY_GIT_HISTORY_ONLY",
       "field_split": true,
       "cross_domain_content_handoff": "D03_D04_D05_SEMANTIC_REVIEW_REQUIRED",
       "visibility": "SYSTEM_AUDIT_UNTIL_REVIEW",
       "authority": "PRESERVED_SOURCE_NOT_PROMOTED",
       "transformation_evidence": "EXACT_ORIGINAL_GIT_BLOB_SHA_REHOME_PRESERVE_SOURCE",
       "field_owner_custody": {
-        "original_document_sha_owner": "novydres/fontes/originais",
+        "original_document_sha_owner": "GIT_HISTORICAL_COMMIT_ONLY",
         "identity_provenance_reference_owner": "novydres/fontes/registro.json",
         "technical_audit_assertion_owner": "novydres/sistema/arquitetura",
         "domain_semantics_in_original": "SOURCE_ONLY_NOT_CURRENT_AUTHORITY",
@@ -8434,7 +8441,9 @@
         "source_scope_basis": "EXACT_ARCHIVED_SOURCE_PATH_MATCH_IN_D01_CONTROLLED_EXTERNAL_REGISTRY",
         "owner_collision_resolution": "ORIGINAL_BLOB_REHOMED_ONCE; OTHER_PHASES_LINK_TO_SOURCE_AND_MUST_APPROVE_FIELD_TRANSFORMATION",
         "no_field_fact_promoted_d02": true
-      }
+      },
+      "current_head_copy": false,
+      "historical_commit": "c9fcfc0c558cd17d58ec8c8272da3ed70182ff37"
     },
     {
       "original_path": "novydres/migration/library-sources/NOVYDRES_PROJECT_BOOTSTRAP_PROMPT_WEB_V2.txt",
@@ -8924,13 +8933,15 @@
     "policy": "NO_CROSS_NAMESPACE_IDENTIFIER_EQUIVALENCE_OR_UNVERIFIED_ACCESS_CLAIMS"
   },
   "origin_rehome": {
-    "status": "ALL_128_D02_ORIGINAL_GIT_BLOBS_PINNED_IN_NEW_OWNERS",
+    "status": "125_D02_ORIGINALS_IN_CURRENT_TREE_3_RETIRED_TO_GIT_HISTORY_BY_OWNER_POLICY",
     "governance": 27,
     "historical_source_and_evidence": 99,
     "asset_reference": 2,
     "no_original_drive_binary_copied": true,
     "authority_not_promoted": true,
-    "fields_owned_by_d03_d05_not_resolved_by_copy": 96
+    "fields_owned_by_d03_d05_not_resolved_by_copy": 96,
+    "current_tree_originals": 125,
+    "historical_git_only_originals": 3
   },
   "media_source_recovery": {
     "date": "2026-11-12",

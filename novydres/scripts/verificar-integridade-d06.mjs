@@ -52,16 +52,26 @@ export function verifyD06({ledgerOverride=null}={}){
   ['novydres/world/geography/03_atlas_de_novydres_v0_2_2.source.md','90174f8f5726cb2b188ef2db66531acbf6898c93'],
   ['novydres/world/geography/03_atlas_de_novydres_v0_2_candidate.source.md','e6392e2208b2dff5457c22c700d3d0702da092fe']
  ]);
+ const retiredAdditionalD02=new Map([
+   ['novydres/migration/drive-archive/1WkxmGwqiCrXxZkLsR8Pk7YdVHLb6WAiM1qGJUJr5DxU.source.txt','681e2286c2acb1e53c4b772a4b13bbdc9115844e'],
+   ['novydres/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1.md','230e992e66fb0a7ba0c19057f92f42fb90fa2964'],
+   ['novydres/migration/library-sources/NOVYDRES_MASTER_HANDOFF_V1_duplicate.md','230e992e66fb0a7ba0c19057f92f42fb90fa2964']
+ ]);
+ let d02VerifiedFromGit=0;
  let atlasVerifiedFromGit=0;
  for(const x of sourceOwned){
   if([...tree.values()].includes(x.source_blob_sha))continue;
-  const allowed=retiredAtlasSources.get(x.source_path);
-  if(x.d01_origin_route?.handoff_phase!=='D03'||allowed!==x.source_blob_sha)err('D02_D04_SOURCE_NOT_COPIED');
+  const phase=x.d01_origin_route?.handoff_phase;
+  const atlasAllowed=phase==='D03'&&retiredAtlasSources.get(x.source_path)===x.source_blob_sha;
+  const d02Allowed=phase==='D02'&&retiredAdditionalD02.get(x.source_path)===x.source_blob_sha;
+  if(!atlasAllowed&&!d02Allowed)err('D02_D04_SOURCE_NOT_COPIED');
   const historic=execFileSync('git',['rev-parse',inv.source_snapshot.commit_sha+':'+x.source_path],{encoding:'utf8'}).trim();
   if(historic!==x.source_blob_sha)err('ATLAS_HISTORICAL_GIT_PIN_FAILED');
-  atlasVerifiedFromGit++;
+  if(atlasAllowed)atlasVerifiedFromGit++;
+  else d02VerifiedFromGit++;
  }
  if(atlasVerifiedFromGit!==2)err('ATLAS_RETIRED_SOURCE_COUNT');
+ if(d02VerifiedFromGit!==3)err('D02_RETIRED_SOURCE_COUNT');
  const retainedD05=out.source_records.filter(x=>x.retirement_method==='EXACT_INERT_SOURCE_BLOB_REHOMED');
  if(retainedD05.length!==285||retainedD05.some(x=>![...tree.values()].includes(x.original_git_blob_sha)))err('D05_EXACT_SOURCE_LOST');
  const beforeCutover=out.source_records.filter(x=>x.active_original_reference===true);
@@ -72,7 +82,7 @@ export function verifyD06({ledgerOverride=null}={}){
  if(d05.exact_blobs_inert!==285||d05.historical_git_only!==114||d05.active_source_successions_unproven!==121)err('D06_D05_CROSSCHECK_FAILED');
  if(!cat.ok||!d04.ok||!state.ok||!xp.ok||!story.ok||!mechanics.ok||!history.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
  if(zero.gate==='ZERO_LEGACY_BLOCKED')err('D06_ZERO_LEGACY_FAIL');
- return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,atlas_git_only_source_count:atlasVerifiedFromGit,
+ return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,atlas_git_only_source_count:atlasVerifiedFromGit,d02_git_only_source_count:d02VerifiedFromGit,
   git_only_historical_sources:114,active_successions_requiring_contextual_semantic_review:121,
   zero_legacy_gate:zero.gate,media_optional_waived:zero.counters.media_optional_waived,
   catalog_subjects:cat.entries,c45_cursor:state.cursor,

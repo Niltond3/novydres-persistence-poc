@@ -7,3 +7,7 @@ Este registro de **proveniência** não ativa fontes, aprova material editorial,
 Dos 14 ativos no Drive, os 14 hashes SHA-256 de **destino** foram calculados. Apenas o MasterMap possui correspondência com digest histórico de origem; para os outros 13 não há equivalência origem/destino provada. As cinco mídias opcionais mantêm integridade `UNKNOWN/NOT_VERIFIED` e nenhuma URL inventada. O check `verificar-custodia-d02.mjs` bloqueia recuperação falsa, nova dependência declarada e referência direta observável nos consumidores inspecionados.
 
 A política histórica de armazenamento em Drive, os estados CANÔNICO/FECHADO e APROVADO/CONGELADO, e as decisões editoriais pendentes permanecem preservados. O gate D02 não é cutover e não substitui a revisão independente de D07.
+
+## Retirada aprovada de fontes editoriais obsoletas (15/11/2026)
+
+Três cópias de migração cujo texto conservava um valor municipal obsoleto foram removidas da árvore atual. A guarda histórica continua nos commits Git e nos SHAs do registro; não constitui fonte editorial concorrente. Dos 128 originais D02, 125 permanecem como bytes no HEAD e 3 ficam exclusivamente no Git histórico. O verificador D06 confere essas exceções por origem e hash exatos, sem relaxar a exigência dos demais 125.
