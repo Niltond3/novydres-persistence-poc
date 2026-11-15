@@ -1,11 +1,9 @@
 {
-  "schema": "NOVYDRES_HISTORY_MILESTONE_PROPOSAL_V1",
+  "schema": "NOVYDRES_HISTORY_CANON_FACT_V1",
   "subject_id": "world-history-novydres",
   "fact_id": "GEO-005.6",
-  "proposal_title": "Reconhecimento público, urbanização excepcional e posição geopolítica de Novydres até 2010",
-  "canonical_status": "PROPOSED_OWNER_REVIEW",
-  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
-  "proposal_date": "2026-11-15",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
   "editorial_scope": "Suplemento gótico-punk de RPG, orientado por marcos relevantes à cidade em 2010. Não produzir censo cronológico, história total nem cadeia exaustiva de prefeitos, guerras e empreiteiras.",
   "source_of_approved_constraints": [
     "novydres/cenario/atlas-novydres/populacao-2010.json",
@@ -47,7 +45,85 @@
       "source": "https://www.anchoragemuseum.org/about-us/stories-and-voices/views-from-the-construction-of-the-trans-alaska-pipeline/"
     }
   ],
-  "proposed_milestones": [
+  "critical_consistency_rules": [
+    "Crescimento e existência públicos de Novydres alteram a história do Alasca no Mundo das Trevas, inclusive censos, representação e economia estadual. Nunca juntar os 7 milhões de Novydres ao total real de 710.231 pessoas no censo de 2010.",
+    "Uma cidade já grande em 1867 não torna automaticamente inexplicável o preço real de US$ 7,2 milhões: o valor jurídico formal e a capacidade de controle imperial não são equivalentes à plena valoração de todas as atividades e direitos locais. Explicar anomalia como disputa de soberanias e influência política, não como desaparecimento dos habitantes.",
+    "O governo mortal muda sem transferência automática de feudos Cainitas. Se algum senhor perder domínio entre 1423 e 2010, isso exige um marco causal próprio com aprovação.",
+    "7 milhões exigem cadeias mundanas de suprimento, alimentos, habitação, água, esgoto, energia, portos, transporte e importações. A geotermia explica aquecimento abundante, não todas as necessidades; linhas de ley e Earthbound não fazem substituição universal de logística.",
+    "Não transformar nove raions modernos em nove feudos originais ou suprimir os Corredores do Ermo. Infraestrutura conecta manchas de ocupação sem urbanização contínua.",
+    "O caminho da política do Alasca em 1867, 1912, 1959, 1968 e 1977 permanece historicamente reconhecível; ficcionalizar especialmente as causas e o peso econômico urbano, não reescrever arbitrariamente todos os eventos."
+  ],
+  "substantive_decisions_left_for_owner": [],
+  "not_yet_approved": [
+    "quantidades e localização exatas das jazidas, minas e recursos naturais",
+    "cronologia precisa de reconhecimento externo de Novydres como cidade e sua população intermediária",
+    "mecanismos e nomes de agentes e contratos de empreendimentos industriais, militares e educacionais",
+    "nome, localização e natureza técnica de cada instalação nuclear americana em Novydres",
+    "traçado cartográfico preciso da ferrovia transcontinental e da travessia do Estreito de Bering, terminais secundários e datas de construção",
+    "detalhes do quadro de horários, operadores, concessões, tarifas e controle de fronteira do Expresso Transberíngio",
+    "posição do Terminal Transberíngio dentro da borda aquecida de Sulfok, além da sua localização distrital aprovada",
+    "eventuais alterações de senhorio Cainita ao longo da história exigem marco causal próprio"
+  ],
+  "editorial_notice": "Aprovado expressamente pelo proprietário em 2026-11-15: os marcos GEO-005.6, a metrópole projetada por vários clãs, recursos por época, educação e administração de longo prazo, instalações nucleares exclusivamente norte-americanas em Novydres e a ferrovia internacional Expresso Transberíngio em atividade até 2010. A estação principal pertence à borda aquecida e periférica de Sulfok; seu fato geográfico é o GEO-013.1. Não fixar detalhes não solicitados.",
+  "cainite_designed_metropolis": {
+    "design_status": "CANON_APPROVED",
+    "thesis": "Novydres não é uma cidade humana colonizada tardiamente por Cainitas: é um projeto urbano e civilizacional cuja evolução é intencionalmente orientada desde a fundação de 1423 por Gilgamesh e múltiplos clãs, com sociedades humanas reais e autônomas sob influência política Cainita permanente.",
+    "mortal_government": "Administrações públicas e privadas humanas reais, muitas vezes competentes e altamente selecionadas, são patrocinadas, influenciadas ou pressionadas por Cainitas para continuidade de planejamento, educação, serviços, comércio e crescimento.",
+    "multipolar_cainite_power": "A influência é de muitos Cainitas e clãs e varia em escala e conflito; não atribuir a Gilgamesh individualmente cada obra nem presumir unanimidade permanente entre clãs.",
+    "human_agency": "Povos originários, trabalhadores, acadêmicos, migrantes e governantes mortais têm agência e podem colaborar, resistir, negociar e produzir mudanças que não se reduzam a ordens de vampiros.",
+    "gothic_punk": "Excelência funcional, investimento e prosperidade coexistem com desigualdade, clientelismo, exploração, feudos, segregação térmica e violência estrutural. Não projetar utopia nem administração infalível.",
+    "distinction": "A intenção de construir a cidade é Cainita desde 1423; comunidades anteriores a Gilgamesh são reais e independentes, não criações dele."
+  },
+  "resources_by_era": {
+    "design_status": "CANON_APPROVED",
+    "fifteenth_to_seventeenth_centuries": "Na região que se tornará Novydres, ouro, gemas e recursos carboníferos sustentam extração e comércio iniciais de escala compatível com tecnologia e população. Grandes jazidas de diamantes são licença geológica ficcional localizada, sem afirmar fatos reais sobre o Alasca.",
+    "eighteenth_and_nineteenth_centuries": "Mineração e metalurgia se expandem; carvão, ouro, gemas, madeiras e logística portuária ajudam Novydres a ser centro de comércio anormalmente desenvolvido para o Alasca.",
+    "twentieth_century": "Petróleo, gás, carvão, minerais estratégicos e raros se tornam progressivamente recursos industriais e exportadores; depósitos subterrâneos anteriores não implicam extração de gás ou petróleo em 1400.",
+    "modern_economy": "Concentração de universidades, escolas técnicas, pesquisa, infraestrutura energética, fabricação e serviços de alto valor soma-se à logística transcontinental.",
+    "geology_caution": "Potencial mineral deve ser atribuído à região com geologia futuramente consistente (GEO-003) e não presumir toda combinação concentrada num único ponto da cidade."
+  },
+  "nuclear_history": {
+    "design_status": "CANON_APPROVED_EXCLUSIVELY_AMERICAN",
+    "presence": "CONFIRMED — instalações e áreas de uso nuclear em Novydres vinculadas exclusivamente à administração, à regulação, ao investimento ou à influência dos Estados Unidos.",
+    "historical_period": "Segunda metade do século XX em diante; não há usinas nucleares na Idade Média nem nos anos 1920.",
+    "permitted_uses": "Energia elétrica complementar, pesquisa, indústria e instalações militares ou de segurança norte-americanas, sem definir reatores, número de unidades ou raions.",
+    "excluded": "Nenhuma instalação, concessão, administração, propriedade ou influência de programa nuclear soviético dentro de Novydres, em qualquer período.",
+    "sovereignty": "Desde a cessão de 1867, Novydres integra o território americano e não concede jurisdição nuclear soviética em seu solo. Isso não elimina vínculos culturais, comerciais ou políticos não nucleares com russos.",
+    "heating_relation": "Geotermia natural permanece a fonte primária aprovada do sistema de aquecimento distrital; energia nuclear não substitui essa regra.",
+    "physical_geography": "Os complexos específicos podem ocupar áreas tecnicamente apropriadas; seus locais, níveis de segurança e eventuais efeitos urbanos permanecem sem atribuição cartográfica.",
+    "real_world_reference": "O reator militar SM-1A em Fort Greely, Alasca, operou de 1962 a 1972; é precedente histórico de capacidade nuclear americana no Ártico, não instalação localizada em Novydres.",
+    "power_context_2010": "A presença nuclear compõe a excepcional base industrial de Novydres e não pressupõe potência elétrica infinita nem segurança absoluta."
+  },
+  "bering_express": {
+    "design_status": "CANON_APPROVED_OPERATING_2010",
+    "name": "Expresso Transberíngio",
+    "operating_year": "2010 — serviço internacional de passageiros e transporte ferroviário de cargas em funcionamento.",
+    "strategic_role": "Um dos marcos públicos de Novydres: ligação intercontinental Rússia oriental — Estreito de Bering — Novydres — Alasca — Canadá — Estados Unidos continentais, possível no Mundo das Trevas graças a séculos de planejamento, recursos e influência Cainita sobre grandes decisões mortais.",
+    "passage": "Travessia protegida pelo Estreito de Bering integrada a sistemas de túneis e ferrovias de aproximação, com controle internacional de fronteiras, adaptação de bitolas e infraestrutura de segurança para condições árticas.",
+    "urban_alignment": "A ferrovia atravessa e articula a coroa periférica aquecida da cidade, por zonas laterais, industriais e logísticas, evitando o centro cívico e os bairros centrais densos; corredores especiais protegidos cruzam Ermos apenas quando necessário para interligar os núcleos urbanos descontínuos.",
+    "no_central_crossing": true,
+    "main_novydres_hub": {
+      "name": "Terminal Transberíngio de Novydres",
+      "raion": "Sulfok",
+      "sector": "franja logística periférica do raion, dentro da faixa urbana servida por aquecimento e infraestrutura protegida",
+      "exact_coordinate": "UNASSIGNED",
+      "local_owner_file": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json"
+    },
+    "city_traffic": "Novydres é parada e plataforma de intercâmbio primária, não mero túnel de passagem: embarque internacional, recepção de passageiros, alfândega, manutenção, triagem de mercadorias e conexão com transporte urbano; serviços ligam o terminal periférico aos demais raions sem exigir a entrada do trem intercontinental no centro.",
+    "landscape": "Eixo aquecido não significa urbanização contínua dos Corredores do Ermo, nem ferrovia exposta sem proteção nos trechos perigosos.",
+    "geopolitical_divergence": "Infraestrutura pública e mundialmente conhecida na linha temporal alternativa do Mundo das Trevas; sua conclusão até 2010 diverge dos projetos não realizados na história real.",
+    "multi_clan_influence": "Ventrue associados a financiamento e acordos, Nosferatu relacionados a obras e corredores, e demais clãs envolvidos em competências e disputas; nenhum clã recebe domínio territorial novo apenas porque a linha o atravessa.",
+    "eastern_connection": "Rússia oriental no território russo, não submetida ao governo dos EUA; o trajeto final ao sul alcança Canadá e Estados Unidos continentais.",
+    "construction_chronology": "Malha local e aproximações surgiram antes da travessia intercontinental completa; anos de cada etapa e documentos de concessão ainda não fixados.",
+    "exact_route_and_facilities": "UNASSIGNED_ALIGNED_TO_FUTURE_GEO-012_GEO-013",
+    "canon_reference": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json"
+  },
+  "required_approval_focus": [],
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "fact_kind": "cainite_planned_metropolis_economic_growth_and_transberingian_express",
+  "title": "A metrópole Cainita, a prosperidade por épocas e o Expresso Transberíngio",
+  "canonical_milestones": [
     {
       "period": "1423 ao século XVIII",
       "heading": "Núcleos que crescem antes da colonização oficial",
@@ -97,75 +173,10 @@
       "fixed_numbers": "2010: 7 milhões de residentes municipais, único total aprovado"
     }
   ],
-  "critical_consistency_rules": [
-    "Crescimento e existência públicos de Novydres alteram a história do Alasca no Mundo das Trevas, inclusive censos, representação e economia estadual. Nunca juntar os 7 milhões de Novydres ao total real de 710.231 pessoas no censo de 2010.",
-    "Uma cidade já grande em 1867 não torna automaticamente inexplicável o preço real de US$ 7,2 milhões: o valor jurídico formal e a capacidade de controle imperial não são equivalentes à plena valoração de todas as atividades e direitos locais. Explicar anomalia como disputa de soberanias e influência política, não como desaparecimento dos habitantes.",
-    "O governo mortal muda sem transferência automática de feudos Cainitas. Se algum senhor perder domínio entre 1423 e 2010, isso exige um marco causal próprio com aprovação.",
-    "7 milhões exigem cadeias mundanas de suprimento, alimentos, habitação, água, esgoto, energia, portos, transporte e importações. A geotermia explica aquecimento abundante, não todas as necessidades; linhas de ley e Earthbound não fazem substituição universal de logística.",
-    "Não transformar nove raions modernos em nove feudos originais ou suprimir os Corredores do Ermo. Infraestrutura conecta manchas de ocupação sem urbanização contínua.",
-    "O caminho da política do Alasca em 1867, 1912, 1959, 1968 e 1977 permanece historicamente reconhecível; ficcionalizar especialmente as causas e o peso econômico urbano, não reescrever arbitrariamente todos os eventos."
-  ],
-  "substantive_decisions_left_for_owner": [
-    "Confirmar se o reconhecimento externo de Novydres já como centro urbano excepcional será situado entre o fim do século XVIII e a compra do Alasca em 1867, sem população exata.",
-    "Confirmar que os anos 1940–1980 concentram o principal salto de escala urbana, após um crescimento histórico anterior já sólido.",
-    "Confirmar que a divergência econômica e demográfica do Alasca é pública, não um encobrimento da existência da cidade."
-  ],
-  "not_yet_approved": [
-    "número ou categoria demográfica em 1867, 1917, 1959 ou outro marco intermediário",
-    "cronologia exata da constituição municipal e seus instrumentos jurídicos",
-    "posição e nomes de áreas portuárias, bases, aeroportos, corredores e postos ferroviários",
-    "agentes e contratos por trás da industrialização e da infraestrutura federal",
-    "migrações específicas ou distribuição populacional pelos nove raions",
-    "criação de feudos novos, alterações de seus controladores e limites",
-    "função exata de um oleoduto ou campo petrolífero dentro da cidade",
-    "quantidades e localização das jazidas e minas",
-    "localização de reatores e instalações nucleares e natureza da participação soviética",
-    "cronologia precisa do túnel ou da ferrovia intercontinental",
-    "nome oficial do expresso internacional",
-    "identidade dos patrocinadores Cainitas por concessionária ou instalação"
-  ],
-  "editorial_notice": "Proposta para revisão do proprietário; não é novo cânone. Não alterar GEO-005.5, registros históricos fechados nem censos. Uma eventual aprovação cria somente os marcos e causalidades sem detalhes não atribuídos.",
-  "cainite_designed_metropolis": {
-    "design_status": "CORE_OWNER_DIRECTIVE_FOR_PROPOSAL",
-    "thesis": "Novydres não é uma cidade humana colonizada tardiamente por Cainitas: é um projeto urbano e civilizacional cuja evolução é intencionalmente orientada desde a fundação de 1423 por Gilgamesh e múltiplos clãs, com sociedades humanas reais e autônomas sob influência política Cainita permanente.",
-    "mortal_government": "Administrações públicas e privadas humanas reais, muitas vezes competentes e altamente selecionadas, são patrocinadas, influenciadas ou pressionadas por Cainitas para continuidade de planejamento, educação, serviços, comércio e crescimento.",
-    "multipolar_cainite_power": "A influência é de muitos Cainitas e clãs e varia em escala e conflito; não atribuir a Gilgamesh individualmente cada obra nem presumir unanimidade permanente entre clãs.",
-    "human_agency": "Povos originários, trabalhadores, acadêmicos, migrantes e governantes mortais têm agência e podem colaborar, resistir, negociar e produzir mudanças que não se reduzam a ordens de vampiros.",
-    "gothic_punk": "Excelência funcional, investimento e prosperidade coexistem com desigualdade, clientelismo, exploração, feudos, segregação térmica e violência estrutural. Não projetar utopia nem administração infalível.",
-    "distinction": "A intenção de construir a cidade é Cainita desde 1423; comunidades anteriores a Gilgamesh são reais e independentes, não criações dele."
-  },
-  "resources_by_era": {
-    "design_status": "PROPOSED_ECONOMIC_MODEL",
-    "fifteenth_to_seventeenth_centuries": "Na região que se tornará Novydres, ouro, gemas e recursos carboníferos sustentam extração e comércio iniciais de escala compatível com tecnologia e população. Grandes jazidas de diamantes são licença geológica ficcional localizada, sem afirmar fatos reais sobre o Alasca.",
-    "eighteenth_and_nineteenth_centuries": "Mineração e metalurgia se expandem; carvão, ouro, gemas, madeiras e logística portuária ajudam Novydres a ser centro de comércio anormalmente desenvolvido para o Alasca.",
-    "twentieth_century": "Petróleo, gás, carvão, minerais estratégicos e raros se tornam progressivamente recursos industriais e exportadores; depósitos subterrâneos anteriores não implicam extração de gás ou petróleo em 1400.",
-    "modern_economy": "Concentração de universidades, escolas técnicas, pesquisa, infraestrutura energética, fabricação e serviços de alto valor soma-se à logística transcontinental.",
-    "geology_caution": "Potencial mineral deve ser atribuído à região com geologia futuramente consistente (GEO-003) e não presumir toda combinação concentrada num único ponto da cidade."
-  },
-  "nuclear_history": {
-    "design_status": "PROPOSED_WITH_HISTORICAL_CONSTRAINTS",
-    "energy_portfolio": "Áreas industriais e de segurança nuclear podem coexistir com termas e geotermia, complementando energia elétrica, pesquisa, indústria e contratos militares. Não substituir a geotermia como fonte primária de aquecimento já canonizada.",
-    "ussr": "A União Soviética só existe a partir de 1922, e a geração elétrica nuclear começa em 1954; usinas soviéticas 'nos primórdios' dos anos 1920 seriam anacrônicas. Alternativas coerentes são presença científica/industrial soviética inicial com instalações nucleares depois de 1954, em Chukotka, ou uma concessão/operador clandestino no lado americano em Novydres cuidadosamente justificado.",
-    "usa": "Instalações nucleares dos EUA no lado de Novydres, de meados do século XX em diante, são plausíveis como divergência ampliada da militarização real; não presumir que os EUA governassem o território russo.",
-    "sovereignty": "Instalações soviéticas no lado americano não podem ser tratadas como jurisdição territorial soviética sem tratado ou ruptura histórica específica aprovada.",
-    "conflicts_2010": "Áreas interditadas, resíduos e interesses privados/governamentais podem gerar ganchos urbanos, ambientais e ocultistas, mas nenhum acidente ou instalação específica foi decidido."
-  },
-  "bering_express": {
-    "design_status": "PROPOSED_AS_PUBLIC_ALT_HISTORY",
-    "concept": "Ferrovia transcontinental construída e operante em 2010; serve carga e passageiros, com uma linha expressa internacional de prestígio que atravessa a Rússia oriental, o Estreito de Bering, Novydres, o Alasca, o Canadá e os Estados Unidos continentais.",
-    "vision": "Um 'Expresso do Oriente' ártico próprio de Novydres: empreendimento excepcional tornado possível pelo financiamento, pela administração da cidade e pela negociação multiestatal influenciada por vários Cainitas.",
-    "civil_engineering": "Travessia marítima por túnel ou complexo protegido que passa pelo Estreito de Bering; ramais de aproximação em Chukotka e no Alasca, conexão pela rede canadense, ajustes de bitola e controle de fronteira. Exige infraestrutura continental, não apenas ponte local.",
-    "public_world_impact": "Projeto visível e conhecido internacionalmente, impossível de esconder sob a Máscara; altera comércio, diplomacia, circulação, alianças e segurança de Rússia, Canadá e Estados Unidos na linha temporal do Mundo das Trevas.",
-    "chronology_default": "Malha interna construída primeiro, conexão com rede norte-americana consolidada depois, travessia de Bering concluída em etapa posterior e serviço completo ativo em 2010; datas exatas ainda não fixadas.",
-    "local_influence": "Sulfok já possui proposta CANDIDATE de pátio ferroviário e logística; usá-lo como possibilidade, mas não elevar a atribuição de localização a cânone sem GEO-004/GEO-012/GEO-013.",
-    "strategic_influence": "Ventrue articulam financiamento e tratados, Nosferatu conhecem obras e acessos, outros clãs protegem interesses distintos; não atribuir automaticamente engenharia a Zelios ou controle do percurso a um único clã.",
-    "name": "UNASSIGNED; Expresso do Oriente ártico é comparação descritiva, não nome oficial canonizado.",
-    "constraints": "O projeto Bering–Alasca–Canadá existe como proposta de infraestrutura no mundo real; no cenário seria obra efetivamente concluída. Precisam permanecer fronteiras e diferenças de bitola, sem transformar a Rússia em território americano."
-  },
-  "required_approval_focus": [
-    "Confirmar tese da metrópole planejada e influenciada por múltiplos clãs desde 1423.",
-    "Confirmar modelo de recursos por épocas, com diamantes como jazida ficcional.",
-    "Confirmar ferrovia intercontinental pública e expressa em operação até 2010, sem fixar nome ou datas de construção.",
-    "Escolher entre atuação soviética somente em Chukotka ou programa secreto/juridicamente excepcional no lado americano; usinas nucleares nos anos 1920 não cabem na história real."
-  ]
+  "soviet_nuclear_exclusion": "EXPLICIT_NO_SOVIET_NUCLEAR_INFLUENCE_OR_INSTALLATIONS_IN_NOVYDRES",
+  "owner_ratification": {
+    "status": "APPROVED",
+    "date": "2026-11-15",
+    "comment": "Aprova tudo GEO-005.6, com exclusão de influência nuclear soviética em Novydres e terminal principal do Expresso Transberíngio em corredor periférico aquecido, sem passar pelo centro"
+  }
 }
