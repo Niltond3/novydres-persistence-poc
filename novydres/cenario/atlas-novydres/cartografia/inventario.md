@@ -48,8 +48,8 @@ Estados editoriais/epistêmicos de fontes (`CANDIDATE`, `UNKNOWN` etc.) são man
 
 1. `novydres/AGENTS.md`, `CONTEXT.md` e `catalogo.json` do mesmo SHA (153 assuntos indexados). Consulta estruturada do catálogo para localizar propriedades e dependências.
 2. `novydres/cenario/atlas-novydres/{assunto.json,index.md,registro.json,segmentos.json,atlas-proposta.md,atlas-proposta.md}`. Fontes de atlas 0.2 e 0.2.2; 9 raions, 32 POIs, 2 variantes custodiadas; status de fonte candidato.
-3. **9 de 9** `novydres/cenario/geografia/district-*/conteudo.json`. Em todos, `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED`, duas variantes. Sete pares textualmente iguais; Sulfok e Vasyl Bay diferem em redação de remissão editorial/camada de causalidade, sem diferença geográfica grosseira demonstrada pelo cotejo literal.
-4. **32 de 32** `novydres/cenario/lugares/poi-*/conteudo.json`. Todos `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED`, duas variantes textualmente iguais por POI. São 32 **registros selecionados de interesse**, não o total de instalações da cidade.
+3. **9 de 9** `novydres/cenario/geografia/district-*/conteudo.json`. Em todos, `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED` e **uma única projeção da proposta editorial corrente**. A avaliação das antigas versões ocorreu antes da consolidação, cujo histórico está disponível somente no Git.
+4. **32 de 32** `novydres/cenario/lugares/poi-*/conteudo.json`. Todos `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED`, com **uma única projeção da proposta corrente** por POI. São 32 **registros selecionados de interesse**, não o total de instalações da cidade.
 5. `novydres/cenario/politica-global/atlas-proposta.md` (facções, vetores e conflitos), `atlas-proposta.md` (Concílio e leis), `fonte-003.source.md` (fé e instituições); todos documentos de origem candidatos.
 6. `novydres/cenario/historia-global/atlas-proposta.md` e `atlas-proposta.md` (introdução e cronologia), também candidatos.
 7. `novydres/cenario/organizacoes/concilio-cruz-espada/conteudo.json`, `legiao-coroa-ferro/conteudo.json`; conceitos documentados, sem promoção epistêmica/editorial.
@@ -123,7 +123,7 @@ Em cada caso são conhecidos **nome e raion candidato**; faltam coordenadas, lot
 | Topografia | Colinas, costa ártica, antigas zonas urbanas | Modelo de relevo, desnível, substrato, áreas de inundação e proteção |
 | História | Fundação associada a 1423; etapas 1917, 1950–1989, 1990–1998, crise em 2010 | Transformação física por época, bairros por idade, cronologia das obras, reconciliação histórica |
 | Clima | Frio extremo, desigualdade de calor, canais/áreas aquecidas | Sazonalidade, regime de gelo, dados de projeto e operação urbana |
-| População | Fontes de atlas falam em **estimativa anterior rejeitada**; pedido recente utiliza **7 milhões** | Censo de 2010, limites contados, moradores vs. visitantes e distribuição por raion |
+| População | **Cânone fechado em 2010:** 7.000.000 residentes, fonte única `../populacao-2010.json` | Distribuição por raion e perfil demográfico ainda em aberto |
 
 **Risco de falsa base visual:** esboços gerados anteriormente usaram Arkham/Miskatonic, 3×3 e outros nomes/posições que não equivalem automaticamente ao atlas atual do GitHub. **Não importar topônimos, rios ou avenidas dessas imagens como cânone** sem decisão explícita.
 

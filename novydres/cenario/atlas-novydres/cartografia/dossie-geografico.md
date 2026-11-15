@@ -17,12 +17,12 @@ canonical_decisions_closed: 2
 
 ## Método de cruzamento
 
-Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3be159cac727`) e as entradas `AGENTS.md`, `CONTEXT.md`, `catalogo.json`. Conferimos as duas variantes do Atlas, nove raions e 32 POIs, fontes dos capítulos de política, Concílio, fé e história; registros das organizações principais, arquitetura de poder de NPCs, episódios/indexes selecionados da CHR-001 e exemplos de fatos de cena. O catálogo expõe **41 dependentes diretos** do Atlas (9 raions + 32 POIs); relações literárias ou de crônica não se esgotam nesse índice.
+Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3be159cac727`) e as entradas `AGENTS.md`, `CONTEXT.md`, `catalogo.json`. Conferimos a proveniência do Atlas e reconciliamos uma única versão candidata corrente, nove raions e 32 POIs, além de fontes dos capítulos de política, Concílio, fé e história; registros das organizações principais, arquitetura de poder de NPCs, episódios/indexes selecionados da CHR-001 e exemplos de fatos de cena. O catálogo expõe **41 dependentes diretos** do Atlas (9 raions + 32 POIs); relações literárias ou de crônica não se esgotam nesse índice.
 
 ### Resultados transversais
 
-- O Atlas 0.2.2 é fonte candidata; não é uma lei geográfica automaticamente vigente. Sete raions têm textos idênticos nas duas variantes de conceito; Sulfok e Vasyl Bay têm redações de referência/editorial diferentes, **sem prova de divergência topológica material** apenas por isso. As 32 duplas POI foram conferidas, com texto igual e autoridade `NOT_SELECTED`.
-- As fontes documentam **estimativa anterior rejeitada**, enquanto o novo pedido de construção usa **7 milhões**; é conflito de definição, não ajuste numérico tácito.
+- `atlas-proposta.md` é a **única fonte candidata corrente** para conteúdos ainda não ratificados. Os nove raions e 32 POIs têm uma projeção atual por assunto com autoridade `NOT_SELECTED` até deliberação; fontes substituídas não permanecem no HEAD.
+- A população canônica foi fixada em **7.000.000 residentes em 2010**, na fonte única `../populacao-2010.json`. Não há outro valor populacional vigente.
 - Domínio, influência, aliança, controle institucional, direito de passagem e presença são variáveis independentes. O mapa oficial mortal não deve revelar relações Cainitas reservadas.
 - Uma afirmação de personagem em cena (ex.: endereço dito por Rada) não transforma esse endereço em instalação municipal validada ou em identidade de outra obra; revisar conhecimento situado antes de espacializar.
 - É impossível garantir 'zero fontes históricas divergentes' sem destruir proveniência. O contrato de fechamento exigirá **zero autoridades operacionais concorrentes** para o mesmo fato/recorte temporal; fontes antigas ficam identificadas e não são consultadas como segunda verdade.
@@ -35,9 +35,9 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 **GEO-001.1 FECHADO (15/11/2026):** fonte única `../populacao-2010.json`; 7.000.000 residentes em 2010. Documentos editoriais obsoletos foram retirados do HEAD. Distribuição por raion ainda aberta.
 
 - **Situação:** `CLOSED_CANON_GEO-001.1` — população municipal em 2010 **fechada** (somente este valor/escopo).
-- **Resposta ao inventário:** O Atlas de origem diz 'estimativa anterior rejeitada'; a diretriz atual do proprietário menciona 7 milhões. Nenhum número de habitantes por raion foi ratificado.
-- **Recomendação:** Recomendo propor 7 milhões de residentes no território municipal de 2010, por ser a preferência mais recente, mas **não reinterpretar** o valor antigo como população metropolitana sem decidir expressamente se é substituído, outro recorte ou outro período.
-- **Critério de fechamento:** Aprovar número, data, perímetro censitário e tratamento explícito da fonte estimativa anterior rejeitada.
+- **Resposta ao inventário:** 7.000.000 residentes municipais em 2010, conforme `../populacao-2010.json`. A distribuição por raion permanece aberta.
+- **Recomendação:** decisão implementada. Utilizar somente o censo aprovado, sem fontes editoriais concorrentes.
+- **Critério de fechamento:** cumprido para valor e ano de referência; perímetro geométrico exato segue GEO-002/GEO-004.
 - **Fontes verificadas:** [AT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185) · [HIST](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/historia-global/atlas-proposta.md#L100-L150).
 - **Proprietários/dependências a conferir:** `world-atlas-novydres`, `world-history-novydres`, `district-*`.
 
@@ -45,8 +45,8 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 **GEO-002.1 FECHADO (15/11/2026):** fonte única `../localizacao-geral-2010.json`; noroeste do Alasca, região do Estreito de Bering. Localização exata, costa, área e projeção permanecem abertas.
 
-- **Situação:** `ABERTO` — decisão canônica **aberta**.
-- **Resposta ao inventário:** Há referência histórica à travessia do Estreito de Bering e ambiente ártico, mas sem polígono, projeção, largura, área ou âncora cartográfica aprovada.
+- **Situação:** `PARTIALLY_CLOSED_GEO-002.1` — localização regional aprovada; demais dimensões abertas.
+- **Resposta ao inventário:** GEO-002.1 aprovou o noroeste do Alasca, região do Estreito de Bering, em `../localizacao-geral-2010.json`. Polígono, projeção, largura, área e ancoragem exata continuam em aberto.
 - **Recomendação:** Fixar primeiro domínio métrico local com origem, unidades e extensão; só depois adotar ancoragem real no Alasca e transformação apropriada, compatível com costeira, geologia e clima. Não fabricar latitude/longitude.
 - **Critério de fechamento:** Aprovar limite municipal, área habitável, extensão, orientação, datum/projeção ou plano local explícito.
 - **Fontes verificadas:** [HIST](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/historia-global/atlas-proposta.md#L100-L150) · [AT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185).
@@ -64,7 +64,7 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 ### GEO-004 — Raions, bairros e fronteiras administrativas
 
 - **Situação:** `PARCIAL_DOCUMENTADO` — decisão canônica **aberta**.
-- **Resposta ao inventário:** Nove raions têm nomes e macroposições nas duas fontes; todos os nove assuntos estão em UNKNOWN/NOT_SELECTED. Nenhuma fronteira territorial fechada foi observada.
+- **Resposta ao inventário:** Nove raions têm nomes e macroposições na proposta corrente; todos os nove assuntos estão em UNKNOWN/NOT_SELECTED. Nenhuma fronteira territorial fechada foi observada.
 - **Recomendação:** Conservar provisoriamente os nove nomes do Atlas e gerar polígonos administrativamente contíguos ou deliberadamente descontínuos; cadastrar enclaves e território fora de raion. Manter grade de tiles independente.
 - **Critério de fechamento:** Aprovar lista oficial, fronteiras, áreas especiais, hierarquia raion→bairro→quadra e topônimos/aliases.
 - **Fontes verificadas:** [AT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185) · [CAT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/catalogo.json).
@@ -217,7 +217,7 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 ### GEO-021 — 32 locais nomeados e outros complexos relevantes
 
 - **Situação:** `32_CANDIDATOS_SEM_GEOMETRIA` — decisão canônica **aberta**.
-- **Resposta ao inventário:** Há 32 POIs com nome e raion, e 32 assuntos locais separados, todos com duas variantes idênticas e autoridade NOT_SELECTED; nenhum possui geometria cadastral aprovada nesta base.
+- **Resposta ao inventário:** Há 32 POIs com nome e raion, e 32 assuntos locais separados, todos com uma projeção atual de autoridade NOT_SELECTED; nenhum possui geometria cadastral aprovada nesta base.
 - **Recomendação:** Auditar cada POI por ID, confirmar existência em 2010, papel, operador, superfície/lote, área, capacidade, mobilidade e divulgação; diferenciar bairro, corredor, estação, prédio e complexo. Acrescentar novos locais essenciais sem renumerar antigos.
 - **Critério de fechamento:** Ratificar catálogo de equipamentos obrigatórios e polígono/posição para cada um, com referência ao assunto proprietário e sem duplicações.
 - **Fontes verificadas:** [POI](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522) · [AT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185) · [CAT](https://github.com/Niltond3/novydres-persistence-poc/blob/7ce8e88c122a5d80879e30a23b1f3be159cac727/novydres/catalogo.json).
