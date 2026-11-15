@@ -1,0 +1,29 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-002.1",
+  "fact_kind": "macro_geographic_region",
+  "canonical_status": "CLOSED_CANON",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "location": {
+    "country": "Estados Unidos",
+    "state": "Alasca",
+    "macroregion": "noroeste do Alasca, na região do Estreito de Bering",
+    "position_exact": null,
+    "latitude": null,
+    "longitude": null,
+    "area_km2": null,
+    "coastline_geometry": null
+  },
+  "scope_of_approval": "somente localização regional",
+  "pending": [
+    "GEO-002.2 relação com continente/costa/ilhas",
+    "GEO-002 posição exata, área e projeção",
+    "GEO-003 relevo e hidrografia",
+    "GEO-004 limites"
+  ],
+  "unique_canonical_source": true
+}

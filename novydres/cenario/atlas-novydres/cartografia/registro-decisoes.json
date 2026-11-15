@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "ONE_CANON_FACT_APPROVED_OTHERS_RECOMMENDATION_DRAFT",
+  "register_status": "GEO001_CLOSED_GEO002_MACROREGION_CLOSED_REMAINDER_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 1,
+  "owner_approved_canon_decisions": 2,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -17,15 +17,14 @@
     {
       "id": "GEO-001",
       "title": "População-base em 2010",
-      "evidence_status": "CONFLITO_DOCUMENTAL",
+      "evidence_status": "RESOLVED_NO_ACTIVE_CONFLICT",
       "decision_state": "CLOSED_CANON",
       "canonical_value": 7000000,
-      "answer": "O Atlas de origem diz 'mais de oito milhões'; a diretriz atual do proprietário menciona 7 milhões. Nenhum número de habitantes por raion foi ratificado.",
-      "recommendation": "Recomendo propor 7 milhões de residentes no território municipal de 2010, por ser a preferência mais recente, mas **não reinterpretar** o valor antigo como população metropolitana sem decidir expressamente se é substituído, outro recorte ou outro período.",
-      "closure_criteria": "Aprovar número, data, perímetro censitário e tratamento explícito da fonte >8 milhões.",
+      "answer": "O censo oficial de 2010 é definido exclusivamente por `populacao-2010.json`.",
+      "recommendation": "Decisão aprovada; não há alternativa editorial vigente.",
+      "closure_criteria": "Fechado: aprovação, fonte única, retirada de cópias obsoletas e referências atuais reconciliadas.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150"
+        "novydres/cenario/atlas-novydres/populacao-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -35,7 +34,7 @@
       "approved_subdecision_id": "GEO-001.1",
       "canonical_value_is_projection_of": "novydres/cenario/atlas-novydres/populacao-2010.json",
       "owner_approved_on": "2026-11-15",
-      "resolution": "Autoridade única da população municipal residente de Novydres em 2010; fontes históricas com mais de oito milhões permanecem imutáveis e são superadas apenas neste atributo/tempo.",
+      "resolution": "7.000.000 residentes municipais em 2010, na única fonte `populacao-2010.json`.",
       "outstanding_after_closure": [
         "GEO-002",
         "GEO-004",
@@ -45,20 +44,25 @@
     {
       "id": "GEO-002",
       "title": "Localização, dimensão, coordenadas e escala",
-      "evidence_status": "ABERTO",
-      "decision_state": "RECOMMENDED_NOT_APPROVED",
-      "canonical_value": null,
+      "evidence_status": "MACROREGIAO_APROVADA_OUTRAS_DIMENSOES_ABERTAS",
+      "decision_state": "PARTIALLY_CLOSED_GEO-002.1",
+      "canonical_value": {
+        "macro_region": "noroeste do Alasca, na região do Estreito de Bering"
+      },
       "answer": "Há referência histórica à travessia do Estreito de Bering e ambiente ártico, mas sem polígono, projeção, largura, área ou âncora cartográfica aprovada.",
       "recommendation": "Fixar primeiro domínio métrico local com origem, unidades e extensão; só depois adotar ancoragem real no Alasca e transformação apropriada, compatível com costeira, geologia e clima. Não fabricar latitude/longitude.",
-      "closure_criteria": "Aprovar limite municipal, área habitável, extensão, orientação, datum/projeção ou plano local explícito.",
+      "closure_criteria": "GEO-002.1 fechado para região geral. GEO-002 segue aberto quanto a posição, costa, área e escala.",
       "source_references": [
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185"
+        "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
         "district-*"
-      ]
+      ],
+      "approved_subdecision_id": "GEO-002.1",
+      "owner_approved_on": "2026-11-15",
+      "macro_region_authority": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
     },
     {
       "id": "GEO-003",
@@ -70,8 +74,8 @@
       "recommendation": "Construir topologia hídrica e relevo em escala metropolitana antes de desenhar vias. Justificar fisicamente a comunicação entre cursos de água, canais subterrâneos e porto; distinguir água natural, artificial e geotérmica.",
       "closure_criteria": "Aprovar geometrias-mestras de costa, rios, cursos subterrâneos, gelo, Ermo, ilhas e grandes desníveis.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -90,7 +94,7 @@
       "recommendation": "Conservar provisoriamente os nove nomes do Atlas e gerar polígonos administrativamente contíguos ou deliberadamente descontínuos; cadastrar enclaves e território fora de raion. Manter grade de tiles independente.",
       "closure_criteria": "Aprovar lista oficial, fronteiras, áreas especiais, hierarquia raion→bairro→quadra e topônimos/aliases.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
         "novydres/catalogo.json"
       ],
       "impact_subject_patterns": [
@@ -109,8 +113,8 @@
       "recommendation": "Usar fases espaciais rastreáveis: assentamentos antigos, núcleo fluvial, infraestrutura pré-industrial, militar/industrial na Guerra Fria, declínio e reforma. Vincular estilo de quarteirão à época, sem reescrever acontecimentos.",
       "closure_criteria": "Aprovar linhas do tempo de implantação, mudanças de nome, principais obras e continuidade entre eras.",
       "source_references": [
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185"
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185"
       ],
       "impact_subject_patterns": [
         "world-history-novydres",
@@ -128,9 +132,9 @@
       "recommendation": "Tomar a grade política do Atlas como proposta prioritária, ratificando domínio e seita separadamente por 2010. Sulfok deve permanecer explicitamente disputado, sem preenchimento com cor de clã único.",
       "closure_criteria": "Aprovar por raion: soberania formal, controle efetivo, legitimidade contestada, seita, vigência e exceções.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
-        "novydres/cenario/politica-global/fonte-002.source.md#L134-L242"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
+        "novydres/cenario/politica-global/atlas-proposta.md#L134-L242"
       ],
       "impact_subject_patterns": [
         "district-*",
@@ -148,9 +152,9 @@
       "recommendation": "Criar matriz multidimensional de influência por clã/facção e raion/bairro: presença, domínio, acesso, autoridade, recursos, oposição e neutralidade. 'Ausente' só com evidência; caso contrário 'não determinado'.",
       "closure_criteria": "Aprovar influências primárias e secundárias, zonas de não acesso, rivalidades e natureza/capacidade de cada mecanismo de controle.",
       "source_references": [
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
         "novydres/cenario/politica-global/fonte-003.source.md#L36-L107",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
         "novydres/cenario/organizacoes/escala-de-poder/fonte-004.source.md"
       ],
       "impact_subject_patterns": [
@@ -170,7 +174,7 @@
       "recommendation": "Criar índice espacial por **ID de personagem** com papéis, presença por época, domínio, influência, ativos, local público ou restrito e grau de certeza. Ficha global é dona da identidade; estado da crônica é dono dos acontecimentos.",
       "closure_criteria": "Aprovar associação região↔ator, papéis e alcance, e classificar explicitamente o que pode aparecer na carta pública.",
       "source_references": [
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
         "novydres/cenario/organizacoes/escala-de-poder/fonte-004.source.md",
         "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
       ],
@@ -191,8 +195,8 @@
       "recommendation": "Modelar como feições temporais de tipo corredor, polígono, ponto e rede com grau de disputa e ator responsável; distinguir conflito atual, ameaça potencial e rumor.",
       "closure_criteria": "Aprovar onde cada conflito acontece, fronteiras de risco e enclaves; evitar que qualquer zona secreta apareça na carta municipal.",
       "source_references": [
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185"
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185"
       ],
       "impact_subject_patterns": [
         "world-politics-novydres",
@@ -211,8 +215,8 @@
       "recommendation": "Depois de GEO-001/004, distribuir população residencial com somatório fechado e população diurna de trabalho separada; incluir ocupação aquecida e baixa densidade de Ermo.",
       "closure_criteria": "Ratificar matriz populacional de cada raion, densidade, empregos e capacidade térmica compatível.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150"
       ],
       "impact_subject_patterns": [
         "district-*",
@@ -229,8 +233,8 @@
       "recommendation": "Definir centros de atividade, zonas residenciais de diferentes densidades, indústria, comércio, instituições, parques/Ermo e expansão histórica; a estética gótico-punk deve decorrer desse desenho realista.",
       "closure_criteria": "Aprovar bairros e macrozonas, regras procedurais locais, proteção do Ermo e diretrizes construtivas.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150"
       ],
       "impact_subject_patterns": [
         "district-*",
@@ -247,8 +251,8 @@
       "recommendation": "Criar hierarquia expressa/arterial/coletora/local/industrial, nós de troca, travessias únicas e acessos de emergência; separar cruzamento em desnível de conexão em nível.",
       "closure_criteria": "Aprovar corredores estruturais, pontes/túneis e conectividade metropolitana testável antes de detalhar ruas.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522",
         "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
       ],
       "impact_subject_patterns": [
@@ -268,9 +272,9 @@
       "recommendation": "Projetar rede integrada em camadas: metrô troncal, ferrovia suburbana/carga, corredores de ônibus, bonde onde histórico urbano justificar, balsas se água navegável; definir IDs de linhas e estações **após** demanda/centros.",
       "closure_criteria": "Ratificar tipo, linhas, nós, terminais, cobertura entre raions e separação do acesso subterrâneo restrito.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -289,9 +293,9 @@
       "recommendation": "Criar grafo de geração→troca→bombeamento→distribuição→edifícios, com capacidade por zona, redundância e falhas; mapear **a desigualdade observável**, mas não converter rumor de sabotagem/desvio em verdade absoluta.",
       "closure_criteria": "Aprovar plantas, setores de aquecimento, prioridades de carga, corredores técnicos e estado de operação em 2010.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150",
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
         "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
       ],
       "impact_subject_patterns": [
@@ -311,8 +315,8 @@
       "recommendation": "Derivar sistemas principais da topografia, população e zonas urbanas; criar camadas de redes públicas separadas das vias clandestinas/secretas, com estações de tratamento e subestações.",
       "closure_criteria": "Aprovar instalações troncais, bacias de atendimento, operadores e interligações críticas; não exigir cadastro domiciliar.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150",
         "novydres/cronicas/CHR-001/estado/index.md#L32-L100"
       ],
       "impact_subject_patterns": [
@@ -331,9 +335,9 @@
       "recommendation": "Adotar uma sede governamental central em Bukovie e um polo administrativo por raion conforme o sistema político, com fóruns, cartórios e unidades locais distribuídos por demanda e acesso. Confirmar a nomenclatura institucional da cidade.",
       "closure_criteria": "Ratificar arquitetura do governo, sedes, rede de repartições, competências e polígonos de implantação de todos os complexos nomeados.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522",
-        "novydres/cenario/politica-global/fonte-002.source.md#L134-L242"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522",
+        "novydres/cenario/politica-global/atlas-proposta.md#L134-L242"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -354,8 +358,8 @@
       "recommendation": "Definir rede hierárquica para o censo aprovado: hospitais terciários, hospitais gerais regionais, maternidades, clínicas de bairro, postos 24h, ambulâncias e rotas de resgate; quantidades derivadas de cobertura e capacidade, não da ilustração.",
       "closure_criteria": "Aprovar número e categorias de hospitais/centros, capacidade, localização por raion, operadores e acesso invernal.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522"
       ],
       "impact_subject_patterns": [
         "district-levi",
@@ -374,8 +378,8 @@
       "recommendation": "Dimensionar sepultamento e cremação para população, mortalidade e clima/permafrost; separar cemitérios históricos religiosos, grandes parques funerários, crematórios, funerárias e necrotérios, com rotas e restrições ambientais.",
       "closure_criteria": "Aprovar número, capacidade, localização e instituições mortuárias, e determinar quais são de interesse Cainita.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/historia-global/fonte-002.source.md#L100-L150"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/historia-global/atlas-proposta.md#L100-L150"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -393,8 +397,8 @@
       "recommendation": "Planejar serviços por população, distância, risco industrial, Ermo e acessibilidade; distinguir polícia civil, serviços de incêndio, resposta ártica e penitenciárias. O Crisol não substitui a rede carcerária comum.",
       "closure_criteria": "Aprovar quantidade, jurisdição, capacidade e distribuição das bases, incluindo redundância em isolamento por nevasca.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
@@ -413,9 +417,9 @@
       "recommendation": "Planejar escolas, universidades, bibliotecas, centros culturais e equipamentos de vizinhança por perfil demográfico. Manter influência Cainita sobre fiéis distinta de propriedade mortal ou controle eclesiástico.",
       "closure_criteria": "Aprovar distribuição de equipamentos e classificação de polos religiosos/culturais com controle mortal e influência noturna separados.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
         "novydres/cenario/politica-global/fonte-003.source.md#L36-L107",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522"
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522"
       ],
       "impact_subject_patterns": [
         "poi-10",
@@ -437,8 +441,8 @@
       "recommendation": "Auditar cada POI por ID, confirmar existência em 2010, papel, operador, superfície/lote, área, capacidade, mobilidade e divulgação; diferenciar bairro, corredor, estação, prédio e complexo. Acrescentar novos locais essenciais sem renumerar antigos.",
       "closure_criteria": "Ratificar catálogo de equipamentos obrigatórios e polígono/posição para cada um, com referência ao assunto proprietário e sem duplicações.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L189-L522",
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L189-L522",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
         "novydres/catalogo.json"
       ],
       "impact_subject_patterns": [
@@ -457,8 +461,8 @@
       "recommendation": "Gerar primeiro carta vetorial técnica determinística, depois diagramação gótico-punk V5; tiles 3×3/5×5 somente recortes da geometria; versões pública e restrita separadas. Proibir ícones sem entidade e decoração pseudo-cartográfica.",
       "closure_criteria": "Só fechar quando GEO-001..021 pertinentes à escala estiverem fechados e forem executados testes de geometrias, redes, rótulos, visibilidade e exportação.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/fonte-001.source.md#L54-L185",
-        "novydres/cenario/politica-global/fonte-001.source.md#L50-L175",
+        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
+        "novydres/cenario/politica-global/atlas-proposta.md#L50-L175",
         "novydres/catalogo.json"
       ],
       "impact_subject_patterns": [
@@ -468,5 +472,10 @@
         "cartografia/*"
       ]
     }
+  ],
+  "closed_GEO_packages": 1,
+  "closed_subdecisions": [
+    "GEO-001.1",
+    "GEO-002.1"
   ]
 }

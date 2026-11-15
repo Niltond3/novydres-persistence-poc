@@ -14,6 +14,8 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
+> **Atualização de 15/11/2026:** GEO-001.1 e GEO-002.1 fechados com fontes únicas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
+
 > **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas GEO-002, GEO-004 e GEO-010.
 
 ## Complemento P0 — dossiê cruzado de decisões
@@ -45,11 +47,11 @@ Estados editoriais/epistêmicos de fontes (`CANDIDATE`, `UNKNOWN` etc.) são man
 ## 2. Fontes e cobertura realizada
 
 1. `novydres/AGENTS.md`, `CONTEXT.md` e `catalogo.json` do mesmo SHA (153 assuntos indexados). Consulta estruturada do catálogo para localizar propriedades e dependências.
-2. `novydres/cenario/atlas-novydres/{assunto.json,index.md,registro.json,segmentos.json,fonte-001.source.md,fonte-002.source.md}`. Fontes de atlas 0.2 e 0.2.2; 9 raions, 32 POIs, 2 variantes custodiadas; status de fonte candidato.
+2. `novydres/cenario/atlas-novydres/{assunto.json,index.md,registro.json,segmentos.json,atlas-proposta.md,atlas-proposta.md}`. Fontes de atlas 0.2 e 0.2.2; 9 raions, 32 POIs, 2 variantes custodiadas; status de fonte candidato.
 3. **9 de 9** `novydres/cenario/geografia/district-*/conteudo.json`. Em todos, `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED`, duas variantes. Sete pares textualmente iguais; Sulfok e Vasyl Bay diferem em redação de remissão editorial/camada de causalidade, sem diferença geográfica grosseira demonstrada pelo cotejo literal.
 4. **32 de 32** `novydres/cenario/lugares/poi-*/conteudo.json`. Todos `CANDIDATE_NOT_OPERATIONAL`, `UNKNOWN`, `NOT_SELECTED`, duas variantes textualmente iguais por POI. São 32 **registros selecionados de interesse**, não o total de instalações da cidade.
-5. `novydres/cenario/politica-global/fonte-001.source.md` (facções, vetores e conflitos), `fonte-002.source.md` (Concílio e leis), `fonte-003.source.md` (fé e instituições); todos documentos de origem candidatos.
-6. `novydres/cenario/historia-global/fonte-001.source.md` e `fonte-002.source.md` (introdução e cronologia), também candidatos.
+5. `novydres/cenario/politica-global/atlas-proposta.md` (facções, vetores e conflitos), `atlas-proposta.md` (Concílio e leis), `fonte-003.source.md` (fé e instituições); todos documentos de origem candidatos.
+6. `novydres/cenario/historia-global/atlas-proposta.md` e `atlas-proposta.md` (introdução e cronologia), também candidatos.
 7. `novydres/cenario/organizacoes/concilio-cruz-espada/conteudo.json`, `legiao-coroa-ferro/conteudo.json`; conceitos documentados, sem promoção epistêmica/editorial.
 8. `novydres/cenario/organizacoes/escala-de-poder/fonte-001..004.source.md`; há registro de decisões de NPC de escala global, mas documentação ainda indica necessidade de revalidação editorial. O mapa não pode presumir automaticamente lotações, presença ou hierarquias regionais.
 9. Existência de assuntos de NPC global (`npc-iskander-yasupov`, `npc-madame-zoya`, `npc-samir-haddad`) confirmada. **Não foi realizado censo completo dos personagens da crônica por localização**: depende de fontes restritas, temporalidade e distinção entre NPC global versus ocorrência em cena.
@@ -121,7 +123,7 @@ Em cada caso são conhecidos **nome e raion candidato**; faltam coordenadas, lot
 | Topografia | Colinas, costa ártica, antigas zonas urbanas | Modelo de relevo, desnível, substrato, áreas de inundação e proteção |
 | História | Fundação associada a 1423; etapas 1917, 1950–1989, 1990–1998, crise em 2010 | Transformação física por época, bairros por idade, cronologia das obras, reconciliação histórica |
 | Clima | Frio extremo, desigualdade de calor, canais/áreas aquecidas | Sazonalidade, regime de gelo, dados de projeto e operação urbana |
-| População | Fontes de atlas falam em **mais de 8 milhões**; pedido recente utiliza **7 milhões** | Censo de 2010, limites contados, moradores vs. visitantes e distribuição por raion |
+| População | Fontes de atlas falam em **estimativa anterior rejeitada**; pedido recente utiliza **7 milhões** | Censo de 2010, limites contados, moradores vs. visitantes e distribuição por raion |
 
 **Risco de falsa base visual:** esboços gerados anteriormente usaram Arkham/Miskatonic, 3×3 e outros nomes/posições que não equivalem automaticamente ao atlas atual do GitHub. **Não importar topônimos, rios ou avenidas dessas imagens como cânone** sem decisão explícita.
 

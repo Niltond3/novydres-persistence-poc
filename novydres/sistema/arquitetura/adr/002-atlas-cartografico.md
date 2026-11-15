@@ -18,7 +18,7 @@ approved_on: 2026-11-14
 
 A geração direta de um mapa completo por um modelo de imagens produziu forte atmosfera, mas não garantiu coerência de ruas, transportes, instituições, hidrografia, legendas ou continuidade entre recortes. O projeto agora precisa **definir progressivamente o próprio cânone geográfico**, preservando o cânone previamente existente, e produzir imagens que representem fatos e geometrias aprovados.
 
-A arquitetura Git-native orientada por assunto do ADR-001 já está implantada. O assunto existente `world-atlas-novydres` guarda fontes de atlas com status histórico candidato; assuntos de distritos e lugares mantêm conceitos próprios. O novo projeto não pode recriar um catálogo paralelo de verdades nem transformar candidatos em fatos aprovados.
+A arquitetura Git-native orientada por assunto do ADR-001 já está implantada. O assunto existente `world-atlas-novydres` mantém uma proposta editorial única para fatos ainda abertos e fontes canônicas únicas para fatos aprovados; raions e locais mantêm seus assuntos próprios. O novo projeto não pode recriar um catálogo paralelo de verdades nem transformar candidatos em fatos aprovados.
 
 ## 2. Decisão arquitetural proposta
 
@@ -33,7 +33,7 @@ Adotar, por aprovação expressa do proprietário, uma arquitetura **Git-native,
 
 ## 3. Limites de autoridade e propriedade
 
-- **Assunto de Atlas:** `novydres/cenario/atlas-novydres` é agregador cartográfico do território e dono de sua representação espacial; suas fontes literais de custódia permanecem intactas.
+- **Assunto de Atlas:** `novydres/cenario/atlas-novydres` é agregador cartográfico do território e dono de sua representação espacial; fontes editoriais obsoletas são retiradas da árvore corrente e recuperáveis somente pelo histórico Git, não como autoridade concorrente.
 - **Raions, bairros e lugares:** os assuntos proprietários existentes em `novydres/cenario/geografia/` e `novydres/cenario/lugares/` mantêm a semântica de cada conceito. A cartografia guarda geometria e referência por ID, não uma segunda biografia ou verdade rival.
 - **Outras entidades:** história, organizações, pessoas e eventos permanecem nos respectivos assuntos. A geometria os referencia quando necessária, respeitando sigilo e temporalidade.
 - **Conflitos:** `CONFIRMED`, `NPC_CLAIM`, `GM_PREPARED`, `CONDITIONAL`, `UNKNOWN` e classificações editoriais do sistema vigente não são substituídos por um simples indicador `aprovado`. O registro cartográfico de proposta/decisão é **um estado de fluxo de trabalho distinto**, que mantém a autoridade epistêmica original.
@@ -51,6 +51,10 @@ Documento arquitetural:
 `novydres/sistema/arquitetura/adr/002-atlas-cartografico.md`
 
 A organização poderá incluir, **somente conforme surgirem necessidades reais**, registros de decisões, regras espaciais, dados, estilos, validação e exportação. Não criar um segundo `assunto.json` sem justificar a criação de outro assunto e atualizar o catálogo derivado conforme as ferramentas do ADR-001. Não usar nomes com sufixos de revisão para arquivos correntes.
+
+### Emenda expressa — fonte única (15/11/2026)
+
+Depois que um fato recebe aprovação e propagação, qualquer documento corrente que contenha uma versão obsoleta e contraditória deve ser corrigido ou retirado da árvore atual. Para conteúdos não canonizados, manter **uma única versão candidata corrente**; projeções por raion/POI referenciam esta versão sem se tornarem autoridades independentes. A proveniência histórica fica nos commits Git, não em arquivos `deprecated` ou `archive` no HEAD. Não reescrever fatos jogados na crônica automaticamente.
 
 ## 5. Modelo de dados
 

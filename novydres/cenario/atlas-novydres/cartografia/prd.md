@@ -23,7 +23,7 @@ Construir progressivamente a geografia urbana de Novydres (recorte de referênci
 
 - Reutilizar o assunto existente `world-atlas-novydres`, em `novydres/cenario/atlas-novydres/`. Não criar um atlas concorrente.
 - Consultar `AGENTS.md`, `CONTEXT.md` e `catalogo.json` no mesmo commit, conforme ADR-001.
-- As duas fontes históricas de Atlas preservadas no assunto são referências com proveniência, **não** um conjunto integralmente ratificado de fatos por campo. As divisões por raion, locais de interesse e demais conceitos dependem de reconciliação de autoridade.
+- A única proposta editorial corrente para fatos geográficos ainda abertos é `../atlas-proposta.md`. Versões anteriores foram retiradas da árvore corrente e continuam recuperáveis apenas por commits Git. A proposta não canoniza automaticamente raions ou locais.
 - Os nove **raions administrativos** não equivalem à grade cartográfica 3×3; qualquer grade de tiles é apenas uma maneira de exportar o território.
 - A aprovação expressa do proprietário autoriza este PRD e o ADR-002 como diretrizes do trabalho cartográfico. **Não aprova nova geografia, novos números populacionais, mudança de história ou publicação de mapa definitivo.**
 - Respeitar a separação entre geografia global, conceitos de distritos, locais, conhecimento por personagem e história de crônica. Fatos conflitantes permanecem assinalados até decisão expressa.
@@ -95,14 +95,18 @@ Cada fase encerra com uma **entrega utilizável e checklist curto de inconsistê
 
 ## Decisão canônica posterior — GEO-001.1 (15/11/2026)
 
-O proprietário fixou em **7.000.000 residentes** a população municipal de Novydres no ano de referência 2010, abrangendo os nove raions. O dado autoritativo reside em `../populacao-2010.json`. A referência antiga a mais de oito milhões é custódia histórica **superada somente para este atributo e período**. GEO-010 (distribuição) e GEO-002/GEO-004 (extensão e limites) permanecem abertos.
+O proprietário fixou em **7.000.000 residentes** a população municipal de Novydres no ano de referência 2010, abrangendo os nove raions. O dado autoritativo reside em `../populacao-2010.json`. As afirmações populacionais obsoletas foram retiradas dos arquivos correntes, em cumprimento da política de fonte única. GEO-010 (distribuição) e GEO-002/GEO-004 (extensão e limites) permanecem abertos.
+
+### Decisão posterior — GEO-002.1 (15/11/2026)
+
+A região geral do noroeste do Alasca, perto do Estreito de Bering, foi aprovada. Única fonte vigente: `../localizacao-geral-2010.json`; localização exata, litoral, área, escala e projeção seguem abertos.
 
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:
 
 1. Localização fictícia e sistema de referência espacial; extensão e escala plausíveis.
-2. População-base e distribuição entre raions (fontes anteriores mencionam mais de oito milhões; ilustrações recentes trouxeram sete milhões).
+2. População-base e distribuição entre raions (população-base de 7.000.000 em 2010 já canonizada, com distribuição por raion em aberto).
 3. Nove raions, fronteiras e relação com bairros e corredores do Ermo.
 4. Rio Vasyl/Reka Vasilya, nascentes, cursos, deságue, ilhas, costas, baías e gelo; compatibilidade com esboços anteriores.
 5. Marcos cronológicos do crescimento metropolitano, industrialização e infraestrutura térmica.
