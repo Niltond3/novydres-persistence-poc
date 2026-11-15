@@ -9,4 +9,6 @@ visibility: SYSTEM_AUDIT
 
 Assunto geográfico candidato. `conteudo.json` contém uma única projeção da proposta editorial vigente com proveniência, sem escolher autoridade ou produzir conhecimento confirmado. O atlas é custodiante da fonte integral, não proprietário concorrente deste conceito.
 
-**Fato territorial canônico GEO-004.1:** [cidade-velha-2010.json](cidade-velha-2010.json) é a fonte única do vínculo entre o núcleo histórico Cidade Velha (Old Town) e Chelsea. A identidade completa do raion e seu traçado permanecem parcialmente candidatos. A [geotermia](../../atlas-novydres/geotermia-aquecimento-2010.json) apenas referencia a relação aprovada.
+**Fato territorial canônico GEO-004.1:** [cidade-velha-2010.json](cidade-velha-2010.json) é a fonte única do vínculo entre o núcleo histórico Cidade Velha (Old Town) e Chelsea. O nome e a existência do raion foram ratificados em GEO-004.2; seu traçado e demais propriedades permanecem candidatos. A [geotermia](../../atlas-novydres/geotermia-aquecimento-2010.json) apenas referencia a relação aprovada.
+
+**GEO-004.2 — nome e existência ratificados:** consultar exclusivamente [raions-oficiais-2010.json](../../atlas-novydres/raions-oficiais-2010.json), que identifica `district-chelsea` como raion administrativo oficial de 2010. O status `CANDIDATE` aplica-se às outras alegações — localização, fronteiras, funções urbanas e política Cainita — ainda não aprovadas.
