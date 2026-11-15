@@ -88,7 +88,7 @@ jobs:
           import { createHash } from 'node:crypto';
           const src=readFileSync(root+'atlas-proposta.md','utf8');
           const srcBytes=Buffer.from(src,'utf8');
-          const sourceBlob=createHash('sha1').update(Buffer.concat([Buffer.from('blob '+srcBytes.length+'\\0'),srcBytes])).digest('hex');
+          const sourceBlob=createHash('sha1').update(Buffer.concat([Buffer.from('blob '+srcBytes.length+'\0'),srcBytes])).digest('hex');
           for(const name of ['alexandria','bukovie','chelsea','drevnigrad','dunwich','levi','new-london','sulfok','vasyl-bay']){
             const q=JSON.parse(readFileSync('novydres/cenario/geografia/district-'+name+'/conteudo.json','utf8'));
             assert.equal(q.source_variants[0].source_blob_sha,sourceBlob,name);
