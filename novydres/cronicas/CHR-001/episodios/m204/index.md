@@ -68,3 +68,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-029.md` registra exposição voluntária de Bartolomeu, Sara guardada na mochila e oferta de ajuda ao trabalhador do carrinho; resposta cautelosa, sem agressão. Carga e vínculo do NPC desconhecidos. Cursor `../estado/recuperacao-c94.json`; sem teste nem recursos.
 
 `adendo-c17-retorno-noturno-030.md` registra ajuda física ao trabalhador com roda presa, inspeção por olfato da lona sem cheiro perceptível de decomposição e sem concluir conteúdo. A carga não foi aberta, e o trabalhador solicita identificação. Cursor `../estado/recuperacao-c95.json`; sem teste, XP ou FV.
+
+`adendo-c17-retorno-noturno-031.md` preserva pergunta do PJ sobre o comportamento do trabalhador e a instalação. O trabalhador explica serviço de carga do Setor VI e afirma desconhecer o conteúdo fechado, antes de perguntar o motivo da visita; alegações situadas, nenhuma revelação verificada do carregamento. Cursor `../estado/recuperacao-c96.json`; sem testes/recursos.
