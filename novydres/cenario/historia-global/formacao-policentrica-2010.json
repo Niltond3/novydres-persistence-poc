@@ -1,7 +1,6 @@
 {
   "schema": "NOVYDRES_HISTORY_CANON_FACT_V1",
   "subject_id": "world-history-novydres",
-  "fact_id": "GEO-005.1",
   "fact_kind": "polycentric_discontinuous_urban_formation",
   "canonical_status": "CLOSED_CANON_SCOPED",
   "truth_state": "CONFIRMED",
@@ -21,19 +20,39 @@
     "some_conurbations_possible": true
   },
   "historical_allocation_planning": {
-    "status": "PROPOSTA_PENDENTE_GEO-005.2",
-    "hypothesis": "Gilgamesh organizou o envio de emissários Cainitas para núcleos distintos conforme adequação ecológica, aptidões e prioridades políticas, estabelecendo senhorios subordinados à sua autoridade",
-    "needs_explicit_owner_decision": true,
-    "forbidden_inference": "não atribuir data de cada assentamento, clan/específico a cada núcleo, pares de emissários, distâncias obrigatórias entre clãs ou jurisdições atuais a partir da hipótese",
-    "reference_context": "As fontes históricas candidatas associam Gilgamesh à fundação de Novydres, mas não resolvem a distribuição territorial inicial."
+    "status": "CANON_APPROVED_GEO-005.2",
+    "responsible_founder": "Gilgamesh",
+    "method": "planejamento estratégico e estruturado da ocupação por emissários Cainitas",
+    "geographic_organization": "envio de emissários a núcleos territorialmente distintos, em vez de formar um centro único de expansão homogênea",
+    "assignment_criteria": [
+      "aptidões e particularidades de cada emissário ou grupo Cainita",
+      "compatibilidade com as características ambientais e os recursos do território",
+      "interesses políticos, segurança e utilidade estratégica para a soberania de Gilgamesh",
+      "potencial de estabelecimento de domínios locais viáveis"
+    ],
+    "local_rule": "emissários passaram a governar ou consolidar seus núcleos como senhorios ou microprincipados subordinados à autoridade de Gilgamesh",
+    "historic_growth": "cada núcleo se desenvolveu conforme condições ambientais e decisões locais, limitado por Ermos que bloquearam expansão uniforme",
+    "proximity_principle": "a localização relativa dos assentamentos originais deve ser historicamente justificada por estratégia e aptidões; não pressupor vizinhança imediata ou segregação absoluta por clã",
+    "clan_example_not_specific_assignment": "O contraste entre Gangrel e Toreador ilustra necessidades territoriais diferentes; não fixa seus domínios iniciais nem obriga distância determinada entre eles.",
+    "approved_assignment_of_individual_clans": false,
+    "approved_emissary_names": false,
+    "approved_foundation_site_or_distance": false,
+    "approved_exact_historical_fief_to_modern_raion_mapping": false,
+    "approved_specific_local_conflicts_or_conquests": false,
+    "initial_territories_and_2010_raions": "relação histórica a estudar; não equiparar automaticamente os limites dos senhorios fundadores aos limites administrativos de 2010"
   },
-  "cartographic_mandate": "Não gerar mapa geral a partir de mancha central radiante ou gradação arquitetônica uniforme; posicionar raions conforme a evolução histórica e as barreiras do Ermo.",
+  "cartographic_mandate": "Qualquer mapa deverá nascer de múltiplos núcleos históricos distribuídos, situados segundo condições geográficas e aptidões dos emissários escolhidos estrategicamente por Gilgamesh, limitados pelos Ermos; não usar crescimento radial, manchas urbanas contínuas por padrão ou proximidade de clãs sem justificação.",
   "unresolved": [
-    "GEO-005.2 papel concreto dos emissários de Gilgamesh no povoamento inicial",
+    "GEO-005 critérios históricos para atribuir emissários, clãs e assentamentos específicos por território",
+    "GEO-005.3 relação espacial entre senhorios fundadores e os nove raions atuais",
     "GEO-005 cronologia da fundação, sucessão e crescimento por raion",
     "GEO-004 posições relativas e fronteiras dos nove raions",
     "GEO-006 domínios Cainitas por período",
     "GEO-003 geografia física da região"
   ],
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "fact_ids": [
+    "GEO-005.1",
+    "GEO-005.2"
+  ]
 }
