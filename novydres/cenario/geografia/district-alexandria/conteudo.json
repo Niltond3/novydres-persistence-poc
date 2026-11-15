@@ -21,5 +21,11 @@
     }
   ],
   "atlas_document_owner": "SINGLE_CURRENT_CANDIDATE_UNTIL_APPROVAL",
-  "verification": "EXACT_LINES_REQUIRED"
+  "verification": "EXACT_LINES_REQUIRED",
+  "canonical_identity_reference": {
+    "fact_id": "GEO-004.2",
+    "source_of_truth": "novydres/cenario/atlas-novydres/raions-oficiais-2010.json",
+    "scope": "official_name_and_administrative_existence_only"
+  },
+  "editorial_authority_explanation": "NOT_SELECTED se aplica somente às descrições candidatas restantes; nome e existência oficiais são definidos exclusivamente em GEO-004.2."
 }
