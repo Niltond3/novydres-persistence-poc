@@ -70,3 +70,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-030.md` registra ajuda física ao trabalhador com roda presa, inspeção por olfato da lona sem cheiro perceptível de decomposição e sem concluir conteúdo. A carga não foi aberta, e o trabalhador solicita identificação. Cursor `../estado/recuperacao-c95.json`; sem teste, XP ou FV.
 
 `adendo-c17-retorno-noturno-031.md` preserva pergunta do PJ sobre o comportamento do trabalhador e a instalação. O trabalhador explica serviço de carga do Setor VI e afirma desconhecer o conteúdo fechado, antes de perguntar o motivo da visita; alegações situadas, nenhuma revelação verificada do carregamento. Cursor `../estado/recuperacao-c96.json`; sem testes/recursos.
+
+`adendo-c17-retorno-noturno-032.md` registra ordem ameaçadora de Bartolomeu e resultado provisório de teste social resistido, margem +2 com crítico limpo, aguardando FV. Cursor `../estado/recuperacao-c97.json`; reação definitiva do NPC ainda não aplicada.
