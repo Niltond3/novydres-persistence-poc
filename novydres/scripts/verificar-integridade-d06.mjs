@@ -46,7 +46,22 @@ export function verifyD06({ledgerOverride=null}={}){
   records.set(row.origin,row);
  }
  const sourceOwned=inv.source_files.filter(x=>x.d01_origin_route.handoff_phase!=='D05');
- for(const x of sourceOwned)if(![...tree.values()].includes(x.source_blob_sha))err('D02_D04_SOURCE_NOT_COPIED');
+ // Atlas: retirada expressa de fontes editoriais duplicadas da árvore corrente.
+ // Apenas estes dois blobs de D03 continuam verificáveis pelo commit histórico pinado.
+ const retiredAtlasSources=new Map([
+  ['novydres/world/geography/03_atlas_de_novydres_v0_2_2.source.md','90174f8f5726cb2b188ef2db66531acbf6898c93'],
+  ['novydres/world/geography/03_atlas_de_novydres_v0_2_candidate.source.md','e6392e2208b2dff5457c22c700d3d0702da092fe']
+ ]);
+ let atlasVerifiedFromGit=0;
+ for(const x of sourceOwned){
+  if([...tree.values()].includes(x.source_blob_sha))continue;
+  const allowed=retiredAtlasSources.get(x.source_path);
+  if(x.d01_origin_route?.handoff_phase!=='D03'||allowed!==x.source_blob_sha)err('D02_D04_SOURCE_NOT_COPIED');
+  const historic=execFileSync('git',['rev-parse',inv.source_snapshot.commit_sha+':'+x.source_path],{encoding:'utf8'}).trim();
+  if(historic!==x.source_blob_sha)err('ATLAS_HISTORICAL_GIT_PIN_FAILED');
+  atlasVerifiedFromGit++;
+ }
+ if(atlasVerifiedFromGit!==2)err('ATLAS_RETIRED_SOURCE_COUNT');
  const retainedD05=out.source_records.filter(x=>x.retirement_method==='EXACT_INERT_SOURCE_BLOB_REHOMED');
  if(retainedD05.length!==285||retainedD05.some(x=>![...tree.values()].includes(x.original_git_blob_sha)))err('D05_EXACT_SOURCE_LOST');
  const beforeCutover=out.source_records.filter(x=>x.active_original_reference===true);
@@ -57,7 +72,7 @@ export function verifyD06({ledgerOverride=null}={}){
  if(d05.exact_blobs_inert!==285||d05.historical_git_only!==114||d05.active_source_successions_unproven!==121)err('D06_D05_CROSSCHECK_FAILED');
  if(!cat.ok||!d04.ok||!state.ok||!xp.ok||!story.ok||!mechanics.ok||!history.ok)err('D06_FUNCTIONAL_SUBGATE_FAIL');
  if(zero.gate==='ZERO_LEGACY_BLOCKED')err('D06_ZERO_LEGACY_FAIL');
- return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,
+ return {head,originals:1029,phase_origins:counts,source_exact_custody:1029-114,atlas_git_only_source_count:atlasVerifiedFromGit,
   git_only_historical_sources:114,active_successions_requiring_contextual_semantic_review:121,
   zero_legacy_gate:zero.gate,media_optional_waived:zero.counters.media_optional_waived,
   catalog_subjects:cat.entries,c45_cursor:state.cursor,

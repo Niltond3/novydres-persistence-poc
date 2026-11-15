@@ -5,16 +5,12 @@ owner_scope: novydres/cenario
 status: CANDIDATE
 visibility: SYSTEM_AUDIT
 ---
-# world-atlas-novydres
+# Atlas de Novydres
 
-Assunto técnico candidato da D03, sem autoridade operacional ou promoção epistêmica/editorial.
+**Única fonte editorial candidata para conteúdos geográficos ainda não aprovados:** [atlas-proposta.md](atlas-proposta.md). Cada raion e lugar possui assunto próprio em `cenario/geografia/` ou `cenario/lugares/`, com uma única projeção desta fonte. A existência de um item na proposta não aprova automaticamente seu conteúdo.
 
-As origens exatas, seus SHAs e a correspondência para os arquivos de custódia literal constam de `registro.json`. A conservação de bytes não equivale a validar fatos por campo, resolver conflito editorial ou executar as responsabilidades locais da D04.
+**Fato canônico de população municipal residente em 2010:** [populacao-2010.json](populacao-2010.json). A proposta geográfica não constitui fonte autônoma para o censo.
 
-## População municipal — fato aprovado GEO-001.1
+**Região geral aprovada GEO-002.1:** noroeste do Alasca, proximidades do Estreito de Bering. Posição exata, costas, dimensões e projeção ainda aguardam decisões.
 
-Para o ano de referência **2010**, a população residente oficial de Novydres é de **7.000.000 de habitantes**, considerando conjuntamente os nove raions administrativos. **Fonte canônica única:** [`populacao-2010.json`](populacao-2010.json), aprovada expressamente pelo proprietário em 15/11/2026.
-
-A referência a "mais de oito milhões" nas versões de custódia literal `fonte-001.source.md` (linha 65) e `fonte-002.source.md` (linha 56) foi **substituída exclusivamente para este atributo e ano**, sem apagar a origem, declarar outro recorte demográfico ou resolver outros conflitos históricos (incluindo `CONFLICT-001`). Essas fontes continuam candidatas/históricas para outros conteúdos. A distribuição por raion (GEO-010), área e fronteiras (GEO-002/GEO-004) ainda estão abertas.
-
-O status `CANDIDATE` do manifesto D03 é metadado da migração e não invalida a aprovação explícita deste fato novo; não houve promoção geral das duas fontes históricas.
+As cópias históricas anteriores foram retiradas da árvore atual conforme diretriz do proprietário. O histórico de commits permite auditoria; não é rota de consulta editorial vigente. Metadados `CANDIDATE` são exigência técnica do manifesto ADR-001 e não representam uma segunda fonte de conteúdo.
