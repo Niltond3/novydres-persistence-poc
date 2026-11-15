@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO001_CLOSED_GEO002_MACROREGION_CLOSED_REMAINDER_OPEN",
+  "register_status": "GEO001_CLOSED_GEO002_TWO_SUBDECISIONS_CLOSED_REMAINDER_OPEN",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 2,
+  "owner_approved_canon_decisions": 3,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -44,14 +44,14 @@
     {
       "id": "GEO-002",
       "title": "Localização, dimensão, coordenadas e escala",
-      "evidence_status": "MACROREGIAO_APROVADA_OUTRAS_DIMENSOES_ABERTAS",
-      "decision_state": "PARTIALLY_CLOSED_GEO-002.1",
+      "evidence_status": "MACROREGION_AND_CONTINENTAL_COASTAL_FORM_APPROVED",
+      "decision_state": "PARTIALLY_CLOSED_GEO-002.1_AND_GEO-002.2",
       "canonical_value": {
-        "macro_region": "noroeste do Alasca, na região do Estreito de Bering"
+        "source_of_truth": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
       },
       "answer": "Há referência histórica à travessia do Estreito de Bering e ambiente ártico, mas sem polígono, projeção, largura, área ou âncora cartográfica aprovada.",
       "recommendation": "Fixar primeiro domínio métrico local com origem, unidades e extensão; só depois adotar ancoragem real no Alasca e transformação apropriada, compatível com costeira, geologia e clima. Não fabricar latitude/longitude.",
-      "closure_criteria": "GEO-002.1 fechado para região geral. GEO-002 segue aberto quanto a posição, costa, área e escala.",
+      "closure_criteria": "GEO-002.1 e GEO-002.2 fechados; GEO-002 continua aberto quanto a litoral detalhado, ilhas, coordenadas, extensão, área e projeção.",
       "source_references": [
         "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
         "novydres/cenario/atlas-novydres/atlas-proposta.md"
@@ -60,9 +60,18 @@
         "world-atlas-novydres",
         "district-*"
       ],
-      "approved_subdecision_id": "GEO-002.1",
       "owner_approved_on": "2026-11-15",
-      "macro_region_authority": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json"
+      "macro_region_authority": "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
+      "approved_subdecision_ids": [
+        "GEO-002.1",
+        "GEO-002.2"
+      ],
+      "outstanding_after_closure": [
+        "GEO-002.3",
+        "GEO-002 área e posição exata",
+        "GEO-003",
+        "GEO-004"
+      ]
     },
     {
       "id": "GEO-003",
@@ -476,6 +485,7 @@
   "closed_GEO_packages": 1,
   "closed_subdecisions": [
     "GEO-001.1",
-    "GEO-002.1"
+    "GEO-002.1",
+    "GEO-002.2"
   ]
 }

@@ -16,14 +16,26 @@
     "latitude": null,
     "longitude": null,
     "area_km2": null,
-    "coastline_geometry": null
+    "coastline_geometry": null,
+    "territorial_configuration": {
+      "primary_urban_footprint": "continental",
+      "coastal_city": true,
+      "secondary_islands": true,
+      "islands_role": "territórios insulares secundários; posição, número, área e ocupação ainda não definidos",
+      "coastal_bays_or_peninsulas": null,
+      "shapes_approved": false
+    }
   },
-  "scope_of_approval": "somente localização regional",
+  "scope_of_approval": "GEO-002.1: macrorregião; GEO-002.2: implantação principal continental e costeira, com ilhas secundárias; sem geometrias definidas",
   "pending": [
-    "GEO-002.2 relação com continente/costa/ilhas",
-    "GEO-002 posição exata, área e projeção",
+    "GEO-002.3 forma do litoral e relação com baías, portos e rios",
+    "GEO-002 localização exata, área e projeção",
     "GEO-003 relevo e hidrografia",
-    "GEO-004 limites"
+    "GEO-004 limites dos raions"
   ],
-  "unique_canonical_source": true
+  "unique_canonical_source": true,
+  "approved_subdecisions": [
+    "GEO-002.1",
+    "GEO-002.2"
+  ]
 }

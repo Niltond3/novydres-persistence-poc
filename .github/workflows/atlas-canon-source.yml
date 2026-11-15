@@ -38,6 +38,11 @@ jobs:
           assert.equal(p.canonical_status,'CLOSED_CANON');
           assert.equal(l.fact_id,'GEO-002.1');
           assert.equal(l.canonical_status,'CLOSED_CANON');
+          assert.deepEqual(l.approved_subdecisions,['GEO-002.1','GEO-002.2']);
+          assert.equal(l.location.territorial_configuration.primary_urban_footprint,'continental');
+          assert.equal(l.location.territorial_configuration.coastal_city,true);
+          assert.equal(l.location.territorial_configuration.secondary_islands,true);
+          assert.equal(l.location.coastline_geometry,null);
           assert.equal(existsSync(root+'atlas-proposta.md'),true);
           const proposal=readFileSync(root+'atlas-proposta.md','utf8');
           assert.ok(!proposal.includes('mais de oito milhões'));

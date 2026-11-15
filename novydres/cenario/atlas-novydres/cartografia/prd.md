@@ -97,9 +97,9 @@ Cada fase encerra com uma **entrega utilizável e checklist curto de inconsistê
 
 O proprietário fixou em **7.000.000 residentes** a população municipal de Novydres no ano de referência 2010, abrangendo os nove raions. O dado autoritativo reside em `../populacao-2010.json`. As afirmações populacionais obsoletas foram retiradas dos arquivos correntes, em cumprimento da política de fonte única. GEO-010 (distribuição) e GEO-002/GEO-004 (extensão e limites) permanecem abertos.
 
-### Decisão posterior — GEO-002.1 (15/11/2026)
+### Decisões posteriores — GEO-002.1 e GEO-002.2 (15/11/2026)
 
-A região geral do noroeste do Alasca, perto do Estreito de Bering, foi aprovada. Única fonte vigente: `../localizacao-geral-2010.json`; localização exata, litoral, área, escala e projeção seguem abertos.
+Localização regional e configuração principal continental e costeira, com ilhas secundárias, aprovadas pelo proprietário. **Fonte única vigente:** `../localizacao-geral-2010.json`; forma costeira e insular, posição exata, área, escala e projeção ainda abertas.
 
 ## 8. Decisões a fechar antes de imagens definitivas
 

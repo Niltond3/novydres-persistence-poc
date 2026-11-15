@@ -14,9 +14,9 @@ geometry_approved: false
 
 # P0 — Inventário geográfico, urbano, territorial e político de Novydres
 
-> **Atualização de 15/11/2026:** GEO-001.1 e GEO-002.1 fechados com fontes únicas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
+> **Atualização de 15/11/2026:** GEO-001.1, GEO-002.1 e GEO-002.2 fechados com fontes únicas respectivas em `../populacao-2010.json` e `../localizacao-geral-2010.json`. Diagnósticos anteriores abaixo são memória de investigação, não autoridade editorial. O Atlas possui uma única proposta corrente.
 
-> **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas GEO-002, GEO-004 e GEO-010.
+> **Fechamento posterior GEO-001.1 (15/11/2026):** população municipal residente de **7.000.000 em 2010** aprovada pelo proprietário e registrada no assunto dono em `../populacao-2010.json`. O texto abaixo documenta a situação histórica anterior à decisão; suas referências a divergência populacional são **evidências superadas**, não alternativas vigentes. Permanecem abertas a geometria específica de GEO-002, GEO-003, GEO-004 e GEO-010.
 
 ## Complemento P0 — dossiê cruzado de decisões
 
