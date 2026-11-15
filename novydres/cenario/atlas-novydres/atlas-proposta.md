@@ -113,14 +113,14 @@ O Atlas reúne a geografia observável de Novydres, o que os Cainitas estabeleci
 ### Raion Chelsea
 
 **Posição no mapa:** Oeste  
-**Jurisdição humana:** Raion moderno de Chelsea, culturalmente chamado Old Town e antigamente conhecido como Pristan Vasilieva; pobre, religioso, denso e mantido vivo pelo corpo principal do Rio Vasyl.  
+**Jurisdição humana:** Raion moderno de Chelsea, que contém o núcleo histórico da Cidade Velha (Old Town), conforme GEO-004.1 no assunto Chelsea; pobre, religioso, denso e mantido vivo pelo corpo principal do Rio Vasyl.  
 **Jurisdição cainita:** Fora da jurisdição formal do Concílio; controlado de fato pelos Estados Livres do Novo Endereço.  
 **Clã/Fação dominante:** Estados Livres do Novo Endereço  
 **Função urbana:** Raion anarquista consolidado, com aquecimento falho, igrejas inflamadas, cortiços, redes de abrigo e ressentimento contra Bukovie.  
 **Atmosfera:** Paredes com gelo por dentro, orações em becos, sirenes distantes, mercados quebrados, pontes frias sobre água morna e assembleias que viram julgamento popular.  
 **Ressonância comum:** Colérica, Melancólica, Desespero e Devoção amarga.  
 **Meios de controle:** Assembleias, milícias de bairro, redes de abrigo térmico, sindicatos, igrejas radicais, células anarquistas e lealdade territorial bairrista.  
-**Camadas históricas:** Pristan Vasilieva nasceu como porto fluvial; Chelsea foi nome de americanização pós-guerra; Old Town é a memória decadente de uma cidade que foi renomeada e depois abandonada.
+**Camadas históricas:** A antiga Pristan Vasilieva nasceu como porto fluvial; Chelsea recebeu denominação de americanização pós-guerra, enquanto o núcleo da Cidade Velha (Old Town) preserva a memória decadente do assentamento anterior. Essas interpretações históricas permanecem candidatas.
 
 ### Raion Bukovie
 
