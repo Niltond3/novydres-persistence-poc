@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "GEO005_1_AND_2_CANON_CLOSED_GILGAMESH_ALLOCATION_SPECIFICS_OPEN",
+  "register_status": "GEO005_1_TO_3_CANON_DOMAIN_CONTINUITY_AND_JOINT_HISTORY_GEOGRAPHY",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 11,
+  "owner_approved_canon_decisions": 12,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -133,18 +133,19 @@
     {
       "id": "GEO-005",
       "title": "Formação histórica e expansão urbana",
-      "evidence_status": "POLYCENTRIC_GROWTH_AND_GILGAMESH_STRATEGIC_EMISSARY_ALLOCATION_APPROVED_SPECIFICS_PENDING",
-      "decision_state": "PARTIALLY_CLOSED_GEO-005.1_AND_GEO-005.2",
+      "evidence_status": "POLYCENTRIC_GILGAMESH_FOUNDATION_AND_DOMAIN_CONTINUITY_APPROVED_SPECIFIC_TRANSITIONS_PENDING",
+      "decision_state": "PARTIALLY_CLOSED_GEO-005.1_TO_GEO-005.3",
       "canonical_value": {
         "source_of_truth": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
         "approved_subdecisions": [
           "GEO-005.1",
-          "GEO-005.2"
+          "GEO-005.2",
+          "GEO-005.3"
         ]
       },
-      "answer": "Crescimento urbano policêntrico e descontínuo, estruturado historicamente por Gilgamesh mediante envio de emissários Cainitas a núcleos distintos conforme aptidões, ambiente e estratégia, formando senhorios subordinados. Identidades, clãs por núcleo, proximidades, fronteiras e equivalência com raions de 2010 não foram aprovados.",
-      "recommendation": "Aplicar esse princípio estratégico à seleção futura de macroposições, depois da geografia física. Não impor distância fixa entre clãs nem inventar distribuições fundadoras.",
-      "closure_criteria": "GEO-005.1 e GEO-005.2 aprovados; continuar GEO-005.3 (relação senhorios/raions), cronologia por núcleo e fases históricas da infraestrutura.",
+      "answer": "Nove raions modernos não exigem nove senhorios originais nem limites coincidentes. Mudança de senhor, clã dominante ou extensão de domínio vampírico não decorre automaticamente da evolução urbana: exige causa histórica forte documentada, período, agentes, mecanismo de legitimidade ou força, consequências e aprovação. Hipótese Ventrue/Chelsea/Bukovie não ratificada.",
+      "recommendation": "Ao propor geografia de cada localidade, construir em paralelo sua cronologia de ocupação e domínio; submeter cada transição real ao proprietário, começando por um núcleo histórico.",
+      "closure_criteria": "GEO-005.1–005.3 fechados; ainda abertas fundações individuais, senhorios originais, cronologia por núcleo, posições e eventos de transferência de domínio.",
       "source_references": [
         "novydres/cenario/historia-global/formacao-policentrica-2010.json",
         "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
@@ -156,7 +157,8 @@
       ],
       "approved_subdecision_ids": [
         "GEO-005.1",
-        "GEO-005.2"
+        "GEO-005.2",
+        "GEO-005.3"
       ]
     },
     {
@@ -177,7 +179,8 @@
         "district-*",
         "world-politics-novydres",
         "org-*"
-      ]
+      ],
+      "procedural_dependency_from_GEO_005_3": "Qualquer mudança de senhor, clã ou extensão de domínio entre períodos requer causa histórica forte, mecanismo e aprovação separada. Nenhuma transição específica foi aprovada."
     },
     {
       "id": "GEO-007",
@@ -199,7 +202,8 @@
         "org-*",
         "district-*",
         "npc-*"
-      ]
+      ],
+      "procedural_dependency_from_GEO_005_3": "Distinguir domínio reconhecido, controle efetivo e influência; presença de um clã não implica transferência do senhorio."
     },
     {
       "id": "GEO-008",
@@ -522,6 +526,7 @@
     "GEO-004.2",
     "GEO-004.3",
     "GEO-005.1",
-    "GEO-005.2"
+    "GEO-005.2",
+    "GEO-005.3"
   ]
 }

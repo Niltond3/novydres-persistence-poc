@@ -6,7 +6,7 @@ visibility: PLAYER_SAFE
 source_snapshot: 7ce8e88c122a5d80879e30a23b1f3be159cac727
 created_on: 2026-11-14
 census_year: 2010
-canonical_decisions_closed: 11
+canonical_decisions_closed: 12
 ---
 
 # Dossiê decisório GEO-001 a GEO-022 — Novydres
@@ -80,9 +80,11 @@ Usamos um mesmo snapshot operacional de `master` (`7ce8e88c122a5d80879e30a23b1f3
 
 ### GEO-005 — Formação histórica e expansão urbana
 
+**GEO-005.3 FECHADO (15/11/2026):** os nove raions modernos não precisam corresponder 1:1 aos senhorios fundadores. **Domínios Cainitas presumem continuidade:** mudança de senhor, clã, extensão ou soberania requer evento histórico forte, agentes, período, mecanismo, consequências e aprovação. A história dos núcleos e sua geografia devem ser definidas em conjunto. [Fonte histórica única](../../historia-global/formacao-policentrica-2010.json). A transferência Ventrue/Chelsea/Bukovie é apenas exemplo hipotético.
+
 **GEO-005.1 e GEO-005.2 FECHADOS (15/11/2026):** a [fonte única histórica](../../historia-global/formacao-policentrica-2010.json) estabelece crescimento policêntrico e envio estratégico por Gilgamesh de emissários Cainitas a núcleos separados, escolhidos conforme aptidões, recursos naturais e interesses políticos, para constituir senhorios subordinados. Não foram canonizados nomes de emissários, clãs por núcleo, posições, distâncias ou limites de senhorios.
 
-- **Situação:** `PARTIALLY_CLOSED_GEO-005.1_AND_GEO-005.2` — formação policêntrica e política de fundação aprovadas; fundações e cronologia específicas abertas.
+- **Situação:** `PARTIALLY_CLOSED_GEO-005.1_TO_GEO-005.3` — formação, estratégia de Gilgamesh e continuidade do domínio fechadas; cronologias e transferências específicas abertas.
 - **Resposta ao inventário:** Fontes discutem 1423/fundação, 1917, 1950–1989, 1990–1998 e 2010; não há mapa de expansão, idade construtiva ou implantação das grandes obras.
 - **Recomendação:** Usar fases espaciais rastreáveis: assentamentos antigos, núcleo fluvial, infraestrutura pré-industrial, militar/industrial na Guerra Fria, declínio e reforma. Vincular estilo de quarteirão à época, sem reescrever acontecimentos.
 - **Critério de fechamento:** Aprovar linhas do tempo de implantação, mudanças de nome, principais obras e continuidade entre eras.

@@ -61,7 +61,7 @@ jobs:
           assert.equal(ermo.cartographic_constraints.prohibit_default_continuous_urban_mass,true);
           assert.equal(ermo.cartographic_constraints.prohibit_radial_even_growth_by_default,true);
           assert.equal(ermo.transit_policy.crossing_does_not_imply_conurbation,true);
-          assert.deepEqual(growth.fact_ids,['GEO-005.1','GEO-005.2']);
+          assert.deepEqual(growth.fact_ids,['GEO-005.1','GEO-005.2','GEO-005.3']);
           assert.equal(growth.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(growth.growth_model.single_radiating_city_center,false);
           assert.equal(growth.growth_model.some_conurbations_possible,true);
@@ -71,6 +71,14 @@ jobs:
           assert.equal(growth.historical_allocation_planning.approved_emissary_names,false);
           assert.equal(growth.historical_allocation_planning.approved_exact_historical_fief_to_modern_raion_mapping,false);
           assert.equal(growth.historical_allocation_planning.assignment_criteria.length,4);
+          const fief=growth.historic_domains_and_modern_raions;
+          assert.equal(fief.status,'CANON_APPROVED_GEO-005.3');
+          assert.equal(fief.automatic_modern_boundary_equals_foundation_domain,false);
+          assert.equal(fief.raion_count_modern,9);
+          assert.equal(fief.number_of_original_fiefs,null);
+          assert.equal(fief.required_explanation_for_any_domain_transfer.strong_historical_cause,true);
+          assert.equal(fief.required_explanation_for_any_domain_transfer.approval_required_before_canonical_assignment,true);
+          assert.equal(fief.no_individual_assignments_or_changes_approved,true);
           for(const x of ['dunwich','levi','alexandria','chelsea','bukovie','new-london','sulfok','drevnigrad','vasyl-bay']){
             const i=readFileSync('novydres/cenario/geografia/district-'+x+'/index.md','utf8');
             assert.ok(i.includes('GEO-005.2'),x);

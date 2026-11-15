@@ -117,6 +117,10 @@ Os nove raions administrativos oficiais foram ratificados. A **fonte única** de
 
 A posição dos núcleos urbanos e os mapas futuros **devem obedecer** à fonte territorial de Ermos `../ermos-estrutura-territorial-2010.json` e à fonte histórica `../../historia-global/formacao-policentrica-2010.json`. Não aplicar geração radial/contínua nem tratar Ermos como gradientes decorativos de arquitetura; a geometria real de barreiras naturais e travessias condicionará a urbanização. Foi aprovada a estratégia de Gilgamesh de distribuir emissários Cainitas conforme aptidões, geografia e interesses políticos, consolidando senhorios locais subordinados. A única fonte desse fato é `../../historia-global/formacao-policentrica-2010.json`. Nenhum clã ou emissário específico foi atribuído aos nove raions, e nenhum senhorio fundador foi equiparado automaticamente a um raion moderno.
 
+### Fechamento GEO-005.3 — Continuidade dos domínios e evolução territorial (15/11/2026)
+
+Não exigir correspondência 1:1 entre senhorios e raions modernos, porém **não criar alterações de senhor, clã dominante ou extensão de domínios Cainitas apenas para preencher o mapa**. Cada mudança precisa ter causa histórica forte, período, atores, mecanismo e consequências, submetidas à aprovação. Ao construir a geografia de cada núcleo, desenvolver simultaneamente sua história. Fonte única `../../historia-global/formacao-policentrica-2010.json`. A hipótese Ventrue/Chelsea/Bukovie não é canônica.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:
