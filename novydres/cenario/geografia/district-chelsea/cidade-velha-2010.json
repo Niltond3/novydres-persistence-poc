@@ -1,0 +1,31 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "district-chelsea",
+  "fact_id": "GEO-004.1",
+  "fact_kind": "historic_urban_core_raion_membership",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "feature": {
+    "feature_id": "chelsea-cidade-velha",
+    "canonical_name": "Cidade Velha",
+    "recognized_name": "Old Town",
+    "classification": "núcleo histórico urbano",
+    "parent_raion_subject_id": "district-chelsea",
+    "relationship": "territorialmente contido no raion Chelsea",
+    "is_entire_raion": false,
+    "geometry": null,
+    "area_km2": null,
+    "internal_administrative_status": "PENDING_GEO-004",
+    "historical_earlier_name": "NOT_CANONIZED_IN_GEO-004.1"
+  },
+  "scope_of_approval": "A Cidade Velha é o núcleo histórico situado no raion Chelsea, não é o nome oficial de todo o raion. Pristan Vasilieva permanece uma hipótese de historicidade em material candidato; GEO-004.1 não ratifica sua etimologia ou período.",
+  "pending": [
+    "GEO-004 limites cartográficos da Cidade Velha e demais raions",
+    "GEO-005 cronologia detalhada de Pristan Vasilieva e adoção de Chelsea",
+    "GEO-014 localização, capacidade e rede térmica detalhada"
+  ],
+  "single_authoritative_source": true
+}

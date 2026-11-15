@@ -105,6 +105,10 @@ Localização regional e configuração principal continental e costeira, com gr
 
 A origem geológica profunda da geotermia, sua concentração abundante na Cidade Velha e a distribuição de aquecimento irregular e desigual foram aprovadas. **Única fonte autoritativa:** `../geotermia-aquecimento-2010.json`. A vinculação administrativa da Cidade Velha a Chelsea e a rede detalhada ainda aguardam decisões.
 
+### Fechamento GEO-004.1 (15/11/2026)
+
+O núcleo histórico Cidade Velha (Old Town) pertence ao raion Chelsea, conforme [fonte canônica única](../../geografia/district-chelsea/cidade-velha-2010.json). Esse vínculo não canoniza os perímetros dos bairros, a totalidade das fronteiras nem a cronologia de Pristan Vasilieva.
+
 ## 8. Decisões a fechar antes de imagens definitivas
 
 A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do que permanece aberto e das dependências de cada escolha. Candidatos iniciais a decisão prioritária:

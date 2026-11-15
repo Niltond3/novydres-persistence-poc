@@ -52,7 +52,14 @@ jobs:
           assert.equal(geo.geology.deep_groundwater_circulation,true);
           assert.equal(geo.geology.active_surface_volcano_required,false);
           assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
-          assert.equal(geo.resource_geography.administrative_mapping.canonical_status,'NOT_YET_CONFIRMED_GEO-004');
+          const oldTown=JSON.parse(readFileSync('novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json','utf8'));
+          assert.equal(oldTown.fact_id,'GEO-004.1');
+          assert.equal(oldTown.canonical_status,'CLOSED_CANON_SCOPED');
+          assert.equal(oldTown.feature.parent_raion_subject_id,'district-chelsea');
+          assert.equal(oldTown.feature.is_entire_raion,false);
+          assert.equal(oldTown.feature.geometry,null);
+          assert.equal(geo.resource_geography.administrative_mapping.canonical_status,'CONFIRMED_GEO-004.1');
+          assert.equal(geo.resource_geography.administrative_mapping.canonical_ref,'novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json');
           assert.equal(geo.district_heating.service_distribution,'UNEQUAL_CITYWIDE');
           assert.equal(l.location.territorial_configuration.land_water_system.geothermal_canon_ref,'geotermia-aquecimento-2010.json');
           assert.equal(l.location.territorial_configuration.land_water_system.geothermal_springs_present,undefined);
@@ -77,6 +84,18 @@ jobs:
           for(let i=1;i<=32;i++){
             const idx=readFileSync('novydres/cenario/lugares/poi-'+String(i).padStart(2,'0')+'/index.md','utf8');
             assert.ok(!idx.includes('duas variantes'),'poi-'+i);
+          }
+          import { createHash } from 'node:crypto';
+          const src=readFileSync(root+'atlas-proposta.md','utf8');
+          const srcBytes=Buffer.from(src,'utf8');
+          const sourceBlob=createHash('sha1').update(Buffer.concat([Buffer.from('blob '+srcBytes.length+'\\0'),srcBytes])).digest('hex');
+          for(const name of ['alexandria','bukovie','chelsea','drevnigrad','dunwich','levi','new-london','sulfok','vasyl-bay']){
+            const q=JSON.parse(readFileSync('novydres/cenario/geografia/district-'+name+'/conteudo.json','utf8'));
+            assert.equal(q.source_variants[0].source_blob_sha,sourceBlob,name);
+          }
+          for(let i=1;i<=32;i++){
+            const q=JSON.parse(readFileSync('novydres/cenario/lugares/poi-'+String(i).padStart(2,'0')+'/conteudo.json','utf8'));
+            assert.equal(q.source_variants[0].source_blob_sha,sourceBlob,'poi-'+i);
           }
           console.log('Atlas single-current-source PASS');
           NODE

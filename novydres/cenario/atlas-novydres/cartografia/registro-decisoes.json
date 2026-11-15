@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_ATLAS_GEO_DECISIONS_V1",
   "subject_id": "world-atlas-novydres",
   "source_master_sha": "7ce8e88c122a5d80879e30a23b1f3be159cac727",
-  "register_status": "ONE_GEO_PACKAGE_CLOSED_AND_SIX_APPROVED_SUBDECISIONS",
+  "register_status": "GEO001_CLOSED_GEO002_1TO3_GEO003_1_GEO014_1_GEO004_1_CLOSED_PARTIAL",
   "reference_year": 2010,
-  "owner_approved_canon_decisions": 6,
+  "owner_approved_canon_decisions": 7,
   "workflow": [
     "OPEN_EVIDENCE",
     "RECOMMENDED",
@@ -100,20 +100,25 @@
     {
       "id": "GEO-004",
       "title": "Raions, bairros e fronteiras administrativas",
-      "evidence_status": "PARCIAL_DOCUMENTADO",
-      "decision_state": "RECOMMENDED_NOT_APPROVED",
-      "canonical_value": null,
-      "answer": "Nove raions têm nomes e macroposições nas duas fontes; todos os nove assuntos estão em UNKNOWN/NOT_SELECTED. Nenhuma fronteira territorial fechada foi observada.",
-      "recommendation": "Conservar provisoriamente os nove nomes do Atlas e gerar polígonos administrativamente contíguos ou deliberadamente descontínuos; cadastrar enclaves e território fora de raion. Manter grade de tiles independente.",
-      "closure_criteria": "Aprovar lista oficial, fronteiras, áreas especiais, hierarquia raion→bairro→quadra e topônimos/aliases.",
+      "evidence_status": "OLD_TOWN_IN_CHELSEA_CONFIRMED_OTHER_BOUNDARIES_OPEN",
+      "decision_state": "PARTIALLY_CLOSED_GEO-004.1",
+      "canonical_value": {
+        "source_of_truth": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
+        "approved_subdecision": "GEO-004.1"
+      },
+      "answer": "A Cidade Velha (Old Town) foi aprovada como núcleo histórico contido em Chelsea. Isso não renomeia todo o raion nem aprova seus limites internos, as demais fronteiras ou a cronologia de Pristan Vasilieva.",
+      "recommendation": "Aplicado GEO-004.1. Prosseguir para limites e tipologia das divisões territoriais, com origem canônica única no assunto Chelsea.",
+      "closure_criteria": "GEO-004.1 fechado; seguem pendentes os limites dos nove raions, bairros, enclaves e a forma cartográfica da Cidade Velha.",
       "source_references": [
-        "novydres/cenario/atlas-novydres/atlas-proposta.md#L54-L185",
-        "novydres/catalogo.json"
+        "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json"
       ],
       "impact_subject_patterns": [
         "world-atlas-novydres",
         "district-*",
         "poi-*"
+      ],
+      "approved_subdecision_ids": [
+        "GEO-004.1"
       ]
     },
     {
@@ -305,7 +310,7 @@
         "source_of_truth": "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
         "closed_subdecision": "GEO-014.1"
       },
-      "answer": "Recurso geotérmico natural abundante e concentrado na Cidade Velha, distribuído pelo sistema urbano de maneira desigual e irregular. Detalhes da rede, capacidades e causas específicas não aprovados.",
+      "answer": "O recurso geotérmico é abundante e tem concentração principal na Cidade Velha, situada no raion Chelsea conforme GEO-004.1. A rede de aquecimento é irregular e desigual; sua geometria, capacidade e causas permanecem abertas.",
       "recommendation": "Criar grafo de geração→troca→bombeamento→distribuição→edifícios, com capacidade por zona, redundância e falhas; mapear **a desigualdade observável**, mas não converter rumor de sabotagem/desvio em verdade absoluta.",
       "closure_criteria": "Subdecisão GEO-014.1 fechada; rede, plantas, capacidades, setores e causas seguem em aberto.",
       "source_references": [
@@ -493,6 +498,7 @@
     "GEO-002.2",
     "GEO-002.3",
     "GEO-003.1",
-    "GEO-014.1"
+    "GEO-014.1",
+    "GEO-004.1"
   ]
 }
