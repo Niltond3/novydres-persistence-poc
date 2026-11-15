@@ -4,7 +4,8 @@
   "fact_ids": [
     "GEO-002.3/TERMAS",
     "GEO-003.1",
-    "GEO-014.1"
+    "GEO-014.1",
+    "GEO-003.2"
   ],
   "canonical_status": "CLOSED_CANON_SCOPED",
   "truth_state": "CONFIRMED",
@@ -49,7 +50,21 @@
     "GEO-004: limites cartográficos do núcleo histórico Cidade Velha e fronteiras dos raions",
     "GEO-003: geometria hídrica, aquíferos e fontes",
     "GEO-014: capacidade energética, instalações e rede de distribuição",
-    "eventual vulcão superficial: existência não determinada"
+    "eventual vulcão superficial: existência não determinada",
+    "GEO-003.2: gradiente térmico com contornos espaciais a definir na cartografia, sem questionar a regra canônica de habitabilidade."
   ],
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "thermal_habitability": {
+    "fact_id": "GEO-003.2",
+    "authority": "OWNER_EXPLICIT_APPROVAL",
+    "approval_date": "2026-11-15",
+    "core": "Cidade Velha (Old Town), no raion Chelsea, concentra a maior abundância de termas naturais e terrenos/abrigos aquecidos; oferece a base natural mais favorável à ocupação histórica.",
+    "distance_principle": "Em regra, quanto mais distante da concentração de termas de Old Town, menores as vantagens térmicas naturais e maiores a exposição ao frio e a dependência de aquecimento distrital, abrigos e rotas protegidas.",
+    "variation": "Não há isotermas concêntricas rígidas: relevo, vento, água, outras nascentes e obras humanas provocam exceções locais. O aquecimento de nascentes e terrenos não transforma toda a atmosfera regional em clima quente.",
+    "lethality": "Na região de Novydres, em condições extremas e sem aquecimento/abrigo/equipamento apropriados por exposição prolongada, a hipotermia e a morte são o desfecho inevitável. O período até o risco fatal depende do ambiente; não afirmar morte instantânea.",
+    "planning": "Toda zona urbana permanentemente habitada depende de acesso seguro a calor natural localizado ou aquecimento artificial confiável. Cortes de serviço, sabotagem, racionamento ou desigualdade térmica possuem consequências potencialmente fatais.",
+    "ermos": "Corredores do Ermo, onde não existe infraestrutura térmica viável em grandes trechos, são barreiras hostis e relevantes à separação dos raions; travessia é possível sob proteção planejada.",
+    "continuity": "A abundância da geotermia não implica aquecimento uniforme, e o aquecimento geotérmico continua sendo o recurso primário do sistema urbano de calefação.",
+    "exact_temperatures_and_risk_times": "UNASSIGNED; detalhar somente se necessário para mapa ou jogo."
+  }
 }

@@ -1,0 +1,74 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-002.4",
+  "title": "Implantação macrorregional de Novydres — Península de Seward, litoral e baía",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authored_on": "2026-11-15",
+  "scope": "Configuração macrorregional da baía, costa, interior e ilhas secundárias como pré-requisito à cartografia. Não desenhar aqui o mapa final, rotas ferroviárias, populações, poderes Cainitas ou limites dos raions.",
+  "reference_natural_geography": {
+    "suggested_anchor": "CONFIRMED: setor ocidental da Península de Seward, noroeste do Alasca, nas proximidades de Port Clarence e do Estreito de Bering.",
+    "real_geographic_analogy": "Port Clarence é referência geográfica real de grande baía abrigada, portuária e navegável. A macrorregião em suas proximidades foi aprovada para Novydres; não implica que a cidade substitua Port Clarence, Teller ou comunidades existentes, nem que sua baía replique exatamente o contorno real.",
+    "geothermal_plausibility": "A Península de Seward possui sistemas termais reais associados a rochas profundas e falhas, como Pilgrim Hot Springs e Serpentine Hot Springs; a abundância e capacidade excepcionais de Novydres são premissas ficcionais canônicas, não atribuições automáticas aos sítios reais.",
+    "location_assignment": "CONFIRMED_APPROXIMATE_SEWARD_PENINSULA_PORT_CLARENCE_VICINITY",
+    "indigenous_continuity": "As comunidades indígenas reais da região não são apagadas, subordinadas por definição ou renomeadas automaticamente pela proposta.",
+    "sources": [
+      "https://beringstraits.com/port-clarence/",
+      "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2024/Miller.pdf",
+      "https://www.nps.gov/articles/000/geology-of-serpentine-hot-springs.htm"
+    ]
+  },
+  "already_binding_constraints": [
+    "GEO-002.1: região do Estreito de Bering, Alasca, EUA; GEO-002.2: predominância continental; GEO-002.3: uma grande baía natural, rios, lagoas e ilhas secundárias.",
+    "GEO-003.1/GEO-014.1: geotermia natural abundante e concentração das termas na Cidade Velha/Chelsea, aquecimento distrital primário e desigual.",
+    "GEO-004.3: Corredores do Ermo como barreiras naturais reais, evitando conurbação contínua.",
+    "GEO-005.1/GEO-005.3: formação policêntrica e continuidade separada dos domínios Cainitas.",
+    "GEO-005.6/GEO-013.1: Expresso Transberíngio na periferia aquecida; exatamente duas paradas municipais, de passageiros em Sulfok e carga em local não definido.",
+    "GEO-003.2: gradiente térmico e habitabilidade aprovados; Old Town concentra as termas, regiões mais afastadas dependem cada vez mais de aquecimento, e exposição prolongada sem proteção é letal."
+  ],
+  "must_not_infer": [
+    "Novydres ocupa ou substitui Teller, Brevig Mission, Port Clarence ou outro povoado real.",
+    "Localização exata ou área do município, dos portos e da baía.",
+    "Forma obrigatória da baía igual à do Port Clarence real.",
+    "Posições oficiais dos nove raions sugeridas por atlas-proposta.md (ainda não ratificadas).",
+    "Traçado de Rio Vasyl, lagoas, costa, portos ou terminais ferroviários.",
+    "Concentração de todos os 7 milhões de moradores nas margens da baía.",
+    "Temperatura do ar uniformemente maior em toda a Cidade Velha, ou gradiente exato em graus Celsius por quilômetro.",
+    "Toda parte afastada das termas é instantaneamente fatal ou incapaz de abrigo e travessia com tecnologia."
+  ],
+  "next_after_approval": [
+    "GEO-003: definir macro-relevo, rios, lagoas, nascentes e limites naturais dos Ermos.",
+    "GEO-004: posicionar os nove raions e suas zonas urbanas sem fixar transferências automáticas de domínios Cainitas.",
+    "GEO-012/GEO-013: depois, projetar estradas, ferrovias internas, metrô, bondes, cargas, as duas paradas do Expresso e conexões protegidas.",
+    "Somente então gerar o mapa visual consistente."
+  ],
+  "editorial_notice": "Documento canônico. Referência espacial é macrorregional; não mover comunidades reais, fixar coordenadas, perímetros e traçado do Rio Vasyl. Gradiente térmico constitui regra de habitabilidade do Atlas. GEO-003 permanece responsável pela morfologia natural precisa, GEO-004 pelos raions e GEO-012/GEO-013 pelos transportes.",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "approved_landform": {
+    "primary_landmass": "Continental, ocupando faixa costeira e hinterlândia para além da baía; não ilha-cidade.",
+    "bay": "Baía natural dominante, abrigada por um cabo ou espigão costeiro, com entrada navegável voltada para águas do Estreito/Mar de Bering; a configuração exata é de desenho futuro.",
+    "harbor_role": "Águas abrigadas como base para comércio e portos, sem fixar cais por raion nesta etapa.",
+    "interior": "Relevo não uniforme, bacias interiores e vales que abrigam nascentes termais; grandes Corredores do Ermo interrompem a continuidade urbana.",
+    "islands": "Pequenas áreas insulares secundárias próximas da costa e/ou entrada da baía, sem propor um arquipélago dominante.",
+    "rivers_and_lagoons": "Rios e lagoas naturais obrigatórios, incluindo futura coerência com o Rio Vasyl candidato; cursos, foz e nomes não ratificados aqui.",
+    "municipal_footprint": "Setor metropolitano extenso com múltiplos núcleos separados, não anel compacto de densidade homogênea ao redor da baía.",
+    "exact_orientations": "UNASSIGNED; evitar determinar já azimute da boca, direções internas do Rio Vasyl e posição individual dos nove raions"
+  },
+  "exact_position_status": "PENDING_COORDINATES_GEO-002",
+  "approved_geographic_scope": "CONFIRMED: referência macrogeográfica na Península de Seward, litoral continental predominante, grande baía natural protegida, vales interiores, rios/lagoas naturais, ilhas secundárias e Corredores do Ermo entre núcleos; perímetros e coordenadas não definidos.",
+  "habitability_guidance": {
+    "core_geothermal_ref": "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+    "founding_thermal_core": "Cidade Velha (Old Town), em Chelsea: concentração de termas e calor geotérmico superficial; condições naturalmente mais favoráveis à ocupação humana durante a fundação e a urbanização inicial.",
+    "away_from_core": "Afastar-se das fontes termais principais geralmente reduz a proteção térmica natural e intensifica a dependência de edificações aquecidas, transportes protegidos e energia distrital; não se trata de queda matemática e uniforme da temperatura do ar a cada quilômetro.",
+    "extreme_northern_exposure": "Sem aquecimento e abrigo adequados durante exposição prolongada, o frio extremo do território é mortal. A cidade precisa ser planejada como sistema de sobrevivência, não como metrópole de clima temperado.",
+    "rare_local_variations": "Outras manifestações termais, relevos abrigados e estruturas tecnológicas podem manter pontos habitáveis isolados; não contradizem a concentração da maior abundância geotérmica em Old Town.",
+    "geographic_effect": "Núcleos urbanizados e rotas protegidas convergem para zonas com calor natural ou aquecimento construído; vazios sem proteção permanecem Ermos e são perigos reais, inclusive entre raions."
+  },
+  "owner_ratification": {
+    "status": "CONFIRMED",
+    "date": "2026-11-15",
+    "scope": "GEO-002.4 aprovado com área âncora próxima a Port Clarence/Península de Seward; GEO-003.2 ambiente mortal sem aquecimento e habitabilidade concentrada em Old Town."
+  }
+}
