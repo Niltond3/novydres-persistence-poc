@@ -1,0 +1,39 @@
+{
+  "schema": "NOVYDRES_HISTORY_CANON_FACT_V1",
+  "subject_id": "world-history-novydres",
+  "fact_id": "GEO-005.1",
+  "fact_kind": "polycentric_discontinuous_urban_formation",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "spatial_relevance_year": 2010,
+  "growth_model": {
+    "pattern": "policêntrico, distribuído e descontínuo",
+    "single_radiating_city_center": false,
+    "origin": "múltiplos núcleos de ocupação territorial separados, que se desenvolveram em ritmos e condições próprias",
+    "raion_role": "núcleos historicamente independentes de evolução urbana; a continuidade urbana entre todos eles não é pressuposta",
+    "natural_landscape_dependency": true,
+    "urbanization_process": "adaptação aos recursos e barreiras naturais, não supressão uniforme do ambiente",
+    "barriers_reference": "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
+    "development_limits": "a expansão encontrou trechos naturalmente hostis que conservaram seus Ermos e impediram conurbação ampla",
+    "connectivity": "integração posterior parcial por travessias e infraestruturas protegidas, sem apagar a separação natural",
+    "some_conurbations_possible": true
+  },
+  "historical_allocation_planning": {
+    "status": "PROPOSTA_PENDENTE_GEO-005.2",
+    "hypothesis": "Gilgamesh organizou o envio de emissários Cainitas para núcleos distintos conforme adequação ecológica, aptidões e prioridades políticas, estabelecendo senhorios subordinados à sua autoridade",
+    "needs_explicit_owner_decision": true,
+    "forbidden_inference": "não atribuir data de cada assentamento, clan/específico a cada núcleo, pares de emissários, distâncias obrigatórias entre clãs ou jurisdições atuais a partir da hipótese",
+    "reference_context": "As fontes históricas candidatas associam Gilgamesh à fundação de Novydres, mas não resolvem a distribuição territorial inicial."
+  },
+  "cartographic_mandate": "Não gerar mapa geral a partir de mancha central radiante ou gradação arquitetônica uniforme; posicionar raions conforme a evolução histórica e as barreiras do Ermo.",
+  "unresolved": [
+    "GEO-005.2 papel concreto dos emissários de Gilgamesh no povoamento inicial",
+    "GEO-005 cronologia da fundação, sucessão e crescimento por raion",
+    "GEO-004 posições relativas e fronteiras dos nove raions",
+    "GEO-006 domínios Cainitas por período",
+    "GEO-003 geografia física da região"
+  ],
+  "single_authoritative_source": true
+}

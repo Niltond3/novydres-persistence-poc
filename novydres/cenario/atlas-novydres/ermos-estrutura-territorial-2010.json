@@ -1,0 +1,55 @@
+{
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-004.3",
+  "fact_kind": "natural_wilderness_barrier_structure",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "territorial_structure": {
+    "wilderness_name": "Corredores do Ermo",
+    "administrative_category": "zona territorial natural especial, não um raion",
+    "raion_count_unchanged": 9,
+    "typical_distribution": "Ermos naturais separam os núcleos urbanizados da maioria dos raions, cercando ou isolando porções significativas da ocupação urbana",
+    "conurbation": "exceção possível entre determinados raions; não é o modelo dominante",
+    "nature_over_urbanization": true,
+    "wilderness_ordinary_habitation": "inviável sob condições extremas em várias áreas; não equivale a ausência absoluta de passagem temporária",
+    "drivers": [
+      "frio extremo persistente e exposição ambiental",
+      "áreas sem infraestrutura viável de aquecimento",
+      "vida selvagem dominante e perigos associados",
+      "barreiras naturais que impediram urbanização regular"
+    ],
+    "isolated_raion_footprints_not_equivalent_to_administrative_polygons": true
+  },
+  "transit_policy": {
+    "unrestricted_surface_circulation": false,
+    "engineered_crossings_permitted": true,
+    "examples": [
+      "estradas de travessia com controles e bloqueios",
+      "ferrovias e sistemas rápidos protegidos",
+      "metrô ou ligação ferroviária veloz tecnicamente protegida",
+      "corredores técnicos e acessos condicionados"
+    ],
+    "crossing_does_not_imply_conurbation": true,
+    "exact_routes_and_controls": "NOT_YET_APPROVED"
+  },
+  "cartographic_constraints": {
+    "prohibit_default_continuous_urban_mass": true,
+    "prohibit_radial_even_growth_by_default": true,
+    "prefer_distinct_urban_nuclei_with_real_wilderness_separators": true,
+    "allow_selected_approved_conurbations": true,
+    "render_wilderness_as_real_landscape_not_stylistic_band": true,
+    "require_consistent_nature_and_transport_topology_before_final_images": true
+  },
+  "pending": [
+    "GEO-003 morfologia e perigos específicos de cada Ermo",
+    "GEO-004.4 localização e limites das zonas do Ermo",
+    "GEO-012 ligações viárias e bloqueios",
+    "GEO-013 linhas ferroviárias, metrô e travessias",
+    "GEO-006 a GEO-009 soberania e conflitos Cainitas em Ermos"
+  ],
+  "single_authoritative_source": true
+}
