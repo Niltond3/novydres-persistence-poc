@@ -1,14 +1,15 @@
 ---
 adr_id: ADR-002
 title: Arquitetura do Atlas Cartográfico Canônico de Novydres
-status: PROPOSTO_PARA_VALIDACAO
+status: APROVADO_PARA_PLANEJAMENTO
 date: 2026-11-14
 scope: NOVYDRES_ATLAS_CARTOGRAFICO
 related_adr: ADR-001
 owner_scope: novydres/sistema/arquitetura
 visibility: PLAYER_SAFE
 source_snapshot: 2880156293d11496669806a4b66bc4107d44573e
-approval_scope: RASCUNHO_DOCUMENTAL_APENAS
+approval_scope: METODO_APROVADO_GEOGRAFIA_NAO_CANONIZADA
+approved_on: 2026-11-14
 ---
 
 # ADR-002 — Arquitetura do Atlas Cartográfico Canônico de Novydres
@@ -21,7 +22,7 @@ A arquitetura Git-native orientada por assunto do ADR-001 já está implantada. 
 
 ## 2. Decisão arquitetural proposta
 
-Adotar uma arquitetura **Git-native, subject-oriented e cartográfica por dados**, na qual:
+Adotar, por aprovação expressa do proprietário, uma arquitetura **Git-native, subject-oriented e cartográfica por dados**, na qual:
 
 1. ChatGPT Web conduz análise, planejamento, edições, verificações e revisão com o proprietário.
 2. GitHub mantém decisões, dados espaciais, código de geração, histórico e resultados aprovados.
@@ -130,4 +131,4 @@ Bloqueios são **somente falhas materiais verificadas ou decisões de autoridade
 
 Benefícios: uma só cidade entre mapas, histórico Git, melhor controle de instituições e infraestrutura, produção incremental e variantes públicas/narrativas. Custos: planejamento, dados estruturados, testes e uma primeira implementação técnica. Riscos residuais: conectores e hospedagem podem exigir configuração; algoritmos de urbanismo não substituem juízo editorial; dados insuficientes não autorizam inventar precisão.
 
-**Estado:** ADR-002 proposto para validação, ainda sem força operacional própria. Este documento não canoniza uma localização, número populacional, malha viária, instalação, tecnologia definitivamente selecionada ou cronologia; a decisão arquitetural e o desenvolvimento seguem sujeitos à aprovação do proprietário e às regras do ADR-001.
+**Estado:** ADR-002 aprovado pelo proprietário em 14/11/2026 como diretriz de planejamento, sem ativar por si só runtime cartográfico. Este documento não canoniza uma localização, número populacional, malha viária, instalação, tecnologia definitivamente selecionada ou cronologia; a decisão arquitetural e o desenvolvimento seguem sujeitos à aprovação do proprietário e às regras do ADR-001.

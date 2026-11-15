@@ -1,13 +1,14 @@
 ---
 document_id: PRD-ATLAS-001
 title: Atlas Cartográfico Canônico de Novydres
-status: PROPOSTO_PARA_VALIDACAO
+status: APROVADO_PARA_PLANEJAMENTO
 date: 2026-11-14
 subject_id: world-atlas-novydres
 owner_scope: novydres/cenario
 visibility: PLAYER_SAFE
 source_snapshot: 2880156293d11496669806a4b66bc4107d44573e
-approval_scope: RASCUNHO_DOCUMENTAL_APENAS
+approval_scope: METODO_APROVADO_GEOGRAFIA_NAO_CANONIZADA
+approved_on: 2026-11-14
 ---
 
 # PRD — Atlas Cartográfico Canônico de Novydres
@@ -24,7 +25,7 @@ Construir progressivamente a geografia urbana de Novydres (recorte de referênci
 - Consultar `AGENTS.md`, `CONTEXT.md` e `catalogo.json` no mesmo commit, conforme ADR-001.
 - As duas fontes históricas de Atlas preservadas no assunto são referências com proveniência, **não** um conjunto integralmente ratificado de fatos por campo. As divisões por raion, locais de interesse e demais conceitos dependem de reconciliação de autoridade.
 - Os nove **raions administrativos** não equivalem à grade cartográfica 3×3; qualquer grade de tiles é apenas uma maneira de exportar o território.
-- A presente aprovação autoriza redigir este PRD e o ADR-002 como propostas. **Não aprova nova geografia, novos números populacionais, mudança de história ou publicação de mapa definitivo.**
+- A aprovação expressa do proprietário autoriza este PRD e o ADR-002 como diretrizes do trabalho cartográfico. **Não aprova nova geografia, novos números populacionais, mudança de história ou publicação de mapa definitivo.**
 - Respeitar a separação entre geografia global, conceitos de distritos, locais, conhecimento por personagem e história de crônica. Fatos conflitantes permanecem assinalados até decisão expressa.
 
 ## 3. Pessoas e usos
@@ -120,4 +121,4 @@ A fase P0 deverá produzir um inventário exaustivo do que já foi decidido, do 
 
 O produto será bem-sucedido quando qualquer distrito puder ser ampliado e revisado sem perder sua relação com a cidade inteira; quando vias, transporte e instituições corresponderem a dados verificáveis; quando a cartografia pública e a narrativa compartilharem a mesma cidade; e quando o projeto puder evoluir por novos prompts, sem reconstrução integral nem canonização silenciosa.
 
-**Estado desta versão:** proposta documental para revisão do proprietário. Nenhum elemento geográfico novo é aprovado por este texto.
+**Estado desta versão:** aprovado pelo proprietário em 14/11/2026 para orientar o planejamento. Nenhum elemento geográfico novo é aprovado por este texto.
