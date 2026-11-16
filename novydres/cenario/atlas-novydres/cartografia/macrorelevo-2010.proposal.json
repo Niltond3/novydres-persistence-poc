@@ -1,0 +1,428 @@
+{
+  "schema": "NOVYDRES_LOCAL_RELIEF_PROPOSAL_V1",
+  "document_id": "MW-003-MACRORELEVO-2010",
+  "subject_id": "world-atlas-novydres",
+  "year": 2010,
+  "approval": {
+    "workflow": "PROPOSED_PENDING_OWNER_REVIEW",
+    "canonical_status": "NOT_APPROVED",
+    "truth_state": "GM_PREPARED",
+    "geometry_authority": "PROPOSAL_ONLY",
+    "owner_approval_for_this_geometry": null
+  },
+  "provenance": {
+    "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
+    "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
+    "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
+    "candidate_coast_branch": "mapwork/mw-002-macrogeometria-costeira",
+    "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
+    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "canonical_sources": [
+      "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
+      "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
+      "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+      "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json"
+    ]
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "coordinate_order": "[x_east_m,y_north_m]",
+    "study_frame": {
+      "xmin": -60000,
+      "ymin": -50000,
+      "xmax": 60000,
+      "ymax": 50000
+    },
+    "geodetic_anchor": null,
+    "epsg": null,
+    "municipal_boundary": null
+  },
+  "relief_model": {
+    "vertical_datum": null,
+    "absolute_altitudes_m": null,
+    "contours": null,
+    "raster_dem": null,
+    "interpretation": "Sparse macroform anchor polygons and crest axes, NOT an exhaustive terrain partition or cadastral survey. Gaps are undefined, not flatland.",
+    "relief_areas": [
+      {
+        "feature_id": "relief-thermal-valley-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            27000,
+            17000
+          ],
+          [
+            34000,
+            14500
+          ],
+          [
+            40000,
+            18500
+          ],
+          [
+            42000,
+            26000
+          ],
+          [
+            35000,
+            33000
+          ],
+          [
+            27500,
+            31000
+          ],
+          [
+            23000,
+            25000
+          ]
+        ],
+        "physiographic_class": "terrain-thermal-valley",
+        "qualitative_morphology": "depressed_thermal_valley",
+        "possible_ermo_type": "not_an_admin_boundary",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-northern-uplands-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -10000,
+            39500
+          ],
+          [
+            1000,
+            47000
+          ],
+          [
+            22500,
+            47000
+          ],
+          [
+            28000,
+            38500
+          ],
+          [
+            18000,
+            35500
+          ],
+          [
+            3000,
+            36500
+          ]
+        ],
+        "physiographic_class": "terrain-rocky-uplands",
+        "qualitative_morphology": "elevated_ridges",
+        "possible_ermo_type": "rocky-pass",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-eastern-uplands-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            44000,
+            -5000
+          ],
+          [
+            50000,
+            -3000
+          ],
+          [
+            57000,
+            13000
+          ],
+          [
+            56000,
+            33000
+          ],
+          [
+            47500,
+            34000
+          ],
+          [
+            45000,
+            22000
+          ],
+          [
+            42000,
+            12000
+          ]
+        ],
+        "physiographic_class": "terrain-rocky-uplands",
+        "qualitative_morphology": "elevated_ridges",
+        "possible_ermo_type": "rocky-pass",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-southern-uplands-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            25000,
+            -23000
+          ],
+          [
+            33000,
+            -29000
+          ],
+          [
+            45000,
+            -26000
+          ],
+          [
+            47000,
+            -15500
+          ],
+          [
+            38000,
+            -7000
+          ],
+          [
+            29000,
+            -11000
+          ]
+        ],
+        "physiographic_class": "terrain-rocky-uplands",
+        "qualitative_morphology": "elevated_ridges",
+        "possible_ermo_type": "rocky-pass",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-southwestern-tundra-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -25000,
+            -47000
+          ],
+          [
+            -5000,
+            -47000
+          ],
+          [
+            8000,
+            -43000
+          ],
+          [
+            7000,
+            -37000
+          ],
+          [
+            -9000,
+            -35000
+          ],
+          [
+            -24000,
+            -36000
+          ]
+        ],
+        "physiographic_class": "terrain-tundra-lowlands",
+        "qualitative_morphology": "low_permafrost_plain",
+        "possible_ermo_type": "tundra-permafrost",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-northeastern-tundra-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            32500,
+            41000
+          ],
+          [
+            39000,
+            48000
+          ],
+          [
+            57000,
+            48000
+          ],
+          [
+            58000,
+            37000
+          ],
+          [
+            48000,
+            37000
+          ]
+        ],
+        "physiographic_class": "terrain-tundra-lowlands",
+        "qualitative_morphology": "low_permafrost_plain",
+        "possible_ermo_type": "tundra-permafrost",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      },
+      {
+        "feature_id": "relief-southern-wet-lowland-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            9000,
+            -28000
+          ],
+          [
+            17000,
+            -26000
+          ],
+          [
+            24000,
+            -29500
+          ],
+          [
+            23000,
+            -34000
+          ],
+          [
+            10000,
+            -35500
+          ]
+        ],
+        "physiographic_class": "terrain-tundra-lowlands",
+        "qualitative_morphology": "seasonal_wet_lowland",
+        "possible_ermo_type": "wetlands",
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "effective_raion": null,
+        "altitude_m": null
+      }
+    ],
+    "ridge_crest_axes": [
+      {
+        "feature_id": "relief-crest-northern-001",
+        "parent_region_id": "relief-northern-uplands-001",
+        "kind": "qualitative_crest_axis",
+        "points_xy_m": [
+          [
+            -3000,
+            42500
+          ],
+          [
+            9000,
+            42500
+          ],
+          [
+            22000,
+            42500
+          ]
+        ],
+        "geometry_type": "LineString",
+        "altitude_m": null,
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "relief-crest-eastern-001",
+        "parent_region_id": "relief-eastern-uplands-001",
+        "kind": "qualitative_crest_axis",
+        "points_xy_m": [
+          [
+            47000,
+            -2000
+          ],
+          [
+            51000,
+            11000
+          ],
+          [
+            52000,
+            26500
+          ]
+        ],
+        "geometry_type": "LineString",
+        "altitude_m": null,
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "relief-crest-southern-001",
+        "parent_region_id": "relief-southern-uplands-001",
+        "kind": "qualitative_crest_axis",
+        "points_xy_m": [
+          [
+            31000,
+            -23500
+          ],
+          [
+            37500,
+            -19000
+          ],
+          [
+            41500,
+            -16500
+          ]
+        ],
+        "geometry_type": "LineString",
+        "altitude_m": null,
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      }
+    ],
+    "coastal_context_references": {
+      "sheltered_bay": {
+        "derived_feature_id": "water-bay-main-001",
+        "coast_feature_id": "coast-mainland-001",
+        "coast_vertex_range_inclusive_zero_based": [
+          5,
+          19
+        ],
+        "geomorphology": "sheltered_bay_estuarine_context"
+      },
+      "exposed_coast_segments": [
+        {
+          "coast_feature_id": "coast-mainland-001",
+          "coast_vertex_range_inclusive_zero_based": [
+            0,
+            5
+          ]
+        },
+        {
+          "coast_feature_id": "coast-mainland-001",
+          "coast_vertex_range_inclusive_zero_based": [
+            19,
+            25
+          ]
+        }
+      ],
+      "policy": "References only; do not copy or redefine MW-002 coastline, bay perimeter or island rings."
+    }
+  },
+  "conceptual_constraints": {
+    "thermal_valley": "Candidate inland depression associated with Cidade Velha/Iknik historic thermal core; not city nucleus or Kingswell boundary; no coordinates for springs or rivers.",
+    "crests": "Topographic barriers/divides potentially relevant to future watersheds, not approved watershed boundaries, roads, passes, tunnels or infrastructure.",
+    "tundra": "Permafrost plains and possible seasonally saturated lowlands; not uniformly ice-covered or permanently flooded.",
+    "ermos": "possible_ermo_type is a conditional geomorphological consequence, not an approved corridor perimeter or administrative unit.",
+    "hydrology": "Rio Vasyl canonically crosses Iknik and flows into the large bay; its course, source, estuary point, tributaries and lakes are intentionally NOT mapped in MW-003.",
+    "geothermal": "No circular isotherms, uniform thermal field, open volcano or underground route is inferred.",
+    "coverage": "Unmapped parts of mainland are unassigned; all islands remain without a relief assignment in this unit."
+  },
+  "explicitly_unassigned": {
+    "municipal_area_km2": null,
+    "raion_geometries": null,
+    "land_cover_global": null,
+    "elevation_m": null,
+    "vertical_datum": null,
+    "coast_approval": null,
+    "shoreline_changes": null,
+    "river_geometries": null,
+    "water_divides": null,
+    "thermal_source_points": null,
+    "ermo_final_boundaries": null,
+    "roads_and_rail": null,
+    "ports": null,
+    "landslide_risk": null
+  },
+  "validation": {
+    "geometry_dependency_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "required": "node novydres/cenario/atlas-novydres/cartografia/validar-macrorelevo.mjs",
+    "tested_in_proposal": "self_and_cross_nonintersection_landside_coast_dependency_crest_containment"
+  }
+}
