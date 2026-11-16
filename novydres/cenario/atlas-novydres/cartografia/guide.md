@@ -4,6 +4,25 @@ Este arquivo contém **modelos de passagem de trabalho**, não geografia nem câ
 
 **Nunca reconstruir fatos a partir da memória de chat ou de um handoff.** Textos de handoff são localizadores e instruções, não evidência. Reconfirmar os fatos e o checkpoint no repositório.
 
+## Regra de fechamento integral do ponto e liberação de handoff (aprovação do proprietário em 16/11/2026)
+
+**É proibido criar handoff para o próximo ponto/unidade enquanto o ponto atual não estiver efetivamente fechado.** A aprovação de uma orientação parcial, a conclusão de uma subdecisão, a publicação de um checkpoint ou a proximidade do limite do contexto **não** equivalem ao fechamento.
+
+O handoff `MW-XXX → MW-YYY` e o prompt de inicialização da próxima unidade **somente podem ser produzidos depois que todos os critérios abaixo forem cumpridos e documentados no GitHub**:
+
+1. **Inventário de decisões do ponto:** enumerar tudo que depende da validação substantiva do proprietário, sem perguntas artificiais ou aprovações de detalhes meramente técnicos.
+2. **Deliberação integral:** para **cada** questão do ponto, registrar a resposta expressa do proprietário — `APROVADO`, `REJEITADO` ou `APROVADO_COM_RESSALVAS` (ou `ADIADO` apenas se o ponto puder ser encerrado honestamente mantendo essa pendência fora do seu critério de aceite). Nenhuma aprovação implícita.
+3. **Implementação concluída:** gerar e publicar **a nova versão do artefato pertinente** que materializa as decisões, suas ressalvas e rejeições; quando uma alternativa for rejeitada, a versão consolidada não poderá apresentá-la como aprovada. Para cartografia, atualizar a geometria estruturada candidata e o visualizador derivado conforme aplicável, preservando a fonte única.
+4. **Validação da versão efetiva:** realizar as verificações técnicas e visuais apropriadas na **nova** versão, reconciliar dependências e corrigir problemas materiais. Testes anteriores à revisão não certificam a revisão. Limitações remanescentes devem estar explicitadas; nenhuma falha bloqueante pode ser disfarçada de PASS.
+5. **Revisão final pelo proprietário:** quando o ponto exige aceite visual ou substantivo da versão consolidada, submetê-la à avaliação; obter aceite ou rejeição inequívoca **dessa versão**, inclusive das ressalvas. Uma ordem de “refinar antes de aprovar” mantém o ponto **aberto** até haver a versão refinada e sua revisão.
+6. **Fechamento e readback remoto:** registrar o estado final do ponto (`CLOSED_FOR_THIS_SCOPE` com decisão/ressalvas delimitadas, ou `CLOSED_REJECTED` após rejeição explicitamente encerrada), entregas, validações, pendências não bloqueantes e commit; confirmar ref, parent, tree e blobs remotamente. **Fechamento do ponto não é canonização:** `CLOSED_CANON` depende separadamente do contrato de propagação e autorização correspondente.
+
+**Se qualquer requisito faltar:** continuar trabalhando **na mesma unidade**, com status `OPEN` ou equivalente; não afirmar unidade concluída, não propor próxima unidade como executável e **não emitir handoff nem prompt para o próximo ponto**. Informar apenas decisões obtidas e pendências de fechamento.
+
+**Exceção técnica para troca de conversa por limite de contexto:** pode-se registrar no GitHub um checkpoint verificável e uma **nota curta de retomada da mesma unidade MW-XXX**, sem declarar fechamento, sem inventar uma nova unidade e sem chamá-la de handoff para próximo passo. A nota indica apenas como reabrir o trabalho atual nas fontes GitHub. Não usar histórico/memória como autoridade.
+
+Esta regra governa os modelos abaixo; **os modelos de handoff e prompt seguinte só ficam habilitados após cumprir o gate de fechamento**.
+
 ## Modelo de encerramento de unidade
 
 ```text
@@ -19,9 +38,9 @@ Próxima unidade: <um objetivo, um entregável e um critério de aceite>
 Referência operacional: novydres/cenario/atlas-novydres/cartografia/guide.md
 ```
 
-Não copiar narrativas extensas, fatos canônicos ou histórico de discussão. Apontar para arquivos e IDs exatos. Se não houve escrita, declarar explicitamente.
+**Utilizar este modelo somente depois do gate de fechamento integral acima.** Não copiar narrativas extensas, fatos canônicos ou histórico de discussão. Apontar para arquivos e IDs exatos. Se não houve escrita, declarar explicitamente.
 
-## Modelo de prompt do próximo chat
+## Modelo de prompt do próximo chat (somente após fechamento)
 
 ```text
 NOVYDRES MAPWORK — MW-YYY
@@ -32,12 +51,12 @@ Repositório: Niltond3/novydres-persistence-poc
 
 Abra o HEAD atual de master; leia AGENTS.md, CONTEXT.md e catalogo.json no mesmo SHA; siga o ADR-002, o PRD-ATLAS-001 e cartografia/guide.md. Resolva no GitHub os assuntos, fontes e dependências desta unidade. O handoff anterior serve apenas para localizar arquivos e checkpoints; valide tudo remotamente. Preserve o cânone, o escopo cartográfico e a governança.
 
-Execute leitura, proposta/implementação autorizada e verificações proporcionais ao bloco. Só peça decisão substantiva ao proprietário. Não avance para outra unidade. Termine com handoff e prompt mínimo para MW-YYY+1 usando o modelo do guia.
+Execute leitura, proposta/implementação autorizada, deliberação integral do proprietário e verificações proporcionais ao bloco. Não avance para outra unidade. Gere handoff para MW-YYY+1 **somente se** o ponto atual estiver completamente fechado conforme o gate; caso contrário, mantenha a unidade aberta e registre apenas checkpoint de retomada da mesma MW.
 ```
 
 ## Política de divisão
 
-Cada chat trata **uma unidade pequena e verificável**, não uma fase inteira obrigatoriamente. Encerre por entregável e não pelo limite de contexto. Se ficar grande, corte no último ponto coerente realmente persistido e verificado; nunca anuncie PASS sem evidência.
+Cada unidade trata **um ponto pequeno e verificável**, não uma fase inteira obrigatoriamente. Não encerrar o ponto por limite de contexto; caso a conversa precise terminar antes do aceite, registrar apenas checkpoint verificado e continuar a **mesma MW** em outro chat, sem handoff de próximo ponto. Nunca anunciar PASS sem evidência.
 
 - **A — Bloqueante do mapa:** resolver ou propor decisão para construir/validar a geometria.
 - **B — Condicionante geográfica:** registrar a consequência espacial e deixar o restante narrativo aberto.

@@ -2,9 +2,11 @@
 document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: OWNER_DECISIONS_1_2_RECORDED_PENDING_REFINED_GEOMETRY
+workflow_status: IN_PROGRESS_OWNER_DECISIONS_RECORDED_REFINEMENT_REQUIRED
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
+work_unit_status: OPEN
+handoff_to_next_point: BLOCKED_UNTIL_POINT_CLOSED
 owner_decision_on: 2026-11-16
 owner_decision_keys: FIS-01-DECISION-1,FIS-01-DECISION-2
 owner_decision: PRESERVE_SHELTERED_BAY_REFINE_CONTOURS_AND_KEEP_THREE_ISLANDS_ONLY_AS_REVISABLE_HYPOTHESIS
@@ -55,10 +57,18 @@ O proprietário declarou: **“FIS-01, decisão 2: mantenha três ilhas como hip
 
 **Consequência funcional:** a análise costeira deve preservar a possibilidade de águas protegidas e circulação na baía sem atribuir às ilhas papel obrigatório de barreira, porto, travessia ou polo urbano. Validar que ilhas continuem sobre água e separadas do continente na futura geometria; não tomar o esquema atual como prova geográfica física exata.
 
-**Pendência A para próxima unidade:** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
+**Pendência A da unidade atual (MW-009):** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
+
+## Gate de fechamento da unidade MW-009
+
+**MW-009 permanece ABERTA:** a aceitação da organização costeira e a hipótese das ilhas são decisões intermediárias, não encerramento do ponto FIS-01.
+
+Conforme a regra agora registrada em `guide.md`, **não gerar handoff nem prompt MW-010** antes de: (1) produzir variante de contorno refinada e versão atualizada do visualizador 2D; (2) verificar impactos com Rio Vasyl, microbacias, relevo, Ermos e ilhas provisórias; (3) submeter a versão consolidada ao proprietário e registrar seu aceite/rejeição/ressalvas; (4) corrigir problemas materiais, concluir as validações pertinentes e verificar o commit remoto. A rejeição de uma variante exige corrigir ou encerrar expressamente a opção descartada; não autoriza inferir a aprovação de outra.
+
+O handoff e prompt MW-010 anteriormente emitidos após a mera decisão sobre as ilhas foram **prematuros e estão revogados como autorização de avanço**. Em caso de limite de contexto, fazer somente checkpoint/nota de retomada da **mesma MW-009**, sem declarar fechamento.
 
 ## Escopo, validação e continuidade
 
-**Este registro documental das decisões 1 e 2 não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. O handoff deve apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
+**Este registro documental das decisões 1 e 2 não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. Quando houver fechamento integral e somente então for permitido um handoff, ele deverá apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
 
 **A/B/C:** A = produzir variante de costa topologicamente verificável para futura aprovação; B = registrar efeito sobre foz, lagoa, Ermos litorâneos e navegabilidade sem projetar infraestrutura; C = redes/portos/raions e narrativa, fora desta revisão.
