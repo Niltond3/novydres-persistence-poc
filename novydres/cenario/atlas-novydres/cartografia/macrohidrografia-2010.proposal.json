@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_LOCAL_HYDROGRAPHY_PROPOSAL_V1",
-  "document_id": "MW-004-MACROHIDROGRAFIA-2010",
+  "document_id": "MW-012-MACROHIDROGRAFIA-REFINED-2010",
   "subject_id": "world-atlas-novydres",
   "year": 2010,
   "approval": {
@@ -8,15 +8,18 @@
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
-    "owner_approval_for_this_geometry": null
+    "owner_approval_for_this_geometry": null,
+    "refinement_stage": "MW012_CANDIDATE_PENDING_OWNER_DECISIONS",
+    "refined_hydro_status": "REFINED_CANDIDATE_NOT_APPROVED",
+    "owner_approval_for_refined_hydro": null
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
     "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
-    "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
+    "candidate_coast_commit": "2a3932a015c8458226410ebfcd67d399b0a33e10",
     "candidate_coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
     "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
-    "candidate_relief_commit": "79772905f0e895c236b31abea059ef2ed085e866",
+    "candidate_relief_commit": "03d4d2dbeec3d298f200de4169cbdba35dea1051",
     "candidate_relief_blob_sha": "cccc4eaac09b192a299108389bef3494f1f15bda",
     "candidate_relief_path": "novydres/cenario/atlas-novydres/cartografia/macrorelevo-2010.proposal.json",
     "canonical_sources": [
@@ -25,9 +28,19 @@
       "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
       "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
     ],
-    "refinement_review": "MW-010: refined mainland coastline approved only as noncanonical working baseline; secondary islands remain hypothetical",
+    "refinement_review": "MW-012 refined hydrography against MW-010 mainland coast and MW-011 relief, both owner-approved as noncanonical cartographic working baselines; hydro refinements await owner decisions.",
     "current_relief_work_unit": "MW-011",
-    "current_relief_candidate_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE"
+    "current_relief_candidate_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
+    "refinement_2010": {
+      "work_unit": "MW-012",
+      "source_checkpoint": "03d4d2dbeec3d298f200de4169cbdba35dea1051",
+      "previous_hydro_blob_sha": "57df659de492f64288c50a0001525e7ae93fa530",
+      "approved_coast_working_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
+      "approved_relief_working_blob_sha": "cccc4eaac09b192a299108389bef3494f1f15bda",
+      "scope": "5 non-exhaustive catchment envelopes, 9 connected watercourses, 3 localized waterbodies, 1 thermal reach; coastline-preserving corrections at two bay outlets",
+      "approval": "PENDING",
+      "method": "Synthetic local-grid geomorphic densification, directed graph endpoints retained; no surveyed hydrological divides or DEM"
+    }
   },
   "spatial_reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -64,56 +77,136 @@
             32000
           ],
           [
+            3306,
+            35810
+          ],
+          [
             3000,
             40000
+          ],
+          [
+            5719,
+            41287
           ],
           [
             8000,
             43000
           ],
           [
+            17628,
+            43163
+          ],
+          [
             27000,
             44000
+          ],
+          [
+            34356,
+            41670
           ],
           [
             42000,
             40000
           ],
           [
+            48203,
+            37296
+          ],
+          [
             55000,
             35000
+          ],
+          [
+            54896,
+            27432
           ],
           [
             55500,
             20000
           ],
           [
+            49408,
+            14112
+          ],
+          [
             44000,
             8000
+          ],
+          [
+            36797,
+            5548
           ],
           [
             30000,
             2500
           ],
           [
+            27476,
+            2513
+          ],
+          [
             25000,
             2000
+          ],
+          [
+            25125,
+            3200
+          ],
+          [
+            25250,
+            4400
+          ],
+          [
+            25254,
+            5947
+          ],
+          [
+            25250,
+            7200
+          ],
+          [
+            24884,
+            8669
+          ],
+          [
+            24500,
+            9850
+          ],
+          [
+            23526,
+            10809
           ],
           [
             22500,
             11500
           ],
           [
+            21441,
+            15055
+          ],
+          [
             20000,
             18000
+          ],
+          [
+            18850,
+            21041
           ],
           [
             17000,
             24000
           ],
           [
+            13832,
+            26860
+          ],
+          [
             10000,
             30000
+          ],
+          [
+            6500,
+            31000
           ]
         ],
         "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
@@ -130,32 +223,64 @@
             36000
           ],
           [
+            -32000,
+            38000
+          ],
+          [
             -28000,
             40000
+          ],
+          [
+            -21864,
+            39833
           ],
           [
             -16000,
             39000
           ],
           [
+            -10846,
+            40098
+          ],
+          [
             -5000,
             41000
+          ],
+          [
+            -1360,
+            42507
           ],
           [
             3000,
             44000
           ],
           [
+            1673,
+            46940
+          ],
+          [
             1000,
             50000
           ],
           [
+            -20506,
+            49640
+          ],
+          [
             -42000,
             50000
           ],
           [
+            -41645,
+            46440
+          ],
+          [
             -42000,
             43000
+          ],
+          [
+            -38646,
+            39565
           ]
         ],
         "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
@@ -172,36 +297,88 @@
             -8000
           ],
           [
+            32284,
+            -8038
+          ],
+          [
             42000,
             -7500
+          ],
+          [
+            47163,
+            -12877
           ],
           [
             53000,
             -18000
           ],
           [
+            50142,
+            -25958
+          ],
+          [
             48000,
             -34000
+          ],
+          [
+            36228,
+            -35514
           ],
           [
             25000,
             -37500
           ],
           [
+            15143,
+            -36919
+          ],
+          [
             5000,
             -37000
+          ],
+          [
+            2314,
+            -33323
           ],
           [
             -1000,
             -30000
           ],
           [
+            356,
+            -25943
+          ],
+          [
             1000,
             -22000
           ],
           [
+            5109,
+            -21206
+          ],
+          [
+            8500,
+            -20350
+          ],
+          [
+            11288,
+            -18955
+          ],
+          [
+            13500,
+            -17350
+          ],
+          [
+            15120,
+            -17278
+          ],
+          [
             16500,
             -17000
+          ],
+          [
+            19805,
+            -12856
           ]
         ],
         "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
@@ -218,28 +395,56 @@
             -35000
           ],
           [
+            -28685,
+            -34675
+          ],
+          [
             -22000,
             -34000
+          ],
+          [
+            -13250,
+            -34759
           ],
           [
             -4000,
             -35000
           ],
           [
+            2143,
+            -37547
+          ],
+          [
             9000,
             -40000
+          ],
+          [
+            6644,
+            -43948
           ],
           [
             5000,
             -48000
           ],
           [
+            -16114,
+            -47658
+          ],
+          [
             -37000,
             -48000
           ],
           [
+            -40648,
+            -44926
+          ],
+          [
             -45000,
             -42000
+          ],
+          [
+            -40141,
+            -38529
           ]
         ],
         "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
@@ -256,24 +461,48 @@
             -3500
           ],
           [
+            23909,
+            -4925
+          ],
+          [
             24500,
             -6500
+          ],
+          [
+            28309,
+            -6195
           ],
           [
             32000,
             -6600
           ],
           [
+            32957,
+            -3856
+          ],
+          [
             34500,
             -1300
+          ],
+          [
+            33614,
+            -121
           ],
           [
             33000,
             1200
           ],
           [
+            29677,
+            917
+          ],
+          [
             26500,
             1300
+          ],
+          [
+            25044,
+            -1204
           ]
         ],
         "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
@@ -292,40 +521,120 @@
             38000
           ],
           [
+            16800,
+            37250
+          ],
+          [
+            18450,
+            36250
+          ],
+          [
             20000,
             35000
+          ],
+          [
+            22100,
+            33000
+          ],
+          [
+            24450,
+            31350
           ],
           [
             27000,
             30000
           ],
           [
+            28800,
+            29250
+          ],
+          [
+            30450,
+            28250
+          ],
+          [
             32000,
             27000
+          ],
+          [
+            32900,
+            26050
+          ],
+          [
+            33900,
+            25200
           ],
           [
             35000,
             24500
           ],
           [
+            34500,
+            23250
+          ],
+          [
+            33850,
+            22100
+          ],
+          [
             33000,
             21000
+          ],
+          [
+            31500,
+            19850
+          ],
+          [
+            30150,
+            18500
           ],
           [
             29000,
             17000
           ],
           [
+            28550,
+            15400
+          ],
+          [
+            27850,
+            13900
+          ],
+          [
             27000,
             12500
+          ],
+          [
+            26500,
+            11200
+          ],
+          [
+            26150,
+            9900
           ],
           [
             26000,
             8500
           ],
           [
+            26150,
+            7350
+          ],
+          [
+            26150,
+            6150
+          ],
+          [
             26000,
             5000
+          ],
+          [
+            25550,
+            4050
+          ],
+          [
+            25200,
+            3050
           ],
           [
             25000,
@@ -354,12 +663,36 @@
             38000
           ],
           [
+            8850,
+            37050
+          ],
+          [
+            10500,
+            35900
+          ],
+          [
             12000,
             34500
           ],
           [
+            14900,
+            33350
+          ],
+          [
+            17900,
+            32550
+          ],
+          [
             21000,
             32000
+          ],
+          [
+            23100,
+            31600
+          ],
+          [
+            25100,
+            30950
           ],
           [
             27000,
@@ -370,7 +703,7 @@
         "downstream": {
           "type": "confluence",
           "target_feature_id": "river-vasyl-main-001",
-          "target_vertex_index": 2
+          "target_vertex_index": 6
         },
         "approval_status": "PROPOSED_NOT_CANONICAL"
       },
@@ -385,12 +718,36 @@
             32000
           ],
           [
+            46750,
+            31150
+          ],
+          [
+            45400,
+            30500
+          ],
+          [
             44000,
             30000
           ],
           [
+            42600,
+            29500
+          ],
+          [
+            41250,
+            28850
+          ],
+          [
             40000,
             28000
+          ],
+          [
+            38500,
+            26600
+          ],
+          [
+            36850,
+            25450
           ],
           [
             35000,
@@ -401,7 +758,7 @@
         "downstream": {
           "type": "confluence",
           "target_feature_id": "river-vasyl-main-001",
-          "target_vertex_index": 4
+          "target_vertex_index": 12
         },
         "approval_status": "PROPOSED_NOT_CANONICAL"
       },
@@ -416,24 +773,72 @@
             -24000
           ],
           [
+            32150,
+            -24950
+          ],
+          [
+            30500,
+            -26100
+          ],
+          [
             29000,
             -27500
+          ],
+          [
+            27000,
+            -28950
+          ],
+          [
+            24800,
+            -30100
           ],
           [
             22500,
             -31000
           ],
           [
+            20800,
+            -30950
+          ],
+          [
+            19150,
+            -31100
+          ],
+          [
             17500,
             -31500
+          ],
+          [
+            15300,
+            -31450
+          ],
+          [
+            13100,
+            -31150
           ],
           [
             11000,
             -30500
           ],
           [
+            9700,
+            -28800
+          ],
+          [
+            8200,
+            -27300
+          ],
+          [
             6500,
             -26000
+          ],
+          [
+            4500,
+            -24900
+          ],
+          [
+            2650,
+            -23600
           ],
           [
             1000,
@@ -460,16 +865,48 @@
             45000
           ],
           [
+            -3950,
+            45650
+          ],
+          [
+            -7950,
+            46000
+          ],
+          [
             -12000,
             46000
+          ],
+          [
+            -16350,
+            45700
+          ],
+          [
+            -20650,
+            45700
           ],
           [
             -25000,
             46000
           ],
           [
+            -28050,
+            45800
+          ],
+          [
+            -31050,
+            45300
+          ],
+          [
             -34000,
             44500
+          ],
+          [
+            -36600,
+            43700
+          ],
+          [
+            -39300,
+            43200
           ],
           [
             -42000,
@@ -496,6 +933,14 @@
             -42000
           ],
           [
+            -2650,
+            -41500
+          ],
+          [
+            -4300,
+            -41250
+          ],
+          [
             -6000,
             -41200
           ]
@@ -518,12 +963,36 @@
             -41000
           ],
           [
+            -16950,
+            -41600
+          ],
+          [
+            -18950,
+            -41950
+          ],
+          [
             -21000,
             -42000
           ],
           [
+            -25350,
+            -41700
+          ],
+          [
+            -29650,
+            -41700
+          ],
+          [
             -34000,
             -42000
+          ],
+          [
+            -37650,
+            -42300
+          ],
+          [
+            -41350,
+            -42300
           ],
           [
             -45000,
@@ -551,8 +1020,24 @@
             -2600
           ],
           [
+            25600,
+            -2800
+          ],
+          [
+            25200,
+            -2900
+          ],
+          [
             24800,
             -3000
+          ],
+          [
+            24200,
+            -3100
+          ],
+          [
+            23600,
+            -3250
           ],
           [
             23000,
@@ -581,6 +1066,14 @@
             26700
           ],
           [
+            32750,
+            26850
+          ],
+          [
+            32400,
+            26950
+          ],
+          [
             32000,
             27000
           ]
@@ -589,7 +1082,7 @@
         "downstream": {
           "type": "confluence",
           "target_feature_id": "river-vasyl-main-001",
-          "target_vertex_index": 3
+          "target_vertex_index": 9
         },
         "approval_status": "PROPOSED_NOT_CANONICAL",
         "upstream_waterbody_id": "pool-thermal-001"
@@ -607,24 +1100,48 @@
             -41000
           ],
           [
+            -13289,
+            -42428
+          ],
+          [
             -12000,
             -44000
+          ],
+          [
+            -9777,
+            -44014
           ],
           [
             -7500,
             -44500
           ],
           [
+            -6923,
+            -42771
+          ],
+          [
             -6000,
             -41200
+          ],
+          [
+            -7151,
+            -40065
           ],
           [
             -8000,
             -38800
           ],
           [
+            -10007,
+            -38860
+          ],
+          [
             -12000,
             -38500
+          ],
+          [
+            -13314,
+            -39836
           ]
         ],
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -644,24 +1161,48 @@
             -4100
           ],
           [
+            26807,
+            -4571
+          ],
+          [
             27500,
             -5200
+          ],
+          [
+            28442,
+            -4439
           ],
           [
             29500,
             -3900
           ],
           [
+            29648,
+            -2963
+          ],
+          [
             30000,
             -2000
+          ],
+          [
+            28829,
+            -1797
           ],
           [
             27800,
             -1400
           ],
           [
+            26968,
+            -2091
+          ],
+          [
             26000,
             -2600
+          ],
+          [
+            26078,
+            -3343
           ]
         ],
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -678,20 +1219,40 @@
             28700
           ],
           [
+            33412,
+            28610
+          ],
+          [
             33800,
             28600
+          ],
+          [
+            34065,
+            28161
           ],
           [
             34400,
             27800
           ],
           [
+            34209,
+            27378
+          ],
+          [
             34100,
             26900
           ],
           [
+            33605,
+            26853
+          ],
+          [
             33100,
             26700
+          ],
+          [
+            33155,
+            27707
           ]
         ],
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -703,8 +1264,8 @@
       {
         "feature_id": "reach-vasyl-local-warm-001",
         "river_feature_id": "river-vasyl-main-001",
-        "start_vertex_index": 3,
-        "end_vertex_index": 5,
+        "start_vertex_index": 9,
+        "end_vertex_index": 15,
         "thermal_input_feature_id": "stream-thermal-pool-outlet-001",
         "relief_anchor_id": "relief-thermal-valley-001",
         "meaning": "potentially_warm_only_near_thermal_inputs_not_entire_river",

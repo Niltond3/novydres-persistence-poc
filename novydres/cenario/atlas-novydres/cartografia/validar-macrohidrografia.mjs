@@ -120,7 +120,16 @@ assert.equal(flows.find(x=>x.kind==='main_river').public_name,'Rio Vasyl');
 assert.equal(flows.filter(x=>x.kind==='tributary').length,2);
 assert.equal(flows.filter(x=>x.kind==='independent_stream').length,2);
 assert.deepEqual(new Set(lakes.map(x=>x.kind)),new Set(['freshwater_inland_lake','brackish_coastal_lagoon','localized_thermal_pool']));
-console.log('MW-004 hydrographic proposal PASS');
+
+for(const f of [...basins,...lakes])for(const [a,b] of edges(f.ring_xy_m))for(const t of [.25,.5,.75]){
+ const p=[a[0]*(1-t)+b[0]*t,a[1]*(1-t)+b[1]*t];
+ assert(!inside(p,sea)||onCoast(p),'MW-012 shoreline quarter-sample: '+f.feature_id);
+}
+for(const crest of r.value.relief_model.ridge_crest_axes)for(const f of flows)
+ for(let i=0;i<crest.points_xy_m.length-1;i++)for(let j=0;j<f.points_xy_m.length-1;j++)
+  assert(!hit(crest.points_xy_m[i],crest.points_xy_m[i+1],f.points_xy_m[j],f.points_xy_m[j+1]),'MW-012 watercourse/crest crossing: '+f.feature_id);
+
+console.log('MW-012 refined hydrographic candidate PASS (if run locally)');
 console.log(basins.length+' catchment envelopes; '+flows.length+' flowpaths; '+lakes.length+' waterbodies; '+warm.length+' localized warm reach');
 console.log('Candidate coastline Git blob: '+c.gitSha);
 console.log('Candidate relief Git blob: '+r.gitSha);

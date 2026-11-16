@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Novydres — Atlas físico 2D de revisão · 2010</title>
-<meta name="description" content="Visualização técnica e não canônica das geometrias candidatas MW-002 a MW-005 de Novydres em 2010.">
+<meta name="description" content="Visualização técnica e não canônica com comparação MW-004/MW-012 da hidrografia de Novydres em 2010.">
 <style>
 :root{color-scheme:dark;--bg:#2d2f32;--panel:#24282c;--panel2:#2a2f34;--ink:#e8eceb;--muted:#a8b2b5;--rule:#43484c;--gold:#c9c0ad;--turquoise:#6d90a1;--red:#ba8773;--water:#4f7382;--land:#2b2d30;--land2:#35383b}
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,'Segoe UI',ui-sans-serif,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink)}
@@ -44,13 +44,14 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 <body>
 <div class="shell">
 <header class="top">
-  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">Padrão 2D adotado · Comparação FIS-02 · MW-003 / MW-011</div></div></div>
+  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">Padrão 2D aprovado · Comparação FIS-03 · MW-004 / MW-012</div></div></div>
   <div class="top-tags"><span class="tag warn">Geometria não canônica</span><span class="tag">Macro-organização aprovada</span><span class="tag">Padrão cartográfico 2D</span><span class="tag">Plano local · metros</span></div>
 </header>
 <aside class="side left" aria-label="Camadas e legenda">
   <h2 class="panelhead">Leitura do território</h2>
   <p class="smallcopy">Mesmos vértices registrados no GitHub, agora com linguagem visual plana e leitura material mais sóbria. A escala é local e sintética: esta folha <b>não</b> corresponde aos limites municipais.</p>
   <div class="comparebox"><div class="sect-title">Comparação costeira · FIS-01</div><select id="coastMode" aria-label="Versão da costa"><option value="refined">Refinada MW-010</option><option value="original">Original MW-009</option><option value="overlay">Sobreposição</option></select><p id="compareCaption">Costa MW-010 aprovada para trabalho · ilhas provisórias</p></div><div class="comparebox"><div class="sect-title">Relevo · FIS-02</div><select id="reliefMode" aria-label="Comparação do relevo"><option value="refined">Refinado MW-011</option><option value="original">Anterior MW-003</option><option value="overlay">Sobreposição</option></select><p id="reliefCaption">Novo desenho do relevo: aguardando aprovação</p></div><section class="sect"><h3 class="sect-title">Camadas <span id="layercount">7 ativas</span></h3><div class="layerlist" id="layers"></div></section>
+  <div class="comparebox"><div class="sect-title">Hidrografia · FIS-03</div><select id="hydroMode" aria-label="Comparação hidrográfica"><option value="refined">Refinada MW-012</option><option value="original">Anterior MW-004</option><option value="overlay">Sobreposição</option></select><p id="hydroCaption">MW-012: rios, microbacias e lagoas refinados · aguardam aprovação</p></div>
   <section class="sect"><h3 class="sect-title">Classes do relevo / Ermos</h3>
     <div class="legend-item"><span class="swatch" style="background:#555049"></span>Vale termal candidato</div>
     <div class="legend-item"><span class="swatch" style="background:#46484b"></span>Serras e contrafortes</div>
@@ -82,10 +83,10 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 </main>
 <aside class="side right" aria-label="Detalhes da feição">
   <section><h2 class="panelhead">Inspecionar feição</h2><p class="smallcopy" id="inspectHelp">Selecione uma área ou linha no mapa para conferir ID, classe, medidas sintéticas e proveniência.</p><div id="details"><p class="instructions">🖱️ Roda do mouse: zoom.<br>✋ Arrastar: mover mapa.<br>◉ Clique: selecionar geometria.<br>⌨️ Teclas +, − e 0: controles de zoom.</p></div></section>
-  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01:</strong> contorno continental aprovado como base de trabalho. <strong>FIS-02:</strong> contornos de vale, três serras, tundra e baixada <strong>aprovados como base de trabalho não canônica</strong>; linha âmbar na sobreposição mostra a variante anterior. As ilhas seguem provisórias; hidrografia e Ermos ainda são candidatos.</div></section>
+  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01:</strong> contorno continental aprovado como base de trabalho. <strong>FIS-02:</strong> contornos de vale, três serras, tundra e baixada <strong>aprovados como base de trabalho não canônica</strong>; linha âmbar na sobreposição mostra a variante anterior. As ilhas seguem provisórias; a hidrografia refinada MW-012 aguarda decisões; os Ermos ainda são candidatos.</div></section>
   <section class="sect"><h3 class="sect-title">Limites desta prévia</h3><p class="smallcopy">Não há limites municipais, raions, ruas, portos, pontes, ferrovias, altitudes, datum ou posicionamento real em GPS. A baía é derivada da mesma costa; o traço pontilhado de sua boca <b>não é uma ponte</b>.</p></section>
 </aside>
-<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-011: relevo refinado aprovado para trabalho · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
+<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-012: hidrografia refinada em revisão · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
 </div>
 <script id="geometry-data" type="text/plain">
 coast|coast-mainland-001|line|Costa continental|outerwest|-42000,-50000;-45000,-42000;-43500,-33800;-36000,-28000;-30200,-20600;-29700,-16150;-28200,-11900;-25450,-14100;-22200,-15400;-18750,-17900;-15800,-21000;-12050,-20450;-8500,-19100;-3600,-20050;1000,-22000;7100,-20350;12800,-17700;16550,-13050;21000,-9000;25000,2000;23700,7200;21600,12100;17700,15250;14500,19100;9400,21100;4000,22200;-2150,19900;-8600,18500;-14200,16250;-19500,13300;-24950,10050;-30700,7400;-34800,5850;-38600,3700;-41950,3650;-45200,4550;-47050,8200;-49700,11400;-49300,17250;-48000,23000;-43850,28000;-40300,33400;-42000,43000;-45000,50000
@@ -102,23 +103,23 @@ relief|relief-southern-wet-lowland-001|poly|seasonal_wet_lowland|terrain-tundra-
 crests|relief-crest-northern-001|line|Eixo de crista|relief-northern-uplands-001|-3000,42500;4000,43600;12500,41300;21000,42200;24500,40500
 crests|relief-crest-eastern-001|line|Eixo de crista|relief-eastern-uplands-001|46500,-2000;50800,8000;51300,13200;52000,23000;51800,29500
 crests|relief-crest-southern-001|line|Eixo de crista|relief-southern-uplands-001|31500,-24000;35700,-22500;39300,-18000;43500,-17500
-basins|basin-vasyl-001|poly|main_river_watershed|river-vasyl-main-001|3000,32000;3000,40000;8000,43000;27000,44000;42000,40000;55000,35000;55500,20000;44000,8000;30000,2500;25000,2000;22500,11500;20000,18000;17000,24000;10000,30000
-basins|basin-northern-exposed-001|poly|independent_coastal_microbasin|stream-northern-001|-36000,36000;-28000,40000;-16000,39000;-5000,41000;3000,44000;1000,50000;-42000,50000;-42000,43000
-basins|basin-southern-bay-001|poly|independent_bay_microbasin|stream-southern-001|23000,-8000;42000,-7500;53000,-18000;48000,-34000;25000,-37500;5000,-37000;-1000,-30000;1000,-22000;16500,-17000
-basins|basin-southwestern-lake-001|poly|independent_lake_and_exposed_coast_microbasin|stream-lake-outlet-001|-36000,-35000;-22000,-34000;-4000,-35000;9000,-40000;5000,-48000;-37000,-48000;-45000,-42000
-basins|basin-tidal-lagoon-001|poly|local_coastal_microbasin|stream-tidal-lagoon-outlet-001|23000,-3500;24500,-6500;32000,-6600;34500,-1300;33000,1200;26500,1300
-watercourses|river-vasyl-main-001|line|Rio Vasyl|basin-vasyl-001|15000,38000;20000,35000;27000,30000;32000,27000;35000,24500;33000,21000;29000,17000;27000,12500;26000,8500;26000,5000;25000,2000
-watercourses|stream-vasyl-north-001|line|tributary|basin-vasyl-001|7000,38000;12000,34500;21000,32000;27000,30000
-watercourses|stream-vasyl-east-001|line|tributary|basin-vasyl-001|48000,32000;44000,30000;40000,28000;35000,24500
-watercourses|stream-southern-001|line|independent_stream|basin-southern-bay-001|34000,-24000;29000,-27500;22500,-31000;17500,-31500;11000,-30500;6500,-26000;1000,-22000
-watercourses|stream-northern-001|line|independent_stream|basin-northern-exposed-001|0,45000;-12000,46000;-25000,46000;-34000,44500;-42000,43000
-watercourses|stream-lake-inlet-001|line|lake_inlet|basin-southwestern-lake-001|-1000,-42000;-6000,-41200
-watercourses|stream-lake-outlet-001|line|lake_outlet|basin-southwestern-lake-001|-15000,-41000;-21000,-42000;-34000,-42000;-45000,-42000
-watercourses|stream-tidal-lagoon-outlet-001|line|tidal_exchange_channel|basin-tidal-lagoon-001|26000,-2600;24800,-3000;23000,-3500
-watercourses|stream-thermal-pool-outlet-001|line|local_thermal_outflow|basin-vasyl-001|33100,26700;32000,27000
-waterbodies|lake-freshwater-inland-001|poly|freshwater_inland_lake|basin-southwestern-lake-001|-15000,-41000;-12000,-44000;-7500,-44500;-6000,-41200;-8000,-38800;-12000,-38500
-waterbodies|lagoon-brackish-coastal-001|poly|brackish_coastal_lagoon|basin-tidal-lagoon-001|26000,-4100;27500,-5200;29500,-3900;30000,-2000;27800,-1400;26000,-2600
-waterbodies|pool-thermal-001|poly|localized_thermal_pool|basin-vasyl-001|33000,28700;33800,28600;34400,27800;34100,26900;33100,26700
+basins|basin-vasyl-001|poly|main_river_watershed|river-vasyl-main-001|3000,32000;3306,35810;3000,40000;5719,41287;8000,43000;17628,43163;27000,44000;34356,41670;42000,40000;48203,37296;55000,35000;54896,27432;55500,20000;49408,14112;44000,8000;36797,5548;30000,2500;27476,2513;25000,2000;25125,3200;25250,4400;25254,5947;25250,7200;24884,8669;24500,9850;23526,10809;22500,11500;21441,15055;20000,18000;18850,21041;17000,24000;13832,26860;10000,30000;6500,31000
+basins|basin-northern-exposed-001|poly|independent_coastal_microbasin|stream-northern-001|-36000,36000;-32000,38000;-28000,40000;-21864,39833;-16000,39000;-10846,40098;-5000,41000;-1360,42507;3000,44000;1673,46940;1000,50000;-20506,49640;-42000,50000;-41645,46440;-42000,43000;-38646,39565
+basins|basin-southern-bay-001|poly|independent_bay_microbasin|stream-southern-001|23000,-8000;32284,-8038;42000,-7500;47163,-12877;53000,-18000;50142,-25958;48000,-34000;36228,-35514;25000,-37500;15143,-36919;5000,-37000;2314,-33323;-1000,-30000;356,-25943;1000,-22000;5109,-21206;8500,-20350;11288,-18955;13500,-17350;15120,-17278;16500,-17000;19805,-12856
+basins|basin-southwestern-lake-001|poly|independent_lake_and_exposed_coast_microbasin|stream-lake-outlet-001|-36000,-35000;-28685,-34675;-22000,-34000;-13250,-34759;-4000,-35000;2143,-37547;9000,-40000;6644,-43948;5000,-48000;-16114,-47658;-37000,-48000;-40648,-44926;-45000,-42000;-40141,-38529
+basins|basin-tidal-lagoon-001|poly|local_coastal_microbasin|stream-tidal-lagoon-outlet-001|23000,-3500;23909,-4925;24500,-6500;28309,-6195;32000,-6600;32957,-3856;34500,-1300;33614,-121;33000,1200;29677,917;26500,1300;25044,-1204
+watercourses|river-vasyl-main-001|line|Rio Vasyl|basin-vasyl-001|15000,38000;16800,37250;18450,36250;20000,35000;22100,33000;24450,31350;27000,30000;28800,29250;30450,28250;32000,27000;32900,26050;33900,25200;35000,24500;34500,23250;33850,22100;33000,21000;31500,19850;30150,18500;29000,17000;28550,15400;27850,13900;27000,12500;26500,11200;26150,9900;26000,8500;26150,7350;26150,6150;26000,5000;25550,4050;25200,3050;25000,2000
+watercourses|stream-vasyl-north-001|line|tributary|basin-vasyl-001|7000,38000;8850,37050;10500,35900;12000,34500;14900,33350;17900,32550;21000,32000;23100,31600;25100,30950;27000,30000
+watercourses|stream-vasyl-east-001|line|tributary|basin-vasyl-001|48000,32000;46750,31150;45400,30500;44000,30000;42600,29500;41250,28850;40000,28000;38500,26600;36850,25450;35000,24500
+watercourses|stream-southern-001|line|independent_stream|basin-southern-bay-001|34000,-24000;32150,-24950;30500,-26100;29000,-27500;27000,-28950;24800,-30100;22500,-31000;20800,-30950;19150,-31100;17500,-31500;15300,-31450;13100,-31150;11000,-30500;9700,-28800;8200,-27300;6500,-26000;4500,-24900;2650,-23600;1000,-22000
+watercourses|stream-northern-001|line|independent_stream|basin-northern-exposed-001|0,45000;-3950,45650;-7950,46000;-12000,46000;-16350,45700;-20650,45700;-25000,46000;-28050,45800;-31050,45300;-34000,44500;-36600,43700;-39300,43200;-42000,43000
+watercourses|stream-lake-inlet-001|line|lake_inlet|basin-southwestern-lake-001|-1000,-42000;-2650,-41500;-4300,-41250;-6000,-41200
+watercourses|stream-lake-outlet-001|line|lake_outlet|basin-southwestern-lake-001|-15000,-41000;-16950,-41600;-18950,-41950;-21000,-42000;-25350,-41700;-29650,-41700;-34000,-42000;-37650,-42300;-41350,-42300;-45000,-42000
+watercourses|stream-tidal-lagoon-outlet-001|line|tidal_exchange_channel|basin-tidal-lagoon-001|26000,-2600;25600,-2800;25200,-2900;24800,-3000;24200,-3100;23600,-3250;23000,-3500
+watercourses|stream-thermal-pool-outlet-001|line|local_thermal_outflow|basin-vasyl-001|33100,26700;32750,26850;32400,26950;32000,27000
+waterbodies|lake-freshwater-inland-001|poly|freshwater_inland_lake|basin-southwestern-lake-001|-15000,-41000;-13289,-42428;-12000,-44000;-9777,-44014;-7500,-44500;-6923,-42771;-6000,-41200;-7151,-40065;-8000,-38800;-10007,-38860;-12000,-38500;-13314,-39836
+waterbodies|lagoon-brackish-coastal-001|poly|brackish_coastal_lagoon|basin-tidal-lagoon-001|26000,-4100;26807,-4571;27500,-5200;28442,-4439;29500,-3900;29648,-2963;30000,-2000;28829,-1797;27800,-1400;26968,-2091;26000,-2600;26078,-3343
+waterbodies|pool-thermal-001|poly|localized_thermal_pool|basin-vasyl-001|33000,28700;33412,28610;33800,28600;34065,28161;34400,27800;34209,27378;34100,26900;33605,26853;33100,26700;33155,27707
 ermos|ermo-rocky-northern-001|poly|Cristas setentrionais|rocky-pass|4000,40000;8000,43000;19000,43800;22000,40500;17000,37500;7000,38600
 ermos|ermo-rocky-eastern-001|poly|Contrafortes orientais|rocky-pass|47000,0;50500,1000;53500,10000;53000,21000;54500,29000;49000,30500;46500,22000;44000,12000
 ermos|ermo-rocky-southern-001|poly|Cristas meridionais|rocky-pass|28500,-21500;34500,-27000;43000,-24500;44000,-17000;38000,-11200;30500,-13500
@@ -130,6 +131,7 @@ ermos|ermo-wetland-vasyl-estuary-001|poly|Várzea inferior do Vasyl|wetlands|255
 ermos|ermo-coastal-northern-001|poly|Litoral externo setentrional|coastal|-39800,36500;-36000,38500;-33500,44500;-35000,48500;-40800,47500;-39000,43000
 ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500,-44000;-34500,-42000;-31500,-36000;-34700,-32000;-39800,-34000;-42000,-39500
 </script>
+<script id="hydro-previous-data" type="application/json">{"source_blob_sha":"57df659de492f64288c50a0001525e7ae93fa530","basins":{"basin-vasyl-001":[[3000,32000],[3000,40000],[8000,43000],[27000,44000],[42000,40000],[55000,35000],[55500,20000],[44000,8000],[30000,2500],[25000,2000],[22500,11500],[20000,18000],[17000,24000],[10000,30000]],"basin-northern-exposed-001":[[-36000,36000],[-28000,40000],[-16000,39000],[-5000,41000],[3000,44000],[1000,50000],[-42000,50000],[-42000,43000]],"basin-southern-bay-001":[[23000,-8000],[42000,-7500],[53000,-18000],[48000,-34000],[25000,-37500],[5000,-37000],[-1000,-30000],[1000,-22000],[16500,-17000]],"basin-southwestern-lake-001":[[-36000,-35000],[-22000,-34000],[-4000,-35000],[9000,-40000],[5000,-48000],[-37000,-48000],[-45000,-42000]],"basin-tidal-lagoon-001":[[23000,-3500],[24500,-6500],[32000,-6600],[34500,-1300],[33000,1200],[26500,1300]]},"watercourses":{"river-vasyl-main-001":[[15000,38000],[20000,35000],[27000,30000],[32000,27000],[35000,24500],[33000,21000],[29000,17000],[27000,12500],[26000,8500],[26000,5000],[25000,2000]],"stream-vasyl-north-001":[[7000,38000],[12000,34500],[21000,32000],[27000,30000]],"stream-vasyl-east-001":[[48000,32000],[44000,30000],[40000,28000],[35000,24500]],"stream-southern-001":[[34000,-24000],[29000,-27500],[22500,-31000],[17500,-31500],[11000,-30500],[6500,-26000],[1000,-22000]],"stream-northern-001":[[0,45000],[-12000,46000],[-25000,46000],[-34000,44500],[-42000,43000]],"stream-lake-inlet-001":[[-1000,-42000],[-6000,-41200]],"stream-lake-outlet-001":[[-15000,-41000],[-21000,-42000],[-34000,-42000],[-45000,-42000]],"stream-tidal-lagoon-outlet-001":[[26000,-2600],[24800,-3000],[23000,-3500]],"stream-thermal-pool-outlet-001":[[33100,26700],[32000,27000]]},"waterbodies":{"lake-freshwater-inland-001":[[-15000,-41000],[-12000,-44000],[-7500,-44500],[-6000,-41200],[-8000,-38800],[-12000,-38500]],"lagoon-brackish-coastal-001":[[26000,-4100],[27500,-5200],[29500,-3900],[30000,-2000],[27800,-1400],[26000,-2600]],"pool-thermal-001":[[33000,28700],[33800,28600],[34400,27800],[34100,26900],[33100,26700]]}}</script>
 <script id="relief-previous-data" type="application/json">{"source_blob_sha":"c28dd404b5d1fb2c6495ca104c7f457c29825644","relief":{"relief-thermal-valley-001":[[27000,17000],[34000,14500],[40000,18500],[42000,26000],[35000,33000],[27500,31000],[23000,25000]],"relief-northern-uplands-001":[[-10000,39500],[1000,47000],[22500,47000],[28000,38500],[18000,35500],[3000,36500]],"relief-eastern-uplands-001":[[44000,-5000],[50000,-3000],[57000,13000],[56000,33000],[47500,34000],[45000,22000],[42000,12000]],"relief-southern-uplands-001":[[25000,-23000],[33000,-29000],[45000,-26000],[47000,-15500],[38000,-7000],[29000,-11000]],"relief-southwestern-tundra-001":[[-25000,-47000],[-5000,-47000],[8000,-43000],[7000,-37000],[-9000,-35000],[-24000,-36000]],"relief-northeastern-tundra-001":[[32500,41000],[39000,48000],[57000,48000],[58000,37000],[48000,37000]],"relief-southern-wet-lowland-001":[[9000,-28000],[17000,-26000],[24000,-29500],[23000,-34000],[10000,-35500]]},"crests":{"relief-crest-northern-001":[[-3000,42500],[9000,42500],[22000,42500]],"relief-crest-eastern-001":[[47000,-2000],[51000,11000],[52000,26500]],"relief-crest-southern-001":[[31000,-23500],[37500,-19000],[41500,-16500]]}}</script>
 <script>
 (()=>{
@@ -171,7 +173,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   function boundsMid(pts){const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);return [(Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2]}
   function resolveName(f){if(f.id==='coast-mainland-001')return 'Linha de costa continental';if(f.id==='river-vasyl-main-001')return 'Rio Vasyl / Reka Vasilya';if(f.id.startsWith('land-islet-'))return f.label;if(f.layer==='ermos')return f.label;return nameByType[f.label]||nameByType[f.group]||f.label.replaceAll('_',' ')}
   function circleRadius(r){return r.layer==='waterbodies'?0.3:0.17}
-  const sourceFile={coast:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json',islands:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json',relief:'MW-003 · macrorelevo-2010.proposal.json',crests:'MW-003 · macrorelevo-2010.proposal.json',basins:'MW-004 · macrohidrografia-2010.proposal.json',watercourses:'MW-004 · macrohidrografia-2010.proposal.json',waterbodies:'MW-004 · macrohidrografia-2010.proposal.json',ermos:'MW-005 · macroermos-2010.proposal.json',thermal:'MW-004 · macrohidrografia-2010.proposal.json',baymouth:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json'};
+  const sourceFile={coast:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json',islands:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json',relief:'MW-003 · macrorelevo-2010.proposal.json',crests:'MW-003 · macrorelevo-2010.proposal.json',basins:'MW-012 · macrohidrografia-2010.proposal.json',watercourses:'MW-012 · macrohidrografia-2010.proposal.json',waterbodies:'MW-012 · macrohidrografia-2010.proposal.json',ermos:'MW-005 · macroermos-2010.proposal.json',thermal:'MW-012 · macrohidrografia-2010.proposal.json',baymouth:'MW-002 · macrogeometria-litoral-baia-ilhas-2010.proposal.json'};
   const layerGroups={};
   for(const x of [...config.map(v=>v.id),'coast'])layerGroups[x]=node('g',{'data-layer':x});
   const base=node('g',{},world);world.insertBefore(base,world.firstChild);
@@ -246,10 +248,40 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   $('reliefMode').addEventListener('change',updateReliefComparison);
   updateReliefComparison();
 
-  // Warm section is a reference to the existing Vasyl line, indices 3..5; no new invented river.
-  const thermalPoints=byId.get('river-vasyl-main-001').points.slice(3,6);
+  // Warm section is a reference to the refined Vasyl line, indices 9..15; no new invented river.
+  const thermalPoints=byId.get('river-vasyl-main-001').points.slice(9,16);
   byId.set('reach-vasyl-local-warm-001',{id:'reach-vasyl-local-warm-001',layer:'thermal',label:'Trecho do Rio Vasyl com aporte termal',geometry:'line',group:'river-vasyl-main-001',points:thermalPoints});
-  node('path',{d:path(thermalPoints),class:'geom','data-id':'reach-vasyl-local-warm-001',fill:'none',stroke:'#dde7e1','stroke-width':.95,'stroke-linecap':'round','stroke-dasharray':'.8 .45'},layerGroups.thermal);
+  const thermalEl=node('path',{d:path(thermalPoints),class:'geom','data-id':'reach-vasyl-local-warm-001',fill:'none',stroke:'#dde7e1','stroke-width':.95,'stroke-linecap':'round','stroke-dasharray':'.8 .45'},layerGroups.thermal);
+
+  // MW-012 historical hydro layer: visualization-only comparison; the one current source is macrohidrografia-2010.proposal.json.
+  const olderHydro=JSON.parse($('hydro-previous-data').textContent);
+  const hydroLayers=['basins','watercourses','waterbodies'];
+  const hydroRecords=records.filter(f=>hydroLayers.includes(f.layer));
+  const refinedHydro=Object.fromEntries(hydroRecords.map(f=>[f.id,f.points.map(p=>p.slice())]));
+  const hydroHistoryShapes=Object.assign({},olderHydro.basins,olderHydro.watercourses,olderHydro.waterbodies);
+  const historicalHydroStrokes=[];
+  for(const f of hydroRecords){
+    const pts=hydroHistoryShapes[f.id].map(p=>p.map(n=>n/1000));
+    const historical=node('path',{d:path(pts,f.geometry==='poly'),fill:'none',stroke:'#eab081','stroke-width':f.id==='river-vasyl-main-001'?.66:.35,'stroke-dasharray':'.95 .56','stroke-linejoin':'round','pointer-events':'none',opacity:0},layerGroups[f.layer]);
+    historicalHydroStrokes.push(historical);
+  }
+  function updateHydroComparison(){
+    const mode=$('hydroMode').value,orig=mode==='original';
+    for(const f of hydroRecords){
+      f.points=orig?hydroHistoryShapes[f.id].map(p=>p.map(n=>n/1000)):refinedHydro[f.id];
+      const el=layerGroups[f.layer].querySelector('[data-id="'+f.id+'"]');
+      if(el)el.setAttribute('d',path(f.points,f.geometry==='poly'));
+    }
+    historicalHydroStrokes.forEach(el=>el.setAttribute('opacity',mode==='overlay'?'1':'0'));
+    const warm=byId.get('reach-vasyl-local-warm-001');
+    warm.points=byId.get('river-vasyl-main-001').points.slice(orig?3:9,orig?6:16);
+    thermalEl.setAttribute('d',path(warm.points));
+    $('hydroCaption').textContent=mode==='overlay'?'Atual: azul; antigo: âmbar tracejado':orig?'MW-004: geometria candidata anterior':'MW-012: refinada, ainda aguardando aprovação';
+    if(selectedId&&byId.has(selectedId))updateInspector(byId.get(selectedId));
+  }
+  $('hydroMode').addEventListener('change',updateHydroComparison);
+  updateHydroComparison();
+
   // Bay threshold is only the chord between coast vertices 6 and 33 (zero-based).
   byId.set('water-bay-main-001',{id:'water-bay-main-001',layer:'baymouth',label:'Boca cartográfica da baía',geometry:'line',group:'coast-mainland-001',points:[coast.points[6],coast.points[33]]});
   const mouthShape=node('path',{d:path([coast.points[6],coast.points[33]]),class:'geom','data-id':'water-bay-main-001',fill:'none',stroke:'#d7e1e3','stroke-width':.26,'stroke-dasharray':'1.2 .9'},layerGroups.baymouth);
