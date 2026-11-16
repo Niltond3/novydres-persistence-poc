@@ -37,9 +37,13 @@ Visualizador 2D: `visualizador-fisico-2010.html`, seletor **Hidrografia · FIS-0
 
 **APROVADO**, limitado ao traçado refinado do Rio Vasyl e dois afluentes, suas duas confluências, desembocadura e trecho de aporte termal localizado, **somente como base de trabalho não canônica**. O proprietário respondeu **“Aprovo”** à pergunta direta de aprovação FIS-03.1, após visualização comparativa no chat. FIS-03.2, FIS-03.3 e o aceite integral seguem pendentes. A geometria corrente não necessita alteração em função dessa decisão; por isso o blob JSON e suas dependências permanecem os mesmos. `approval.owner_approval_for_this_geometry=null` e o fluxo global pendente continuam válidos.
 
+## Decisão expressa registrada — FIS-03.2 (16/11/2026)
+
+**APROVADO**, restrito aos cinco envelopes candidatos de microbacias e duas drenagens independentes, incluindo a eliminação de invasões dos envelopes sobre a baía, **como base de trabalho não canônica**. O proprietário respondeu **“Aprovo”** à deliberação específica acompanhada da comparação 2D MW-012. Não houve solicitação de alterações de vértices. FIS-03.3 e a aprovação integral seguem pendentes; os blobs estruturados e o estado global `approval.canonical_status=NOT_APPROVED` não são alterados por esta decisão parcial.
+
 ## Decisões a solicitar ao proprietário, uma por vez
 1. **FIS-03.1 — Rio Vasyl e afluentes**: APROVADO EXPRESSAMENTE em 16/11/2026, como geometria cartográfica de trabalho **não canônica**: curso principal refinado, dois afluentes, ambas as confluências, foz preexistente na baía e trecho de aporte termal localizado. O proprietário respondeu literalmente **“Aprovo”** à pergunta de aprovação da FIS-03.1 acompanhada do recorte comparativo 2D da variante MW-012. A aprovação é parcial, não encerra FIS-03 nem aprova os cinco envelopes, as drenagens independentes, os três corpos d'água e suas ligações como conjuntos. Não altera vértices nem autoriza canonização ou handoff.
-2. **FIS-03.2 — Microbacias e drenagens independentes**: PENDENTE. Envelopes não exaustivos, dois ajustes de compatibilidade costeira, curso meridional e curso do litoral exposto.
+2. **FIS-03.2 — Microbacias e drenagens independentes**: APROVADO EXPRESSAMENTE em 16/11/2026, como geometria cartográfica de trabalho **não canônica**: cinco envelopes não exaustivos, correções marginais para não invadir a baía e duas drenagens independentes, meridional com deságue na baía e setentrional com deságue na costa exposta. O proprietário respondeu literalmente **“Aprovo”** à questão FIS-03.2 após comparação 2D. Esta aprovação parcial não equivale a aprovar FIS-03.3 nem ao aceite consolidado e não canoniza divisores hidrográficos ou hidrologia quantitativa.
 3. **FIS-03.3 — Corpos d'água e conexões**: PENDENTE. Lago interior doce, lagoa salobra com troca mareal, piscina e escoadouro termal.
 4. **Revisão final consolidada**: PENDENTE. Aceite expresso da mesma versão integral após deliberações e validações.
 
