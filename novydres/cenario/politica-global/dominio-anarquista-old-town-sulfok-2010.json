@@ -8,17 +8,17 @@
   "authority": "OWNER_EXPLICIT_DIRECTION",
   "approved_on": "2026-11-16",
   "reference_year": 2010,
-  "title": "Domínio anarquista da Cidade Velha (Kingswell) e Sulfok em 2010",
-  "decision": "Em 2010, a Cidade Velha (nome formal Iknik), núcleo do raion Kingswell, e o raion Sulfok permanecem sob domínio anarquista efetivo, e não do Concílio da Cruz e Espada. A decisão não abrange automaticamente todo Kingswell.",
+  "title": "Domínio anarquista integral de Kingswell e Sulfok em 2010",
+  "decision": "Em 2010, a totalidade dos raions Kingswell (que inclui o núcleo histórico Cidade Velha/Iknik) e Sulfok permanece sob domínio territorial anarquista efetivo. Kingswell foi conquistado em 1917 e Sulfok foi conquistado dos ocupantes sabáticos ainda em 1945. O Concílio não governa os dois raions, mantém cerco de desgaste e não realizou ofensiva aberta de reconquista completa de 1945 a 2010. A geometria exata não está definida.",
   "territorial_scope": [
     {
-      "territory": "Cidade Velha (Iknik formal) no raion Kingswell",
+      "territory": "Raion Kingswell (inclui Cidade Velha/Iknik)",
       "administrative_parent": "Kingswell",
-      "extent": "Núcleo Cidade Velha, formalmente Iknik, dentro de Kingswell. Não estender domínio anarquista automaticamente a todos os bairros de Kingswell.",
+      "extent": "Todo o raion Kingswell, não apenas Cidade Velha/Iknik; o núcleo histórico não equivale geometricamente ao raion. Fronteiras exatas pendentes.",
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
       "council_domain": "NONE",
       "administrative_parent_subject_id": "district-chelsea",
-      "historical_context": "Posto avançado Ventrue batizado Kingswell por Gilgamesh em 1423. Ventrue expulsos em 1917; Concílio retoma Sulfok mas não a Cidade Velha."
+      "historical_context": "Kingswell fora perdido para os anarquistas em 1917 e permaneceu anarquista continuamente até 2010; Sulfok foi reconquistado pelo Concílio em 1917, mas passou ao domínio anarquista ainda em 1945."
     },
     {
       "territory": "Sulfok",
@@ -27,7 +27,7 @@
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
       "council_domain": "NONE",
       "contest": "A contestação Gangrel e a presença de outras facções não significam soberania partilhada nem administração territorial do Concílio",
-      "historical_start_of_anarchist_domain": "Após conquista militar de Sulfok dos ocupantes sabáticos, em data não definida depois de 1945 e até 2010 (GEO-005.11).",
+      "historical_start_of_anarchist_domain": "1945, ainda durante a mesma guerra da invasão sabática, por conquista anarquista dos ocupantes; Wilhelmina comandou a vitória conciliar contra o Sabá mas não essa conquista.",
       "sabbat_relation_2010": "Independência territorial anarquista em relação ao Sabá; não inferir ausência total de sabáticos na cidade."
     }
   ],
@@ -36,13 +36,14 @@
     "Competências transversais clânicas (Nosferatu/aquecimento, Gangrel/coerção, Ventrue/economia) e operações em instalações não transferem domínio.",
     "Presença Hecata, patrulhas Gangrel e redes subterrâneas Nosferatu não tornam Sulfok domínio conjunto.",
     "Não confundir domínio cainita com jurisdição mortal: Novydres e seus raions continuam administrativamente sob lei americana.",
-    "A revolta anarquista atingiu Sulfok em 1917, mas a Corte o recuperou naquele mesmo ano. Controle pelo Concílio foi mantido e contestado até a conquista sabática em 1945, após a qual o movimento anarquista deteve o território até 2010 (GEO-005.10).",
-    "GEO-005.11: os anarquistas não receberam Sulfok dos sabáticos; rejeitaram a ocupação, enfrentaram os conquistadores de 1945 e conquistaram o território pela força em data posterior ainda indeterminada. O Concílio não retomou o território."
+    "Em 1945, o Concílio perdeu Sulfok para o Sabá; este perdeu Sulfok para o movimento anarquista ainda em 1945. Nem Wilhelmina nem o Concílio recuperaram Sulfok, e não houve ocupação sabática prolongada até 1953.",
+    "GEO-005.11: a conquista militar anarquista de Sulfok dos ocupantes sabáticos ocorreu ainda em 1945 e foi mantida até 2010, sob cerco político-econômico do Concílio.",
+    "Todo o raion Kingswell, e não somente seu núcleo Cidade Velha, está sob domínio anarquista em 2010. Fronteiras e subdivisões internas ainda sem geometria."
   ],
   "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
   "pending": [
-    "Domínio dos demais bairros de Kingswell e limites urbanos de Cidade Velha",
-    "Datas, chefes, campanhas e instituições da conquista anarquista contra a ocupação sabática após 1945; mecanismo militar confirmado em GEO-005.11",
+    "Distribuição interna e limites geográficos dos bairros de Kingswell e do núcleo Cidade Velha/Iknik",
+    "Comandantes, combates, datas mensais e instituições da conquista anarquista de Sulfok ainda em 1945",
     "Titularidade jurídica de Cidade Velha após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
     "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
     "Geometrias, limites municipais e frentes concretas de conflito"
@@ -58,5 +59,6 @@
     "historic_core_formal_name": "Iknik",
     "english_name": "Old Town"
   },
-  "post_1945_sulfok_history_ref": "novydres/cenario/historia-global/ruptura-anarquista-saba-sulfok-pos-1945.json"
+  "post_1945_sulfok_history_ref": "novydres/cenario/historia-global/ruptura-anarquista-saba-sulfok-pos-1945.json",
+  "siege_and_social_context_ref": "novydres/cenario/politica-global/cerco-estados-livres-kingswell-sulfok-2010.json"
 }
