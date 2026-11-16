@@ -48,7 +48,7 @@ jobs:
           assert.equal(l.location.territorial_configuration.land_water_system.natural_rivers_present,true);
           assert.equal(l.location.territorial_configuration.land_water_system.natural_lagoons_present,true);
           const geo=j('geotermia-aquecimento-2010.json');
-          assert.deepEqual(geo.fact_ids,['GEO-002.3/TERMAS','GEO-003.1','GEO-014.1']);
+          assert.deepEqual(geo.fact_ids,['GEO-002.3/TERMAS','GEO-003.1','GEO-014.1','GEO-003.2']);
           assert.equal(geo.geology.deep_groundwater_circulation,true);
           assert.equal(geo.geology.active_surface_volcano_required,false);
           assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
