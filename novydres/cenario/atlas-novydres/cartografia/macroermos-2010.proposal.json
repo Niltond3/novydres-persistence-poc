@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_LOCAL_WILDERNESS_PROPOSAL_V1",
-  "document_id": "MW-005-ERMO-CORRIDORS-2010",
+  "document_id": "MW-013-REFINED-ERMO-CORRIDORS-2010",
   "subject_id": "world-atlas-novydres",
   "year": 2010,
   "approval": {
@@ -8,11 +8,13 @@
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
-    "owner_approval_for_this_geometry": null
+    "owner_approval_for_this_geometry": null,
+    "refinement_stage": "CANDIDATE_AWAITING_INDIVIDUAL_OWNER_DECISIONS",
+    "owner_approval_for_refined_ermos": null
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
-    "parent_work_unit": "MW-004",
+    "parent_work_unit": "MW-012",
     "parent_candidate_checkpoint": "4185b05dcecee4a9a4fcacdf8efa5b7bde61c714",
     "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
     "coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
@@ -36,7 +38,10 @@
     "current_relief_candidate_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
     "current_hydro_work_unit": "MW-012",
     "current_hydro_candidate_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
-    "hydro_dependency_note": "MW-012 hydro dependency SHA updated after noncanonical cartographic approval only; FIS-04 geometries and approval unchanged."
+    "hydro_dependency_note": "MW-012 hydro dependency SHA updated after noncanonical cartographic approval only; FIS-04 geometries and approval unchanged.",
+    "previous_ermo_blob_sha": "83e21a758e439ba1abaa873b94deef2af2ec9b3b",
+    "refinement_work_unit": "MW-013",
+    "refinement_method": "Two perturbed intermediate vertices per source boundary edge, 50-m local snapping; same macrolocations, classes, stream identities and protected layers."
   },
   "spatial_reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -73,7 +78,23 @@
             40000
           ],
           [
+            5600,
+            40750
+          ],
+          [
+            6650,
+            42300
+          ],
+          [
             8000,
+            43000
+          ],
+          [
+            11800,
+            44000
+          ],
+          [
+            15750,
             43000
           ],
           [
@@ -81,16 +102,48 @@
             43800
           ],
           [
+            20300,
+            42850
+          ],
+          [
+            20950,
+            41350
+          ],
+          [
             22000,
             40500
+          ],
+          [
+            20050,
+            39800
+          ],
+          [
+            18650,
+            38150
           ],
           [
             17000,
             37500
           ],
           [
+            13400,
+            37200
+          ],
+          [
+            10050,
+            38800
+          ],
+          [
             7000,
             38600
+          ],
+          [
+            6050,
+            39300
+          ],
+          [
+            4850,
+            39400
           ]
         ],
         "relief_anchor_id": "relief-northern-uplands-001",
@@ -113,32 +166,96 @@
             0
           ],
           [
+            48150,
+            600
+          ],
+          [
+            49500,
+            500
+          ],
+          [
             50500,
             1000
+          ],
+          [
+            52200,
+            3950
+          ],
+          [
+            52150,
+            7450
           ],
           [
             53500,
             10000
           ],
           [
+            52600,
+            13800
+          ],
+          [
+            53700,
+            17700
+          ],
+          [
             53000,
             21000
+          ],
+          [
+            54100,
+            23700
+          ],
+          [
+            53650,
+            26700
           ],
           [
             54500,
             29000
           ],
           [
+            52450,
+            29150
+          ],
+          [
+            50750,
+            30350
+          ],
+          [
             49000,
             30500
+          ],
+          [
+            48700,
+            27350
+          ],
+          [
+            46800,
+            24700
           ],
           [
             46500,
             22000
           ],
           [
+            44950,
+            18650
+          ],
+          [
+            45250,
+            14850
+          ],
+          [
             44000,
             12000
+          ],
+          [
+            45750,
+            7950
+          ],
+          [
+            45600,
+            3450
           ]
         ],
         "relief_anchor_id": "relief-eastern-uplands-001",
@@ -159,24 +276,72 @@
             -21500
           ],
           [
+            31000,
+            -23000
+          ],
+          [
+            32400,
+            -25650
+          ],
+          [
             34500,
             -27000
+          ],
+          [
+            37650,
+            -26700
+          ],
+          [
+            40300,
+            -24800
           ],
           [
             43000,
             -24500
           ],
           [
+            42850,
+            -21800
+          ],
+          [
+            44100,
+            -19300
+          ],
+          [
             44000,
             -17000
+          ],
+          [
+            41500,
+            -15400
+          ],
+          [
+            40100,
+            -12600
           ],
           [
             38000,
             -11200
           ],
           [
+            35200,
+            -11500
+          ],
+          [
+            32850,
+            -13200
+          ],
+          [
             30500,
             -13500
+          ],
+          [
+            30350,
+            -16450
+          ],
+          [
+            28700,
+            -19000
           ]
         ],
         "relief_anchor_id": "relief-southern-uplands-001",
@@ -199,24 +364,72 @@
             43500
           ],
           [
+            42400,
+            44550
+          ],
+          [
+            43700,
+            45100
+          ],
+          [
             44500,
             46000
+          ],
+          [
+            47650,
+            46500
+          ],
+          [
+            50800,
+            45600
           ],
           [
             53500,
             46000
           ],
           [
+            53800,
+            44500
+          ],
+          [
+            54700,
+            43250
+          ],
+          [
             55000,
             42000
+          ],
+          [
+            53150,
+            41150
+          ],
+          [
+            51100,
+            41200
           ],
           [
             49500,
             40500
           ],
           [
+            47800,
+            41050
+          ],
+          [
+            45950,
+            40800
+          ],
+          [
             44500,
             41200
+          ],
+          [
+            43300,
+            41850
+          ],
+          [
+            42500,
+            42950
           ]
         ],
         "relief_anchor_id": "relief-northeastern-tundra-001",
@@ -238,23 +451,71 @@
           ],
           [
             -22500,
+            -42950
+          ],
+          [
+            -22900,
+            -40800
+          ],
+          [
+            -22500,
             -39000
+          ],
+          [
+            -21750,
+            -38100
+          ],
+          [
+            -20650,
+            -37550
           ],
           [
             -20000,
             -36800
           ],
           [
+            -19100,
+            -37100
+          ],
+          [
+            -18150,
+            -36950
+          ],
+          [
             -17400,
             -37200
+          ],
+          [
+            -17000,
+            -37800
+          ],
+          [
+            -16850,
+            -38500
           ],
           [
             -16500,
             -39000
           ],
           [
+            -17200,
+            -40350
+          ],
+          [
+            -18400,
+            -41350
+          ],
+          [
             -19000,
             -42500
+          ],
+          [
+            -20550,
+            -43150
+          ],
+          [
+            -21700,
+            -44400
           ]
         ],
         "relief_anchor_id": "relief-southwestern-tundra-001",
@@ -277,24 +538,72 @@
             -44500
           ],
           [
+            -2100,
+            -44950
+          ],
+          [
+            -150,
+            -44550
+          ],
+          [
             1500,
             -44900
+          ],
+          [
+            2850,
+            -43550
+          ],
+          [
+            4650,
+            -42850
           ],
           [
             5800,
             -41700
           ],
           [
+            5000,
+            -40850
+          ],
+          [
+            4650,
+            -39750
+          ],
+          [
             4000,
             -39000
+          ],
+          [
+            2000,
+            -38100
+          ],
+          [
+            -250,
+            -38150
           ],
           [
             -2000,
             -37400
           ],
           [
+            -2600,
+            -38050
+          ],
+          [
+            -3450,
+            -38450
+          ],
+          [
             -4000,
             -39000
+          ],
+          [
+            -4300,
+            -40900
+          ],
+          [
+            -3750,
+            -42850
           ]
         ],
         "relief_anchor_id": "relief-southwestern-tundra-001",
@@ -317,20 +626,60 @@
             -29500
           ],
           [
+            12200,
+            -28750
+          ],
+          [
+            14100,
+            -28600
+          ],
+          [
             15600,
             -28000
+          ],
+          [
+            17400,
+            -29150
+          ],
+          [
+            19550,
+            -29550
           ],
           [
             21100,
             -30500
           ],
           [
+            21050,
+            -31600
+          ],
+          [
+            20600,
+            -32600
+          ],
+          [
             20500,
             -33500
           ],
           [
+            17500,
+            -33150
+          ],
+          [
+            14550,
+            -33850
+          ],
+          [
             12000,
             -33600
+          ],
+          [
+            11300,
+            -32250
+          ],
+          [
+            11100,
+            -30700
           ]
         ],
         "relief_anchor_id": "relief-southern-wet-lowland-001",
@@ -353,20 +702,60 @@
             10500
           ],
           [
+            26650,
+            10700
+          ],
+          [
+            27800,
+            10550
+          ],
+          [
             28800,
             10700
+          ],
+          [
+            29400,
+            9300
+          ],
+          [
+            30450,
+            8200
           ],
           [
             31000,
             7000
           ],
           [
+            30900,
+            5550
+          ],
+          [
+            30300,
+            4250
+          ],
+          [
             30200,
             3000
           ],
           [
+            28850,
+            3100
+          ],
+          [
+            27550,
+            3700
+          ],
+          [
             26400,
             3800
+          ],
+          [
+            26400,
+            6200
+          ],
+          [
+            25550,
+            8450
           ]
         ],
         "relief_anchor_id": null,
@@ -389,24 +778,72 @@
             36500
           ],
           [
+            -38600,
+            37450
+          ],
+          [
+            -37050,
+            37700
+          ],
+          [
             -36000,
             38500
+          ],
+          [
+            -35500,
+            40750
+          ],
+          [
+            -33950,
+            42600
           ],
           [
             -33500,
             44500
           ],
           [
+            -33750,
+            46000
+          ],
+          [
+            -34750,
+            47250
+          ],
+          [
             -35000,
             48500
+          ],
+          [
+            -36950,
+            47800
+          ],
+          [
+            -39100,
+            48050
           ],
           [
             -40800,
             47500
           ],
           [
+            -40450,
+            45800
+          ],
+          [
+            -39350,
+            44450
+          ],
+          [
             -39000,
             43000
+          ],
+          [
+            -38850,
+            40650
+          ],
+          [
+            -39850,
+            38500
           ]
         ],
         "relief_anchor_id": null,
@@ -432,24 +869,72 @@
             -44000
           ],
           [
+            -37600,
+            -43600
+          ],
+          [
+            -36100,
+            -42350
+          ],
+          [
             -34500,
             -42000
+          ],
+          [
+            -33850,
+            -39700
+          ],
+          [
+            -32100,
+            -37950
           ],
           [
             -31500,
             -36000
           ],
           [
+            -32350,
+            -34400
+          ],
+          [
+            -33950,
+            -33350
+          ],
+          [
             -34700,
             -32000
+          ],
+          [
+            -36350,
+            -33000
+          ],
+          [
+            -38350,
+            -33150
           ],
           [
             -39800,
             -34000
           ],
           [
+            -40200,
+            -36050
+          ],
+          [
+            -41600,
+            -37750
+          ],
+          [
             -42000,
             -39500
+          ],
+          [
+            -41400,
+            -41250
+          ],
+          [
+            -40050,
+            -42550
           ]
         ],
         "relief_anchor_id": null,
@@ -503,10 +988,11 @@
   "validation_summary": {
     "method": "deterministic_V8_geometry_preflight_and_reproducible_Node_validator",
     "candidate_segment_count": 10,
-    "synthetic_total_km2": 801.59,
+    "synthetic_total_km2": 800.42125,
     "preflight_errors": [],
     "not_an_exhaustive_wilderness_area": true,
     "not_municipal_area": true,
-    "no_urban_separation_certification": true
+    "no_urban_separation_certification": true,
+    "refinement_checks": "PROVISIONAL_V8_GEOMETRY_PREFLIGHT_NOT_NODE_CI"
   }
 }

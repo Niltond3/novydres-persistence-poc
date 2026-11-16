@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** MW-005: geometria local candidata dos Corredores do Ermo; sem dependências npm. */
+/** MW-013: geometria local candidata dos Corredores do Ermo; sem dependências npm. */
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -84,7 +84,7 @@ for(const s of segs){
 }
 for(let i=0;i<segs.length;i++)for(let j=i+1;j<segs.length;j++)assert(!overlap(segs[i].ring_xy_m,segs[j].ring_xy_m),'overlapping Ermos: '+segs[i].feature_id+' '+segs[j].feature_id);
 assert(Math.abs(total-e.validation_summary.synthetic_total_km2)<0.001);
-console.log('MW-005 macro-Ermo candidate PASS');
+console.log('MW-013 macro-Ermo candidate PASS');
 console.log(segs.length+' segments, four natural classes, '+total.toFixed(3)+' km2 synthetic/non-exhaustive');
 console.log('Coast '+c.sha+' relief '+r.sha+' hydro '+h.sha);
 console.log('No raions, transport or approval inferred');
