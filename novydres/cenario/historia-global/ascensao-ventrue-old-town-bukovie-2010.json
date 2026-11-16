@@ -8,14 +8,14 @@
   "approved_on": "2026-11-15",
   "title": "Domínio Ventrue inicial de Old Town, exploração e deslocamento a Bukovie",
   "early": "Ventrue controlavam inicialmente o núcleo de Old Town, sob soberania maior de Gilgamesh; população mais concentrada, termas e riquezas minerais facilitaram exploração de trabalho humano, extração e acumulação de influência e fortuna. Nome e data do primeiro senhor local permanecem desconhecidos.",
-  "change": "Esgotamento ou decadência de parte das jazidas originais, industrialização pesada e degradação ambiental/social contribuíram para saída da elite Ventrue do núcleo antigo. Chegada de migrantes humanos diversos também motivou preconceito aristocrático Ventrue: eles diziam que essas pessoas eram menos adequadas ao seu 'paladar'. Isto é discriminação dos vampiros, não propriedade real das populações migrantes.",
-  "migration": "Os Ventrue deslocaram o centro político, financeiro, executivo e aristocrático para Bukovie, consolidado em 2010 como seu bastião de poder e riqueza, afastado de Old Town.",
+  "change": "Desgaste ou esgotamento de parte das jazidas, industrialização pesada, degradação social/ambiental e tensões com imigração alimentaram o contexto anterior a 1917. Parte da aristocracia Ventrue tinha preconceitos contra populações migrantes, que julgava indignas de seu 'paladar'; trata-se de discriminação dos vampiros, não característica das populações. Esses fatores não explicam uma partida voluntária: a causa direta da perda territorial e do exílio foi a expulsão na Primeira Revolta Anarquista de 1917 (GEO-005.9).",
+  "migration": "Em 1917, durante a Primeira Revolta Anarquista infiltrada pelo Sabá (GEO-005.9), vários anciões foram destruídos, inclusive Ventrue. Os sobreviventes foram expulsos de Old Town e refugiaram-se em Bukovie; com apoio da Corte retaliaram e recuperaram sua honra, mas não o território. Em 2010 Bukovie é seu bastião de riqueza, influência executiva e aristocracia reconstruída.",
   "heat_diversion": "O privilégio térmico de Bukovie se sustenta por desvio deliberado e prioritário do calor geotérmico originado em Old Town. Esta expropriação prejudica o abastecimento e o conforto de setores da Cidade Velha.",
   "bukovie": "Bukovie foi desenvolvida em tundra extremamente fria, sem abundância comparável de fontes termais. Falha prolongada da calefação que a sustenta, sem redundância suficiente, causa congelamento de estruturas e risco fatal generalizado aos habitantes; não morte instantânea ou congelamento uniforme em segundos.",
   "old_town_recovery": "As termas de Old Town permanecem naturalmente poderosas. Se a derivação artificial para Bukovie cessar e o calor voltar a ser disponibilizado à Cidade Velha, suas condições térmicas podem melhorar muito em relação à situação de 2010.",
-  "legal_layers": "A mudança do CENTRO DE PODER Ventrue está confirmada; não presumir que o título jurídico de senhorio de Old Town foi cedido, quem o recebeu, nem a origem jurídica do domínio de Bukovie.",
+  "legal_layers": "A perda efetiva de Old Town em 1917 e o exílio em Bukovie são confirmados em GEO-005.9; o reconhecimento do exílio e a restauração da posição institucional não equivalem à reconquista de Old Town. Ainda não estão definidos o título jurídico e sucessão de senhorio de Old Town, a antiga titularidade de Bukovie ou mecanismos jurídicos da instalação Ventrue ali.",
   "nosferatu": "A competência Cainita institucional do aquecimento segue pertencendo aos Nosferatu (POL-001.1/POL-001.2). O mecanismo de desvio — pacto, apadrinhamento, compra, captura institucional, coerção ou conluio — continua sem decisão.",
-  "timeline": "Fases confirmadas em ordem geral (exploração inicial, industrialização/imigração, deslocamento para Bukovie, prioridade de calor), mas datas e personagens concretos dessas mudanças não foram ratificados.",
+  "timeline": "Fases confirmadas em ordem geral: exploração inicial, industrialização e imigração, revolta de 1917 com expulsão Ventrue, retaliação sem recuperação territorial, descoberta da conspiração sabática durante a invasão de 1945 e consolidação de Bukovie como bastião Ventrue até 2010. Datas de grandes obras e desvio térmico, além de nomes individuais, permanecem abertas.",
   "dependencies": [
     "novydres/cenario/atlas-novydres/corredor-extrativo-old-town-sulfok-2010.json",
     "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
@@ -28,7 +28,8 @@
     "natureza do contrato com Nosferatu e responsabilidades",
     "reação de demais clãs e das comunidades humanas",
     "tubulações, pontos de desvio e distribuição",
-    "datas de industrialização, migração e retirada do centro de poder"
+    "datas e etapas da industrialização, da infraestrutura térmica e do desenvolvimento de Bukovie"
   ],
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "historical_event_authority_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json"
 }
