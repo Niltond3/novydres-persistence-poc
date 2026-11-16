@@ -103,12 +103,47 @@
     "novydres/cenario/historia-global/formacao-policentrica-2010.json"
   ],
   "next_gates": [
+    "Pré-condição: validar macrozonas de recursos minerais/energéticos e reservas nucleares/militares",
     "aprovar macroposições",
     "desenhar polígonos, áreas e cursos d'água em GEO-002/GEO-003/GEO-004",
     "validar jurisdição e continuidade histórica GEO-005/GEO-006",
     "distribuir população GEO-010",
     "definir transportes GEO-012/GEO-013 antes do mapa visual"
   ],
-  "owner_decision": "Aprovar ou corrigir o posicionamento irregular dos nove raions e a foz candidata do Rio Vasyl em Sulfok.",
-  "single_authoritative_proposal": true
+  "owner_decision": "APROVAÇÃO DE GEO-004.4 SUSPENSA A PEDIDO DO PROPRIETÁRIO ATÉ REVISÃO DE RECURSOS E INSTALAÇÕES ESTRATÉGICAS",
+  "single_authoritative_proposal": true,
+  "review_state": "ON_HOLD_PENDING_RESOURCE_STRATEGIC_MACROZONES",
+  "resource_strategic_precondition": {
+    "status": "NOT_CANON_PENDING_OWNER_REVIEW",
+    "reason": "Posicionamento de raions não pode ser aprovado antes de situar as macrozonas minerais e os complexos estratégicos que explicam sua ocupação.",
+    "suggested_noncanonical_regions": [
+      {
+        "category": "metais, ouro, diamantes e minerais raros",
+        "potential": "serras e contrafortes interiores próximos dos setores candidatos de Drevnigrad e Dunwich",
+        "caution": "Ouro e diamantes não precisam ocorrer nos mesmos depósitos; diamantes abundantes são premissa ficcional local; verificar aquíferos e sítios indígenas"
+      },
+      {
+        "category": "carvão",
+        "potential": "bacias sedimentares nas bordas dos planaltos interiores",
+        "caution": "Não distribuir carvão automaticamente em rochas cristalinas de mineração metálica"
+      },
+      {
+        "category": "petróleo e gás",
+        "potential": "bacias sedimentares costeiras ou externas ao núcleo urbano, conectadas a logística protegida",
+        "caution": "Não exigir poços sob bairros nem passagem do oleoduto real Trans-Alasca pela cidade"
+      },
+      {
+        "category": "instalação nuclear americana",
+        "potential": "plataforma periférica firme fora do vale termal, da várzea do Rio Vasyl e dos bairros mais densos, com resfriamento e acesso",
+        "caution": "Programa nuclear exclusivamente americano é cânone; existência de usina especificamente DESATIVADA ainda não é fato fechado"
+      },
+      {
+        "category": "bases militares americanas",
+        "potential": "elevações externas para radar, baía para instalações navais e setor firme com acesso para base aérea/terrestre",
+        "caution": "Definir reservas estratégicas antes de limites de raion; nomes, unidades, implantação precisa e cronologia ficam abertos"
+      }
+    ],
+    "order": "Primeiro aprovar macrozonas econômicas e estratégicas; depois revisar macroposições dos nove raions; por fim cadastrar instalações individuais nas GEO-011/GEO-015/GEO-019/GEO-021.",
+    "protect": "Não alterar GEO-003, GEO-004.1–.3, GEO-005.6 ou terminal canônico de Sulfok; não atribuir senhorios novos."
+  }
 }
