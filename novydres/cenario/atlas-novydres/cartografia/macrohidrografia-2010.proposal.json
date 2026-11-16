@@ -1,0 +1,746 @@
+{
+  "schema": "NOVYDRES_LOCAL_HYDROGRAPHY_PROPOSAL_V1",
+  "document_id": "MW-004-MACROHIDROGRAFIA-2010",
+  "subject_id": "world-atlas-novydres",
+  "year": 2010,
+  "approval": {
+    "workflow": "PROPOSED_PENDING_OWNER_REVIEW",
+    "canonical_status": "NOT_APPROVED",
+    "truth_state": "GM_PREPARED",
+    "geometry_authority": "PROPOSAL_ONLY",
+    "owner_approval_for_this_geometry": null
+  },
+  "provenance": {
+    "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
+    "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
+    "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
+    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
+    "candidate_relief_commit": "79772905f0e895c236b31abea059ef2ed085e866",
+    "candidate_relief_blob_sha": "c5f6caaddfbef3a89fd5ce85a291ae972e9f35ab",
+    "candidate_relief_path": "novydres/cenario/atlas-novydres/cartografia/macrorelevo-2010.proposal.json",
+    "canonical_sources": [
+      "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
+      "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+      "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
+      "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
+    ]
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "coordinate_order": "[x_east_m,y_north_m]",
+    "study_frame": {
+      "xmin": -60000,
+      "ymin": -50000,
+      "xmax": 60000,
+      "ymax": 50000
+    },
+    "geodetic_anchor": null,
+    "epsg": null,
+    "municipal_boundary": null,
+    "vertical_datum": null,
+    "absolute_elevations_m": null
+  },
+  "hydro_model": {
+    "methodology": "Sparse non-exhaustive candidate flow graph and approximate catchment envelopes; no DEM or measured flow. Coast and relief are referenced, not recopied.",
+    "coastal_targets": {
+      "bay_feature_id": "water-bay-main-001",
+      "outer_sea_feature_id": "water-outer-001",
+      "coast_feature_id": "coast-mainland-001"
+    },
+    "catchment_areas": [
+      {
+        "feature_id": "basin-vasyl-001",
+        "kind": "main_river_watershed",
+        "primary_flow_id": "river-vasyl-main-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            3000,
+            32000
+          ],
+          [
+            3000,
+            40000
+          ],
+          [
+            8000,
+            43000
+          ],
+          [
+            27000,
+            44000
+          ],
+          [
+            42000,
+            40000
+          ],
+          [
+            55000,
+            35000
+          ],
+          [
+            55500,
+            20000
+          ],
+          [
+            44000,
+            8000
+          ],
+          [
+            30000,
+            2500
+          ],
+          [
+            25000,
+            2000
+          ],
+          [
+            22500,
+            11500
+          ],
+          [
+            20000,
+            18000
+          ],
+          [
+            17000,
+            24000
+          ],
+          [
+            10000,
+            30000
+          ]
+        ],
+        "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "basin-northern-exposed-001",
+        "kind": "independent_coastal_microbasin",
+        "primary_flow_id": "stream-northern-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -36000,
+            36000
+          ],
+          [
+            -28000,
+            40000
+          ],
+          [
+            -16000,
+            39000
+          ],
+          [
+            -5000,
+            41000
+          ],
+          [
+            3000,
+            44000
+          ],
+          [
+            1000,
+            50000
+          ],
+          [
+            -42000,
+            50000
+          ],
+          [
+            -42000,
+            43000
+          ]
+        ],
+        "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "basin-southern-bay-001",
+        "kind": "independent_bay_microbasin",
+        "primary_flow_id": "stream-southern-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            23000,
+            -8000
+          ],
+          [
+            42000,
+            -7500
+          ],
+          [
+            53000,
+            -18000
+          ],
+          [
+            48000,
+            -34000
+          ],
+          [
+            25000,
+            -37500
+          ],
+          [
+            5000,
+            -37000
+          ],
+          [
+            -1000,
+            -30000
+          ],
+          [
+            1000,
+            -22000
+          ],
+          [
+            16500,
+            -17000
+          ]
+        ],
+        "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "basin-southwestern-lake-001",
+        "kind": "independent_lake_and_exposed_coast_microbasin",
+        "primary_flow_id": "stream-lake-outlet-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -36000,
+            -35000
+          ],
+          [
+            -22000,
+            -34000
+          ],
+          [
+            -4000,
+            -35000
+          ],
+          [
+            9000,
+            -40000
+          ],
+          [
+            5000,
+            -48000
+          ],
+          [
+            -37000,
+            -48000
+          ],
+          [
+            -45000,
+            -42000
+          ]
+        ],
+        "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "basin-tidal-lagoon-001",
+        "kind": "local_coastal_microbasin",
+        "primary_flow_id": "stream-tidal-lagoon-outlet-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            23000,
+            -3500
+          ],
+          [
+            24500,
+            -6500
+          ],
+          [
+            32000,
+            -6600
+          ],
+          [
+            34500,
+            -1300
+          ],
+          [
+            33000,
+            1200
+          ],
+          [
+            26500,
+            1300
+          ]
+        ],
+        "interpretation": "approximate_nonexhaustive_catchment_envelope_not_surveyed_divide",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      }
+    ],
+    "watercourses": [
+      {
+        "feature_id": "river-vasyl-main-001",
+        "kind": "main_river",
+        "basin_id": "basin-vasyl-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            15000,
+            38000
+          ],
+          [
+            20000,
+            35000
+          ],
+          [
+            27000,
+            30000
+          ],
+          [
+            32000,
+            27000
+          ],
+          [
+            35000,
+            24500
+          ],
+          [
+            33000,
+            21000
+          ],
+          [
+            29000,
+            17000
+          ],
+          [
+            27000,
+            12500
+          ],
+          [
+            26000,
+            8500
+          ],
+          [
+            26000,
+            5000
+          ],
+          [
+            25000,
+            2000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "coast_vertex",
+          "coast_feature_id": "coast-mainland-001",
+          "vertex_index": 12,
+          "waterbody_id": "water-bay-main-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "public_name": "Rio Vasyl",
+        "alternative_name": "Reka Vasilya"
+      },
+      {
+        "feature_id": "stream-vasyl-north-001",
+        "kind": "tributary",
+        "basin_id": "basin-vasyl-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            7000,
+            38000
+          ],
+          [
+            12000,
+            34500
+          ],
+          [
+            21000,
+            32000
+          ],
+          [
+            27000,
+            30000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "confluence",
+          "target_feature_id": "river-vasyl-main-001",
+          "target_vertex_index": 2
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "stream-vasyl-east-001",
+        "kind": "tributary",
+        "basin_id": "basin-vasyl-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            48000,
+            32000
+          ],
+          [
+            44000,
+            30000
+          ],
+          [
+            40000,
+            28000
+          ],
+          [
+            35000,
+            24500
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "confluence",
+          "target_feature_id": "river-vasyl-main-001",
+          "target_vertex_index": 4
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "stream-southern-001",
+        "kind": "independent_stream",
+        "basin_id": "basin-southern-bay-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            34000,
+            -24000
+          ],
+          [
+            29000,
+            -27500
+          ],
+          [
+            22500,
+            -31000
+          ],
+          [
+            17500,
+            -31500
+          ],
+          [
+            11000,
+            -30500
+          ],
+          [
+            6500,
+            -26000
+          ],
+          [
+            1000,
+            -22000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "coast_vertex",
+          "coast_feature_id": "coast-mainland-001",
+          "vertex_index": 9,
+          "waterbody_id": "water-bay-main-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "stream-northern-001",
+        "kind": "independent_stream",
+        "basin_id": "basin-northern-exposed-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            0,
+            45000
+          ],
+          [
+            -12000,
+            46000
+          ],
+          [
+            -25000,
+            46000
+          ],
+          [
+            -34000,
+            44500
+          ],
+          [
+            -42000,
+            43000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "coast_vertex",
+          "coast_feature_id": "coast-mainland-001",
+          "vertex_index": 24,
+          "waterbody_id": "water-outer-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "stream-lake-inlet-001",
+        "kind": "lake_inlet",
+        "basin_id": "basin-southwestern-lake-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            -1000,
+            -42000
+          ],
+          [
+            -6000,
+            -41200
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "waterbody_inlet",
+          "waterbody_id": "lake-freshwater-inland-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "stream-lake-outlet-001",
+        "kind": "lake_outlet",
+        "basin_id": "basin-southwestern-lake-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            -15000,
+            -41000
+          ],
+          [
+            -21000,
+            -42000
+          ],
+          [
+            -34000,
+            -42000
+          ],
+          [
+            -45000,
+            -42000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "coast_vertex",
+          "coast_feature_id": "coast-mainland-001",
+          "vertex_index": 1,
+          "waterbody_id": "water-outer-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "upstream_waterbody_id": "lake-freshwater-inland-001"
+      },
+      {
+        "feature_id": "stream-tidal-lagoon-outlet-001",
+        "kind": "tidal_exchange_channel",
+        "basin_id": "basin-tidal-lagoon-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            26000,
+            -2600
+          ],
+          [
+            24800,
+            -3000
+          ],
+          [
+            23000,
+            -3500
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "coast_segment",
+          "coast_feature_id": "coast-mainland-001",
+          "segment_start_index": 11,
+          "waterbody_id": "water-bay-main-001"
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "upstream_waterbody_id": "lagoon-brackish-coastal-001",
+        "bidirectional_tidal_exchange": true
+      },
+      {
+        "feature_id": "stream-thermal-pool-outlet-001",
+        "kind": "local_thermal_outflow",
+        "basin_id": "basin-vasyl-001",
+        "geometry_type": "LineString",
+        "points_xy_m": [
+          [
+            33100,
+            26700
+          ],
+          [
+            32000,
+            27000
+          ]
+        ],
+        "flow_direction": "first_to_last",
+        "downstream": {
+          "type": "confluence",
+          "target_feature_id": "river-vasyl-main-001",
+          "target_vertex_index": 3
+        },
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "upstream_waterbody_id": "pool-thermal-001"
+      }
+    ],
+    "waterbodies": [
+      {
+        "feature_id": "lake-freshwater-inland-001",
+        "kind": "freshwater_inland_lake",
+        "basin_id": "basin-southwestern-lake-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -15000,
+            -41000
+          ],
+          [
+            -12000,
+            -44000
+          ],
+          [
+            -7500,
+            -44500
+          ],
+          [
+            -6000,
+            -41200
+          ],
+          [
+            -8000,
+            -38800
+          ],
+          [
+            -12000,
+            -38500
+          ]
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "inlet_stream_ids": [
+          "stream-lake-inlet-001"
+        ],
+        "outlet_stream_id": "stream-lake-outlet-001"
+      },
+      {
+        "feature_id": "lagoon-brackish-coastal-001",
+        "kind": "brackish_coastal_lagoon",
+        "basin_id": "basin-tidal-lagoon-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            26000,
+            -4100
+          ],
+          [
+            27500,
+            -5200
+          ],
+          [
+            29500,
+            -3900
+          ],
+          [
+            30000,
+            -2000
+          ],
+          [
+            27800,
+            -1400
+          ],
+          [
+            26000,
+            -2600
+          ]
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "tidal_channel_id": "stream-tidal-lagoon-outlet-001"
+      },
+      {
+        "feature_id": "pool-thermal-001",
+        "kind": "localized_thermal_pool",
+        "basin_id": "basin-vasyl-001",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            33000,
+            28700
+          ],
+          [
+            33800,
+            28600
+          ],
+          [
+            34400,
+            27800
+          ],
+          [
+            34100,
+            26900
+          ],
+          [
+            33100,
+            26700
+          ]
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "outlet_stream_id": "stream-thermal-pool-outlet-001",
+        "thermal_temperature_c": null
+      }
+    ],
+    "localized_thermal_reaches": [
+      {
+        "feature_id": "reach-vasyl-local-warm-001",
+        "river_feature_id": "river-vasyl-main-001",
+        "start_vertex_index": 3,
+        "end_vertex_index": 5,
+        "thermal_input_feature_id": "stream-thermal-pool-outlet-001",
+        "relief_anchor_id": "relief-thermal-valley-001",
+        "meaning": "potentially_warm_only_near_thermal_inputs_not_entire_river",
+        "approval_status": "PROPOSED_NOT_CANONICAL"
+      }
+    ],
+    "relief_references": {
+      "thermal_valley_id": "relief-thermal-valley-001",
+      "northern_uplands_id": "relief-northern-uplands-001",
+      "southern_uplands_id": "relief-southern-uplands-001",
+      "southwestern_tundra_id": "relief-southwestern-tundra-001",
+      "southern_wet_lowland_id": "relief-southern-wet-lowland-001"
+    },
+    "open_lagoon_policy": "Coastal lagoon is inland of candidate shoreline and connected by a tidal channel; do not model a new coastline or offshore water polygon."
+  },
+  "canonical_constraints_preserved": [
+    "GEO-003.4: Rio Vasyl crosses Iknik's thermal core and reaches large bay; coordinates and tributary courses are not canonical.",
+    "GEO-003.4: two or more secondary drainage basins need not join Vasyl.",
+    "GEO-003.4: freshwater inland waters, brackish coastal lagoon and localized thermal water are distinct.",
+    "GEO-003.3/GEO-003.5: uplands, lowlands, wetlands and exposed coast constrain hydrology, without establishing DEM or Ermo perimeter.",
+    "GEO-002: coast shape and islands remain unapproved candidates."
+  ],
+  "explicitly_unassigned": {
+    "real_geodetic_coordinates": null,
+    "river_discharge_m3_s": null,
+    "river_width_m": null,
+    "channel_bathymetry_m": null,
+    "absolute_slope": null,
+    "snow_ice_seasonal_bounds": null,
+    "thermal_water_temperature_c": null,
+    "water_levels_and_tide_datum": null,
+    "formal_watershed_divides": null,
+    "lake_depths": null,
+    "municipal_boundary": null,
+    "raions_and_neighborhoods": null,
+    "roads_and_rail": null,
+    "ports_and_bridges": null,
+    "underground_channels": null,
+    "geothermal_pipe_network": null,
+    "official_names_secondary_streams": null
+  }
+}
