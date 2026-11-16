@@ -76,3 +76,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-033.md` resolve teste de Intimidação C97 aceito sem FV (4 contra 2, margem +2, crítico limpo). Trabalhador cumpre ordem imediata e leva carrinho coberto pela passagem lateral, sem revelar conteúdo. PJ não o segue automaticamente. Cursor `../estado/recuperacao-c98.json`.
 
 `adendo-c17-retorno-noturno-034.md` registra reflexão íntima de Bartolomeu sobre família, risco, tédio e aparente anticlimax, seguida de retirada pela rota de volta correta até elevador inferior (diferente da passagem do trabalhador). Sem chamada de elevador, conclusão de saída ou novos testes. Cursor `../estado/recuperacao-c99.json`.
+
+`adendo-c17-retorno-noturno-035.md` registra botão de chamada inferior, campainha e resposta de Emil no posto superior, exigindo fechar a grade antes da subida. Cursor `../estado/recuperacao-c100.json`; sem embarque automático ou testes.
