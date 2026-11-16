@@ -34,11 +34,12 @@
     },
     {
       "subject_id": "district-chelsea",
-      "name": "Chelsea",
+      "name": "Siku",
       "proposed_macro_sector": "oeste-interior",
-      "terrain": "vale termal do Rio Vasyl e Old Town",
-      "settlement_logic": "Old Town: berço termal e de riqueza extrativa controlada inicialmente pelos Ventrue, depois indústria pesada, desgaste de jazidas e desvio do calor a Bukovie.",
-      "geometry": null
+      "terrain": "vale termal do Rio Vasyl e Iknik (antiga Cidade Velha/Old Town)",
+      "settlement_logic": "Iknik: núcleo termal e base da extração inicial Ventrue, depois decadência mineira, indústria e expropriação de calor para Bukovie. O raion Siku é maior que Iknik; a geometria continua em revisão.",
+      "geometry": null,
+      "name_legacy": "Chelsea"
     },
     {
       "subject_id": "district-bukovie",
@@ -84,7 +85,7 @@
   "spatial_rules": [
     "A cidade não é grade 3x3: setores são orientações gerais, sem células quadradas nem distâncias, áreas ou direções angulares uniformes.",
     "Os núcleos urbanos são descontínuos, com Ermos de rocha, tundra, várzea e litoral entre muitos deles; conurbação excepcional não é modelo padrão.",
-    "Chelsea contém Old Town, o vale termal e o trecho localmente morno do Rio Vasyl; isso não abrange necessariamente todo Chelsea.",
+    "Siku contém Iknik, o vale termal e o trecho localmente morno do Rio Vasyl; isso não abrange necessariamente todo Siku.",
     "Bukovie é central por papel político e infraestrutura, não centro geográfico exato, nem origem do desenvolvimento de Novydres.",
     "Baía principal com setores de margem candidatos de Sulfok, Vasyl Bay e Alexandria; costa detalhada permanece aberta.",
     "Rio Vasyl desemboca na baía; o estuário em Sulfok é hipótese prioritária e não é cânone neste estágio.",
@@ -103,8 +104,8 @@
     "novydres/cenario/historia-global/formacao-policentrica-2010.json"
   ],
   "next_gates": [
-    "Confirmados: eixo econômico Old Town–Sulfok e história Ventrue/Bukovie",
-    "Determinar sucessão jurídica de Old Town, ocupação anterior de Bukovie e origem da autorização térmica Nosferatu",
+    "Confirmados: eixo econômico Iknik–Sulfok e história Ventrue/Bukovie",
+    "Determinar sucessão jurídica de Iknik, ocupação anterior de Bukovie e origem da autorização térmica Nosferatu",
     "Definir sítios nucleares e militares americanos ainda sem localização",
     "Só depois aprovar macroposições dos nove raions, fronteiras e Ermos",
     "Por fim detalhar transporte, calefação, bairros e serviços antes do mapa visual"
@@ -157,5 +158,9 @@
     "source": "novydres/cenario/politica-global/competencias-clanicas-institucionais-2010.json",
     "planning": "Distribuição de clínicas, hospitais, postos de guarda, firmas de segurança, núcleos culturais, fé, lei, aquecimento e centros econômicos deve refletir o domínio funcional e seu apadrinhamento, não exigir que todo estabelecimento de um setor esteja fisicamente no raion de seu clã.",
     "approvals_status": "Nenhum novo prédio, limite ou senhorio geográfico é aprovado com esta regra."
+  },
+  "toponym_aliases": {
+    "raion": "Siku (anteriormente Chelsea)",
+    "historical_core": "Iknik (Cidade Velha/Old Town)"
   }
 }

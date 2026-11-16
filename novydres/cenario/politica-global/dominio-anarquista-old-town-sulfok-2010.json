@@ -8,13 +8,13 @@
   "authority": "OWNER_EXPLICIT_DIRECTION",
   "approved_on": "2026-11-16",
   "reference_year": 2010,
-  "title": "Domínio anarquista de Old Town e Sulfok em 2010",
-  "decision": "O movimento anarquista detém o domínio territorial de Old Town e de Sulfok em 2010. O Concílio da Cruz e Espada não mantém domínio territorial em nenhum dos dois locais.",
+  "title": "Domínio anarquista de Iknik e Sulfok em 2010",
+  "decision": "O movimento anarquista detém o domínio territorial de Iknik (Cidade Velha/Old Town) e de Sulfok em 2010. O Concílio da Cruz e Espada não possui domínio territorial em nenhum desses dois locais.",
   "territorial_scope": [
     {
-      "territory": "Old Town / Cidade Velha",
-      "administrative_parent": "Chelsea",
-      "extent": "Somente núcleo histórico Old Town; não atribuir automaticamente a totalidade do raion Chelsea",
+      "territory": "Iknik (Cidade Velha / Old Town)",
+      "administrative_parent": "Siku",
+      "extent": "Somente núcleo histórico Iknik; não atribuir automaticamente a totalidade do raion Siku (antes Chelsea)",
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
       "council_domain": "NONE"
     },
@@ -37,13 +37,23 @@
   ],
   "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
   "pending": [
-    "Domínio dos demais bairros de Chelsea e limites urbanos de Old Town",
+    "Domínio dos demais bairros de Siku e limites urbanos de Iknik",
     "Agentes e mecanismo de passagem do controle sabático em 1945 ao domínio anarquista posterior em Sulfok",
-    "Titularidade jurídica de Old Town após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
+    "Titularidade jurídica de Iknik após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
     "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
     "Geometrias, limites municipais e frentes concretas de conflito"
   ],
   "cartographic_use": "Representar em camada cainita temporal de 2010; não expor automaticamente em mapa público mortal; mapear contestação separada do domínio principal.",
   "single_authoritative_source": true,
-  "historical_ref_sulfok": "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json"
+  "historical_ref_sulfok": "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json",
+  "toponym_reference": {
+    "fact_id": "GEO-004.5",
+    "raion": "Siku",
+    "old_label": "Chelsea",
+    "historic_core": "Iknik",
+    "historic_aliases": [
+      "Cidade Velha",
+      "Old Town"
+    ]
+  }
 }

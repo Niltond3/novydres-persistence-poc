@@ -5,11 +5,11 @@ owner_scope: novydres/cenario/geografia
 status: CANDIDATE
 visibility: SYSTEM_AUDIT
 ---
-# district-chelsea
+# Raion Siku (ID técnico `district-chelsea`)
 
 Assunto geográfico candidato. `conteudo.json` contém uma única projeção da proposta editorial vigente com proveniência, sem escolher autoridade ou produzir conhecimento confirmado. O atlas é custodiante da fonte integral, não proprietário concorrente deste conceito.
 
-**Fato territorial canônico GEO-004.1:** [cidade-velha-2010.json](cidade-velha-2010.json) é a fonte única do vínculo entre o núcleo histórico Cidade Velha (Old Town) e Chelsea. O nome e a existência do raion foram ratificados em GEO-004.2; seu traçado e demais propriedades permanecem candidatos. A [geotermia](../../atlas-novydres/geotermia-aquecimento-2010.json) apenas referencia a relação aprovada.
+**Fato territorial canônico GEO-004.1:** [cidade-velha-2010.json](cidade-velha-2010.json) é a fonte única do vínculo entre o núcleo histórico Iknik (Cidade Velha/Old Town) e Siku (antigo Chelsea). O nome e a existência do raion foram ratificados em GEO-004.2; seu traçado e demais propriedades permanecem candidatos. A [geotermia](../../atlas-novydres/geotermia-aquecimento-2010.json) apenas referencia a relação aprovada.
 
 **GEO-004.2 — nome e existência ratificados:** consultar exclusivamente [raions-oficiais-2010.json](../../atlas-novydres/raions-oficiais-2010.json), que identifica `district-chelsea` como raion administrativo oficial de 2010. O status `CANDIDATE` aplica-se às outras alegações — localização, fronteiras, funções urbanas e política Cainita — ainda não aprovadas.
 
@@ -23,7 +23,7 @@ Assunto geográfico candidato. `conteudo.json` contém uma única projeção da 
 
 **GEO-005.4.3 — preparação urukiana canônica anterior a 1423:** a [fonte histórica única](preparacao-urukiana-antes-de-1423.json) ratifica as cinco fases aproximadas de 1390–1423. Durga Syn profetizou o destino, mas Gilgamesh criou a estratégia: células urukianas, patronato, missão ortodoxa secreta, enfraquecimento parcial de defesas sobrenaturais e chegada em 1423 com Cainitas e uma hoste militar cristã ortodoxa. As datas exatas de cada evento, agentes, métodos e geografia permanecem abertos; seguem válidas a Máscara, a Lex Fidei, a Lex Serpentium e as demais Leis de Sangue.
 
-**GEO-004.5 — futura revisão do nome Chelsea:** [pedido editorial registrado](revisao-toponimo-2010.json) para pesquisar topônimo ligado de forma responsável aos povos originários da Península de Seward. Chelsea permanece nome oficial até aprovação posterior, sem alterar o nome de Old Town nem o ID técnico neste momento.
+**GEO-004.5 — RENOMEAÇÃO CANÔNICA:** [decisão proprietária](revisao-toponimo-2010.json) aprova **Siku** (Iñupiaq, gelo; SÍ-ku) como nome oficial deste raion em 2010 e **Iknik** (adaptação gráfica de *ikniq*, fogo; ÍK-nik) para o núcleo histórico. Chelsea, Cidade Velha e Old Town são aliases legados; os IDs técnicos permanecem estáveis. A história de uso desses nomes em 1423 não foi definida.
 
 **GEO-005.8 — passado Ventrue e calor retirado:** a [história de Old Town e Bukovie](../../historia-global/ascensao-ventrue-old-town-bukovie-2010.json) estabelece domínio Ventrue inicial, mineração, industrialização e a mudança do centro de poder. A [GEO-014.2](../../atlas-novydres/geotermia-aquecimento-2010.json) confirma captação privilegiada de calor da Cidade Velha para Bukovie. A [faixa extrativa única](../../atlas-novydres/corredor-extrativo-old-town-sulfok-2010.json) conecta Old Town a Sulfok. Quem sucedeu o senhorio e o novo nome de Chelsea continuam abertos.
 
@@ -31,6 +31,6 @@ Assunto geográfico candidato. `conteudo.json` contém uma única projeção da 
 
 **GEO-006.1 — domínio territorial em 2010:** [fonte política canônica](../../politica-global/dominio-anarquista-old-town-sulfok-2010.json). Old Town é domínio do movimento anarquista, não do Concílio da Cruz e Espada. Não extrapolar automaticamente ao restante de Chelsea; títulos e fronteiras seguem em aberto.
 
-**GEO-004.5 — proposta ampliada de nomes indígenas:** [pauta proprietária](revisao-toponimo-2010.json). O proprietário quer renomear tanto Chelsea quanto o núcleo próprio Cidade Velha/Old Town, valorizando a presença anterior de povos Iñupiat; nenhuma grafia nova foi ratificada. Os nomes atuais e IDs continuam autoritativos até aprovação.
+**GEO-004.5 — nomes oficializados:** [decisão aprovada](revisao-toponimo-2010.json) estabelece Siku e Iknik para o presente cartográfico de 2010, preservando Chelsea e Cidade Velha/Old Town como aliases.
 
-**GEO-004.5 + EDI-001.1 — nomes acessíveis:** [pauta de renomeação](revisao-toponimo-2010.json) reúne candidatos curtos com significado e pronúncia, incluindo Siku (gelo; SÍ-ku), Nuna (terra; NÚ-na) e Iknik (fogo; ÍK-nik, grafia ficcional americanizada de Ikniq). Nenhum nome foi escolhido; consultar a [convenção editorial](../../atlas-novydres/convencao-editorial-idiomas-e-pronuncia.json) para guias de outros idiomas.
+**EDI-001.1 — leitura dos nomes oficiais:** **Siku** (SÍ-ku, gelo, Iñupiaq) e **Iknik** (ÍK-nik, fogo; grafia ficcional americanizada de *ikniq*). Consultar [convenção editorial](../../atlas-novydres/convencao-editorial-idiomas-e-pronuncia.json). Nuna e demais termos seguem apenas sugestões anteriores sem oficialidade.

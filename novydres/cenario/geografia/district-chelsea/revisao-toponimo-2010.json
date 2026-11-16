@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_TOPONYM_REVIEW_REQUEST_V1",
   "subject_id": "district-chelsea",
   "request_id": "GEO-004.5",
-  "status": "OWNER_APPROVED_ACCESSIBLE_INDIGENOUS_TOPONYM_SEARCH_NO_NAME_SELECTED",
+  "status": "CLOSED_NAMES_APPROVED",
   "requested_on": "2026-11-15",
-  "current_official_name": "Chelsea",
+  "current_official_name": "Siku",
   "proposed_new_name": null,
   "intent": "Substituir por topônimos culturalmente e linguisticamente fundamentados tanto o nome oficial do raion Chelsea quanto o nome próprio do núcleo histórico Cidade Velha/Old Town; considerar sua ocupação por povos originários anterior à chegada Cainita, evitando anacronismo anglófono e tradução indígena fabricada.",
   "reference_region": "Península de Seward, Estreito de Bering, Alasca, Estados Unidos",
@@ -14,27 +14,39 @@
     "https://www.uaf.edu/anlc/languages-move/inupiaq.php"
   ],
   "protected_continuity": [
-    "Chelsea continua o nome oficial canônico de 2010 até nova aprovação em GEO-004.2.",
-    "Cidade Velha/Old Town continua núcleo histórico dentro do raion Chelsea; seu topônimo próprio também está sob revisão, mas não muda automaticamente.",
-    "ID técnico district-chelsea só muda mediante migração de referências e aceite do proprietário.",
-    "A história do nome antigo/novo deve acompanhar estudo das sucessões Cainitas e história social humana."
+    "Siku substitui Chelsea como nome oficial do raion em 2010; Chelsea permanece rótulo histórico/editorial antigo para localizar referências.",
+    "Iknik substitui Cidade Velha como topônimo do núcleo histórico; Cidade Velha e Old Town permanecem descrições ou apelidos reconhecíveis.",
+    "IDs técnicos district-chelsea e chelsea-cidade-velha permanecem estáveis por compatibilidade referencial. Alterações futuras de IDs exigem migração própria, não são nomes exibidos.",
+    "Não atribuir a adaptação moderna Iknik automaticamente à fala histórica de comunidades anteriores a 1423.",
+    "Fronteiras, política territorial, história Cainita e rede térmica são fatos independentes não alterados pela renomeação."
   ],
-  "scope": "Aprovados o objetivo da dupla renomeação e o critério de facilidade fonética, com guia de significado e pronúncia para língua estrangeira. Nenhum nome foi escolhido; oficial Chelsea, núcleo Cidade Velha/Old Town e identificadores técnicos não mudam.",
+  "scope": "CÂNONE FECHADO: Chelsea→Siku (raion), Cidade Velha/Old Town→Iknik (núcleo). Pronúncia e semântica confirmadas para uso editorial, mantendo raiz histórica ikniq e glossário. Os nomes legados são aliases; IDs técnicos e geometria permanecem estáveis.",
   "updated_on": "2026-11-16",
   "renaming_targets": [
     {
       "feature_id": "district-chelsea",
-      "current_official_name": "Chelsea",
+      "current_official_name": "Siku",
       "proposed_new_name": null,
-      "status": "PENDING_NAME_APPROVAL"
+      "status": "CLOSED_APPROVED",
+      "previous_official_name": "Chelsea",
+      "approved_name": "Siku",
+      "pronunciation_pt_br": "SÍ-ku",
+      "language": "Iñupiaq",
+      "meaning_pt": "gelo"
     },
     {
       "feature_id": "chelsea-cidade-velha",
-      "current_canonical_name": "Cidade Velha",
+      "current_canonical_name": "Iknik",
       "recognized_name": "Old Town",
       "proposed_new_name": null,
-      "status": "PENDING_NAME_APPROVAL",
-      "note": "Cidade Velha e Old Town podem permanecer descrições ou apelidos após uma renomeação, se confirmado futuramente."
+      "status": "CLOSED_APPROVED",
+      "note": "Cidade Velha e Old Town podem permanecer descrições ou apelidos após uma renomeação, se confirmado futuramente.",
+      "previous_canonical_name": "Cidade Velha",
+      "approved_name": "Iknik",
+      "pronunciation_pt_br": "ÍK-nik",
+      "source_lexeme": "ikniq",
+      "meaning_pt": "fogo",
+      "name_form": "adaptação americanizada ficcional"
     }
   ],
   "linguistic_research": {
@@ -88,7 +100,7 @@
       "language": "Iñupiaq",
       "meaning_pt": "gelo",
       "pronunciation_pt_br": "SÍ-ku",
-      "editorial_status": "PROPOSED_NOT_APPROVED",
+      "editorial_status": "SELECTED_CANONICAL",
       "use": "evoca o território gelado ao redor do núcleo termal"
     },
     {
@@ -98,7 +110,7 @@
       "language": "Iñupiaq",
       "meaning_pt": "terra, território",
       "pronunciation_pt_br": "NÚ-na",
-      "editorial_status": "PROPOSED_NOT_APPROVED",
+      "editorial_status": "NOT_SELECTED",
       "use": "raiz territorial simples, sem traduzir automaticamente como 'terra dos ancestrais'"
     },
     {
@@ -108,7 +120,7 @@
       "language": "Iñupiaq ocidental/Kobuk atestado; conferir aplicação local",
       "meaning_pt": "fogo",
       "pronunciation_pt_br": "ÍK-nik",
-      "editorial_status": "PROPOSED_AMERICANIZED_SPELLING_NOT_APPROVED",
+      "editorial_status": "SELECTED_CANONICAL",
       "use": "associação metafórica ao calor geotérmico, sem afirmar que o termo signifique termas"
     },
     {
@@ -118,8 +130,28 @@
       "language": "Iñupiaq; verificar variante local",
       "meaning_pt": "lagoa, enseada ou baía",
       "pronunciation_pt_br": "TÁ-sik",
-      "editorial_status": "PROPOSED_GEOGRAPHY_CONDITIONAL",
+      "editorial_status": "NOT_SELECTED",
       "use": "usar somente se vínculo físico com lagoa/enseada for aprovado"
     }
-  ]
+  ],
+  "approved_on": "2026-11-16",
+  "previous_official_name": "Chelsea",
+  "approved_selection": {
+    "raion": {
+      "name": "Siku",
+      "pronunciation_pt_br": "SÍ-ku",
+      "language": "Iñupiaq",
+      "lexeme": "siku",
+      "meaning_pt": "gelo"
+    },
+    "historical_core": {
+      "name": "Iknik",
+      "pronunciation_pt_br": "ÍK-nik",
+      "language": "Iñupiaq; subvariedade local não verificada",
+      "lexeme": "ikniq",
+      "meaning_pt": "fogo",
+      "adaptation": "grafia americanizada aprovada"
+    },
+    "scope": "Apenas os topônimos canônicos de 2010; não fixa data de origem dos nomes nos séculos anteriores nem traçados."
+  }
 }

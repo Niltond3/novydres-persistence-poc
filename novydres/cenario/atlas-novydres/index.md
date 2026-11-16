@@ -9,13 +9,13 @@ visibility: SYSTEM_AUDIT
 
 **Única fonte editorial candidata para conteúdos geográficos ainda não aprovados:** [atlas-proposta.md](atlas-proposta.md). Cada raion e lugar possui assunto próprio em `cenario/geografia/` ou `cenario/lugares/`, com uma única projeção desta fonte. A existência de um item na proposta não aprova automaticamente seu conteúdo.
 
-**GEO-004.2 — raions oficiais:** [raions-oficiais-2010.json](raions-oficiais-2010.json) é a fonte canônica única para a existência e os nomes dos nove raions em 2010. Os assuntos de raion apenas referenciam a lista. Não estão aprovadas as fronteiras, dimensões, macroposições ou jurisdições Cainitas.
+**GEO-004.2 — raions oficiais:** [raions-oficiais-2010.json](raions-oficiais-2010.json) é a fonte canônica única para a existência e os nomes dos nove raions em 2010, incluindo **Siku**, que substitui Chelsea como topônimo oficial em GEO-004.5. Os assuntos de raion apenas referenciam a lista. Não estão aprovadas as fronteiras, dimensões, macroposições ou jurisdições Cainitas.
 
 **Fato canônico de população municipal residente em 2010:** [populacao-2010.json](populacao-2010.json). A proposta geográfica não constitui fonte autônoma para o censo.
 
 **Localização e implantação territorial aprovadas GEO-002.1/GEO-002.2/GEO-002.3:** a fonte canônica única é [localizacao-geral-2010.json](localizacao-geral-2010.json). Configuração continental majoritária, acesso marítimo por grande baía natural, rios e lagoas naturais e fontes termais são diretrizes aprovadas; não se trata de arquipélago. A origem geológica, a concentração na Cidade Velha e a desigualdade de aquecimento estão definidas **exclusivamente** em [geotermia-aquecimento-2010.json](geotermia-aquecimento-2010.json); redes, vazão, geometrias, área e coordenadas permanecem abertas.
 
-**Pertencimento territorial GEO-004.1:** o [assunto proprietário Chelsea](../geografia/district-chelsea/cidade-velha-2010.json) estabelece a Cidade Velha como seu núcleo histórico. A fonte geotérmica referencia esse fato sem duplicá-lo; a geometria ainda está aberta.
+**Pertencimento territorial GEO-004.1:** o [assunto proprietário Siku, com ID técnico histórico district-chelsea](../geografia/district-chelsea/cidade-velha-2010.json) estabelece Iknik (Cidade Velha/Old Town) como seu núcleo histórico. A fonte geotérmica referencia esse fato sem duplicá-lo; a geometria ainda está aberta.
 
 As cópias históricas anteriores foram retiradas da árvore atual conforme diretriz do proprietário. O histórico de commits permite auditoria; não é rota de consulta editorial vigente. Metadados `CANDIDATE` são exigência técnica do manifesto ADR-001 e não representam uma segunda fonte de conteúdo.
 
@@ -51,6 +51,8 @@ As cópias históricas anteriores foram retiradas da árvore atual conforme dire
 
 **GEO-005.10 — condicionante histórica de Sulfok:** [fonte histórica](../historia-global/ciclo-sulfok-1917-1945-2010.json). Sulfok participou da revolta de 1917, foi retomado pelo Concílio no mesmo ano e se tornou difícil de defender pela interposição estratégica de Old Town no acesso principal desde Bukovie. Em 1945 caiu ao Sabá; posteriormente os anarquistas conservaram o domínio até 2010. Não inferir rotas e distâncias exatas.
 
-**GEO-004.5 — revisão dupla de topônimos:** [pedido territorial Chelsea/Old Town](../geografia/district-chelsea/revisao-toponimo-2010.json). O objetivo aprovado é substituir ambos os nomes por topônimos coerentes com línguas e presença originárias, sem aprovar forma específica ou mudar os nomes e IDs atuais.
+**GEO-004.5 — nomes APROVADOS em 2010:** raion **Siku** (Iñupiaq, gelo; SÍ-ku) e núcleo histórico **Iknik** (grafia americanizada de *ikniq*, fogo; ÍK-nik). [Fonte proprietária](../geografia/district-chelsea/revisao-toponimo-2010.json), [raions oficiais](raions-oficiais-2010.json) e [núcleo histórico](../geografia/district-chelsea/cidade-velha-2010.json). Chelsea, Cidade Velha e Old Town continuam aliases de legado. IDs técnicos inalterados; nenhuma mudança territorial ou de nomes desde 1423 é presumida.
 
 **EDI-001.1 — convenção oficial de línguas e pronúncia:** [fonte editorial canônica](convencao-editorial-idiomas-e-pronuncia.json). Termos fora de português/inglês devem apresentar significado verificado e pronúncia prática em português brasileiro no suplemento, mapas e apresentações. Exemplo de grafia adaptada não é forma original validada. Os candidatos Siku, Nuna, Iknik e Tasiq continuam em revisão na [pauta Chelsea/Old Town](../geografia/district-chelsea/revisao-toponimo-2010.json), sem mudança de nomes oficiais.
+
+**Nota de migração de rótulos:** referências a Chelsea e Old Town preservadas em propostas antigas, narrativas, fontes literais e títulos de arquivos são aliases históricos/documentais, não nomes oficiais de 2010. Usar Siku e Iknik na próxima revisão de conteúdo e na cartografia; preservar proveniência dos arquivos candidatos.
