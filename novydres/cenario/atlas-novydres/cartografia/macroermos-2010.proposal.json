@@ -1,0 +1,506 @@
+{
+  "schema": "NOVYDRES_LOCAL_WILDERNESS_PROPOSAL_V1",
+  "document_id": "MW-005-ERMO-CORRIDORS-2010",
+  "subject_id": "world-atlas-novydres",
+  "year": 2010,
+  "approval": {
+    "workflow": "PROPOSED_PENDING_OWNER_REVIEW",
+    "canonical_status": "NOT_APPROVED",
+    "truth_state": "GM_PREPARED",
+    "geometry_authority": "PROPOSAL_ONLY",
+    "owner_approval_for_this_geometry": null
+  },
+  "provenance": {
+    "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
+    "parent_work_unit": "MW-004",
+    "parent_candidate_checkpoint": "4185b05dcecee4a9a4fcacdf8efa5b7bde61c714",
+    "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
+    "coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
+    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "relief_commit": "79772905f0e895c236b31abea059ef2ed085e866",
+    "candidate_relief_blob_sha": "c5f6caaddfbef3a89fd5ce85a291ae972e9f35ab",
+    "candidate_hydro_blob_sha": "34918d5707abac23534df877a8c4b0ec4cefc834",
+    "dependency_paths": [
+      "macrogeometria-litoral-baia-ilhas-2010.proposal.json",
+      "macrorelevo-2010.proposal.json",
+      "macrohidrografia-2010.proposal.json"
+    ],
+    "canonical_sources": [
+      "../macrorelevo-hidrografia-ermos-2010.json",
+      "../ermos-estrutura-territorial-2010.json",
+      "../implantacao-litoral-baia-2010.json",
+      "../geotermia-aquecimento-2010.json"
+    ]
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "axes": {
+      "x_positive": "east_on_working_sheet",
+      "y_positive": "north_on_working_sheet"
+    },
+    "study_frame": {
+      "xmin": -60000,
+      "ymin": -50000,
+      "xmax": 60000,
+      "ymax": 50000
+    },
+    "geodetic_anchor": null,
+    "epsg": null,
+    "vertical_datum": null,
+    "municipal_boundary": null
+  },
+  "wilderness_model": {
+    "natural_special_zone_not_raion": true,
+    "representation": "non_exhaustive_candidate_barrier_segments",
+    "number_of_raions_in_canon": 9,
+    "geometry_source": "corridor_segments.ring_xy_m",
+    "corridor_segments": [
+      {
+        "feature_id": "ermo-rocky-northern-001",
+        "kind": "rocky-pass",
+        "descriptive_label_pt": "Cristas setentrionais",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            4000,
+            40000
+          ],
+          [
+            8000,
+            43000
+          ],
+          [
+            19000,
+            43800
+          ],
+          [
+            22000,
+            40500
+          ],
+          [
+            17000,
+            37500
+          ],
+          [
+            7000,
+            38600
+          ]
+        ],
+        "relief_anchor_id": "relief-northern-uplands-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "river-vasyl-main-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-rocky-eastern-001",
+        "kind": "rocky-pass",
+        "descriptive_label_pt": "Contrafortes orientais",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            47000,
+            0
+          ],
+          [
+            50500,
+            1000
+          ],
+          [
+            53500,
+            10000
+          ],
+          [
+            53000,
+            21000
+          ],
+          [
+            54500,
+            29000
+          ],
+          [
+            49000,
+            30500
+          ],
+          [
+            46500,
+            22000
+          ],
+          [
+            44000,
+            12000
+          ]
+        ],
+        "relief_anchor_id": "relief-eastern-uplands-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-rocky-southern-001",
+        "kind": "rocky-pass",
+        "descriptive_label_pt": "Cristas meridionais",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            28500,
+            -21500
+          ],
+          [
+            34500,
+            -27000
+          ],
+          [
+            43000,
+            -24500
+          ],
+          [
+            44000,
+            -17000
+          ],
+          [
+            38000,
+            -11200
+          ],
+          [
+            30500,
+            -13500
+          ]
+        ],
+        "relief_anchor_id": "relief-southern-uplands-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "stream-southern-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-tundra-northeastern-001",
+        "kind": "tundra-permafrost",
+        "descriptive_label_pt": "Tundra nordeste",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            41500,
+            43500
+          ],
+          [
+            44500,
+            46000
+          ],
+          [
+            53500,
+            46000
+          ],
+          [
+            55000,
+            42000
+          ],
+          [
+            49500,
+            40500
+          ],
+          [
+            44500,
+            41200
+          ]
+        ],
+        "relief_anchor_id": "relief-northeastern-tundra-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-tundra-southwestern-west-001",
+        "kind": "tundra-permafrost",
+        "descriptive_label_pt": "Tundra sudoeste oeste",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -23000,
+            -45000
+          ],
+          [
+            -22500,
+            -39000
+          ],
+          [
+            -20000,
+            -36800
+          ],
+          [
+            -17400,
+            -37200
+          ],
+          [
+            -16500,
+            -39000
+          ],
+          [
+            -19000,
+            -42500
+          ]
+        ],
+        "relief_anchor_id": "relief-southwestern-tundra-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "stream-lake-outlet-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-tundra-southwestern-east-001",
+        "kind": "tundra-permafrost",
+        "descriptive_label_pt": "Tundra sudoeste leste",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -4000,
+            -44500
+          ],
+          [
+            1500,
+            -44900
+          ],
+          [
+            5800,
+            -41700
+          ],
+          [
+            4000,
+            -39000
+          ],
+          [
+            -2000,
+            -37400
+          ],
+          [
+            -4000,
+            -39000
+          ]
+        ],
+        "relief_anchor_id": "relief-southwestern-tundra-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "stream-lake-inlet-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-wetland-southern-001",
+        "kind": "wetlands",
+        "descriptive_label_pt": "Baixada úmida meridional",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            10500,
+            -29500
+          ],
+          [
+            15600,
+            -28000
+          ],
+          [
+            21100,
+            -30500
+          ],
+          [
+            20500,
+            -33500
+          ],
+          [
+            12000,
+            -33600
+          ]
+        ],
+        "relief_anchor_id": "relief-southern-wet-lowland-001",
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "stream-southern-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-wetland-vasyl-estuary-001",
+        "kind": "wetlands",
+        "descriptive_label_pt": "Várzea inferior do Vasyl",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            25500,
+            10500
+          ],
+          [
+            28800,
+            10700
+          ],
+          [
+            31000,
+            7000
+          ],
+          [
+            30200,
+            3000
+          ],
+          [
+            26400,
+            3800
+          ]
+        ],
+        "relief_anchor_id": null,
+        "exposed_coast_segment_indices": null,
+        "natural_watercourse_ids_intersecting": [
+          "river-vasyl-main-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-coastal-northern-001",
+        "kind": "coastal",
+        "descriptive_label_pt": "Litoral externo setentrional",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -39800,
+            36500
+          ],
+          [
+            -36000,
+            38500
+          ],
+          [
+            -33500,
+            44500
+          ],
+          [
+            -35000,
+            48500
+          ],
+          [
+            -40800,
+            47500
+          ],
+          [
+            -39000,
+            43000
+          ]
+        ],
+        "relief_anchor_id": null,
+        "exposed_coast_segment_indices": [
+          23,
+          24
+        ],
+        "natural_watercourse_ids_intersecting": [
+          "stream-northern-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      },
+      {
+        "feature_id": "ermo-coastal-southwestern-001",
+        "kind": "coastal",
+        "descriptive_label_pt": "Litoral externo sudoeste",
+        "geometry_type": "Polygon",
+        "ring_xy_m": [
+          [
+            -39500,
+            -44000
+          ],
+          [
+            -34500,
+            -42000
+          ],
+          [
+            -31500,
+            -36000
+          ],
+          [
+            -34700,
+            -32000
+          ],
+          [
+            -39800,
+            -34000
+          ],
+          [
+            -42000,
+            -39500
+          ]
+        ],
+        "relief_anchor_id": null,
+        "exposed_coast_segment_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "natural_watercourse_ids_intersecting": [
+          "stream-lake-outlet-001"
+        ],
+        "approval_status": "PROPOSED_NOT_CANONICAL",
+        "municipal_or_raion_boundary": false,
+        "urban_gap_proven": false
+      }
+    ],
+    "interpretation": {
+      "rocky": "barreiras de relevo rochoso, sem fixação de passagens",
+      "tundra": "faixas expostas de permafrost e tundra não urbanizadas",
+      "wetlands": "várzeas e solos sazonalmente saturados, passíveis de escoamentos fluviais naturais",
+      "coastal": "faixas terrestres expostas próximas ao litoral externo, sem ocupar o mar",
+      "natural_stream_intersection": "sobreposição geométrica com rio natural é permitida; não representa passagem construída ou travessia urbana",
+      "urban_separation": "a função de separação de núcleos é qualitativa até a geometria urbana futura; nenhuma continuidade barreira-raion pode ser provada agora"
+    }
+  },
+  "canonical_constraints_preserved": [
+    "GEO-003.5 quatro classes físicas de Ermo, sem posição previamente aprovada",
+    "GEO-004.3 Ermos não são um décimo raion nem faixa decorativa",
+    "GEO-003.3 serras, tundra, várzeas e litoral exposto podem coexistir",
+    "GEO-003.4 cursos naturais e várzeas podem se sobrepor; nenhuma ponte/estrada é inferida",
+    "GEO-002.4 litoral continental e baía protegida; contorno permanece candidato"
+  ],
+  "explicitly_unassigned": {
+    "raion_boundaries": null,
+    "municipal_boundary": null,
+    "urban_core_footprints": null,
+    "engineered_crossings": null,
+    "road_network": null,
+    "rail_network": null,
+    "ports": null,
+    "thermal_utility_network": null,
+    "geodetic_coordinates": null,
+    "altitude_or_slopes": null,
+    "permafrost_thickness": null,
+    "seasonal_flood_extent": null,
+    "seasonal_sea_ice": null,
+    "official_feature_toponyms": null,
+    "canonical_corridor_boundaries": null
+  },
+  "validation_summary": {
+    "method": "deterministic_V8_geometry_preflight_and_reproducible_Node_validator",
+    "candidate_segment_count": 10,
+    "synthetic_total_km2": 801.59,
+    "preflight_errors": [],
+    "not_an_exhaustive_wilderness_area": true,
+    "not_municipal_area": true,
+    "no_urban_separation_certification": true
+  }
+}
