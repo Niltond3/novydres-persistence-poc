@@ -2,11 +2,11 @@
   "schema": "NOVYDRES_TOPONYM_REVIEW_REQUEST_V1",
   "subject_id": "district-chelsea",
   "request_id": "GEO-004.5",
-  "status": "OWNER_REQUESTED_FUTURE_RENAME",
+  "status": "OWNER_CONFIRMED_TWO_RENAMES_RESEARCH_PENDING",
   "requested_on": "2026-11-15",
   "current_official_name": "Chelsea",
   "proposed_new_name": null,
-  "intent": "Substituir futuramente nome percebido como excessivamente anglófono por topônimo adequado à história e aos povos originários locais, com justificativa linguística e histórica.",
+  "intent": "Substituir por topônimos culturalmente e linguisticamente fundamentados tanto o nome oficial do raion Chelsea quanto o nome próprio do núcleo histórico Cidade Velha/Old Town; considerar sua ocupação por povos originários anterior à chegada Cainita, evitando anacronismo anglófono e tradução indígena fabricada.",
   "reference_region": "Península de Seward, Estreito de Bering, Alasca, Estados Unidos",
   "required_research": "Verificar comunidades e línguas Iñupiat apropriadas ao local e contexto, além da presença regional Yupik, sem fabricar termo nativo nem generalizar culturas distintas.",
   "sources": [
@@ -15,9 +15,63 @@
   ],
   "protected_continuity": [
     "Chelsea continua o nome oficial canônico de 2010 até nova aprovação em GEO-004.2.",
-    "Cidade Velha/Old Town é núcleo histórico dentro desse raion e não muda de nome automaticamente.",
+    "Cidade Velha/Old Town continua núcleo histórico dentro do raion Chelsea; seu topônimo próprio também está sob revisão, mas não muda automaticamente.",
     "ID técnico district-chelsea só muda mediante migração de referências e aceite do proprietário.",
     "A história do nome antigo/novo deve acompanhar estudo das sucessões Cainitas e história social humana."
   ],
-  "scope": "Somente pauta formal de futura revisão. Não aprova novo nome, nova etnia específica nem mudança territorial."
+  "scope": "Aprovada a DIRETRIZ de renomear Chelsea e o núcleo Cidade Velha; grafias e nomes novos não ratificados. Sem mudança atual de geografia, IDs, nomes, outras línguas e jurisdição.",
+  "updated_on": "2026-11-16",
+  "renaming_targets": [
+    {
+      "feature_id": "district-chelsea",
+      "current_official_name": "Chelsea",
+      "proposed_new_name": null,
+      "status": "PENDING_NAME_APPROVAL"
+    },
+    {
+      "feature_id": "chelsea-cidade-velha",
+      "current_canonical_name": "Cidade Velha",
+      "recognized_name": "Old Town",
+      "proposed_new_name": null,
+      "status": "PENDING_NAME_APPROVAL",
+      "note": "Cidade Velha e Old Town podem permanecer descrições ou apelidos após uma renomeação, se confirmado futuramente."
+    }
+  ],
+  "linguistic_research": {
+    "primary_area": "oeste da Península de Seward, Port Clarence e região de Teller",
+    "priority": "Iñupiaq da Península de Seward, com atenção às variedades Qawiaraq e do Estreito de Bering; reconhecer presença de povos Yupik sem fundir línguas diferentes.",
+    "documented_research_words_not_approved_toponyms": [
+      {
+        "term": "Uunaqtuq",
+        "gloss": "está quente (especialmente líquido)",
+        "role": "inspiração para núcleo de fontes termais, sem validar uso toponímico"
+      },
+      {
+        "term": "Tasiq",
+        "gloss": "lagoa, enseada, baía",
+        "role": "inspiração geográfica, verificar dialeto e morfologia"
+      },
+      {
+        "term": "Qawiaraq",
+        "gloss": "topônimo histórico, comunidade e variedade linguística reais",
+        "role": "referência histórica, não deslocar nome de comunidade real à ficção sem justificativa"
+      },
+      {
+        "term": "Kigluait",
+        "gloss": "picos agudos, topônimo de montanhas reais",
+        "role": "referência a acidentes montanhosos, não copiar indiscriminadamente"
+      }
+    ],
+    "research_sources": [
+      "https://www.uaf.edu/anlc/languages-move/inupiaq.php",
+      "https://beringstraits.com/history-region/",
+      "https://inupiaq.tusaalanga.ca/glossary/english?showall=1",
+      "https://www.graphiteoneinc.com/wp-content/uploads/2026/03/Graphite-Creek_Environmental-Evaluation-Document_REV-0.pdf"
+    ],
+    "guardrails": [
+      "Palavras isoladas não equivalem a topônimo gramaticalmente correto; verificar grafia e semântica local antes de aprovar.",
+      "Não apagar nem rebatizar automaticamente Teller, Brevig Mission, Qawiaraq ou outros lugares e comunidades reais.",
+      "Nomes Chelsea e Cidade Velha/Old Town e IDs técnicos continuam canônicos até aprovação expressa dos substitutos e migração coordenada."
+    ]
+  }
 }

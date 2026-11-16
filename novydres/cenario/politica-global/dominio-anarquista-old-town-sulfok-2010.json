@@ -24,24 +24,26 @@
       "extent": "Raion Sulfok; geometria por definir",
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
       "council_domain": "NONE",
-      "contest": "A contestação Gangrel e a presença de outras facções não significam soberania partilhada nem administração territorial do Concílio"
+      "contest": "A contestação Gangrel e a presença de outras facções não significam soberania partilhada nem administração territorial do Concílio",
+      "historical_start_of_anarchist_domain": "AFTER_SABBAT_CAPTURE_1945; exact transfer or transition from Sabbat force to anarchist holders unassigned (GEO-005.10)"
     }
   ],
   "canon_constraints": [
     "Domínio territorial efetivo em 2010 não identifica automaticamente o título jurídico Cainita nem legitimação por parte do Concílio.",
     "Competências transversais clânicas (Nosferatu/aquecimento, Gangrel/coerção, Ventrue/economia) e operações em instalações não transferem domínio.",
     "Presença Hecata, patrulhas Gangrel e redes subterrâneas Nosferatu não tornam Sulfok domínio conjunto.",
-    "Não presumir que Sulfok tenha sido conquistado em 1917, nem que o governo anarquista de Old Town tenha sido ininterrupto desde a revolta.",
-    "Não confundir domínio cainita com jurisdição mortal: Novydres e seus raions continuam administrativamente sob lei americana."
+    "Não confundir domínio cainita com jurisdição mortal: Novydres e seus raions continuam administrativamente sob lei americana.",
+    "A revolta anarquista atingiu Sulfok em 1917, mas a Corte o recuperou naquele mesmo ano. Controle pelo Concílio foi mantido e contestado até a conquista sabática em 1945, após a qual o movimento anarquista deteve o território até 2010 (GEO-005.10)."
   ],
   "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
   "pending": [
     "Domínio dos demais bairros de Chelsea e limites urbanos de Old Town",
-    "Data, agentes e meios da ascensão anarquista em Sulfok",
+    "Agentes e mecanismo de passagem do controle sabático em 1945 ao domínio anarquista posterior em Sulfok",
     "Titularidade jurídica de Old Town após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
     "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
     "Geometrias, limites municipais e frentes concretas de conflito"
   ],
   "cartographic_use": "Representar em camada cainita temporal de 2010; não expor automaticamente em mapa público mortal; mapear contestação separada do domínio principal.",
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "historical_ref_sulfok": "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json"
 }
