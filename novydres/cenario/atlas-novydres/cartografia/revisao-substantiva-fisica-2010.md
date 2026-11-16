@@ -2,13 +2,15 @@
 document_id: MW-007-PACOTE-DECISAO-FISICA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: READY_FOR_OWNER_SUBSTANTIVE_REVIEW
+workflow_status: OWNER_APPROVED_MACRO_ORGANIZATION_ONLY
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
 source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
 source_mw006_checkpoint: bd0b4708b81cc2dfa0105ad7b44866d0809d9638
-owner_decision: PENDING
+owner_decision: APPROVED_M_FOR_FIS_01_TO_04
 created_on: 2026-11-16
+owner_approval_date: 2026-11-16
+owner_approval_scope: RELATIVE_MACRO_ORGANIZATION_ONLY_NO_CANONICAL_CONTOURS_OR_COORDINATES
 ---
 
 # MW-007 — Pacote de decisão conjunta da geografia física candidata (2010)
@@ -32,16 +34,31 @@ O quadro `NOVYDRES-LOCAL-2010`, 120 × 100 km, e o teste de 4.000–7.000 km² d
 
 **Fatos canônicos protegidos:** macrorregião no setor ocidental da Península de Seward, nas proximidades de Port Clarence, sem apagar comunidades reais; predominância continental, baía abrigada, ilhas secundárias; cinco classes de paisagem; Rio Vasyl passa pelo núcleo termal de Cidade Velha/Iknik e deságua na baía, com aquecimento localizado; quatro classes de Ermo interrompem a continuidade urbana. São fatos **qualitativos**, não os vértices destas propostas. Os nove raions continuam nove; Kingswell é nome oficial do raion com ID técnico legado `district-chelsea`.
 
-## 2. Alcance de cada tipo de decisão
+## 2. Deliberação expressa recebida em 16/11/2026
+
+O proprietário declarou: **“Aprovo a macro-organização das quatro camadas físicas (FIS-01 a FIS-04), sem canonizar seus contornos e coordenadas.”**
+
+| ID | Opção escolhida | Alcance exato |
+| --- | --- | --- |
+| FIS-01 — costa | **M** | Organização geral costa ocidental, baía protegida, promontório e ilhas secundárias; número, dimensões e perímetros insulares específicos permanecem candidatos. |
+| FIS-02 — relevo | **M** | Organização relativa vale termal interior, serras, tundra e baixadas; sete contornos e eixos de crista continuam candidatos. |
+| FIS-03 — hidrografia | **M** | Organização relativa Rio Vasyl, vale termal, afluentes e demais corpos d'água; trajetórias, vértice da foz, perímetros e envelopes de bacia continuam candidatos. |
+| FIS-04 — Ermos | **M** | Distribuição tipológica de barreiras de cristas, tundra, várzea e costa; dez perímetros e soma sintética de 801,59 km² não foram ratificados. |
+
+**Efeito:** autoriza usar esta organização relativa integrada como **referência operacional aprovada para continuar a modelagem**, com vértices, números de feições opcionais, áreas, distâncias, posições absolutas e geometria formal ainda revisáveis. O quadro MW-001 segue hipótese operacional. Nenhuma das quatro geometrias-fonte muda de `NOT_APPROVED` para `CLOSED_CANON`; seus valores `owner_approval_for_this_geometry: null` não devem ser alterados pela escolha M. Não há ratificação de contornos nem área municipal, âncora geodésica, raions, transportes ou componentes de engenharia.
+
+O registro da escolha é **decisão substantiva de macro-organização**, não canonização integral e não autorização para substituir as fontes canônicas físicas já fechadas. A integração/propagação futura, se for exigida para efeitos canônicos, é outra unidade e requer escopo próprio. As alternativas G, R e D abaixo ficam documentadas como opções avaliadas, não como decisões aprovadas.
+
+## 3. Alcance de cada tipo de decisão
 
 - **G — Aprovar a geometria candidata como escolha substantiva de desenho para 2010:** aprova a forma/vínculos explicitados, sujeita a propagação no assunto proprietário e consumidores; antes dessa propagação, estado `APPROVED_PENDING_PROPAGATION`, nunca `CLOSED_CANON`. Não ratifica precisão cadastral, datum, limite municipal ou equipamentos ausentes.
 - **M — Aprovar somente a macro-organização morfológica:** mantém os vértices do JSON como **hipótese operacional corrigível**, sem declarar os contornos oficialmente escolhidos. As regras qualitativas já canônicas não precisam de segunda aprovação.
 - **R — Solicitar revisão dirigida:** modifica só a camada identificada e revalida a cadeia de dependências depois da revisão; nenhuma variante nova é aprovada implicitamente.
 - **D — Adiar:** mantém o estado atual `PROPOSED_PENDING_OWNER_REVIEW`.
 
-**Sem resposta inequívoca do proprietário, todas as quatro decisões permanecem D (pendentes).** Um simples “aprovo o relatório” não autoriza alteração do cânone nem equivale a opção G. Uma aprovação que escolher G será registrada como decisão do proprietário, mas a propagação canônica e seus testes pertencem a unidade posterior explicitamente autorizada.
+**Antes da deliberação, todas as quatro decisões permaneciam pendentes; a escolha expressa M para as quatro está registrada na seção 2.** Um simples “aprovo o relatório” não autoriza alteração do cânone nem equivale a opção G. Uma aprovação que escolher G será registrada como decisão do proprietário, mas a propagação canônica e seus testes pertencem a unidade posterior explicitamente autorizada.
 
-## 3. Decisões substantivas integradas
+## 4. Decisões substantivas integradas
 
 ### FIS-01 — Forma da baía, litoral e ilhas (MW-002)
 
@@ -83,9 +100,9 @@ O quadro `NOVYDRES-LOCAL-2010`, 120 × 100 km, e o teste de 4.000–7.000 km² d
 
 **Impacto:** isolamento predominante de núcleos é cânone qualitativo, mas não há polígonos de núcleos que permitam certificá-lo. Exigir agora uma barreira totalmente contínua ou cobertura exaustiva seria precisão artificial.
 
-## 4. Escolha conjunta, precedência e ressalvas
+## 5. Escolha conjunta, precedência e ressalvas
 
-**Recomendação editorial MW-007:** optar por **M nas quatro decisões** se a macroconfiguração for aceitável. Isso dá continuidade ao modelo integrado como hipótese visual e espacial controlada sem a falsa ratificação de contornos absolutos; nenhum GEO é encerrado com essa escolha. A escolha **G** pode ser feita individualmente quando o proprietário quiser ratificar um contorno específico, sempre observando a propagação posterior e o efeito sobre dependências.
+**Deliberação MW-007:** o proprietário escolheu **M nas quatro decisões** (FIS-01 a FIS-04). Isso dá continuidade ao modelo integrado como hipótese visual e espacial controlada sem a falsa ratificação de contornos absolutos; nenhum GEO é encerrado com essa escolha. A escolha **G** pode ser feita individualmente quando o proprietário quiser ratificar um contorno específico, sempre observando a propagação posterior e o efeito sobre dependências.
 
 Ordem obrigatória de revisão material: **FIS-01 → FIS-02 → FIS-03 → FIS-04**. Revisão de costa aciona as demais; revisão do relevo aciona água e Ermo; revisão de água aciona Ermo. Não duplicar linhas/polígonos para facilitar edição.
 
@@ -98,10 +115,10 @@ Ordem obrigatória de revisão material: **FIS-01 → FIS-02 → FIS-03 → FIS-
 
 **Dependências protegidas:** GEO-002.1–002.4; GEO-003.1–003.5; GEO-004.3; GEO-014.1–014.2 e as demais fontes proprietárias relacionadas; não alterar fatos aprovados nem renomear IDs técnicos nesta unidade.
 
-## 5. Protocolo de decisão e continuação
+## 6. Registro e continuação
 
-Resposta inequívoca esperada do proprietário: indicar **FIS-01, FIS-02, FIS-03 e FIS-04** com opção **G/M/R/D** e, no caso de R, a correção substantiva desejada. A escolha deve explicitar se é aprovação de desenho de 2010 ou mera aceitação da macro-organização. **A publicação deste pacote não é consentimento.**
+Resposta recebida e registrada: **FIS-01=M; FIS-02=M; FIS-03=M; FIS-04=M**, somente macro-organização, sem canonização de contornos e coordenadas. **O registro da aprovação tem alcance limitado ao declarado pelo proprietário**, não a quaisquer hipóteses adicionais descritas nesta pauta.
 
-Esta unidade cria apenas este pacote documental. Não altera `master`, candidatos, verificadores, fontes canônicas ou conteúdos de raions/transportes. Após o proprietário decidir, uma **nova unidade** deverá registrar a decisão com sua autoridade exata, atualizar/propagar apenas os escopos autorizados, executar os validadores pertinentes e realizar readback remoto. Se a resposta for M ou D, não promover geometria a cânone.
+Esta unidade cria e atualiza apenas este pacote documental, incluindo o registro expresso da escolha M. Não altera `master`, candidatos, verificadores, fontes canônicas ou conteúdos de raions/transportes. Uma **nova unidade**, em outro chat, deverá recuperar a decisão deste GitHub, utilizá-la como diretriz de modelagem e executar somente trabalho geométrico futuro autorizado. A opção M **não** permite promover geometria a cânone.
 
 Handoff operacional conforme `cartografia/guide.md`: iniciar a próxima conversa no HEAD atual de `master`, resolver `world-atlas-novydres` pelo catálogo e ler o pacote e quatro JSONs no checkpoint remoto da branch MW-007. Handoffs jamais substituem os arquivos GitHub.
