@@ -21,7 +21,7 @@
   ],
   "reference_real_world": {
     "geography": "Península de Seward é composta por serras, elevações onduladas, vales fluviais, tundra, planícies encharcadas e permafrost; a região de Port Clarence contém baía protegida, lagoas e ambiente costeiro vulnerável.",
-    "geothermal": "Áreas termais reais como Pilgrim e Serpentine Hot Springs são fenômenos geológicos localizados; Novydres possui concentração excepcionalmente abundante em Iknik (antiga Cidade Velha / Old Town) por cânone ficcional, sem torná-la uma 'ilha de clima quente'.",
+    "geothermal": "Pilgrim e Serpentine Hot Springs são referências reais de termas localizadas. A concentração geotérmica ficcional da Cidade Velha não aquece toda a atmosfera de Novydres.",
     "hydrology": "Água superficial segue divisores de águas e declives até estuários. O calor geotérmico pode aquecer trechos sem determinar a vazão total ou tornar toda a baía morna.",
     "sources": [
       "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JF005355",
@@ -38,9 +38,9 @@
         "id": "terrain-thermal-valley",
         "label": "Bacia/vale termal histórico",
         "form": "Depressão e vale interior protegido por colinas, conectado hidrogeologicamente a falhas quentes profundas.",
-        "placement": "Abrange Iknik (Cidade Velha/Old Town), núcleo do raion Siku (antigo Chelsea), sem fixar posição cartográfica exata do vale.",
+        "placement": "Abrange a Cidade Velha (Iknik nos documentos), núcleo de raion ainda sem novo nome aprovado (ID district-chelsea; antigo Chelsea).",
         "function": "Origem do núcleo histórico com abrigos, água, solos localmente descongelados e águas termais abundantes.",
-        "limit": "Não equivaler automaticamente a todo Siku nem ao centro cívico metropolitano de 2010."
+        "limit": "O núcleo Cidade Velha não equivale automaticamente a todo o raion nem ao centro cívico metropolitano."
       },
       {
         "id": "terrain-rocky-uplands",
@@ -78,8 +78,8 @@
     "status": "CANON_APPROVED",
     "main_river": {
       "existence_as_named_feature": "CONFIRMED_BY_OWNER_APPROVAL_GEO-003.4",
-      "topology": "Rio de água doce alimentado por bacia elevada; recebe tributários e afluxos de nascentes geotérmicas quando percorre o vale termal de Iknik (Old Town); desce para estuário na grande baía.",
-      "chelsea": "Campo técnico legado 'chelsea': curso principal atravessa Iknik, núcleo do atual raion Siku, com trechos localmente mornos e margens de ocupação histórica.",
+      "topology": "Rio doce com bacia em cotas elevadas; recebe tributários e fontes geotérmicas no vale da Cidade Velha, seguindo à grande baía.",
+      "chelsea": "Campo técnico legado: o rio principal atravessa a Cidade Velha, nome formal Iknik, dentro de raion de novo nome pendente.",
       "estuary": "O Rio Vasyl deságua na grande baía do território. O setor industrial/portuário e a associação territorial com Sulfok permanecem hipóteses cartográficas, não localizações ratificadas.",
       "temperature": "Trechos aquecidos ficam perto de entradas termais; jusante e afluentes podem esfriar, congelar parcialmente ou receber controle hidráulico humano. Nunca supor rio integralmente quente ou gelo ausente por toda a extensão.",
       "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário.",
@@ -184,12 +184,10 @@
   },
   "toponym_reference": {
     "fact_id": "GEO-004.5",
-    "raion": "Siku",
+    "current_raion_official_name": null,
     "raion_legacy": "Chelsea",
-    "historic_core": "Iknik",
-    "historic_core_legacy": [
-      "Cidade Velha",
-      "Old Town"
-    ]
+    "rejected_raion_candidate": "Siku",
+    "formal_core_name": "Iknik",
+    "common_core_name": "Cidade Velha"
   }
 }

@@ -2,9 +2,9 @@
   "schema": "NOVYDRES_TOPONYM_REVIEW_REQUEST_V1",
   "subject_id": "district-chelsea",
   "request_id": "GEO-004.5",
-  "status": "CLOSED_NAMES_APPROVED",
+  "status": "PARTIAL_APPROVAL_CORE_APPROVED_RAION_NAME_PENDING",
   "requested_on": "2026-11-15",
-  "current_official_name": "Siku",
+  "current_official_name": null,
   "proposed_new_name": null,
   "intent": "Substituir por topônimos culturalmente e linguisticamente fundamentados tanto o nome oficial do raion Chelsea quanto o nome próprio do núcleo histórico Cidade Velha/Old Town; considerar sua ocupação por povos originários anterior à chegada Cainita, evitando anacronismo anglófono e tradução indígena fabricada.",
   "reference_region": "Península de Seward, Estreito de Bering, Alasca, Estados Unidos",
@@ -14,39 +14,41 @@
     "https://www.uaf.edu/anlc/languages-move/inupiaq.php"
   ],
   "protected_continuity": [
-    "Siku substitui Chelsea como nome oficial do raion em 2010; Chelsea permanece rótulo histórico/editorial antigo para localizar referências.",
-    "Iknik substitui Cidade Velha como topônimo do núcleo histórico; Cidade Velha e Old Town permanecem descrições ou apelidos reconhecíveis.",
-    "IDs técnicos district-chelsea e chelsea-cidade-velha permanecem estáveis por compatibilidade referencial. Alterações futuras de IDs exigem migração própria, não são nomes exibidos.",
-    "Não atribuir a adaptação moderna Iknik automaticamente à fala histórica de comunidades anteriores a 1423.",
-    "Fronteiras, política territorial, história Cainita e rede térmica são fatos independentes não alterados pela renomeação."
+    "Chelsea é apenas uma referência histórica/editorial do raion de novo nome pendente; o ID técnico permanece district-chelsea.",
+    "Siku não deve aparecer como nome oficial de Novydres, pois foi rejeitado pelo proprietário.",
+    "Cidade Velha é o nome popular predominante do núcleo formalmente denominado Iknik (ÍK-nik, de ikniq, fogo); Old Town é equivalente inglês.",
+    "Não afirmar que Iknik fosse o nome ancestral pré-1423 sem decisão histórica.",
+    "A renomeação não altera fronteiras, domínios Cainitas, termas ou outros fatos geográficos."
   ],
-  "scope": "CÂNONE FECHADO: Chelsea→Siku (raion), Cidade Velha/Old Town→Iknik (núcleo). Pronúncia e semântica confirmadas para uso editorial, mantendo raiz histórica ikniq e glossário. Os nomes legados são aliases; IDs técnicos e geometria permanecem estáveis.",
+  "scope": "Raion sem nome novo escolhido (Siku rejeitado); Cidade Velha nome cotidiano principal do núcleo, Iknik nome formal e raro. IDs históricos preservados.",
   "updated_on": "2026-11-16",
   "renaming_targets": [
     {
       "feature_id": "district-chelsea",
-      "current_official_name": "Siku",
+      "current_official_name": null,
       "proposed_new_name": null,
-      "status": "CLOSED_APPROVED",
+      "status": "PENDING_NEW_NAME",
       "previous_official_name": "Chelsea",
-      "approved_name": "Siku",
+      "approved_name": null,
       "pronunciation_pt_br": "SÍ-ku",
       "language": "Iñupiaq",
-      "meaning_pt": "gelo"
+      "meaning_pt": "gelo",
+      "withdrawn_name": "Siku"
     },
     {
       "feature_id": "chelsea-cidade-velha",
       "current_canonical_name": "Iknik",
-      "recognized_name": "Old Town",
+      "recognized_name": "Cidade Velha",
       "proposed_new_name": null,
-      "status": "CLOSED_APPROVED",
-      "note": "Cidade Velha e Old Town podem permanecer descrições ou apelidos após uma renomeação, se confirmado futuramente.",
+      "status": "FORMAL_NAME_APPROVED_COMMON_USAGE_APPROVED",
+      "note": "Iknik: uso restrito principalmente a documentos oficiais; Cidade Velha: nome cotidiano predominante.",
       "previous_canonical_name": "Cidade Velha",
       "approved_name": "Iknik",
       "pronunciation_pt_br": "ÍK-nik",
       "source_lexeme": "ikniq",
       "meaning_pt": "fogo",
-      "name_form": "adaptação americanizada ficcional"
+      "name_form": "adaptação americanizada ficcional",
+      "common_name": "Cidade Velha"
     }
   ],
   "linguistic_research": {
@@ -100,7 +102,7 @@
       "language": "Iñupiaq",
       "meaning_pt": "gelo",
       "pronunciation_pt_br": "SÍ-ku",
-      "editorial_status": "SELECTED_CANONICAL",
+      "editorial_status": "REJECTED_BY_OWNER",
       "use": "evoca o território gelado ao redor do núcleo termal"
     },
     {
@@ -137,21 +139,19 @@
   "approved_on": "2026-11-16",
   "previous_official_name": "Chelsea",
   "approved_selection": {
-    "raion": {
-      "name": "Siku",
-      "pronunciation_pt_br": "SÍ-ku",
-      "language": "Iñupiaq",
-      "lexeme": "siku",
-      "meaning_pt": "gelo"
-    },
+    "raion": null,
     "historical_core": {
       "name": "Iknik",
       "pronunciation_pt_br": "ÍK-nik",
       "language": "Iñupiaq; subvariedade local não verificada",
       "lexeme": "ikniq",
       "meaning_pt": "fogo",
-      "adaptation": "grafia americanizada aprovada"
+      "adaptation": "grafia americanizada aprovada",
+      "common_name": "Cidade Velha",
+      "english_name": "Old Town"
     },
-    "scope": "Apenas os topônimos canônicos de 2010; não fixa data de origem dos nomes nos séculos anteriores nem traçados."
-  }
+    "scope": "Apenas os topônimos canônicos de 2010; não fixa data de origem dos nomes nos séculos anteriores nem traçados.",
+    "raion_status": "PENDING_AFTER_SIKU_REJECTION"
+  },
+  "owner_feedback": "Siku rejeitado expressamente pelo proprietário por duplo sentido indesejado em português; não usar como nome atual. Cidade Velha permanece o nome falado quase sempre pelos moradores; Iknik é forma documental e oficial rara."
 }

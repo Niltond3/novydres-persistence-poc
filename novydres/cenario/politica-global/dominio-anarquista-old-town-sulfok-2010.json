@@ -8,15 +8,16 @@
   "authority": "OWNER_EXPLICIT_DIRECTION",
   "approved_on": "2026-11-16",
   "reference_year": 2010,
-  "title": "Domínio anarquista de Iknik e Sulfok em 2010",
-  "decision": "O movimento anarquista detém o domínio territorial de Iknik (Cidade Velha/Old Town) e de Sulfok em 2010. O Concílio da Cruz e Espada não possui domínio territorial em nenhum desses dois locais.",
+  "title": "Domínio anarquista da Cidade Velha e Sulfok em 2010",
+  "decision": "O movimento anarquista mantém domínio territorial sobre Cidade Velha (formalmente Iknik) e Sulfok em 2010. Nenhum deles é território do Concílio da Cruz e Espada.",
   "territorial_scope": [
     {
-      "territory": "Iknik (Cidade Velha / Old Town)",
-      "administrative_parent": "Siku",
-      "extent": "Somente núcleo histórico Iknik; não atribuir automaticamente a totalidade do raion Siku (antes Chelsea)",
+      "territory": "Cidade Velha (nome formal Iknik; Old Town em inglês)",
+      "administrative_parent": null,
+      "extent": "Somente núcleo histórico Cidade Velha, não todo o raion de nome pendente (antigo Chelsea).",
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
-      "council_domain": "NONE"
+      "council_domain": "NONE",
+      "administrative_parent_subject_id": "district-chelsea"
     },
     {
       "territory": "Sulfok",
@@ -37,9 +38,9 @@
   ],
   "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
   "pending": [
-    "Domínio dos demais bairros de Siku e limites urbanos de Iknik",
+    "Domínio dos demais bairros de raion de nome pendente e limites urbanos de Cidade Velha",
     "Agentes e mecanismo de passagem do controle sabático em 1945 ao domínio anarquista posterior em Sulfok",
-    "Titularidade jurídica de Iknik após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
+    "Titularidade jurídica de Cidade Velha após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
     "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
     "Geometrias, limites municipais e frentes concretas de conflito"
   ],
@@ -48,12 +49,10 @@
   "historical_ref_sulfok": "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json",
   "toponym_reference": {
     "fact_id": "GEO-004.5",
-    "raion": "Siku",
-    "old_label": "Chelsea",
-    "historic_core": "Iknik",
-    "historic_aliases": [
-      "Cidade Velha",
-      "Old Town"
-    ]
+    "raion_official_name": null,
+    "raion_legacy_name": "Chelsea",
+    "historic_core_common_name": "Cidade Velha",
+    "historic_core_formal_name": "Iknik",
+    "english_name": "Old Town"
   }
 }

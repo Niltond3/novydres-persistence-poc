@@ -11,10 +11,10 @@
   "feature": {
     "feature_id": "chelsea-cidade-velha",
     "canonical_name": "Iknik",
-    "recognized_name": "Old Town",
+    "recognized_name": "Cidade Velha",
     "classification": "núcleo histórico urbano",
     "parent_raion_subject_id": "district-chelsea",
-    "relationship": "territorialmente contido no raion Siku (identificador técnico district-chelsea)",
+    "relationship": "Núcleo histórico dentro do raion identificado tecnicamente como district-chelsea; nome oficial do raion ainda pendente.",
     "is_entire_raion": false,
     "geometry": null,
     "area_km2": null,
@@ -29,25 +29,26 @@
     "name_meaning_pt": "fogo",
     "name_pronunciation_pt_br": "ÍK-nik",
     "name_style": "Grafia ficcional americanizada de ikniq, não grafia atestada da palavra indígena",
-    "parent_raion_official_name": "Siku"
+    "parent_raion_official_name": null,
+    "official_written_name": "Iknik",
+    "common_name": "Cidade Velha",
+    "usage_convention": "Moradores de Novydres quase sempre dizem Cidade Velha; Iknik é usado raramente, principalmente em documentos oficiais; Old Town é o equivalente inglês.",
+    "parent_raion_name_status": "PENDING_OWNER_RENAMING"
   },
-  "scope_of_approval": "Iknik (apelidos Cidade Velha/Old Town) é o núcleo histórico situado no raion Siku (anteriormente rotulado Chelsea), não é o nome oficial do raion inteiro. A adoção editorial de Iknik em 2010 não prova que essa grafia fosse o nome originário antes de 1423. Pristan Vasilieva segue hipótese não ratificada.",
+  "scope_of_approval": "O nome formal do núcleo é Iknik, mas Cidade Velha é a denominação corrente e predominante na fala dos moradores, com Old Town em inglês. Nome oficial do raion envolvente ainda pendente; a grafia Iknik não é retroprojetada automaticamente à época anterior a 1423.",
   "pending": [
     "GEO-004 limites cartográficos da Iknik e demais raions",
-    "GEO-005 cronologia detalhada de Pristan Vasilieva e adoção de Siku",
+    "GEO-005 cronologia detalhada de Pristan Vasilieva e renomeação pendente do raion",
     "GEO-014 localização, capacidade e rede térmica detalhada"
   ],
   "single_authoritative_source": true,
   "toponym_change": {
     "fact_id": "GEO-004.5",
-    "approved_on": "2026-11-16",
-    "status": "CANON_APPROVED",
-    "current_name": "Iknik",
-    "historical_aliases": [
-      "Cidade Velha",
-      "Old Town"
-    ],
-    "parent_raion_name": "Siku",
+    "status": "FORMAL_CORE_APPROVED_RAION_RENAME_PENDING",
+    "formal_name": "Iknik",
+    "common_name": "Cidade Velha",
+    "english_name": "Old Town",
+    "parent_raion_official_name": null,
     "stable_feature_id": "chelsea-cidade-velha"
   }
 }

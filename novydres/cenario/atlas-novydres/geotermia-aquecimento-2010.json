@@ -24,17 +24,18 @@
   "resource_geography": {
     "natural_hot_springs_present": true,
     "resource_abundance": "ABUNDANT",
-    "main_concentration_toponym": "Iknik",
+    "main_concentration_toponym": "Cidade Velha",
     "administrative_mapping": {
       "canonical_ref": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
       "canonical_status": "CONFIRMED_GEO-004.1",
       "geometry_status": "PENDING_GEO-004",
-      "note": "Consultar assunto proprietário de Iknik, núcleo histórico dentro de Siku (IDs técnicos legados), sem segunda fonte de autoridade."
+      "note": "Cidade Velha (nome formal Iknik) é núcleo dentro do raion de novo nome pendente; ID técnico district-chelsea."
     },
     "spring_locations": null,
     "spring_count": null,
     "temperatures": null,
-    "flow_rates": null
+    "flow_rates": null,
+    "official_core_name": "Iknik"
   },
   "district_heating": {
     "geothermal_resource_is_primary": true,
@@ -49,11 +50,11 @@
       "fact_id": "GEO-014.2",
       "source": "novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json",
       "state": "CANON_APPROVED",
-      "from": "complexo termal natural de Iknik, raion Siku (antigo Old Town/Chelsea)",
+      "from": "complexo termal natural da Cidade Velha (formalmente Iknik), raion de nome pendente",
       "to": "Bukovie, bastião financeiro e aristocrático Ventrue",
-      "effect": "Distribuição artificialmente priorizada a Bukovie reduz parte do calor aproveitado em Iknik (Cidade Velha/Old Town), apesar da abundância geotérmica local.",
+      "effect": "O desvio privilegiado para Bukovie reduz a parcela de calor disponível na Cidade Velha, apesar da geotermia local abundante.",
       "bukovie_dependence": "Bukovie, em tundra naturalmente extrema, depende de abastecimento artificial; apagão longo sem soluções substitutas traz congelamento de serviços, edifícios e mortalidade grave.",
-      "targeted_interruption": "Interromper o desvio privilegiado pode devolver calor aproveitável a Iknik e melhorar suas condições; interrupção total do sistema não implica recuperação automática do núcleo.",
+      "targeted_interruption": "Se a derivação privilegiada parar e o calor puder voltar a ser usado na Cidade Velha, suas condições podem melhorar; não confundir com desligamento total.",
       "nosferatu_rule": "Nosferatu continuam detentores da competência setorial de aquecimento; papel exato dos operadores no desvio ainda não definido.",
       "technical_network": "UNASSIGNED_GEO-014"
     }
@@ -70,8 +71,8 @@
     "fact_id": "GEO-003.2",
     "authority": "OWNER_EXPLICIT_APPROVAL",
     "approval_date": "2026-11-15",
-    "core": "Iknik (Cidade Velha/Old Town), no raion Siku (antigo Chelsea), concentra termas naturais e terrenos/abrigos aquecidos, oferecendo a base natural mais favorável à ocupação histórica.",
-    "distance_principle": "Em regra, quanto mais distante da concentração de termas de Iknik, menores as vantagens térmicas naturais e maiores a exposição ao frio e a dependência de aquecimento distrital, abrigos e rotas protegidas.",
+    "core": "Cidade Velha (formalmente Iknik), dentro do raion ainda sem nome substituto aprovado, concentra a geotermia e oferece a base natural mais habitável do núcleo histórico.",
+    "distance_principle": "Quanto mais distante das termas da Cidade Velha, menores em geral as vantagens térmicas naturais, ressalvadas variações locais.",
     "variation": "Não há isotermas concêntricas rígidas: relevo, vento, água, outras nascentes e obras humanas provocam exceções locais. O aquecimento de nascentes e terrenos não transforma toda a atmosfera regional em clima quente.",
     "lethality": "Na região de Novydres, em condições extremas e sem aquecimento/abrigo/equipamento apropriados por exposição prolongada, a hipotermia e a morte são o desfecho inevitável. O período até o risco fatal depende do ambiente; não afirmar morte instantânea.",
     "planning": "Toda zona urbana permanentemente habitada depende de acesso seguro a calor natural localizado ou aquecimento artificial confiável. Cortes de serviço, sabotagem, racionamento ou desigualdade térmica possuem consequências potencialmente fatais.",
@@ -81,19 +82,10 @@
   },
   "toponym_reference": {
     "fact_id": "GEO-004.5",
-    "source": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
-    "current_names": {
-      "historical_core": "Iknik",
-      "raion": "Siku"
-    },
-    "legacy_aliases": {
-      "historical_core": [
-        "Cidade Velha",
-        "Old Town"
-      ],
-      "raion": [
-        "Chelsea"
-      ]
-    }
+    "historical_core_common_name": "Cidade Velha",
+    "historical_core_formal_name": "Iknik",
+    "parent_raion_official_name": null,
+    "parent_raion_legacy": "Chelsea",
+    "rejected_name": "Siku"
   }
 }

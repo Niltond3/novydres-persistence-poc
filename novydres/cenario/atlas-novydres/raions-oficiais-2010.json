@@ -31,13 +31,11 @@
     },
     {
       "subject_id": "district-chelsea",
-      "official_name": "Siku",
+      "official_name": null,
       "geometry": null,
-      "previous_editorial_name": "Chelsea",
-      "pronunciation_pt_br": "SÍ-ku",
-      "origin_language": "Iñupiaq",
-      "meaning_pt": "gelo",
-      "toponym_change_fact": "GEO-004.5"
+      "name_status": "PENDING_OWNER_RENAMING",
+      "legacy_editorial_label": "Chelsea",
+      "rejected_candidate": "Siku"
     },
     {
       "subject_id": "district-bukovie",
@@ -67,7 +65,7 @@
   ],
   "ratified_only": [
     "nove raions existentes",
-    "nomes oficiais",
+    "nomes dos oito raions sem revisão pendente",
     "tipo de divisão administrativa em 2010"
   ],
   "still_pending": [
@@ -76,15 +74,17 @@
     "população por raion",
     "bairros e enclaves",
     "domínios Cainitas, seitas e conflitos",
-    "funções urbanas e detalhes candidatos"
+    "funções urbanas e detalhes candidatos",
+    "novo nome do raion district-chelsea, candidato Siku rejeitado"
   ],
   "single_authoritative_source": true,
   "toponym_revision": {
-    "decision": "GEO-004.5",
-    "approved_on": "2026-11-16",
-    "official_raion": "Siku",
-    "old_label": "Chelsea",
-    "stable_subject_id": "district-chelsea",
-    "note": "A mudança de rótulo não modifica raions, limites, número, jurisdição ou IDs internos; ver assunto proprietário para Iknik."
+    "fact_id": "GEO-004.5",
+    "status": "RAION_RENAMING_PENDING_CORE_APPROVED",
+    "legacy_raion_label": "Chelsea",
+    "rejected_raion_candidate": "Siku",
+    "formal_core_name": "Iknik",
+    "everyday_core_name": "Cidade Velha",
+    "no_change_to_raion_count": true
   }
 }
