@@ -3,7 +3,7 @@ document_id: MW-012-HYDROGRAPHY-REVIEW
 subject_id: world-atlas-novydres
 reference_year: 2010
 work_unit: MW-012
-status: THREE_PARTIAL_DECISIONS_APPROVED_AWAITING_FINAL_OWNER_REVIEW
+status: OWNER_APPROVED_CONSOLIDATED_PENDING_REMOTE_CLOSURE_READBACK
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED
 source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
@@ -11,7 +11,14 @@ source_mw011_commit: 03d4d2dbeec3d298f200de4169cbdba35dea1051
 coast_working_blob_sha: d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577
 relief_working_blob_sha: cccc4eaac09b192a299108389bef3494f1f15bda
 source_hydro_blob_sha: 57df659de492f64288c50a0001525e7ae93fa530
-refined_hydro_blob_sha: 0b9747b1b82064a8ad3eaa935a4ef500271d1bf9
+refined_hydro_blob_sha: d0912bb8b420a8a29b0de602f4eb05f179da3b0c
+fis03_1_owner_decision: APROVADO
+fis03_2_owner_decision: APROVADO
+fis03_3_owner_decision: APROVADO
+fis03_final_owner_decision: APROVADO
+fis03_final_owner_decision_on: 2026-11-16
+fis03_final_owner_decision_verbatim: Aprovo
+technical_validation_status: PENDING_FINAL_REMOTE_READBACK
 ---
 
 # MW-012 — Macrohidrografia refinada FIS-03 (2010)
@@ -55,8 +62,16 @@ A verificação geométrica de 6.909 checagens diz respeito a **essa mesma geome
 1. **FIS-03.1 — Rio Vasyl e afluentes**: APROVADO EXPRESSAMENTE em 16/11/2026, como geometria cartográfica de trabalho **não canônica**: curso principal refinado, dois afluentes, ambas as confluências, foz preexistente na baía e trecho de aporte termal localizado. O proprietário respondeu literalmente **“Aprovo”** à pergunta de aprovação da FIS-03.1 acompanhada do recorte comparativo 2D da variante MW-012. A aprovação é parcial, não encerra FIS-03 nem aprova os cinco envelopes, as drenagens independentes, os três corpos d'água e suas ligações como conjuntos. Não altera vértices nem autoriza canonização ou handoff.
 2. **FIS-03.2 — Microbacias e drenagens independentes**: APROVADO EXPRESSAMENTE em 16/11/2026, como geometria cartográfica de trabalho **não canônica**: cinco envelopes não exaustivos, correções marginais para não invadir a baía e duas drenagens independentes, meridional com deságue na baía e setentrional com deságue na costa exposta. O proprietário respondeu literalmente **“Aprovo”** à questão FIS-03.2 após comparação 2D. Esta aprovação parcial não equivale a aprovar FIS-03.3 nem ao aceite consolidado e não canoniza divisores hidrográficos ou hidrologia quantitativa.
 3. **FIS-03.3 — Corpos d'água e conexões**: APROVADO EXPRESSAMENTE em 16/11/2026, como geometria cartográfica de trabalho **não canônica**: lago interior de água doce com tributário de entrada e emissário até mar exterior, lagoa costeira salobra com canal de troca mareal até a baía (sem deslocamento de costa), piscina termal e seu escoadouro curto até o Rio Vasyl, mantendo aquecimento somente localizado. O proprietário respondeu literalmente **“Aprovo”** à pergunta de aprovação específica FIS-03.3 após comparação 2D em três painéis. A aprovação individual não substitui a revisão final consolidada.
-4. **Revisão final consolidada**: PENDENTE. Aceite expresso da mesma versão integral após deliberações e validações.
+4. **Revisão final consolidada**: APROVADO EXPRESSAMENTE em 16/11/2026, sem ressalvas, para a mesma variante 2D integral FIS-03 como geometria não canônica de trabalho. Proprietário respondeu literalmente **“Aprovo”** à pergunta final; não pediu alteração geométrica nem canonização.
 
-**A:** revisão final consolidada FIS-03, validação da versão de fechamento e readback remoto ainda necessários. **B:** topo e bacias sintéticas não provam declives mensurados ou engenharia hidrotermal. **C:** FIS-04, raions, bairros, transportes, infraestrutura, história e runtime não fazem parte de MW-012.
+**A:** nenhuma deliberação geográfica FIS-03 restante; fechamento técnico e readback remoto são os últimos gates. **B:** topo e bacias sintéticas não provam declives mensurados ou engenharia hidrotermal. **C:** FIS-04, raions, bairros, transportes, infraestrutura, história e runtime não fazem parte de MW-012.
 
-**Gate:** não fechar a unidade, não produzir handoff e não canonizar antes de todas as aprovações, correções, validação e verificação remota de fechamento.
+**Gate:** três subdecisões e revisão integral aprovadas. Não emitir handoff até concluir verificação da versão publicada e readback remoto. Canonização não autorizada.
+
+## Aceite integral e consolidação técnica (16/11/2026)
+
+**APROVADO** o mapa 2D integrado e toda a geometria FIS-03 como base de trabalho cartográfica **não canônica**, sem ressalvas. As três aprovações individuais estão registradas acima; o proprietário respondeu novamente **“Aprovo”** ao pedido final explícito. O escopo são 9 linhas (Rio Vasyl; 2 tributários; 2 cursos independentes; 4 conexões de água), 5 envelopes de microbacias, 3 corpos d'água e 1 trecho local termal. Não houve alterações de vértices após o aceite.
+
+**Hidrografia aprovada:** blob `d0912bb8b420a8a29b0de602f4eb05f179da3b0c`. Costa MW-010 e relevo MW-011 preservados; Ermos aponta para o novo SHA de hidrografia mas mantém suas geometrias FIS-04 e aprovação pendente. Metadados `approval.refinement_stage=CLOSED_FOR_THIS_SCOPE` e `approval.owner_approval_for_refined_hydro.decision=APROVADO`, enquanto o status de canonização `NOT_APPROVED` e `owner_approval_for_this_geometry=null` permanecem intocados. Não há coordenadas geodésicas, divisores de águas medidos, vazões, temperaturas, obras civis, limites municipais ou aprovação das ilhas.
+
+**Teste da versão publicada:** aguardando readback remoto neste checkpoint técnico; os 6.909 testes preliminares documentados são da mesma geometria, mas não certificam Node/CI. Nenhum teste de navegador/headless foi executado.

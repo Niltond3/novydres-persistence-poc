@@ -9,9 +9,33 @@
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
     "owner_approval_for_this_geometry": null,
-    "refinement_stage": "MW012_CANDIDATE_PENDING_OWNER_DECISIONS",
-    "refined_hydro_status": "REFINED_CANDIDATE_NOT_APPROVED",
-    "owner_approval_for_refined_hydro": null
+    "refinement_stage": "CLOSED_FOR_THIS_SCOPE",
+    "refined_hydro_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE",
+    "owner_approval_for_refined_hydro": {
+      "decision": "APROVADO",
+      "decision_on": "2026-11-16",
+      "owner_verbatim": "Aprovo",
+      "work_unit": "MW-012",
+      "scope": "REFINED_VASYL_TWO_TRIBUTARIES_TWO_INDEPENDENT_STREAMS_FOUR_WATERBODY_CONNECTIONS_FIVE_SPARSE_CATCHMENTS_THREE_WATERBODIES_AND_LOCAL_WARM_REACH",
+      "partial_decisions": [
+        "FIS-03.1 approved",
+        "FIS-03.2 approved",
+        "FIS-03.3 approved"
+      ],
+      "owner_final_review": "OWNER_APPROVED_FULL_INTEGRATED_REFINED_HYDROGRAPHY_2D",
+      "excludes": [
+        "canonization",
+        "measured_watershed_divides",
+        "geodetic_and_elevation_authority",
+        "measured_discharge_width_depth_or_temperature",
+        "municipal_raion_and_neighborhood_limits",
+        "secondary_islands",
+        "FIS-04_wilderness_approval",
+        "roads_rail_ports_bridges_or_pipe_networks",
+        "secondary_watercourse_names"
+      ],
+      "consequence": "Use as noncanonical working geometry for further physical mapwork only."
+    }
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
@@ -28,7 +52,7 @@
       "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
       "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
     ],
-    "refinement_review": "MW-012 refined hydrography against MW-010 mainland coast and MW-011 relief, both owner-approved as noncanonical cartographic working baselines; hydro refinements await owner decisions.",
+    "refinement_review": "MW-012 closed: owner separately approved FIS-03.1/FIS-03.2/FIS-03.3 and the integrated 2D FIS-03 map; no canonization.",
     "current_relief_work_unit": "MW-011",
     "current_relief_candidate_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
     "refinement_2010": {
@@ -38,8 +62,9 @@
       "approved_coast_working_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
       "approved_relief_working_blob_sha": "cccc4eaac09b192a299108389bef3494f1f15bda",
       "scope": "5 non-exhaustive catchment envelopes, 9 connected watercourses, 3 localized waterbodies, 1 thermal reach; coastline-preserving corrections at two bay outlets",
-      "approval": "PENDING",
-      "method": "Synthetic local-grid geomorphic densification, directed graph endpoints retained; no surveyed hydrological divides or DEM"
+      "approval": "CLOSED_FOR_THIS_SCOPE_OWNER_APPROVED_NONCANONICAL",
+      "method": "Synthetic local-grid geomorphic densification, directed graph endpoints retained; no surveyed hydrological divides or DEM",
+      "owner_final_review_on": "2026-11-16"
     }
   },
   "spatial_reference": {
@@ -1286,7 +1311,7 @@
     "GEO-003.4: two or more secondary drainage basins need not join Vasyl.",
     "GEO-003.4: freshwater inland waters, brackish coastal lagoon and localized thermal water are distinct.",
     "GEO-003.3/GEO-003.5: uplands, lowlands, wetlands and exposed coast constrain hydrology, without establishing DEM or Ermo perimeter.",
-    "GEO-002: coast shape and islands remain unapproved candidates."
+    "GEO-002: mainland coastline is owner-approved only as noncanonical working baseline; islands stay hypothetical, and all canonical statuses remain NOT_APPROVED."
   ],
   "explicitly_unassigned": {
     "real_geodetic_coordinates": null,

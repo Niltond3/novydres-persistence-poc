@@ -7,7 +7,9 @@ import {dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=dirname(fileURLToPath(import.meta.url));
 const load=name=>{const buf=readFileSync(join(root,name));return {value:JSON.parse(buf.toString('utf8')),gitSha:createHash('sha1').update(Buffer.concat([Buffer.from('blob '+buf.length+'\0'),buf])).digest('hex')}};
-const h=load('macrohidrografia-2010.proposal.json').value;
+const hs=load('macrohidrografia-2010.proposal.json');
+const h=hs.value;
+const e=load('macroermos-2010.proposal.json');
 const c=load('macrogeometria-litoral-baia-ilhas-2010.proposal.json');
 const r=load('macrorelevo-2010.proposal.json');
 const exact=(a,b)=>a[0]===b[0]&&a[1]===b[1];
@@ -28,6 +30,13 @@ assert.equal(h.approval.workflow,'PROPOSED_PENDING_OWNER_REVIEW');
 assert.equal(h.approval.canonical_status,'NOT_APPROVED');
 assert.equal(h.approval.geometry_authority,'PROPOSAL_ONLY');
 assert.equal(h.approval.owner_approval_for_this_geometry,null);
+assert.equal(h.approval.refinement_stage,'CLOSED_FOR_THIS_SCOPE');
+assert.equal(h.approval.refined_hydro_status,'OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE');
+assert.equal(h.approval.owner_approval_for_refined_hydro.decision,'APROVADO');
+assert.equal(h.approval.owner_approval_for_refined_hydro.work_unit,'MW-012');
+assert.equal(h.provenance.refinement_2010.approval,'CLOSED_FOR_THIS_SCOPE_OWNER_APPROVED_NONCANONICAL');
+assert.equal(e.value.provenance.candidate_hydro_blob_sha,hs.gitSha);
+assert.equal(e.value.approval.canonical_status,'NOT_APPROVED');
 assert.equal(c.value.approval.canonical_status,'NOT_APPROVED');
 assert.equal(r.value.approval.canonical_status,'NOT_APPROVED');
 assert.equal(h.provenance.candidate_coast_blob_sha,c.gitSha);
@@ -129,8 +138,8 @@ for(const crest of r.value.relief_model.ridge_crest_axes)for(const f of flows)
  for(let i=0;i<crest.points_xy_m.length-1;i++)for(let j=0;j<f.points_xy_m.length-1;j++)
   assert(!hit(crest.points_xy_m[i],crest.points_xy_m[i+1],f.points_xy_m[j],f.points_xy_m[j+1]),'MW-012 watercourse/crest crossing: '+f.feature_id);
 
-console.log('MW-012 refined hydrographic candidate PASS (if run locally)');
+console.log('MW-012 approved noncanonical FIS-03 working geometry validator PASS');
 console.log(basins.length+' catchment envelopes; '+flows.length+' flowpaths; '+lakes.length+' waterbodies; '+warm.length+' localized warm reach');
 console.log('Candidate coastline Git blob: '+c.gitSha);
 console.log('Candidate relief Git blob: '+r.gitSha);
-console.log('No canonical approval or hydrologic plausibility certification claimed');
+console.log('Only noncanonical cartographic approval; no hydrologic survey or canonization claimed');
