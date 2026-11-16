@@ -2,19 +2,21 @@
 document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: OWNER_REFINEMENT_DIRECTIVE_RECORDED
+workflow_status: OWNER_DECISIONS_1_2_RECORDED_PENDING_REFINED_GEOMETRY
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
 owner_decision_on: 2026-11-16
-owner_decision_key: FIS-01-DECISION-1
-owner_decision: PRESERVE_SHELTERED_BAY_MACROCONFIGURATION_REFINE_CONTOURS_BEFORE_GEOMETRY_APPROVAL
+owner_decision_keys: FIS-01-DECISION-1,FIS-01-DECISION-2
+owner_decision: PRESERVE_SHELTERED_BAY_REFINE_CONTOURS_AND_KEEP_THREE_ISLANDS_ONLY_AS_REVISABLE_HYPOTHESIS
 source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
 source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
 ---
 
-# MW-009 — Revisão substantiva costeira, decisão 1
+# MW-009 — Revisão substantiva costeira, decisões 1 e 2
 
-## Deliberação expressa do proprietário
+## Decisão 1 — Baía protegida e refinamento do contorno
+
+### Deliberação expressa do proprietário
 
 **“FIS-01, decisão 1: mantenha a configuração da grande baía protegida, mas refine seus contornos antes de pedir aprovação geométrica.”**
 
@@ -40,17 +42,23 @@ source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
 1. Manter grande baía naturalmente abrigada por cabo, faixa continental dominante e conexão com mar externo; evitar morfologia de arquipélago dominante.
 2. Refinar linhas com qualidade visual legível em escala metropolitana **sem simular precisão de levantamento geodésico**. Não gerar milhares de vértices arbitrários ou detalhes não sustentados por relevo, estuários e dinâmica de costa.
 3. Preservar ou reconectar explicitamente a hidrografia aprovada qualitativamente (Vasyl deságua na baía, atravessa vale termal; outras microbacias permanecem distintas). Se o ponto de foz mudar, ajustar referências e validar os dependentes em uma proposta conjunta.
-4. Não decidir quantitativo, dimensões ou ocupação das ilhas antes de deliberar sobre o arranjo insular; duas ilhas internas e uma externa são **apenas o arranjo anterior candidato**.
+4. **Conforme decisão 2**, manter duas ilhas internas e uma externa apenas como **hipótese operacional**, sujeita a mudança de número, áreas, posições e perímetros. Não inferir decisão sobre ocupação insular ou pontos de navegação.
 5. Comparar variante e proposta original no **único visualizador 2D de revisão**, com diferença distinguível e sem introduzir fonte de geometria paralela.
 6. Verificar anéis, interseções, posição terra/água, conexões de drenagem, relação com relevo e Ermos; documentação reproduzível, com limitações.
 7. Solicitar nova decisão substantiva **somente após** apresentar variante refinada e impactos, sem converter `NOT_APPROVED` em `CLOSED_CANON`.
 
-## Próxima escolha dentro da revisão de FIS-01
+## Decisão 2 — Hipótese revisável das ilhas secundárias
 
-**Ilhas secundárias — ainda não deliberadas.** A proposta possui **duas ilhas dentro da baía e uma no mar externo**. O cânone determina que ilhas sejam secundárias, mas não fixa número, posições ou extensão. A avaliação deve considerar abrigo marítimo, circulação na baía, possível interferência na navegação e não transformar a metrópole em arquipélago. A escolha das ilhas antecede a fixação do novo contorno da costa, para não refazer trabalho desnecessário.
+O proprietário declarou: **“FIS-01, decisão 2: mantenha três ilhas como hipótese, duas internas e uma externa, sem fixar número ou contornos.”**
+
+**Interpretação estrita:** conservar, no conjunto de trabalho, as duas ilhas internas e uma externa já presentes no JSON candidato, **sem converter esse inventário em quantidade canônica, sem aprovar posições nem limites e sem pressupor sua ocupação**. O desenho pode ser reduzido, ampliado ou redistribuído caso a análise geomorfológica, costeira ou de navegação futura evidencie necessidade; qualquer versão definitiva exigirá decisão expressa posterior. Não existem novos nomes, portos, instalações, áreas territoriais ou infraestrutura associados às ilhas por essa escolha.
+
+**Consequência funcional:** a análise costeira deve preservar a possibilidade de águas protegidas e circulação na baía sem atribuir às ilhas papel obrigatório de barreira, porto, travessia ou polo urbano. Validar que ilhas continuem sobre água e separadas do continente na futura geometria; não tomar o esquema atual como prova geográfica física exata.
+
+**Pendência A para próxima unidade:** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
 
 ## Escopo, validação e continuidade
 
-**Esta atualização documental não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. O handoff deve apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
+**Este registro documental das decisões 1 e 2 não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. O handoff deve apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
 
 **A/B/C:** A = produzir variante de costa topologicamente verificável para futura aprovação; B = registrar efeito sobre foz, lagoa, Ermos litorâneos e navegabilidade sem projetar infraestrutura; C = redes/portos/raions e narrativa, fora desta revisão.
