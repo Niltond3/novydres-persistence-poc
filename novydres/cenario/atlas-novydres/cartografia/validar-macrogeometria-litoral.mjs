@@ -12,7 +12,7 @@ const cross=(a,b,c,d)=>{const o1=orient(a,b,c),o2=orient(a,b,d),o3=orient(c,d,a)
 const edges=(pts,closed)=>{let arr=[];for(let k=0;k<pts.length-1;k++)arr.push([pts[k],pts[k+1]]);if(closed&&!eq(pts[0],pts[pts.length-1]))arr.push([pts[pts.length-1],pts[0]]);return arr;};
 const simple=(pts,closed)=>{const e=edges(pts,closed);for(let a=0;a<e.length;a++)for(let z=a+1;z<e.length;z++){if(z===a+1||(closed&&a===0&&z===e.length-1))continue;if(cross(e[a][0],e[a][1],e[z][0],e[z][1]))return false;}return true;};
 const pointInPoly=(p,r)=>{for(const [a,z] of edges(r,true))if(on(a,z,p))return false;let hit=false;for(let k=0,j=r.length-1;k<r.length;j=k++){const a=r[k],z=r[j];if((a[1]>p[1])!==(z[1]>p[1])&&p[0]<(z[0]-a[0])*(p[1]-a[1])/(z[1]-a[1])+a[0])hit=!hit;}return hit;};
-const disjoint=(a,z)=>{for(const [p,q] of edges(a,true))for(const [u,v] of edges(z,true))if(cross(p,q,u,v))return false;return true;};
+const disjoint=(a,z,zClosed=true)=>{for(const [p,q] of edges(a,true))for(const [u,v] of edges(z,zClosed))if(cross(p,q,u,v))return false;return true;};
 const insideFrame=(p)=>Number.isInteger(p[0])&&Number.isInteger(p[1])&&p[0]>=f.xmin&&p[0]<=f.xmax&&p[1]>=f.ymin&&p[1]<=f.ymax;
 if(d.approval.canonical_status!=="NOT_APPROVED"||d.approval.owner_approval_for_this_geometry!==null)errors.push("Must remain an unapproved proposal");
 if(d.spatial_reference.crs!=="NOVYDRES-LOCAL-2010"||d.spatial_reference.georeferenced!==false||d.spatial_reference.geodetic_anchor!==null)errors.push("CRS/geodetic status invalid");
@@ -33,7 +33,7 @@ if(ids.has(island.feature_id))errors.push("Duplicate feature id "+island.feature
 const r=island.ring_xy_m, area=ar(r)/1e6;ia.push({feature_id:island.feature_id,area_km2:area,waterbody:island.waterbody});
 if(!r.every(insideFrame)||!eq(r[0],r[r.length-1])||!simple(r,true)||area<=0||area>=100)errors.push("Invalid secondary island "+island.feature_id);
 if(!r.slice(0,-1).every(p=>pointInPoly(p,water)))errors.push("Island outside study water "+island.feature_id);
-if(!disjoint(r,c))errors.push("Island touches or crosses coastline "+island.feature_id);
+if(!disjoint(r,c,false))errors.push("Island touches or crosses coastline "+island.feature_id);
 const insideBay=r.slice(0,-1).every(p=>pointInPoly(p,bay));
 if((island.waterbody==="water-bay-main-001")!==insideBay)errors.push("Wrong bay/ocean association "+island.feature_id);
 if(!disjoint(r,bay))errors.push("Island crosses bay boundary "+island.feature_id);

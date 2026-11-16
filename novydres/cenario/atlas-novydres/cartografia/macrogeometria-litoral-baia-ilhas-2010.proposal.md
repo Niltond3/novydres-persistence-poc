@@ -36,7 +36,7 @@ Execução reproduzível na raiz do repositório:
 node novydres/cenario/atlas-novydres/cartografia/validar-macrogeometria-litoral.mjs
 ```
 
-**Métricas sintéticas computadas, não áreas municipais oficiais:** área do quadro 12.000 km²; terra continental dentro da folha 8.188,25 km²; baía pelo fecho da boca 1.851,25 km²; soma das três ilhas 65,44 km²; boca aproximada 18,445 km. A superfície continental recortada contém território exterior ao município futuro, **logo não deve ser comparada como se fosse área municipal** com a hipótese aprovada de 4.000–7.000 km² de terras sob jurisdição.
+**Métricas sintéticas computadas, não áreas municipais oficiais:** área do quadro 12.000 km²; terra continental dentro da folha 8.188,25 km²; baía pelo fecho da boca 1.851,25 km²; soma das três ilhas 65,44 km²; boca aproximada 18,4 km. A superfície continental recortada contém território exterior ao município futuro, **logo não deve ser comparada como se fosse área municipal** com a hipótese aprovada de 4.000–7.000 km² de terras sob jurisdição.
 
 A rotina geométrica permite atestar consistência interna; não testa marés, profundidade, sazonalidade de gelo, geologia, marcos reais ou habitabilidade. Qualquer aprovação da morfologia exige decisão substantiva do proprietário.
 
