@@ -1,0 +1,56 @@
+---
+document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
+subject_id: world-atlas-novydres
+reference_year: 2010
+workflow_status: OWNER_REFINEMENT_DIRECTIVE_RECORDED
+canonical_status: NOT_APPROVED
+truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
+owner_decision_on: 2026-11-16
+owner_decision_key: FIS-01-DECISION-1
+owner_decision: PRESERVE_SHELTERED_BAY_MACROCONFIGURATION_REFINE_CONTOURS_BEFORE_GEOMETRY_APPROVAL
+source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
+source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
+---
+
+# MW-009 — Revisão substantiva costeira, decisão 1
+
+## Deliberação expressa do proprietário
+
+**“FIS-01, decisão 1: mantenha a configuração da grande baía protegida, mas refine seus contornos antes de pedir aprovação geométrica.”**
+
+**Interpretação estrita:**
+1. **Preservar:** litoral predominantemente continental, costa externa exposta, grande baía natural protegida por promontório e ligação navegável ao mar; organização relativa já aceita em MW-007.
+2. **Exigir revisão:** o traçado exato da costa, as concavidades, as projeções do promontório e o limiar cartográfico da boca **não estão aprovados**; antes de pedir opção G/aprovação geométrica, apresentar nova variante de contorno e sua justificativa físico-espacial.
+3. **Não interpretar como autorização:** canonizar a configuração métrica atual (inclusive área sintética da baía ~1.851,25 km² e abertura ~18,4 km), aprovar número/posições/perímetros das ilhas, ancorar EPSG, decidir portos, vias, raions, limites municipais ou obra de engenharia.
+4. **Padrão visual aprovado e obrigatório na revisão:** HTML/SVG 2D grafite/azul dessaturado e texturas discretas conforme `visualizacao-fisica-interativa-2010.md`; a representação é derivada da geometria estruturada.
+
+**Situação do trabalho:** diretriz de revisão aprovada; **a geometria refinada ainda precisa ser produzida, confrontada com dependências e novamente submetida à avaliação**. Nenhuma alteração de pontos foi efetuada apenas por este registro.
+
+## Fontes verificadas e relações de dependência
+
+- `macrogeometria-litoral-baia-ilhas-2010.proposal.json` — costa candidata e ilhas: blob `0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d` no checkpoint MW-008. A baía é derivada da sequência única de costa; limiar definido pelos índices 5 e 19 da costa candidata, sem ponte.
+- `macrohidrografia-2010.proposal.json` — blob `34918d5707abac23534df877a8c4b0ec4cefc834`. A foz do Vasyl candidato coincide com vértice costeiro 12. Mover/inserir pontos costeiros exige remapear o índice da foz, revalidar conexão entre linha fluvial e costa e revisar lagoa/canal mareal e demais descargas.
+- `macrorelevo-2010.proposal.json` — blob `c5f6caaddfbef3a89fd5ce85a291ae972e9f35ab`. Revisar interseções entre terreno rochoso, baixada/tundra e costa após qualquer alteração.
+- `macroermos-2010.proposal.json` — blob `2865c843b292c9d128bb2e957634de09c4e4b70a`. Revisar polígonos de litoral externo, Ermos úmidos e eventuais interseções com água.
+- `validacao-integrada-fisica-2010.md` — `PASS_WITH_LIMITATIONS` apenas na geometria **anterior**; não transferir esse resultado para a geometria refinada sem executar novamente verificações pertinentes.
+- Cânone de master: `localizacao-geral-2010.json` e `implantacao-litoral-baia-2010.json`. Port Clarence é referência geográfica macrorregional, não contorno copiado nem autorização de deslocar comunidades reais.
+
+## Critérios de desenho e aceite da futura variante
+
+1. Manter grande baía naturalmente abrigada por cabo, faixa continental dominante e conexão com mar externo; evitar morfologia de arquipélago dominante.
+2. Refinar linhas com qualidade visual legível em escala metropolitana **sem simular precisão de levantamento geodésico**. Não gerar milhares de vértices arbitrários ou detalhes não sustentados por relevo, estuários e dinâmica de costa.
+3. Preservar ou reconectar explicitamente a hidrografia aprovada qualitativamente (Vasyl deságua na baía, atravessa vale termal; outras microbacias permanecem distintas). Se o ponto de foz mudar, ajustar referências e validar os dependentes em uma proposta conjunta.
+4. Não decidir quantitativo, dimensões ou ocupação das ilhas antes de deliberar sobre o arranjo insular; duas ilhas internas e uma externa são **apenas o arranjo anterior candidato**.
+5. Comparar variante e proposta original no **único visualizador 2D de revisão**, com diferença distinguível e sem introduzir fonte de geometria paralela.
+6. Verificar anéis, interseções, posição terra/água, conexões de drenagem, relação com relevo e Ermos; documentação reproduzível, com limitações.
+7. Solicitar nova decisão substantiva **somente após** apresentar variante refinada e impactos, sem converter `NOT_APPROVED` em `CLOSED_CANON`.
+
+## Próxima escolha dentro da revisão de FIS-01
+
+**Ilhas secundárias — ainda não deliberadas.** A proposta possui **duas ilhas dentro da baía e uma no mar externo**. O cânone determina que ilhas sejam secundárias, mas não fixa número, posições ou extensão. A avaliação deve considerar abrigo marítimo, circulação na baía, possível interferência na navegação e não transformar a metrópole em arquipélago. A escolha das ilhas antecede a fixação do novo contorno da costa, para não refazer trabalho desnecessário.
+
+## Escopo, validação e continuidade
+
+**Esta atualização documental não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. O handoff deve apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
+
+**A/B/C:** A = produzir variante de costa topologicamente verificável para futura aprovação; B = registrar efeito sobre foz, lagoa, Ermos litorâneos e navegabilidade sem projetar infraestrutura; C = redes/portos/raions e narrativa, fora desta revisão.
