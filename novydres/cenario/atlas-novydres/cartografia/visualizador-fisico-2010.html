@@ -82,10 +82,10 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 </main>
 <aside class="side right" aria-label="Detalhes da feição">
   <section><h2 class="panelhead">Inspecionar feição</h2><p class="smallcopy" id="inspectHelp">Selecione uma área ou linha no mapa para conferir ID, classe, medidas sintéticas e proveniência.</p><div id="details"><p class="instructions">🖱️ Roda do mouse: zoom.<br>✋ Arrastar: mover mapa.<br>◉ Clique: selecionar geometria.<br>⌨️ Teclas +, − e 0: controles de zoom.</p></div></section>
-  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01:</strong> contorno continental aprovado como base de trabalho. <strong>FIS-02:</strong> nova geometria de vale, três serras, tundra e baixada <strong>aguardando aprovação</strong>; linha âmbar na sobreposição mostra a variante anterior. As ilhas seguem provisórias; hidrografia e Ermos ainda são candidatos.</div></section>
+  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01:</strong> contorno continental aprovado como base de trabalho. <strong>FIS-02:</strong> contornos de vale, três serras, tundra e baixada <strong>aprovados como base de trabalho não canônica</strong>; linha âmbar na sobreposição mostra a variante anterior. As ilhas seguem provisórias; hidrografia e Ermos ainda são candidatos.</div></section>
   <section class="sect"><h3 class="sect-title">Limites desta prévia</h3><p class="smallcopy">Não há limites municipais, raions, ruas, portos, pontes, ferrovias, altitudes, datum ou posicionamento real em GPS. A baía é derivada da mesma costa; o traço pontilhado de sua boca <b>não é uma ponte</b>.</p></section>
 </aside>
-<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-011: relevo refinado em revisão · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
+<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-011: relevo refinado aprovado para trabalho · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
 </div>
 <script id="geometry-data" type="text/plain">
 coast|coast-mainland-001|line|Costa continental|outerwest|-42000,-50000;-45000,-42000;-43500,-33800;-36000,-28000;-30200,-20600;-29700,-16150;-28200,-11900;-25450,-14100;-22200,-15400;-18750,-17900;-15800,-21000;-12050,-20450;-8500,-19100;-3600,-20050;1000,-22000;7100,-20350;12800,-17700;16550,-13050;21000,-9000;25000,2000;23700,7200;21600,12100;17700,15250;14500,19100;9400,21100;4000,22200;-2150,19900;-8600,18500;-14200,16250;-19500,13300;-24950,10050;-30700,7400;-34800,5850;-38600,3700;-41950,3650;-45200,4550;-47050,8200;-49700,11400;-49300,17250;-48000,23000;-43850,28000;-40300,33400;-42000,43000;-45000,50000
@@ -240,7 +240,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
     for(const [id,el] of currentReliefNodes){const f=byId.get(id);f.points=oldMode?olderAreas[id]:currentAreas[id];el.setAttribute('d',path(f.points,true))}
     for(const [id,el] of currentCrestNodes){const f=byId.get(id);f.points=oldMode?olderCrests[id]:currentCrests[id];el.setAttribute('d',path(f.points))}
     for(const el of historicStrokes)el.setAttribute('opacity',mode==='overlay'?'.98':'0');
-    $('reliefCaption').textContent=mode==='overlay'?'Novo: preenchimento / contorno antigo: âmbar tracejado':oldMode?'MW-003: forma anterior, histórica e não aprovada':'MW-011: forma refinada, aguardando aceite';
+    $('reliefCaption').textContent=mode==='overlay'?'Novo: preenchimento / contorno antigo: âmbar tracejado':oldMode?'MW-003: forma anterior, histórica e não aprovada':'MW-011: forma refinada, aprovada para trabalho';
     if(selectedId&&byId.has(selectedId))updateInspector(byId.get(selectedId));
   }
   $('reliefMode').addEventListener('change',updateReliefComparison);
@@ -287,7 +287,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
     prop('Geometria',f.geometry==='poly'?'Polígono':'Linha');prop('Vértices',String(f.points.length));
     prop(f.geometry==='poly'?'Área da feição*':'Extensão da linha*',(f.geometry==='poly'?areaKm(f.points):lineKm(f.points)).toFixed(2)+(f.geometry==='poly'?' km²':' km'));
     prop('Centro do envelope*',boundsMid(f.points).map(n=>(n<0?'':'+' )+n.toFixed(2)).join(' / ')+' km');
-    prop('Origem',sourceFile[f.layer]);prop('Estado',f.id==='coast-mainland-001'?($('coastMode').value==='original'?'CONTORNO ANTERIOR · HISTÓRICO':'APROVADO PARA TRABALHO · NÃO CANÔNICO'):((f.layer==='relief'||f.layer==='crests')&&$('reliefMode').value==='original'?'MW-003 HISTÓRICO · NÃO APROVADO':'PROPOSTA · NÃO CANÔNICA'));
+    prop('Origem',sourceFile[f.layer]);prop('Estado',f.id==='coast-mainland-001'?($('coastMode').value==='original'?'CONTORNO ANTERIOR · HISTÓRICO':'APROVADO PARA TRABALHO · NÃO CANÔNICO'):((f.layer==='relief'||f.layer==='crests')?($('reliefMode').value==='original'?'MW-003 HISTÓRICO · NÃO APROVADO':'APROVADO PARA TRABALHO · NÃO CANÔNICO'):'PROPOSTA · NÃO CANÔNICA'));
     const note=document.createElement('div');note.className='choice';note.textContent='* Cálculo sobre a geometria sintética local. Não representa mensuração geodésica, divisão administrativa ou área municipal.';details.append(note);
     const clear=document.createElement('button');clear.className='mini-btn';clear.style.marginTop='12px';clear.textContent='Limpar seleção';clear.onclick=()=>{selectedId=null;updateInspector(null)};details.append(clear)
   }

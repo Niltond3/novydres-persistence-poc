@@ -9,8 +9,34 @@
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
     "owner_approval_for_this_geometry": null,
-    "refinement_stage": "OPEN_PENDING_OWNER_DECISION",
-    "owner_approval_for_refined_relief": null
+    "refinement_stage": "CLOSED_FOR_THIS_SCOPE",
+    "owner_approval_for_refined_relief": {
+      "decision": "APROVADO",
+      "decision_on": "2026-11-16",
+      "owner_verbatim": "Aprovo",
+      "work_unit": "MW-011",
+      "scope": "SEVEN_SPARSE_REFINED_RELIEF_POLYGONS_AND_THREE_QUALITATIVE_CREST_AXES_ONLY",
+      "partial_decisions": [
+        "FIS-02.1: thermal valley approved",
+        "FIS-02.2: three uplands and crest axes approved",
+        "FIS-02.3: two tundra patches and southern seasonal wet lowland approved"
+      ],
+      "owner_final_review": "OWNER_APPROVED_COMPLETE_2D_REFINED_RELIEF_VISUALIZATION",
+      "excludes": [
+        "canonization",
+        "geodetic_coordinate_authority",
+        "vertical_datum_or_absolute_altitude",
+        "DEM_and_slopes",
+        "measured_hydrological_divides",
+        "actual_boundaries_of_Kingswell_Iknik_or_raions",
+        "roads_rail_tunnels_and_ports",
+        "hydrography_and_wilderness_geometry_approval",
+        "secondary_islands",
+        "municipal_limits"
+      ],
+      "consequence": "Use this macrorelief as the approved noncanonical cartographic working geometry for downstream FIS-03 and FIS-04 refinement."
+    },
+    "refined_relief_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
@@ -25,13 +51,13 @@
       "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
       "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json"
     ],
-    "refinement_review": "MW-011: seven landform anchors and three crest axes refined against owner-approved noncanonical MW-010 mainland coastline; current working geometry pending FIS-02 owner review.",
+    "refinement_review": "MW-011 closed after owner approval of all 7 sparse relief polygons and 3 qualitative ridge axes, against MW-010 noncanonical approved mainland coast. No canonization.",
     "refinement_2010": {
       "work_unit": "MW-011",
       "source_refinement_commit": "2a3932a015c8458226410ebfcd67d399b0a33e10",
       "previous_relief_blob_sha": "c28dd404b5d1fb2c6495ca104c7f457c29825644",
       "approved_mainland_coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
-      "approval_status": "OPEN_PENDING_OWNER_DECISION",
+      "approval_status": "CLOSED_FOR_THIS_SCOPE_OWNER_APPROVED_NONCANONICAL",
       "method": "Macro-boundary edits in local integer-metre coordinates; non-exhaustive landforms, no DEM or altitude claims"
     }
   },
