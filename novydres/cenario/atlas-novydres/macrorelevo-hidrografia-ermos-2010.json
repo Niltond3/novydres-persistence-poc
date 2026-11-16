@@ -1,5 +1,5 @@
 {
-  "schema": "NOVYDRES_GEO_PHYSICAL_STRUCTURE_PROPOSAL_V1",
+  "schema": "NOVYDRES_GEO_CANON_FACT_V1",
   "subject_id": "world-atlas-novydres",
   "fact_ids": [
     "GEO-003.3",
@@ -7,8 +7,8 @@
     "GEO-003.5"
   ],
   "decision_scope": "GEO-003 macrorelevo, rios e lagoas naturais, áreas do Ermo e conexões hidrotermais",
-  "canonical_status": "PROPOSED_OWNER_REVIEW",
-  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
   "authored_on": "2026-11-15",
   "editorial_goal": "Fechar só a topologia física indispensável para a distribuição dos raions e futuro mapa de 2010. Evitar coordenadas, desenho completo da malha, perfis técnicos, inventário exaustivo de lagos ou estações.",
   "sources_of_binding_canon": [
@@ -32,7 +32,7 @@
   },
   "macrorelief": {
     "decision": "GEO-003.3",
-    "status": "PROPOSED",
+    "status": "CANON_APPROVED",
     "zones": [
       {
         "id": "terrain-thermal-valley",
@@ -75,15 +75,15 @@
   },
   "hydrology": {
     "decision": "GEO-003.4",
-    "status": "PROPOSED",
+    "status": "CANON_APPROVED",
     "main_river": {
-      "name_candidate": "Rio Vasyl / Reka Vasilya",
-      "existence_as_named_feature": "PROPOSED_FROM_CANDIDATE_ATLAS_NOT_PREVIOUSLY_CLOSED",
+      "existence_as_named_feature": "CONFIRMED_BY_OWNER_APPROVAL_GEO-003.4",
       "topology": "Rio de água doce alimentado por uma bacia em cotas superiores; recebe tributários e afluxos de nascentes geotérmicas quando percorre o Vale Termal de Old Town; desce para estuário na grande baía.",
       "chelsea": "Curso principal atravessa a Cidade Velha, com trechos localmente mornos e margens favoráveis à ocupação histórica.",
-      "estuary": "Deságue em setor costeiro industrial/portuário ainda não delimitado. A associação com Sulfok é a principal hipótese editorial de 2010, sem aprovar sua foz, fronteiras ou rota.",
+      "estuary": "O Rio Vasyl deságua na grande baía do território. O setor industrial/portuário e a associação territorial com Sulfok permanecem hipóteses cartográficas, não localizações ratificadas.",
       "temperature": "Trechos aquecidos ficam perto de entradas termais; jusante e afluentes podem esfriar, congelar parcialmente ou receber controle hidráulico humano. Nunca supor rio integralmente quente ou gelo ausente por toda a extensão.",
-      "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário."
+      "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário.",
+      "name": "Rio Vasyl / Reka Vasilya"
     },
     "secondary_rivers": "Ao menos duas microbacias laterais independentes ou tributárias drenam serras e tundra para a baía, lagoas ou costa externa, sem convergir todas obrigatoriamente ao Rio Vasyl; seus nomes e cursos serão atribuídos na cartografia.",
     "lakes_and_lagoons": [
@@ -111,13 +111,13 @@
     ],
     "subterranean_network": {
       "interpretation": "Águas subterrâneas circulam por aquíferos e fraturas. Águas geotérmicas podem aflorar em áreas distantes e alimentar canais laterais naturais ou captados pela engenharia urbana.",
-      "new_london_candidate": "A proposta antiga do Atlas descreve canais subterrâneos que emergem em New London. Manter como hipótese plausível de afloramento de aquífero, não canalização comprovada do leito inteiro do Rio Vasyl por New London nem trajeto específico fechado.",
+      "new_london_candidate": "Afloramento subterrâneo em New London permanece hipótese do Atlas editorial; não foi aprovada a canalização do Rio Vasyl por esse raion nem sua topologia de cursos subterrâneos.",
       "nosferatu": "Galerias e linhas de ley podem atravessar o sistema, mas não se equivalem necessariamente a aquíferos ou dutos físicos."
     }
   },
   "ermos": {
     "decision": "GEO-003.5",
-    "status": "PROPOSED",
+    "status": "CANON_APPROVED",
     "types": [
       {
         "id": "rocky-pass",
@@ -168,7 +168,18 @@
     "linhas de transporte e dutos, estações, portos, hospitais, construções e bairros",
     "associação de clã, personagem ou domínio Cainita a cada feição natural"
   ],
-  "owner_decision_requested": "Aprovar ou corrigir a macroestrutura de cinco zonas, o Rio Vasyl com aquecimento localizado, as lagoas interiores e costeiras e quatro categorias de Ermo. Não fechar geometrias sem modelo cartográfico.",
+  "owner_decision_requested": "RESOLVED_APPROVED_2026-11-15",
   "visibility": "player_safe_physical_geography_except_underground_supernatural_details",
-  "single_authoritative_proposal": true
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "scope_of_approval": "Aprovação do proprietário das GEO-003.3–GEO-003.5: cinco macrozonas de relevo, modelo do Rio Vasyl/Reka Vasilya com águas geotérmicas aquecendo localmente Old Town, bacias secundárias, lagos e lagoas, aquíferos e quatro tipos físicos de Corredores do Ermo. Sem geometria cartográfica ou raions adicionais.",
+  "editorial_status_note": "Apenas a macroestrutura física e classes naturais são cânone. Nomes, trajetos, polígonos, altitudes, capacidade dos rios, posições exatas de Ermos e sítios termais não foram atribuídos; GEO-004 e GEO-012/GEO-013 continuam por fazer. Referências do Atlas editorial ainda não confirmadas são hipóteses, não fatos.",
+  "single_authoritative_source": true,
+  "owner_approval": {
+    "date": "2026-11-15",
+    "status": "CONFIRMED",
+    "decision": "Aprovo",
+    "scope": "Cinco macrozonas, hidrografia proposta e quatro formas do Ermo, preservando detalhes espaciais abertos"
+  }
 }
