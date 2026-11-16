@@ -51,7 +51,7 @@ jobs:
           assert.deepEqual(geo.fact_ids,['GEO-002.3/TERMAS','GEO-003.1','GEO-014.1','GEO-003.2']);
           assert.equal(geo.geology.deep_groundwater_circulation,true);
           assert.equal(geo.geology.active_surface_volcano_required,false);
-          assert.equal(geo.resource_geography.main_concentration_toponym,'Cidade Velha');
+          assert.equal(geo.resource_geography.main_concentration_toponym,'Iknik');
           const ermo=j('ermos-estrutura-territorial-2010.json');
           const growth=JSON.parse(readFileSync('novydres/cenario/historia-global/formacao-policentrica-2010.json','utf8'));
           assert.equal(ermo.fact_id,'GEO-004.3');
@@ -89,9 +89,10 @@ jobs:
           assert.equal(raions.fact_id,'GEO-004.2');
           assert.equal(raions.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(raions.official_raion_count,9);
-          const officialNames=['Dunwich','Levi','Alexandria','Chelsea','Bukovie','New London','Sulfok','Drevnigrad','Vasyl Bay'];
+          const officialNames=['Dunwich','Levi','Alexandria','Siku','Bukovie','New London','Sulfok','Drevnigrad','Vasyl Bay'];
           assert.deepEqual(raions.raions.map(x=>x.official_name),officialNames);
           assert.equal(new Set(raions.raions.map(x=>x.subject_id)).size,9);
+          assert.equal(raions.raions.find(x=>x.subject_id==='district-chelsea')?.official_name,'Siku');
           for(const x of raions.raions){
             const d=JSON.parse(readFileSync('novydres/cenario/geografia/'+x.subject_id+'/conteudo.json','utf8'));
             assert.equal(d.canonical_identity_reference.source_of_truth,root+'raions-oficiais-2010.json',x.subject_id);
@@ -114,6 +115,9 @@ jobs:
           assert.equal(oldTown.fact_id,'GEO-004.1');
           assert.equal(oldTown.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(oldTown.feature.parent_raion_subject_id,'district-chelsea');
+          assert.equal(oldTown.feature.canonical_name,'Iknik');
+          assert.deepEqual(oldTown.feature.display_aliases,['Cidade Velha','Old Town']);
+          assert.equal(oldTown.feature.parent_raion_official_name,'Siku');
           assert.equal(oldTown.feature.is_entire_raion,false);
           assert.equal(oldTown.feature.geometry,null);
           assert.equal(geo.resource_geography.administrative_mapping.canonical_status,'CONFIRMED_GEO-004.1');
