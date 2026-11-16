@@ -45,26 +45,15 @@
     "1990–2010 crise, especialização institucional e disputas"
   ],
   "venture_example": {
-    "status": "HYPOTHESIS_NOT_CANON",
-    "case": "O poder econômico e executivo Ventrue é CANÔNICO em 2010; seu suposto domínio jurídico fundador em Chelsea e possível deslocamento para Bukovie continuam hipóteses históricas NÃO APROVADAS.",
-    "main_decisions": [
-      "Ventrue realmente detinham domínio jurídico de Old Town ou apenas influência econômica?",
-      "Quem detinha Bukovie antes da chegada?",
-      "A economia e a população mudaram antes dos Ventrue ou foram atraídas pelos Ventrue?",
-      "A causa foi conflito político, necessidade de investimentos, novo eixo logístico, segurança, concessão ou combinação?",
-      "Quem ficou com Old Town e qual foi o mecanismo de sucessão?",
-      "Quem eram os vizinhos e qual reação política/territorial?",
-      "Como isso produziu o contraste térmico e financeiro em 2010?"
-    ],
-    "possible_causes": [
-      "capital seguiu população e novas rotas",
-      "novos investimentos Ventrue deslocaram população e poder",
-      "conquista, pacto ou expulsão política levou à mudança"
-    ],
-    "do_not_infer": [
-      "não fixar evento em 1867 ou 1917 por conveniência",
-      "não presumir migração da totalidade dos Ventrue",
-      "não converter proposta de Atlas de 2010 em título fundador"
+    "status": "CORE_FACTS_CANON_APPROVED_GEO-005.8",
+    "canon_ref": "novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json",
+    "confirmed": "Controle Ventrue inicial de Old Town, mineração, exploração humana, industrialização, preconceito com imigração, transferência do centro político/econômico a Bukovie e desvio térmico.",
+    "pending": [
+      "quem sucedeu o domínio jurídico de Old Town",
+      "quem dominava Bukovie antes dos Ventrue",
+      "datas e protagonistas precisos",
+      "acordos, apadrinhamento ou coerção dos Nosferatu",
+      "relações com senhorios vizinhos"
     ]
   },
   "malkavian_example": {
@@ -128,15 +117,15 @@
     }
   ],
   "cross_raion_case": "Nosferatu possuem influência transversal em redes subterrâneas; isso não os torna senhores de todos os raions de superfície.",
-  "geoeconomic_siting_integration": "Jazidas, carvão, petróleo/gás, complexo nuclear americano e reservas militares devem ser definidos em conjunto com o histórico de patronos, senhores, mão de obra e corredores de circulação, ANTES de ratificar as macroposições GEO-004.4.",
+  "geoeconomic_siting_integration": "Uma única faixa de exploração de riquezas e indústria pesadas entre Old Town/Chelsea e Sulfok: GEO-004.6A canônica. História Ventrue e desvio de calor: GEO-005.8/GEO-014.2 canônicos. Sítios militares/nucleares ainda por decidir.",
   "rename_dependency": "O proprietário solicitou futura revisão do nome Chelsea com referência culturalmente pesquisada aos povos originários. Referência proprietária: novydres/cenario/geografia/district-chelsea/revisao-toponimo-2010.json.",
   "workflow_order": [
-    "Definir para cada setor seu equivalente histórico plausível e seus direitos de sangue por período sem fabricar fatos",
-    "Determinar titularidades de cada senhorio, controle efetivo e direitos transversais em cada fase, com nomes e datas por aprovação",
-    "Registrar alianças, prestações, conflitos e condições de acesso à saúde, religião, aquecimento, arte/lazer, justiça e poder executivo/militar",
-    "Vincular causas de mineração, educação, migrações, indústria nuclear americana e bases militares à expansão e às alianças locais",
-    "Explicar se houve migração Ventrue de Old Town a Bukovie e se Levi se tornou polo médico, antes de traçar limites de raion",
-    "Revisar GEO-004.4 e depois densidades, redes e instalações antes da arte"
+    "Definir quem inicialmente governava Old Town pelos Ventrue e época sem fixar nome arbitrário",
+    "Reconstituir expansão ao sul para Sulfok e a transformação social",
+    "Explicar ocupação anterior de Bukovie, destino jurídico de Old Town e reações de vizinhos",
+    "Definir papel e responsabilidade dos Nosferatu no desvio do calor",
+    "Situar instalações nucleares e militares dos EUA e então aprovar raions",
+    "Detalhar redes de ferrovia, metro, calor, serviços e cartografia"
   ],
   "status_approval_scope": "Diretriz metodológica solicitada; fatos específicos e trocas de poder não aprovados.",
   "canon_competence_reference": {
@@ -190,52 +179,23 @@
     "domain_contract": "A evolução de hospitais, milícias, cortes, religião, indústrias, calefação e entretenimento deve registrar patronos e custos de operar fora do clã titular; não inventar personagens específicos como patrocinadores antes de aprovação."
   },
   "integrated_economic_geography_scenarios": {
-    "status": "PROPOSED_OWNER_REVIEW_NOT_CANON",
-    "zoning_reference": "novydres/cenario/atlas-novydres/macrozonas-economicas-estrategicas-2010.proposal.json",
-    "methodological_rule": "Para cada feição Z01–Z07, cruzar descobrimento/tecnologia de extração, patrocínios Cainitas, apadrinhamento setorial, efeitos de migração, proteção e custo humano e disputa com senhorios vizinhos.",
-    "phases": [
-      {
-        "period": "pré-1423 a século XVII",
-        "mechanism": "Old Town termal e comércio costeiro preexistente; Gilgamesh mantém núcleo e emissários fundam ou negociam assentamentos periféricos. Ouro aluvionar, gemas e carvão de afloramento apenas em escala tecnológica verossímil; evitar projecção de diamante industrial ou petróleo moderno."
-      },
-      {
-        "period": "século XVIII–1867",
-        "mechanism": "Expansão de direitos de comércio e mineração em Z01–Z03; investidor Ventrue em projeto remoto pode precisar de patronato Gangrel para coerção, Nosferatu para calefação e título de senhor local para passagem/caça."
-      },
-      {
-        "period": "1867–1917",
-        "mechanism": "A transação americana articulada por Ekaterina e novos contratos criam oportunidades; NÃO se conclui que a sede Ventrue de Old Town tenha migrado a Bukovie, nem que transferiu juridicamente o senhorio."
-      },
-      {
-        "period": "1917–1945",
-        "mechanism": "Regência, mudança administrativa e expansão de investimentos podem criar centro cívico distinto da cidade velha. Se houver cisão de domínio, documentar evento com senhor anterior/posterior e legitimação."
-      },
-      {
-        "period": "1945–1989",
-        "mechanism": "Industrialização de Z05, projetos americanos militares Z07 e nucleares Z06 e infraestrutura hospitalar/termal crescem. Gangrel controlam competência coerciva Cainita e seus apadrinhamentos, NÃO unidades federais dos EUA."
-      },
-      {
-        "period": "1990–2010",
-        "mechanism": "Bukovie pode ter capital, Chelsea conservar núcleo antigo, Levi especialização médica, Sulfok serviços e reservas; explicar por causalidade econômica e jurídica os contrastes, mantendo as atribuições territoriais candidatas."
-      }
+    "status": "SCOPED_CANON_CONFIRMED_OPEN_DETAILS",
+    "canon_sources": [
+      "novydres/cenario/atlas-novydres/corredor-extrativo-old-town-sulfok-2010.json",
+      "novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json"
     ],
-    "ventrue_chelsea_bukovie_recommendation": {
-      "status": "RECOMMENDED_SCENARIO_NOT_CANON",
-      "prefer": "Transferência gradual da CENTRALIDADE econômica e executiva para um núcleo novo ou fortalecido, sem supor troca automática de SENHORIO. A história de domínio Cainita de Old Town e da ocupação anterior de Bukovie permanece a investigar.",
-      "choose_later": "O poder seguiu crescimento humano e infraestrutura? Investimento Ventrue atraiu trabalhadores? Um pacto, levante ou disputa legitimou eventual cessão do território Chelsea? Registrar ato e consequência em 2010.",
-      "no_date_assigned": true
-    },
-    "malkavian_levi_recommendation": {
-      "status": "RECOMMENDED_SCENARIO_NOT_CANON",
-      "prefer": "Levi como polo de medicina especializada, ensino e pesquisa criado gradualmente por patronos médicos Malkavian; clínicas de outros clãs requerem seu apadrinhamento enquanto hospitais gerais permanecem por todos os raions.",
-      "health_duty": "Poder sobre saúde exige responsabilidade por cuidado humano; especialização não significa hospitais melhores em todos os aspectos ou monopolização de pessoas.",
-      "no_age_or_founder_assigned": true
-    },
-    "gangrel_military_recommendation": {
-      "status": "RECOMMENDED_SCENARIO_NOT_CANON",
-      "prefer": "A autoridade Gangrel começa com segurança de caravanas, Ermos e refúgios e passa por corporações de guarda e polícia mortal influenciada no século XX; cargos e serviços Cainitas de coerção fora do clã exigem apadrinhamento.",
-      "u_s_military": "A presença militar federal americana continua instituição soberana mortal, não organização subordinada formalmente aos Gangrel."
-    },
-    "domain_history_gate": "Antes da cartografia, cada setor deve documentar títulos, patronos, predecessor/sucessor, vizinhos e mecanismo de transição em marcos históricos, ou UNKNOWN explícito."
+    "stages": [
+      "mineração e enriquecimento Ventrue na Old Town inicial",
+      "desenvolvimento industrial ao sul até Sulfok",
+      "desgaste mineral/ambiental e entrada de migrantes",
+      "migração da elite e centro financeiro Ventrue a Bukovie",
+      "2010: dependência do calor de Old Town e desigualdade térmica"
+    ],
+    "unknowns": [
+      "datas e titulares dos senhorios",
+      "como aconteceu o desvio e acordo/contenda Nosferatu",
+      "posições de complexo nuclear e bases militares",
+      "demais clãs, vizinhos e seus pactos"
+    ]
   }
 }

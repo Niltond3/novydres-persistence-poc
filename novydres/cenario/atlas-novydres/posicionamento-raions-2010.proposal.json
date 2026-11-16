@@ -37,15 +37,15 @@
       "name": "Chelsea",
       "proposed_macro_sector": "oeste-interior",
       "terrain": "vale termal do Rio Vasyl e Old Town",
-      "settlement_logic": "núcleo histórico e vantagem térmica natural",
+      "settlement_logic": "Old Town: berço termal e de riqueza extrativa controlada inicialmente pelos Ventrue, depois indústria pesada, desgaste de jazidas e desvio do calor a Bukovie.",
       "geometry": null
     },
     {
       "subject_id": "district-bukovie",
       "name": "Bukovie",
       "proposed_macro_sector": "centro funcional, interior",
-      "terrain": "terraço firme protegido, a leste do vale termal",
-      "settlement_logic": "centralidade administrativa moderna dependente de aquecimento artificial",
+      "terrain": "Tundra extremamente fria, sem geotermia natural suficiente para sustentar a área urbana.",
+      "settlement_logic": "Bastião financeiro e aristocrático Ventrue surgido após migração de Old Town; depende do calor desviado da Cidade Velha e sofreria congelamento perigoso se essa calefação falhasse prolongadamente.",
       "geometry": null
     },
     {
@@ -61,7 +61,7 @@
       "name": "Sulfok",
       "proposed_macro_sector": "sudoeste, borda da baía",
       "terrain": "baixadas costeiras portuárias e terraços industriais",
-      "settlement_logic": "terminal de passageiros canônico na faixa periférica aquecida; foz do Vasyl aqui ainda proposta",
+      "settlement_logic": "Extensão meridional e marítima do eixo econômico de Old Town: indústria pesada, porto, ferrovias e única estação internacional de passageiros do Expresso. Terminal de cargas continua sem posição fixa.",
       "geometry": null
     },
     {
@@ -103,58 +103,47 @@
     "novydres/cenario/historia-global/formacao-policentrica-2010.json"
   ],
   "next_gates": [
-    "Revisar GEO-004.6 macrozonas Z01–Z07 em conjunto com cronologia de senhorios GEO-005.7",
-    "Reconstruir quadro histórico Cainita e institucional (GEO-005.7) articulado com geoeconomia e zonas estratégicas",
-    "Pré-condição: validar macrozonas de recursos minerais/energéticos e reservas nucleares/militares",
-    "aprovar macroposições",
-    "desenhar polígonos, áreas e cursos d'água em GEO-002/GEO-003/GEO-004",
-    "validar jurisdição e continuidade histórica GEO-005/GEO-006",
-    "distribuir população GEO-010",
-    "definir transportes GEO-012/GEO-013 antes do mapa visual"
+    "Confirmados: eixo econômico Old Town–Sulfok e história Ventrue/Bukovie",
+    "Determinar sucessão jurídica de Old Town, ocupação anterior de Bukovie e origem da autorização térmica Nosferatu",
+    "Definir sítios nucleares e militares americanos ainda sem localização",
+    "Só depois aprovar macroposições dos nove raions, fronteiras e Ermos",
+    "Por fim detalhar transporte, calefação, bairros e serviços antes do mapa visual"
   ],
   "owner_decision": "GEO-004.4 EM REVISÃO: o proprietário não aprova posições dos raions antes de reconstruir história Cainita, recursos, instituições e vínculos entre núcleos.",
   "single_authoritative_proposal": true,
   "review_state": "ON_HOLD_PENDING_INTERWOVEN_CAINITE_HISTORY_AND_RESOURCE_STRATEGIC_MACROZONES",
   "resource_strategic_precondition": {
     "status": "NOT_CANON_PENDING_OWNER_REVIEW",
-    "reason": "Posicionamento de raions não pode ser aprovado antes de situar as macrozonas minerais e os complexos estratégicos que explicam sua ocupação.",
+    "reason": "Faixa extrativa Old Town–Sulfok aprovada em GEO-004.6A; ainda faltam localização de reservas militares/nucleares e sucessões jurídicas dos senhorios para ratificar nove raions.",
     "suggested_noncanonical_regions": [
       {
-        "category": "metais, ouro, diamantes e minerais raros",
-        "potential": "serras e contrafortes interiores próximos dos setores candidatos de Drevnigrad e Dunwich",
-        "caution": "Ouro e diamantes não precisam ocorrer nos mesmos depósitos; diamantes abundantes são premissa ficcional local; verificar aquíferos e sítios indígenas"
+        "category": "Mineração e indústria pesada",
+        "status": "CANON_APPROVED",
+        "reference": "novydres/cenario/atlas-novydres/corredor-extrativo-old-town-sulfok-2010.json",
+        "placement": "Um eixo Old Town/Chelsea a Sulfok"
       },
       {
-        "category": "carvão",
-        "potential": "bacias sedimentares nas bordas dos planaltos interiores",
-        "caution": "Não distribuir carvão automaticamente em rochas cristalinas de mineração metálica"
+        "category": "Instalações nucleares americanas",
+        "status": "PENDING",
+        "reference": "novydres/cenario/atlas-novydres/macrozonas-economicas-estrategicas-2010.proposal.json"
       },
       {
-        "category": "petróleo e gás",
-        "potential": "bacias sedimentares costeiras ou externas ao núcleo urbano, conectadas a logística protegida",
-        "caution": "Não exigir poços sob bairros nem passagem do oleoduto real Trans-Alasca pela cidade"
-      },
-      {
-        "category": "instalação nuclear americana",
-        "potential": "plataforma periférica firme fora do vale termal, da várzea do Rio Vasyl e dos bairros mais densos, com resfriamento e acesso",
-        "caution": "Programa nuclear exclusivamente americano é cânone; existência de usina especificamente DESATIVADA ainda não é fato fechado"
-      },
-      {
-        "category": "bases militares americanas",
-        "potential": "elevações externas para radar, baía para instalações navais e setor firme com acesso para base aérea/terrestre",
-        "caution": "Definir reservas estratégicas antes de limites de raion; nomes, unidades, implantação precisa e cronologia ficam abertos"
+        "category": "Bases e reservas militares americanas",
+        "status": "PENDING",
+        "reference": "novydres/cenario/atlas-novydres/macrozonas-economicas-estrategicas-2010.proposal.json"
       }
     ],
     "order": "Primeiro aprovar macrozonas econômicas e estratégicas; depois revisar macroposições dos nove raions; por fim cadastrar instalações individuais nas GEO-011/GEO-015/GEO-019/GEO-021.",
     "protect": "Não alterar GEO-003, GEO-004.1–.3, GEO-005.6 ou terminal canônico de Sulfok; não atribuir senhorios novos.",
     "macrozone_proposal_path": "novydres/cenario/atlas-novydres/macrozonas-economicas-estrategicas-2010.proposal.json",
-    "macrozone_status": "PROPOSED_OWNER_REVIEW",
-    "macrozone_note": "As Z01–Z07 não ratificam a foz do Rio Vasyl em Sulfok, o campo de diamantes por raion, a posição da usina nuclear, bases ou qualquer senhorio; revisar após decisão."
+    "macrozone_status": "ECONOMY_CONFIRMED_STRATEGY_PENDING",
+    "macrozone_note": "Antiga divisão Z01–Z05 foi rejeitada; a exploração se concentra no eixo Old Town–Sulfok. Posições de usinas e bases permanecem abertas."
   },
   "historical_precondition": {
     "status": "BLOCKING_GEO-004.4_APPROVAL",
     "history_source": "novydres/cenario/historia-global/evolucao-senhorios-e-economia-territorial-2010.proposal.json",
-    "directive": "Evolução dos senhorios, rivalidades, instituições mortais e economia precisa ser resolvida junto com os recursos naturais antes de posicionar raions. Hipóteses Ventrue Chelsea→Bukovie e Malkavian/saúde são exemplos em estudo, não cânone."
+    "directive": "GEO-005.8 confirmou domínio Ventrue inicial de Old Town, exploração e migração para Bukovie, assim como desvio do calor. A sucessão jurídica de Old Town, o titular anterior de Bukovie e o acordo com Nosferatu ainda estão abertos.",
+    "canon_ref": "novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json"
   },
   "institutional_competence_precondition": {
     "fact_id": "POL-001.1",
