@@ -11,6 +11,12 @@ current_relief_proposal_blob_sha: da9afd790822aa66d30b22a8d87f573277f4c690
 source_relief_proposal_blob_sha: c28dd404b5d1fb2c6495ca104c7f457c29825644
 coast_approved_working_blob_sha: d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577
 work_unit: MW-011
+fis02_valley_owner_decision: APROVADO
+fis02_valley_decision_on: 2026-11-16
+fis02_valley_approval_scope: NONCANONICAL_REFINED_THERMAL_VALLEY_WORKING_GEOMETRY_ONLY
+fis02_uplands_owner_decision: PENDING
+fis02_tundra_lowlands_owner_decision: PENDING
+fis02_final_review: PENDING
 ---
 
 # MW-011 — Revisão candidata FIS-02: macrorelevo (2010)
@@ -20,6 +26,14 @@ work_unit: MW-011
 O proprietário aprovou em MW-007 somente a **organização relativa** de FIS-02. A costa continental refinada de MW-010 está aprovada como **base de trabalho não canônica**; os contornos/número das ilhas continuam hipóteses. As cinco classes canônicas GEO-003.3, a orientação hidrotermal GEO-003.4 e os Ermos GEO-003.5/GEO-004.3 são preservados. Este documento **não registra decisão de aprovação do novo relevo**.
 
 Bootstrap: HEAD `master` 27595ca32652efdef3d406eb91e4482299056bd9; leitura conjunta AGENTS/CONTEXT/catálogo, assunto `world-atlas-novydres`, ADR-002, PRD-ATLAS-001, guide e fontes físicas. Origem de MW-010: branch `mapwork/mw-010-refinamento-costeiro-fis01`, commit `2a3932a015c8458226410ebfcd67d399b0a33e10`.
+
+## Decisão expressa recebida — FIS-02.1 (16/11/2026)
+
+**Estado: APROVADO**, somente quanto ao contorno refinado do vale termal `relief-thermal-valley-001`. Diante da pergunta explícita “Você aprova o contorno refinado do vale termal, rejeita ou aprova com ressalvas?”, o proprietário respondeu **“Aprovo”**.
+
+**Alcance:** o polígono refinado já publicado na proposta MW-011 é aceito como base cartográfica de trabalho **não canônica**; sua relação com Cidade Velha/Iknik, trechos termicamente influenciados do Rio Vasyl e a piscina termal candidata é mantida. Não fixa os limites de Kingswell/Iknik, nascentes, temperaturas, altitudes ou engenharia. **Não aprova** as três serras/cristas, as duas áreas de tundra ou a baixada úmida, que ainda aguardam decisões específicas. Não altera o status global da geometria, `owner_approval_for_this_geometry: null`.
+
+O polígono do vale já corresponde à versão aprovada para trabalho, portanto **não há necessidade de modificar seus vértices nesta subdecisão**. A aprovação parcial não encerra MW-011 e não autoriza handoff.
 
 ## Refinamento implementado (variante não canônica)
 
@@ -48,12 +62,12 @@ Mantidos **sete polígonos esparsos** com IDs estáveis: um vale termal interior
 
 ## Inventário das decisões substantivas ainda necessárias
 
-1. **FIS-02.1 — Vale termal:** aprovar, rejeitar ou aprovar com ressalvas o novo polígono interior como âncora da depressão associada a Cidade Velha/Iknik, **não** perímetro de Iknik/Kingswell, sem declarar pontos de fonte termal.
+1. **FIS-02.1 — Vale termal: APROVADO em 16/11/2026**, na extensão exata da seção de decisão expressa acima.
 2. **FIS-02.2 — Serras e cristas:** aprovar, rejeitar ou aprovar com ressalvas os três maciços e seus eixos qualitativos (norte/leste/sul), mantendo inexistentes altimetria, rotas e divisores hidráulicos medidos.
 3. **FIS-02.3 — Tundra e baixada:** aprovar, rejeitar ou aprovar com ressalvas as duas manchas esparsas de tundra e a baixada úmida meridional, sem afirmar cobertura territorial exaustiva ou inundação permanente.
 4. **Aceite final expresso:** após eventuais correções e publicação de geometria e visualizador efetivos, aprovação da versão consolidada. Aprovações parciais não fecham FIS-02.
 
-**A:** decisões 1–4 e revalidação final na geometria consolidada. **B:** consequência apenas espacial sobre rio/afluentes, piscina termal, bacias e fragmentos de Ermo; sem deslocá-los em FIS-02. **C:** raions, bairros, portos, transportes, histórias, clãs, runtime e engenharia detalhada.
+**A:** decisões 2–4 e revalidação final na geometria consolidada. **B:** consequência apenas espacial sobre rio/afluentes, piscina termal, bacias e fragmentos de Ermo; sem deslocá-los em FIS-02. **C:** raions, bairros, portos, transportes, histórias, clãs, runtime e engenharia detalhada.
 
 ## Gate e continuidade
 
