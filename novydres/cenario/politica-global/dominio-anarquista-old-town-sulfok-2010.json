@@ -1,0 +1,47 @@
+{
+  "schema": "NOVYDRES_CAINITE_TERRITORIAL_AUTHORITY_CANON_V1",
+  "subject_id": "world-politics-novydres",
+  "fact_id": "GEO-006.1",
+  "fact_kind": "anarchist_territorial_control_2010",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_DIRECTION",
+  "approved_on": "2026-11-16",
+  "reference_year": 2010,
+  "title": "Domínio anarquista de Old Town e Sulfok em 2010",
+  "decision": "O movimento anarquista detém o domínio territorial de Old Town e de Sulfok em 2010. O Concílio da Cruz e Espada não mantém domínio territorial em nenhum dos dois locais.",
+  "territorial_scope": [
+    {
+      "territory": "Old Town / Cidade Velha",
+      "administrative_parent": "Chelsea",
+      "extent": "Somente núcleo histórico Old Town; não atribuir automaticamente a totalidade do raion Chelsea",
+      "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
+      "council_domain": "NONE"
+    },
+    {
+      "territory": "Sulfok",
+      "administrative_parent": "Sulfok",
+      "extent": "Raion Sulfok; geometria por definir",
+      "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
+      "council_domain": "NONE",
+      "contest": "A contestação Gangrel e a presença de outras facções não significam soberania partilhada nem administração territorial do Concílio"
+    }
+  ],
+  "canon_constraints": [
+    "Domínio territorial efetivo em 2010 não identifica automaticamente o título jurídico Cainita nem legitimação por parte do Concílio.",
+    "Competências transversais clânicas (Nosferatu/aquecimento, Gangrel/coerção, Ventrue/economia) e operações em instalações não transferem domínio.",
+    "Presença Hecata, patrulhas Gangrel e redes subterrâneas Nosferatu não tornam Sulfok domínio conjunto.",
+    "Não presumir que Sulfok tenha sido conquistado em 1917, nem que o governo anarquista de Old Town tenha sido ininterrupto desde a revolta.",
+    "Não confundir domínio cainita com jurisdição mortal: Novydres e seus raions continuam administrativamente sob lei americana."
+  ],
+  "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
+  "pending": [
+    "Domínio dos demais bairros de Chelsea e limites urbanos de Old Town",
+    "Data, agentes e meios da ascensão anarquista em Sulfok",
+    "Titularidade jurídica de Old Town após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
+    "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
+    "Geometrias, limites municipais e frentes concretas de conflito"
+  ],
+  "cartographic_use": "Representar em camada cainita temporal de 2010; não expor automaticamente em mapa público mortal; mapear contestação separada do domínio principal.",
+  "single_authoritative_source": true
+}
