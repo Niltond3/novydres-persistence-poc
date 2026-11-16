@@ -1,0 +1,114 @@
+{
+  "schema": "NOVYDRES_GEO_RELATIVE_RAIONS_PROPOSAL_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-004.4",
+  "canonical_status": "PROPOSED_OWNER_REVIEW",
+  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
+  "proposal_date": "2026-11-15",
+  "reference_year": 2010,
+  "scope": "Distribuição relativa dos nove raions, mantendo GEO-004.1–004.3 e GEO-003. Não aprova polígonos, áreas, coordenadas, população por raion, localização definitiva da foz, domínios Cainitas ou estações internas.",
+  "raions": [
+    {
+      "subject_id": "district-dunwich",
+      "name": "Dunwich",
+      "proposed_macro_sector": "noroeste periférico",
+      "terrain": "tundra exposta, colinas e Ermos",
+      "settlement_logic": "assentamentos separados e travessias de fronteira",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-levi",
+      "name": "Levi",
+      "proposed_macro_sector": "norte interior",
+      "terrain": "terraços elevados e colinas estáveis",
+      "settlement_logic": "núcleos institucionais isolados que dependem de aquecimento",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-alexandria",
+      "name": "Alexandria",
+      "proposed_macro_sector": "nordeste costeiro",
+      "terrain": "promontórios rochosos e enseadas da costa",
+      "settlement_logic": "acessos marítimos e assentamentos protegidos da exposição",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-chelsea",
+      "name": "Chelsea",
+      "proposed_macro_sector": "oeste-interior",
+      "terrain": "vale termal do Rio Vasyl e Old Town",
+      "settlement_logic": "núcleo histórico e vantagem térmica natural",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-bukovie",
+      "name": "Bukovie",
+      "proposed_macro_sector": "centro funcional, interior",
+      "terrain": "terraço firme protegido, a leste do vale termal",
+      "settlement_logic": "centralidade administrativa moderna dependente de aquecimento artificial",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-new-london",
+      "name": "New London",
+      "proposed_macro_sector": "leste interior",
+      "terrain": "terraços e microbacias secundárias",
+      "settlement_logic": "acesso protegido sem pressupor que o Rio Vasyl passe por ali",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-sulfok",
+      "name": "Sulfok",
+      "proposed_macro_sector": "sudoeste, borda da baía",
+      "terrain": "baixadas costeiras portuárias e terraços industriais",
+      "settlement_logic": "terminal de passageiros canônico na faixa periférica aquecida; foz do Vasyl aqui ainda proposta",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-drevnigrad",
+      "name": "Drevnigrad",
+      "proposed_macro_sector": "sul interior",
+      "terrain": "contrafortes rochosos, vales e solos firmes",
+      "settlement_logic": "núcleos produtivos separados por Ermos",
+      "geometry": null
+    },
+    {
+      "subject_id": "district-vasyl-bay",
+      "name": "Vasyl Bay",
+      "proposed_macro_sector": "sudeste da grande baía",
+      "terrain": "terraços costeiros abrigados e lagoas",
+      "settlement_logic": "núcleo em margem distinta de Sulfok, sem pressupor segunda grande baía",
+      "geometry": null
+    }
+  ],
+  "spatial_rules": [
+    "A cidade não é grade 3x3: setores são orientações gerais, sem células quadradas nem distâncias, áreas ou direções angulares uniformes.",
+    "Os núcleos urbanos são descontínuos, com Ermos de rocha, tundra, várzea e litoral entre muitos deles; conurbação excepcional não é modelo padrão.",
+    "Chelsea contém Old Town, o vale termal e o trecho localmente morno do Rio Vasyl; isso não abrange necessariamente todo Chelsea.",
+    "Bukovie é central por papel político e infraestrutura, não centro geográfico exato, nem origem do desenvolvimento de Novydres.",
+    "Baía principal com setores de margem candidatos de Sulfok, Vasyl Bay e Alexandria; costa detalhada permanece aberta.",
+    "Rio Vasyl desemboca na baía; o estuário em Sulfok é hipótese prioritária e não é cânone neste estágio.",
+    "New London pode ter aquíferos próprios, mas canais subterrâneos do Rio Vasyl por esse raion ainda não estão aprovados.",
+    "Expresso Transberíngio cruza periferia aquecida sem passar pelo centro: única parada de passageiros em Sulfok e outra de carga com raion indefinido.",
+    "Distribuição dos raions em 2010 não determina automaticamente os senhorios fundadores, clãs dominantes ou mudanças de domínio Cainita.",
+    "Não transformar comunidades originárias ou locais reais próximos a Port Clarence em povoações fictícias por atribuição automática."
+  ],
+  "binding_refs": [
+    "novydres/cenario/atlas-novydres/raions-oficiais-2010.json",
+    "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
+    "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+    "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
+    "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
+    "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json",
+    "novydres/cenario/historia-global/formacao-policentrica-2010.json"
+  ],
+  "next_gates": [
+    "aprovar macroposições",
+    "desenhar polígonos, áreas e cursos d'água em GEO-002/GEO-003/GEO-004",
+    "validar jurisdição e continuidade histórica GEO-005/GEO-006",
+    "distribuir população GEO-010",
+    "definir transportes GEO-012/GEO-013 antes do mapa visual"
+  ],
+  "owner_decision": "Aprovar ou corrigir o posicionamento irregular dos nove raions e a foz candidata do Rio Vasyl em Sulfok.",
+  "single_authoritative_proposal": true
+}
