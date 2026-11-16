@@ -89,10 +89,10 @@ jobs:
           assert.equal(raions.fact_id,'GEO-004.2');
           assert.equal(raions.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(raions.official_raion_count,9);
-          const officialNames=['Dunwich','Levi','Alexandria','Kingswal','Bukovie','New London','Sulfok','Drevnigrad','Vasyl Bay'];
+          const officialNames=['Dunwich','Levi','Alexandria','Kingswell','Bukovie','New London','Sulfok','Drevnigrad','Vasyl Bay'];
           assert.deepEqual(raions.raions.map(x=>x.official_name),officialNames);
           assert.equal(new Set(raions.raions.map(x=>x.subject_id)).size,9);
-          assert.equal(raions.raions.find(x=>x.subject_id==='district-chelsea')?.official_name,'Kingswal');
+          assert.equal(raions.raions.find(x=>x.subject_id==='district-chelsea')?.official_name,'Kingswell');
           for(const x of raions.raions){
             const d=JSON.parse(readFileSync('novydres/cenario/geografia/'+x.subject_id+'/conteudo.json','utf8'));
             assert.equal(d.canonical_identity_reference.source_of_truth,root+'raions-oficiais-2010.json',x.subject_id);
@@ -117,7 +117,7 @@ jobs:
           assert.equal(oldTown.feature.parent_raion_subject_id,'district-chelsea');
           assert.equal(oldTown.feature.canonical_name,'Iknik');
           assert.deepEqual(oldTown.feature.display_aliases,['Cidade Velha','Old Town']);
-          assert.equal(oldTown.feature.parent_raion_official_name,'Kingswal');
+          assert.equal(oldTown.feature.parent_raion_official_name,'Kingswell');
           assert.equal(oldTown.feature.recognized_name,'Cidade Velha');
           assert.equal(oldTown.feature.common_name,'Cidade Velha');
           assert.equal(oldTown.feature.is_entire_raion,false);
