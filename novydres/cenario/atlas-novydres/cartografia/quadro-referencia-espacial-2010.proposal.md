@@ -3,8 +3,11 @@ document_id: MW-001-GEO-002-QUADRO-ESPACIAL
 subject_id: world-atlas-novydres
 fact_scope: GEO-002-quadro-metrico-extensao
 reference_year: 2010
-workflow_status: PROPOSTA_PARA_APROVACAO_DO_PROPRIETARIO
+workflow_status: APPROVED_WORKING_HYPOTHESIS
 canonical_status: NOT_APPROVED
+owner_approval_date: 2026-11-16
+owner_approval_scope: WORKING_FRAME_120X100_KM_AND_TERRESTRIAL_AREA_STUDY_RANGE_4000_TO_7000_KM2
+owner_approval_effect: WORKING_ASSUMPTIONS_ONLY_NO_CANONICAL_GEOMETRY_OR_MUNICIPAL_AREA
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
 visibility: PLAYER_SAFE
 source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
@@ -15,6 +18,9 @@ geometry_authority: none
 # MW-001 — Proposta de quadro espacial e extensão de Novydres (2010)
 
 ## 1. Mandato e distinção de autoridade
+
+**Aprovação explícita do proprietário em 16/11/2026:** o quadro local de **120 × 100 km** e a hipótese de **4.000–7.000 km² de superfície terrestre municipal em estudo** foram aprovados **como hipóteses operacionais para orientar a cartografia**. A convenção local de coordenadas, unidades e orientação aqui descrita passa a ser o referencial de trabalho de MW-002, sem converter o enquadramento em limites municipais canônicos. **Não foram aprovadas** geometria de costa, âncora real, perímetro, área municipal efetiva, localização individual de raions ou projeção geográfica definitiva. Este aceite não equivale ao fechamento integral de GEO-002.
+
 
 **Objeto exclusivo:** resolver como **proposta**, e não como cânone, o referencial horizontal, as unidades, a orientação e a ordem de grandeza da extensão necessária ao futuro mapa. Não desenhar litoral, rios, limites municipais, raions, bairros ou transportes, nem gerar ilustração definitiva. A validação e o aceite deste documento significam que existe uma proposta rastreável; **não** significam aprovação substantiva.
 
@@ -86,9 +92,11 @@ Uma representação local inicial deve adotar esquema próprio com `crs: NOVYDRE
 
 **Testes verificáveis já no documento:** `xmax-xmin=120000 m`, `ymax-ymin=100000 m`, área do quadro `12000 km²`; eixos ortogonais e ambas as direções positivas definidas; nenhuma coordenada de lugar, costa ou rio foi atribuída; `geometria_municipal=null` permanece; valor de habitantes não foi alterado.
 
-**Para fechar a parcela remanescente de GEO-002**, o proprietário ainda precisará: (A) aprovar ou ajustar o sistema de trabalho, orientação e ordem de grandeza proposta; (B) decidir se o intervalo terrestre de 4.000–7.000 km² é apenas hipótese adequada ou deve ser substituído; (C) numa fase posterior, aprovar o perímetro ou geometria base capaz de estabelecer área efetiva e âncora real. Até lá, o status é `PROPOSTA_PARA_APROVACAO_DO_PROPRIETARIO`, nunca `CLOSED_CANON`.
+**Decisão do proprietário para MW-001:** aprovada em 16/11/2026 a utilização do quadro de 120 × 100 km e do intervalo de 4.000–7.000 km² **como hipóteses de trabalho**. O referencial local de desenho descrito na seção 2 é a convenção operacional de MW-002. Alterações substantivas dessas hipóteses precisarão ser registradas e aprovadas; não exigir aprovação repetida para utilizá-las dentro desse escopo.
 
-**Aceite de MW-001, diferente de fechamento GEO-002:** proposta no assunto Atlas, coerente com GEO-002.1–002.4 e geografia física canônica, com números marcados como cenários e nenhum mapa produzido ou aprovação inferida.
+**Para fechar a parcela remanescente de GEO-002**, ainda são necessárias geometria física suficiente, perímetro ou delimitação municipal, cálculo de área efetiva, ancoragem geográfica quando couber e validação dos vínculos espaciais. GEO-002.4 permanece fechado em seu arquivo proprietário. Este documento não recebe status `CLOSED_CANON`.
+
+**Aceite de MW-001, diferente de fechamento GEO-002:** proposta documentada, aprovada para orientar a modelagem, reconciliada com GEO-002.1–002.4 e geografia física canônica, sem mapa produzido ou canonização por inferência.
 
 ## 7. Questão técnica adjacente fora do mandato de edição MW-001
 
@@ -96,4 +104,4 @@ Uma representação local inicial deve adotar esquema próprio com `crs: NOVYDRE
 
 ## 8. Limites explícitos desta entrega
 
-Nenhum desenho nem coordenada de feição canônica foi criado; nenhum rio, porto, raion, baía, área municipal ou latitude/longitude foi ratificado. A única mudança pretendida por MW-001 é **documental e candidata**, em branch de proposta. O plano de trabalho seguinte deverá partir dos arquivos proprietários atuais, não deste documento como autoridade factual. Consulte `cartografia/guide.md` para handoff.
+Nenhum desenho nem coordenada de feição canônica foi criado; nenhum rio, porto, raion, baía, área municipal ou latitude/longitude foi ratificado. A mudança persistida por MW-001 é **documental e aprovada somente para uso como hipótese operacional**, em branch de proposta. O plano de trabalho seguinte deverá partir dos arquivos proprietários atuais, não deste documento como autoridade factual. Consulte `cartografia/guide.md` para handoff.
