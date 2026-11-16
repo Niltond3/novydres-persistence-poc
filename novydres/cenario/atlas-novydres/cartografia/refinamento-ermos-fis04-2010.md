@@ -35,5 +35,9 @@ Aprovações parciais não fecham MW-013. Não emitir handoff antes da aprovaç�
 ## Pré-validação
 Geometria sintética verificada pelo JavaScript no conector: anéis simples, interiores em terra e relevo apropriado, zero colisões de costa, lago, lagoa e ilhas, referências de interseção de cursos naturais preservadas, nenhum Ermo sobreposto aos demais. Comparador no arquivo `visualizador-fisico-2010.html`: MW-013, MW-005, sobreposição. Não houve teste real de navegador, Node/CI ou validação geodésica. Não inferir altitudes, permafrost medido, alagamentos, separação efetiva de cidades ou travessias.
 
+
+### Execução prévia do validador integrado
+O corpo de verificações de `validar-macroermos.mjs` foi executado com entradas reais lidas do remoto num ambiente JavaScript do conector (com adaptador de carregamento/asserções, não com Node): **11.795 asserções PASS**, sem erros; estado de costa `d72cf3eb...`, relevo `cccc4eaa...`, hidrografia `d0912bb8...`, Ermos `ea3d1709...`. Verificou tipologia, polígonos, segmentos, adjacência ao relevo, costa/terra, águas, cursos naturais e não sobreposição. O HTML tem 10/10 registros de Ermos atuais exatamente iguais ao JSON; parser JavaScript do script principal: `COMPILED_OK`. **Não houve execução de browser ou CI/Node real**; não fechar FIS-04 sem decisões do proprietário, teste final e readback.
+
 ## Pendências A/B/C
 A: deliberações individuais, aceite final, validação e readback conclusivos. B: funções de separação ainda qualitativas, a depender de futuros núcleos urbanos. C: raions, transportes, política e narrativa fora do escopo.
