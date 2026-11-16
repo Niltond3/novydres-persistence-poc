@@ -41,10 +41,22 @@
     "service_distribution": "UNEQUAL_CITYWIDE",
     "service_regularity": "IRREGULAR",
     "resource_abundance_does_not_imply_uniform_heating": true,
-    "deliberate_heat_diversion": "NOT_CONFIRMED",
+    "deliberate_heat_diversion": "CONFIRMED_OWNER_DIRECTION",
     "network_geometry": null,
     "sector_priorities": null,
-    "heat_capacity": null
+    "heat_capacity": null,
+    "heat_diversion_ventrue_bukovie": {
+      "fact_id": "GEO-014.2",
+      "source": "novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json",
+      "state": "CANON_APPROVED",
+      "from": "complexo termal natural de Old Town/Chelsea",
+      "to": "Bukovie, bastião financeiro e aristocrático Ventrue",
+      "effect": "Distribuição artificialmente priorizada a Bukovie reduz parte do calor aproveitado em Old Town, apesar da abundância geotérmica local.",
+      "bukovie_dependence": "Bukovie, em tundra naturalmente extrema, depende de abastecimento artificial; apagão longo sem soluções substitutas traz congelamento de serviços, edifícios e mortalidade grave.",
+      "targeted_interruption": "Interrupção do desvio privilegiado pode devolver calor aproveitável a Old Town e melhorar suas condições; interrupção total do sistema não implica recuperação automática da Cidade Velha.",
+      "nosferatu_rule": "Nosferatu continuam detentores da competência setorial de aquecimento; papel exato dos operadores no desvio ainda não definido.",
+      "technical_network": "UNASSIGNED_GEO-014"
+    }
   },
   "pending": [
     "GEO-004: limites cartográficos do núcleo histórico Cidade Velha e fronteiras dos raions",
