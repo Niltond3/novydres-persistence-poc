@@ -1,0 +1,333 @@
+{
+  "schema": "NOVYDRES_LOCAL_CARTOGRAPHY_PROPOSAL_V1",
+  "document_id": "MW-002-COAST-BAY-ISLANDS-2010",
+  "subject_id": "world-atlas-novydres",
+  "year": 2010,
+  "approval": {
+    "cartographic_workflow": "PROPOSED_PENDING_OWNER_REVIEW",
+    "canonical_status": "NOT_APPROVED",
+    "truth_state": "GM_PREPARED",
+    "geometry_authority": "PROPOSAL_ONLY",
+    "owner_approval_for_this_geometry": null
+  },
+  "provenance": {
+    "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
+    "parent_work_unit": "MW-001",
+    "working_frame_source_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
+    "working_frame_source_path": "novydres/cenario/atlas-novydres/cartografia/quadro-referencia-espacial-2010.proposal.md",
+    "canonical_source_paths": [
+      "novydres/cenario/atlas-novydres/localizacao-geral-2010.json",
+      "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
+      "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
+      "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
+    ],
+    "method": "Fictional, locally metric macrogeometry. No geodetic fit or claim to replicate Port Clarence."
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "coordinate_order": "[x_east_m,y_north_m]",
+    "units": "m",
+    "origin": "abstract_study_frame_center",
+    "axes": {
+      "x_positive": "east_on_working_sheet",
+      "y_positive": "north_on_working_sheet"
+    },
+    "rotation_on_sheet_degrees": 0,
+    "geodetic_anchor": null,
+    "epsg": null,
+    "georeferenced": false
+  },
+  "study_frame": {
+    "xmin": -60000,
+    "ymin": -50000,
+    "xmax": 60000,
+    "ymax": 50000,
+    "intended_use": "clipping_and_validation_only_not_municipal_boundary",
+    "municipal_geometry": null
+  },
+  "proposed_geometry": {
+    "mainland_coastline": {
+      "feature_id": "coast-mainland-001",
+      "kind": "mainland_coast",
+      "geometry_type": "LineString",
+      "points_xy_m": [
+        [
+          -42000,
+          -50000
+        ],
+        [
+          -45000,
+          -42000
+        ],
+        [
+          -43000,
+          -33500
+        ],
+        [
+          -36000,
+          -28000
+        ],
+        [
+          -30000,
+          -20000
+        ],
+        [
+          -28000,
+          -12000
+        ],
+        [
+          -22000,
+          -16000
+        ],
+        [
+          -15000,
+          -21000
+        ],
+        [
+          -8000,
+          -19000
+        ],
+        [
+          1000,
+          -22000
+        ],
+        [
+          13000,
+          -17000
+        ],
+        [
+          21000,
+          -9000
+        ],
+        [
+          25000,
+          2000
+        ],
+        [
+          22000,
+          12000
+        ],
+        [
+          15000,
+          18500
+        ],
+        [
+          4000,
+          22000
+        ],
+        [
+          -8000,
+          18500
+        ],
+        [
+          -19000,
+          13000
+        ],
+        [
+          -30000,
+          7000
+        ],
+        [
+          -38000,
+          3500
+        ],
+        [
+          -45000,
+          4500
+        ],
+        [
+          -50000,
+          11000
+        ],
+        [
+          -48000,
+          23000
+        ],
+        [
+          -40000,
+          33000
+        ],
+        [
+          -42000,
+          43000
+        ],
+        [
+          -45000,
+          50000
+        ]
+      ],
+      "order": "south_frame_edge_to_north_frame_edge",
+      "endpoint_rule": "Both endpoints are clipped on study frame; continuity beyond frame is unknown.",
+      "waterside": "west_side_and_large_reentrant_bay",
+      "decision_status": "PROPOSED_NOT_CANONICAL"
+    },
+    "sheltered_bay": {
+      "feature_id": "water-bay-main-001",
+      "kind": "sheltered_natural_bay",
+      "geometry_type": "DerivedPolygon",
+      "derived_from_feature": "coast-mainland-001",
+      "coastline_vertices_inclusive_zero_based": [
+        5,
+        19
+      ],
+      "closure": "straight_mouth_chord_from_north_endpoint_back_to_south_endpoint",
+      "mouth_vertex_indices_zero_based": [
+        5,
+        19
+      ],
+      "mouth_interpretation": "cartographic_seaward_threshold_not_a_bridge_or_port_or_depth_measurement",
+      "connected_to": "water-outer-001",
+      "official_name": null,
+      "decision_status": "PROPOSED_NOT_CANONICAL"
+    },
+    "outer_sea": {
+      "feature_id": "water-outer-001",
+      "kind": "open_sea_study_window",
+      "geometry_type": "DerivedPolygon",
+      "derivation": "water_side_of_mainland_coastline_clipped_to_study_frame_excluding_all_islands",
+      "connected_to": "water-bay-main-001",
+      "decision_status": "PROPOSED_NOT_CANONICAL"
+    },
+    "secondary_islands": [
+      {
+        "feature_id": "land-islet-001",
+        "kind": "secondary_island",
+        "geometry_type": "Polygon",
+        "waterbody": "water-bay-main-001",
+        "name": null,
+        "ring_xy_m": [
+          [
+            -18300,
+            -2000
+          ],
+          [
+            -17500,
+            -3800
+          ],
+          [
+            -14700,
+            -4400
+          ],
+          [
+            -12500,
+            -2400
+          ],
+          [
+            -13000,
+            600
+          ],
+          [
+            -15500,
+            1700
+          ],
+          [
+            -18300,
+            -2000
+          ]
+        ],
+        "decision_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "land-islet-002",
+        "kind": "secondary_island",
+        "geometry_type": "Polygon",
+        "waterbody": "water-bay-main-001",
+        "name": null,
+        "ring_xy_m": [
+          [
+            3000,
+            1500
+          ],
+          [
+            6300,
+            800
+          ],
+          [
+            8300,
+            3300
+          ],
+          [
+            7800,
+            6700
+          ],
+          [
+            5000,
+            8200
+          ],
+          [
+            2400,
+            5300
+          ],
+          [
+            3000,
+            1500
+          ]
+        ],
+        "decision_status": "PROPOSED_NOT_CANONICAL"
+      },
+      {
+        "feature_id": "land-islet-003",
+        "kind": "secondary_island",
+        "geometry_type": "Polygon",
+        "waterbody": "water-outer-001",
+        "name": null,
+        "ring_xy_m": [
+          [
+            -54500,
+            -23500
+          ],
+          [
+            -51800,
+            -24400
+          ],
+          [
+            -50100,
+            -21500
+          ],
+          [
+            -52200,
+            -19500
+          ],
+          [
+            -54500,
+            -23500
+          ]
+        ],
+        "decision_status": "PROPOSED_NOT_CANONICAL"
+      }
+    ]
+  },
+  "derived_geometry_rules": {
+    "bay_ring": "coastline.points_xy_m.slice(5,20) closed by line joining last point to first",
+    "study_water_ring": "coastline.points_xy_m followed by [xmin,ymax], [xmin,ymin], closed to coastline first point",
+    "study_mainland_ring": "coastline.points_xy_m followed by [xmax,ymax], [xmax,ymin], closed to coastline first point",
+    "islands_are_holes_in_water": true,
+    "islands_are_additional_land": true,
+    "study_land_is_not_municipal_land": true,
+    "avoid_duplicate_authority": "All derived water/land outer boundary rings use the single coastline sequence; no duplicated canonical borders.",
+    "no_geojson_claim": "Coordinates are local metric plane coordinates, not RFC 7946 GeoJSON."
+  },
+  "fixed_canonical_constraints_preserved": [
+    "GEO-002.1/2/3: Seward/Bering macroregion, continental majority, large bay, islands secondary.",
+    "GEO-002.4: Port Clarence vicinity is macroregional analogy only; exact orientations and contours remain free.",
+    "GEO-003.3: sheltered bay and exposed coast both exist.",
+    "GEO-003.4: Rio Vasyl ultimately discharges into this bay, but river course and discharge coordinates are not assigned.",
+    "GEO-004.3: natural Ermos break conurbation; their geometry is not attempted here."
+  ],
+  "explicitly_unassigned": {
+    "number_of_islands_as_canonical_fact": null,
+    "municipal_limit": null,
+    "municipal_area_km2": null,
+    "official_bay_area_km2": null,
+    "sea_depths": null,
+    "mean_water_level": null,
+    "tidal_and_ice_extents": null,
+    "elevation_model": null,
+    "geodetic_coastline_position": null,
+    "district_and_neighborhood_geometries": null,
+    "ports_and_navigation_channels": null,
+    "river_trajectory_and_mouth_point": null,
+    "rail_road_and_utility_networks": null,
+    "urban_occupancy": null
+  }
+}

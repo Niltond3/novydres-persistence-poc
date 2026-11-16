@@ -1,0 +1,51 @@
+// MW-002 — repeatable local metric topology checks; proposal only. No Node dependencies.
+import { readFileSync } from "node:fs";
+const input = new URL("./macrogeometria-litoral-baia-ilhas-2010.proposal.json", import.meta.url);
+const geometry = JSON.parse(readFileSync(input, "utf8"));
+const validate = function validate(d) {
+const errors=[], g=d.proposed_geometry, f=d.study_frame, c=g.mainland_coastline.points_xy_m, i=g.secondary_islands, b=g.sheltered_bay.coastline_vertices_inclusive_zero_based;
+const eq=(p,q)=>p[0]===q[0]&&p[1]===q[1];
+const ar=(p)=>Math.abs(p.reduce((s,a,k)=>{const z=p[(k+1)%p.length];return s+a[0]*z[1]-z[0]*a[1]},0))/2;
+const orient=(a,b,p)=>(b[0]-a[0])*(p[1]-a[1])-(b[1]-a[1])*(p[0]-a[0]);
+const on=(a,b,p)=>orient(a,b,p)===0&&p[0]>=Math.min(a[0],b[0])&&p[0]<=Math.max(a[0],b[0])&&p[1]>=Math.min(a[1],b[1])&&p[1]<=Math.max(a[1],b[1]);
+const cross=(a,b,c,d)=>{const o1=orient(a,b,c),o2=orient(a,b,d),o3=orient(c,d,a),o4=orient(c,d,b);return (o1*o2<0&&o3*o4<0)||on(a,b,c)||on(a,b,d)||on(c,d,a)||on(c,d,b);};
+const edges=(pts,closed)=>{let arr=[];for(let k=0;k<pts.length-1;k++)arr.push([pts[k],pts[k+1]]);if(closed&&!eq(pts[0],pts[pts.length-1]))arr.push([pts[pts.length-1],pts[0]]);return arr;};
+const simple=(pts,closed)=>{const e=edges(pts,closed);for(let a=0;a<e.length;a++)for(let z=a+1;z<e.length;z++){if(z===a+1||(closed&&a===0&&z===e.length-1))continue;if(cross(e[a][0],e[a][1],e[z][0],e[z][1]))return false;}return true;};
+const pointInPoly=(p,r)=>{for(const [a,z] of edges(r,true))if(on(a,z,p))return false;let hit=false;for(let k=0,j=r.length-1;k<r.length;j=k++){const a=r[k],z=r[j];if((a[1]>p[1])!==(z[1]>p[1])&&p[0]<(z[0]-a[0])*(p[1]-a[1])/(z[1]-a[1])+a[0])hit=!hit;}return hit;};
+const disjoint=(a,z)=>{for(const [p,q] of edges(a,true))for(const [u,v] of edges(z,true))if(cross(p,q,u,v))return false;return true;};
+const insideFrame=(p)=>Number.isInteger(p[0])&&Number.isInteger(p[1])&&p[0]>=f.xmin&&p[0]<=f.xmax&&p[1]>=f.ymin&&p[1]<=f.ymax;
+if(d.approval.canonical_status!=="NOT_APPROVED"||d.approval.owner_approval_for_this_geometry!==null)errors.push("Must remain an unapproved proposal");
+if(d.spatial_reference.crs!=="NOVYDRES-LOCAL-2010"||d.spatial_reference.georeferenced!==false||d.spatial_reference.geodetic_anchor!==null)errors.push("CRS/geodetic status invalid");
+if(f.xmax-f.xmin!==120000||f.ymax-f.ymin!==100000||f.municipal_geometry!==null)errors.push("MW-001 frame altered or municipal boundary invented");
+if(!Array.isArray(c)||c.length<8||!c.every(insideFrame))errors.push("Coast vertices invalid or outside study frame");
+if(!simple(c,false))errors.push("Self-intersecting main coastline");
+if(c[0][1]!==f.ymin||c[c.length-1][1]!==f.ymax)errors.push("Coast must reach south and north clipping edges");
+if(c.some((p,k)=>k>0&&eq(p,c[k-1])))errors.push("Repeated neighboring coastal vertex");
+if(!Number.isInteger(b[0])||!Number.isInteger(b[1])||b[0]<1||b[1]>=c.length-1||b[1]-b[0]<5)errors.push("Bay coastal indices invalid");
+const bay=c.slice(b[0],b[1]+1), water=[...c,[f.xmin,f.ymax],[f.xmin,f.ymin]],land=[...c,[f.xmax,f.ymax],[f.xmax,f.ymin]];
+if(!simple(bay,true)||!simple(water,true)||!simple(land,true))errors.push("Invalid clipped bay/water/mainland topology");
+const coastArea=ar(land)/1e6,bayArea=ar(bay)/1e6,waterArea=ar(water)/1e6;
+if(bayArea<500||bayArea>3500)errors.push("Bay relative-scale sanity condition failed");
+if(Math.abs(coastArea+waterArea-12000)>0.000001)errors.push("Clipped mainland + sea != working frame");
+const ids=new Set([g.mainland_coastline.feature_id,g.sheltered_bay.feature_id,g.outer_sea.feature_id]), ia=[];
+for(const island of i) {
+if(ids.has(island.feature_id))errors.push("Duplicate feature id "+island.feature_id);ids.add(island.feature_id);
+const r=island.ring_xy_m, area=ar(r)/1e6;ia.push({feature_id:island.feature_id,area_km2:area,waterbody:island.waterbody});
+if(!r.every(insideFrame)||!eq(r[0],r[r.length-1])||!simple(r,true)||area<=0||area>=100)errors.push("Invalid secondary island "+island.feature_id);
+if(!r.slice(0,-1).every(p=>pointInPoly(p,water)))errors.push("Island outside study water "+island.feature_id);
+if(!disjoint(r,c))errors.push("Island touches or crosses coastline "+island.feature_id);
+const insideBay=r.slice(0,-1).every(p=>pointInPoly(p,bay));
+if((island.waterbody==="water-bay-main-001")!==insideBay)errors.push("Wrong bay/ocean association "+island.feature_id);
+if(!disjoint(r,bay))errors.push("Island crosses bay boundary "+island.feature_id);
+}
+for(let x=0;x<i.length;x++)for(let y=x+1;y<i.length;y++)if(!disjoint(i[x].ring_xy_m,i[y].ring_xy_m)||pointInPoly(i[x].ring_xy_m[0],i[y].ring_xy_m)||pointInPoly(i[y].ring_xy_m[0],i[x].ring_xy_m))errors.push("Islands overlap");
+const islandArea=ia.reduce((s,v)=>s+v.area_km2,0);
+if(islandArea/coastArea>0.05)errors.push("Island mass not secondary to mainland");
+const mouthA=c[b[0]],mouthB=c[b[1]],mouthKm=Math.hypot(mouthA[0]-mouthB[0],mouthA[1]-mouthB[1])/1000;
+if(mouthKm<5||mouthKm>40)errors.push("Implausible bay entrance at study scale");
+if(!c.every(p=>p[0]>f.xmin&&p[0]<f.xmax))errors.push("Coast collides with E/W study frame edge");
+return {status:errors.length?"FAIL":"PASS",errors,metrics:{study_area_km2:12000,mainland_clipped_study_km2:coastArea,water_clipped_before_islands_km2:waterArea,bay_polygon_km2:bayArea,bay_mouth_km:Math.round(mouthKm*1000)/1000,secondary_island_area_km2:islandArea,islands:ia,coastline_vertices:c.length,geo_anchor_assigned:false,municipal_boundary_assigned:false}};
+};
+const result = validate(geometry);
+console.log(JSON.stringify(result, null, 2));
+if (result.status !== "PASS") process.exitCode = 1;
