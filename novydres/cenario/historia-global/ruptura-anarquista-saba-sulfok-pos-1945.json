@@ -2,61 +2,65 @@
   "schema": "NOVYDRES_HISTORY_CANON_FACT_V1",
   "subject_id": "world-history-novydres",
   "fact_id": "GEO-005.11",
-  "fact_kind": "post_1945_anarchist_break_with_sabbat_and_conquest_of_sulfok",
+  "fact_kind": "1945_sabbat_invasion_anarchist_conquest_sulfok_same_year",
   "canonical_status": "CLOSED_CANON_SCOPED",
   "truth_state": "CONFIRMED",
   "authority": "OWNER_EXPLICIT_APPROVAL",
   "approved_on": "2026-11-16",
-  "title": "A ruptura entre anarquistas e Sabá e a reconquista anarquista de Sulfok após 1945",
+  "title": "1945: ruptura militar anarquista–Sabá, derrota da invasão e conquista de Sulfok",
   "temporal_scope": {
     "sabbat_capture_year": 1945,
-    "anarchist_conquest_year": null,
-    "conquest_time_range": "depois da conquista sabática de 1945, em algum momento antes ou até 2010",
+    "sabbat_capture_window": "meados de 1945",
+    "anarchist_conquest_year": 1945,
+    "conquest_time_range": "ainda em 1945, após a ocupação sabática durante a mesma campanha da invasão",
+    "sabbat_territorial_defeat_year": 1945,
     "final_reference_year": 2010
   },
-  "canon_decision": "Sulfok não foi doado, entregue por pacto de transferência nem herdado pacificamente do Sabá. Após a ocupação militar sabática iniciada em 1945, forças do movimento anarquista rejeitaram a sujeição à autoridade dos ocupantes, combateram os sabáticos e tomaram-lhes Sulfok pela força. Em 2010 a região está sob domínio territorial anarquista efetivo, não do Sabá e não do Concílio da Cruz e Espada.",
+  "canon_decision": "Em meados de 1945, o Sabá invadiu Novydres e conquistou Sulfok do Concílio da Cruz e Espada. Ainda em 1945, o Sabá perdeu a campanha e foi expulso do controle territorial da cidade: Wilhelmina Harker foi a principal arquiteta e general da vitória militar do Concílio em seus enfrentamentos diretos contra o Sabá, mas não conquistou Sulfok; o movimento anarquista derrotou os ocupantes sabáticos de Sulfok, conquistou esse território para si e o manteve. Nem Wilhelmina nem o Concílio recuperaram Sulfok. Kingswell, já conquistado pelos anarquistas em 1917, e Sulfok permaneceram sob controle territorial anarquista até 2010.",
   "confirmed_sequence": [
     {
-      "period": "1945",
-      "controller": "Sabá",
-      "event": "Durante a invasão declaradamente sabática de Novydres, os invasores derrotam as forças que defendiam Sulfok pelo Concílio da Cruz e Espada e estabelecem ocupação territorial."
+      "period": "MEADOS_DE_1945",
+      "controller": "Sabá — ocupação de Sulfok",
+      "event": "A invasão declaradamente sabática rompe as defesas do Concílio em Sulfok e estabelece domínio ocupante no raion industrial."
     },
     {
-      "period": "depois de 1945, data não definida",
-      "controller": "Sabá — domínio sujeito a resistência",
-      "event": "Forças anarquistas, inclusive no contexto de resistência ligada à Cidade Velha de Kingswell, rejeitam a submissão permanente à autoridade sabática e entram em confronto com os ocupantes. Não confundir isso com uma unidade política permanente de todos os grupos anarquistas."
+      "period": "AINDA_EM_1945",
+      "controller": "Campanhas paralelas do Concílio e anarquistas contra o Sabá",
+      "event": "Wilhelmina Harker dirige a vitória militar do Concílio nos confrontos diretos contra a invasão; separadamente, os anarquistas combatem os ocupantes de Sulfok. Não atribuir a Wilhelmina comando ou mérito territorial pela conquista anarquista de Sulfok."
     },
     {
-      "period": "após a ocupação sabática, até 2010",
-      "controller": "Movimento anarquista — conquista pela força",
-      "event": "Os anarquistas derrotam o domínio sabático em Sulfok e assumem seu controle territorial. A data exata da conquista, sua duração e os participantes permanecem abertos."
+      "period": "DESFECHO_DE_1945",
+      "controller": "Anarquistas — Sulfok; Concílio — outros territórios preservados",
+      "event": "O Sabá perde seu domínio territorial em Novydres ainda em 1945. Os anarquistas tomam Sulfok dos invasores e impedem sua reconquista pelo Concílio. Kingswell já estava em poder anarquista desde 1917. Não presumir extermínio de todos os agentes clandestinos sabáticos."
     },
     {
-      "period": "2010",
-      "controller": "Movimento anarquista / Estados Livres do Novo Endereço",
-      "event": "Sulfok permanece sob governo territorial anarquista. Sua independência diante do Concílio e do Sabá resulta de conquistas contra ambos em épocas diferentes; a organização interna dos Estados Livres ainda não está definida."
+      "period": "1945_A_2010",
+      "controller": "Movimento anarquista / Estados Livres",
+      "event": "Kingswell e Sulfok permanecem sob efetivo controle anarquista; o Concílio cerca, isola e tenta minar seus adversários sem empreender campanha aberta de reconquista integral."
     }
   ],
   "political_implications": [
-    "O movimento anarquista de Novydres não é braço territorial do Sabá; parte da liderança de 1917 colaborou com agentes sabáticos, mas essa colaboração não significou filiação coletiva nem subordinação permanente.",
-    "O Sabá conquistou Sulfok do Concílio em 1945; os anarquistas posteriormente conquistaram Sulfok do Sabá. São duas transições militares distintas, não uma única transferência ideológica.",
-    "A rejeição à dominação sabática é marco de autonomia política anarquista; não equivale a afirmar democracia, unanimidade, homogeneidade ideológica ou governo único.",
-    "O Concílio não recuperou Sulfok após sua perda em 1945. Não atribuir ao Concílio o mérito da expulsão posterior dos ocupantes sabáticos.",
-    "O desaparecimento de Gilgamesh em 1917 e a infiltração sabática parcial na insurreição não são automaticamente causas da guerra posterior em Sulfok; evitar construir conspiração contínua não aprovada."
+    "O movimento anarquista não é braço territorial do Sabá: houve infiltração e colaboração parcial em 1917, sem filiação coletiva.",
+    "Em 1945, Wilhelmina Harker assegurou a vitória militar do Concílio no confronto direto com o Sabá, enquanto os anarquistas conquistaram Sulfok por campanha própria contra os ocupantes.",
+    "O resultado militar comum não foi vitória territorial unificada: o Concílio não recuperou Sulfok e jamais retomou Kingswell.",
+    "O Sabá foi expulso como poder territorial de Novydres ainda em 1945; isso não comprova ausência de agentes isolados no submundo posterior.",
+    "Desde 1945, o Concílio prefere cerco, desgaste econômico, influência clandestina e desestabilização em vez de ofensiva pública de reconquista total de Kingswell e Sulfok.",
+    "A independência territorial anarquista não pressupõe governo interno único nem homogeneidade de facções."
   ],
   "boundaries": [
-    "Não presumir que os anarquistas de 2010 dominem a totalidade do raion Kingswell: confirmado apenas núcleo Cidade Velha, cujo nome formal raro é Iknik (ÍK-nik; adaptação de ikniq, 'fogo').",
-    "Não atribuir automaticamente todos os anarquistas ao Sabá nem afirmar que todos os sabáticos foram destruídos, exilados ou convertidos.",
-    "A conquista foi territorial cainita; não modifica soberania ou administração mortal norte-americana.",
-    "Não determinar lideranças, clãs, força militar, estratégia, sequência de batalhas, data exata ou arranjo de governo sem decisões posteriores."
+    "O domínio anarquista abrange os raions Kingswell e Sulfok em 2010, incluindo Cidade Velha/Iknik no primeiro; fronteiras físicas precisas permanecem pendentes.",
+    "Não afirmar destruição ou expulsão física de absolutamente todos os sabáticos em 1945; a expulsão se refere à derrota da campanha e fim do domínio territorial.",
+    "A conquista foi Cainita, sem alterar a administração e soberania civil norte-americana.",
+    "Wilhelmina foi arquiteta da vitória do Concílio sobre a invasão; não general da conquista anarquista de Sulfok.",
+    "Meses precisos, líderes anarquistas da campanha, batalhas, acordos e facções internas não foram definidos."
   ],
   "pending": [
-    "Data e duração da ocupação sabática de Sulfok após 1945 e da campanha anarquista de conquista",
-    "Lideranças sabáticas e anarquistas, composição dos participantes e divergências internas",
-    "Fases, eventos, custo humano e geografia das batalhas; destino dos líderes e sobreviventes do Sabá",
-    "Conexão política e logística entre anarquistas da Cidade Velha e os combatentes em Sulfok",
-    "Forma de coordenação, pacto, governo local e sucessão entre a vitória anarquista e os Estados Livres de 2010",
-    "Relação diplomática/hostilidade com Concílio após a expulsão dos sabáticos, sem presumir tratado"
+    "Etapas e meses da ofensiva em 1945, após seu início em meados do ano",
+    "Lideranças sabáticas e anarquistas, composição dos combatentes e divergências",
+    "Fases, custos e locais de combate; sobreviventes e sua presença clandestina",
+    "Coordenação ou não entre operações anarquistas e conciliares sem impor comando unificado",
+    "Pactos internos e estrutura de governo anarquista entre 1945 e 2010",
+    "Geometrias e fronteiras precisas dos dois raions"
   ],
   "related_facts": [
     "GEO-005.9",
@@ -67,8 +71,10 @@
   "related_sources": [
     "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
     "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json",
-    "novydres/cenario/politica-global/dominio-anarquista-old-town-sulfok-2010.json"
+    "novydres/cenario/politica-global/dominio-anarquista-old-town-sulfok-2010.json",
+    "novydres/cenario/politica-global/cerco-estados-livres-kingswell-sulfok-2010.json"
   ],
-  "scope_of_approval": "Ruptura militar anarquista–Sabá pós-1945 e conquista territorial anarquista de Sulfok são fatos canônicos. Cronologia exata, líderes, governo, contornos dos bairros e caracterização de facções internas continuam desconhecidos.",
-  "single_authoritative_source": true
+  "scope_of_approval": "Invasão e ocupação sabática de Sulfok em meados de 1945; derrota do Sabá como poder territorial no mesmo ano; Wilhelmina como grande general da vitória do Concílio nos enfrentamentos diretos; Sulfok conquistado e mantido pelos anarquistas, não pelo Concílio; Kingswell e Sulfok anarquistas e cercados de 1945 a 2010. Detalhes de combate, chefes anarquistas e geometria não aprovados.",
+  "single_authoritative_source": true,
+  "legacy_path_note": "O nome do arquivo conserva referência antiga a 'pós-1945' por estabilidade dos vínculos; a conquista ocorreu ainda em 1945 e este conteúdo prevalece."
 }
