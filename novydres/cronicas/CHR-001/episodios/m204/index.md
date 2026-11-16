@@ -78,3 +78,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-034.md` registra reflexão íntima de Bartolomeu sobre família, risco, tédio e aparente anticlimax, seguida de retirada pela rota de volta correta até elevador inferior (diferente da passagem do trabalhador). Sem chamada de elevador, conclusão de saída ou novos testes. Cursor `../estado/recuperacao-c99.json`.
 
 `adendo-c17-retorno-noturno-035.md` registra botão de chamada inferior, campainha e resposta de Emil no posto superior, exigindo fechar a grade antes da subida. Cursor `../estado/recuperacao-c100.json`; sem embarque automático ou testes.
+
+`adendo-c17-retorno-noturno-036.md` preserva a fala de Bartolomeu exigindo subida rápida e a resposta de Emil condicionando o elevador à grade fechada e intertravamento ativo. Cursor `../estado/recuperacao-c101.json`; ainda sem subida, gasto ou teste.
