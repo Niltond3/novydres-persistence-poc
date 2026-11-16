@@ -103,6 +103,7 @@
     "novydres/cenario/historia-global/formacao-policentrica-2010.json"
   ],
   "next_gates": [
+    "Reconstruir quadro histórico Cainita e institucional (GEO-005.7) articulado com geoeconomia e zonas estratégicas",
     "Pré-condição: validar macrozonas de recursos minerais/energéticos e reservas nucleares/militares",
     "aprovar macroposições",
     "desenhar polígonos, áreas e cursos d'água em GEO-002/GEO-003/GEO-004",
@@ -110,9 +111,9 @@
     "distribuir população GEO-010",
     "definir transportes GEO-012/GEO-013 antes do mapa visual"
   ],
-  "owner_decision": "APROVAÇÃO DE GEO-004.4 SUSPENSA A PEDIDO DO PROPRIETÁRIO ATÉ REVISÃO DE RECURSOS E INSTALAÇÕES ESTRATÉGICAS",
+  "owner_decision": "GEO-004.4 EM REVISÃO: o proprietário não aprova posições dos raions antes de reconstruir história Cainita, recursos, instituições e vínculos entre núcleos.",
   "single_authoritative_proposal": true,
-  "review_state": "ON_HOLD_PENDING_RESOURCE_STRATEGIC_MACROZONES",
+  "review_state": "ON_HOLD_PENDING_INTERWOVEN_CAINITE_HISTORY_AND_RESOURCE_STRATEGIC_MACROZONES",
   "resource_strategic_precondition": {
     "status": "NOT_CANON_PENDING_OWNER_REVIEW",
     "reason": "Posicionamento de raions não pode ser aprovado antes de situar as macrozonas minerais e os complexos estratégicos que explicam sua ocupação.",
@@ -145,5 +146,10 @@
     ],
     "order": "Primeiro aprovar macrozonas econômicas e estratégicas; depois revisar macroposições dos nove raions; por fim cadastrar instalações individuais nas GEO-011/GEO-015/GEO-019/GEO-021.",
     "protect": "Não alterar GEO-003, GEO-004.1–.3, GEO-005.6 ou terminal canônico de Sulfok; não atribuir senhorios novos."
+  },
+  "historical_precondition": {
+    "status": "BLOCKING_GEO-004.4_APPROVAL",
+    "history_source": "novydres/cenario/historia-global/evolucao-senhorios-e-economia-territorial-2010.proposal.json",
+    "directive": "Evolução dos senhorios, rivalidades, instituições mortais e economia precisa ser resolvida junto com os recursos naturais antes de posicionar raions. Hipóteses Ventrue Chelsea→Bukovie e Malkavian/saúde são exemplos em estudo, não cânone."
   }
 }
