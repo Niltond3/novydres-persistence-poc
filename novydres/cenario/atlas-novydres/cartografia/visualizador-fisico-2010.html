@@ -250,7 +250,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   const thermalPoints=byId.get('river-vasyl-main-001').points.slice(3,6);
   byId.set('reach-vasyl-local-warm-001',{id:'reach-vasyl-local-warm-001',layer:'thermal',label:'Trecho do Rio Vasyl com aporte termal',geometry:'line',group:'river-vasyl-main-001',points:thermalPoints});
   node('path',{d:path(thermalPoints),class:'geom','data-id':'reach-vasyl-local-warm-001',fill:'none',stroke:'#dde7e1','stroke-width':.95,'stroke-linecap':'round','stroke-dasharray':'.8 .45'},layerGroups.thermal);
-  // Bay threshold is only the chord between coast vertices 5 and 19.
+  // Bay threshold is only the chord between coast vertices 6 and 33 (zero-based).
   byId.set('water-bay-main-001',{id:'water-bay-main-001',layer:'baymouth',label:'Boca cartográfica da baía',geometry:'line',group:'coast-mainland-001',points:[coast.points[6],coast.points[33]]});
   const mouthShape=node('path',{d:path([coast.points[6],coast.points[33]]),class:'geom','data-id':'water-bay-main-001',fill:'none',stroke:'#d7e1e3','stroke-width':.26,'stroke-dasharray':'1.2 .9'},layerGroups.baymouth);
   const coastShape=node('path',{d:path(coast.points),class:'geom','data-id':'coast-mainland-001',fill:'none',stroke:'#d9e0dc','stroke-width':.42,'stroke-linejoin':'round'},layerGroups.coast);
