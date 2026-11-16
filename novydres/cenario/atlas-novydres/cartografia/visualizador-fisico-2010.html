@@ -44,13 +44,13 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 <body>
 <div class="shell">
 <header class="top">
-  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">Padrão 2D adotado · Comparação de contornos MW-009 / MW-010</div></div></div>
+  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">Padrão 2D adotado · Comparação FIS-02 · MW-003 / MW-011</div></div></div>
   <div class="top-tags"><span class="tag warn">Geometria não canônica</span><span class="tag">Macro-organização aprovada</span><span class="tag">Padrão cartográfico 2D</span><span class="tag">Plano local · metros</span></div>
 </header>
 <aside class="side left" aria-label="Camadas e legenda">
   <h2 class="panelhead">Leitura do território</h2>
   <p class="smallcopy">Mesmos vértices registrados no GitHub, agora com linguagem visual plana e leitura material mais sóbria. A escala é local e sintética: esta folha <b>não</b> corresponde aos limites municipais.</p>
-  <div class="comparebox"><div class="sect-title">Comparação costeira · FIS-01</div><select id="coastMode" aria-label="Versão da costa"><option value="refined">Refinada MW-010</option><option value="original">Original MW-009</option><option value="overlay">Sobreposição</option></select><p id="compareCaption">Costa MW-010 aprovada para trabalho · ilhas provisórias</p></div><section class="sect"><h3 class="sect-title">Camadas <span id="layercount">7 ativas</span></h3><div class="layerlist" id="layers"></div></section>
+  <div class="comparebox"><div class="sect-title">Comparação costeira · FIS-01</div><select id="coastMode" aria-label="Versão da costa"><option value="refined">Refinada MW-010</option><option value="original">Original MW-009</option><option value="overlay">Sobreposição</option></select><p id="compareCaption">Costa MW-010 aprovada para trabalho · ilhas provisórias</p></div><div class="comparebox"><div class="sect-title">Relevo · FIS-02</div><select id="reliefMode" aria-label="Comparação do relevo"><option value="refined">Refinado MW-011</option><option value="original">Anterior MW-003</option><option value="overlay">Sobreposição</option></select><p id="reliefCaption">Novo desenho do relevo: aguardando aprovação</p></div><section class="sect"><h3 class="sect-title">Camadas <span id="layercount">7 ativas</span></h3><div class="layerlist" id="layers"></div></section>
   <section class="sect"><h3 class="sect-title">Classes do relevo / Ermos</h3>
     <div class="legend-item"><span class="swatch" style="background:#555049"></span>Vale termal candidato</div>
     <div class="legend-item"><span class="swatch" style="background:#46484b"></span>Serras e contrafortes</div>
@@ -82,26 +82,26 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 </main>
 <aside class="side right" aria-label="Detalhes da feição">
   <section><h2 class="panelhead">Inspecionar feição</h2><p class="smallcopy" id="inspectHelp">Selecione uma área ou linha no mapa para conferir ID, classe, medidas sintéticas e proveniência.</p><div id="details"><p class="instructions">🖱️ Roda do mouse: zoom.<br>✋ Arrastar: mover mapa.<br>◉ Clique: selecionar geometria.<br>⌨️ Teclas +, − e 0: controles de zoom.</p></div></section>
-  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01 · contorno refinado aprovado integralmente como base de trabalho.</strong> As três ilhas permanecem hipóteses revisáveis. A geometria não foi canonizada nem georreferenciada; FIS-02 a FIS-04 só possuem macro-organização aprovada.</div></section>
+  <section class="sect"><h3 class="sect-title">O que já foi decidido</h3><div class="choice"><strong>FIS-01:</strong> contorno continental aprovado como base de trabalho. <strong>FIS-02:</strong> nova geometria de vale, três serras, tundra e baixada <strong>aguardando aprovação</strong>; linha âmbar na sobreposição mostra a variante anterior. As ilhas seguem provisórias; hidrografia e Ermos ainda são candidatos.</div></section>
   <section class="sect"><h3 class="sect-title">Limites desta prévia</h3><p class="smallcopy">Não há limites municipais, raions, ruas, portos, pontes, ferrovias, altitudes, datum ou posicionamento real em GPS. A baía é derivada da mesma costa; o traço pontilhado de sua boca <b>não é uma ponte</b>.</p></section>
 </aside>
-<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-010: contorno aprovado para trabalho · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
+<footer class="foot"><span><b>Fonte:</b> Niltond3/novydres-persistence-poc · MW-007 <code>76fae4de</code> · Dados locais embutidos, sem conexão à internet</span><span>MW-011: relevo refinado em revisão · Coordenadas: NOVYDRES-LOCAL-2010 · Não canônico</span></footer>
 </div>
 <script id="geometry-data" type="text/plain">
 coast|coast-mainland-001|line|Costa continental|outerwest|-42000,-50000;-45000,-42000;-43500,-33800;-36000,-28000;-30200,-20600;-29700,-16150;-28200,-11900;-25450,-14100;-22200,-15400;-18750,-17900;-15800,-21000;-12050,-20450;-8500,-19100;-3600,-20050;1000,-22000;7100,-20350;12800,-17700;16550,-13050;21000,-9000;25000,2000;23700,7200;21600,12100;17700,15250;14500,19100;9400,21100;4000,22200;-2150,19900;-8600,18500;-14200,16250;-19500,13300;-24950,10050;-30700,7400;-34800,5850;-38600,3700;-41950,3650;-45200,4550;-47050,8200;-49700,11400;-49300,17250;-48000,23000;-43850,28000;-40300,33400;-42000,43000;-45000,50000
 islands|land-islet-001|poly|Ilhota da baía|water-bay-main-001|-18300,-2000;-17500,-3800;-14700,-4400;-12500,-2400;-13000,600;-15500,1700;-18300,-2000
 islands|land-islet-002|poly|Ilhota da baía|water-bay-main-001|3000,1500;6300,800;8300,3300;7800,6700;5000,8200;2400,5300;3000,1500
 islands|land-islet-003|poly|Ilhota externa|water-outer-001|-54500,-23500;-51800,-24400;-50100,-21500;-52200,-19500;-54500,-23500
-relief|relief-thermal-valley-001|poly|depressed_thermal_valley|terrain-thermal-valley|27000,17000;34000,14500;40000,18500;42000,26000;35000,33000;27500,31000;23000,25000
-relief|relief-northern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|-10000,39500;1000,47000;22500,47000;28000,38500;18000,35500;3000,36500
-relief|relief-eastern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|44000,-5000;50000,-3000;57000,13000;56000,33000;47500,34000;45000,22000;42000,12000
-relief|relief-southern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|25000,-23000;33000,-29000;45000,-26000;47000,-15500;38000,-7000;29000,-11000
-relief|relief-southwestern-tundra-001|poly|low_permafrost_plain|terrain-tundra-lowlands|-25000,-47000;-5000,-47000;8000,-43000;7000,-37000;-9000,-35000;-24000,-36000
-relief|relief-northeastern-tundra-001|poly|low_permafrost_plain|terrain-tundra-lowlands|32500,41000;39000,48000;57000,48000;58000,37000;48000,37000
-relief|relief-southern-wet-lowland-001|poly|seasonal_wet_lowland|terrain-tundra-lowlands|9000,-28000;17000,-26000;24000,-29500;23000,-34000;10000,-35500
-crests|relief-crest-northern-001|line|Eixo de crista|relief-northern-uplands-001|-3000,42500;9000,42500;22000,42500
-crests|relief-crest-eastern-001|line|Eixo de crista|relief-eastern-uplands-001|47000,-2000;51000,11000;52000,26500
-crests|relief-crest-southern-001|line|Eixo de crista|relief-southern-uplands-001|31000,-23500;37500,-19000;41500,-16500
+relief|relief-thermal-valley-001|poly|depressed_thermal_valley|terrain-thermal-valley|24500,16900;28500,15600;32900,14300;35200,15400;37500,15800;39900,18400;41100,21400;42400,25500;40800,28400;38200,30500;35600,33100;32500,32600;28800,31800;26200,30400;23100,27400;22200,24800;23300,21300
+relief|relief-northern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|-11500,39700;-7800,43200;-1900,46200;4300,47700;11600,47200;17400,48100;23400,46900;26400,42800;28300,39100;25100,37400;19300,35400;15200,36600;7800,36000;2700,37100;-3200,36400;-8500,38300
+relief|relief-eastern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|43800,-5800;47500,-4300;50200,-3200;52600,1100;53800,6300;57100,12800;57800,18700;56800,26000;55300,33600;52100,34800;47700,34300;45700,27800;44800,21400;42200,13100;42800,7400;41500,1400
+relief|relief-southern-uplands-001|poly|elevated_ridges|terrain-rocky-uplands|24700,-22300;27400,-24900;31800,-29000;35700,-28900;40200,-27500;45600,-26000;47000,-21700;48600,-16400;45900,-13300;42100,-10300;38400,-7400;33900,-8600;29700,-10700;27700,-15700
+relief|relief-southwestern-tundra-001|poly|low_permafrost_plain|terrain-tundra-lowlands|-26400,-46200;-21300,-48100;-14100,-47100;-7800,-47900;-1000,-46200;4600,-44300;8200,-42100;6900,-37300;2600,-36200;-4500,-35200;-10500,-34700;-16400,-35900;-24000,-35400;-25600,-39400
+relief|relief-northeastern-tundra-001|poly|low_permafrost_plain|terrain-tundra-lowlands|31200,40800;35000,43300;39200,47700;44100,48300;50300,47100;55800,48300;57900,44600;58600,39200;56100,36600;48700,36700;45200,38900;39600,38600;35500,39800
+relief|relief-southern-wet-lowland-001|poly|seasonal_wet_lowland|terrain-tundra-lowlands|8200,-27600;12700,-26600;16900,-25300;19900,-27100;24000,-29200;24200,-33000;21900,-35000;16000,-35900;9300,-34600;8200,-31200
+crests|relief-crest-northern-001|line|Eixo de crista|relief-northern-uplands-001|-3000,42500;4000,43600;12500,41300;21000,42200;24500,40500
+crests|relief-crest-eastern-001|line|Eixo de crista|relief-eastern-uplands-001|46500,-2000;50800,8000;51300,13200;52000,23000;51800,29500
+crests|relief-crest-southern-001|line|Eixo de crista|relief-southern-uplands-001|31500,-24000;35700,-22500;39300,-18000;43500,-17500
 basins|basin-vasyl-001|poly|main_river_watershed|river-vasyl-main-001|3000,32000;3000,40000;8000,43000;27000,44000;42000,40000;55000,35000;55500,20000;44000,8000;30000,2500;25000,2000;22500,11500;20000,18000;17000,24000;10000,30000
 basins|basin-northern-exposed-001|poly|independent_coastal_microbasin|stream-northern-001|-36000,36000;-28000,40000;-16000,39000;-5000,41000;3000,44000;1000,50000;-42000,50000;-42000,43000
 basins|basin-southern-bay-001|poly|independent_bay_microbasin|stream-southern-001|23000,-8000;42000,-7500;53000,-18000;48000,-34000;25000,-37500;5000,-37000;-1000,-30000;1000,-22000;16500,-17000
@@ -130,6 +130,7 @@ ermos|ermo-wetland-vasyl-estuary-001|poly|Várzea inferior do Vasyl|wetlands|255
 ermos|ermo-coastal-northern-001|poly|Litoral externo setentrional|coastal|-39800,36500;-36000,38500;-33500,44500;-35000,48500;-40800,47500;-39000,43000
 ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500,-44000;-34500,-42000;-31500,-36000;-34700,-32000;-39800,-34000;-42000,-39500
 </script>
+<script id="relief-previous-data" type="application/json">{"source_blob_sha":"c28dd404b5d1fb2c6495ca104c7f457c29825644","relief":{"relief-thermal-valley-001":[[27000,17000],[34000,14500],[40000,18500],[42000,26000],[35000,33000],[27500,31000],[23000,25000]],"relief-northern-uplands-001":[[-10000,39500],[1000,47000],[22500,47000],[28000,38500],[18000,35500],[3000,36500]],"relief-eastern-uplands-001":[[44000,-5000],[50000,-3000],[57000,13000],[56000,33000],[47500,34000],[45000,22000],[42000,12000]],"relief-southern-uplands-001":[[25000,-23000],[33000,-29000],[45000,-26000],[47000,-15500],[38000,-7000],[29000,-11000]],"relief-southwestern-tundra-001":[[-25000,-47000],[-5000,-47000],[8000,-43000],[7000,-37000],[-9000,-35000],[-24000,-36000]],"relief-northeastern-tundra-001":[[32500,41000],[39000,48000],[57000,48000],[58000,37000],[48000,37000]],"relief-southern-wet-lowland-001":[[9000,-28000],[17000,-26000],[24000,-29500],[23000,-34000],[10000,-35500]]},"crests":{"relief-crest-northern-001":[[-3000,42500],[9000,42500],[22000,42500]],"relief-crest-eastern-001":[[47000,-2000],[51000,11000],[52000,26500]],"relief-crest-southern-001":[[31000,-23500],[37500,-19000],[41500,-16500]]}}</script>
 <script>
 (()=>{
   'use strict';
@@ -143,13 +144,13 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   if(!coast||coast.points.length!==44||records.length!==41)throw Error('Inventário de fontes não confere');
   const config=[
     {id:'relief',label:'Macrorelevo',color:'#47494c',on:true},
-    {id:'ermos',label:'Corredores do Ermo',color:'#6c6f6b',on:true},
+    {id:'ermos',label:'Corredores do Ermo',color:'#6c6f6b',on:false},
     {id:'watercourses',label:'Rios e afluentes',color:'#a7c1ca',on:true,line:true},
     {id:'waterbodies',label:'Lagos, lagoa e terma',color:'#658896',on:true},
     {id:'islands',label:'Ilhas secundárias',color:'#303235',on:true},
     {id:'thermal',label:'Trecho termal',color:'#d3ddd8',on:true,line:true},
     {id:'basins',label:'Envelopes de bacias',color:'#90a9b0',on:false},
-    {id:'crests',label:'Eixos de crista',color:'#9ca2a4',on:false,line:true},
+    {id:'crests',label:'Eixos de crista',color:'#9ca2a4',on:true,line:true},
     {id:'baymouth',label:'Limiar da baía',color:'#c8d4d6',on:true,line:true},
   ];
   const settings=Object.fromEntries(config.map(c=>[c.id,c.on]));
@@ -218,12 +219,33 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
     return node('path',{...props,...style},group);
   }
   for(const f of records.filter(x=>x.layer==='basins'))feature(f);
-  for(const f of records.filter(x=>x.layer==='relief'))feature(f);
+  const currentReliefNodes=new Map(); for(const f of records.filter(x=>x.layer==='relief'))currentReliefNodes.set(f.id,feature(f));
   for(const f of records.filter(x=>x.layer==='ermos'))feature(f);
   for(const f of records.filter(x=>x.layer==='islands'))feature(f);
   for(const f of records.filter(x=>x.layer==='waterbodies'))feature(f);
-  for(const f of records.filter(x=>x.layer==='crests'))feature(f);
+  const currentCrestNodes=new Map(); for(const f of records.filter(x=>x.layer==='crests'))currentCrestNodes.set(f.id,feature(f));
   for(const f of records.filter(x=>x.layer==='watercourses'))feature(f);
+
+  // Previous MW-003 relief is an inspection overlay ONLY. The only active geometry source remains the MW-011 JSON proposal.
+  const reliefHistory=JSON.parse($('relief-previous-data').textContent);
+  const priorKm=(entry)=>Object.fromEntries(Object.entries(entry).map(([id,pts])=>[id,pts.map(p=>p.map(n=>n/1000))]));
+  const olderAreas=priorKm(reliefHistory.relief),olderCrests=priorKm(reliefHistory.crests);
+  const currentAreas=Object.fromEntries([...currentReliefNodes.keys()].map(id=>[id,byId.get(id).points.map(p=>p.slice())]));
+  const currentCrests=Object.fromEntries([...currentCrestNodes.keys()].map(id=>[id,byId.get(id).points.map(p=>p.slice())]));
+  const historicStrokes=[];
+  for(const [id,pts] of Object.entries(olderAreas))historicStrokes.push(node('path',{d:path(pts,true),fill:'none',stroke:'#e7b184','stroke-width':.66,'stroke-dasharray':'1.0 .58','stroke-linejoin':'round','pointer-events':'none',opacity:0},layerGroups.relief));
+  for(const [id,pts] of Object.entries(olderCrests))historicStrokes.push(node('path',{d:path(pts),fill:'none',stroke:'#d6b68f','stroke-width':.43,'stroke-dasharray':'.8 .65','pointer-events':'none',opacity:0},layerGroups.crests));
+  function updateReliefComparison(){
+    const mode=$('reliefMode').value,oldMode=mode==='original';
+    for(const [id,el] of currentReliefNodes){const f=byId.get(id);f.points=oldMode?olderAreas[id]:currentAreas[id];el.setAttribute('d',path(f.points,true))}
+    for(const [id,el] of currentCrestNodes){const f=byId.get(id);f.points=oldMode?olderCrests[id]:currentCrests[id];el.setAttribute('d',path(f.points))}
+    for(const el of historicStrokes)el.setAttribute('opacity',mode==='overlay'?'.98':'0');
+    $('reliefCaption').textContent=mode==='overlay'?'Novo: preenchimento / contorno antigo: âmbar tracejado':oldMode?'MW-003: forma anterior, histórica e não aprovada':'MW-011: forma refinada, aguardando aceite';
+    if(selectedId&&byId.has(selectedId))updateInspector(byId.get(selectedId));
+  }
+  $('reliefMode').addEventListener('change',updateReliefComparison);
+  updateReliefComparison();
+
   // Warm section is a reference to the existing Vasyl line, indices 3..5; no new invented river.
   const thermalPoints=byId.get('river-vasyl-main-001').points.slice(3,6);
   byId.set('reach-vasyl-local-warm-001',{id:'reach-vasyl-local-warm-001',layer:'thermal',label:'Trecho do Rio Vasyl com aporte termal',geometry:'line',group:'river-vasyl-main-001',points:thermalPoints});
@@ -265,7 +287,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
     prop('Geometria',f.geometry==='poly'?'Polígono':'Linha');prop('Vértices',String(f.points.length));
     prop(f.geometry==='poly'?'Área da feição*':'Extensão da linha*',(f.geometry==='poly'?areaKm(f.points):lineKm(f.points)).toFixed(2)+(f.geometry==='poly'?' km²':' km'));
     prop('Centro do envelope*',boundsMid(f.points).map(n=>(n<0?'':'+' )+n.toFixed(2)).join(' / ')+' km');
-    prop('Origem',sourceFile[f.layer]);prop('Estado',f.id==='coast-mainland-001'?($('coastMode').value==='original'?'CONTORNO ANTERIOR · HISTÓRICO':'APROVADO PARA TRABALHO · NÃO CANÔNICO'):'PROPOSTA · NÃO CANÔNICA');
+    prop('Origem',sourceFile[f.layer]);prop('Estado',f.id==='coast-mainland-001'?($('coastMode').value==='original'?'CONTORNO ANTERIOR · HISTÓRICO':'APROVADO PARA TRABALHO · NÃO CANÔNICO'):((f.layer==='relief'||f.layer==='crests')&&$('reliefMode').value==='original'?'MW-003 HISTÓRICO · NÃO APROVADO':'PROPOSTA · NÃO CANÔNICA'));
     const note=document.createElement('div');note.className='choice';note.textContent='* Cálculo sobre a geometria sintética local. Não representa mensuração geodésica, divisão administrativa ou área municipal.';details.append(note);
     const clear=document.createElement('button');clear.className='mini-btn';clear.style.marginTop='12px';clear.textContent='Limpar seleção';clear.onclick=()=>{selectedId=null;updateInspector(null)};details.append(clear)
   }

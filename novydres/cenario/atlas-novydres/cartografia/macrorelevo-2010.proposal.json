@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_LOCAL_RELIEF_PROPOSAL_V1",
-  "document_id": "MW-003-MACRORELEVO-2010",
+  "document_id": "MW-011-MACRORELEVO-REFINED-2010",
   "subject_id": "world-atlas-novydres",
   "year": 2010,
   "approval": {
@@ -8,13 +8,15 @@
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
-    "owner_approval_for_this_geometry": null
+    "owner_approval_for_this_geometry": null,
+    "refinement_stage": "OPEN_PENDING_OWNER_DECISION",
+    "owner_approval_for_refined_relief": null
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
     "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
-    "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
-    "candidate_coast_branch": "mapwork/mw-002-macrogeometria-costeira",
+    "candidate_coast_commit": "2a3932a015c8458226410ebfcd67d399b0a33e10",
+    "candidate_coast_branch": "mapwork/mw-010-refinamento-costeiro-fis01",
     "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
     "candidate_coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
     "canonical_sources": [
@@ -23,7 +25,15 @@
       "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
       "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json"
     ],
-    "refinement_review": "MW-010: refined mainland coastline approved only as noncanonical working baseline; secondary islands remain hypothetical"
+    "refinement_review": "MW-011: seven landform anchors and three crest axes refined against owner-approved noncanonical MW-010 mainland coastline; current working geometry pending FIS-02 owner review.",
+    "refinement_2010": {
+      "work_unit": "MW-011",
+      "source_refinement_commit": "2a3932a015c8458226410ebfcd67d399b0a33e10",
+      "previous_relief_blob_sha": "c28dd404b5d1fb2c6495ca104c7f457c29825644",
+      "approved_mainland_coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
+      "approval_status": "OPEN_PENDING_OWNER_DECISION",
+      "method": "Macro-boundary edits in local integer-metre coordinates; non-exhaustive landforms, no DEM or altitude claims"
+    }
   },
   "spatial_reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -51,32 +61,72 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            27000,
-            17000
+            24500,
+            16900
           ],
           [
-            34000,
-            14500
+            28500,
+            15600
           ],
           [
-            40000,
-            18500
+            32900,
+            14300
           ],
           [
-            42000,
-            26000
+            35200,
+            15400
           ],
           [
-            35000,
-            33000
+            37500,
+            15800
           ],
           [
-            27500,
-            31000
+            39900,
+            18400
           ],
           [
-            23000,
-            25000
+            41100,
+            21400
+          ],
+          [
+            42400,
+            25500
+          ],
+          [
+            40800,
+            28400
+          ],
+          [
+            38200,
+            30500
+          ],
+          [
+            35600,
+            33100
+          ],
+          [
+            32500,
+            32600
+          ],
+          [
+            28800,
+            31800
+          ],
+          [
+            26200,
+            30400
+          ],
+          [
+            23100,
+            27400
+          ],
+          [
+            22200,
+            24800
+          ],
+          [
+            23300,
+            21300
           ]
         ],
         "physiographic_class": "terrain-thermal-valley",
@@ -91,28 +141,68 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            -10000,
-            39500
+            -11500,
+            39700
           ],
           [
-            1000,
-            47000
+            -7800,
+            43200
           ],
           [
-            22500,
-            47000
+            -1900,
+            46200
           ],
           [
-            28000,
-            38500
+            4300,
+            47700
           ],
           [
-            18000,
-            35500
+            11600,
+            47200
           ],
           [
-            3000,
-            36500
+            17400,
+            48100
+          ],
+          [
+            23400,
+            46900
+          ],
+          [
+            26400,
+            42800
+          ],
+          [
+            28300,
+            39100
+          ],
+          [
+            25100,
+            37400
+          ],
+          [
+            19300,
+            35400
+          ],
+          [
+            15200,
+            36600
+          ],
+          [
+            7800,
+            36000
+          ],
+          [
+            2700,
+            37100
+          ],
+          [
+            -3200,
+            36400
+          ],
+          [
+            -8500,
+            38300
           ]
         ],
         "physiographic_class": "terrain-rocky-uplands",
@@ -127,32 +217,68 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            44000,
-            -5000
-          ],
-          [
-            50000,
-            -3000
-          ],
-          [
-            57000,
-            13000
-          ],
-          [
-            56000,
-            33000
+            43800,
+            -5800
           ],
           [
             47500,
-            34000
+            -4300
           ],
           [
-            45000,
-            22000
+            50200,
+            -3200
           ],
           [
-            42000,
-            12000
+            52600,
+            1100
+          ],
+          [
+            53800,
+            6300
+          ],
+          [
+            57100,
+            12800
+          ],
+          [
+            57800,
+            18700
+          ],
+          [
+            56800,
+            26000
+          ],
+          [
+            55300,
+            33600
+          ],
+          [
+            52100,
+            34800
+          ],
+          [
+            47700,
+            34300
+          ],
+          [
+            45700,
+            27800
+          ],
+          [
+            44800,
+            21400
+          ],
+          [
+            42200,
+            13100
+          ],
+          [
+            42800,
+            7400
+          ],
+          [
+            41500,
+            1400
           ]
         ],
         "physiographic_class": "terrain-rocky-uplands",
@@ -167,28 +293,60 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            25000,
-            -23000
+            24700,
+            -22300
           ],
           [
-            33000,
+            27400,
+            -24900
+          ],
+          [
+            31800,
             -29000
           ],
           [
-            45000,
+            35700,
+            -28900
+          ],
+          [
+            40200,
+            -27500
+          ],
+          [
+            45600,
             -26000
           ],
           [
             47000,
-            -15500
+            -21700
           ],
           [
-            38000,
-            -7000
+            48600,
+            -16400
           ],
           [
-            29000,
-            -11000
+            45900,
+            -13300
+          ],
+          [
+            42100,
+            -10300
+          ],
+          [
+            38400,
+            -7400
+          ],
+          [
+            33900,
+            -8600
+          ],
+          [
+            29700,
+            -10700
+          ],
+          [
+            27700,
+            -15700
           ]
         ],
         "physiographic_class": "terrain-rocky-uplands",
@@ -203,28 +361,60 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            -25000,
-            -47000
+            -26400,
+            -46200
           ],
           [
-            -5000,
-            -47000
+            -21300,
+            -48100
           ],
           [
-            8000,
-            -43000
+            -14100,
+            -47100
           ],
           [
-            7000,
-            -37000
+            -7800,
+            -47900
           ],
           [
-            -9000,
-            -35000
+            -1000,
+            -46200
+          ],
+          [
+            4600,
+            -44300
+          ],
+          [
+            8200,
+            -42100
+          ],
+          [
+            6900,
+            -37300
+          ],
+          [
+            2600,
+            -36200
+          ],
+          [
+            -4500,
+            -35200
+          ],
+          [
+            -10500,
+            -34700
+          ],
+          [
+            -16400,
+            -35900
           ],
           [
             -24000,
-            -36000
+            -35400
+          ],
+          [
+            -25600,
+            -39400
           ]
         ],
         "physiographic_class": "terrain-tundra-lowlands",
@@ -239,24 +429,56 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            32500,
-            41000
+            31200,
+            40800
           ],
           [
-            39000,
-            48000
+            35000,
+            43300
           ],
           [
-            57000,
-            48000
+            39200,
+            47700
           ],
           [
-            58000,
-            37000
+            44100,
+            48300
           ],
           [
-            48000,
-            37000
+            50300,
+            47100
+          ],
+          [
+            55800,
+            48300
+          ],
+          [
+            57900,
+            44600
+          ],
+          [
+            58600,
+            39200
+          ],
+          [
+            56100,
+            36600
+          ],
+          [
+            48700,
+            36700
+          ],
+          [
+            45200,
+            38900
+          ],
+          [
+            39600,
+            38600
+          ],
+          [
+            35500,
+            39800
           ]
         ],
         "physiographic_class": "terrain-tundra-lowlands",
@@ -271,24 +493,44 @@
         "geometry_type": "Polygon",
         "ring_xy_m": [
           [
-            9000,
-            -28000
+            8200,
+            -27600
           ],
           [
-            17000,
-            -26000
+            12700,
+            -26600
+          ],
+          [
+            16900,
+            -25300
+          ],
+          [
+            19900,
+            -27100
           ],
           [
             24000,
-            -29500
+            -29200
           ],
           [
-            23000,
-            -34000
+            24200,
+            -33000
           ],
           [
-            10000,
-            -35500
+            21900,
+            -35000
+          ],
+          [
+            16000,
+            -35900
+          ],
+          [
+            9300,
+            -34600
+          ],
+          [
+            8200,
+            -31200
           ]
         ],
         "physiographic_class": "terrain-tundra-lowlands",
@@ -310,12 +552,20 @@
             42500
           ],
           [
-            9000,
-            42500
+            4000,
+            43600
           ],
           [
-            22000,
-            42500
+            12500,
+            41300
+          ],
+          [
+            21000,
+            42200
+          ],
+          [
+            24500,
+            40500
           ]
         ],
         "geometry_type": "LineString",
@@ -328,16 +578,24 @@
         "kind": "qualitative_crest_axis",
         "points_xy_m": [
           [
-            47000,
+            46500,
             -2000
           ],
           [
-            51000,
-            11000
+            50800,
+            8000
+          ],
+          [
+            51300,
+            13200
           ],
           [
             52000,
-            26500
+            23000
+          ],
+          [
+            51800,
+            29500
           ]
         ],
         "geometry_type": "LineString",
@@ -350,16 +608,20 @@
         "kind": "qualitative_crest_axis",
         "points_xy_m": [
           [
-            31000,
-            -23500
+            31500,
+            -24000
           ],
           [
-            37500,
-            -19000
+            35700,
+            -22500
           ],
           [
-            41500,
-            -16500
+            39300,
+            -18000
+          ],
+          [
+            43500,
+            -17500
           ]
         ],
         "geometry_type": "LineString",
@@ -424,6 +686,7 @@
   "validation": {
     "geometry_dependency_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
     "required": "node novydres/cenario/atlas-novydres/cartografia/validar-macrorelevo.mjs",
-    "tested_in_proposal": "self_and_cross_nonintersection_landside_coast_dependency_crest_containment"
+    "tested_in_proposal": "MW-011 deterministic topology and cross-layer preflight; Node/CI unverified",
+    "previous_geometry_blob_sha": "c28dd404b5d1fb2c6495ca104c7f457c29825644"
   }
 }
