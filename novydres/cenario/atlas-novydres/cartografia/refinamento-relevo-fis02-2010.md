@@ -14,7 +14,9 @@ work_unit: MW-011
 fis02_valley_owner_decision: APROVADO
 fis02_valley_decision_on: 2026-11-16
 fis02_valley_approval_scope: NONCANONICAL_REFINED_THERMAL_VALLEY_WORKING_GEOMETRY_ONLY
-fis02_uplands_owner_decision: PENDING
+fis02_uplands_owner_decision: APROVADO
+fis02_uplands_decision_on: 2026-11-16
+fis02_uplands_approval_scope: THREE_NONCANONICAL_REFINED_UPLAND_POLYGONS_AND_THREE_QUALITATIVE_RIDGE_AXES
 fis02_tundra_lowlands_owner_decision: PENDING
 fis02_final_review: PENDING
 ---
@@ -23,7 +25,7 @@ fis02_final_review: PENDING
 
 ## Escopo, fatos protegidos e estado
 
-O proprietário aprovou em MW-007 somente a **organização relativa** de FIS-02. A costa continental refinada de MW-010 está aprovada como **base de trabalho não canônica**; os contornos/número das ilhas continuam hipóteses. As cinco classes canônicas GEO-003.3, a orientação hidrotermal GEO-003.4 e os Ermos GEO-003.5/GEO-004.3 são preservados. Este documento **não registra decisão de aprovação do novo relevo**.
+O proprietário aprovou em MW-007 somente a **organização relativa** de FIS-02. A costa continental refinada de MW-010 está aprovada como **base de trabalho não canônica**; os contornos/número das ilhas continuam hipóteses. As cinco classes canônicas GEO-003.3, a orientação hidrotermal GEO-003.4 e os Ermos GEO-003.5/GEO-004.3 são preservados. Este documento registra aprovações **parciais**, sem aceite final do conjunto nem canonização do relevo.
 
 Bootstrap: HEAD `master` 27595ca32652efdef3d406eb91e4482299056bd9; leitura conjunta AGENTS/CONTEXT/catálogo, assunto `world-atlas-novydres`, ADR-002, PRD-ATLAS-001, guide e fontes físicas. Origem de MW-010: branch `mapwork/mw-010-refinamento-costeiro-fis01`, commit `2a3932a015c8458226410ebfcd67d399b0a33e10`.
 
@@ -31,9 +33,17 @@ Bootstrap: HEAD `master` 27595ca32652efdef3d406eb91e4482299056bd9; leitura conju
 
 **Estado: APROVADO**, somente quanto ao contorno refinado do vale termal `relief-thermal-valley-001`. Diante da pergunta explícita “Você aprova o contorno refinado do vale termal, rejeita ou aprova com ressalvas?”, o proprietário respondeu **“Aprovo”**.
 
-**Alcance:** o polígono refinado já publicado na proposta MW-011 é aceito como base cartográfica de trabalho **não canônica**; sua relação com Cidade Velha/Iknik, trechos termicamente influenciados do Rio Vasyl e a piscina termal candidata é mantida. Não fixa os limites de Kingswell/Iknik, nascentes, temperaturas, altitudes ou engenharia. **Não aprova** as três serras/cristas, as duas áreas de tundra ou a baixada úmida, que ainda aguardam decisões específicas. Não altera o status global da geometria, `owner_approval_for_this_geometry: null`.
+**Alcance:** o polígono refinado já publicado na proposta MW-011 é aceito como base cartográfica de trabalho **não canônica**; sua relação com Cidade Velha/Iknik, trechos termicamente influenciados do Rio Vasyl e a piscina termal candidata é mantida. Não fixa os limites de Kingswell/Iknik, nascentes, temperaturas, altitudes ou engenharia. **Na ocasião, não abrangia** as três serras/cristas nem as duas áreas de tundra ou a baixada úmida; a decisão posterior FIS-02.2 está registrada abaixo. Não altera o status global da geometria, `owner_approval_for_this_geometry: null`.
 
 O polígono do vale já corresponde à versão aprovada para trabalho, portanto **não há necessidade de modificar seus vértices nesta subdecisão**. A aprovação parcial não encerra MW-011 e não autoriza handoff.
+
+## Decisão expressa recebida — FIS-02.2 (16/11/2026)
+
+**Estado: APROVADO** para os três polígonos de serras e os respectivos eixos qualitativos de crista: `relief-northern-uplands-001`, `relief-eastern-uplands-001` e `relief-southern-uplands-001`. Perguntado se aprovava “os três sistemas de serras e seus eixos de crista refinados, ou deseja ajustes?”, o proprietário respondeu **“Aprovo”**.
+
+**Alcance:** aceitação exata das geometrias refinadas MW-011 já publicadas, **somente como base de trabalho não canônica**. Não determina elevações, altimetria, divisor de águas medido, túnel, estrada, ferrovias, corredores de urbanização nem limites políticos. As três cristas são linhas qualitativas internas aos maciços, não levantamentos geodésicos.
+
+**Pendências após FIS-02.2:** decisão sobre duas manchas de tundra e a baixada úmida meridional (FIS-02.3); depois disso, aceite final expresso sobre a versão integral validada. O conjunto de propostas permanece `PROPOSED_PENDING_OWNER_REVIEW` e `NOT_APPROVED`, com `owner_approval_for_this_geometry: null` até o gate final. Nenhum vértice precisa ser alterado nesta decisão parcial. Nenhum handoff é autorizado.
 
 ## Refinamento implementado (variante não canônica)
 
@@ -63,11 +73,11 @@ Mantidos **sete polígonos esparsos** com IDs estáveis: um vale termal interior
 ## Inventário das decisões substantivas ainda necessárias
 
 1. **FIS-02.1 — Vale termal: APROVADO em 16/11/2026**, na extensão exata da seção de decisão expressa acima.
-2. **FIS-02.2 — Serras e cristas:** aprovar, rejeitar ou aprovar com ressalvas os três maciços e seus eixos qualitativos (norte/leste/sul), mantendo inexistentes altimetria, rotas e divisores hidráulicos medidos.
+2. **FIS-02.2 — Serras e cristas: APROVADO em 16/11/2026**, com o alcance limitado à geometria de trabalho descrito acima.
 3. **FIS-02.3 — Tundra e baixada:** aprovar, rejeitar ou aprovar com ressalvas as duas manchas esparsas de tundra e a baixada úmida meridional, sem afirmar cobertura territorial exaustiva ou inundação permanente.
 4. **Aceite final expresso:** após eventuais correções e publicação de geometria e visualizador efetivos, aprovação da versão consolidada. Aprovações parciais não fecham FIS-02.
 
-**A:** decisões 2–4 e revalidação final na geometria consolidada. **B:** consequência apenas espacial sobre rio/afluentes, piscina termal, bacias e fragmentos de Ermo; sem deslocá-los em FIS-02. **C:** raions, bairros, portos, transportes, histórias, clãs, runtime e engenharia detalhada.
+**A:** decisões 3–4 e revalidação final na geometria consolidada. **B:** consequência apenas espacial sobre rio/afluentes, piscina termal, bacias e fragmentos de Ermo; sem deslocá-los em FIS-02. **C:** raions, bairros, portos, transportes, histórias, clãs, runtime e engenharia detalhada.
 
 ## Gate e continuidade
 
