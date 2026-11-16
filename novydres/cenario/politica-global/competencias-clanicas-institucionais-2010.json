@@ -189,5 +189,57 @@
     "Não canoniza ano de atribuição, nomes de primeiros titulares, contratos, marcos ou transferências territoriais."
   ],
   "owner_approval_scope": "Aprova expressamente Ventrue=Economia/Executivo, Toreador=Religião, Malkavian=Saúde, Tzimisce=Arte/Lazer, Banu Haqim=Jurídico, Nosferatu=Aquecimento, Gangrel=Militar/Coercivo; poder, responsabilidade, regulação Cainita da alimentação e negociação. Não aprova domínios por raion, antecedentes desde 1423 ou eventos não descritos.",
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "approved_subdecisions": [
+    "POL-001.1",
+    "POL-001.2"
+  ],
+  "patronage_rule": {
+    "fact_id": "POL-001.2",
+    "rule_name": "Apadrinhamento de competências de clã",
+    "canonical_status": "CLOSED_CANON_SCOPED",
+    "truth_state": "CONFIRMED",
+    "authority": "OWNER_EXPLICIT_APPROVAL",
+    "approval_date": "2026-11-15",
+    "central_rule": "Qualquer Cainita, de qualquer clã, que queira EXERCER profissional, institucional, empresarial ou por cargo uma atividade coberta pelo domínio setorial de outro clã deve obter e manter apadrinhamento daquele clã. Pertencer a um clã distinto não impede a atuação, mas exercê-la sem o apadrinhamento devido viola a Lei do Domínio.",
+    "protected_sector_reference": "clan_domains — sete competências canônicas POL-001.1",
+    "qualifying_patrons": "O patrono deve ser um Membro do clã titular do setor. Ele presta o aval e assume responsabilidade política pelo afilhado. O reconhecimento efetivo do Status ou sua concessão deve respeitar as competências e os procedimentos das regras vigentes de Status.",
+    "patronage_as_status": {
+      "authorization_form": "Um traço de Status relativo ao apadrinhamento, de natureza temporária ou permanente, com identificação do setor, patrono, beneficiário, extensão autorizada e condições. Não é clã, vínculo de Sangue, posse territorial nem título soberano.",
+      "temporary": "Pode ser implementado por empréstimo de Status já reconhecido, concedendo ao beneficiário o uso temporário correspondente. Aplica-se o contrato vigente: no máximo um ano e um dia, um traço por cedente para o mesmo beneficiário de cada vez, vedado reempréstimo; o cedente mantém o traço permanente mas fica sem poder usá-lo enquanto emprestado.",
+      "permanent": "Pode ser reconhecido por concessão permanente de Status segundo autoridade competente das regras de Novydres, com registro social e possibilidade de contestação. Um membro do clã pode patrocinar essa concessão, mas não recebe automaticamente poder ilimitado para conceder Status Permanente fora de sua alçada.",
+      "position_status_distinction": "Status Posicional por ocupar cargo (ex.: Xerife) NÃO substitui automaticamente o apadrinhamento do clã competente. O direito de ocupar o cargo e o direito de exercer atividade setorial são requisitos distintos.",
+      "no_free_automatic_trait": "Não atribuir mecanicamente um traço sem fonte, patrono e modo de concessão válidos; não criar bônus permanentes irrestritos por simples contratação mortal.",
+      "registry": "Concessões permanentes observam o registro da Harpia e os oficiais pertinentes; a existência de empréstimo ou patrocínio precisa ser rastreável politicamente conforme o regime do domínio, sem exigir que seja anunciado a humanos."
+    },
+    "permissions_and_liability": {
+      "authority": "O traço permite as atividades cobertas pelo setor nos limites da concessão, seu prazo, local e condições, sem anular direitos Cainitas territoriais e regras de Hospitalidade ou outras competências sobrepostas.",
+      "no_blanket_exemption": "O aval não concede licença para matar, ocultar crimes, violar a Máscara, usurpar tribunal, exercer autoridade federal mortal ou ignorar sentença do Príncipe/Concílio.",
+      "ongoing_responsibility": "O apadrinhado responde por suas ações. O patrono responde politicamente pelo acesso que concedeu e pode sofrer responsabilização por abuso, negligência grave ou Escândalo, segundo o caso.",
+      "unauthorized": "Exercer competência de clã alheio sem o apadrinhamento necessário configura afronta à Lei do Domínio. Competência para julgar, tipificar a quebra concreta e impor pena permanece com os órgãos e autoridades já estabelecidos.",
+      "revoked_or_expired": "Empréstimo terminado ou apadrinhamento revogado faz cessar a legitimidade Cainita para novas ações cobertas. Os acordos e responsabilidades pendentes precisam de transição ou renovação; não presumir invalidade retroativa de cuidados mortais já realizados.",
+      "cumulative_authorizations": "Apadrinhamento setorial não equivale a licença territorial de caça ou refúgio: uma clínica dentro de um senhorio alheio pode depender tanto do aval Malkavian quanto do senhor territorial e, conforme atividade, de outros setores.",
+      "mortal_autonomy": "Hospitais, clínicas, polícias, empresas e órgãos estatais continuam sujeitos às leis e autorizações mortais. O patrocínio não transforma a atividade civil lícita de um HUMANO sem conhecimento de Cainitas em infração vampírica."
+    },
+    "concrete_cases": [
+      {
+        "sector": "Poder militar e coercivo",
+        "clan": "Gangrel",
+        "covered": "Cainita atuando como Xerife, policial, guarda, segurança privada, mercenário, executor coercivo ou assassino contratado, inclusive por meio de empresa ou patronato.",
+        "requirement": "Apadrinhamento Gangrel é necessário, inclusive para Cainita oficialmente indicado ao cargo de Xerife; nomeação institucional e apadrinhamento são atos complementares.",
+        "nuance": "Assassino contratado não recebe licença para Destruição de outro Cainita ou assassinato ilegal de mortal. Punições e autorização de destruição seguem a Lei; os Gangrel controlam o setor e seus acessos, não o monopólio soberano de sentenciar."
+      },
+      {
+        "sector": "Saúde",
+        "clan": "Malkavian",
+        "covered": "Cainita de outro clã que abra, possua, patrocine, administre ou exerça de modo relevante atividade de clínica médica, clínica psiquiátrica, hospital ou instituição de cuidados.",
+        "requirement": "Apadrinhamento Malkavian obrigatório para exploração da competência médica, independentemente de os registros e licenças mortais estarem em dia.",
+        "nuance": "O patrocínio não converte automaticamente cada paciente em presa, não transfere hospitais públicos à titularidade dos Malkavianos, e não impede mortais de obter assistência urgente."
+      }
+    ],
+    "universal_application": "A mesma lógica de apadrinhamento aplica-se às demais competências canônicas quando um Cainita de outro clã pretende operar o setor: economia/executivo Ventrue, religião Toreador, arte/lazer Tzimisce, jurídico Banu Haqim, aquecimento Nosferatu.",
+    "exceptions_and_future_rules": "Prazos e traços efetivamente concedidos, nomes dos patronos, grau necessário por atividade, mecanismos de auditoria e eventuais exceções judiciais não foram atribuídos a personagens concretos. Não inventar uma tabela de preços, bônus ou penalidades não aprovada.",
+    "illustrative_social_logic": "O apadrinhamento gera aliança, obrigação, dependência e conflitos de interesse entre clãs. Também permite serviços especializados por pessoas de outros clãs sem eliminar a responsabilidade do detentor da competência."
+  },
+  "editorial_note": "POL-001.2 integra apadrinhamento no mesmo arquivo canônico de POL-001.1, sem criar fonte concorrente. Status e empréstimos obedecem aos contratos já existentes; GEO-005.7 continua proposta histórica sem atribuição de patronos antigos."
 }
