@@ -2,11 +2,11 @@
 document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: REFINEMENT_MW010_PUBLISHED_PENDING_OWNER_DECISION
+workflow_status: FIS01_REFINEMENT_APPROVED_MW010
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
-work_unit_status: OPEN
-handoff_to_next_point: BLOCKED_UNTIL_POINT_CLOSED
+work_unit_status: CLOSED_BY_MW010
+handoff_to_next_point: ALLOWED_AFTER_MW010_REMOTE_CLOSE
 owner_decision_on: 2026-11-16
 owner_decision_keys: FIS-01-DECISION-1,FIS-01-DECISION-2
 owner_decision: PRESERVE_SHELTERED_BAY_REFINE_CONTOURS_AND_KEEP_THREE_ISLANDS_ONLY_AS_REVISABLE_HYPOTHESIS
@@ -59,13 +59,11 @@ O proprietário declarou: **“FIS-01, decisão 2: mantenha três ilhas como hip
 
 **Pendência A da unidade atual (MW-009):** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
 
-## Gate de fechamento da unidade MW-009
+## Atualização do gate FIS-01 após MW-010 (16/11/2026)
 
-**MW-009 permanece ABERTA:** a aceitação da organização costeira e a hipótese das ilhas são decisões intermediárias, não encerramento do ponto FIS-01.
+A condição historicamente aberta em MW-009 foi atendida pelo refinamento e aceite integral do contorno apresentados em MW-010. A declaração expressa do proprietário é **“Aprovo o contorno refinado na integra”**. O contorno refinado continental é aprovado como **base cartográfica candidata não canônica**, sem decidir ilhas, área oficial, datum, raions, transporte ou infraestrutura. O arquivo proprietário do fechamento e suas validações é `refinamento-costeiro-fis01-2010.md`; todo o encerramento foi auditado na branch `mapwork/mw-010-refinamento-costeiro-fis01`.
 
-Conforme a regra agora registrada em `guide.md`, **não gerar handoff nem prompt MW-010** antes de: (1) produzir variante de contorno refinada e versão atualizada do visualizador 2D; (2) verificar impactos com Rio Vasyl, microbacias, relevo, Ermos e ilhas provisórias; (3) submeter a versão consolidada ao proprietário e registrar seu aceite/rejeição/ressalvas; (4) corrigir problemas materiais, concluir as validações pertinentes e verificar o commit remoto. A rejeição de uma variante exige corrigir ou encerrar expressamente a opção descartada; não autoriza inferir a aprovação de outra.
-
-O handoff e prompt MW-010 anteriormente emitidos após a mera decisão sobre as ilhas foram **prematuros e estão revogados como autorização de avanço**. Em caso de limite de contexto, fazer somente checkpoint/nota de retomada da **mesma MW-009**, sem declarar fechamento.
+A proibição anterior de produzir handoff valia enquanto FIS-01 estivesse aberto; fica superada **somente depois do readback remoto do fechamento MW-010**. As indicações anteriores de espera ou de futura revisão no corpo histórico acima são contexto de MW-009, não o estado vigente de FIS-01.
 
 ## Escopo, validação e continuidade
 
@@ -73,6 +71,6 @@ O handoff e prompt MW-010 anteriormente emitidos após a mera decisão sobre as 
 
 **A/B/C:** A = produzir variante de costa topologicamente verificável para futura aprovação; B = registrar efeito sobre foz, lagoa, Ermos litorâneos e navegabilidade sem projetar infraestrutura; C = redes/portos/raions e narrativa, fora desta revisão.
 
-## Anotação MW-010 — pendência de aceite
+## Encerramento pela MW-010
 
-Variante costeira estruturada refinada e comparador publicados na branch `mapwork/mw-010-refinamento-costeiro-fis01`, sem canonização. A decisão expressa sobre o contorno revisado segue pendente. O ponto FIS-01 continua aberto; handoff proibido até o gate de fechamento do `guide.md`.
+Variante refinada aceita integralmente pelo proprietário como contorno **candidato de trabalho**, sem canonização. Ilhas permanecem hipóteses. O fechamento da unidade e readback remoto constam do relatório MW-010.

@@ -9,7 +9,25 @@
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
     "owner_approval_for_this_geometry": null,
-    "refinement_stage": "OWNER_VISUAL_REVIEW_PENDING"
+    "refinement_stage": "CLOSED_FOR_THIS_SCOPE",
+    "refined_mainland_coastline_status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE",
+    "owner_approval_for_refined_mainland_coastline": {
+      "decision": "APROVADO",
+      "decision_on": "2026-11-16",
+      "owner_verbatim": "Aprovo o contorno refinado na integra",
+      "feature_id": "coast-mainland-001",
+      "work_unit": "MW-010",
+      "scope": "REFINED_CONTINENTAL_COASTLINE_AND_DERIVED_BAY_CONTOUR_ONLY",
+      "excluded_from_approval": [
+        "secondary_islands_number_perimeters_positions",
+        "official_coastal_metrics",
+        "geodetic_anchor",
+        "municipal_limits",
+        "raions",
+        "transport_infrastructure"
+      ],
+      "consequence": "Adopt as current non-canonical physical cartography working baseline."
+    }
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
@@ -31,7 +49,7 @@
         "FIS-01-DECISION-1",
         "FIS-01-DECISION-2"
       ],
-      "review_status": "PENDING_OWNER_VISUAL_APPROVAL",
+      "review_status": "OWNER_APPROVED_FOR_WORKING_BASELINE_NO_CANONIZATION",
       "method": "17 shifted macro-bends, 18 sparse segment bends, local metre grid; not geodetic"
     }
   },

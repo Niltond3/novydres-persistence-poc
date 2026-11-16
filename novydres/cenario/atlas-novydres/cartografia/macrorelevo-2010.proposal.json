@@ -16,14 +16,14 @@
     "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
     "candidate_coast_branch": "mapwork/mw-002-macrogeometria-costeira",
     "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
-    "candidate_coast_blob_sha": "537fd80836323d309773de5e44839546c9418f85",
+    "candidate_coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
     "canonical_sources": [
       "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
       "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
       "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
       "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json"
     ],
-    "refinement_review": "MW-010 pending owner acceptance"
+    "refinement_review": "MW-010: refined mainland coastline approved only as noncanonical working baseline; secondary islands remain hypothetical"
   },
   "spatial_reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -422,7 +422,7 @@
     "landslide_risk": null
   },
   "validation": {
-    "geometry_dependency_sha": "537fd80836323d309773de5e44839546c9418f85",
+    "geometry_dependency_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
     "required": "node novydres/cenario/atlas-novydres/cartografia/validar-macrorelevo.mjs",
     "tested_in_proposal": "self_and_cross_nonintersection_landside_coast_dependency_crest_containment"
   }
