@@ -19,7 +19,7 @@ const inside=(p,ring)=>{let v=false;for(let i=0,j=ring.length-1;i<ring.length;j=
 const line=c.value.proposed_geometry.mainland_coastline.points_xy_m;
 const shoreEdges=line.slice(1).map((p,i)=>[line[i],p]);
 const sea=[...line,[-60000,50000],[-60000,-50000]];
-const xy=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isInteger)&&p[0]>-60000&&p[0]<60000&&p[1]>-50000&&p[1]<50000;
+const xy=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isInteger)&&p[0]>=-60000&&p[0]<=60000&&p[1]>=-50000&&p[1]<=50000;
 const onCoast=p=>shoreEdges.some(([a,b])=>on(a,b,p));
 assert.equal(h.schema,'NOVYDRES_LOCAL_HYDROGRAPHY_PROPOSAL_V1');
 assert.equal(h.subject_id,'world-atlas-novydres');
@@ -104,8 +104,8 @@ for(let i=0;i<flows.length;i++)for(let j=i+1;j<flows.length;j++){
  const a=flows[i],b=flows[j],ap=a.points_xy_m,bp=b.points_xy_m;
  for(let k=0;k<ap.length-1;k++)for(let m=0;m<bp.length-1;m++){
   if(!hit(ap[k],ap[k+1],bp[m],bp[m+1]))continue;
-  const valid=a.downstream.type==='confluence'&&a.downstream.target_feature_id===b.feature_id&&m===a.downstream.target_vertex_index-1&&exact(ap.at(-1),bp[m+1])&&k===ap.length-2
-   ||b.downstream.type==='confluence'&&b.downstream.target_feature_id===a.feature_id&&k===b.downstream.target_vertex_index-1&&exact(bp.at(-1),ap[k+1])&&m===bp.length-2;
+  const valid=a.downstream.type==='confluence'&&a.downstream.target_feature_id===b.feature_id&&k===ap.length-2&&exact(ap.at(-1),bp[a.downstream.target_vertex_index])&&(m===a.downstream.target_vertex_index-1||m===a.downstream.target_vertex_index)
+   ||b.downstream.type==='confluence'&&b.downstream.target_feature_id===a.feature_id&&m===bp.length-2&&exact(bp.at(-1),ap[b.downstream.target_vertex_index])&&(k===b.downstream.target_vertex_index-1||k===b.downstream.target_vertex_index);
   assert(valid,'unexpected stream crossing: '+a.feature_id+' '+b.feature_id);
  }
 }
