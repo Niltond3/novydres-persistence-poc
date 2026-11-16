@@ -31,11 +31,16 @@
     },
     {
       "subject_id": "district-chelsea",
-      "official_name": null,
+      "official_name": "Kingswal",
       "geometry": null,
-      "name_status": "PENDING_OWNER_RENAMING",
+      "name_status": "CANON_APPROVED_GEO-004.5",
       "legacy_editorial_label": "Chelsea",
-      "rejected_candidate": "Siku"
+      "rejected_candidate": "Siku",
+      "pronunciation_pt_br": "KÍNGZ-uól (aproximação de mesa)",
+      "toponym_style": "ficcional, de inspiração inglesa",
+      "semantic_dedication_pt": "Fonte do Rei, no sentido ritual cainita, não tradução literal de Kingswal",
+      "first_use_in_cainite_records": "1423 (denominação do posto avançado Ventrue por Gilgamesh)",
+      "civil_official_adoption_date": "UNASSIGNED"
     },
     {
       "subject_id": "district-bukovie",
@@ -65,7 +70,7 @@
   ],
   "ratified_only": [
     "nove raions existentes",
-    "nomes dos oito raions sem revisão pendente",
+    "nomes oficiais dos nove raions em 2010",
     "tipo de divisão administrativa em 2010"
   ],
   "still_pending": [
@@ -74,17 +79,19 @@
     "população por raion",
     "bairros e enclaves",
     "domínios Cainitas, seitas e conflitos",
-    "funções urbanas e detalhes candidatos",
-    "novo nome do raion district-chelsea, candidato Siku rejeitado"
+    "funções urbanas e detalhes candidatos"
   ],
   "single_authoritative_source": true,
   "toponym_revision": {
     "fact_id": "GEO-004.5",
-    "status": "RAION_RENAMING_PENDING_CORE_APPROVED",
-    "legacy_raion_label": "Chelsea",
-    "rejected_raion_candidate": "Siku",
+    "status": "RAION_KINGSWAL_CORE_IKNIK_APPROVED",
+    "official_raion_name": "Kingswal",
+    "historical_raion_alias": "Chelsea",
+    "rejected_candidate": "Siku",
     "formal_core_name": "Iknik",
-    "everyday_core_name": "Cidade Velha",
+    "common_core_name": "Cidade Velha",
+    "historical_origin": "Dedicatória dinástica Ventrue em 1423; adoção civil posterior ainda não datada",
+    "stable_subject_id": "district-chelsea",
     "no_change_to_raion_count": true
   }
 }

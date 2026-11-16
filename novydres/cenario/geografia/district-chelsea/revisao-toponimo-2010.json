@@ -2,11 +2,11 @@
   "schema": "NOVYDRES_TOPONYM_REVIEW_REQUEST_V1",
   "subject_id": "district-chelsea",
   "request_id": "GEO-004.5",
-  "status": "PARTIAL_APPROVAL_CORE_APPROVED_RAION_NAME_PENDING",
+  "status": "CLOSED_KINGSWAL_RAION_IKNIK_FORMAL_CIDADE_VELHA_COMMON",
   "requested_on": "2026-11-15",
-  "current_official_name": null,
+  "current_official_name": "Kingswal",
   "proposed_new_name": null,
-  "intent": "Substituir por topônimos culturalmente e linguisticamente fundamentados tanto o nome oficial do raion Chelsea quanto o nome próprio do núcleo histórico Cidade Velha/Old Town; considerar sua ocupação por povos originários anterior à chegada Cainita, evitando anacronismo anglófono e tradução indígena fabricada.",
+  "intent": "Nomear o raion Kingswal como dedicatória cainita ao progenitor dos Ventrue e preservar o núcleo de origem indígena Iknik, chamado cotidiana e majoritariamente Cidade Velha.",
   "reference_region": "Península de Seward, Estreito de Bering, Alasca, Estados Unidos",
   "required_research": "Verificar comunidades e línguas Iñupiat apropriadas ao local e contexto, além da presença regional Yupik, sem fabricar termo nativo nem generalizar culturas distintas.",
   "sources": [
@@ -14,25 +14,29 @@
     "https://www.uaf.edu/anlc/languages-move/inupiaq.php"
   ],
   "protected_continuity": [
-    "Chelsea é apenas uma referência histórica/editorial do raion de novo nome pendente; o ID técnico permanece district-chelsea.",
-    "Siku não deve aparecer como nome oficial de Novydres, pois foi rejeitado pelo proprietário.",
-    "Cidade Velha é o nome popular predominante do núcleo formalmente denominado Iknik (ÍK-nik, de ikniq, fogo); Old Town é equivalente inglês.",
-    "Não afirmar que Iknik fosse o nome ancestral pré-1423 sem decisão histórica.",
-    "A renomeação não altera fronteiras, domínios Cainitas, termas ou outros fatos geográficos."
+    "Kingswal é o nome oficial do raion em 2010; Chelsea é referência histórica/editorial anterior; Siku permanece rejeitado.",
+    "Nome do posto avançado em 1423 em círculos cainitas; a data de adoção pública civil de Kingswal ainda não está definida.",
+    "Não presumir que o inglês era língua dominante nas comunidades originárias locais em 1423 nem que Kingswal substituía seu topônimo próprio.",
+    "O nome Iknik preserva raiz indígena (adaptação gráfica da palavra ikniq, 'fogo'), sem afirmar que essa exata grafia era usada antes de 1423.",
+    "Cidade Velha é o nome cotidiano predominante para o núcleo Iknik, que aparece raramente em documentos oficiais; Old Town é equivalente inglês.",
+    "'Fonte do Rei' é sentido cerimonial dado ao nome Kingswal pela corte Ventrue: Kingswal não é tradução literal inglesa, ao contrário de King's Well ou Kingswell.",
+    "Não atribuir genealogia Ventrue a Gilgamesh nem escolher qual variante da tradição do Antediluviano (Ventru ou Veddartha) é verdadeira sem decisão posterior.",
+    "IDs técnicos district-chelsea e chelsea-cidade-velha permanecem estáveis por compatibilidade.",
+    "Fronteiras, soberania mortal americana e domínio anarquista de 2010 não são alterados pela renomeação."
   ],
-  "scope": "Raion sem nome novo escolhido (Siku rejeitado); Cidade Velha nome cotidiano principal do núcleo, Iknik nome formal e raro. IDs históricos preservados.",
+  "scope": "Cânone fechado: Kingswal é o raion oficial de 2010 e nome cainita do posto avançado concedido aos Ventrue por Gilgamesh em 1423. Fonte do Rei é dedicatória alegórica; não etimologia literal de Kingswal. Iknik é nome formal da Cidade Velha, que permanece nome popular predominante.",
   "updated_on": "2026-11-16",
   "renaming_targets": [
     {
       "feature_id": "district-chelsea",
-      "current_official_name": null,
-      "proposed_new_name": null,
-      "status": "PENDING_NEW_NAME",
+      "current_official_name": "Kingswal",
       "previous_official_name": "Chelsea",
-      "approved_name": null,
-      "pronunciation_pt_br": "SÍ-ku",
-      "language": "Iñupiaq",
-      "meaning_pt": "gelo",
+      "approved_name": "Kingswal",
+      "proposed_new_name": null,
+      "status": "CLOSED_APPROVED",
+      "pronunciation_pt_br": "KÍNGZ-uól",
+      "language": "English-inspired fictional toponym",
+      "meaning_pt": "'Fonte do Rei' (sentido cerimonial e não tradução literal)",
       "withdrawn_name": "Siku"
     },
     {
@@ -40,7 +44,7 @@
       "current_canonical_name": "Iknik",
       "recognized_name": "Cidade Velha",
       "proposed_new_name": null,
-      "status": "FORMAL_NAME_APPROVED_COMMON_USAGE_APPROVED",
+      "status": "CLOSED_FORMAL_NAME_AND_COMMON_USAGE",
       "note": "Iknik: uso restrito principalmente a documentos oficiais; Cidade Velha: nome cotidiano predominante.",
       "previous_canonical_name": "Cidade Velha",
       "approved_name": "Iknik",
@@ -93,7 +97,7 @@
       "Nome curto e fácil de ler não significa etimologia inglesa. Pronúncia precisa acompanhar palavras não portuguesas/inglesas conforme EDI-001.1."
     ]
   },
-  "selection_preference": "Escolher nomes documentados em língua indígena regional mas curtos e pronunciáveis em português e inglês; preferir fonemas simples, podendo registrar grafia americanizada claramente diferenciada da forma histórica. Não misturar léxico tupi-guarani brasileiro à tradição linguística do Alasca apenas por semelhança sonora.",
+  "selection_preference": "Kingswal escolhido por ser fácil de pronunciar, compatível com topônimo inglês de 2010 e trazer homenagem secreta ao fundador Ventrue; prioridade de raízes indígenas preservada em Iknik e nas culturas originárias locais.",
   "accessible_shortlist": [
     {
       "target": "district-chelsea",
@@ -139,19 +143,24 @@
   "approved_on": "2026-11-16",
   "previous_official_name": "Chelsea",
   "approved_selection": {
-    "raion": null,
+    "raion": {
+      "name": "Kingswal",
+      "pronunciation_pt_br": "KÍNGZ-uól",
+      "historical_foundation_year": 1423,
+      "assigner": "Gilgamesh",
+      "dedication": "progenitor Ventrue",
+      "private_sense": "Fonte do Rei (não tradução literal)",
+      "language": "grafia ficcional de estilo inglês",
+      "public_adoption_date": "UNASSIGNED"
+    },
     "historical_core": {
       "name": "Iknik",
-      "pronunciation_pt_br": "ÍK-nik",
-      "language": "Iñupiaq; subvariedade local não verificada",
-      "lexeme": "ikniq",
-      "meaning_pt": "fogo",
-      "adaptation": "grafia americanizada aprovada",
       "common_name": "Cidade Velha",
-      "english_name": "Old Town"
-    },
-    "scope": "Apenas os topônimos canônicos de 2010; não fixa data de origem dos nomes nos séculos anteriores nem traçados.",
-    "raion_status": "PENDING_AFTER_SIKU_REJECTION"
+      "english_name": "Old Town",
+      "pronunciation_pt_br": "ÍK-nik",
+      "lexeme": "ikniq",
+      "meaning_pt": "fogo"
+    }
   },
-  "owner_feedback": "Siku rejeitado expressamente pelo proprietário por duplo sentido indesejado em português; não usar como nome atual. Cidade Velha permanece o nome falado quase sempre pelos moradores; Iknik é forma documental e oficial rara."
+  "owner_feedback": "Decisão final: Kingswal (grafia exata, não Kingswell) para raion. Gilgamesh o nomeou em 1423 como posto avançado do clã Ventrue; 'Fonte do Rei' é leitura simbólica privada e não tradução literal da grafia inglesa. O núcleo histórico tem forma documental Iknik e uso popular Cidade Velha. Siku rejeitado."
 }

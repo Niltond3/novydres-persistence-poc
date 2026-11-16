@@ -8,16 +8,17 @@
   "authority": "OWNER_EXPLICIT_DIRECTION",
   "approved_on": "2026-11-16",
   "reference_year": 2010,
-  "title": "Domínio anarquista da Cidade Velha e Sulfok em 2010",
-  "decision": "O movimento anarquista mantém domínio territorial sobre Cidade Velha (formalmente Iknik) e Sulfok em 2010. Nenhum deles é território do Concílio da Cruz e Espada.",
+  "title": "Domínio anarquista da Cidade Velha (Kingswal) e Sulfok em 2010",
+  "decision": "Em 2010, a Cidade Velha (nome formal Iknik), núcleo do raion Kingswal, e o raion Sulfok permanecem sob domínio anarquista efetivo, e não do Concílio da Cruz e Espada. A decisão não abrange automaticamente todo Kingswal.",
   "territorial_scope": [
     {
-      "territory": "Cidade Velha (nome formal Iknik; Old Town em inglês)",
-      "administrative_parent": null,
-      "extent": "Somente núcleo histórico Cidade Velha, não todo o raion de nome pendente (antigo Chelsea).",
+      "territory": "Cidade Velha (Iknik formal) no raion Kingswal",
+      "administrative_parent": "Kingswal",
+      "extent": "Núcleo Cidade Velha, formalmente Iknik, dentro de Kingswal. Não estender domínio anarquista automaticamente a todos os bairros de Kingswal.",
       "holder_2010": "Movimento anarquista / Estados Livres do Novo Endereço",
       "council_domain": "NONE",
-      "administrative_parent_subject_id": "district-chelsea"
+      "administrative_parent_subject_id": "district-chelsea",
+      "historical_context": "Posto avançado Ventrue batizado Kingswal por Gilgamesh em 1423. Ventrue expulsos em 1917; Concílio retoma Sulfok mas não a Cidade Velha."
     },
     {
       "territory": "Sulfok",
@@ -38,7 +39,7 @@
   ],
   "historical_ref": "novydres/cenario/historia-global/revolta-anarquista-1917-invasao-saba-1945.json",
   "pending": [
-    "Domínio dos demais bairros de raion de nome pendente e limites urbanos de Cidade Velha",
+    "Domínio dos demais bairros de Kingswal e limites urbanos de Cidade Velha",
     "Agentes e mecanismo de passagem do controle sabático em 1945 ao domínio anarquista posterior em Sulfok",
     "Titularidade jurídica de Cidade Velha após 1917, eventual reconhecimento pelo Concílio e sequência de governo local",
     "Relações entre células anarquistas, sindicatos, clãs e setores industriais",
@@ -49,7 +50,7 @@
   "historical_ref_sulfok": "novydres/cenario/historia-global/ciclo-sulfok-1917-1945-2010.json",
   "toponym_reference": {
     "fact_id": "GEO-004.5",
-    "raion_official_name": null,
+    "raion_official_name": "Kingswal",
     "raion_legacy_name": "Chelsea",
     "historic_core_common_name": "Cidade Velha",
     "historic_core_formal_name": "Iknik",

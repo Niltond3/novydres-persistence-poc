@@ -9,9 +9,9 @@
   "approval_date": "2026-11-15",
   "location_reference": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
   "historical_frame": {
-    "pre_contact": "Há comunidades e tradições locais anteriores ao domínio cainita; não caracterizar a região como território desabitado.",
+    "pre_contact": "Comunidades e tradições de povos originários ocupavam a região antes da chegada cainita; Iknik (índice formal moderno, adaptado de ikniq, 'fogo') preserva referência a essa herança, mas a grafia antiga e topônimo pré-contato não estão aprovados.",
     "cainite_arrival_reference": "A cronologia histórica candidata existente situa a travessia de Gilgamesh em 1423; esta subdecisão não altera o marco.",
-    "initial_mortal_organization": "O núcleo nasce de populações originárias, redes regionais de subsistência e troca e da reorganização gradual das ocupações sob influência Cainita; não se trata de colônia europeia ou russa no século XV.",
+    "initial_mortal_organization": "Povoamento assentado em comunidades originárias, subsistência, trocas e adaptação às termas naturais. A designação política Kingswal foi imposta ao posto avançado Ventrue por Gilgamesh em 1423 no âmbito cainita; não presumir sua adoção como nome público ou falado pelos indígenas da época.",
     "political_context": "As estruturas sociais mortais da fundação não eram Estados Unidos, império russo nem capitalismo industrial moderno.",
     "specific_real_world_ethnicity_or_language_for_cult": "NOT_ASSIGNED",
     "old_indigenous_place_name": null,
@@ -53,7 +53,7 @@
   "story_design_dependencies": {
     "must_link_geography_and_history": true,
     "not_yet_decided": [
-      "nome originário do lugar e língua de referência",
+      "forma e língua exata do nome usado pelas comunidades locais antes de 1423; Iknik é o nome formal moderno adaptado, não prova direta da forma histórica",
       "forma do culto e identidade sobrenatural assumida por Gilgamesh ou emissários",
       "quem exercia autoridade mortal e como era organizada",
       "datas, números de habitantes e escala real das caçadas",
@@ -63,5 +63,10 @@
     "cainite_domains_continuity_reference": "novydres/cenario/historia-global/formacao-policentrica-2010.json",
     "never_approve_historical_event_from_example": true
   },
-  "single_authoritative_source": true
+  "single_authoritative_source": true,
+  "kingswal_1423_reference": {
+    "fact_id": "GEO-004.5",
+    "authority": "novydres/cenario/geografia/district-chelsea/gilgamesh-culto-fundador-e-leis-de-sangue.json",
+    "description": "Kingswal, nome de posto avançado cainita/Ventrue por Gilgamesh em 1423; núcleo humano de origem indígena não criado do zero."
+  }
 }

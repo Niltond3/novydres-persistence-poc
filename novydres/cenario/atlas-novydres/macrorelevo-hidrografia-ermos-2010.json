@@ -38,9 +38,9 @@
         "id": "terrain-thermal-valley",
         "label": "Bacia/vale termal histórico",
         "form": "Depressão e vale interior protegido por colinas, conectado hidrogeologicamente a falhas quentes profundas.",
-        "placement": "Abrange a Cidade Velha (Iknik nos documentos), núcleo de raion ainda sem novo nome aprovado (ID district-chelsea; antigo Chelsea).",
+        "placement": "Vale termal da Cidade Velha (nome formal Iknik), núcleo do raion Kingswal (antigo Chelsea), sem fixar localização exata.",
         "function": "Origem do núcleo histórico com abrigos, água, solos localmente descongelados e águas termais abundantes.",
-        "limit": "O núcleo Cidade Velha não equivale automaticamente a todo o raion nem ao centro cívico metropolitano."
+        "limit": "Não equivale ao raion Kingswal inteiro nem ao centro cívico de Novydres em 2010."
       },
       {
         "id": "terrain-rocky-uplands",
@@ -79,7 +79,7 @@
     "main_river": {
       "existence_as_named_feature": "CONFIRMED_BY_OWNER_APPROVAL_GEO-003.4",
       "topology": "Rio doce com bacia em cotas elevadas; recebe tributários e fontes geotérmicas no vale da Cidade Velha, seguindo à grande baía.",
-      "chelsea": "Campo técnico legado: o rio principal atravessa a Cidade Velha, nome formal Iknik, dentro de raion de novo nome pendente.",
+      "chelsea": "Campo com ID legado 'chelsea': curso principal atravessa a Cidade Velha (Iknik formal) no raion Kingswal e apresenta trechos localmente mornos.",
       "estuary": "O Rio Vasyl deságua na grande baía do território. O setor industrial/portuário e a associação territorial com Sulfok permanecem hipóteses cartográficas, não localizações ratificadas.",
       "temperature": "Trechos aquecidos ficam perto de entradas termais; jusante e afluentes podem esfriar, congelar parcialmente ou receber controle hidráulico humano. Nunca supor rio integralmente quente ou gelo ausente por toda a extensão.",
       "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário.",
@@ -184,10 +184,9 @@
   },
   "toponym_reference": {
     "fact_id": "GEO-004.5",
-    "current_raion_official_name": null,
-    "raion_legacy": "Chelsea",
-    "rejected_raion_candidate": "Siku",
-    "formal_core_name": "Iknik",
-    "common_core_name": "Cidade Velha"
+    "raion_name": "Kingswal",
+    "legacy_raion_name": "Chelsea",
+    "core_common_name": "Cidade Velha",
+    "core_formal_name": "Iknik"
   }
 }
