@@ -8,7 +8,8 @@
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
-    "owner_approval_for_this_geometry": null
+    "owner_approval_for_this_geometry": null,
+    "refinement_stage": "OWNER_VISUAL_REVIEW_PENDING"
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
@@ -21,7 +22,18 @@
       "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
       "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json"
     ],
-    "method": "Fictional, locally metric macrogeometry. No geodetic fit or claim to replicate Port Clarence."
+    "method": "Fictional, locally metric macrogeometry. No geodetic fit or claim to replicate Port Clarence.",
+    "refinement": {
+      "work_unit": "MW-010",
+      "prior_commit": "a1d6d900b4e823a53933408649581b110fafdfaf",
+      "prior_git_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+      "owner_decision_keys": [
+        "FIS-01-DECISION-1",
+        "FIS-01-DECISION-2"
+      ],
+      "review_status": "PENDING_OWNER_VISUAL_APPROVAL",
+      "method": "17 shifted macro-bends, 18 sparse segment bends, local metre grid; not geodetic"
+    }
   },
   "spatial_reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -60,40 +72,68 @@
           -42000
         ],
         [
-          -43000,
-          -33500
+          -43500,
+          -33800
         ],
         [
           -36000,
           -28000
         ],
         [
-          -30000,
-          -20000
+          -30200,
+          -20600
         ],
         [
-          -28000,
-          -12000
+          -29700,
+          -16150
         ],
         [
-          -22000,
-          -16000
+          -28200,
+          -11900
         ],
         [
-          -15000,
+          -25450,
+          -14100
+        ],
+        [
+          -22200,
+          -15400
+        ],
+        [
+          -18750,
+          -17900
+        ],
+        [
+          -15800,
           -21000
         ],
         [
-          -8000,
-          -19000
+          -12050,
+          -20450
+        ],
+        [
+          -8500,
+          -19100
+        ],
+        [
+          -3600,
+          -20050
         ],
         [
           1000,
           -22000
         ],
         [
-          13000,
-          -17000
+          7100,
+          -20350
+        ],
+        [
+          12800,
+          -17700
+        ],
+        [
+          16550,
+          -13050
         ],
         [
           21000,
@@ -104,48 +144,92 @@
           2000
         ],
         [
-          22000,
-          12000
+          23700,
+          7200
         ],
         [
-          15000,
-          18500
+          21600,
+          12100
+        ],
+        [
+          17700,
+          15250
+        ],
+        [
+          14500,
+          19100
+        ],
+        [
+          9400,
+          21100
         ],
         [
           4000,
-          22000
+          22200
         ],
         [
-          -8000,
+          -2150,
+          19900
+        ],
+        [
+          -8600,
           18500
         ],
         [
-          -19000,
-          13000
+          -14200,
+          16250
         ],
         [
-          -30000,
-          7000
+          -19500,
+          13300
         ],
         [
-          -38000,
-          3500
+          -24950,
+          10050
         ],
         [
-          -45000,
-          4500
+          -30700,
+          7400
         ],
         [
-          -50000,
-          11000
+          -34800,
+          5850
+        ],
+        [
+          -38600,
+          3700
+        ],
+        [
+          -41950,
+          3650
+        ],
+        [
+          -45200,
+          4550
+        ],
+        [
+          -47050,
+          8200
+        ],
+        [
+          -49700,
+          11400
+        ],
+        [
+          -49300,
+          17250
         ],
         [
           -48000,
           23000
         ],
         [
-          -40000,
-          33000
+          -43850,
+          28000
+        ],
+        [
+          -40300,
+          33400
         ],
         [
           -42000,
@@ -167,13 +251,13 @@
       "geometry_type": "DerivedPolygon",
       "derived_from_feature": "coast-mainland-001",
       "coastline_vertices_inclusive_zero_based": [
-        5,
-        19
+        6,
+        33
       ],
       "closure": "straight_mouth_chord_from_north_endpoint_back_to_south_endpoint",
       "mouth_vertex_indices_zero_based": [
-        5,
-        19
+        6,
+        33
       ],
       "mouth_interpretation": "cartographic_seaward_threshold_not_a_bridge_or_port_or_depth_measurement",
       "connected_to": "water-outer-001",
@@ -298,7 +382,7 @@
     ]
   },
   "derived_geometry_rules": {
-    "bay_ring": "coastline.points_xy_m.slice(5,20) closed by line joining last point to first",
+    "bay_ring": "coastline.points_xy_m.slice(6,34) closed by line joining last point to first",
     "study_water_ring": "coastline.points_xy_m followed by [xmin,ymax], [xmin,ymin], closed to coastline first point",
     "study_mainland_ring": "coastline.points_xy_m followed by [xmax,ymax], [xmax,ymin], closed to coastline first point",
     "islands_are_holes_in_water": true,

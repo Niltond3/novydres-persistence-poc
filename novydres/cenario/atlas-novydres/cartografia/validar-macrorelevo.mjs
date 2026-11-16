@@ -152,7 +152,7 @@ for(const axis of axes){
   }
 }
 const coastal=relief.relief_model.coastal_context_references;
-assert.deepEqual(coastal.sheltered_bay.coast_vertex_range_inclusive_zero_based,[5,19]);
+assert.deepEqual(coastal.sheltered_bay.coast_vertex_range_inclusive_zero_based,coast.proposed_geometry.sheltered_bay.coastline_vertices_inclusive_zero_based);
 assert.equal(coastal.sheltered_bay.derived_feature_id,coast.proposed_geometry.sheltered_bay.feature_id);
 assert.deepEqual(coastal.exposed_coast_segments.map(s=>s.coast_vertex_range_inclusive_zero_based),
   [[0,5],[19,line.length-1]]);
