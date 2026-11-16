@@ -46,7 +46,7 @@
   ],
   "venture_example": {
     "status": "HYPOTHESIS_NOT_CANON",
-    "case": "Ventrue inicialmente em Old Town/Chelsea, deslocando centro de poder a Bukovie",
+    "case": "O poder econômico e executivo Ventrue é CANÔNICO em 2010; seu suposto domínio jurídico fundador em Chelsea e possível deslocamento para Bukovie continuam hipóteses históricas NÃO APROVADAS.",
     "main_decisions": [
       "Ventrue realmente detinham domínio jurídico de Old Town ou apenas influência econômica?",
       "Quem detinha Bukovie antes da chegada?",
@@ -68,8 +68,8 @@
     ]
   },
   "malkavian_example": {
-    "status": "HYPOTHESIS_NOT_CANON",
-    "case": "Uma concentração Malkavian em Levi poderia promover polo hospitalar, psicológico, acadêmico e de pesquisa",
+    "status": "CANONICAL_HEALTH_FUNCTION_LEVI_GEOGRAPHY_AND_HISTORY_NOT_APPROVED",
+    "case": "Saúde é competência Cainita CANÔNICA dos Malkavianos. Ainda se investiga se e por quê Levi concentra instituições e redes médicas, de quais períodos isso decorre e como a competência atua em todos os raions.",
     "test_questions": [
       "Quem financiou e dirige mortalmente hospitais e clínicas?",
       "A concentração oferece melhor atendimento aos residentes ou apenas serviços especializados?",
@@ -78,7 +78,7 @@
       "Quais rivalidades e alianças com Ventrue, Toreador, Nosferatu e demais agentes?",
       "Que diferença há entre cuidado eficiente e eventual exploração institucional?"
     ],
-    "guardrail": "Não presumir propriedade de toda a rede pública de saúde, excelência universal ou exclusividade médica Malkavian."
+    "guardrail": "Competência setorial Malkaviana CANÔNICA não equivale à posse de hospitais mortais, à melhor atenção em todo lugar nem a atribuição territorial a Levi. Sua centralidade pode atrair bons serviços, mas distribuição e eficiência precisam de história, investimento e obrigações plausíveis."
   },
   "regional_roles_to_investigate_not_canon": [
     {
@@ -131,12 +131,55 @@
   "geoeconomic_siting_integration": "Jazidas, carvão, petróleo/gás, complexo nuclear americano e reservas militares devem ser definidos em conjunto com o histórico de patronos, senhores, mão de obra e corredores de circulação, ANTES de ratificar as macroposições GEO-004.4.",
   "rename_dependency": "O proprietário solicitou futura revisão do nome Chelsea com referência culturalmente pesquisada aos povos originários. Referência proprietária: novydres/cenario/geografia/district-chelsea/revisao-toponimo-2010.json.",
   "workflow_order": [
-    "Mapear hipóteses de senhorios fundadores e vizinhanças sem inventar lacunas",
-    "Analisar períodos de controle jurídico/efetivo e sua legitimidade",
-    "Resolver causalmente cada evento de transferência e consequências",
-    "Cruzar recursos e investimentos com saúde, educação, religião, segurança, água/calor e demografia",
-    "Rever macroposições GEO-004.4, mantendo o nome Chelsea até nova aprovação",
-    "Somente então fixar limites, densidades, infraestrutura e redes de transportes antes da arte visual"
+    "Definir para cada setor seu equivalente histórico plausível e seus direitos de sangue por período sem fabricar fatos",
+    "Determinar titularidades de cada senhorio, controle efetivo e direitos transversais em cada fase, com nomes e datas por aprovação",
+    "Registrar alianças, prestações, conflitos e condições de acesso à saúde, religião, aquecimento, arte/lazer, justiça e poder executivo/militar",
+    "Vincular causas de mineração, educação, migrações, indústria nuclear americana e bases militares à expansão e às alianças locais",
+    "Explicar se houve migração Ventrue de Old Town a Bukovie e se Levi se tornou polo médico, antes de traçar limites de raion",
+    "Revisar GEO-004.4 e depois densidades, redes e instalações antes da arte"
   ],
-  "status_approval_scope": "Diretriz metodológica solicitada; fatos específicos e trocas de poder não aprovados."
+  "status_approval_scope": "Diretriz metodológica solicitada; fatos específicos e trocas de poder não aprovados.",
+  "canon_competence_reference": {
+    "fact_id": "POL-001.1",
+    "source": "novydres/cenario/politica-global/competencias-clanicas-institucionais-2010.json",
+    "status": "CONFIRMED_IN_CURRENT_CAINITE_INSTITUTIONAL_ORDER",
+    "scope": "As sete competências e a responsabilidade são canônicas para 2010; a origem, a formação e os deslocamentos históricos ainda são perguntas GEO-005.7."
+  },
+  "historical_competence_inquiry": [
+    {
+      "period": "1423 e primeiras fundações",
+      "status": "HYPOTHESIS",
+      "question": "Que funções de proteção, cuidado, lei, cultura, rito, calor e patronato já existiam entre os emissários? Não projetar ministérios modernos no século XV."
+    },
+    {
+      "period": "1632 e pacto do Draco",
+      "status": "HYPOTHESIS",
+      "question": "Que direitos de Tzimisce sobre cultura, arte, lazer, oficinas ou patronato foram negociados, se houve? Não inferir do pacto uma competência automaticamente datada."
+    },
+    {
+      "period": "séculos XVIII–XIX",
+      "status": "HYPOTHESIS",
+      "question": "Como comércio, mineração, ordens religiosas, instituições de cura e jurisprudência consolidaram especialistas e direitos de alimentação setoriais?"
+    },
+    {
+      "period": "1867–1917",
+      "status": "HYPOTHESIS",
+      "question": "De que modo a ação Ventrue e as relações com o Estado americano alteraram economia/executivo, sem confundir aquisição de governo mortal com mudança de senhorio?"
+    },
+    {
+      "period": "1917–1940",
+      "status": "HYPOTHESIS",
+      "question": "A regência após o desaparecimento de Gilgamesh formalizou novas competências ou apenas confirmou as anteriores?"
+    },
+    {
+      "period": "1940–1989",
+      "status": "HYPOTHESIS",
+      "question": "A Guerra Fria, os complexos militares americanos, a saúde moderna, a calefação e o mercado cultural ampliaram poder dos clãs setoriais?"
+    },
+    {
+      "period": "1990–2010",
+      "status": "HYPOTHESIS",
+      "question": "Que conflitos e responsabilidades setoriais explicam desigualdade térmica, saúde, disputas jurídicas, religião, entretenimento e segurança atuais?"
+    }
+  ]
 }

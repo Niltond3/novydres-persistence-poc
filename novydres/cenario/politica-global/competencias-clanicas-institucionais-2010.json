@@ -1,0 +1,193 @@
+{
+  "schema": "NOVYDRES_CAINITE_FUNCTIONAL_DOMAIN_CANON_V1",
+  "subject_id": "world-politics-novydres",
+  "fact_id": "POL-001.1",
+  "title": "Domínios de competência dos sete clãs — poder, alimentação e responsabilidade",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_APPROVAL",
+  "approval_date": "2026-11-15",
+  "reference_year": 2010,
+  "historical_temporal_scope": "Sete competências predominantes canonizadas para a ordem Cainita analisada em 2010. Início, continuidade, origem jurídica, delegação histórica e sucessão de cada competência antes de 2010 permanecem sujeitos à GEO-005.7.",
+  "governing_principle": "Ter domínio significa poder E responsabilidade. Quem detém a competência deve prestar proteção, manutenção, acesso, coordenação e responsabilidade por falhas no setor correspondente, não somente extrair favores, sangue ou rendas.",
+  "authority_layers": [
+    {
+      "layer": "sectoral_cainite_competence",
+      "rule": "Competência sobre um setor institucional em toda a cidade; inclui regulação política Cainita, interlocução, alimentação por esse meio, acesso, proteção e obrigações."
+    },
+    {
+      "layer": "territorial_cainite_domain",
+      "rule": "Senhorio sobre lugar concreto (terras, refúgios, caçadas locais, direitos de passagem), cuja titularidade histórica não é derivada automaticamente da competência setorial."
+    },
+    {
+      "layer": "mortal_public_private_governance",
+      "rule": "Hospitais, forças militares, órgãos executivos, igrejas, empresas e centros culturais podem ser governados legalmente por humanos e pelo Estado americano. A influência Cainita opera de modo indireto, negociado ou clandestino, sem transferir titularidade administrativa automaticamente."
+    }
+  ],
+  "feeding_rights": {
+    "rule": "O clã responsável pelo setor controla, entre Cainitas, as autorizações, limites, permissões, exceções e prestações referentes à alimentação que UTILIZE aquele setor ou suas instituições. Outras competências ou territórios envolvidos podem exigir consentimentos cumulativos, regras de hospitalidade e recurso às autoridades legais.",
+    "scope": "Não equivale a domínio total sobre o sangue de todos os humanos que frequentam serviços do setor. Um paciente em sua casa e um paciente internado não geram automaticamente a mesma jurisdição.",
+    "relationship_to_blood_laws": "As Leis de Sangue, a Hospitalidade, o Direito de Domínio e a autoridade do Príncipe/Regentes e do Concílio continuam superiores ou concorrentes conforme o tipo de ato; nenhuma competência setorial permite caça irrestrita ou violação de direito de outro senhor.",
+    "enforcement": "Conflitos são negociados, remunerados por prestações, pactuados ou levados à autoridade Cainita competente. Urgência não cria automaticamente salvo-conduto, embora possa fundamentar exceção autorizada e responsabilidade por omissão."
+  },
+  "negotiation_example": {
+    "situation": "Um Toreador precisa organizar intervenção médica urgente em área atingida por crise sanitária.",
+    "consequence": "Ele deve negociar com os Malkavianos, detentores da competência de Saúde, para obter suporte, autorização de uso de redes médicas e condições Cainitas de alimentação/acesso, sem substituir a prestação pública de socorro.",
+    "other_domains": "A operação pode exigir Ventrue (orçamento/autoridade executiva), Nosferatu (aquecimento de unidades), Gangrel (proteção ou evacuação) e Banu Haqim (base jurídica), além da autorização territorial onde necessária.",
+    "public_safety": "Nenhum acordo Cainita cancela o dever de proteger pessoas em emergência mortal."
+  },
+  "clan_domains": [
+    {
+      "clan": "Ventrue",
+      "domain": "Poder econômico e executivo",
+      "control": [
+        "crédito, investimentos, fundos, conselhos corporativos e orçamentos",
+        "influência nos gestores do Executivo mortal e política econômica",
+        "licenciamento político Cainita de alimentação e acesso obtidos por finanças, trabalho, relações executivas e patronato"
+      ],
+      "responsibility": [
+        "continuidade financeira e capacidade de financiamento de serviços essenciais",
+        "proteção da estabilidade econômica e prestação de contas perante a ordem Cainita",
+        "não transformar toda autoridade governamental mortal em propriedade jurídica dos Ventrue"
+      ],
+      "frictions": [
+        "Nosferatu: preço e manutenção da calefação",
+        "Banu Haqim: legalidade e abuso de poder",
+        "Gangrel: recursos de defesa",
+        "Malkavian: financiamento da saúde"
+      ]
+    },
+    {
+      "clan": "Toreador",
+      "domain": "Religião",
+      "control": [
+        "influência Cainita central sobre organizações, patronos, ritos, redes de assistência e representações religiosas",
+        "licenciamento ou restrição de alimentação que utilize proteção religiosa, peregrinações, caridade, retiros e instituições confessionais",
+        "interlocução institucional entre corte, líderes confessionais e agentes Cainitas"
+      ],
+      "responsibility": [
+        "proteção do pluralismo confessional reconhecido, da segurança e integridade das comunidades",
+        "preservação de autonomia religiosa mortal e assistência em crises de fé, fome e acolhimento",
+        "respeito à Lex Fidei e aos papéis próprios de Banu Haqim, Malkavian, Guardião da Fé e Intérpretes"
+      ],
+      "frictions": [
+        "Banu Haqim: decisões jurídicas, heresia e direito de proteção",
+        "Malkavian: assistência hospitalar religiosa",
+        "Tzimisce: arte sacra, festivais e espaços culturais"
+      ]
+    },
+    {
+      "clan": "Malkavian",
+      "domain": "Saúde",
+      "control": [
+        "influência central sobre hospitais, clínicas, cuidados psiquiátricos, pesquisa, assistência e fluxos médico-institucionais",
+        "direitos de autorização e restrição da alimentação Cainita que explore pacientes, instituições médicas, acesso clínico ou condições de cuidado",
+        "negociação de intervenções e utilização de recursos médicos por outros clãs"
+      ],
+      "responsibility": [
+        "manutenção de serviços, cuidado real dos humanos, capacidade de resposta a epidemias e emergências",
+        "prevenção de riscos, proteção de pacientes e responsabilidade por uso abusivo da influência médica",
+        "garantia de que acesso clínico humano necessário não dependa exclusivamente de acordos vampíricos"
+      ],
+      "frictions": [
+        "Toreador: ações de saúde em comunidades religiosas",
+        "Ventrue: orçamento sanitário",
+        "Tzimisce: terapias experimentais e lazer terapêutico",
+        "Nosferatu: calefação hospitalar"
+      ]
+    },
+    {
+      "clan": "Tzimisce",
+      "domain": "Arte e lazer",
+      "control": [
+        "patronato de artes, teatro, música, oficinas, espetáculos, clubes, entretenimento e lazer",
+        "organização de espaços de sociabilidade e direitos Cainitas de alimentação vinculados a eventos, casas de espetáculo e circuitos culturais",
+        "influência sobre preservação ou transformação de tradições estéticas e espaços recreativos"
+      ],
+      "responsibility": [
+        "manutenção de espaços culturais e de segurança do público mortal",
+        "fomento de ofícios artísticos, patrimônio, acesso cultural e organização dos eventos",
+        "responsabilização por riscos, abusos e danos associados aos circuitos recreativos"
+      ],
+      "frictions": [
+        "Toreador: arte religiosa e celebrações",
+        "Ventrue: patrocínio e concessões",
+        "Gangrel: segurança de multidões",
+        "Malkavian: saúde em eventos"
+      ]
+    },
+    {
+      "clan": "Banu Haqim",
+      "domain": "Poder jurídico",
+      "control": [
+        "investigação, interpretação prática, tribunais, procedimentos, precedentes, registros e aconselhamento jurídico Cainita",
+        "licenciamento e mediação das modalidades de alimentação e acesso que explorem prisões, custódias, litígios, procedimentos legais e posições jurídicas",
+        "interlocução com operadores mortais de Justiça e execução de decisões válidas"
+      ],
+      "responsibility": [
+        "devido processo, apuração de violações, mediação de conflitos e proteção dos limites de domínio",
+        "separar investigação e execução de autoridade soberana para sentenciar e legislar",
+        "não usurpar prerrogativas do Príncipe/Regentes, Concílio, Lex Fidei e outros titulares jurídicos"
+      ],
+      "frictions": [
+        "Gangrel: coerção e execução de decisões",
+        "Ventrue: poderes executivos e corrupção",
+        "Toreador: conflitos religiosos",
+        "Nosferatu: provas e infraestrutura"
+      ]
+    },
+    {
+      "clan": "Nosferatu",
+      "domain": "Aquecimento",
+      "control": [
+        "influência Cainita decisiva sobre a captação, manutenção, distribuição e continuidade dos sistemas de calor distrital e seus corredores subterrâneos",
+        "direitos de uso, passagem e alimentação Cainita derivados de instalações térmicas, equipes de manutenção, abrigos e circuitos relacionados ao setor",
+        "negociação de acesso a canais térmicos e serviços críticos por outros clãs"
+      ],
+      "responsibility": [
+        "preservação de aquecimento confiável, redundância, manutenção e socorro a falhas sob frio mortal",
+        "proteção dos humanos e aviso oportuno de riscos de congelamento ou sabotagem",
+        "não confundir domínio funcional do aquecimento com posse natural de todas as termas ou território de superfície"
+      ],
+      "frictions": [
+        "Ventrue: orçamento e desigualdade de distribuição",
+        "Malkavian: fornecimento a hospitais",
+        "Gangrel: proteção de corredores",
+        "Banu Haqim: dever de assistência e fiscalização"
+      ]
+    },
+    {
+      "clan": "Gangrel",
+      "domain": "Poder militar e coercivo",
+      "control": [
+        "influência Cainita predominante sobre defesa territorial, guarda de fronteiras, patrulhas, aparato coercivo e capacidade de mobilização armada",
+        "direitos de caçada e acesso autorizados associados a patrulhas, guarnições, regiões de fronteira e serviços de segurança",
+        "negociação de escoltas, contenção, segurança de instalações e proteção dos demais domínios"
+      ],
+      "responsibility": [
+        "proteger população e núcleos urbanos dos riscos do Ermo, ataques e desordem violenta",
+        "disciplinar o uso de força, garantir rotas e responder por abuso ou omissão de segurança",
+        "distinguir capacidade coerciva de autorização legal para condenar; não presumir comando formal sobre forças federais americanas"
+      ],
+      "frictions": [
+        "Banu Haqim: legalidade de medidas coercivas",
+        "Nosferatu: defesa de dutos e calor",
+        "Ventrue: recursos e ordens executivas",
+        "Tzimisce: segurança de festivais"
+      ]
+    }
+  ],
+  "cross_clan_cooperation": "O resultado estratégico depende de interdependência e negociação. Um clã pode possuir competência funcional central sobre um setor sem monopolizar as instituições mortais, sem anular outros clãs nem ter um raion exclusivo.",
+  "nonlisted_clans": "Lasombra, Hecata, Brujah, Ravnos, Tremere e demais grupos não perdem existência, influência ou poderes previamente reconhecidos por não integrarem essas sete competências designadas. Atribuições específicas exigem decisões posteriores.",
+  "special_consistency": [
+    "Toreador domina o setor religioso entre Cainitas, mas Ortodoxia, Islã e Judaísmo não são sua propriedade e a Lex Fidei conserva seus pilares, Guardião e Intérpretes.",
+    "Tzimisce recebe arte e lazer como competência principal; isso não torna propriedade exclusiva toda obra de arte, templo, artista ou patrimônio religioso e não revoga seu Draco Pact.",
+    "Nosferatu administram o setor térmico Cainita com responsabilidade operacional; não possuem automaticamente o vale termal de Old Town nem um raion de superfície.",
+    "Gangrel têm a competência militar/coerciva Cainita, mas ordens jurídicas válidas continuam com autoridades soberanas e Banu Haqim, sem presumir comando de bases militares federais americanas.",
+    "Ventrue têm hegemonia econômica/executiva setorial, mas não se tornam senhores fundadores de Chelsea nem titulares atuais de Bukovie apenas por essa competência.",
+    "Malkavian têm Saúde como competência canônica; a distribuição de hospitais e existência de um polo médico Malkavian em Levi continuam por decidir, sem atestar excelência universal.",
+    "Não canoniza ano de atribuição, nomes de primeiros titulares, contratos, marcos ou transferências territoriais."
+  ],
+  "owner_approval_scope": "Aprova expressamente Ventrue=Economia/Executivo, Toreador=Religião, Malkavian=Saúde, Tzimisce=Arte/Lazer, Banu Haqim=Jurídico, Nosferatu=Aquecimento, Gangrel=Militar/Coercivo; poder, responsabilidade, regulação Cainita da alimentação e negociação. Não aprova domínios por raion, antecedentes desde 1423 ou eventos não descritos.",
+  "single_authoritative_source": true
+}
