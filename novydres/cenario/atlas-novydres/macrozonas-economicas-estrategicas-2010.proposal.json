@@ -1,0 +1,191 @@
+{
+  "schema": "NOVYDRES_GEO_ECONOMIC_STRATEGIC_MACROZONE_PROPOSAL_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "GEO-004.6",
+  "title": "Macrozonas geoeconômicas, nucleares e militares antes da delimitação dos raions — 2010",
+  "canonical_status": "PROPOSED_OWNER_REVIEW",
+  "truth_state": "GM_PREPARED_PROPOSAL_NOT_CONFIRMED",
+  "proposal_date": "2026-11-15",
+  "reference_year": 2010,
+  "goal": "Propor apenas zonas funcionais territoriais e relações econômicas/históricas suficientes para decidir a macroposição dos nove raions. Não fixar polígonos, latitudes, perímetros municipais, posse de clãs, concessões a personagens ou localizações de instalações precisas.",
+  "bindings": [
+    "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
+    "novydres/cenario/atlas-novydres/implantacao-litoral-baia-2010.json",
+    "novydres/cenario/atlas-novydres/geotermia-aquecimento-2010.json",
+    "novydres/cenario/historia-global/crescimento-publico-e-geopolitico-2010.json",
+    "novydres/cenario/historia-global/evolucao-senhorios-e-economia-territorial-2010.proposal.json",
+    "novydres/cenario/politica-global/competencias-clanicas-institucionais-2010.json",
+    "novydres/cenario/atlas-novydres/posicionamento-raions-2010.proposal.json"
+  ],
+  "geologic_real_world_analogies": [
+    {
+      "reference": "USGS regional bedrock",
+      "url": "https://www.usgs.gov/publications/geology-seward-peninsula-and-saint-lawrence-island",
+      "finding": "Oeste da Península de Seward/York contém granito e depósitos minerais associados a estanho, potencialmente diversos metais; analogia para distritos metalíferos."
+    },
+    {
+      "reference": "USGS placer gold",
+      "url": "https://www.usgs.gov/centers/alaska-science-center/science/critical-minerals-alaska-placer-deposits-and-southeast-alaska",
+      "finding": "Ouro aluvionar e estanho encontrados em placers da península, com potencial de minerais críticos, sem afirmar quantidades específicas para o território fictício."
+    },
+    {
+      "reference": "BLM coal Chicago Creek",
+      "url": "https://www.arlis.org/docs/vol1/BLM/2024/1451729377/ANCSA_17d1_FEIS-app_D.pdf",
+      "finding": "Carvão em Chicago Creek no noroeste da península, incluindo extração histórica; usar somente como plausibilidade."
+    },
+    {
+      "reference": "USGS Norton Basin offshore",
+      "url": "https://pubs.usgs.gov/publication/ofr79720",
+      "finding": "Bacia sedimentar marítima ao sul da Península de Seward, com potencial de hidrocarbonetos. A ficção pode desenvolver exploração e logística sem tratar potencial como produção real."
+    },
+    {
+      "reference": "US Army SM-1A",
+      "url": "https://www.army.mil/article/272965/baltimore_district_kicks_off_decommissioning_of_former_army_nuclear_power_plant_on_fort_greely_alaska",
+      "finding": "Reator militar americano SM-1A operou 1962–1972 no Alasca real. Não está em Novydres; precedente de programa nuclear Ártico, desativação e remediação."
+    }
+  ],
+  "proposed_zones": [
+    {
+      "id": "Z01",
+      "label": "Cinturão metalífero ocidental",
+      "terrain": "York-like intrusões graníticas em serras/contrafortes e vales exteriores, sem copiar a cartografia real",
+      "bearing": "interior ocidental e noroeste, fora do Vale Termal histórico",
+      "resources": [
+        "estanho",
+        "tungstênio",
+        "metais de base",
+        "ouro em placers de tributários",
+        "outros minerais críticos sob investigação"
+      ],
+      "suggested_raion_relations": [
+        "Dunwich e seus Ermos",
+        "Drevnigrad em rotas industriais futuras, NÃO por posse da mesma jazida"
+      ],
+      "economic_effect": "Núcleos de mineiros e entrepostos em diferentes épocas, vias de escoamento e conflitos por contratos; salvaguardar drenagem termal de Old Town.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z02",
+      "label": "Campo diamantífero ficcional",
+      "terrain": "Corpo mineralizante próprio em substrato profundo estável, isolado dos placers de ouro e do cinturão estanífero",
+      "bearing": "interior remoto sob Ermos rochosos, posição relativa deliberadamente não fixada",
+      "resources": [
+        "diamantes em quantidades excepcionais exclusivamente ficcionais"
+      ],
+      "suggested_raion_relations": [
+        "área de senhorio fundador ainda UNKNOWN",
+        "escolher depois setor administrativo; não tomar automaticamente Dunwich ou Drevnigrad"
+      ],
+      "economic_effect": "Poder gerador de patronato, segredos contratuais e conflito por direitos de exploração e proteção; sondar plausibilidade de geologia alternativa explícita.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z03",
+      "label": "Planície carbonífera setentrional",
+      "terrain": "Bolsa sedimentar isolada de rochas metalíferas, em baixada/terraço frio com permafrost",
+      "bearing": "norte e noroeste do interior, não sobre Old Town",
+      "resources": [
+        "carvão"
+      ],
+      "suggested_raion_relations": [
+        "Dunwich",
+        "Levi como conexão de infraestrutura hipotética"
+      ],
+      "economic_effect": "Fornecimento histórico para indústria e refúgios remotos; sua escala evolui por tecnologia e acordos de acesso.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z04",
+      "label": "Bacia externa de petróleo e gás",
+      "terrain": "Bacia sedimentar costeira/marítima inspirada em Norton Basin; pode ter campos além dos limites municipais",
+      "bearing": "ao sul/externo da península, voltado ao Mar de Bering e à rede de portos protegidos",
+      "resources": [
+        "petróleo",
+        "gás natural"
+      ],
+      "suggested_raion_relations": [
+        "Sulfok como logística/beneficiamento",
+        "Vasyl Bay como litoral candidato sujeito a impactos, não proprietário dos poços"
+      ],
+      "economic_effect": "Concessões e investimentos posteriores à industrialização; refinarias/dutos/conexões surgem em fase moderna, não exploração comercial em 1423.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z05",
+      "label": "Arco de transformação e distribuição industrial",
+      "terrain": "Terraços firmes da periferia baixa da baía, separados de estuários frágeis e do centro densamente habitado",
+      "bearing": "lado portuário/industrial candidato entre Sulfok e áreas produtivas interiores",
+      "resources": [
+        "beneficiamento mineral",
+        "carga ferroviária",
+        "armazenagem",
+        "eventuais unidades de processamento de hidrocarbonetos"
+      ],
+      "suggested_raion_relations": [
+        "Sulfok",
+        "Drevnigrad",
+        "outros por futura malha de carga"
+      ],
+      "economic_effect": "Separar local de extração de local de industrialização e embarque. Uma parada de cargas do Expresso terá posição própria ainda não ratificada.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z06",
+      "label": "Reserva nuclear americana de legado da Guerra Fria",
+      "terrain": "Terraço de rocha competente, afastado da bacia termal, planície inundável e áreas de deslizamento, com acesso e fonte de resfriamento tecnicamente verificados",
+      "bearing": "periferia ao sul/interior ligada por corredor logístico à indústria; setor administrativo ainda indeterminado",
+      "resources": [
+        "complexo nuclear dos EUA"
+      ],
+      "suggested_raion_relations": [
+        "Drevnigrad ou faixa periférica adjacente, hipótese a cotejar com Z01/Z05"
+      ],
+      "economic_effect": "Propor núcleo militar/técnico americano construído na segunda metade do século XX. Um reator EXPERIMENTAL DESATIVADO até 2010 é opção editorial forte mas NÃO aprovada; outros usos nucleares americanos seguem abertos.",
+      "status": "CANDIDATE_NOT_CANON"
+    },
+    {
+      "id": "Z07",
+      "label": "Arco defensivo americano do Estreito",
+      "terrain": "cristas expostas para vigilância, trechos portuários protegidos para apoio marítimo, terraços firmes e afastados para aeronaves",
+      "bearing": "defesa distribuída entre margens, norte/noroeste e áreas de acesso à baía",
+      "resources": [
+        "reserva de radares e sensores",
+        "instalações portuárias militares",
+        "setor aéreo/terrestre de apoio"
+      ],
+      "suggested_raion_relations": [
+        "Dunwich",
+        "Alexandria",
+        "Sulfok",
+        "sem exigi-los como raions exclusivamente militares"
+      ],
+      "economic_effect": "Reserva federal, investimento e logística da Guerra Fria coexistem com competência coerciva Cainita Gangrel sem subordinar formalmente forças armadas dos EUA.",
+      "status": "CANDIDATE_NOT_CANON"
+    }
+  ],
+  "macro_causality": {
+    "origin": "Old Town e a proteção termal explicam a ocupação inicial; depósitos minerais e acesso à baía criam novos núcleos separados por Ermos, antes de raions modernos.",
+    "multi_core": "A riqueza mineral, comércio, serviços e decisões humanas atraem pessoas; os patronos Cainitas podem antecipar, explorar ou redirecionar essa concentração, não são a única causa.",
+    "sectoral_rule": "Os sete domínios clânicos POL-001.1 e apadrinhamento POL-001.2 são transversais: Ventrue podem financiar Z01; Gangrel proteger passagem; Nosferatu garantir calor; Banu Haqim licenciar atividades Cainitas, sem pressupor que sejam senhores territoriais.",
+    "timing": "Extração pré-industrial limitada no início; grandes minas/ferrovias/combustíveis são evoluções posteriores. Programa nuclear militar americano somente na segunda metade do século XX ou depois.",
+    "distinguish": "Recurso geológico, concessão de exploração humana, senhorio Cainita, domínio funcional de clã e administração por raion são cinco autoridades diferentes."
+  },
+  "geographic_safeguards": [
+    "Não implantar minas/instalação nuclear sobre nascentes termas de Old Town ou leito principal do Rio Vasyl sem estudo e aprovação",
+    "Não presumir diamantes reais da Península de Seward nem jazidas imensas de petróleo sob a baía de Novydres",
+    "Não implicar que dois raions precisem dividir igualmente jazida ou base por aparecerem próximos",
+    "Não apagar comunidades indígenas e patrimônios reais nem dar ao patrocinador Cainita propriedade automática da terra",
+    "Na reserva nuclear, não escolher falhas geotérmicas ativas, área alagável ou perímetros habitados densos; estudos técnicos e ambientais seriam obrigatórios",
+    "Áreas militares federais dos EUA não derivam sua autoridade legal dos Gangrel",
+    "Não definir rota do Expresso ou estações internas, salvo duas paradas comerciais já canonizadas dentro da cidade",
+    "Não declarar controladas por nenhum clã as sete zonas apenas por suas competências setoriais"
+  ],
+  "approval_requests": [
+    "Confirmar ou corrigir as sete zonas Z01–Z07 como macrogeografia funcional",
+    "Decidir se quer CANONIZAR um reator americano desativado em 2010 no complexo Z06, distinto da presença nuclear americana já aprovada",
+    "Confirmar se o campo diamantífero deve permanecer um único corpo isolado ou vários campos",
+    "Após macrozonas, amadurecer cronologia de senhorios e relações entre vizinhos antes de atualizar GEO-004.4"
+  ],
+  "cartography_status": "NO_COORDINATES_OR_POLYGONS; still conditional on owner decisions and GEO-004.4",
+  "owner_decision": "PENDING — nenhuma nova instalação real ou territorialização de raions foi aprovada."
+}
