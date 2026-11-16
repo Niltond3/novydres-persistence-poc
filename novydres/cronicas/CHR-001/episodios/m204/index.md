@@ -82,3 +82,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-036.md` preserva a fala de Bartolomeu exigindo subida rápida e a resposta de Emil condicionando o elevador à grade fechada e intertravamento ativo. Cursor `../estado/recuperacao-c101.json`; ainda sem subida, gasto ou teste.
 
 `adendo-c17-retorno-noturno-037.md` narra fechamento da grade, subida regular conduzida por Emil e chegada ao andar superior com acesso destravado; não presume saída da plataforma nem recolhimento da lanterna. Cursor `../estado/recuperacao-c102.json`.
+
+`adendo-c17-retorno-noturno-038.md` registra lanterna recuperada, saída pela rota de entrada e despedida silenciosa de Emil; PJ já está no exterior a caminho de casa. Documentos/Sara retidos, tédio e certeza de decisão preservados como pensamentos. Cursor `../estado/recuperacao-c103.json`; sem avanço automático de M3.02/Rada.
