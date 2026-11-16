@@ -15,3 +15,6 @@ Recursos conferidos: XP total 675, gastos 270, remanescentes 405, crédito 0; FV
 D04/D05 PASS com risco aceito; D06 PASS técnico; D07 PASS contextual de agente identificável. Nove grupos de sucessores examinados, **119 comportamentos não certificados**. `CONFLICT-001/002/003B` pendentes; cinco mídias opcionais dispensadas, ACL externa e V5 integral não certificados. Sem alteração de cânone, sem ledger universal, sem fallback.
 
 Transação em resposta de jogo autorizada: mesmo snapshot, owner, prosa+estado no commit, `tx_id`, CAS e readback antes da entrega; em erro, suspender e reconciliar, sem rerrolagem ou duplicação.
+
+## Convenção linguística do suplemento
+Em novos textos, revisões, apresentações e interações, termos de idiomas fora de português/inglês exigem significado ou sentido etimológico verificado, idioma e pronúncia aproximada acessível em português brasileiro. Não inventar etimologia de nomes próprios. A fonte única da regra EDI-001.1 é `cenario/atlas-novydres/convencao-editorial-idiomas-e-pronuncia.json` (sujeito `world-atlas-novydres`); candidatos de renomeação em Chelsea/Old Town não são nomes já aprovados. O passado do projeto não é reescrito por esta convenção sem revisão específica.

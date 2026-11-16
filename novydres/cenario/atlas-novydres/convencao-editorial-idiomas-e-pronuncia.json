@@ -1,0 +1,60 @@
+{
+  "schema": "NOVYDRES_EDITORIAL_FOREIGN_TERMS_PRONUNCIATION_V1",
+  "subject_id": "world-atlas-novydres",
+  "fact_id": "EDI-001.1",
+  "canonical_status": "CLOSED_CANON_SCOPED",
+  "truth_state": "CONFIRMED",
+  "authority": "OWNER_EXPLICIT_DIRECTION",
+  "approved_on": "2026-11-16",
+  "title": "Convenção editorial para línguas fora do português e do inglês",
+  "global_scope": "Material oficial, suplementos, mapas, legendas, cronologias, narração e explicações ao jogador; também interações de pesquisa no ChatGPT.",
+  "presentation_rule": "Sempre que um termo, nome ou expressão de língua diferente do português e do inglês for introduzido, apresentar grafia, significado ou sentido contextual verificado, idioma e pronúncia aproximada legível por falantes de português brasileiro. Incluir guia de pronúncia para termos históricos e adaptados; não supor que quem joga conhece russo, hebraico, iñupiaq ou outras línguas.",
+  "notation": "Termo (pronúncia: SÍ-ku; significado: gelo; idioma: iñupiaque). Marcar sílaba tônica em MAIÚSCULAS ou acento legível; privilegiar guia fonético simples em português brasileiro, sem exigir IPA.",
+  "proper_names": "Para nomes próprios sem etimologia verificável, indicar sentido narrativo ou 'significado etimológico não confirmado', sem inventar traduções; apresentar pronúncia quando houver evidência, ou sinalizar 'pronúncia proposta/provisória'.",
+  "repeated_uses": "No material de consulta, oferecer ficha ou glossário prontamente acessível e indicar na primeira ocorrência de cada seção; em textos curtos e conversas fornecer significado e pronúncia junto do termo ao introduzi-lo, repetindo o guia se surgir em novo contexto. Não sacrificar legibilidade nem ocultar origem.",
+  "anglicization": "Grafias americanizadas são permitidas apenas como adaptações ficcionais explicitamente rotuladas, com grafia indígena fonte, significado documentado e pronúncia; não apresentá-las como palavras indígenas autênticas.",
+  "language_authenticity": "Usar léxico realmente documentado no idioma geograficamente adequado. Aproximação sonora ao inglês ou a padrões familiares a lusófonos é critério de seleção, não licença para inventar etimologias ou misturar a origem da Península de Seward com povos tupi-guarani brasileiros.",
+  "dialect_authenticity": "Verificar formas pertinentes às variantes da Península de Seward, especialmente Qawiaraq e Estreito de Bering; não presumir equivalência exata com North Slope ou Kobuk. Se falta confirmação local, classificar como proposta etimológica provisória.",
+  "pronunciation_disclaimer": "Grafias simplificadas como ÍK-nik, SÍ-ku, NÚ-na são guias aproximados de mesa, não pronúncia fonética acadêmica. Consoantes indígenas e variações regionais podem diferir do português e do inglês.",
+  "implementation_scope": "Obrigatório para novos conteúdos e revisões editoriais subsequentes; arquivos históricos já existentes não são silenciosamente reescritos nesta decisão. O glossário deve ser ampliado gradualmente na revisão dos trechos afetados.",
+  "examples": [
+    {
+      "documented_lexeme": "nuna",
+      "meaning_pt": "terra, território, chão ou tundra",
+      "suggested_english_friendly_spelling": "Nuna",
+      "pronunciation_pt_br": "NÚ-na",
+      "meaning_scope": "não traduzir livremente como 'terra ancestral'"
+    },
+    {
+      "documented_lexeme": "siku",
+      "meaning_pt": "gelo",
+      "suggested_english_friendly_spelling": "Siku",
+      "pronunciation_pt_br": "SÍ-ku"
+    },
+    {
+      "documented_lexeme": "ikniq",
+      "meaning_pt": "fogo",
+      "suggested_english_friendly_spelling": "Iknik",
+      "pronunciation_pt_br": "ÍK-nik",
+      "historical_word_pronunciation_pt_br": "ÍK-nik (aproximação; o q original não é idêntico ao k português)",
+      "status": "AMERICANIZED_SPELLING_IS_PROPOSAL_NOT_ATTESTED_INUPIAQ_WORD"
+    },
+    {
+      "documented_lexeme": "tasiq",
+      "meaning_pt": "lagoa, enseada ou baía",
+      "suggested_english_friendly_spelling": "Tasiq",
+      "pronunciation_pt_br": "TÁ-sik",
+      "note": "toponímia de raion condicionada à confirmação de paisagem local e da variedade linguística"
+    }
+  ],
+  "sources": [
+    "https://www.uaf.edu/anlc/languages-move/inupiaq.php",
+    "https://inupiaq.tusaalanga.ca/lesson/1/grammar",
+    "https://inupiaq.tusaalanga.ca/glossary/english?showall=1",
+    "https://www.inupiaqonline.com/aqvalua%C5%8Baaq%28-%29%2Caqvaluaqtaaq",
+    "https://library.alaska.gov/hist/hist_docs/docs/anlm/200078.pdf",
+    "https://inupiaq.tusaalanga.ca/node/2504"
+  ],
+  "scope_of_approval": "A regra editorial de acessibilidade linguística é aprovada. Os exemplos de topônimos continuam candidatos e não substituem Chelsea ou Cidade Velha/Old Town.",
+  "single_authoritative_source": true
+}

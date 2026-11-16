@@ -2,7 +2,7 @@
   "schema": "NOVYDRES_TOPONYM_REVIEW_REQUEST_V1",
   "subject_id": "district-chelsea",
   "request_id": "GEO-004.5",
-  "status": "OWNER_CONFIRMED_TWO_RENAMES_RESEARCH_PENDING",
+  "status": "OWNER_APPROVED_ACCESSIBLE_INDIGENOUS_TOPONYM_SEARCH_NO_NAME_SELECTED",
   "requested_on": "2026-11-15",
   "current_official_name": "Chelsea",
   "proposed_new_name": null,
@@ -19,7 +19,7 @@
     "ID técnico district-chelsea só muda mediante migração de referências e aceite do proprietário.",
     "A história do nome antigo/novo deve acompanhar estudo das sucessões Cainitas e história social humana."
   ],
-  "scope": "Aprovada a DIRETRIZ de renomear Chelsea e o núcleo Cidade Velha; grafias e nomes novos não ratificados. Sem mudança atual de geografia, IDs, nomes, outras línguas e jurisdição.",
+  "scope": "Aprovados o objetivo da dupla renomeação e o critério de facilidade fonética, com guia de significado e pronúncia para língua estrangeira. Nenhum nome foi escolhido; oficial Chelsea, núcleo Cidade Velha/Old Town e identificadores técnicos não mudam.",
   "updated_on": "2026-11-16",
   "renaming_targets": [
     {
@@ -66,12 +66,60 @@
       "https://www.uaf.edu/anlc/languages-move/inupiaq.php",
       "https://beringstraits.com/history-region/",
       "https://inupiaq.tusaalanga.ca/glossary/english?showall=1",
-      "https://www.graphiteoneinc.com/wp-content/uploads/2026/03/Graphite-Creek_Environmental-Evaluation-Document_REV-0.pdf"
+      "https://www.graphiteoneinc.com/wp-content/uploads/2026/03/Graphite-Creek_Environmental-Evaluation-Document_REV-0.pdf",
+      "https://inupiaq.tusaalanga.ca/lesson/1/grammar",
+      "https://www.inupiaqonline.com/aqvalua%C5%8Baaq%28-%29%2Caqvaluaqtaaq",
+      "https://library.alaska.gov/hist/hist_docs/docs/anlm/200078.pdf",
+      "https://inupiaq.tusaalanga.ca/node/2504"
     ],
     "guardrails": [
       "Palavras isoladas não equivalem a topônimo gramaticalmente correto; verificar grafia e semântica local antes de aprovar.",
       "Não apagar nem rebatizar automaticamente Teller, Brevig Mission, Qawiaraq ou outros lugares e comunidades reais.",
-      "Nomes Chelsea e Cidade Velha/Old Town e IDs técnicos continuam canônicos até aprovação expressa dos substitutos e migração coordenada."
+      "Nomes Chelsea e Cidade Velha/Old Town e IDs técnicos continuam canônicos até aprovação expressa dos substitutos e migração coordenada.",
+      "Nome curto e fácil de ler não significa etimologia inglesa. Pronúncia precisa acompanhar palavras não portuguesas/inglesas conforme EDI-001.1."
     ]
-  }
+  },
+  "selection_preference": "Escolher nomes documentados em língua indígena regional mas curtos e pronunciáveis em português e inglês; preferir fonemas simples, podendo registrar grafia americanizada claramente diferenciada da forma histórica. Não misturar léxico tupi-guarani brasileiro à tradição linguística do Alasca apenas por semelhança sonora.",
+  "accessible_shortlist": [
+    {
+      "target": "district-chelsea",
+      "candidate": "Siku",
+      "historical_root": "siku",
+      "language": "Iñupiaq",
+      "meaning_pt": "gelo",
+      "pronunciation_pt_br": "SÍ-ku",
+      "editorial_status": "PROPOSED_NOT_APPROVED",
+      "use": "evoca o território gelado ao redor do núcleo termal"
+    },
+    {
+      "target": "district-chelsea",
+      "candidate": "Nuna",
+      "historical_root": "nuna",
+      "language": "Iñupiaq",
+      "meaning_pt": "terra, território",
+      "pronunciation_pt_br": "NÚ-na",
+      "editorial_status": "PROPOSED_NOT_APPROVED",
+      "use": "raiz territorial simples, sem traduzir automaticamente como 'terra dos ancestrais'"
+    },
+    {
+      "target": "chelsea-cidade-velha",
+      "candidate": "Iknik",
+      "historical_root": "ikniq",
+      "language": "Iñupiaq ocidental/Kobuk atestado; conferir aplicação local",
+      "meaning_pt": "fogo",
+      "pronunciation_pt_br": "ÍK-nik",
+      "editorial_status": "PROPOSED_AMERICANIZED_SPELLING_NOT_APPROVED",
+      "use": "associação metafórica ao calor geotérmico, sem afirmar que o termo signifique termas"
+    },
+    {
+      "target": "district-chelsea",
+      "candidate": "Tasiq",
+      "historical_root": "tasiq",
+      "language": "Iñupiaq; verificar variante local",
+      "meaning_pt": "lagoa, enseada ou baía",
+      "pronunciation_pt_br": "TÁ-sik",
+      "editorial_status": "PROPOSED_GEOGRAPHY_CONDITIONAL",
+      "use": "usar somente se vínculo físico com lagoa/enseada for aprovado"
+    }
+  ]
 }

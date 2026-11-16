@@ -32,3 +32,5 @@ Assunto geográfico candidato. `conteudo.json` contém uma única projeção da 
 **GEO-006.1 — domínio territorial em 2010:** [fonte política canônica](../../politica-global/dominio-anarquista-old-town-sulfok-2010.json). Old Town é domínio do movimento anarquista, não do Concílio da Cruz e Espada. Não extrapolar automaticamente ao restante de Chelsea; títulos e fronteiras seguem em aberto.
 
 **GEO-004.5 — proposta ampliada de nomes indígenas:** [pauta proprietária](revisao-toponimo-2010.json). O proprietário quer renomear tanto Chelsea quanto o núcleo próprio Cidade Velha/Old Town, valorizando a presença anterior de povos Iñupiat; nenhuma grafia nova foi ratificada. Os nomes atuais e IDs continuam autoritativos até aprovação.
+
+**GEO-004.5 + EDI-001.1 — nomes acessíveis:** [pauta de renomeação](revisao-toponimo-2010.json) reúne candidatos curtos com significado e pronúncia, incluindo Siku (gelo; SÍ-ku), Nuna (terra; NÚ-na) e Iknik (fogo; ÍK-nik, grafia ficcional americanizada de Ikniq). Nenhum nome foi escolhido; consultar a [convenção editorial](../../atlas-novydres/convencao-editorial-idiomas-e-pronuncia.json) para guias de outros idiomas.
