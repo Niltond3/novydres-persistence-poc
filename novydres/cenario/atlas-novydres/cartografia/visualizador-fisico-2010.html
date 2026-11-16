@@ -3,38 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Novydres — Atlas físico interativo · 2010 · MW-008</title>
+<title>Novydres — Atlas físico 2D de revisão · 2010</title>
 <meta name="description" content="Visualização técnica e não canônica das geometrias candidatas MW-002 a MW-005 de Novydres em 2010.">
 <style>
-:root{color-scheme:dark;--bg:#111b23;--panel:#17232b;--panel2:#1d2c35;--ink:#ebeadf;--muted:#a8b4b8;--rule:#38464b;--gold:#c8a477;--turquoise:#7fc9d5;--red:#de927f}
+:root{color-scheme:dark;--bg:#2d2f32;--panel:#24282c;--panel2:#2a2f34;--ink:#e8eceb;--muted:#a8b2b5;--rule:#43484c;--gold:#c9c0ad;--turquoise:#6d90a1;--red:#ba8773;--water:#4f7382;--land:#2b2d30;--land2:#35383b}
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,'Segoe UI',ui-sans-serif,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink)}
 button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #f4cd90;outline-offset:3px}a{color:#a9d5df}
-.shell{height:100dvh;min-height:600px;display:grid;grid-template-columns:286px minmax(300px,1fr) 286px;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
-.top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:84px;padding:14px 23px;border-bottom:1px solid var(--rule);background:linear-gradient(110deg,#1e2d36,#121c24 63%,#252727)}
-.brand{display:flex;align-items:center;gap:14px;min-width:0}.brandmark{width:45px;height:45px;border:1px solid #957b5c;border-radius:50%;display:grid;place-items:center;color:#e9c391;letter-spacing:-3px;font-family:Georgia,serif;font-size:28px;transform:rotate(-8deg);flex:none}
-.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:800}.brand h1{font-size:23px;line-height:1;margin:5px 0 4px;letter-spacing:.06em;font-family:Georgia,'Times New Roman',serif;font-weight:600}.subtitle{font-size:11px;color:#a6b4b8;white-space:nowrap}
-.top-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}.tag{padding:7px 10px;border:1px solid #455356;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#d4d8d3;white-space:nowrap}.tag.warn{border-color:#a27364;color:#f1b4a3;background:#402d2b}
-.side{background:var(--panel);padding:20px 17px;overflow:auto}.side.left{border-right:1px solid var(--rule)}.side.right{border-left:1px solid var(--rule)}
-.panelhead{font-family:Georgia,serif;font-size:19px;margin:0 0 8px;letter-spacing:.015em}.smallcopy{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 20px}.sect{padding-top:16px;border-top:1px solid var(--rule);margin-top:18px}.sect-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 14px;font-size:10px;text-transform:uppercase;font-weight:800;color:#d4bc94;letter-spacing:.16em}
-.layer{display:flex;align-items:center;gap:11px;min-height:37px;padding:5px 3px;border-radius:7px;cursor:pointer;font-size:12px;color:#e0e8e6}.layer:hover{background:#243640}.layer input{accent-color:#bdc9ad;width:15px;height:15px;flex:none}.swatch{display:inline-block;width:18px;height:11px;border:1px solid #71828a;flex:none;border-radius:2px}.swatch.line{height:0;border-width:2px 0 0;border-radius:0}
+.shell{height:100dvh;min-height:600px;display:grid;grid-template-columns:286px minmax(300px,1fr) 286px;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;background:linear-gradient(180deg,#2e3135,#26292c)}
+.top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:84px;padding:14px 23px;border-bottom:1px solid var(--rule);background:linear-gradient(110deg,#31353a,#23272b 63%,#30353a)}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}.brandmark{width:45px;height:45px;border:1px solid #8e948f;border-radius:50%;display:grid;place-items:center;color:#d7d9d4;letter-spacing:-3px;font-family:Georgia,serif;font-size:28px;transform:rotate(-8deg);flex:none;background:#2b3034}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cad0cf;font-weight:800}.brand h1{font-size:23px;line-height:1;margin:5px 0 4px;letter-spacing:.07em;font-family:Georgia,'Times New Roman',serif;font-weight:600}.subtitle{font-size:11px;color:#a6b4b8;white-space:nowrap}
+.top-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}.tag{padding:7px 10px;border:1px solid #5a6165;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#dfe3df;white-space:nowrap;background:#2d3236}.tag.warn{border-color:#8a7368;color:#ead4ca;background:#3a3130}
+.side{background:linear-gradient(180deg,#25292d,#212529);padding:20px 17px;overflow:auto}.side.left{border-right:1px solid var(--rule)}.side.right{border-left:1px solid var(--rule)}
+.panelhead{font-family:Georgia,serif;font-size:19px;margin:0 0 8px;letter-spacing:.015em}.smallcopy{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 20px}.sect{padding-top:16px;border-top:1px solid var(--rule);margin-top:18px}.sect-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 14px;font-size:10px;text-transform:uppercase;font-weight:800;color:#d3d7d5;letter-spacing:.16em}
+.layer{display:flex;align-items:center;gap:11px;min-height:37px;padding:5px 6px;border-radius:7px;cursor:pointer;font-size:12px;color:#e3e8e6}.layer:hover{background:#2d3439}.layer input{accent-color:#b9c3c7;width:15px;height:15px;flex:none}.swatch{display:inline-block;width:18px;height:11px;border:1px solid #8b979b;flex:none;border-radius:2px}.swatch.line{height:0;border-width:2px 0 0;border-radius:0}
 .legend-item{display:flex;gap:10px;align-items:center;font-size:11px;color:#b9c5c7;margin:9px 0}.legend-item b{color:#f4f1e3;font-weight:600}
 .bullet{height:8px;width:8px;border-radius:50%;background:#8a9da1;flex:none}
-.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.stat{background:#24333b;border:1px solid #34454b;padding:11px 10px;border-radius:10px}.stat b{display:block;color:#f0d7ac;font-size:17px;font-variant-numeric:tabular-nums}.stat span{color:#acb8b8;font-size:10px;line-height:1.3}
-.maparea{position:relative;min-height:0;background:#0a2735;overflow:hidden}.maparea svg{width:100%;height:100%;display:block;touch-action:none;cursor:grab}.maparea svg.grabbing{cursor:grabbing}
-.maptools{position:absolute;top:15px;left:15px;display:flex;gap:6px;z-index:2}.maptools button,.mini-btn{border:1px solid #5a6b73;background:rgba(18,35,43,.91);color:#edf2ed;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0004}.maptools button:hover,.mini-btn:hover{background:#30444f}
-.north{position:absolute;right:20px;top:18px;text-align:center;color:#eadaba;font-size:12px;letter-spacing:.1em;text-shadow:0 1px 5px #061923;font-weight:800;pointer-events:none}.north svg{width:34px;height:45px;display:block;margin:auto;cursor:default}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.stat{background:#2d3439;border:1px solid #454c50;padding:11px 10px;border-radius:10px}.stat b{display:block;color:#dfe3de;font-size:17px;font-variant-numeric:tabular-nums}.stat span{color:#b5bdbc;font-size:10px;line-height:1.3}
+.maparea{position:relative;min-height:0;background:#4c7180;overflow:hidden}.maparea svg{width:100%;height:100%;display:block;touch-action:none;cursor:grab}.maparea svg.grabbing{cursor:grabbing}
+.maptools{position:absolute;top:15px;left:15px;display:flex;gap:6px;z-index:2}.maptools button,.mini-btn{border:1px solid #697277;background:rgba(39,44,48,.92);color:#edf2ed;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0005}.maptools button:hover,.mini-btn:hover{background:#383f44}
+.north{position:absolute;right:20px;top:18px;text-align:center;color:#f1f3f2;font-size:12px;letter-spacing:.1em;text-shadow:0 1px 5px #16242a;font-weight:800;pointer-events:none}.north svg{width:34px;height:45px;display:block;margin:auto;cursor:default}
 .scale{position:absolute;bottom:23px;left:24px;pointer-events:none;display:flex;flex-direction:column;gap:5px}.scale-line{height:8px;width:100px;border-bottom:2px solid #e5e9e5;border-left:2px solid #e5e9e5;border-right:2px solid #e5e9e5}.scale-label{font-size:11px;text-shadow:0 1px 7px #001c2a;color:#e3eff1}
-.coords{position:absolute;bottom:18px;right:17px;background:rgba(16,31,41,.86);border:1px solid #48606c;padding:7px 10px;border-radius:8px;color:#cbdadf;font-size:10px;font-variant-numeric:tabular-nums;pointer-events:none}
-.tooltip{position:absolute;display:none;pointer-events:none;z-index:3;max-width:270px;padding:8px 10px;background:#152630f2;border:1px solid #8e9d9f;color:#f7ead7;font-size:12px;border-radius:7px;box-shadow:0 7px 18px #0008;line-height:1.4}
-.notice{position:absolute;top:15px;right:74px;z-index:2;padding:8px 10px;border:1px solid #5b7a83;background:#1c3039d9;border-radius:7px;color:#cbdcdf;font-size:10px}
-.selection-id{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#c8dacb;overflow-wrap:anywhere;background:#21313b;border:1px solid #3d4c50;padding:10px;border-radius:8px;margin:12px 0}
+.coords{position:absolute;bottom:18px;right:17px;background:rgba(41,46,50,.88);border:1px solid #687277;padding:7px 10px;border-radius:8px;color:#dbe1e2;font-size:10px;font-variant-numeric:tabular-nums;pointer-events:none}
+.tooltip{position:absolute;display:none;pointer-events:none;z-index:3;max-width:270px;padding:8px 10px;background:#252b2ff2;border:1px solid #919a9d;color:#f1f2ee;font-size:12px;border-radius:7px;box-shadow:0 7px 18px #0008;line-height:1.4}
+.notice{position:absolute;top:15px;right:74px;z-index:2;padding:8px 10px;border:1px solid #6f787d;background:#2a3136dc;border-radius:7px;color:#d9e0de;font-size:10px}
+.selection-id{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:#d6e0d5;overflow-wrap:anywhere;background:#2a3136;border:1px solid #465056;padding:10px;border-radius:8px;margin:12px 0}
 .property{display:flex;align-items:start;justify-content:space-between;border-bottom:1px solid #34414a;padding:9px 0;gap:14px;font-size:11px}.property .k{color:#9dacb1}.property .v{color:#f2ede2;text-align:right;max-width:62%;overflow-wrap:anywhere;font-weight:600}
-.choice{margin-top:12px;padding:12px;background:#27343c;border-left:3px solid var(--gold);font-size:12px;line-height:1.5;color:#e2e7e3}.choice strong{color:#ffe0ac}
+.choice{margin-top:12px;padding:12px;background:#2d3338;border-left:3px solid #c8cfc9;font-size:12px;line-height:1.5;color:#e2e7e3}.choice strong{color:#f4f4ef}
 .instructions{font-size:12px;color:#a9b8bc;line-height:1.65;margin-top:12px}
-.foot{grid-column:1/-1;min-height:32px;padding:8px 18px;background:#101921;border-top:1px solid #38464d;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#9baeb4;white-space:nowrap;overflow:hidden}.foot span{overflow:hidden;text-overflow:ellipsis}
-.grid-line{stroke:#aec2ba;stroke-opacity:.085;stroke-width:.08;pointer-events:none}.grid-line.major{stroke-opacity:.14;stroke-width:.11}.grid-label{fill:#98b2b5;opacity:.58;font-size:1.8px;font-family:ui-monospace,monospace;pointer-events:none}
-.geom{cursor:crosshair;transition:filter .16s,opacity .2s}.geom:hover{filter:brightness(1.22)}.geom.selected{stroke:#ffdf9b!important;stroke-width:.9!important;stroke-dasharray:none!important;filter:drop-shadow(0 0 .55px #f8e3bc)}
-.map-note{fill:#d9e2df;font-size:2.35px;letter-spacing:.25px;font-family:Georgia,serif;pointer-events:none;paint-order:stroke;stroke:#142e37;stroke-width:.45}
+.foot{grid-column:1/-1;min-height:32px;padding:8px 18px;background:#212529;border-top:1px solid #42494d;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#b4bebf;white-space:nowrap;overflow:hidden}.foot span{overflow:hidden;text-overflow:ellipsis}
+.grid-line{stroke:#f1f4f2;stroke-opacity:.05;stroke-width:.08;pointer-events:none}.grid-line.major{stroke-opacity:.08;stroke-width:.11}.grid-label{fill:#edf1ef;opacity:.34;font-size:1.8px;font-family:ui-monospace,monospace;pointer-events:none}
+.geom{cursor:crosshair;transition:filter .16s,opacity .2s}.geom:hover{filter:brightness(1.22)}.geom.selected{stroke:#f3f6f4!important;stroke-width:.9!important;stroke-dasharray:none!important;filter:drop-shadow(0 0 .55px #ffffffc7)}
+.map-note{fill:#eef1ef;font-size:2.35px;letter-spacing:.28px;font-family:Georgia,serif;pointer-events:none;paint-order:stroke;stroke:#283136;stroke-width:.55}
 @media(max-width:1180px){.shell{grid-template-columns:247px minmax(250px,1fr) 250px}.top{padding-inline:15px}.side{padding:17px 12px}.brand h1{font-size:20px}.notice{display:none}}
 @media(max-width:900px){.shell{height:auto;min-height:100dvh;grid-template-columns:210px minmax(0,1fr);grid-template-rows:auto minmax(500px,65dvh) auto auto;overflow:visible}.side.right{grid-column:1/-1;border-left:none;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:15px}.side.right .sect{margin:0}.maparea{min-height:500px}.foot{white-space:normal}.subtitle{white-space:normal}}
 @media(max-width:610px){.shell{grid-template-columns:1fr;grid-template-rows:auto auto 65dvh auto auto}.top{align-items:flex-start;flex-direction:column}.top-tags{justify-content:flex-start}.side.left{border-right:none;padding:12px 15px}.side.left .sect:nth-of-type(n+2){display:none}.layerlist{display:grid;grid-template-columns:1fr 1fr}.statgrid,.side.left>.smallcopy{display:none}.maparea{min-height:420px}.side.right{display:block;padding:16px}.maptools{top:10px;left:10px}.maptools button{padding:8px}.foot{display:block}}
@@ -43,21 +43,21 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 <body>
 <div class="shell">
 <header class="top">
-  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">MW-008 · Reprodução vetorial das propostas MW-002 a MW-005</div></div></div>
-  <div class="top-tags"><span class="tag warn">Geometria não canônica</span><span class="tag">Macro-organização aprovada</span><span class="tag">Plano local · metros</span></div>
+  <div class="brand"><div class="brandmark" aria-hidden="true">N</div><div><div class="eyebrow">Novydres / Mapwork</div><h1>ATLAS FÍSICO · 2010</h1><div class="subtitle">Padrão 2D adotado · Geometrias MW-002 a MW-005</div></div></div>
+  <div class="top-tags"><span class="tag warn">Geometria não canônica</span><span class="tag">Macro-organização aprovada</span><span class="tag">Padrão cartográfico 2D</span><span class="tag">Plano local · metros</span></div>
 </header>
 <aside class="side left" aria-label="Camadas e legenda">
   <h2 class="panelhead">Leitura do território</h2>
-  <p class="smallcopy">Mesmos vértices registrados no GitHub. A escala é local e sintética: esta folha <b>não</b> corresponde aos limites municipais.</p>
+  <p class="smallcopy">Mesmos vértices registrados no GitHub, agora com linguagem visual plana e leitura material mais sóbria. A escala é local e sintética: esta folha <b>não</b> corresponde aos limites municipais.</p>
   <section class="sect"><h3 class="sect-title">Camadas <span id="layercount">7 ativas</span></h3><div class="layerlist" id="layers"></div></section>
   <section class="sect"><h3 class="sect-title">Classes do relevo / Ermos</h3>
-    <div class="legend-item"><span class="swatch" style="background:#a36d50"></span>Vale termal candidato</div>
-    <div class="legend-item"><span class="swatch" style="background:#766275"></span>Serras e contrafortes</div>
-    <div class="legend-item"><span class="swatch" style="background:#627b65"></span>Tundra e permafrost</div>
-    <div class="legend-item"><span class="swatch" style="background:#66857a"></span>Baixada úmida</div>
-    <div class="legend-item"><span class="swatch" style="background:#c98d63"></span>Ermos (camada sobreposta)</div>
-    <div class="legend-item"><span class="swatch line" style="border-color:#7dd8ee"></span>Curso d'água</div>
-    <div class="legend-item"><span class="swatch line" style="border-color:#f1b56d"></span>Trecho com aporte termal</div>
+    <div class="legend-item"><span class="swatch" style="background:#555049"></span>Vale termal candidato</div>
+    <div class="legend-item"><span class="swatch" style="background:#46484b"></span>Serras e contrafortes</div>
+    <div class="legend-item"><span class="swatch" style="background:#59615b"></span>Tundra e permafrost</div>
+    <div class="legend-item"><span class="swatch" style="background:#5d6964"></span>Baixada úmida</div>
+    <div class="legend-item"><span class="swatch" style="background:#6f716e"></span>Ermos (camada sobreposta)</div>
+    <div class="legend-item"><span class="swatch line" style="border-color:#a8c1cb"></span>Curso d'água</div>
+    <div class="legend-item"><span class="swatch line" style="border-color:#d0d8d2"></span>Trecho com aporte termal</div>
   </section>
   <section class="sect"><h3 class="sect-title">Inventário candidato</h3><div class="statgrid">
     <div class="stat"><b>3</b><span>ilhas secundárias</span></div>
@@ -69,7 +69,7 @@ button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus
 <main class="maparea" id="stage" aria-label="Mapa físico interativo de Novydres">
   <div class="maptools"><button id="fit" title="Enquadrar toda a folha">Enquadrar</button><button id="zoomIn" title="Aproximar">＋</button><button id="zoomOut" title="Afastar">−</button><button id="saveSvg" title="Exportar a vista vetorial atual como SVG">Salvar SVG</button></div>
   <svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="-66 -56 132 112" role="img" aria-label="Costa, baía, ilhas, relevo, rios, lagoas e Ermos candidatos; plano local Novydres 2010">
-    <rect x="-200" y="-200" width="400" height="400" fill="#0a2d40"/>
+    <rect x="-200" y="-200" width="400" height="400" fill="#4f7382"/>
     <g id="world" transform="scale(1,-1)"></g>
     <g id="labels"></g>
   </svg>
@@ -141,15 +141,15 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   const coast=byId.get('coast-mainland-001');
   if(!coast||coast.points.length!==26||records.length!==41)throw Error('Inventário de fontes não confere');
   const config=[
-    {id:'relief',label:'Macrorelevo',color:'#756a6f',on:true},
-    {id:'ermos',label:'Corredores do Ermo',color:'#ca8e60',on:true},
-    {id:'watercourses',label:'Rios e afluentes',color:'#7bd3e8',on:true,line:true},
-    {id:'waterbodies',label:'Lagos, lagoa e terma',color:'#4f9bb3',on:true},
-    {id:'islands',label:'Ilhas secundárias',color:'#d5ba8d',on:true},
-    {id:'thermal',label:'Trecho termal',color:'#f4ba76',on:true,line:true},
-    {id:'basins',label:'Envelopes de bacias',color:'#91bfc1',on:false},
-    {id:'crests',label:'Eixos de crista',color:'#e7c7ac',on:false,line:true},
-    {id:'baymouth',label:'Limiar da baía',color:'#acd9df',on:true,line:true},
+    {id:'relief',label:'Macrorelevo',color:'#47494c',on:true},
+    {id:'ermos',label:'Corredores do Ermo',color:'#6c6f6b',on:true},
+    {id:'watercourses',label:'Rios e afluentes',color:'#a7c1ca',on:true,line:true},
+    {id:'waterbodies',label:'Lagos, lagoa e terma',color:'#658896',on:true},
+    {id:'islands',label:'Ilhas secundárias',color:'#303235',on:true},
+    {id:'thermal',label:'Trecho termal',color:'#d3ddd8',on:true,line:true},
+    {id:'basins',label:'Envelopes de bacias',color:'#90a9b0',on:false},
+    {id:'crests',label:'Eixos de crista',color:'#9ca2a4',on:false,line:true},
+    {id:'baymouth',label:'Limiar da baía',color:'#c8d4d6',on:true,line:true},
   ];
   const settings=Object.fromEntries(config.map(c=>[c.id,c.on]));
   const defaults={x:-66,y:-56,w:132,h:112},view={...defaults};
@@ -173,10 +173,21 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   const layerGroups={};
   for(const x of [...config.map(v=>v.id),'coast'])layerGroups[x]=node('g',{'data-layer':x});
   const base=node('g',{},world);world.insertBefore(base,world.firstChild);
-  node('path',{d:path([...coast.points,[60,50],[60,-50]],true),fill:'#39463d',stroke:'none'},base);
+  const defs=node('defs',{},svg);
+  defs.innerHTML=`
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#58798a"/><stop offset="100%" stop-color="#476a79"/></linearGradient>
+    <linearGradient id="g-land" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#35383c"/><stop offset="100%" stop-color="#2a2c2f"/></linearGradient>
+    <pattern id="p-rock" width="3.5" height="3.5" patternUnits="userSpaceOnUse"><rect width="3.5" height="3.5" fill="#515154"/><path d="M0 3.5L3.5 0" stroke="#67696d" stroke-width="0.22" opacity="0.65"/></pattern>
+    <pattern id="p-tundra" width="4.2" height="4.2" patternUnits="userSpaceOnUse"><rect width="4.2" height="4.2" fill="#5d655e"/><circle cx="1.1" cy="1.1" r="0.23" fill="#818881" opacity="0.55"/><circle cx="3.1" cy="2.8" r="0.23" fill="#848b84" opacity="0.55"/></pattern>
+    <pattern id="p-wet" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#5d6964"/><path d="M0 2H4M1 4V0" stroke="#7b8781" stroke-width="0.17" opacity="0.52"/></pattern>
+    <pattern id="p-coastal" width="4.5" height="4.5" patternUnits="userSpaceOnUse"><rect width="4.5" height="4.5" fill="#686b69"/><path d="M0 3.4C.8 3.0 1.5 3.0 2.2 3.4S3.7 3.8 4.5 3.4" fill="none" stroke="#8a8e8a" stroke-width="0.18" opacity="0.6"/></pattern>
+    <filter id="soft-relief" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="0.15" stdDeviation="0.22" flood-color="#000000" flood-opacity="0.28"/></filter>
+  `;
+  node('rect',{x:-60,y:-50,width:120,height:100,fill:'url(#g-water)',stroke:'none'},base);
+  node('path',{d:path([...coast.points,[60,50],[60,-50]],true),fill:'url(#g-land)',stroke:'#1c2327','stroke-width':.28},base);
   const bayCoast=coast.points.slice(5,20);
-  node('path',{d:path(bayCoast,true),fill:'#174d60',stroke:'none'},base);
-  const coastlineFrame=node('rect',{x:-60,y:-50,width:120,height:100,fill:'none',stroke:'#9caeae','stroke-width':.16,'stroke-dasharray':'1.5 1.3'},base);
+  node('path',{d:path(bayCoast,true),fill:'#5e7f8e','fill-opacity':.28,stroke:'none'},base);
+  const coastlineFrame=node('rect',{x:-60,y:-50,width:120,height:100,fill:'none',stroke:'#d8e1dd','stroke-opacity':.28,'stroke-width':.15,'stroke-dasharray':'1.5 1.3'},base);
   for(let x=-60;x<=60;x+=10){node('line',{x1:x,y1:-50,x2:x,y2:50,class:'grid-line'+(x%20===0?' major':'')},base)}
   for(let y=-50;y<=50;y+=10){node('line',{x1:-60,y1:y,x2:60,y2:y,class:'grid-line'+(y%20===0?' major':'')},base)}
   // The grid is a drawing reference only, not a municipal boundary or geodetic graticule.
@@ -186,22 +197,22 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
     const props={d:path(f.points,f.geometry==='poly'),class:'geom', 'data-id':f.id};
     const style={};
     if(f.layer==='relief'){
-      style.fill=f.group==='terrain-thermal-valley'?'#a36d50':f.label==='seasonal_wet_lowland'?'#62857b':f.label==='low_permafrost_plain'?'#607c67':'#736071';
-      style.opacity=.82;style.stroke='#d0c4a1';style['stroke-opacity']=.62;style['stroke-width']=.23;
+      style.fill=f.group==='terrain-thermal-valley'?'#56514a':f.label==='seasonal_wet_lowland'?'#5c6762':f.label==='low_permafrost_plain'?'#595f5a':'#46484b';
+      style.opacity=.94;style.stroke='#666c6e';style['stroke-opacity']=.72;style['stroke-width']=.20;style.filter='url(#soft-relief)';
     }else if(f.layer==='basins'){
-      style.fill='#9bd3d5';style['fill-opacity']=.12;style.stroke='#8bd6d9';style['stroke-opacity']=.57;style['stroke-width']=.17;style['stroke-dasharray']='.9 .6';
+      style.fill='none';style.stroke='#9eb0b5';style['stroke-opacity']=.34;style['stroke-width']=.16;style['stroke-dasharray']='1.0 .8';
     }else if(f.layer==='ermos'){
-      style.fill=f.group==='rocky-pass'?'#df9465':f.group==='tundra-permafrost'?'#c5c486':f.group==='wetlands'?'#71b5ad':'#b89eac';
-      style['fill-opacity']=.61;style.stroke='#f0d7bd';style['stroke-opacity']=.76;style['stroke-width']=.27;
+      style.fill=f.group==='rocky-pass'?'url(#p-rock)':f.group==='tundra-permafrost'?'url(#p-tundra)':f.group==='wetlands'?'url(#p-wet)':'url(#p-coastal)';
+      style['fill-opacity']=.78;style.stroke='#9ea5a5';style['stroke-opacity']=.82;style['stroke-width']=.22;
     }else if(f.layer==='islands'){
-      style.fill='#c0b18d';style.stroke='#e7d8b6';style['stroke-width']=.28;
+      style.fill='url(#g-land)';style.stroke='#1e2428';style['stroke-width']=.24;
     }else if(f.layer==='waterbodies'){
-      style.fill=f.id==='pool-thermal-001'?'#d9996e':'#317e9c';style.stroke='#ace7ee';style['stroke-width']=.28;
+      style.fill=f.id==='pool-thermal-001'?'#64706a':'#56798a';style.stroke='#c7d4d7';style['stroke-opacity']=.55;style['stroke-width']=.20;
     }else if(f.layer==='watercourses'){
-      style.fill='none';style.stroke=f.id==='river-vasyl-main-001'?'#83e1f2':'#7ecbdc';style['stroke-width']=f.id==='river-vasyl-main-001'?.82:.41;style['stroke-linejoin']='round';style['stroke-linecap']='round';
+      style.fill='none';style.stroke=f.id==='river-vasyl-main-001'?'#b7ccd4':'#9cb6c0';style['stroke-width']=f.id==='river-vasyl-main-001'?.72:.36;style['stroke-linejoin']='round';style['stroke-linecap']='round';style['stroke-opacity']=.97;
       if(f.id==='stream-tidal-lagoon-outlet-001')style['stroke-dasharray']='.7 .55';
     }else if(f.layer==='crests'){
-      style.fill='none';style.stroke='#eed1af';style['stroke-width']=.34;style['stroke-dasharray']='1.1 .65';
+      style.fill='none';style.stroke='#9da2a4';style['stroke-opacity']=.8;style['stroke-width']=.24;style['stroke-dasharray']='.95 .62';
     }
     return node('path',{...props,...style},group);
   }
@@ -215,15 +226,16 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   // Warm section is a reference to the existing Vasyl line, indices 3..5; no new invented river.
   const thermalPoints=byId.get('river-vasyl-main-001').points.slice(3,6);
   byId.set('reach-vasyl-local-warm-001',{id:'reach-vasyl-local-warm-001',layer:'thermal',label:'Trecho do Rio Vasyl com aporte termal',geometry:'line',group:'river-vasyl-main-001',points:thermalPoints});
-  node('path',{d:path(thermalPoints),class:'geom','data-id':'reach-vasyl-local-warm-001',fill:'none',stroke:'#f4bd72','stroke-width':1.07,'stroke-linecap':'round'},layerGroups.thermal);
+  node('path',{d:path(thermalPoints),class:'geom','data-id':'reach-vasyl-local-warm-001',fill:'none',stroke:'#dde7e1','stroke-width':.95,'stroke-linecap':'round','stroke-dasharray':'.8 .45'},layerGroups.thermal);
   // Bay threshold is only the chord between coast vertices 5 and 19.
   byId.set('water-bay-main-001',{id:'water-bay-main-001',layer:'baymouth',label:'Boca cartográfica da baía',geometry:'line',group:'coast-mainland-001',points:[coast.points[5],coast.points[19]]});
-  node('path',{d:path([coast.points[5],coast.points[19]]),class:'geom','data-id':'water-bay-main-001',fill:'none',stroke:'#bfdfe3','stroke-width':.35,'stroke-dasharray':'1.2 .9'},layerGroups.baymouth);
-  node('path',{d:path(coast.points),class:'geom','data-id':'coast-mainland-001',fill:'none',stroke:'#9ecbd0','stroke-width':.54,'stroke-linejoin':'round'},layerGroups.coast);
+  node('path',{d:path([coast.points[5],coast.points[19]]),class:'geom','data-id':'water-bay-main-001',fill:'none',stroke:'#d7e1e3','stroke-width':.26,'stroke-dasharray':'1.2 .9'},layerGroups.baymouth);
+  node('path',{d:path(coast.points),class:'geom','data-id':'coast-mainland-001',fill:'none',stroke:'#d9e0dc','stroke-width':.42,'stroke-linejoin':'round'},layerGroups.coast);
   // Minimal annotations; labels are not point features or canonized settlements.
   const makeText=(value,x,y,opacity=1)=>{const t=node('text',{x,y:-y,class:'map-note',opacity},labels);t.textContent=value};
-  makeText('BAÍA ABRIGADA · PROPOSTA',-10,-12,.83);
+  makeText('BAÍA ABRIGADA · PROPOSTA',-8,-11,.86);
   makeText('VALE TERMAL',27,18.7,.96);
+  makeText('RIO VASYL',20,31,.8);
   function layerUi(){const parent=$('layers');for(const c of config){const el=document.createElement('label');el.className='layer';const input=document.createElement('input');input.type='checkbox';input.checked=c.on;input.setAttribute('aria-label',c.label);input.addEventListener('change',()=>{settings[c.id]=input.checked;updateVisibility()});const sw=document.createElement('span');sw.className='swatch'+(c.line?' line':'');sw.style[c.line?'borderColor':'background']=c.color;const caption=document.createElement('span');caption.textContent=c.label;el.append(input,sw,caption);parent.append(el)}updateVisibility()}
   function updateVisibility(){for(const id of Object.keys(settings)){layerGroups[id].style.display=settings[id]?'':'none';} $('layercount').textContent=Object.values(settings).filter(Boolean).length+' ativas';if(selectedId){const f=byId.get(selectedId);if(f&&settings[f.layer]===false){selectedId=null;updateInspector(null)}}}
   layerUi();
@@ -259,7 +271,7 @@ ermos|ermo-coastal-southwestern-001|poly|Litoral externo sudoeste|coastal|-39500
   document.addEventListener('keydown',ev=>{if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;if(ev.key==='+'||ev.key==='=')zoom(.75);if(ev.key==='-')zoom(1.25);if(ev.key==='0')$('fit').click()});
   function updateScale(){const m=svg.getScreenCTM();if(!m)return;const p=svg.createSVGPoint();p.x=-10;p.y=0;const left=p.matrixTransform(m);p.x=10;const right=p.matrixTransform(m);$('scaleLine').style.width=Math.max(10,Math.abs(right.x-left.x))+'px'}
   window.addEventListener('resize',updateScale);
-  $('saveSvg').onclick=()=>{const exportSvg=svg.cloneNode(true);exportSvg.setAttribute('xmlns',SVG_NS);exportSvg.setAttribute('width','1600');exportSvg.setAttribute('height','1350');exportSvg.querySelectorAll('.geom').forEach(el=>{el.removeAttribute('class');el.removeAttribute('data-id')});exportSvg.querySelectorAll('.grid-line').forEach(el=>{el.removeAttribute('class');el.setAttribute('stroke','#a2b9ae');el.setAttribute('stroke-opacity','.13');el.setAttribute('stroke-width','.09')});exportSvg.querySelectorAll('.grid-label,.map-note').forEach(el=>{el.removeAttribute('class');el.setAttribute('fill','#e2e8dd');el.setAttribute('font-size','2.1')});exportSvg.querySelectorAll('g[style]').forEach(g=>{if(g.style.display==='none')g.remove()});const xml='<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(exportSvg);const url=URL.createObjectURL(new Blob([xml],{type:'image/svg+xml;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='novydres-mw008-candidato-vista.svg';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+  $('saveSvg').onclick=()=>{const exportSvg=svg.cloneNode(true);exportSvg.setAttribute('xmlns',SVG_NS);exportSvg.setAttribute('width','1600');exportSvg.setAttribute('height','1350');exportSvg.querySelectorAll('.geom').forEach(el=>{el.removeAttribute('class');el.removeAttribute('data-id')});exportSvg.querySelectorAll('.grid-line').forEach(el=>{el.removeAttribute('class');el.setAttribute('stroke','#a2b9ae');el.setAttribute('stroke-opacity','.13');el.setAttribute('stroke-width','.09')});exportSvg.querySelectorAll('.grid-label,.map-note').forEach(el=>{el.removeAttribute('class');el.setAttribute('fill','#e2e8dd');el.setAttribute('font-size','2.1')});exportSvg.querySelectorAll('g[style]').forEach(g=>{if(g.style.display==='none')g.remove()});const xml='<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(exportSvg);const url=URL.createObjectURL(new Blob([xml],{type:'image/svg+xml;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='novydres-fisico-2d-candidato-vista.svg';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
   setView();
 })();
 </script>
