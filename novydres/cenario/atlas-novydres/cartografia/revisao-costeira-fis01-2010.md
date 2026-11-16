@@ -28,7 +28,7 @@ source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
 3. **Não interpretar como autorização:** canonizar a configuração métrica atual (inclusive área sintética da baía ~1.851,25 km² e abertura ~18,4 km), aprovar número/posições/perímetros das ilhas, ancorar EPSG, decidir portos, vias, raions, limites municipais ou obra de engenharia.
 4. **Padrão visual aprovado e obrigatório na revisão:** HTML/SVG 2D grafite/azul dessaturado e texturas discretas conforme `visualizacao-fisica-interativa-2010.md`; a representação é derivada da geometria estruturada.
 
-**Situação do trabalho:** diretriz de revisão aprovada; **a geometria refinada ainda precisa ser produzida, confrontada com dependências e novamente submetida à avaliação**. Nenhuma alteração de pontos foi efetuada apenas por este registro.
+**Situação histórica em MW-009:** esta diretriz inicialmente aguardava uma nova versão do contorno. **Estado vigente após MW-010:** a geometria refinada foi produzida, confrontada com dependências e aprovada integralmente pelo proprietário como base cartográfica de trabalho não canônica; ver `refinamento-costeiro-fis01-2010.md`.
 
 ## Fontes verificadas e relações de dependência
 
@@ -57,7 +57,7 @@ O proprietário declarou: **“FIS-01, decisão 2: mantenha três ilhas como hip
 
 **Consequência funcional:** a análise costeira deve preservar a possibilidade de águas protegidas e circulação na baía sem atribuir às ilhas papel obrigatório de barreira, porto, travessia ou polo urbano. Validar que ilhas continuem sobre água e separadas do continente na futura geometria; não tomar o esquema atual como prova geográfica física exata.
 
-**Pendência A da unidade atual (MW-009):** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
+**Pendência A histórica, atendida em MW-010:** a variante refinada foi publicada no padrão 2D, verificada contra dependências físicas e aprovada pelo proprietário. O quantitativo e os contornos das ilhas continuam hipóteses não canônicas, sem necessidade de decisão para o fechamento do ponto de contorno costeiro.
 
 ## Atualização do gate FIS-01 após MW-010 (16/11/2026)
 
