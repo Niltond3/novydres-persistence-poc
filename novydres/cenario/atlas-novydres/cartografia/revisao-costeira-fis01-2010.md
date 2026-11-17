@@ -2,7 +2,7 @@
 document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: IN_PROGRESS_OWNER_DECISIONS_RECORDED_REFINEMENT_REQUIRED
+workflow_status: REFINED_GEOMETRY_READY_FOR_OWNER_REVIEW
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
 work_unit_status: OPEN
@@ -28,7 +28,7 @@ source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
 3. **Não interpretar como autorização:** canonizar a configuração métrica atual (inclusive área sintética da baía ~1.851,25 km² e abertura ~18,4 km), aprovar número/posições/perímetros das ilhas, ancorar EPSG, decidir portos, vias, raions, limites municipais ou obra de engenharia.
 4. **Padrão visual aprovado e obrigatório na revisão:** HTML/SVG 2D grafite/azul dessaturado e texturas discretas conforme `visualizacao-fisica-interativa-2010.md`; a representação é derivada da geometria estruturada.
 
-**Situação do trabalho:** diretriz de revisão aprovada; **a geometria refinada ainda precisa ser produzida, confrontada com dependências e novamente submetida à avaliação**. Nenhuma alteração de pontos foi efetuada apenas por este registro.
+**Situação do trabalho:** a diretriz foi aplicada em MW-009; a **geometria candidata refinada foi gerada e apresentada em comparação integral 2D**, permanecendo sujeita à avaliação expressa do proprietário. Os pontos antigos de ancoragem, incluindo desembocaduras, foram preservados.
 
 ## Fontes verificadas e relações de dependência
 
@@ -57,13 +57,25 @@ O proprietário declarou: **“FIS-01, decisão 2: mantenha três ilhas como hip
 
 **Consequência funcional:** a análise costeira deve preservar a possibilidade de águas protegidas e circulação na baía sem atribuir às ilhas papel obrigatório de barreira, porto, travessia ou polo urbano. Validar que ilhas continuem sobre água e separadas do continente na futura geometria; não tomar o esquema atual como prova geográfica física exata.
 
-**Pendência A da unidade atual (MW-009):** produzir a variante costeira refinada e inspecionável no padrão HTML/SVG 2D aprovado, reconciliar dependências físicas, executar validação pertinente e submetê-la ao proprietário. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
+**Pendência A da unidade atual (MW-009):** obter decisão expressa do proprietário sobre a versão refinada já apresentada (aprovar, rejeitar ou aprovar com ressalvas); somente depois tratar ajustes e validação de fechamento conforme o guia. **Não há decisão adicional de contorno ou quantidade insular a exigir antes do refinamento.**
+
+## Proposta refinada submetida à avaliação
+
+Foi preparado o arquivo **único** de revisão `visualizador-fisico-2010.html`, mostrando **ANTES** (MW-002) e **DEPOIS** (MW-009) lado a lado, em duas folhas integrais de 120 × 100 km, sincronizadas para zoom e pan, com relevo, hidrografia, ilhas, bacias e Ermos. A camada antiga aparece também como tracejado opcional no mapa novo. A imagem é derivada de geometrias propostas estruturadas, não decide fatos por si.
+
+A geometria foi atualizada **no mesmo** `macrogeometria-litoral-baia-ilhas-2010.proposal.json`; a versão anterior permanece auditável em Git. O litoral preserva os **26 vértices originais** (inclusive desembocaduras e boca da baía) e intercala **75 vértices sintéticos**, totalizando **101 vértices**. Os segmentos costeiros foram suavizados com desvios locais limitados a aproximadamente **0,82 km** da costa anterior, com incrementos de desenho de 100 m (não precisão cartográfica real). A pequena erosão/ondulação foi limitada para que as bacias candidatas permaneçam em terra.
+
+Área sintética da baía: **1.851,25 → 1.845,255 km²** (−0,32%), **sem alterar a largura da boca**. Comprimento sintético da costa na folha: **248,677 → 250,034 km**. Não inferir domínio territorial, dimensão municipal ou navegação sazonal desses números. As **duas ilhas internas e a externa** mantêm os mesmos polígonos como hipótese (não aprovação de quantidade). O Rio Vasyl continua alcançando exatamente o ponto original de sua foz; quatro outros alvos litorâneos incluem a saída de lagoa, sem deriva.
+
+As camadas FIS-02, FIS-03 e FIS-04 **não mudaram seus pontos**. Foram reconciliados apenas SHA de dependência e referências de índices litorâneos: costa→relevo→hidrografia→Ermos. A validação local via Shapely confirmou costa/baía simples, ilhas no mar, 7 polígonos de relevo, 5 bacias, 3 corpos d'água e 10 polígonos de Ermos em terra, 9 cursos e 5 desembocaduras conectadas. O HTML passou em Chromium headless desktop/mobile sem exceções JS, com 41 feições selecionáveis por mapa, alternância de camadas e zoom sincronizado. **Não equivale à execução comprovada dos validadores Node MW-002..MW-006; sem MDE, datum, EPSG, dados de gelo ou limites municipais.**
+
+**Gate atual:** `OPEN_AWAITING_OWNER_REFINED_COAST_DECISION`. Decisão requerida: **aprovar, rejeitar ou aprovar com ressalvas o contorno refinado apresentado**. Aprovação de desenho ainda não é `CLOSED_CANON`; propagação canônica obedece separadamente ao `contrato-propagacao.md`.
 
 ## Gate de fechamento da unidade MW-009
 
-**MW-009 permanece ABERTA:** a aceitação da organização costeira e a hipótese das ilhas são decisões intermediárias, não encerramento do ponto FIS-01.
+**MW-009 permanece ABERTA:** a nova variante costeira e o comparativo integral já estão preparados, mas ainda falta o aceite/rejeição/ressalvas do proprietário sobre a versão refinada; isso impede encerramento e handoff.
 
-Conforme a regra agora registrada em `guide.md`, **não gerar handoff nem prompt MW-010** antes de: (1) produzir variante de contorno refinada e versão atualizada do visualizador 2D; (2) verificar impactos com Rio Vasyl, microbacias, relevo, Ermos e ilhas provisórias; (3) submeter a versão consolidada ao proprietário e registrar seu aceite/rejeição/ressalvas; (4) corrigir problemas materiais, concluir as validações pertinentes e verificar o commit remoto. A rejeição de uma variante exige corrigir ou encerrar expressamente a opção descartada; não autoriza inferir a aprovação de outra.
+Conforme `guide.md`, **não gerar handoff nem prompt MW-010** enquanto estiver pendente: (1) o julgamento do proprietário sobre a variante refinada e seu mapa 2D integral antes/depois; (2) eventuais ajustes solicitados e nova submissão; (3) as validações finais, verificação remota e fechamento formal. O material técnico foi preparado com verificações espaciais sintéticas; **os scripts Node históricos não foram executados nesta atualização**. A rejeição de uma variante exige corrigir ou encerrar expressamente a opção descartada; não autoriza inferir a aprovação de outra.
 
 O handoff e prompt MW-010 anteriormente emitidos após a mera decisão sobre as ilhas foram **prematuros e estão revogados como autorização de avanço**. Em caso de limite de contexto, fazer somente checkpoint/nota de retomada da **mesma MW-009**, sem declarar fechamento.
 

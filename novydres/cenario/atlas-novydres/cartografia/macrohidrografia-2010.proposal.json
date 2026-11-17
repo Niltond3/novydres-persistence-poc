@@ -14,10 +14,10 @@
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
     "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
     "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
-    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "candidate_coast_blob_sha": "f650d2117c456999c31fc04dbc4a720a8b02d917",
     "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
     "candidate_relief_commit": "79772905f0e895c236b31abea059ef2ed085e866",
-    "candidate_relief_blob_sha": "c5f6caaddfbef3a89fd5ce85a291ae972e9f35ab",
+    "candidate_relief_blob_sha": "ddeca2fcb9fb7d9d53b140e5ae5cbe65db0ed581",
     "candidate_relief_path": "novydres/cenario/atlas-novydres/cartografia/macrorelevo-2010.proposal.json",
     "canonical_sources": [
       "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
@@ -333,7 +333,7 @@
         "downstream": {
           "type": "coast_vertex",
           "coast_feature_id": "coast-mainland-001",
-          "vertex_index": 12,
+          "vertex_index": 48,
           "waterbody_id": "water-bay-main-001"
         },
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -441,7 +441,7 @@
         "downstream": {
           "type": "coast_vertex",
           "coast_feature_id": "coast-mainland-001",
-          "vertex_index": 9,
+          "vertex_index": 36,
           "waterbody_id": "water-bay-main-001"
         },
         "approval_status": "PROPOSED_NOT_CANONICAL"
@@ -477,7 +477,7 @@
         "downstream": {
           "type": "coast_vertex",
           "coast_feature_id": "coast-mainland-001",
-          "vertex_index": 24,
+          "vertex_index": 96,
           "waterbody_id": "water-outer-001"
         },
         "approval_status": "PROPOSED_NOT_CANONICAL"
@@ -531,7 +531,7 @@
         "downstream": {
           "type": "coast_vertex",
           "coast_feature_id": "coast-mainland-001",
-          "vertex_index": 1,
+          "vertex_index": 4,
           "waterbody_id": "water-outer-001"
         },
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -560,7 +560,7 @@
         "downstream": {
           "type": "coast_segment",
           "coast_feature_id": "coast-mainland-001",
-          "segment_start_index": 11,
+          "segment_start_index": 45,
           "waterbody_id": "water-bay-main-001"
         },
         "approval_status": "PROPOSED_NOT_CANONICAL",
@@ -742,5 +742,10 @@
     "underground_channels": null,
     "geothermal_pipe_network": null,
     "official_names_secondary_streams": null
+  },
+  "refinement_dependency_update": {
+    "work_unit": "MW-009",
+    "scope": "downstream coast index and SHA remap, hydro geometry unchanged",
+    "approval": "NOT_APPROVED"
   }
 }

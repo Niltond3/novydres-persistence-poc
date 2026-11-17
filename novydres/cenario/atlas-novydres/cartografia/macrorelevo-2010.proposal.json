@@ -16,7 +16,7 @@
     "candidate_coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
     "candidate_coast_branch": "mapwork/mw-002-macrogeometria-costeira",
     "candidate_coast_path": "novydres/cenario/atlas-novydres/cartografia/macrogeometria-litoral-baia-ilhas-2010.proposal.json",
-    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "candidate_coast_blob_sha": "f650d2117c456999c31fc04dbc4a720a8b02d917",
     "canonical_sources": [
       "novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json",
       "novydres/cenario/atlas-novydres/ermos-estrutura-territorial-2010.json",
@@ -371,8 +371,8 @@
         "derived_feature_id": "water-bay-main-001",
         "coast_feature_id": "coast-mainland-001",
         "coast_vertex_range_inclusive_zero_based": [
-          5,
-          19
+          20,
+          76
         ],
         "geomorphology": "sheltered_bay_estuarine_context"
       },
@@ -381,14 +381,14 @@
           "coast_feature_id": "coast-mainland-001",
           "coast_vertex_range_inclusive_zero_based": [
             0,
-            5
+            20
           ]
         },
         {
           "coast_feature_id": "coast-mainland-001",
           "coast_vertex_range_inclusive_zero_based": [
-            19,
-            25
+            76,
+            100
           ]
         }
       ],
@@ -421,8 +421,13 @@
     "landslide_risk": null
   },
   "validation": {
-    "geometry_dependency_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "geometry_dependency_sha": "f650d2117c456999c31fc04dbc4a720a8b02d917",
     "required": "node novydres/cenario/atlas-novydres/cartografia/validar-macrorelevo.mjs",
     "tested_in_proposal": "self_and_cross_nonintersection_landside_coast_dependency_crest_containment"
+  },
+  "refinement_dependency_update": {
+    "work_unit": "MW-009",
+    "scope": "coast SHA and indices remapped; relief geometries identical",
+    "approval": "NOT_APPROVED"
   }
 }

@@ -16,10 +16,10 @@
     "parent_candidate_checkpoint": "4185b05dcecee4a9a4fcacdf8efa5b7bde61c714",
     "working_frame_commit": "b92721da0bc85f1d497668423e2a8f64d81ba9f4",
     "coast_commit": "b76d646955a08177957f90340792c780af5cc8f8",
-    "candidate_coast_blob_sha": "0aefaa2161aa9b728fd03a4ec3d0daf522a81b4d",
+    "candidate_coast_blob_sha": "f650d2117c456999c31fc04dbc4a720a8b02d917",
     "relief_commit": "79772905f0e895c236b31abea059ef2ed085e866",
-    "candidate_relief_blob_sha": "c5f6caaddfbef3a89fd5ce85a291ae972e9f35ab",
-    "candidate_hydro_blob_sha": "34918d5707abac23534df877a8c4b0ec4cefc834",
+    "candidate_relief_blob_sha": "ddeca2fcb9fb7d9d53b140e5ae5cbe65db0ed581",
+    "candidate_hydro_blob_sha": "c9d0399eb05922b92b7d8db7cba0edba8ad9e82e",
     "dependency_paths": [
       "macrogeometria-litoral-baia-ilhas-2010.proposal.json",
       "macrorelevo-2010.proposal.json",
@@ -405,8 +405,14 @@
         ],
         "relief_anchor_id": null,
         "exposed_coast_segment_indices": [
-          23,
-          24
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99
         ],
         "natural_watercourse_ids_intersecting": [
           "stream-northern-001"
@@ -451,7 +457,19 @@
           0,
           1,
           2,
-          3
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
         ],
         "natural_watercourse_ids_intersecting": [
           "stream-lake-outlet-001"
@@ -502,5 +520,10 @@
     "not_an_exhaustive_wilderness_area": true,
     "not_municipal_area": true,
     "no_urban_separation_certification": true
+  },
+  "refinement_dependency_update": {
+    "work_unit": "MW-009",
+    "scope": "coastal segments and SHA remap, Ermos polygons unchanged",
+    "approval": "NOT_APPROVED"
   }
 }
