@@ -45,11 +45,14 @@ As relações diretas Kingswell–Sulfok, Bukovie–Kingswell e Bukovie–Alexan
 
 ## Decisões pendentes para MW-014 (uma de cada vez)
 1. Organização geral dos nove pontos candidatos em relação a costa, água, relevo, termas e Ermos — **APROVADA SEM RESSALVAS como base não canônica em 17/11/2026**.
-2. Configuração Kingswell–Sulfok: conurbação, continuidade econômica sem contato urbano, ou outra composição — **sem decisão**.
+2. Kingswell–Sulfok — **B selecionada, conurbação parcial e cinturão industrial**. Somente o conceito foi aprovado; contornos da candidata C estão pendentes de revisão visual.
 3. Extensão realista e morfologia das ocupações após aceite de posicionamento — **sem decisão**.
 4. A versão visual e os nove pontos da candidata B foram **aprovados sem ressalvas**; o fechamento consolidado da unidade ainda exige deliberações 2–3 ou adiamento expresso compatível com o escopo, seguidas de leitura remota.
 
 **A** — pontos urbanos aprovados como base de trabalho; configuração de continuidade e abrangência da unidade ainda abertas. **B** — efeitos espaciais de calor, água e Ermos considerados, sem projetar infraestrutura. **C** — política Cainita, criaturas e crônica não desenvolvidas.
+
+## Decisão conceitual B (17/11/2026)
+O proprietário selecionou expressamente a alternativa B: **conurbação parcial e cinturão industrial**. Esta decisão não fixa perímetros ou infraestrutura. Nova candidata C estruturada em `contato-urbano-kingswell-sulfok-2010.proposal.json`, três trechos contíguos em parte com intervalo natural/desocupado antes da porção de Sulfok. `comparador-kingswell-sulfok-mw014-c.html` mostra ANTES = MW-014 B com nove pontos aprovados, DEPOIS = mesma base acrescida de três trechos; costa, ilhas, rios, afluentes, relevo e Ermos inalterados. Pré-validação de 609 amostras de borda sem invadir terra marítima, lagoas ou Ermos; trechos 1–2 em contato, 2–3 separados. A revisão da geometria permanece obrigatória, sem canonização.
 
 ## Estado do trabalho
 **MW-014 continua ABERTO** até as decisões remanescentes e o gate final. A candidata B foi aprovada para uso como base cartográfica não canônica, sem canonizar posições. Não alterar master, raions, crônica ou runtime. Não criar handoff para unidade seguinte antes da deliberação e validações integrais.
