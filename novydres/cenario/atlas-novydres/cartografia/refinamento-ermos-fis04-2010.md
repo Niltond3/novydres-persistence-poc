@@ -37,3 +37,14 @@ A formação urbana policêntrica e o envio estratégico de emissários por Gilg
 **A:** nova proposta territorial de Ermo, comparação visual e todas as aprovações ainda pendentes. **B:** posição efetiva de núcleos urbanos só poderá ser comprovada em unidade posterior de ocupação. **C:** Garou, caerns, criaturas e metatrama não terão localização ou história fixadas em MW-013.
 
 **MW-013 permanece ABERTO. Não emitir handoff.**
+
+## Proposta A — malha territorial (segunda interpretação)
+O proprietário solicitou uma malha irregular conectada de **natureza não domada**, ramificada entre núcleos cuja localização administrativa ainda não foi definida. O isolamento da maioria dos núcleos é a regra histórica; conurbações podem surgir com desenvolvimento tecnológico, eliminação de ameaças e alterações da habitabilidade, sem transformar isso em regra para todos os raions.
+
+Diretrizes **topológicas verbais e provisórias**, não geocodificadas: Sulfok–Kingswell/Cidade Velha como continuidade urbana; separação por Ermo entre Bukovie–Kingswell e entre Bukovie–Alexandria; demais adjacências em aberto. Embora GEO-004.6A confirme o cinturão econômico Sulfok–Kingswell, ele **não torna conurbação obrigatória**: a indicação corrente permanece hipótese geométrica até aprovação formal, sem alteração canônica. Raion oficial: Alexandria.
+
+`malha-territorial-ermos-fis04-2010.proposal.json`: nova proposta alternativa com 10 envelopes irregulares de territórios hostis com eixos conectados; sem fixar qualquer núcleo, bairro, raion ou rota. Os espaços sem Ermo **não** são automaticamente áreas urbanas. `comparador-malha-ermos-fis04-2010.html`: comparador geográfico 2D autocontido, ligado às mesmas geometrias de costa, relevo, rios e águas, com camadas ligáveis.
+
+Validação preliminar JS: 10 componentes, 478 vértices, 818 testes de pontos e 51025 testes de cruzamento, sem autointerseções, invasões de mar ou lagoas; espinha conectada por nós compartilhados. Distância mínima de vértice à costa: 2219 m. Soma de área sintética bruta antes da fusão geométrica e descontagem de sobreposições: 3178 km², **não é área territorial**. Ainda não verificada união topológica rigorosa dos envelopes nem separação de núcleos; não rodou navegador nem CI.
+
+**Porta de decisão atual:** aprovar a configuração morfológica geral da malha A como hipótese de trabalho, rejeitar ou pedir alterações. Isso **não** aprova fronteiras dos raions, perigos individuais, rotas ou canonização. A antiga `macroermos-2010.proposal.json` permanece rejeitada e vazia até aprovação explícita de substituição; não gerar handoff.
