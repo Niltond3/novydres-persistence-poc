@@ -5,11 +5,25 @@
   "year": 2010,
   "work_unit": "MW-013",
   "approval": {
-    "workflow": "OWNER_REVIEW_REQUIRED_ORGANIC_REFINEMENT",
+    "workflow": "REFINED_GEOMETRY_OWNER_APPROVED_FINAL_SCOPE_ACCEPTANCE_PENDING",
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
-    "geometry_authority": "STRUCTURED_CANDIDATE_ONLY",
-    "owner_approval_for_refined_geometry": null,
+    "geometry_authority": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE",
+    "owner_approval_for_refined_geometry": {
+      "decision": "APPROVED_NONCANONICAL_WORKING_BASELINE",
+      "date": "2026-11-16",
+      "owner_verbatim": "Aprovo",
+      "question_scope": "Aprovação do refinamento orgânico B dos contornos como nova base de trabalho não canônica, com composição total do atlas apresentada antes/depois.",
+      "approved_geometry_reference": "MW-013-FIS04-TERRITORIAL-MESH-B-ORGANIC-REFINEMENT",
+      "implications": "Mantém dez envelopes, refinamento de 478 para 2349 vértices e o padrão de avaliação visual integral.",
+      "not_approved": [
+        "FIS04_CONSOLIDATED_FINAL_CLOSURE",
+        "CANONIZATION",
+        "RAION_POSITIONS",
+        "TRANSPORT",
+        "FINAL_COLORS"
+      ]
+    },
     "previous_composition_approved_with_reservation": true,
     "previous_composition_decision": {
       "decision": "APROVADA_COM_RESSALVA_GEOMETRICA_OBRIGATORIA",
@@ -99,7 +113,7 @@
     "protected_traversal_possible_without_conurbation": true
   },
   "geometry": {
-    "status": "REFINED_PROPOSAL_AWAITING_OWNER_REVIEW",
+    "status": "REFINED_OWNER_APPROVED_NONCANONICAL_BASELINE_PENDING_FINAL_ACCEPTANCE",
     "construction": "Same ten connected territorial-envelope parts, same ten centerline polylines and same unlocated urban context; only outline rings changed.",
     "origin": "MW-013-TERRITORIAL-MESH-A",
     "part_count": 10,
@@ -9949,7 +9963,7 @@
     "colour_design_status": "NOT_PROPOSED"
   },
   "validation": {
-    "status": "PRELIMINARY_PHYSICAL_PASS_NOT_FINAL_GEOMETRIC_APPROVAL",
+    "status": "INTEGRATED_PREVALIDATION_PASS_PENDING_FINAL_OWNER_ACCEPTANCE",
     "segments_before": 10,
     "segments_after": 10,
     "vertices_before": 478,
@@ -10070,6 +10084,20 @@
       "headless browser",
       "CI",
       "approved final geometry"
-    ]
+    ],
+    "integrated_post_approval_validation": {
+      "result": "PASS",
+      "validator_kind": "IN_CONNECTOR_JS_WITH_GITHUB_SOURCE_BLOBS",
+      "original_geometry_unmodified": true,
+      "polygon_union_contact_components": 1,
+      "physical_errors": 0,
+      "point_checks": 2689,
+      "coast_and_water_edge_checks": 180873,
+      "self_intersection_pairs_checked": 360367,
+      "display_data_source_mismatches": 0,
+      "same_context_before_after": true,
+      "html_js_parses": true,
+      "note": "Exhaustive geometric intersections in synthetic coordinates; not an official polygon union construction or real-browser/CI execution."
+    }
   }
 }

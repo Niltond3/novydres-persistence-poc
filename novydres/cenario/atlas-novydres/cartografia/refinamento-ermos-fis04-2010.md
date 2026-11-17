@@ -66,3 +66,16 @@ Solicitação expressa do proprietário: refinar a borda quadrada/pincelada e **
 Pré-validação automática preliminar JS: 2349 consultas a pontos de anéis, ambas as costas terrestres e bordas internas respeitadas, nenhum anel autointersectante, nenhum corpo d'água cruzado ou englobado, componentes conectados pelo grafo de eixos original. Esta verificação é preliminar; não atesta união topológica exata dos envelopes, nem colonização, nem execução real de navegador/Node/CI. Inventário: {"coastline":1,"islands":3,"relief":7,"crests":3,"basins":5,"rivers":9,"waterbodies":3,"thermal":1}. Parser JavaScript da vista comparativa: SYNTAX_OK.
 
 **GATE:** somente a composição macroterritorial A está aprovada; a nova borda orgânica B **aguarda aprovação expressa do proprietário**, podendo exigir novas iterações. Não fazer handoff nem canonização.
+
+
+## Decisão individual — refinamento orgânico B aprovado
+Em 16/11/2026, o proprietário respondeu **“Aprovo”** à apresentação e à pergunta sobre aceitar a versão orgânica B como **nova base de trabalho não canônica**. Escopo da aprovação: contornos orgânicos B, preservada a composição A já aprovada. Esta decisão **não é** o aceite consolidado final de MW-013 e **não canoniza** FIS-04, raions, cores, transportes ou perigos narrativos.
+
+O arquivo `malha-territorial-ermos-fis04-2010.refined.proposal.json` registra `APPROVED_NONCANONICAL_WORKING_BASELINE`, mantendo `canonical_status=NOT_APPROVED`.
+
+### Validação complementar integrada
+Antes da gravação, foi executado em JavaScript o corpo do validador reproduzível `validar-malha-territorial-fis04.mjs` com os textos efetivos obtidos do GitHub e adapter local de leitura/asserções. Resultado: **{"status":"PASS","branch_parts":10,"union_components":1,"vertices":2349,"points":2689,"coast_water_edge_checks":180873,"self_intersection_pairs":360367,"full_visual":{"islands":3,"relief":7,"crests":3,"basins":5,"watercourses":9,"waterbodies":3,"thermal":1}}**. Conferidos: malha conectada como união por contato dos dez envelopes, nenhum cruzamento de costa, lagoas ou auto-interseção, preservação dos eixos, comparação exata dos dois conjuntos de anéis, e totalidade de costa, 3 ilhas, 7 relevos, 3 cristas, 5 bacias, 9 cursos d'água, 3 corpos d'água e trecho termal. Nenhuma camada antecedente modificada.
+
+**Limite de validação:** teste lógico sintético no conector; Node CLI, navegador real, geodésia e pegadas urbanas não foram executados/certificados. As ilhas seguem hipóteses. A malha não atribui posições aos raions.
+
+**GATE FINAL:** solicitar ao proprietário o aceite **consolidado** de FIS-04, explicitamente distinto das aprovações de composição e refinamento, após readback remoto da publicação. Somente depois poderá atualizar a proposta FIS-04 principal, fechar MW-013 e criar handoff, se as verificações finais continuarem PASS.
