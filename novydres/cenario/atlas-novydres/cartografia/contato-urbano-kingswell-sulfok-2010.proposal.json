@@ -14,10 +14,20 @@
     "corrected_visual_approval_date": "2026-11-17",
     "corrected_visual_scope": "BROAD_ORGANIC_MIXED_AND_INDUSTRIAL_OCCUPATION_COMPOSITION_WITH_UNBUILT_BREAK_NOT_SURVEYED_GEOMETRY",
     "corrected_visual_decision": "APROVADO",
-    "approved_as_rendering_reference": true
+    "approved_as_rendering_reference": true,
+    "specific_attribution_approval": {
+      "status": "OWNER_APPROVED_CONCEPTUAL_ATTRIBUTION",
+      "answer": "expansão urbana de Vasyl Bay",
+      "date": "2026-11-17",
+      "affected_nucleus": 9,
+      "raion_id": "district-vasyl-bay",
+      "distinct_raion_id": "district-sulfok",
+      "geometry_status": "NOT_APPROVED",
+      "no_canonization": true
+    }
   },
   "canonical_status": "NOT_APPROVED",
-  "proposal_status": "SUPERSEDED_THIN_STRIP_GEOMETRY_RETAINED_AS_HISTORY_NOT_APPROVED",
+  "proposal_status": "THIN_STRIP_GEOMETRY_SUPERSEDED; BROAD_ORGANIC_VECTOR_REVISION_PENDING",
   "provenance": {
     "branch_parent": "cfec9a9e158448b0dd6ace6f5d570c016cd2d597",
     "approved_anchor_model_blob": "0bb2f2fe0252750565b6558d1e6148bcdcc17a74",
@@ -710,11 +720,41 @@
         "subject_id": "district-vasyl-bay"
       },
       "issue": "A imagem ilustrativa aprovada desenha também expansão junto ao marcador 9, mas texto a chama incorretamente de Sulfok. Essa área pertence ao entorno de Vasyl Bay, não podendo ser automaticamente canonizada como parte de Sulfok.",
-      "disposition": "Corrigir identificação e separar a eventual expansão de Vasyl Bay do escopo estrito do cinturão Kingswell–Sulfok; decidir geograficamente se a área candidata do 9 deve integrar as futuras manchas urbanas de Vasyl Bay. Não mover pontos aprovados."
-    }
+      "disposition": "RESOLVED_BY_OWNER_2026-11-17: mancha inferior = expansão urbana do núcleo 9 Vasyl Bay; Sulfok é o núcleo 7 e conserva sua função de cinturão industrial no eixo Kingswell–Sulfok. Os polígonos antigos da candidata C são superados e não devem ser reinterpretados como geometria de Vasyl Bay.",
+      "owner_resolution": {
+        "approved_on": "2026-11-17",
+        "decision": "A mancha orgânica inferior, em torno do marcador 9, representa expansão URBANA de Vasyl Bay; não extensão industrial de Sulfok.",
+        "approved_concept_only": true,
+        "geometry_approved": false,
+        "authoritative_feature_subject_id": "district-vasyl-bay",
+        "nucleus_marker": 9,
+        "keep_distinct_from": "district-sulfok",
+        "note": "Atribuição espacial conceitual aprovada pelo proprietário na sequência da revisão visual. Não deriva coordenadas de ilustração nem altera a geometria aprovada dos núcleos."
+      }
+    },
+    "approved_composition_roles": [
+      {
+        "subject_id": "district-chelsea",
+        "nucleus_number": 4,
+        "role": "expansão urbana mista ampla de Kingswell",
+        "geometry_status": "PENDING_VECTOR_PROPOSAL"
+      },
+      {
+        "subject_id": "district-sulfok",
+        "nucleus_number": 7,
+        "role": "setor industrial/manufatureiro amplo relacionado ao cinturão Kingswell–Sulfok",
+        "geometry_status": "PENDING_VECTOR_PROPOSAL"
+      },
+      {
+        "subject_id": "district-vasyl-bay",
+        "nucleus_number": 9,
+        "role": "expansão urbana ampla e orgânica de Vasyl Bay, separada por intervalo não urbanizado do setor industrial do núcleo 7",
+        "geometry_status": "PENDING_VECTOR_PROPOSAL"
+      }
+    ]
   },
   "approval": {
-    "state": "APPROVED_VISUAL_CONCEPT_ONLY_GEOMETRY_PENDING",
+    "state": "COMPOSITION_AND_ATTRIBUTION_APPROVED_EXACT_GEOMETRY_PENDING",
     "status": "NOT_APPROVED",
     "owner_visual_direction_approved": true,
     "owner_precise_polygon_geometry_approved": false,

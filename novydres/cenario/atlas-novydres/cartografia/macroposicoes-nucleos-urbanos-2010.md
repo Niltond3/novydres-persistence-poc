@@ -66,3 +66,15 @@ O proprietário declarou **“Aprovo”** à visualização corrigida que substi
 **Correção de referência obrigatória:** o núcleo **7 é Sulfok** (`district-sulfok`) e o **9 é Vasyl Bay** (`district-vasyl-bay`). A imagem ilustrativa posiciona mancha adicional ao redor de 9, mas a chama incorretamente Sulfok em seu texto. O aceite da intenção visual **não** autoriza transferir Vasyl Bay para Sulfok, alterar as nove âncoras ou definir a mancha de 9 como infraestrutura de Sulfok. A função e geometria da terceira mancha devem ser resolvidas no modelo estruturado, preservando o mapa aprovado.
 
 **Próxima validação necessária dentro de MW-014:** construir novo candidato vetorial orgânico em `NOVYDRES-LOCAL-2010`, derivar comparador integral HTML fiel aos dados, oferecer download se o aplicativo não renderizar e submeter a geometria correta à aprovação do proprietário. Verificar não invasão de Ermos, mar e corpos d'água, preservação integral de costa, ilhas, relevo e cursos d'água. Até lá, **MW-014 permanece aberto, sem canonização e sem handoff.**
+
+## Resolução da terceira mancha — Vasyl Bay (17/11/2026)
+
+**Decisão expressa do proprietário:** “expansão urbana de Vasyl Bay”. Isso responde à dúvida de atribuição da mancha orgânica inferior da visualização corrigida.
+
+- **Núcleo 9 = Vasyl Bay** (`district-vasyl-bay`). A mancha ao redor desse ponto deverá ser tratada como **expansão urbana de Vasyl Bay**, não como área industrial do raion Sulfok.
+- **Núcleo 7 = Sulfok** (`district-sulfok`). Preserva-se a função industrial/logística já assentada no eixo econômico Kingswell–Sulfok.
+- **Núcleo 4 = Kingswell/Cidade Velha** (`district-chelsea`). Mantém expansão urbana mista da composição orgânica aprovada.
+- O **intervalo não urbanizado** da imagem situa-se conceitualmente entre o setor industrial próximo de 7 e a expansão urbana próxima de 9. Não é criada fronteira administrativa, travessia, Ermo novo ou nova estrutura hídrica.
+- **Estado epistêmico:** aprovada a atribuição conceitual das três manchas, **não** suas geometrias ou áreas precisas. A imagem não define coordenadas. Os polígonos finos da candidata C são históricos e **superados**, não podem ser reinterpretados como a expansão de Vasyl Bay.
+
+**Pendência A em MW-014:** produzir uma nova geometria vetorial candidata (amplas manchas orgânicas) a partir de fontes estruturadas, com compatibilidade física, comparador integral ANTES/DEPOIS e aprovação explícita do proprietário antes de fechar. MW-014 permanece aberto e não canônico.
