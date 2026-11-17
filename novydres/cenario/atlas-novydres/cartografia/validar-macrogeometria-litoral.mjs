@@ -14,7 +14,19 @@ const simple=(pts,closed)=>{const e=edges(pts,closed);for(let a=0;a<e.length;a++
 const pointInPoly=(p,r)=>{for(const [a,z] of edges(r,true))if(on(a,z,p))return false;let hit=false;for(let k=0,j=r.length-1;k<r.length;j=k++){const a=r[k],z=r[j];if((a[1]>p[1])!==(z[1]>p[1])&&p[0]<(z[0]-a[0])*(p[1]-a[1])/(z[1]-a[1])+a[0])hit=!hit;}return hit;};
 const disjoint=(a,z,zClosed=true)=>{for(const [p,q] of edges(a,true))for(const [u,v] of edges(z,zClosed))if(cross(p,q,u,v))return false;return true;};
 const insideFrame=(p)=>Number.isInteger(p[0])&&Number.isInteger(p[1])&&p[0]>=f.xmin&&p[0]<=f.xmax&&p[1]>=f.ymin&&p[1]<=f.ymax;
-if(d.approval.canonical_status!=="NOT_APPROVED"||d.approval.owner_approval_for_this_geometry!==null)errors.push("Must remain an unapproved proposal");
+if(d.approval.canonical_status!=="NOT_APPROVED"||d.approval.owner_approval_for_this_geometry!==null)errors.push("Composite coastal/insular proposal must remain noncanonical and not fully approved");
+const scoped=d.approval.scoped_owner_selection;
+if(scoped){
+  if(scoped.status!=="APPROVED_PENDING_PROPAGATION"||
+     scoped.scope!=="REFINED_CONTINENTAL_COAST_AND_DERIVED_SHELTERED_BAY_CONTOUR_2010_ONLY"||
+     JSON.stringify(scoped.accepted_feature_ids)!==JSON.stringify(["coast-mainland-001","water-bay-main-001"])||
+     scoped.canonical_effect!=="NONE_UNTIL_FORMAL_PROPAGATION"||
+     d.proposed_geometry.mainland_coastline.decision_status!=="APPROVED_PENDING_PROPAGATION"||
+     d.proposed_geometry.sheltered_bay.decision_status!=="APPROVED_PENDING_PROPAGATION"||
+     d.proposed_geometry.secondary_islands.some(x=>x.decision_status!=="PROPOSED_NOT_CANONICAL")||
+     JSON.stringify(scoped.expressly_unapproved_feature_ids)!==JSON.stringify(d.proposed_geometry.secondary_islands.map(x=>x.feature_id)))
+    errors.push("Scoped owner approval must exclude all still-provisional islands and must not canonize the composite geometry");
+}
 if(d.spatial_reference.crs!=="NOVYDRES-LOCAL-2010"||d.spatial_reference.georeferenced!==false||d.spatial_reference.geodetic_anchor!==null)errors.push("CRS/geodetic status invalid");
 if(f.xmax-f.xmin!==120000||f.ymax-f.ymin!==100000||f.municipal_geometry!==null)errors.push("MW-001 frame altered or municipal boundary invented");
 if(!Array.isArray(c)||c.length<8||!c.every(insideFrame))errors.push("Coast vertices invalid or outside study frame");

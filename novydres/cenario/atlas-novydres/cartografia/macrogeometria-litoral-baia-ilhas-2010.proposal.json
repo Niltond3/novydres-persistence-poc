@@ -8,7 +8,24 @@
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "PROPOSAL_ONLY",
-    "owner_approval_for_this_geometry": null
+    "owner_approval_for_this_geometry": null,
+    "scoped_owner_selection": {
+      "status": "APPROVED_PENDING_PROPAGATION",
+      "owner_decision_date": "2026-11-17",
+      "scope": "REFINED_CONTINENTAL_COAST_AND_DERIVED_SHELTERED_BAY_CONTOUR_2010_ONLY",
+      "accepted_feature_ids": [
+        "coast-mainland-001",
+        "water-bay-main-001"
+      ],
+      "expressly_unapproved_feature_ids": [
+        "land-islet-001",
+        "land-islet-002",
+        "land-islet-003"
+      ],
+      "terms": "Proprietário aprovou o contorno refinado mostrado no comparativo completo 2D. O elogio à paleta reforça o padrão visual previamente adotado. As duas ilhas internas e a externa continuam uma hipótese sem número, posições ou formas ratificadas.",
+      "canonical_effect": "NONE_UNTIL_FORMAL_PROPAGATION",
+      "visual_standard": "APPROVED_FLAT_2D_GRAPHITE_DESATURATED_BLUE"
+    }
   },
   "provenance": {
     "master_snapshot_sha": "27595ca32652efdef3d406eb91e4482299056bd9",
@@ -459,7 +476,7 @@
       "order": "south_frame_edge_to_north_frame_edge",
       "endpoint_rule": "Both endpoints are clipped on study frame; continuity beyond frame is unknown.",
       "waterside": "west_side_and_large_reentrant_bay",
-      "decision_status": "PROPOSED_NOT_CANONICAL"
+      "decision_status": "APPROVED_PENDING_PROPAGATION"
     },
     "sheltered_bay": {
       "feature_id": "water-bay-main-001",
@@ -478,7 +495,7 @@
       "mouth_interpretation": "cartographic_seaward_threshold_not_a_bridge_or_port_or_depth_measurement",
       "connected_to": "water-outer-001",
       "official_name": null,
-      "decision_status": "PROPOSED_NOT_CANONICAL"
+      "decision_status": "APPROVED_PENDING_PROPAGATION"
     },
     "outer_sea": {
       "feature_id": "water-outer-001",

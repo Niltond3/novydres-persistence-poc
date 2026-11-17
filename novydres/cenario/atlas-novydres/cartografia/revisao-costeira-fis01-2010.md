@@ -2,19 +2,23 @@
 document_id: MW-009-FIS01-REVISAO-COSTEIRA-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
-workflow_status: REFINED_GEOMETRY_READY_FOR_OWNER_REVIEW
+workflow_status: CLOSED_FOR_THIS_SCOPE_SCOPED_OWNER_APPROVAL_NONCANONICAL
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED_PROPOSAL_NOT_CONFIRMED
-work_unit_status: OPEN
-handoff_to_next_point: BLOCKED_UNTIL_POINT_CLOSED
+work_unit_status: CLOSED_FOR_THIS_SCOPE
+handoff_to_next_point: ELIGIBLE_AFTER_REMOTE_CLOSE_BUT_NO_REPLAY_OF_EXISTING_MW010
 owner_decision_on: 2026-11-16
-owner_decision_keys: FIS-01-DECISION-1,FIS-01-DECISION-2
+owner_decision_keys: FIS-01-DECISION-1,FIS-01-DECISION-2,FIS-01-DECISION-3
 owner_decision: PRESERVE_SHELTERED_BAY_REFINE_CONTOURS_AND_KEEP_THREE_ISLANDS_ONLY_AS_REVISABLE_HYPOTHESIS
 source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
 source_mw008_commit: cf75cf87b4ffc2ea24edaa3e3c3ce35ff3607d39
+owner_final_approval_date: 2026-11-17
+owner_final_approval_scope: MW009_REFINED_COAST_BAY_ONLY_NOT_LATER_MW010_BASELINE
+later_baseline_ref: mapwork/mw-010-refinamento-costeiro-fis01
+later_baseline_coast_blob_sha: d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577
 ---
 
-# MW-009 — Revisão substantiva costeira, decisões 1 e 2
+# MW-009 — Revisão substantiva costeira, decisões 1, 2 e 3
 
 ## Decisão 1 — Baía protegida e refinamento do contorno
 
@@ -69,18 +73,28 @@ A geometria foi atualizada **no mesmo** `macrogeometria-litoral-baia-ilhas-2010.
 
 As camadas FIS-02, FIS-03 e FIS-04 **não mudaram seus pontos**. Foram reconciliados apenas SHA de dependência e referências de índices litorâneos: costa→relevo→hidrografia→Ermos. A validação local via Shapely confirmou costa/baía simples, ilhas no mar, 7 polígonos de relevo, 5 bacias, 3 corpos d'água e 10 polígonos de Ermos em terra, 9 cursos e 5 desembocaduras conectadas. O HTML passou em Chromium headless desktop/mobile sem exceções JS, com 41 feições selecionáveis por mapa, alternância de camadas e zoom sincronizado. **Não equivale à execução comprovada dos validadores Node MW-002..MW-006; sem MDE, datum, EPSG, dados de gelo ou limites municipais.**
 
-**Gate atual:** `OPEN_AWAITING_OWNER_REFINED_COAST_DECISION`. Decisão requerida: **aprovar, rejeitar ou aprovar com ressalvas o contorno refinado apresentado**. Aprovação de desenho ainda não é `CLOSED_CANON`; propagação canônica obedece separadamente ao `contrato-propagacao.md`.
+**Gate final nesta variante MW-009:** aceite geométrico expresso registrado em 17/11/2026, sem ressalvas ao contorno apresentado; **a geometria ainda é não canônica**. A aprovação pertence exclusivamente a esta revisão e não suplanta a variante posterior da MW-010. Qualquer promoção à base corrente requer reconciliação explícita com a cadeia MW-010–MW-014.
+
+## Decisão 3 — Aceite expresso da variante refinada (17/11/2026)
+
+Após receber o comparativo integral 2D MW-009 com as duas folhas completas, o proprietário declarou: **“Aprovo; o esquema de cores está bem melhor também.”**
+
+**Efeito exato desta escolha:** `APROVADO` para o traçado continental de 101 vértices e a baía derivada nesta versão, sem ressalvas ao contorno. O comentário sobre as cores **reafirma** o padrão visual 2D grafite e azul dessaturado já aprovado, sem implicar alterações em geometria, altitude, raions ou infraestrutura. Ilhas continuam hipótese revisável (duas internas, uma externa) e **NÃO** tiveram seus polígonos/quantidade canonizados ou aprovados.
+
+O `macrogeometria-litoral-baia-ilhas-2010.proposal.json` recebe seleção **escopada** `APPROVED_PENDING_PROPAGATION` para `coast-mainland-001` e `water-bay-main-001`; seu estado agregado permanece `NOT_APPROVED` porque inclui ilhas não aprovadas. Nenhum `CLOSED_CANON` é acionado.
+
+**Divergência com trabalhos posteriores, identificada na verificação remota:** a branch `mapwork/mw-010-refinamento-costeiro-fis01`, commit `2a3932a015c8458226410ebfcd67d399b0a33e10`, e unidades MW-011–MW-014, utilizam outra costa de **44 vértices**, blob `d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577`, já aprovada em 16/11/2026. A decisão atual **não altera nem revoga** essa variante anterior para a cadeia corrente; se ambas forem candidatas a base corrente, isso é um assunto substantivo novo que exige reconciliação explícita. Não emitir handoff fictício para MW-010, pois já existe e está fechada.
 
 ## Gate de fechamento da unidade MW-009
 
-**MW-009 permanece ABERTA:** a nova variante costeira e o comparativo integral já estão preparados, mas ainda falta o aceite/rejeição/ressalvas do proprietário sobre a versão refinada; isso impede encerramento e handoff.
+**MW-009 está FECHADA SOMENTE NESTE ESCOPO:** decisões 1/2 preservadas; decisão 3 aceita para a variante 101-vértices; arquivo estruturado, visualizador, inspeção visual e verificação geométrica sintética disponíveis. O fechamento é documental/cartográfico da revisão isolada, não canonização nem escolha automática da base usada nas unidades posteriores.
 
-Conforme `guide.md`, **não gerar handoff nem prompt MW-010** enquanto estiver pendente: (1) o julgamento do proprietário sobre a variante refinada e seu mapa 2D integral antes/depois; (2) eventuais ajustes solicitados e nova submissão; (3) as validações finais, verificação remota e fechamento formal. O material técnico foi preparado com verificações espaciais sintéticas; **os scripts Node históricos não foram executados nesta atualização**. A rejeição de uma variante exige corrigir ou encerrar expressamente a opção descartada; não autoriza inferir a aprovação de outra.
+O gate do `guide.md` foi percorrido para **esta variante**, com decisão expressa, artefatos derivados e validação geométrica independente de candidatos. Verificações V8 da versão refinada: **0 erros** em contorno auto-intersectante, anéis de baía/terra/mar, 25 polígonos sobre terra, 33 segmentos fluviais, 100 segmentos costeiros, cinco desembocaduras, 10 inventários fluviais de Ermos, três eixos de cristas, relacionamentos de IDs, SHA de dependências e identidade dos 101 vértices do HTML. Resultado **PASS_WITH_LIMITATIONS**. Validação anterior Shapely e testes Chromium de zoom/camadas antes/depois também passaram. **Os validadores Node originais não foram executados nesta rodada**; sem altimetria, datum, coordenadas geodésicas, sazonalidade e limites municipais. Este estado não promove o fechamento de consumidores geográficos posteriores.
 
-O handoff e prompt MW-010 anteriormente emitidos após a mera decisão sobre as ilhas foram **prematuros e estão revogados como autorização de avanço**. Em caso de limite de contexto, fazer somente checkpoint/nota de retomada da **mesma MW-009**, sem declarar fechamento.
+O handoff antigo emitido antes do aceite final foi prematuro e não constitui autoridade. **MW-010 já existe e foi fechada com outra variante de contorno (44 vértices), aprovada pelo proprietário em 16/11/2026; MW-011 a MW-014 a preservam**. Este registro posterior de aceite de MW-009 **não altera nem substitui** esses trabalhos. Se a intenção for adotar a variante MW-009 de 101 vértices como base atual, abrir uma unidade separada de **reconciliação explícita**, nunca reexecutar MW-010 ou transportar silenciosamente esta geometria.
 
 ## Escopo, validação e continuidade
 
-**Este registro documental das decisões 1 e 2 não modifica** `master`, JSONs físicos, validação MW-006, visualizador 2D, raions, transportes, personagens ou crônica. As alternativas e premissas que ainda carecem de aprovação permanecem propostas. Quando houver fechamento integral e somente então for permitido um handoff, ele deverá apontar para este arquivo no GitHub, nunca usar o texto do prompt como fonte de autoridade.
+**Este fechamento modifica apenas a branch MW-009**: registra aprovação parcial da costa/baía nos dados estruturados, atualiza referências SHA nas demais camadas sem alterar seus pontos, reforça o validador do estado parcial e atualiza o HTML 2D. **Não modifica** `master`, branch MW-010 ou posteriores, status das ilhas, geometrias não costeiras, validade de MW-006, raions, transportes, personagens ou crônica. O handoff, se necessário, deve apontar para os arquivos no GitHub, sem transportar geografia por prompt.
 
 **A/B/C:** A = produzir variante de costa topologicamente verificável para futura aprovação; B = registrar efeito sobre foz, lagoa, Ermos litorâneos e navegabilidade sem projetar infraestrutura; C = redes/portos/raions e narrativa, fora desta revisão.
