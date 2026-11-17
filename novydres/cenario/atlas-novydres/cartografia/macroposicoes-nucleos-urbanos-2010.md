@@ -1,40 +1,28 @@
 ---
-document_id: MW-014-URBAN-NUCLEI-CANDIDATE-A
+document_id: MW-014-URBAN-NUCLEI-REJECTION-A
 subject_id: world-atlas-novydres
 work_unit: MW-014
-status: OPEN_PENDING_OWNER_APPROVAL
+status: OPEN_REDESIGN_REQUIRED
+candidate_a_status: REJECTED_BY_OWNER
 canonical_status: NOT_APPROVED
 source_master_sha: cea4284fcf9cfa6fb531b7e693181420dcbddb56
 source_mw013_commit: cee95e61bcdb525e2cf8b88da842ce5ea950200f
+rejected_candidate_commit: 30d373ef07635a4cdd88bc10979913666feefc7d
 ---
-# MW-014 — Macroposições urbanas, candidata A
+# MW-014 — Rejeição integral da proposta A e redesenho obrigatório
 
-## Base factual e escopo
-São **nove raions administrativos** com nomes canônicos, mas nenhum limite aprovado. A Cidade Velha/Iknik é núcleo interno de Kingswell. A formação urbana é policêntrica, descontínua, separada por Ermos; existem exceções de conurbação. O cinturão econômico Kingswell–Sulfok é canônico, mas não exige ligação urbana contínua.
+## Decisão expressa do proprietário (16/11/2026)
+O proprietário apresentou captura da visualização recebida no chat e rejeitou **integralmente** a composição enviada, relatando regressão severa na distribuição dos elementos, sobreposição, desordem visual e impossibilidade de compreensão. A candidata A **não possui aceite visual nem espacial**. A rejeição desta entrega não invalida as bases MW-010 a MW-013 anteriormente aprovadas como hipóteses cartográficas não canônicas.
 
-O resultado aqui é **hipótese visual e geometria de nove centros de ocupação**, um núcleo de referência para cada raion. **Não** equivale a atribuição de todo o raion, área urbana municipal, redes viárias, pontos institucionais nem distribuição dos sete milhões de habitantes.
+## Diagnóstico
+A mensagem de apresentação incluiu um esquema SVG improvisado, desenhado separadamente do comparador integral de GitHub, com rótulos de baixa legibilidade sobrepostos a feições. O esquema substituiu, na experiência do usuário, a comparação integral ANTES/DEPOIS obrigatória no `guide.md`. Barras espessas e círculos usados para Ermos degradaram a representação orgânica aprovada em MW-013. A hierarquia de cor/forma/tipografia falhou na tela móvel. Não houve prova de legibilidade/visualização real no navegador ou captura de aprovação do comparador integral. Os testes por amostragem de geometria não equivalem a validação de qualidade visual.
 
-## Alteração integral antes/depois
-**ANTES** = MW-013: mesma costa e baía MW-010, três ilhas hipotéticas, relevo MW-011, hidrografia MW-012 e malha orgânica MW-013. Não há núcleo urbano geocodificado. **DEPOIS** = mesma base e novas camadas de nove polígonos de macronúcleo, mais faixa candidata de contato urbano Kingswell–Sulfok. Controles de camada são equivalentes nos dois painéis; sem omitir ilhas, afluentes ou lagoas.
+## Consequências operacionais
+- **Rejeitado o pacote A como um todo:** nenhuma das nove macroposições ou contornos, nem a faixa contínua Kingswell–Sulfok, está aprovada.
+- **Nenhuma decisão administrativa/canônica nova:** nomes dos nove raions preservados; todas as fronteiras oficiais continuam indefinidas.
+- **Retirada da árvore corrente:** `macroposicoes-nucleos-urbanos-2010.proposal.json`, `comparador-integral-nucleos-mw014-2010.html` e `validar-macroposicoes-mw014.mjs`. Estes arquivos permanecem recuperáveis exclusivamente pelo commit histórico 30d373ef07635a4cdd88bc10979913666feefc7d; não são propostas correntes nem podem ser usados para buscar aprovação.
+- **Fontes físicas intactas:** costa, ilhas, relevo, hidrografia, malha de Ermos e visualizador integral MW-013 mantêm seus estados de trabalho não canônico.
+- **Próxima execução ainda é MW-014:** produzir nova geometria estruturada somente com cartografia completa, ANTES/DEPOIS com enquadramento/escala comuns, todos os rios e afluentes, ilhas e Ermos íntegros, bom contraste, rótulos legíveis e inspeção em tamanho de tela móvel. Não usar desenho esquemático paralelo como substituto da prova geográfica. Revalidar compatibilidade entre ocupação e Ermos antes de pedir qualquer aprovação.
+- **Um ponto de decisão por vez:** após uma representação utilizável, decidir primeiro organização geral; posteriormente contornos, adjacências e aceite consolidado. A reprovação desta proposta não autoriza inventar novas decisões nem fechar MW-014.
 
-Abrir `comparador-integral-nucleos-mw014-2010.html`. Os polígonos são geométricos e procedem exclusivamente de `macroposicoes-nucleos-urbanos-2010.proposal.json`, nunca da renderização como autoridade. Cores são apenas representação técnica.
-
-## Questões de aprovação substantiva
-1. **Composição geral:** distribuição dos nove macronúcleos em relação ao relevo, baía, Rio Vasyl e Ermos.
-2. **Contato Kingswell–Sulfok:** aceitar, rejeitar ou ajustar a faixa contínua de ocupação proposta. Nenhuma ferrovia ou rua foi desenhada.
-3. **Separações de Bukovie:** as retas diretas até Kingswell e Alexandria cruzam Ermo; isso não proíbe corredores técnicos futuros.
-4. **Forma e escala:** aprovar ou pedir ajustes nos contornos urbanos antes do aceite integral. Esses contornos não são limites administrativos.
-
-Propostas em análise **não canonizam** GEO-004.4 e não alteram arquivos proprietários de raions, crônica, política ou runtime.
-
-## Validação
-Prevalidação em JavaScript sobre dados lidos do GitHub: 1948 amostras/asserções de borda urbana, nove núcleos, um corredor candidato, zero invasões de Ermos, costa ou lagoas; segmentos diretos Kingswell–Sulfok livre de Ermo e Bukovie–Kingswell/Bukovie–Alexandria cruzando Ermo. Inventário do comparador: 1 costa, 3 ilhas, 7 relevos, 3 cristas, 10 envelopes do Ermo, 9 cursos d'água, 3 corpos d'água, 1 trecho termal, 5 bacias e limiar da baía.
-
-**Limitações:** sem teste Node CLI, navegador, interseção exata de todos os segmentos, georreferenciamento, população espacial, fechamento municipal ou verificação de precisão de contorno. O validador `validar-macroposicoes-mw014.mjs` é reproduzível no ambiente Node. Toda posição é candidata e sem aprovação do proprietário.
-
-## Estado de governança
-A — Aprovar/refinar macronúcleos e adjacências; pendente.
-B — Compatibilidade térmica e posição relativa com recursos, costa e relevo foram consideradas; redes não foram definidas.
-C — Política Cainita, senhores, domínio, criaturas e cenas permanecem fora do escopo MW-014.
-
-**MW-014 aberto. Não produzir handoff, não canonizar nem avançar para transportes até conclusão de todas as decisões e validações.**
+**MW-014 permanece ABERTO. Sem handoff de próxima unidade e sem canonização.**
