@@ -86,3 +86,13 @@ Estes **não** são perímetros urbanos oficiais nem limites de raion; área apr
 
 ### Refinamento D de contornos orgânicos — 17/11/2026
 Os três polígonos foram suavizados até duas vezes pelo algoritmo Chaikin e validados contra costa, Ermos e corpos d'água, amostrando segmentos a cada 50 m. Os dados de contorno atualizados, não a ilustração, geram o comparador HTML. Resultados: Kingswell · expansão urbana mista 113 vértices; Sulfok · polo industrial 77 vértices; Vasyl Bay · expansão urbana 77 vértices. Mantêm-se nove núcleos e geografia física. Contornos ainda aguardam aceite integral do proprietário, sem canonização.
+
+## Aprovação de diretriz de redesenho funcional — 17/11/2026
+
+Após examinar quatro referências de mapas urbanos usados em RPG, o proprietário identificou que a candidata D apresenta **três manchas pouco articuladas e enormes áreas com aspecto de vazio sem função**, não tecido de uma cidade. Concordou expressamente em **substituir o método de desenho**, construindo uma ocupação territorial macro ampla, com densidades/uso de solo/serviços/indústria em transição, em vez de apenas pequenas manchas.
+
+**Alcance autorizado:** nova diretriz metodológica, registrada em `guide.md`, e plano de distribuição funcional `plano-tecido-urbano-mw014-e.json`. A decisão **não** aprova novos polígonos, corredores, bairros ou instalações. A geometria D torna-se referência anterior de comparação, **não versão válida para pedir nova aprovação visual**. As nove posições aprovadas e a geografia física não mudam.
+
+**Conciliação canônica:** conforme GEO-004.3 e GEO-005.1–005.3, Novydres é policêntrica e descontínua. Não se pode converter toda terra fora dos Ermos em ocupação urbana contínua como fato. O novo método impede “vazios neutros” **na representação**, sem suprimir franjas de baixa densidade, espaços de suporte, barreiras geográficas e separação real pelos Ermos. Quando houver uso concreto desconhecido, classificá-lo honestamente como pendência e não inventar infraestrutura.
+
+**Próximo produto D→E na mesma MW-014:** geometrias de classes de uso/ocupação nas áreas compatíveis, inventário de não classificados, comparação integral ANTES/DEPOIS com HTML interativo e fallback para download, verificação espacial e aceite expresso do proprietário. Sem canonização, sem encerramento e sem handoff.

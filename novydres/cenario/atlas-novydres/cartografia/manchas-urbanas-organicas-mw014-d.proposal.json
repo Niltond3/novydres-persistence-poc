@@ -5,12 +5,13 @@
   "work_unit": "MW-014",
   "reference_year": 2010,
   "approval": {
-    "state": "CANDIDATE_D_SMOOTHED_GEOMETRY_REVIEW_PENDING",
+    "state": "REWORK_REQUIRED_UNAPPROVED_GEOMETRY_SUPERSEDED_FOR_REVIEW",
     "truth_state": "GM_PREPARED",
     "nine_anchor_points_owner_approved": true,
     "organic_visual_concept_owner_approved": true,
     "exact_polygon_geometry_owner_approved": false,
-    "canonical_status": "NOT_APPROVED"
+    "canonical_status": "NOT_APPROVED",
+    "superseded_review_reason": "Desenho de três manchas isoladas e vazio funcional não satisfaz a diretriz de cidade articulada aprovada em 17/11/2026; preservar os polígonos D como comparação histórica, não submissão atual."
   },
   "reference": {
     "crs": "NOVYDRES-LOCAL-2010",
@@ -1299,5 +1300,14 @@
       "thermal": 1,
       "basins": 5
     }
+  },
+  "revision_state": {
+    "successor_work_unit": "MW-014",
+    "successor_candidate": "E—field-of-functional-land-use",
+    "owner_approved_methodology": true,
+    "owner_approved_candidate_e_geometry": false,
+    "source_of_decision": "cartografia/guide.md, Critério de tecido urbano e usos territoriais — MW-014",
+    "preserve_approved_nuclei_and_physics": true,
+    "do_not_reuse_three_D_polygons_as_sufficient_city_extent": true
   }
 }

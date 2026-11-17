@@ -1,0 +1,162 @@
+{
+  "schema": "NOVYDRES_MW014_URBAN_FABRIC_REDISTRIBUTION_DESIGN_BRIEF_V1",
+  "document_id": "MW014-URBAN-FABRIC-E-DESIGN-BRIEF",
+  "subject_id": "world-atlas-novydres",
+  "work_unit": "MW-014",
+  "reference_year": 2010,
+  "status": {
+    "owner_direction": "APPROVED_METHOD",
+    "proposed_geometry_status": "NOT_CREATED",
+    "canonical_status": "NOT_APPROVED",
+    "prior_candidate_D": "REWORK_REQUIRED",
+    "scope": "MACRO_OCCUPANCY_AND_RELATIONS_NOT_ROADS_OR_RAION_BORDERS"
+  },
+  "provenance": {
+    "master_bootstrap_sha": "2ffb772bf18acc8c03f19503bda1a4b04443c0a4",
+    "source_branch_sha": "f6eac5ff7ed46cab57842a93c0087b27eff2de02",
+    "source_D_blob": "dbeaae3a7f6dfb7398b0d52bf550dc1cf4c4a028",
+    "guide_published_in": "cartografia/guide.md",
+    "authority_refs": [
+      "../ermos-estrutura-territorial-2010.json",
+      "../../historia-global/formacao-policentrica-2010.json",
+      "../populacao-2010.json",
+      "../corredor-extrativo-old-town-sulfok-2010.json",
+      "macroposicoes-nucleos-urbanos-2010.proposal.json"
+    ]
+  },
+  "design_goal": "Evitar manchas isoladas e espaços terrestres neutros extensos; organizar tecido funcional policêntrico amplo, heterogêneo e articulado sem afirmar conurbação contínua.",
+  "reference_frame": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "frame_xy_m": [
+      -60000,
+      -50000,
+      60000,
+      50000
+    ]
+  },
+  "anchored_nuclei_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "land_use_classes": [
+    {
+      "id": "urban_dense",
+      "name": "Urbano consolidado",
+      "intensity": "alta",
+      "status": "PROPOSE_ONLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "urban_mixed",
+      "name": "Residencial/comercial/institucional misto",
+      "intensity": "variável",
+      "status": "PROPOSE_ONLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "industrial_logistics",
+      "name": "Industrial/manufatura/logística",
+      "intensity": "variável",
+      "status": "PROPOSE_ONLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "periurban_support",
+      "name": "Franja urbana, serviços e usos técnicos",
+      "intensity": "baixa ou intermediária",
+      "status": "PROPOSE_ONLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "functional_open",
+      "name": "Área aberta de uso definido ou condicionante físico",
+      "intensity": "baixa",
+      "status": "PROPOSE_ONLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "not_yet_classified",
+      "name": "Área pendente de definição",
+      "intensity": null,
+      "status": "HONEST_UNKNOWN_SHOWN_EXPLICITLY",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "ermo",
+      "name": "Corredor do Ermo",
+      "intensity": "natureza dominante",
+      "status": "PRESERVE_PREVIOUS_APPROVED_WORK_BASE",
+      "must_be_supported_by_geometry": true
+    },
+    {
+      "id": "water",
+      "name": "Água",
+      "intensity": null,
+      "status": "PRESERVE_PREVIOUS_APPROVED_WORK_BASE",
+      "must_be_supported_by_geometry": true
+    }
+  ],
+  "spatial_policy": {
+    "outside_ermo": "No large neutral blanks without a declared proposed land use, physical explanation, or explicit unclassified state.",
+    "compatible_with_polycentric_canon": true,
+    "do_not_assume_continuous_built_mass": true,
+    "cross_ermo_requires_approved_engineered_crossing": true,
+    "functional_contact_does_not_equal_conurbation": true,
+    "no_new_infrastructure_facilities_or_roads_without_evidence": true,
+    "coastal_areas_must_respect_coast_and_hydrology": true,
+    "no_raion_boundaries_inference": true,
+    "no_automatic_population_allocation": true,
+    "no_generated_image_as_spatial_authority": true
+  },
+  "known_owner_choices": {
+    "kingswell": {
+      "nucleus": 4,
+      "role": "urbano misto extenso"
+    },
+    "sulfok": {
+      "nucleus": 7,
+      "role": "polo industrial e manufatureiro no eixo econômico"
+    },
+    "vasyl_bay": {
+      "nucleus": 9,
+      "role": "expansão urbana própria distinta de Sulfok"
+    },
+    "economic_axis": "Kingswell–Sulfok; conurbação parcial aceita como conceito, não limites concretos."
+  },
+  "required_proposal_e_artifacts": [
+    "structured occupation geometry or explicitly bounded classification grid",
+    "exact retained physical geometry provenance",
+    "integral interactive before-after from same geometry",
+    "downloadable HTML fallback",
+    "visual owner review",
+    "spatial validation report"
+  ],
+  "validation_gates": [
+    "land coverage accounted for or marked unknown",
+    "wilderness and water exclusion",
+    "nine approved anchors preserved",
+    "non-default full conurbation",
+    "functional transition legible",
+    "all physical layers unchanged",
+    "mobile legibility",
+    "owner polygon geometry approval explicit"
+  ],
+  "still_pending": [
+    "geometries by class",
+    "land use proportions",
+    "spatial population",
+    "routes and block networks",
+    "exact conurbation limits",
+    "owner approval of revised map",
+    "canonical propagation"
+  ],
+  "owner_approval_scope": "methodology only; not exact land-use assignments nor geometry nor map final"
+}
