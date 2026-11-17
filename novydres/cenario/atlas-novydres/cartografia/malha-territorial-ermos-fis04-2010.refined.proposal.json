@@ -5,7 +5,7 @@
   "year": 2010,
   "work_unit": "MW-013",
   "approval": {
-    "workflow": "REFINED_GEOMETRY_OWNER_APPROVED_FINAL_SCOPE_ACCEPTANCE_PENDING",
+    "workflow": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "geometry_authority": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE",
@@ -39,6 +39,22 @@
         "CANONIZACAO"
       ],
       "approval_date": "2026-11-16"
+    },
+    "owner_approval_for_final_scope": {
+      "decision": "APPROVED_FIS04_SCOPE_CLOSED_NONCANONICAL_WORKING_BASELINE",
+      "date": "2026-11-16",
+      "owner_verbatim": "Aprovo",
+      "question_scope": "Aceite consolidado final de MW-013/FIS-04, para adotar a malha orgânica B como base cartográfica de trabalho não canônica.",
+      "scope": "ONLY_FIS04_GEOMETRIC_WORKING_BASELINE_AND_ITS_VISUAL_COMPARISON",
+      "canonical_status": "NOT_APPROVED",
+      "unassigned": [
+        "raion_positions",
+        "administrative_boundaries",
+        "transport_routes",
+        "historical_threat_sites",
+        "graphic_final_palette",
+        "island_count_finalization"
+      ]
     }
   },
   "provenance": {
@@ -113,7 +129,7 @@
     "protected_traversal_possible_without_conurbation": true
   },
   "geometry": {
-    "status": "REFINED_OWNER_APPROVED_NONCANONICAL_BASELINE_PENDING_FINAL_ACCEPTANCE",
+    "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE",
     "construction": "Same ten connected territorial-envelope parts, same ten centerline polylines and same unlocated urban context; only outline rings changed.",
     "origin": "MW-013-TERRITORIAL-MESH-A",
     "part_count": 10,
@@ -9963,7 +9979,7 @@
     "colour_design_status": "NOT_PROPOSED"
   },
   "validation": {
-    "status": "INTEGRATED_PREVALIDATION_PASS_PENDING_FINAL_OWNER_ACCEPTANCE",
+    "status": "INTEGRATED_PREVALIDATION_PASS_CLOSED_FOR_SCOPE_WITH_EXPLICIT_LIMITATIONS",
     "segments_before": 10,
     "segments_after": 10,
     "vertices_before": 478,
@@ -10083,7 +10099,11 @@
       "real dangers and causes",
       "headless browser",
       "CI",
-      "approved final geometry"
+      "approved final geometry",
+      "Node CLI run",
+      "real-browser render",
+      "external CI",
+      "official municipal Ermo union topology (exact fused outline)"
     ],
     "integrated_post_approval_validation": {
       "result": "PASS",

@@ -79,3 +79,23 @@ Antes da gravação, foi executado em JavaScript o corpo do validador reproduzí
 **Limite de validação:** teste lógico sintético no conector; Node CLI, navegador real, geodésia e pegadas urbanas não foram executados/certificados. As ilhas seguem hipóteses. A malha não atribui posições aos raions.
 
 **GATE FINAL:** solicitar ao proprietário o aceite **consolidado** de FIS-04, explicitamente distinto das aprovações de composição e refinamento, após readback remoto da publicação. Somente depois poderá atualizar a proposta FIS-04 principal, fechar MW-013 e criar handoff, se as verificações finais continuarem PASS.
+
+
+## Fechamento integral do MW-013 — aprovado expressamente pelo proprietário
+**Decisão final:** em 16/11/2026, depois de aprovar separadamente a composição territorial A e o refinamento orgânico B, o proprietário respondeu **“Aprovo”** à pergunta de aceite **consolidado final** de FIS-04, com adoção da malha orgânica B exclusivamente como **base cartográfica de trabalho não canônica**.
+
+**Entregáveis efetivos:**
+- `macroermos-2010.proposal.json` atualizado como projeção estruturada integrada da malha B, com dez polígonos FIS-04 e referência precisa ao blob-fonte da variante refinada B. Cânone permanece `NOT_APPROVED`; antigo refinamento rochoso rejeitado permanece somente histórico.
+- `malha-territorial-ermos-fis04-2010.refined.proposal.json` confirmado como autoridade da geometria candidata aceita. 10 componentes conectados, 2.349 vértices de borda; eixos territoriais mantidos.
+- `visualizador-fisico-2010.html` novamente exibe a camada FIS-04 em conjunto com costa, **três ilhas hipotéticas**, relevo, hidrografia e demais referências; camada de Ermo não é categoria fisiográfica.
+- `comparador-integral-ermos-fis04-2010.html` preserva ANTES/DEPOIS completos da aprovação; todas as feições físicas de contexto coincidem entre as vistas. Sua atualização visual não confere status a cores finais.
+- `validar-malha-territorial-fis04.mjs`: topologia, conexões dos envelopes e comparação integral; `validar-macroermos.mjs`: leitura da proposta principal, igualdade com fonte B e completude de inventário.
+- `guide.md`: protocolo obrigatório de visão integral ANTES/DEPOIS, com ilhas e todos os cursos de água.
+
+**Validações:** corpo do validador da malha executado no conector com fontes GitHub: 10/10 envelopes conectados por contato, **2.689 pontos**, **180.873 testes de interação com costa e águas** e **360.367 pares de segmentos verificados contra autointerseção**, tudo PASS; 3 ilhas, 7 relevos, 3 cristas, 5 bacias, 9 cursos d'água, 3 corpos d'água e trecho termal íntegros no comparador. A integração principal foi conferida por comparação exata de coordenadas e scripts de visualização compiláveis. **Sem execução de browser/Node CLI/CI real**, nem certeza geodésica, mensuração oficial ou união geométrica materializada num polígono único.
+
+**Estado final da unidade:** FIS-04 **OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE_CLOSED_FOR_SCOPE**. Nenhum raion foi posicionado, não houve fronteira administrativa, transporte, alocação de seres sobrenaturais ou canonização. A separação real entre os núcleos será confrontada quando houver geometria urbana/raions. Áreas não demarcadas não equivalem automaticamente a urbanização.
+
+**Pendências remanescentes A/B/C:** A da geometria FIS-04 desta unidade: **nenhuma**; B: integração posterior com ocupação e raions, conservação das travessias naturais e técnicas sem antecipar rotas; C: ameaças narrativas, controvérsias Cainitas e metatrama fora do escopo. A próxima unidade terá objetivo e aprovações independentes.
+
+**MW-013: FECHADO EM ESCOPO. Não promover a master nem canonizar automaticamente.**
