@@ -48,3 +48,9 @@ Diretrizes **topológicas verbais e provisórias**, não geocodificadas: Sulfok�
 Validação preliminar JS: 10 componentes, 478 vértices, 818 testes de pontos e 51025 testes de cruzamento, sem autointerseções, invasões de mar ou lagoas; espinha conectada por nós compartilhados. Distância mínima de vértice à costa: 2219 m. Soma de área sintética bruta antes da fusão geométrica e descontagem de sobreposições: 3178 km², **não é área territorial**. Ainda não verificada união topológica rigorosa dos envelopes nem separação de núcleos; não rodou navegador nem CI.
 
 **Porta de decisão atual:** aprovar a configuração morfológica geral da malha A como hipótese de trabalho, rejeitar ou pedir alterações. Isso **não** aprova fronteiras dos raions, perigos individuais, rotas ou canonização. A antiga `macroermos-2010.proposal.json` permanece rejeitada e vazia até aprovação explícita de substituição; não gerar handoff.
+
+
+## Decisão do proprietário — composição aprovada, geometria ainda rejeitável
+Em 16/11/2026, o proprietário **aprovou a composição territorial geral da malha A**, entendida apenas como organização macroterritorial conectada e ramificada dos Ermos. **Ressalva obrigatória:** os contornos atuais parecem excessivamente quadrados e semelhantes a pinceladas; necessitam refinamento substancial para parecerem **orgânicos**. A aprovação **não** abrange a forma final dos polígonos, a localização de raions, travessias, cores, nem canonização.
+
+Critério para a próxima variante dentro de MW-013: conservar o esqueleto topológico aprovado, porém construir envelopes com ramificações de largura variável, curvas e reentrâncias naturais em escalas diferentes, conexões fluidas e contornos coerentes com o relevo e a hidrografia. Não gerar ruído aleatório decorativo: a geometria estruturada deve preceder a imagem. Entregar comparação 2D e submeter **a nova geometria** a aprovação individual e final antes de fechar. MW-013 permanece aberto, sem handoff.

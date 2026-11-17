@@ -5,12 +5,28 @@
   "year": 2010,
   "work_unit": "MW-013",
   "approval": {
-    "workflow": "OWNER_GEOMETRIC_REVIEW_PENDING",
+    "workflow": "COMPOSITION_APPROVED_GEOMETRIC_REFINEMENT_REQUIRED",
     "canonical_status": "NOT_APPROVED",
     "truth_state": "GM_PREPARED",
     "owner_approval_for_this_geometry": null,
     "geometry_authority": "STRUCTURED_PROPOSAL_ONLY",
-    "rejected_previous_variant_not_reinstated": true
+    "rejected_previous_variant_not_reinstated": true,
+    "composition_status": "OWNER_APPROVED_WITH_MANDATORY_REFINEMENT",
+    "owner_approval_for_composition": {
+      "decision": "APROVADA_COM_RESSALVA_GEOMETRICA_OBRIGATORIA",
+      "scope": "DISTRIBUICAO_TERRITORIAL_GERAL_E_MALHA_RAMIFICADA",
+      "owner_statement": "Eu aprovo essa composição territorial dos ermos, mas precisamos refinar bastante coisa. Tá muito quadrado, como se tivesse sido feito por uma pincelada. Tem que ser uma coisa mais orgânica.",
+      "accepted": "Estrutura territorial geral conectada e ramificada como base de trabalho.",
+      "mandatory_rework": "Refinamento substancial das margens, da naturalidade dos contornos e da transição das ramificações, com topologia física integrada e nova apresentação ao proprietário.",
+      "not_approved": [
+        "GEOMETRIA_FINAL",
+        "FORMA_FINAL_DOS_POLIGONOS",
+        "LIMITES_ADMINISTRATIVOS_DOS_RAIONS",
+        "CORES_FINAIS",
+        "CANONIZACAO"
+      ],
+      "approval_date": "2026-11-16"
+    }
   },
   "provenance": {
     "source_master_sha": "cea4284fcf9cfa6fb531b7e693181420dcbddb56",
@@ -87,7 +103,7 @@
     "protected_traversal_possible_without_conurbation": true
   },
   "geometry": {
-    "status": "SYNTHETIC_PROPOSAL_NOT_DEFINITIVE",
+    "status": "OUTLINE_REFINEMENT_REQUIRED_AFTER_COMPOSITION_APPROVAL",
     "construction": "Individual irregular overlapping envelopes form a single connected land mesh; axis graph shares exact branch nodes.",
     "union_representation": "CONNECTED_COMPONENTS_OVERLAP_ALLOWED_AS_SAME_ERMO_SYSTEM",
     "outline_precision_m": 50,
@@ -2400,10 +2416,24 @@
     ],
     "unassigned_urban_nuclei": [],
     "administrative_boundaries": [],
-    "transport_paths": []
+    "transport_paths": [],
+    "geometry_refinement_requirements": {
+      "status": "MANDATORY_BEFORE_FINAL_OWNER_REVIEW",
+      "current_issue": "Excessivamente geométrico/quadrado; sem aparência orgânica; ramificações parecendo pinceladas.",
+      "requirements": [
+        "Substituir seções longas e aproximadamente paralelas por bordas sinuosas irregulares em múltiplas escalas, sem adicionar ruído decorativo uniforme.",
+        "Criar alargamentos, estreitamentos e reentrâncias fisicamente plausíveis, com transições de junções menos artificiais.",
+        "Preservar a topologia macroterritorial aprovada da malha sem fixar as posições dos raions.",
+        "Reconciliar bordas propostas com costa, relevo e hidrografia já aprovados como bases de trabalho não canônicas.",
+        "Separar geometria estruturada de estilo gráfico: cores e pinceladas não constituem decisões cartográficas aprovadas.",
+        "Apresentar comparação visual 2D antes de solicitar aprovação geométrica final."
+      ],
+      "final_outline_owner_approval_required": true,
+      "refined_variant_created": false
+    }
   },
   "validation": {
-    "status": "PASS_PRELIMINARY_PHYSICAL_SCOPE_ONLY",
+    "status": "PREVIOUS_PREVALIDATION_ONLY_REFINEMENT_NOT_YET_EXECUTED",
     "distinct_envelope_parts": 10,
     "connected_axis_components": 1,
     "polygon_vertices": 478,
@@ -2420,6 +2450,7 @@
       "habitable pockets as settlements",
       "actual browser view",
       "official surface area"
-    ]
+    ],
+    "note_previous_check": "Pré-validação da geometria da proposta A antes da ressalva de refinamento; não valida a variante futura."
   }
 }
