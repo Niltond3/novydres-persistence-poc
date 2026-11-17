@@ -54,3 +54,15 @@ Validação preliminar JS: 10 componentes, 478 vértices, 818 testes de pontos e
 Em 16/11/2026, o proprietário **aprovou a composição territorial geral da malha A**, entendida apenas como organização macroterritorial conectada e ramificada dos Ermos. **Ressalva obrigatória:** os contornos atuais parecem excessivamente quadrados e semelhantes a pinceladas; necessitam refinamento substancial para parecerem **orgânicos**. A aprovação **não** abrange a forma final dos polígonos, a localização de raions, travessias, cores, nem canonização.
 
 Critério para a próxima variante dentro de MW-013: conservar o esqueleto topológico aprovado, porém construir envelopes com ramificações de largura variável, curvas e reentrâncias naturais em escalas diferentes, conexões fluidas e contornos coerentes com o relevo e a hidrografia. Não gerar ruído aleatório decorativo: a geometria estruturada deve preceder a imagem. Entregar comparação 2D e submeter **a nova geometria** a aprovação individual e final antes de fechar. MW-013 permanece aberto, sem handoff.
+
+
+## Refinamento orgânico B e regra de visão integral
+Solicitação expressa do proprietário: refinar a borda quadrada/pincelada e **sempre apresentar o antes e o depois da composição completa**, sem omitir ilhas ou afluentes. A regra foi documentada em `cartografia/guide.md` nesta branch; não foi publicada em master.
+
+`malha-territorial-ermos-fis04-2010.refined.proposal.json`: segunda candidata estruturada; 10 envelopes, mesmos eixos e relações; margens suavizadas por duas passagens de Chaikin, amostragem de perímetro a 480m e variação normal com quatro comprimentos de onda, condicionada a ausência de autointerseção e invasão de áreas aquáticas. Contornos de 478 para 2349 vértices; somente margens mudaram. Não foi fixado nenhum raion, núcleo urbano ou rota.
+
+`comparador-integral-ermos-fis04-2010.html`: dupla vista integral simultânea, ANTES/DEPOIS, mesma escala e folha inteira. Compõe automaticamente a costa original, três ilhas, 7 áreas de relevo, 3 cristas, 9 cursos d'água, 3 corpos d'água, 1 trecho termal, 5 bacias opcionais e limiar de baía; eixos técnicos opcionais. Padrão de cores é somente auxílio de leitura e **não está aprovado para imagem final**. Todas as camadas de contexto têm as mesmas coordenadas de fonte nas duas vistas.
+
+Pré-validação automática preliminar JS: 2349 consultas a pontos de anéis, ambas as costas terrestres e bordas internas respeitadas, nenhum anel autointersectante, nenhum corpo d'água cruzado ou englobado, componentes conectados pelo grafo de eixos original. Esta verificação é preliminar; não atesta união topológica exata dos envelopes, nem colonização, nem execução real de navegador/Node/CI. Inventário: {"coastline":1,"islands":3,"relief":7,"crests":3,"basins":5,"rivers":9,"waterbodies":3,"thermal":1}. Parser JavaScript da vista comparativa: SYNTAX_OK.
+
+**GATE:** somente a composição macroterritorial A está aprovada; a nova borda orgânica B **aguarda aprovação expressa do proprietário**, podendo exigir novas iterações. Não fazer handoff nem canonização.

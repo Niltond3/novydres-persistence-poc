@@ -63,3 +63,16 @@ Cada unidade trata **um ponto pequeno e verificável**, não uma fase inteira ob
 - **C — Fora do escopo:** registrar sem investigar.
 
 Não exigir que todas as pendências do suplemento sejam fechadas. Não usar `guide.md` como fonte de novos fatos, de estado de projeto ou como substituto dos assuntos proprietários.
+
+
+## Protocolo visual obrigatório para revisões cartográficas
+
+Diretriz expressa do proprietário em MW-013 (16/11/2026): **toda proposta visual cartográfica sujeita a aprovação deve mostrar a composição territorial total, nunca somente a região, camada ou recorte modificado.**
+
+1. Exibir sempre **ANTES e DEPOIS** simultaneamente ou em duas vistas equivalentes e claramente rotuladas, com o mesmo enquadramento integral, orientação norte, escala e geometria de referência. Recolocar o modo de visão integral por padrão.
+2. Preservar **todas as camadas relevantes de contexto** nas duas vistas: contorno e baía, ilhas (inclusive as hipotéticas), relevo, rios e todos os afluentes/ramificações, corpos d'água e elementos já existentes no comparador físico. Disponibilizar bacias, cristas, termas e outras camadas técnicas por alternância quando necessário à legibilidade. Nunca omitir geografia apenas para destacar a mudança.
+3. A mudança sob análise deve ser a **única diferença visual substancial** entre as duas folhas. Não alterar cores de comparação, escala, recorte, simplificação, ordem de camadas nem posições das outras feições entre elas. Geometria estruturada mantém autoridade; renderização não cria cânone.
+4. Acompanhar cada comparação com **inventário factual das alterações**: quais entidades, contornos, tamanhos/contagens ou relações foram mudados e quais ficaram intactos. Identificar explicitamente hipóteses, ressalvas e pendências.
+5. A versão visual comparativa deve ser reproduzível a partir dos arquivos GitHub e apresentada para aprovação antes de considerar qualquer refinamento fechado. Aprovação de composição não é aprovação de perímetro nem de estilo gráfico. Se a visualização integral não for produzível, declarar a limitação e **não pedir aceite visual**.
+
+Este protocolo é operacional para o Atlas, não altera a geografia canônica, a crônica nem decisões de raions.
