@@ -9,10 +9,15 @@
     "selected": "B",
     "concept": "Conurbação parcial e cinturão industrial",
     "concept_owner_approved": true,
-    "geometry_owner_approved": false
+    "geometry_owner_approved": false,
+    "owner_approved_corrected_visual_direction": true,
+    "corrected_visual_approval_date": "2026-11-17",
+    "corrected_visual_scope": "BROAD_ORGANIC_MIXED_AND_INDUSTRIAL_OCCUPATION_COMPOSITION_WITH_UNBUILT_BREAK_NOT_SURVEYED_GEOMETRY",
+    "corrected_visual_decision": "APROVADO",
+    "approved_as_rendering_reference": true
   },
   "canonical_status": "NOT_APPROVED",
-  "proposal_status": "GEOMETRY_CANDIDATE_C_OWNER_VISUAL_REVIEW_PENDING",
+  "proposal_status": "SUPERSEDED_THIN_STRIP_GEOMETRY_RETAINED_AS_HISTORY_NOT_APPROVED",
   "provenance": {
     "branch_parent": "cfec9a9e158448b0dd6ace6f5d570c016cd2d597",
     "approved_anchor_model_blob": "0bb2f2fe0252750565b6558d1e6148bcdcc17a74",
@@ -686,5 +691,33 @@
     "coast_ermo_waterbody_invasions": 0,
     "upper_contact": true,
     "lower_unbuilt_gap": true
+  },
+  "visual_direction_approved": {
+    "description": "Substituir faixas artificiais estreitas por áreas de ocupação mista e industrial extensas, irregulares e visualmente plausíveis, preservando separações não urbanizadas relevantes e a composição territorial integral. O proprietário aprovou a imagem de orientação visual corrigida; isso não define coordenadas vetoriais.",
+    "no_derived_geography_from_generated_image": true,
+    "retain_original_physical_layer_geometries": true,
+    "retain_approved_nine_point_anchors": true,
+    "candidate_c_thin_strips_rejected_as_representation": true,
+    "visual_reference_source": "imagem ilustrativa entregue ao proprietário no chat MW-014 em 17/11/2026; decisão conceitual capturada integralmente neste arquivo para não depender da mídia do chat",
+    "required_next_action": "Implementar geometria candidata de envelopes orgânicos por coordenadas no NOVYDRES-LOCAL-2010, gerar ANTES/DEPOIS fiel a todas as camadas, validar e colher aprovação visual dos novos polígonos",
+    "disambiguation": {
+      "sulfok": {
+        "nucleus_number": 7,
+        "subject_id": "district-sulfok"
+      },
+      "vasyl_bay": {
+        "nucleus_number": 9,
+        "subject_id": "district-vasyl-bay"
+      },
+      "issue": "A imagem ilustrativa aprovada desenha também expansão junto ao marcador 9, mas texto a chama incorretamente de Sulfok. Essa área pertence ao entorno de Vasyl Bay, não podendo ser automaticamente canonizada como parte de Sulfok.",
+      "disposition": "Corrigir identificação e separar a eventual expansão de Vasyl Bay do escopo estrito do cinturão Kingswell–Sulfok; decidir geograficamente se a área candidata do 9 deve integrar as futuras manchas urbanas de Vasyl Bay. Não mover pontos aprovados."
+    }
+  },
+  "approval": {
+    "state": "APPROVED_VISUAL_CONCEPT_ONLY_GEOMETRY_PENDING",
+    "status": "NOT_APPROVED",
+    "owner_visual_direction_approved": true,
+    "owner_precise_polygon_geometry_approved": false,
+    "canonical_status": "NOT_APPROVED"
   }
 }

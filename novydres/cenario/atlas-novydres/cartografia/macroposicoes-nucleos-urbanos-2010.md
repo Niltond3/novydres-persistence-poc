@@ -56,3 +56,13 @@ O proprietário selecionou expressamente a alternativa B: **conurbação parcial
 
 ## Estado do trabalho
 **MW-014 continua ABERTO** até as decisões remanescentes e o gate final. A candidata B foi aprovada para uso como base cartográfica não canônica, sem canonizar posições. Não alterar master, raions, crônica ou runtime. Não criar handoff para unidade seguinte antes da deliberação e validações integrais.
+
+## Aprovação da correção visual orgânica (17/11/2026)
+
+O proprietário declarou **“Aprovo”** à visualização corrigida que substitui as faixas finas e retas por **áreas orgânicas mais amplas**, mistas e industriais, mantendo a conurbação apenas parcial e um intervalo não urbanizado. Esta é uma **aprovação expressa da composição/linguagem visual**, não de coordenadas, fronteiras administrativas, superfícies populadas oficiais ou imagens como autoridade geográfica.
+
+**Rejeição operacional:** os três polígonos estreitos da candidata C publicados no commit `3b56debbfcd6e739a1d8193ee91eb6045d27e3d2` não materializam a composição agora aprovada e ficam **superados como proposta geométrica atual**, embora preservados em histórico Git. Não apresentá-los como contornos aprovados.
+
+**Correção de referência obrigatória:** o núcleo **7 é Sulfok** (`district-sulfok`) e o **9 é Vasyl Bay** (`district-vasyl-bay`). A imagem ilustrativa posiciona mancha adicional ao redor de 9, mas a chama incorretamente Sulfok em seu texto. O aceite da intenção visual **não** autoriza transferir Vasyl Bay para Sulfok, alterar as nove âncoras ou definir a mancha de 9 como infraestrutura de Sulfok. A função e geometria da terceira mancha devem ser resolvidas no modelo estruturado, preservando o mapa aprovado.
+
+**Próxima validação necessária dentro de MW-014:** construir novo candidato vetorial orgânico em `NOVYDRES-LOCAL-2010`, derivar comparador integral HTML fiel aos dados, oferecer download se o aplicativo não renderizar e submeter a geometria correta à aprovação do proprietário. Verificar não invasão de Ermos, mar e corpos d'água, preservação integral de costa, ilhas, relevo e cursos d'água. Até lá, **MW-014 permanece aberto, sem canonização e sem handoff.**
