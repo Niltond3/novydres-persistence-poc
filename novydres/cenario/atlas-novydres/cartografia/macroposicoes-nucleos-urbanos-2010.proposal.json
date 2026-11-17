@@ -1,0 +1,228 @@
+{
+  "schema": "NOVYDRES_MW014_URBAN_ANCHORS_PROPOSAL_V2",
+  "document_id": "MW-014-CANDIDATE-B-POINT-ANCHORS-2010",
+  "subject_id": "world-atlas-novydres",
+  "work_unit": "MW-014",
+  "reference_year": 2010,
+  "approval": {
+    "state": "CANDIDATE_B_PENDING_OWNER_REVIEW",
+    "truth_state": "GM_PREPARED",
+    "canonical_status": "NOT_APPROVED",
+    "owner_approval": false,
+    "previous_candidate_a": "REJECTED_BY_OWNER"
+  },
+  "provenance": {
+    "master_sha": "9df23f37a96169ee005600d2d70237f408dae2e5",
+    "source_mw013_checkpoint": "cee95e61bcdb525e2cf8b88da842ce5ea950200f",
+    "source_mw014_rejection": "6e0f6da5f3f5fec525916578e2e8df9996e4bb6c",
+    "physical_source_blobs": {
+      "malha-territorial-ermos-fis04-2010.refined.proposal.json": "eac63da71d49fbe55d79da2ee82fbafae609decd",
+      "macrogeometria-litoral-baia-ilhas-2010.proposal.json": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
+      "macrorelevo-2010.proposal.json": "cccc4eaac09b192a299108389bef3494f1f15bda",
+      "macrohidrografia-2010.proposal.json": "d0912bb8b420a8a29b0de602f4eb05f179da3b0c"
+    }
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "coordinate_order": "[x_east_m,y_north_m]",
+    "frame": {
+      "xmin": -60000,
+      "ymin": -50000,
+      "xmax": 60000,
+      "ymax": 50000
+    },
+    "geodetic_anchor": null
+  },
+  "geometry_scope": {
+    "type": "Point anchors",
+    "urban_polygons": null,
+    "raion_polygons": null,
+    "admin_limits": null,
+    "population_distribution": null,
+    "transport_routes": null,
+    "conurbation_polygons": null,
+    "marker_size_not_to_scale": true
+  },
+  "nuclei": [
+    {
+      "feature_id": "urban-anchor-district-dunwich-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-dunwich",
+      "label": "Dunwich",
+      "number": 1,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        -34000,
+        31000
+      ],
+      "proposed_sector": "Noroeste periférico",
+      "physical_context": "Terras setentrionais com ocupação isolada",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-levi-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-levi",
+      "label": "Levi",
+      "number": 2,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        7000,
+        46000
+      ],
+      "proposed_sector": "Norte interior",
+      "physical_context": "Terraço elevado, aquecimento artificial",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-alexandria-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-alexandria",
+      "label": "Alexandria",
+      "number": 3,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        11000,
+        25000
+      ],
+      "proposed_sector": "Margem norte da baía",
+      "physical_context": "Acesso costeiro protegido, sem definir porto",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-chelsea-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-chelsea",
+      "label": "Kingswell / Cidade Velha",
+      "number": 4,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        33000,
+        23000
+      ],
+      "proposed_sector": "Vale termal",
+      "physical_context": "Cidade Velha no vale do Rio Vasyl e das termas",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-bukovie-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-bukovie",
+      "label": "Bukovie",
+      "number": 5,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        56000,
+        6000
+      ],
+      "proposed_sector": "Interior oriental",
+      "physical_context": "Tundra com dependência de calor artificial",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-new-london-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-new-london",
+      "label": "New London",
+      "number": 6,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        51000,
+        -12000
+      ],
+      "proposed_sector": "Leste interior",
+      "physical_context": "Terraços e bacias menores",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-sulfok-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-sulfok",
+      "label": "Sulfok",
+      "number": 7,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        25000,
+        12000
+      ],
+      "proposed_sector": "Margem industrial da baía",
+      "physical_context": "Continuação econômica da Cidade Velha no litoral",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-drevnigrad-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-drevnigrad",
+      "label": "Drevnigrad",
+      "number": 8,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        46000,
+        -40000
+      ],
+      "proposed_sector": "Sul interior",
+      "physical_context": "Ocupação descontínua entre contrafortes",
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-anchor-district-vasyl-bay-2010",
+      "kind": "candidate_nucleus_anchor",
+      "subject_id": "district-vasyl-bay",
+      "label": "Vasyl Bay",
+      "number": 9,
+      "geometry_type": "Point",
+      "coordinates_xy_m": [
+        21000,
+        -12000
+      ],
+      "proposed_sector": "Margem sudeste da baía",
+      "physical_context": "Núcleo em outra faixa costeira da grande baía",
+      "status": "NOT_APPROVED"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "district-chelsea",
+      "to": "district-sulfok",
+      "interpretation": "POSSIBLE_URBAN_INTERFACE_NOT_CONFIRMED",
+      "straight_line_ermo_samples": 0,
+      "status": "OWNER_REVIEW"
+    },
+    {
+      "from": "district-bukovie",
+      "to": "district-chelsea",
+      "interpretation": "WILDERNESS_INTERVENES_IN_STRAIGHT_LINE",
+      "straight_line_ermo_samples": 73,
+      "status": "OWNER_REVIEW"
+    },
+    {
+      "from": "district-bukovie",
+      "to": "district-alexandria",
+      "interpretation": "WILDERNESS_INTERVENES_IN_STRAIGHT_LINE",
+      "straight_line_ermo_samples": 46,
+      "status": "OWNER_REVIEW"
+    }
+  ],
+  "unchanged_context": {
+    "coast": true,
+    "islands": 3,
+    "relief_areas": 7,
+    "ermo_envelopes": 10,
+    "rivers": 9,
+    "waterbodies": 3,
+    "crests": 3,
+    "basins": 5,
+    "thermal_reach": 1
+  },
+  "pending": [
+    "all urban perimeters",
+    "raion borders",
+    "conurbation decision",
+    "infrastructure routes",
+    "population spatialization",
+    "municipal border",
+    "other settlements"
+  ],
+  "limitation": "Indicated anchor points are not administrative limits, real-world geodetic points or proven urban extents."
+}

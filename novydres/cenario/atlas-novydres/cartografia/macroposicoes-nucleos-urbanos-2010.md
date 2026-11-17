@@ -1,28 +1,45 @@
 ---
-document_id: MW-014-URBAN-NUCLEI-REJECTION-A
+document_id: MW-014-URBAN-NUCLEI-CANDIDATE-B
 subject_id: world-atlas-novydres
 work_unit: MW-014
-status: OPEN_REDESIGN_REQUIRED
-candidate_a_status: REJECTED_BY_OWNER
+work_unit_status: OPEN_OWNER_REVIEW_PENDING
 canonical_status: NOT_APPROVED
-source_master_sha: cea4284fcf9cfa6fb531b7e693181420dcbddb56
-source_mw013_commit: cee95e61bcdb525e2cf8b88da842ce5ea950200f
-rejected_candidate_commit: 30d373ef07635a4cdd88bc10979913666feefc7d
+candidate_a_status: REJECTED_BY_OWNER
+candidate_b_status: PROPOSED_NONCANONICAL
+master_bootstrap_sha: 9df23f37a96169ee005600d2d70237f408dae2e5
+previous_rejection_commit: 6e0f6da5f3f5fec525916578e2e8df9996e4bb6c
 ---
-# MW-014 — Rejeição integral da proposta A e redesenho obrigatório
+# MW-014 — Variante B: núcleos de implantação, não polígonos administrativos
 
-## Decisão expressa do proprietário (16/11/2026)
-O proprietário apresentou captura da visualização recebida no chat e rejeitou **integralmente** a composição enviada, relatando regressão severa na distribuição dos elementos, sobreposição, desordem visual e impossibilidade de compreensão. A candidata A **não possui aceite visual nem espacial**. A rejeição desta entrega não invalida as bases MW-010 a MW-013 anteriormente aprovadas como hipóteses cartográficas não canônicas.
+## Estado e autoridade
+A proposta A foi rejeitada integralmente pelo proprietário, inclusive como apresentação. Sua geometria e visualização foram retiradas do HEAD da branch em `6e0f6da5f3f5fec525916578e2e8df9996e4bb6c`. Esta candidata B não reaproveita polígonos urbanos, nem propõe faixa construída contínua como fato, e não altera a base física aprovada apenas para trabalho em MW-010–013.
 
-## Diagnóstico
-A mensagem de apresentação incluiu um esquema SVG improvisado, desenhado separadamente do comparador integral de GitHub, com rótulos de baixa legibilidade sobrepostos a feições. O esquema substituiu, na experiência do usuário, a comparação integral ANTES/DEPOIS obrigatória no `guide.md`. Barras espessas e círculos usados para Ermos degradaram a representação orgânica aprovada em MW-013. A hierarquia de cor/forma/tipografia falhou na tela móvel. Não houve prova de legibilidade/visualização real no navegador ou captura de aprovação do comparador integral. Os testes por amostragem de geometria não equivalem a validação de qualidade visual.
+## ANTES / DEPOIS completo
+O arquivo `comparador-integral-nucleos-mw014-2010.html` usa uma única instância dos dados estruturados das camadas físicas em **duas vistas de mesmo recorte e escala**, com layout empilhado no celular. O ANTES = integralidade física de MW-013; o DEPOIS = exatamente as mesmas camadas, acrescentadas 9 âncoras do tipo `Point`. Não há topônimos escritos sobre o território; números 1–9 remetem a lista externa legível e interativa. Botões de zoom sincronizam os dois mapas. A lista permite foco no mesmo local nos dois painéis; botão “Território inteiro” restaura a comparação integral.
 
-## Consequências operacionais
-- **Rejeitado o pacote A como um todo:** nenhuma das nove macroposições ou contornos, nem a faixa contínua Kingswell–Sulfok, está aprovada.
-- **Nenhuma decisão administrativa/canônica nova:** nomes dos nove raions preservados; todas as fronteiras oficiais continuam indefinidas.
-- **Retirada da árvore corrente:** `macroposicoes-nucleos-urbanos-2010.proposal.json`, `comparador-integral-nucleos-mw014-2010.html` e `validar-macroposicoes-mw014.mjs`. Estes arquivos permanecem recuperáveis exclusivamente pelo commit histórico 30d373ef07635a4cdd88bc10979913666feefc7d; não são propostas correntes nem podem ser usados para buscar aprovação.
-- **Fontes físicas intactas:** costa, ilhas, relevo, hidrografia, malha de Ermos e visualizador integral MW-013 mantêm seus estados de trabalho não canônico.
-- **Próxima execução ainda é MW-014:** produzir nova geometria estruturada somente com cartografia completa, ANTES/DEPOIS com enquadramento/escala comuns, todos os rios e afluentes, ilhas e Ermos íntegros, bom contraste, rótulos legíveis e inspeção em tamanho de tela móvel. Não usar desenho esquemático paralelo como substituto da prova geográfica. Revalidar compatibilidade entre ocupação e Ermos antes de pedir qualquer aprovação.
-- **Um ponto de decisão por vez:** após uma representação utilizável, decidir primeiro organização geral; posteriormente contornos, adjacências e aceite consolidado. A reprovação desta proposta não autoriza inventar novas decisões nem fechar MW-014.
+Inventário preservado integralmente: 1 costa, 3 ilhas secundárias hipotéticas, 7 feições de relevo, 3 cristas, 10 envelopes orgânicos de Ermo, 9 cursos d'água incluindo afluentes, 3 corpos d'água, 5 bacias, trecho termal e limiar da baía. Cor e desenho das camadas físicas seguem o padrão técnico MW-013, sem esquema de círculos ou pinceladas como substituto dos Ermos. Rótulos são externos, portanto não encobrem hidrografia nem topografia.
 
-**MW-014 permanece ABERTO. Sem handoff de próxima unidade e sem canonização.**
+## Proposta geométrica B
+Os pontos 1–9 estão em `macroposicoes-nucleos-urbanos-2010.proposal.json`, com coordenadas locais métricas, referências de `subject_id` para os nove raions e justificativas geográficas. São **pontos de referência urbanos**: não equivalem a área construída, fronteira administrativa, centroide oficial, função política nem distribuição da população municipal.
+
+As relações diretas Kingswell–Sulfok, Bukovie–Kingswell e Bukovie–Alexandria são hipóteses geométricas: ligação reta Kingswell–Sulfok sem invasão do Ermo no teste por amostragem; outras duas ligam centros separados por Ermo. Isso **não** atribui viabilidade de obra, caminho, estrada, ferrovia ou conurbação construída.
+
+## Validação executada
+- 9 identificadores urbanos distintos, formato exclusivamente Point, com checagem de amostras de terra firme e afastamento amostral de 1,4 km das águas e Ermos (441 testes de posição/amostragem).
+- Inventário e coordenadas de costa, 3 ilhas, 7 relevos, 3 cristas, 10 Ermos, 9 cursos d’água, 3 corpos d’água, 5 bacias e trecho termal derivados e conferidos com dados estruturados.
+- Três relações diretas analisadas (201 amostras em pré-estudo e 301 na validação de modelo; sem interpretação como redes).
+- Script JS da visualização: sintaxe PASS. Teste com DOM simulado: PASS para criação de mapas, nove fichas, nove marcadores, sincronização de zoom e grupos físicos equivalentes nas duas vistas.
+- Validador Node reproduzível: `validar-macroposicoes-mw014.mjs`.
+
+**Limitações materiais:** a visualização real em navegador móvel ainda não foi testada por captura de tela nesta execução, nem foram certificados CRS real, topologia exata de todos os polígonos ou propriedades cadastrais. A validação sintética não significa aceite visual pelo proprietário.
+
+## Decisões pendentes para MW-014 (uma de cada vez)
+1. Organização geral dos nove pontos candidatos em relação a costa, água, relevo, termas e Ermos — **aguarda proprietário**.
+2. Configuração Kingswell–Sulfok: conurbação, continuidade econômica sem contato urbano, ou outra composição — **sem decisão**.
+3. Extensão realista e morfologia das ocupações após aceite de posicionamento — **sem decisão**.
+4. Revisão final e aceite consolidado da geometria/visualização aprovada ou revisada — **sem decisão**.
+
+**A** — decisões de posicionamento ainda abertas. **B** — efeitos espaciais de calor, água e Ermos considerados, sem projetar infraestrutura. **C** — política Cainita, criaturas e crônica não desenvolvidas.
+
+## Estado do trabalho
+**MW-014 continua ABERTO.** A proposta B não canoniza qualquer posição. Não alterar master, raions, crônica ou runtime. Não criar handoff para unidade seguinte antes da deliberação e validações integrais.
