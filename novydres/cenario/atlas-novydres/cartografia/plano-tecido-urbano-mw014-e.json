@@ -6,7 +6,7 @@
   "reference_year": 2010,
   "status": {
     "owner_direction": "APPROVED_METHOD",
-    "proposed_geometry_status": "NOT_CREATED",
+    "proposed_geometry_status": "CANDIDATE_E_CREATED_AWAITING_OWNER_VISUAL_REVIEW",
     "canonical_status": "NOT_APPROVED",
     "prior_candidate_D": "REWORK_REQUIRED",
     "scope": "MACRO_OCCUPANCY_AND_RELATIONS_NOT_ROADS_OR_RAION_BORDERS"
@@ -158,5 +158,11 @@
     "owner approval of revised map",
     "canonical propagation"
   ],
-  "owner_approval_scope": "methodology only; not exact land-use assignments nor geometry nor map final"
+  "owner_approval_scope": "methodology only; not exact land-use assignments nor geometry nor map final",
+  "candidate_e": {
+    "geometry_path": "ocupacao-funcional-mw014-e.proposal.json",
+    "interactive_html": "comparador-tecido-funcional-mw014-e.html",
+    "validator": "validar-tecido-funcional-mw014-e.mjs",
+    "owner_approval": false
+  }
 }
