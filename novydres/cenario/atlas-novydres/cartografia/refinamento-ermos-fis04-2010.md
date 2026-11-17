@@ -3,41 +3,37 @@ document_id: MW-013-FIS04-ERMO-REFINEMENT-2010
 subject_id: world-atlas-novydres
 reference_year: 2010
 work_unit: MW-013
-workflow_status: OWNER_DECISIONS_PENDING
+workflow_status: REJECTED_REDESIGN_REQUIRED
 canonical_status: NOT_APPROVED
 truth_state: GM_PREPARED
-source_master_sha: 27595ca32652efdef3d406eb91e4482299056bd9
-source_parent_commit: 216754fc6f21c1b52804a0ad6b9eb4cf6526a6ed
-source_ermo_blob_sha: 83e21a758e439ba1abaa873b94deef2af2ec9b3b
-coast_working_blob_sha: d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577
-relief_working_blob_sha: cccc4eaac09b192a299108389bef3494f1f15bda
-hydro_working_blob_sha: d0912bb8b420a8a29b0de602f4eb05f179da3b0c
+source_master_sha: cea4284fcf9cfa6fb531b7e693181420dcbddb56
+source_branch_checkpoint: 7a67e197205afa87ecb20545bce847d33fc9c402
+rejected_geometry_blob_sha: ea3d170930cf7e5a626bb8a800ca90004f2467a4
 ---
-# MW-013 — Proposta de refinamento dos Corredores do Ermo (FIS-04)
+# MW-013 — Revisão de FIS-04 após rejeição da representação
 
-## Escopo e estado
-Geometria **candidata, não canônica e sem aprovação do proprietário**. GEO-003.5 e GEO-004.3 continuam a ser as fontes canônicas. Costa continental MW-010, relevo MW-011 e hidrografia MW-012 são bases de trabalho aprovadas, não canônicas; ilhas permanecem hipótese. Não definir raions, rotas, travessias, áreas oficiais ou ocupação urbana.
+## Decisão expressa do proprietário
+O proprietário observou que **“essa representação não está boa”**, porque confundia os Ermos com maciços rochosos, tundra, brejos e outras unidades de relevo. A geometria MW-013 de dez pequenas manchas naturais foi **rejeitada como representação territorial de FIS-04**. Nenhuma geometria FIS-04 foi aprovada ou canonizada.
 
-## Proposta
-Dez polígonos não exaustivos: três rochosos, três de tundra/permafrost, duas várzeas e dois trechos costeiros expostos. Cada aresta recebe dois vértices intermediários com perturbação moderada, arredondada a 50 metros locais; antigos pontos principais são preservados. Os mesmos tipos, âncoras de relevo, relações hídricas e identidades permanecem. Isto é refinamento de representação geométrica, não levantamento natural real.
+A revisão prévia passou em 11.795 asserções sintéticas, porém **essas verificações não testaram o significado territorial exigido**. O resultado não valida a cartografia dos Ermos. Os dez contornos rejeitados permanecem recuperáveis somente no histórico Git. O campo estruturado atual `wilderness_model.corridor_segments` está vazio até que uma candidata apropriada seja produzida.
 
-Vértices originais: 60; novos: 180. Área sintética somada MW-005: 801.590 km²; MW-013: 800.421 km². Esses números **não são área municipal ou área oficial dos Ermos**.
+## Definição correta a orientar a geometria
+Os Corredores do Ermo representam **áreas de território que a expansão civilizacional não dominou de forma permanente**, independentemente da topografia dominante. São a natureza indomada, de múltiplos perigos e limites de habitabilidade, interposta entre e ao redor dos núcleos históricos de ocupação. Podem incluir montanhas, planícies, tundra, várzeas, floresta, litoral ou combinação desses ambientes. As quatro categorias canônicas GEO-003.5 são **contextos físicos**, não o critério exclusivo de delimitação.
 
-## Gates de decisão (um por vez)
-1. FIS-04.1 — cristas setentrionais, contrafortes orientais e cristas meridionais: PENDENTE.
-2. FIS-04.2 — tundra nordeste e duas manchas sudoeste: PENDENTE.
-3. FIS-04.3 — várzea meridional e várzea inferior do Vasyl: PENDENTE.
-4. FIS-04.4 — litoral exposto setentrional e sudoeste: PENDENTE.
-5. Aceite global da revisão FIS-04: PENDENTE.
+A formação urbana policêntrica e o envio estratégico de emissários por Gilgamesh constam da fonte canônica `novydres/cenario/historia-global/formacao-policentrica-2010.json`. A expansão dessas ocupações foi condicionada pelos perigos do território; não presumir uma expansão radial de cidade contínua. O proprietário mencionou feras indomáveis, hordas, possíveis caerns Garou e riscos a Cainitas muito poderosos **como exemplos de explicações possíveis**, não como novos fatos cartográficos, domínios/caerns localizados ou aprovação de metatrama.
 
-Aprovações parciais não fecham MW-013. Não emitir handoff antes da aprovação global, validações finais e leitura remota.
+## Regra para a próxima variante
+1. Desenhar **grandes extensões intersticiais e envolventes de natureza não submetida à ocupação**, com fronteiras irregulares e heterogêneas, sem usar o contorno de uma serra como perímetro obrigatório de Ermo.
+2. Manter separadas as camadas de **território do Ermo**, **fisiografia** e **causas de perigo**. Estas últimas podem ser múltiplas ou desconhecidas.
+3. Não inventar nem ratificar posições dos nove raions, dos núcleos de povoamento, das rotas de passagem, de caerns ou de criaturas; sem suas pegadas, a separação física de núcleos permanece **não demonstrada**.
+4. Preservar rigorosamente costa MW-010, relevo MW-011 e hidrografia MW-012 como bases de trabalho não canônicas. A nova geometria não poderá invadir mar ou corpos lacustres como terra.
+5. Travessias naturais ou artificiais podem atravessar Ermo, mas não implicam conurbação. GEO-012/013 continuam fora desta unidade.
 
-## Pré-validação
-Geometria sintética verificada pelo JavaScript no conector: anéis simples, interiores em terra e relevo apropriado, zero colisões de costa, lago, lagoa e ilhas, referências de interseção de cursos naturais preservadas, nenhum Ermo sobreposto aos demais. Comparador no arquivo `visualizador-fisico-2010.html`: MW-013, MW-005, sobreposição. Não houve teste real de navegador, Node/CI ou validação geodésica. Não inferir altitudes, permafrost medido, alagamentos, separação efetiva de cidades ou travessias.
+## Estado da implementação
+`macroermos-2010.proposal.json`: sem polígonos atuais, com interpretação territorial corrigida e aprovação `REJECTED_REDESIGN_REQUIRED`.
+`visualizador-fisico-2010.html`: removidos os dez polígonos rejeitados, com alerta de que FIS-04 está em redesenho; as camadas MW-010 a MW-012 continuam inalteradas.
+`validar-macroermos.mjs`: adaptado para verificar a ausência de geometria vigente e a preservação de estados e dependências; não confundir este teste de governança com validação de nova geometria.
 
+**A:** nova proposta territorial de Ermo, comparação visual e todas as aprovações ainda pendentes. **B:** posição efetiva de núcleos urbanos só poderá ser comprovada em unidade posterior de ocupação. **C:** Garou, caerns, criaturas e metatrama não terão localização ou história fixadas em MW-013.
 
-### Execução prévia do validador integrado
-O corpo de verificações de `validar-macroermos.mjs` foi executado com entradas reais lidas do remoto num ambiente JavaScript do conector (com adaptador de carregamento/asserções, não com Node): **11.795 asserções PASS**, sem erros; estado de costa `d72cf3eb...`, relevo `cccc4eaa...`, hidrografia `d0912bb8...`, Ermos `ea3d1709...`. Verificou tipologia, polígonos, segmentos, adjacência ao relevo, costa/terra, águas, cursos naturais e não sobreposição. O HTML tem 10/10 registros de Ermos atuais exatamente iguais ao JSON; parser JavaScript do script principal: `COMPILED_OK`. **Não houve execução de browser ou CI/Node real**; não fechar FIS-04 sem decisões do proprietário, teste final e readback.
-
-## Pendências A/B/C
-A: deliberações individuais, aceite final, validação e readback conclusivos. B: funções de separação ainda qualitativas, a depender de futuros núcleos urbanos. C: raions, transportes, política e narrativa fora do escopo.
+**MW-013 permanece ABERTO. Não emitir handoff.**
