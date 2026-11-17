@@ -76,3 +76,17 @@ Diretriz expressa do proprietário em MW-013 (16/11/2026): **toda proposta visua
 5. A versão visual comparativa deve ser reproduzível a partir dos arquivos GitHub e apresentada para aprovação antes de considerar qualquer refinamento fechado. Aprovação de composição não é aprovação de perímetro nem de estilo gráfico. Se a visualização integral não for produzível, declarar a limitação e **não pedir aceite visual**.
 
 Este protocolo é operacional para o Atlas, não altera a geografia canônica, a crônica nem decisões de raions.
+
+
+## Entrega de prévias visuais no aplicativo e alternativa de download (aprovação do proprietário em 17/11/2026)
+
+**Obrigatório em toda unidade Mapwork que demande aprovação visual do proprietário.** Esta diretriz está persistida neste `guide.md` no GitHub; **não depende de memória do ChatGPT, prompts de handoff nem histórico de conversa**.
+
+1. **Apresentação primária no ChatGPT:** tentar exibir diretamente na resposta uma **visualização HTML interativa** do mapa, usando um recurso de incorporação realmente disponível na interface. O visual deve partir das **mesmas geometrias estruturadas e camadas do comparador publicado no GitHub**, com a composição integral e ANTES/DEPOIS onde houver revisão. Nunca substituir a geografia por um esquema improvisado nem publicar apenas link como se a visualização estivesse incorporada.
+2. **Caso a interface do aplicativo não renderize HTML interativo**, declarar essa limitação de modo explícito e **fornecer o HTML interativo como arquivo para download**, para abertura no navegador. Não afirmar que a imagem/HTML apareceu no chat sem evidência e nunca atribuir sucesso à renderização somente porque um arquivo foi criado.
+3. **Fallback visual direto**, quando tecnicamente viável: fornecer junto do HTML um **PNG/SVG integral** gerado do mesmo modelo cartográfico estruturado, útil para leitura imediata no aplicativo. O fallback estático não substitui a disponibilidade do HTML interativo e não pode modificar/omitir costa, baía, ilhas, rios, afluentes, relevo ou Ermos.
+4. **Identidade e legibilidade:** comparar sempre as mesmas camadas, estilo, orientação, enquadramento e escala, com alterações sob análise claramente destacadas; usar legendas legíveis no celular e controles funcionais. Registrar qual artefato e SHA foram usados na visualização e no fallback. Validar os artefatos que puderem ser testados e especificar os que **não** foram testados em navegador/dispositivo real.
+5. **Porta de aprovação:** solicitar decisão visual **apenas após fornecer um meio efetivo de inspeção integral** pelo proprietário. Se a interface não exibir a mídia, o arquivo de download é rota válida para inspeção; obter aceitação expressa do proprietário da versão efetivamente analisada. Uma aprovação da imagem não canoniza automaticamente geografia nem direitos administrativos.
+6. **Aplicação permanente:** consultar esta regra no `guide.md` do GitHub no bootstrap e em **toda** nova etapa que exija exame visual; nunca confiar na recordação desta conversa. Se houver versões divergentes do guia entre master e branch, reconciliar com a versão aprovada publicada e registrar o SHA do guia aplicado.
+
+**Resumo operacional:** primeiro HTML interativo **visível no ChatGPT quando suportado**; se não for renderizado, **HTML para download obrigatório**, com PNG/SVG integral como complemento viável; nunca depender de link isolado nem declarar visualização inexistente.

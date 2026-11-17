@@ -2,14 +2,24 @@
 document_id: MW-014-URBAN-NUCLEI-CANDIDATE-B
 subject_id: world-atlas-novydres
 work_unit: MW-014
-work_unit_status: OPEN_OWNER_REVIEW_PENDING
+work_unit_status: OPEN_ANCHORS_APPROVED_NONCANONICAL_OTHER_DECISIONS_PENDING
 canonical_status: NOT_APPROVED
 candidate_a_status: REJECTED_BY_OWNER
-candidate_b_status: PROPOSED_NONCANONICAL
+candidate_b_status: OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE
+candidate_b_approval_date: 2026-11-17
+candidate_b_decision: APROVADO_SEM_RESSALVAS
 master_bootstrap_sha: 9df23f37a96169ee005600d2d70237f408dae2e5
 previous_rejection_commit: 6e0f6da5f3f5fec525916578e2e8df9996e4bb6c
 ---
 # MW-014 — Variante B: núcleos de implantação, não polígonos administrativos
+
+## Aprovação expressa da variante B — 17/11/2026
+
+O proprietário aprovou a **visualização integral ANTES/DEPOIS da variante B, sem ressalvas**, com seus **nove pontos candidatos de implantação**, após a prévia apresentada no aplicativo ChatGPT. A aprovação alcança a **composição espacial e os pontos de referência** da candidata B; esta é agora **base de trabalho não canônica**.
+
+Artefatos aprovados: `macroposicoes-nucleos-urbanos-2010.proposal.json` (nove pontos, blob histórico `0ec37a6b11a59155ad50445e64345a15dac1c192`); visualização `comparador-integral-nucleos-mw014-2010.html` (blob `53fa926ec39afccb008208ba7bfe86bdeb5201e9`). Os limites administrativos, contornos construídos, redes de transporte, distribuição da população, conurbação Kingswell–Sulfok e canonização **não foram submetidos nem aprovados**.
+
+Diretriz adicional aprovada na mesma manifestação: atualizar `cartografia/guide.md` para exigir **HTML interativo incorporado no ChatGPT sempre que suportado**, fallback HTML **para download** caso o aplicativo não exiba a incorporação, além de PNG/SVG fiel quando viável. Essa diretriz deve morar no GitHub, não na memória do chat.
 
 ## Estado e autoridade
 A proposta A foi rejeitada integralmente pelo proprietário, inclusive como apresentação. Sua geometria e visualização foram retiradas do HEAD da branch em `6e0f6da5f3f5fec525916578e2e8df9996e4bb6c`. Esta candidata B não reaproveita polígonos urbanos, nem propõe faixa construída contínua como fato, e não altera a base física aprovada apenas para trabalho em MW-010–013.
@@ -34,12 +44,12 @@ As relações diretas Kingswell–Sulfok, Bukovie–Kingswell e Bukovie–Alexan
 **Limitações materiais:** a visualização real em navegador móvel ainda não foi testada por captura de tela nesta execução, nem foram certificados CRS real, topologia exata de todos os polígonos ou propriedades cadastrais. A validação sintética não significa aceite visual pelo proprietário.
 
 ## Decisões pendentes para MW-014 (uma de cada vez)
-1. Organização geral dos nove pontos candidatos em relação a costa, água, relevo, termas e Ermos — **aguarda proprietário**.
+1. Organização geral dos nove pontos candidatos em relação a costa, água, relevo, termas e Ermos — **APROVADA SEM RESSALVAS como base não canônica em 17/11/2026**.
 2. Configuração Kingswell–Sulfok: conurbação, continuidade econômica sem contato urbano, ou outra composição — **sem decisão**.
 3. Extensão realista e morfologia das ocupações após aceite de posicionamento — **sem decisão**.
-4. Revisão final e aceite consolidado da geometria/visualização aprovada ou revisada — **sem decisão**.
+4. A versão visual e os nove pontos da candidata B foram **aprovados sem ressalvas**; o fechamento consolidado da unidade ainda exige deliberações 2–3 ou adiamento expresso compatível com o escopo, seguidas de leitura remota.
 
-**A** — decisões de posicionamento ainda abertas. **B** — efeitos espaciais de calor, água e Ermos considerados, sem projetar infraestrutura. **C** — política Cainita, criaturas e crônica não desenvolvidas.
+**A** — pontos urbanos aprovados como base de trabalho; configuração de continuidade e abrangência da unidade ainda abertas. **B** — efeitos espaciais de calor, água e Ermos considerados, sem projetar infraestrutura. **C** — política Cainita, criaturas e crônica não desenvolvidas.
 
 ## Estado do trabalho
-**MW-014 continua ABERTO.** A proposta B não canoniza qualquer posição. Não alterar master, raions, crônica ou runtime. Não criar handoff para unidade seguinte antes da deliberação e validações integrais.
+**MW-014 continua ABERTO** até as decisões remanescentes e o gate final. A candidata B foi aprovada para uso como base cartográfica não canônica, sem canonizar posições. Não alterar master, raions, crônica ou runtime. Não criar handoff para unidade seguinte antes da deliberação e validações integrais.

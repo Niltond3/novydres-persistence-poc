@@ -5,11 +5,29 @@
   "work_unit": "MW-014",
   "reference_year": 2010,
   "approval": {
-    "state": "CANDIDATE_B_PENDING_OWNER_REVIEW",
+    "state": "OWNER_APPROVED_CANDIDATE_B_NONCANONICAL_WORKING_BASELINE",
     "truth_state": "GM_PREPARED",
     "canonical_status": "NOT_APPROVED",
-    "owner_approval": false,
-    "previous_candidate_a": "REJECTED_BY_OWNER"
+    "owner_approval": true,
+    "previous_candidate_a": "REJECTED_BY_OWNER",
+    "owner_decision": "APROVADO_SEM_RESSALVAS",
+    "approved_on": "2026-11-17",
+    "approval_scope": "NINE_CANDIDATE_POINT_ANCHORS_AND_THEIR_COMPLETE_VISUAL_COMPOSITION_IN_MW014_VARIANT_B",
+    "approved_noncanonical_working_baseline": true,
+    "geometry_authority": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE",
+    "source_visual_blobs": {
+      "comparador-integral-nucleos-mw014-2010.html": "53fa926ec39afccb008208ba7bfe86bdeb5201e9"
+    },
+    "source_geometry_blob": "0ec37a6b11a59155ad50445e64345a15dac1c192",
+    "explicitly_not_approved": [
+      "RAION_POLYGON_BOUNDARIES",
+      "URBAN_FOOTPRINTS",
+      "BUILT_CONURBATION_KINGSWELL_SULFOK",
+      "TRANSPORT_ROUTES",
+      "SPATIAL_POPULATION_ALLOCATION",
+      "CANONIZATION"
+    ],
+    "confirmation": "O proprietário visualizou a variante B integral com os nove núcleos numerados e respondeu 'Aprovo sem resalvas'; decisão registrada como aprovação sem ressalvas."
   },
   "provenance": {
     "master_sha": "9df23f37a96169ee005600d2d70237f408dae2e5",
@@ -58,7 +76,7 @@
       ],
       "proposed_sector": "Noroeste periférico",
       "physical_context": "Terras setentrionais com ocupação isolada",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-levi-2010",
@@ -73,7 +91,7 @@
       ],
       "proposed_sector": "Norte interior",
       "physical_context": "Terraço elevado, aquecimento artificial",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-alexandria-2010",
@@ -88,7 +106,7 @@
       ],
       "proposed_sector": "Margem norte da baía",
       "physical_context": "Acesso costeiro protegido, sem definir porto",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-chelsea-2010",
@@ -103,7 +121,7 @@
       ],
       "proposed_sector": "Vale termal",
       "physical_context": "Cidade Velha no vale do Rio Vasyl e das termas",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-bukovie-2010",
@@ -118,7 +136,7 @@
       ],
       "proposed_sector": "Interior oriental",
       "physical_context": "Tundra com dependência de calor artificial",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-new-london-2010",
@@ -133,7 +151,7 @@
       ],
       "proposed_sector": "Leste interior",
       "physical_context": "Terraços e bacias menores",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-sulfok-2010",
@@ -148,7 +166,7 @@
       ],
       "proposed_sector": "Margem industrial da baía",
       "physical_context": "Continuação econômica da Cidade Velha no litoral",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-drevnigrad-2010",
@@ -163,7 +181,7 @@
       ],
       "proposed_sector": "Sul interior",
       "physical_context": "Ocupação descontínua entre contrafortes",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     },
     {
       "feature_id": "urban-anchor-district-vasyl-bay-2010",
@@ -178,7 +196,7 @@
       ],
       "proposed_sector": "Margem sudeste da baía",
       "physical_context": "Núcleo em outra faixa costeira da grande baía",
-      "status": "NOT_APPROVED"
+      "status": "OWNER_APPROVED_NONCANONICAL_WORKING_BASELINE"
     }
   ],
   "relationships": [
@@ -187,21 +205,21 @@
       "to": "district-sulfok",
       "interpretation": "POSSIBLE_URBAN_INTERFACE_NOT_CONFIRMED",
       "straight_line_ermo_samples": 0,
-      "status": "OWNER_REVIEW"
+      "status": "PENDING_CONCEPTUAL_DELIBERATION_AFTER_GEOMETRIC_ANCHOR_APPROVAL"
     },
     {
       "from": "district-bukovie",
       "to": "district-chelsea",
       "interpretation": "WILDERNESS_INTERVENES_IN_STRAIGHT_LINE",
       "straight_line_ermo_samples": 73,
-      "status": "OWNER_REVIEW"
+      "status": "PENDING_CONCEPTUAL_DELIBERATION_AFTER_GEOMETRIC_ANCHOR_APPROVAL"
     },
     {
       "from": "district-bukovie",
       "to": "district-alexandria",
       "interpretation": "WILDERNESS_INTERVENES_IN_STRAIGHT_LINE",
       "straight_line_ermo_samples": 46,
-      "status": "OWNER_REVIEW"
+      "status": "PENDING_CONCEPTUAL_DELIBERATION_AFTER_GEOMETRIC_ANCHOR_APPROVAL"
     }
   ],
   "unchanged_context": {
@@ -224,5 +242,10 @@
     "municipal border",
     "other settlements"
   ],
-  "limitation": "Indicated anchor points are not administrative limits, real-world geodetic points or proven urban extents."
+  "limitation": "Indicated anchor points are not administrative limits, real-world geodetic points or proven urban extents.",
+  "pendings_of_this_unit": [
+    "Definir expressamente a leitura urbana do eixo Kingswell–Sulfok (sem confundir corredor econômico com conurbação)",
+    "Decidir se e como as extensões/morfologias de ocupação serão tratadas dentro desta unidade ou deferidas de modo expresso",
+    "Validar versão consolidada conforme gate de fechamento do guide.md"
+  ]
 }
