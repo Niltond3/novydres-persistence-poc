@@ -1,0 +1,498 @@
+{
+  "schema": "NOVYDRES_MW014_ORGANIC_URBAN_ENVELOPES_CANDIDATE_D_V1",
+  "document_id": "MW014-URBAN-D",
+  "subject_id": "world-atlas-novydres",
+  "work_unit": "MW-014",
+  "reference_year": 2010,
+  "approval": {
+    "state": "CANDIDATE_D_OWNER_GEOMETRY_REVIEW_PENDING",
+    "truth_state": "GM_PREPARED",
+    "nine_anchor_points_owner_approved": true,
+    "organic_visual_concept_owner_approved": true,
+    "exact_polygon_geometry_owner_approved": false,
+    "canonical_status": "NOT_APPROVED"
+  },
+  "reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "frame": [
+      -60000,
+      -50000,
+      120000,
+      100000
+    ]
+  },
+  "provenance": {
+    "source_branch_commit": "9d3c1782d70ef2f7b4734e44c74cccf3f498305f",
+    "source_integral_map_blob": "53fa926ec39afccb008208ba7bfe86bdeb5201e9",
+    "source_nine_anchor_model_blob": "0bb2f2fe0252750565b6558d1e6148bcdcc17a74",
+    "source_owner_decisions_blob": "6dd7a10bca82a49cd3c0c4e31208eba758889756",
+    "not_derived_from_illustration": true,
+    "method": "Organic radial lobes on 200m metric grid; clip by coast and approved-for-work Ermos plus waterbodies with 290m guard; retain anchor-connected component; validate every boundary at <=50m. Source geometry stays unchanged."
+  },
+  "polygons": [
+    {
+      "feature_id": "urban-kingswell-d",
+      "subject_id": "district-chelsea",
+      "nucleus_number": 4,
+      "label": "Kingswell · expansão urbana mista",
+      "kind": "mixed_urban",
+      "geometry_type": "Polygon",
+      "ring_xy_m": [
+        [
+          33400,
+          26400
+        ],
+        [
+          32800,
+          26400
+        ],
+        [
+          32800,
+          29000
+        ],
+        [
+          31600,
+          29000
+        ],
+        [
+          30400,
+          28000
+        ],
+        [
+          27400,
+          27800
+        ],
+        [
+          26200,
+          26400
+        ],
+        [
+          24800,
+          26000
+        ],
+        [
+          24000,
+          25000
+        ],
+        [
+          24400,
+          21600
+        ],
+        [
+          26200,
+          20600
+        ],
+        [
+          27200,
+          16800
+        ],
+        [
+          28400,
+          16400
+        ],
+        [
+          29800,
+          15000
+        ],
+        [
+          31000,
+          15000
+        ],
+        [
+          32800,
+          15800
+        ],
+        [
+          33200,
+          17600
+        ],
+        [
+          37600,
+          17800
+        ],
+        [
+          38600,
+          19000
+        ],
+        [
+          39000,
+          21000
+        ],
+        [
+          39600,
+          21800
+        ],
+        [
+          39600,
+          23400
+        ],
+        [
+          38400,
+          25000
+        ],
+        [
+          38000,
+          27200
+        ],
+        [
+          37200,
+          28200
+        ],
+        [
+          34200,
+          28800
+        ],
+        [
+          34600,
+          27200
+        ],
+        [
+          34400,
+          26600
+        ],
+        [
+          33400,
+          26400
+        ]
+      ],
+      "draw_color": "#bc775a",
+      "construction": {
+        "lobes_km": [
+          [
+            33,
+            23,
+            6.7,
+            5.7
+          ],
+          [
+            29.2,
+            23.7,
+            4.9,
+            4.4
+          ],
+          [
+            30.3,
+            18.9,
+            3.6,
+            3.65
+          ],
+          [
+            35.2,
+            22.5,
+            3.5,
+            3.8
+          ]
+        ],
+        "cell_size_m": 200,
+        "seed": 4
+      },
+      "metrics": {
+        "sampled_cells": 3828,
+        "excluded_cells": 96,
+        "main_connected_cells": 3732,
+        "km2": 149.28,
+        "vertices": 29,
+        "edge_sample_checks": 1116,
+        "invalid_edge_samples": 0
+      },
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "industrial-sulfok-d",
+      "subject_id": "district-sulfok",
+      "nucleus_number": 7,
+      "label": "Sulfok · polo industrial",
+      "kind": "heavy_industry_and_logistics",
+      "geometry_type": "Polygon",
+      "ring_xy_m": [
+        [
+          22000,
+          12200
+        ],
+        [
+          24200,
+          6400
+        ],
+        [
+          26000,
+          6800
+        ],
+        [
+          26800,
+          8000
+        ],
+        [
+          27600,
+          8000
+        ],
+        [
+          28400,
+          8600
+        ],
+        [
+          29000,
+          10200
+        ],
+        [
+          31600,
+          11200
+        ],
+        [
+          32000,
+          14000
+        ],
+        [
+          30600,
+          15600
+        ],
+        [
+          31400,
+          16400
+        ],
+        [
+          31400,
+          17400
+        ],
+        [
+          29400,
+          19200
+        ],
+        [
+          25600,
+          19800
+        ],
+        [
+          23800,
+          18200
+        ],
+        [
+          24000,
+          16600
+        ],
+        [
+          22600,
+          16400
+        ],
+        [
+          20000,
+          14200
+        ],
+        [
+          20000,
+          13800
+        ],
+        [
+          22000,
+          12200
+        ]
+      ],
+      "draw_color": "#d4a366",
+      "construction": {
+        "lobes_km": [
+          [
+            25,
+            12,
+            5,
+            4.65
+          ],
+          [
+            27.3,
+            16.7,
+            3.7,
+            3
+          ],
+          [
+            23.9,
+            9,
+            2.9,
+            2.9
+          ],
+          [
+            28.8,
+            13.4,
+            3,
+            3.4
+          ]
+        ],
+        "cell_size_m": 200,
+        "seed": 7
+      },
+      "metrics": {
+        "sampled_cells": 2759,
+        "excluded_cells": 356,
+        "main_connected_cells": 2403,
+        "km2": 96.12,
+        "vertices": 20,
+        "edge_sample_checks": 851,
+        "invalid_edge_samples": 0
+      },
+      "status": "NOT_APPROVED"
+    },
+    {
+      "feature_id": "urban-vasyl-bay-d",
+      "subject_id": "district-vasyl-bay",
+      "nucleus_number": 9,
+      "label": "Vasyl Bay · expansão urbana",
+      "kind": "mixed_urban",
+      "geometry_type": "Polygon",
+      "ring_xy_m": [
+        [
+          20800,
+          -9800
+        ],
+        [
+          16200,
+          -13800
+        ],
+        [
+          14800,
+          -15600
+        ],
+        [
+          15000,
+          -16200
+        ],
+        [
+          18200,
+          -16800
+        ],
+        [
+          18800,
+          -15600
+        ],
+        [
+          21600,
+          -16000
+        ],
+        [
+          22400,
+          -15600
+        ],
+        [
+          22600,
+          -15000
+        ],
+        [
+          24000,
+          -14800
+        ],
+        [
+          24200,
+          -14000
+        ],
+        [
+          25800,
+          -13200
+        ],
+        [
+          26200,
+          -12400
+        ],
+        [
+          26200,
+          -11800
+        ],
+        [
+          25600,
+          -11400
+        ],
+        [
+          25800,
+          -10200
+        ],
+        [
+          25000,
+          -9400
+        ],
+        [
+          24400,
+          -7800
+        ],
+        [
+          21800,
+          -7800
+        ],
+        [
+          20800,
+          -9800
+        ]
+      ],
+      "draw_color": "#cf8c78",
+      "construction": {
+        "lobes_km": [
+          [
+            21,
+            -12,
+            4.75,
+            3.4
+          ],
+          [
+            18.6,
+            -14.3,
+            4.1,
+            2.7
+          ],
+          [
+            22.6,
+            -10.6,
+            3.2,
+            2.8
+          ]
+        ],
+        "cell_size_m": 200,
+        "seed": 9
+      },
+      "metrics": {
+        "sampled_cells": 1839,
+        "excluded_cells": 467,
+        "main_connected_cells": 1372,
+        "km2": 54.88,
+        "vertices": 20,
+        "edge_sample_checks": 689,
+        "invalid_edge_samples": 0
+      },
+      "status": "NOT_APPROVED"
+    }
+  ],
+  "proposed_topology": {
+    "kingswell_sulfok_touch": true,
+    "industrial_sulfok_to_urban_vasyl_bay_separated": true,
+    "minimum_vertex_distance_km": 14.2,
+    "no_new_wilderness": true
+  },
+  "other_nuclei": [
+    "district-dunwich",
+    "district-levi",
+    "district-alexandria",
+    "district-chelsea",
+    "district-bukovie",
+    "district-new-london",
+    "district-sulfok",
+    "district-drevnigrad",
+    "district-vasyl-bay"
+  ],
+  "not_established": [
+    "all nine raion borders",
+    "population distribution",
+    "total city urban footprint",
+    "transport networks",
+    "port and terminal sites",
+    "official cadastral area",
+    "canonization"
+  ],
+  "validation": {
+    "perimeter_samples": 2656,
+    "violations": 0,
+    "full_context_counts": {
+      "islands": 3,
+      "relief": 7,
+      "crests": 3,
+      "ermo": 10,
+      "river": 9,
+      "waterbodies": 3,
+      "thermal": 1,
+      "basins": 5
+    }
+  }
+}
