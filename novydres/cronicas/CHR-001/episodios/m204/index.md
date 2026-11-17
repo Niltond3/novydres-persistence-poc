@@ -84,3 +84,5 @@ Arquivo por assunto de fontes da crônica CHR-001, apenas candidato. `registro.j
 `adendo-c17-retorno-noturno-037.md` narra fechamento da grade, subida regular conduzida por Emil e chegada ao andar superior com acesso destravado; não presume saída da plataforma nem recolhimento da lanterna. Cursor `../estado/recuperacao-c102.json`.
 
 `adendo-c17-retorno-noturno-038.md` registra lanterna recuperada, saída pela rota de entrada e despedida silenciosa de Emil; PJ já está no exterior a caminho de casa. Documentos/Sara retidos, tédio e certeza de decisão preservados como pensamentos. Cursor `../estado/recuperacao-c103.json`; sem avanço automático de M3.02/Rada.
+
+`adendo-c17-retorno-noturno-039.md` registra nota meta do jogador encerrando o flashback, sem ações fictícias adicionais. O cursor `../estado/recuperacao-c104.json` declara fecho retrospectivo e preparo de retorno a M3.02 C02/Rada, sem avanço automático.
