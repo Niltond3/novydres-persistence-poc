@@ -37,7 +37,7 @@ A imagem ilustrativa de Novydres foi entregue pelo proprietário em 17/11/2026 c
 | MW014-VIS-06 | B | Decidir apenas consequências espaciais macro de instalações de porto, ferrovia, docas, pontes e corredores de acesso necessários à leitura da cidade. | Infraestrutura exata e redes de ruas/trilhos exigem geometria própria em unidade futura; não desenhar detalhes inventados. |
 | MW014-VIS-07 | B | Examinar possibilidade de usos diferenciados das três ilhas hipotéticas, sem pressupor grande ilha urbana central construída nem pontes do exemplo. | Contornos e número das ilhas ainda hipótese; nenhuma aprovação só por ilustração. |
 | MW014-VIS-08 | B | Definir graus relativos de tecido consolidado, misto, técnico, industrial e aberto sem derivar densidade demográfica diretamente de cores. | População municipal 7 milhões é canônica, espacialização pendente. |
-| MW014-VIS-09 | C | Estabelecer diretriz estética de atlas: neve sobre áreas construídas, cartografia legível, contraste industrial e textura gótico-ártica; adequar depois ao renderizador multiescala. | Não confundir acabamento ilustrado com fonte de geometria. |
+| MW014-VIS-09 | B | Estabelecer diretriz estética de atlas: neve sobre áreas construídas, cartografia legível, contraste industrial e textura gótico-ártica; adequar depois ao renderizador multiescala. | Não confundir acabamento ilustrado com fonte de geometria. |
 
 ## Não transportar literalmente da ilustração
 
