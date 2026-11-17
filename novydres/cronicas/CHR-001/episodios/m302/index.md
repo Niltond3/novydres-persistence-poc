@@ -110,3 +110,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `../m204/adendo-c17-retorno-noturno-028.md` e `../../estado/recuperacao-c93.json` registram observação retroativa de possíveis empregadores dos homens das galerias, sem conhecimento transmitido a Rada ou avanço de M3.02.C02.
 
 `c02-interacao-024.md` retoma M3.02 C02 com reflexão interior de Bartolomeu sobre saudade da guerra, violência e tédio. Só `Chato...` é audível e provoca a resposta cautelosa de Rada, sem transferência de conhecimentos da incursão fechada. Cursor `../../estado/recuperacao-c105.json`; sem teste ou despesa.
+
+`c02-interacao-025.md` registra pedido de desculpas e explicação técnica de Bartolomeu sobre endereços divergentes de rede subterrânea e superfície. Rada aceita explicação, não solicita busca cega e começa a sair para consultar sua fonte, ainda ao alcance. Cursor `../../estado/recuperacao-c106.json`; C02 aberta sem novos testes ou informação sobrenatural.
