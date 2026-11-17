@@ -1,0 +1,1525 @@
+{
+  "schema": "NOVYDRES_MW014_URBAN_MACROPOSITIONS_PROPOSAL_V1",
+  "document_id": "MW-014-NINE-URBAN-NUCLEI-2010-CANDIDATE-A",
+  "subject_id": "world-atlas-novydres",
+  "work_unit": "MW-014",
+  "reference_year": 2010,
+  "approval": {
+    "workflow": "CANDIDATE_A_PENDING_OWNER_REVIEW",
+    "truth_state": "GM_PREPARED",
+    "canonical_status": "NOT_APPROVED",
+    "proposed_geometry_only": true,
+    "owner_geometry_approval": false,
+    "not_fixed_raion_boundaries": true
+  },
+  "provenance": {
+    "master_bootstrap_sha": "cea4284fcf9cfa6fb531b7e693181420dcbddb56",
+    "mw013_checkpoint_sha": "cee95e61bcdb525e2cf8b88da842ce5ea950200f",
+    "source_refined_ermo_blob_sha": "eac63da71d49fbe55d79da2ee82fbafae609decd",
+    "coast_blob_sha": "d72cf3eb2b3fac9473017a6bbfdc46ea1efb8577",
+    "hydro_blob_sha": "d0912bb8b420a8a29b0de602f4eb05f179da3b0c",
+    "relief_blob_sha": "cccc4eaac09b192a299108389bef3494f1f15bda",
+    "full_comparator_context": "comparador-integral-ermos-fis04-2010.html",
+    "canonical_owner_references": [
+      "../raions-oficiais-2010.json",
+      "../posicionamento-raions-2010.proposal.json",
+      "../ermos-estrutura-territorial-2010.json",
+      "../../historia-global/formacao-policentrica-2010.json",
+      "../geotermia-aquecimento-2010.json",
+      "../corredor-extrativo-old-town-sulfok-2010.json"
+    ]
+  },
+  "spatial_reference": {
+    "crs": "NOVYDRES-LOCAL-2010",
+    "units": "m",
+    "coordinate_order": "[x_east_m,y_north_m]",
+    "study_frame": {
+      "xmin": -60000,
+      "ymin": -50000,
+      "xmax": 60000,
+      "ymax": 50000
+    },
+    "geodetic_anchor": null,
+    "municipal_boundary": null
+  },
+  "conceptual_scope": "Macronúcleos de ocupação, não fronteiras dos nove raions, não área urbana total e não distribuição da população municipal.",
+  "urban_nuclei": [
+    {
+      "feature_id": "urban-nucleus-dunwich-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Dunwich",
+      "public_map_label": "Dunwich",
+      "raion_subject_ref": "district-dunwich",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        -35000,
+        35000
+      ],
+      "ring_xy_m": [
+        [
+          -31691,
+          35000
+        ],
+        [
+          -31710,
+          35532
+        ],
+        [
+          -31932,
+          36033
+        ],
+        [
+          -32194,
+          36523
+        ],
+        [
+          -32563,
+          36980
+        ],
+        [
+          -33146,
+          37255
+        ],
+        [
+          -33826,
+          37302
+        ],
+        [
+          -34435,
+          37306
+        ],
+        [
+          -35000,
+          37405
+        ],
+        [
+          -35606,
+          37476
+        ],
+        [
+          -36205,
+          37364
+        ],
+        [
+          -36754,
+          37132
+        ],
+        [
+          -37328,
+          36892
+        ],
+        [
+          -37907,
+          36578
+        ],
+        [
+          -38254,
+          36095
+        ],
+        [
+          -38248,
+          35525
+        ],
+        [
+          -38091,
+          35000
+        ],
+        [
+          -37987,
+          34517
+        ],
+        [
+          -37844,
+          34043
+        ],
+        [
+          -37515,
+          33634
+        ],
+        [
+          -37088,
+          33303
+        ],
+        [
+          -36702,
+          32931
+        ],
+        [
+          -36276,
+          32498
+        ],
+        [
+          -35684,
+          32206
+        ],
+        [
+          -35000,
+          32205
+        ],
+        [
+          -34358,
+          32376
+        ],
+        [
+          -33756,
+          32560
+        ],
+        [
+          -33198,
+          32809
+        ],
+        [
+          -32803,
+          33215
+        ],
+        [
+          -32585,
+          33689
+        ],
+        [
+          -32341,
+          34105
+        ],
+        [
+          -31971,
+          34511
+        ],
+        [
+          -31691,
+          35000
+        ]
+      ],
+      "local_environment_basis": "noroeste periférico; tundra",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-levi-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Levi",
+      "public_map_label": "Levi",
+      "raion_subject_ref": "district-levi",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        3000,
+        46000
+      ],
+      "ring_xy_m": [
+        [
+          5448,
+          46000
+        ],
+        [
+          5438,
+          46422
+        ],
+        [
+          5229,
+          46803
+        ],
+        [
+          4977,
+          47149
+        ],
+        [
+          4693,
+          47472
+        ],
+        [
+          4296,
+          47687
+        ],
+        [
+          3829,
+          47740
+        ],
+        [
+          3400,
+          47750
+        ],
+        [
+          3000,
+          47844
+        ],
+        [
+          2555,
+          47944
+        ],
+        [
+          2097,
+          47895
+        ],
+        [
+          1692,
+          47702
+        ],
+        [
+          1308,
+          47471
+        ],
+        [
+          931,
+          47202
+        ],
+        [
+          696,
+          46830
+        ],
+        [
+          710,
+          46396
+        ],
+        [
+          848,
+          46000
+        ],
+        [
+          926,
+          45641
+        ],
+        [
+          979,
+          45272
+        ],
+        [
+          1152,
+          44926
+        ],
+        [
+          1440,
+          44644
+        ],
+        [
+          1741,
+          44361
+        ],
+        [
+          2069,
+          44045
+        ],
+        [
+          2503,
+          43827
+        ],
+        [
+          3000,
+          43844
+        ],
+        [
+          3453,
+          44021
+        ],
+        [
+          3858,
+          44199
+        ],
+        [
+          4248,
+          44376
+        ],
+        [
+          4561,
+          44643
+        ],
+        [
+          4755,
+          44980
+        ],
+        [
+          4946,
+          45299
+        ],
+        [
+          5222,
+          45616
+        ],
+        [
+          5448,
+          46000
+        ]
+      ],
+      "local_environment_basis": "norte interior; terraços e colinas",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-alexandria-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Alexandria",
+      "public_map_label": "Alexandria",
+      "raion_subject_ref": "district-alexandria",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        13000,
+        26000
+      ],
+      "ring_xy_m": [
+        [
+          15605,
+          26000
+        ],
+        [
+          15588,
+          26429
+        ],
+        [
+          15324,
+          26802
+        ],
+        [
+          15003,
+          27115
+        ],
+        [
+          14695,
+          27412
+        ],
+        [
+          14316,
+          27641
+        ],
+        [
+          13860,
+          27729
+        ],
+        [
+          13420,
+          27760
+        ],
+        [
+          13000,
+          27865
+        ],
+        [
+          12524,
+          27992
+        ],
+        [
+          12023,
+          27966
+        ],
+        [
+          11595,
+          27753
+        ],
+        [
+          11233,
+          27472
+        ],
+        [
+          10891,
+          27175
+        ],
+        [
+          10660,
+          26808
+        ],
+        [
+          10664,
+          26387
+        ],
+        [
+          10805,
+          26000
+        ],
+        [
+          10880,
+          25649
+        ],
+        [
+          10890,
+          25272
+        ],
+        [
+          11012,
+          24893
+        ],
+        [
+          11300,
+          24584
+        ],
+        [
+          11649,
+          24315
+        ],
+        [
+          12023,
+          24034
+        ],
+        [
+          12484,
+          23837
+        ],
+        [
+          13000,
+          23865
+        ],
+        [
+          13461,
+          24069
+        ],
+        [
+          13860,
+          24270
+        ],
+        [
+          14261,
+          24427
+        ],
+        [
+          14627,
+          24644
+        ],
+        [
+          14882,
+          24952
+        ],
+        [
+          15095,
+          25277
+        ],
+        [
+          15372,
+          25607
+        ],
+        [
+          15605,
+          26000
+        ]
+      ],
+      "local_environment_basis": "margem nordeste da baía; assentamento costeiro",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-chelsea-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Kingswell",
+      "public_map_label": "Kingswell / Cidade Velha",
+      "raion_subject_ref": "district-chelsea",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        31000,
+        23000
+      ],
+      "ring_xy_m": [
+        [
+          34825,
+          23000
+        ],
+        [
+          34781,
+          23688
+        ],
+        [
+          34352,
+          24269
+        ],
+        [
+          33823,
+          24725
+        ],
+        [
+          33368,
+          25165
+        ],
+        [
+          32875,
+          25566
+        ],
+        [
+          32263,
+          25788
+        ],
+        [
+          31627,
+          25884
+        ],
+        [
+          31000,
+          26053
+        ],
+        [
+          30290,
+          26263
+        ],
+        [
+          29536,
+          26231
+        ],
+        [
+          28913,
+          25855
+        ],
+        [
+          28449,
+          25333
+        ],
+        [
+          28029,
+          24815
+        ],
+        [
+          27706,
+          24247
+        ],
+        [
+          27661,
+          23607
+        ],
+        [
+          27825,
+          23000
+        ],
+        [
+          27915,
+          22439
+        ],
+        [
+          27885,
+          21820
+        ],
+        [
+          28003,
+          21169
+        ],
+        [
+          28418,
+          20640
+        ],
+        [
+          28986,
+          20245
+        ],
+        [
+          29584,
+          19876
+        ],
+        [
+          30262,
+          19607
+        ],
+        [
+          31000,
+          19653
+        ],
+        [
+          31656,
+          19985
+        ],
+        [
+          32215,
+          20318
+        ],
+        [
+          32802,
+          20534
+        ],
+        [
+          33398,
+          20807
+        ],
+        [
+          33849,
+          21260
+        ],
+        [
+          34173,
+          21798
+        ],
+        [
+          34526,
+          22359
+        ],
+        [
+          34825,
+          23000
+        ]
+      ],
+      "local_environment_basis": "vale termal e Rio Vasyl; Cidade Velha é núcleo interno",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-bukovie-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Bukovie",
+      "public_map_label": "Bukovie",
+      "raion_subject_ref": "district-bukovie",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        55000,
+        7000
+      ],
+      "ring_xy_m": [
+        [
+          58363,
+          7000
+        ],
+        [
+          58305,
+          7573
+        ],
+        [
+          57913,
+          8051
+        ],
+        [
+          57420,
+          8408
+        ],
+        [
+          57023,
+          8762
+        ],
+        [
+          56640,
+          9137
+        ],
+        [
+          56142,
+          9402
+        ],
+        [
+          55577,
+          9526
+        ],
+        [
+          55000,
+          9651
+        ],
+        [
+          54361,
+          9800
+        ],
+        [
+          53686,
+          9762
+        ],
+        [
+          53143,
+          9420
+        ],
+        [
+          52783,
+          8931
+        ],
+        [
+          52474,
+          8470
+        ],
+        [
+          52190,
+          8014
+        ],
+        [
+          52080,
+          7506
+        ],
+        [
+          52163,
+          7000
+        ],
+        [
+          52224,
+          6519
+        ],
+        [
+          52185,
+          5985
+        ],
+        [
+          52265,
+          5408
+        ],
+        [
+          52639,
+          4944
+        ],
+        [
+          53195,
+          4647
+        ],
+        [
+          53770,
+          4413
+        ],
+        [
+          54367,
+          4229
+        ],
+        [
+          55000,
+          4251
+        ],
+        [
+          55570,
+          4503
+        ],
+        [
+          56059,
+          4773
+        ],
+        [
+          56588,
+          4931
+        ],
+        [
+          57167,
+          5113
+        ],
+        [
+          57629,
+          5470
+        ],
+        [
+          57918,
+          5947
+        ],
+        [
+          58161,
+          6452
+        ],
+        [
+          58363,
+          7000
+        ]
+      ],
+      "local_environment_basis": "setor interior a leste; tundra e calor artificial",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-new-london-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "New London",
+      "public_map_label": "New London",
+      "raion_subject_ref": "district-new-london",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        52000,
+        -10000
+      ],
+      "ring_xy_m": [
+        [
+          55715,
+          -10000
+        ],
+        [
+          55637,
+          -9380
+        ],
+        [
+          55217,
+          -8858
+        ],
+        [
+          54666,
+          -8473
+        ],
+        [
+          54233,
+          -8086
+        ],
+        [
+          53850,
+          -7627
+        ],
+        [
+          53329,
+          -7251
+        ],
+        [
+          52680,
+          -7070
+        ],
+        [
+          52000,
+          -6970
+        ],
+        [
+          51273,
+          -6868
+        ],
+        [
+          50521,
+          -6938
+        ],
+        [
+          49921,
+          -7333
+        ],
+        [
+          49557,
+          -7906
+        ],
+        [
+          49263,
+          -8432
+        ],
+        [
+          48929,
+          -8910
+        ],
+        [
+          48711,
+          -9439
+        ],
+        [
+          48715,
+          -10000
+        ],
+        [
+          48771,
+          -10551
+        ],
+        [
+          48750,
+          -11154
+        ],
+        [
+          48846,
+          -11806
+        ],
+        [
+          49284,
+          -12328
+        ],
+        [
+          49961,
+          -12616
+        ],
+        [
+          50650,
+          -12794
+        ],
+        [
+          51314,
+          -12955
+        ],
+        [
+          52000,
+          -12970
+        ],
+        [
+          52639,
+          -12753
+        ],
+        [
+          53199,
+          -12482
+        ],
+        [
+          53810,
+          -12322
+        ],
+        [
+          54507,
+          -12149
+        ],
+        [
+          55083,
+          -11766
+        ],
+        [
+          55396,
+          -11206
+        ],
+        [
+          55576,
+          -10610
+        ],
+        [
+          55715,
+          -10000
+        ]
+      ],
+      "local_environment_basis": "leste interior; terraços e microbacias",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-sulfok-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Sulfok",
+      "public_map_label": "Sulfok",
+      "raion_subject_ref": "district-sulfok",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        25000,
+        13000
+      ],
+      "ring_xy_m": [
+        [
+          27463,
+          13000
+        ],
+        [
+          27409,
+          13439
+        ],
+        [
+          27161,
+          13820
+        ],
+        [
+          26809,
+          14108
+        ],
+        [
+          26524,
+          14397
+        ],
+        [
+          26282,
+          14759
+        ],
+        [
+          25942,
+          15085
+        ],
+        [
+          25486,
+          15239
+        ],
+        [
+          25000,
+          15273
+        ],
+        [
+          24504,
+          15285
+        ],
+        [
+          24004,
+          15205
+        ],
+        [
+          23602,
+          14918
+        ],
+        [
+          23366,
+          14498
+        ],
+        [
+          23184,
+          14112
+        ],
+        [
+          22940,
+          13782
+        ],
+        [
+          22723,
+          13415
+        ],
+        [
+          22663,
+          13000
+        ],
+        [
+          22701,
+          12581
+        ],
+        [
+          22726,
+          12137
+        ],
+        [
+          22818,
+          11664
+        ],
+        [
+          23130,
+          11286
+        ],
+        [
+          23616,
+          11101
+        ],
+        [
+          24105,
+          11020
+        ],
+        [
+          24549,
+          10924
+        ],
+        [
+          25000,
+          10873
+        ],
+        [
+          25441,
+          10969
+        ],
+        [
+          25840,
+          11140
+        ],
+        [
+          26268,
+          11260
+        ],
+        [
+          26760,
+          11387
+        ],
+        [
+          27175,
+          11668
+        ],
+        [
+          27375,
+          12098
+        ],
+        [
+          27431,
+          12557
+        ],
+        [
+          27463,
+          13000
+        ]
+      ],
+      "local_environment_basis": "litoral protegido e transição industrial",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-drevnigrad-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Drevnigrad",
+      "public_map_label": "Drevnigrad",
+      "raion_subject_ref": "district-drevnigrad",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        45000,
+        -41000
+      ],
+      "ring_xy_m": [
+        [
+          48449,
+          -41000
+        ],
+        [
+          48385,
+          -40442
+        ],
+        [
+          48108,
+          -39933
+        ],
+        [
+          47657,
+          -39529
+        ],
+        [
+          47253,
+          -39133
+        ],
+        [
+          46907,
+          -38636
+        ],
+        [
+          46417,
+          -38166
+        ],
+        [
+          45733,
+          -37948
+        ],
+        [
+          45000,
+          -37964
+        ],
+        [
+          44290,
+          -38040
+        ],
+        [
+          43592,
+          -38183
+        ],
+        [
+          43014,
+          -38537
+        ],
+        [
+          42664,
+          -39064
+        ],
+        [
+          42400,
+          -39560
+        ],
+        [
+          42018,
+          -39977
+        ],
+        [
+          41616,
+          -40442
+        ],
+        [
+          41449,
+          -41000
+        ],
+        [
+          41519,
+          -41574
+        ],
+        [
+          41641,
+          -42153
+        ],
+        [
+          41837,
+          -42751
+        ],
+        [
+          42303,
+          -43234
+        ],
+        [
+          43018,
+          -43458
+        ],
+        [
+          43738,
+          -43525
+        ],
+        [
+          44367,
+          -43637
+        ],
+        [
+          45000,
+          -43764
+        ],
+        [
+          45655,
+          -43729
+        ],
+        [
+          46270,
+          -43541
+        ],
+        [
+          46903,
+          -43360
+        ],
+        [
+          47613,
+          -43165
+        ],
+        [
+          48220,
+          -42783
+        ],
+        [
+          48485,
+          -42196
+        ],
+        [
+          48481,
+          -41574
+        ],
+        [
+          48449,
+          -41000
+        ]
+      ],
+      "local_environment_basis": "sul interior; planícies e contrafortes",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    },
+    {
+      "feature_id": "urban-nucleus-vasyl-bay-001",
+      "kind": "urbanized_core_footprint_candidate",
+      "name": "Vasyl Bay",
+      "public_map_label": "Vasyl Bay",
+      "raion_subject_ref": "district-vasyl-bay",
+      "geometry_type": "Polygon",
+      "center_xy_m": [
+        21000,
+        -13000
+      ],
+      "ring_xy_m": [
+        [
+          22513,
+          -13000
+        ],
+        [
+          22496,
+          -12740
+        ],
+        [
+          22416,
+          -12487
+        ],
+        [
+          22243,
+          -12273
+        ],
+        [
+          22060,
+          -12073
+        ],
+        [
+          21891,
+          -11833
+        ],
+        [
+          21662,
+          -11601
+        ],
+        [
+          21342,
+          -11496
+        ],
+        [
+          21000,
+          -11532
+        ],
+        [
+          20684,
+          -11610
+        ],
+        [
+          20382,
+          -11693
+        ],
+        [
+          20117,
+          -11844
+        ],
+        [
+          19942,
+          -12074
+        ],
+        [
+          19811,
+          -12305
+        ],
+        [
+          19626,
+          -12502
+        ],
+        [
+          19415,
+          -12724
+        ],
+        [
+          19313,
+          -13000
+        ],
+        [
+          19358,
+          -13286
+        ],
+        [
+          19459,
+          -13558
+        ],
+        [
+          19583,
+          -13829
+        ],
+        [
+          19797,
+          -14053
+        ],
+        [
+          20114,
+          -14161
+        ],
+        [
+          20438,
+          -14188
+        ],
+        [
+          20718,
+          -14242
+        ],
+        [
+          21000,
+          -14332
+        ],
+        [
+          21308,
+          -14356
+        ],
+        [
+          21606,
+          -14280
+        ],
+        [
+          21895,
+          -14172
+        ],
+        [
+          22205,
+          -14054
+        ],
+        [
+          22471,
+          -13860
+        ],
+        [
+          22583,
+          -13574
+        ],
+        [
+          22554,
+          -13270
+        ],
+        [
+          22513,
+          -13000
+        ]
+      ],
+      "local_environment_basis": "margem sudeste da grande baía",
+      "not_raion_perimeter": true,
+      "not_total_urbanized_area": true,
+      "status": "PENDING_OWNER_REVIEW"
+    }
+  ],
+  "conurbation_candidate": {
+    "feature_id": "urban-contact-kingswell-sulfok-001",
+    "status": "PROPOSED_OWNER_REVIEW",
+    "semantic": "CANDIDATE_CONTINUOUS_URBAN_FABRIC_NOT_ROAD_OR_RAIL",
+    "participating_raion_ids": [
+      "district-chelsea",
+      "district-sulfok"
+    ],
+    "centerline_xy_m": [
+      [
+        25000,
+        13000
+      ],
+      [
+        26400,
+        15000
+      ],
+      [
+        27500,
+        17100
+      ],
+      [
+        28700,
+        19000
+      ],
+      [
+        29700,
+        21200
+      ],
+      [
+        31000,
+        23000
+      ]
+    ],
+    "approx_half_width_xy_m": [
+      950,
+      900,
+      850,
+      850,
+      900,
+      950
+    ],
+    "ring_xy_m": [
+      [
+        24222,
+        13545
+      ],
+      [
+        25632,
+        15469
+      ],
+      [
+        26763,
+        17524
+      ],
+      [
+        27951,
+        19402
+      ],
+      [
+        28920,
+        21649
+      ],
+      [
+        30230,
+        23556
+      ],
+      [
+        31770,
+        22444
+      ],
+      [
+        30480,
+        20751
+      ],
+      [
+        29449,
+        18598
+      ],
+      [
+        28237,
+        16676
+      ],
+      [
+        27168,
+        14531
+      ],
+      [
+        25778,
+        12455
+      ],
+      [
+        24222,
+        13545
+      ]
+    ],
+    "geometry_type": "Polygon",
+    "historic_conurbation_not_canonical": true
+  },
+  "relationships": [
+    {
+      "from": "district-chelsea",
+      "to": "district-sulfok",
+      "type": "CANDIDATE_DIRECT_URBAN_CONTACT",
+      "source": "MW-013 owner-indicated topology",
+      "geometric_test": "no wilderness or water corridor intersection",
+      "status": "OWNER_REVIEW"
+    },
+    {
+      "from": "district-bukovie",
+      "to": "district-chelsea",
+      "type": "DIRECT_INTERVENING_WILDERNESS",
+      "source": "MW-013 owner-indicated topology",
+      "status": "OWNER_REVIEW"
+    },
+    {
+      "from": "district-bukovie",
+      "to": "district-alexandria",
+      "type": "DIRECT_INTERVENING_WILDERNESS",
+      "source": "MW-013 owner-indicated topology",
+      "status": "OWNER_REVIEW"
+    }
+  ],
+  "pending": "Todas as demais adjacências, fronteiras dos raions, demais núcleos, bairros, população espacial, rotas, travessias e processos político-históricos ainda dependem de decisões próprias.",
+  "presentation": "Os dois painéis usam rigorosamente mesma costa, ilhas, 7 relevos, 3 cristas, 9 cursos d'água, 3 corpos d'água, 5 microbacias e trecho termal; apenas a camada de núcleos muda.",
+  "effects_on_canonical_files": [],
+  "owner_approval_required_for_closure": true
+}
