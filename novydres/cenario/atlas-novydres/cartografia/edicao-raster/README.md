@@ -36,3 +36,11 @@ Dependência: Python 3 + Pillow. Os HTML são autocontidos com WebP embutido; se
 ## Segurança editorial
 
 Nenhuma edição raster transforma imagem em fonte canônica, altera `world-atlas-novydres` ou resolve GEOs. Não criar “handoff” de próxima MW com ponto aberto; apenas estado de retomada da mesma atividade. A aprovação da máscara ≠ aprovação da edição. Não mover estruturas não autorizadas. Não modificar `master` sem aprovação/integração.
+
+## Arquivos raster persistidos e retomada sem chat (18/11/2026)
+
+**Manifest oficial no Git:** `edicao-raster/assets.json` (SHA-256, nomes, caminhos persistentes e estados). Os **5 binários de referência/artefatos** estão na pasta persistente da ChatGPT Library `/Novydres - Mapwork/edicao-raster`, não embutidos no Git. A integração atual não ofereceu envio binário PNG direto ao GitHub; não alegar que o PNG mora no repositório. O manifesto Git, e não memória de conversa, governa quais hashes, fontes e estados são válidos. Os cinco arquivos foram recuperados da Library e confrontados com os hashes locais.
+
+**M01-V2:** `APPROVED_BY_OWNER` em 18/11/2026. A estação histórica oeste foi aceita após retirada da sombra residual; fora da M01, zero pixels modificados. PNG aprovado `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`. Não usar a candidata V1, nem exigir novo aceite da M01.
+
+**Como retomar num chat limpo:** após bootstrap no Git, consultar `assets.json`; chamar `files.list` na pasta Library indicada e `files.materialize` (raw_file) para obter exatamente a master e a M01-V2, e conferir SHA-256 antes de qualquer operação. A imagem marcada M02 também está lá. **O arquivo de marcação não é a máscara aprovada.** A máscara M02 continua pendente; primeiro prévia integral e aceite expresso, depois edição M02 sobre a M01-V2 aprovada. O mestre V1 fica imutável.

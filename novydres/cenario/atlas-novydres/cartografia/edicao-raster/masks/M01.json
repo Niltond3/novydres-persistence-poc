@@ -1,7 +1,7 @@
 {
   "id": "M01",
   "name": "Estação Histórica Oeste",
-  "state": "EDIT_APPROVED_ASSET_NOT_IN_GIT",
+  "state": "EDIT_APPROVED_LIBRARY_PERSISTED",
   "base": {
     "file": "novydres_imagem_mestre_v1.png",
     "size": [
@@ -234,6 +234,10 @@
     "outside_mask_changed_pixels": 0,
     "inside_mask_changed_pixels": 16073,
     "review": "Aprovo",
-    "next_step": "M02 depende de máscara binária ainda não aprovada; usar M01-V2 como base operacional derivada quando arquivo exato estiver disponível, sem sobrescrever mestre V1"
+    "next_step": "M02 depende de máscara binária ainda não aprovada; usar M01-V2 como base operacional derivada quando arquivo exato estiver disponível, sem sobrescrever mestre V1",
+    "binary_persisted_in_library": true,
+    "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_candidata_v2_sem_sombra.png",
+    "library_file_id": "libfile_e896c0ccede88191a78222af44d32f68",
+    "retrieval": "files.list Library at /Novydres - Mapwork/edicao-raster then files.materialize raw_file; verify SHA256; do not assume binary is included in git"
   }
 }

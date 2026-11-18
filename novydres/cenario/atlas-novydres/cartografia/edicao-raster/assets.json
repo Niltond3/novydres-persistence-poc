@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "kind": "NOVYDRES_RASTER_ASSET_REGISTRY",
+  "subject_id": "world-atlas-novydres",
+  "scope": "illustrative_raster_workflow_not_canonical_geography",
+  "status": "OPERATIONAL_VERIFIED_LIBRARY_STORAGE",
+  "approved_state": "M01_V2_OWNER_APPROVED",
+  "approved_date": "2026-11-18",
+  "storage": {
+    "provider": "ChatGPT Library",
+    "folder": "/Novydres - Mapwork/edicao-raster",
+    "image_bin_in_github": false,
+    "git_role": "authoritative_manifest_workflow_checksums_approvals",
+    "note": "Tool available here cannot upload binary PNG directly into GitHub. Media bytes stored as separate persistent Library assets and identified by SHA256."
+  },
+  "artifacts": [
+    {
+      "id": "MASTER_V1",
+      "filename": "novydres_imagem_mestre_v1.png",
+      "size_bytes": 4804247,
+      "sha256": "d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d",
+      "library_file_id": "libfile_92acb1dea9a88191bf605ef04e46ec18",
+      "state": "IMMUTABLE",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_imagem_mestre_v1.png"
+    },
+    {
+      "id": "M01_MASK_APPROVED",
+      "filename": "novydres_M01_mascara_aprovada.png",
+      "size_bytes": 2356,
+      "sha256": "c56af12ce4649301681e66ea378f64f03c146693be54a1dc35683752b2a90fca",
+      "library_file_id": "libfile_7e6f53e848ec8191a04c55e2f5c9e24a",
+      "state": "MASK_APPROVED",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_mascara_aprovada.png"
+    },
+    {
+      "id": "M01_V2_APPROVED",
+      "filename": "novydres_M01_candidata_v2_sem_sombra.png",
+      "size_bytes": 3782711,
+      "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+      "library_file_id": "libfile_e896c0ccede88191a78222af44d32f68",
+      "state": "APPROVED_BY_OWNER",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_candidata_v2_sem_sombra.png"
+    },
+    {
+      "id": "M01_V2_COMPARATOR",
+      "filename": "novydres_M01_comparador_v2_interativo.html",
+      "size_bytes": 3652077,
+      "sha256": "f44f269c5f2ed788216a2ed1331bee6bac439b358227c5dfbe25779f6273b1a7",
+      "library_file_id": "libfile_dacc45223fa881919d42a837cc203032",
+      "state": "APPROVED_REVIEW_ARTIFACT",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_comparador_v2_interativo.html"
+    },
+    {
+      "id": "M02_MARKED_REFERENCE",
+      "filename": "novydres_M02_marcacao_referencia.png",
+      "size_bytes": 4623304,
+      "sha256": "31e968f9ef75a14ccb97b41d37787e480cb14dd72c4aa2d67ed65fbfde801e35",
+      "library_file_id": "libfile_0d89038994c481918659c95eb2888441",
+      "state": "REFERENCE_ONLY_NOT_BASE_NOT_MASK",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_marcacao_referencia.png"
+    }
+  ],
+  "retrieval_and_resume": [
+    "Read master HEAD AGENTS.md CONTEXT.md catalogo.json, then cartografia/guide.md and edicao-raster/README.md plus this manifest.",
+    "Use files.list(surface=library,library_path=/Novydres - Mapwork/edicao-raster) to resolve exact asset by path; materialize as raw_file for programmatic edits.",
+    "Verify each SHA256 and dimensions before use; missing/mismatch must block instead of guessing or using generated variants.",
+    "M01 V2 is the latest approved cumulative illustration; do not re-edit M01 or fall back to unmodified master when implementing M02.",
+    "M02 reference is marked image, not a master. Its mask is not yet approved. Generate mask preview from immutable master with M02.json, ask for approval, then compose approved M02 edit on top of M01-V2.",
+    "Provide whole-map before/after interactive offline comparator in chat or as download, inspect semantic edges and prove zero changed pixels beyond M02 approved mask.",
+    "Do not canonize map or close M02 without visual owner approval; store approval and version/asset metadata in GitHub."
+  ]
+}
