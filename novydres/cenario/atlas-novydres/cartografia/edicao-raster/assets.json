@@ -4,7 +4,7 @@
   "subject_id": "world-atlas-novydres",
   "scope": "illustrative_raster_workflow_not_canonical_geography",
   "status": "OPERATIONAL_VERIFIED_LIBRARY_STORAGE",
-  "approved_state": "M01_V2_OWNER_APPROVED",
+  "approved_state": "M01_V2_AND_M02_MASK_V3_OWNER_APPROVED_M02_ART_PENDING",
   "approved_date": "2026-11-18",
   "storage": {
     "provider": "ChatGPT Library",
@@ -67,6 +67,43 @@
       "library_file_id": "libfile_0d89038994c481918659c95eb2888441",
       "state": "REFERENCE_ONLY_NOT_BASE_NOT_MASK",
       "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_marcacao_referencia.png"
+    },
+    {
+      "id": "M02_MASK_V3_APPROVED",
+      "filename": "novydres_M02V3_mascara_aprovada.png",
+      "sha256": "45203d53388c961cb1a81e593e29313b031a7b6a6f5110cb1e8a0a82230576d8",
+      "size_bytes": 2572,
+      "state": "MASK_APPROVED",
+      "approved_on": "2026-11-18",
+      "library_file_id": "libfile_2b39629dfee8819193863710449983f0",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02V3_mascara_aprovada.png",
+      "geometry_source": "masks/M02.json"
+    },
+    {
+      "id": "M02_CANDIDATE_V2_PENDING",
+      "filename": "novydres_M02_candidata_v2_pendente.png",
+      "sha256": "64ccfbad536eeb2286a2e0c723ee40842b785122de5ca2cd077e7ca41520d710",
+      "state": "NOT_APPROVED_CANDIDATE",
+      "library_file_id": "libfile_345b1c5e8d188191bc241aaa038f8b2a",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_candidata_v2_pendente.png",
+      "base_sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+      "mask_sha256": "45203d53388c961cb1a81e593e29313b031a7b6a6f5110cb1e8a0a82230576d8",
+      "outside_modified_pixels": 0
+    },
+    {
+      "id": "M02_CANDIDATE_V2_COMPARATOR",
+      "filename": "novydres_M02V3_comparador_resultado_pendente.html",
+      "sha256": "e3fab8e521cd5631e328f814a32af168054d28cb805e11cd2d8273bf44678939",
+      "state": "PENDING_VISUAL_REVIEW_ARTIFACT",
+      "library_file_id": "libfile_f825bce9dcd88191918a1f598ac9f4fb",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02V3_comparador_resultado_pendente.html"
+    },
+    {
+      "id": "M02_CANDIDATE_V2_REPORT",
+      "filename": "novydres_M02V3_candidata_relatorio.json",
+      "state": "DRAFT_VERIFICATION_REPORT",
+      "library_file_id": "libfile_267cc76e61608191a946f89038c47d11",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02V3_candidata_relatorio.json"
     }
   ],
   "retrieval_and_resume": [
@@ -75,7 +112,7 @@
     "Use files.list(surface=library,library_path=/Novydres - Mapwork/edicao-raster) to resolve exact asset by path; materialize as raw_file for programmatic edits.",
     "Verify each SHA256 and dimensions before use; missing/mismatch must block instead of guessing or using generated variants.",
     "M01 V2 is the latest approved cumulative illustration; do not re-edit M01 or fall back to unmodified master when implementing M02.",
-    "M02 reference is marked image, not a master. Its mask is not yet approved. Generate mask preview from immutable master with M02.json, ask for approval, then compose approved M02 edit on top of M01-V2.",
+    "M02V3 mask is expressly approved on 2026-11-18; retrieve masks/M02.json and its library binary by SHA256. M02 artistic candidate V2 is not approved.",
     "Provide whole-map before/after interactive offline comparator in chat or as download, inspect semantic edges and prove zero changed pixels beyond M02 approved mask.",
     "Do not canonize map or close M02 without visual owner approval; store approval and version/asset metadata in GitHub."
   ]
