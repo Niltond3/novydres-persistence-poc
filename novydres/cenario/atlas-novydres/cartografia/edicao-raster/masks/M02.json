@@ -1,17 +1,564 @@
 {
   "id": "M02",
   "name": "Reurbanização Habitacional Sul",
-  "state": "SPEC_ONLY_MASK_NOT_APPROVED",
-  "base": "novydres_imagem_mestre_v1.png",
-  "description": "Eliminar trem isolado e casa/galpão do extremo sul, substituindo somente seu lote por blocos habitacionais altos, decrépitos, densos, habitados; sujeira, gelo e manutenção precária.",
+  "state": "MASK_R2_CANDIDATE_AWAITING_OWNER_APPROVAL",
+  "base": {
+    "file": "novydres_M01_candidata_v2_sem_sombra.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+    "state": "M01_V2_OWNER_APPROVED",
+    "source": "assets.json / Git raw chunks and Library"
+  },
+  "description": "Redefinir M02 como faixa contínua de reurbanização sul, com corredor ferroviário meridional/viaduto, rodovia superior e transição para quadras residenciais ao leste. A inclusão das vias na máscara permite retoques e recomposição apenas no interior da região, sem determinar antecipadamente sua eliminação.",
   "protected": [
-    "trilhos principais",
-    "viadutos/arcadas",
-    "ruas estruturais",
-    "mina e instalações industriais",
-    "edifícios adjacentes fora da máscara"
+    "imagem-mestre V1 (imutável)",
+    "estação M01 V2 aprovada",
+    "cava e centro da mina fora da máscara",
+    "instalações industriais e edificações não selecionadas",
+    "continuidade das vias e linhas férreas fora da máscara, sem deslocamento"
   ],
-  "polygons": [],
+  "polygons": [
+    [
+      [
+        110,
+        898
+      ],
+      [
+        125,
+        904
+      ],
+      [
+        135,
+        923
+      ],
+      [
+        144,
+        948
+      ],
+      [
+        153,
+        968
+      ],
+      [
+        179,
+        983
+      ],
+      [
+        208,
+        994
+      ],
+      [
+        260,
+        999
+      ],
+      [
+        327,
+        998
+      ],
+      [
+        399,
+        987
+      ],
+      [
+        462,
+        974
+      ],
+      [
+        539,
+        958
+      ],
+      [
+        609,
+        946
+      ],
+      [
+        690,
+        931
+      ],
+      [
+        770,
+        917
+      ],
+      [
+        845,
+        906
+      ],
+      [
+        915,
+        892
+      ],
+      [
+        982,
+        881
+      ],
+      [
+        1040,
+        867
+      ],
+      [
+        1106,
+        849
+      ],
+      [
+        1164,
+        829
+      ],
+      [
+        1220,
+        810
+      ],
+      [
+        1263,
+        786
+      ],
+      [
+        1298,
+        758
+      ],
+      [
+        1324,
+        729
+      ],
+      [
+        1342,
+        708
+      ],
+      [
+        1384,
+        712
+      ],
+      [
+        1382,
+        746
+      ],
+      [
+        1369,
+        771
+      ],
+      [
+        1349,
+        797
+      ],
+      [
+        1323,
+        827
+      ],
+      [
+        1287,
+        860
+      ],
+      [
+        1235,
+        886
+      ],
+      [
+        1185,
+        909
+      ],
+      [
+        1128,
+        930
+      ],
+      [
+        1065,
+        949
+      ],
+      [
+        994,
+        970
+      ],
+      [
+        915,
+        988
+      ],
+      [
+        838,
+        1007
+      ],
+      [
+        757,
+        1022
+      ],
+      [
+        688,
+        1038
+      ],
+      [
+        612,
+        1051
+      ],
+      [
+        539,
+        1067
+      ],
+      [
+        467,
+        1085
+      ],
+      [
+        390,
+        1085
+      ],
+      [
+        308,
+        1085
+      ],
+      [
+        240,
+        1080
+      ],
+      [
+        186,
+        1068
+      ],
+      [
+        158,
+        1049
+      ],
+      [
+        138,
+        1029
+      ],
+      [
+        130,
+        1007
+      ],
+      [
+        122,
+        978
+      ],
+      [
+        109,
+        944
+      ]
+    ],
+    [
+      [
+        305,
+        966
+      ],
+      [
+        322,
+        940
+      ],
+      [
+        349,
+        910
+      ],
+      [
+        385,
+        883
+      ],
+      [
+        439,
+        849
+      ],
+      [
+        502,
+        815
+      ],
+      [
+        570,
+        784
+      ],
+      [
+        645,
+        751
+      ],
+      [
+        715,
+        725
+      ],
+      [
+        787,
+        693
+      ],
+      [
+        848,
+        680
+      ],
+      [
+        880,
+        693
+      ],
+      [
+        907,
+        718
+      ],
+      [
+        908,
+        741
+      ],
+      [
+        876,
+        770
+      ],
+      [
+        822,
+        792
+      ],
+      [
+        743,
+        826
+      ],
+      [
+        667,
+        856
+      ],
+      [
+        583,
+        895
+      ],
+      [
+        518,
+        931
+      ],
+      [
+        449,
+        968
+      ],
+      [
+        398,
+        998
+      ],
+      [
+        357,
+        1027
+      ],
+      [
+        322,
+        1030
+      ]
+    ],
+    [
+      [
+        389,
+        957
+      ],
+      [
+        433,
+        910
+      ],
+      [
+        501,
+        870
+      ],
+      [
+        589,
+        825
+      ],
+      [
+        683,
+        781
+      ],
+      [
+        774,
+        749
+      ],
+      [
+        833,
+        739
+      ],
+      [
+        874,
+        756
+      ],
+      [
+        882,
+        794
+      ],
+      [
+        891,
+        830
+      ],
+      [
+        927,
+        880
+      ],
+      [
+        916,
+        914
+      ],
+      [
+        887,
+        931
+      ],
+      [
+        824,
+        941
+      ],
+      [
+        744,
+        955
+      ],
+      [
+        655,
+        974
+      ],
+      [
+        565,
+        991
+      ],
+      [
+        484,
+        1009
+      ],
+      [
+        418,
+        1014
+      ],
+      [
+        390,
+        995
+      ]
+    ],
+    [
+      [
+        624,
+        980
+      ],
+      [
+        676,
+        954
+      ],
+      [
+        721,
+        938
+      ],
+      [
+        787,
+        924
+      ],
+      [
+        849,
+        916
+      ],
+      [
+        909,
+        924
+      ],
+      [
+        977,
+        925
+      ],
+      [
+        1025,
+        924
+      ],
+      [
+        1090,
+        916
+      ],
+      [
+        1140,
+        911
+      ],
+      [
+        1182,
+        911
+      ],
+      [
+        1217,
+        922
+      ],
+      [
+        1248,
+        948
+      ],
+      [
+        1270,
+        973
+      ],
+      [
+        1266,
+        1002
+      ],
+      [
+        1232,
+        1034
+      ],
+      [
+        1196,
+        1057
+      ],
+      [
+        1157,
+        1078
+      ],
+      [
+        1102,
+        1085
+      ],
+      [
+        1000,
+        1085
+      ],
+      [
+        917,
+        1081
+      ],
+      [
+        844,
+        1071
+      ],
+      [
+        757,
+        1065
+      ],
+      [
+        687,
+        1055
+      ],
+      [
+        636,
+        1039
+      ],
+      [
+        615,
+        1013
+      ]
+    ]
+  ],
   "protected_holes": [],
-  "next_gate": "User must approve full-map mask preview before edit."
+  "next_gate": "Solicitar aprovação explícita da máscara M02 R2 sobre mapa integral. Só após aceite da máscara autorizar edição visual e recomposição confinada aos 275157 pixels. Sem canonização automática.",
+  "master_v1": {
+    "file": "novydres_imagem_mestre_v1.png",
+    "sha256": "d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d",
+    "immutable": true
+  },
+  "reference": {
+    "file": "novydres_M02_marcacao_referencia.png",
+    "sha256": "31e968f9ef75a14ccb97b41d37787e480cb14dd72c4aa2d67ed65fbfde801e35",
+    "role": "annotation_not_base_or_mask"
+  },
+  "editable": [
+    "corredor ferroviário sul e viaduto dentro da nova delimitação",
+    "trecho da rodovia superior do setor sul dentro da delimitação",
+    "galpão e trem isolado no extremo sul",
+    "tecido residencial intermediário e faixa de integração com edifícios a leste"
+  ],
+  "mask_pixels": 275157,
+  "mask_pct": 17.4977,
+  "mask_sha256": "7b97e0b6facab3083910ae020ba45366f3685ac0881a89ba5283a5dce314661a",
+  "approved": false,
+  "approval_scope": "GEOMETRIC_CANDIDATE_ONLY_NO_EDIT_AUTHORIZED",
+  "revision": "M02-MASK-R2",
+  "previous_proposal": {
+    "revision": "R1",
+    "mask_sha256": "680c37f5e9f8f324de854c3241e9e07b3adbd7289d804a3fff1a41b08df7d64c",
+    "mask_pixels": 8420,
+    "mask_pct": 0.5354,
+    "owner_review": "Ampliar para incluir linha férrea, rodovia superior e conexão com edifícios a leste; R1 é insuficiente"
+  },
+  "previews": {
+    "map_full": "novydres_M02_mascara_ampliada_integral.png",
+    "sha256": "ae7730cbe0e0b0eb5df260fdd6977df88f750cc2f7b2eafb652f8d756368ff4e",
+    "comparison_html": "novydres_M02_comparador_mascara_R2_interativo.html",
+    "comparison_sha256": "320f824402b4dd64109bd83e66c248aae6c9ebf1fe44f6923cedb8759cf43d42",
+    "delivery": "ChatGPT conversation downloadable files; not stored in GitHub",
+    "browser_tests": "Chromium desktop 1200px and mobile viewport 390px: full/detail, slide/side, slider and pointer OK; owner device not tested"
+  }
 }
