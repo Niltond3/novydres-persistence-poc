@@ -1,7 +1,7 @@
 {
   "id": "M01",
   "name": "Estação Histórica Oeste",
-  "state": "MASK_APPROVED_EDIT_OPEN",
+  "state": "EDIT_APPROVED_ASSET_NOT_IN_GIT",
   "base": {
     "file": "novydres_imagem_mestre_v1.png",
     "size": [
@@ -222,9 +222,18 @@
     "todo o restante do mapa"
   ],
   "candidate": {
-    "state": "NEEDS_VISUAL_CORRECTION",
-    "approved": false,
-    "issue": "Sombra/silhueta do telhado da estação anterior visível atrás da nova estação; não ampliar máscara sem nova aprovação",
-    "outside_mask_changed_pixels": 0
+    "state": "APPROVED_BY_OWNER",
+    "approved": true,
+    "approved_on": "2026-11-18",
+    "revision": "M01-V2",
+    "file": "novydres_M01_candidata_v2_sem_sombra.png",
+    "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+    "binary_persisted_in_repo": false,
+    "comparator": "novydres_M01_comparador_v2_interativo.html",
+    "issue_resolved": "Sombra/silhueta residual atrás da estação corrigida; aceita visualmente pelo proprietário",
+    "outside_mask_changed_pixels": 0,
+    "inside_mask_changed_pixels": 16073,
+    "review": "Aprovo",
+    "next_step": "M02 depende de máscara binária ainda não aprovada; usar M01-V2 como base operacional derivada quando arquivo exato estiver disponível, sem sobrescrever mestre V1"
   }
 }
