@@ -1,8 +1,16 @@
 {
   "id": "M02",
   "name": "Reurbanização Habitacional Sul",
-  "state": "SPEC_ONLY_MASK_NOT_APPROVED",
-  "base": "novydres_imagem_mestre_v1.png",
+  "state": "DRAFT_MASK_AWAITING_BASE_HASH_AND_OWNER_APPROVAL",
+  "base": {
+    "file": "novydres_M01_candidata_v2_sem_sombra.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+    "binary_persisted_in_repo": false
+  },
   "description": "Eliminar trem isolado e casa/galpão do extremo sul, substituindo somente seu lote por blocos habitacionais altos, decrépitos, densos, habitados; sujeira, gelo e manutenção precária.",
   "protected": [
     "trilhos principais",
@@ -11,7 +19,158 @@
     "mina e instalações industriais",
     "edifícios adjacentes fora da máscara"
   ],
-  "polygons": [],
+  "polygons": [
+    [
+      [
+        773,
+        1001
+      ],
+      [
+        787,
+        997
+      ],
+      [
+        812,
+        999
+      ],
+      [
+        823,
+        1005
+      ],
+      [
+        822,
+        1015
+      ],
+      [
+        815,
+        1021
+      ],
+      [
+        775,
+        1020
+      ],
+      [
+        772,
+        1012
+      ]
+    ],
+    [
+      [
+        810,
+        996
+      ],
+      [
+        824,
+        988
+      ],
+      [
+        852,
+        988
+      ],
+      [
+        882,
+        996
+      ],
+      [
+        903,
+        1005
+      ],
+      [
+        910,
+        1016
+      ],
+      [
+        909,
+        1044
+      ],
+      [
+        904,
+        1055
+      ],
+      [
+        886,
+        1059
+      ],
+      [
+        851,
+        1058
+      ],
+      [
+        820,
+        1052
+      ],
+      [
+        809,
+        1044
+      ]
+    ],
+    [
+      [
+        766,
+        1030
+      ],
+      [
+        777,
+        1025
+      ],
+      [
+        793,
+        1028
+      ],
+      [
+        820,
+        1037
+      ],
+      [
+        847,
+        1040
+      ],
+      [
+        859,
+        1048
+      ],
+      [
+        858,
+        1058
+      ],
+      [
+        846,
+        1060
+      ],
+      [
+        817,
+        1059
+      ],
+      [
+        783,
+        1053
+      ],
+      [
+        768,
+        1048
+      ],
+      [
+        764,
+        1040
+      ]
+    ]
+  ],
   "protected_holes": [],
-  "next_gate": "User must approve full-map mask preview before edit."
+  "next_gate": "Obter imagem M01-V2 com SHA-256 bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963 ou decisão explícita sobre divergência. Depois, aprovação visual da máscara M02; só então editar.",
+  "master_v1": {
+    "file": "novydres_imagem_mestre_v1.png",
+    "sha256": "d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d",
+    "immutable": true
+  },
+  "preview_unverified_base": {
+    "file": "image(20261118-222724).png",
+    "sha256": "6b8557375647341b0283b341a6a2e24c7dd81389e2c30a65a26f252b8e417bfa",
+    "matches_approved_M01_V2": false,
+    "reason": "SHA-256 do anexo não coincide com o M01-V2 aprovado; prévia é apenas geométrica."
+  },
+  "mask_pixels": 8420,
+  "mask_pct": 0.5354,
+  "mask_sha256": "680c37f5e9f8f324de854c3241e9e07b3adbd7289d804a3fff1a41b08df7d64c",
+  "approved": false,
+  "approval_scope": "Nenhuma aprovação de máscara ou edição; geometria candidata sobre base anexa não verificada"
 }
