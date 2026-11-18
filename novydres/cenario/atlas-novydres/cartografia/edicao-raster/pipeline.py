@@ -4,6 +4,7 @@ import argparse
 import base64
 import io
 import json
+import hashlib
 from pathlib import Path
 from PIL import Image, ImageDraw
 
@@ -93,14 +94,18 @@ def main():
     args=ap.parse_args()
     base=load_image(args.base)
     if args.action=='mask':
-        spec=json.loads(Path(args.spec).read_text()); mask=mask_from_spec(spec,base.size)
+        spec=json.loads(Path(args.spec).read_text()); expected=spec.get('base',{}).get('sha256')
+        if expected and hashlib.sha256(Path(args.base).read_bytes()).hexdigest()!=expected: raise ValueError('SHA-256 da imagem-base incompatível com a máscara aprovada')
+        mask=mask_from_spec(spec,base.size)
         mask.save(args.out);preview(base,mask,Path(args.out).with_name('preview_'+Path(args.out).name))
         print(json.dumps(dict(mask_pixels=sum(bool(x) for x in mask.tobytes()),path=args.out)))
     elif args.action=='compose':
         mask=Image.open(args.mask).convert('L');result=compose(base,load_image(args.candidate),mask,args.out)
         print(json.dumps(verify(base,result,mask)))
     elif args.action=='verify':
-        print(json.dumps(verify(base,load_image(args.after),Image.open(args.mask).convert('L'))))
+        report=verify(base,load_image(args.after),Image.open(args.mask).convert('L'))
+        print(json.dumps(report))
+        if not report['external_unchanged']: raise SystemExit(2)
     elif args.action=='compare':
         bbox=None
         if args.mask:
