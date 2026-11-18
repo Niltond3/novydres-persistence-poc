@@ -2,8 +2,8 @@
   "id": "M02",
   "revision": "M02V3",
   "name": "Reurbanização Habitacional Sul",
-  "state": "MASK_V3_CANDIDATE_WAITING_OWNER_APPROVAL",
-  "approved": false,
+  "state": "MASK_V3_APPROVED_EDIT_NOT_YET_APPROVED",
+  "approved": true,
   "base": {
     "file": "novydres_M01_candidata_v2_sem_sombra.png",
     "size": [
@@ -779,5 +779,10 @@
     "test": "Chromium 1200px e 390px PASS; Android do proprietário não testado"
   },
   "replaces_candidate": "M02-R2 amplitude 17.4977%, não aprovada; V3 é a proposta corrente desta branch",
-  "next_gate": "Aprovação expressa da máscara V3 pelo proprietário; não executar intervenção artística ou canonização sem aprovação."
+  "next_gate": "Produzir candidata artistica M02 confinada aos 29469 pixels, verificar zero pixels externos modificados; enviar comparador ANTES/DEPOIS completo para aceite expresso do resultado.",
+  "mask_approved": true,
+  "mask_approval_date": "2026-11-18",
+  "mask_approval_owner_text": "Aprovo",
+  "approval_scope": "Exclusivamente o perimetro binario M02V3 para composicao local; resultado artistico ainda nao aprovado",
+  "candidate_state": "NOT_YET_APPROVED"
 }
