@@ -1,0 +1,230 @@
+{
+  "id": "M01",
+  "name": "Estação Histórica Oeste",
+  "state": "MASK_APPROVED_EDIT_OPEN",
+  "base": {
+    "file": "novydres_imagem_mestre_v1.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "sha256": "d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d"
+  },
+  "polygons": [
+    [
+      [
+        171,
+        800
+      ],
+      [
+        175,
+        794
+      ],
+      [
+        185,
+        788
+      ],
+      [
+        195,
+        782
+      ],
+      [
+        208,
+        774
+      ],
+      [
+        221,
+        766
+      ],
+      [
+        238,
+        760
+      ],
+      [
+        256,
+        755
+      ],
+      [
+        274,
+        748
+      ],
+      [
+        291,
+        744
+      ],
+      [
+        306,
+        742
+      ],
+      [
+        318,
+        744
+      ],
+      [
+        328,
+        748
+      ],
+      [
+        335,
+        753
+      ],
+      [
+        341,
+        760
+      ],
+      [
+        340,
+        771
+      ],
+      [
+        342,
+        820
+      ],
+      [
+        335,
+        824
+      ],
+      [
+        326,
+        830
+      ],
+      [
+        315,
+        836
+      ],
+      [
+        300,
+        844
+      ],
+      [
+        282,
+        852
+      ],
+      [
+        267,
+        861
+      ],
+      [
+        258,
+        863
+      ],
+      [
+        250,
+        862
+      ],
+      [
+        244,
+        858
+      ],
+      [
+        227,
+        856
+      ],
+      [
+        206,
+        856
+      ],
+      [
+        186,
+        849
+      ],
+      [
+        174,
+        847
+      ],
+      [
+        171,
+        840
+      ]
+    ],
+    [
+      [
+        286,
+        824
+      ],
+      [
+        298,
+        816
+      ],
+      [
+        311,
+        810
+      ],
+      [
+        325,
+        804
+      ],
+      [
+        336,
+        799
+      ],
+      [
+        344,
+        801
+      ],
+      [
+        352,
+        807
+      ],
+      [
+        356,
+        811
+      ],
+      [
+        354,
+        824
+      ],
+      [
+        344,
+        829
+      ],
+      [
+        333,
+        836
+      ],
+      [
+        320,
+        842
+      ],
+      [
+        304,
+        850
+      ],
+      [
+        288,
+        856
+      ],
+      [
+        284,
+        850
+      ],
+      [
+        284,
+        832
+      ]
+    ]
+  ],
+  "protected_holes": [],
+  "mask_sha256": "c56af12ce4649301681e66ea378f64f03c146693be54a1dc35683752b2a90fca",
+  "mask_pixels": 16075,
+  "mask_pct": 1.0222,
+  "approved_on": "2026-11-18",
+  "approval_scope": "Somente delimitação, não resultado artístico",
+  "goal": "Estação fundação meados do séc. XIX, deteriorada mas ativa, com baldeação para bondes",
+  "editable": [
+    "edifício principal",
+    "anexo imediato de embarque e baldeação"
+  ],
+  "protected": [
+    "ruas e avenidas",
+    "trilhos principais",
+    "edifícios vizinhos",
+    "todo o restante do mapa"
+  ],
+  "candidate": {
+    "state": "NEEDS_VISUAL_CORRECTION",
+    "approved": false,
+    "issue": "Sombra/silhueta do telhado da estação anterior visível atrás da nova estação; não ampliar máscara sem nova aprovação",
+    "outside_mask_changed_pixels": 0
+  }
+}
