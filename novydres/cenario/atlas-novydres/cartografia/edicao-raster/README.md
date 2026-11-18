@@ -28,8 +28,8 @@ Dependência: Python 3 + Pillow. Os HTML são autocontidos com WebP embutido; se
 
 ## Fonte e estados atuais (18/11/2026)
 
-- **Imagem-mestre V1 imutável:** `novydres_imagem_mestre_v1.png`, 1448×1086; SHA256 `d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d`. **O binário mestre não está incluído neste pacote Git**; é obrigatório recuperar o arquivo original do usuário / anexo, verificar hash e jamais reconstruí-lo a partir de uma candidata ou de um PNG com anotações. O proprietário já declarou que pode enviar a versão do mapa na retomada.
-- **M01:** delimitação de 1,0222% aprovada. **M01-V2 APROVADA PELO PROPRIETÁRIO em 18/11/2026**, após correção da silhueta/sombra residual. Candidato `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`; zero pixels alterados fora da máscara. **O PNG aprovado e o comparador NÃO estão armazenados no GitHub**: para editar M02 sem perder M01, recuperar/anexar o PNG M01-V2 exato e validar hash. Ver `masks/M01.json`.
+- **Imagem-mestre V1 imutável:** `novydres_imagem_mestre_v1.png`, 1448×1086; SHA256 `d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d`. **O mestre pode ser recuperado de fragmentos binários versionados em Git, sem gerar outra imagem**, via `reconstruct_assets.py`, ou de sua réplica em Library; SHA-256 é obrigatório.
+- **M01:** delimitação de 1,0222% aprovada. **M01-V2 APROVADA PELO PROPRIETÁRIO em 18/11/2026**, após correção da silhueta/sombra residual. Candidato `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`; zero pixels alterados fora da máscara. **O PNG M01-V2 aprovado pode ser reconstituído byte a byte pelos fragmentos binários Git**. O comparador HTML está na Library e pode ser regenerado pelo pipeline. Ver `masks/M01.json`.
 - **M02:** objetivo textual definido, delimitação pixel a pixel ainda NÃO aprovada; ver `masks/M02.json`. Próximo passo executável é gerar a prévia integral da máscara M02 a partir do arquivo M01-V2 recuperado e obter aprovação da máscara; não fazer edição artística de M02 antes da aprovação.
 - **Comparador:** versão anterior falhava no uso relatado pelo proprietário. Nova versão reconstruída e validada programaticamente em Chromium 1200px e 390px nos modos de mapa completo/detalhe, slider e lado-a-lado; **teste no dispositivo do proprietário pendente**. Se não abrir, não declarar gate concluído.
 
@@ -39,8 +39,20 @@ Nenhuma edição raster transforma imagem em fonte canônica, altera `world-atla
 
 ## Arquivos raster persistidos e retomada sem chat (18/11/2026)
 
-**Manifest oficial no Git:** `edicao-raster/assets.json` (SHA-256, nomes, caminhos persistentes e estados). Os **5 binários de referência/artefatos** estão na pasta persistente da ChatGPT Library `/Novydres - Mapwork/edicao-raster`, não embutidos no Git. A integração atual não ofereceu envio binário PNG direto ao GitHub; não alegar que o PNG mora no repositório. O manifesto Git, e não memória de conversa, governa quais hashes, fontes e estados são válidos. Os cinco arquivos foram recuperados da Library e confrontados com os hashes locais.
+**Manifest oficial no Git:** `edicao-raster/assets.json` (SHA-256, nomes, caminhos persistentes e estados). Os cinco arquivos também estão na pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster`. **Mestre V1, M01-V2 e máscara M01 estão no Git como binários recuperáveis sem perda**: ver seção abaixo. Manifesto Git, e não memória de conversa, governa hashes, fontes e estados.
 
 **M01-V2:** `APPROVED_BY_OWNER` em 18/11/2026. A estação histórica oeste foi aceita após retirada da sombra residual; fora da M01, zero pixels modificados. PNG aprovado `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`. Não usar a candidata V1, nem exigir novo aceite da M01.
 
 **Como retomar num chat limpo:** após bootstrap no Git, consultar `assets.json`; chamar `files.list` na pasta Library indicada e `files.materialize` (raw_file) para obter exatamente a master e a M01-V2, e conferir SHA-256 antes de qualquer operação. A imagem marcada M02 também está lá. **O arquivo de marcação não é a máscara aprovada.** A máscara M02 continua pendente; primeiro prévia integral e aceite expresso, depois edição M02 sobre a M01-V2 aprovada. O mestre V1 fica imutável.
+
+## Recuperação integral de PNGs a partir do Git (18/11/2026; regra vigente)
+
+**Os binários mestre V1 e M01 V2 APROVADA ESTÃO persistidos no próprio GitHub** como fragmentos binários brutos sem perdas (cada um de até 150000 bytes), ordenados em `assets/master_v1/` (33 fragmentos) e `assets/m01_v2/` (26 fragmentos). A máscara M01 também foi publicada em `assets/M01_mask.png`. Não são PNGs individuais dentro do Git: o comando abaixo reconstrói exatamente os PNGs originais, com SHA-256 obrigatório. Esta seção **substitui afirmações históricas anteriores de ausência de binários no Git**.
+
+Após checkout/obtenção dos arquivos do repositório:
+
+`python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py --asset master_v1 --out MASTER.png`
+
+`python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py --asset m01_v2 --out M01-V2.png`
+
+O script recusa sobrescrever arquivo existente, verifica os SHA-1 dos fragmentos e confere o SHA-256 final. Consultar `assets/parts.json` e `assets.json`; em um chat sem acesso a clone/files Git binários, a pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster` permanece como réplica de recuperação, com mesmos SHA-256. A `M01-V2` já está aprovada e será a base operacional cumulativa para M02. A máscara de M02 segue **NÃO aprovada**; validar antes de editar. O arquivo com marcação M02 existe na Library e não é uma máscara.

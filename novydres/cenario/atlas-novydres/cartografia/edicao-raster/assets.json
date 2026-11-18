@@ -9,9 +9,12 @@
   "storage": {
     "provider": "ChatGPT Library",
     "folder": "/Novydres - Mapwork/edicao-raster",
-    "image_bin_in_github": false,
+    "image_bin_in_github": true,
     "git_role": "authoritative_manifest_workflow_checksums_approvals",
-    "note": "Tool available here cannot upload binary PNG directly into GitHub. Media bytes stored as separate persistent Library assets and identified by SHA256."
+    "note": "Master V1 and approved M01 V2 are complete, byte-identical PNGs stored as ordered raw binary fragments in Git; reconstruct_assets.py reassembles and SHA-256 verifies. Other artifacts remain in persistent Library.",
+    "github_binary_format": "lossless_ordered_raw_chunks",
+    "github_root": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/assets/",
+    "github_reconstructor": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py"
   },
   "artifacts": [
     {
@@ -21,7 +24,9 @@
       "sha256": "d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d",
       "library_file_id": "libfile_92acb1dea9a88191bf605ef04e46ec18",
       "state": "IMMUTABLE",
-      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_imagem_mestre_v1.png"
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_imagem_mestre_v1.png",
+      "github_parts_key": "master_v1",
+      "git_binary_reconstructable": true
     },
     {
       "id": "M01_MASK_APPROVED",
@@ -30,7 +35,9 @@
       "sha256": "c56af12ce4649301681e66ea378f64f03c146693be54a1dc35683752b2a90fca",
       "library_file_id": "libfile_7e6f53e848ec8191a04c55e2f5c9e24a",
       "state": "MASK_APPROVED",
-      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_mascara_aprovada.png"
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_mascara_aprovada.png",
+      "github_path": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/assets/M01_mask.png",
+      "git_binary_reconstructable": true
     },
     {
       "id": "M01_V2_APPROVED",
@@ -39,7 +46,9 @@
       "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
       "library_file_id": "libfile_e896c0ccede88191a78222af44d32f68",
       "state": "APPROVED_BY_OWNER",
-      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_candidata_v2_sem_sombra.png"
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_candidata_v2_sem_sombra.png",
+      "github_parts_key": "m01_v2",
+      "git_binary_reconstructable": true
     },
     {
       "id": "M01_V2_COMPARATOR",
@@ -61,6 +70,7 @@
     }
   ],
   "retrieval_and_resume": [
+    "Prefer Git binary parts (assets/parts.json and reconstruct_assets.py) for MASTER_V1 and M01_V2_APPROVED. If Git clone/materialization unavailable in client, Library paths with verified SHA256 remain a secondary retrieval route.",
     "Read master HEAD AGENTS.md CONTEXT.md catalogo.json, then cartografia/guide.md and edicao-raster/README.md plus this manifest.",
     "Use files.list(surface=library,library_path=/Novydres - Mapwork/edicao-raster) to resolve exact asset by path; materialize as raw_file for programmatic edits.",
     "Verify each SHA256 and dimensions before use; missing/mismatch must block instead of guessing or using generated variants.",

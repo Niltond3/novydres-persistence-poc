@@ -1,7 +1,7 @@
 {
   "id": "M01",
   "name": "Estação Histórica Oeste",
-  "state": "EDIT_APPROVED_LIBRARY_PERSISTED",
+  "state": "EDIT_APPROVED_GIT_PERSISTED",
   "base": {
     "file": "novydres_imagem_mestre_v1.png",
     "size": [
@@ -228,7 +228,7 @@
     "revision": "M01-V2",
     "file": "novydres_M01_candidata_v2_sem_sombra.png",
     "sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
-    "binary_persisted_in_repo": false,
+    "binary_persisted_in_repo": true,
     "comparator": "novydres_M01_comparador_v2_interativo.html",
     "issue_resolved": "Sombra/silhueta residual atrás da estação corrigida; aceita visualmente pelo proprietário",
     "outside_mask_changed_pixels": 0,
@@ -238,6 +238,9 @@
     "binary_persisted_in_library": true,
     "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M01_candidata_v2_sem_sombra.png",
     "library_file_id": "libfile_e896c0ccede88191a78222af44d32f68",
-    "retrieval": "files.list Library at /Novydres - Mapwork/edicao-raster then files.materialize raw_file; verify SHA256; do not assume binary is included in git"
+    "retrieval": "Use Git assets/parts.json plus reconstruct_assets.py to restore raw master and M01 V2 losslessly, verifying SHA256; alternatively retrieve from Library by recorded path and verify hashes.",
+    "binary_persisted_as_chunks": true,
+    "git_parts_key": "m01_v2",
+    "git_reconstructor": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py"
   }
 }
