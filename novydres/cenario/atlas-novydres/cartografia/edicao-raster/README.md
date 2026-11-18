@@ -12,7 +12,7 @@ Quando o proprietário disser **“vamos continuar a edição do mapa”**, com 
 4. **Execução local:** produzir candidata com ferramenta artística, sem assumir que ela obedeceu ao escopo; compor sobre uma cópia da base com `pipeline.py compose`, restringindo ao PNG da máscara aprovada; gerar relatório `verify`.
 5. **Revisão semântica:** inspecionar encaixes de coberturas, sombras residuais/ghosting, continuidade das estradas, trilhos, perspectiva, bordas e edifícios protegidos. **Zero pixels alterados fora da máscara é necessário, mas NÃO suficiente.** Se houver falha visual, status `NEEDS_VISUAL_CORRECTION`, sem aprovação.
 6. **Comparação obrigatória:** executar `pipeline.py compare`; entregar no chat **HTML interativo offline, funcional e verificado**, com mapa integral ANTES/DEPOIS por padrão, modos deslizar e lado-a-lado, mais prévia estática integral. Oferecer download direto no chat; **não enviar link GitHub como forma de visualizar**. Testar no Chromium desktop e mobile quando disponível, relatar limites se não houver navegador.
-7. **Aceite e persistência:** só após aprovação explícita da candidata registrar nova revisão aprovada; manter mestre anterior e metadados de máscara/versionamento, readback remoto. Sem nova imagem, sem nova máscara ou sem aprovação, não afirmar que foi editado, aceito ou canonizado.
+7. **Aceite e persistência:** só após aprovação explícita da candidata registrar nova revisão aprovada; manter mestre anterior e metadados de máscara/versionamento, readback remoto. **Se o binário aprovado não estiver persistido no repositório, declarar a lacuna e exigir sua recuperação por hash antes da próxima edição acumulativa.** Sem nova imagem, sem nova máscara ou sem aprovação, não afirmar que foi editado, aceito ou canonizado.
 
 ## Artefatos e comandos
 
@@ -29,8 +29,8 @@ Dependência: Python 3 + Pillow. Os HTML são autocontidos com WebP embutido; se
 ## Fonte e estados atuais (18/11/2026)
 
 - **Imagem-mestre V1 imutável:** `novydres_imagem_mestre_v1.png`, 1448×1086; SHA256 `d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d`. **O binário mestre não está incluído neste pacote Git**; é obrigatório recuperar o arquivo original do usuário / anexo, verificar hash e jamais reconstruí-lo a partir de uma candidata ou de um PNG com anotações. O proprietário já declarou que pode enviar a versão do mapa na retomada.
-- **M01:** `MASK_APPROVED_EDIT_OPEN`. Delimitação de 1,0222% aprovada; candidata feita tem silhueta/sombra antiga atrás da estação — `NEEDS_VISUAL_CORRECTION`, não aprovada; ver `masks/M01.json`.
-- **M02:** objetivo textual definido, delimitação pixel a pixel ainda NÃO aprovada; ver `masks/M02.json`.
+- **M01:** delimitação de 1,0222% aprovada. **M01-V2 APROVADA PELO PROPRIETÁRIO em 18/11/2026**, após correção da silhueta/sombra residual. Candidato `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`; zero pixels alterados fora da máscara. **O PNG aprovado e o comparador NÃO estão armazenados no GitHub**: para editar M02 sem perder M01, recuperar/anexar o PNG M01-V2 exato e validar hash. Ver `masks/M01.json`.
+- **M02:** objetivo textual definido, delimitação pixel a pixel ainda NÃO aprovada; ver `masks/M02.json`. Próximo passo executável é gerar a prévia integral da máscara M02 a partir do arquivo M01-V2 recuperado e obter aprovação da máscara; não fazer edição artística de M02 antes da aprovação.
 - **Comparador:** versão anterior falhava no uso relatado pelo proprietário. Nova versão reconstruída e validada programaticamente em Chromium 1200px e 390px nos modos de mapa completo/detalhe, slider e lado-a-lado; **teste no dispositivo do proprietário pendente**. Se não abrir, não declarar gate concluído.
 
 ## Segurança editorial
