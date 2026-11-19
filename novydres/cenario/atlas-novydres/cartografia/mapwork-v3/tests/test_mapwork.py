@@ -202,3 +202,46 @@ def test_all_historical_bridges_must_be_mixed_use():
     plan['bridges'][2]['mixed_ped_vehicle']=False
     with pytest.raises(m.Invalid,match='mixed-use'):
         m.validate_spatial_plan(plan,z,cfg)
+
+
+def integral_sketch_inputs():
+    cfg,z,plan=planning_inputs()
+    g=m.load(ROOT/'zones/cidade-velha/esboco-integral-u02-v1.json')
+    return cfg,z,plan,g
+
+def test_integral_sketch_matches_spatial_plan():
+    cfg,z,plan,g=integral_sketch_inputs()
+    result=m.validate_integral_sketch(g,plan,z,cfg)
+    assert result['validity']=='CANDIDATE_WITH_BLOCKERS'
+    assert result['bridges']==3 and result['pois']==5
+    assert result['crossing_conflicts']==3
+
+def test_historical_bridge_cannot_be_off_river():
+    cfg,z,plan,g=integral_sketch_inputs()
+    g['historical_bridges'][1]['center_px']=[740,900]
+    with pytest.raises(m.Invalid,match='not snapped'):
+        m.validate_integral_sketch(g,plan,z,cfg)
+
+def test_kingswell_poi_must_be_inside_raion_polygon():
+    cfg,z,plan,g=integral_sketch_inputs()
+    g['poi_sites'][0]['candidate_px']=[100,200]
+    with pytest.raises(m.Invalid,match='POI mismatch|outside Kingswell polygon'):
+        m.validate_integral_sketch(g,plan,z,cfg)
+
+def test_crossing_conflicts_cannot_silently_disappear():
+    cfg,z,plan,g=integral_sketch_inputs()
+    g['crossing_conflicts']=[]
+    with pytest.raises(m.Invalid,match='three observed crossing'):
+        m.validate_integral_sketch(g,plan,z,cfg)
+
+def test_approved_sketch_cannot_ignore_crossing_or_boundary_gate():
+    cfg,z,plan,g=integral_sketch_inputs()
+    z['status']='SKETCH_APPROVED';z['sketch_approved']=True
+    with pytest.raises(m.Invalid,match='unresolved topology'):
+        m.validate_integral_sketch(g,plan,z,cfg)
+
+def test_sketch_source_image_preserved():
+    cfg,z,plan,g=integral_sketch_inputs()
+    g['base']['pixels_modified']=1
+    with pytest.raises(m.Invalid,match='preserve U02'):
+        m.validate_integral_sketch(g,plan,z,cfg)

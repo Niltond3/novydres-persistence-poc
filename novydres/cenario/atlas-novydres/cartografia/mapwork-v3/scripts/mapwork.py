@@ -261,6 +261,80 @@ def validate_spatial_plan(plan, z, cfg):
         fail(bool(z['connectors']) if z['neighbors'] else True,'missing neighbor connectors in approved sketch')
     return {'historical_bridges':3,'pois':5,'resource_fronts':3,'readiness':'PLANNING_NOT_READY_FOR_IMAGE' if z['status']=='PLANNING' else 'SPATIAL_GATES_VERIFIED'}
 
+def _point_inside_polygon(point, poly):
+    x,y=point
+    inside=False
+    for i in range(len(poly)):
+        x1,y1=poly[i]; x2,y2=poly[(i+1)%len(poly)]
+        if (y1>y)!=(y2>y) and x < (x2-x1)*(y-y1)/(y2-y1)+x1:
+            inside=not inside
+    return inside
+
+def _segment_distance(p, a, b):
+    ax,ay=a;bx,by=b;px,py=p
+    vx,vy=bx-ax,by-ay
+    if vx==0 and vy==0:return math.hypot(px-ax,py-ay)
+    t=max(0,min(1,((px-ax)*vx+(py-ay)*vy)/(vx*vx+vy*vy)))
+    return math.hypot(px-ax-t*vx,py-ay-t*vy)
+
+def _line_distance(p,coords):
+    return min(_segment_distance(p,coords[i],coords[i+1]) for i in range(len(coords)-1))
+
+def validate_integral_sketch(g,plan,z,cfg):
+    """Validate editable candidate topology; never interpret a planning PASS as owner approval."""
+    fail(g.get('schema')=='NOVYDRES_KINGSWELL_U02_INTEGRAL_SKETCH_1','integral sketch schema')
+    fail(g.get('state')=='CANDIDATE_FULL_MAP_NOT_OWNER_APPROVED','sketch cannot silently promote status')
+    base=g.get('base',{})
+    fail(base.get('sha256')==cfg['reference']['sha256'] and base.get('size_px')==cfg['world_size_units'],'sketch U02 identity mismatch')
+    fail(base.get('pixels_modified')==0 and base.get('projection')=='top_down_90_degrees','sketch must preserve U02 top-down pixels')
+    scope=g.get('scope',{})
+    fail(scope.get('same_extent') is True and scope.get('microcore_is_not_a_second_raion') is True,'Kingswell must be entire Cidade Velha raion')
+    bounds=z['bounds']; w,h=cfg['world_size_units']
+    def points_on_map(points,name,check_bounds=False):
+        fail(isinstance(points,list) and len(points)>=3,name+': insufficient vertices')
+        for p in points:
+            fail(isinstance(p,list) and len(p)==2 and all(isinstance(v,(float,int)) and math.isfinite(v) for v in p),name+': invalid vertex')
+            x,y=p
+            fail(0<=x<=w and 0<=y<=h,name+': outside U02')
+            if check_bounds:fail(bounds[0]<=x<=bounds[2] and bounds[1]<=y<=bounds[3],name+': outside planning bounds')
+    poly=g.get('raion_polygon_candidate_px')
+    points_on_map(poly,'Kingswell polygon',True)
+    for sector in g.get('land_use_sectors',[]):
+        points_on_map(sector.get('polygon_px'),sector['id'])
+    river=g.get('waterways',{}).get('rio_vasyl_urban_candidate_px')
+    fail(isinstance(river,list) and len(river)>=5,'missing substantial Vasyl river candidate')
+    points_on_map(river,'Rio Vasyl line')
+    bridges=g.get('historical_bridges',[])
+    fail(len(bridges)==3 and len({b.get('id') for b in bridges})==3,'sketch must contain exactly three distinct historical bridges')
+    plan_b={b['center_px'][0]:b for b in plan['bridges']}
+    for bridge in bridges:
+        center=bridge.get('center_px')
+        fail(isinstance(center,list) and len(center)==2,'invalid bridge coordinate')
+        fail(_point_inside_polygon(center,poly),bridge['id']+': bridge outside Kingswell polygon')
+        fail(_line_distance(center,river)<=8,bridge['id']+': historical bridge not snapped to candidate Vasyl river')
+        fail(bridge.get('priority')=='mixed_ped_vehicle','bridge must preserve mixed pedestrian/vehicle use')
+        fail(bridge.get('span_ends_px') and len(bridge['span_ends_px'])==2,'bridge requires two approaches')
+        fail(any(b.get('center_px')==center for b in plan['bridges']),bridge['id']+': bridge differs from spatial plan')
+    sites=g.get('poi_sites',[])
+    fail(len(sites)==5 and {p.get('id') for p in sites}=={'poi-14','poi-15','poi-16','poi-17','poi-32'},'sketch must contain five Kingswell POIs')
+    plan_pois={p['id']:p for p in plan['pois']}
+    for poi in sites:
+        pt=poi.get('candidate_px')
+        fail(pt==plan_pois[poi['id']]['center_px'],poi['id']+': POI mismatch with spatial plan')
+        fail(_point_inside_polygon(pt,poly),poi['id']+': POI outside Kingswell polygon')
+        fail(poi.get('status')=='CANDIDATE_VISUAL_INSPECTION_REQUIRED',poi['id']+': POI cannot claim visual/canon approval')
+    conflicts=g.get('crossing_conflicts',[])
+    fail(len(conflicts)==3 and len({c.get('id') for c in conflicts})==3,'three observed crossing discrepancies must remain traceable')
+    fail(all(c.get('status')=='UNRESOLVED_VISIBLE_CROSSING_NOT_COUNTED' for c in conflicts),'unverified crossing may not be asserted to be another bridge')
+    fail(g.get('validation',{}).get('conflicts_unresolved')==3,'unresolved U02 crossings must be recorded as blockers')
+    fail(g.get('adjacency',{}).get('sulfok',{}).get('coordination_needed') is True,'do not silently reassign Sulfok geography')
+    rail=g.get('transport',{}).get('external_freight_exit',{})
+    fail(rail.get('candidate_px')==[100,h],'external freight connector must stay on verified southern raster edge')
+    fail(g['transport'].get('no_new_bridges') is True and g['transport'].get('no_new_international_stops') is True,'sketch cannot add bridge/express station')
+    if z['status']!='PLANNING':
+        fail(g['validation']['conflicts_unresolved']==0 and g['validation']['owner_sketch_approval'] is True,'sketch has unresolved topology or no owner approval')
+    return {'sketch_version':g['version'],'bridges':len(bridges),'pois':len(sites),'crossing_conflicts':len(conflicts),'validity':'CANDIDATE_WITH_BLOCKERS' if z['status']=='PLANNING' else 'SKETCH_APPROVED'}
+
 def audit_required_planning_zones(cfg):
     required=cfg.get('required_planning_zones',[])
     fail(bool(required) and len(required)==len(set(required)),'required planning zones must be configured')
@@ -272,7 +346,13 @@ def audit_required_planning_zones(cfg):
         fail(path.is_file(),f'required zone missing: {folder}/zone.json')
         fail(planpath.is_file(),f'required spatial plan missing: {folder}/spatial-plan.json')
         z=load(path);audit_zone(z,cfg,strict=False)
-        results.append(validate_spatial_plan(load(planpath),z,cfg))
+        plan=load(planpath)
+        report=validate_spatial_plan(plan,z,cfg)
+        if plan.get('gates',{}).get('integral_sketch_prepared'):
+            sketchpath=ROOT/'zones'/folder/'esboco-integral-u02-v1.json'
+            fail(sketchpath.is_file(),f'required integral sketch missing: {folder}')
+            report['sketch']=validate_integral_sketch(load(sketchpath),plan,z,cfg)
+        results.append(report)
     return results
 
 def audit_repository(cfg,state):
