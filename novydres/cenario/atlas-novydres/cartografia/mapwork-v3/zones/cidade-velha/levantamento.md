@@ -163,11 +163,16 @@
 - Evidência: “KW-V3-D21: Aprovo A — rede de serviços comunitários distribuídos pelos bairros, em edifícios pequenos e médios, frequentemente reaproveitados, com poucos equipamentos maiores próximos às vias principais.”
 - Consequência: serviços cotidianos de proximidade integrados ao tecido misto, complementados por poucos equipamentos de escala maior próximos dos eixos viários. **Não aprova instituições ou locais específicos, quantidade, capacidade, qualidade de serviço, geometria ou imagens.**
 
+**KW-V3-D22 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** frentes ribeirinhas mistas e descontínuas, com moradias densas, cais e armazéns antigos, pequenos acessos públicos e maior atividade logística na transição industrial.
+- Evidência: “KW-V3-D22: Aprovo A — frentes ribeirinhas mistas e descontínuas, com moradias densas, cais e armazéns antigos, pequenos acessos públicos e maior atividade logística na transição industrial.”
+- Consequência: margem heterogênea, com variações entre ocupação popular, vestígios comerciais antigos e logística mais intensa rumo à expansão industrial. **Não fixa localização de cais, armazéns, atracadouros ou terminais nem modifica contornos, pontes ou geometrias.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D22` — que ocupação predomina nas **margens do Rio Vasyl dentro de Kingswell** em 2010?
-- **A (recomendada):** frentes ribeirinhas mistas e descontínuas: habitação densa, cais e armazéns antigos, pequenos acessos públicos e pontos de embarque compatíveis; maior intensidade logística na transição industrial.
-- **B:** frente predominantemente residencial e comercial compacta, edificações próximas ao rio e instalações de cais/embarque concentradas em poucos acessos.
-- **C:** frentes ribeirinhas sobretudo produtivas e logísticas, com armazéns, cais e oficinas em longos trechos; moradia e espaços públicos recuados.
-Respeitar as **três únicas pontes**, as rotas fixas de balsas, a origem histórica numa margem e a expansão posterior para a outra. **A escolha não define margens, cais ou terminais individuais, coordenadas, contornos ou imagens.**
+`KW-V3-D23` — como as **ruas e passagens da cidade devem alcançar as margens do Rio Vasyl**, considerando as balsas com veículos e a malha orgânica?
+- **A (recomendada):** malha capilar de becos, passagens e escadarias de pedestres descendo a pequenos cais e largos, complementada por alguns acessos viários maiores e rampas para balsas e logística.
+- **B:** via marginal principal contínua ao longo de boa parte do rio, distribuindo veículos e pessoas entre os cais e terminais.
+- **C:** separação funcional, com poucos corredores de descida de veículos/cargas e grande parte dos acessos públicos por becos e escadarias.
+A decisão **não aprova escadas, rampas, vias ou terminais individuais, cortes de relevo, localização, nova ponte ou geometria**; compatibilizar com U02 e as três únicas pontes históricas.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
