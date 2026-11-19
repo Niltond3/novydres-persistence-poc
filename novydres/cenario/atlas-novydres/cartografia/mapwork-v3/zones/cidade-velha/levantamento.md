@@ -108,11 +108,16 @@
 - Evidência: “KW-V3-D10: Aprovo A — poucas rotas fixas, com terminais estruturados e capacidade de transportar pessoas e veículos.”
 - Consequência funcional: representar travessias hidroviárias regulares articuladas às ruas, em complementação às três pontes históricas de KW-V3-D09. **Sem número ou local aprovado para as rotas, balsas e terminais; sem novas pontes.**
 
+**KW-V3-D11 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** uma das **três únicas pontes históricas** se liga diretamente ao núcleo termal original; as outras duas atendem diferentes setores do vale e das expansões urbanas.
+- Evidência: “KW-V3-D11: Aprovo A — uma ponte ligada ao núcleo histórico termal e as outras duas conectando setores diferentes da expansão urbana ao longo do vale.”
+- Consequência: uma travessia histórica central e duas distribuídas, conectadas às redes viárias de seus setores, **sem novas pontes** e sem posições/traçados definidos. Respeitar a restrição KW-V3-D09, a referência U02 e seus conectores.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D11` — como distribuir funcionalmente as três pontes históricas sobre o Rio Vasyl?
-- **A (recomendada):** uma ponte junto ao núcleo histórico termal; as outras duas conectam diferentes setores do vale e da expansão urbana.
-- **B:** três pontes próximas ao núcleo histórico, com balsas especialmente relevantes para bairros afastados.
-- **C:** três pontes distribuídas em trechos separados segundo os eixos de circulação de maior escala, sem centralidade histórica de uma delas.
-A decisão orienta função e distribuição, **sem aprovar margens, geometrias, coordenadas ou alterar conectores da base U02.**
+`KW-V3-D12` — como organizar as **nascentes geotérmicas naturais** dentro do núcleo compacto, respeitando a abundância e a irregularidade do calor aprovadas (GEO-002.3/GEO-003.2)?
+- **A (recomendada):** conjunto principal de nascentes no coração histórico, com surgências secundárias dispersas irregularmente; antigo tecido urbano próximo ao conjunto principal.
+- **B:** vários polos termais relevantes distribuídos pelo núcleo, sem um agrupamento principal dominante.
+- **C:** nascentes distribuídas em sequência descontínua ao longo do vale do Rio Vasyl, formando um eixo termal interno ao núcleo histórico compacto.
+Não definir ainda número, coordenadas, temperatura, vazão, fontes de toda Novydres ou isotermas rígidas.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
