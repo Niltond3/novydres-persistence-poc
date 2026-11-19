@@ -138,11 +138,16 @@
 - Evidência: “KW-V3-D16: Aprovo A — perfil escalonado e irregular, com construções históricas relativamente baixas e compactas, volumes médios nas expansões e poucos marcos altos.”
 - Consequência morfológica: skyline de caráter não uniforme, mas com legibilidade de núcleo antigo e expansões; sem prédios altos distribuídos uniformemente nem obrigação de blocos horizontais grandes. **Não fixa número de andares, posições dos marcos, volumes individuais, polígonos ou arte.**
 
+**KW-V3-D17 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pedra e tijolo antigos, anexos de madeira, reformas posteriores com metal e concreto; fachadas variadas, envelhecidas, remendadas e adaptadas ao frio.
+- Evidência: “KW-V3-D17: Aprovo A — pedra e tijolo antigos, anexos de madeira e reformas posteriores em metal e concreto; fachadas variadas, envelhecidas e adaptadas ao frio.”
+- Consequência: linguagem arquitetônica em camadas, variando edifício a edifício e refletindo reapropriação histórica em 2010, sem importar automaticamente a linguagem própria de Drevnigrad. **Não há material obrigatório para cada prédio, nem aprovação de geometria ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D17` — que linguagem de materiais e fachadas deve predominar no tecido histórico de Kingswell, com suas camadas de ocupação e adaptações até 2010?
-- **A (recomendada):** pedra e tijolo envelhecidos das camadas antigas, madeira em anexos, reparos de metal e concreto posteriores; fachadas e telhados variados adaptados ao frio, com marcas de reuso.
-- **B:** alvenaria mais monumental e ornamento gótico-eslavo dominantes no núcleo histórico, com reformas e elementos produtivos secundários.
-- **C:** linguagem popular mais austera de madeira/tijolo com raros prédios monumentais ou ornados, fortemente remendada por material industrial reutilizado.
-A decisão define predominâncias arquitetônicas, **sem aprovar materiais obrigatórios para cada prédio, localização, desenho, alturas ou geração de imagem**. Não atribuir automaticamente a Kingswell a identidade regional específica de Drevnigrad.
+`KW-V3-D18` — que tipologia de espaços públicos predomina no núcleo histórico compacto de Kingswell?
+- **A (recomendada):** pequenos largos, mercados de rua e pátios de convívio entre as vielas, com poucos espaços maiores junto ao centro termal e imóveis comunitários reaproveitados.
+- **B:** grande praça pública termal estruturante, com alguns largos secundários e ruas históricas que confluem para ela.
+- **C:** espaços coletivos mais interiores, em pátios e edifícios reapropriados; poucas praças abertas no centro histórico.
+Escolha apenas morfológica para estudo; respeitar ruas orgânicas D08, reuso D05, nascentes D12 e captação geotérmica D13. **Não aprova local, número, medida de praças nem imagem.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
