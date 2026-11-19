@@ -352,3 +352,6 @@
 
 
 **Esboço técnico integral U02 v1:** proposta depositada em `esboco-integral-u02-v1.json` e descrita em `esboco-integral-u02-v1.md`. Por causa de cruzamentos visuais adicionais e sobreposição com Sulfok, permanece CANDIDATE; nenhuma imagem gerada nem sketch aprovado.
+
+
+**Aprovação de esboço integral U02 V2 (19/11/2026):** proprietário aprovou a versão exibida, excluindo os marcadores de conflito X01–X03. A V2 substitui V1 como esboço válido; a imagem U02 é imutável. Status SKETCH_APPROVED, sem liberação de arte; lotes/conectores faltantes serão feitos na preparação técnica. Evidência: “Consegui visualizar na versão web diretamente no navegador. Eu aprovo. Enquanto os conflitos, eu removo eles. A versão que nós aprovamos sem os conflitos é que vale.”.

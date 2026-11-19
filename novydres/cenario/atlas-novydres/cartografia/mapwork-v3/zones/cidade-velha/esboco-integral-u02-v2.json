@@ -1,0 +1,679 @@
+{
+  "schema": "NOVYDRES_KINGSWELL_U02_INTEGRAL_SKETCH_1",
+  "version": "U02_KW_SKETCH_02",
+  "state": "OWNER_APPROVED_SKETCH_NO_CONFLICT_MARKERS",
+  "base": {
+    "id": "T03_U02_APPROVED",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "size_px": [
+      1448,
+      1086
+    ],
+    "pixels_modified": 0,
+    "projection": "top_down_90_degrees"
+  },
+  "scope": {
+    "owner_raion_subject_id": "district-chelsea",
+    "display_name": "Kingswell / Cidade Velha",
+    "same_extent": true,
+    "historical_feature_id": "chelsea-cidade-velha",
+    "microcore_is_not_a_second_raion": true,
+    "boundaries_are_provisional": true,
+    "sketch_boundary_approved_scoped": true
+  },
+  "raion_polygon_candidate_px": [
+    [
+      365,
+      733
+    ],
+    [
+      425,
+      710
+    ],
+    [
+      488,
+      698
+    ],
+    [
+      546,
+      676
+    ],
+    [
+      610,
+      662
+    ],
+    [
+      696,
+      665
+    ],
+    [
+      782,
+      669
+    ],
+    [
+      845,
+      662
+    ],
+    [
+      923,
+      692
+    ],
+    [
+      989,
+      712
+    ],
+    [
+      1006,
+      761
+    ],
+    [
+      1013,
+      820
+    ],
+    [
+      1017,
+      900
+    ],
+    [
+      1023,
+      968
+    ],
+    [
+      1032,
+      1086
+    ],
+    [
+      363,
+      1086
+    ],
+    [
+      343,
+      1022
+    ],
+    [
+      306,
+      990
+    ],
+    [
+      321,
+      937
+    ],
+    [
+      339,
+      892
+    ],
+    [
+      329,
+      847
+    ],
+    [
+      336,
+      798
+    ],
+    [
+      351,
+      757
+    ]
+  ],
+  "previous_inventory_envelope_px": [
+    [
+      559,
+      705
+    ],
+    [
+      617,
+      675
+    ],
+    [
+      690,
+      660
+    ],
+    [
+      762,
+      670
+    ],
+    [
+      845,
+      660
+    ],
+    [
+      929,
+      691
+    ],
+    [
+      996,
+      719
+    ],
+    [
+      992,
+      782
+    ],
+    [
+      1010,
+      855
+    ],
+    [
+      1012,
+      930
+    ],
+    [
+      1028,
+      1011
+    ],
+    [
+      1033,
+      1086
+    ],
+    [
+      546,
+      1086
+    ],
+    [
+      589,
+      1017
+    ],
+    [
+      592,
+      944
+    ],
+    [
+      582,
+      867
+    ],
+    [
+      554,
+      792
+    ]
+  ],
+  "land_use_sectors": [
+    {
+      "id": "KW-HIST",
+      "name": "Microcentro termal original (morfologia, não raion)",
+      "polygon_px": [
+        [
+          557,
+          771
+        ],
+        [
+          602,
+          760
+        ],
+        [
+          648,
+          782
+        ],
+        [
+          677,
+          818
+        ],
+        [
+          667,
+          868
+        ],
+        [
+          618,
+          892
+        ],
+        [
+          570,
+          876
+        ],
+        [
+          554,
+          829
+        ]
+      ],
+      "fill": "#f3b66b",
+      "kind": "thermal_core"
+    },
+    {
+      "id": "KW-WEST",
+      "name": "Margem histórica expandida / margem ocidental",
+      "polygon_px": [
+        [
+          373,
+          774
+        ],
+        [
+          486,
+          776
+        ],
+        [
+          509,
+          806
+        ],
+        [
+          510,
+          891
+        ],
+        [
+          470,
+          928
+        ],
+        [
+          383,
+          932
+        ],
+        [
+          343,
+          879
+        ],
+        [
+          354,
+          813
+        ]
+      ],
+      "fill": "#9476c9",
+      "kind": "mixed_historic"
+    },
+    {
+      "id": "KW-WORKER",
+      "name": "Cortiços, pátios e oficinas",
+      "polygon_px": [
+        [
+          662,
+          762
+        ],
+        [
+          825,
+          767
+        ],
+        [
+          887,
+          815
+        ],
+        [
+          857,
+          914
+        ],
+        [
+          770,
+          947
+        ],
+        [
+          648,
+          929
+        ],
+        [
+          640,
+          839
+        ]
+      ],
+      "fill": "#7caeae",
+      "kind": "worker_urban"
+    },
+    {
+      "id": "KW-EDGE",
+      "name": "Franja técnica e transição para encosta",
+      "polygon_px": [
+        [
+          853,
+          781
+        ],
+        [
+          980,
+          784
+        ],
+        [
+          990,
+          878
+        ],
+        [
+          958,
+          934
+        ],
+        [
+          900,
+          960
+        ],
+        [
+          845,
+          910
+        ]
+      ],
+      "fill": "#c59e73",
+      "kind": "technical_edge"
+    },
+    {
+      "id": "KW-TRANS",
+      "name": "Transição industrial e logística para Sulfok",
+      "polygon_px": [
+        [
+          334,
+          912
+        ],
+        [
+          445,
+          905
+        ],
+        [
+          512,
+          919
+        ],
+        [
+          613,
+          944
+        ],
+        [
+          616,
+          974
+        ],
+        [
+          443,
+          1002
+        ],
+        [
+          333,
+          988
+        ]
+      ],
+      "fill": "#b38489",
+      "kind": "industrial_fringe"
+    }
+  ],
+  "waterways": {
+    "rio_vasyl_urban_candidate_px": [
+      [
+        266,
+        712
+      ],
+      [
+        308,
+        734
+      ],
+      [
+        350,
+        754
+      ],
+      [
+        404,
+        771
+      ],
+      [
+        462,
+        770
+      ],
+      [
+        518,
+        765
+      ],
+      [
+        536,
+        783
+      ],
+      [
+        543,
+        811
+      ],
+      [
+        532,
+        846
+      ],
+      [
+        540,
+        880
+      ],
+      [
+        529,
+        913
+      ],
+      [
+        476,
+        947
+      ],
+      [
+        430,
+        963
+      ],
+      [
+        359,
+        957
+      ],
+      [
+        309,
+        986
+      ],
+      [
+        260,
+        1044
+      ]
+    ],
+    "upstream_downstream_orientation": "UNVERIFIED_U02_VISUAL; protect as candidate, not hydrographic canon",
+    "east_ice_channel_kind": "SEPARATE_WATERWAY_UNCONFIRMED",
+    "source_truth": "Rio Vasyl crosses Kingswell and empties into bay; U02 visual needs formal hydrographic reconciliation",
+    "do_not_fabricate_headwaters": true
+  },
+  "historical_bridges": [
+    {
+      "id": "KW-B01",
+      "center_px": [
+        520,
+        766
+      ],
+      "span_ends_px": [
+        [
+          519,
+          744
+        ],
+        [
+          523,
+          785
+        ]
+      ],
+      "priority": "mixed_ped_vehicle",
+      "reason": "Travessia sobre trecho horizontal do rio junto à frente cívica antiga; acompanha aproximação viária visível.",
+      "status": "SKETCH_BRIDGE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "KW-B02",
+      "center_px": [
+        542,
+        811
+      ],
+      "span_ends_px": [
+        [
+          510,
+          809
+        ],
+        [
+          569,
+          812
+        ]
+      ],
+      "priority": "mixed_ped_vehicle",
+      "reason": "Travessia de quarteirões entre margem de expansão e núcleo urbano; rede local existente.",
+      "status": "SKETCH_BRIDGE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "KW-B03",
+      "center_px": [
+        541,
+        881
+      ],
+      "span_ends_px": [
+        [
+          503,
+          879
+        ],
+        [
+          574,
+          883
+        ]
+      ],
+      "priority": "mixed_ped_vehicle",
+      "reason": "Travessia da expansão urbana do século XX e da borda produtiva, sem especialização funcional.",
+      "status": "SKETCH_BRIDGE_APPROVED_NOT_GIS_CANON"
+    }
+  ],
+  "crossing_conflicts": [],
+  "poi_sites": [
+    {
+      "id": "poi-14",
+      "name": "Salão do Conselho",
+      "legacy_px": [
+        690,
+        790
+      ],
+      "candidate_px": [
+        689,
+        792
+      ],
+      "role": "civic",
+      "reason": "Imóvel de escala cívica em quadra regular central com acesso pela malha principal.",
+      "status": "SKETCH_SITE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "poi-15",
+      "name": "Estação Geotérmica Periférica",
+      "legacy_px": [
+        880,
+        1020
+      ],
+      "candidate_px": [
+        868,
+        929
+      ],
+      "role": "thermal_utility",
+      "reason": "Transferida da encosta nevada/fora de tecido urbano para margem sudeste ocupada e ligada a via de serviço.",
+      "status": "SKETCH_SITE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "poi-16",
+      "name": "Capelas da Fome Branca",
+      "legacy_px": [
+        718,
+        900
+      ],
+      "candidate_px": [
+        713,
+        897
+      ],
+      "role": "chapels",
+      "reason": "Pequenos edifícios religiosos reaproveitados em tecido denso, não megacomplexo isolado.",
+      "status": "SKETCH_SITE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "poi-17",
+      "name": "Assembleia dos Estados Livres",
+      "legacy_px": [
+        834,
+        841
+      ],
+      "candidate_px": [
+        830,
+        828
+      ],
+      "role": "civic_assembly",
+      "reason": "Quadra urbana central acessível por ruas largas e passagens pedonais.",
+      "status": "SKETCH_SITE_APPROVED_NOT_GIS_CANON"
+    },
+    {
+      "id": "poi-32",
+      "name": "Grande Sinagoga Beit HaZikaron",
+      "legacy_px": [
+        750,
+        951
+      ],
+      "candidate_px": [
+        741,
+        915
+      ],
+      "role": "religious",
+      "reason": "Retirada do alinhamento da via arterial sul para quadra histórica residencial com acesso local.",
+      "status": "SKETCH_SITE_APPROVED_NOT_GIS_CANON"
+    }
+  ],
+  "ferries_candidate": [
+    {
+      "id": "KW-F01",
+      "west_landing_px": [
+        511,
+        850
+      ],
+      "east_landing_px": [
+        567,
+        847
+      ],
+      "transport": [
+        "pedestrians",
+        "vehicles"
+      ],
+      "status": "CANDIDATE_EXISTING_APPROACH_REVIEW"
+    },
+    {
+      "id": "KW-F02",
+      "west_landing_px": [
+        486,
+        910
+      ],
+      "east_landing_px": [
+        558,
+        915
+      ],
+      "transport": [
+        "pedestrians",
+        "vehicles"
+      ],
+      "status": "CANDIDATE_EXISTING_APPROACH_REVIEW"
+    }
+  ],
+  "transport": {
+    "protected_existing": [
+      "U02 southern regional artery",
+      "U02 western heavy railway (interregional)",
+      "U02 historical streets, main roads, industrial streets"
+    ],
+    "external_freight_exit": {
+      "id": "EXT-RAIL-FREIGHT-S",
+      "candidate_px": [
+        100,
+        1086
+      ],
+      "status": "CANDIDATE_ON_APPROVED_TRUNK_NO_NEW_RAIL",
+      "off_map_mines": [
+        "gold",
+        "diamonds"
+      ],
+      "gas": "pipeline_primarily_rail_for_equipment"
+    },
+    "regional_rail_not_a_kingswell_station": true,
+    "no_new_international_stops": true,
+    "no_new_bridges": true
+  },
+  "adjacency": {
+    "sulfok": {
+      "relation": "WEST_SOUTHWEST_AND_INDUSTRIAL_CONTINUITY",
+      "status": "OWNER_APPROVED_VISUAL_BORDER_PENDING_CONNECTOR_CONTRACT",
+      "coordination_needed": true
+    },
+    "drevnigrad": {
+      "relation": "EAST_OF_EASTERN_ICE_CHANNEL",
+      "status": "KEEP_EAST_CONNECTORS_U02_NO_INVENTED_BRIDGE",
+      "coordination_needed": true
+    },
+    "new_london_and_vasyl_bay": {
+      "relation": "OTHER_RAIONS_NOT_EDITED",
+      "u03_visual_swap_preserved": true
+    }
+  },
+  "validation": {
+    "bridge_count": 3,
+    "pois_count": 5,
+    "conflicts_unresolved": 0,
+    "raion_boundary_review_required": false,
+    "neighbor_seam_review_required": true,
+    "hydrology_review_required": true,
+    "owner_sketch_approval": true,
+    "art_generation_authorized": false,
+    "source_pixels_changed": 0
+  },
+  "owner_decision_requested": "APPROVED_SCOPED; next prepare lot elements and shared boundary connectors",
+  "revision_from": "U02_KW_SKETCH_01",
+  "owner_approval": {
+    "decision": "APPROVED",
+    "approved_on": "2026-11-19",
+    "evidence": "Consegui visualizar na versão web diretamente no navegador. Eu aprovo. Enquanto os conflitos, eu removo eles. A versão que nós aprovamos sem os conflitos é que vale.",
+    "scope": "Esboço integral aprovado sem os três marcadores de conflito; não altera pixels U02, não canoniza geografia GIS nem constitui aprovação de arte final."
+  },
+  "excluded_annotations_note": "X01–X03 excluídos do mapa anotado por decisão do proprietário; nenhum cruzamento físico ou pixel foi removido do raster U02."
+}

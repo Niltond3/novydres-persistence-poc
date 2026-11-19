@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_MAPWORK_V3_KINGSWELL_SPATIAL_PLAN_1",
-  "status": "PLANNING_CANDIDATE",
+  "status": "SKETCH_OWNER_APPROVED_SPATIAL_PREP_PENDING",
   "owner_decision": {
     "same_extent": true,
     "owner_subject_id": "district-chelsea",
@@ -27,7 +27,7 @@
       "role": "travessia histórica do microcentro termal para margem de expansão",
       "confidence": "CANDIDATE",
       "mixed_ped_vehicle": true,
-      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "site_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "KW-VASYL-02",
@@ -38,7 +38,7 @@
       "role": "travessia residencial e comercial na expansão intermediária",
       "confidence": "CANDIDATE",
       "mixed_ped_vehicle": true,
-      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "site_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "KW-VASYL-03",
@@ -49,7 +49,7 @@
       "role": "travessia de expansão industrial mista, sem especialização permanente",
       "confidence": "CANDIDATE",
       "mixed_ped_vehicle": true,
-      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "site_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     }
   ],
   "river_identification": "Curso sinuoso na interface oeste da área de busca; confirmar que é Rio Vasyl e classificar todas as passagens aparentes antes de fixar as três pontes. Se conflito com U02 ou Sulfok, manter bloqueio e corrigir esboço, nunca inventar quarta ponte.",
@@ -70,7 +70,7 @@
         690,
         790
       ],
-      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "position_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "poi-15",
@@ -88,7 +88,7 @@
         880,
         1020
       ],
-      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "position_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "poi-16",
@@ -106,7 +106,7 @@
         718,
         900
       ],
-      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "position_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "poi-17",
@@ -124,7 +124,7 @@
         834,
         841
       ],
-      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "position_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     },
     {
       "id": "poi-32",
@@ -142,7 +142,7 @@
         750,
         951
       ],
-      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
+      "position_status": "OWNER_APPROVED_SKETCH_POSITION_NOT_GIS_CANON"
     }
   ],
   "external_resource_fronts": [
@@ -174,11 +174,11 @@
     "bridge_river_topology_verified": false,
     "adjacent_zone_edges_verified": false,
     "poi_u02_sites_verified": false,
-    "full_technical_sketch_approved": false,
+    "full_technical_sketch_approved": true,
     "image_generation_authorized": false,
     "integral_sketch_prepared": true,
-    "integral_sketch_owner_approved": false,
-    "crossing_conflicts_unresolved": 3
+    "integral_sketch_owner_approved": true,
+    "crossing_conflicts_unresolved": 0
   },
   "rail_exit_candidates": [
     {
@@ -200,5 +200,17 @@
     }
   ],
   "rail_geometry_gate": "A coordenada é apenas âncora de borda a ajustar sobre os trilhos EXISTENTES da U02; não fixa expansão de linha, ramal ou plataforma. Toda continuidade fora da cena exige o conector físico confirmado na visão técnica integral.",
-  "integral_sketch_ref": "esboco-integral-u02-v1.json"
+  "integral_sketch_ref": "esboco-integral-u02-v2.json",
+  "owner_visual_sketch_approval": {
+    "evidence": "Consegui visualizar na versão web diretamente no navegador. Eu aprovo. Enquanto os conflitos, eu removo eles. A versão que nós aprovamos sem os conflitos é que vale.",
+    "approved_on": "2026-11-19",
+    "version": "U02_KW_SKETCH_02",
+    "removed_annotations": [
+      "X01",
+      "X02",
+      "X03"
+    ],
+    "base_raster_unchanged": true,
+    "not_gis_topology_certification": true
+  }
 }

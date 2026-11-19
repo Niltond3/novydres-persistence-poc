@@ -2,7 +2,7 @@
   "schema": "NOVYDRES_MAPWORK_V3_ZONE_1",
   "id": "kingswell",
   "owner_subject_id": "district-chelsea",
-  "status": "PLANNING",
+  "status": "SKETCH_APPROVED",
   "bounds": [
     306,
     650,
@@ -359,10 +359,12 @@
       "accessed_on": "2026-11-19"
     }
   ],
-  "sketch_approved": false,
+  "sketch_approved": true,
   "source_commit": "876b764bcc23ca2ea2949f5ec505ce85bac46701",
   "checkpoint": {
-    "status": "FULL_MAP_TECHNICAL_SKETCH_CANDIDATE_UNAPPROVED",
-    "detail": "Esboço U02 v1 completo em geometria candidata; três cruzamentos aparentes e limite Sulfok exigem conciliação; geração e fechamento proibidos antes de aprovação do proprietário."
+    "status": "SKETCH_APPROVED_DETAIL_PREP_PENDING",
+    "version": "U02_KW_SKETCH_02",
+    "owner_evidence": "Consegui visualizar na versão web diretamente no navegador. Eu aprovo. Enquanto os conflitos, eu removo eles. A versão que nós aprovamos sem os conflitos é que vale.",
+    "remaining": "Criar polígonos de lotes, reconciliar conectores e validar antes de qualquer geração. Sem reinserir marcadores X01-X03."
   }
 }
