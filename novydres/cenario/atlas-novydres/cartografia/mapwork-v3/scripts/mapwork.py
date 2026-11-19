@@ -33,7 +33,7 @@ def config_check(cfg):
     w,h=cfg['world_size_units']; scale=cfg['detail_pixels_per_unit']; tile=cfg['tile_size_px']
     fail(w>0 and h>0 and isinstance(scale,int) and scale>0 and scale<=256,'invalid scale')
     fail(isinstance(tile,int) and tile>=128 and tile<=2048 and tile & (tile-1)==0,'invalid tile size')
-    fail(cfg['projection']['type']=='illustrated_2d_oblique','projection must remain 2D')
+    fail(cfg['projection']['type']=='illustrated_2d_topdown','projection must remain 2D')
     fail(cfg['projection']['floor_height_units'] is None,'do not invent absolute height')
     fail(len(cfg['layer_order'])==len(set(cfg['layer_order'])),'duplicate layers')
     fail(re.fullmatch('[0-9a-f]{64}',cfg['reference']['sha256']) is not None,'reference SHA')

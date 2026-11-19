@@ -9,11 +9,12 @@
   "tile_size_px": 512,
   "max_bleed_units": 1.5,
   "projection": {
-    "type": "illustrated_2d_oblique",
+    "type": "illustrated_2d_topdown",
     "global_north": "up",
-    "facade_direction": "south_east",
+    "facade_direction": null,
     "lighting": "cool_northwest_diffuse",
-    "floor_height_units": null
+    "floor_height_units": null,
+    "source_view": "U02 top-down 90 degrees; no oblique reinterpretation of baseline"
   },
   "layer_order": [
     "terrain",

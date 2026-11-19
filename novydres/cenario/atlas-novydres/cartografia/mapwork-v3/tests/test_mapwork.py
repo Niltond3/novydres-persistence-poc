@@ -171,7 +171,7 @@ def test_no_unapproved_spatial_promotion():
 
 def test_missing_real_zone_is_not_false_pass(tmp_path,monkeypatch):
     cfg,z,plan=planning_inputs()
-    fake=tmp_path/'mapwork';(fake/'zones').mkdir();(fake/'releases').mkdir()
+    fake=tmp_path/'mapwork';(fake/'zones').mkdir(parents=True);(fake/'releases').mkdir()
     monkeypatch.setattr(m,'ROOT',fake)
     with pytest.raises(m.Invalid,match='required zone missing'):
         m.audit_repository(cfg,m.load(ROOT/'world-state.json'))

@@ -7,7 +7,7 @@
 1. Bootstrap em um único SHA de `master`: `novydres/AGENTS.md`, `CONTEXT.md`, `catalogo.json`, ADR-002, PRD-ATLAS-001 e `cartografia/guide.md`; nunca substituir as fontes por resumo de chat.
 2. Referência aprovada U02 (SHA-256 `9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0`), 1448×1086. Suas coordenadas são unidades abstratas, não metros.
 3. Escala detalhada única: 64 px por pixel U02, tiles 512×512. Não renderizar o atlas inteiro em uma bitmap monolítica. A qualidade final vem de novos assets, não da interpolação da U02.
-4. Lote com máscara total e bleed ≤ 1,5 unidade U02. Edifícios especiais têm asset separado. Elementos de lotes são desenhados em 2D com perspectiva oblíqua consistente, não extrusão mecânica 3D.
+4. Lote com máscara total e bleed ≤ 1,5 unidade U02. Edifícios especiais têm asset separado. Elementos de lotes são desenhados em 2D top-down consistente com a U02, não extrusão mecânica 3D.
 5. Conectores espaciais de zonas adjacentes devem ter os mesmos ID, categoria, coordenadas, largura e perfil. Estradas/trilhos/rios têm definição global; nunca redesenhar a autoridade independentemente em cada lado. O teste semântico não substitui inspeção visual das costuras.
 6. Editar uma região não altera zonas aprovadas nem promove cânone. `last_approved_global_release` aponta só para versão aprovada; candidato nunca atualiza esse ponteiro automaticamente.
 7. Toda entrega visual exige mapa ANTES/DEPOIS integral e zoom, com HTML acessível pelo chat, não GitHub como canal visual. O comparador é um HTML autocontido que carrega os tiles relevantes; avaliar limite de tamanho para zonas grandes.
