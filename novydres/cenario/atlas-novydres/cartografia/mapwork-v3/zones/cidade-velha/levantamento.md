@@ -233,11 +233,21 @@
 - Evidência: “KW-V3-D35: Aprovo A — pequenos recuos e espaços de espera abrigados junto aos portões de trabalhadores, preferencialmente dentro dos terrenos industriais, sem alargar as ruas históricas.”
 - Consequência: proteção localizada para trocas de turno sem transferir aglomerações às ruas estreitas e sem alargamento artificial de vias; respeitar D08, D19, D28-D29 e D34. **Não aprova abrigos ou recuos individuais, dimensões, portões, localizações, geometrias ou arte.**
 
+**KW-V3-D36 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** cortiços e moradias subdivididas compactas, conectados por pequenos pátios coletivos e passagens internas, com anexos utilitários irregulares.
+- Evidência: “KW-V3-D36: Aprovo A — cortiços e moradias subdivididas compactas, conectados por pequenos pátios coletivos e passagens internas, com anexos utilitários irregulares.”
+- Consequência: quarteirões residenciais de ocupação densa, pátios internos menores e anexos irregulares junto às ruas operárias secundárias. **Não fixa imóveis, pátios individuais, vias, dimensões, geometrias ou arte.**
+
+**KW-V3-D37 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** uso misto pulverizado, com pequenas oficinas, vendas e serviços espalhados por térreos ou anexos de pátios, integrados às moradias, sem eixo comercial muito nítido.
+- Evidência: “KW-V3-D37: A — Uso misto pulverizado (recomendada). Pequenas oficinas, vendas e serviços aparecem espalhados no térreo ou em anexos de pátio, misturados às moradias, sem formar um eixo comercial muito nítido.”
+- Consequência: quarteirões de trabalho e moradia intercalados em escala miúda, sem concentração artificial de lojas em uma única rua. **Não aprova oficinas, lojas ou atividades específicas, imóveis, locais, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D36` — como organizar internamente os quarteirões de moradias operárias próximos aos muros industriais, preservando a malha estreita?
-- **A (recomendada):** cortiços e moradias subdivididas muito compactas, conectadas por pequenos pátios coletivos e passagens internas, com anexos utilitários irregulares.
-- **B:** fileiras de casas operárias estreitas e geminadas, com fundos pequenos e ligações ocasionais entre as fileiras, formando quadras relativamente mais regulares.
-- **C:** blocos habitacionais coletivos e compridos, agrupados ao redor de pátios internos um pouco maiores, com poucos acessos às ruas secundárias.
-Compatibilizar D15–D17, D28, D35 e base U02. **Não aprova imóveis, lotes, vias, dimensões, geometrias ou imagens.**
+`KW-V3-D38` — quanta circulação pedonal por dentro dos pátios e passagens deve conectar ruas e quadras mistas?
+- **A:** passagens atravessáveis entre várias ruas e pátios, com comércio e oficinas orientados também a alguns caminhos internos.
+- **B:** pátios predominantemente reservados, acessados por uma única passagem a partir da rua; sem travessias frequentes por dentro das quadras.
+- **C (recomendada):** permeabilidade irregular, com alguns percursos atravessáveis e muitos pátios sem saída ou semiprivados, criando uma rede orgânica de ramificações.
+A escolha define apenas a relação relativa entre pátios e circulação a pé. **Não cria novas ruas, servidões legais, portões, passagens ou acessos específicos, nem geometrias ou imagens.** Preservar D08, D15, D18-D19, D28-D29, D36-D37 e conectores U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
