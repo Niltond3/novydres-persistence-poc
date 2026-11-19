@@ -103,11 +103,16 @@
 - **Guardrail para geração cartográfica:** exigir contagem exata de três pontes no Rio Vasyl, proibir qualquer quarta ponte (inclusive implícita em nova rodovia/ramal), representar travessias alternativas por balsas. Se a referência U02 ou outros conectores parecerem contradizer a regra, **reportar divergência antes de editar a referência**; não deslocar ou eliminar o conector aprovado automaticamente.
 - Não aprova as posições nem a geometria das pontes e dos terminais de balsas.
 
+**KW-V3-D10 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** poucas rotas fixas de balsas, operando terminais estruturados com acesso à malha viária e capacidade de transportar pessoas e veículos.
+- Evidência: “KW-V3-D10: Aprovo A — poucas rotas fixas, com terminais estruturados e capacidade de transportar pessoas e veículos.”
+- Consequência funcional: representar travessias hidroviárias regulares articuladas às ruas, em complementação às três pontes históricas de KW-V3-D09. **Sem número ou local aprovado para as rotas, balsas e terminais; sem novas pontes.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D10` — qual padrão de serviço das balsas que complementam as três pontes históricas em Kingswell?
-- **A (recomendada):** poucas rotas fixas, com terminais estruturados e acessos viários para pessoas e veículos.
-- **B:** numerosas rotas curtas entre atracadouros locais, algumas para veículos e outras apenas para passageiros.
-- **C:** hierarquia com travessia principal para veículos e múltiplas rotas menores para passageiros.
-Nenhum modelo libera a construção de outra ponte; a localização e as instalações dependerão de proposta técnica aprovada.
+`KW-V3-D11` — como distribuir funcionalmente as três pontes históricas sobre o Rio Vasyl?
+- **A (recomendada):** uma ponte junto ao núcleo histórico termal; as outras duas conectam diferentes setores do vale e da expansão urbana.
+- **B:** três pontes próximas ao núcleo histórico, com balsas especialmente relevantes para bairros afastados.
+- **C:** três pontes distribuídas em trechos separados segundo os eixos de circulação de maior escala, sem centralidade histórica de uma delas.
+A decisão orienta função e distribuição, **sem aprovar margens, geometrias, coordenadas ou alterar conectores da base U02.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
