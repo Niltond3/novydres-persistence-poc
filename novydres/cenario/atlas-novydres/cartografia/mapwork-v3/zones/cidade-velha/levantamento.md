@@ -158,11 +158,16 @@
 - Evidência: “KW-V3-D20: Aprovo A — marcos cívicos e religiosos distribuídos entre largos e quarteirões históricos reaproveitados, com funções comunitárias também nas expansões urbanas.”
 - Consequência: conservar a pluralidade dos marcos no tecido antigo, estendendo funções comunitárias aos bairros novos sem criar centro monumental único. **Não confirma identidade, número, função atual ou implantação de templos, sedes ou POIs específicos, nem geometria ou arte.**
 
+**KW-V3-D21 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** rede de serviços comunitários distribuídos pelos bairros, em edifícios pequenos e médios, frequentemente reaproveitados, com poucos equipamentos maiores próximos às vias principais.
+- Evidência: “KW-V3-D21: Aprovo A — rede de serviços comunitários distribuídos pelos bairros, em edifícios pequenos e médios, frequentemente reaproveitados, com poucos equipamentos maiores próximos às vias principais.”
+- Consequência: serviços cotidianos de proximidade integrados ao tecido misto, complementados por poucos equipamentos de escala maior próximos dos eixos viários. **Não aprova instituições ou locais específicos, quantidade, capacidade, qualidade de serviço, geometria ou imagens.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D21` — como distribuir serviços comunitários básicos (escolas, atendimento de saúde local e apoio social) entre núcleo histórico e expansões?
-- **A (recomendada):** rede distribuída em prédios pequenos e médios, inclusive edifícios reaproveitados, associada a vias locais e largos; poucos equipamentos maiores junto aos eixos de acesso.
-- **B:** polos de serviços maiores e concentrados nas avenidas e perto das pontes, exigindo mais deslocamentos desde os bairros residenciais.
-- **C:** predomínio de soluções comunitárias improvisadas em construções reconvertidas, com escassez de instalações formais.
-A decisão é de morfologia para o esboço, **sem inventar escolas, clínicas ou hospitais específicos**. Respeitar a distribuição térmica desigual, o clima letal, as três únicas pontes, os serviços de balsas, e a ausência de geometria aprovada.
+`KW-V3-D22` — que ocupação predomina nas **margens do Rio Vasyl dentro de Kingswell** em 2010?
+- **A (recomendada):** frentes ribeirinhas mistas e descontínuas: habitação densa, cais e armazéns antigos, pequenos acessos públicos e pontos de embarque compatíveis; maior intensidade logística na transição industrial.
+- **B:** frente predominantemente residencial e comercial compacta, edificações próximas ao rio e instalações de cais/embarque concentradas em poucos acessos.
+- **C:** frentes ribeirinhas sobretudo produtivas e logísticas, com armazéns, cais e oficinas em longos trechos; moradia e espaços públicos recuados.
+Respeitar as **três únicas pontes**, as rotas fixas de balsas, a origem histórica numa margem e a expansão posterior para a outra. **A escolha não define margens, cais ou terminais individuais, coordenadas, contornos ou imagens.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
