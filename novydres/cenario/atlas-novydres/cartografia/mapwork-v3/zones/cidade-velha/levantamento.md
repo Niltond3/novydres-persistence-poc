@@ -213,11 +213,16 @@
 - Evidência: “KW-V3-D31: Aprovo A — maioria dos complexos industriais ainda em funcionamento, mas desgastados e remendados, com fachadas escurecidas, coberturas reparadas, manutenção irregular e alguns setores desativados.”
 - Consequência: paisagem industrial predominantemente ativa, porém fisicamente deteriorada, com manutenção desigual e abandono limitado a alguns setores. **Não define empresas, edifícios, quantidades, distribuição espacial, geometria nem arte.**
 
+**KW-V3-D32 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** bolsões descontínuos de galpões e alas desativadas dentro ou junto aos complexos industriais ainda operacionais, com pátios parcialmente inutilizados e sem grandes vazios urbanos.
+- Evidência: “KW-V3-D32: Aprovo A — bolsões descontínuos de galpões e alas desativadas dentro ou junto aos complexos industriais ainda operacionais, com pátios parcialmente inutilizados e sem grandes vazios urbanos.”
+- Consequência: desativação em fragmentos entre instalações ativas, não bairros inteiros abandonados. Preservar maioria industrial em funcionamento (D31) e continuidade urbana (D06). **Sem localização, quantidade, proprietários, ocupantes, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D32` — como distribuir os setores fabris desativados entre complexos ainda em operação na transição de Kingswell para Sulfok?
-- **A (recomendada):** bolsões descontínuos de alas e galpões desativados dentro ou ao lado de complexos ainda ativos; pátios parcialmente inutilizados, sem grandes vazios.
-- **B:** algumas fábricas completas desativadas nas bordas do corredor industrial, conservando predominância operacional nos quarteirões centrais.
-- **C:** antigos edifícios fabris desativados perto de ruas secundárias, reaproveitados pontualmente para oficinas, depósitos ou serviços comunitários.
-Respeitar o predomínio de indústria ativa da D31, a morfologia fabril D27-D30 e a continuidade urbana D06. **Não fixa imóveis, ocupantes, quantidades, coordenadas ou geometria.**
+`KW-V3-D33` — que condição física e uso predomina nos bolsões fabris desativados entre fábricas ainda operacionais?
+- **A (recomendada):** setores fechados e em degradação gradual, com maquinário e materiais remanescentes, estruturas parcialmente deterioradas, mas sem predomínio de ruínas abertas.
+- **B:** reaproveitamento informal de algumas áreas por pequenas oficinas, depósitos e atividades secundárias, misturado a setores fechados.
+- **C:** degradação estrutural mais intensa, com colapsos parciais de coberturas, corrosão e pátios obstruídos, contrastando com galpões vizinhos ativos.
+A escolha não define ocupantes, empresas, perigos ou percentuais; conservar D29, D31-D32 e U02. **Sem geometria ou imagem.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
