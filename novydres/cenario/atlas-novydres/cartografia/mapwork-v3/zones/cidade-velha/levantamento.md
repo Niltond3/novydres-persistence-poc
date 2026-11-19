@@ -173,11 +173,16 @@
 - Evidência: “KW-V3-D23: Aprovo A — acessos capilares por vielas, escadarias e passagens de pedestres, complementados por poucos eixos viários e rampas para balsas de veículos e logística.”
 - Consequência: preservar a capilaridade da malha antiga em vez de impor avenida marginal contínua, assegurando alguns acessos automotivos estruturantes ao rio. **Não aprova número, localização, traçado nem engenharia individual de rampas, escadas, vias ou terminais, e não altera a referência U02.**
 
+**KW-V3-D24 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pequenos cais históricos e acessos públicos permanecem distribuídos pela frente ribeirinha; os poucos terminais de balsas operam separadamente, com rampas e acessos viários próprios.
+- Evidência: “KW-V3-D24: Aprovo A — pequenos cais históricos e acessos públicos distribuídos, separados funcionalmente dos poucos terminais de balsas, que terão rampas e acessos viários próprios.”
+- Consequência: não converter a rede de pequenos cais históricos em terminais veiculares; organizar aproximações e rampas de balsas em poucos pontos funcionais. **Sem autorizar número, localização, dimensões, obras, nova ponte, geometria ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D24` — como relacionar operacionalmente os pequenos cais históricos e os terminais estruturados de balsas para pessoas e veículos?
-- **A (recomendada):** pequenos cais e acessos públicos permanecem distribuídos e independentes; poucos terminais de balsas ocupam locais próprios com rampas e acessos viários, evitando sobrecarregar as vielas.
-- **B:** terminais de balsas compartilham parte dos antigos cais, armazéns e áreas de comércio, formando polos mistos de passageiros, veículos e carga leve.
-- **C:** terminais e operação de carga concentram-se mais na transição industrial, deixando antigos cais do centro sobretudo para comércio local e uso comunitário.
-Esta escolha define apenas organização relativa, **sem quantidade de rotas ou terminais, POIs, localização, infraestrutura, geometria ou novas pontes**. As três únicas pontes e a base U02 permanecem protegidas.
+`KW-V3-D25` — como distribuir a transferência de mercadorias entre os antigos cais e o corredor logístico-industrial compartilhado com Sulfok?
+- **A (recomendada):** rede escalonada, com pequenos depósitos e carga leve nos cais antigos, passando para pátios de transbordo maiores acessíveis por vias amplas nas bordas do núcleo histórico.
+- **B:** muitos pequenos entrepostos, oficinas e pátios de carga permeando o tecido residencial-industrial, enquanto caminhões grandes usam os poucos corredores estruturantes.
+- **C:** transferência de carga principalmente concentrada em poucos centros junto à transição industrial, mantendo comércio de baixo volume nos antigos cais.
+Nenhuma alternativa cria nova ferrovia, rodovia, terminal, cais ou ponte, nem define localização, capacidade, quantidade, traçado ou geometria; respeitar D06-D07, D22-D24 e conectores U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
