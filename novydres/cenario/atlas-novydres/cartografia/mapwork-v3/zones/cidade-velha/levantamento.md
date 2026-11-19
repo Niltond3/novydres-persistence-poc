@@ -188,11 +188,16 @@
 - Evidência: “KW-V3-D26: Aprovo A — corredor principal de cargas com acessos seletivos aos pátios e galpões, complementado por ruas locais que atendem moradias e comércio sem sobrecarregar as vielas históricas.”
 - Consequência: separação hierárquica do tráfego pesado sem isolar funcionalmente bairros ou impor hiatos urbanos artificiais na transição com Sulfok. **Não cria vias, ramais, pontes, traçados, geometrias ou arte.** Preservar U02.
 
+**KW-V3-D27 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** grandes galpões, pátios murados e complexos fabris predominam junto ao corredor de cargas; oficinas e moradias se concentram principalmente nas ruas secundárias.
+- Evidência: “KW-V3-D27: Aprovo B — grandes galpões, pátios murados e complexos fabris predominam junto ao corredor de cargas, enquanto oficinas e moradias ocupam principalmente ruas secundárias.”
+- Consequência: frente industrial de porte maior e caráter produtivo nítido no corredor, convivendo com bairros operários adjacentes. **Sem inventar separação desocupada, fronteira impermeável com Sulfok, edifícios, alturas, lotes ou geometrias.** Preservar U02.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D27` — que tipologia de edifícios industriais e oficinas deve predominar na transição entre Kingswell e Sulfok?
-- **A (recomendada):** fábricas e oficinas antigas de tijolo reaproveitadas, galpões médios e anexos utilitários posteriores, entremeados com habitações operárias; poucos complexos maiores junto ao corredor de cargas.
-- **B:** grandes galpões, pátios murados e conjuntos fabris de maior porte dominam o corredor; oficinas e moradias predominam nas ruas secundárias.
-- **C:** prédios produtivos mais modernos de metal e concreto dominam as expansões, restando oficinas e instalações históricas de tijolo como fragmentos.
-Definir apenas a identidade morfológica de Kingswell sem substituir pela de Sulfok; **não aprovar edifícios, lotes, volumes específicos, traçados, geometrias ou imagens**.
+`KW-V3-D28` — como relacionar espacialmente os grandes complexos fabris murados e as ruas residenciais/comerciais próximas?
+- **A (recomendada):** transição construída gradual com oficinas e depósitos menores entre grandes instalações e moradias operárias; nenhuma faixa vazia artificial.
+- **B:** contraste direto com muros altos e fundos de fábricas confrontando ruas residenciais estreitas, poucas mediações de escala e acessos controlados.
+- **C:** frentes parcialmente ativas de comércio, oficinas e serviços nos limites dos complexos, deixando galpões grandes e pátios mais internos às quadras.
+A escolha complementa D27, **não altera a predominância de galpões junto ao corredor nem aprova novos traçados, edifícios, geometrias ou imagens**. Respeitar D06, D26 e conectores U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
