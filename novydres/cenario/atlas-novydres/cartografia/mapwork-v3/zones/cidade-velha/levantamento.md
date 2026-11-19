@@ -77,11 +77,16 @@
 - Evidência: “KW-V3-D04: Aprovo A — sobreposição gradual: a malha urbana anterior permaneceu em grande parte, com inserções de edifícios de poder, culto e praças remodeladas.”
 - Consequência morfológica: sobrepor diferentes períodos de edifícios e espaço público sem substituir uniformemente a malha termal original. **Não aprova sítios ou monumentos concretos nem canoniza sobrevivências específicas até 2010.**
 
+**KW-V3-D05 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** reapropriação funcional predominante das construções históricas para moradias, mercados, oficinas e usos comunitários, mantendo alguns monumentos e ruínas.
+- Evidência: “KW-V3-D05: Aprovo A — reapropriação funcional das construções históricas para moradias, mercados, oficinas e usos comunitários, mantendo alguns monumentos e ruínas.”
+- Consequência morfológica: reutilização do tecido construído em vez de abandono total ou substituição uniforme, com coexistência de estruturas monumentais e ruínas. **Não aprova edificações individuais, quantidades, localização ou canonização.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D05` — em 2010, qual o destino predominante das construções antigas de culto e poder, sobretudo no contexto de Kingswell após 1917?
-- **A (recomendada):** reapropriação para moradias, mercados, oficinas e atividades comunitárias; monumentos e algumas ruínas ainda visíveis.
-- **B:** fragmentação: muitos espaços abandonados/arruinados, entremeados por ocupações improvisadas e inserções operárias.
-- **C:** substituição por adensamento: cortiços e estruturas produtivas ocuparam boa parte das antigas áreas, restando poucos marcos reconhecíveis.
-A escolha caracteriza a paisagem urbana em 2010, sem inventar decretos da Revolta de 1917 ou transformar percentuais e edificações hipotéticas em fatos.
+`KW-V3-D06` — como conectar morfologicamente o núcleo histórico compacto às expansões industriais internas ao raion Kingswell em 2010?
+- **A (recomendada):** transição contínua e irregular, com mistura gradual de quarteirões antigos, cortiços, oficinas e galpões, reforçando o corredor logístico existente em direção a Sulfok.
+- **B:** transição relativamente nítida entre tecido antigo e tecido fabril, porém com ocupação urbana contígua.
+- **C:** mosaico intenso de antigas quadras, moradia operária e focos industriais intercalados em praticamente todo o raion, sem progressão predominante.
+Não criar vazios urbanos artificiais; **preservar geometria macro, Ermos e conectores aprovados e não inferir localização/forma de faixa industrial.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
