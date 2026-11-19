@@ -208,11 +208,16 @@
 - Evidência: “KW-V3-D30: Aprovo A — galpões com telhados amplos e variados, predominantemente baixos ou médios, com poucas chaminés e torres técnicas altas como marcos ocasionais.”
 - Consequência: grandes coberturas industriais com perfil majoritariamente baixo/médio e pontuais marcos técnicos verticais, sem formar uma floresta contínua de chaminés. **Não aprova quantidades, alturas, locais, novas instalações, geometrias ou arte.**
 
+**KW-V3-D31 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** maioria dos complexos industriais ainda em funcionamento, mas desgastados e remendados, com fachadas escurecidas, coberturas reparadas, manutenção irregular e alguns setores desativados.
+- Evidência: “KW-V3-D31: Aprovo A — maioria dos complexos industriais ainda em funcionamento, mas desgastados e remendados, com fachadas escurecidas, coberturas reparadas, manutenção irregular e alguns setores desativados.”
+- Consequência: paisagem industrial predominantemente ativa, porém fisicamente deteriorada, com manutenção desigual e abandono limitado a alguns setores. **Não define empresas, edifícios, quantidades, distribuição espacial, geometria nem arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D31` — qual o estado de conservação predominante dos complexos fabris de Kingswell em 2010?
-- **A (recomendada):** industriais ainda em funcionamento, mas desgastados e remendados, com fachadas escurecidas, coberturas reparadas e manutenção irregular; alguns setores desativados.
-- **B:** declínio industrial profundo, com grande parte dos complexos vazios ou parcialmente ocupados, pátios deteriorados e poucas operações regulares.
-- **C:** operação industrial relativamente forte, com galpões conservados e modernizados, apesar das precariedades do entorno residencial.
-A decisão trata da atmosfera física e ocupação relativa, não da produção exata ou de edifícios individuais. Preservar D17, D27-D30 e base U02; **sem geometrias ou imagens**.
+`KW-V3-D32` — como distribuir os setores fabris desativados entre complexos ainda em operação na transição de Kingswell para Sulfok?
+- **A (recomendada):** bolsões descontínuos de alas e galpões desativados dentro ou ao lado de complexos ainda ativos; pátios parcialmente inutilizados, sem grandes vazios.
+- **B:** algumas fábricas completas desativadas nas bordas do corredor industrial, conservando predominância operacional nos quarteirões centrais.
+- **C:** antigos edifícios fabris desativados perto de ruas secundárias, reaproveitados pontualmente para oficinas, depósitos ou serviços comunitários.
+Respeitar o predomínio de indústria ativa da D31, a morfologia fabril D27-D30 e a continuidade urbana D06. **Não fixa imóveis, ocupantes, quantidades, coordenadas ou geometria.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
