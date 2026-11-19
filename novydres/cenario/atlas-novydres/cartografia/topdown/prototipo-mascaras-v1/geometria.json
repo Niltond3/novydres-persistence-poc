@@ -1,0 +1,36 @@
+{
+  "schema": "NOVYDRES_HIERARCHICAL_MASK_PROTOTYPE_V1",
+  "state": "CANDIDATE_AWAITING_OWNER_VISUAL_REVIEW",
+  "not_canon": true,
+  "base": {
+    "asset": "T03_U02_aprovada.png",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "size_px": [1448, 1086],
+    "is_immutable": true,
+    "coordinate_system": "topdown U02 pixel coordinates, origin top-left, +x east, +y south"
+  },
+  "render": { "detail_scale": 16, "crop_xyxy": [740, 776, 814, 836], "camera": "plan 90 deg; local volumes conveyed through roof facets; no perspective warp" },
+  "hierarchy": [
+    {"id":"city-novydres","type":"city","parent":null,"editable":false},
+    {"id":"region-kingswell","type":"region","parent":"city-novydres","editable":false,"region_status":"working_visual_anchor_only"},
+    {"id":"neighborhood-ksw-pilot-01","type":"neighborhood","parent":"region-kingswell","polygon_px":[[754,788],[801,788],[802,818],[754,818]],"editable":false,"status":"study_only_not_administrative_boundary"},
+    {"id":"lot-a","type":"lot","parent":"neighborhood-ksw-pilot-01","polygon_px":[[758.8,792.3],[776.8,792.3],[777.3,814.4],[758.7,814.4]]},
+    {"id":"lot-b","type":"lot","parent":"neighborhood-ksw-pilot-01","polygon_px":[[779.6,792.3],[798.6,792.3],[798.6,814.4],[779.6,814.4]]},
+    {"id":"a1","type":"building","parent":"lot-a","roof_kind":"gable","footprint_px":[760.3,793.6,767.4,803.1],"wall_height_px":0.6,"palette":"slate"},
+    {"id":"a2","type":"building","parent":"lot-a","roof_kind":"mansard","footprint_px":[768.5,793.8,775.7,803.8],"wall_height_px":0.6,"palette":"terracotta"},
+    {"id":"a3","type":"building","parent":"lot-a","roof_kind":"industrial_sawtooth","footprint_px":[760.4,806.2,775.9,813.2],"wall_height_px":0.6,"palette":"slate"},
+    {"id":"b1","type":"building","parent":"lot-b","roof_kind":"gable","footprint_px":[780.9,793.5,788.1,803.5],"wall_height_px":0.6,"palette":"terracotta"},
+    {"id":"b2","type":"building","parent":"lot-b","roof_kind":"flat","footprint_px":[789.3,793.6,797.3,803.9],"wall_height_px":0.6,"palette":"slate","target_of_microedit":true},
+    {"id":"b3","type":"building","parent":"lot-b","roof_kind":"mansard","footprint_px":[780.9,805.3,789.8,813.4],"wall_height_px":0.6,"palette":"slate"},
+    {"id":"b4","type":"building","parent":"lot-b","roof_kind":"gable","footprint_px":[790.9,805.3,797.4,813.4],"wall_height_px":0.6,"palette":"terracotta"}
+  ],
+  "protected_external_layers": ["roads","railways","tramways","water","terrain","islands","ermo","pois"],
+  "edit_policy": {
+    "parent_geometry_contains_child_geometry": true,
+    "building_change": "render target building; diff allowed only in this building's stable edit mask; parents unaffected",
+    "lot_change": "rerender lot; revalidate every child building geometry and graphic layer; do not automatically replace unaffected buildings",
+    "infra_change": "independent layer; recalculate affected building/lot conflicts before any raster change",
+    "approval": "visual comparison + original preservation check; no canon until explicit approval"
+  },
+  "target_edit": {"building_id":"b2","from":"flat slate roof","to":"oxidized-copper pitched roof with dormers and chimneys"}
+}

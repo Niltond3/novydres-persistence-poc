@@ -1,0 +1,32 @@
+{
+  "schema": "NOVYDRES_PROTOTYPE_MASK_VALIDATION_V1",
+  "base_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "city_size_px": [
+    1448,
+    1086
+  ],
+  "detail_scale": 16,
+  "region": "Kingswell",
+  "neighborhood": "neighborhood-ksw-pilot-01",
+  "lot_count": 2,
+  "buildings_count": 7,
+  "microedit_target": "b2",
+  "changed_pixels_16x_lots": 212046,
+  "changed_pixels_16x_microedit": 22498,
+  "changed_pixels_native_lots": 865,
+  "changed_pixels_native_microedit": 108,
+  "highres_microedit_outside_b2": 0,
+  "highres_lot_edit_outside_lots": 0,
+  "native_lot_edit_outside_lots": 0,
+  "native_microedit_outside_b2": 0,
+  "geometry_child_within_parent": true,
+  "source_unchanged": true,
+  "structural_validation": "pixelwise outside protected masks; exact rail/water layer geometry not revalidated",
+  "limitations": [
+    "Experimental 2.5D roofs, not generative architectural illustration",
+    "No approved cadastral lot geometry",
+    "Original U02 only has 1448x1086 details; high-res new building layers cannot recover lost original detail",
+    "No physical GIS validation and no real-world absolute dimensions",
+    "HTML browser/mobile device visual QA pending"
+  ]
+}
