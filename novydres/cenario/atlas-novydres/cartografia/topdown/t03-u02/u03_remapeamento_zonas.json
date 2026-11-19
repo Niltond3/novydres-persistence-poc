@@ -1,0 +1,50 @@
+{
+  "schema": "NOVYDRES_U03_ONWARD_REGION_SWAP_V1",
+  "status": "OWNER_APPROVED_FOR_U03_ONWARD_VISUAL_MAP",
+  "owner_phrase": "trocar de lugar para U3 em diante Vasyl Bay e New London. Sendo que o POI da estação ferrea ficará no caso em New London",
+  "effective_from": "T03/U03",
+  "retroactively_changes_u01_or_u02": false,
+  "regional_envelopes": [
+    {
+      "previous_label": "Vasyl Bay",
+      "new_label": "New London",
+      "previous_id": "district-vasyl-bay",
+      "new_id": "district-new-london",
+      "affects_existing_pixels": false
+    },
+    {
+      "previous_label": "New London",
+      "new_label": "Vasyl Bay",
+      "previous_id": "district-new-london",
+      "new_id": "district-vasyl-bay",
+      "affects_existing_pixels": false
+    }
+  ],
+  "poi34": {
+    "id": "poi-34",
+    "name": "Estação Norte de Passageiros",
+    "stays_in_physical_location": true,
+    "new_working_region": "New London",
+    "status": "OWNER_APPROVED_ZONE_ASSIGNMENT_FOR_U03",
+    "does_not_define_exact_polygon": true
+  },
+  "poi21": {
+    "id": "poi-21",
+    "name": "Estação Sul de Carga / Pátio Ferroviário",
+    "alias_retired": "poi-35",
+    "unchanged": true
+  },
+  "other_pois": "Revisar os POIs de New London e Vasyl Bay em U03; nao mover edificios sem aprovar contorno, identidades ou necessidades de preservacao.",
+  "official_9_raions_unchanged": true,
+  "important_conflict": {
+    "fact_id": "GEO-013.1",
+    "current_official_passenger_raion": "Sulfok",
+    "new_working_passenger_visual_raion": "New London",
+    "needs_source_owner_reconciliation": true,
+    "no_automatic_canon_promotion": true
+  },
+  "T03U02_artwork_preserved": true,
+  "map_style": "top-down 90 graus, gótico-punk, iluminação discreta, vias frias de diferentes larguras",
+  "exact_mask_approval": false,
+  "geospatial_canon_approved": false
+}
