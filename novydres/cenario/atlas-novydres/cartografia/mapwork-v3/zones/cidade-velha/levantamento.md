@@ -133,11 +133,16 @@
 - Evidência: “KW-V3-D15: Aprovo A — tecido residencial denso e misto, com cortiços e edifícios históricos subdivididos no núcleo, passando gradualmente a habitações operárias, moradias sobre oficinas e quadras industriais-residenciais.”
 - Consequência morfológica: adensamento habitacional sem tornar os bairros mono-funcionais, conservando diversidade histórica e continuidade com o corredor industrial. **Não define densidades numéricas, quantidade de edifícios, altura, lotes ou geometria.**
 
+**KW-V3-D16 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** perfil de alturas escalonado e irregular: construções históricas comparativamente baixas e compactas; volumes médios nas expansões operárias; poucos marcos elevados.
+- Evidência: “KW-V3-D16: Aprovo A — perfil escalonado e irregular, com construções históricas relativamente baixas e compactas, volumes médios nas expansões e poucos marcos altos.”
+- Consequência morfológica: skyline de caráter não uniforme, mas com legibilidade de núcleo antigo e expansões; sem prédios altos distribuídos uniformemente nem obrigação de blocos horizontais grandes. **Não fixa número de andares, posições dos marcos, volumes individuais, polígonos ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D16` — como variar o **gabarito e o volume construído** entre o núcleo histórico termal e as expansões operárias?
-- **A (recomendada):** núcleo com prédios comparativamente baixos e compactos, expansões com volumes predominantemente médios e poucos marcos elevados; silhueta irregular, não uniforme.
-- **B:** núcleo antigo baixo contrastando fortemente com blocos habitacionais e industriais maiores e mais altos nas expansões.
-- **C:** alturas baixas, médias e altas fortemente intercaladas em quase todo o tecido, inclusive nas mesmas quadras, sem perfil territorial predominante.
-Nenhuma alternativa fixa pavimentos, número de edifícios, relevo, polígonos ou imagens; a proposta técnica posterior deve preservar a referência U02 e as decisões previamente aprovadas.
+`KW-V3-D17` — que linguagem de materiais e fachadas deve predominar no tecido histórico de Kingswell, com suas camadas de ocupação e adaptações até 2010?
+- **A (recomendada):** pedra e tijolo envelhecidos das camadas antigas, madeira em anexos, reparos de metal e concreto posteriores; fachadas e telhados variados adaptados ao frio, com marcas de reuso.
+- **B:** alvenaria mais monumental e ornamento gótico-eslavo dominantes no núcleo histórico, com reformas e elementos produtivos secundários.
+- **C:** linguagem popular mais austera de madeira/tijolo com raros prédios monumentais ou ornados, fortemente remendada por material industrial reutilizado.
+A decisão define predominâncias arquitetônicas, **sem aprovar materiais obrigatórios para cada prédio, localização, desenho, alturas ou geração de imagem**. Não atribuir automaticamente a Kingswell a identidade regional específica de Drevnigrad.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
