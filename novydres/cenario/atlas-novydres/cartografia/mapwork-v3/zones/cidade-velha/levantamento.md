@@ -349,3 +349,6 @@
 **Próximo trabalho obrigatório:** reconciliação espacial e técnica, conforme `auditoria-prontidao-2026-11-19.md`. Sem inventar pergunta D57. A próxima deliberação do proprietário só deve tratar de uma escolha espacial que o esboço integral e as evidências da U02 demonstrem não ser resolvível tecnicamente.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
+
+
+**Esboço técnico integral U02 v1:** proposta depositada em `esboco-integral-u02-v1.json` e descrita em `esboco-integral-u02-v1.md`. Por causa de cruzamentos visuais adicionais e sobreposição com Sulfok, permanece CANDIDATE; nenhuma imagem gerada nem sketch aprovado.

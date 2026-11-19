@@ -10,43 +10,46 @@
   },
   "base_u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
   "working_bounds_px": [
-    485,
-    655,
-    1040,
+    306,
+    650,
+    1050,
     1086
   ],
-  "bounds_note": "RETÂNGULO DE CONTEXTO para observação de margem e vizinhança, não é polígono oficial de Kingswell nem máscara autorizada. A área de busca anterior foi sul-central e não ratificou fronteiras.",
+  "bounds_note": "Retângulo contextual para incluir as duas margens candidatas e a aproximação de Sulfok; não é limite oficial ou máscara aprovada.",
   "bridge_count_mandatory": 3,
   "bridges": [
     {
       "id": "KW-VASYL-01",
       "center_px": [
-        515,
-        765
+        520,
+        766
       ],
       "role": "travessia histórica do microcentro termal para margem de expansão",
       "confidence": "CANDIDATE",
-      "mixed_ped_vehicle": true
+      "mixed_ped_vehicle": true,
+      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "KW-VASYL-02",
       "center_px": [
-        548,
-        810
+        542,
+        811
       ],
       "role": "travessia residencial e comercial na expansão intermediária",
       "confidence": "CANDIDATE",
-      "mixed_ped_vehicle": true
+      "mixed_ped_vehicle": true,
+      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "KW-VASYL-03",
       "center_px": [
-        540,
-        883
+        541,
+        881
       ],
       "role": "travessia de expansão industrial mista, sem especialização permanente",
       "confidence": "CANDIDATE",
-      "mixed_ped_vehicle": true
+      "mixed_ped_vehicle": true,
+      "site_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     }
   ],
   "river_identification": "Curso sinuoso na interface oeste da área de busca; confirmar que é Rio Vasyl e classificar todas as passagens aparentes antes de fixar as três pontes. Se conflito com U02 ou Sulfok, manter bloqueio e corrigir esboço, nunca inventar quarta ponte.",
@@ -55,66 +58,91 @@
       "id": "poi-14",
       "name": "Salão do Conselho",
       "center_px": [
-        690,
-        790
+        689,
+        792
       ],
       "rationale": "Uso cívico reaproveitado perto do microcentro termal e de uma praça preexistente",
       "kind": "special_building_candidate",
       "source": "inventario-espacial-v3-aprovado.json (ponto em referência visual anterior)",
       "u02_site_confirmation": "PENDING",
-      "canonized_location": false
+      "canonized_location": false,
+      "previously_inventoried_center_px": [
+        690,
+        790
+      ],
+      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "poi-15",
       "name": "Estação Geotérmica Periférica",
       "center_px": [
-        880,
-        1020
+        868,
+        929
       ],
       "rationale": "Faixa técnica periférica, acesso de manutenção por via existente",
       "kind": "special_building_candidate",
       "source": "inventario-espacial-v3-aprovado.json (ponto em referência visual anterior)",
       "u02_site_confirmation": "PENDING",
-      "canonized_location": false
+      "canonized_location": false,
+      "previously_inventoried_center_px": [
+        880,
+        1020
+      ],
+      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "poi-16",
       "name": "Capelas da Fome Branca / Cathedral Streets",
       "center_px": [
-        718,
-        900
+        713,
+        897
       ],
       "rationale": "Capelas dispersas junto a cortiços, pátios e vielas sem grande vazio artificial",
       "kind": "special_building_candidate",
       "source": "inventario-espacial-v3-aprovado.json (ponto em referência visual anterior)",
       "u02_site_confirmation": "PENDING",
-      "canonized_location": false
+      "canonized_location": false,
+      "previously_inventoried_center_px": [
+        718,
+        900
+      ],
+      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "poi-17",
       "name": "Assembleia dos Estados Livres",
       "center_px": [
-        834,
-        841
+        830,
+        828
       ],
       "rationale": "Edifício comunitário central em malha mista, acessível das vias coletoras",
       "kind": "special_building_candidate",
       "source": "inventario-espacial-v3-aprovado.json (ponto em referência visual anterior)",
       "u02_site_confirmation": "PENDING",
-      "canonized_location": false
+      "canonized_location": false,
+      "previously_inventoried_center_px": [
+        834,
+        841
+      ],
+      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     },
     {
       "id": "poi-32",
       "name": "Grande Sinagoga Beit HaZikaron",
       "center_px": [
-        750,
-        951
+        741,
+        915
       ],
       "rationale": "Edifício religioso histórico integrado à ocupação residencial e acessos a pé",
       "kind": "special_building_candidate",
       "source": "inventario-espacial-v3-aprovado.json (ponto em referência visual anterior)",
       "u02_site_confirmation": "PENDING",
-      "canonized_location": false
+      "canonized_location": false,
+      "previously_inventoried_center_px": [
+        750,
+        951
+      ],
+      "position_status": "INTEGRAL_SKETCH_PROPOSED_NOT_APPROVED"
     }
   ],
   "external_resource_fronts": [
@@ -147,7 +175,10 @@
     "adjacent_zone_edges_verified": false,
     "poi_u02_sites_verified": false,
     "full_technical_sketch_approved": false,
-    "image_generation_authorized": false
+    "image_generation_authorized": false,
+    "integral_sketch_prepared": true,
+    "integral_sketch_owner_approved": false,
+    "crossing_conflicts_unresolved": 3
   },
   "rail_exit_candidates": [
     {
@@ -168,5 +199,6 @@
       "new_rail_geometry_authorized": false
     }
   ],
-  "rail_geometry_gate": "A coordenada é apenas âncora de borda a ajustar sobre os trilhos EXISTENTES da U02; não fixa expansão de linha, ramal ou plataforma. Toda continuidade fora da cena exige o conector físico confirmado na visão técnica integral."
+  "rail_geometry_gate": "A coordenada é apenas âncora de borda a ajustar sobre os trilhos EXISTENTES da U02; não fixa expansão de linha, ramal ou plataforma. Toda continuidade fora da cena exige o conector físico confirmado na visão técnica integral.",
+  "integral_sketch_ref": "esboco-integral-u02-v1.json"
 }
