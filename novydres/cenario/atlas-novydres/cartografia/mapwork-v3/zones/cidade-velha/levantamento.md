@@ -62,11 +62,16 @@
 - Evidência: mensagem expressa do proprietário: “KW-V3-D01: Aprovo a opção A — núcleo histórico compacto em torno do vale termal e do Rio Vasyl; expansões industriais fora do núcleo, ainda dentro do raion Kingswell.”
 - Consequência espacial: separar perímetro do núcleo histórico, zonas de expansão no mesmo raion, corredor extrativo até Sulfok e redes de travessia. **Aprovação conceitual não aprova polígono, metragem, edifícios, pontes, densidade nem cânone do Atlas.**
 
+**KW-V3-D02 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** núcleo histórico inicialmente concentrado em uma margem do Rio Vasyl, com expansão posterior para a outra.
+- Evidência: “KW-V3-D02: Aprovo A — núcleo histórico inicialmente concentrado em uma margem do Rio Vasyl, com expansão posterior para a outra.”
+- Consequência cartográfica: distribuição assimétrica da idade do tecido urbano nas duas margens; travessias e ocupação ulterior devem respeitar a cronologia proposta. **Não define qual margem é mais antiga, nem pontes, cronologia, perímetros ou cânone oficial.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D02` — qual é a relação do **tecido histórico original** com as duas margens do Rio Vasyl?
-- **A (recomendada):** núcleo inicial predominante numa margem; a margem oposta incorporada posteriormente por pontes e expansão urbana, preservando um centro histórico mais antigo e assimétrico.
-- **B:** o núcleo histórico nasceu distribuído pelas duas margens, com travessias já estruturantes desde sua formação, ainda compacto.
-- **C:** outra relação proposta pelo proprietário.
-A decisão orienta desenho de quarteirões, antiguidade de ruas e local de pontes, **sem aprovar ainda margem geográfica específica, posicionamento de pontes nem geometria.**
+`KW-V3-D03` — o que estruturou primeiro o assentamento histórico na margem inicial?
+- **A (recomendada):** fontes termais e abrigos como centro primitivo; comércio e eventuais cais fluviais próximos, sem pressupor um porto estabelecido.
+- **B:** travessia/comércio fluvial como eixo primitivo; termas sustentam setores próximos.
+- **C:** dois polos coetâneos relevantes, termal e fluvial, articulados por ruas antigas.
+A decisão é de morfologia histórica e uso do solo; nenhuma instalação específica ou cronologia não documentada vira fato.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
