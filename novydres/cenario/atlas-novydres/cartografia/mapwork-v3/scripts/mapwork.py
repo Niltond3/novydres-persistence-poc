@@ -53,8 +53,9 @@ def audit_zone(z, cfg, assets=None, strict=False):
     fail(z['status'] not in ('OWNER_APPROVED','PUBLISHED') or z.get('owner_approval'),'owner approval missing')
     if z['status']!='PLANNING':
         fail(not any(d['status']=='OPEN' for d in z['decisions']),'open blocking decision')
-        fail(bool(z['elements']),'nonplanning zone without detailed elements')
-        fail(bool(z['connectors']) if z['neighbors'] else True,'nonplanning zone has no neighbor connectors')
+        if z['status']!='SKETCH_APPROVED':
+            fail(bool(z['elements']),'nonplanning zone without detailed elements')
+            fail(bool(z['connectors']) if z['neighbors'] else True,'nonplanning zone has no neighbor connectors')
     scale=cfg['detail_pixels_per_unit']; max_bleed=cfg['max_bleed_units']
     cores=[]
     for e in z['elements']:
@@ -200,6 +201,8 @@ def next_action(z):
         if not z['research']:return {'action':'RESEARCH','note':'Research world analogues; cite sources, do not infer canon.'}
         return {'action':'PRESENT_SKETCH','note':'Whole-region technical sketch and succinct decision packet; wait for explicit approval.'}
     if not z['sketch_approved']:return {'action':'WAIT_SKETCH_APPROVAL'}
+    if z['status']=='SKETCH_APPROVED' and (not z['elements'] or (z['neighbors'] and not z['connectors'])):
+        return {'action':'PREPARE_DETAIL_GEOMETRY','note':'Sketch approved; derive lot geometry and shared boundary connectors before art.'}
     pending=[e['id'] for e in z['elements'] if e['status']!='VERIFIED']
     if pending:return {'action':'GENERATE_NEXT','element_id':pending[0],'remaining':len(pending)}
     if not z.get('owner_approval'):return {'action':'SHOW_BEFORE_AFTER','note':'Render and deliver full comparison before asking for owner approval.'}
@@ -209,7 +212,7 @@ def next_action(z):
 def validate_spatial_plan(plan, z, cfg):
     """Validate real candidate anchors and gates; planning PASS never implies image readiness."""
     fail(plan.get('schema')=='NOVYDRES_MAPWORK_V3_KINGSWELL_SPATIAL_PLAN_1','spatial plan schema')
-    fail(plan.get('status')=='PLANNING_CANDIDATE','spatial plan must remain candidate until full sketch approval')
+    fail(plan.get('status') in ('PLANNING_CANDIDATE','SKETCH_OWNER_APPROVED_SPATIAL_PREP_PENDING'),'invalid spatial plan planning/approval state')
     owner=plan.get('owner_decision',{})
     fail(owner.get('same_extent') is True and owner.get('owner_subject_id')=='district-chelsea','Kingswell must equal entire Cidade Velha raion')
     fail(z['owner_subject_id']==owner['owner_subject_id'] and z['id']=='kingswell','zone owner and identity mismatch')
@@ -253,13 +256,20 @@ def validate_spatial_plan(plan, z, cfg):
     gate_names=('bridge_river_topology_verified','adjacent_zone_edges_verified','poi_u02_sites_verified','full_technical_sketch_approved','image_generation_authorized')
     fail(all(type(gates.get(k)) is bool for k in gate_names),'missing spatial readiness gate')
     if z['status']=='PLANNING':
-        fail(z['sketch_approved'] is False and gates['image_generation_authorized'] is False,'planning zone must not authorize images')
+        fail(plan.get('status')=='PLANNING_CANDIDATE' and z['sketch_approved'] is False and gates['image_generation_authorized'] is False,'planning zone must not authorize images')
+        readiness='PLANNING_NOT_READY_FOR_IMAGE'
+    elif z['status']=='SKETCH_APPROVED':
+        fail(plan.get('status')=='SKETCH_OWNER_APPROVED_SPATIAL_PREP_PENDING','approved sketch must use approved plan')
+        fail(z['sketch_approved'] is True and gates['full_technical_sketch_approved'] is True and gates.get('integral_sketch_owner_approved') is True,'missing express sketch approval')
+        fail(gates['image_generation_authorized'] is False,'sketch approval alone must not authorize image generation')
+        readiness='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
     else:
         fail(all(gates[k] for k in gate_names),'nonplanning zone has unresolved spatial/image gates')
         fail(z['sketch_approved'] is True,'technical sketch not approved')
-        fail(bool(z['elements']),'approved sketch has no physical elements')
-        fail(bool(z['connectors']) if z['neighbors'] else True,'missing neighbor connectors in approved sketch')
-    return {'historical_bridges':3,'pois':5,'resource_fronts':3,'readiness':'PLANNING_NOT_READY_FOR_IMAGE' if z['status']=='PLANNING' else 'SPATIAL_GATES_VERIFIED'}
+        fail(bool(z['elements']),'generation stage has no physical elements')
+        fail(bool(z['connectors']) if z['neighbors'] else True,'missing neighbor connectors in generating stage')
+        readiness='SPATIAL_GATES_VERIFIED'
+    return {'historical_bridges':3,'pois':5,'resource_fronts':3,'readiness':readiness}
 
 def _point_inside_polygon(point, poly):
     x,y=point
@@ -283,7 +293,11 @@ def _line_distance(p,coords):
 def validate_integral_sketch(g,plan,z,cfg):
     """Validate editable candidate topology; never interpret a planning PASS as owner approval."""
     fail(g.get('schema')=='NOVYDRES_KINGSWELL_U02_INTEGRAL_SKETCH_1','integral sketch schema')
-    fail(g.get('state')=='CANDIDATE_FULL_MAP_NOT_OWNER_APPROVED','sketch cannot silently promote status')
+    if z['status']=='PLANNING':
+        fail(g.get('state')=='CANDIDATE_FULL_MAP_NOT_OWNER_APPROVED','planning sketch cannot silently promote status')
+    else:
+        fail(g.get('state')=='OWNER_APPROVED_SKETCH_NO_CONFLICT_MARKERS','approved sketch must have owner-approved state')
+        fail(g.get('owner_approval',{}).get('decision')=='APPROVED' and g.get('owner_approval',{}).get('evidence'),'missing owner evidence for sketch')
     base=g.get('base',{})
     fail(base.get('sha256')==cfg['reference']['sha256'] and base.get('size_px')==cfg['world_size_units'],'sketch U02 identity mismatch')
     fail(base.get('pixels_modified')==0 and base.get('projection')=='top_down_90_degrees','sketch must preserve U02 top-down pixels')
@@ -322,18 +336,21 @@ def validate_integral_sketch(g,plan,z,cfg):
         pt=poi.get('candidate_px')
         fail(pt==plan_pois[poi['id']]['center_px'],poi['id']+': POI mismatch with spatial plan')
         fail(_point_inside_polygon(pt,poly),poi['id']+': POI outside Kingswell polygon')
-        fail(poi.get('status')=='CANDIDATE_VISUAL_INSPECTION_REQUIRED',poi['id']+': POI cannot claim visual/canon approval')
+        fail(poi.get('status')==('CANDIDATE_VISUAL_INSPECTION_REQUIRED' if z['status']=='PLANNING' else 'SKETCH_SITE_APPROVED_NOT_GIS_CANON'),poi['id']+': POI site status mismatches sketch stage')
     conflicts=g.get('crossing_conflicts',[])
-    fail(len(conflicts)==3 and len({c.get('id') for c in conflicts})==3,'three observed crossing discrepancies must remain traceable')
-    fail(all(c.get('status')=='UNRESOLVED_VISIBLE_CROSSING_NOT_COUNTED' for c in conflicts),'unverified crossing may not be asserted to be another bridge')
-    fail(g.get('validation',{}).get('conflicts_unresolved')==3,'unresolved U02 crossings must be recorded as blockers')
+    if z['status']=='PLANNING':
+        fail(len(conflicts)==3 and len({c.get('id') for c in conflicts})==3,'three observed crossing discrepancies must remain traceable in legacy draft')
+        fail(g.get('validation',{}).get('conflicts_unresolved')==3,'draft must retain unresolved marker count')
+    else:
+        fail(len(conflicts)==0,'approved sketch must not carry conflict markers excluded by owner')
+        fail(g.get('validation',{}).get('conflicts_unresolved')==0,'approved sketch must not carry conflict marker count')
     fail(g.get('adjacency',{}).get('sulfok',{}).get('coordination_needed') is True,'do not silently reassign Sulfok geography')
     rail=g.get('transport',{}).get('external_freight_exit',{})
     fail(rail.get('candidate_px')==[100,h],'external freight connector must stay on verified southern raster edge')
     fail(g['transport'].get('no_new_bridges') is True and g['transport'].get('no_new_international_stops') is True,'sketch cannot add bridge/express station')
     if z['status']!='PLANNING':
-        fail(g['validation']['conflicts_unresolved']==0 and g['validation']['owner_sketch_approval'] is True,'sketch has unresolved topology or no owner approval')
-    return {'sketch_version':g['version'],'bridges':len(bridges),'pois':len(sites),'crossing_conflicts':len(conflicts),'validity':'CANDIDATE_WITH_BLOCKERS' if z['status']=='PLANNING' else 'SKETCH_APPROVED'}
+        fail(g['validation']['conflicts_unresolved']==0 and g['validation']['owner_sketch_approval'] is True,'approved sketch has conflict markers or no owner approval')
+    return {'sketch_version':g['version'],'bridges':len(bridges),'pois':len(sites),'crossing_conflicts':len(conflicts),'validity':'CANDIDATE_WITH_BLOCKERS' if z['status']=='PLANNING' else 'OWNER_APPROVED_VISUAL_SKETCH'}
 
 def audit_required_planning_zones(cfg):
     required=cfg.get('required_planning_zones',[])
@@ -349,7 +366,9 @@ def audit_required_planning_zones(cfg):
         plan=load(planpath)
         report=validate_spatial_plan(plan,z,cfg)
         if plan.get('gates',{}).get('integral_sketch_prepared'):
-            sketchpath=ROOT/'zones'/folder/'esboco-integral-u02-v1.json'
+            sketchname=plan.get('integral_sketch_ref','esboco-integral-u02-v1.json')
+            fail(re.fullmatch(r'esboco-integral-u02-v\d+\.json',sketchname) is not None,'unsafe sketch reference')
+            sketchpath=ROOT/'zones'/folder/sketchname
             fail(sketchpath.is_file(),f'required integral sketch missing: {folder}')
             report['sketch']=validate_integral_sketch(load(sketchpath),plan,z,cfg)
         results.append(report)
@@ -375,7 +394,7 @@ def audit_repository(cfg,state):
     if state['last_approved_global_release'] is not None:
         pointer=state['last_approved_global_release']
         fail((ROOT/'releases'/pointer['manifest']).is_file(),'approved global release pointer missing')
-    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'PLANNING_NOT_READY_FOR_IMAGE' if any(x['readiness']=='PLANNING_NOT_READY_FOR_IMAGE' for x in required_zone_reports) else 'SPATIAL_GATES_VERIFIED','releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
+    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'SPATIAL_GATES_VERIFIED' if all(x['readiness']=='SPATIAL_GATES_VERIFIED' for x in required_zone_reports) else 'NOT_READY_FOR_ART_GENERATION','releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);sub=ap.add_subparsers(dest='cmd',required=True)

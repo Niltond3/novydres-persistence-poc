@@ -37,7 +37,8 @@ def test_repository_contract():
     assert result['repository']=='PASS' and result['zones_checked']==1
     assert result['required_zone_reports'][0]['historical_bridges']==3
     assert result['required_zone_reports'][0]['pois']==5
-    assert result['image_readiness']=='PLANNING_NOT_READY_FOR_IMAGE'
+    assert result['image_readiness']=='NOT_READY_FOR_ART_GENERATION'
+    assert result['required_zone_reports'][0]['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
 
 def test_e2e_tiles_compare(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
@@ -129,8 +130,8 @@ def planning_inputs():
 
 def test_kingswell_identity_spatial_gate():
     cfg,z,plan=planning_inputs()
-    assert z['sketch_approved'] is False
-    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='PLANNING_NOT_READY_FOR_IMAGE'
+    assert z['sketch_approved'] is True
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
 
 def test_bridge_exact_count_and_uniqueness():
     cfg,z,plan=planning_inputs()
@@ -164,8 +165,7 @@ def test_offframe_resources_and_transport_are_checked():
 
 def test_no_unapproved_spatial_promotion():
     cfg,z,plan=planning_inputs()
-    z['status']='SKETCH_APPROVED'
-    z['sketch_approved']=True
+    z['status']='GENERATING'
     with pytest.raises(m.Invalid,match='unresolved spatial'):
         m.validate_spatial_plan(plan,z,cfg)
 
@@ -206,15 +206,15 @@ def test_all_historical_bridges_must_be_mixed_use():
 
 def integral_sketch_inputs():
     cfg,z,plan=planning_inputs()
-    g=m.load(ROOT/'zones/cidade-velha/esboco-integral-u02-v1.json')
+    g=m.load(ROOT/'zones/cidade-velha/esboco-integral-u02-v2.json')
     return cfg,z,plan,g
 
 def test_integral_sketch_matches_spatial_plan():
     cfg,z,plan,g=integral_sketch_inputs()
     result=m.validate_integral_sketch(g,plan,z,cfg)
-    assert result['validity']=='CANDIDATE_WITH_BLOCKERS'
+    assert result['validity']=='OWNER_APPROVED_VISUAL_SKETCH'
     assert result['bridges']==3 and result['pois']==5
-    assert result['crossing_conflicts']==3
+    assert result['crossing_conflicts']==0
 
 def test_historical_bridge_cannot_be_off_river():
     cfg,z,plan,g=integral_sketch_inputs()
@@ -228,16 +228,16 @@ def test_kingswell_poi_must_be_inside_raion_polygon():
     with pytest.raises(m.Invalid,match='POI mismatch|outside Kingswell polygon'):
         m.validate_integral_sketch(g,plan,z,cfg)
 
-def test_crossing_conflicts_cannot_silently_disappear():
+def test_owner_removed_crossing_markers_cannot_reappear():
     cfg,z,plan,g=integral_sketch_inputs()
-    g['crossing_conflicts']=[]
-    with pytest.raises(m.Invalid,match='three observed crossing'):
+    g['crossing_conflicts']=[{'id':'X01','center_px':[355,742]}]
+    with pytest.raises(m.Invalid,match='must not carry conflict markers'):
         m.validate_integral_sketch(g,plan,z,cfg)
 
-def test_approved_sketch_cannot_ignore_crossing_or_boundary_gate():
+def test_approved_sketch_requires_owner_proof():
     cfg,z,plan,g=integral_sketch_inputs()
-    z['status']='SKETCH_APPROVED';z['sketch_approved']=True
-    with pytest.raises(m.Invalid,match='unresolved topology'):
+    g['validation']['owner_sketch_approval']=False
+    with pytest.raises(m.Invalid,match='no owner approval'):
         m.validate_integral_sketch(g,plan,z,cfg)
 
 def test_sketch_source_image_preserved():
@@ -245,3 +245,11 @@ def test_sketch_source_image_preserved():
     g['base']['pixels_modified']=1
     with pytest.raises(m.Invalid,match='preserve U02'):
         m.validate_integral_sketch(g,plan,z,cfg)
+
+
+def test_next_after_approved_sketch_is_detail_geometry_not_art():
+    cfg,z,plan=planning_inputs()
+    nxt=m.next_action(z)
+    assert nxt['action']=='PREPARE_DETAIL_GEOMETRY'
+    assert m.audit_zone(z,cfg,strict=False)['elements']==0
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
