@@ -128,11 +128,16 @@
 - Evidência: “KW-V3-D14: Aprovo C — distribuição térmica desigual sobretudo por uso dos edifícios, com prioridade para instalações técnicas e atividades econômicas e aquecimento irregular nas moradias.”
 - Consequência: representar o contraste entre abastecimento de setores técnico-produtivos e fragilidade das moradias; **sem pressupor privação absoluta em todos os domicílios, localização, métricas ou responsáveis operacionais.** Mantém o desvio privilegiado para Bukovie, GEO-014 e o clima extremo.
 
+**KW-V3-D15 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** tecido residencial denso e de uso misto. No núcleo, cortiços e edifícios históricos subdivididos; nas expansões, transição gradual para habitações operárias compactas, moradias sobre oficinas e quadras industriais-residenciais.
+- Evidência: “KW-V3-D15: Aprovo A — tecido residencial denso e misto, com cortiços e edifícios históricos subdivididos no núcleo, passando gradualmente a habitações operárias, moradias sobre oficinas e quadras industriais-residenciais.”
+- Consequência morfológica: adensamento habitacional sem tornar os bairros mono-funcionais, conservando diversidade histórica e continuidade com o corredor industrial. **Não define densidades numéricas, quantidade de edifícios, altura, lotes ou geometria.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D15` — qual a predominância das tipologias residenciais de Kingswell em 2010, conciliando o núcleo histórico reaproveitado e a expansão operária?
-- **A (recomendada):** tecido muito denso e misto, com cortiços e edifícios antigos subdivididos perto do núcleo, passando a habitações operárias compactas, casas sobre oficinas e quadras de uso produtivo-residencial.
-- **B:** blocos residenciais de maior porte predominando nas expansões modernas, com cortiços concentrados no núcleo antigo.
-- **C:** pátios compartilhados, anexos e habitações geminadas compactas predominando no raion, com menos blocos altos.
-Não fixa altura, população, quantidade, proporções ou edifícios individuais. Respeitar as decisões D01-D06, a densidade de Kingswell e a evolução orgânica aprovada.
+`KW-V3-D16` — como variar o **gabarito e o volume construído** entre o núcleo histórico termal e as expansões operárias?
+- **A (recomendada):** núcleo com prédios comparativamente baixos e compactos, expansões com volumes predominantemente médios e poucos marcos elevados; silhueta irregular, não uniforme.
+- **B:** núcleo antigo baixo contrastando fortemente com blocos habitacionais e industriais maiores e mais altos nas expansões.
+- **C:** alturas baixas, médias e altas fortemente intercaladas em quase todo o tecido, inclusive nas mesmas quadras, sem perfil territorial predominante.
+Nenhuma alternativa fixa pavimentos, número de edifícios, relevo, polígonos ou imagens; a proposta técnica posterior deve preservar a referência U02 e as decisões previamente aprovadas.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
