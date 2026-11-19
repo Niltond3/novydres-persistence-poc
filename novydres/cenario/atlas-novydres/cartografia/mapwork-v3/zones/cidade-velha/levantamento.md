@@ -268,11 +268,16 @@
 - Evidência: “KW-V3-D42: Aprovo A — iluminação industrial utilitária mais intensa e localizada nos portões de carga, pátios de manobra e áreas técnicas, contrastando com as ruas residenciais pouco iluminadas.”
 - Consequência: contraste localizado e forte entre pontos industriais ativos e ruas operárias escuras, sem impor iluminação generalizada às fábricas ou operação noturna a todas elas. **Sem fixar equipamentos, turnos, potência, localizações, geometrias ou arte.**
 
+**KW-V3-D43 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** neve acinzentada, resíduos de transporte e fachadas escurecidas concentrados próximos aos muros industriais e ao corredor de cargas, diminuindo irregularmente no interior residencial.
+- Evidência: “KW-V3-D43: Aprovo A — neve acinzentada, resíduos de transporte e fachadas escurecidas concentrados próximos aos muros industriais e ao corredor de cargas, diminuindo irregularmente no interior residencial.”
+- Consequência: graduação irregular do desgaste industrial a partir do corredor de cargas, sem tornar toda a zona operária uniformemente suja. **Não fixa fontes de emissões, impacto sanitário, quantidades, localização de marcas, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D43` — como devem aparecer marcas de desgaste e resíduos associados às fábricas nas ruas e pátios operários vizinhos?
-- **A (recomendada):** marcas mais fortes junto a muros e ao corredor de cargas: neve acinzentada, resíduos do tráfego e fachadas escurecidas; diminuição irregular pelo interior dos bairros.
-- **B:** fuligem e neve suja amplamente disseminadas também nos pátios e passagens dos quarteirões residenciais.
-- **C:** sujeira industrial pontual junto aos portões, docas e ruas de caminhões; no restante predomina desgaste climático e conservação precária.
-Diretriz de materialidade e distribuição visual de sujeira, sem pressupor emissões perigosas, fábricas específicas, consequências sanitárias, dispersão atmosférica mensurável, geometrias ou imagens. Preservar D17, D27–D31, D34, D40 e baseline U02.
+`KW-V3-D44` — como a infraestrutura de aquecimento deve aparecer nos quarteirões operários de Kingswell, considerando o sistema geotérmico e o calor distribuído desigualmente?
+- **A:** tubulações e condutos aparentes relativamente frequentes em fachadas e pátios, incluindo reparos e pontos técnicos; presença da rede não equivale a aquecimento regular.
+- **B:** infraestrutura quase totalmente subterrânea, com tampas, acessos técnicos e poucas instalações de superfície visíveis.
+- **C (recomendada):** rede principal subterrânea e derivações/remendos aparentes pontuais em fachadas, pátios e áreas técnicas, sem padronização ou garantia de calor residencial.
+A decisão define apenas visibilidade e morfologia da rede; não aprova ramais, equipamentos, fornecimento efetivo a casas, traçados, geometrias ou imagens. Respeitar D12–D14, D17, D36–D40 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
