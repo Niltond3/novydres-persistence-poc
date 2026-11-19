@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "id": "NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1",
+  "subject_id": "world-atlas-novydres",
+  "designation": "REFERENCIA_VISUAL_CANONICA_ATUAL",
+  "status": "APPROVED_BY_OWNER",
+  "approved_on": "2026-11-18",
+  "approval_source": "Aprovo a nova versão, canonize ela como novo canone",
+  "year_of_map_reference": 2010,
+  "canon_scope": "ILUSTRACAO_INTEGRAL_E_DIRECAO_ARTISTICA_APENAS",
+  "medium": "raster_isometric_artwork",
+  "style": "Vampiro: A Máscara V5; gótico-punk moderno, frio, industrial e noturno; iluminação espacialmente desigual; sombras azul-grafite e luzes âmbar/branco frio/vermelho pontuais",
+  "current_operational_visual_base": true,
+  "original_illustration": {
+    "filename": "novydres_canon_visual_gotico_punk_v1_aprovado.png",
+    "original_sha256": "50014c337fa101a5b853fa53bdba86af424c1ec103009b986544e252bec492cb",
+    "size_bytes": 3978930,
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "pixel_format": "RGB",
+    "raw_rgb_pixel_sha256": "fd619f368e7fb0fe10d18c5ed56b9c9207309c64e4394278ad5bac6d5dc7d30e",
+    "library_path": "/Novydres - Mapwork/edicao-raster/novydres_canon_visual_gotico_punk_v1_aprovado.png",
+    "library_file_id": "libfile_009fcecda62c8191a06c4f096a41f838"
+  },
+  "git_lossless_source": {
+    "path": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/assets/visual_canon_gothic_punk_v1.webp",
+    "git_blob_sha1": "ee7f1a7539df1b9b2c158bca0aee8348a855b48a",
+    "sha256": "6dad296d1f42e44e9211a1fe41455cb16d5899cc097da901e63fc113af92dd54",
+    "size_bytes": 2748752,
+    "format": "WebP lossless RGB, method=6, exact=True",
+    "pixel_equivalence_verified": true,
+    "raw_rgb_pixel_sha256": "fd619f368e7fb0fe10d18c5ed56b9c9207309c64e4394278ad5bac6d5dc7d30e",
+    "restore_script": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/verify_visual_canon.py",
+    "binary_png_identity": false,
+    "note": "Git armazena pixels do visual aprovado sem perda; PNG exato está na Library. PNG exportado de WebP pode ter bytes de arquivo diferentes, apesar dos pixels idênticos."
+  },
+  "visual_comparator": {
+    "library_path": "/Novydres - Mapwork/edicao-raster/novydres_comparador_canon_visual_gotico_punk_v1.html",
+    "library_file_id": "libfile_003b597c389081919b95b26550f67993",
+    "before": "novydres_M02_V3_global_grade_v1.png",
+    "after": "novydres_canon_visual_gotico_punk_v1_aprovado.png"
+  },
+  "lineage": {
+    "previously_approved_visual": "M02_V3_APPROVED",
+    "previous_png_sha256": "c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b",
+    "source_master_v1_immutable": true,
+    "M01_V2_approved_immutable": true,
+    "M02_V3_approved_preserved": true
+  },
+  "origin": {
+    "type": "GLOBAL_AI_IMAGE_RESTYLE",
+    "is_deterministic_color_grade": false,
+    "geometry_unchanged_not_proven": true,
+    "editorial_treatment": "A aprovação recai sobre a aparência total como ilustração aprovada; as diferenças de edifícios, pontes, transportes e elementos inventados por IA não substituem geometria nem fatos canônicos aprovados."
+  },
+  "authority_boundary": {
+    "visual_style_and_illustration_canonicity": true,
+    "geographical_or_historical_facts_canonized": false,
+    "spatial_geometry_changed": false,
+    "rule": "As fontes cartográficas/geográficas e os assuntos proprietários continuam sendo as autoridades de fatos e posição; o raster não resolve GEOs, infraestrutura ou raions."
+  },
+  "next_workflow": "Novas edições raster partem deste visual e requerem máscaras e aprovação próprias. Verificar integridade pelo raw_rgb_pixel_sha256. Não substituir automaticamente fontes técnicas por contornos desenhados pela IA."
+}

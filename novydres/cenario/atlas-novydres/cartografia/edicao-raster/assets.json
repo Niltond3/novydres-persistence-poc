@@ -4,7 +4,7 @@
   "subject_id": "world-atlas-novydres",
   "scope": "illustrative_raster_workflow_not_canonical_geography",
   "status": "OPERATIONAL_VERIFIED_LIBRARY_STORAGE",
-  "approved_state": "M01_V2_AND_M02_V3_ART_APPROVED",
+  "approved_state": "VISUAL_CANON_GOTHIC_PUNK_V1_APPROVED",
   "approved_date": "2026-11-18",
   "storage": {
     "provider": "ChatGPT Library",
@@ -136,14 +136,39 @@
       "state": "APPROVED_VERIFY_REPORT",
       "library_file_id": "libfile_8619d602c61c8191814ff5daed5a622c",
       "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_V3_validacao_aprovada.json"
+    },
+    {
+      "id": "NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1",
+      "filename": "novydres_canon_visual_gotico_punk_v1_aprovado.png",
+      "sha256": "50014c337fa101a5b853fa53bdba86af424c1ec103009b986544e252bec492cb",
+      "size_bytes": 3978930,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "raw_rgb_pixel_sha256": "fd619f368e7fb0fe10d18c5ed56b9c9207309c64e4394278ad5bac6d5dc7d30e",
+      "state": "CANONICAL_VISUAL_REFERENCE_APPROVED",
+      "approved_on": "2026-11-18",
+      "library_file_id": "libfile_009fcecda62c8191a06c4f096a41f838",
+      "library_path": "/Novydres - Mapwork/edicao-raster/novydres_canon_visual_gotico_punk_v1_aprovado.png",
+      "git_binary_path": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/assets/visual_canon_gothic_punk_v1.webp",
+      "git_blob_sha1": "ee7f1a7539df1b9b2c158bca0aee8348a855b48a",
+      "git_binary_sha256": "6dad296d1f42e44e9211a1fe41455cb16d5899cc097da901e63fc113af92dd54",
+      "git_lossless_pixel_identical": true,
+      "supersedes_current_image_id": "M02_V3_APPROVED",
+      "canon_scope": "visual_illustration_only_not_geographical_facts"
     }
   ],
   "retrieval_and_resume": [
-    "Use the master HEAD Git-native bootstrap and subject world-atlas-novydres, then cartografia/guide.md, masks/M02.json and assets.json.",
-    "Current accumulated M02 V3 art is approved by owner 2026-11-18; M01 V2 is prior approved source and master V1 immutable.",
-    "Git contains a lossless WebP patch at assets/m02_v3_approved/patch.webp and reconstruct_m02_v3.py; run script to reconstruct exact PNG, SHA256 c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b.",
-    "The PNG and HTML comparator are also in ChatGPT Library with their SHA-256s; Git JSON remains authoritative for approval and provenance.",
-    "M02 is closed for this illustrative raster scope, not geogra­phically canonized. No additional geographic truth arises from raster art."
+    "Bootstrap master/AGENTS/CONTEXT/catalogo -> world-atlas-novydres; consult cartografia/guide.md and edicao-raster/visual-canon.json plus assets.json.",
+    "Current approved full-map illustration is NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1, an AI-generated globally restyled artwork (approved by owner). Do not treat it as deterministic color grading or as verified identical city geometries.",
+    "Exact approved PNG is in Library, SHA-256 50014c337fa101a5b853fa53bdba86af424c1ec103009b986544e252bec492cb. Git carries a 100% pixel-identical lossless WebP with SHA-256 6dad296d1f42e44e9211a1fe41455cb16d5899cc097da901e63fc113af92dd54.",
+    "Use verify_visual_canon.py to validate SHA256 of WebP, and raw-RGB pixel hash after decoding; the exact PNG file encoding is not reconstructed from WebP, but pixel values are identical.",
+    "Old approved M02 V3, M01 V2 and master V1 remain immutable as historical lineage and recoverable artifacts.",
+    "Visual canon approval does not authorize changing or canonizing geospatial or narrative facts; only representational artwork and visual style are approved.",
+    "For any further raster edits, start with this approved visual base, obtain explicit mask approval and confirm zero changes outside approved masks before user accepts edited art."
   ],
-  "current_cumulative_image_id": "M02_V3_APPROVED"
+  "current_cumulative_image_id": "NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1",
+  "current_visual_canon_id": "NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1",
+  "visual_canon_record": "visual-canon.json"
 }

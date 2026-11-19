@@ -55,7 +55,7 @@ Após checkout/obtenção dos arquivos do repositório:
 
 `python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py --asset m01_v2 --out M01-V2.png`
 
-O script recusa sobrescrever arquivo existente, verifica os SHA-1 dos fragmentos e confere o SHA-256 final. Consultar `assets/parts.json` e `assets.json`; em um chat sem acesso a clone/files Git binários, a pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster` permanece como réplica de recuperação, com mesmos SHA-256. A `M01-V2` já está aprovada e será a base operacional cumulativa para M02. A máscara M02V3 e a arte M02 V3 corrigida estão **APROVADAS**. A antiga candidata V2 foi rejeitada/substituída. O arquivo com marcação M02 existe na Library e não é uma máscara.
+O script recusa sobrescrever arquivo existente, verifica os SHA-1 dos fragmentos e confere o SHA-256 final. Consultar `assets/parts.json` e `assets.json`; em um chat sem acesso a clone/files Git binários, a pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster` permanece como réplica de recuperação, com mesmos SHA-256. A `M01-V2` foi base cumulativa de M02. A imagem aprovada mais recente para novas edições é definida em `visual-canon.json`. A máscara M02V3 e a arte M02 V3 corrigida estão **APROVADAS**. A antiga candidata V2 foi rejeitada/substituída. O arquivo com marcação M02 existe na Library e não é uma máscara.
 
 ## M02V3 — máscara e arte aprovadas (18/11/2026)
 
@@ -72,3 +72,14 @@ python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_m02
 ```
 
 Requer Pillow e os binários M01 V2 recuperáveis do Git pelo `reconstruct_assets.py`. O reconstrutor valida SHA-256 da base, patch, máscara e saída. **Aprovada a imagem ilustrativa**, não as hipóteses cartográficas que ela contenha.
+
+## Visual canônico atual — gótico-punk moderno (18/11/2026)
+
+**APROVADO EXPRESSAMENTE PELO PROPRIETÁRIO**: mapa integral gótico-punk em estilo Vampiro: A Máscara V5, ID `NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1`. Substitui M02 V3 como **referência visual operacional atual** (sem apagar versões anteriores). É uma transformação **global por IA**, não um color grading matemático, e não tem certificação de correspondência geométrica pixel a pixel ao mapa anterior.
+
+- Fonte única de seleção/autoridade visual: `visual-canon.json`; manifesto de ativos: `assets.json`.
+- PNG original exatamente aprovado na Library: `/Novydres - Mapwork/edicao-raster/novydres_canon_visual_gotico_punk_v1_aprovado.png` (SHA-256 `50014c337fa101a5b853fa53bdba86af424c1ec103009b986544e252bec492cb`).
+- Git contém `assets/visual_canon_gothic_punk_v1.webp`, formato WebP **sem perdas**, conferido RGB-pixel-a-RGB-pixel com o PNG, SHA-256 `6dad296d1f42e44e9211a1fe41455cb16d5899cc097da901e63fc113af92dd54`; exportar PNG pode alterar apenas a codificação PNG, sem mudar pixels.
+- Validação: `python verify_visual_canon.py` ou `python verify_visual_canon.py --out novo_mapa.png` (requer Pillow).
+- **Escopo de cânone:** atmosfera e ilustração geral. Não modifica automaticamente geografia, cronologia, fronteiras, lugares, ferrovias reais da malha técnica ou demais fatos de assunto. Esses continuam governados por fontes estruturadas aprovadas.
+- Para novas máscaras, usar a nova base gótico-punk, não M02 V3, depois da verificação de seu hash de pixels.
