@@ -113,11 +113,16 @@
 - Evidência: “KW-V3-D11: Aprovo A — uma ponte ligada ao núcleo histórico termal e as outras duas conectando setores diferentes da expansão urbana ao longo do vale.”
 - Consequência: uma travessia histórica central e duas distribuídas, conectadas às redes viárias de seus setores, **sem novas pontes** e sem posições/traçados definidos. Respeitar a restrição KW-V3-D09, a referência U02 e seus conectores.
 
+**KW-V3-D12 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** conjunto principal de nascentes no coração histórico termal; surgências secundárias distribuídas de forma irregular pelos arredores.
+- Evidência: “KW-V3-D12: Aprovo A — conjunto principal de nascentes no coração histórico termal, com fontes secundárias distribuídas irregularmente pelos arredores.”
+- Consequência morfológica: a implantação urbana deve reconhecer um polo termal original sem transformar toda Kingswell em área aquecida uniformemente. **Não define quantidade, vazões, temperaturas, fontes individualizadas ou geometria.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D12` — como organizar as **nascentes geotérmicas naturais** dentro do núcleo compacto, respeitando a abundância e a irregularidade do calor aprovadas (GEO-002.3/GEO-003.2)?
-- **A (recomendada):** conjunto principal de nascentes no coração histórico, com surgências secundárias dispersas irregularmente; antigo tecido urbano próximo ao conjunto principal.
-- **B:** vários polos termais relevantes distribuídos pelo núcleo, sem um agrupamento principal dominante.
-- **C:** nascentes distribuídas em sequência descontínua ao longo do vale do Rio Vasyl, formando um eixo termal interno ao núcleo histórico compacto.
-Não definir ainda número, coordenadas, temperatura, vazão, fontes de toda Novydres ou isotermas rígidas.
+`KW-V3-D13` — como a infraestrutura de captação e distribuição geotérmica de 2010 deve se articular ao núcleo termal antigo?
+- **A (recomendada):** pequenos elementos técnicos distribuídos e adaptados aos quarteirões históricos, com instalações maiores na transição industrial; fontes e espaços urbanos antigos continuam reconhecíveis.
+- **B:** complexo de captação central dominante no coração das nascentes, marcado por equipamentos e estruturas técnicas.
+- **C:** principais instalações técnicas nas bordas do núcleo, com redes chegando às fontes e preservação visual predominante do centro antigo.
+Respeitar GEO-014: a abundância geotérmica **não** gera abastecimento igualitário; o desvio de calor para Bukovie e a precariedade de partes da Cidade Velha permanecem. Ainda sem rede, capacidade, instalações ou contornos aprovados.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
