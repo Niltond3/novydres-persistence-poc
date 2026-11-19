@@ -328,11 +328,16 @@
 - Evidência: “KW-V3-D54: Aprovo B — as três pontes históricas mantêm uso misto de pedestres e veículos, com controles locais conforme suas limitações, sem especialização funcional.”
 - Consequência: as três travessias funcionam para circulação de pessoas e veículos, sem atribuir prioridade pedonal exclusiva à ponte do núcleo histórico nem restringir uso misto apenas às outras duas. **Não define classes ou capacidades de veículos, controles precisos, obras, geometrias ou arte.**
 
+**KW-V3-D55 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** as três pontes históricas permanecem funcionais, mas exibem pavimentos e acabamentos remendados, reparos de épocas diferentes e desgaste provocado pelo clima.
+- Evidência: “KW-V3-D55: Aprovo A — as três pontes históricas permanecem funcionais, mas exibem pavimentos e acabamentos remendados, reparos de épocas diferentes e desgaste provocado pelo clima.”
+- Consequência: pontes históricas de uso misto com marcas de manutenção sobrepostas ao longo do tempo, mas todas em funcionamento. **Não determina obras, materiais estruturais, capacidade, segurança, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D55` — qual estado de conservação visual predomina nas três pontes históricas do Rio Vasyl em 2010, preservando seu uso misto?
-- **A (recomendada):** pontes funcionais e visivelmente remendadas, com reparos de períodos diferentes, desgaste de pavimentos e marcas do clima.
-- **B:** conservação histórica mais cuidada, com materiais e acabamentos originais predominantes, manutenção relativamente regular e reparos discretos.
-- **C:** conservação visual desigual: uma ponte aparenta estar mais restaurada e outras apresentam mais remendos, permanecendo todas em operação.
-A decisão é apenas tipológica e visual: **não autoriza reconstrução, restauro específico, alterações estruturais, dimensionamento, novas pontes, posições, geometrias ou imagens**. Preservar D09–D11, D17, D45, D54, Rio Vasyl e baseline U02.
+`KW-V3-D56` — como o inverno rigoroso e as condições de gelo no Rio Vasyl afetam a operação das balsas de pessoas e veículos?
+- **A (recomendada):** tenta-se manter serviço durante o ano, reduzindo frequência ou suspendendo viagens pontualmente quando o gelo e o rio impedirem travessias; pontes absorvem parte da demanda.
+- **B:** paralisação sazonal regular das balsas nos períodos mais severos do inverno, concentrando temporariamente travessias nas três pontes.
+- **C:** regime desigual entre serviços/terminais; alguns funcionam com gelo moderado, outros interrompem com maior frequência, com apoio das pontes.
+A decisão rege a operação sazonal, **sem fixar congelamento integral do rio, equipamento de quebra-gelo, calendário, rotas, frequência, terminais, geometria ou imagens**. Preservar D09–D10, D23–D24, D53–D55, hidrografia e U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
