@@ -168,11 +168,16 @@
 - Evidência: “KW-V3-D22: Aprovo A — frentes ribeirinhas mistas e descontínuas, com moradias densas, cais e armazéns antigos, pequenos acessos públicos e maior atividade logística na transição industrial.”
 - Consequência: margem heterogênea, com variações entre ocupação popular, vestígios comerciais antigos e logística mais intensa rumo à expansão industrial. **Não fixa localização de cais, armazéns, atracadouros ou terminais nem modifica contornos, pontes ou geometrias.**
 
+**KW-V3-D23 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** acessos capilares por vielas, escadarias e passagens de pedestres conectam bairros e pequenos cais, complementados por poucos eixos viários e rampas capazes de atender balsas de veículos e logística.
+- Evidência: “KW-V3-D23: Aprovo A — acessos capilares por vielas, escadarias e passagens de pedestres, complementados por poucos eixos viários e rampas para balsas de veículos e logística.”
+- Consequência: preservar a capilaridade da malha antiga em vez de impor avenida marginal contínua, assegurando alguns acessos automotivos estruturantes ao rio. **Não aprova número, localização, traçado nem engenharia individual de rampas, escadas, vias ou terminais, e não altera a referência U02.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D23` — como as **ruas e passagens da cidade devem alcançar as margens do Rio Vasyl**, considerando as balsas com veículos e a malha orgânica?
-- **A (recomendada):** malha capilar de becos, passagens e escadarias de pedestres descendo a pequenos cais e largos, complementada por alguns acessos viários maiores e rampas para balsas e logística.
-- **B:** via marginal principal contínua ao longo de boa parte do rio, distribuindo veículos e pessoas entre os cais e terminais.
-- **C:** separação funcional, com poucos corredores de descida de veículos/cargas e grande parte dos acessos públicos por becos e escadarias.
-A decisão **não aprova escadas, rampas, vias ou terminais individuais, cortes de relevo, localização, nova ponte ou geometria**; compatibilizar com U02 e as três únicas pontes históricas.
+`KW-V3-D24` — como relacionar operacionalmente os pequenos cais históricos e os terminais estruturados de balsas para pessoas e veículos?
+- **A (recomendada):** pequenos cais e acessos públicos permanecem distribuídos e independentes; poucos terminais de balsas ocupam locais próprios com rampas e acessos viários, evitando sobrecarregar as vielas.
+- **B:** terminais de balsas compartilham parte dos antigos cais, armazéns e áreas de comércio, formando polos mistos de passageiros, veículos e carga leve.
+- **C:** terminais e operação de carga concentram-se mais na transição industrial, deixando antigos cais do centro sobretudo para comércio local e uso comunitário.
+Esta escolha define apenas organização relativa, **sem quantidade de rotas ou terminais, POIs, localização, infraestrutura, geometria ou novas pontes**. As três únicas pontes e a base U02 permanecem protegidas.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
