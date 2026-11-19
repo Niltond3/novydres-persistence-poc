@@ -263,11 +263,16 @@
 - Evidência: “KW-V3-D41: Aprovo A — iluminação pública esparsa nas ruas e cruzamentos principais, complementada por luzes de portas, oficinas e comércios, mantendo muitas passagens internas em penumbra.”
 - Consequência: luminosidade noturna descontínua, com bolsões de luz junto às atividades de bairro e passagens internas mais escuras. **Sem definir postes, equipamentos, localização, circuitos, potência, geometrias ou arte.**
 
+**KW-V3-D42 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** iluminação industrial utilitária mais intensa e localizada nos portões de carga, pátios de manobra e áreas técnicas, contrastando com as ruas residenciais pouco iluminadas.
+- Evidência: “KW-V3-D42: Aprovo A — iluminação industrial utilitária mais intensa e localizada nos portões de carga, pátios de manobra e áreas técnicas, contrastando com as ruas residenciais pouco iluminadas.”
+- Consequência: contraste localizado e forte entre pontos industriais ativos e ruas operárias escuras, sem impor iluminação generalizada às fábricas ou operação noturna a todas elas. **Sem fixar equipamentos, turnos, potência, localizações, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D42` — qual contraste noturno deve existir entre complexos fabris ativos e ruas residenciais adjacentes?
-- **A (recomendada):** iluminação utilitária mais intensa, porém localizada, nos portões de carga, pátios de manobra e áreas técnicas industriais, contrastando com ruas operárias pouco iluminadas.
-- **B:** contraste moderado, com luz industrial concentrada nas operações necessárias e alguma iluminação alcançando ruas laterais; bairros e fábricas de luminosidade próxima.
-- **C:** exteriores industriais predominantemente escuros, com poucos focos técnicos e portões iluminados, criando paisagem geral sombria também na frente fabril.
-A decisão compara padrões de luz, **sem presumir operação noturna de toda fábrica, turnos, luminárias específicas, rede elétrica, localização, geometrias ou imagem**. Preservar D14, D26–D31, D34–D35, D41 e baseline U02.
+`KW-V3-D43` — como devem aparecer marcas de desgaste e resíduos associados às fábricas nas ruas e pátios operários vizinhos?
+- **A (recomendada):** marcas mais fortes junto a muros e ao corredor de cargas: neve acinzentada, resíduos do tráfego e fachadas escurecidas; diminuição irregular pelo interior dos bairros.
+- **B:** fuligem e neve suja amplamente disseminadas também nos pátios e passagens dos quarteirões residenciais.
+- **C:** sujeira industrial pontual junto aos portões, docas e ruas de caminhões; no restante predomina desgaste climático e conservação precária.
+Diretriz de materialidade e distribuição visual de sujeira, sem pressupor emissões perigosas, fábricas específicas, consequências sanitárias, dispersão atmosférica mensurável, geometrias ou imagens. Preservar D17, D27–D31, D34, D40 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
