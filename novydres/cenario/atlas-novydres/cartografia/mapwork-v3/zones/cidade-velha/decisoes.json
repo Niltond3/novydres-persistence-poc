@@ -531,23 +531,33 @@
     },
     {
       "id": "KW-V3-D52",
-      "status": "OPEN",
+      "status": "APPROVED",
       "question": "Como integrar os pontos de acesso ao transporte coletivo já previsto na infraestrutura de Novydres aos quarteirões históricos e operários de Kingswell?",
+      "selected_option": "A",
+      "answer": "Paradas e acessos ao transporte coletivo concentrados nas vias mais largas e corredores existentes, conectados aos interiores dos quarteirões por vielas e passagens pedonais.",
+      "approved_on": "2026-11-19",
+      "evidence": "KW-V3-D52: Aprovo A — paradas e acessos ao transporte coletivo concentrados nas vias mais largas e corredores existentes, conectados aos interiores dos quarteirões por vielas e passagens pedonais.",
+      "limits": "Diretriz funcional de distribuição de paradas/acessos sem criar ou remanejar rotas, linhas, estações, trilhos, POIs, vias, pontes, horários, geometrias ou arte. Preservar D08–D09, D18–D19, D21, D23, D26, D36–D38, D51, baseline U02 e POI ferroviário de New London."
+    },
+    {
+      "id": "KW-V3-D53",
+      "status": "OPEN",
+      "question": "Como deve ser organizada a circulação de pedestres e veículos nos terminais de balsas que atravessam o Rio Vasyl em Kingswell?",
       "options": [
         {
           "id": "A",
-          "text": "Paradas e pontos de acesso concentrados nas vias mais largas e eixos de circulação existentes, conectados por vielas e travessias pedonais ao interior dos quarteirões, sem levar veículos coletivos às passagens estreitas."
+          "text": "Fluxos predominantemente separados: embarque e espera de pedestres utilizam acessos próprios, enquanto veículos formam filas em áreas de aproximação distintas, adaptadas às ruas e terminais existentes."
         },
         {
           "id": "B",
-          "text": "Distribuição mais capilar, com pontos de acesso menores próximos a ruas locais e bordas dos pátios, aproveitando somente vias existentes compatíveis com os modos de transporte já aprovados."
+          "text": "Espaço de acesso compartilhado: pedestres e veículos chegam ao mesmo espaço de aproximação e se organizam por sinalização simples e prioridade de embarque, sem grandes áreas separadas."
         },
         {
           "id": "C",
-          "text": "Acesso mais periférico, com poucos pontos de transferência em vias principais, exigindo caminhadas mais longas pelos corredores internos e bairros históricos."
+          "text": "Separação variável por terminal: onde houver espaço, filas de veículos e circulação pedonal ficam distintas; nos acessos históricos mais estreitos, compartilham parcialmente a aproximação."
         }
       ],
-      "blocks": "Define apenas relação espacial entre acessos/paradas de transporte coletivo existente e tecido urbano de Kingswell; não cria linhas, estações, veículos, trilhos, ramais, alterações nas vias U02, POIs, horários, pontes, interferências em conectores ou geometria. Não criar terminal interregional ou deslocar POI da estação de New London. Respeitar D08, D09 (exatamente três pontes históricas), D18–D19, D21, D23, D26, D36–D38, D51 e baseline U02."
+      "blocks": "Decisão conceitual de organização dos fluxos de chegada e espera nos terminais fluviais já previstos, sem fixar número, posição, dimensão, estrutura dos terminais, filas específicas, obras, travessias, horário ou capacidade das balsas. Não criar pontes, rampas, vias ou conectores novos, nem modificar U02. Preservar D09 (exatamente três pontes históricas), D10 (balsas para passageiros e veículos), D23–D24 (acessos à margem e distinção dos cais), D26, D52 e a hidrografia aprovada."
     }
   ],
   "release_effects": "NONE",

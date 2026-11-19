@@ -313,11 +313,16 @@
 - Evidência: “KW-V3-D51: Aprovo A — veículos de emergência chegam pelas ruas locais acessíveis, enquanto equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas históricas.”
 - Consequência: atendimento dependente das entradas viárias existentes e da permeabilidade pedonal dos quarteirões, sem novas ruas ou alargamentos. **Não fixa corporações, instalações, larguras, trajetos, geometrias ou arte.**
 
+**KW-V3-D52 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** paradas e acessos ao transporte coletivo concentrados nas vias mais largas e corredores existentes, conectados aos interiores dos quarteirões por vielas e passagens pedonais.
+- Evidência: “KW-V3-D52: Aprovo A — paradas e acessos ao transporte coletivo concentrados nas vias mais largas e corredores existentes, conectados aos interiores dos quarteirões por vielas e passagens pedonais.”
+- Consequência: conexão pedonal entre o tecido denso e o transporte coletivo nas vias já apropriadas, sem circulação de veículos coletivos dentro das passagens históricas. **Não cria paradas, POIs, linhas, vias, pontes, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D52` — como os acessos ao transporte coletivo da infraestrutura já existente devem se integrar ao tecido histórico e operário de Kingswell?
-- **A (recomendada):** paradas/acessos concentrados nas vias mais largas e corredores já existentes, com chegada a pé por vielas e pátios, sem circulação coletiva nas passagens estreitas.
-- **B:** pontos menores distribuídos mais capilarmente junto a ruas locais e bordas dos quarteirões, somente quando compatíveis com a infraestrutura aprovada.
-- **C:** poucos pontos de transferência concentrados nas vias principais periféricas, exigindo percursos pedonais mais longos pelos bairros.
-Define distribuição funcional relativa, **sem criar linhas, estações, POIs, novas vias, trilhos, pontes, horários, geometrias ou imagens**. Preservar D08–D09, D18–D19, D21, D23, D26, D36–D38, D51, baseline U02 e estação ferroviária de New London.
+`KW-V3-D53` — como separar ou compartilhar a circulação de pedestres e veículos nos terminais de balsas sobre o Rio Vasyl?
+- **A (recomendada):** fluxos predominantemente separados, com acesso e espera pedonais distintos das áreas de aproximação e filas dos veículos.
+- **B:** espaço de aproximação compartilhado, com organização simples entre pedestres e veículos sem grandes áreas separadas.
+- **C:** separação variável segundo condições preexistentes de cada terminal; onde houver espaço, fluxos separados, e nos trechos estreitos parcialmente compartilhados.
+Define apenas o padrão de circulação e espera nos terminais previamente previstos, **sem criar terminais, pontes, novas rampas, vias, posições, quantidades, geometrias ou imagens**. Preservar as três pontes históricas D09, balsas D10, margens D23–D24 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
