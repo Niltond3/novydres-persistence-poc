@@ -38,9 +38,9 @@
         "id": "terrain-thermal-valley",
         "label": "Bacia/vale termal histórico",
         "form": "Depressão e vale interior protegido por colinas, conectado hidrogeologicamente a falhas quentes profundas.",
-        "placement": "Vale termal da Cidade Velha (nome formal Kingswell), núcleo do raion Kingswell (antigo Chelsea), sem fixar localização exata.",
+        "placement": "Microcentro geotérmico original dentro do raion Kingswell, que inteiro é chamado Cidade Velha; não há área administrativa Cidade Velha separada.",
         "function": "Origem do núcleo histórico com abrigos, água, solos localmente descongelados e águas termais abundantes.",
-        "limit": "Não equivale ao raion Kingswell inteiro nem ao centro cívico de Novydres em 2010."
+        "limit": "O microcentro termal não equivale a todo o raion Kingswell e não fixa centro cívico de Novydres."
       },
       {
         "id": "terrain-rocky-uplands",
@@ -79,7 +79,7 @@
     "main_river": {
       "existence_as_named_feature": "CONFIRMED_BY_OWNER_APPROVAL_GEO-003.4",
       "topology": "Rio doce com bacia em cotas elevadas; recebe tributários e fontes geotérmicas no vale da Cidade Velha, seguindo à grande baía.",
-      "chelsea": "Campo com ID legado 'chelsea': curso principal atravessa a Cidade Velha (Kingswell formal) no raion Kingswell e apresenta trechos localmente mornos.",
+      "chelsea": "No raion inteiro Kingswell (= Cidade Velha), Rio Vasyl atravessa a zona e apresenta aquecimento localizado no microcentro termal original.",
       "estuary": "O Rio Vasyl deságua na grande baía do território. O setor industrial/portuário e a associação territorial com Sulfok permanecem hipóteses cartográficas, não localizações ratificadas.",
       "temperature": "Trechos aquecidos ficam perto de entradas termais; jusante e afluentes podem esfriar, congelar parcialmente ou receber controle hidráulico humano. Nunca supor rio integralmente quente ou gelo ausente por toda a extensão.",
       "navigation": "Alguns trechos podem ser navegáveis e outros não, dependendo de declive/obras, a decidir somente se necessário.",
@@ -188,5 +188,9 @@
     "legacy_raion_name": "Chelsea",
     "core_common_name": "Cidade Velha",
     "core_formal_name": "Kingswell"
+  },
+  "owner_correction_2026_11_19": {
+    "status": "OWNER_APPROVED_BRANCH_CANDIDATE",
+    "territorial_identity": "KINGSWELL_CIDADE_VELHA_IDENTICAL_EXTENT"
   }
 }

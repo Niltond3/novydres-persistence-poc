@@ -1,11 +1,11 @@
 # TEMPLATE EXECUTÁVEL — NOVYDRES MAPWORK V3 / CIDADE VELHA
 
-Alvo: **Cidade Velha (Kingswell)**, núcleo histórico de nome formal Kingswell situado no raion homônimo **Kingswell** (`district-chelsea`). Núcleo histórico e raion são entidades espaciais distintas, apesar da homonímia.
+Alvo: **Cidade Velha = Kingswell = raion inteiro** (`district-chelsea`). Correção expressa do proprietário em 19/11/2026: não existe outra zona separada para o núcleo histórico. O microcentro termal de fundação continua somente como parte morfológica interna.
 
 Repositório: `Niltond3/novydres-persistence-poc`. No HEAD de `master`, leia `novydres/AGENTS.md`, `CONTEXT.md` e `catalogo.json` no mesmo SHA. Siga ADR-002, PRD-ATLAS-001, `cartografia/guide.md` e `cartografia/mapwork-v3/AGENT.md`, config, schemas, scripts, templates e manifestos. **Se a V3 ainda for branch candidata**, declare-a e use o SHA verificado; não presuma integração a master.
 
 **Sessão 1 — planejar antes de gerar:**
-1. Recupere de fontes proprietárias a definição vigente de Cidade Velha, sua geografia, história, instituições, redes, restrições, visibilidade e versão global anterior aprovada. Distinga CANON, CANDIDATE e UNKNOWN, sem inferir fronteiras ou metros.
+1. Recupere de fontes proprietárias a definição vigente de Cidade Velha, sua geografia, história, instituições, redes, restrições, visibilidade e versão global anterior aprovada. Distinga CANON, CANDIDATE e UNKNOWN, sem inferir fronteiras ou metros. A caixa do `spatial-plan.json` é contexto de estudo e não é uma fronteira aprovada.
 2. Inspecione as zonas adjacentes efetivamente geradas e conectores globais; reconcilie roads/tram/rail/water/Ermos. Se houver conflito com aprovado, bloqueie e apresente proposta de solução sem alterar vizinhos.
 3. Pesquise na web referências reais de bairros históricos frios e densos, arquitetura envelhecida, estrutura viária, transporte, equipamentos e tecido urbano. Registre URLs e motivos de analogia, sem projetar fatos reais diretamente como cânone.
 4. Faça **somente perguntas substantivas ainda abertas, uma de cada vez**. Não gere imagens artísticas enquanto houver decisão bloqueante.

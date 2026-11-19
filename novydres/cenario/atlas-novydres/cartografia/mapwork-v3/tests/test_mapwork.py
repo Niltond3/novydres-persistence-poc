@@ -175,3 +175,12 @@ def test_missing_real_zone_is_not_false_pass(tmp_path,monkeypatch):
     monkeypatch.setattr(m,'ROOT',fake)
     with pytest.raises(m.Invalid,match='required zone missing'):
         m.audit_repository(cfg,m.load(ROOT/'world-state.json'))
+
+
+def test_canonical_sources_follow_entire_raion_correction():
+    cenario=ROOT.parents[2]
+    city=json.loads((cenario/'geografia/district-chelsea/cidade-velha-2010.json').read_text())
+    raions=json.loads((cenario/'atlas-novydres/raions-oficiais-2010.json').read_text())
+    assert city['feature']['is_entire_raion'] is True
+    assert city['feature']['spatial_identity']['same_extent'] is True
+    assert next(r for r in raions['raions'] if r['subject_id']=='district-chelsea')['same_extent_as_cidade_velha'] is True

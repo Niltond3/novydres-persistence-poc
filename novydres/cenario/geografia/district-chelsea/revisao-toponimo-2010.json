@@ -6,7 +6,7 @@
   "requested_on": "2026-11-15",
   "revised_on": "2026-11-19",
   "authority": "OWNER_EXPLICIT_CORRECTION",
-  "scope": "Nome formal da Cidade Velha (núcleo histórico) = Kingswell; nome oficial do raion administrativo homônimo = Kingswell. Nome popular do núcleo = Cidade Velha; Old Town é tradução. Os dois objetos territoriais mantêm identidades distintas.",
+  "scope": "Kingswell é todo o raion e é a própria Cidade Velha; o identificador anterior do núcleo é alias territorial da mesma extensão. Centro termal de fundação é apenas microcentro morfológico.",
   "approved_selection": {
     "raion": {
       "name": "Kingswell",
@@ -34,7 +34,7 @@
     "Nove raions oficiais; Kingswell substitui rótulo editorial Chelsea, não o ID técnico.",
     "Gilgamesh nomeou posto avançado Ventrue em 1423; data de adoção civil pública de Kingswell ainda não definida.",
     "O nome histórico dos povos originários antes de 1423 não foi definido; sua ocupação e agência permanecem reconhecidas.",
-    "Não inferir que o núcleo Cidade Velha equivalha geometricamente a todo o raion Kingswell.",
+    "Correção de 19/11/2026: Cidade Velha e Kingswell são o mesmo polígono territorial, embora o núcleo de origem termal seja apenas microcentro morfológico.",
     "Não alterar fronteiras, domínios de 2010, fatos da crônica ou geometrias pela correção toponímica."
   ],
   "source_history": "Versões anteriores de GEO-004.5 permanecem exclusivamente no histórico Git; a escolha formal anterior do núcleo foi substituída por direção expressa do proprietário.",
@@ -42,7 +42,11 @@
   "status_of_prior_core_designation": "SUPERSEDED_NOT_AN_ALIAS",
   "unresolved": [
     "topônimo originário real pré-contato",
-    "limites do núcleo e do raion",
+    "limites geográficos do único raion Kingswell/Cidade Velha",
     "data de adoção civil pública de Kingswell"
-  ]
+  ],
+  "owner_correction_2026_11_19": {
+    "status": "OWNER_APPROVED_BRANCH_CANDIDATE",
+    "same_extent": true
+  }
 }
