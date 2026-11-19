@@ -248,11 +248,16 @@
 - Evidência: “KW-V3-D38: Aprovo A — passagens de pedestres atravessam os quarteirões, conectando várias ruas e pátios, com algumas oficinas e vendas voltadas aos caminhos internos.”
 - Consequência: permeabilidade pedonal elevada no interior das quadras mistas, integrando circulação de moradores, oficinas e pequenos comércios. **Não permite atravessar indiscriminadamente complexos fabris murados nem estabelece direitos legais de passagem, posições, quantitativos, traçados, geometrias ou arte.**
 
+**KW-V3-D39 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa C aprovada expressamente:** caminhos internos predominantemente descobertos, com pequenos abrigos apenas junto às entradas de moradias, oficinas e comércios.
+- Evidência: “KW-V3-D39: Aprovo C — caminhos internos predominantemente descobertos, com pequenos abrigos apenas junto às entradas de moradias, oficinas e comércios.”
+- Consequência: travessias pedonais expostas ao frio, com proteção pontual nas interfaces edificadas; não introduzir galerias contínuas nem pressupor calefação. **Não fixa obras, localização, quantidade de abrigos, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D39` — como as passagens pedonais atravessáveis dos quarteirões operários devem oferecer abrigo contra o frio extremo?
-- **A (recomendada):** proteção intermitente com arcadas, marquises e coberturas leves ligadas a oficinas e térreos, alternada com pátios e vielas abertos.
-- **B:** predomínio de passagens sob edifícios e galerias reaproveitadas, cobrindo boa parte das travessias, com pátios internos parcialmente abertos.
-- **C:** travessias principalmente descobertas, com abrigos pequenos e pontuais apenas junto a entradas e atividades de bairro.
-A decisão trata somente de padrão tipológico de proteção; respeitar D14, D19, D36-D38 e U02, **sem presumir aquecimento uniforme ou criar passagens, coberturas, edifícios, geometrias ou imagens específicos**.
+`KW-V3-D40` — como tratar neve e gelo nas passagens internas predominantemente descobertas dos quarteirões operários, preservando circulação a pé?
+- **A (recomendada):** remoção comunitária irregular para manter caminhos estreitos, com montes de neve nos cantos dos pátios e junto a muros; gelo e desníveis persistem.
+- **B:** adaptação física simples nos caminhos mais usados, com pisos e pequenos canais de escoamento, enquanto passagens secundárias continuam precárias, sem calefação generalizada.
+- **C:** limpeza sazonal insuficiente, com parte das passagens obstruída em períodos rigorosos e desvios temporários pelas ruas externas.
+A decisão trata da condição de uso dos caminhos, **sem fixar responsáveis, obras específicas, equipamentos, pontos de drenagem, novos traçados, geometrias ou imagens**. Respeitar D08, D14, D19, D36-D39 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
