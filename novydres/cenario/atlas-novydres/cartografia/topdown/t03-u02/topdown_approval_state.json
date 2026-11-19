@@ -1,0 +1,36 @@
+{
+  "schema": "NOVYDRES_T03_U02_APPROVAL_V1",
+  "status": "APPROVED_BY_OWNER_FOR_SUBSEQUENT_VISUAL_WORK",
+  "approved_on": "2026-11-19",
+  "owner_approval": "Aprovo: podemos trabalhar com isso. Persista tudo no Gihub com uma resalva, trocar de lugar para U3 em diante Vasyl Bay e New London. Sendo que o POI da estação ferrea ficará no caso em New London",
+  "visual_base_id": "NOVYDRES_T03_U02_APPROVED",
+  "source_u01_v2_sha256": "f17cdcdaec1fa4d9e096fc458a883378a0b9cd82f7b88af4759e1ad8900149de",
+  "approved_u02_png_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "mask_u02_sha256": "b5939602b2a41d673fe6c75ca36fd438bca34c923f5796aec267799e5f53b9a5",
+  "current_working_base": "U02/T03_U02_candidata_mascarada.png",
+  "resolution": [
+    1448,
+    1086
+  ],
+  "out_of_mask_changes": 0,
+  "within_mask_changed_pixels": 533702,
+  "source_image_immutable": true,
+  "historical_gothic_punk_v1_canon_unchanged": true,
+  "geography_canon_modified": false,
+  "approval_not_scope": [
+    "limites de zonas",
+    "geometria cadastral dos POIs",
+    "rede viária GIS validada",
+    "alteração dos fatos oficiais do Atlas"
+  ],
+  "next_phase_requirement": "Apply U03 region swap New London ↔ Vasyl Bay without touching U02 approved PNG",
+  "poi34_location_from_u03": "New London",
+  "poi21_identity": "Estação Sul de Carga / Pátio Ferroviário",
+  "poi35_active": false,
+  "remaining_conflicts": [
+    "GEO-013.1 passageiros Sulfok vs POI 34 visual em New London",
+    "posição/raion definitivo de terminal de carga (POI 21) pendente"
+  ],
+  "source_manifest": "topdown_assets_manifest.json",
+  "restore_script": "reconstruct_topdown.py"
+}
