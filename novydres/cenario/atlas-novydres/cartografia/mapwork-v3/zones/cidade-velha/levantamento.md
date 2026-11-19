@@ -123,11 +123,16 @@
 - Evidência: “KW-V3-D13: Aprovo A — pequenas instalações geotérmicas integradas aos quarteirões históricos, com equipamentos maiores na transição industrial.”
 - Consequência: infraestrutura técnica incorporada sem substituir o núcleo termal por um único complexo industrial. **Não há aprovação de localização exata, tubulações, capacidade, geometria, arte ou canonização.** Preservar o desvio privilegiado do calor para Bukovie e as falhas de distribuição locais.
 
+**KW-V3-D14 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa C aprovada expressamente:** distribuição térmica desigual principalmente por **uso dos edifícios**, com prioridade para instalações técnicas e atividades econômicas, enquanto moradias sofrem irregularidade de fornecimento mesmo quando próximas das fontes.
+- Evidência: “KW-V3-D14: Aprovo C — distribuição térmica desigual sobretudo por uso dos edifícios, com prioridade para instalações técnicas e atividades econômicas e aquecimento irregular nas moradias.”
+- Consequência: representar o contraste entre abastecimento de setores técnico-produtivos e fragilidade das moradias; **sem pressupor privação absoluta em todos os domicílios, localização, métricas ou responsáveis operacionais.** Mantém o desvio privilegiado para Bukovie, GEO-014 e o clima extremo.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D14` — como distribuir espacialmente, na proposta de Kingswell em 2010, a desigualdade residencial de acesso ao aquecimento?
-- **A (recomendada):** mosaico irregular de quadras atendidas e desassistidas, condicionado às redes, manutenção e nascentes locais; o centro termal também pode sofrer cortes.
-- **B:** gradiente residencial predominante mais favorecido no núcleo termal e mais precário nas expansões periféricas, com exceções locais.
-- **C:** desigualdade sobretudo por função dos imóveis; instalações técnicas e setores econômicos mais atendidos, moradias próximas e distantes com irregularidade.
-Qualquer alternativa deve respeitar a abundância geotérmica, o desvio para Bukovie, o clima letal e a distribuição canônica desigual. **Nenhuma autoriza um mapa de calor rígido, números de fornecimento ou geometrias.**
+`KW-V3-D15` — qual a predominância das tipologias residenciais de Kingswell em 2010, conciliando o núcleo histórico reaproveitado e a expansão operária?
+- **A (recomendada):** tecido muito denso e misto, com cortiços e edifícios antigos subdivididos perto do núcleo, passando a habitações operárias compactas, casas sobre oficinas e quadras de uso produtivo-residencial.
+- **B:** blocos residenciais de maior porte predominando nas expansões modernas, com cortiços concentrados no núcleo antigo.
+- **C:** pátios compartilhados, anexos e habitações geminadas compactas predominando no raion, com menos blocos altos.
+Não fixa altura, população, quantidade, proporções ou edifícios individuais. Respeitar as decisões D01-D06, a densidade de Kingswell e a evolução orgânica aprovada.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
