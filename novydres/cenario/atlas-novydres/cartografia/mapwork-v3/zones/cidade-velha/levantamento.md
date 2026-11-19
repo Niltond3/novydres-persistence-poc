@@ -253,11 +253,16 @@
 - Evidência: “KW-V3-D39: Aprovo C — caminhos internos predominantemente descobertos, com pequenos abrigos apenas junto às entradas de moradias, oficinas e comércios.”
 - Consequência: travessias pedonais expostas ao frio, com proteção pontual nas interfaces edificadas; não introduzir galerias contínuas nem pressupor calefação. **Não fixa obras, localização, quantidade de abrigos, geometrias ou arte.**
 
+**KW-V3-D40 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** limpeza comunitária irregular, mantendo caminhos estreitos transitáveis, com neve acumulada nos cantos dos pátios e junto aos muros, enquanto gelo e desníveis persistem.
+- Evidência: “KW-V3-D40: Aprovo A — limpeza comunitária irregular, mantendo caminhos estreitos transitáveis, com neve acumulada nos cantos dos pátios e junto aos muros, enquanto gelo e desníveis persistem.”
+- Consequência: circulação a pé sustentada por intervenções locais e descontínuas; a neve não desaparece totalmente e o gelo segue interferindo no cotidiano. **Sem fixar equipamentos, responsáveis formais, pontos de neve, obras, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D40` — como tratar neve e gelo nas passagens internas predominantemente descobertas dos quarteirões operários, preservando circulação a pé?
-- **A (recomendada):** remoção comunitária irregular para manter caminhos estreitos, com montes de neve nos cantos dos pátios e junto a muros; gelo e desníveis persistem.
-- **B:** adaptação física simples nos caminhos mais usados, com pisos e pequenos canais de escoamento, enquanto passagens secundárias continuam precárias, sem calefação generalizada.
-- **C:** limpeza sazonal insuficiente, com parte das passagens obstruída em períodos rigorosos e desvios temporários pelas ruas externas.
-A decisão trata da condição de uso dos caminhos, **sem fixar responsáveis, obras específicas, equipamentos, pontos de drenagem, novos traçados, geometrias ou imagens**. Respeitar D08, D14, D19, D36-D39 e baseline U02.
+`KW-V3-D41` — como distribuir iluminação noturna entre ruas operárias, pátios e passagens de pedestres de Kingswell?
+- **A (recomendada):** iluminação pública esparsa em ruas e cruzamentos principais; luz de portas, oficinas e comércio ilumina pontos internos das quadras, com muitas passagens em penumbra.
+- **B:** iluminação utilitária mais contínua em ruas operárias e parte das travessias, porém com infraestrutura antiga, manutenção irregular e pátios escuros.
+- **C:** iluminação pública mínima ou falha, dependendo quase totalmente de janelas, oficinas e entradas, com grandes trechos de rua e pátio escurecidos.
+Diretriz de distribuição visual noturna, não fixa luminárias, potência, cores, circuitos, obras, locais específicos, geometrias ou imagens. Respeitar D14, D37-D39, linha atmosférica V5 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
