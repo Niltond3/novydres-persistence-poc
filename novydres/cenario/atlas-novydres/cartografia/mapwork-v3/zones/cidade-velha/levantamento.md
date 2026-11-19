@@ -218,11 +218,16 @@
 - Evidência: “KW-V3-D32: Aprovo A — bolsões descontínuos de galpões e alas desativadas dentro ou junto aos complexos industriais ainda operacionais, com pátios parcialmente inutilizados e sem grandes vazios urbanos.”
 - Consequência: desativação em fragmentos entre instalações ativas, não bairros inteiros abandonados. Preservar maioria industrial em funcionamento (D31) e continuidade urbana (D06). **Sem localização, quantidade, proprietários, ocupantes, geometrias ou arte.**
 
+**KW-V3-D33 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** setores industriais desativados predominantemente fechados e em deterioração gradual, com máquinas antigas, materiais remanescentes e estruturas parcialmente degradadas, sem predomínio de ruínas abertas.
+- Evidência: “KW-V3-D33: Aprovo A — setores industriais desativados predominantemente fechados e em deterioração gradual, com máquinas antigas, materiais remanescentes e estruturas parcialmente degradadas, sem predomínio de ruínas abertas.”
+- Consequência: degradação lenta em bolsões fechados entre fábricas em operação, sem paisagem dominante de colapsos ou ruínas expostas. **Não define localização, quantidade, ocupantes, riscos específicos, geometria ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D33` — que condição física e uso predomina nos bolsões fabris desativados entre fábricas ainda operacionais?
-- **A (recomendada):** setores fechados e em degradação gradual, com maquinário e materiais remanescentes, estruturas parcialmente deterioradas, mas sem predomínio de ruínas abertas.
-- **B:** reaproveitamento informal de algumas áreas por pequenas oficinas, depósitos e atividades secundárias, misturado a setores fechados.
-- **C:** degradação estrutural mais intensa, com colapsos parciais de coberturas, corrosão e pátios obstruídos, contrastando com galpões vizinhos ativos.
-A escolha não define ocupantes, empresas, perigos ou percentuais; conservar D29, D31-D32 e U02. **Sem geometria ou imagem.**
+`KW-V3-D34` — como organizar os acessos cotidianos de trabalhadores aos complexos fabris, considerando grandes portões logísticos e muros junto aos bairros?
+- **A (recomendada):** portões de carga voltados ao corredor principal e poucas entradas de trabalhadores pelas ruas laterais/secundárias, conectadas à malha pedonal dos bairros e à circulação interna.
+- **B:** entradas de trabalhadores concentradas junto à frente logística principal, separadas mas próximas aos grandes portões de carga.
+- **C:** pequenas entradas controladas de trabalhadores distribuídas ao longo de várias ruas secundárias, mantendo os portões de carga exclusivamente na frente industrial.
+A escolha é só organização relativa de circulação; preservar D15, D26, D28-D29 e conectores U02. **Não autoriza número ou posição de portões, obras, novas vias, geometria ou imagens.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
