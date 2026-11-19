@@ -1,0 +1,70 @@
+{
+  "schema": "NOVYDRES_V2_VISUAL_POC_TEST",
+  "base_sha256_verified": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "world_size_px": [
+    1448,
+    1086
+  ],
+  "detail_size_px": [
+    1184,
+    960
+  ],
+  "building_count": 7,
+  "lot_count": 2,
+  "independent_building_assets": true,
+  "protected_assets_unchanged_in_microedit": true,
+  "projection": "2.5D uniform oblique with south and east facades, plan 90 degrees",
+  "building_masks_intersection_px": 0,
+  "isolated_edit_tests": [
+    {
+      "id": "a1",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "a2",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "a3",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "b1",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "b2",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "b3",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    },
+    {
+      "id": "b4",
+      "pixel_changes": 1,
+      "outside_mask_px": 0
+    }
+  ],
+  "detail_lot_changes": 212046,
+  "detail_changes_outside_lots": 0,
+  "detail_b2_changes": 20446,
+  "detail_changes_outside_b2": 0,
+  "native_lot_changes": 867,
+  "native_b2_changes": 99,
+  "native_changes_outside_b2": 0,
+  "source_preserved": true,
+  "limitations": [
+    "All lot polygons remain experimental and non-cadastral",
+    "2.5D projection intentionally illustrates volume, not photogrammetric camera",
+    "Native U02 remains 1448x1086; enlarged legacy pixels cannot recover lost detail",
+    "No GIS topology revalidation",
+    "Human architectural approval required before closing"
+  ]
+}

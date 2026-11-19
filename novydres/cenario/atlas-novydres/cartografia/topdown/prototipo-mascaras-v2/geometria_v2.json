@@ -1,0 +1,272 @@
+{
+  "schema": "NOVYDRES_HIERARCHICAL_MASK_PROTOTYPE_V2",
+  "state": "CANDIDATE_AWAITING_OWNER_VISUAL_REVIEW",
+  "not_canon": true,
+  "base": {
+    "asset": "T03_U02_aprovada.png",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "size_px": [
+      1448,
+      1086
+    ],
+    "is_immutable": true,
+    "coordinate_system": "topdown U02 pixel coordinates, origin top-left, +x east, +y south"
+  },
+  "render": {
+    "detail_scale": 16,
+    "crop_xyxy": [
+      740,
+      776,
+      814,
+      836
+    ],
+    "world_camera": "orthographic_topdown_plan_90deg",
+    "building_projection": "illustrative_oblique_roof_setback_with_south_east_facades",
+    "oblique_direction": "roof illustrated northwest within fixed approved experimental ground footprint; visible south/east facades",
+    "lighting": "NW upper left, same for every building",
+    "absolute_height_known": false,
+    "output_native_px": [
+      1448,
+      1086
+    ],
+    "roof_inset_east_south_px": [
+      1.42,
+      2.16
+    ]
+  },
+  "hierarchy": [
+    {
+      "id": "city-novydres",
+      "type": "city",
+      "parent": null,
+      "editable": false
+    },
+    {
+      "id": "region-kingswell",
+      "type": "region",
+      "parent": "city-novydres",
+      "editable": false,
+      "region_status": "working_visual_anchor_only"
+    },
+    {
+      "id": "neighborhood-ksw-pilot-01",
+      "type": "neighborhood",
+      "parent": "region-kingswell",
+      "polygon_px": [
+        [
+          754,
+          788
+        ],
+        [
+          801,
+          788
+        ],
+        [
+          802,
+          818
+        ],
+        [
+          754,
+          818
+        ]
+      ],
+      "editable": false,
+      "status": "study_only_not_administrative_boundary"
+    },
+    {
+      "id": "lot-a",
+      "type": "lot",
+      "parent": "neighborhood-ksw-pilot-01",
+      "polygon_px": [
+        [
+          758.8,
+          792.3
+        ],
+        [
+          776.8,
+          792.3
+        ],
+        [
+          777.3,
+          814.4
+        ],
+        [
+          758.7,
+          814.4
+        ]
+      ]
+    },
+    {
+      "id": "lot-b",
+      "type": "lot",
+      "parent": "neighborhood-ksw-pilot-01",
+      "polygon_px": [
+        [
+          779.6,
+          792.3
+        ],
+        [
+          798.6,
+          792.3
+        ],
+        [
+          798.6,
+          814.4
+        ],
+        [
+          779.6,
+          814.4
+        ]
+      ]
+    },
+    {
+      "id": "a1",
+      "type": "building",
+      "parent": "lot-a",
+      "roof_kind": "gable",
+      "footprint_px": [
+        760.3,
+        793.6,
+        767.4,
+        803.1
+      ],
+      "palette": "slate",
+      "height_factor": 1.0,
+      "asset_path": "assets/buildings/a1.png",
+      "mask_path": "assets/masks/a1.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "a2",
+      "type": "building",
+      "parent": "lot-a",
+      "roof_kind": "mansard",
+      "footprint_px": [
+        768.5,
+        793.8,
+        775.7,
+        803.8
+      ],
+      "palette": "terracotta",
+      "height_factor": 1.05,
+      "asset_path": "assets/buildings/a2.png",
+      "mask_path": "assets/masks/a2.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "a3",
+      "type": "building",
+      "parent": "lot-a",
+      "roof_kind": "industrial_sawtooth",
+      "footprint_px": [
+        760.4,
+        806.2,
+        775.9,
+        813.2
+      ],
+      "palette": "slate",
+      "height_factor": 0.84,
+      "asset_path": "assets/buildings/a3.png",
+      "mask_path": "assets/masks/a3.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "b1",
+      "type": "building",
+      "parent": "lot-b",
+      "roof_kind": "gable",
+      "footprint_px": [
+        780.9,
+        793.5,
+        788.1,
+        803.5
+      ],
+      "palette": "terracotta",
+      "height_factor": 1.0,
+      "asset_path": "assets/buildings/b1.png",
+      "mask_path": "assets/masks/b1.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "b2",
+      "type": "building",
+      "parent": "lot-b",
+      "roof_kind": "flat",
+      "footprint_px": [
+        789.3,
+        793.6,
+        797.3,
+        803.9
+      ],
+      "palette": "slate",
+      "target_of_microedit": true,
+      "height_factor": 0.95,
+      "asset_path": "assets/buildings/b2.png",
+      "mask_path": "assets/masks/b2.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "b3",
+      "type": "building",
+      "parent": "lot-b",
+      "roof_kind": "mansard",
+      "footprint_px": [
+        780.9,
+        805.3,
+        789.8,
+        813.4
+      ],
+      "palette": "slate",
+      "height_factor": 0.92,
+      "asset_path": "assets/buildings/b3.png",
+      "mask_path": "assets/masks/b3.png",
+      "asset_is_independent": true
+    },
+    {
+      "id": "b4",
+      "type": "building",
+      "parent": "lot-b",
+      "roof_kind": "gable",
+      "footprint_px": [
+        790.9,
+        805.3,
+        797.4,
+        813.4
+      ],
+      "palette": "terracotta",
+      "height_factor": 0.96,
+      "asset_path": "assets/buildings/b4.png",
+      "mask_path": "assets/masks/b4.png",
+      "asset_is_independent": true
+    }
+  ],
+  "protected_external_layers": [
+    "roads",
+    "railways",
+    "tramways",
+    "water",
+    "terrain",
+    "islands",
+    "ermo",
+    "pois"
+  ],
+  "edit_policy": {
+    "roof_and_facade_geometry": "projected_image_must_fit_stable_mask_and_parent_lot",
+    "individual_asset": "one transparent PNG and one stable mask PNG per building",
+    "lot_does_not_generate_buildings": true,
+    "lot_renders_only_registered_children": true,
+    "building_change": "replace only target PNG; strict byte/pixel verification outside stable mask",
+    "parent_change": "revalidate registered children; do not redraw automatically",
+    "image_infrastructure": "unchanged outside explicitly approved edit polygons",
+    "no_assumptions": "missing source geometry => block or document as candidate, never canon",
+    "approval": "visual and technical review before closure; no canonization"
+  },
+  "target_edit": {
+    "building_id": "b2",
+    "base_asset": "assets/buildings/b2.png",
+    "candidate_asset": "assets/buildings/b2_cobre.png",
+    "style_change": "flat roof to oxidized copper mansard with dormers",
+    "footprint_change": false
+  },
+  "source_poc_v1_commit": "b8b4f4b75b8033c62daa7a494526366cc335f112"
+}

@@ -1,0 +1,234 @@
+{
+  "schema": "NOVYDRES_BUILDING_ASSETS_V2",
+  "source_u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "state": "CANDIDATE_AWAITING_OWNER_VISUAL_REVIEW",
+  "projection": {
+    "detail_scale": 16,
+    "crop_xyxy": [
+      740,
+      776,
+      814,
+      836
+    ],
+    "world_camera": "orthographic_topdown_plan_90deg",
+    "building_projection": "illustrative_oblique_roof_setback_with_south_east_facades",
+    "oblique_direction": "roof illustrated northwest within fixed approved experimental ground footprint; visible south/east facades",
+    "lighting": "NW upper left, same for every building",
+    "absolute_height_known": false,
+    "output_native_px": [
+      1448,
+      1086
+    ],
+    "roof_inset_east_south_px": [
+      1.42,
+      2.16
+    ]
+  },
+  "buildings": [
+    {
+      "id": "a1",
+      "parent": "lot-a",
+      "asset": "assets/buildings/a1.png",
+      "mask": "assets/masks/a1.png",
+      "bbox_detail_xyxy": [
+        324,
+        281,
+        440,
+        435
+      ],
+      "footprint_px": [
+        760.3,
+        793.6,
+        767.4,
+        803.1
+      ],
+      "roof_kind": "gable",
+      "height_factor": 1.0,
+      "projection_offset_px": [
+        1.42,
+        2.16
+      ],
+      "asset_sha256": "2676b265ad0e57b25882857044811e05cadf36a81affdbfd1485aa8dda5e2c42",
+      "mask_sha256": "19ee983622016ebd5a004bad56ed94b9c36f9b94a6aadaa1d74b62f3fb084a8d",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    },
+    {
+      "id": "a2",
+      "parent": "lot-a",
+      "asset": "assets/buildings/a2.png",
+      "mask": "assets/masks/a2.png",
+      "bbox_detail_xyxy": [
+        455,
+        284,
+        573,
+        446
+      ],
+      "footprint_px": [
+        768.5,
+        793.8,
+        775.7,
+        803.8
+      ],
+      "roof_kind": "mansard",
+      "height_factor": 1.05,
+      "projection_offset_px": [
+        1.491,
+        2.268
+      ],
+      "asset_sha256": "e9b717a65ccfa7e9721f19961dff8f2415898b07081a75f4a9df3b395cfad70e",
+      "mask_sha256": "e06065577e61a6fe35836c26b7446e50dc3b97bb9fbbfa574fcf4f1791a0285b",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    },
+    {
+      "id": "a3",
+      "parent": "lot-a",
+      "asset": "assets/buildings/a3.png",
+      "mask": "assets/masks/a3.png",
+      "bbox_detail_xyxy": [
+        326,
+        483,
+        576,
+        597
+      ],
+      "footprint_px": [
+        760.4,
+        806.2,
+        775.9,
+        813.2
+      ],
+      "roof_kind": "industrial_sawtooth",
+      "height_factor": 0.84,
+      "projection_offset_px": [
+        1.1928,
+        1.8144
+      ],
+      "asset_sha256": "e2a25cc59e4e2fb1dd812b3228ba56593c3193cb60e2d8c69f1ed6c10b4182ff",
+      "mask_sha256": "f8f3fa5eb4bb753c61fb283a37c29982dc5dd9db0d999c260b4417137347b15c",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    },
+    {
+      "id": "b1",
+      "parent": "lot-b",
+      "asset": "assets/buildings/b1.png",
+      "mask": "assets/masks/b1.png",
+      "bbox_detail_xyxy": [
+        654,
+        279,
+        771,
+        442
+      ],
+      "footprint_px": [
+        780.9,
+        793.5,
+        788.1,
+        803.5
+      ],
+      "roof_kind": "gable",
+      "height_factor": 1.0,
+      "projection_offset_px": [
+        1.42,
+        2.16
+      ],
+      "asset_sha256": "2dba8deae8524d153025bb84c5a7b19d7a681b5b5a614ba65b80f8fb65d716bd",
+      "mask_sha256": "70e83833e656c7c536af7c3e5cc06cffe66dfc51e0e1672ffae7bac97f579baa",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    },
+    {
+      "id": "b2",
+      "parent": "lot-b",
+      "asset": "assets/buildings/b2.png",
+      "mask": "assets/masks/b2.png",
+      "bbox_detail_xyxy": [
+        788,
+        281,
+        918,
+        448
+      ],
+      "footprint_px": [
+        789.3,
+        793.6,
+        797.3,
+        803.9
+      ],
+      "roof_kind": "flat",
+      "height_factor": 0.95,
+      "projection_offset_px": [
+        1.349,
+        2.052
+      ],
+      "asset_sha256": "ae095aef7c1732e36b10243beb03e1807a600b28e918a08d62a8ce57350b8ec7",
+      "mask_sha256": "94ae1c5de48f60be4ff1eb1b673d45afd8afdd1e488fc31a73d5e22c4ddc2f96",
+      "status": "EXPERIMENTAL_NOT_CANON",
+      "variant_asset": "assets/buildings/b2_cobre.png",
+      "variant_sha256": "fa697748aab32f2a01ad30b2e9687c860a556d92f07657a350822c33cf323d26"
+    },
+    {
+      "id": "b3",
+      "parent": "lot-b",
+      "asset": "assets/buildings/b3.png",
+      "mask": "assets/masks/b3.png",
+      "bbox_detail_xyxy": [
+        654,
+        468,
+        798,
+        600
+      ],
+      "footprint_px": [
+        780.9,
+        805.3,
+        789.8,
+        813.4
+      ],
+      "roof_kind": "mansard",
+      "height_factor": 0.92,
+      "projection_offset_px": [
+        1.3064,
+        1.9872
+      ],
+      "asset_sha256": "1783b2f1a87ab490c2e5767b5ffd58614cca093d869a3c59e01f5054b6de9571",
+      "mask_sha256": "bc3a4100a5c4e4c619ea6c21785667091d7bfd5b99690387162eab3820a4b022",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    },
+    {
+      "id": "b4",
+      "parent": "lot-b",
+      "asset": "assets/buildings/b4.png",
+      "mask": "assets/masks/b4.png",
+      "bbox_detail_xyxy": [
+        814,
+        468,
+        920,
+        600
+      ],
+      "footprint_px": [
+        790.9,
+        805.3,
+        797.4,
+        813.4
+      ],
+      "roof_kind": "gable",
+      "height_factor": 0.96,
+      "projection_offset_px": [
+        1.3632,
+        2.0736
+      ],
+      "asset_sha256": "7693f580d96c29f6ffc0a11149115cd350a407758366da5e852358f1589ddabb",
+      "mask_sha256": "0279c7495e25d71f9b808a8832ee6836a691a7063d20600e38efe9b9923ecdcc",
+      "status": "EXPERIMENTAL_NOT_CANON"
+    }
+  ],
+  "composition_order": [
+    "lot-ground:lot-a",
+    "lot-ground:lot-b",
+    "a1",
+    "a2",
+    "a3",
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+  ],
+  "geometry_file": "geometria_v2.json",
+  "immutable_origin": "POC_V1 b8b4f4b75b8033c62daa7a494526366cc335f112",
+  "poiss_untouched": true
+}
