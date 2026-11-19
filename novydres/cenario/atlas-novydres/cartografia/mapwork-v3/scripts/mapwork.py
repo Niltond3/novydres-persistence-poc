@@ -53,6 +53,8 @@ def audit_zone(z, cfg, assets=None, strict=False):
     fail(z['status'] not in ('OWNER_APPROVED','PUBLISHED') or z.get('owner_approval'),'owner approval missing')
     if z['status']!='PLANNING':
         fail(not any(d['status']=='OPEN' for d in z['decisions']),'open blocking decision')
+        fail(bool(z['elements']),'nonplanning zone without detailed elements')
+        fail(bool(z['connectors']) if z['neighbors'] else True,'nonplanning zone has no neighbor connectors')
     scale=cfg['detail_pixels_per_unit']; max_bleed=cfg['max_bleed_units']
     cores=[]
     for e in z['elements']:
@@ -204,6 +206,63 @@ def next_action(z):
     if z['status']!='PUBLISHED':return {'action':'VERIFY_AND_PUBLISH','note':'Owner-approved candidate; Git transaction with CAS, Drive receipts and readback.'}
     return {'action':'COMPLETE','note':'No handoff until all closure gates and readback passed.'}
 
+def validate_spatial_plan(plan, z, cfg):
+    """Validate real candidate anchors and gates; planning PASS never implies image readiness."""
+    fail(plan.get('schema')=='NOVYDRES_MAPWORK_V3_KINGSWELL_SPATIAL_PLAN_1','spatial plan schema')
+    fail(plan.get('status')=='PLANNING_CANDIDATE','spatial plan must remain candidate until full sketch approval')
+    owner=plan.get('owner_decision',{})
+    fail(owner.get('same_extent') is True and owner.get('owner_subject_id')=='district-chelsea','Kingswell must equal entire Cidade Velha raion')
+    fail(z['owner_subject_id']==owner['owner_subject_id'] and z['id']=='kingswell','zone owner and identity mismatch')
+    fail(plan.get('base_u02_sha256')==cfg['reference']['sha256'],'spatial plan U02 SHA mismatch')
+    fail(plan.get('working_bounds_px')==z['bounds'],'zone bounds and working plan mismatch')
+    bridges=plan.get('bridges',[])
+    fail(plan.get('bridge_count_mandatory')==3 and len(bridges)==3,'exactly three historical Vasyl bridge candidates required')
+    fail(len({b['id'] for b in bridges})==3,'duplicate historical bridge id')
+    pois=plan.get('pois',[])
+    required={'poi-14','poi-15','poi-16','poi-17','poi-32'}
+    fail(len(pois)==len(required) and {p['id'] for p in pois}==required,'missing, duplicate or unexpected Kingswell POI')
+    def anchor(point, label):
+        fail(isinstance(point,list) and len(point)==2 and all(isinstance(v,(int,float)) and math.isfinite(v) for v in point),label+': invalid coordinate')
+        x,y=point
+        fail(0<=x<=cfg['world_size_units'][0] and 0<=y<=cfg['world_size_units'][1],label+': coordinate outside U02')
+        fail(z['bounds'][0]<=x<=z['bounds'][2] and z['bounds'][1]<=y<=z['bounds'][3],label+': coordinate outside planning bounds')
+    for b in bridges:
+        anchor(b.get('center_px'),b['id'])
+        fail(b.get('confidence')=='CANDIDATE',b['id']+': must not claim canon bridge position')
+    for p in pois:
+        anchor(p.get('center_px'),p['id'])
+        fail(p.get('canonized_location') is False,p['id']+': unapproved POI position canonized')
+    fronts=plan.get('external_resource_fronts',[])
+    fail(len(fronts)==3 and {x.get('kind') for x in fronts}=={'gold','diamond','natural_gas'},'missing external resource fronts')
+    fail(all(x.get('off_map') is True and 'center_px' not in x for x in fronts),'off-frame extraction may not fabricate on-map POIs')
+    gas=next(x for x in fronts if x['kind']=='natural_gas')
+    fail(gas.get('primary_transport')=='pipeline','natural gas primary transport must be pipeline')
+    gates=plan.get('gates',{})
+    gate_names=('bridge_river_topology_verified','adjacent_zone_edges_verified','poi_u02_sites_verified','full_technical_sketch_approved','image_generation_authorized')
+    fail(all(type(gates.get(k)) is bool for k in gate_names),'missing spatial readiness gate')
+    if z['status']=='PLANNING':
+        fail(z['sketch_approved'] is False and gates['image_generation_authorized'] is False,'planning zone must not authorize images')
+    else:
+        fail(all(gates[k] for k in gate_names),'nonplanning zone has unresolved spatial/image gates')
+        fail(z['sketch_approved'] is True,'technical sketch not approved')
+        fail(bool(z['elements']),'approved sketch has no physical elements')
+        fail(bool(z['connectors']) if z['neighbors'] else True,'missing neighbor connectors in approved sketch')
+    return {'historical_bridges':3,'pois':5,'resource_fronts':3,'readiness':'PLANNING_NOT_READY_FOR_IMAGE' if z['status']=='PLANNING' else 'SPATIAL_GATES_VERIFIED'}
+
+def audit_required_planning_zones(cfg):
+    required=cfg.get('required_planning_zones',[])
+    fail(bool(required) and len(required)==len(set(required)),'required planning zones must be configured')
+    results=[]
+    for folder in required:
+        fail(re.fullmatch(r'[a-z][a-z0-9-]+',folder) is not None,'unsafe required zone folder')
+        path=ROOT/'zones'/folder/'zone.json'
+        planpath=ROOT/'zones'/folder/'spatial-plan.json'
+        fail(path.is_file(),f'required zone missing: {folder}/zone.json')
+        fail(planpath.is_file(),f'required spatial plan missing: {folder}/spatial-plan.json')
+        z=load(path);audit_zone(z,cfg,strict=False)
+        results.append(validate_spatial_plan(load(planpath),z,cfg))
+    return results
+
 def audit_repository(cfg,state):
     config_check(cfg)
     fail(state['schema']=='NOVYDRES_MAPWORK_V3_WORLD_STATE_1','world state schema')
@@ -220,10 +279,11 @@ def audit_repository(cfg,state):
         fail(bool(r.get('tiles')),str(p)+': release has no tiles')
         for t in r['tiles']:
             fail(t.get('drive_file_id') and re.fullmatch('[0-9a-f]{64}',t.get('sha256','')),str(p)+': tile not uploaded/hashed')
+    required_zone_reports=audit_required_planning_zones(cfg)
     if state['last_approved_global_release'] is not None:
         pointer=state['last_approved_global_release']
         fail((ROOT/'releases'/pointer['manifest']).is_file(),'approved global release pointer missing')
-    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
+    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'PLANNING_NOT_READY_FOR_IMAGE' if any(x['readiness']=='PLANNING_NOT_READY_FOR_IMAGE' for x in required_zone_reports) else 'SPATIAL_GATES_VERIFIED','releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);sub=ap.add_subparsers(dest='cmd',required=True)

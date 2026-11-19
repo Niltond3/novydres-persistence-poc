@@ -34,7 +34,10 @@ def fixture(tmp_path):
 
 def test_repository_contract():
     result=m.audit_repository(m.load(ROOT/'config.json'),m.load(ROOT/'world-state.json'))
-    assert result['repository']=='PASS' and result['zones_checked']==0
+    assert result['repository']=='PASS' and result['zones_checked']==1
+    assert result['required_zone_reports'][0]['historical_bridges']==3
+    assert result['required_zone_reports'][0]['pois']==5
+    assert result['image_readiness']=='PLANNING_NOT_READY_FOR_IMAGE'
 
 def test_e2e_tiles_compare(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
@@ -116,3 +119,59 @@ def test_release_rejects_missing_receipts(tmp_path, monkeypatch):
     m.save(fake/'releases'/'r.json',bad)
     monkeypatch.setattr(m,'ROOT',fake)
     with pytest.raises(m.Invalid,match='not uploaded'):m.audit_repository(cfg,st)
+
+
+def planning_inputs():
+    cfg=m.load(ROOT/'config.json')
+    z=m.load(ROOT/'zones/cidade-velha/zone.json')
+    plan=m.load(ROOT/'zones/cidade-velha/spatial-plan.json')
+    return cfg,z,plan
+
+def test_kingswell_identity_spatial_gate():
+    cfg,z,plan=planning_inputs()
+    assert z['sketch_approved'] is False
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='PLANNING_NOT_READY_FOR_IMAGE'
+
+def test_bridge_exact_count_and_uniqueness():
+    cfg,z,plan=planning_inputs()
+    plan['bridges'].append(dict(plan['bridges'][0],id='KW-VASYL-04'))
+    with pytest.raises(m.Invalid,match='exactly three'):
+        m.validate_spatial_plan(plan,z,cfg)
+    _,z,plan=planning_inputs()
+    plan['bridges'][1]['id']=plan['bridges'][0]['id']
+    with pytest.raises(m.Invalid,match='duplicate historical bridge'):
+        m.validate_spatial_plan(plan,z,cfg)
+
+def test_missing_poi_or_site_outside_world_fails():
+    cfg,z,plan=planning_inputs()
+    plan['pois']=plan['pois'][:-1]
+    with pytest.raises(m.Invalid,match='missing, duplicate or unexpected Kingswell POI'):
+        m.validate_spatial_plan(plan,z,cfg)
+    _,z,plan=planning_inputs()
+    plan['bridges'][0]['center_px']=[-1,765]
+    with pytest.raises(m.Invalid,match='outside U02'):
+        m.validate_spatial_plan(plan,z,cfg)
+
+def test_offframe_resources_and_transport_are_checked():
+    cfg,z,plan=planning_inputs()
+    plan['external_resource_fronts'][0]['center_px']=[900,700]
+    with pytest.raises(m.Invalid,match='off-frame extraction'):
+        m.validate_spatial_plan(plan,z,cfg)
+    _,z,plan=planning_inputs()
+    next(f for f in plan['external_resource_fronts'] if f['kind']=='natural_gas')['primary_transport']='rail'
+    with pytest.raises(m.Invalid,match='natural gas primary transport'):
+        m.validate_spatial_plan(plan,z,cfg)
+
+def test_no_unapproved_spatial_promotion():
+    cfg,z,plan=planning_inputs()
+    z['status']='SKETCH_APPROVED'
+    z['sketch_approved']=True
+    with pytest.raises(m.Invalid,match='unresolved spatial'):
+        m.validate_spatial_plan(plan,z,cfg)
+
+def test_missing_real_zone_is_not_false_pass(tmp_path,monkeypatch):
+    cfg,z,plan=planning_inputs()
+    fake=tmp_path/'mapwork';(fake/'zones').mkdir();(fake/'releases').mkdir()
+    monkeypatch.setattr(m,'ROOT',fake)
+    with pytest.raises(m.Invalid,match='required zone missing'):
+        m.audit_repository(cfg,m.load(ROOT/'world-state.json'))

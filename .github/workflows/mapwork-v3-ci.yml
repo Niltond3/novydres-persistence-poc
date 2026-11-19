@@ -6,7 +6,7 @@ on:
       - 'novydres/cenario/atlas-novydres/cartografia/mapwork-v3/**'
       - '.github/workflows/mapwork-v3-ci.yml'
   push:
-    branches: [master, 'mapwork/**']
+    branches: [master, 'mapwork/**', 'mapwork-v3/**']
     paths:
       - 'novydres/cenario/atlas-novydres/cartografia/mapwork-v3/**'
       - '.github/workflows/mapwork-v3-ci.yml'
