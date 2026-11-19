@@ -178,11 +178,16 @@
 - Evidência: “KW-V3-D24: Aprovo A — pequenos cais históricos e acessos públicos distribuídos, separados funcionalmente dos poucos terminais de balsas, que terão rampas e acessos viários próprios.”
 - Consequência: não converter a rede de pequenos cais históricos em terminais veiculares; organizar aproximações e rampas de balsas em poucos pontos funcionais. **Sem autorizar número, localização, dimensões, obras, nova ponte, geometria ou arte.**
 
+**KW-V3-D25 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** rede logística escalonada: pequenos depósitos e operações leves junto aos antigos cais; pátios de transbordo maiores nas bordas do núcleo histórico, conectados ao corredor industrial compartilhado com Sulfok.
+- Evidência: “KW-V3-D25: Aprovo A — rede escalonada, com pequenos depósitos e operações leves nos cais antigos e pátios de transferência maiores nas bordas do núcleo histórico, conectados ao corredor industrial.”
+- Consequência: hierarquia de cargas leves nos cais históricos para transbordos mais volumosos nas bordas, sem transformar o núcleo antigo em pátio de carga pesada. **Não define quantidade, localização, novos ramais ou estradas, operação das balsas, capacidade, geometria ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D25` — como distribuir a transferência de mercadorias entre os antigos cais e o corredor logístico-industrial compartilhado com Sulfok?
-- **A (recomendada):** rede escalonada, com pequenos depósitos e carga leve nos cais antigos, passando para pátios de transbordo maiores acessíveis por vias amplas nas bordas do núcleo histórico.
-- **B:** muitos pequenos entrepostos, oficinas e pátios de carga permeando o tecido residencial-industrial, enquanto caminhões grandes usam os poucos corredores estruturantes.
-- **C:** transferência de carga principalmente concentrada em poucos centros junto à transição industrial, mantendo comércio de baixo volume nos antigos cais.
-Nenhuma alternativa cria nova ferrovia, rodovia, terminal, cais ou ponte, nem define localização, capacidade, quantidade, traçado ou geometria; respeitar D06-D07, D22-D24 e conectores U02.
+`KW-V3-D26` — como o corredor principal de cargas Kingswell–Sulfok convive com o tecido misto operário e residencial da transição?
+- **A (recomendada):** eixo de cargas estruturante com entradas seletivas para galpões e pátios; ruas locais transversais e paralelas atendem residências e comércio e evitam tráfego pesado nas vielas.
+- **B:** eixo de cargas compartilhado com comércio e frentes de atividades operárias, com conexão direta à rede local e mistura visível de fluxos.
+- **C:** eixo principal com vias curtas de serviço que alcançam pátios internos, enquanto comércio e moradias se voltam principalmente para a rede de ruas locais.
+Em todos os casos preservar D06-D07, D15, D25 e **nenhum novo eixo, ferrovia, ponte ou geometria sem validação de conectores U02 e esboço técnico integral aprovado**.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.

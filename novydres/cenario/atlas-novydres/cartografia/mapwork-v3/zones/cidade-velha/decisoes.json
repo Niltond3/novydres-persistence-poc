@@ -261,23 +261,33 @@
     },
     {
       "id": "KW-V3-D25",
-      "status": "OPEN",
+      "status": "APPROVED",
       "question": "Como o transporte e a transferência de mercadorias devem se distribuir entre os cais históricos de Kingswell e o corredor logístico-industrial compartilhado com Sulfok?",
+      "selected_option": "A",
+      "answer": "Rede logística escalonada: pequenos depósitos e operações leves junto aos cais antigos; pátios de transbordo maiores nas bordas do núcleo histórico, conectados ao corredor industrial compartilhado com Sulfok.",
+      "approved_on": "2026-11-19",
+      "evidence": "KW-V3-D25: Aprovo A — rede escalonada, com pequenos depósitos e operações leves nos cais antigos e pátios de transferência maiores nas bordas do núcleo histórico, conectados ao corredor industrial.",
+      "limits": "Hierarquia logística candidata apenas. Não fixa localização, extensão, quantidade, capacidade, ramais ferroviários, vias, obras, relação com terminais de balsas ou geometria; respeitar U02 e exatamente três pontes históricas."
+    },
+    {
+      "id": "KW-V3-D26",
+      "status": "OPEN",
+      "question": "Como o corredor principal de cargas Kingswell–Sulfok deve conviver com as ruas residenciais e comerciais da transição urbano-industrial?",
       "options": [
         {
           "id": "A",
-          "text": "Rede escalonada: pequenos depósitos e pontos de carga leves próximos aos antigos cais, transferência de cargas maiores em pátios acessíveis por vias amplas nas bordas do núcleo, conectados ao corredor industrial."
+          "text": "Eixo estruturante de cargas com acessos seletivos aos pátios e galpões; uma rede de vias locais paralelas e transversais atende moradias e comércio, reduzindo caminhões nas vielas históricas."
         },
         {
           "id": "B",
-          "text": "Muitos entrepostos locais: oficinas, armazéns e pequenos pátios logísticos permeiam as quadras mistas, com entregas frequentes, enquanto caminhões maiores usam poucos eixos já estabelecidos."
+          "text": "Corredor principal de uso compartilhado, com caminhões, comércio e atividades operárias voltados para a mesma via; conexões secundárias distribuem circulação e acesso aos pátios."
         },
         {
           "id": "C",
-          "text": "Centralização nas expansões: quase todo transbordo de carga de maior porte ocorre em poucos centros logísticos na transição industrial; cais históricos conservam operações comerciais de pequeno volume."
+          "text": "Corredor principal de cargas ligado a vias de serviço curtas e dispersas para pátios internos; frentes comerciais e residenciais orientam-se majoritariamente para ruas locais, sem avenida industrial de fachada dominante."
         }
       ],
-      "blocks": "Decisão apenas de hierarquia de distribuição de cargas, sem fixar volumes, modal ferroviário, novas vias, quantidade de pátios, localização de depósitos, operação em terminais de balsas, geometria ou imagens. Respeitar as decisões D06-D07, D22-D24, os conectores U02 e a proibição de novas pontes (D09). Qualquer ramal ferroviário depende de compatibilidade com infraestrutura previamente aprovada."
+      "blocks": "Todas as opções mantêm um corredor logístico principal já aprovado (D07) e a transição urbana orgânica D06, sem inventar vazios ou conurbação forçada com Sulfok. Diretriz de hierarquia funcional, não traçado/duplicação de eixos, ramal ferroviário, ponte nova, geometria, arte ou autorização para alterar conectores U02."
     }
   ],
   "release_effects": "NONE",
