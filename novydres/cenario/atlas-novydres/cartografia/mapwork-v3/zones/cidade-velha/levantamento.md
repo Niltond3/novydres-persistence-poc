@@ -198,11 +198,16 @@
 - Evidência: “KW-V3-D28: Aprovo B — contraste direto, com muros altos e fundos de fábricas confrontando ruas residenciais estreitas, com poucos elementos de transição.”
 - Consequência: interface fabril-residencial abrupta e opressiva, sem corredor intermediário de oficinas obrigatórias; preservar a malha contínua D06 e entradas de carga seletivas D26. **Não fixa posição, gabarito, materiais de muros, traçado, geometria ou imagem.**
 
+**KW-V3-D29 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** quarteirões industriais fechados, com galpões ao redor de pátios internos, portões de carga voltados ao corredor principal e muros junto às ruas residenciais.
+- Evidência: “KW-V3-D29: Aprovo A — quarteirões industriais fechados, com galpões ao redor de pátios internos, portões de carga voltados ao corredor principal e muros junto às ruas residenciais.”
+- Consequência: logística intramuros organizada em pátios de manobra e galpões adjacentes, com acessos seletivos ao corredor pesado e fundos murados confrontando bairros. **Não impõe forma idêntica a todo quarteirão nem aprova número, dimensão, posição, edifícios individuais ou geometrias.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D29` — como distribuir os grandes galpões e pátios dentro dos quarteirões industriais de Kingswell?
-- **A (recomendada):** quarteirões murados com pátios internos de manobra e galpões em seu entorno; portões voltados ao corredor de cargas e fundos/muros voltados às ruas residenciais.
-- **B:** galpões compridos em fileiras paralelas ao corredor, com docas e pátios alongados entre os edifícios e fundos murados diante dos bairros.
-- **C:** complexos de expansão irregular, com galpões e anexos de diferentes idades organizados em torno de pátios assimétricos e conectados internamente.
-A escolha trata apenas de padrão de organização. Respeitar D06, D26-D28, base U02; **não aprova quarteirões individuais, localizações de portões, áreas, novas vias, geometria ou imagens**.
+`KW-V3-D30` — qual deve ser o perfil dos telhados e estruturas verticais dos grandes complexos industriais de Kingswell?
+- **A (recomendada):** telhados amplos e variados de galpões baixos e médios, com poucas chaminés ou torres técnicas mais altas como marcos ocasionais.
+- **B:** numerosas chaminés, torres e reservatórios criando um perfil vertical industrial recorrente junto ao corredor.
+- **C:** perfil horizontal de telhados extensos, incluindo sheds industriais, com quase nenhum marco vertical.
+A escolha é visual e morfológica, não cria equipamentos, indústrias ou chaminés específicas nem fixa dimensões. Compatibilizar D16-D17, D27-D29 e preservar base U02; **sem geometria ou arte antes de esboço técnico aprovado**.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
