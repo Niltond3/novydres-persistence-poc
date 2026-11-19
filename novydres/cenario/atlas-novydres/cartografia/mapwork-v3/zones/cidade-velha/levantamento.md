@@ -183,11 +183,16 @@
 - Evidência: “KW-V3-D25: Aprovo A — rede escalonada, com pequenos depósitos e operações leves nos cais antigos e pátios de transferência maiores nas bordas do núcleo histórico, conectados ao corredor industrial.”
 - Consequência: hierarquia de cargas leves nos cais históricos para transbordos mais volumosos nas bordas, sem transformar o núcleo antigo em pátio de carga pesada. **Não define quantidade, localização, novos ramais ou estradas, operação das balsas, capacidade, geometria ou arte.**
 
+**KW-V3-D26 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** corredor principal de cargas com acessos seletivos a pátios e galpões, complementado por ruas locais para moradias e comércio, sem sobrecarga de caminhões nas vielas históricas.
+- Evidência: “KW-V3-D26: Aprovo A — corredor principal de cargas com acessos seletivos aos pátios e galpões, complementado por ruas locais que atendem moradias e comércio sem sobrecarregar as vielas históricas.”
+- Consequência: separação hierárquica do tráfego pesado sem isolar funcionalmente bairros ou impor hiatos urbanos artificiais na transição com Sulfok. **Não cria vias, ramais, pontes, traçados, geometrias ou arte.** Preservar U02.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D26` — como o corredor principal de cargas Kingswell–Sulfok convive com o tecido misto operário e residencial da transição?
-- **A (recomendada):** eixo de cargas estruturante com entradas seletivas para galpões e pátios; ruas locais transversais e paralelas atendem residências e comércio e evitam tráfego pesado nas vielas.
-- **B:** eixo de cargas compartilhado com comércio e frentes de atividades operárias, com conexão direta à rede local e mistura visível de fluxos.
-- **C:** eixo principal com vias curtas de serviço que alcançam pátios internos, enquanto comércio e moradias se voltam principalmente para a rede de ruas locais.
-Em todos os casos preservar D06-D07, D15, D25 e **nenhum novo eixo, ferrovia, ponte ou geometria sem validação de conectores U02 e esboço técnico integral aprovado**.
+`KW-V3-D27` — que tipologia de edifícios industriais e oficinas deve predominar na transição entre Kingswell e Sulfok?
+- **A (recomendada):** fábricas e oficinas antigas de tijolo reaproveitadas, galpões médios e anexos utilitários posteriores, entremeados com habitações operárias; poucos complexos maiores junto ao corredor de cargas.
+- **B:** grandes galpões, pátios murados e conjuntos fabris de maior porte dominam o corredor; oficinas e moradias predominam nas ruas secundárias.
+- **C:** prédios produtivos mais modernos de metal e concreto dominam as expansões, restando oficinas e instalações históricas de tijolo como fragmentos.
+Definir apenas a identidade morfológica de Kingswell sem substituir pela de Sulfok; **não aprovar edifícios, lotes, volumes específicos, traçados, geometrias ou imagens**.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
