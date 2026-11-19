@@ -1,6 +1,6 @@
 from pathlib import Path
 import base64, hashlib
-base=Path('/mnt/data')
+base=Path.cwd()
 a=base64.b64encode((base/'T03_U02_aprovada.png').read_bytes()).decode()
 b=base64.b64encode((base/'T03_U03_candidata.png').read_bytes()).decode()
 html='''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"><title>Novydres — T03/U02 × U03</title><style>
