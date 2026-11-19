@@ -12,10 +12,10 @@
     "feature_id": "chelsea-cidade-velha",
     "canonical_name": "Kingswell",
     "recognized_name": "Cidade Velha",
-    "classification": "núcleo histórico urbano",
+    "classification": "raion inteiro de identidade histórica Cidade Velha",
     "parent_raion_subject_id": "district-chelsea",
-    "relationship": "Cidade Velha é núcleo histórico cujo nome formal é Kingswell, situado no raion homônimo Kingswell (ID district-chelsea). Núcleo e raion são entidades espaciais distintas; suas fronteiras não foram aprovadas.",
-    "is_entire_raion": false,
+    "relationship": "Kingswell (nome formal) e Cidade Velha (uso comum) são exatamente a mesma extensão territorial: o raion inteiro district-chelsea. O ID histórico chelsea-cidade-velha não demarca subzona independente. O microcentro termal de fundação é apenas uma área morfológica interna sem limites administrativos próprios.",
+    "is_entire_raion": true,
     "geometry": null,
     "area_km2": null,
     "internal_administrative_status": "PENDING_GEO-004",
@@ -33,9 +33,15 @@
     "official_written_name": "Kingswell",
     "common_name": "Cidade Velha",
     "usage_convention": "Kingswell é o nome formal da Cidade Velha e do raion homônimo; Cidade Velha (Old Town) é o uso cotidiano do núcleo histórico. Não confundir núcleo e raion.",
-    "parent_raion_name_status": "CANON_APPROVED_GEO-004.5"
+    "parent_raion_name_status": "CANON_APPROVED_GEO-004.5",
+    "spatial_identity": {
+      "equivalent_raion_id": "district-chelsea",
+      "historical_alias_id": "chelsea-cidade-velha",
+      "same_extent": true,
+      "original_thermal_center_is_morphological_only": true
+    }
   },
-  "scope_of_approval": "Correção expressa do proprietário em 2026-11-19: nome formal da Cidade Velha = Kingswell, não o antigo nome atribuído em revisão anterior. O raion também se chama Kingswell. Núcleo e raion mantêm IDs distintos, sem aprovação de perímetros.",
+  "scope_of_approval": "Correção territorial expressa do proprietário em 19/11/2026: Kingswell = Cidade Velha = raion inteiro; não existe núcleo histórico com polígono próprio. Mudança persistida somente na branch candidata, aguardando propagação editorial; perímetro oficial ainda não aprovado.",
   "pending": [
     "GEO-004 limites cartográficos da Cidade Velha (Kingswell) e demais raions",
     "GEO-014 localização, capacidade e rede térmica detalhada"
@@ -52,5 +58,10 @@
     "prior_formal_assignment": "SUPERSEDED_IN_GIT_HISTORY",
     "indigenous_pre_contact_name": "UNASSIGNED"
   },
-  "owner_correction_date": "2026-11-19"
+  "owner_correction_date": "2026-11-19",
+  "owner_correction_2026_11_19": {
+    "status": "OWNER_APPROVED_BRANCH_CANDIDATE",
+    "same_extent": true,
+    "evidence": "Kingswell é o nome do raion e o raion é o núcleo histórico. Não existe diferença entre os dois. Kingswell é a Cidade Velha, é o raion inteiro. Delego ao agente a localização das três pontes e dos pontos de interesse; áreas de ouro, diamante e gás natural podem continuar fora do mapa conectadas por logística."
+  }
 }

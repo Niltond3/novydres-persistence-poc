@@ -29,7 +29,7 @@
       "canonical_ref": "novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json",
       "canonical_status": "CONFIRMED_GEO-004.1",
       "geometry_status": "PENDING_GEO-004",
-      "note": "Cidade Velha (nome formal Kingswell) é o núcleo termal dentro do raion homônimo Kingswell, não o raion inteiro. A geometria permanece pendente."
+      "note": "Correção 19/11/2026: Cidade Velha = raion Kingswell inteiro; o microcentro de nascentes termal é apenas região morfológica dentro do raion, não recorte administrativo separado."
     },
     "spring_locations": null,
     "spring_count": null,
@@ -79,7 +79,7 @@
     "fact_id": "GEO-003.2",
     "authority": "OWNER_EXPLICIT_APPROVAL",
     "approval_date": "2026-11-15",
-    "core": "Cidade Velha (nome formal Kingswell), núcleo do raion Kingswell, concentra a geotermia e oferece a base natural mais habitável do núcleo histórico.",
+    "core": "No raion inteiro Kingswell (= Cidade Velha) existe um microcentro histórico de maior concentração geotérmica; não presumir que todo o raion receba o mesmo calor.",
     "distance_principle": "Quanto mais distante das termas da Cidade Velha, menores em geral as vantagens térmicas naturais, ressalvadas variações locais.",
     "variation": "Não há isotermas concêntricas rígidas: relevo, vento, água, outras nascentes e obras humanas provocam exceções locais. O aquecimento de nascentes e terrenos não transforma toda a atmosfera regional em clima quente.",
     "lethality": "Na região de Novydres, em condições extremas e sem aquecimento/abrigo/equipamento apropriados por exposição prolongada, a hipotermia e a morte são o desfecho inevitável. O período até o risco fatal depende do ambiente; não afirmar morte instantânea.",
@@ -95,5 +95,9 @@
     "parent_raion_official_name": "Kingswell",
     "parent_raion_legacy": "Chelsea",
     "raion_semantic_dedication": "Fonte do Rei — sentido alegórico cainita, não etimologia literal inglesa"
+  },
+  "owner_correction_2026_11_19": {
+    "status": "BRANCH_CANDIDATE",
+    "same_extent": true
   }
 }

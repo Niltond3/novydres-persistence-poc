@@ -2,14 +2,22 @@
 
 **Status:** PLANNING / CANDIDATE_RESEARCH_ONLY; não é aprovação de geometria, instalação, POI, arte ou cânone.
 **Snapshot autoritativo:** master `876b764bcc23ca2ea2949f5ec505ce85bac46701` (19/11/2026).
-**Sujeito proprietário:** `district-chelsea`; núcleo `chelsea-cidade-velha`. A região não corresponde ao raion inteiro.
+**Sujeito proprietário:** `district-chelsea`; o antigo ID `chelsea-cidade-velha` referencia a mesma extensão territorial. **Kingswell/Cidade Velha = raion inteiro** por correção de 19/11/2026. O microcentro termal original é apenas unidade morfológica interna.
 **Agente:** `novydres/cenario/atlas-novydres/cartografia/mapwork-v3/AGENT.md`.
 **Referência visual:** U02 aprovada, Drive ID `1PrfWEcD07Gz5eX5r2qKGaRlecixVKh6r`, PNG 1448×1086, SHA256 `9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0`, verificado por download e cálculo local.
 **Estado global V3:** `world-state.json`: nenhuma zona criada; `last_approved_global_release=null`; não há conectores V3 já gerados.
 
+## Correção territorial e delegação visual — 19/11/2026
+
+- **Proprietário:** Kingswell = Cidade Velha = raion inteiro. O compacto núcleo termal de origem de D01–D03 é referência morfológica, não um segundo polígono administrativo. As fontes de master que afirmem o contrário estão superadas para esta proposta e exigem propagação editorial.
+- **Delegação:** definir os três lugares históricos das pontes e as posições candidatas dos cinco POIs, por coerência visual e urbana, sem aprovação isolada de coordenadas; o esboço integral ainda requer aceite.
+- **Além da borda:** ouro e diamantes podem ser extraídos fora da imagem, com ferrovias de carga continuando até o exterior; o gás natural liga-se à indústria preferencialmente por dutos, com apoio ferroviário logístico. Não desenhar minas ou ferrovias novas sem contrato de borda.
+- **Persistência:** o planejamento, posições candidatas e recusas técnicas constam do `spatial-plan.json`. A `zone.json` é PLANNING, sem elementos artísticos, sem conectores canonizados, sem autorização para gerar.
+- **Evidência da correção:** “Kingswell é o nome do raion e o raion é o núcleo histórico. Não existe diferença entre os dois. Kingswell é a Cidade Velha, é o raion inteiro. Delego ao agente a localização das três pontes e dos pontos de interesse; áreas de ouro, diamante e gás natural podem continuar fora do mapa conectadas por logística.”. O registro anterior das 55 decisões permanece intocado; D56 continua DEFERRED.
+
 ## CANON — fatos vinculantes (fontes no snapshot)
 
-- Nome formal do núcleo histórico e do raion é Kingswell, nome comum Cidade Velha; IDs estáveis distintos. Núcleo, limites, população e área ainda sem definição. Fonte: `novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json` (GEO-004.1) e `revisao-toponimo-2010.json` (GEO-004.5); **não reintroduzir nome indígena anterior**.
+- Cidade Velha (nome comum) e Kingswell (nome formal) abrangem todo o mesmo raion. O microcentro termal de fundação não forma segunda zona; perímetro de raion, população e área ainda pendentes. Fonte: `novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json` (GEO-004.1) e `revisao-toponimo-2010.json` (GEO-004.5); **não reintroduzir nome indígena anterior**.
 - Região originalmente habitada por comunidades originárias antes de 1423. Gilgamesh dedicou o posto Ventrue Kingswell em 1423, com uma única Ordem Urukiana dotada de atuação religiosa/ritual. Crescimento gradual; não atribuir aos povos originários os ritos fictícios do culto. Fonte: `origens-mortais-e-culto-fundador.json`, `gilgamesh-culto-fundador-e-leis-de-sangue.json`, `preparacao-urukiana-antes-de-1423.json`.
 - Ventrue exploraram termas/minerais; expulsos em 1917 para Bukovie. Kingswell permaneceu anarquista; Sulfok passou aos anarquistas em 1945; cerco econômico e social persistente em 2010. Fontes: `novydres/cenario/historia-global/ascensao-ventrue-old-town-bukovie-2010.json`, `revolta-anarquista-1917-invasao-saba-1945.json`, `novydres/cenario/politica-global/dominio-anarquista-old-town-sulfok-2010.json`, `cerco-estados-livres-kingswell-sulfok-2010.json`. Camada cainita não entra automaticamente na carta mortal pública.
 - Vale protegido com geotermia abundante e Rio Vasyl atravessando a Cidade Velha, afluentes e foz na grande baía, sem contornos aprovados. Aquecimento precário e desigual: parte privilegiada do calor desviada para Bukovie. Fontes: `novydres/cenario/atlas-novydres/macrorelevo-hidrografia-ermos-2010.json`, `geotermia-aquecimento-2010.json`.
@@ -26,7 +34,7 @@
 
 ## UNKNOWN — bloqueios relevantes do desenho técnico
 
-1. Forma/extensão do núcleo Cidade Velha **dentro** do raion Kingswell, especialmente as margens e travessias do Rio Vasyl; não há geometria nem área aprovada.
+1. Forma/extensão do **raion inteiro Kingswell = Cidade Velha**, mais posição interna do microcentro termal original e das travessias do Rio Vasyl; não há polígono canônico.
 2. Relações de lote, quadra, largura viária, ruas/bonde, densidades, pavimentos, população local e metragens; não inferir metros a partir da referência U02.
 3. Posições exatas de fontes termais, captadores, tubulações, racionamento, vias, pequenas pontes, redes técnicas e limites dos Ermos.
 4. Status/localização dos POIs candidatos e adjacências com setores vizinhos; ferrovias e pontos em conflito dependem de reconciliação.
