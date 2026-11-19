@@ -10,11 +10,11 @@
   "reference_year": 2010,
   "feature": {
     "feature_id": "chelsea-cidade-velha",
-    "canonical_name": "Iknik",
+    "canonical_name": "Kingswell",
     "recognized_name": "Cidade Velha",
     "classification": "núcleo histórico urbano",
     "parent_raion_subject_id": "district-chelsea",
-    "relationship": "núcleo histórico Cidade Velha (Iknik em registros formais), situado dentro do raion Kingswell; não equivale a todo o raion",
+    "relationship": "Cidade Velha é núcleo histórico cujo nome formal é Kingswell, situado no raion homônimo Kingswell (ID district-chelsea). Núcleo e raion são entidades espaciais distintas; suas fronteiras não foram aprovadas.",
     "is_entire_raion": false,
     "geometry": null,
     "area_km2": null,
@@ -24,31 +24,33 @@
       "Cidade Velha",
       "Old Town"
     ],
-    "original_lexeme": "ikniq",
-    "name_origin_language": "Iñupiaq (variante regional exata a verificar)",
-    "name_meaning_pt": "fogo",
-    "name_pronunciation_pt_br": "ÍK-nik",
-    "name_style": "Grafia ficcional americanizada de ikniq, não grafia atestada da palavra indígena",
+    "original_lexeme": null,
+    "name_origin_language": "Inglês (nome político-histórico); nome indígena anterior permanece indeterminado",
+    "name_meaning_pt": "Fonte do Rei / Nascente do Rei (topônimo inglês de sentido político cainita; não nome indígena)",
+    "name_pronunciation_pt_br": "KÍNGZ-uél",
+    "name_style": "Topônimo político-histórico em inglês compartilhado pelo núcleo e raion; Cidade Velha/Old Town são nomes usuais",
     "parent_raion_official_name": "Kingswell",
-    "official_written_name": "Iknik",
+    "official_written_name": "Kingswell",
     "common_name": "Cidade Velha",
-    "usage_convention": "Os habitantes chamam-no quase sempre Cidade Velha; Iknik (ÍK-nik, adaptação de ikniq, 'fogo') figura raramente, sobretudo em documentos oficiais; Old Town é tradução inglesa. Kingswell denomina o raion, não o núcleo.",
+    "usage_convention": "Kingswell é o nome formal da Cidade Velha e do raion homônimo; Cidade Velha (Old Town) é o uso cotidiano do núcleo histórico. Não confundir núcleo e raion.",
     "parent_raion_name_status": "CANON_APPROVED_GEO-004.5"
   },
-  "scope_of_approval": "A Cidade Velha é núcleo histórico e nome de uso cotidiano dentro do raion Kingswell, enquanto Iknik é sua forma documental. A raiz indígena local persiste sob topônimo político em inglês; não afirmar que Kingswell substituiu nomes nativos entre os habitantes de 1423. Sem aprovação das fronteiras.",
+  "scope_of_approval": "Correção expressa do proprietário em 2026-11-19: nome formal da Cidade Velha = Kingswell, não o antigo nome atribuído em revisão anterior. O raion também se chama Kingswell. Núcleo e raion mantêm IDs distintos, sem aprovação de perímetros.",
   "pending": [
-    "GEO-004 limites cartográficos da Iknik e demais raions",
+    "GEO-004 limites cartográficos da Cidade Velha (Kingswell) e demais raions",
     "GEO-014 localização, capacidade e rede térmica detalhada"
   ],
   "single_authoritative_source": true,
   "toponym_change": {
     "fact_id": "GEO-004.5",
-    "status": "FORMAL_CORE_AND_RAION_APPROVED",
-    "formal_name": "Iknik",
+    "status": "OWNER_CORRECTED_2026_11_19",
+    "formal_name": "Kingswell",
     "common_name": "Cidade Velha",
     "english_name": "Old Town",
     "parent_raion_official_name": "Kingswell",
     "stable_feature_id": "chelsea-cidade-velha",
-    "sociohistorical_continuity": "Origem indígena preservada; Kingswell é nome político do domínio Ventrue, não apagamento da ocupação prévia"
-  }
+    "prior_formal_assignment": "SUPERSEDED_IN_GIT_HISTORY",
+    "indigenous_pre_contact_name": "UNASSIGNED"
+  },
+  "owner_correction_date": "2026-11-19"
 }

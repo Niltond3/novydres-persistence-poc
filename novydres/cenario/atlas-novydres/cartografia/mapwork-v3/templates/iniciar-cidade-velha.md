@@ -1,6 +1,6 @@
 # TEMPLATE EXECUTÁVEL — NOVYDRES MAPWORK V3 / CIDADE VELHA
 
-Alvo: **Cidade Velha / Iknik**, núcleo histórico situado no raion **Kingswell** (`district-chelsea`). Não confundir núcleo histórico e raion administrativo.
+Alvo: **Cidade Velha (Kingswell)**, núcleo histórico de nome formal Kingswell situado no raion homônimo **Kingswell** (`district-chelsea`). Núcleo histórico e raion são entidades espaciais distintas, apesar da homonímia.
 
 Repositório: `Niltond3/novydres-persistence-poc`. No HEAD de `master`, leia `novydres/AGENTS.md`, `CONTEXT.md` e `catalogo.json` no mesmo SHA. Siga ADR-002, PRD-ATLAS-001, `cartografia/guide.md` e `cartografia/mapwork-v3/AGENT.md`, config, schemas, scripts, templates e manifestos. **Se a V3 ainda for branch candidata**, declare-a e use o SHA verificado; não presuma integração a master.
 

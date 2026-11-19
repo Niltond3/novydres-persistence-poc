@@ -15,7 +15,7 @@
   "anglicization": "Grafias americanizadas são permitidas apenas como adaptações ficcionais explicitamente rotuladas, com grafia indígena fonte, significado documentado e pronúncia; não apresentá-las como palavras indígenas autênticas.",
   "language_authenticity": "Usar léxico realmente documentado no idioma geograficamente adequado. Aproximação sonora ao inglês ou a padrões familiares a lusófonos é critério de seleção, não licença para inventar etimologias ou misturar a origem da Península de Seward com povos tupi-guarani brasileiros.",
   "dialect_authenticity": "Verificar formas pertinentes às variantes da Península de Seward, especialmente Qawiaraq e Estreito de Bering; não presumir equivalência exata com North Slope ou Kobuk. Se falta confirmação local, classificar como proposta etimológica provisória.",
-  "pronunciation_disclaimer": "Grafias simplificadas como ÍK-nik, SÍ-ku, NÚ-na são guias aproximados de mesa, não pronúncia fonética acadêmica. Consoantes indígenas e variações regionais podem diferir do português e do inglês.",
+  "pronunciation_disclaimer": "Grafias simplificadas como SÍ-ku e NÚ-na são guias aproximados de mesa, não pronúncia fonética acadêmica.",
   "implementation_scope": "Obrigatório para novos conteúdos e revisões editoriais subsequentes; arquivos históricos já existentes não são silenciosamente reescritos nesta decisão. O glossário deve ser ampliado gradualmente na revisão dos trechos afetados.",
   "examples": [
     {
@@ -36,11 +36,11 @@
     {
       "documented_lexeme": "ikniq",
       "meaning_pt": "fogo",
-      "suggested_english_friendly_spelling": "Iknik",
+      "suggested_english_friendly_spelling": null,
       "pronunciation_pt_br": "ÍK-nik",
       "historical_word_pronunciation_pt_br": "ÍK-nik (aproximação; o q original não é idêntico ao k português)",
-      "status": "APPROVED_FORMAL_TOPONYM_IKNIK",
-      "usage_note": "Cidade Velha é nome falado predominante; Iknik aparece raramente em registros oficiais."
+      "status": "LEXICAL_RESEARCH_ONLY_NOT_APPROVED_TOPONYM",
+      "usage_note": "Palavra documentada apenas como referência linguística; não é o nome aprovado da Cidade Velha."
     },
     {
       "documented_lexeme": "tasiq",
@@ -58,7 +58,7 @@
     "https://library.alaska.gov/hist/hist_docs/docs/anlm/200078.pdf",
     "https://inupiaq.tusaalanga.ca/node/2504"
   ],
-  "scope_of_approval": "Convenção editorial de pronúncia aprovada: Kingswell (KÍNGZ-uél) é o nome oficial do raion de ID técnico district-chelsea. Sua etimologia inglesa histórica é 'Fonte do Rei'/'Nascente do Rei', com homenagem cainita secreta ao Antediluviano Ventrue. Cidade Velha segue nome cotidiano do núcleo Iknik (ÍK-nik, de ikniq, fogo).",
+  "scope_of_approval": "Convenção editorial de pronúncia aprovada. Kingswell (KÍNGZ-uél) denomina oficialmente tanto o raion district-chelsea quanto seu núcleo histórico Cidade Velha, que não se confunde espacialmente com o raion. A herança indígena anterior permanece historicamente reconhecida, sem atribuição de topônimo originário específico.",
   "single_authoritative_source": true,
   "kingswal_toponym_policy": {
     "source": "novydres/cenario/geografia/district-chelsea/revisao-toponimo-2010.json",
@@ -67,7 +67,7 @@
     "style": "ficcional inspirado em inglês",
     "historical_foundation": "Nome cainita imposto por Gilgamesh a posto Ventrue em 1423",
     "meaning_to_cainites": "Fonte do Rei — dedicatória simbólica ao progenitor Ventrue, não tradução literal",
-    "indigenous_core_continuity": "Cidade Velha popular, Iknik oficial/documental, preservando etimologia da língua originária",
+    "indigenous_core_continuity": "Cidade Velha (Old Town) é nome popular do núcleo histórico formalmente Kingswell; topônimo indígena pré-contato indeterminado.",
     "external_civil_first_adoption_date": "UNASSIGNED"
   }
 }
