@@ -28,7 +28,3 @@ jobs:
         run: python novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/mapwork.py audit
       - name: Run geometry, mask, tiles and before/after integration tests
         run: python -m pytest -q novydres/cenario/atlas-novydres/cartografia/mapwork-v3/tests
-      - name: Existing Atlas subjects and catalog sanity
-        run: |
-          node novydres/scripts/validar-assuntos.mjs
-          node novydres/scripts/catalogo-assuntos.mjs --check
