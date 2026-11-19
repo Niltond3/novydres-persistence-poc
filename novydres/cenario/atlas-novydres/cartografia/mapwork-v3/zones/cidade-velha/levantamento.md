@@ -298,11 +298,16 @@
 - Evidência: “KW-V3-D48: Aprovo B — infraestrutura elétrica e de comunicação predominantemente embutida ou subterrânea, com poucos cabos aparentes e caixas técnicas discretas.”
 - Consequência: pouca fiação aérea visível no tecido operário, apesar da presença de instalações técnicas discretas, mantendo a infraestrutura de calor igualmente subterrânea segundo D44. **Não determina qualidade ou cobertura dos serviços, circuitos, equipamentos individuais, geometrias ou arte.**
 
+**KW-V3-D49 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** ligações prediais diretas predominantes nas moradias e oficinas, embora tubulações antigas provoquem interrupções ocasionais, com poucos pontos coletivos.
+- Evidência: “KW-V3-D49: Aprovo B — ligações prediais diretas predominantes nas moradias e oficinas, embora tubulações antigas provoquem interrupções ocasionais, com poucos pontos coletivos.”
+- Consequência: água encanada direta predomina mesmo nos bairros operários densos, mas a infraestrutura envelhecida ainda sofre falhas; pontos coletivos são minoritários. **Não define potabilidade, origens, rede de esgoto, ligações individuais, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D49` — como se organiza o abastecimento de água nas moradias subdivididas e pátios coletivos operários?
-- **A (recomendada):** serviço encanado desigual: algumas unidades têm ligações próprias, enquanto muitos cortiços e anexos utilizam torneiras e pontos compartilhados nos pátios, com manutenção irregular.
-- **B:** maioria das moradias e oficinas com ligações prediais diretas, embora ocorram falhas e reparos em tubulações antigas; uso coletivo excepcional.
-- **C:** pontos de abastecimento coletivos predominantes nos pátios e cortiços, com ligações individuais menos frequentes.
-A decisão define padrão funcional e arquitetônico de acesso à água, **não sua potabilidade ou origem, nem rede de esgoto, reservatórios, ligações concretas, geometrias ou imagens**. Respeitar D15, D21, D36–D38, D44, D48 e baseline U02.
+`KW-V3-D50` — como deve funcionar o esgotamento sanitário dos cortiços, moradias subdivididas e pequenas oficinas nos quarteirões operários?
+- **A (recomendada):** rede subterrânea antiga e desigual, com ligação na maioria dos prédios mas deterioração e reparos precários, ocasionando problemas pontuais em pátios e vielas.
+- **B:** rede subterrânea relativamente consolidada, com atendimento amplo, falhas localizadas em trechos antigos e pouca manifestação aparente nas ruas.
+- **C:** saneamento fragmentado, com rede incompleta e mais soluções prediais compartilhadas ou precárias, produzindo problemas frequentes nos pátios.
+A decisão é independente do abastecimento de água D49; **não autoriza despejos no Rio Vasyl, sistemas específicos de tratamento, obras, emissários, geometrias ou imagens**. Respeitar D15, D21, D36–D38, D45–D46, D49 e U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
