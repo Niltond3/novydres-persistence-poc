@@ -308,11 +308,16 @@
 - Evidência: “KW-V3-D50: Aprovo A — rede subterrânea de esgoto antiga e desigual, atendendo a maioria dos prédios, mas com trechos deteriorados, reparos improvisados e problemas pontuais de refluxo ou extravasamento em pátios e vielas.”
 - Consequência: infraestrutura sanitária majoritariamente conectada, mas envelhecida e sujeita a problemas localizados, sem supor esgoto a céu aberto generalizado. **Não determina pontos exatos de extravasamento, tratamento, ligações ao rio, obras, geometrias ou arte.**
 
+**KW-V3-D51 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** veículos de emergência chegam pelas ruas locais acessíveis, enquanto equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas históricas.
+- Evidência: “KW-V3-D51: Aprovo A — veículos de emergência chegam pelas ruas locais acessíveis, enquanto equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas históricas.”
+- Consequência: atendimento dependente das entradas viárias existentes e da permeabilidade pedonal dos quarteirões, sem novas ruas ou alargamentos. **Não fixa corporações, instalações, larguras, trajetos, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D51` — como os serviços de emergência devem acessar o interior dos quarteirões operários, com vielas estreitas e passagens principalmente pedonais?
-- **A (recomendada):** veículos param nas ruas locais acessíveis, e equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas.
-- **B:** algumas passagens de serviço já suficientemente largas recebem veículos pequenos em emergência; nos demais trechos, acesso a pé.
-- **C:** acesso predominantemente indireto: os veículos ficam nas ruas externas, exigindo percursos internos longos e sem infraestrutura especial.
-A decisão trata da lógica espacial de chegada, **sem criar corporações, unidades, veículos, vias, obras, pontos de acesso, geometrias ou imagens**. Respeitar D08, D15, D21, D26, D36–D38, D47, D50 e baseline U02.
+`KW-V3-D52` — como os acessos ao transporte coletivo da infraestrutura já existente devem se integrar ao tecido histórico e operário de Kingswell?
+- **A (recomendada):** paradas/acessos concentrados nas vias mais largas e corredores já existentes, com chegada a pé por vielas e pátios, sem circulação coletiva nas passagens estreitas.
+- **B:** pontos menores distribuídos mais capilarmente junto a ruas locais e bordas dos quarteirões, somente quando compatíveis com a infraestrutura aprovada.
+- **C:** poucos pontos de transferência concentrados nas vias principais periféricas, exigindo percursos pedonais mais longos pelos bairros.
+Define distribuição funcional relativa, **sem criar linhas, estações, POIs, novas vias, trilhos, pontes, horários, geometrias ou imagens**. Preservar D08–D09, D18–D19, D21, D23, D26, D36–D38, D51, baseline U02 e estação ferroviária de New London.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.

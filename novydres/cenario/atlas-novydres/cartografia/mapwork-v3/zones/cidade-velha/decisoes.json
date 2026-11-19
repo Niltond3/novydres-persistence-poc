@@ -521,23 +521,33 @@
     },
     {
       "id": "KW-V3-D51",
-      "status": "OPEN",
+      "status": "APPROVED",
       "question": "Como os serviços de emergência devem alcançar os interiores dos quarteirões operários compactos de Kingswell, onde as passagens são predominantemente pedonais?",
+      "selected_option": "A",
+      "answer": "Veículos de emergência chegam pelas ruas locais acessíveis, enquanto equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas históricas.",
+      "approved_on": "2026-11-19",
+      "evidence": "KW-V3-D51: Aprovo A — veículos de emergência chegam pelas ruas locais acessíveis, enquanto equipes seguem a pé com equipamentos portáteis pelas passagens e pátios, sem alargar as vielas históricas.",
+      "limits": "Padrão conceitual de acessibilidade por equipes de emergência, sem impor corporações, quartéis, veículos, equipes, protocolos, larguras, novos acessos, vias, equipamentos, geometrias ou imagens. Preservar D08, D15, D21, D26, D36–D38, D47, D50 e U02."
+    },
+    {
+      "id": "KW-V3-D52",
+      "status": "OPEN",
+      "question": "Como integrar os pontos de acesso ao transporte coletivo já previsto na infraestrutura de Novydres aos quarteirões históricos e operários de Kingswell?",
       "options": [
         {
           "id": "A",
-          "text": "Acesso perimetral: veículos de emergência chegam pelas ruas locais acessíveis e equipes avançam a pé, por pátios e passagens, com equipamentos portáteis; sem alargar as vielas antigas."
+          "text": "Paradas e pontos de acesso concentrados nas vias mais largas e eixos de circulação existentes, conectados por vielas e travessias pedonais ao interior dos quarteirões, sem levar veículos coletivos às passagens estreitas."
         },
         {
           "id": "B",
-          "text": "Acessos de serviço pontuais: algumas passagens mais amplas já existentes permitem entrada restrita de veículos pequenos, enquanto a maior parte dos interiores depende de acesso a pé."
+          "text": "Distribuição mais capilar, com pontos de acesso menores próximos a ruas locais e bordas dos pátios, aproveitando somente vias existentes compatíveis com os modos de transporte já aprovados."
         },
         {
           "id": "C",
-          "text": "Acesso predominantemente indireto: veículos param nas ruas externas, e as equipes percorrem longos trechos estreitos e pátios internos, com pouca infraestrutura adaptada à emergência."
+          "text": "Acesso mais periférico, com poucos pontos de transferência em vias principais, exigindo caminhadas mais longas pelos corredores internos e bairros históricos."
         }
       ],
-      "blocks": "Define apenas padrão de acesso e circulação em emergências, não cria bombeiros, polícia, hospitais, quartéis, estações, equipes, tipos de veículos, protocolos, largura, ruas, novos pontos de acesso, equipamentos específicos, geometrias ou imagens. Respeitar D08 (ruas históricas), D15, D21, D26 (hierarquia viária), D36–D38 (quadras e travessias), D47 (coleta leve), D50 (esgoto) e U02."
+      "blocks": "Define apenas relação espacial entre acessos/paradas de transporte coletivo existente e tecido urbano de Kingswell; não cria linhas, estações, veículos, trilhos, ramais, alterações nas vias U02, POIs, horários, pontes, interferências em conectores ou geometria. Não criar terminal interregional ou deslocar POI da estação de New London. Respeitar D08, D09 (exatamente três pontes históricas), D18–D19, D21, D23, D26, D36–D38, D51 e baseline U02."
     }
   ],
   "release_effects": "NONE",
