@@ -18,7 +18,7 @@ def sha256(data: bytes) -> str:
 def verify(record_file: Path, out: Path | None = None) -> dict:
     spec = json.loads(record_file.read_text(encoding="utf-8"))
     image_ref = spec["git_lossless_source"]
-    image = ROOT / Path(image_ref["path"]).relative_to(ROOT.parent.parent.parent.parent) if False else ROOT / "assets/visual_canon_gothic_punk_v1.webp"
+    image = ROOT / Path(image_ref["path"]).relative_to("novydres/cenario/atlas-novydres/cartografia/edicao-raster")
     raw = image.read_bytes()
     if sha256(raw) != image_ref["sha256"]:
         raise ValueError("WebP Git: SHA-256 divergente")
