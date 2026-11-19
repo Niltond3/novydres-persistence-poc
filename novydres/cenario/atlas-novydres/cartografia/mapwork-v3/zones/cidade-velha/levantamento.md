@@ -223,11 +223,16 @@
 - Evidência: “KW-V3-D33: Aprovo A — setores industriais desativados predominantemente fechados e em deterioração gradual, com máquinas antigas, materiais remanescentes e estruturas parcialmente degradadas, sem predomínio de ruínas abertas.”
 - Consequência: degradação lenta em bolsões fechados entre fábricas em operação, sem paisagem dominante de colapsos ou ruínas expostas. **Não define localização, quantidade, ocupantes, riscos específicos, geometria ou arte.**
 
+**KW-V3-D34 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** grandes portões de carga voltados ao corredor industrial e poucas entradas de trabalhadores pelas ruas laterais e secundárias, conectadas aos bairros operários.
+- Evidência: “KW-V3-D34: Aprovo A — grandes portões de carga voltados ao corredor industrial e poucas entradas de trabalhadores pelas ruas laterais e secundárias, conectadas aos bairros operários.”
+- Consequência: fluxos de pessoas e caminhões separados funcionalmente, preservando o acesso aos bairros operários por vias locais e o caráter murado das fábricas. **Não define número ou localização de entradas, infraestrutura de controle, vias novas, geometria ou imagens.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D34` — como organizar os acessos cotidianos de trabalhadores aos complexos fabris, considerando grandes portões logísticos e muros junto aos bairros?
-- **A (recomendada):** portões de carga voltados ao corredor principal e poucas entradas de trabalhadores pelas ruas laterais/secundárias, conectadas à malha pedonal dos bairros e à circulação interna.
-- **B:** entradas de trabalhadores concentradas junto à frente logística principal, separadas mas próximas aos grandes portões de carga.
-- **C:** pequenas entradas controladas de trabalhadores distribuídas ao longo de várias ruas secundárias, mantendo os portões de carga exclusivamente na frente industrial.
-A escolha é só organização relativa de circulação; preservar D15, D26, D28-D29 e conectores U02. **Não autoriza número ou posição de portões, obras, novas vias, geometria ou imagens.**
+`KW-V3-D35` — como organizar a chegada e espera dos trabalhadores nas poucas entradas de pessoal, considerando ruas estreitas e frio extremo?
+- **A (recomendada):** pequenos recuos e espaços de espera abrigados junto aos portões, preferencialmente internos ao lote fabril, sem alargar artificialmente ruas históricas.
+- **B:** pequenos largos externos em ruas secundárias diante dos portões, com coberturas e comércio voltado às trocas de turno.
+- **C:** entradas diretamente nas ruas estreitas, quase sem recuos ou áreas de espera, com abrigos mínimos e fluxo concentrado nos horários de turno.
+Diretriz de morfologia e proteção climática; respeitar D08, D19, D28-D29, D34 e U02. **Não aprova novas praças, portões, reformas, localização, geometrias ou imagens.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
