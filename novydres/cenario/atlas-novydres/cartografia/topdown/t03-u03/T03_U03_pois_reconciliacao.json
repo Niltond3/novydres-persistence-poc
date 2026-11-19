@@ -1,0 +1,559 @@
+{
+  "schema": "NOVYDRES_T03_U03_POI_RECONCILIATION_V1",
+  "state": "CANDIDATE_NOT_CANONICAL",
+  "source": "inventario-espacial-v3-aprovado.json (GitHub master)",
+  "mapping_effective_from": "U03",
+  "poi_count": 34,
+  "poi34_station_physical_site_unchanged": true,
+  "poi35_retired": true,
+  "source_coordinates_are_from_pre_topdown_raster": true,
+  "do_not_place_34_pois_before_U04": true,
+  "pois": [
+    {
+      "id": "poi-01",
+      "number": 1,
+      "name": "Torre de Inverno",
+      "raion": "Bukovie",
+      "candidate_point_px": [
+        1141,
+        159
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Bukovie",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Bukovie",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-02",
+      "number": 2,
+      "name": "Palácio de Âmbar",
+      "raion": "Bukovie",
+      "candidate_point_px": [
+        1030,
+        104
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Bukovie",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Bukovie",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-03",
+      "number": 3,
+      "name": "Exchange Hall",
+      "raion": "Bukovie",
+      "candidate_point_px": [
+        1284,
+        177
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Bukovie",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Bukovie",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-04",
+      "number": 4,
+      "name": "Feudo de Dominique Mishkin",
+      "raion": "Bukovie",
+      "candidate_point_px": [
+        1344,
+        128
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Bukovie",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Bukovie",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-05",
+      "number": 5,
+      "name": "Prefeitura de Novydres",
+      "raion": "Bukovie",
+      "candidate_point_px": [
+        1144,
+        91
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Bukovie",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Bukovie",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-06",
+      "number": 6,
+      "name": "Suprema Corte",
+      "raion": "New London",
+      "candidate_point_px": [
+        834,
+        392
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "New London",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Vasyl Bay (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_NEW_LONDON_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-07",
+      "number": 7,
+      "name": "Salão do Conselho",
+      "raion": "New London",
+      "candidate_point_px": [
+        930,
+        362
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "New London",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Vasyl Bay (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_NEW_LONDON_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-08",
+      "number": 8,
+      "name": "Embaixada Mithraica / Consulado",
+      "raion": "New London",
+      "candidate_point_px": [
+        956,
+        435
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "New London",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Vasyl Bay (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_NEW_LONDON_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-09",
+      "number": 9,
+      "name": "Canais de Vidro",
+      "raion": "New London",
+      "candidate_point_px": [
+        788,
+        466
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "New London",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Vasyl Bay (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_NEW_LONDON_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-10",
+      "number": 10,
+      "name": "Catedral de Santa Sophia",
+      "raion": "Vasyl Bay",
+      "candidate_point_px": [
+        407,
+        88
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Vasyl Bay",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "New London (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_VASYL_BAY_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-11",
+      "number": 11,
+      "name": "Universidade Imperial Teológica",
+      "raion": "Vasyl Bay",
+      "candidate_point_px": [
+        273,
+        152
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Vasyl Bay",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "New London (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_VASYL_BAY_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-12",
+      "number": 12,
+      "name": "Seminário Santo Vasyl Dreznov",
+      "raion": "Vasyl Bay",
+      "candidate_point_px": [
+        336,
+        62
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Vasyl Bay",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "New London (reassessment required)",
+      "status_u03": "PENDING_U04__FORMER_VASYL_BAY_ENVELOPE",
+      "purpose_region_conflict": true
+    },
+    {
+      "id": "poi-13",
+      "number": 13,
+      "name": "O Crisol",
+      "raion": "Vasyl Bay",
+      "candidate_point_px": [
+        831,
+        280
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "ÁREA_INSULAR_EM_ESTUDO",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Crisol / area insular in study",
+      "status_u03": "PENDING_GEOMETRIC_APPROVAL"
+    },
+    {
+      "id": "poi-14",
+      "number": 14,
+      "name": "Salão do Conselho",
+      "raion": "Kingswell",
+      "candidate_point_px": [
+        690,
+        790
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Kingswell",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Kingswell",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-15",
+      "number": 15,
+      "name": "Estação Geotérmica Periférica",
+      "raion": "Kingswell",
+      "candidate_point_px": [
+        880,
+        1020
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Kingswell",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Kingswell",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-16",
+      "number": 16,
+      "name": "Capelas da Fome Branca / Cathedral Streets",
+      "raion": "Kingswell",
+      "candidate_point_px": [
+        718,
+        900
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Kingswell",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Kingswell",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-17",
+      "number": 17,
+      "name": "Assembleia dos Estados Livres",
+      "raion": "Kingswell",
+      "candidate_point_px": [
+        834,
+        841
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Kingswell",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Kingswell",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-18",
+      "number": 18,
+      "name": "Aeroporto Internacional",
+      "raion": "Sulfok",
+      "candidate_point_px": null,
+      "point_is_approved": false,
+      "working_region_u02": "Sulfok",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Sulfok",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-19",
+      "number": 19,
+      "name": "Docas Quebra-Gelo",
+      "raion": "Sulfok",
+      "candidate_point_px": null,
+      "point_is_approved": false,
+      "working_region_u02": "Sulfok",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Sulfok",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-20",
+      "number": 20,
+      "name": "Campus Técnico-Industrial da Universidade",
+      "raion": "Sulfok",
+      "candidate_point_px": [
+        371,
+        877
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Sulfok",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Sulfok",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-21",
+      "number": 21,
+      "name": "Estação Sul de Carga / Pátio Ferroviário",
+      "raion": "UNRESOLVED",
+      "candidate_point_px": [
+        1104,
+        871
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Drevnigrad",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "UNRESOLVED",
+      "status_u03": "IDENTITY_FIXED__SITE_UNRESOLVED"
+    },
+    {
+      "id": "poi-22",
+      "number": 22,
+      "name": "Bairro das Casas Antigas",
+      "raion": "Drevnigrad",
+      "candidate_point_px": [
+        1214,
+        982
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Drevnigrad",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Drevnigrad",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-23",
+      "number": 23,
+      "name": "Matadouro Litúrgico",
+      "raion": "Drevnigrad",
+      "candidate_point_px": [
+        1316,
+        849
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Drevnigrad",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Drevnigrad",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-24",
+      "number": 24,
+      "name": "Jardim de Carne Harker",
+      "raion": "Drevnigrad",
+      "candidate_point_px": [
+        1118,
+        923
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Drevnigrad",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Drevnigrad",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-25",
+      "number": 25,
+      "name": "Farol de Alexandria",
+      "raion": "Alexandria",
+      "candidate_point_px": [
+        267,
+        349
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Alexandria",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Alexandria",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-26",
+      "number": 26,
+      "name": "Ruas dos Tribunais",
+      "raion": "Alexandria",
+      "candidate_point_px": [
+        464,
+        503
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Alexandria",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Alexandria",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-27",
+      "number": 27,
+      "name": "Observatório da Rede Ártica",
+      "raion": "Levi",
+      "candidate_point_px": [
+        1341,
+        418
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Levi",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Levi",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-28",
+      "number": 28,
+      "name": "Arquivo Levi",
+      "raion": "Levi",
+      "candidate_point_px": [
+        1222,
+        551
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Levi",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Levi",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-29",
+      "number": 29,
+      "name": "Estação de Guarda do Ermo",
+      "raion": "Dunwich",
+      "candidate_point_px": [
+        585,
+        92
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Dunwich",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Dunwich",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-30",
+      "number": 30,
+      "name": "Círculo das Vilas Antigas",
+      "raion": "Dunwich",
+      "candidate_point_px": [
+        722,
+        160
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Dunwich",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Dunwich",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-31",
+      "number": 31,
+      "name": "Grande Mesquita de Al-Nur",
+      "raion": "Alexandria",
+      "candidate_point_px": [
+        529,
+        350
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Alexandria",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Alexandria",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-32",
+      "number": 32,
+      "name": "Grande Sinagoga Beit HaZikaron",
+      "raion": "Kingswell",
+      "candidate_point_px": [
+        750,
+        951
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Kingswell",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "Kingswell",
+      "status_u03": "NOT_AFFECTED_BY_SWAP__GEOMETRY_UNAPPROVED"
+    },
+    {
+      "id": "poi-33",
+      "number": 33,
+      "name": "Expresso Transibérico — corredor ferroviário",
+      "raion": "INTERZONAL",
+      "candidate_point_px": [
+        83,
+        559
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "CORREDOR_INTERZONAL",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "INTERREGIONAL",
+      "status_u03": "CORRIDOR_FIXED_FOR_VISUAL_BASE"
+    },
+    {
+      "id": "poi-34",
+      "number": 34,
+      "name": "Estação Norte de Passageiros",
+      "raion": "Vasyl Bay",
+      "candidate_point_px": [
+        143,
+        97
+      ],
+      "point_is_approved": false,
+      "working_region_u02": "Vasyl Bay",
+      "image_coordinates_transferred_to_u03": false,
+      "physical_displacement_authorized": false,
+      "visual_region_u03": "New London",
+      "status_u03": "ZONE_ASSIGNMENT_APPROVED__SITE_UNCHANGED",
+      "point_from_legacy_inventory_is_geodetically_verified": false
+    }
+  ]
+}

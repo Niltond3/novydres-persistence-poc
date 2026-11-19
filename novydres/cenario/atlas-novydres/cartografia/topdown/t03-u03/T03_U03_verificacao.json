@@ -1,0 +1,58 @@
+{
+  "schema": "NOVYDRES_T03_U03_VISUAL_CANDIDATE_V1",
+  "status": "CANDIDATE_AWAITING_OWNER_APPROVAL",
+  "source_u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "result_sha256": "3fae4c251e09651994c4da43e8f61967193b655abf39f983eabccff2c7ad96b1",
+  "resolution": [
+    1448,
+    1086
+  ],
+  "source_immutable": true,
+  "changed_pixels": 387566,
+  "changed_outside_protective_rois": 0,
+  "architectural_detail_counts": {
+    "New London": 69,
+    "Dunwich": 86,
+    "Bukovie": 135,
+    "Alexandria": 105,
+    "Vasyl Bay": 62,
+    "Crisol": 15,
+    "Levi": 183,
+    "Sulfok": 251,
+    "Kingswell": 333,
+    "Drevnigrad": 229
+  },
+  "active_roof_pixel_masks": {
+    "New London": 17144,
+    "Dunwich": 22547,
+    "Bukovie": 35094,
+    "Alexandria": 27394,
+    "Vasyl Bay": 15233,
+    "Crisol": 2621,
+    "Levi": 50131,
+    "Sulfok": 68670,
+    "Kingswell": 89399,
+    "Drevnigrad": 61386
+  },
+  "regional_swap": {
+    "former_Vasyl_Bay": "New London",
+    "former_New_London": "Vasyl Bay"
+  },
+  "poi34": "New London, physical station unchanged",
+  "poi21": "identity preserved; position unapproved",
+  "poi35": "retired",
+  "boundary_status": "VISUAL_SEARCH_ROIS_NOT_ADMINISTRATIVE_BOUNDARIES",
+  "canon_changed": false,
+  "conflicts": [
+    "GEO-013.1: Sulfok versus U03 New London POI34",
+    "Inventário V3 coordenadas oriundas de raster anterior; contornos não transferidos como SIG",
+    "Arquitetura em estudo, ROI e marcação de telhados não são máscaras aprovadas"
+  ],
+  "validation": [
+    "png_sha256_reference",
+    "same_dimensions_and_perspective",
+    "bitwise_protected_pixels",
+    "no_new_labels",
+    "noncanonical_zonal_mapping"
+  ]
+}
