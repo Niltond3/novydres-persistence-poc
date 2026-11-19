@@ -82,11 +82,16 @@
 - Evidência: “KW-V3-D05: Aprovo A — reapropriação funcional das construções históricas para moradias, mercados, oficinas e usos comunitários, mantendo alguns monumentos e ruínas.”
 - Consequência morfológica: reutilização do tecido construído em vez de abandono total ou substituição uniforme, com coexistência de estruturas monumentais e ruínas. **Não aprova edificações individuais, quantidades, localização ou canonização.**
 
+**KW-V3-D06 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** transição contínua, orgânica e de uso misto entre construções históricas, cortiços, oficinas e galpões, com indústria mais intensa em direção ao corredor de Sulfok.
+- Evidência: “KW-V3-D06: Aprovo A — transição urbana contínua e orgânica, com mistura gradual de construções históricas, cortiços, oficinas e galpões, intensificando a atividade industrial em direção a Sulfok.”
+- Consequência morfológica: evitar vazio artificial ou fratura estilística dentro de Kingswell; **não forçar conurbação obrigatória com Sulfok** (GEO-004.6A), nem aprovar traçados, lotes, eixos, geometria ou arte.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D06` — como conectar morfologicamente o núcleo histórico compacto às expansões industriais internas ao raion Kingswell em 2010?
-- **A (recomendada):** transição contínua e irregular, com mistura gradual de quarteirões antigos, cortiços, oficinas e galpões, reforçando o corredor logístico existente em direção a Sulfok.
-- **B:** transição relativamente nítida entre tecido antigo e tecido fabril, porém com ocupação urbana contígua.
-- **C:** mosaico intenso de antigas quadras, moradia operária e focos industriais intercalados em praticamente todo o raion, sem progressão predominante.
-Não criar vazios urbanos artificiais; **preservar geometria macro, Ermos e conectores aprovados e não inferir localização/forma de faixa industrial.**
+`KW-V3-D07` — como organizar o eixo logístico do cinturão produtivo de Kingswell, orientado para Sulfok?
+- **A (recomendada):** um eixo principal de vias de carga e espaços produtivos, com oficinas/depósitos/pátios relacionados, conectado a ruas locais; ramais ferroviários apenas onde compatíveis com a base aprovada.
+- **B:** malha distribuída de eixos menores de transporte, com tráfego de cargas e instalações dispersas, sem eixo logístico dominante.
+- **C:** faixa pesada relativamente segregada da malha residencial, com travessias estruturadas em pontos específicos.
+A escolha deve respeitar o corredor econômico GEO-004.6A sem inventar geometria, novas estações internacionais em Cidade Velha ou conurbação inter-raions obrigatória.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
