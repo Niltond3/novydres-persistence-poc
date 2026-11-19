@@ -283,11 +283,16 @@
 - Evidência: “KW-V3-D45: Aprovo A — pavimentação histórica remendada, combinando pedra, paralelepípedos irregulares, asfalto gasto e concreto, com desníveis e drenagem imperfeita.”
 - Consequência: camadas históricas e reparos utilitários coexistem nas ruas operárias, com irregularidade de piso e escoamento incompleto. **Não fixa materiais em trechos individuais, cotas, obras de drenagem, geometrias ou arte.**
 
+**KW-V3-D46 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** sarjetas antigas e canaletas improvisadas conduzem apenas parte da água do degelo, deixando poças e placas de gelo nos pontos baixos das ruas e pátios.
+- Evidência: “KW-V3-D46: Aprovo A — sarjetas antigas e canaletas improvisadas conduzem apenas parte da água do degelo, deixando poças e placas de gelo nos pontos baixos das ruas e pátios.”
+- Consequência: escoamento improvisado e imperfeito no interior dos quarteirões, com degelo, poças e gelo em depressões, sem redesenho da hidrografia ou das ruas. **Não aprova canaletas individuais, obras, pontos baixos, cotas, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D46` — como drenagem superficial e degelo devem aparecer nas ruas e pátios operários, considerando o frio extremo e os pavimentos remendados?
-- **A (recomendada):** sarjetas antigas e canaletas improvisadas e desconexas drenam apenas parte do degelo, deixando poças e placas de gelo em pontos baixos.
-- **B:** sistema histórico de sarjetas de pedra e bocas de escoamento com traçados reconhecíveis, mas trechos congelados, assoreados ou remendados.
-- **C:** drenagem utilitária relativamente funcional nas vias secundárias principais, enquanto pátios e vielas apresentam canais improvisados e mais gelo acumulado.
-A decisão regula a condição visual e funcional da drenagem, não aprova canalizações, ligações ao rio, cotas, vazões, novas obras, geometrias ou imagens. Respeitar D08, D22–D23, D38–D40, D44–D45 e U02.
+`KW-V3-D47` — como organizar a coleta e o armazenamento temporário de resíduos domésticos e de pequenas oficinas nos quarteirões compactos de Kingswell?
+- **A (recomendada):** pequenos pontos compartilhados nos pátios e becos, com transporte manual ou em carrinhos até ruas locais acessíveis à coleta, que permanece irregular.
+- **B:** poucos pontos comuns maiores nas bordas dos quarteirões junto a ruas secundárias, deixando pátios e passagens internas relativamente livres.
+- **C:** resíduos dispersos em vários pátios e passagens, sem organização local clara, com acúmulo e remoção eventuais.
+A decisão trata da organização tipológica dos resíduos residenciais e de pequenas oficinas, não dos resíduos industriais D43; **não fixa serviços, horários, responsabilidades, quantidades, rotas, locais individuais, geometrias ou imagens**. Respeitar D15, D18, D26, D36–D40, D45–D46 e U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
