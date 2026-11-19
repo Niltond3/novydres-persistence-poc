@@ -203,11 +203,16 @@
 - Evidência: “KW-V3-D29: Aprovo A — quarteirões industriais fechados, com galpões ao redor de pátios internos, portões de carga voltados ao corredor principal e muros junto às ruas residenciais.”
 - Consequência: logística intramuros organizada em pátios de manobra e galpões adjacentes, com acessos seletivos ao corredor pesado e fundos murados confrontando bairros. **Não impõe forma idêntica a todo quarteirão nem aprova número, dimensão, posição, edifícios individuais ou geometrias.**
 
+**KW-V3-D30 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** galpões com telhados amplos e variados, predominantemente baixos ou médios, com poucas chaminés e torres técnicas altas como marcos ocasionais.
+- Evidência: “KW-V3-D30: Aprovo A — galpões com telhados amplos e variados, predominantemente baixos ou médios, com poucas chaminés e torres técnicas altas como marcos ocasionais.”
+- Consequência: grandes coberturas industriais com perfil majoritariamente baixo/médio e pontuais marcos técnicos verticais, sem formar uma floresta contínua de chaminés. **Não aprova quantidades, alturas, locais, novas instalações, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D30` — qual deve ser o perfil dos telhados e estruturas verticais dos grandes complexos industriais de Kingswell?
-- **A (recomendada):** telhados amplos e variados de galpões baixos e médios, com poucas chaminés ou torres técnicas mais altas como marcos ocasionais.
-- **B:** numerosas chaminés, torres e reservatórios criando um perfil vertical industrial recorrente junto ao corredor.
-- **C:** perfil horizontal de telhados extensos, incluindo sheds industriais, com quase nenhum marco vertical.
-A escolha é visual e morfológica, não cria equipamentos, indústrias ou chaminés específicas nem fixa dimensões. Compatibilizar D16-D17, D27-D29 e preservar base U02; **sem geometria ou arte antes de esboço técnico aprovado**.
+`KW-V3-D31` — qual o estado de conservação predominante dos complexos fabris de Kingswell em 2010?
+- **A (recomendada):** industriais ainda em funcionamento, mas desgastados e remendados, com fachadas escurecidas, coberturas reparadas e manutenção irregular; alguns setores desativados.
+- **B:** declínio industrial profundo, com grande parte dos complexos vazios ou parcialmente ocupados, pátios deteriorados e poucas operações regulares.
+- **C:** operação industrial relativamente forte, com galpões conservados e modernizados, apesar das precariedades do entorno residencial.
+A decisão trata da atmosfera física e ocupação relativa, não da produção exata ou de edifícios individuais. Preservar D17, D27-D30 e base U02; **sem geometrias ou imagens**.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
