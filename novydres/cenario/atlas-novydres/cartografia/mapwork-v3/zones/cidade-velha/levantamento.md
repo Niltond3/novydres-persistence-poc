@@ -323,11 +323,16 @@
 - Evidência: “KW-V3-D53: Aprovo A — circulação de pedestres e veículos predominantemente separada nos terminais de balsas, com acessos e áreas de espera distintos, adaptados às vias existentes.”
 - Consequência: terminais fluviais organizam filas de veículos e acesso pedonal de forma separada, dentro dos acessos preexistentes, reduzindo cruzamentos de fluxo. **Não cria acessos, terminais, pontes, rampas, posições, geometrias ou arte.**
 
+**KW-V3-D54 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** as três pontes históricas mantêm uso misto de pedestres e veículos, com controles locais conforme suas limitações, sem especialização funcional.
+- Evidência: “KW-V3-D54: Aprovo B — as três pontes históricas mantêm uso misto de pedestres e veículos, com controles locais conforme suas limitações, sem especialização funcional.”
+- Consequência: as três travessias funcionam para circulação de pessoas e veículos, sem atribuir prioridade pedonal exclusiva à ponte do núcleo histórico nem restringir uso misto apenas às outras duas. **Não define classes ou capacidades de veículos, controles precisos, obras, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D54` — como priorizar pedestres e veículos nas três pontes históricas do Rio Vasyl, preservando as estruturas e as balsas para pessoas e veículos?
-- **A (recomendada):** ponte do núcleo termal com prioridade pedonal e circulação local leve; duas pontes das expansões com uso misto controlado, e balsas como alternativa para parte dos veículos.
-- **B:** três pontes com uso misto de pedestres e veículos, respeitando limitações e controle local, sem especializar a função de cada uma.
-- **C:** prioridade pedonal nas três pontes, com tráfego de veículos bastante limitado e maior participação das balsas na travessia motorizada.
-A decisão fixa apenas prioridades funcionais, **sem alterar quantidade de pontes, suas estruturas ou traçados, estabelecer capacidade, pesos, regras legais, novas vias, geometrias ou imagens**. Preservar D09–D11, D23, D26, D52–D53 e baseline U02.
+`KW-V3-D55` — qual estado de conservação visual predomina nas três pontes históricas do Rio Vasyl em 2010, preservando seu uso misto?
+- **A (recomendada):** pontes funcionais e visivelmente remendadas, com reparos de períodos diferentes, desgaste de pavimentos e marcas do clima.
+- **B:** conservação histórica mais cuidada, com materiais e acabamentos originais predominantes, manutenção relativamente regular e reparos discretos.
+- **C:** conservação visual desigual: uma ponte aparenta estar mais restaurada e outras apresentam mais remendos, permanecendo todas em operação.
+A decisão é apenas tipológica e visual: **não autoriza reconstrução, restauro específico, alterações estruturais, dimensionamento, novas pontes, posições, geometrias ou imagens**. Preservar D09–D11, D17, D45, D54, Rio Vasyl e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
