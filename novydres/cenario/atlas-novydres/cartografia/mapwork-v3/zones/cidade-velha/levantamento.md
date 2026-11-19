@@ -87,11 +87,16 @@
 - Evidência: “KW-V3-D06: Aprovo A — transição urbana contínua e orgânica, com mistura gradual de construções históricas, cortiços, oficinas e galpões, intensificando a atividade industrial em direção a Sulfok.”
 - Consequência morfológica: evitar vazio artificial ou fratura estilística dentro de Kingswell; **não forçar conurbação obrigatória com Sulfok** (GEO-004.6A), nem aprovar traçados, lotes, eixos, geometria ou arte.
 
+**KW-V3-D07 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** eixo logístico principal com vias de carga, oficinas, depósitos e pátios, articulado à malha urbana por ruas locais e ramais ferroviários apenas onde compatíveis.
+- Evidência: “KW-V3-D07: Aprovo A — eixo logístico principal com vias de carga, oficinas, depósitos e pátios, conectado à malha urbana por ruas locais e ramais ferroviários onde compatíveis.”
+- Consequência morfológica: hierarquia funcional para transporte pesado sem isolamento obrigatório do restante da cidade. **Não autoriza traçado, novo ramal, estação, conurbação nem arte.** Respeitar GEO-004.6A e a infraestrutura U02.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D07` — como organizar o eixo logístico do cinturão produtivo de Kingswell, orientado para Sulfok?
-- **A (recomendada):** um eixo principal de vias de carga e espaços produtivos, com oficinas/depósitos/pátios relacionados, conectado a ruas locais; ramais ferroviários apenas onde compatíveis com a base aprovada.
-- **B:** malha distribuída de eixos menores de transporte, com tráfego de cargas e instalações dispersas, sem eixo logístico dominante.
-- **C:** faixa pesada relativamente segregada da malha residencial, com travessias estruturadas em pontos específicos.
-A escolha deve respeitar o corredor econômico GEO-004.6A sem inventar geometria, novas estações internacionais em Cidade Velha ou conurbação inter-raions obrigatória.
+`KW-V3-D08` — qual lógica predominante para as ruas mais antigas do núcleo termal da Cidade Velha?
+- **A (recomendada):** vias estreitas e irregulares que acompanham relevo, termas e Rio Vasyl; vias mais largas posteriores costuram o tecido sem suprimi-lo.
+- **B:** convergência de ruas antigas para praças cerimoniais e edifícios de culto/poder, com vielas secundárias irregulares.
+- **C:** terraços e ruas longitudinalmente adaptados às encostas do vale, ligados por rampas/escadarias.
+Sem determinar posição, medidas, ruas ou quadras; preservar vias de circulação de serviços e conexões pré-aprovadas ao passar à proposta técnica.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
