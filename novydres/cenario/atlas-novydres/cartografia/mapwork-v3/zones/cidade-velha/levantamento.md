@@ -278,11 +278,16 @@
 - Evidência: “KW-V3-D44: Aprovo B — rede de aquecimento predominantemente subterrânea, com tampas de inspeção, acessos de manutenção e poucas instalações técnicas visíveis na superfície.”
 - Consequência: presença superficial discreta da rede geotérmica, sem proliferar tubulações aparentes em fachadas e pátios; o aquecimento das moradias permanece desigual segundo D14. **Sem definir tampas ou acessos individuais, equipamentos, conexões, fornecimento, geometrias ou arte.**
 
+**KW-V3-D45 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pavimentação histórica remendada, combinando pedra, paralelepípedos irregulares, asfalto gasto e concreto, com desníveis e drenagem imperfeita.
+- Evidência: “KW-V3-D45: Aprovo A — pavimentação histórica remendada, combinando pedra, paralelepípedos irregulares, asfalto gasto e concreto, com desníveis e drenagem imperfeita.”
+- Consequência: camadas históricas e reparos utilitários coexistem nas ruas operárias, com irregularidade de piso e escoamento incompleto. **Não fixa materiais em trechos individuais, cotas, obras de drenagem, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D45` — qual o padrão predominante de pavimentação e desgaste nas ruas residenciais estreitas e pátios operários de Kingswell?
-- **A (recomendada):** superfícies históricas remendadas: pedra, paralelepípedos irregulares, faixas de asfalto gasto, concreto e reparos locais, com desníveis e drenagem imperfeita.
-- **B:** pedra e paralelepípedos antigos predominam, com poucas reformas modernas, acentuando a continuidade do núcleo histórico.
-- **C:** asfalto e concreto utilitário envelhecidos predominam nas vias secundárias, com pavimentos antigos preservados principalmente em becos e pátios.
-Define a linguagem material dos pavimentos; não fixa revestimento de qualquer trecho, reformas, drenagem individual, traçados, geometrias ou imagens. Respeitar D08, D17, D36, D38–D40, D44 e baseline U02.
+`KW-V3-D46` — como drenagem superficial e degelo devem aparecer nas ruas e pátios operários, considerando o frio extremo e os pavimentos remendados?
+- **A (recomendada):** sarjetas antigas e canaletas improvisadas e desconexas drenam apenas parte do degelo, deixando poças e placas de gelo em pontos baixos.
+- **B:** sistema histórico de sarjetas de pedra e bocas de escoamento com traçados reconhecíveis, mas trechos congelados, assoreados ou remendados.
+- **C:** drenagem utilitária relativamente funcional nas vias secundárias principais, enquanto pátios e vielas apresentam canais improvisados e mais gelo acumulado.
+A decisão regula a condição visual e funcional da drenagem, não aprova canalizações, ligações ao rio, cotas, vazões, novas obras, geometrias ou imagens. Respeitar D08, D22–D23, D38–D40, D44–D45 e U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
