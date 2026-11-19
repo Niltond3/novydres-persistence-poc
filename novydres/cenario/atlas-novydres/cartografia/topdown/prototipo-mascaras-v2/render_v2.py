@@ -350,7 +350,7 @@ def main():
               'buildings':rows,
               'composition_order':['lot-ground:lot-a','lot-ground:lot-b']+[r['id'] for r in rows],
               'geometry_file':'geometria_v2.json','immutable_origin':'POC_V1 b8b4f4b75b8033c62daa7a494526366cc335f112',
-              'poiss_untouched':True}
+              'pois_untouched':True}
     (ROOT/'manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     stats={'schema':'NOVYDRES_V2_VISUAL_POC_TEST','base_sha256_verified':sha(source),
            'world_size_px':[w,h],'detail_size_px':[W,H], 'building_count':len(BLDGS),
