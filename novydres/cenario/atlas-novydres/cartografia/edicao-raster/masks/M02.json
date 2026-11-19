@@ -2,7 +2,7 @@
   "id": "M02",
   "revision": "M02V3",
   "name": "Reurbanização Habitacional Sul",
-  "state": "MASK_APPROVED_ART_CANDIDATE_PENDING_REVIEW",
+  "state": "CLOSED_FOR_THIS_SCOPE",
   "approved": true,
   "base": {
     "file": "novydres_M01_candidata_v2_sem_sombra.png",
@@ -779,12 +779,12 @@
     "test": "Chromium 1200px e 390px PASS; Android do proprietário não testado"
   },
   "replaces_candidate": "M02-R2 amplitude 17.4977%, não aprovada; V3 é a proposta corrente desta branch",
-  "next_gate": "Revisão visual do proprietário sobre a candidata M02-CANDIDATE-V2 no comparador ANTES/DEPOIS. Se rejeitar, corrigir a mesma unidade. Não canonizar ou aprovar automaticamente o resultado artístico.",
+  "next_gate": "M02 concluída neste escopo e recuperável a partir do Git; futuras unidades requerem autorização própria.",
   "mask_approved": true,
   "mask_approval_date": "2026-11-18",
   "mask_approval_owner_text": "Aprovo",
-  "approval_scope": "O proprietário aprovou SOMENTE a máscara M02V3; a composição artística gerada continua pendente de aprovação.",
-  "candidate_state": "NOT_YET_APPROVED",
+  "approval_scope": "Máscara M02V3 e resultado artístico M02 V3 com edifício leste corrigido aprovados expressamente. Não canoniza geografia.",
+  "candidate_state": "APPROVED_BY_OWNER",
   "mask_storage": {
     "provider": "ChatGPT Library",
     "library_file_id": "libfile_2b39629dfee8819193863710449983f0",
@@ -793,26 +793,62 @@
     "git_encoding": "Reprodutível com o polígono em M02.json e Pillow; binário direto em Library"
   },
   "candidate": {
-    "revision": "M02_CANDIDATE_V2",
-    "state": "PENDING_OWNER_VISUAL_APPROVAL",
-    "approved": false,
-    "filename": "novydres_M02_candidata_v2_pendente.png",
-    "library_file_id": "libfile_345b1c5e8d188191bc241aaa038f8b2a",
-    "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_candidata_v2_pendente.png",
-    "sha256": "64ccfbad536eeb2286a2e0c723ee40842b785122de5ca2cd077e7ca41520d710",
-    "composite_base_sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+    "revision": "M02_V3_ART_APPROVED",
+    "state": "APPROVED_BY_OWNER",
+    "approved": true,
+    "approved_on": "2026-11-18",
+    "approval_evidence": "O proprietário aprovou expressamente a versão V3 com o prédio da borda leste corrigido e solicitou sua persistência no GitHub",
+    "filename": "novydres_M02_V3_aprovada.png",
+    "sha256": "c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b",
+    "size_bytes": 3782797,
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "base_sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
     "mask_sha256": "45203d53388c961cb1a81e593e29313b031a7b6a6f5110cb1e8a0a82230576d8",
+    "mask_pixels": 29469,
+    "inside_modified_pixels": 24902,
     "outside_modified_pixels": 0,
-    "inside_modified_pixels": 29469,
+    "library_file_id": "libfile_3658f07f5dec819196e16bbb1dccd265",
+    "library_path": "/Novydres - Mapwork/edicao-raster/novydres_M02_V3_aprovada.png",
+    "git_restore": {
+      "method": "Pillow lossless WebP source patch composited over approved M01 V2 via approved M02 V3 polygon",
+      "path": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/assets/m02_v3_approved/patch.webp",
+      "blob_sha1": "eb6e26e69409c603f74e3229079e69cf8dc7ff8c",
+      "patch_sha256": "e09e8189350ba63da129e267f88792758a0483220be759f7532a3fbef74a0476",
+      "patch_bytes": 72984,
+      "patch_bbox_xyxy": [
+        700,
+        975,
+        1042,
+        1086
+      ],
+      "reconstruct_script": "novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_m02_v3.py",
+      "exact_original_png_sha256": "c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b",
+      "tested_locally": true
+    },
     "comparator": {
-      "library_file_id": "libfile_f825bce9dcd88191918a1f598ac9f4fb",
-      "path": "/Novydres - Mapwork/edicao-raster/novydres_M02V3_comparador_resultado_pendente.html",
-      "sha256": "e3fab8e521cd5631e328f814a32af168054d28cb805e11cd2d8273bf44678939",
-      "tests": "Chromium desktop 1200px e mobile viewport 390px; full/detail, slider/side, mouse pointer PASS. Android proprietário não testado"
+      "path": "/Novydres - Mapwork/edicao-raster/novydres_M02_V3_comparador_aprovado.html",
+      "library_file_id": "libfile_5d65635c8c9c8191a10ec6970672646c",
+      "sha256": "68c8898e7b9fdc4999124c6b5792efdfb21cf7142216016249a6b890aea42da7",
+      "status": "APPROVED_REVIEW_ARTIFACT"
     },
     "report": {
-      "library_file_id": "libfile_267cc76e61608191a946f89038c47d11",
-      "path": "/Novydres - Mapwork/edicao-raster/novydres_M02V3_candidata_relatorio.json"
+      "path": "/Novydres - Mapwork/edicao-raster/novydres_M02_V3_validacao_aprovada.json",
+      "library_file_id": "libfile_8619d602c61c8191814ff5daed5a622c",
+      "sha256": "5f03d943bb5fc43a2de5194a5e493546cd5636e8c3b174f4af60f6c70a0ed0e4"
     }
+  },
+  "current_approved_asset_id": "M02_V3_APPROVED",
+  "closed_on": "2026-11-18",
+  "canonized": false,
+  "validation": {
+    "outside_mask_modified_pixels": 0,
+    "inside_mask_modified_pixels": 24902,
+    "mask_pixels": 29469,
+    "full_image_sha256": "c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b",
+    "reconstruction_local_test": "PASS",
+    "owner_visual_approval": "APPROVED"
   }
 }

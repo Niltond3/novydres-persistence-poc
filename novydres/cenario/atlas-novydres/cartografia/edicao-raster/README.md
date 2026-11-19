@@ -30,7 +30,7 @@ Dependência: Python 3 + Pillow. Os HTML são autocontidos com WebP embutido; se
 
 - **Imagem-mestre V1 imutável:** `novydres_imagem_mestre_v1.png`, 1448×1086; SHA256 `d36dc57d32d6874bd122316480432ca1ce4009a44a044b3c2e5815fc21dc947d`. **O mestre pode ser recuperado de fragmentos binários versionados em Git, sem gerar outra imagem**, via `reconstruct_assets.py`, ou de sua réplica em Library; SHA-256 é obrigatório.
 - **M01:** delimitação de 1,0222% aprovada. **M01-V2 APROVADA PELO PROPRIETÁRIO em 18/11/2026**, após correção da silhueta/sombra residual. Candidato `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`; zero pixels alterados fora da máscara. **O PNG M01-V2 aprovado pode ser reconstituído byte a byte pelos fragmentos binários Git**. O comparador HTML está na Library e pode ser regenerado pelo pipeline. Ver `masks/M01.json`.
-- **M02:** máscara M02V3 (29.469 pixels / 1,874%) **APROVADA pelo proprietário em 18/11/2026**. Candidata de composição habitacional `M02_CANDIDATE_V2` criada com zero diferenças fora da máscara, porém **AGUARDANDO aprovação visual**; ver `masks/M02.json` e `assets.json`. Próximo passo: revisar a candidata no comparador HTML offline.
+- **M02:** máscara V3 (29.469 pixels) e resultado artístico V3 **APROVADOS em 18/11/2026**. PNG cumulativo SHA-256 `c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b`. Zero diferenças fora da máscara. Recuperação binária Git por `reconstruct_m02_v3.py` + patch WebP sem perdas (ver assets.json). Nenhuma canonização automática.
 - **Comparador:** versão anterior falhava no uso relatado pelo proprietário. Nova versão reconstruída e validada programaticamente em Chromium 1200px e 390px nos modos de mapa completo/detalhe, slider e lado-a-lado; **teste no dispositivo do proprietário pendente**. Se não abrir, não declarar gate concluído.
 
 ## Segurança editorial
@@ -43,7 +43,7 @@ Nenhuma edição raster transforma imagem em fonte canônica, altera `world-atla
 
 **M01-V2:** `APPROVED_BY_OWNER` em 18/11/2026. A estação histórica oeste foi aceita após retirada da sombra residual; fora da M01, zero pixels modificados. PNG aprovado `novydres_M01_candidata_v2_sem_sombra.png`, SHA-256 `bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963`. Não usar a candidata V1, nem exigir novo aceite da M01.
 
-**Como retomar num chat limpo:** após bootstrap no Git, consultar `assets.json`; chamar `files.list` na pasta Library indicada e `files.materialize` (raw_file) para obter exatamente a master e a M01-V2, e conferir SHA-256 antes de qualquer operação. A imagem marcada M02 também está lá. **O arquivo de marcação não é a máscara aprovada.** A máscara M02V3 foi aprovada; a composição artística M02-CANDIDATE-V2 está aguardando aceite no comparador. Não promover automaticamente. O mestre V1 fica imutável.
+**Como retomar num chat limpo:** após bootstrap no Git, consultar `assets.json`; chamar `files.list` na pasta Library indicada e `files.materialize` (raw_file) para obter exatamente a master e a M01-V2, e conferir SHA-256 antes de qualquer operação. A imagem marcada M02 também está lá. **O arquivo de marcação não é a máscara aprovada.** A máscara M02V3 e a versão artística M02 V3 corrigida foram aprovadas pelo proprietário; esta última é agora a base cumulativa corrente, recuperável pelo Git e pela Library.
 
 ## Recuperação integral de PNGs a partir do Git (18/11/2026; regra vigente)
 
@@ -55,10 +55,20 @@ Após checkout/obtenção dos arquivos do repositório:
 
 `python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_assets.py --asset m01_v2 --out M01-V2.png`
 
-O script recusa sobrescrever arquivo existente, verifica os SHA-1 dos fragmentos e confere o SHA-256 final. Consultar `assets/parts.json` e `assets.json`; em um chat sem acesso a clone/files Git binários, a pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster` permanece como réplica de recuperação, com mesmos SHA-256. A `M01-V2` já está aprovada e será a base operacional cumulativa para M02. A máscara M02V3 está **APROVADA**; a arte M02-CANDIDATE-V2 está **NÃO APROVADA**, pendente de avaliação visual. O arquivo com marcação M02 existe na Library e não é uma máscara.
+O script recusa sobrescrever arquivo existente, verifica os SHA-1 dos fragmentos e confere o SHA-256 final. Consultar `assets/parts.json` e `assets.json`; em um chat sem acesso a clone/files Git binários, a pasta persistente ChatGPT Library `/Novydres - Mapwork/edicao-raster` permanece como réplica de recuperação, com mesmos SHA-256. A `M01-V2` já está aprovada e será a base operacional cumulativa para M02. A máscara M02V3 e a arte M02 V3 corrigida estão **APROVADAS**. A antiga candidata V2 foi rejeitada/substituída. O arquivo com marcação M02 existe na Library e não é uma máscara.
 
-## M02V3 — máscara aprovada, arte pendente (18/11/2026)
+## M02V3 — máscara e arte aprovadas (18/11/2026)
 
 A máscara extraída da pincelada branca do proprietário foi aprovada expressamente (`Aprovo`), com 29.469 pixels (1,874%) e SHA-256 `45203d53388c961cb1a81e593e29313b031a7b6a6f5110cb1e8a0a82230576d8`. A fonte estruturada é `masks/M02.json`, o PNG binário aprovado está na Library listada em `assets.json`. M01-V2 continua sendo a base operacional cumulativa imutável.
 
-A edição artística candidata `M02_CANDIDATE_V2` substitui o galpão e o trem isolado por blocos habitacionais degradados; SHA-256 `64ccfbad536eeb2286a2e0c723ee40842b785122de5ca2cd077e7ca41520d710`. Composição via máscara binária: **zero pixels modificados fora**, 29.469 internos alterados. Candidata PNG, comparador HTML e relatório estão persistidos na Library e registrados no manifesto Git `assets.json`. Teste HTML em Chromium 1200px/390px PASS; teste no Android proprietário pendente. **A arte não está aprovada** e não deve ser usada como base acumulativa em novas edições até aceite expresso.
+A candidata V2 foi rejeitada por corte de um edifício no limite leste. A versão V3 corrigida foi **APROVADA expressamente**: 24.902 pixels modificados dentro da máscara, zero fora, SHA-256 `c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b`. PNG completo e comparador em Library; patch sem perdas e reconstrutor em Git. O último prédio termina inteiro antes da rua de conexão leste. Não canoniza a geografia.
+
+## Recuperação Git do PNG M02 V3 aprovado
+
+O binário `assets/m02_v3_approved/patch.webp` é um recorte **WebP lossless** de 342×111 pixels. Aplicado exclusivamente na máscara M02 V3 sobre a M01 V2 aprovada, reconstrói **byte a byte** `novydres_M02_V3_aprovada.png` SHA-256 `c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b`. O arquivo PNG completo está também na Library (conforme `assets.json`).
+
+```sh
+python novydres/cenario/atlas-novydres/cartografia/edicao-raster/reconstruct_m02_v3.py --out M02-V3.png
+```
+
+Requer Pillow e os binários M01 V2 recuperáveis do Git pelo `reconstruct_assets.py`. O reconstrutor valida SHA-256 da base, patch, máscara e saída. **Aprovada a imagem ilustrativa**, não as hipóteses cartográficas que ela contenha.

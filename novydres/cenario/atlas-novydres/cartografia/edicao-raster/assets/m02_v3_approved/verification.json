@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "id": "M02_V3_APPROVED_CHECKPOINT",
+  "status": "APPROVED_BY_OWNER",
+  "date": "2026-11-18",
+  "scope": "ILLUSTRATIVE_RASTER_ONLY",
+  "source_base_sha256": "bb5c4a03bf65240e250e49504e6d281b6dc0b864eab16aa6a44e9b623cd26963",
+  "mask_sha256": "45203d53388c961cb1a81e593e29313b031a7b6a6f5110cb1e8a0a82230576d8",
+  "mask_pixels": 29469,
+  "inside_changed_pixels": 24902,
+  "outside_changed_pixels": 0,
+  "output_png_sha256": "c118a0560e4adcaaede454b524d43bc3a4a94474dc01cfd17ceaea2963318e0b",
+  "output_png_size_bytes": 3782797,
+  "patch_sha256": "e09e8189350ba63da129e267f88792758a0483220be759f7532a3fbef74a0476",
+  "patch_blob_git_sha1": "eb6e26e69409c603f74e3229079e69cf8dc7ff8c",
+  "patch_size_bytes": 72984,
+  "patch_bbox_xyxy": [
+    700,
+    975,
+    1042,
+    1086
+  ],
+  "restorer": "reconstruct_m02_v3.py",
+  "exact_restore_test": "PASS: reconstructed PNG SHA256 equals approved source",
+  "approval": "Aprovo (art V3 revised), seguida de instrução expressa de salvar no GitHub",
+  "geography_canonized": false
+}
