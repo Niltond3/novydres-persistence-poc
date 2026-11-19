@@ -78,23 +78,56 @@
     },
     {
       "id": "KW-V3-D08",
-      "status": "OPEN",
+      "status": "APPROVED",
       "question": "Qual lógica predomina nas ruas mais antigas do núcleo termal compacto de Cidade Velha, respeitando o vale e o Rio Vasyl?",
+      "selected_option": "A",
+      "answer": "Ruas estreitas e irregulares, adaptadas ao relevo, às termas e ao Rio Vasyl; vias posteriores mais largas adicionadas sem destruir a malha original.",
+      "approved_on": "2026-11-19",
+      "evidence": "KW-V3-D08: Aprovo A — ruas estreitas e irregulares, adaptadas ao relevo, às termas e ao Rio Vasyl, com vias mais largas adicionadas posteriormente sem destruir a malha original.",
+      "limits": "Aprovação morfológica, sem traçados ou geometrias específicos nem licenciamento de alteração da infraestrutura aprovada."
+    },
+    {
+      "id": "KW-V3-D09",
+      "status": "APPROVED_WITH_CAVEAT",
+      "selected_option": "A",
+      "question": "Qual a lógica histórica das travessias do Rio Vasyl entre a margem original e a margem expandida?",
+      "answer": "Exatamente três pontes históricas conectam as duas margens do Rio Vasyl. Nenhuma outra ponte foi construída ao longo do tempo. Com a expansão urbana, balsas passaram a transportar pessoas e veículos entre as margens.",
+      "owner_caveat": "Só existem três pontes históricas que conectam o Rio. Nenhuma outra foi construída no decorrer do tempo. O que aconteceu foi que balsas começaram a rodar e fazer a conexão de passagem de pessoas e veículos.",
+      "evidence": "KW-V3-D09: Aprovo A — Poucas travessias estruturantes (Com resalva). O núcleo antigo se conecta à margem posterior por poucas pontes principais, muito importantes para a organização urbana. Só existem três pontes históricas que conectam o Rio. Nenhuma outra foi construída no decorrer do tempo. O que aconteceu foi que balsas começaram a rodar e fazer a conexão de passagem de pessoas e veículos",
+      "approved_on": "2026-11-19",
+      "constraints": {
+        "river": "Rio Vasyl",
+        "bridges_exact_count": 3,
+        "bridges_historic": true,
+        "additional_bridges_after_original_three": 0,
+        "no_new_river_bridge_construction": true,
+        "ferry_transport": [
+          "passengers",
+          "vehicles"
+        ],
+        "ferry_network_exists_by_2010": true
+      },
+      "limits": "Não define posicionamento ou largura das três pontes, idades individuais, capacidade/rotas/terminais das balsas ou geometria do rio. Na futura proposta, reconciliar contagem com qualquer conector da base cartográfica U02 antes de alterar imagens; sem canonização/merge."
+    },
+    {
+      "id": "KW-V3-D10",
+      "status": "OPEN",
+      "question": "Como distribuir os serviços de balsas que complementam as três pontes históricas em Kingswell em 2010?",
       "options": [
         {
           "id": "A",
-          "text": "Traçado orgânico: ruas estreitas, vielas e quadras irregulares se adaptam às encostas, às fontes termais e ao rio; vias posteriores mais largas costuram o tecido sem apagá-lo."
+          "text": "Poucas rotas fixas entre terminais estruturados e acessos viários existentes, com capacidade de transportar pedestres e veículos, sem competir com os três eixos de pontes."
         },
         {
           "id": "B",
-          "text": "Traçado de centro cerimonial: caminhos antigos convergem para praças e conjuntos de culto/poder, com vias secundárias irregulares e reformas posteriores."
+          "text": "Várias rotas curtas e frequentes entre pequenos atracadouros distribuídos pelos bairros, algumas operando com veículos e outras apenas com passageiros."
         },
         {
           "id": "C",
-          "text": "Traçado por terraços: ruas principais acompanham curvas de nível e degraus do vale, interligadas por rampas, escadarias e travessias, com menor convergência ao centro termal."
+          "text": "Sistema hierárquico: um serviço principal para veículos em terminais robustos, mais travessias menores e frequentes de passageiros em cais locais."
         }
       ],
-      "blocks": "Decisão de morfologia urbana no núcleo histórico, não de traçado exato. Respeitar a malha humana preexistente, a sobreposição gradual pós-1423, o relevo/rios aprovados, os conectores da base e os acessos para mobilidade/serviços."
+      "blocks": "A escolha diz respeito à organização funcional; todas as opções preservam exatamente três pontes históricas e nenhum novo vão. Número, posições, capacidade, tecnologia e geometria de terminais serão propostos depois no esboço completo."
     }
   ],
   "release_effects": "NONE",

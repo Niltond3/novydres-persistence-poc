@@ -92,11 +92,22 @@
 - Evidência: “KW-V3-D07: Aprovo A — eixo logístico principal com vias de carga, oficinas, depósitos e pátios, conectado à malha urbana por ruas locais e ramais ferroviários onde compatíveis.”
 - Consequência morfológica: hierarquia funcional para transporte pesado sem isolamento obrigatório do restante da cidade. **Não autoriza traçado, novo ramal, estação, conurbação nem arte.** Respeitar GEO-004.6A e a infraestrutura U02.
 
+**KW-V3-D08 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** ruas estreitas e irregulares adaptadas a encostas, termas e Rio Vasyl; vias mais largas construídas depois, costurando a malha sem destruí-la.
+- Evidência: “KW-V3-D08: Aprovo A — ruas estreitas e irregulares, adaptadas ao relevo, às termas e ao Rio Vasyl, com vias mais largas adicionadas posteriormente sem destruir a malha original.”
+- Consequência: vielas e quadras orgânicas de tecido histórico preservadas onde possível, em convivência com eixos posteriores. **Ainda sem aprovação de traçados ou edifícios.**
+
+**KW-V3-D09 — APROVADA COM RESSALVA EXPRESSA DO PROPRIETÁRIO (19/11/2026):**
+- **Regra obrigatória do planejamento:** existem **exatamente três pontes históricas** de travessia do Rio Vasyl entre as margens. **Nunca foram construídas outras pontes sobre esse rio** após essas três. Balsas foram implantadas posteriormente, transportando **pessoas e veículos** entre as margens.
+- Evidência: “KW-V3-D09: Aprovo A — Poucas travessias estruturantes (Com resalva). O núcleo antigo se conecta à margem posterior por poucas pontes principais, muito importantes para a organização urbana. Só existem três pontes históricas que conectam o Rio. Nenhuma outra foi construída no decorrer do tempo. O que aconteceu foi que balsas começaram a rodar e fazer a conexão de passagem de pessoas e veículos”.
+- **Guardrail para geração cartográfica:** exigir contagem exata de três pontes no Rio Vasyl, proibir qualquer quarta ponte (inclusive implícita em nova rodovia/ramal), representar travessias alternativas por balsas. Se a referência U02 ou outros conectores parecerem contradizer a regra, **reportar divergência antes de editar a referência**; não deslocar ou eliminar o conector aprovado automaticamente.
+- Não aprova as posições nem a geometria das pontes e dos terminais de balsas.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D08` — qual lógica predominante para as ruas mais antigas do núcleo termal da Cidade Velha?
-- **A (recomendada):** vias estreitas e irregulares que acompanham relevo, termas e Rio Vasyl; vias mais largas posteriores costuram o tecido sem suprimi-lo.
-- **B:** convergência de ruas antigas para praças cerimoniais e edifícios de culto/poder, com vielas secundárias irregulares.
-- **C:** terraços e ruas longitudinalmente adaptados às encostas do vale, ligados por rampas/escadarias.
-Sem determinar posição, medidas, ruas ou quadras; preservar vias de circulação de serviços e conexões pré-aprovadas ao passar à proposta técnica.
+`KW-V3-D10` — qual padrão de serviço das balsas que complementam as três pontes históricas em Kingswell?
+- **A (recomendada):** poucas rotas fixas, com terminais estruturados e acessos viários para pessoas e veículos.
+- **B:** numerosas rotas curtas entre atracadouros locais, algumas para veículos e outras apenas para passageiros.
+- **C:** hierarquia com travessia principal para veículos e múltiplas rotas menores para passageiros.
+Nenhum modelo libera a construção de outra ponte; a localização e as instalações dependerão de proposta técnica aprovada.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
