@@ -273,11 +273,16 @@
 - Evidência: “KW-V3-D43: Aprovo A — neve acinzentada, resíduos de transporte e fachadas escurecidas concentrados próximos aos muros industriais e ao corredor de cargas, diminuindo irregularmente no interior residencial.”
 - Consequência: graduação irregular do desgaste industrial a partir do corredor de cargas, sem tornar toda a zona operária uniformemente suja. **Não fixa fontes de emissões, impacto sanitário, quantidades, localização de marcas, geometrias ou arte.**
 
+**KW-V3-D44 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** rede de aquecimento predominantemente subterrânea, com tampas de inspeção, acessos de manutenção e poucas instalações técnicas visíveis na superfície.
+- Evidência: “KW-V3-D44: Aprovo B — rede de aquecimento predominantemente subterrânea, com tampas de inspeção, acessos de manutenção e poucas instalações técnicas visíveis na superfície.”
+- Consequência: presença superficial discreta da rede geotérmica, sem proliferar tubulações aparentes em fachadas e pátios; o aquecimento das moradias permanece desigual segundo D14. **Sem definir tampas ou acessos individuais, equipamentos, conexões, fornecimento, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D44` — como a infraestrutura de aquecimento deve aparecer nos quarteirões operários de Kingswell, considerando o sistema geotérmico e o calor distribuído desigualmente?
-- **A:** tubulações e condutos aparentes relativamente frequentes em fachadas e pátios, incluindo reparos e pontos técnicos; presença da rede não equivale a aquecimento regular.
-- **B:** infraestrutura quase totalmente subterrânea, com tampas, acessos técnicos e poucas instalações de superfície visíveis.
-- **C (recomendada):** rede principal subterrânea e derivações/remendos aparentes pontuais em fachadas, pátios e áreas técnicas, sem padronização ou garantia de calor residencial.
-A decisão define apenas visibilidade e morfologia da rede; não aprova ramais, equipamentos, fornecimento efetivo a casas, traçados, geometrias ou imagens. Respeitar D12–D14, D17, D36–D40 e baseline U02.
+`KW-V3-D45` — qual o padrão predominante de pavimentação e desgaste nas ruas residenciais estreitas e pátios operários de Kingswell?
+- **A (recomendada):** superfícies históricas remendadas: pedra, paralelepípedos irregulares, faixas de asfalto gasto, concreto e reparos locais, com desníveis e drenagem imperfeita.
+- **B:** pedra e paralelepípedos antigos predominam, com poucas reformas modernas, acentuando a continuidade do núcleo histórico.
+- **C:** asfalto e concreto utilitário envelhecidos predominam nas vias secundárias, com pavimentos antigos preservados principalmente em becos e pátios.
+Define a linguagem material dos pavimentos; não fixa revestimento de qualquer trecho, reformas, drenagem individual, traçados, geometrias ou imagens. Respeitar D08, D17, D36, D38–D40, D44 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
