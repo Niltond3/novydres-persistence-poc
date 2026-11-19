@@ -143,11 +143,16 @@
 - Evidência: “KW-V3-D17: Aprovo A — pedra e tijolo antigos, anexos de madeira e reformas posteriores em metal e concreto; fachadas variadas, envelhecidas e adaptadas ao frio.”
 - Consequência: linguagem arquitetônica em camadas, variando edifício a edifício e refletindo reapropriação histórica em 2010, sem importar automaticamente a linguagem própria de Drevnigrad. **Não há material obrigatório para cada prédio, nem aprovação de geometria ou arte.**
 
+**KW-V3-D18 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** rede de pequenos largos, mercados de rua e pátios coletivos entre vielas, com poucos espaços maiores junto ao núcleo termal.
+- Evidência: “KW-V3-D18: Aprovo A — rede de pequenos largos, mercados de rua e pátios coletivos entre as vielas, com poucos espaços maiores junto ao núcleo termal.”
+- Consequência: sistema descentralizado de convivência e comércio a pequena escala, vinculado à malha orgânica original, sem uma praça gigante dominante. **Não fixa quantidades, implantação, dimensões, nome de praça, monumento ou geometria.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D18` — que tipologia de espaços públicos predomina no núcleo histórico compacto de Kingswell?
-- **A (recomendada):** pequenos largos, mercados de rua e pátios de convívio entre as vielas, com poucos espaços maiores junto ao centro termal e imóveis comunitários reaproveitados.
-- **B:** grande praça pública termal estruturante, com alguns largos secundários e ruas históricas que confluem para ela.
-- **C:** espaços coletivos mais interiores, em pátios e edifícios reapropriados; poucas praças abertas no centro histórico.
-Escolha apenas morfológica para estudo; respeitar ruas orgânicas D08, reuso D05, nascentes D12 e captação geotérmica D13. **Não aprova local, número, medida de praças nem imagem.**
+`KW-V3-D19` — como mercados de rua, largos e pátios devem funcionar no frio extremo de Novydres em 2010?
+- **A (recomendada):** proteção climática pontual integrada às edificações — arcadas, coberturas leves, corta-ventos e passagens abrigadas — mantendo espaços externos, com uso condicionado ao clima e às fontes termais próximas.
+- **B:** mercados e conexões predominantemente em interiores reaproveitados e galerias protegidas, deixando largos externos para trânsito e eventos limitados.
+- **C:** mercados e praças predominantemente externos em períodos adequados, com espaços internos de abrigo para os períodos de frio extremo.
+Respeitar a **habitabilidade perigosa sem abrigo/calor** (GEO-003.2), a distribuição desigual de aquecimento (D14), o desvio para Bukovie e o caráter da rede pública aprovada em D18. **Não estabelecer aquecimento uniforme, equipamentos específicos, locais ou geometria.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
