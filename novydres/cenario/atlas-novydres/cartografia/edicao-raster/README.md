@@ -83,3 +83,19 @@ Requer Pillow e os binários M01 V2 recuperáveis do Git pelo `reconstruct_asset
 - Validação: `python verify_visual_canon.py` ou `python verify_visual_canon.py --out novo_mapa.png` (requer Pillow).
 - **Escopo de cânone:** atmosfera e ilustração geral. Não modifica automaticamente geografia, cronologia, fronteiras, lugares, ferrovias reais da malha técnica ou demais fatos de assunto. Esses continuam governados por fontes estruturadas aprovadas.
 - Para novas máscaras, usar a nova base gótico-punk, não M02 V3, depois da verificação de seu hash de pixels.
+
+
+## Caminho top-down — T03/U02 aprovado para U03 (19/11/2026)
+
+Esta seção rege **somente** a continuação da cartografia top-down de Novydres, não substitui o cânone histórico Gótico-Punk V1. O proprietário aprovou T03/U01 V2 e depois T03/U02 como **base visual de trabalho**.
+
+- **Base cumulativa atual para U03:** `novydres/cenario/atlas-novydres/cartografia/topdown/t03-u02/`.
+- **Manifesto com integridade dos binários:** `topdown_assets_manifest.json` (pacote zstd de 15 arquivos originais, dividido em 58 fragmentos Git verificáveis). Recuperação por `reconstruct_topdown.py`.
+- **PNG da T03/U02 aprovado:** `U02/T03_U02_candidata_mascarada.png` no pacote recuperável, SHA-256 `9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0`, 1448×1086.
+- **Decisão explícita:** `topdown_approval_state.json`. Zero pixels alterados fora da máscara de composição, mas continuidade viária topológica não certificada.
+- **Ressalva obrigatória a partir de U03:** `u03_remapeamento_zonas.json`. **Trocar Vasyl Bay e New London de lugar no mapa de trabalho**; POI 34 Estação Norte de Passageiros fica na localização física original e passa a ser tratado em **New London**.
+- **POI 21:** Estação Sul de Carga / Pátio Ferroviário; POI 35 permanece absorvido e inativo.
+- **Divergência em aberto:** GEO-013.1 registra terminal internacional de passageiros em Sulfok, ao passo que a decisão visual de U03 situa POI 34 em New London; **não promover a nova atribuição a geografia oficial sem reconciliação formal**.
+- U01/U02 ficam byte a byte preservadas. Nenhum edifício é movido por esta decisão. As imagens antigas M01/M02 permanecem sob seu próprio protocolo.
+
+**Fonte de verdade para U03:** arquivos na `master` + manifesto top-down acima. Não usar a branch anterior como fonte de fatos.
