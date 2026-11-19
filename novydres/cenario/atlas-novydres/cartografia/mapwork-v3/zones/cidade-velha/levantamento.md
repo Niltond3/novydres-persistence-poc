@@ -228,11 +228,16 @@
 - Evidência: “KW-V3-D34: Aprovo A — grandes portões de carga voltados ao corredor industrial e poucas entradas de trabalhadores pelas ruas laterais e secundárias, conectadas aos bairros operários.”
 - Consequência: fluxos de pessoas e caminhões separados funcionalmente, preservando o acesso aos bairros operários por vias locais e o caráter murado das fábricas. **Não define número ou localização de entradas, infraestrutura de controle, vias novas, geometria ou imagens.**
 
+**KW-V3-D35 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pequenos recuos e espaços de espera abrigados junto aos portões de trabalhadores, preferencialmente dentro dos terrenos industriais, sem alargar as ruas históricas.
+- Evidência: “KW-V3-D35: Aprovo A — pequenos recuos e espaços de espera abrigados junto aos portões de trabalhadores, preferencialmente dentro dos terrenos industriais, sem alargar as ruas históricas.”
+- Consequência: proteção localizada para trocas de turno sem transferir aglomerações às ruas estreitas e sem alargamento artificial de vias; respeitar D08, D19, D28-D29 e D34. **Não aprova abrigos ou recuos individuais, dimensões, portões, localizações, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D35` — como organizar a chegada e espera dos trabalhadores nas poucas entradas de pessoal, considerando ruas estreitas e frio extremo?
-- **A (recomendada):** pequenos recuos e espaços de espera abrigados junto aos portões, preferencialmente internos ao lote fabril, sem alargar artificialmente ruas históricas.
-- **B:** pequenos largos externos em ruas secundárias diante dos portões, com coberturas e comércio voltado às trocas de turno.
-- **C:** entradas diretamente nas ruas estreitas, quase sem recuos ou áreas de espera, com abrigos mínimos e fluxo concentrado nos horários de turno.
-Diretriz de morfologia e proteção climática; respeitar D08, D19, D28-D29, D34 e U02. **Não aprova novas praças, portões, reformas, localização, geometrias ou imagens.**
+`KW-V3-D36` — como organizar internamente os quarteirões de moradias operárias próximos aos muros industriais, preservando a malha estreita?
+- **A (recomendada):** cortiços e moradias subdivididas muito compactas, conectadas por pequenos pátios coletivos e passagens internas, com anexos utilitários irregulares.
+- **B:** fileiras de casas operárias estreitas e geminadas, com fundos pequenos e ligações ocasionais entre as fileiras, formando quadras relativamente mais regulares.
+- **C:** blocos habitacionais coletivos e compridos, agrupados ao redor de pátios internos um pouco maiores, com poucos acessos às ruas secundárias.
+Compatibilizar D15–D17, D28, D35 e base U02. **Não aprova imóveis, lotes, vias, dimensões, geometrias ou imagens.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
