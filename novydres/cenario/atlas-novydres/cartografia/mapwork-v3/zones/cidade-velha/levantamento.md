@@ -153,11 +153,16 @@
 - Evidência: “KW-V3-D19: Aprovo A — proteção climática pontual, com arcadas, coberturas e passagens abrigadas integradas às construções; largos e mercados externos permanecem.”
 - Consequência: rede pública aberta e diversa com abrigos localizados, não uma cidade toda coberta ou aquecida. **A atividade externa permanece condicionada ao clima extremo e à infraestrutura precária; não há aprovação de engenharia, localização, tamanho ou geometria.**
 
+**KW-V3-D20 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** marcos cívicos e religiosos distribuídos entre largos e quarteirões históricos reaproveitados, com funções comunitárias também nas expansões.
+- Evidência: “KW-V3-D20: Aprovo A — marcos cívicos e religiosos distribuídos entre largos e quarteirões históricos reaproveitados, com funções comunitárias também nas expansões urbanas.”
+- Consequência: conservar a pluralidade dos marcos no tecido antigo, estendendo funções comunitárias aos bairros novos sem criar centro monumental único. **Não confirma identidade, número, função atual ou implantação de templos, sedes ou POIs específicos, nem geometria ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D20` — qual lógica espacial deve predominar para os marcos cívicos e religiosos históricos reconhecíveis em Kingswell em 2010?
-- **A (recomendada):** poucos marcos históricos de culto e atividade cívica dispersos entre largos e quarteirões reapropriados, com funções comunitárias também em expansões posteriores.
-- **B:** maioria dos marcos cívicos e religiosos remanescentes próxima às termas, compondo um centro monumental compacto e bairros exteriores com equipamentos menores.
-- **C:** contraste: antigos conjuntos de culto principalmente no centro termal e edificações cívicas anarquistas predominantemente nas expansões operárias.
-POIs da referência U02 são candidatos visuais e **não têm localização ou identidade automaticamente canônicas**. Esta escolha não autoriza construções individuais, sedes, igrejas, sinagogas, monumentos, geometrias ou imagens.
+`KW-V3-D21` — como distribuir serviços comunitários básicos (escolas, atendimento de saúde local e apoio social) entre núcleo histórico e expansões?
+- **A (recomendada):** rede distribuída em prédios pequenos e médios, inclusive edifícios reaproveitados, associada a vias locais e largos; poucos equipamentos maiores junto aos eixos de acesso.
+- **B:** polos de serviços maiores e concentrados nas avenidas e perto das pontes, exigindo mais deslocamentos desde os bairros residenciais.
+- **C:** predomínio de soluções comunitárias improvisadas em construções reconvertidas, com escassez de instalações formais.
+A decisão é de morfologia para o esboço, **sem inventar escolas, clínicas ou hospitais específicos**. Respeitar a distribuição térmica desigual, o clima letal, as três únicas pontes, os serviços de balsas, e a ausência de geometria aprovada.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
