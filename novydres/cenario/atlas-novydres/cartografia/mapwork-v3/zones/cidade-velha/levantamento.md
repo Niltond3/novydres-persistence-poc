@@ -193,11 +193,16 @@
 - Evidência: “KW-V3-D27: Aprovo B — grandes galpões, pátios murados e complexos fabris predominam junto ao corredor de cargas, enquanto oficinas e moradias ocupam principalmente ruas secundárias.”
 - Consequência: frente industrial de porte maior e caráter produtivo nítido no corredor, convivendo com bairros operários adjacentes. **Sem inventar separação desocupada, fronteira impermeável com Sulfok, edifícios, alturas, lotes ou geometrias.** Preservar U02.
 
+**KW-V3-D28 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** contraste direto entre muros altos/fundos de fábricas e ruas residenciais estreitas, com poucos elementos de transição.
+- Evidência: “KW-V3-D28: Aprovo B — contraste direto, com muros altos e fundos de fábricas confrontando ruas residenciais estreitas, com poucos elementos de transição.”
+- Consequência: interface fabril-residencial abrupta e opressiva, sem corredor intermediário de oficinas obrigatórias; preservar a malha contínua D06 e entradas de carga seletivas D26. **Não fixa posição, gabarito, materiais de muros, traçado, geometria ou imagem.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D28` — como relacionar espacialmente os grandes complexos fabris murados e as ruas residenciais/comerciais próximas?
-- **A (recomendada):** transição construída gradual com oficinas e depósitos menores entre grandes instalações e moradias operárias; nenhuma faixa vazia artificial.
-- **B:** contraste direto com muros altos e fundos de fábricas confrontando ruas residenciais estreitas, poucas mediações de escala e acessos controlados.
-- **C:** frentes parcialmente ativas de comércio, oficinas e serviços nos limites dos complexos, deixando galpões grandes e pátios mais internos às quadras.
-A escolha complementa D27, **não altera a predominância de galpões junto ao corredor nem aprova novos traçados, edifícios, geometrias ou imagens**. Respeitar D06, D26 e conectores U02.
+`KW-V3-D29` — como distribuir os grandes galpões e pátios dentro dos quarteirões industriais de Kingswell?
+- **A (recomendada):** quarteirões murados com pátios internos de manobra e galpões em seu entorno; portões voltados ao corredor de cargas e fundos/muros voltados às ruas residenciais.
+- **B:** galpões compridos em fileiras paralelas ao corredor, com docas e pátios alongados entre os edifícios e fundos murados diante dos bairros.
+- **C:** complexos de expansão irregular, com galpões e anexos de diferentes idades organizados em torno de pátios assimétricos e conectados internamente.
+A escolha trata apenas de padrão de organização. Respeitar D06, D26-D28, base U02; **não aprova quarteirões individuais, localizações de portões, áreas, novas vias, geometria ou imagens**.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
