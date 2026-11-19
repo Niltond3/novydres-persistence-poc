@@ -148,11 +148,16 @@
 - Evidência: “KW-V3-D18: Aprovo A — rede de pequenos largos, mercados de rua e pátios coletivos entre as vielas, com poucos espaços maiores junto ao núcleo termal.”
 - Consequência: sistema descentralizado de convivência e comércio a pequena escala, vinculado à malha orgânica original, sem uma praça gigante dominante. **Não fixa quantidades, implantação, dimensões, nome de praça, monumento ou geometria.**
 
+**KW-V3-D19 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** proteção climática pontual por arcadas, coberturas e passagens abrigadas integradas às construções; largos e mercados externos permanecem.
+- Evidência: “KW-V3-D19: Aprovo A — proteção climática pontual, com arcadas, coberturas e passagens abrigadas integradas às construções; largos e mercados externos permanecem.”
+- Consequência: rede pública aberta e diversa com abrigos localizados, não uma cidade toda coberta ou aquecida. **A atividade externa permanece condicionada ao clima extremo e à infraestrutura precária; não há aprovação de engenharia, localização, tamanho ou geometria.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D19` — como mercados de rua, largos e pátios devem funcionar no frio extremo de Novydres em 2010?
-- **A (recomendada):** proteção climática pontual integrada às edificações — arcadas, coberturas leves, corta-ventos e passagens abrigadas — mantendo espaços externos, com uso condicionado ao clima e às fontes termais próximas.
-- **B:** mercados e conexões predominantemente em interiores reaproveitados e galerias protegidas, deixando largos externos para trânsito e eventos limitados.
-- **C:** mercados e praças predominantemente externos em períodos adequados, com espaços internos de abrigo para os períodos de frio extremo.
-Respeitar a **habitabilidade perigosa sem abrigo/calor** (GEO-003.2), a distribuição desigual de aquecimento (D14), o desvio para Bukovie e o caráter da rede pública aprovada em D18. **Não estabelecer aquecimento uniforme, equipamentos específicos, locais ou geometria.**
+`KW-V3-D20` — qual lógica espacial deve predominar para os marcos cívicos e religiosos históricos reconhecíveis em Kingswell em 2010?
+- **A (recomendada):** poucos marcos históricos de culto e atividade cívica dispersos entre largos e quarteirões reapropriados, com funções comunitárias também em expansões posteriores.
+- **B:** maioria dos marcos cívicos e religiosos remanescentes próxima às termas, compondo um centro monumental compacto e bairros exteriores com equipamentos menores.
+- **C:** contraste: antigos conjuntos de culto principalmente no centro termal e edificações cívicas anarquistas predominantemente nas expansões operárias.
+POIs da referência U02 são candidatos visuais e **não têm localização ou identidade automaticamente canônicas**. Esta escolha não autoriza construções individuais, sedes, igrejas, sinagogas, monumentos, geometrias ou imagens.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
