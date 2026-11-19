@@ -72,11 +72,16 @@
 - Evidência: “KW-V3-D03: Aprovo A — as fontes termais e os abrigos estruturaram o núcleo original; comércio e instalações fluviais desenvolveram-se próximos.”
 - Consequência morfológica: privilegiar núcleo termal e função de abrigo como origem, deixando o mercado e acessos ribeirinhos relacionados, mas não como centro primordial. **Não aprova localização de fontes, cais, edificações, traçado ou cânone.**
 
+**KW-V3-D04 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** sobreposição gradual: a malha urbana humana anterior permaneceu em grande parte, recebendo edifícios de poder e culto e praças remodeladas durante o período de domínio de Gilgamesh e suas camadas posteriores.
+- Evidência: “KW-V3-D04: Aprovo A — sobreposição gradual: a malha urbana anterior permaneceu em grande parte, com inserções de edifícios de poder, culto e praças remodeladas.”
+- Consequência morfológica: sobrepor diferentes períodos de edifícios e espaço público sem substituir uniformemente a malha termal original. **Não aprova sítios ou monumentos concretos nem canoniza sobrevivências específicas até 2010.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D04` — qual efeito físico teve a implantação do culto e poder de Gilgamesh (a partir de 1423) sobre o assentamento humano termal preexistente?
-- **A (recomendada):** sobreposição gradual com malha anterior preservada, inserindo complexos de poder/culto e praças remodeladas.
-- **B:** reorganização monumental mais agressiva do núcleo termal, deslocando vestígios antigos para bordas e vielas.
-- **C:** múltiplos pequenos polos de culto/poder espalhados pelo tecido existente, sem complexo central dominante.
-A decisão orientará a leitura de camadas históricas na planta de 2010, sem converter hipótese arquitetônica em fato histórico do cânone.
+`KW-V3-D05` — em 2010, qual o destino predominante das construções antigas de culto e poder, sobretudo no contexto de Kingswell após 1917?
+- **A (recomendada):** reapropriação para moradias, mercados, oficinas e atividades comunitárias; monumentos e algumas ruínas ainda visíveis.
+- **B:** fragmentação: muitos espaços abandonados/arruinados, entremeados por ocupações improvisadas e inserções operárias.
+- **C:** substituição por adensamento: cortiços e estruturas produtivas ocuparam boa parte das antigas áreas, restando poucos marcos reconhecíveis.
+A escolha caracteriza a paisagem urbana em 2010, sem inventar decretos da Revolta de 1917 ou transformar percentuais e edificações hipotéticas em fatos.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
