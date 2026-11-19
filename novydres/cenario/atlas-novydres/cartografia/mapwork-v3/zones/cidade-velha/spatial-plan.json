@@ -25,7 +25,8 @@
         765
       ],
       "role": "travessia histórica do microcentro termal para margem de expansão",
-      "confidence": "CANDIDATE"
+      "confidence": "CANDIDATE",
+      "mixed_ped_vehicle": true
     },
     {
       "id": "KW-VASYL-02",
@@ -34,7 +35,8 @@
         810
       ],
       "role": "travessia residencial e comercial na expansão intermediária",
-      "confidence": "CANDIDATE"
+      "confidence": "CANDIDATE",
+      "mixed_ped_vehicle": true
     },
     {
       "id": "KW-VASYL-03",
@@ -43,7 +45,8 @@
         883
       ],
       "role": "travessia de expansão industrial mista, sem especialização permanente",
-      "confidence": "CANDIDATE"
+      "confidence": "CANDIDATE",
+      "mixed_ped_vehicle": true
     }
   ],
   "river_identification": "Curso sinuoso na interface oeste da área de busca; confirmar que é Rio Vasyl e classificar todas as passagens aparentes antes de fixar as três pontes. Se conflito com U02 ou Sulfok, manter bloqueio e corrigir esboço, nunca inventar quarta ponte.",
@@ -145,5 +148,25 @@
     "poi_u02_sites_verified": false,
     "full_technical_sketch_approved": false,
     "image_generation_authorized": false
-  }
+  },
+  "rail_exit_candidates": [
+    {
+      "id": "EXT-RAIL-FREIGHT-SOUTH",
+      "candidate_exit_px": [
+        100,
+        1086
+      ],
+      "edge": "south",
+      "network": "Corredor ferroviário ocidental existente da U02, associado à logística de Sulfok e à ligação Kingswell–Sulfok",
+      "purpose": "Continuação para mineração de ouro e diamantes não representada no raster",
+      "external_front_ids": [
+        "EXT-GOLD",
+        "EXT-DIAMOND"
+      ],
+      "status": "CANDIDATE_NEEDS_SNAP_TO_APPROVED_RAIL_BASELINE",
+      "new_station_authorized": false,
+      "new_rail_geometry_authorized": false
+    }
+  ],
+  "rail_geometry_gate": "A coordenada é apenas âncora de borda a ajustar sobre os trilhos EXISTENTES da U02; não fixa expansão de linha, ramal ou plataforma. Toda continuidade fora da cena exige o conector físico confirmado na visão técnica integral."
 }

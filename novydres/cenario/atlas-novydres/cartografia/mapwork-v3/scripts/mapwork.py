@@ -237,6 +237,18 @@ def validate_spatial_plan(plan, z, cfg):
     fail(all(x.get('off_map') is True and 'center_px' not in x for x in fronts),'off-frame extraction may not fabricate on-map POIs')
     gas=next(x for x in fronts if x['kind']=='natural_gas')
     fail(gas.get('primary_transport')=='pipeline','natural gas primary transport must be pipeline')
+    exits=plan.get('rail_exit_candidates',[])
+    fail(bool(exits) and len({x['id'] for x in exits})==len(exits),'missing or duplicate external rail connector candidates')
+    for ex in exits:
+        point=ex.get('candidate_exit_px')
+        fail(isinstance(point,list) and len(point)==2,'external rail connector invalid coordinate')
+        x,y=point
+        fail(all(isinstance(v,(int,float)) and math.isfinite(v) for v in point),'external rail connector invalid numeric coordinate')
+        w,h=cfg['world_size_units']
+        fail(0<=x<=w and 0<=y<=h and (x in (0,w) or y in (0,h)),'external rail connector must touch raster boundary')
+        fail(ex.get('status')=='CANDIDATE_NEEDS_SNAP_TO_APPROVED_RAIL_BASELINE','rail exit cannot claim verified geometry')
+        fail(ex.get('new_station_authorized') is False and ex.get('new_rail_geometry_authorized') is False,'no new station or rail authorized')
+    fail(all(b.get('mixed_ped_vehicle') is True for b in bridges),'all three historic bridges remain mixed-use')
     gates=plan.get('gates',{})
     gate_names=('bridge_river_topology_verified','adjacent_zone_edges_verified','poi_u02_sites_verified','full_technical_sketch_approved','image_generation_authorized')
     fail(all(type(gates.get(k)) is bool for k in gate_names),'missing spatial readiness gate')

@@ -184,3 +184,21 @@ def test_canonical_sources_follow_entire_raion_correction():
     assert city['feature']['is_entire_raion'] is True
     assert city['feature']['spatial_identity']['same_extent'] is True
     assert next(r for r in raions['raions'] if r['subject_id']=='district-chelsea')['same_extent_as_cidade_velha'] is True
+
+
+def test_rail_exit_is_real_border_candidate_not_new_station():
+    cfg,z,plan=planning_inputs()
+    assert m.validate_spatial_plan(plan,z,cfg)['historical_bridges']==3
+    plan['rail_exit_candidates'][0]['candidate_exit_px']=[100,1000]
+    with pytest.raises(m.Invalid,match='raster boundary'):
+        m.validate_spatial_plan(plan,z,cfg)
+    _,z,plan=planning_inputs()
+    plan['rail_exit_candidates'][0]['new_station_authorized']=True
+    with pytest.raises(m.Invalid,match='no new station'):
+        m.validate_spatial_plan(plan,z,cfg)
+
+def test_all_historical_bridges_must_be_mixed_use():
+    cfg,z,plan=planning_inputs()
+    plan['bridges'][2]['mixed_ped_vehicle']=False
+    with pytest.raises(m.Invalid,match='mixed-use'):
+        m.validate_spatial_plan(plan,z,cfg)
