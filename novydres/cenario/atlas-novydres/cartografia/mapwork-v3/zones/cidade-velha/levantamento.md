@@ -318,11 +318,16 @@
 - Evidência: “KW-V3-D52: Aprovo A — paradas e acessos ao transporte coletivo concentrados nas vias mais largas e corredores existentes, conectados aos interiores dos quarteirões por vielas e passagens pedonais.”
 - Consequência: conexão pedonal entre o tecido denso e o transporte coletivo nas vias já apropriadas, sem circulação de veículos coletivos dentro das passagens históricas. **Não cria paradas, POIs, linhas, vias, pontes, geometrias ou arte.**
 
+**KW-V3-D53 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** circulação de pedestres e veículos predominantemente separada nos terminais de balsas, com acessos e áreas de espera distintos, adaptados às vias existentes.
+- Evidência: “KW-V3-D53: Aprovo A — circulação de pedestres e veículos predominantemente separada nos terminais de balsas, com acessos e áreas de espera distintos, adaptados às vias existentes.”
+- Consequência: terminais fluviais organizam filas de veículos e acesso pedonal de forma separada, dentro dos acessos preexistentes, reduzindo cruzamentos de fluxo. **Não cria acessos, terminais, pontes, rampas, posições, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D53` — como separar ou compartilhar a circulação de pedestres e veículos nos terminais de balsas sobre o Rio Vasyl?
-- **A (recomendada):** fluxos predominantemente separados, com acesso e espera pedonais distintos das áreas de aproximação e filas dos veículos.
-- **B:** espaço de aproximação compartilhado, com organização simples entre pedestres e veículos sem grandes áreas separadas.
-- **C:** separação variável segundo condições preexistentes de cada terminal; onde houver espaço, fluxos separados, e nos trechos estreitos parcialmente compartilhados.
-Define apenas o padrão de circulação e espera nos terminais previamente previstos, **sem criar terminais, pontes, novas rampas, vias, posições, quantidades, geometrias ou imagens**. Preservar as três pontes históricas D09, balsas D10, margens D23–D24 e baseline U02.
+`KW-V3-D54` — como priorizar pedestres e veículos nas três pontes históricas do Rio Vasyl, preservando as estruturas e as balsas para pessoas e veículos?
+- **A (recomendada):** ponte do núcleo termal com prioridade pedonal e circulação local leve; duas pontes das expansões com uso misto controlado, e balsas como alternativa para parte dos veículos.
+- **B:** três pontes com uso misto de pedestres e veículos, respeitando limitações e controle local, sem especializar a função de cada uma.
+- **C:** prioridade pedonal nas três pontes, com tráfego de veículos bastante limitado e maior participação das balsas na travessia motorizada.
+A decisão fixa apenas prioridades funcionais, **sem alterar quantidade de pontes, suas estruturas ou traçados, estabelecer capacidade, pesos, regras legais, novas vias, geometrias ou imagens**. Preservar D09–D11, D23, D26, D52–D53 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
