@@ -57,11 +57,16 @@
 4. Fazer o mapa técnico integral ANTES/DEPOIS somente após a resolução de decisões substantivas; nenhuma ilustração PNG prévia à aprovação expressa do esboço.
 5. Não avançar a PLANNING para SKETCH_APPROVED; nenhuma canonização, release global ou handoff.
 
-**Primeira decisão substantiva pendente:**
-`KW-V3-D01` — qual a abrangência territorial histórica do núcleo Cidade Velha dentro do raion Kingswell?
-- **A, recomendação candidata:** núcleo histórico compacto centralizado nas nascentes/trecho principal do Rio Vasyl, com densidade elevada e expansões industriais externas a ele no restante do raion.
-- **B:** núcleo histórico extenso e longitudinal ao vale do Rio Vasyl, englobando bairros produtivos antigos; outras expansões ainda dentro do raion.
-- **C:** outro conceito indicado pelo proprietário.
-A decisão define escopo, não aprova contornos ou medidas sem o esboço técnico posterior.
+**KW-V3-D01 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** núcleo histórico **compacto** em torno do vale termal e do Rio Vasyl, com expansões industriais **fora do núcleo histórico, porém dentro do raion Kingswell**.
+- Evidência: mensagem expressa do proprietário: “KW-V3-D01: Aprovo a opção A — núcleo histórico compacto em torno do vale termal e do Rio Vasyl; expansões industriais fora do núcleo, ainda dentro do raion Kingswell.”
+- Consequência espacial: separar perímetro do núcleo histórico, zonas de expansão no mesmo raion, corredor extrativo até Sulfok e redes de travessia. **Aprovação conceitual não aprova polígono, metragem, edifícios, pontes, densidade nem cânone do Atlas.**
+
+**Próxima decisão substantiva, ainda ABERTA:**
+`KW-V3-D02` — qual é a relação do **tecido histórico original** com as duas margens do Rio Vasyl?
+- **A (recomendada):** núcleo inicial predominante numa margem; a margem oposta incorporada posteriormente por pontes e expansão urbana, preservando um centro histórico mais antigo e assimétrico.
+- **B:** o núcleo histórico nasceu distribuído pelas duas margens, com travessias já estruturantes desde sua formação, ainda compacto.
+- **C:** outra relação proposta pelo proprietário.
+A decisão orienta desenho de quarteirões, antiguidade de ruas e local de pontes, **sem aprovar ainda margem geográfica específica, posicionamento de pontes nem geometria.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
