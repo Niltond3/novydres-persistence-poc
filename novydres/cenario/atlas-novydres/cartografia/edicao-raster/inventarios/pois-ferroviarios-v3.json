@@ -1,0 +1,334 @@
+{
+  "base": {
+    "id": "NOVYDRES_VISUAL_CANON_GOTHIC_PUNK_V1",
+    "filename": "novydres_canon_visual_gotico_punk_v1_aprovado.png",
+    "size_px": [
+      1448,
+      1086
+    ],
+    "file_sha256": "50014c337fa101a5b853fa53bdba86af424c1ec103009b986544e252bec492cb",
+    "raw_rgb_sha256": "fd619f368e7fb0fe10d18c5ed56b9c9207309c64e4394278ad5bac6d5dc7d30e"
+  },
+  "new_pois": [
+    {
+      "id": "poi-33",
+      "number": 33,
+      "name": "Expresso Transibérico — corredor ferroviário",
+      "raion": "INTERZONAL",
+      "source_raion_candidate": null,
+      "working_zone": "CORREDOR_INTERZONAL",
+      "candidate_point_px": [
+        83,
+        559
+      ],
+      "point_is_approved": false,
+      "placement_status": "TRACADO_VISUAL_CANDIDATO",
+      "note": "POI linear interzonal sobre o viaduto oeste e ligação sul; percurso exato ainda depende de levantamento ferroviário e não integra território de Kingswell. Serviço também denominado Expresso Transberíngio na fonte vigente.",
+      "geometry_kind": "CORREDOR_LINEAR_MULTISEGMENTO_NAO_MASCARA",
+      "related_pois": [
+        "poi-34",
+        "poi-35"
+      ],
+      "island_site_approved": false,
+      "editorial_status": "ADICAO_POI_APROVADA_PELO_PROPRIETARIO_GEOMETRIA_CANDIDATA"
+    },
+    {
+      "id": "poi-34",
+      "number": 34,
+      "name": "Estação Norte de Passageiros",
+      "raion": "Vasyl Bay",
+      "source_raion_candidate": null,
+      "working_zone": "Vasyl Bay",
+      "candidate_point_px": [
+        143,
+        97
+      ],
+      "point_is_approved": false,
+      "placement_status": "FORMA_COMPATIVEL",
+      "note": "Terminal monumental de passageiros visível ao extremo norte/oeste. A identificação com a parada internacional conflita com GEO-013.1, que localiza passageiros em Sulfok: requer reconciliação editorial, sem alterar o cânone automaticamente.",
+      "geometry_kind": "COMPLEXO_EDIFICADO_CONTORNO_CANDIDATO_NAO_MASCARA",
+      "related_pois": [
+        "poi-33"
+      ],
+      "island_site_approved": false,
+      "editorial_status": "ADICAO_POI_APROVADA_PELO_PROPRIETARIO_GEOMETRIA_CANDIDATA"
+    },
+    {
+      "id": "poi-35",
+      "number": 35,
+      "name": "Estação Sul de Carga",
+      "raion": "Drevnigrad",
+      "source_raion_candidate": null,
+      "working_zone": "Drevnigrad",
+      "candidate_point_px": [
+        1104,
+        871
+      ],
+      "point_is_approved": false,
+      "placement_status": "FORMA_COMPATIVEL",
+      "note": "Complexo ferroviário de cargas e equipamentos visível no sul oriental. Terminal internacional de carga continua sem posição/raion canônicos em GEO-013.1; localização visual candidata, não confirmar função internacional pelo raster.",
+      "geometry_kind": "COMPLEXO_EDIFICADO_CONTORNO_CANDIDATO_NAO_MASCARA",
+      "related_pois": [
+        "poi-33"
+      ],
+      "island_site_approved": false,
+      "editorial_status": "ADICAO_POI_APROVADA_PELO_PROPRIETARIO_GEOMETRIA_CANDIDATA"
+    }
+  ],
+  "rail_infrastructure": {
+    "id": "rail-express-transiberico-v3",
+    "poi_id": "poi-33",
+    "kind": "CORREDOR_LINEAR_MULTI_GEOMETRIA",
+    "segments": [
+      {
+        "id": "EXP-WEST-01",
+        "name": "Tronco oeste sobre viaduto",
+        "role": "EIXO_EXTERNO",
+        "polyline_px": [
+          [
+            98,
+            146
+          ],
+          [
+            82,
+            193
+          ],
+          [
+            75,
+            257
+          ],
+          [
+            77,
+            347
+          ],
+          [
+            78,
+            458
+          ],
+          [
+            84,
+            550
+          ],
+          [
+            92,
+            650
+          ],
+          [
+            101,
+            755
+          ],
+          [
+            107,
+            865
+          ],
+          [
+            118,
+            960
+          ],
+          [
+            147,
+            1046
+          ],
+          [
+            175,
+            1082
+          ]
+        ],
+        "status": "TRACADO_VISUAL_CANDIDATO_NAO_CANONICO"
+      },
+      {
+        "id": "EXP-SOUTH-02",
+        "name": "Ligação periférica para pátio de cargas",
+        "role": "RAMAL_AUDITAVEL_HIPOTESE",
+        "polyline_px": [
+          [
+            112,
+            923
+          ],
+          [
+            168,
+            963
+          ],
+          [
+            242,
+            987
+          ],
+          [
+            334,
+            1010
+          ],
+          [
+            456,
+            1006
+          ],
+          [
+            575,
+            996
+          ],
+          [
+            683,
+            974
+          ],
+          [
+            790,
+            947
+          ],
+          [
+            903,
+            934
+          ],
+          [
+            1010,
+            902
+          ],
+          [
+            1136,
+            878
+          ],
+          [
+            1251,
+            841
+          ]
+        ],
+        "status": "LIGACAO_CANDIDATA_NAO_CONFIRMADA"
+      }
+    ],
+    "station_envelopes": [
+      {
+        "id": "STN-34",
+        "poi_id": "poi-34",
+        "name": "Norte Passageiros",
+        "polygon_px": [
+          [
+            37,
+            30
+          ],
+          [
+            78,
+            15
+          ],
+          [
+            173,
+            15
+          ],
+          [
+            221,
+            36
+          ],
+          [
+            270,
+            73
+          ],
+          [
+            268,
+            126
+          ],
+          [
+            223,
+            153
+          ],
+          [
+            166,
+            152
+          ],
+          [
+            129,
+            168
+          ],
+          [
+            76,
+            152
+          ],
+          [
+            24,
+            122
+          ],
+          [
+            17,
+            75
+          ]
+        ],
+        "status": "IDENTIFICACAO_VISUAL_CANDIDATA"
+      },
+      {
+        "id": "STN-35",
+        "poi_id": "poi-35",
+        "name": "Sul Carga",
+        "polygon_px": [
+          [
+            840,
+            850
+          ],
+          [
+            887,
+            827
+          ],
+          [
+            944,
+            812
+          ],
+          [
+            1018,
+            801
+          ],
+          [
+            1085,
+            785
+          ],
+          [
+            1164,
+            794
+          ],
+          [
+            1236,
+            824
+          ],
+          [
+            1271,
+            857
+          ],
+          [
+            1254,
+            902
+          ],
+          [
+            1178,
+            925
+          ],
+          [
+            1070,
+            930
+          ],
+          [
+            959,
+            946
+          ],
+          [
+            869,
+            919
+          ]
+        ],
+        "status": "IDENTIFICACAO_VISUAL_CANDIDATA"
+      }
+    ],
+    "stop_count_in_inventory": 2,
+    "stop_count_in_canonical_service": 2,
+    "independence": [
+      "poi-21 (Pátio Ferroviário de Sulfok)",
+      "M01 (Estação Histórica Oeste, máscara previamente aprovada)",
+      "M02V3 (Reurbanização Sul)"
+    ],
+    "conflict": {
+      "id": "CONFLITO_GEOGRAFICO_PASSAGEIROS_GEO0131",
+      "classification": "PENDING_OWNER_RECONCILIATION",
+      "source": "novydres/cenario/geografia/district-sulfok/terminal-transberingio-2010.json",
+      "source_fact": "GEO-013.1 reserva parada internacional de passageiros a Sulfok",
+      "visual_proposal": "POI-34, estação norte, situado no setor candidato de Vasyl Bay",
+      "effect": "Não substituir Sulfok na fonte canônica nem considerar localização oficial concluída",
+      "freight_note": "GEO-013.1 mantém terminal de carga em distrito indeterminado; POI-35 é proposta visual em Drevnigrad"
+    },
+    "is_an_edit_mask": false,
+    "is_official_rail_alignment": false
+  },
+  "no_raster_edit": true
+}
