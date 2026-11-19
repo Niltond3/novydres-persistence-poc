@@ -288,11 +288,16 @@
 - Evidência: “KW-V3-D46: Aprovo A — sarjetas antigas e canaletas improvisadas conduzem apenas parte da água do degelo, deixando poças e placas de gelo nos pontos baixos das ruas e pátios.”
 - Consequência: escoamento improvisado e imperfeito no interior dos quarteirões, com degelo, poças e gelo em depressões, sem redesenho da hidrografia ou das ruas. **Não aprova canaletas individuais, obras, pontos baixos, cotas, geometrias ou arte.**
 
+**KW-V3-D47 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pequenos pontos compartilhados de resíduos nos pátios e becos, com transporte manual ou por carrinhos até ruas locais acessíveis à coleta, que permanece irregular.
+- Evidência: “KW-V3-D47: Aprovo A — pequenos pontos compartilhados de resíduos nos pátios e becos, com transporte manual ou por carrinhos até ruas locais acessíveis à coleta, que permanece irregular.”
+- Consequência: armazenamento de curta distância e remoção imperfeita em bairros operários densos, sem penetração indiscriminada de caminhões em vielas nem bloqueio permanente das travessias D38. **Não define coletores, responsáveis, frequência exata, locais, rotas, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D47` — como organizar a coleta e o armazenamento temporário de resíduos domésticos e de pequenas oficinas nos quarteirões compactos de Kingswell?
-- **A (recomendada):** pequenos pontos compartilhados nos pátios e becos, com transporte manual ou em carrinhos até ruas locais acessíveis à coleta, que permanece irregular.
-- **B:** poucos pontos comuns maiores nas bordas dos quarteirões junto a ruas secundárias, deixando pátios e passagens internas relativamente livres.
-- **C:** resíduos dispersos em vários pátios e passagens, sem organização local clara, com acúmulo e remoção eventuais.
-A decisão trata da organização tipológica dos resíduos residenciais e de pequenas oficinas, não dos resíduos industriais D43; **não fixa serviços, horários, responsabilidades, quantidades, rotas, locais individuais, geometrias ou imagens**. Respeitar D15, D18, D26, D36–D40, D45–D46 e U02.
+`KW-V3-D48` — como devem aparecer os cabos de energia e comunicação no tecido operário compacto em 2010, distinguindo-se da rede de calor subterrânea?
+- **A (recomendada):** fiação aérea envelhecida predominante entre fachadas e postes existentes, com emendas e derivações aparentes para casas e oficinas.
+- **B:** energia e comunicações principalmente embutidas ou subterrâneas, com poucos cabos aparentes e caixas técnicas discretas.
+- **C:** rede mista: alimentação principal pouco visível, conexões secundárias aéreas ou fixadas em paredes e maior concentração de remendos em pátios densos.
+A decisão é visual e tipológica; não aprova postes, cabos, circuitos, cobertura de serviço, equipamentos, posições, geometrias ou imagens. Preservar D17, D36–D38, D41, D44 e U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
