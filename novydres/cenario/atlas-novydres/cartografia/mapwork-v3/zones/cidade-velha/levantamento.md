@@ -333,11 +333,11 @@
 - Evidência: “KW-V3-D55: Aprovo A — as três pontes históricas permanecem funcionais, mas exibem pavimentos e acabamentos remendados, reparos de épocas diferentes e desgaste provocado pelo clima.”
 - Consequência: pontes históricas de uso misto com marcas de manutenção sobrepostas ao longo do tempo, mas todas em funcionamento. **Não determina obras, materiais estruturais, capacidade, segurança, geometrias ou arte.**
 
-**Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D56` — como o inverno rigoroso e as condições de gelo no Rio Vasyl afetam a operação das balsas de pessoas e veículos?
-- **A (recomendada):** tenta-se manter serviço durante o ano, reduzindo frequência ou suspendendo viagens pontualmente quando o gelo e o rio impedirem travessias; pontes absorvem parte da demanda.
-- **B:** paralisação sazonal regular das balsas nos períodos mais severos do inverno, concentrando temporariamente travessias nas três pontes.
-- **C:** regime desigual entre serviços/terminais; alguns funcionam com gelo moderado, outros interrompem com maior frequência, com apoio das pontes.
-A decisão rege a operação sazonal, **sem fixar congelamento integral do rio, equipamento de quebra-gelo, calendário, rotas, frequência, terminais, geometria ou imagens**. Preservar D09–D10, D23–D24, D53–D55, hidrografia e U02.
+**KW-V3-D56 — ADIADA / NÃO BLOQUEANTE DA IMAGEM (19/11/2026):**
+- A pergunta sobre o regime sazonal das balsas não altera os elementos espaciais da imagem já definidos em D09–D10 e D53–D55; **nenhuma alternativa A/B/C foi aprovada**.
+- Adiada por critério técnico de relevância visual, diante da solicitação expressa do proprietário de auditar as 55 decisões anteriores e concentrar o planejamento no que falta para a geração detalhada.
+- Se a operação sazonal voltar a ser necessária para uma camada específica, decidir naquele escopo. Não inferir fechamento de travessias, novas pontes nem congelamento total do rio.
+
+**Próximo trabalho obrigatório:** reconciliação espacial e técnica, conforme `auditoria-prontidao-2026-11-19.md`. Sem inventar pergunta D57. A próxima deliberação do proprietário só deve tratar de uma escolha espacial que o esboço integral e as evidências da U02 demonstrem não ser resolvível tecnicamente.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
