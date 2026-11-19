@@ -67,11 +67,16 @@
 - Evidência: “KW-V3-D02: Aprovo A — núcleo histórico inicialmente concentrado em uma margem do Rio Vasyl, com expansão posterior para a outra.”
 - Consequência cartográfica: distribuição assimétrica da idade do tecido urbano nas duas margens; travessias e ocupação ulterior devem respeitar a cronologia proposta. **Não define qual margem é mais antiga, nem pontes, cronologia, perímetros ou cânone oficial.**
 
+**KW-V3-D03 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** fontes termais e abrigos estruturaram o núcleo original na margem inicial; comércio e instalações fluviais desenvolveram-se próximos.
+- Evidência: “KW-V3-D03: Aprovo A — as fontes termais e os abrigos estruturaram o núcleo original; comércio e instalações fluviais desenvolveram-se próximos.”
+- Consequência morfológica: privilegiar núcleo termal e função de abrigo como origem, deixando o mercado e acessos ribeirinhos relacionados, mas não como centro primordial. **Não aprova localização de fontes, cais, edificações, traçado ou cânone.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D03` — o que estruturou primeiro o assentamento histórico na margem inicial?
-- **A (recomendada):** fontes termais e abrigos como centro primitivo; comércio e eventuais cais fluviais próximos, sem pressupor um porto estabelecido.
-- **B:** travessia/comércio fluvial como eixo primitivo; termas sustentam setores próximos.
-- **C:** dois polos coetâneos relevantes, termal e fluvial, articulados por ruas antigas.
-A decisão é de morfologia histórica e uso do solo; nenhuma instalação específica ou cronologia não documentada vira fato.
+`KW-V3-D04` — qual efeito físico teve a implantação do culto e poder de Gilgamesh (a partir de 1423) sobre o assentamento humano termal preexistente?
+- **A (recomendada):** sobreposição gradual com malha anterior preservada, inserindo complexos de poder/culto e praças remodeladas.
+- **B:** reorganização monumental mais agressiva do núcleo termal, deslocando vestígios antigos para bordas e vielas.
+- **C:** múltiplos pequenos polos de culto/poder espalhados pelo tecido existente, sem complexo central dominante.
+A decisão orientará a leitura de camadas históricas na planta de 2010, sem converter hipótese arquitetônica em fato histórico do cânone.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
