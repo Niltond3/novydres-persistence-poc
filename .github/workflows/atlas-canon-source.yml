@@ -115,7 +115,10 @@ jobs:
           assert.equal(oldTown.fact_id,'GEO-004.1');
           assert.equal(oldTown.canonical_status,'CLOSED_CANON_SCOPED');
           assert.equal(oldTown.feature.parent_raion_subject_id,'district-chelsea');
-          assert.equal(oldTown.feature.canonical_name,'Iknik');
+          assert.equal(oldTown.feature.canonical_name,'Kingswell');
+          assert.equal(oldTown.feature.official_written_name,'Kingswell');
+          assert.equal(oldTown.feature.is_entire_raion,false);
+          assert.equal(oldTown.toponym_change.formal_name,'Kingswell');
           assert.deepEqual(oldTown.feature.display_aliases,['Cidade Velha','Old Town']);
           assert.equal(oldTown.feature.parent_raion_official_name,'Kingswell');
           assert.equal(oldTown.feature.recognized_name,'Cidade Velha');
