@@ -118,11 +118,16 @@
 - Evidência: “KW-V3-D12: Aprovo A — conjunto principal de nascentes no coração histórico termal, com fontes secundárias distribuídas irregularmente pelos arredores.”
 - Consequência morfológica: a implantação urbana deve reconhecer um polo termal original sem transformar toda Kingswell em área aquecida uniformemente. **Não define quantidade, vazões, temperaturas, fontes individualizadas ou geometria.**
 
+**KW-V3-D13 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa A aprovada expressamente:** pequenas instalações geotérmicas incorporadas aos quarteirões históricos, com equipamentos de maior escala nas áreas de transição industrial.
+- Evidência: “KW-V3-D13: Aprovo A — pequenas instalações geotérmicas integradas aos quarteirões históricos, com equipamentos maiores na transição industrial.”
+- Consequência: infraestrutura técnica incorporada sem substituir o núcleo termal por um único complexo industrial. **Não há aprovação de localização exata, tubulações, capacidade, geometria, arte ou canonização.** Preservar o desvio privilegiado do calor para Bukovie e as falhas de distribuição locais.
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D13` — como a infraestrutura de captação e distribuição geotérmica de 2010 deve se articular ao núcleo termal antigo?
-- **A (recomendada):** pequenos elementos técnicos distribuídos e adaptados aos quarteirões históricos, com instalações maiores na transição industrial; fontes e espaços urbanos antigos continuam reconhecíveis.
-- **B:** complexo de captação central dominante no coração das nascentes, marcado por equipamentos e estruturas técnicas.
-- **C:** principais instalações técnicas nas bordas do núcleo, com redes chegando às fontes e preservação visual predominante do centro antigo.
-Respeitar GEO-014: a abundância geotérmica **não** gera abastecimento igualitário; o desvio de calor para Bukovie e a precariedade de partes da Cidade Velha permanecem. Ainda sem rede, capacidade, instalações ou contornos aprovados.
+`KW-V3-D14` — como distribuir espacialmente, na proposta de Kingswell em 2010, a desigualdade residencial de acesso ao aquecimento?
+- **A (recomendada):** mosaico irregular de quadras atendidas e desassistidas, condicionado às redes, manutenção e nascentes locais; o centro termal também pode sofrer cortes.
+- **B:** gradiente residencial predominante mais favorecido no núcleo termal e mais precário nas expansões periféricas, com exceções locais.
+- **C:** desigualdade sobretudo por função dos imóveis; instalações técnicas e setores econômicos mais atendidos, moradias próximas e distantes com irregularidade.
+Qualquer alternativa deve respeitar a abundância geotérmica, o desvio para Bukovie, o clima letal e a distribuição canônica desigual. **Nenhuma autoriza um mapa de calor rígido, números de fornecimento ou geometrias.**
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
