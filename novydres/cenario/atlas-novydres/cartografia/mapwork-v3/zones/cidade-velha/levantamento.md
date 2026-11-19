@@ -293,11 +293,16 @@
 - Evidência: “KW-V3-D47: Aprovo A — pequenos pontos compartilhados de resíduos nos pátios e becos, com transporte manual ou por carrinhos até ruas locais acessíveis à coleta, que permanece irregular.”
 - Consequência: armazenamento de curta distância e remoção imperfeita em bairros operários densos, sem penetração indiscriminada de caminhões em vielas nem bloqueio permanente das travessias D38. **Não define coletores, responsáveis, frequência exata, locais, rotas, geometrias ou arte.**
 
+**KW-V3-D48 — APROVADA_PELO_PROPRIETÁRIO (19/11/2026), escopo conceitual candidato do Mapwork V3:**
+- **Alternativa B aprovada expressamente:** infraestrutura elétrica e de comunicação predominantemente embutida ou subterrânea, com poucos cabos aparentes e caixas técnicas discretas.
+- Evidência: “KW-V3-D48: Aprovo B — infraestrutura elétrica e de comunicação predominantemente embutida ou subterrânea, com poucos cabos aparentes e caixas técnicas discretas.”
+- Consequência: pouca fiação aérea visível no tecido operário, apesar da presença de instalações técnicas discretas, mantendo a infraestrutura de calor igualmente subterrânea segundo D44. **Não determina qualidade ou cobertura dos serviços, circuitos, equipamentos individuais, geometrias ou arte.**
+
 **Próxima decisão substantiva, ainda ABERTA:**
-`KW-V3-D48` — como devem aparecer os cabos de energia e comunicação no tecido operário compacto em 2010, distinguindo-se da rede de calor subterrânea?
-- **A (recomendada):** fiação aérea envelhecida predominante entre fachadas e postes existentes, com emendas e derivações aparentes para casas e oficinas.
-- **B:** energia e comunicações principalmente embutidas ou subterrâneas, com poucos cabos aparentes e caixas técnicas discretas.
-- **C:** rede mista: alimentação principal pouco visível, conexões secundárias aéreas ou fixadas em paredes e maior concentração de remendos em pátios densos.
-A decisão é visual e tipológica; não aprova postes, cabos, circuitos, cobertura de serviço, equipamentos, posições, geometrias ou imagens. Preservar D17, D36–D38, D41, D44 e U02.
+`KW-V3-D49` — como se organiza o abastecimento de água nas moradias subdivididas e pátios coletivos operários?
+- **A (recomendada):** serviço encanado desigual: algumas unidades têm ligações próprias, enquanto muitos cortiços e anexos utilizam torneiras e pontos compartilhados nos pátios, com manutenção irregular.
+- **B:** maioria das moradias e oficinas com ligações prediais diretas, embora ocorram falhas e reparos em tubulações antigas; uso coletivo excepcional.
+- **C:** pontos de abastecimento coletivos predominantes nos pátios e cortiços, com ligações individuais menos frequentes.
+A decisão define padrão funcional e arquitetônico de acesso à água, **não sua potabilidade ou origem, nem rede de esgoto, reservatórios, ligações concretas, geometrias ou imagens**. Respeitar D15, D21, D36–D38, D44, D48 e baseline U02.
 
 **Pendência editorial identificada:** `novydres/CONTEXT.md` mantém referência toponímica antiga, superada por GEO-004.1/GEO-004.5 do mesmo snapshot. Corrigir por processo editorial próprio; não alterado neste checkpoint.
