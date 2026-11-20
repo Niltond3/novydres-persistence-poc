@@ -634,6 +634,13 @@ def main(argv=None):
     p.add_argument("--inventory-file",help="full approved installation inventory")
     p.add_argument("--image-receipts",help="materialized native image receipts per work unit")
     p.add_argument("--editable-mask",help="owner-scoped U02 intervention mask for refinement")
+    p.add_argument("--recipe-unit",help="prepare generator recipe for a single planned unit")
+    p.add_argument("--audit-unit",help="audit native asset materialization and mask per unit")
+    p.add_argument("--unit-receipt",help="one actual generated image receipt")
+    p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
+    p.add_argument("--visual-review",help="separate agent-only aesthetic inspection receipt")
+    p.add_argument("--ledger",help="SHA-bound per-unit progress/repair ledger")
+    p.add_argument("--start-unit",action="store_true",help="start one audit attempt in the ledger")
     args=p.parse_args(argv)
     if not args.intent and not (args.district or args.zone):
         p.error("legacy calls need --district/--zone; V3.3 calls need --intent")
