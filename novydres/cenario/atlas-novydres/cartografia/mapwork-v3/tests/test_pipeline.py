@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 import sys
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -262,3 +263,21 @@ def test_unapproved_prior_tile_manifest_is_rejected(tmp_path):
     core.composite([zone],cfg,base,assets,first)
     with pytest.raises(core.Invalid,match="not an approved release"):
         core.composite([zone],cfg,base,assets,tmp_path/"new",approved_before=first)
+
+
+def test_legacy_cli_cannot_skip_unified_planning_gates():
+    entry=str(ROOT/"scripts"/"mapwork.py")
+    result=subprocess.run(
+        [sys.executable,entry,"next","--zone",str(ROOT/"zones"/"cidade-velha"/"zone.json")],
+        capture_output=True,text=True,check=False
+    )
+    assert result.returncode==2
+    assert "legacy next/render CLI disabled" in result.stderr
+    result=subprocess.run(
+        [sys.executable,entry,"render","--zones",str(ROOT/"zones"/"cidade-velha"/"zone.json"),
+         "--assets","/tmp/nonexistent","--base","/tmp/nonexistent","--out","/tmp/nonexistent",
+         "--protected-mask","/tmp/nonexistent"],
+        capture_output=True,text=True,check=False
+    )
+    assert result.returncode==2
+    assert "legacy next/render CLI disabled" in result.stderr
