@@ -36,15 +36,16 @@
     "No native image unit receipts or visual reviews; no tiled composition and no final before/after",
     "Unknown physical access in metres; U02 reference is abstract and cannot be assigned surveyed metre scale without source",
     "Unresolved metro route/stop editorial policy; D56 ferry ice operation remains DEFERRED and non-blocking for technical study",
-    "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval"
+    "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
+    "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "BUILD_AND_AUDIT_REAL_NETWORK_ON_U02",
+  "next_action": "BUILD_GLOBAL_SPATIAL_V31_AND_VALIDATE_BILATERAL_SEAMS_USING_ACTUAL_U02",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
   "human_visual_review_not_requested": true,
   "handoff_allowed": false,
-  "note": "After owner approval of KW-PROP-006 option A, return to SPATIAL_MODEL. No image generation or U02 modification. Prior partial metrics are diagnostic; not a complete global spatial plan.",
+  "note": "Metro option A incorporated and conceptual spatial exclusion audited. No global network, exclusive territory, work-unit designs, native image jobs or comparison was produced.",
   "next_decision_id": null,
   "open_editorial_proposals": 0,
   "metro_decision": {
@@ -60,5 +61,14 @@
     "plan_commit": "e79604dff385d91cf27dbe2cef7044b68e36d068"
   },
   "master_latest_readback": "cd33c18e90d190e625939e9bd8808b12af3c8315",
-  "master_unchanged_since_last_checkpoint": true
+  "master_unchanged_since_last_checkpoint": true,
+  "metro_spatial_audit": {
+    "thermal_core_pixels": 12111,
+    "thermal_worker_overlap_pixels": 2079,
+    "eligible_conceptual_sector_union_excluding_core_pixels": 93774,
+    "conceptual_four_neighbor_components": 2,
+    "actual_metro_route_verified": false,
+    "metro_tunnel_or_station_created": false,
+    "source_plan": "zones/cidade-velha/spatial-plan.json"
+  }
 }
