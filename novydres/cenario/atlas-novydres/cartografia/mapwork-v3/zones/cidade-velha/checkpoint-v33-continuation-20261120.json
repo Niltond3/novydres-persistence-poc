@@ -8,7 +8,7 @@
   "target": "kingswell",
   "subject_id": "district-chelsea",
   "phase": "SPATIAL_MODEL",
-  "current_execution_outcome": "PARTIAL_CANDIDATE_SURFACE_NETWORK_PERSISTED_VALIDATION_NOT_COMPLETE",
+  "current_execution_outcome": "CANDIDATE_ROADS_AND_BRIDGES_SAVED; 24_JUNCTION_VISUAL_REVIEW_FAILS_TOPOLOGY_PROMOTION",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
@@ -42,7 +42,7 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "REVIEW_ALL_24_ROAD_JUNCTIONS_AND_4_OTHER_WATER_INTERFACES_ON_U02; VALIDATE_EXCLUSIVE_TERRITORY_AND_BILATERAL_SEAMS; CREATE_REAL_GLOBAL_SPATIAL_V31_AFTER_ALL_GATES",
+  "next_action": "VISUALLY_SNAP_ROADS_TO_ACTUAL_U02_BEDS_THEN_CLASSIFY_24_JUNCTIONS_AND_4_WATER_CROSSINGS; BUILD_EXCLUSIVE_TERRITORY_AND_BILATERAL_SEAMS; VALIDATE_WITH_EXISTING_PIPELINE",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
@@ -93,6 +93,14 @@
     "tests_locally_passed": 9,
     "image_source_sha256_checked": true,
     "final_spatial_manifest_generated": false,
-    "first_pass_only": true
+    "first_pass_only": true,
+    "visual_review": {
+      "path": "zones/cidade-velha/spatial-visual-review-v33-20261120.json",
+      "blob_sha": "f246b44b8d9c7a2e9e060f7b81e7df721fe9e4ce",
+      "result": "FAIL_FOR_TOPOLOGY_PROMOTION",
+      "crossings_inspected": 24,
+      "grades_verified": 0,
+      "road_alignments_gis_certified": 0
+    }
   }
 }
