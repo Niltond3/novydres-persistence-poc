@@ -7,7 +7,7 @@
   "recovered_initial_checkpoint": "178f2179f43081d9eb34ac41747567257c390c04",
   "target": "kingswell",
   "subject_id": "district-chelsea",
-  "phase": "SPATIAL_MODEL",
+  "phase": "EDITORIAL_DECISIONS",
   "current_execution_outcome": "BLOCKED_PRE_ART",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
@@ -31,17 +31,20 @@
     "coverage_of_illustrative_sectors_percent": 38.84
   },
   "outstanding": [
+    "KW-PROP-006: relação do metrô com Kingswell ainda requer escolha editorial explícita; D56 permanece adiada e sem reabertura",
     "Full audited global-spatial-v31.json and GIS-backed U02 road/water/rail/metro network missing",
     "Exact lot-based 100% coverage, per-building designs, legitimate edit masks and neighbor seams missing",
     "No native image unit receipts or visual reviews; no tiled composition and no final before/after",
     "Unknown physical access in metres; U02 reference is abstract and cannot be assigned surveyed metre scale without source",
     "Unresolved metro route/stop editorial policy; D56 ferry ice operation remains DEFERRED and non-blocking for technical study"
   ],
-  "next_action": "RECOVER_EXISTING_U02_INFRASTRUCTURE_GEOMETRY_AND_RECONCILE_EXCLUSIVE_TERRITORY_BEFORE_RECIPE_OR_ART",
+  "next_action": "ASK_OWNER_ONE_DECISION",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
   "human_visual_review_not_requested": true,
   "handoff_allowed": false,
-  "note": "This is a source-audited recovery checkpoint, not a successful pipeline.py execution receipt."
+  "note": "This is a source-audited recovery checkpoint, not a successful pipeline.py execution receipt.",
+  "next_decision_id": "KW-PROP-006",
+  "open_editorial_proposals": 1
 }
