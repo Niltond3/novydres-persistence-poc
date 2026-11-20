@@ -145,7 +145,7 @@ def validate_proposals(register, *, region, commit, referenced=None):
                     pid + ": missing " + field)
         status = item.get("status")
         require(status in STATES, pid + ": invalid editorial state")
-        if status in ("APPROVED", "APPROVED_WITH_CONDITIONS"):
+        if status in ("APPROVED", "APPROVED_WITH_CONDITIONS", "REJECTED"):
             decision = item.get("decision")
             require(isinstance(decision, dict) and decision.get("by") == "OWNER" and
                     isinstance(decision.get("evidence"), str) and
@@ -157,6 +157,9 @@ def validate_proposals(register, *, region, commit, referenced=None):
                 require(isinstance(decision.get("conditions"), str) and
                         bool(decision["conditions"].strip()),
                         pid + ": conditional consent needs testable conditions")
+                require(decision.get("conditions_verified") is True and
+                        len(decision.get("verification_evidence", "")) >= 12,
+                        pid + ": conditions have not been verified")
         by_id[pid] = item
     for pid in referenced or []:
         require(pid in by_id and by_id[pid]["status"] in
