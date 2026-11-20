@@ -117,7 +117,21 @@ def check_canonical_pois(zone_path,plan):
                                ", ".join(sorted(required.symmetric_difference(found))))
 
 
-def validate_work_unit_bindings(zone,report,plan=None):
+def affected_unit_ids(report,editable_u02=None):
+    """Only raster work units crossing owner-authorized pixels require new art."""
+    units={u["id"]:u for u in report["work_units"]}
+    if editable_u02 is None:
+        return set(units)
+    affected=set()
+    for uid,unit in units.items():
+        bbox=unit["bbox"]
+        if editable_u02.crop(tuple(bbox)).getbbox() is not None:
+            affected.add(uid)
+    core.fail(bool(affected),"refinement has no planned work-unit coverage")
+    return affected
+
+
+def validate_work_unit_bindings(zone,report,plan=None,required_units=None):
     """Every rendered asset belongs to one work unit and no global network layer."""
     expected={u["id"]:u for u in report["work_units"]}
     bound={}
@@ -154,7 +168,9 @@ def validate_work_unit_bindings(zone,report,plan=None):
             if e["kind"]=="poi" and (not building["site_id"] or
                 e.get("site_id")!=building["site_id"]):
                 raise core.Invalid(e["id"]+": POI asset lacks approved site identity")
-    missing=expected.keys()-bound.keys()
+    required=set(expected) if required_units is None else set(required_units)
+    core.fail(required.issubset(expected),"unknown required native work unit")
+    missing=required-set(bound)
     if missing:
         raise core.Invalid("planned work units lack bound art elements: "+", ".join(sorted(missing)[:6]))
     return bound
@@ -307,7 +323,7 @@ def _asset_fingerprints(zone,assets):
     return result
 
 
-def verify_native_manifest(images,zone,report,cfg,assets):
+def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None):
     """Bind actual generated and reviewed image bytes to the exact composited lots."""
     core.fail(isinstance(images,dict) and
               images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1" and
@@ -321,8 +337,9 @@ def verify_native_manifest(images,zone,report,cfg,assets):
                   "V3.3 duplicate or invalid native-image work unit")
         index[receipt["work_unit_id"]]=receipt
     units={u["id"]:u for u in report["work_units"]}
-    core.fail(set(index)==set(units),
-              "V3.3 native images must cover planned work units exactly once")
+    active=set(units) if active_units is None else set(active_units)
+    core.fail(bool(active) and active.issubset(units) and set(index)==active,
+              "V3.3 native images must cover exactly the changed work units")
     bound={}
     for element in zone["elements"]:
         if element["kind"]=="lot":
@@ -330,9 +347,10 @@ def verify_native_manifest(images,zone,report,cfg,assets):
             core.fail(uid not in bound and uid in units,
                       "V3.3 duplicate/unknown lot asset per unit")
             bound[uid]=element
-    core.fail(set(bound)==set(units),
-              "V3.3 every native image must correspond to one bound lot asset")
-    for uid,unit in units.items():
+    core.fail(active.issubset(bound),
+              "V3.3 every changed unit must have a bound lot asset")
+    for uid in sorted(active):
+        unit=units[uid]
         receipt=index[uid]
         bbox=unit["bbox"];scale=cfg["detail_pixels_per_unit"]
         v33.image_receipt(receipt,expected_size=[
@@ -446,7 +464,14 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     core.fail(report["generation_ready"] and
               (is_v33 or all(report["gates"].values())),
               "composition contract blocked by urban/art gates")
-    bound=validate_work_unit_bindings(zone,report,plan=plan)
+    affected=set(expected)
+    if is_v33 and intent["mode"]!="CREATE_REGION":
+        mask_path=Path(contract["v33"].get("edit_mask_path",""))
+        core.fail(mask_path.is_file(),"V3.3 edit mask missing before artwork binding")
+        with Image.open(mask_path) as im:
+            affected=affected_unit_ids(report,im.convert("L"))
+    bound=validate_work_unit_bindings(zone,report,plan=plan,
+                                     required_units=affected if is_v33 else None)
     verify_unit_art_masks(plan,report,zone["elements"],assets,cfg)
     core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
               "composition contract asset hash or ownership mismatch")
@@ -470,7 +495,7 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
             with Image.open(p) as im:
                 v33.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
         images=core.load(receipt["image_receipts_path"])
-        verify_native_manifest(images,zone,report,cfg,assets)
+        verify_native_manifest(images,zone,report,cfg,assets,active_units=affected)
 
 
 def run(args):
@@ -568,7 +593,15 @@ def run(args):
         return state("SPATIAL_VALIDATION",nxt,blockers,spatial_path,report)
 
     if zone["status"]!="SKETCH_APPROVED":
-        bound=validate_work_unit_bindings(zone,report,plan=plan)
+        required=None
+        if getattr(args,"v33_verified",False):
+            request=core.load(args.intent)
+            if request["mode"]!="CREATE_REGION":
+                if not args.editable_mask or not Path(args.editable_mask).is_file():
+                    raise core.Invalid("refinement requires materialized --editable-mask")
+                with Image.open(args.editable_mask) as im:
+                    required=affected_unit_ids(report,im.convert("L"))
+        bound=validate_work_unit_bindings(zone,report,plan=plan,required_units=required)
     if zone["status"]=="SKETCH_APPROVED":
         return state("ART_AUTHORIZED","PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT",
                      ["Spatial contract passed; create verified generation jobs only, not a release."],
@@ -626,7 +659,8 @@ def run(args):
         if not args.image_receipts:
             raise core.Invalid("V3.3 native-image provenance receipts required")
         receipts=core.load(args.image_receipts)
-        verify_native_manifest(receipts,zone,report,cfg,args.assets)
+        active=affected_unit_ids(report,edit_mask)
+        verify_native_manifest(receipts,zone,report,cfg,args.assets,active_units=active)
         registration["image_receipts_path"]=str(Path(args.image_receipts).resolve())
         registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
