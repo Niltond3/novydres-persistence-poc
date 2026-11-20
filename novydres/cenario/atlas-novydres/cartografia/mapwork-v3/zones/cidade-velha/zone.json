@@ -13,8 +13,354 @@
     "sulfok",
     "drevnigrad"
   ],
-  "connectors": [],
-  "elements": [],
+  "connectors": [
+    {
+      "id": "KW-EXT-SUL-01",
+      "kind": "urban_edge",
+      "x": 335.4,
+      "y": 901,
+      "width": 5,
+      "neighbor": "sulfok",
+      "profile": "historic_industrial_transition_v1"
+    },
+    {
+      "id": "KW-EXT-SUL-02",
+      "kind": "urban_edge",
+      "x": 307.4,
+      "y": 985,
+      "width": 5,
+      "neighbor": "sulfok",
+      "profile": "residential_factory_contact_v1"
+    },
+    {
+      "id": "KW-EXT-DRE-01",
+      "kind": "urban_edge",
+      "x": 1014.5,
+      "y": 850,
+      "width": 5,
+      "neighbor": "drevnigrad",
+      "profile": "dense_urban_to_east_v1"
+    },
+    {
+      "id": "KW-EXT-DRE-02",
+      "kind": "terrain",
+      "x": 1023.9,
+      "y": 980,
+      "width": 6,
+      "neighbor": "drevnigrad",
+      "profile": "technical_terrain_east_v1"
+    }
+  ],
+  "elements": [
+    {
+      "id": "KW-L01",
+      "core": [
+        502,
+        750,
+        531,
+        780
+      ],
+      "envelope": [
+        501,
+        749,
+        532,
+        781
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "bridgehead_block",
+      "description": "Cabeceira Norte-Oeste / frente cívica antiga | KW-FAM-F | KW-GEN-01 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L02",
+      "core": [
+        670,
+        773,
+        711,
+        810
+      ],
+      "envelope": [
+        669,
+        772,
+        712,
+        811
+      ],
+      "status": "PENDING",
+      "kind": "special_building",
+      "layer": "special",
+      "asset": null,
+      "mask": null,
+      "role": "special_poi_block",
+      "description": "Cabeceira Norte-Leste / quadra cívica | KW-FAM-A | KW-GEN-01 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L03",
+      "core": [
+        573,
+        788,
+        655,
+        848
+      ],
+      "envelope": [
+        572,
+        787,
+        656,
+        849
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "historic_block",
+      "description": "Microcentro termal ocidental | KW-FAM-A | KW-GEN-02 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L04",
+      "core": [
+        805,
+        803,
+        854,
+        854
+      ],
+      "envelope": [
+        804,
+        802,
+        855,
+        855
+      ],
+      "status": "PENDING",
+      "kind": "special_building",
+      "layer": "special",
+      "asset": null,
+      "mask": null,
+      "role": "special_poi_block",
+      "description": "Microcentro termal oriental / assembleia | KW-FAM-A | KW-GEN-02 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L05",
+      "core": [
+        371,
+        803,
+        474,
+        895
+      ],
+      "envelope": [
+        370,
+        802,
+        475,
+        896
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "mixed_residential_block",
+      "description": "Margem histórica ocidental expandida | KW-FAM-B | KW-GEN-03 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L06",
+      "core": [
+        691,
+        875,
+        727,
+        908
+      ],
+      "envelope": [
+        690,
+        874,
+        728,
+        909
+      ],
+      "status": "PENDING",
+      "kind": "special_building",
+      "layer": "special",
+      "asset": null,
+      "mask": null,
+      "role": "special_poi_block",
+      "description": "Capelas e quarteirões internos | KW-FAM-C | KW-GEN-03 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L07",
+      "core": [
+        492,
+        832,
+        540,
+        869
+      ],
+      "envelope": [
+        491,
+        831,
+        541,
+        870
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "ferry_terminal_block",
+      "description": "Frente de balsa central e margem ribeirinha | KW-FAM-F | KW-GEN-01 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L08",
+      "core": [
+        729,
+        909,
+        771,
+        942
+      ],
+      "envelope": [
+        728,
+        908,
+        772,
+        943
+      ],
+      "status": "PENDING",
+      "kind": "special_building",
+      "layer": "special",
+      "asset": null,
+      "mask": null,
+      "role": "special_poi_block",
+      "description": "Quarteirões operários centrais / sinagoga | KW-FAM-C | KW-GEN-03 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L09",
+      "core": [
+        847,
+        909,
+        892,
+        950
+      ],
+      "envelope": [
+        846,
+        908,
+        893,
+        951
+      ],
+      "status": "PENDING",
+      "kind": "special_building",
+      "layer": "special",
+      "asset": null,
+      "mask": null,
+      "role": "special_poi_block",
+      "description": "Franja geotérmica periférica | KW-FAM-D | KW-GEN-04 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L10",
+      "core": [
+        903,
+        806,
+        975,
+        898
+      ],
+      "envelope": [
+        902,
+        805,
+        976,
+        899
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "worker_courtyard_block",
+      "description": "Tecido operário oriental | KW-FAM-C | KW-GEN-03 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L11",
+      "core": [
+        503,
+        871,
+        533,
+        906
+      ],
+      "envelope": [
+        502,
+        870,
+        534,
+        907
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "bridgehead_block",
+      "description": "Cabeceira Sul-Oeste / balsa sul | KW-FAM-F | KW-GEN-04 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L12",
+      "core": [
+        552,
+        871,
+        625,
+        929
+      ],
+      "envelope": [
+        551,
+        870,
+        626,
+        930
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "riverfront_block",
+      "description": "Cabeceira Sul-Leste / transição técnica | KW-FAM-D | KW-GEN-04 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L13",
+      "core": [
+        359,
+        907,
+        476,
+        960
+      ],
+      "envelope": [
+        358,
+        906,
+        477,
+        961
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "industrial_edge_block",
+      "description": "Transição industrial norte | KW-FAM-E | KW-GEN-05 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    },
+    {
+      "id": "KW-L14",
+      "core": [
+        389,
+        963,
+        545,
+        1021
+      ],
+      "envelope": [
+        388,
+        962,
+        546,
+        1022
+      ],
+      "status": "PENDING",
+      "kind": "lot",
+      "layer": "lot",
+      "asset": null,
+      "mask": null,
+      "role": "industrial_edge_block",
+      "description": "Transição industrial sul / borda ferroviária | KW-FAM-E | KW-GEN-05 | preliminary macro-lot rectangle; subdivide into 16x16 detail lots and protect U02 roads/water/rail"
+    }
+  ],
   "decisions": [
     {
       "id": "KW-V3-D01",
@@ -362,9 +708,20 @@
   "sketch_approved": true,
   "source_commit": "876b764bcc23ca2ea2949f5ec505ce85bac46701",
   "checkpoint": {
-    "status": "SKETCH_APPROVED_DETAIL_PREP_PENDING",
-    "version": "U02_KW_SKETCH_02",
-    "owner_evidence": "Consegui visualizar na versão web diretamente no navegador. Eu aprovo. Enquanto os conflitos, eu removo eles. A versão que nós aprovamos sem os conflitos é que vale.",
-    "remaining": "Criar polígonos de lotes, reconciliar conectores e validar antes de qualquer geração. Sem reinserir marcadores X01-X03."
+    "status": "DETAIL_MACROLOTS_AND_BORDER_CONTRACTS_PREPARED_NOT_ART_READY",
+    "version": "KW_DETAIL_PREP_V2",
+    "approved_sketch": "U02_KW_SKETCH_02",
+    "preparation_plan": "preparacao-tecnica-v1.json",
+    "detail_manifest": "lotes-conectores-v2.json",
+    "lot_macros": 14,
+    "neighbor_reservations": 4,
+    "regional_rail_off_zone": true,
+    "blockers": [
+      "atomic subdivision and coverage validation",
+      "pixel-exact protected masks",
+      "matching shared connectors with neighbors",
+      "no explicit authorization for artistic generation"
+    ],
+    "image_generation_authorized": false
   }
 }
