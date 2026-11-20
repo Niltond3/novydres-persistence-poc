@@ -43,3 +43,9 @@ Um lote pode conter vários edifícios, oficinas, fábrica, pátios, parque ou P
 - A U02 de Kingswell e as 55 decisões permanecem como fonte de fatos. O polígono U02_KW_SKETCH_02 permanece aprovado como esboço **macro**. Os 14 macrolotes V2 são **âncoras antigas não definitivas**, não representam os novos lotes.
 
 **Não afirmar que a zona real está pronta porque a fixture passou.** A transição para execução de Kingswell exige inventário/geometria das vias reais e prova de cobertura da máscara editável da zona.
+
+## Integração com a CI e prova contra falso PASS
+
+O comando existente `mapwork.py audit` agora chama o módulo V3.1, valida um mapa sintético fechado com ruas, trilho elevado e bonde, e mede explicitamente o percentual de **janelas antigas** sobre o polígono real de Kingswell. Este percentual não equivale à taxa edificada: mostra por que os 14 retângulos são inadequados como loteamento. O campo `architecture_v31.real_zone_generation_ready` continua **false** até haver entrada territorial e redes vetorizadas da U02.
+
+A V3.1 produz um programa tipológico para cada quadrante delimitado (ocupação-alvo, uso, faixas de pavimentos e POIs internos), mas não inventa pegadas de edifícios nem demografia sem dados. O campo `generation_ready` exige verificação dos bytes da imagem U02, recebimentos de máscara reproduzíveis, costuras bilaterais verificadas por conteúdo e evidência de autorização do proprietário. Um simples booleano marcado em JSON não libera arte.

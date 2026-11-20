@@ -112,7 +112,7 @@ def test_invalid_morphology_stops_before_art():
 def test_missing_global_network_or_ownership_is_rejected():
     p,cfg=fixture()
     p["transport"]["edges"][0]["owner"]="kingswell"
-    with pytest.raises(urban.ContractError,match="globally owned"):
+    with pytest.raises(urban.ContractError,match="GLOBAL_NETWORK|globally owned"):
         urban.plan_city(p,cfg)
 
 
@@ -173,3 +173,37 @@ def test_protected_pixels_cannot_be_repainted():
     with pytest.raises(urban.ContractError,match="protected pixel changed"):
         urban.verify_no_protected_edits(before,after,[5])
     assert urban.verify_no_protected_edits(before,after,[0,1,2,3])
+
+
+def test_no_complete_real_geometry_without_real_transport_and_territory():
+    p,cfg=fixture()
+    p["fixture_mode"]=False
+    p["source_sha256"]=cfg["reference"]["sha256"]
+    report=urban.plan_city(p,cfg)
+    assert report['gates']['source_bytes_verified'] is False
+    assert report['generation_ready'] is False
+    assert "source_bytes_verified" in report['blocking_gates']
+
+
+def test_tram_with_own_barrier_is_rejected():
+    p,cfg=fixture()
+    p["transport"]["edges"][4]["separates_blocks"]=True
+    with pytest.raises(urban.ContractError,match="tram tracks do not create"):
+        urban.plan_city(p,cfg)
+
+
+def test_unclassified_pixels_are_not_assigned_any_work_units():
+    p,cfg=fixture()
+    report=urban.plan_city(p,cfg)
+    assert report['territory']['classified_pixels']==report['territory']['total_pixels']
+    assert report['geometry']['assigned_pixels']==report['geometry']['editable_pixels']
+
+
+def test_special_site_is_represented_as_content_not_new_city_lot():
+    p,cfg=fixture()
+    orig=urban.plan_city(p,cfg)
+    block=orig["blocks"][0]["id"]
+    p["special_sites"]=[{"id":"CIVIC-01","block_id":block}]
+    report=urban.plan_city(p,cfg)
+    assert report["geometry"]["urban_lots"]==orig["geometry"]["urban_lots"]
+    assert report["block_programs"][0]["poi_sites"]==["CIVIC-01"]

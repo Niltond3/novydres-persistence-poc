@@ -323,3 +323,15 @@ def test_missing_connector_or_missing_element_fails():
     z['elements'].pop()
     with pytest.raises(m.Invalid,match='zone.elements not synchronized'):
         m.validate_detail_preparation(d,z,plan,g,cfg)
+
+
+def test_real_kingswell_v31_gate_reports_incomplete_coverage():
+    cfg=m.load(ROOT/'config.json')
+    state=m.load(ROOT/'world-state.json')
+    report=m.audit_repository(cfg,state)
+    v31=report['architecture_v31']
+    assert v31['synthetic_contracts']=='PASS'
+    assert v31['real_zone_generation_ready'] is False
+    assert v31['legacy_kingswell']['window_coverage_pct']<20
+    assert v31['legacy_kingswell']['full_generation_area_coverage_proven'] is False
+    assert v31['legacy_kingswell']['legacy_windows_are_city_lots'] is False

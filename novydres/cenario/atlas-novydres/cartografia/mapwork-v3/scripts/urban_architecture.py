@@ -536,6 +536,31 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     }
 
 
+def audit_legacy_kingswell_coverage(sketch, detail, width, height):
+    """Quantify incomplete 14-window LEGACY planning against approved real outline.
+
+    This is deliberately not building-density coverage: the polygon also
+    includes streets, water and terrain. Never infer that missing windows
+    correspond one-for-one to missing buildings.
+    """
+    zone=_polygon_mask((width,height),sketch["raion_polygon_candidate_px"]).tobytes()
+    m=Image.new("L",(width,height),0);p=ImageDraw.Draw(m)
+    for item in detail["lots"]:
+        x0,y0,x1,y1=item["core"]
+        require(x0<x1 and y0<y1,"invalid legacy macro-window")
+        p.rectangle((int(x0),int(y0),int(x1)-1,int(y1)-1),fill=1)
+    painted=m.tobytes()
+    total=sum(zone)
+    covered=sum(1 for a,b in zip(zone,painted) if a and b)
+    require(total>0,"empty Kingswell polygon")
+    return {"polygon_pixels":total,"legacy_window_pixels":covered,
+            "window_coverage_pct":round(covered*100/total,2),
+            "unwindowed_pixels":total-covered,
+            "full_generation_area_coverage_proven":False,
+            "area_basis":"all Kingswell polygon including water/streets/terrain",
+            "legacy_windows_are_city_lots":False}
+
+
 def verify_no_protected_edits(original, modified, protected_indices):
     """Byte-level change guard: images must be identical at every protected pixel."""
     require(original.size==modified.size,"before/after dimensions differ")

@@ -485,10 +485,34 @@ def audit_repository(cfg,state):
         for t in r['tiles']:
             fail(t.get('drive_file_id') and re.fullmatch('[0-9a-f]{64}',t.get('sha256','')),str(p)+': tile not uploaded/hashed')
     required_zone_reports=audit_required_planning_zones(cfg)
+    # V3.1 architecture is checked on every CI audit, but synthetic fixtures
+    # can NEVER certify the real Kingswell zone or authorize rendering.
+    import importlib.util
+    arch_path=ROOT/'scripts'/'urban_architecture.py'
+    require_arch=arch_path.is_file()
+    fail(require_arch,'V3.1 urban architecture planner missing')
+    module_spec=importlib.util.spec_from_file_location('novydres_v31_urban',arch_path)
+    architecture=importlib.util.module_from_spec(module_spec)
+    module_spec.loader.exec_module(architecture)
+    fixture=load(ROOT/'fixtures'/'topology-v31-synthetic.json')
+    arch_report=architecture.plan_city(fixture,cfg)
+    fail(arch_report['fixture'] is True and arch_report['generation_ready'] is False,
+         'synthetic architecture fixture must never authorize generation')
+    fail(arch_report['territory']['coverage_pct']==100 and
+         arch_report['geometry']['eligible_coverage_pct']==100 and
+         arch_report['geometry']['urban_lots']>=4,
+         'architecture V3.1 synthetic coverage invalid')
+    real_legacy=architecture.audit_legacy_kingswell_coverage(
+        load(ROOT/'zones'/'cidade-velha'/'esboco-integral-u02-v2.json'),
+        load(ROOT/'zones'/'cidade-velha'/'lotes-conectores-v2.json'),
+        *cfg['world_size_units']
+    )
+    fail(real_legacy['window_coverage_pct']<100,
+         'legacy Kingswell windows unexpectedly cover entire territory; update architecture checkpoint')
     if state['last_approved_global_release'] is not None:
         pointer=state['last_approved_global_release']
         fail((ROOT/'releases'/pointer['manifest']).is_file(),'approved global release pointer missing')
-    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'SPATIAL_GATES_VERIFIED' if all(x['readiness']=='SPATIAL_GATES_VERIFIED' for x in required_zone_reports) else 'NOT_READY_FOR_ART_GENERATION','releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
+    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'SPATIAL_GATES_VERIFIED' if all(x['readiness']=='SPATIAL_GATES_VERIFIED' for x in required_zone_reports) else 'NOT_READY_FOR_ART_GENERATION','architecture_v31':{'synthetic_contracts':'PASS','transport':arch_report['transport'],'quadrants':arch_report['geometry']['urban_lots'],'fixture_not_a_real_zone':True,'legacy_kingswell':real_legacy,'real_zone_generation_ready':False},'releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);sub=ap.add_subparsers(dest='cmd',required=True)
