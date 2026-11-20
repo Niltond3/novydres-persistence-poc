@@ -278,10 +278,11 @@ def verify_edit_pixels(before, after, editable, protected):
 
 
 def make_generation_recipe(*, unit, intent, design_path, reference_path,
-                           proposal_register, neighbor_digests, style):
+                           proposal_register, neighbor_digests, style, mask_file):
     path = Path(design_path)
-    require(path.is_file() and Path(reference_path).is_file(),
-            "recipe requires materialized design and original reference")
+    require(path.is_file() and Path(reference_path).is_file() and
+            Path(mask_file).is_file(),
+            "recipe requires materialized design, mask and original reference")
     approved = validate_proposals(
         proposal_register, region=intent["target"]["id"],
         commit=intent["source_commit"])
@@ -294,6 +295,14 @@ def make_generation_recipe(*, unit, intent, design_path, reference_path,
         "bbox": unit["bbox"],
         "reference_sha256": digest(reference_path),
         "urban_design_sha256": digest(path),
+        "urban_design_path": str(path.resolve()),
+        "urban_design": json.loads(path.read_text(encoding="utf-8")),
+        "native_image_mask_path": str(Path(mask_file).resolve()),
+        "native_image_mask_sha256": digest(mask_file),
+        "authorized_new_element_ids": sorted(
+            set(eid for p in proposal_register["proposals"]
+                if p["status"] in ("APPROVED", "APPROVED_WITH_CONDITIONS")
+                for eid in p.get("authorized_ids", []))),
         "decisions_sha256": evidence_digest(proposal_register),
         "neighbor_sha256": dict(neighbor_digests),
         "mask_edit_bounds": intent.get("intervention", {}).get("bounds"),
@@ -318,6 +327,31 @@ def resume_units(checkpoint, *, expected_inputs):
                 "checkpoint references missing or altered unit")
         completed.append(item["id"])
     return completed
+
+
+def plan_unit_mask(plan, report, work_unit_id, cfg, *, owner_edit_mask=None):
+    """Rasterize the actual work-unit editable authority; never draw geometry from AI."""
+    from PIL import ImageDraw
+    import urban_content
+    unit=next((u for u in report["work_units"] if u["id"]==work_unit_id),None)
+    require(unit is not None,"missing unit for deterministic native mask")
+    scale=cfg["detail_pixels_per_unit"]
+    x0,y0,x1,y1=unit["bbox"]
+    ctx=urban_content.design_context(plan)
+    if owner_edit_mask is not None:
+        require(owner_edit_mask.mode=="L" and
+                owner_edit_mask.size==(ctx["w"],ctx["h"]),
+                "owner intervention mask does not align to reference U02")
+    mask=Image.new("L",((x1-x0)*scale,(y1-y0)*scale),0)
+    draw=ImageDraw.Draw(mask)
+    for y in range(y0,y1):
+        for x in range(x0,x1):
+            i=y*ctx["w"]+x
+            if (ctx["editable"][i] and ctx["labels"][i]==unit["block_label"] and
+                (owner_edit_mask is None or owner_edit_mask.getpixel((x,y)))):
+                sx,sy=(x-x0)*scale,(y-y0)*scale
+                draw.rectangle((sx,sy,sx+scale-1,sy+scale-1),fill=255)
+    return mask
 
 
 def audit_atomic_image(receipt, mask_file, plan, report, unit_id, cfg):
