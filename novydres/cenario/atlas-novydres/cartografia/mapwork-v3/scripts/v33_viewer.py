@@ -179,7 +179,8 @@ addEventListener('resize',draw);draw();
         bundle = str(root / "novydres-comparison.zip")
         with zipfile.ZipFile(bundle,"w",compression=zipfile.ZIP_DEFLATED,
                              compresslevel=3) as archive:
-            for name in ("comparison.html","overview-before.png","overview-after.png"):
+            # Tests and diagnostics may choose another HTML basename.
+            for name in (Path(output).name,"overview-before.png","overview-after.png"):
                 archive.write(root/name,name)
             for item in sorted(tile_root.rglob("*")):
                 if item.is_file():
