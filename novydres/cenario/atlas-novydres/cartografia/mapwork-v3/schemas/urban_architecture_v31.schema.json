@@ -1,0 +1,351 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novydres Mapwork V3.1 global network territory and morphological blocks",
+  "type": "object",
+  "required": [
+    "schema",
+    "source_sha256",
+    "grid",
+    "zone",
+    "territory",
+    "morphology",
+    "transport",
+    "neighbor_seams",
+    "work_policy",
+    "owner_art_authorized"
+  ],
+  "properties": {
+    "schema": {
+      "const": "NOVYDRES_MAPWORK_V31_TERRITORY_NETWORK_1"
+    },
+    "source_sha256": {
+      "type": "string",
+      "minLength": 9
+    },
+    "fixture_mode": {
+      "type": "boolean"
+    },
+    "grid": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 8
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 8
+        }
+      }
+    },
+    "zone": {
+      "type": "object",
+      "required": [
+        "id",
+        "polygon"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "polygon": {
+          "$ref": "#/$defs/polygon"
+        }
+      }
+    },
+    "territory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "class",
+          "polygon"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "class": {
+            "enum": [
+              "urban",
+              "industrial",
+              "natural",
+              "water",
+              "protected"
+            ]
+          },
+          "polygon": {
+            "$ref": "#/$defs/polygon"
+          }
+        }
+      }
+    },
+    "morphology": {
+      "type": "object"
+    },
+    "transport": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges",
+        "crossings"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "point",
+              "kind",
+              "level"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "point": {
+                "$ref": "#/$defs/point"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "ring_geometry": {
+                "$ref": "#/$defs/polygon"
+              }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "class",
+              "from",
+              "to",
+              "points",
+              "width_units",
+              "owner",
+              "separates_blocks"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "class": {
+                "enum": [
+                  "street",
+                  "collector",
+                  "avenue",
+                  "arterial",
+                  "expressway",
+                  "ramp",
+                  "service",
+                  "rail_main",
+                  "rail_freight",
+                  "rail_siding",
+                  "tram",
+                  "river",
+                  "canal"
+                ]
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              },
+              "width_units": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "owner": {
+                "const": "GLOBAL_NETWORK"
+              },
+              "separates_blocks": {
+                "type": "boolean"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "level_from": {
+                "type": "integer"
+              },
+              "level_to": {
+                "type": "integer"
+              },
+              "structure": {
+                "type": "string"
+              },
+              "shared_with_road": {
+                "type": "boolean"
+              },
+              "reserved_right_of_way": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "crossings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "edge_a",
+              "edge_b",
+              "kind",
+              "point"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "edge_a": {
+                "type": "string"
+              },
+              "edge_b": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "grade_separated",
+                  "at_grade"
+                ]
+              },
+              "point": {
+                "$ref": "#/$defs/point"
+              },
+              "junction_id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "neighbor_seams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from_zone",
+          "to_zone",
+          "point",
+          "kind",
+          "width_units",
+          "profile"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "from_zone": {
+            "type": "string"
+          },
+          "to_zone": {
+            "type": "string"
+          },
+          "point": {
+            "$ref": "#/$defs/point"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "width_units": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "profile": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "work_policy": {
+      "type": "object",
+      "required": [
+        "max_units",
+        "max_work_units"
+      ],
+      "properties": {
+        "max_units": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "max_work_units": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mask_receipt": {
+          "type": "object"
+        }
+      }
+    },
+    "owner_art_authorized": {
+      "type": "boolean"
+    },
+    "owner_art_approval": {
+      "type": "object"
+    },
+    "special_sites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "block_id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "block_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "polygon": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_MAPWORK_V3_ARCHITECTURE_AUDIT_1",
-  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "status": "ARCHITECTURE_V31_ENGINE_IMPLEMENTED_REAL_ZONE_INPUT_PENDING",
   "date": "2026-11-20",
   "approved_user_artifact": "U02_KW_SKETCH_02",
   "preservation": {
@@ -61,5 +61,9 @@
     "detail_plan": "NOT_READY",
     "generation_authorized": false
   },
-  "next_allowed_change": "Implement architecture contracts and validate pilots; do not generate new zone art or redraw approved sketch."
+  "next_allowed_change": "Implement architecture contracts and validate pilots; do not generate new zone art or redraw approved sketch.",
+  "last_engine_component": "scripts/urban_architecture.py",
+  "real_kingswell_readiness": "NOT_READY; global transport inventory and full territory polygons not materialized",
+  "implemented_at": "2026-11-20",
+  "owner_clarification": "Quadrant/quarteirão defined by at-grade streets and physical barriers is the city lot. Buildings/factories/POIs are contents, atomic art units are independent implementation subdivisions."
 }

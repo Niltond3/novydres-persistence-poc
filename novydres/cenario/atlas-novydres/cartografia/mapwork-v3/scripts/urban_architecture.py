@@ -18,6 +18,7 @@ import math
 from pathlib import Path
 
 from PIL import Image, ImageDraw
+from jsonschema import Draft202012Validator
 
 
 class ContractError(ValueError):
@@ -29,7 +30,7 @@ RAIL_CLASSES = {"rail_main", "rail_freight", "rail_siding"}
 TRAM_CLASSES = {"tram"}
 WATER_CLASSES = {"river", "canal"}
 EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES
-JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "terminal", "portal"}
+JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass"}
 CROSSING_CLASSES = {"at_grade", "grade_separated"}
 LANDUSE_CLASSES = {"urban", "industrial", "natural", "water", "protected"}
 MORPH_CLASSES = {"historic", "worker", "industrial", "technical", "mixed", "waterfront"}
@@ -125,12 +126,25 @@ def _validate_nodes_edges(transport, width, height):
             require(e.get("shared_with_road") is True or e.get("reserved_right_of_way") is True,
                     f"{label}: tram must declare shared or reserved corridor")
         if to_level!=0 or from_level!=0:
+            if e["class"]!="ramp":
+                require(e.get("structure") in {"viaduct","overpass","elevated_rail","tunnel","underpass"},
+                        f"{label}: non-surface infrastructure must identify physical structure")
             require(e["separates_blocks"] is False or (from_level==to_level==0),
                     f"{label}: elevated route cannot cut ground-level blocks")
         if e["class"] in WATER_CLASSES:
             require(e["separates_blocks"] is True,f"{label}: river/canal is a physical boundary")
         incid[e["from"]]+=1;incid[e["to"]]+=1
+    incident=collections.defaultdict(list)
+    for e in edges:
+        incident[e["from"]].append(e)
+        incident[e["to"]].append(e)
     for n in nodes:
+        touching=incident[n["id"]]
+        has_rail=any(e["class"] in RAIL_CLASSES for e in touching)
+        has_road=any(e["class"] in ROAD_CLASSES for e in touching)
+        if has_rail and has_road:
+            require(n["kind"]=="rail_crossing",
+                    f"{n['id']}: at-grade road/rail connection requires declared rail crossing")
         if n["kind"]=="roundabout":
             require(incid[n["id"]]>=3,f"{n['id']}: roundabout requires at least 3 branches")
             ring=n.get("ring_geometry")
@@ -369,9 +383,13 @@ def derive_work_units(width,height,labels,allowed,max_units,scale):
     return result,sum(covered)
 
 
-def plan_city(plan, cfg, *, fail_on_missing_authority=True):
+def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     """Fully materialize contracts for a declared synthetic/real spatial manifest."""
     require(plan.get("schema")==SCHEMA,"architecture schema mismatch")
+    schema_path=Path(__file__).resolve().parents[1]/"schemas"/"urban_architecture_v31.schema.json"
+    schema=json.loads(schema_path.read_text(encoding="utf-8"))
+    errors=list(Draft202012Validator(schema).iter_errors(plan))
+    require(not errors,"V3.1 schema: "+("; ".join(e.message for e in errors[:3])))
     require(plan.get("source_sha256")==cfg["reference"]["sha256"] or
             (plan.get("fixture_mode") is True and plan.get("source_sha256")=="SYNTHETIC"),
             "source U02 binding mismatch")
@@ -390,6 +408,16 @@ def plan_city(plan, cfg, *, fail_on_missing_authority=True):
     transport_stats=validate_transport(plan["transport"],w,h)
     zone,classes,names,class_counts=classify_territory(plan)
     _morphology_rules(plan,class_counts)
+    source_verified=False
+    if reference_file is not None:
+        ref=Path(reference_file)
+        if ref.is_file():
+            digest=hashlib.sha256(ref.read_bytes()).hexdigest()
+            with Image.open(ref) as pic:
+                dims=pic.size
+            source_verified=(digest==cfg["reference"]["sha256"] and dims==(w,h)
+                             and plan.get("fixture_mode") is not True)
+        require(source_verified,"actual U02 source file failed SHA or dimensions")
     eligible_classes={names["urban"],names["industrial"]}
     eligible=bytearray(1 if zone[i] and classes[i] in eligible_classes else 0 for i in range(w*h))
     # The surface of streets at ground level defines the *quadrant* perimeter.
@@ -421,20 +449,67 @@ def plan_city(plan, cfg, *, fail_on_missing_authority=True):
     require(isinstance(declared_seams,list),"neighbor seam list required")
     require(len({s["id"] for s in declared_seams})==len(declared_seams),
             "duplicate shared connector identifiers")
-    seams_verified=bool(declared_seams) and all(s.get("verified_both_sides") is True for s in declared_seams)
+    counterparts=neighbor_manifests or {}
+    seams_verified=bool(declared_seams)
+    for seam in declared_seams:
+        require(seam.get("from_zone")==plan["zone"]["id"] and
+                seam.get("to_zone") and seam.get("id") and finite_xy(seam.get("point")),
+                "malformed bilateral seam contract")
+        peer=counterparts.get(seam["to_zone"],{})
+        mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None)
+        expected=("kind","width_units","profile")
+        good=bool(mate) and mate.get("from_zone")==seam["to_zone"] and mate.get("to_zone")==seam["from_zone"]
+        good=good and all(mate.get(k)==seam.get(k) for k in expected)
+        good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
+        seams_verified=seams_verified and bool(good)
+    receipt=plan.get("work_policy",{}).get("mask_receipt",{})
+    masks_verified=(
+        isinstance(receipt,dict) and
+        receipt.get("editable_sha256")==hashlib.sha256(eligible_edit).hexdigest() and
+        receipt.get("protected_sha256")==hashlib.sha256(protected).hexdigest() and
+        receipt.get("work_unit_count")==len(tasks) and
+        receipt.get("source_sha256")==cfg["reference"]["sha256"] and
+        source_verified
+    )
+    owner_approval=plan.get("owner_art_approval",{})
+    owner_auth=(
+        plan.get("owner_art_authorized") is True and
+        isinstance(owner_approval,dict) and
+        owner_approval.get("decision")=="APPROVED" and
+        isinstance(owner_approval.get("evidence"),str) and
+        len(owner_approval["evidence"])>=8
+    )
     required_gates={
         "source_and_global_topology":True,
+        "source_bytes_verified":source_verified,
         "territory_classification":True,
         "urban_morphology":True,
         "quadrants_derived_from_transport":True,
         "work_unit_coverage":True,
         "protected_network_coverage":True,
         "neighbor_seams":seams_verified,
-        "pixel_masks_verified":plan["work_policy"].get("masks_verified") is True,
-        "owner_art_authorized":plan.get("owner_art_authorized") is True
+        "pixel_masks_verified":masks_verified,
+        "owner_art_authorized":owner_auth
     }
     ready=all(required_gates.values()) and plan.get("fixture_mode") is False
     # No claim that a synthetic fixture provides real city evidence.
+    blocked=[k for k,v in required_gates.items() if not v]
+    block_programs=[]
+    reverse={v:k for k,v in names.items()}
+    for b in blocks:
+        counts={reverse[k]:v for k,v in b["landuse_counts"].items()}
+        typ=max(counts,key=counts.get)
+        profile=plan["morphology"][typ]
+        block_programs.append({
+            "block_id":b["id"],"quadrant_bbox":b["bbox"],"area_pixels":b["pixels"],
+            "urban_program":typ,"typology":profile["typology"],
+            "occupation_target":profile["occupation_target"],
+            "building_floor_band":profile["building_floors"],
+            "use_mix":profile["use_mix"],
+            "poi_sites":[site["id"] for site in plan.get("special_sites",[])
+                         if site.get("block_id")==b["id"]],
+            "buildings_generated":0
+        })
     return {
         "schema":"NOVYDRES_MAPWORK_V31_AUDIT_REPORT_1",
         "zone":plan["zone"]["id"],
@@ -448,9 +523,15 @@ def plan_city(plan, cfg, *, fail_on_missing_authority=True):
                     "lot_semantics":"ROAD_BOUNDED_QUADRANT",
                     "work_unit_semantics":"ATOMIC_GENERATION_WINDOW"},
         "blocks":blocks,
+        "block_programs":block_programs,
         "work_units":tasks,
         "gates":required_gates,
         "generation_ready":ready,
+        "blocking_gates":blocked,
+        "mask_fingerprints":{
+            "editable_sha256":hashlib.sha256(eligible_edit).hexdigest(),
+            "protected_sha256":hashlib.sha256(protected).hexdigest()
+        },
         "status":"GENERATION_READY" if ready else "STRUCTURE_VALID_NOT_GENERATION_READY"
     }
 
@@ -470,10 +551,11 @@ def cli():
     p.add_argument("manifest",type=Path)
     p.add_argument("--config",type=Path,required=True)
     p.add_argument("--report",type=Path)
+    p.add_argument("--reference",type=Path,help="actual immutable U02 PNG; required for real generation readiness")
     args=p.parse_args()
     manifest=json.loads(args.manifest.read_text(encoding="utf-8"))
     cfg=json.loads(args.config.read_text(encoding="utf-8"))
-    report=plan_city(manifest,cfg)
+    report=plan_city(manifest,cfg,reference_file=args.reference)
     txt=json.dumps(report,ensure_ascii=False,indent=2)
     if args.report:
         args.report.parent.mkdir(parents=True,exist_ok=True)
