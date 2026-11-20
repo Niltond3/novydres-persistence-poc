@@ -344,10 +344,44 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               plan.get("fixture_mode") is False and
               zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED"),
               "composition contract zone/plan authority mismatch")
-    core.audit_zone(zone,cfg,assets,strict=True)
+    is_v33=bool(contract.get("v33"))
+    if is_v33:
+        receipt=contract["v33"]
+        required={
+            "intent_path":"intent_sha256",
+            "decisions_path":"decisions_sha256",
+            "inventory_path":"inventory_sha256",
+            "scope_index_path":"scope_index_sha256",
+            "research_path":"research_sha256",
+            "capabilities_path":"capabilities_sha256",
+            "image_receipts_path":"image_receipts_sha256"
+        }
+        for key,sha_key in required.items():
+            path=Path(receipt.get(key,""))
+            core.fail(path.is_file() and fingerprint(path)==receipt.get(sha_key),
+                      "V3.3 composition authority drift: "+key)
+        intent=core.load(receipt["intent_path"])
+        index=core.load(receipt["scope_index_path"])
+        core.fail(index["source_commit"]==intent["source_commit"],
+                  "V3.3 source commit mismatch")
+        v33.validate_intent(intent,index["targets"],index["world_bounds"])
+        register=core.load(receipt["decisions_path"])
+        approvals=v33.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
+        core.fail(not approvals["pending"],"V3.3 has pending editorial decisions")
+        inventory=core.load(receipt["inventory_path"])
+        canon=set(index["targets"][zone["id"]].get("approved_element_ids",[]))
+        core.fail(set(inventory.get("canonical_elements",[])).issubset(canon),
+                  "V3.3 asserted unsupported existing elements")
+        v33.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
+        v33.validate_research(core.load(receipt["research_path"]))
+        caps=v33.capability_preflight(core.load(receipt["capabilities_path"]))
+        core.fail(not caps["missing"],"V3.3 required host capability not evidenced")
+    core.audit_zone(zone,cfg,assets,strict=True,v33_verified=is_v33)
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=base,
                            neighbor_manifests=load_verified_neighbors(plan))
+    if is_v33:
+        report["gates"]["owner_art_authorized"]=True
     expected={u["id"] for u in report["work_units"]}
     core.fail(set(contract.get("design_sha256",{}))==expected,
               "composition contract incomplete work-unit design hashes")
@@ -374,6 +408,25 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               protected_u02.mode=="L" and protected_u02.size==protection.size and
               protected_u02.tobytes()==protection.tobytes(),
               "composition contract requires the exact validated U02 protection mask")
+    if is_v33:
+        receipt=contract["v33"]
+        if intent["mode"]!="CREATE_REGION":
+            p=Path(receipt.get("edit_mask_path",""))
+            core.fail(p.is_file() and fingerprint(p)==receipt.get("edit_mask_sha256"),
+                      "V3.3 edit mask is missing or changed")
+            with Image.open(p) as im:
+                v33.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
+        images=core.load(receipt["image_receipts_path"])
+        core.fail(images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1",
+                  "V3.3 image batch schema mismatch")
+        indexed={item["work_unit_id"]:item for item in images["images"]}
+        core.fail(len(indexed)==len(images["images"]) and set(indexed)==expected,
+                  "V3.3 native-image receipts not one-to-one with work units")
+        for unit in report["work_units"]:
+            bbox=unit["bbox"];scale=cfg["detail_pixels_per_unit"]
+            v33.image_receipt(indexed[unit["id"]],
+                expected_size=[(bbox[2]-bbox[0])*scale,(bbox[3]-bbox[1])*scale],
+                work_unit_id=unit["id"])
 
 
 def run(args):
@@ -509,7 +562,12 @@ def run(args):
             "decisions_sha256":fingerprint(args.decisions_file),
             "inventory_path":str(Path(args.inventory_file).resolve()),
             "inventory_sha256":fingerprint(args.inventory_file),
-            "scope_index_path":str(Path(args.scope_index or ROOT/"scope-index.json").resolve())
+            "scope_index_path":str(Path(args.scope_index or ROOT/"scope-index.json").resolve()),
+            "scope_index_sha256":fingerprint(args.scope_index or ROOT/"scope-index.json"),
+            "research_path":str(Path(args.research_file).resolve()),
+            "research_sha256":fingerprint(args.research_file),
+            "capabilities_path":str(Path(args.capabilities).resolve()),
+            "capabilities_sha256":fingerprint(args.capabilities)
         }
         contract["v33"]=registration
         if intent["mode"]!="CREATE_REGION":
@@ -550,7 +608,7 @@ def run(args):
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("command",choices=["run"])
-    target=p.add_mutually_exclusive_group(required=True)
+    target=p.add_mutually_exclusive_group(required=False)
     target.add_argument("--district")
     target.add_argument("--zone")
     p.add_argument("--spatial",help="approved candidate territorial/network manifest")
@@ -571,6 +629,8 @@ def main(argv=None):
     p.add_argument("--image-receipts",help="materialized native image receipts per work unit")
     p.add_argument("--editable-mask",help="owner-scoped U02 intervention mask for refinement")
     args=p.parse_args(argv)
+    if not args.intent and not (args.district or args.zone):
+        p.error("legacy calls need --district/--zone; V3.3 calls need --intent")
     try:
         result=run(args)
         if args.checkpoint:
