@@ -122,6 +122,10 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
     Fail on inaccessible buildings or an oversize job. All footprint rectangles are
     strictly within one eligible U02 pixel, leaving perimeter service circulation.
     """
+    if plan.get("work_policy",{}).get("parceling")=="URBAN_BLOCKS_V33":
+        import v33_urban
+        return v33_urban.design_unit(plan,report,work_unit_id,
+                                     max_buildings=max_buildings,context=context)
     urban.require(report["zone"]==plan["zone"]["id"],"urban report/plan identity mismatch")
     work=next((x for x in report["work_units"] if x["id"]==work_unit_id),None)
     urban.require(work is not None,"unknown work unit")
