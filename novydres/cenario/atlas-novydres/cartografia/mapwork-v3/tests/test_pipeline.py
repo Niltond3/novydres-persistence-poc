@@ -55,6 +55,16 @@ def element(assets,name,bounds,color):
     }
 
 
+def mark_approved_tiles(root):
+    p=root/"tiles.json"
+    manifest=core.load(p)
+    manifest["stage"]="APPROVED"
+    manifest["owner_approval"]={"decision":"APPROVED","evidence":"synthetic owner fixture only"}
+    for tile in manifest["tiles"]:
+        tile["drive_file_id"]="synthetic-drive-readback-id"
+    core.save(p,manifest)
+
+
 def test_unified_entrypoint_resolves_existing_and_missing_districts():
     p=pipeline.resolve_zone("kingswell")
     assert p.name=="zone.json" and p.parent.name=="cidade-velha"
@@ -88,6 +98,7 @@ def test_second_composition_preserves_old_art_in_same_tile(tmp_path):
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
     first=tmp_path/"approved"
     core.composite([zone],cfg,base,assets,first)
+    mark_approved_tiles(first)
     old=Image.open(first/"tile_0_0.png").convert("RGBA").getpixel((3*8,3*8))
     assert old==(220,30,30,255)
     zone["elements"]=[element(assets,"new",[8,2,12,6],(25,205,30,255))]
@@ -103,6 +114,7 @@ def test_second_composition_cannot_change_previously_approved_pixel(tmp_path):
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
     first=tmp_path/"approved"
     core.composite([zone],cfg,base,assets,first)
+    mark_approved_tiles(first)
     zone["elements"]=[element(assets,"replacement",[2,2,6,6],(30,220,30,255))]
     with pytest.raises(core.Invalid,match="previously approved content overwritten"):
         core.composite([zone],cfg,base,assets,tmp_path/"candidate",approved_before=first)
@@ -219,3 +231,34 @@ def test_underground_pipeline_requires_a_tunnel_and_negative_level():
     })
     with pytest.raises(urban.ContractError,match="underground network requires negative level and tunnel"):
         urban.validate_transport(p["transport"],64,64)
+
+
+def test_tile_catalogue_inherits_untouched_approved_tiles_across_zones(tmp_path):
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"old-west",[2,2,6,6],(220,30,30,255))]
+    west=tmp_path/"west"
+    core.composite([zone],cfg,base,assets,west)
+    mark_approved_tiles(west)
+    zone["id"]="east"
+    zone["bounds"]=[16,0,32,16]
+    zone["elements"]=[element(assets,"new-east",[18,2,22,6],(25,205,30,255))]
+    east=tmp_path/"east"
+    manifest=core.composite([zone],cfg,base,assets,east,approved_before=west)
+    assert len(manifest["inherited_tiles"])==1
+    assert len(manifest["tiles"])==1
+    assert core.verify_tiles(manifest,east,cfg,inherited_root=west)==2
+    with pytest.raises(core.Invalid,match="inherited tile"):
+        core.verify_tiles(manifest,east,cfg)
+    comparison=tmp_path/"compare.html"
+    details=core.html_compare(west,east,base,comparison,cfg)
+    assert details["before_tiles"]==2
+    assert details["after_tiles"]==2
+
+
+def test_unapproved_prior_tile_manifest_is_rejected(tmp_path):
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
+    first=tmp_path/"candidate"
+    core.composite([zone],cfg,base,assets,first)
+    with pytest.raises(core.Invalid,match="not an approved release"):
+        core.composite([zone],cfg,base,assets,tmp_path/"new",approved_before=first)
