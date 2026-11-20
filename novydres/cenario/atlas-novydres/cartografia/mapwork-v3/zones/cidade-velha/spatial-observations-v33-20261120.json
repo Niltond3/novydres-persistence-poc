@@ -1106,7 +1106,384 @@
     "metro_alignment_verified": false,
     "neighbor_seams_verified": false,
     "poi_siting_and_access_verified": false,
-    "v31_generation_ready": false
+    "v31_generation_ready": false,
+    "nonnode_crossings_claimed_connected": 0
   },
-  "next_action": "SNAP_ROAD_CENTERLINES_TO_U02_SURFACE_WITH_INTERSECTION_GRADE_AUDIT_AND_FULL_WATER_LANDUSE_MASK; DO NOT CREATE GLOBAL-SPATIAL-V31.JSON UNTIL GATES"
+  "next_action": "SNAP_ROAD_CENTERLINES_TO_U02_SURFACE_WITH_INTERSECTION_GRADE_AUDIT_AND_FULL_WATER_LANDUSE_MASK; DO NOT CREATE GLOBAL-SPATIAL-V31.JSON UNTIL GATES",
+  "intersection_candidates": [
+    {
+      "id": "KW-X-001",
+      "road_a": "KW-R-01",
+      "road_b": "KW-R-08",
+      "candidate_points_px": [
+        [
+          518.08,
+          741.36
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-002",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          364.89,
+          774.606
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-003",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-07",
+      "candidate_points_px": [
+        [
+          449.896,
+          789.164
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-004",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-09",
+      "candidate_points_px": [
+        [
+          522.688,
+          786.56
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-005",
+      "road_a": "KW-R-03",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          355.909,
+          811
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-006",
+      "road_a": "KW-R-03",
+      "road_b": "KW-R-07",
+      "candidate_points_px": [
+        [
+          452.045,
+          806.36
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-007",
+      "road_a": "KW-R-04",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          344.226,
+          852.208
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-008",
+      "road_a": "KW-R-05",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          337.01,
+          890.947
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-009",
+      "road_a": "KW-R-07",
+      "road_b": "KW-R-12",
+      "candidate_points_px": [
+        [
+          462.114,
+          879.189
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-010",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-14",
+      "candidate_points_px": [
+        [
+          751.501,
+          823.457
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-011",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-15",
+      "candidate_points_px": [
+        [
+          654.243,
+          821.592
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-012",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-16",
+      "candidate_points_px": [
+        [
+          830,
+          828
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-013",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-14",
+      "candidate_points_px": [
+        [
+          751,
+          838
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-014",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-15",
+      "candidate_points_px": [
+        [
+          663,
+          861
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-015",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-16",
+      "candidate_points_px": [
+        [
+          829.783,
+          836.885
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-016",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          749.195,
+          912.196
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-017",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          752.511,
+          792.136
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-018",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          749.09,
+          916.387
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-019",
+      "road_a": "KW-R-15",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          655.154,
+          774.485
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-020",
+      "road_a": "KW-R-15",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          662.015,
+          895.477
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-021",
+      "road_a": "KW-R-16",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          829.641,
+          893.355
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-022",
+      "road_a": "KW-R-16",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          828.617,
+          794.801
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-023",
+      "road_a": "KW-R-17",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          865.355,
+          879.323
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-024",
+      "road_a": "KW-R-18",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          740.079,
+          914.42
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    }
+  ],
+  "additional_road_river_intersections": [
+    {
+      "road_id": "KW-R-06",
+      "point_px": [
+        367.627,
+        759.549
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-13",
+      "point_px": [
+        507.224,
+        926.97
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-22",
+      "point_px": [
+        361.022,
+        957.171
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-22",
+      "point_px": [
+        453.793,
+        954.724
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    }
+  ]
 }
