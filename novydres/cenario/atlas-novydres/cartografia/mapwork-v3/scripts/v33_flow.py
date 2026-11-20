@@ -205,12 +205,26 @@ def run(args, v32_run):
         if args.ledger:
             ledger=core.load(args.ledger) if Path(args.ledger).is_file() else {
                 "schema":"NOVYDRES_MAPWORK_V33_UNIT_LEDGER_1","units":{}}
+            plan_file=Path(args.design_root) if args.design_root else zone_path.parent/"urban-design"
+            design_file=plan_file/(uid+".json")
+            v33.require(design_file.is_file(),"unit ledger cannot omit detailed spatial design")
+            fingerprints={
+                "intent_sha256":v33.digest(args.intent),
+                "scope_index_sha256":v33.digest(args.scope_index or ROOT/"scope-index.json"),
+                "spatial_sha256":v33.digest(path),
+                "design_sha256":v33.digest(design_file),
+                "reference_sha256":v33.digest(args.reference),
+                "decisions_sha256":v33.digest(args.decisions_file),
+                "research_sha256":v33.digest(args.research_file),
+                "inventory_sha256":v33.digest(args.inventory_file),
+                "unit_mask_sha256":v33.digest(args.unit_mask),
+                "work_unit_id":uid
+            }
+            input_hash=v33.evidence_digest(fingerprints)
             if args.start_unit:
-                v33.unit_transition(ledger,uid,event="START",input_sha256=
-                                    v33.evidence_digest({"recipe":uid,"plan":report["transport_sha256"],
-                                                         "reference":v33.digest(args.reference)}))
-            input_hash=ledger.get("units",{}).get(uid,{}).get("input_sha256")
-            v33.require(bool(input_hash),"unit ledger has no active attempt; start with --start-unit")
+                v33.unit_transition(ledger,uid,event="START",input_sha256=input_hash)
+            v33.require(uid in ledger.get("units",{}),
+                        "unit ledger has no active attempt; start with --start-unit")
             record=v33.unit_transition(
                 ledger,uid,event="AUDIT_PASS" if reviewed.get("status")=="PASS" else "AUDIT_FAIL",
                 input_sha256=input_hash,receipt=audited if reviewed.get("status")=="PASS"
