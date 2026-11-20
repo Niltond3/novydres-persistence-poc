@@ -370,7 +370,7 @@ def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None):
                   isinstance(review.get("evidence"),str) and
                   len(review["evidence"])>=12,
                   uid+": visual inspection receipt missing or failed")
-    return len(units)
+    return len(active)
 
 
 def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
