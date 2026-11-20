@@ -1,3 +1,7 @@
+## V3.3 — protocolo visual obrigatório (candidato)
+
+Antes de seguir as etapas abaixo, consulte [VISUAL_REVIEW_PROTOCOL_V33.md](VISUAL_REVIEW_PROTOCOL_V33.md). A imagem é gerada nativamente pelo agente, sem API. A pipeline confere artefatos e comprovantes com SHA, enquanto o agente analisa visualmente cada máscara e seus pares, e depois o atlas completo; sem parecer de unidade e parecer macro reais, não se solicita aprovação. O preflight não exige imagem ainda não gerada. A correção não cria cânone nem dispensa planejamento urbano prévio.
+
 # NOVYDRES MAPWORK V3.3 — CONTRATO PRIORITÁRIO DO AGENTE
 
 **Este bloco V3.3 prevalece sobre as instruções V3.2/V3.1 mantidas abaixo para histórico e regressão.**

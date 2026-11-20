@@ -218,32 +218,46 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
         "sha256":e["asset"]["sha256"],
         "mask_sha256":e["mask"]["sha256"],
         "generator_evidence":"Actual native tool receipt #12345",
-        "visual_review":{"by":"AGENT","status":"PASS","evidence":
-                         "Verified roof geometry and seams with neighbors"}
+        "visual_review":{
+            "schema":"NOVYDRES_MAPWORK_V33_UNIT_VISUAL_REVIEW_1",
+            "by":"AGENT","model":"GPT-6","status":"PASS",
+            "work_unit_id":uid,"image_sha256":e["asset"]["sha256"],
+            "mask_sha256":e["mask"]["sha256"],
+            "reference_sha256":"a"*64,"spatial_sha256":"b"*64,
+            "checks":{key:{"status":"PASS","note":"Checked real visual context"}
+                      for key in ("mask_and_footprint","urban_structure",
+                                  "connections_and_access","micro_to_macro","macro_to_micro")},
+            "neighbors":[],"summary":"Agent visually inspected current unit image"
+        }
     }
     batch={"schema":"NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1","images":[receipt]}
-    assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)==1
-    more={"id":"WU-UNCHANGED","bbox":[6,2,10,6]}
+    assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
+                                           reference_sha256="a"*64,spatial_sha256="b"*64)==1
+    more={"id":"WU-UNCHANGED","bbox":[11,2,15,6]}
     assert pipeline.verify_native_manifest(
         batch,zone,{"work_units":[unit,more]},cfg,assets,
-        active_units={uid})==1
+        active_units={uid},reference_sha256="a"*64,spatial_sha256="b"*64)==1
     with pytest.raises(core.Invalid,match="changed work units"):
         pipeline.verify_native_manifest(
-            batch,zone,{"work_units":[unit,more]},cfg,assets)
+            batch,zone,{"work_units":[unit,more]},cfg,assets,
+            reference_sha256="a"*64,spatial_sha256="b"*64)
     batch["images"][0]["visual_review"]["status"]="NOT_CHECKED"
-    with pytest.raises(core.Invalid,match="visual inspection receipt"):
-        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+    with pytest.raises(c.Blocked,match="agent visual review"):
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
+                                        reference_sha256="a"*64,spatial_sha256="b"*64)
     batch["images"][0]["visual_review"]["status"]="PASS"
     batch["images"][0]["mask_sha256"]="0"*64
     with pytest.raises(core.Invalid,match="not bound to composited mask"):
-        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
+                                        reference_sha256="a"*64,spatial_sha256="b"*64)
     batch["images"][0]["mask_sha256"]=e["mask"]["sha256"]
     other=assets/"other.png"
     Image.new("RGBA",(32,32),(30,200,30,255)).save(other)
     receipt["sha256"]=core.sha(other)
     receipt["local_path"]=str(other)
     with pytest.raises(core.Invalid,match="provenance is not the composited lot asset"):
-        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
+                                        reference_sha256="a"*64,spatial_sha256="b"*64)
 
 
 def test_offline_comparison_zip_contains_html_tiles_and_overviews(tmp_path):

@@ -20,6 +20,7 @@ import mapwork as core
 import urban_architecture as urban
 import urban_content as content
 import v33_contracts as v33
+import v33_visual as visual
 import v33_flow
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -323,7 +324,8 @@ def _asset_fingerprints(zone,assets):
     return result
 
 
-def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None):
+def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None,
+                           reference_sha256=None,spatial_sha256=None):
     """Bind actual generated and reviewed image bytes to the exact composited lots."""
     core.fail(isinstance(images,dict) and
               images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1" and
@@ -349,6 +351,11 @@ def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None):
             bound[uid]=element
     core.fail(active.issubset(bound),
               "V3.3 every changed unit must have a bound lot asset")
+    context={r["work_unit_id"]:r for r in images.get("context_images",[])}
+    core.fail(not (set(context)&set(index)) and
+              all(k in units for k in context),
+              "V3.3 peer context overlaps generated units or is unknown")
+    all_receipts={**context,**index}
     for uid in sorted(active):
         unit=units[uid]
         receipt=index[uid]
@@ -364,12 +371,21 @@ def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None):
         core.fail(element["mask"]["sha256"]==receipt.get("mask_sha256") and
                   fingerprint(Path(assets)/element["mask"]["path"])==receipt["mask_sha256"],
                   uid+": native image receipt not bound to composited mask")
-        review=receipt.get("visual_review")
-        core.fail(isinstance(review,dict) and review.get("by")=="AGENT" and
-                  review.get("status")=="PASS" and
-                  isinstance(review.get("evidence"),str) and
-                  len(review["evidence"])>=12,
-                  uid+": visual inspection receipt missing or failed")
+        peer_images={}
+        for peer in visual.neighbor_sides(report["work_units"],uid):
+            core.fail(peer in all_receipts,uid+": neighbor image receipt missing: "+peer)
+            b=units[peer]["bbox"]
+            v33.image_receipt(all_receipts[peer],expected_size=[
+                (b[2]-b[0])*scale,(b[3]-b[1])*scale
+            ],work_unit_id=peer)
+            peer_images[peer]=all_receipts[peer]
+        core.fail(reference_sha256 is not None and spatial_sha256 is not None,
+                  "V3.3 visual review requires reference and spatial file SHA")
+        visual.validate_unit_visual_review(
+            receipt.get("visual_review"),unit_id=uid,
+            image_sha256=receipt["sha256"],mask_sha256=receipt["mask_sha256"],
+            reference_sha256=reference_sha256,spatial_sha256=spatial_sha256,
+            work_units=report["work_units"],neighbor_receipts=peer_images)
     return len(active)
 
 
@@ -444,7 +460,7 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
                   "V3.3 asserted unsupported existing elements")
         v33.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
         v33.validate_research(core.load(receipt["research_path"]))
-        caps=v33.capability_preflight(core.load(receipt["capabilities_path"]))
+        caps=v33.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
         core.fail(not caps["missing"],"V3.3 required host capability not evidenced")
     core.audit_zone(zone,cfg,assets,strict=True,v33_verified=is_v33)
     check_canonical_pois(zone_path,plan)
@@ -495,7 +511,9 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
             with Image.open(p) as im:
                 v33.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
         images=core.load(receipt["image_receipts_path"])
-        verify_native_manifest(images,zone,report,cfg,assets,active_units=affected)
+        verify_native_manifest(images,zone,report,cfg,assets,active_units=affected,
+                               reference_sha256=fingerprint(base),
+                               spatial_sha256=fingerprint(spatial_path))
 
 
 def run(args):
@@ -660,7 +678,9 @@ def run(args):
             raise core.Invalid("V3.3 native-image provenance receipts required")
         receipts=core.load(args.image_receipts)
         active=affected_unit_ids(report,edit_mask)
-        verify_native_manifest(receipts,zone,report,cfg,args.assets,active_units=active)
+        verify_native_manifest(receipts,zone,report,cfg,args.assets,active_units=active,
+                               reference_sha256=fingerprint(args.reference),
+                               spatial_sha256=fingerprint(spatial_path))
         registration["image_receipts_path"]=str(Path(args.image_receipts).resolve())
         registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
@@ -668,10 +688,26 @@ def run(args):
                             edit_mask_u02=edit_mask,contract=contract)
     comparison=out/"comparison.html"
     result=core.html_compare(args.before,tiles,args.reference,comparison,cfg)
+    evidence={"tiles":len(manifest["tiles"]),"comparison":str(comparison),
+              "comparison_bytes":result["bytes"],"manifest":str(tiles/"tiles.json"),
+              "tiles_sha256":fingerprint(tiles/"tiles.json"),
+              "before_sha256":fingerprint(out/"overview-before.png"),
+              "after_sha256":fingerprint(out/"overview-after.png"),
+              "image_receipts_sha256":fingerprint(args.image_receipts)}
+    if getattr(args,"v33_verified",False):
+        if not args.macro_review or not Path(args.macro_review).is_file():
+            return state("GLOBAL_VISUAL_REVIEW","AGENT_INSPECT_COMPOSED_ATLAS",
+                         ["Inspect real before/after overviews, tiles, unit interfaces and macro/micro coherence; record hash-bound global report."],
+                         spatial_path,report,evidence)
+        review=core.load(args.macro_review)
+        evidence["global_visual_review"]=visual.validate_global_visual_review(
+            review,tiles=tiles/"tiles.json",
+            before_overview=out/"overview-before.png",
+            after_overview=out/"overview-after.png",
+            original_reference=args.reference,image_receipts=args.image_receipts)
     return state("CANDIDATE_READY_FOR_OWNER_REVIEW","SHOW_COMPLETE_BEFORE_AFTER",
                  ["Owner must explicitly approve candidate; GitHub/Drive readback and editorial gate remain mandatory."],
-                 spatial_path,report,{"tiles":len(manifest["tiles"]),"comparison":str(comparison),
-                                      "comparison_bytes":result["bytes"],"manifest":str(tiles/"tiles.json")})
+                 spatial_path,report,evidence)
 
 
 def main(argv=None):
@@ -701,7 +737,8 @@ def main(argv=None):
     p.add_argument("--audit-unit",help="audit native asset materialization and mask per unit")
     p.add_argument("--unit-receipt",help="one actual generated image receipt")
     p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
-    p.add_argument("--visual-review",help="separate agent-only aesthetic inspection receipt")
+    p.add_argument("--visual-review",help="hash-bound agent inspection of unit image/mask and face-neighbors")
+    p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
     p.add_argument("--ledger",help="SHA-bound per-unit progress/repair ledger")
     p.add_argument("--start-unit",action="store_true",help="start one audit attempt in the ledger")
     args=p.parse_args(argv)

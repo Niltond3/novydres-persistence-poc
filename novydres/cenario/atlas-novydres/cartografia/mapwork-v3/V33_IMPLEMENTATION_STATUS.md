@@ -30,3 +30,8 @@ A suíte `tests/test_v33_contracts.py` e `tests/test_v33_urban.py` cobre autoriz
 5. Demonstrar recuperação de interrupção com assets privados por Drive, Git CAS/readback, testes negativos e publicação apenas após aceite visual.
 
 **Resultado: V3.3 candidata parcialmente implementada; NÃO IMPLEMENTED/NOT READY FOR CANON.** Não usar contagens de testes em fixtures para alegar cumprimento dos cinco critérios reais.
+
+
+## Ajuste de auditoria visual (candidato)
+
+Foi adicionado o validador interno `scripts/v33_visual.py`, invocado exclusivamente pela entrada `pipeline.py run`. Pareceres de unidade vinculam os SHA de PNG, máscara, U02, plano e imagens de vizinhos em borda; o parecer global, posterior à composição, vincula SHA de tiles, overviews ANTES/DEPOIS, U02 e recibos de imagem. O modelo deve analisar os pixels; o código verifica documentação, cobertura e integridade, não a estética. Teste de imagens sem geração real não demonstra execução ponta a ponta. Kingswell ainda depende de rede espacial e máscaras reais.

@@ -195,19 +195,35 @@ def validate_inventory(elements, register, *, canonical_element_ids=()):
     return {"elements": len(ids), "proposals_used": sorted(set(referenced))}
 
 
-def capability_preflight(receipts, *, reference=None):
+def capability_preflight(receipts, *, reference=None, require_native=True):
     """Only on-disk SHA readback is technical proof; host features need real receipts."""
     require(isinstance(receipts, dict) and receipts.get("schema") ==
             SCHEMA + "_CAPABILITY_1", "real capability receipt required")
     verified = {}
-    for item in ("github_read", "github_write", "web_research",
-                 "native_image_generation", "native_image_materialization",
-                 "user_delivery"):
+    # Unrendered art cannot be an initial prerequisite; no API key handshake.
+    for item in ("github_read", "github_write", "web_research", "user_delivery"):
         data = receipts.get(item)
         verified[item] = (isinstance(data, dict) and
                           data.get("verified") is True and
                           isinstance(data.get("evidence"), str) and
                           len(data["evidence"]) >= 12)
+    if require_native:
+        proof=receipts.get("native_image_proof")
+        found=False
+        if isinstance(proof,dict):
+            p=Path(proof.get("local_path",""))
+            found=(p.is_file() and SHA64.fullmatch(proof.get("sha256",""))
+                   is not None and digest(p)==proof["sha256"])
+            if found:
+                try:
+                    with Image.open(p) as im:
+                        found=im.format in ("PNG","WEBP") and im.width>0 and im.height>0
+                        im.verify()
+                except (OSError,ValueError):
+                    found=False
+        # Verbal claims are not proof of materialized bytes.
+        verified["native_image_generation"]=found
+        verified["native_image_materialization"]=found
     if reference:
         path = Path(reference["path"])
         verified["reference"] = (path.is_file() and
@@ -426,12 +442,14 @@ def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
                 receipt.get("technical_status")=="PASS",
                 "unit cannot pass without deterministic technical audit")
         require(isinstance(visual_review,dict) and
+                visual_review.get("schema")==SCHEMA+"_UNIT_VISUAL_REVIEW_1" and
+                visual_review.get("by")=="AGENT" and
                 visual_review.get("status")=="PASS" and
-                isinstance(visual_review.get("evidence"),str) and
-                len(visual_review["evidence"])>=12,
-                "agent visual inspection must be documented independently")
+                visual_review.get("image_sha256")==receipt["image_sha256"] and
+                visual_review.get("mask_sha256")==receipt["mask_sha256"],
+                "agent visual report must be hash-bound before ledger PASS")
         record["status"]="VERIFIED"
         record["image_sha256"]=receipt["image_sha256"]
         record["mask_sha256"]=receipt["mask_sha256"]
-        record["visual_evidence"]=visual_review["evidence"]
+        record["visual_review_sha256"]=evidence_digest(visual_review)
     return record

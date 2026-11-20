@@ -13,6 +13,7 @@ import mapwork as core
 import urban_architecture as urban
 import urban_content as content
 import v33_contracts as v33
+import v33_visual as visual
 
 ROOT=Path(__file__).resolve().parents[1]
 CANON_CATALOG=ROOT.parents[3]/"catalogo.json"
@@ -62,9 +63,9 @@ def run(args, v32_run):
     capabilities = _load(args.capabilities)
     if not capabilities:
         return _state("CAPABILITY_CHECK", "PROVE_HOST_CAPABILITIES",
-                      ["GitHub read/write, Web research, image tool, image materialization and mobile delivery require real host receipts"],
+                      ["GitHub read/write, research and user delivery require receipts; native PNGs are verified when generated"],
                       intent=intent)
-    caps = v33.capability_preflight(capabilities)
+    caps = v33.capability_preflight(capabilities,require_native=False)
     if caps["missing"]:
         return _state("BLOCKED_CAPABILITY", "RESTORE_REQUIRED_HOST_TOOLS",
                       caps["missing"], intent=intent, audit=caps)
@@ -201,7 +202,25 @@ def run(args, v32_run):
             return _state("IMAGE_VISUAL_REVIEW","AGENT_INSPECT_IMAGE",
                           ["Record lighting, geometry, roof, seams and visual continuity; technical audit is not aesthetic certification"],
                           intent=intent,audit=audited)
-        v33.require(reviewed.get("by")=="AGENT","visual audit must be performed by the agent")
+        if reviewed.get("status")=="PASS":
+            peers=visual.neighbor_sides(report["work_units"],uid)
+            batch=_load(args.image_receipts)
+            receipts={r["work_unit_id"]:r for r in batch.get("images",[])} if batch else {}
+            if batch:
+                receipts.update({r["work_unit_id"]:r for r in batch.get("context_images",[])})
+            if not set(peers).issubset(receipts):
+                return _state("IMAGE_VISUAL_REVIEW","MATERIALIZE_NEIGHBOR_IMAGES_AND_INSPECT",
+                              sorted(set(peers)-set(receipts)),intent=intent,audit=audited)
+            visual.validate_unit_visual_review(
+                reviewed,unit_id=uid,image_sha256=audited["image_sha256"],
+                mask_sha256=audited["mask_sha256"],
+                reference_sha256=v33.digest(args.reference),
+                spatial_sha256=v33.digest(path),
+                work_units=report["work_units"],neighbor_receipts=receipts)
+        else:
+            v33.require(reviewed.get("by")=="AGENT" and
+                        reviewed.get("status")=="FAIL",
+                        "failed visual review must be recorded by the agent")
         if args.ledger:
             ledger=core.load(args.ledger) if Path(args.ledger).is_file() else {
                 "schema":"NOVYDRES_MAPWORK_V33_UNIT_LEDGER_1","units":{}}
