@@ -252,3 +252,25 @@ def test_offline_comparison_zip_contains_html_tiles_and_overviews(tmp_path):
         assert "viewer-assets/reference.png" in names
         assert any(n.startswith("viewer-assets/after/") for n in names)
         assert "novydres-comparison.zip" not in names
+
+
+def test_v33_pipeline_enters_capability_gate_without_fabricated_data(tmp_path):
+    import pipeline
+    intent=_intent(source_commit="a"*40)
+    index={
+        "schema":"NOVYDRES_MAPWORK_V33_SCOPE_INDEX_1",
+        "source_commit":"a"*40,
+        "targets":{"sulfok":{"subject_id":"district-sulfok","kind":"region"}},
+        "world_bounds":[0,0,1448,1086]
+    }
+    ip=tmp_path/"intent.json";sp=tmp_path/"scope.json";cp=tmp_path/"result.json"
+    ip.write_text(json.dumps(intent),encoding="utf-8")
+    sp.write_text(json.dumps(index),encoding="utf-8")
+    assert pipeline.main(["run","--intent",str(ip),"--scope-index",str(sp),
+                          "--checkpoint",str(cp)])==0
+    result=core.load(cp)
+    assert result["phase"]=="CAPABILITY_CHECK"
+    assert result["canonical_state_changed"] is False
+    assert result["publication_authorized"] is False
+    with pytest.raises(SystemExit):
+        pipeline.main(["run","--district","kingswell","--execute"])
