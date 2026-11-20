@@ -8,7 +8,7 @@
   "target": "kingswell",
   "subject_id": "district-chelsea",
   "phase": "SPATIAL_MODEL",
-  "current_execution_outcome": "SPATIAL_MODEL_INCOMPLETE_NO_GENERATION",
+  "current_execution_outcome": "PARTIAL_CANDIDATE_SURFACE_NETWORK_PERSISTED_VALIDATION_NOT_COMPLETE",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
@@ -22,7 +22,10 @@
     "registered_approved_sketch_pois": 5,
     "newly_authorized_elements": 0,
     "visual_assets_generated": 0,
-    "masks_generated": 0
+    "masks_generated": 0,
+    "spatial_observations_file": "zones/cidade-velha/spatial-observations-v33-20261120.json",
+    "spatial_road_audit_file": "zones/cidade-velha/spatial-network-audit-v33-20261120.json",
+    "regression_test_file": "tests/test_kingswell_spatial_observations_v33.py"
   },
   "audit": {
     "candidate_polygon_pixels": 272640,
@@ -39,13 +42,13 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "BUILD_REAL_SPATIAL_V31_FROM_U02_WITH_EXCLUSIVE_TERRITORY_SURFACE_TRANSPORT_AND_WATER_THEN_VALIDATE",
+  "next_action": "REVIEW_ALL_24_ROAD_JUNCTIONS_AND_4_OTHER_WATER_INTERFACES_ON_U02; VALIDATE_EXCLUSIVE_TERRITORY_AND_BILATERAL_SEAMS; CREATE_REAL_GLOBAL_SPATIAL_V31_AFTER_ALL_GATES",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
   "human_visual_review_not_requested": true,
   "handoff_allowed": false,
-  "note": "Decision A and constraints persisted, conceptual expansion mask two disjoint components, and U02 candidate bridge points visually screened. Global-spatial-v31.json still absent. No candidate image or final composition generated.",
+  "note": "Native V3.3 pipeline did not run; local independently executed regression suite on source-bound candidate observations. Existing U02 SHA verified, no image generation, no canon.",
   "next_decision_id": null,
   "open_editorial_proposals": 0,
   "metro_decision": {
@@ -80,5 +83,16 @@
     ],
     "outcome": "PRELIMINARY_VISUAL_SITING_ONLY",
     "network_topology_pass": false
+  },
+  "road_network_progress": {
+    "candidate_road_corridors": 22,
+    "pending_at_grade_or_grade_separated_road_crossings": 24,
+    "unknown_existing_road_water_crossing_points": 4,
+    "historical_bridge_span_crosses_river": 3,
+    "bridge_approach_endpoints_in_range": 6,
+    "tests_locally_passed": 9,
+    "image_source_sha256_checked": true,
+    "final_spatial_manifest_generated": false,
+    "first_pass_only": true
   }
 }
