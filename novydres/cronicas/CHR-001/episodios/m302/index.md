@@ -116,3 +116,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `c02-interacao-026.md` registra despedida simples de Rada e retorno de Bartolomeu ao trabalho sem diálogo adicional. M3.02 C02 encerrada sem nova trama ou salto temporal; cursor `../../estado/recuperacao-c107.json`, próxima cena relevante pendente de dramaturgia.
 
 `c03-abertura-001.md` inaugura M3.02 C03 com bilhete da escola sobre consulta familiar antes de eventual monitoria de Mikahel no maternal. Mary e Mikahel falam autonomamente; Bartolomeu não responde por presunção. Cursor `../../estado/recuperacao-c108.json`, cena aberta, sem gastos, teste ou transferência de informação de Rada/Setor VI.
+
+`c03-interacao-002.md` preserva literalmente a fala do jogador sobre liberdade e registra reflexão autônoma de Mikahel e pedido de conversa com a professora. Cursor `../../estado/recuperacao-c109.json`; C03 aberta, resposta do pai pendente, sem mudança de recursos.
