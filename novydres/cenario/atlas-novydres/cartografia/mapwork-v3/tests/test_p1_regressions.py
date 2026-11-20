@@ -158,3 +158,66 @@ def test_p1_physical_scale_never_inferred_from_reference_pixels():
     p["physical_reference"]=bad
     with pytest.raises(urban.ContractError,match="V3.1 schema|explicit owner evidence"):
         urban.plan_city(p,cfg)
+
+
+def test_p1_global_infrastructure_cannot_paint_as_unit_asset():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    report=urban.plan_city(p,core.load(ROOT/"config.json"))
+    elems=[{"id":"L"+u["id"],"kind":"lot","work_unit_id":u["id"],
+            "core":u["bbox"],"status":"PENDING"} for u in report["work_units"]]
+    first=report["work_units"][0]
+    elems.append({"id":"UNOWNED-ROAD","kind":"road","work_unit_id":first["id"],
+                  "core":first["bbox"],"status":"PENDING"})
+    with pytest.raises(core.Invalid,match="global infrastructure"):
+        pipeline.validate_work_unit_bindings({"elements":elems},report,plan=p)
+
+
+def test_p1_special_building_cannot_claim_arbitrary_footprint():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    report=urban.plan_city(p,core.load(ROOT/"config.json"))
+    elems=[{"id":"L"+u["id"],"kind":"lot","work_unit_id":u["id"],
+            "core":u["bbox"],"status":"PENDING"} for u in report["work_units"]]
+    u=report["work_units"][0]
+    elems.append({"id":"SPECIAL","kind":"special_building","work_unit_id":u["id"],
+                  "building_id":"FAKE-BUILDING","core":u["bbox"],"status":"PENDING"})
+    with pytest.raises(core.Invalid,match="approved building footprint"):
+        pipeline.validate_work_unit_bindings({"elements":elems},report,plan=p)
+
+
+def test_p1_special_asset_mask_cannot_paint_whole_adjacent_unit(tmp_path):
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    report=urban.plan_city(p,cfg)
+    unit=report["work_units"][0]
+    from PIL import Image
+    scale=cfg["detail_pixels_per_unit"]
+    bounds=unit["bbox"]
+    im=Image.new("L",((bounds[2]-bounds[0])*scale,
+                     (bounds[3]-bounds[1])*scale),255)
+    im.save(tmp_path/"wide.png")
+    e={"id":"SPECIAL-WIDE","kind":"special_building","work_unit_id":unit["id"],
+       "status":"VERIFIED","envelope":bounds,
+       "core":[bounds[0]+.25,bounds[1]+.25,bounds[0]+.75,bounds[1]+.75],
+       "mask":{"path":"wide.png"}}
+    with pytest.raises(core.Invalid,match="outside its assigned editable cells or footprint"):
+        pipeline.verify_unit_art_masks(p,report,[e],tmp_path,cfg)
+
+
+def test_p1_visible_mask_overlap_requires_explicit_owner_authority(tmp_path):
+    from PIL import Image
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    cfg["detail_pixels_per_unit"]=8
+    Image.new("RGBA",(8,8),(255,0,0,255)).save(tmp_path/"a.png")
+    Image.new("RGBA",(8,8),(0,255,0,255)).save(tmp_path/"b.png")
+    Image.new("L",(8,8),255).save(tmp_path/"mask.png")
+    members=[{"id":id,"work_unit_id":"WU-00001-0000-0000","status":"VERIFIED",
+              "asset":{"path":f"{id}.png"},"mask":{"path":"mask.png"},
+              "envelope":[0,0,1,1]} for id in ("a","b")]
+    with pytest.raises(core.Invalid,match="unauthorized visible overlap"):
+        pipeline.verify_art_overlaps(p,members,tmp_path,cfg)
+    p["owner_art_authorized"]=True
+    p["owner_art_approval"]={"decision":"APPROVED",
+        "authorized_overlaps":[{"elements":["a","b"],
+                                "evidence":"human owner explicitly reviewed both layers"}]}
+    pipeline.verify_art_overlaps(p,members,tmp_path,cfg)

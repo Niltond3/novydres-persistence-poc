@@ -115,35 +115,114 @@ def check_canonical_pois(zone_path,plan):
                                ", ".join(sorted(required.symmetric_difference(found))))
 
 
-def validate_work_unit_bindings(zone,report):
-    """Every planned unit must own exactly one atomic lot asset."""
+def validate_work_unit_bindings(zone,report,plan=None):
+    """Every rendered asset belongs to one work unit and no global network layer."""
     expected={u["id"]:u for u in report["work_units"]}
     bound={}
+    local={"lot","special_building","poi","finish"}
+    designs={}
+    context=None
     for e in zone["elements"]:
         uid=e.get("work_unit_id")
         if uid not in expected:
             raise core.Invalid(e["id"]+": absent or invalid work_unit_id")
+        if e["kind"] not in local:
+            raise core.Invalid(e["id"]+": global infrastructure is not a local art asset")
         if e["kind"]=="lot":
             if uid in bound:
                 raise core.Invalid(uid+": duplicate atomic lot asset")
             if e["core"]!=expected[uid]["bbox"]:
                 raise core.Invalid(uid+": asset core differs from planned work unit")
             bound[uid]=e
+            continue
+        if not core.rect(e["core"]) or not core.inside(e["core"],expected[uid]["bbox"]):
+            raise core.Invalid(e["id"]+": artistic core extends beyond its work unit")
+        building_id=e.get("building_id")
+        if e["kind"] in ("special_building","poi") or building_id:
+            if plan is None:
+                raise core.Invalid(e["id"]+": special asset requires validated building plan")
+            if uid not in designs:
+                if context is None:
+                    context=content.design_context(plan)
+                designs[uid]={b["id"]:b for b in
+                              content.design_unit(plan,report,uid,context=context)["buildings"]}
+            building=designs[uid].get(building_id)
+            if building is None or e["core"]!=building["footprint"]:
+                raise core.Invalid(e["id"]+": special asset does not match approved building footprint")
+            if e["kind"]=="poi" and (not building["site_id"] or
+                e.get("site_id")!=building["site_id"]):
+                raise core.Invalid(e["id"]+": POI asset lacks approved site identity")
     missing=expected.keys()-bound.keys()
     if missing:
         raise core.Invalid("planned work units lack bound art elements: "+", ".join(sorted(missing)[:6]))
     return bound
 
 
+def _pixel_rect(rect,scale):
+    from math import ceil
+    return tuple(round(v*scale) for v in rect)
+
+
+def verify_art_overlaps(plan,elements,assets,cfg):
+    """Two visible alpha masks cannot overlap unless approved by owner per pair."""
+    from PIL import ImageChops
+    from collections import defaultdict
+    by_unit=defaultdict(list)
+    for e in elements:
+        if e["status"]=="VERIFIED" and e.get("asset"):
+            by_unit[e["work_unit_id"]].append(e)
+    approvals=plan.get("owner_art_approval",{})
+    approved=set()
+    if plan.get("owner_art_authorized") is True and approvals.get("decision")=="APPROVED":
+        for item in approvals.get("authorized_overlaps",[]):
+            pair=item.get("elements",[])
+            if (len(pair)==2 and pair[0]!=pair[1] and
+                isinstance(item.get("evidence"),str) and len(item["evidence"])>=16):
+                approved.add(frozenset(pair))
+    scale=cfg["detail_pixels_per_unit"]
+    for uid,members in by_unit.items():
+        for i,a in enumerate(members):
+            for b in members[i+1:]:
+                rect_a=_pixel_rect(a["envelope"],scale)
+                rect_b=_pixel_rect(b["envelope"],scale)
+                intersection=(max(rect_a[0],rect_b[0]),max(rect_a[1],rect_b[1]),
+                              min(rect_a[2],rect_b[2]),min(rect_a[3],rect_b[3]))
+                if intersection[2]<=intersection[0] or intersection[3]<=intersection[1]:
+                    continue
+                def visible(e,rect):
+                    bounds=_pixel_rect(e["envelope"],scale)
+                    crop=(intersection[0]-bounds[0],intersection[1]-bounds[1],
+                          intersection[2]-bounds[0],intersection[3]-bounds[1])
+                    with Image.open(Path(assets)/e["asset"]["path"]) as art:
+                        alpha=art.convert("RGBA").getchannel("A").crop(crop)
+                    with Image.open(Path(assets)/e["mask"]["path"]) as mask:
+                        coverage=mask.convert("L").crop(crop)
+                    return ImageChops.darker(alpha,coverage)
+                if ImageChops.darker(visible(a,rect_a),visible(b,rect_b)).getbbox() is not None:
+                    if frozenset((a["id"],b["id"])) not in approved:
+                        raise core.Invalid(uid+": unauthorized visible overlap between "+
+                                           a["id"]+" and "+b["id"])
+
+
 def verify_unit_art_masks(plan,report,elements,assets,cfg):
-    """A lot's decoded mask may paint only its own editable work-unit cells."""
+    """All local art masks, not only lots, obey exact unit + special footprints."""
     from PIL import ImageChops, ImageDraw
+    from math import ceil, floor
     context=content.design_context(plan)
     w,h=context["w"],context["h"]
     scale=cfg["detail_pixels_per_unit"]
-    for uid,e in elements.items():
+    if isinstance(elements,dict):
+        entries=[(uid,e) for uid,e in elements.items()]
+    else:
+        entries=[(e.get("work_unit_id"),e) for e in elements]
+    units={u["id"]:u for u in report["work_units"]}
+    for uid,e in entries:
         if e["status"]!="VERIFIED":
             continue
+        if uid not in units:
+            raise core.Invalid(e["id"]+": art mask has no authorized work unit")
+        if e["kind"] in ("road","rail","tram","water","terrain","ermo","bridge"):
+            raise core.Invalid(e["id"]+": global network asset cannot be painted locally")
         x0,y0,x1,y1=e["envelope"]
         left,top=round(x0*scale),round(y0*scale)
         mask_file=Path(assets)/e["mask"]["path"]
@@ -151,7 +230,7 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
             m=img.convert("L")
         allowed=Image.new("L",m.size,0)
         draw=ImageDraw.Draw(allowed)
-        unit=next(u for u in report["work_units"] if u["id"]==uid)
+        unit=units[uid]
         bx0,by0,bx1,by1=unit["bbox"]
         for y in range(by0,by1):
             for x in range(bx0,bx1):
@@ -159,8 +238,18 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
                 if context["editable"][i] and context["labels"][i]==unit["block_label"]:
                     sx,sy=x*scale-left,y*scale-top
                     draw.rectangle([sx,sy,sx+scale-1,sy+scale-1],fill=255)
+        if e["kind"] in ("special_building","poi") or e.get("building_id"):
+            core_rect=e["core"]
+            limited=Image.new("L",m.size,0)
+            dr=ImageDraw.Draw(limited)
+            dr.rectangle([ceil(core_rect[0]*scale-left),ceil(core_rect[1]*scale-top),
+                          floor(core_rect[2]*scale-left)-1,floor(core_rect[3]*scale-top)-1],
+                         fill=255)
+            allowed=ImageChops.darker(allowed,limited)
         if ImageChops.subtract(m,allowed).getbbox() is not None:
-            raise core.Invalid(uid+": art mask paints outside its assigned editable cells")
+            raise core.Invalid(e["id"]+": art mask paints outside its assigned editable cells or footprint")
+    if not isinstance(elements,dict):
+        verify_art_overlaps(plan,[e for _,e in entries],assets,cfg)
 
 
 def validate_all_unit_designs(plan,report,design_root,cfg):
@@ -268,8 +357,8 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     validate_all_unit_designs(plan,report,design_root,cfg)
     core.fail(report["generation_ready"] and all(report["gates"].values()),
               "composition contract blocked by urban/art gates")
-    bound=validate_work_unit_bindings(zone,report)
-    verify_unit_art_masks(plan,report,bound,assets,cfg)
+    bound=validate_work_unit_bindings(zone,report,plan=plan)
+    verify_unit_art_masks(plan,report,zone["elements"],assets,cfg)
     core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
               "composition contract asset hash or ownership mismatch")
     core.fail(contract.get("before_manifest_sha256")==(
@@ -371,7 +460,7 @@ def run(args):
         return state("SPATIAL_VALIDATION",nxt,blockers,spatial_path,report)
 
     if zone["status"]!="SKETCH_APPROVED":
-        bound=validate_work_unit_bindings(zone,report)
+        bound=validate_work_unit_bindings(zone,report,plan=plan)
     if zone["status"]=="SKETCH_APPROVED":
         return state("ART_AUTHORIZED","PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT",
                      ["Spatial contract passed; create verified generation jobs only, not a release."],
@@ -396,7 +485,7 @@ def run(args):
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
     core.audit_zone(zone,cfg,args.assets,strict=True)
-    verify_unit_art_masks(plan,report,bound,args.assets,cfg)
+    verify_unit_art_masks(plan,report,zone["elements"],args.assets,cfg)
     contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
                                        report,args.reference,args.assets,args.before)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
