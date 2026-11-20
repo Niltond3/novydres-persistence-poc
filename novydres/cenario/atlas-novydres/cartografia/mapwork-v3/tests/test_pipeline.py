@@ -290,7 +290,8 @@ def test_existing_neighbor_manifest_without_mate_is_not_a_reservation():
     cfg=core.load(ROOT/"config.json")
     authority=hashlib.sha256(json.dumps(p["transport"],sort_keys=True,separators=(",",":")).encode()).hexdigest()
     p["neighbor_seams"]=[{"id":"SEAM","from_zone":"test-city","to_zone":"peer",
-                          "point":[2,22],"kind":"road","width_units":2,"profile":"ground",
+                          "point":[2,32],"kind":"road","width_units":3,"profile":"urban_at_grade",
+                          "level":0,"network_edge_id":"AV-01","network_node_id":"W",
                           "reservation_status":"APPROVED_SCOPED","authority_sha256":authority}]
     with pytest.raises(urban.ContractError,match="existing neighbor seam differs"):
         urban.plan_city(p,cfg,neighbor_manifests={"peer":{"seams":[]}})
@@ -354,7 +355,8 @@ def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_pa
     monkeypatch.setattr(pipeline,"ROOT",fake)
     authority=hashlib.sha256(json.dumps(p["transport"],sort_keys=True,separators=(",",":")).encode()).hexdigest()
     p["neighbor_seams"]=[{"id":"X","from_zone":"test-city","to_zone":"peer",
-                          "point":[2,22],"kind":"road","width_units":2,"profile":"ground",
+                          "point":[2,32],"kind":"road","width_units":3,"profile":"urban_at_grade",
+                          "level":0,"network_edge_id":"AV-01","network_node_id":"W",
                           "reservation_status":"APPROVED_SCOPED","authority_sha256":authority}]
     peers=pipeline.load_verified_neighbors(p)
     assert "peer" in peers
