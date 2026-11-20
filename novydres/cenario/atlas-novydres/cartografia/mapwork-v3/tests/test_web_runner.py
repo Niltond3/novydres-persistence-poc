@@ -24,6 +24,7 @@ def test_hosted_bootstrap_emits_content_hashes_without_private_media(tmp_path,mo
 
 def test_browser_request_rejects_stale_parent_before_pipeline(tmp_path,monkeypatch):
     monkeypatch.setenv("GITHUB_EVENT_NAME","push")
+    monkeypatch.setenv("GITHUB_SHA","c"*40)
     monkeypatch.setattr(web_runner,"parent_commit",lambda:"1"*40)
     monkeypatch.setattr(web_runner,"checked_path",lambda p,**kw:tmp_path/"request.json")
     core.save(tmp_path/"request.json",{
@@ -46,15 +47,15 @@ def test_push_request_discovery_uses_checked_out_git_diff(monkeypatch):
     monkeypatch.setenv("GITHUB_SHA","b"*40)
     def fake_check_output(args,**kwargs):
         if "rev-parse" in args:
-            return "b"*40+"\\n"
+            return "b"*40+"\n"
         return ("novydres/cenario/atlas-novydres/cartografia/mapwork-v3/"
-                "web-requests/kingswell.json\\n")
+                "web-requests/kingswell.json\n")
     monkeypatch.setattr(web_runner.subprocess,"check_output",fake_check_output)
     assert web_runner.discover_request_from_push()=="web-requests/kingswell.json"
 
 
 def test_push_request_rejects_mismatched_checkout(monkeypatch):
     monkeypatch.setenv("GITHUB_SHA","b"*40)
-    monkeypatch.setattr(web_runner.subprocess,"check_output",lambda *a,**kw:"a"*40+"\\n")
+    monkeypatch.setattr(web_runner.subprocess,"check_output",lambda *a,**kw:"a"*40+"\n")
     with pytest.raises(core.Invalid,match="checkout differs"):
         web_runner.discover_request_from_push()

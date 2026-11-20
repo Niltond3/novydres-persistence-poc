@@ -341,6 +341,7 @@ def test_legacy_compare_and_validate_cannot_claim_operational_pass():
 def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_path,monkeypatch):
     p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
     p["fixture_mode"]=False
+    p["source_sha256"]=core.load(ROOT/"config.json")["reference"]["sha256"]
     fake=tmp_path/"mapwork"
     path=fake/"zones"/"peer";path.mkdir(parents=True)
     core.save(path/"zone.json",{"id":"peer","status":"SKETCH_APPROVED"})
@@ -381,3 +382,23 @@ def test_work_unit_mask_cannot_paint_outside_its_exact_editable_area(tmp_path):
     element={"id":"E","status":"VERIFIED","mask":{"path":"outside.png"},"envelope":env}
     with pytest.raises(core.Invalid,match="outside its assigned editable cells"):
         pipeline.verify_unit_art_masks(p,report,{u["id"]:element},assets,cfg)
+
+
+def test_placed_poi_is_occupant_with_street_access_in_atomic_unit():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    context=urban_content.design_context(p)
+    cell=next(i for i,v in enumerate(context["editable"]) if v and i in context["distance"])
+    x,y=cell%64,cell//64
+    block_id=context["blocks"][context["labels"][cell]-1]["id"]
+    p["special_sites"]=[{"id":"POI-ACCESS","block_id":block_id,
+                         "point":[x+0.5,y+0.5],"entrance":[x+0.5,y+0.5],
+                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8]}]
+    report=urban.plan_city(p,cfg)
+    unit=next(u for u in report["work_units"]
+              if u["block_label"]==context["labels"][cell]
+              and u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3])
+    design=urban_content.design_unit(p,report,unit["id"])
+    sites=[building for building in design["buildings"] if building["site_id"]=="POI-ACCESS"]
+    assert len(sites)==1 and sites[0]["road_access_steps"] is not None
+    assert sites[0]["use"]=="special_site" and design["access_verified"]
