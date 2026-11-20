@@ -223,6 +223,13 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
     }
     batch={"schema":"NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1","images":[receipt]}
     assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)==1
+    more={"id":"WU-UNCHANGED","bbox":[6,2,10,6]}
+    assert pipeline.verify_native_manifest(
+        batch,zone,{"work_units":[unit,more]},cfg,assets,
+        active_units={uid})==1
+    with pytest.raises(core.Invalid,match="changed work units"):
+        pipeline.verify_native_manifest(
+            batch,zone,{"work_units":[unit,more]},cfg,assets)
     batch["images"][0]["visual_review"]["status"]="NOT_CHECKED"
     with pytest.raises(core.Invalid,match="visual inspection receipt"):
         pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
@@ -278,3 +285,15 @@ def test_v33_pipeline_enters_capability_gate_without_fabricated_data(tmp_path):
     assert result["publication_authorized"] is False
     with pytest.raises(SystemExit):
         pipeline.main(["run","--district","kingswell","--execute"])
+
+
+def test_affected_units_only_include_authorized_edit_pixels():
+    import pipeline
+    work={"work_units":[{"id":"A","bbox":[0,0,8,8]},
+                        {"id":"B","bbox":[8,0,16,8]}]}
+    mask=Image.new("L",(16,8),0)
+    mask.putpixel((9,2),255)
+    assert pipeline.affected_unit_ids(work,mask)=={"B"}
+    assert pipeline.affected_unit_ids(work,None)=={"A","B"}
+    with pytest.raises(core.Invalid,match="no planned work-unit coverage"):
+        pipeline.affected_unit_ids(work,Image.new("L",(16,8),0))
