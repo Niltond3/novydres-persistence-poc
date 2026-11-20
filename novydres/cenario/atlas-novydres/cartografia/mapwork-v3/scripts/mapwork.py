@@ -93,7 +93,11 @@ def audit_zone(z, cfg, assets=None, strict=False):
     for c in z['connectors']:
         fail(c['neighbor'] in z['neighbors'],f"{c['id']}: neighbor not declared")
         fail(bounds[0]<=c['x']<=bounds[2] and bounds[1]<=c['y']<=bounds[3],f"{c['id']}: outside bounds")
-        fail(any(abs(c['x']-bounds[i])<1e-9 for i in (0,2)) or any(abs(c['y']-bounds[i])<1e-9 for i in (1,3)),f"{c['id']}: connector not on boundary")
+        candidate_polygon_seam=(z['status']=='SKETCH_APPROVED' and z.get('checkpoint',{}).get('border_anchor_mode')=='SKETCH_POLYGON_CANDIDATE')
+        if candidate_polygon_seam:
+            fail(not strict,f"{c['id']}: candidate polygon seam is not strict-verified")
+        else:
+            fail(any(abs(c['x']-bounds[i])<1e-9 for i in (0,2)) or any(abs(c['y']-bounds[i])<1e-9 for i in (1,3)),f"{c['id']}: connector not on boundary")
     if strict:
         fail(z['sketch_approved'],'sketch needs owner approval')
         fail(all(e['status']=='VERIFIED' for e in z['elements']),'unverified element')
