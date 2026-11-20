@@ -19,6 +19,8 @@ from PIL import Image
 import mapwork as core
 import urban_architecture as urban
 import urban_content as content
+import v33_contracts as v33
+import v33_flow
 
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA="NOVYDRES_MAPWORK_V32_PIPELINE_CHECKPOINT_1"
@@ -375,6 +377,8 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
 
 
 def run(args):
+    if getattr(args,"intent",None) and not getattr(args,"v33_verified",False):
+        return v33_flow.run(args,run)
     cfg=core.load(core.CONFIG)
     core.config_check(cfg)
     zone_path=resolve_zone(args.district,args.zone)
@@ -384,13 +388,14 @@ def run(args):
                           blockers=["Resolve district subject ID, canonical boundaries, neighbors and source SHA from GitHub master; do not invent geometry."])
     zone=core.load(zone_path)
     district=zone["id"]
-    core.audit_zone(zone,cfg,strict=False)
+    core.audit_zone(zone,cfg,strict=False,
+                    v33_verified=getattr(args,"v33_verified",False))
     def state(phase,action,blockers=(),spatial_path=None,report=None,artifacts=None):
         return checkpoint(district=district,zone_path=zone_path,zone=zone,
                           phase=phase,action=action,blockers=blockers,
                           spatial_path=spatial_path,architectural_report=report,artifacts=artifacts)
 
-    if zone["status"]=="PLANNING":
+    if zone["status"]=="PLANNING" and not getattr(args,"v33_verified",False):
         if not zone.get("research"):
             return state("RESEARCH","RESEARCH_ANALOGUES",
                          ["Record dated URLs and architecture/urbanism analogues before decisions."])
@@ -401,7 +406,7 @@ def run(args):
             return state("TECHNICAL_SKETCH","PRESENT_INTEGRAL_SKETCH_FOR_OWNER_APPROVAL",
                          ["Include global transport, water, urban blocks, buildings, POIs and neighboring zones."])
 
-    if not zone["sketch_approved"]:
+    if not zone["sketch_approved"] and not getattr(args,"v33_verified",False):
         return state("TECHNICAL_SKETCH","WAIT_EXPLICIT_SKETCH_APPROVAL")
 
     spatial_path=Path(args.spatial) if args.spatial else zone_path.parent/"global-spatial-v31.json"
@@ -418,6 +423,11 @@ def run(args):
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=args.reference,
                            neighbor_manifests=load_verified_neighbors(plan))
+    if getattr(args,"v33_verified",False):
+        # V3.3 proposal register + exact installation inventory were validated
+        # BEFORE calling this legacy spatial engine. The old blanket owner-art
+        # approval is no longer an additional approval ceremony.
+        report["gates"]["owner_art_authorized"]=True
     # Urban design is a mandatory deterministic phase, not an image-side suggestion.
     # A real declarative map can be planned in a hosted runner without private U02
     # bytes. Byte verification remains a hard gate before image generation/composition.
@@ -484,13 +494,51 @@ def run(args):
         raise core.Invalid("approved release exists: --before is mandatory to preserve its tiles")
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
-    core.audit_zone(zone,cfg,args.assets,strict=True)
+    core.audit_zone(zone,cfg,args.assets,strict=True,
+                    v33_verified=getattr(args,"v33_verified",False))
     verify_unit_art_masks(plan,report,zone["elements"],args.assets,cfg)
     contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
                                        report,args.reference,args.assets,args.before)
+    edit_mask=None
+    if getattr(args,"v33_verified",False):
+        intent=core.load(args.intent)
+        registration={
+            "intent_path":str(Path(args.intent).resolve()),
+            "intent_sha256":fingerprint(args.intent),
+            "decisions_path":str(Path(args.decisions_file).resolve()),
+            "decisions_sha256":fingerprint(args.decisions_file),
+            "inventory_path":str(Path(args.inventory_file).resolve()),
+            "inventory_sha256":fingerprint(args.inventory_file),
+            "scope_index_path":str(Path(args.scope_index or ROOT/"scope-index.json").resolve())
+        }
+        contract["v33"]=registration
+        if intent["mode"]!="CREATE_REGION":
+            if not args.editable_mask:
+                raise core.Invalid("V3.3 refinement requires --editable-mask")
+            with Image.open(args.editable_mask) as im:
+                edit_mask=im.convert("L")
+            v33.validate_edit_mask(edit_mask,intent["intervention"]["bounds"],protection)
+            registration["edit_mask_sha256"]=fingerprint(args.editable_mask)
+            registration["edit_mask_path"]=str(Path(args.editable_mask).resolve())
+        if not args.image_receipts:
+            raise core.Invalid("V3.3 native-image provenance receipts required")
+        receipts=core.load(args.image_receipts)
+        if receipts.get("schema")!="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1":
+            raise core.Invalid("invalid native-image receipt batch")
+        byid={r["work_unit_id"]:r for r in receipts["images"]}
+        if set(byid)!={u["id"] for u in report["work_units"]}:
+            raise core.Invalid("missing or extra native-image unit receipts")
+        for unit in report["work_units"]:
+            uid=unit["id"]
+            v33.image_receipt(byid[uid],expected_size=[
+                (unit["bbox"][2]-unit["bbox"][0])*cfg["detail_pixels_per_unit"],
+                (unit["bbox"][3]-unit["bbox"][1])*cfg["detail_pixels_per_unit"]
+            ],work_unit_id=uid)
+        registration["image_receipts_path"]=str(Path(args.image_receipts).resolve())
+        registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
                             approved_before=args.before,protected_u02=protection,
-                            contract=contract)
+                            edit_mask_u02=edit_mask,contract=contract)
     comparison=out/"comparison.html"
     result=core.html_compare(args.before,tiles,args.reference,comparison,cfg)
     return state("CANDIDATE_READY_FOR_OWNER_REVIEW","SHOW_COMPLETE_BEFORE_AFTER",
@@ -514,6 +562,14 @@ def main(argv=None):
     p.add_argument("--out",help="candidate output only; no canon write")
     p.add_argument("--execute",action="store_true",help="compose only if all planning and art gates pass")
     p.add_argument("--checkpoint",help="write deterministic resumable checkpoint JSON")
+    p.add_argument("--intent",help="agent-resolved and canonical-indexed V3.3 request JSON")
+    p.add_argument("--scope-index",help="exact canonical subject/index snapshot")
+    p.add_argument("--capabilities",help="host capabilities with actual execution receipts")
+    p.add_argument("--research-file",help="external analogues including two independent domains")
+    p.add_argument("--decisions-file",help="owner-signed proposal and decision register")
+    p.add_argument("--inventory-file",help="full approved installation inventory")
+    p.add_argument("--image-receipts",help="materialized native image receipts per work unit")
+    p.add_argument("--editable-mask",help="owner-scoped U02 intervention mask for refinement")
     args=p.parse_args(argv)
     try:
         result=run(args)
@@ -521,7 +577,7 @@ def main(argv=None):
             core.save(args.checkpoint,result)
         print(json.dumps({"status":"PASS","result":result},ensure_ascii=False,indent=2))
         return 0
-    except (core.Invalid,urban.ContractError,KeyError,ValueError,OSError) as exc:
+    except (core.Invalid,urban.ContractError,v33.Blocked,KeyError,ValueError,OSError) as exc:
         print(json.dumps({"status":"FAIL","error":str(exc)},ensure_ascii=False),file=sys.stderr)
         return 2
 
