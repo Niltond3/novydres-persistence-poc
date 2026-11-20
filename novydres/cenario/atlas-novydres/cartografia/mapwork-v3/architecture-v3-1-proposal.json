@@ -1,6 +1,6 @@
 {
   "schema": "NOVYDRES_MAPWORK_V3_ARCHITECTURE_AUDIT_1",
-  "status": "ARCHITECTURE_V31_ENGINE_IMPLEMENTED_REAL_ZONE_INPUT_PENDING",
+  "status": "V31_CORE_ENGINE_IMPLEMENTED_REAL_U02_DATA_PENDING",
   "date": "2026-11-20",
   "approved_user_artifact": "U02_KW_SKETCH_02",
   "preservation": {
@@ -65,5 +65,16 @@
   "last_engine_component": "scripts/urban_architecture.py",
   "real_kingswell_readiness": "NOT_READY; global transport inventory and full territory polygons not materialized",
   "implemented_at": "2026-11-20",
-  "owner_clarification": "Quadrant/quarteirão defined by at-grade streets and physical barriers is the city lot. Buildings/factories/POIs are contents, atomic art units are independent implementation subdivisions."
+  "owner_clarification": "Quadrant/quarteirão defined by at-grade streets and physical barriers is the city lot. Buildings/factories/POIs are contents, atomic art units are independent implementation subdivisions.",
+  "implemented_modules": [
+    "scripts/urban_architecture.py",
+    "schemas/urban_architecture_v31.schema.json",
+    "fixtures/topology-v31-synthetic.json",
+    "tests/test_urban_architecture.py",
+    "scripts/mapwork.py (audit and next integration)",
+    "architecture-v3-1-transport.md"
+  ],
+  "original_approved_sketch_scope": "MACRO (U02_KW_SKETCH_02) only; no detailed block network extracted",
+  "transport_first_owner_decision": "Urban lot = physical road-bounded quadrant, buildings/POIs/industry are its contents; work unit is operational subpart.",
+  "gates_real_kingswell": "BLOCKED: real network vectors, territory classification and matched masks missing"
 }

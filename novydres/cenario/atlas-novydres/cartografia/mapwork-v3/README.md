@@ -1,4 +1,4 @@
-# Novydres Mapwork V3 — piloto de infraestrutura (não canônico)
+# Novydres Mapwork V3 — infraestrutura de composição e arquitetura urbana V3.1 (não canônica)
 
 **Propósito:** gerar arte 2D por lote (edifício individual só por exceção), compor mosaicos globais em alta resolução, preservar escala U02, checar conectores e entregar comparação ANTES/DEPOIS completa. Este pacote **não** gera arte com IA por conta própria: o agente no ChatGPT pesquisa, chama ferramenta de imagem quando autorizado, baixa e envia assets via Google Drive, confere o readback, atualiza manifestos no GitHub e só então usa o compositor local.
 
@@ -38,3 +38,12 @@ Execute da pasta `mapwork-v3/`. `--before` pode ser omitido apenas na primeira v
 - A escala física, altura de pavimentos e limites exatos da Cidade Velha ainda precisam de decisão. A camada de base U02 ampliada ainda será baixa resolução fora das regiões substituídas.
 - O HTML embute tiles PNG em base64. Em zonas grandes, dividir entrega por conjunto de tiles/trechos inspecionáveis; manter mapa integral como visão de contexto. Não prometer um único arquivo leve para milhares de tiles.
 - O presente pacote prova o mecanismo com fixtures sintéticas, **não a geração artística real da Cidade Velha**.
+
+
+## V3.1 — Transporte estrutura os lotes
+
+Um **lote urbano** é um quarteirão/quadrante delimitado por vias, linhas ferroviárias ao nível do solo, água e outras barreiras urbanas. Dentro do lote distribuem-se edifícios, fábricas, pátios e POIs. Uma `work_unit` é apenas uma parcela operacional de geração/máscara e pode haver muitas work units no mesmo lote. A contagem de lotes é derivada da malha, não escolhida como 14 por antecedência.
+
+A camada `scripts/urban_architecture.py` define rede global de ruas/avenidas/expressas, trevos, viadutos, cruzamentos, ferrovias, ramais, bondes e hidrografia, verificando níveis, conectividade, classificação territorial 100%, morfologia por uso/altura, formação de quarteirões e distribuição exata dos pixels editáveis nas work units. O motor preserva a autoridade da U02, separa cruzamentos reais de passagens elevadas e exige máscaras e costuras bilaterais antes da geração de arte. Consulte `architecture-v3-1-transport.md`.
+
+**Kingswell:** U02_KW_SKETCH_02 aprovado no nível **macro**; a rede real da U02 e a classificação integral ainda não foram extraídas. Os 14 retângulos históricos são janelas candidatas cobrindo 16,32% do polígono total, não lotes da cidade. Testes sintéticos da arquitetura não comprovam que Kingswell esteja pronto para arte.
