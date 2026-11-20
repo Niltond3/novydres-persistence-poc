@@ -30,3 +30,5 @@ O plano original de seis famílias e sete grupos está preservado em `preparacao
 | KW-L14 | `389,963,545,1021` | `388,962,546,1022` | KW-GEN-05 |
 
 **Próxima ação determinística:** subdividir macrolotes, construir máscaras geométricas, encaixar conectores físicos no raster U02 e validar continuidade bilateral. Sem imagens.
+
+**Ajuste de implantação auditado:** L14 deslocado da área costeira rochosa para a faixa urbano-industrial sudoeste (core `338,905,357,953`), sem modificar o esboço aprovado ou a U02. A ferrovia regional continua fora do domínio de Kingswell.

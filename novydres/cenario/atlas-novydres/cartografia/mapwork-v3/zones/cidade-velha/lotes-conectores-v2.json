@@ -763,23 +763,24 @@
       ],
       "bleed_risk": "medium",
       "core": [
-        389,
-        963,
-        545,
-        1021
+        338,
+        905,
+        357,
+        953
       ],
       "envelope": [
-        388,
-        962,
-        546,
-        1022
+        337,
+        904,
+        358,
+        954
       ],
       "units": "U02_reference_pixels",
       "frame_type": "technical_generation_window_not_cadastral_boundary",
       "mask_policy": "preserve_all_U02_roads_rail_water_bridges_and_edges_outside_approved_editable_pixels",
       "geometry_status": "RECTANGULAR_ENVELOPE_SEEDED_NOT_PIXEL_MASK_VERIFIED",
       "atomic_subdivision_max_units": 16,
-      "asset_status": "PENDING_NOT_GENERATED"
+      "asset_status": "PENDING_NOT_GENERATED",
+      "geometry_revision_note": "Technical visual audit of full U02 corrected a prior window that fell on rocky/snowy coastal terrain. New L14 core is in the southwestern urban/industrial edge; off-zone railway remains global-only."
     }
   ],
   "external_connectors": [

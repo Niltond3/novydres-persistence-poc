@@ -271,12 +271,15 @@ def test_detail_macrolots_and_seams_are_persisted_but_not_art_ready():
 def test_macrolot_overlap_is_rejected():
     cfg,z,plan,g,d=detail_inputs()
     d['lots'][1]['core']=d['lots'][0]['core'][:]
+    d['lots'][1]['envelope']=d['lots'][0]['envelope'][:]
+    e=next(e for e in z['elements'] if e['id']=='KW-L02')
+    e['core']=d['lots'][1]['core'][:];e['envelope']=d['lots'][1]['envelope'][:]
     with pytest.raises(m.Invalid,match='overlapping macro-lot cores'):
         m.validate_detail_preparation(d,z,plan,g,cfg)
 
 def test_poi_not_inside_core_is_rejected():
     cfg,z,plan,g,d=detail_inputs()
-    d['lots'][1]['core']=[660,760,680,780]
+    d['lots'][0]['contains'].append('poi-14')
     with pytest.raises(m.Invalid,match='POI outside lot core'):
         m.validate_detail_preparation(d,z,plan,g,cfg)
 
