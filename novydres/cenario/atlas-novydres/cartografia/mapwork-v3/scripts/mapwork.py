@@ -596,7 +596,8 @@ def main():
     try:
         config_check(cfg)
         if args.cmd=='audit': result=audit_repository(cfg,load(STATE))
-        elif args.cmd=='next':result=next_action(load(args.zone))
+        elif args.cmd in ('next','render'):
+            raise Invalid('legacy next/render CLI disabled; use scripts/pipeline.py run for all state transitions and composition')
         elif args.cmd=='compare':result=html_compare(args.before,args.after,args.base,args.out,cfg)
         else:
             zones=[load(path) for path in args.zones]
