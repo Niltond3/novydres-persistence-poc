@@ -40,3 +40,21 @@ def test_browser_request_rejects_traversal(tmp_path):
         web_runner.checked_path("../../world-state.json",prefix="web-requests")
     with pytest.raises(core.Invalid,match="web-requests"):
         web_runner.checked_path("zones/cidade-velha/zone.json",prefix="web-requests")
+
+
+def test_push_request_discovery_uses_checked_out_git_diff(monkeypatch):
+    monkeypatch.setenv("GITHUB_SHA","b"*40)
+    def fake_check_output(args,**kwargs):
+        if "rev-parse" in args:
+            return "b"*40+"\\n"
+        return ("novydres/cenario/atlas-novydres/cartografia/mapwork-v3/"
+                "web-requests/kingswell.json\\n")
+    monkeypatch.setattr(web_runner.subprocess,"check_output",fake_check_output)
+    assert web_runner.discover_request_from_push()=="web-requests/kingswell.json"
+
+
+def test_push_request_rejects_mismatched_checkout(monkeypatch):
+    monkeypatch.setenv("GITHUB_SHA","b"*40)
+    monkeypatch.setattr(web_runner.subprocess,"check_output",lambda *a,**kw:"a"*40+"\\n")
+    with pytest.raises(core.Invalid,match="checkout differs"):
+        web_runner.discover_request_from_push()

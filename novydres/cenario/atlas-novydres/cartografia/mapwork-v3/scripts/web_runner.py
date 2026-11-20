@@ -42,11 +42,15 @@ def parent_commit():
 
 
 def discover_request_from_push():
-    event=Path(os.environ["GITHUB_EVENT_PATH"])
-    data=json.loads(event.read_text(encoding="utf-8"))
+    """Use the checked-out commit, not incomplete push event payload file lists."""
     prefix="novydres/cenario/atlas-novydres/cartografia/mapwork-v3/web-requests/"
-    changed={p[len(prefix):] for c in data.get("commits",[])
-             for key in ("added","modified") for p in c.get(key,[])
+    checked_out=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip()
+    if checked_out!=os.environ.get("GITHUB_SHA"):
+        raise core.Invalid("runner checkout differs from the triggering SHA")
+    changed_paths=subprocess.check_output(
+        ["git","diff-tree","--no-commit-id","--name-only","-r","HEAD"],
+        cwd=ROOT,text=True).splitlines()
+    changed={p[len(prefix):] for p in changed_paths
              if p.startswith(prefix) and p.endswith(".json")}
     if len(changed)>1:
         raise core.Invalid("web runner requires at most one committed request per push")
@@ -70,7 +74,7 @@ def run_request(*, district=None, request=None, out):
             raise core.Invalid("invalid request ID")
         if not re.fullmatch(r"[0-9a-f]{40}",payload.get("expected_parent_sha","")):
             raise core.Invalid("request must bind to a full expected parent SHA")
-        if os.environ.get("GITHUB_EVENT_NAME")=="push" and parent_commit()!=payload["expected_parent_sha"]:
+        if os.environ.get("GITHUB_SHA") and parent_commit()!=payload["expected_parent_sha"]:
             raise core.Invalid("stale or non-CAS web request: parent commit differs")
         district=payload.get("district")
         zone=str(checked_path(payload["zone_path"])) if payload.get("zone_path") else None

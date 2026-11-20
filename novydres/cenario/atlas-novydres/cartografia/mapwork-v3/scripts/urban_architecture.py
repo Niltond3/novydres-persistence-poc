@@ -763,20 +763,6 @@ def verify_no_protected_edits(original, modified, protected_indices):
 
 def cli():
     raise SystemExit("urban_architecture.py is internal only; use scripts/pipeline.py run")
-    p=argparse.ArgumentParser(description="Topology-first urban architecture V3.1")
-    p.add_argument("manifest",type=Path)
-    p.add_argument("--config",type=Path,required=True)
-    p.add_argument("--report",type=Path)
-    p.add_argument("--reference",type=Path,help="actual immutable U02 PNG; required for real generation readiness")
-    args=p.parse_args()
-    manifest=json.loads(args.manifest.read_text(encoding="utf-8"))
-    cfg=json.loads(args.config.read_text(encoding="utf-8"))
-    report=plan_city(manifest,cfg,reference_file=args.reference)
-    txt=json.dumps(report,ensure_ascii=False,indent=2)
-    if args.report:
-        args.report.parent.mkdir(parents=True,exist_ok=True)
-        args.report.write_text(txt+"\n",encoding="utf-8")
-    print(txt)
 
 
 if __name__=="__main__":

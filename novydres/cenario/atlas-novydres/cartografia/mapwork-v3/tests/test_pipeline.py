@@ -336,3 +336,48 @@ def test_legacy_compare_and_validate_cannot_claim_operational_pass():
         result=subprocess.run([sys.executable,entry,command,*args],capture_output=True,text=True)
         assert result.returncode==2
         assert "CLI disabled" in result.stderr
+
+
+def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_path,monkeypatch):
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    p["fixture_mode"]=False
+    fake=tmp_path/"mapwork"
+    path=fake/"zones"/"peer";path.mkdir(parents=True)
+    core.save(path/"zone.json",{"id":"peer","status":"SKETCH_APPROVED"})
+    other=copy.deepcopy(p)
+    other["zone"]["id"]="peer"
+    other["neighbor_seams"]=[]
+    core.save(path/"global-spatial-v31.json",other)
+    monkeypatch.setattr(pipeline,"ROOT",fake)
+    authority=hashlib.sha256(json.dumps(p["transport"],sort_keys=True,separators=(",",":")).encode()).hexdigest()
+    p["neighbor_seams"]=[{"id":"X","from_zone":"test-city","to_zone":"peer",
+                          "point":[2,22],"kind":"road","width_units":2,"profile":"ground",
+                          "reservation_status":"APPROVED_SCOPED","authority_sha256":authority}]
+    peers=pipeline.load_verified_neighbors(p)
+    assert "peer" in peers
+    with pytest.raises(urban.ContractError,match="existing neighbor seam differs"):
+        urban.plan_city(p,core.load(ROOT/"config.json"),neighbor_manifests=peers)
+
+
+def test_legacy_pois_cannot_be_omitted_from_new_spatial_plan(tmp_path):
+    folder=tmp_path/"zone";folder.mkdir()
+    core.save(folder/"spatial-plan.json",{"pois":[{"id":"POI-MUST-SURVIVE"}]})
+    with pytest.raises(core.Invalid,match="POIs missing spatial sites"):
+        pipeline.check_canonical_pois(folder/"zone.json",{"special_sites":[]})
+
+
+def test_work_unit_mask_cannot_paint_outside_its_exact_editable_area(tmp_path):
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    report=urban.plan_city(p,cfg)
+    u=report["work_units"][0]
+    x0,y0,x1,y1=u["bbox"]
+    # Full mask over one-pixel bleed must be rejected, even inside a zone.
+    env=[x0-1 if x0>=1 else x0,y0-1 if y0>=1 else y0,x1+1,y1+1]
+    scale=cfg["detail_pixels_per_unit"]
+    assets=tmp_path/"assets";assets.mkdir()
+    mask=assets/"outside.png"
+    Image.new("L",((env[2]-env[0])*scale,(env[3]-env[1])*scale),255).save(mask)
+    element={"id":"E","status":"VERIFIED","mask":{"path":"outside.png"},"envelope":env}
+    with pytest.raises(core.Invalid,match="outside its assigned editable cells"):
+        pipeline.verify_unit_art_masks(p,report,{u["id"]:element},assets,cfg)
