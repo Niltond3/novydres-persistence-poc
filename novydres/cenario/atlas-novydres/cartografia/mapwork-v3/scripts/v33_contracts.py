@@ -235,6 +235,26 @@ def image_receipt(receipt, *, expected_size, work_unit_id):
             "work_unit_id": work_unit_id}
 
 
+def validate_edit_mask(edit_mask, bounds, protected):
+    """An owner-defined 2D intervention cannot implicitly extend across the atlas."""
+    from PIL import ImageDraw
+    require(edit_mask.mode == "L" and edit_mask.size == protected.size,
+            "edit/protection masks must align to immutable U02 resolution")
+    require(rect(bounds), "authorized edit bounds required")
+    x0,y0,x1,y1 = bounds
+    allowed=Image.new("L",edit_mask.size,0)
+    draw=ImageDraw.Draw(allowed)
+    from math import ceil, floor
+    draw.rectangle((ceil(x0),ceil(y0),floor(x1)-1,floor(y1)-1),fill=255)
+    require(edit_mask.getbbox() is not None,
+            "empty edit mask cannot authorize arbitrary image changes")
+    require(ImageChops.subtract(edit_mask,allowed).getbbox() is None,
+            "edit mask leaks outside authorized intervention")
+    require(ImageChops.darker(edit_mask,protected).getbbox() is None,
+            "edit mask overlaps protected canonical infrastructure")
+    return {"editable_pixels":sum(1 for p in edit_mask.tobytes() if p)}
+
+
 def verify_edit_pixels(before, after, editable, protected):
     """Pixel-exact exclusion outside approved edit area, including preapproved art."""
     require(before.size == after.size == editable.size == protected.size,
