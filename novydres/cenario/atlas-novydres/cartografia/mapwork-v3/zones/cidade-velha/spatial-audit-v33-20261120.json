@@ -85,12 +85,49 @@
     "po_is_sited_and_accessible": false,
     "unit_edit_masks_verified": false,
     "art_permitted": false,
-    "candidate_before_after_generated": false
+    "candidate_before_after_generated": false,
+    "metro_editorial_direction_resolved": true,
+    "metro_technical_alignment_validated": false
   },
   "user_approval": {
     "sketch": "APPROVED_U02_KW_SKETCH_02",
     "end_art": false,
     "canon": false
   },
-  "next_action": "BUILD_REAL_V33_GLOBAL_SPATIAL_MANIFEST_FROM_U02_AND_GROUNDED_NEIGHBOR_SEAMS"
+  "next_action": "V33_SPATIAL_FOUNDATION: CLASSIFY_REAL_U02_SURFACE_AND_VALIDATE_BILATERAL_CONNECTORS_THEN_DERIVE_UNDERGROUND_ROUTE_WITH_CORE_EXCLUSION",
+  "metro_v33_option_a": {
+    "approval_id": "KW-PROP-006",
+    "status": "APPROVED_EDITORIAL_WITH_TECHNICAL_RESTRICTIONS",
+    "approval_source": "decisions-v33-20261120.json",
+    "sketch_reference": "esboco-integral-u02-v2.json",
+    "plan_source": "spatial-plan.json",
+    "historical_core_sector": "KW-HIST",
+    "pixel_center_audit": {
+      "core_area": 12111,
+      "core_within_raion": true,
+      "core_worker_overlap": 2079,
+      "core_exclusion_takes_precedence": true,
+      "possible_expansion_union_excluding_core": 93774,
+      "mask_four_neighbor_components": 2,
+      "component_summaries": [
+        {
+          "area_pixels": 53065,
+          "sector_ids": [
+            "KW-WORKER",
+            "KW-EDGE"
+          ]
+        },
+        {
+          "area_pixels": 40709,
+          "sector_ids": [
+            "KW-WEST",
+            "KW-TRANS"
+          ]
+        }
+      ]
+    },
+    "semantic_limit": "These are conceptual sketch polygons, not authorized metro centerlines, physical tunnel viability, validated neighbor seams or station siting.",
+    "no_hydrography_or_actual_underground_rail_verified": true,
+    "no_new_tunnel_station_portal_authorized": true
+  }
 }
