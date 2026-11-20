@@ -44,7 +44,7 @@ def test_e2e_tiles_compare(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
     for z in zones:assert m.audit_zone(z,cfg,assets,True)['elements']==1
     assert m.connector_match(zones)['verified_adjacent_zone_pairs']==1
-    tile_dir=tmp_path/'tiles';result=m.composite(zones,cfg,base,assets,tile_dir)
+    tile_dir=tmp_path/'tiles';result=m._compose_tiles(zones,cfg,base,assets,tile_dir)
     assert result['tiles'] and m.verify_tiles(result,tile_dir,cfg)==len(result['tiles'])
     html=tmp_path/'comparison.html';info=m.html_compare(None,tile_dir,base,html,cfg)
     assert info['after_tiles']==len(result['tiles'])

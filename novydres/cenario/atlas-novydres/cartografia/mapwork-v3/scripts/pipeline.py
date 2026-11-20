@@ -161,6 +161,96 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
             raise core.Invalid(uid+": art mask paints outside its assigned editable cells")
 
 
+def _asset_fingerprints(zone,assets):
+    """Bind every rendered layer, including special buildings and finish layers."""
+    result={}
+    for e in zone["elements"]:
+        if e["status"]!="VERIFIED":
+            continue
+        result[e["id"]]={
+            "asset":fingerprint(Path(assets)/e["asset"]["path"]),
+            "mask":fingerprint(Path(assets)/e["mask"]["path"])
+        }
+    return result
+
+
+def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
+                              base,assets,before):
+    """Content-addressed capability description; never just a boolean pass flag."""
+    return {
+        "schema":"NOVYDRES_MAPWORK_V32_COMPOSITION_CONTRACT_1",
+        "zone_path":str(zone_path),
+        "zone_sha256":fingerprint(zone_path),
+        "spatial_path":str(spatial_path),
+        "spatial_sha256":fingerprint(spatial_path),
+        "design_root":str(design_root),
+        "design_sha256":{u["id"]:fingerprint(Path(design_root)/(u["id"]+".json"))
+                         for u in report["work_units"]},
+        "reference_sha256":fingerprint(base),
+        "asset_sha256":_asset_fingerprints(zone,assets),
+        "before_manifest_sha256":fingerprint(Path(before)/"tiles.json") if before else None,
+        "world_state_sha256":fingerprint(core.STATE)
+    }
+
+
+def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_u02):
+    """Rebuild all authorization gates at use time, then verify input hash binding."""
+    core.fail(contract.get("schema")=="NOVYDRES_MAPWORK_V32_COMPOSITION_CONTRACT_1",
+              "invalid composition contract schema")
+    core.fail(len(zones)==1 and cfg==core.load(core.CONFIG),
+              "composition contract requires the current repository configuration and one zone")
+    zone_path=Path(contract["zone_path"])
+    spatial_path=Path(contract["spatial_path"])
+    design_root=Path(contract["design_root"])
+    core.fail(zone_path.is_file() and spatial_path.is_file(),
+              "composition contract source files missing")
+    core.fail(fingerprint(zone_path)==contract.get("zone_sha256") and
+              fingerprint(spatial_path)==contract.get("spatial_sha256") and
+              fingerprint(base)==contract.get("reference_sha256") and
+              fingerprint(core.STATE)==contract.get("world_state_sha256"),
+              "stale pipeline composition contract: source hash changed")
+    zone=core.load(zone_path)
+    plan=core.load(spatial_path)
+    core.fail(zone==zones[0] and plan.get("zone",{}).get("id")==zone["id"] and
+              plan.get("fixture_mode") is False and
+              zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED"),
+              "composition contract zone/plan authority mismatch")
+    core.audit_zone(zone,cfg,assets,strict=True)
+    check_canonical_pois(zone_path,plan)
+    report=urban.plan_city(plan,cfg,reference_file=base,
+                           neighbor_manifests=load_verified_neighbors(plan))
+    core.fail(report["generation_ready"] and all(report["gates"].values()),
+              "composition contract blocked by urban/art gates")
+    expected={u["id"] for u in report["work_units"]}
+    core.fail(set(contract.get("design_sha256",{}))==expected,
+              "composition contract incomplete work-unit design hashes")
+    ctx=content.design_context(plan)
+    for uid in sorted(expected):
+        path=design_root/(uid+".json")
+        core.fail(path.is_file() and
+                  fingerprint(path)==contract["design_sha256"][uid],
+                  uid+": stale/missing work-unit design in composition contract")
+        candidate=core.load(path)
+        regenerated=content.design_unit(plan,report,uid,context=ctx)
+        core.fail(candidate==regenerated and regenerated["access_verified"],
+                  uid+": unverified detailed design at composition")
+    bound=validate_work_unit_bindings(zone,report)
+    verify_unit_art_masks(plan,report,bound,assets,cfg)
+    core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
+              "composition contract asset hash or ownership mismatch")
+    core.fail(contract.get("before_manifest_sha256")==(
+        fingerprint(Path(before)/"tiles.json") if before else None),
+        "stale composition contract: approved-before manifest changed")
+    world=core.load(core.STATE)
+    core.fail(not world.get("last_approved_global_release") or before,
+              "composition contract must preserve the previous approved release")
+    protection=urban.spatial_protection_mask(plan)
+    core.fail(protected_u02 is not None and
+              protected_u02.mode=="L" and protected_u02.size==protection.size and
+              protected_u02.tobytes()==protection.tobytes(),
+              "composition contract requires the exact validated U02 protection mask")
+
+
 def run(args):
     cfg=core.load(core.CONFIG)
     core.config_check(cfg)
@@ -284,8 +374,11 @@ def run(args):
     out=Path(args.out); tiles=out/"tiles"
     core.audit_zone(zone,cfg,args.assets,strict=True)
     verify_unit_art_masks(plan,report,bound,args.assets,cfg)
+    contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
+                                       report,args.reference,args.assets,args.before)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
-                            approved_before=args.before,protected_u02=protection)
+                            approved_before=args.before,protected_u02=protection,
+                            contract=contract)
     comparison=out/"comparison.html"
     result=core.html_compare(args.before,tiles,args.reference,comparison,cfg)
     return state("CANDIDATE_READY_FOR_OWNER_REVIEW","SHOW_COMPLETE_BEFORE_AFTER",

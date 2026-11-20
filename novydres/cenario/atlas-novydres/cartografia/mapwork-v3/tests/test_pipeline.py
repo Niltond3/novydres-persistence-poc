@@ -98,13 +98,13 @@ def test_second_composition_preserves_old_art_in_same_tile(tmp_path):
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
     first=tmp_path/"approved"
-    core.composite([zone],cfg,base,assets,first)
+    core._compose_tiles([zone],cfg,base,assets,first)
     mark_approved_tiles(first)
     old=Image.open(first/"tile_0_0.png").convert("RGBA").getpixel((3*8,3*8))
     assert old==(220,30,30,255)
     zone["elements"]=[element(assets,"new",[8,2,12,6],(25,205,30,255))]
     second=tmp_path/"candidate"
-    core.composite([zone],cfg,base,assets,second,approved_before=first)
+    core._compose_tiles([zone],cfg,base,assets,second,approved_before=first)
     after=Image.open(second/"tile_0_0.png").convert("RGBA")
     assert after.getpixel((3*8,3*8))==old
     assert after.getpixel((9*8,3*8))==(25,205,30,255)
@@ -114,11 +114,11 @@ def test_second_composition_cannot_change_previously_approved_pixel(tmp_path):
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
     first=tmp_path/"approved"
-    core.composite([zone],cfg,base,assets,first)
+    core._compose_tiles([zone],cfg,base,assets,first)
     mark_approved_tiles(first)
     zone["elements"]=[element(assets,"replacement",[2,2,6,6],(30,220,30,255))]
     with pytest.raises(core.Invalid,match="previously approved content overwritten"):
-        core.composite([zone],cfg,base,assets,tmp_path/"candidate",approved_before=first)
+        core._compose_tiles([zone],cfg,base,assets,tmp_path/"candidate",approved_before=first)
 
 
 def test_compositor_rejects_protected_road_pixels(tmp_path):
@@ -127,7 +127,7 @@ def test_compositor_rejects_protected_road_pixels(tmp_path):
     protected=Image.new("L",(32,16),0)
     protected.putpixel((9,3),255)
     with pytest.raises(core.Invalid,match="protected network/territory"):
-        core.composite([zone],cfg,base,assets,tmp_path/"candidate",protected_u02=protected)
+        core._compose_tiles([zone],cfg,base,assets,tmp_path/"candidate",protected_u02=protected)
 
 
 def test_collinear_road_overlap_cannot_hide_from_validator():
@@ -238,13 +238,13 @@ def test_tile_catalogue_inherits_untouched_approved_tiles_across_zones(tmp_path)
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"old-west",[2,2,6,6],(220,30,30,255))]
     west=tmp_path/"west"
-    core.composite([zone],cfg,base,assets,west)
+    core._compose_tiles([zone],cfg,base,assets,west)
     mark_approved_tiles(west)
     zone["id"]="east"
     zone["bounds"]=[16,0,32,16]
     zone["elements"]=[element(assets,"new-east",[18,2,22,6],(25,205,30,255))]
     east=tmp_path/"east"
-    manifest=core.composite([zone],cfg,base,assets,east,approved_before=west)
+    manifest=core._compose_tiles([zone],cfg,base,assets,east,approved_before=west)
     assert len(manifest["inherited_tiles"])==1
     assert len(manifest["tiles"])==1
     assert core.verify_tiles(manifest,east,cfg,inherited_root=west)==2
@@ -260,9 +260,9 @@ def test_unapproved_prior_tile_manifest_is_rejected(tmp_path):
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
     first=tmp_path/"candidate"
-    core.composite([zone],cfg,base,assets,first)
+    core._compose_tiles([zone],cfg,base,assets,first)
     with pytest.raises(core.Invalid,match="not an approved release"):
-        core.composite([zone],cfg,base,assets,tmp_path/"new",approved_before=first)
+        core._compose_tiles([zone],cfg,base,assets,tmp_path/"new",approved_before=first)
 
 
 def test_legacy_cli_cannot_skip_unified_planning_gates():

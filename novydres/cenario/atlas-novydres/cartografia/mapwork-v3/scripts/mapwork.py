@@ -151,7 +151,23 @@ def _tile_protection_mask(protected_u02,px,py,tw,th,scale):
     expanded=part.resize((part.width*scale,part.height*scale),Image.Resampling.NEAREST)
     return expanded.crop((px-u0*scale,py-v0*scale,px-u0*scale+tw,py-v0*scale+th))
 
-def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None):
+def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,*,contract=None):
+    """Production entry point: fail closed unless pipeline revalidates all bound inputs.
+
+    Python internals are not a security sandbox. _compose_tiles is an internal
+    renderer for unit tests; it must never be exposed as an operational CLI.
+    """
+    fail(isinstance(contract,dict) and contract.get('schema')==
+         'NOVYDRES_MAPWORK_V32_COMPOSITION_CONTRACT_1',
+         'pipeline composition contract required')
+    import pipeline
+    pipeline.verify_composition_contract(
+        contract,zones,cfg,base,assets,approved_before,protected_u02)
+    return _compose_tiles(zones,cfg,base,assets,out,
+                          approved_before=approved_before,protected_u02=protected_u02)
+
+
+def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=None):
     source_check(base,cfg)
     for z in zones:audit_zone(z,cfg,assets,strict=True)
     # Neighbor zones may be reserved but not yet rendered; spatial planner owns the seam gate.

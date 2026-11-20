@@ -21,7 +21,6 @@ import web_runner
 from test_pipeline import make_tile_inputs, element
 
 
-@pytest.mark.xfail(strict=True, reason="P1: direct compositor bypass still works at baseline")
 def test_p1_direct_composite_requires_verified_pipeline_contract(tmp_path):
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"unplanned",[2,2,6,6],(240,30,30,255))]
@@ -76,3 +75,11 @@ def test_p1_push_with_multiple_distinct_requests_cannot_silently_select_last(mon
     monkeypatch.setattr(web_runner.subprocess,"check_output",fake_git)
     with pytest.raises(core.Invalid,match="multiple.*request"):
         web_runner.discover_request_from_push()
+
+
+def test_p1_fake_composition_contract_rejected(tmp_path):
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"fake",[2,2,6,6],(240,20,20,255))]
+    with pytest.raises(core.Invalid,match="contract"):
+        core.composite([zone],cfg,base,assets,tmp_path/"denied",
+                       contract={"schema":"NOVYDRES_MAPWORK_V32_COMPOSITION_CONTRACT_1"})
