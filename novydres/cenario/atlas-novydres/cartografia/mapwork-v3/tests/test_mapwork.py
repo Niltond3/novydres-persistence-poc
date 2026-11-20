@@ -250,7 +250,7 @@ def test_sketch_source_image_preserved():
 def test_next_after_approved_sketch_is_detail_geometry_not_art():
     cfg,z,plan=planning_inputs()
     nxt=m.next_action(z)
-    assert nxt['action']=='SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS'
+    assert nxt['action']=='BUILD_GLOBAL_TRANSPORT_AND_TERRITORY_V31'
     assert m.audit_zone(z,cfg,strict=False)['elements']==14
     assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
 
@@ -266,7 +266,7 @@ def test_detail_macrolots_and_seams_are_persisted_but_not_art_ready():
     assert r['macro_lots']==14
     assert r['border_reservations']==4 and r['internal_graph_connectors']==35
     assert r['image_readiness']=='NOT_READY_FOR_ART_GENERATION'
-    assert m.next_action(z)['action']=='SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS'
+    assert m.next_action(z)['action']=='BUILD_GLOBAL_TRANSPORT_AND_TERRITORY_V31'
 
 def test_macrolot_overlap_is_rejected():
     cfg,z,plan,g,d=detail_inputs()

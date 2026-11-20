@@ -17,3 +17,8 @@
 **Estados:** PLANNING → SKETCH_APPROVED → GENERATING → VISUAL_REVIEW → OWNER_APPROVED → PUBLISHED. Falha técnica = BLOCKED no checkpoint, sem promoção silenciosa. `mapwork.py next` mostra a próxima ação determinística; pesquisa, perguntas e geração permanecem responsabilidade das ferramentas do agente, não do script.
 
 **CI e verdade:** o workflow em PR **não** garante bloqueio de merge se branch protection indisponível. O agent gate recusa publicação com teste vermelho; não confundir proteção operacional com proteção GitHub administrada.
+
+
+## Arquitetura V3.1 — obrigatória antes de gerar Kingswell
+
+**Lote urbano = quadrante/quarteirão delimitado pela infraestrutura no nível do solo.** Construções, fábricas, oficinas e POIs são ocupantes internos; uma `work_unit` é somente unidade atômica de geração. A autoridade global inclui ruas, avenidas, artérias, trevos, viadutos, ramais ferroviários, bondes, água e conexões entre zonas. `U02_KW_SKETCH_02` está aprovado como esboço MACRO; a malha de lotes não está concluída e os 14 retângulos legados não são lotes da cidade. Antes de qualquer geração visual, executar e seguir `scripts/urban_architecture.py` e `architecture-v3-1-transport.md`, obter 100% de território classificado e área editável coberta, topologia e costuras verificadas. A saída `mapwork.py next` deve ser `BUILD_GLOBAL_TRANSPORT_AND_TERRITORY_V31`.

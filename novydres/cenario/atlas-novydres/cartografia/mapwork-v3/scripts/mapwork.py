@@ -205,6 +205,9 @@ def next_action(z):
         if not z['research']:return {'action':'RESEARCH','note':'Research world analogues; cite sources, do not infer canon.'}
         return {'action':'PRESENT_SKETCH','note':'Whole-region technical sketch and succinct decision packet; wait for explicit approval.'}
     if not z['sketch_approved']:return {'action':'WAIT_SKETCH_APPROVAL'}
+    if z['status']=='SKETCH_APPROVED' and z['id']=='kingswell':
+        return {'action':'BUILD_GLOBAL_TRANSPORT_AND_TERRITORY_V31',
+                'note':'Macro sketch U02_KW_SKETCH_02 approved. Vectorize global streets, avenues, interchanges, overpasses, rail, tram and water; classify full territory and derive quadrants bounded by at-grade networks before art.'}
     if z['status']=='SKETCH_APPROVED':
         if not z['elements'] or (z['neighbors'] and not z['connectors']):
             return {'action':'PREPARE_DETAIL_GEOMETRY','note':'Sketch approved; derive lot geometry and shared boundary connectors before art.'}
