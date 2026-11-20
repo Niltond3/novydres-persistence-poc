@@ -58,6 +58,11 @@ def assert_guards(o):
         for endpoint,road in zip(b['approved_sketch_span_px'],approaches[b['id']]):
             pts=byid[road]['points_px']
             assert min(point_dist(endpoint,pts[0]),point_dist(endpoint,pts[-1]))<=2.5
+    junctions=o.get('intersection_candidates',[])
+    assert len(junctions)==o['validation']['provisional_road_road_intersections']==24
+    assert all(j['grade']=='UNRESOLVED' and j['graph_connectivity']=='NOT_ASSERTED' for j in junctions)
+    crossings=o.get('additional_road_river_intersections',[])
+    assert len(crossings)==4 and all(c['is_new_bridge'] is False for c in crossings)
     assert len(o['poi_sketch_anchors'])==5
     assert all(not p['footprint_surveyed'] and not p['site_access_verified'] for p in o['poi_sketch_anchors'])
 
