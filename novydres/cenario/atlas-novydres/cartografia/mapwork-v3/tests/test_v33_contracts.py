@@ -197,3 +197,58 @@ def test_html_uses_lazy_external_tiles_and_integral_overview(tmp_path):
     assert "base64" not in html and "getImage" in html
     assert (tmp_path/"overview-before.png").is_file()
     assert (tmp_path/"overview-after.png").is_file()
+
+
+def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
+    import pipeline
+    from test_pipeline import make_tile_inputs, element
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    uid="WU-TEST-1"
+    e=element(assets,"native",[2,2,6,6],(200,30,30,255))
+    e["work_unit_id"]=uid
+    zone["elements"]=[e]
+    unit={"id":uid,"bbox":[2,2,6,6]}
+    receipt={
+        "schema":"NOVYDRES_MAPWORK_V33_IMAGE_RECEIPT_1",
+        "work_unit_id":uid,"local_path":str(assets/e["asset"]["path"]),
+        "sha256":e["asset"]["sha256"],
+        "mask_sha256":e["mask"]["sha256"],
+        "generator_evidence":"Actual native tool receipt #12345",
+        "visual_review":{"by":"AGENT","status":"PASS","evidence":
+                         "Verified roof geometry and seams with neighbors"}
+    }
+    batch={"schema":"NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1","images":[receipt]}
+    assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)==1
+    batch["images"][0]["visual_review"]["status"]="NOT_CHECKED"
+    with pytest.raises(core.Invalid,match="visual inspection receipt"):
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+    batch["images"][0]["visual_review"]["status"]="PASS"
+    batch["images"][0]["mask_sha256"]="0"*64
+    with pytest.raises(core.Invalid,match="not bound to composited mask"):
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+    batch["images"][0]["mask_sha256"]=e["mask"]["sha256"]
+    other=assets/"other.png"
+    Image.new("RGBA",(32,32),(30,200,30,255)).save(other)
+    receipt["sha256"]=core.sha(other)
+    receipt["local_path"]=str(other)
+    with pytest.raises(core.Invalid,match="provenance is not the composited lot asset"):
+        pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets)
+
+
+def test_offline_comparison_zip_contains_html_tiles_and_overviews(tmp_path):
+    import zipfile
+    from test_pipeline import make_tile_inputs, element
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"unit",[2,2,6,6],(30,200,30,255))]
+    after=tmp_path/"atlas"
+    core._compose_tiles([zone],cfg,base,assets,after)
+    output=tmp_path/"comparison.html"
+    result=viewer.build_comparison(None,after,base,output,cfg)
+    with zipfile.ZipFile(result["bundle"]) as z:
+        names=set(z.namelist())
+        assert "comparison.html" in names
+        assert "overview-after.png" in names
+        assert "overview-before.png" in names
+        assert "viewer-assets/reference.png" in names
+        assert any(n.startswith("viewer-assets/after/") for n in names)
+        assert "novydres-comparison.zip" not in names
