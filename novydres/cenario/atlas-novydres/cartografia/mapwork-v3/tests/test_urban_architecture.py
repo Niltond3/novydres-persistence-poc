@@ -207,3 +207,32 @@ def test_special_site_is_represented_as_content_not_new_city_lot():
     report=urban.plan_city(p,cfg)
     assert report["geometry"]["urban_lots"]==orig["geometry"]["urban_lots"]
     assert report["block_programs"][0]["poi_sites"]==["CIVIC-01"]
+
+
+def test_hole_support_for_water_inside_urban_territory():
+    p,cfg=fixture()
+    hole=[[20,6],[26,6],[26,12],[20,12]]
+    p["territory"][0]["holes"]=[hole]
+    p["territory"].append({"id":"T-WATER","class":"water","polygon":hole})
+    report=urban.plan_city(p,cfg)
+    assert report["territory"]["coverage_pct"]==100
+    assert report["territory"]["by_landuse"]["water"]>0
+
+
+def test_interchange_requires_ramps_not_just_a_named_intersection():
+    p,cfg=fixture()
+    p["transport"]["nodes"][1]["kind"]="interchange"
+    with pytest.raises(urban.ContractError,match="grade-changing ramp"):
+        urban.plan_city(p,cfg)
+
+
+def test_at_grade_mixed_rail_road_requires_declared_crossing():
+    p,cfg=fixture()
+    p["transport"]["nodes"].append({"id":"L","point":[2,2],"kind":"portal","level":0})
+    p["transport"]["edges"].append({
+        "id":"R-ATGRADE","class":"rail_siding","from":"L","to":"C",
+        "points":[[2,2],[32,32]],"level":0,"width_units":1,
+        "separates_blocks":True,"owner":"GLOBAL_NETWORK"
+    })
+    with pytest.raises(urban.ContractError,match="rail crossing"):
+        urban.plan_city(p,cfg)

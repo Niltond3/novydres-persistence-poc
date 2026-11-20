@@ -152,6 +152,8 @@ def _validate_nodes_edges(transport, width, height):
                     f"{n['id']}: roundabout requires a physical ring polygon")
         if n["kind"]=="interchange":
             require(incid[n["id"]]>=2,f"{n['id']}: empty interchange")
+            require(any(e["class"]=="ramp" for e in touching),
+                    f"{n['id']}: interchange requires a grade-changing ramp")
     return bynode,{e["id"]:e for e in edges}
 
 
@@ -243,9 +245,15 @@ def validate_transport(transport, width, height):
     }
 
 
-def _polygon_mask(shape, polygon):
+def _polygon_mask(shape, polygon, holes=None):
+    """Classify territory with interior voids, e.g. rivers through urban blocks."""
     im=Image.new("L",shape,0)
-    ImageDraw.Draw(im).polygon([tuple(p) for p in polygon],fill=1)
+    draw=ImageDraw.Draw(im)
+    draw.polygon([tuple(p) for p in polygon],fill=1)
+    for hole in holes or []:
+        require(len(hole)>=3 and all(finite_xy(p) for p in hole),
+                "invalid territory hole")
+        draw.polygon([tuple(p) for p in hole],fill=0)
     return im
 
 
@@ -271,7 +279,7 @@ def classify_territory(plan):
     for x in plan["territory"]:
         typ=x.get("class")
         require(typ in LANDUSE_CLASSES,f"{x.get('id')}: invalid landuse class")
-        bit=_polygon_mask(shape,x["polygon"]).tobytes()
+        bit=_polygon_mask(shape,x["polygon"],x.get("holes",[])).tobytes()
         for i,p in enumerate(bit):
             if not p:
                 continue
