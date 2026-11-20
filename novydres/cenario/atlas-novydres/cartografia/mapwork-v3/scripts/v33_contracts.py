@@ -318,3 +318,86 @@ def resume_units(checkpoint, *, expected_inputs):
                 "checkpoint references missing or altered unit")
         completed.append(item["id"])
     return completed
+
+
+def audit_atomic_image(receipt, mask_file, plan, report, unit_id, cfg):
+    """Deterministic native PNG readback + locally authorized per-U02 cell coverage.
+
+    Visual aesthetics are NOT part of this mathematical PASS; the agent must
+    supply a separate honest visual review result before marking VERIFIED.
+    """
+    from PIL import ImageDraw
+    import urban_content
+
+    unit=next((u for u in report["work_units"] if u["id"]==unit_id),None)
+    require(unit is not None, "native image job has no planned work-unit owner")
+    scale=cfg["detail_pixels_per_unit"]
+    x0,y0,x1,y1=unit["bbox"]
+    size=[(x1-x0)*scale,(y1-y0)*scale]
+    native=image_receipt(receipt,expected_size=size,work_unit_id=unit_id)
+    path=Path(mask_file)
+    require(path.is_file(), "native image requires locally materialized unit mask")
+    with Image.open(path) as img:
+        require(img.size==tuple(size),"native image mask does not fit recipe bbox")
+        coverage=img.convert("L")
+    ctx=urban_content.design_context(plan)
+    expected=Image.new("L",tuple(size),0)
+    d=ImageDraw.Draw(expected)
+    for y in range(y0,y1):
+        for x in range(x0,x1):
+            i=y*ctx["w"]+x
+            if ctx["editable"][i] and ctx["labels"][i]==unit["block_label"]:
+                sx,sy=(x-x0)*scale,(y-y0)*scale
+                d.rectangle([sx,sy,sx+scale-1,sy+scale-1],fill=255)
+    require(coverage.getbbox() is not None,"atomic image cannot have an empty edit mask")
+    require(ImageChops.subtract(coverage,expected).getbbox() is None,
+            "native image unit mask paints outside canonical editable cells")
+    return {"schema":SCHEMA+"_IMAGE_AUDIT_1",
+            "unit":unit_id,"technical_status":"PASS",
+            "image_sha256":native["sha256"],"mask_sha256":digest(path),
+            "visual_status":"NOT_MATHEMATICALLY_CERTIFIED"}
+
+
+def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
+                    visual_review=None, retry_limit=3):
+    """One deterministic retry state transition; the *agent* performs corrections.
+
+    No blind loop, no automatic approval, no silent skip after a failed render.
+    """
+    require(SHA64.fullmatch(input_sha256 or "") is not None,
+            "unit ledger requires a SHA-256 input contract")
+    require(event in ("START","AUDIT_PASS","AUDIT_FAIL"),"unit event invalid")
+    require(isinstance(ledger,dict) and ledger.get("schema")==SCHEMA+"_UNIT_LEDGER_1",
+            "unit ledger schema missing")
+    units=ledger.setdefault("units",{})
+    record=units.setdefault(unit_id,{"attempts":0,"status":"PENDING",
+                                     "input_sha256":input_sha256})
+    require(record.get("input_sha256")==input_sha256,
+            "unit input changed: invalidate previous verified output")
+    if record["status"]=="VERIFIED":
+        require(event=="AUDIT_PASS" and receipt is not None and
+                record.get("image_sha256")==receipt.get("image_sha256"),
+                "verified unit immutable until a new owner-authorized intervention")
+        return record
+    if event=="START":
+        require(record["attempts"]<retry_limit,"retry budget exhausted for "+unit_id)
+        record["attempts"]+=1
+        record["status"]="GENERATING"
+    elif event=="AUDIT_FAIL":
+        require(record["status"]=="GENERATING","failed audit requires active attempt")
+        record["status"]="BLOCKED" if record["attempts"]>=retry_limit else "REPAIR_REQUIRED"
+        record["failure"]=receipt.get("failure") if isinstance(receipt,dict) else "unspecified"
+    elif event=="AUDIT_PASS":
+        require(record["status"]=="GENERATING" and isinstance(receipt,dict) and
+                receipt.get("technical_status")=="PASS",
+                "unit cannot pass without deterministic technical audit")
+        require(isinstance(visual_review,dict) and
+                visual_review.get("status")=="PASS" and
+                isinstance(visual_review.get("evidence"),str) and
+                len(visual_review["evidence"])>=12,
+                "agent visual inspection must be documented independently")
+        record["status"]="VERIFIED"
+        record["image_sha256"]=receipt["image_sha256"]
+        record["mask_sha256"]=receipt["mask_sha256"]
+        record["visual_evidence"]=visual_review["evidence"]
+    return record
