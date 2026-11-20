@@ -33,6 +33,7 @@ def config_check(cfg):
     w,h=cfg['world_size_units']; scale=cfg['detail_pixels_per_unit']; tile=cfg['tile_size_px']
     fail(w>0 and h>0 and isinstance(scale,int) and scale>0 and scale<=256,'invalid scale')
     fail(isinstance(tile,int) and tile>=128 and tile<=2048 and tile & (tile-1)==0,'invalid tile size')
+    fail(tile % scale == 0,'tile size must be aligned to the reference scale')
     fail(cfg['projection']['type']=='illustrated_2d_topdown','projection must remain 2D')
     fail(cfg['projection']['floor_height_units'] is None,'do not invent absolute height')
     fail(len(cfg['layer_order'])==len(set(cfg['layer_order'])),'duplicate layers')
@@ -134,10 +135,36 @@ def tiles_for(zones,cfg):
             for tx in range(x0//t,(x1-1)//t+1): coords.add((tx,ty))
     return sorted(coords,key=lambda p:(p[1],p[0]))
 
-def composite(zones,cfg,base,assets,out):
+def _changed_pixels(a,b):
+    """1-bit semantic delta: any changed RGBA channel counts."""
+    delta=ImageChops.difference(a.convert('RGBA'),b.convert('RGBA')).split()
+    changed=delta[0]
+    for band in delta[1:]: changed=ImageChops.lighter(changed,band)
+    return changed.point(lambda x:255 if x else 0)
+
+def _tile_protection_mask(protected_u02,px,py,tw,th,scale):
+    """Expand only one tile of the reference-grid protection mask; never upscale the atlas."""
+    u0,v0=px//scale,py//scale
+    u1=(px+tw+scale-1)//scale
+    v1=(py+th+scale-1)//scale
+    part=protected_u02.crop((u0,v0,u1,v1))
+    expanded=part.resize((part.width*scale,part.height*scale),Image.Resampling.NEAREST)
+    return expanded.crop((px-u0*scale,py-v0*scale,px-u0*scale+tw,py-v0*scale+th))
+
+def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None):
     source_check(base,cfg)
     for z in zones:audit_zone(z,cfg,assets,strict=True)
-    connector_match(zones, require_all=True)
+    # Neighbor zones may be reserved but not yet rendered; spatial planner owns the seam gate.
+    connector_match(zones, require_all=False)
+    if protected_u02 is not None:
+        fail(protected_u02.size==tuple(cfg['world_size_units']) and protected_u02.mode=='L',
+             'protected U02 mask must be an L image matching immutable reference')
+    previous={}
+    if approved_before is not None:
+        root=Path(approved_before)
+        old=load(root/'tiles.json')
+        verify_tiles(old,root,cfg)
+        previous={(item['x'],item['y']):item for item in old['tiles']}
     s=cfg['detail_pixels_per_unit'];t=cfg['tile_size_px'];output=Path(out);output.mkdir(parents=True,exist_ok=True)
     layers={name:i for i,name in enumerate(cfg['layer_order'])}
     elements=[e for z in zones for e in z['elements']]
@@ -148,7 +175,16 @@ def composite(zones,cfg,base,assets,out):
         for tx,ty in coords:
             px,py=tx*t,ty*t
             tw=min(t,cfg['world_size_units'][0]*s-px);th=min(t,cfg['world_size_units'][1]*s-py)
-            im=src.transform((tw,th),Image.Transform.AFFINE,(1/s,0,px/s,0,1/s,py/s),Image.Resampling.BICUBIC)
+            baseline=src.transform((tw,th),Image.Transform.AFFINE,
+                                   (1/s,0,px/s,0,1/s,py/s),Image.Resampling.BICUBIC)
+            previous_tile=previous.get((tx,ty))
+            if previous_tile:
+                with Image.open(Path(approved_before)/previous_tile['filename']) as old_image:
+                    im=old_image.convert('RGBA')
+                fail(im.size==(tw,th),'previous approved tile dimensions mismatch')
+            else:
+                im=baseline.copy()
+            before=im.copy()
             for e in elements:
                 x0,y0,x1,y1=(round(v*s) for v in e['envelope'])
                 a0=max(px,x0);b0=max(py,y0);a1=min(px+tw,x1);b1=min(py+th,y1)
@@ -158,6 +194,15 @@ def composite(zones,cfg,base,assets,out):
                     crop=original.convert('RGBA').crop(box); mask=mm.convert('L').crop(box)
                     alpha=ImageChops.darker(crop.getchannel('A'),mask);crop.putalpha(alpha)
                     im.alpha_composite(crop,(a0-px,b0-py))
+            delta=_changed_pixels(before,im)
+            if protected_u02 is not None:
+                protection=_tile_protection_mask(protected_u02,px,py,tw,th,s)
+                fail(ImageChops.darker(delta,protection).getbbox() is None,
+                     f'protected network/territory pixels changed in tile {tx},{ty}')
+            if previous_tile:
+                old_changes=_changed_pixels(baseline,before)
+                fail(ImageChops.darker(delta,old_changes).getbbox() is None,
+                     f'previously approved content overwritten in tile {tx},{ty}')
             name=f"tile_{tx}_{ty}.png"; p=output/name; im.save(p,optimize=True)
             entries.append({'x':tx,'y':ty,'filename':name,'sha256':sha(p),'width':tw,'height':th,'drive_file_id':None})
     manifest={'schema':'NOVYDRES_MAPWORK_V3_TILES_1','world_size_units':cfg['world_size_units'],'detail_pixels_per_unit':s,'tile_size_px':t,'zone_ids':[z['id'] for z in zones],'tiles':entries,'stage':'CANDIDATE_NOT_UPLOADED'}
@@ -200,9 +245,9 @@ def html_compare(before, after, base, out, cfg):
 
 def next_action(z):
     if z['status']=='PLANNING':
+        if not z['research']:return {'action':'RESEARCH','note':'Research world analogues first; cite sources, do not infer canon.'}
         missing=[d for d in z['decisions'] if d['status']=='OPEN']
         if missing:return {'action':'ASK_OWNER','questions':missing}
-        if not z['research']:return {'action':'RESEARCH','note':'Research world analogues; cite sources, do not infer canon.'}
         return {'action':'PRESENT_SKETCH','note':'Whole-region technical sketch and succinct decision packet; wait for explicit approval.'}
     if not z['sketch_approved']:return {'action':'WAIT_SKETCH_APPROVAL'}
     if z['status']=='SKETCH_APPROVED' and z['id']=='kingswell':
@@ -522,7 +567,7 @@ def main():
     sub.add_parser('audit')
     p=sub.add_parser('next');p.add_argument('--zone',required=True)
     p=sub.add_parser('validate');p.add_argument('--zones',nargs='+',required=True);p.add_argument('--assets');p.add_argument('--base');p.add_argument('--strict',action='store_true')
-    p=sub.add_parser('render');p.add_argument('--zones',nargs='+',required=True);p.add_argument('--assets',required=True);p.add_argument('--base',required=True);p.add_argument('--out',required=True)
+    p=sub.add_parser('render');p.add_argument('--zones',nargs='+',required=True);p.add_argument('--assets',required=True);p.add_argument('--base',required=True);p.add_argument('--out',required=True);p.add_argument('--before');p.add_argument('--protected-mask',required=True)
     p=sub.add_parser('compare');p.add_argument('--before');p.add_argument('--after',required=True);p.add_argument('--base',required=True);p.add_argument('--out',required=True)
     args=ap.parse_args();cfg=load(CONFIG)
     try:
@@ -535,7 +580,10 @@ def main():
             if args.cmd=='validate':
                 result={'zones':[audit_zone(z,cfg,args.assets,args.strict) for z in zones], 'seams':connector_match(zones, require_all=args.strict)}
                 if args.base:source_check(args.base,cfg)
-            else:result=composite(zones,cfg,args.base,args.assets,args.out)
+            else:
+                with Image.open(args.protected_mask) as mask:
+                    result=composite(zones,cfg,args.base,args.assets,args.out,
+                                     approved_before=args.before,protected_u02=mask.convert('L'))
         print(json.dumps({'status':'PASS','result':result},ensure_ascii=False,indent=2))
     except (Invalid,KeyError,ValueError,OSError) as exc:
         print(json.dumps({'status':'FAIL','error':str(exc)},ensure_ascii=False),file=sys.stderr);sys.exit(2)
