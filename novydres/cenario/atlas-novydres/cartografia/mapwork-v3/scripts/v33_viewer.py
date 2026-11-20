@@ -34,7 +34,7 @@ def _copy_tile(source, target, entry):
     return name
 
 
-def build_comparison(before, after, reference, output, cfg, *, zip_bundle=False):
+def build_comparison(before, after, reference, output, cfg, *, zip_bundle=True):
     """Produce self-contained mobile comparison folder, not a single embedded HTML."""
     import mapwork as core
 
@@ -175,8 +175,15 @@ addEventListener('resize',draw);draw();
     Path(output).write_text(html, encoding="utf-8")
     bundle = None
     if zip_bundle:
-        bundle = shutil.make_archive(str(root / "novydres-comparison"), "zip", root,
-                                     base_dir=".")
+        import zipfile
+        bundle = str(root / "novydres-comparison.zip")
+        with zipfile.ZipFile(bundle,"w",compression=zipfile.ZIP_DEFLATED,
+                             compresslevel=3) as archive:
+            for name in ("comparison.html","overview-before.png","overview-after.png"):
+                archive.write(root/name,name)
+            for item in sorted(tile_root.rglob("*")):
+                if item.is_file():
+                    archive.write(item,str(item.relative_to(root)))
     return {"path": str(output), "before_tiles": len(prior),
             "after_tiles": len(candidate), "bytes": Path(output).stat().st_size,
             "before_overview": str(root / "overview-before.png"),
