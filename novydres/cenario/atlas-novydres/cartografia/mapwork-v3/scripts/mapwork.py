@@ -595,19 +595,13 @@ def main():
     args=ap.parse_args();cfg=load(CONFIG)
     try:
         config_check(cfg)
-        if args.cmd=='audit': result=audit_repository(cfg,load(STATE))
-        elif args.cmd in ('next','render'):
-            raise Invalid('legacy next/render CLI disabled; use scripts/pipeline.py run for all state transitions and composition')
-        elif args.cmd=='compare':result=html_compare(args.before,args.after,args.base,args.out,cfg)
+        if args.cmd=='audit':
+            result=audit_repository(cfg,load(STATE))
+            result['scope']='REPOSITORY_DIAGNOSTIC_ONLY_NOT_IMAGE_AUTHORIZATION'
+        elif args.cmd in ('next','render','compare','validate'):
+            raise Invalid('legacy next/render/compare/validate CLI disabled; use scripts/pipeline.py run for all operational validations and composition')
         else:
-            zones=[load(path) for path in args.zones]
-            if args.cmd=='validate':
-                result={'zones':[audit_zone(z,cfg,args.assets,args.strict) for z in zones], 'seams':connector_match(zones, require_all=args.strict)}
-                if args.base:source_check(args.base,cfg)
-            else:
-                with Image.open(args.protected_mask) as mask:
-                    result=composite(zones,cfg,args.base,args.assets,args.out,
-                                     approved_before=args.before,protected_u02=mask.convert('L'))
+            raise Invalid('only read-only audit diagnostics are supported here')
         print(json.dumps({'status':'PASS','result':result},ensure_ascii=False,indent=2))
     except (Invalid,KeyError,ValueError,OSError) as exc:
         print(json.dumps({'status':'FAIL','error':str(exc)},ensure_ascii=False),file=sys.stderr);sys.exit(2)

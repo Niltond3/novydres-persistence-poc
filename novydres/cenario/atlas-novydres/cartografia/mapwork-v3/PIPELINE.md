@@ -61,3 +61,11 @@ A pesquisa e geração de imagem são **ações externas**, executadas por um ag
 - Não há manifesto real vetorizado e totalmente classificado de Kingswell/Sulfok nem bytes U02/Drive disponíveis no CI. Por isso a pipeline hoje **corretamente bloqueia** geração real.
 - O gerador de arte, inspeção visual de fachadas, reconstrução automática de ruas da imagem e comparador leve/lazy para milhares de tiles continuam sob responsabilidade de integrações/etapas específicas. Não chamar o fluxo de ponta a ponta concluído sem o teste real acima.
 - Nenhum merge em `master`, nova release, alteração de imagem canônica ou publicação de zonas decorre desta branch.
+
+
+## Contratos adicionais P1 (20/11/2026)
+
+- Toda zona vizinha com `global-spatial-v31.json` existente deve ser lida e confrontada bilateralmente (sem aceitar reserva no lugar de contrato existente). Sem geometria de um vizinho ainda não gerado, somente reserva `APPROVED_SCOPED` ligada ao SHA da rede global é aceita.
+- `special_sites` é obrigatório, mesmo quando vazio. Cada POI exige `block_id`, `point`, `footprint` e `entrance`, dentro de uma parcela acessível. O `spatial-plan.json` legado fornece a lista mínima de POIs a preservar. Morfologia exige `access_mode` e `access_clearance_units`, com corredor em escala U02 abstrata; não equivale a certificação viária métrica.
+- Na fase GENERATING e posteriores, cada `work_unit` do plano requer um `element.kind=lot` com `work_unit_id` único e `core` idêntico ao bbox planejado. Antes da composição, máscaras de assets verificados são comparadas à área editável exata da unidade (não somente ao envelope).
+- Para executar desde ChatGPT/Claude Web **sem filesystem**, criar pedido JSON em `web-requests/` usando CAS sobre o HEAD da branch candidata; o job hospedado retorna checkpoint/recibo em artefato do GitHub Actions. Não usar artefato temporário como estado canônico: persistir checkpoint no GitHub via commit CAS e confirmar blob/commit/ref. GitHub Actions sem Drive privado continua bloqueando etapas que exigem bytes. Não confundir o runner diagnóstico com um gerador de arte.

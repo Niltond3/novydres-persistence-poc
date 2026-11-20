@@ -281,3 +281,58 @@ def test_legacy_cli_cannot_skip_unified_planning_gates():
     )
     assert result.returncode==2
     assert "legacy next/render CLI disabled" in result.stderr
+
+
+def test_existing_neighbor_manifest_without_mate_is_not_a_reservation():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    authority=hashlib.sha256(json.dumps(p["transport"],sort_keys=True,separators=(",",":")).encode()).hexdigest()
+    p["neighbor_seams"]=[{"id":"SEAM","from_zone":"test-city","to_zone":"peer",
+                          "point":[2,22],"kind":"road","width_units":2,"profile":"ground",
+                          "reservation_status":"APPROVED_SCOPED","authority_sha256":authority}]
+    with pytest.raises(urban.ContractError,match="existing neighbor seam differs"):
+        urban.plan_city(p,cfg,neighbor_manifests={"peer":{"seams":[]}})
+
+
+def test_poi_must_have_footprint_entrance_and_verified_block():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    report=urban.plan_city(p,cfg)
+    p["special_sites"]=[{"id":"POI","block_id":report["blocks"][0]["id"]}]
+    with pytest.raises(urban.ContractError,match="required property"):
+        urban.plan_city(p,cfg)
+
+
+def test_too_dense_morphology_blocks_access_corridor():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    p["morphology"]["urban"]["occupation_target"]=1
+    with pytest.raises(urban.ContractError,match="less clearance"):
+        urban.plan_city(p,cfg)
+
+
+def test_atomic_art_bindings_refuse_unplanned_or_missing_work_units():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    report=urban.plan_city(p,core.load(ROOT/"config.json"))
+    elements=[{"id":"asset-"+u["id"],"kind":"lot","work_unit_id":u["id"],
+               "core":u["bbox"],"envelope":u["bbox"],"status":"PENDING"}
+              for u in report["work_units"]]
+    assert len(pipeline.validate_work_unit_bindings({"elements":elements},report))==len(elements)
+    with pytest.raises(core.Invalid,match="lack bound art elements"):
+        pipeline.validate_work_unit_bindings({"elements":elements[:-1]},report)
+    corrupted=copy.deepcopy(elements)
+    corrupted[0]["core"]=[0,0,1,1]
+    with pytest.raises(core.Invalid,match="core differs"):
+        pipeline.validate_work_unit_bindings({"elements":corrupted},report)
+    corrupted=copy.deepcopy(elements)
+    corrupted[0]["work_unit_id"]="WU-99999-9999-9999"
+    with pytest.raises(core.Invalid,match="absent or invalid"):
+        pipeline.validate_work_unit_bindings({"elements":corrupted},report)
+
+
+def test_legacy_compare_and_validate_cannot_claim_operational_pass():
+    entry=str(ROOT/"scripts"/"mapwork.py")
+    for command,args in [("validate",["--zones","dummy"]),("compare",["--after","dummy","--base","dummy","--out","dummy"])]:
+        result=subprocess.run([sys.executable,entry,command,*args],capture_output=True,text=True)
+        assert result.returncode==2
+        assert "CLI disabled" in result.stderr

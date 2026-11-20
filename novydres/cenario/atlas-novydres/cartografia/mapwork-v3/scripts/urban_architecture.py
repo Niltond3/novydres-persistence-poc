@@ -629,7 +629,7 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         good=good and all(mate.get(k)==seam.get(k) for k in expected)
         good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
         if peer is not None:
-            require(bool(good),f"{seam['id']}: existing neighbor seam missing or differs from global authority")
+            require(bool(good),f"{seam['id']}: existing neighbor seam differs or is missing from global authority")
             matched_seams+=1
         else:
             reservation=(seam.get("reservation_status")=="APPROVED_SCOPED" and
@@ -762,6 +762,7 @@ def verify_no_protected_edits(original, modified, protected_indices):
 
 
 def cli():
+    raise SystemExit("urban_architecture.py is internal only; use scripts/pipeline.py run")
     p=argparse.ArgumentParser(description="Topology-first urban architecture V3.1")
     p.add_argument("manifest",type=Path)
     p.add_argument("--config",type=Path,required=True)
