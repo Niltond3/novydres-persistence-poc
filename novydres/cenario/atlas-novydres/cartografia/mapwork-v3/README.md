@@ -1,3 +1,23 @@
+# Novydres Mapwork V3.3 — candidato arquitetural, não canônico
+
+**Entrada única de negócio:** `scripts/pipeline.py run --intent <intent.json> --capabilities <receipt.json> --research-file <research.json> --decisions-file <decisions.json> --inventory-file <inventory.json>`.
+
+A base V3.2 foi preservada; V3.3 adiciona `scripts/v33_contracts.py`, `v33_flow.py`, `v33_urban.py`, `v33_viewer.py` como **bibliotecas chamadas pela pipeline**, não como rotas concorrentes. Consulte `AGENT.md` e `PIPELINE.md` (seções V3.3) ANTES de seguir qualquer fluxo histórico abaixo.
+
+Implementado como **candidato verificável por testes**: pesquisa externa rastreável; consentimento editorial por proposta e inventário exato; pedidos de criação/refinamento com máscara; parcelamento multicélula abstrato; receitas, comprovantes SHA e auditoria nativa por unidade; proteção de arte anterior fora da máscara; comparação integral com lazy tiles e ZIP móvel. Os scripts não criam imagens de IA; o agente deve executar chamadas reais, materializar bytes e conferir hashes. Testes GitHub Actions são regressões, não certificação de capacidades da sessão ChatGPT Web.
+
+**Estado de aceitação:** sem os assets reais, a rede U02 completa de Sulfok e a posição canônica confirmada da Torre Ventura, a V3.3 não é declarada concluída. Não alterar `master`, não publicar nem canonizar sem aprovação final do proprietário.
+
+### Testes
+`python -m pip install -r requirements.txt` e `python -m pytest -q tests` executados na pasta `mapwork-v3` validam contratos determinísticos. A execução local pelo agente Web é necessária além deles.
+
+### Entrega visual
+O comparador produz `comparison.html`, `viewer-assets/`, `overview-before.png`, `overview-after.png` e `novydres-comparison.zip`. Um HTML sozinho NÃO contém os PNGs, porque o zoom busca tiles externos; forneça o ZIP direto pelo chat e nunca link de GitHub como substituto da visualização.
+
+---
+
+## Histórico V3.2 abaixo (referência de regressão, não contrato vigente)
+
 # Novydres Mapwork V3.2 — pipeline unificada, não canônica
 
 **Entrada única:** `python scripts/pipeline.py run --district sulfok` ou `--district kingswell`. Use `--checkpoint /tmp/state.json` para saída JSON reproduzível, `--spatial` + `--reference` para prova espacial, `--design-unit WU-...` para gerar um plano de edifícios (com `--out`) e `--execute` somente quando todas as unidades, máscaras, imagens e autorizações estiverem verificadas. Leia `PIPELINE.md` para a ordem obrigatória. As rotinas antigas abaixo permanecem como componentes técnicos de baixo nível, não como fluxos concorrentes.
