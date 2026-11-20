@@ -151,7 +151,8 @@ def test_first_zone_may_reserve_peer_seam_against_global_network():
     ).encode()).hexdigest()
     p["neighbor_seams"]=[{
         "id":"BORDER-01","from_zone":"test-city","to_zone":"future-city",
-        "point":[2,22],"kind":"road","width_units":2,"profile":"urban_at_grade",
+        "point":[2,32],"kind":"road","width_units":3,"profile":"urban_at_grade",
+        "level":0,"network_edge_id":"AV-01","network_node_id":"W",
         "reservation_status":"APPROVED_SCOPED","authority_sha256":authority
     }]
     r=urban.plan_city(p,cfg)
@@ -160,7 +161,8 @@ def test_first_zone_may_reserve_peer_seam_against_global_network():
     assert r["seam_status"]["pending_peer_verification"] is True
     peer={"future-city":{"seams":[{
         "id":"BORDER-01","from_zone":"future-city","to_zone":"test-city",
-        "point":[2,22],"kind":"road","width_units":3,"profile":"urban_at_grade"
+        "point":[2,32],"kind":"road","width_units":4,"profile":"urban_at_grade",
+        "level":0,"network_edge_id":"AV-01","network_node_id":"W"
     }]}}
     with pytest.raises(urban.ContractError,match="existing neighbor seam differs"):
         urban.plan_city(p,cfg,neighbor_manifests=peer)

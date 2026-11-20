@@ -524,6 +524,74 @@ def derive_work_units(width,height,labels,allowed,max_units,scale):
     return result,sum(covered)
 
 
+TRANSPORT_SEAM_CLASSES={
+    "road":ROAD_CLASSES, "rail":RAIL_CLASSES, "tram":TRAM_CLASSES,
+    "water":WATER_CLASSES, "bridge":ROAD_CLASSES | RAIL_CLASSES
+}
+
+
+def _on_segment(point,a,b,tol=0.01):
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    length=dx*dx+dy*dy
+    if length<1e-12:
+        return point_close(point,a,tol)
+    t=max(0.0,min(1.0,((point[0]-a[0])*dx+(point[1]-a[1])*dy)/length))
+    return point_close(point,[a[0]+t*dx,a[1]+t*dy],tol)
+
+
+def _on_polygon_boundary(point,polygon):
+    return any(_on_segment(point,polygon[i],polygon[(i+1)%len(polygon)])
+               for i in range(len(polygon)))
+
+
+def _on_shared_border(point,a,b):
+    for i in range(len(a)):
+        x,y=a[i],a[(i+1)%len(a)]
+        if not _on_segment(point,x,y):
+            continue
+        for j in range(len(b)):
+            u,v=b[j],b[(j+1)%len(b)]
+            if collinear_overlap(x,y,u,v) is not None and _on_segment(point,u,v):
+                return True
+    return False
+
+
+def _validate_seam_network(seam,transport):
+    kind=seam["kind"]
+    if kind not in TRANSPORT_SEAM_CLASSES:
+        # Non-transport seams are border agreements, not road certifications.
+        require(kind in ("ermo","terrain","urban_edge"),f"{seam['id']}: invalid seam kind")
+        return
+    edge_id=seam.get("network_edge_id")
+    edge=next((e for e in transport["edges"] if e["id"]==edge_id),None)
+    require(edge is not None and edge["class"] in TRANSPORT_SEAM_CLASSES[kind],
+            f"{seam['id']}: missing/mismatched transport edge")
+    require(any(_on_segment(seam["point"],a,b)
+                for a,b in zip(edge["points"],edge["points"][1:])),
+            f"{seam['id']}: seam is not on its transport edge")
+    require(abs(edge["width_units"]-seam["width_units"])<=1e-8,
+            f"{seam['id']}: transport width differs")
+    require(edge.get("profile")==seam["profile"],
+            f"{seam['id']}: transport profile differs")
+    level=seam.get("level")
+    require(type(level) is int,f"{seam['id']}: transport level required")
+    if edge["class"]=="ramp":
+        nodes={n["id"]:n for n in transport["nodes"]}
+        matches=((point_close(seam["point"],nodes[edge["from"]]["point"]) and
+                  level==edge["level_from"]) or
+                 (point_close(seam["point"],nodes[edge["to"]]["point"]) and
+                  level==edge["level_to"]))
+        require(matches,f"{seam['id']}: ramp seam level mismatches boundary endpoint")
+    else:
+        require(level==edge["level"],f"{seam['id']}: transport level differs")
+    node_id=seam.get("network_node_id")
+    if node_id is not None:
+        node=next((n for n in transport["nodes"] if n["id"]==node_id),None)
+        require(node is not None and node_id in (edge["from"],edge["to"]) and
+                point_close(node["point"],seam["point"],0.01) and node["level"]==level,
+                f"{seam['id']}: transport node does not meet border at grade")
+
+
 def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     """Fully materialize contracts for a declared synthetic/real spatial manifest."""
     require(plan.get("schema")==SCHEMA,"architecture schema mismatch")
@@ -622,20 +690,33 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         require(seam.get("from_zone")==plan["zone"]["id"] and
                 seam.get("to_zone") and seam.get("id") and finite_xy(seam.get("point")),
                 "malformed bilateral seam contract")
+        require(_on_polygon_boundary(seam["point"],plan["zone"]["polygon"]),
+                f"{seam['id']}: seam point is not on this zone boundary")
+        _validate_seam_network(seam,plan["transport"])
         peer=counterparts.get(seam["to_zone"])
         mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None) if peer is not None else None
-        expected=("kind","width_units","profile")
+        expected=("kind","width_units","profile","level","network_edge_id","network_node_id")
         good=bool(mate) and mate.get("from_zone")==seam["to_zone"] and mate.get("to_zone")==seam["from_zone"]
         good=good and all(mate.get(k)==seam.get(k) for k in expected)
         good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
         if peer is not None:
             require(bool(good),f"{seam['id']}: existing neighbor seam differs or is missing from global authority")
+            require(_on_shared_border(seam["point"],plan["zone"]["polygon"],
+                                      peer.get("zone_polygon",[])),
+                    f"{seam['id']}: connector is not on a shared zone boundary")
+            _validate_seam_network(mate,peer["transport"])
             matched_seams+=1
         else:
             reservation=(seam.get("reservation_status")=="APPROVED_SCOPED" and
                          seam.get("authority_sha256")==transport_digest)
             reserved_seams+=int(reservation)
             seams_verified=seams_verified and reservation
+    for neighbor,peer in counterparts.items():
+        required_ids={s["id"] for s in declared_seams if s["to_zone"]==neighbor}
+        peer_ids=[s["id"] for s in peer.get("seams",[])
+                  if s.get("to_zone")==plan["zone"]["id"]]
+        require(set(peer_ids)==required_ids and len(peer_ids)==len(set(peer_ids)),
+                f"{neighbor}: asymmetric or extra existing neighbor connectors")
     receipt=plan.get("work_policy",{}).get("mask_receipt",{})
     masks_verified=(
         isinstance(receipt,dict) and

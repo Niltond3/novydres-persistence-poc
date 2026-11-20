@@ -308,8 +308,45 @@
           "authority_sha256": {
             "type": "string",
             "pattern": "^[0-9a-f]{64}$"
+          },
+          "network_edge_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "network_node_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "level": {
+            "type": "integer"
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "road",
+                    "rail",
+                    "tram",
+                    "water",
+                    "bridge"
+                  ]
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "network_edge_id",
+                "level"
+              ]
+            }
+          }
+        ]
       }
     },
     "work_policy": {

@@ -86,9 +86,8 @@ def load_verified_neighbors(plan):
         zone_path,zone=matches[0]
         spatial=zone_path.parent/"global-spatial-v31.json"
         if not spatial.is_file():
-            if zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED","PUBLISHED"):
-                raise core.Invalid("active neighbor has no global spatial manifest: "+neighbor)
-            continue
+            # An existing approved sketch is not a future reservation.
+            raise core.Invalid("existing neighbor has no spatial manifest: "+neighbor)
         other=core.load(spatial)
         if other.get("zone",{}).get("id")!=neighbor or other.get("fixture_mode") is not False:
             raise core.Invalid("invalid neighbor identity or fixture: "+neighbor)
@@ -98,7 +97,9 @@ def load_verified_neighbors(plan):
                     separators=(",",":")).encode("utf-8")).hexdigest()
         if digest(other["transport"])!=digest(plan["transport"]):
             raise core.Invalid("neighbor global transport differs: "+neighbor)
-        peers[neighbor]={"seams":other["neighbor_seams"]}
+        peers[neighbor]={"seams":other["neighbor_seams"],
+                         "zone_polygon":other["zone"]["polygon"],
+                         "transport":other["transport"]}
     return peers
 
 

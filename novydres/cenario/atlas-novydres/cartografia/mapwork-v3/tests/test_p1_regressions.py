@@ -28,7 +28,6 @@ def test_p1_direct_composite_requires_verified_pipeline_contract(tmp_path):
         core.composite([zone],cfg,base,assets,tmp_path/"unsafe")
 
 
-@pytest.mark.xfail(strict=True, reason="P1: approved neighbor without spatial manifest is treated as absent")
 def test_p1_existing_approved_neighbor_without_spatial_manifest_fails(tmp_path,monkeypatch):
     monkeypatch.setattr(pipeline,"ROOT",tmp_path)
     folder=tmp_path/"zones"/"neighbor";folder.mkdir(parents=True)
@@ -83,3 +82,44 @@ def test_p1_fake_composition_contract_rejected(tmp_path):
     with pytest.raises(core.Invalid,match="contract"):
         core.composite([zone],cfg,base,assets,tmp_path/"denied",
                        contract={"schema":"NOVYDRES_MAPWORK_V32_COMPOSITION_CONTRACT_1"})
+
+
+def test_p1_seam_must_touch_real_edge_with_matching_width_level_profile():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    authority=hashlib.sha256(json.dumps(p["transport"],sort_keys=True,
+                             separators=(",",":")).encode()).hexdigest()
+    seam={"id":"BORDER","from_zone":"test-city","to_zone":"future",
+          "point":[2,32],"kind":"road","width_units":3,"profile":"urban_at_grade",
+          "level":0,"network_edge_id":"AV-01","network_node_id":"W",
+          "reservation_status":"APPROVED_SCOPED","authority_sha256":authority}
+    p["neighbor_seams"]=[seam]
+    assert urban.plan_city(p,cfg)["gates"]["neighbor_seams"]
+    seam["point"]=[2,22]
+    with pytest.raises(urban.ContractError,match="transport edge"):
+        urban.plan_city(p,cfg)
+    seam["point"]=[2,32];seam["level"]=1
+    with pytest.raises(urban.ContractError,match="level"):
+        urban.plan_city(p,cfg)
+    seam["level"]=0;seam["profile"]="wrong"
+    with pytest.raises(urban.ContractError,match="profile"):
+        urban.plan_city(p,cfg)
+
+
+def test_p1_existing_peer_must_share_boundary_not_only_connector_id():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    seam={"id":"BORDER","from_zone":"test-city","to_zone":"future",
+          "point":[2,32],"kind":"road","width_units":3,"profile":"urban_at_grade",
+          "level":0,"network_edge_id":"AV-01","network_node_id":"W"}
+    p["neighbor_seams"]=[seam]
+    mate={**seam,"from_zone":"future","to_zone":"test-city"}
+    peer={"future":{"seams":[mate],"zone_polygon":[[5,2],[6,2],[6,61],[5,61]],
+                    "transport":p["transport"]}}
+    with pytest.raises(urban.ContractError,match="shared zone boundary"):
+        urban.plan_city(p,cfg,neighbor_manifests=peer)
+    peer["future"]["zone_polygon"]=[[0,2],[2,2],[2,61],[0,61]]
+    assert urban.plan_city(p,cfg,neighbor_manifests=peer)["seam_status"]["matched"]==1
+    peer["future"]["seams"].append({**mate,"id":"EXTRA"})
+    with pytest.raises(urban.ContractError,match="asymmetric"):
+        urban.plan_city(p,cfg,neighbor_manifests=peer)
