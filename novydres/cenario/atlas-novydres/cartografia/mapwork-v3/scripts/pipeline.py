@@ -307,6 +307,54 @@ def _asset_fingerprints(zone,assets):
     return result
 
 
+def verify_native_manifest(images,zone,report,cfg,assets):
+    """Bind actual generated and reviewed image bytes to the exact composited lots."""
+    core.fail(isinstance(images,dict) and
+              images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1" and
+              isinstance(images.get("images"),list),
+              "V3.3 native-image batch missing or malformed")
+    index={}
+    for receipt in images["images"]:
+        core.fail(isinstance(receipt,dict) and
+                  receipt.get("work_unit_id") not in index and
+                  isinstance(receipt.get("work_unit_id"),str),
+                  "V3.3 duplicate or invalid native-image work unit")
+        index[receipt["work_unit_id"]]=receipt
+    units={u["id"]:u for u in report["work_units"]}
+    core.fail(set(index)==set(units),
+              "V3.3 native images must cover planned work units exactly once")
+    bound={}
+    for element in zone["elements"]:
+        if element["kind"]=="lot":
+            uid=element.get("work_unit_id")
+            core.fail(uid not in bound and uid in units,
+                      "V3.3 duplicate/unknown lot asset per unit")
+            bound[uid]=element
+    core.fail(set(bound)==set(units),
+              "V3.3 every native image must correspond to one bound lot asset")
+    for uid,unit in units.items():
+        receipt=index[uid]
+        bbox=unit["bbox"];scale=cfg["detail_pixels_per_unit"]
+        v33.image_receipt(receipt,expected_size=[
+            (bbox[2]-bbox[0])*scale,(bbox[3]-bbox[1])*scale
+        ],work_unit_id=uid)
+        element=bound[uid]
+        core.fail(element["status"]=="VERIFIED" and
+                  element["asset"]["sha256"]==receipt["sha256"] and
+                  fingerprint(Path(assets)/element["asset"]["path"])==receipt["sha256"],
+                  uid+": native image provenance is not the composited lot asset")
+        core.fail(element["mask"]["sha256"]==receipt.get("mask_sha256") and
+                  fingerprint(Path(assets)/element["mask"]["path"])==receipt["mask_sha256"],
+                  uid+": native image receipt not bound to composited mask")
+        review=receipt.get("visual_review")
+        core.fail(isinstance(review,dict) and review.get("by")=="AGENT" and
+                  review.get("status")=="PASS" and
+                  isinstance(review.get("evidence"),str) and
+                  len(review["evidence"])>=12,
+                  uid+": visual inspection receipt missing or failed")
+    return len(units)
+
+
 def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
                               base,assets,before):
     """Content-addressed capability description; never just a boolean pass flag."""
@@ -422,16 +470,7 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
             with Image.open(p) as im:
                 v33.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
         images=core.load(receipt["image_receipts_path"])
-        core.fail(images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1",
-                  "V3.3 image batch schema mismatch")
-        indexed={item["work_unit_id"]:item for item in images["images"]}
-        core.fail(len(indexed)==len(images["images"]) and set(indexed)==expected,
-                  "V3.3 native-image receipts not one-to-one with work units")
-        for unit in report["work_units"]:
-            bbox=unit["bbox"];scale=cfg["detail_pixels_per_unit"]
-            v33.image_receipt(indexed[unit["id"]],
-                expected_size=[(bbox[2]-bbox[0])*scale,(bbox[3]-bbox[1])*scale],
-                work_unit_id=unit["id"])
+        verify_native_manifest(images,zone,report,cfg,assets)
 
 
 def run(args):
@@ -587,17 +626,7 @@ def run(args):
         if not args.image_receipts:
             raise core.Invalid("V3.3 native-image provenance receipts required")
         receipts=core.load(args.image_receipts)
-        if receipts.get("schema")!="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1":
-            raise core.Invalid("invalid native-image receipt batch")
-        byid={r["work_unit_id"]:r for r in receipts["images"]}
-        if set(byid)!={u["id"] for u in report["work_units"]}:
-            raise core.Invalid("missing or extra native-image unit receipts")
-        for unit in report["work_units"]:
-            uid=unit["id"]
-            v33.image_receipt(byid[uid],expected_size=[
-                (unit["bbox"][2]-unit["bbox"][0])*cfg["detail_pixels_per_unit"],
-                (unit["bbox"][3]-unit["bbox"][1])*cfg["detail_pixels_per_unit"]
-            ],work_unit_id=uid)
+        verify_native_manifest(receipts,zone,report,cfg,args.assets)
         registration["image_receipts_path"]=str(Path(args.image_receipts).resolve())
         registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
@@ -642,6 +671,8 @@ def main(argv=None):
     p.add_argument("--ledger",help="SHA-bound per-unit progress/repair ledger")
     p.add_argument("--start-unit",action="store_true",help="start one audit attempt in the ledger")
     args=p.parse_args(argv)
+    if args.execute and not args.intent:
+        p.error("V3.3 composition requires --intent and owner decision/inventory receipts")
     if not args.intent and not (args.district or args.zone):
         p.error("legacy calls need --district/--zone; V3.3 calls need --intent")
     try:
