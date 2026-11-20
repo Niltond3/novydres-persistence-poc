@@ -96,7 +96,7 @@
     "end_art": false,
     "canon": false
   },
-  "next_action": "V33_SPATIAL_FOUNDATION: CLASSIFY_REAL_U02_SURFACE_AND_VALIDATE_BILATERAL_CONNECTORS_THEN_DERIVE_UNDERGROUND_ROUTE_WITH_CORE_EXCLUSION",
+  "next_action": "SNAP_CANDIDATE_NETWORK_TO_U02; CLASSIFY_CROSSINGS_AND_RIVER_BANKS; FULL_TERRITORY; BILATERAL_SEAMS; THEN_VALIDATE_V31",
   "metro_v33_option_a": {
     "approval_id": "KW-PROP-006",
     "status": "APPROVED_EDITORIAL_WITH_TECHNICAL_RESTRICTIONS",
@@ -174,5 +174,23 @@
       "No bilateral street, metro, ferry or rail adjacency audits"
     ],
     "outcome": "PRELIMINARY_VISUAL_SITING_ONLY_NOT_TOPOLOGY_PASS"
+  },
+  "road_network_v33_candidate": {
+    "evidence_path": "zones/cidade-velha/spatial-observations-v33-20261120.json",
+    "evidence_blob_sha": "b3264358d7fd405e525694c8ad6980d4578d41ed",
+    "audit_path": "zones/cidade-velha/spatial-network-audit-v33-20261120.json",
+    "audit_blob_sha": "822de58a9d005665d39db8cbbd57dbbaca0b055f",
+    "regression_test_path": "tests/test_kingswell_spatial_observations_v33.py",
+    "study_scope": "Raster-grounded 22 major corridor centerline hypotheses only; no surveyed full local street grid",
+    "observed_major_road_corridors": 22,
+    "provisional_unclassified_road_road_intersections": 24,
+    "river_intersection_points_outside_approved_three_historical_bridge_spans": 4,
+    "approved_historical_bridges": 3,
+    "bridge_approaches_within_two_point_five_pixels": 6,
+    "candidate_gis_network_certified": false,
+    "full_transport_topology_approved": false,
+    "metro_option_A_preserved": true,
+    "new_stations_or_tunnels": 0,
+    "master_and_original_raster_modified": false
   }
 }
