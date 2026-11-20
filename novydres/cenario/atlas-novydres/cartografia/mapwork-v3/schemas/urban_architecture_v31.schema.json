@@ -309,6 +309,10 @@
         },
         "mask_receipt": {
           "type": "object"
+        },
+        "batch_size": {
+          "type": "integer",
+          "minimum": 1
         }
       }
     },

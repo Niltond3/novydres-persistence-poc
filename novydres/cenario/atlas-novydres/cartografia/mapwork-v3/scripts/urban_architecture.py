@@ -450,6 +450,18 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
             f"planned {len(tasks)} work units exceeds budget {budget}; split into batches")
     need=sum(eligible_edit)
     require(need==pixels,"eligible coverage not exactly 100 percent")
+    batchsize=plan["work_policy"].get("batch_size",min(12,budget))
+    require(isinstance(batchsize,int) and 1<=batchsize<=budget,
+            "invalid incremental generation batch size")
+    batches=[
+        {"id":f"BATCH-{k//batchsize+1:04d}",
+         "work_unit_ids":[t["id"] for t in tasks[k:k+batchsize]],
+         "status":"PENDING_UNAUTHORIZED"}
+        for k in range(0,len(tasks),batchsize)
+    ]
+    flattened=[unit for batch in batches for unit in batch["work_unit_ids"]]
+    require(len(flattened)==len(tasks) and
+            len(set(flattened))==len(tasks),"incomplete or duplicate incremental queue")
     total=sum(zone)
     classified=sum(class_counts.values())
     require(total==classified,"territory classification must cover exact polygon")
@@ -533,6 +545,13 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "blocks":blocks,
         "block_programs":block_programs,
         "work_units":tasks,
+        "generation_queue":{
+            "batches":batches,
+            "batch_size":batchsize,
+            "total_work_units":len(tasks),
+            "all_work_units_queued_once":True,
+            "generation_authorized":False
+        },
         "gates":required_gates,
         "generation_ready":ready,
         "blocking_gates":blocked,

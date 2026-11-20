@@ -236,3 +236,23 @@ def test_at_grade_mixed_rail_road_requires_declared_crossing():
     })
     with pytest.raises(urban.ContractError,match="rail crossing"):
         urban.plan_city(p,cfg)
+
+
+def test_incremental_batches_are_bounded_and_lossless():
+    p,cfg=fixture()
+    r=urban.plan_city(p,cfg)
+    q=r["generation_queue"]
+    assert q["batch_size"]==4
+    ids=[v for batch in q["batches"] for v in batch["work_unit_ids"]]
+    assert len(ids)==r["geometry"]["work_units"]
+    assert len(set(ids))==len(ids)
+    assert all(len(batch["work_unit_ids"])<=4 for batch in q["batches"])
+    assert all(batch["status"]=="PENDING_UNAUTHORIZED" for batch in q["batches"])
+    assert not q["generation_authorized"]
+
+
+def test_invalid_batch_size_cannot_authorize_any_art():
+    p,cfg=fixture()
+    p["work_policy"]["batch_size"]=201
+    with pytest.raises(urban.ContractError,match="batch size"):
+        urban.plan_city(p,cfg)
