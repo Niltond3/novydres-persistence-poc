@@ -259,7 +259,43 @@
       "expansion_sectors_union_pixels": 95853,
       "expansion_sectors_excluding_thermal_core_pixels": 93774,
       "geometry_status": "SKETCH_POLYGONS_NOT_METRO_ALIGNMENT",
-      "note": "The 93,774 conceptual expansion pixels are not all eligible for a tunnel; hydrography, water, protected features, underground engineering and neighboring network are not yet checked."
+      "note": "The 93,774 conceptual expansion pixels are not all eligible for a tunnel; hydrography, water, protected features, underground engineering and neighboring network are not yet checked.",
+      "conceptual_expansion_mask_connectivity": {
+        "connectivity": "4_NEIGHBOR_U02_PIXEL_CENTERS",
+        "component_count": 2,
+        "components": [
+          {
+            "area_pixels": 53065,
+            "bbox_px": [
+              644,
+              762,
+              990,
+              960
+            ],
+            "sectors": [
+              "KW-WORKER",
+              "KW-EDGE"
+            ]
+          },
+          {
+            "area_pixels": 40709,
+            "bbox_px": [
+              333,
+              774,
+              616,
+              1002
+            ],
+            "sectors": [
+              "KW-WEST",
+              "KW-TRANS"
+            ]
+          }
+        ],
+        "joins_permitted_by_this_audit": 0,
+        "required_validation": "A real, separately authorized underground route must be grounded in water and topography, actual rail access and bilateral neighbors; conceptual polygon adjacency does not create a tunnel.",
+        "no_new_river_crossing_inferred": true,
+        "topology_stage": "NONMETRIC_CANDIDATE_EXPANSION_MASK_ONLY"
+      }
     }
   }
 }
