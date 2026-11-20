@@ -105,5 +105,13 @@
     "art_generation_ready": false,
     "owner_final_visual_approval": false
   },
-  "next": "Keep V3.3 in SPATIAL_MODEL. Classify and validate every U02 crossing/grade, complete actual hydrography and exclusive territory, then produce official global-spatial-v31.json through existing single pipeline only."
+  "next": "Keep V3.3 in SPATIAL_MODEL. Classify and validate every U02 crossing/grade, complete actual hydrography and exclusive territory, then produce official global-spatial-v31.json through existing single pipeline only.",
+  "visual_review": {
+    "path": "zones/cidade-velha/spatial-visual-review-v33-20261120.json",
+    "blob_sha": "f246b44b8d9c7a2e9e060f7b81e7df721fe9e4ce",
+    "result": "FAIL_FOR_TOPOLOGY_PROMOTION",
+    "crossings_inspected": 24,
+    "grades_verified": 0,
+    "road_alignments_gis_certified": 0
+  }
 }
