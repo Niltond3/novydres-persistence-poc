@@ -185,3 +185,37 @@ def test_urban_design_blocks_inaccessible_buildings():
     assert design["building_count"]>0
     assert design["access_verified"] is False
     assert len(design["inaccessible_buildings"])==design["building_count"]
+
+
+def test_underground_metro_does_not_cut_streets_or_erase_surface_buildable_land():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    before=urban.plan_city(p,cfg)
+    p["transport"]["nodes"] += [
+        {"id":"M1","point":[2,10],"kind":"metro_station","level":-1},
+        {"id":"M2","point":[61,50],"kind":"metro_station","level":-1}
+    ]
+    p["transport"]["edges"].append({
+        "id":"METRO-1","class":"metro","from":"M1","to":"M2",
+        "points":[[2,10],[61,50]],"level":-1,"width_units":2,
+        "separates_blocks":False,"owner":"GLOBAL_NETWORK","structure":"tunnel"
+    })
+    after=urban.plan_city(p,cfg)
+    assert after["transport"]["metro"]==1
+    assert after["geometry"]["urban_lots"]==before["geometry"]["urban_lots"]
+    assert after["geometry"]["editable_pixels"]==before["geometry"]["editable_pixels"]
+
+
+def test_underground_pipeline_requires_a_tunnel_and_negative_level():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    p["transport"]["nodes"] += [
+        {"id":"U1","point":[2,8],"kind":"utility_hub","level":0},
+        {"id":"U2","point":[61,8],"kind":"utility_hub","level":0}
+    ]
+    p["transport"]["edges"].append({
+        "id":"GAS-1","class":"gas_pipe","from":"U1","to":"U2",
+        "points":[[2,8],[61,8]],"level":0,"width_units":1,
+        "separates_blocks":False,"owner":"GLOBAL_NETWORK"
+    })
+    with pytest.raises(urban.ContractError,match="underground network requires negative level and tunnel"):
+        urban.validate_transport(p["transport"],64,64)
