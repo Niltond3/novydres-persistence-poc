@@ -130,7 +130,8 @@ def run(args, v32_run):
                                neighbor_manifests=v32_run.__globals__["load_verified_neighbors"](plan))
         required=("source_and_global_topology","source_bytes_verified",
                   "territory_classification","neighbor_seams",
-                  "poi_sites_placed_and_accessible","ground_access_and_clearance")
+                  "pixel_masks_verified","poi_sites_placed_and_accessible",
+                  "ground_access_and_clearance")
         v33.require(all(report["gates"][key] for key in required),
                     "V3.3 spatial topology/access audits failed before image jobs")
         uid=args.recipe_unit or args.audit_unit
@@ -147,24 +148,46 @@ def run(args, v32_run):
                         "recipe design differs from deterministic current spatial plan")
             v33.require(expected["access_verified"],
                         "unit building street accessibility audit failed")
+            if not args.out:
+                return _state("IMAGE_RECIPE","SPECIFY_LOCAL_RECIPE_DESTINATION",
+                              ["--out required for versioned recipe write"],intent=intent)
+            owner_edit=None
+            if intent["mode"]!="CREATE_REGION":
+                if not args.editable_mask or not Path(args.editable_mask).is_file():
+                    return _state("EDIT_MASK","MATERIALIZE_OWNER_APPROVED_EDIT_MASK",
+                                  ["Owner edit mask required before preparing this refinement recipe"],
+                                  intent=intent)
+                from PIL import Image
+                with Image.open(args.editable_mask) as im:
+                    owner_edit=im.convert("L")
+                v33.validate_edit_mask(owner_edit,intent["intervention"]["bounds"],
+                                       urban.spatial_protection_mask(plan))
+            mask=v33.plan_unit_mask(plan,report,uid,cfg,owner_edit_mask=owner_edit)
+            if mask.getbbox() is None:
+                return _state("IMAGE_RECIPE","SKIP_UNIT_OUTSIDE_EDIT_SCOPE",
+                              [uid+" is unchanged; do not create a native image for it"],
+                              intent=intent)
+            mask_path=Path(args.out)/"masks"/(uid+".png")
+            mask_path.parent.mkdir(parents=True,exist_ok=True)
+            mask.save(mask_path)
             recipe=v33.make_generation_recipe(
                 unit=unit,intent=intent,design_path=design,
-                reference_path=args.reference,proposal_register=register,
+                reference_path=args.reference,mask_file=mask_path,
+                proposal_register=register,
                 neighbor_digests={seam["id"]:report["transport_sha256"]
                                   for seam in plan["neighbor_seams"]},
                 style={"projection":"TOP_DOWN_90",
                        "lighting":cfg["projection"]["lighting"],
                        "scale":cfg["detail_pixels_per_unit"],
                        "preserve_outside_mask":True})
-            if not args.out:
-                return _state("IMAGE_RECIPE","SPECIFY_LOCAL_RECIPE_DESTINATION",
-                              ["--out required for versioned recipe write"],intent=intent)
             location=Path(args.out)/"recipes"/(uid+".json")
             core.save(location,recipe)
             return _state("IMAGE_RECIPE","GENERATE_WITH_CHATGPT_NATIVE_IMAGE",
                           ["Recipe saved. Generate image externally and materialize actual bytes before audit."],
                           intent=intent,audit={"recipe":str(location),
-                                               "recipe_sha256":v33.digest(location)})
+                                               "recipe_sha256":v33.digest(location),
+                                               "mask_file":str(mask_path),
+                                               "mask_sha256":v33.digest(mask_path)})
         receipt=core.load(args.unit_receipt) if args.unit_receipt and Path(args.unit_receipt).is_file() else None
         if not receipt:
             return _state("IMAGE_MATERIALIZATION","FETCH_NATIVE_IMAGE_BYTES",
