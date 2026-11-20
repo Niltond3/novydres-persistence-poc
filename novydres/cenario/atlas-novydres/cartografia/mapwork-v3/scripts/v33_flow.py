@@ -92,8 +92,11 @@ def run(args, v32_run):
                 inventory.get("region")==target and
                 inventory.get("source_commit")==intent["source_commit"],
                 "inventory authority mismatch")
+    canon_ids=index["targets"][target].get("approved_element_ids",[])
+    v33.require(set(inventory.get("canonical_elements",[])).issubset(set(canon_ids)),
+                "inventory claims unsupported canonical existing elements")
     installation = v33.validate_inventory(inventory.get("elements",[]),register,
-                                         canonical_element_ids=inventory.get("canonical_elements",[]))
+                                         canonical_element_ids=canon_ids)
     if intent["mode"]=="ADD_ELEMENT":
         v33.require(intent.get("element_id") in
                     {e["id"] for e in inventory.get("elements",[])},
@@ -107,6 +110,8 @@ def run(args, v32_run):
     # Existing topology and renderer are reused, not forked. The old
     # SKETCH_APPROVED bit is NOT treated as owner approval of V3.3 art.
     args.v33_verified=True
+    args.district=target
+    args.zone=None
     result=v32_run(args)
     result["schema"]="NOVYDRES_MAPWORK_V33_PIPELINE_CHECKPOINT_1"
     result["intent_sha256"]=v33.evidence_digest(intent)
