@@ -8,7 +8,7 @@
   "target": "kingswell",
   "subject_id": "district-chelsea",
   "phase": "SPATIAL_MODEL",
-  "current_execution_outcome": "CANDIDATE_ROADS_AND_BRIDGES_SAVED; 24_JUNCTION_VISUAL_REVIEW_FAILS_TOPOLOGY_PROMOTION",
+  "current_execution_outcome": "R2_98_CORRIDOR_CANDIDATE_PERSISTED; 47_ENDPOINT_SNAP_AND_171_LOCAL_NODE_CANDIDATES; STILL_UNSURVEYED",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
@@ -42,7 +42,7 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "VISUALLY_SNAP_ROADS_TO_ACTUAL_U02_BEDS_THEN_CLASSIFY_24_JUNCTIONS_AND_4_WATER_CROSSINGS; BUILD_EXCLUSIVE_TERRITORY_AND_BILATERAL_SEAMS; VALIDATE_WITH_EXISTING_PIPELINE",
+  "next_action": "R2 visual grade/roadbed review; source U02 raster unchanged. Complete full street and physical territory and official V31 validations before generating images.",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
@@ -101,6 +101,23 @@
       "crossings_inspected": 24,
       "grades_verified": 0,
       "road_alignments_gis_certified": 0
-    }
+    },
+    "previous_first_pass_retained": true
+  },
+  "road_network_r2": {
+    "file": "zones/cidade-velha/road-network-candidate-v33-r2.json",
+    "source": "zones/cidade-velha/road-network-v33-r2-source.vct",
+    "git_blob_sha": "022586c5f1d3b128762171a28c718bfad82845f8",
+    "source_blob_sha": "3024c55e97b5e0b8f3a5dd2d594e330b02397d58",
+    "status": "NON_CANON_SPATIAL_CANDIDATE",
+    "candidate_road_corridors": 98,
+    "locally_noded_intersection_hypotheses": 171,
+    "endpoint_snaps_under_2px": 47,
+    "grade_unresolved_arterial_crossings": 39,
+    "historical_river_crossings_only": 3,
+    "local_graph_components": 6,
+    "POI_point_radius_3px_conflicts": 0,
+    "full_gis_validation_passed": false,
+    "art_generation_authorized": false
   }
 }
