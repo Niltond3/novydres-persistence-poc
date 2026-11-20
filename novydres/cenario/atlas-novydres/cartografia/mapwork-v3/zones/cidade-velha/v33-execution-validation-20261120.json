@@ -1,0 +1,83 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_REAL_EXECUTION_VALIDATION_1",
+  "date": "2026-11-20",
+  "candidate_branch": "mapwork-v3/v33-agent-pipeline-20261120",
+  "source_commit": "e13b356c6d1bb356fdd96a38202968a08f6f2521",
+  "canonical_master": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "target": {
+    "id": "kingswell",
+    "subject_id": "district-chelsea",
+    "mode": "CREATE_REGION"
+  },
+  "working_source": "actual GitHub candidate files transferred through temporary read-only transport workflow, extracted and executed locally; transport workflow removed from branch after validation",
+  "source_integrity": {
+    "u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "u02_bytes_verified": true
+  },
+  "real_invocations": [
+    {
+      "entrypoint": "scripts/pipeline.py run --intent zones/cidade-velha/intent-v33-2026-11-20.json --scope-index scope-index.json",
+      "process_exit": 0,
+      "phase": "CAPABILITY_CHECK",
+      "next_action": "PROVE_HOST_CAPABILITIES",
+      "result": "NO_VALID_HOST_RECEIPTS_YET"
+    },
+    {
+      "entrypoint": "scripts/pipeline.py run --intent zones/cidade-velha/intent-v33-2026-11-20.json --scope-index scope-index.json --capabilities <real-capabilities> --research-file zones/cidade-velha/research-v33-2026-11-20.json",
+      "process_exit": 0,
+      "phase": "BLOCKED_CAPABILITY",
+      "next_action": "RESTORE_REQUIRED_HOST_TOOLS",
+      "blockers": [
+        "native_image_generation",
+        "native_image_materialization"
+      ],
+      "result": "BLOCKED_HONESTLY"
+    },
+    {
+      "entrypoint": "scripts/pipeline.py run --district kingswell --reference <SHA_verified_original_U02>",
+      "process_exit": 0,
+      "phase": "SPATIAL_MODEL",
+      "next_action": "BUILD_GLOBAL_TRANSPORT_AND_TERRITORY",
+      "blockers": [
+        "Missing real transport network, exclusive land-use polygons and authoritative zone seams; macro windows cannot substitute."
+      ],
+      "result": "INTERNAL_LEGACY_DIAGNOSTIC_ONLY_NOT_V33_AUTHORIZATION"
+    }
+  ],
+  "contract_checks": {
+    "intent_validation": "PASS",
+    "research_validation": "PASS_3_REAL_WORLD_DOMAINS",
+    "approved_decisions_retained": 55,
+    "deferred": [
+      "KW-V3-D56"
+    ],
+    "real_source_u02_verified": true
+  },
+  "regression": {
+    "github_actions_commit": "0c5b385ccd0645fd9e22b30fedc741726b7a4676",
+    "workflow_run_id": 44805708450,
+    "passed": 132,
+    "source_local_subset": "131_PASS_1_ERROR_DUE_TO_TRANSFER_EXCLUDING_AN_UNRELATED_CANONICAL_FILE",
+    "source_local_subset_is_not_regression": true
+  },
+  "negative_test": {
+    "case": "CAPABILITY_EVIDENCE_SPOOFING",
+    "source": "scripts/v33_contracts.py:capability_preflight",
+    "procedure": "Set verified:true and an arbitrary 12+ character claim on both unsupported native generation/materialization capabilities in isolated test object; no visual generator was invoked.",
+    "observed": "Returned missing=[] and marked all capabilities verified.",
+    "severity": "P1",
+    "interpretation": "Capability self-assertions are not cryptographically or materially validated; DO NOT treat this test as permission to produce city art."
+  },
+  "blockers": [
+    "Native image generation by approved work unit and image byte materialization not proven.",
+    "No real global-spatial-v31.json for Kingswell.",
+    "Transport, river, seam, 100% territory classification, footprints and masks not audited.",
+    "Real neighboring zone connectivity and POI siting not verified.",
+    "No actual candidate composition to compare or approve."
+  ],
+  "outcome": "NOT_READY_FOR_INTEGRAL_GENERATION_OR_OWNER_APPROVAL",
+  "canonical_state_changed": false,
+  "release_published": false,
+  "actual_visual_assets_generated": 0,
+  "followup_gate": "Correct evidence integrity and build real U02-backed spatial network and complete territories before unit generation and compositing."
+}
