@@ -13,6 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 import mapwork as core
 import urban_architecture as urban
+import urban_content
 import pipeline
 
 
@@ -157,3 +158,30 @@ def test_protected_mask_matches_reference_dimensions():
     im=urban.spatial_protection_mask(p)
     assert im.mode=="L" and im.size==(64,64)
     assert sum(1 for v in im.tobytes() if v)>0
+
+
+def test_urban_design_produces_individual_footprints_with_street_access():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    r=urban.plan_city(p,core.load(ROOT/"config.json"))
+    unit=r["work_units"][0]
+    design=urban_content.design_unit(p,r,unit["id"])
+    assert design["building_count"]==unit["pixels"]
+    assert design["parcels_covered_exactly_once"]
+    assert design["access_verified"]
+    assert all(b["road_access_steps"] is not None for b in design["buildings"])
+    for b in design["buildings"]:
+        x0,y0,x1,y1=b["parcel"]
+        q=b["footprint"]
+        assert x0<q[0]<q[2]<x1 and y0<q[1]<q[3]<y1
+
+
+def test_urban_design_blocks_inaccessible_buildings():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    r=urban.plan_city(p,core.load(ROOT/"config.json"))
+    ctx=urban_content.design_context(p)
+    ctx["parents"]={}
+    ctx["distance"]={}
+    design=urban_content.design_unit(p,r,r["work_units"][0]["id"],context=ctx)
+    assert design["building_count"]>0
+    assert design["access_verified"] is False
+    assert len(design["inaccessible_buildings"])==design["building_count"]
