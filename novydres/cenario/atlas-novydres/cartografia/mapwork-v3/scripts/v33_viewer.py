@@ -121,7 +121,7 @@ h3{font-size:13px;margin:9px 0}small{opacity:.75}@media(max-width:700px){.views{
 const D=__DATA__, views=[document.getElementById('before'),document.getElementById('after')];
 const pools=[D.before,D.after], cache=new Map(), pending=new Set(), MAX_CACHE=96;
 let zoom=1,dx=0,dy=0,active=new Map(),pinch=null;
-const base=new Image();base.src=D.base;base.onload=draw;
+const overviews=[new Image(),new Image()];overviews[0].src='overview-before.png';overviews[1].src='overview-after.png';overviews.forEach(im=>im.onload=draw);
 function getImage(src){
   if(cache.has(src)){const i=cache.get(src);cache.delete(src);cache.set(src,i);return i;}
   if(pending.has(src))return null;
@@ -138,7 +138,7 @@ function draw(){
     c.width=Math.round(c.clientWidth*pixelRatio);c.height=Math.round(c.clientHeight*pixelRatio);
     const g=c.getContext('2d');g.setTransform(pixelRatio,0,0,pixelRatio,0,0);
     g.clearRect(0,0,c.clientWidth,c.clientHeight);
-    if(base.complete&&base.naturalWidth)g.drawImage(base,v.x,v.y,D.w*v.k,D.h*v.k);
+    if(overviews[idx].complete&&overviews[idx].naturalWidth)g.drawImage(overviews[idx],v.x,v.y,D.w*v.k,D.h*v.k);
     for(const t of pools[idx]){
       const x=v.x+(t.x*D.tile/D.s)*v.k,y=v.y+(t.y*D.tile/D.s)*v.k;
       const w=(t.width/D.s)*v.k,h=(t.height/D.s)*v.k;
