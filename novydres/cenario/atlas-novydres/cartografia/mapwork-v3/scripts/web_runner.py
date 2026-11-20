@@ -184,7 +184,9 @@ def _check_resume(payload,checkpoint,source_fingerprints):
 def run_request(*,district=None,request=None,out):
     root=Path(out)
     root.mkdir(parents=True,exist_ok=True)
-    verify_remote_branch()
+    if not (os.environ.get("GITHUB_EVENT_NAME")=="pull_request" and
+            request is None and district):
+        verify_remote_branch()
     selected=None
     if not request and not district and os.environ.get("GITHUB_EVENT_NAME")=="push":
         selected=discover_request_metadata()

@@ -68,7 +68,7 @@ def test_p1_push_with_multiple_distinct_requests_cannot_silently_select_last(mon
     def fake_git(*args):
         if args[:2]==("rev-parse","HEAD"):return "b"*40
         if args[0]=="merge-base":return "a"*40
-        if args[0]=="rev-list":return "c"*40+"\\n"+"b"*40
+        if args[0]=="rev-list":return "c"*40+"\n"+"b"*40
         if args[0]=="diff-tree":
             return prefix+("first.json" if args[-1]=="c"*40 else "last.json")
         raise AssertionError(args)
@@ -84,7 +84,7 @@ def test_p1_push_intermediate_single_request_is_discovered(monkeypatch):
     def fake_git(*args):
         if args[:2]==("rev-parse","HEAD"):return "b"*40
         if args[0]=="merge-base":return "a"*40
-        if args[0]=="rev-list":return "c"*40+"\\n"+"b"*40
+        if args[0]=="rev-list":return "c"*40+"\n"+"b"*40
         if args[0]=="diff-tree":
             return prefix+"intermediate.json" if args[-1]=="c"*40 else ""
         raise AssertionError(args)

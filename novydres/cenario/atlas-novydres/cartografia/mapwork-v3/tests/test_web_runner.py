@@ -25,6 +25,7 @@ def test_hosted_bootstrap_emits_content_hashes_without_private_media(tmp_path,mo
 def test_browser_request_rejects_stale_parent_before_pipeline(tmp_path,monkeypatch):
     monkeypatch.setenv("GITHUB_EVENT_NAME","push")
     monkeypatch.setenv("GITHUB_SHA","c"*40)
+    monkeypatch.setenv("GITHUB_ACTIONS","false")
     monkeypatch.setattr(web_runner,"parent_commit",lambda:"1"*40)
     monkeypatch.setattr(web_runner,"checked_path",lambda p,**kw:tmp_path/"request.json")
     core.save(tmp_path/"request.json",{
