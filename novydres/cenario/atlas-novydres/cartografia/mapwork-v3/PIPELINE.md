@@ -38,7 +38,7 @@ A pesquisa e geração de imagem são **ações externas**, executadas por um ag
 4. `python scripts/pipeline.py run --zone ... --spatial ... --reference ... --design-root zones/<slug>/urban-design`: compara **todos os planos vetoriais** com o que o motor regeneraria; depois checa `mask_receipt`, as aprovações e os assets. Art não está liberada apenas por existir arquivo.
 5. `python scripts/pipeline.py run --zone ... --spatial ... --reference ... --design-root ... --assets /tmp/assets --before /tmp/tiles-aprovados --out /tmp/candidata --execute`: compõe **somente** se todos os arquivos, SHA e gates passaram. O comparador é candidato e exige revisão humana.
 
-`--before` é obrigatório quando `world-state.json` referencia uma release anterior. O compositor mescla a base de cada tile com o aprovado e impede alterações de pixels aprovados: edições intencionais de obra anterior precisam de processo de autorização e reprojeto próprio, não de bypass.
+`--before` é obrigatório quando `world-state.json` referencia uma release anterior. O compositor mescla a base de cada tile com o aprovado e impede alterações de pixels aprovados: edições intencionais de obra anterior precisam de processo de autorização e reprojeto próprio, não de bypass. A pasta `--before` deve conter uma cópia **materializada e SHA-validada de todos** os tiles do último estado aprovado: `tiles` + `inherited_tiles`. O catálogo candidato referencia os tiles inalterados em `inherited_tiles` e conserva `parent_manifest_sha256`, sem duplicar PNGs; manifestos com `stage` não aprovado ou sem IDs remotos são rejeitados. Ao publicar, é obrigatório confirmar os IDs herdados e os novos, e tornar o conjunto novamente materializável no próximo checkpoint.
 
 ## Regras de geometria e arte
 
