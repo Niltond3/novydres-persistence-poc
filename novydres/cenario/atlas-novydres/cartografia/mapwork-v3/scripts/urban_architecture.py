@@ -29,8 +29,10 @@ ROAD_CLASSES = {"street", "collector", "avenue", "arterial", "expressway", "ramp
 RAIL_CLASSES = {"rail_main", "rail_freight", "rail_siding"}
 TRAM_CLASSES = {"tram"}
 WATER_CLASSES = {"river", "canal"}
-EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES
-JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass"}
+UNDERGROUND_CLASSES = {"metro", "heat_pipe", "gas_pipe", "utility_duct"}
+UTILITY_CLASSES = UNDERGROUND_CLASSES | {"aqueduct"}
+EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES | UTILITY_CLASSES
+JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass", "metro_station", "utility_hub", "aqueduct_gate", "heat_exchange", "gas_terminal"}
 CROSSING_CLASSES = {"at_grade", "grade_separated"}
 LANDUSE_CLASSES = {"urban", "industrial", "natural", "water", "protected"}
 MORPH_CLASSES = {"historic", "worker", "industrial", "technical", "mixed", "waterfront"}
@@ -148,6 +150,15 @@ def _validate_nodes_edges(transport, width, height):
                     f"{label}: elevated route cannot cut ground-level blocks")
         if e["class"] in WATER_CLASSES:
             require(e["separates_blocks"] is True,f"{label}: river/canal is a physical boundary")
+        if e["class"] in UNDERGROUND_CLASSES:
+            require(from_level<0 and to_level<0 and
+                    e.get("structure") in {"tunnel","underpass"},
+                    f"{label}: underground network requires negative level and tunnel")
+            require(e["separates_blocks"] is False,
+                    f"{label}: subsurface networks cannot split ground city blocks")
+        if e["class"]=="aqueduct":
+            require(e["separates_blocks"] is False,
+                    f"{label}: utility aqueduct cannot independently subdivide lots")
         incid[e["from"]]+=1;incid[e["to"]]+=1
     incident=collections.defaultdict(list)
     for e in edges:
@@ -228,6 +239,11 @@ def validate_transport(transport, width, height):
         if a["id"]==b["id"]:
             continue
         pt=seg_cross(pa,qa,pb,qb)
+        underground_grade=(a["class"] in UNDERGROUND_CLASSES or
+                           b["class"] in UNDERGROUND_CLASSES)
+        different_grade=a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from"))
+        if underground_grade and different_grade:
+            continue
         if pt is None:
             overlap=collinear_overlap(pa,qa,pb,qb)
             if overlap is None:
@@ -265,6 +281,8 @@ def validate_transport(transport, width, height):
         "rails":sum(e["class"] in RAIL_CLASSES for e in byedge.values()),
         "trams":sum(e["class"] in TRAM_CLASSES for e in byedge.values()),
         "waterways":sum(e["class"] in WATER_CLASSES for e in byedge.values()),
+        "metro":sum(e["class"]=="metro" for e in byedge.values()),
+        "utilities":sum(e["class"] in UTILITY_CLASSES and e["class"]!="metro" for e in byedge.values()),
         "junctions":dict(collections.Counter(n["kind"] for n in bynode.values()))
     }
 
@@ -321,7 +339,8 @@ def spatial_protection_mask(plan):
     w,h=plan["grid"]["width"],plan["grid"]["height"]
     zone,classes,names,_=classify_territory(plan)
     corridors=_line_mask((w,h),plan["transport"],lambda e:
-                         e["class"] in EDGE_CLASSES).tobytes()
+                         e["class"] not in UNDERGROUND_CLASSES or
+                         e.get("surface_easement") is True).tobytes()
     protected_categories={names["water"],names["natural"],names["protected"]}
     mask=bytes(255 if zone[i] and
                (classes[i] in protected_categories or corridors[i]) else 0
@@ -471,7 +490,8 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     # Elevated rail/roads/viaducts are preserved as a second overlay, but they
     # do not connect ground roads or falsely split lots at an overpass.
     all_rails_roads=_line_mask((w,h),plan["transport"],lambda e:
-        e["class"] in EDGE_CLASSES).tobytes()
+        e["class"] not in UNDERGROUND_CLASSES or
+        e.get("surface_easement") is True).tobytes()
     landuse_protected={names["water"],names["natural"],names["protected"]}
     protected=bytearray(1 if (zone[i] and (classes[i] in landuse_protected or
                                            all_rails_roads[i])) else 0 for i in range(w*h))
