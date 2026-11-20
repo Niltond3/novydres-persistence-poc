@@ -250,6 +250,73 @@ def test_sketch_source_image_preserved():
 def test_next_after_approved_sketch_is_detail_geometry_not_art():
     cfg,z,plan=planning_inputs()
     nxt=m.next_action(z)
-    assert nxt['action']=='PREPARE_DETAIL_GEOMETRY'
-    assert m.audit_zone(z,cfg,strict=False)['elements']==0
+    assert nxt['action']=='SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS'
+    assert m.audit_zone(z,cfg,strict=False)['elements']==14
     assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
+
+
+def detail_inputs():
+    cfg,z,plan,sketch=integral_sketch_inputs()
+    d=m.load(ROOT/'zones/cidade-velha/lotes-conectores-v2.json')
+    return cfg,z,plan,sketch,d
+
+def test_detail_macrolots_and_seams_are_persisted_but_not_art_ready():
+    cfg,z,plan,g,d=detail_inputs()
+    r=m.validate_detail_preparation(d,z,plan,g,cfg)
+    assert r['macro_lots']==14
+    assert r['border_reservations']==4 and r['internal_graph_connectors']==35
+    assert r['image_readiness']=='NOT_READY_FOR_ART_GENERATION'
+    assert m.next_action(z)['action']=='SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS'
+
+def test_macrolot_overlap_is_rejected():
+    cfg,z,plan,g,d=detail_inputs()
+    d['lots'][1]['core']=d['lots'][0]['core'][:]
+    with pytest.raises(m.Invalid,match='overlapping macro-lot cores'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_poi_not_inside_core_is_rejected():
+    cfg,z,plan,g,d=detail_inputs()
+    d['lots'][1]['core']=[660,760,680,780]
+    with pytest.raises(m.Invalid,match='POI outside lot core'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_future_group_dependency_is_rejected():
+    cfg,z,plan,g,d=detail_inputs()
+    d['lots'][0]['depends_on']=['KW-L14']
+    with pytest.raises(m.Invalid,match='future generation group'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_cyclic_dependency_is_rejected():
+    cfg,z,plan,g,d=detail_inputs()
+    d['lots'][0]['depends_on']=['KW-L02']
+    with pytest.raises(m.Invalid,match='cyclic generation dependency'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_border_must_stay_on_sketch_perimeter():
+    cfg,z,plan,g,d=detail_inputs()
+    d['border_contracts'][0]['anchor_px']=[550,850]
+    z['connectors'][0]['x']=550;z['connectors'][0]['y']=850
+    with pytest.raises(m.Invalid,match='not on proposed raion boundary'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_regional_rail_cannot_be_claimed_by_kingswell():
+    cfg,z,plan,g,d=detail_inputs()
+    d['regional_external_reference']['owner_zone']='kingswell'
+    with pytest.raises(m.Invalid,match='regional freight connector ownership'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_candidate_must_not_claim_mask_verified():
+    cfg,z,plan,g,d=detail_inputs()
+    d['constraints']['roads_water_rail_masks_verified']=True
+    with pytest.raises(m.Invalid,match='unverified masks'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+
+def test_missing_connector_or_missing_element_fails():
+    cfg,z,plan,g,d=detail_inputs()
+    z['connectors'].pop()
+    with pytest.raises(m.Invalid,match='zone connectors not synchronized'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)
+    cfg,z,plan,g,d=detail_inputs()
+    z['elements'].pop()
+    with pytest.raises(m.Invalid,match='zone.elements not synchronized'):
+        m.validate_detail_preparation(d,z,plan,g,cfg)

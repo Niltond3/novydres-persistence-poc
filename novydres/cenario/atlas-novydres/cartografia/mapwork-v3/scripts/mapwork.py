@@ -201,8 +201,10 @@ def next_action(z):
         if not z['research']:return {'action':'RESEARCH','note':'Research world analogues; cite sources, do not infer canon.'}
         return {'action':'PRESENT_SKETCH','note':'Whole-region technical sketch and succinct decision packet; wait for explicit approval.'}
     if not z['sketch_approved']:return {'action':'WAIT_SKETCH_APPROVAL'}
-    if z['status']=='SKETCH_APPROVED' and (not z['elements'] or (z['neighbors'] and not z['connectors'])):
-        return {'action':'PREPARE_DETAIL_GEOMETRY','note':'Sketch approved; derive lot geometry and shared boundary connectors before art.'}
+    if z['status']=='SKETCH_APPROVED':
+        if not z['elements'] or (z['neighbors'] and not z['connectors']):
+            return {'action':'PREPARE_DETAIL_GEOMETRY','note':'Sketch approved; derive lot geometry and shared boundary connectors before art.'}
+        return {'action':'SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS','note':'14 macro-lot windows exist but protected masks, atomic lots and bilateral seams remain unverified; never generate art in SKETCH_APPROVED.'}
     pending=[e['id'] for e in z['elements'] if e['status']!='VERIFIED']
     if pending:return {'action':'GENERATE_NEXT','element_id':pending[0],'remaining':len(pending)}
     if not z.get('owner_approval'):return {'action':'SHOW_BEFORE_AFTER','note':'Render and deliver full comparison before asking for owner approval.'}
@@ -352,6 +354,89 @@ def validate_integral_sketch(g,plan,z,cfg):
         fail(g['validation']['conflicts_unresolved']==0 and g['validation']['owner_sketch_approval'] is True,'approved sketch has conflict markers or no owner approval')
     return {'sketch_version':g['version'],'bridges':len(bridges),'pois':len(sites),'crossing_conflicts':len(conflicts),'validity':'CANDIDATE_WITH_BLOCKERS' if z['status']=='PLANNING' else 'OWNER_APPROVED_VISUAL_SKETCH'}
 
+
+def validate_detail_preparation(d, z, plan, sketch, cfg):
+    """Fail closed on fictitious production readiness of candidate macro-lot rectangles."""
+    fail(d.get('schema')=='NOVYDRES_MAPWORK_V3_KINGSWELL_DETAIL_PREP_1','detail preparation schema')
+    fail(d.get('version')=='KW_DETAIL_PREP_V2' and d.get('status')=='GEOMETRY_SEEDED_PENDING_MASK_AND_SEAM_VERIFICATION','detail preparation must be geometry seeded')
+    src=d.get('approved_sketch_reference',{})
+    fail(src.get('version')==sketch.get('version') and src.get('hash_reference')==cfg['reference']['sha256'] and src.get('owner_approved') is True,'detail preparation sketch reference mismatch')
+    fail(src.get('excluded_marker_ids')==['X01','X02','X03'] and len(sketch.get('crossing_conflicts',[]))==0,'owner-excluded conflict overlays cannot return')
+    fail(z['status']=='SKETCH_APPROVED' and z['sketch_approved'] is True,'detail preparation requires approved sketch')
+    constraints=d.get('constraints',{})
+    fail(constraints.get('image_generation_authorized') is False and constraints.get('complete_urban_coverage_verified') is False,'candidate detail plan cannot claim art/coverage readiness')
+    fail(constraints.get('roads_water_rail_masks_verified') is False and constraints.get('neighbors_reconciled') is False,'unverified masks or neighbor seams cannot claim pass')
+    fail(constraints.get('atomic_window_max_units')==16 and constraints.get('actual_bleed_units')<=cfg['max_bleed_units'],'atomic size or bleed contract mismatch')
+    lots=d.get('lots',[])
+    required={'KW-L%02d'%i for i in range(1,15)}
+    fail(len(lots)==14 and {lot.get('id') for lot in lots}==required,'missing or extra Kingswell macro-lots')
+    fail(len(z['elements'])==14 and {e['id'] for e in z['elements']}==required,'zone.elements not synchronized with macro-lot manifest')
+    elements={e['id']:e for e in z['elements']}
+    groups={g['id']:g['sequence'] for g in d.get('generation_groups',[])}
+    fail(set(groups)=={'KW-GEN-%02d'%i for i in range(7)},'required generation groups missing')
+    def overlaps(a,b):
+        return a[0]<b[2] and b[0]<a[2] and a[1]<b[3] and b[1]<a[3]
+    rects=[]
+    poi_positions={p['id']:p['candidate_px'] for p in sketch['poi_sites']}
+    seen_pois=[]
+    for l in lots:
+        name=l['id']; core=l.get('core'); env=l.get('envelope')
+        fail(rect(core) and rect(env) and inside(core,env) and inside(env,z['bounds']),name+': invalid core/envelope')
+        for other in rects:fail(not overlaps(core,other[1]),name+': overlapping macro-lot cores with '+other[0])
+        rects.append((name,core))
+        max_bleed=max(core[0]-env[0],core[1]-env[1],env[2]-core[2],env[3]-core[3])
+        fail(max_bleed<=cfg['max_bleed_units']+1e-8,name+': bleed exceeds allowed')
+        e=elements[name]
+        fail(e['core']==core and e['envelope']==env and e['kind']==('special_building' if l['special'] else 'lot'),name+': zone element not synchronized')
+        fail(e['status']=='PENDING' and e['asset'] is None and e['mask'] is None,name+': assets cannot be preapproved')
+        fail(l['group'] in groups,name+': missing generation group')
+        for dep in l.get('depends_on',[]):
+            parent=next((x for x in lots if x['id']==dep),None)
+            fail(parent is not None and dep!=name,name+': invalid lot dependency')
+            fail(groups[parent['group']]<=groups[l['group']],name+': depends on future generation group')
+        for item in l.get('contains',[]):
+            if item in poi_positions:
+                x,y=poi_positions[item]
+                fail(core[0]<x<core[2] and core[1]<y<core[3],name+': POI outside lot core')
+                seen_pois.append(item)
+    fail(set(seen_pois)==set(poi_positions) and len(seen_pois)==5,'five POIs must belong to unique macro-lots')
+    # Detect cycles even inside a single allowed generation group.
+    byid={l['id']:l for l in lots};active=set();done=set()
+    def visit(k):
+        fail(k not in active,'cyclic generation dependency')
+        if k in done:return
+        active.add(k)
+        for dep in byid[k].get('depends_on',[]):visit(dep)
+        active.remove(k);done.add(k)
+    for k in byid:visit(k)
+    contracts=d.get('border_contracts',[])
+    fail(len(contracts)==4 and len({c['id'] for c in contracts})==4,'four independent boundary reservations required')
+    fail(len(z['connectors'])==4 and len({c['id'] for c in z['connectors']})==4,'zone connectors not synchronized with boundary reservations')
+    byconn={c['id']:c for c in z['connectors']}
+    poly=sketch['raion_polygon_candidate_px']
+    for c in contracts:
+        x,y=c.get('anchor_px',[None,None])
+        fail(c['id'] in byconn and c['target_zone'] in z['neighbors'],'unknown boundary connector or neighbor')
+        fail(c.get('edge_state')=='CANDIDATE_NEIGHBOR_NOT_GENERATED' and c.get('requires_neighbor_match') is True,'unverified boundary promoted without neighbor verification')
+        actual=byconn[c['id']]
+        fail(actual['x']==x and actual['y']==y and actual['width']==c['width_units'] and actual['kind']==c['kind'] and actual['neighbor']==c['target_zone'] and actual['profile']==c['profile'],'connector payload differs from border contract')
+        fail(0<=x<=cfg['world_size_units'][0] and 0<=y<=cfg['world_size_units'][1],'connector outside U02')
+        fail(min(_segment_distance([x,y],poly[i],poly[(i+1)%len(poly)]) for i in range(len(poly)))<=2,'connector not on proposed raion boundary')
+    r=d.get('regional_external_reference',{})
+    fail(r.get('owner_zone')=='GLOBAL_RAIL_NOT_KINGSWELL' and r.get('anchor_px')==[100,cfg['world_size_units'][1]],'regional freight connector ownership mismatch')
+    fail(r['anchor_px'][0]<z['bounds'][0] and r['id'] not in byconn,'off-zone regional rail must not be assigned to Kingswell')
+    fail(r.get('no_new_station') is True and r.get('no_new_track') is True,'regional rail may not create infrastructure')
+    internal=d.get('internal_connectors',[])
+    fail(len(internal)==35 and len({c['id'] for c in internal})==35,'35 declared internal connectors required')
+    intern_ids={c['id'] for c in internal}
+    usage={x for l in lots for x in l.get('internal_connectors',[])}
+    fail(usage==intern_ids,'internal graph connector missing or orphan')
+    valid_refs=required|{c['id'] for c in d.get('external_connectors',[])}
+    for c in internal:
+        fail(c.get('status')=='PENDING_COORDINATE_CHECK' and c.get('geometry_status')=='GRAPH_ONLY_NEEDS_SNAP_TO_U02','unsnapped internal route promoted')
+        fail(bool(c['links']) and all(k in valid_refs for k in c['links']),'broken internal graph reference')
+    return {'macro_lots':14,'zone_pending_elements':14,'border_reservations':4,'internal_graph_connectors':35,'unique_pois':5,'atomic_subdivision':'PENDING','mask_status':'PENDING','neighbor_seam_status':'PENDING','image_readiness':'NOT_READY_FOR_ART_GENERATION'}
+
 def audit_required_planning_zones(cfg):
     required=cfg.get('required_planning_zones',[])
     fail(bool(required) and len(required)==len(set(required)),'required planning zones must be configured')
@@ -370,7 +455,12 @@ def audit_required_planning_zones(cfg):
             fail(re.fullmatch(r'esboco-integral-u02-v\d+\.json',sketchname) is not None,'unsafe sketch reference')
             sketchpath=ROOT/'zones'/folder/sketchname
             fail(sketchpath.is_file(),f'required integral sketch missing: {folder}')
-            report['sketch']=validate_integral_sketch(load(sketchpath),plan,z,cfg)
+            sketch=load(sketchpath)
+            report['sketch']=validate_integral_sketch(sketch,plan,z,cfg)
+            if z.get('elements'):
+                detailpath=ROOT/'zones'/folder/'lotes-conectores-v2.json'
+                fail(detailpath.is_file(),f'required detail preparation missing: {folder}')
+                report['detail_preparation']=validate_detail_preparation(load(detailpath),z,plan,sketch,cfg)
         results.append(report)
     return results
 
