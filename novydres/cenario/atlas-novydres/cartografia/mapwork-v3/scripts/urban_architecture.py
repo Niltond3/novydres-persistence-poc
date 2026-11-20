@@ -133,6 +133,9 @@ def _validate_nodes_edges(transport, width, height):
     for n in nodes:
         if n["kind"]=="roundabout":
             require(incid[n["id"]]>=3,f"{n['id']}: roundabout requires at least 3 branches")
+            ring=n.get("ring_geometry")
+            require(isinstance(ring,list) and len(ring)>=4 and all(finite_xy(p) for p in ring),
+                    f"{n['id']}: roundabout requires a physical ring polygon")
         if n["kind"]=="interchange":
             require(incid[n["id"]]>=2,f"{n['id']}: empty interchange")
     return bynode,{e["id"]:e for e in edges}
@@ -164,6 +167,9 @@ def validate_transport(transport, width, height):
             require(x.get("junction_id") in bynode,f"{x['id']}: at-grade junction must have a node")
             require(point_close(x["point"],bynode[x["junction_id"]]["point"]),
                     f"{x['id']}: crossing does not align junction")
+            require(x["junction_id"] in (a["from"],a["to"]) and
+                    x["junction_id"] in (b["from"],b["to"]),
+                    f"{x['id']}: at-grade crossing must split both edge geometries at junction")
     # Spatial hash to avoid checking every network segment against every other.
     bucket=16
     cells=collections.defaultdict(list)
@@ -224,13 +230,13 @@ def validate_transport(transport, width, height):
 
 
 def _polygon_mask(shape, polygon):
-    im=Image.new("1",shape,0)
+    im=Image.new("L",shape,0)
     ImageDraw.Draw(im).polygon([tuple(p) for p in polygon],fill=1)
     return im
 
 
 def _line_mask(shape, transport, selector):
-    im=Image.new("1",shape,0);d=ImageDraw.Draw(im)
+    im=Image.new("L",shape,0);d=ImageDraw.Draw(im)
     for e in transport["edges"]:
         if not selector(e):
             continue
@@ -330,7 +336,7 @@ def derive_work_units(width,height,labels,allowed,max_units,scale):
     """Partition ALL eligible pixels exactly once into bounded work-unit masks."""
     labels_n=len(labels)
     require(labels_n==width*height,"invalid block label image")
-    require(1<=max_units<=32 and isinstance(max_units,int),"work-unit size must be between 1 and 32 reference pixels")
+    require(isinstance(max_units,int) and 1<=max_units<=32,"work-unit size must be between 1 and 32 reference pixels")
     tasks={}
     covered=bytearray(width*height)
     for i,block in enumerate(labels):
