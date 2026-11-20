@@ -177,10 +177,14 @@ def test_tile_compositor_permits_scoped_approved_replacement(tmp_path):
     result=core._compose_tiles([zone],cfg,base,assets,final,
                                approved_before=first,edit_mask_u02=editable)
     assert result["tiles"]
-    with pytest.raises(core.Invalid,match="outside owner-authorized"):
-        wrong=Image.new("L",(32,16),0);wrong.putpixel((0,0),255)
-        core._compose_tiles([zone],cfg,base,assets,tmp_path/"wrong",
-                            approved_before=first,edit_mask_u02=wrong)
+    # The compositor defensively clips the replacement to the owner mask:
+    # art supplied for a different area MUST NOT touch an approved old pixel.
+    wrong=Image.new("L",(32,16),0);wrong.putpixel((0,0),255)
+    core._compose_tiles([zone],cfg,base,assets,tmp_path/"wrong",
+                        approved_before=first,edit_mask_u02=wrong)
+    with Image.open(first/"tile_0_0.png") as baseline, Image.open(
+            tmp_path/"wrong"/"tile_0_0.png") as clipped:
+        assert baseline.convert("RGBA").tobytes()==clipped.convert("RGBA").tobytes()
 
 
 def test_html_uses_lazy_external_tiles_and_integral_overview(tmp_path):
