@@ -234,7 +234,8 @@
       "no_surface_network_changes_implied": true,
       "no_station_or_portal_inferred": true,
       "underground_level_not_surveyed": true,
-      "bilateral_neighbor_contract_required": true
+      "bilateral_neighbor_contract_required": true,
+      "exclusion_precedence": "KW-HIST overrides any overlapping expansion-sector designations, notably KW-WORKER. Intersection is excluded from all candidate metro corridors."
     },
     "forbidden_inferences": [
       "Any newly approved station, access or ventilation point",
@@ -246,6 +247,19 @@
     "station_points": [],
     "neighbor_seam_points": [],
     "mask_status": "NOT_DERIVED",
-    "next_technical_step": "Derive possible underground routing graph from U02-grounded surface/water/terrain constraints, exclude KW-HIST, audit actual portal seams; do not introduce unapproved stations."
+    "next_technical_step": "Derive possible underground routing graph from U02-grounded surface/water/terrain constraints, exclude KW-HIST, audit actual portal seams; do not introduce unapproved stations.",
+    "constraint_audit": {
+      "method": "Integer pixel centers in U02 sketch polygons, independent candidate geometry check; not U02 tunnel/road survey",
+      "source": "esboco-integral-u02-v2.json",
+      "source_blob_sha": "180f3a01ad40983b6ade2217cb488c7b591fa45d",
+      "thermal_core_pixels": 12111,
+      "thermal_core_outside_raion_pixels": 0,
+      "core_and_worker_expansion_overlap_pixels": 2079,
+      "other_core_and_expansion_overlap_pixels": 0,
+      "expansion_sectors_union_pixels": 95853,
+      "expansion_sectors_excluding_thermal_core_pixels": 93774,
+      "geometry_status": "SKETCH_POLYGONS_NOT_METRO_ALIGNMENT",
+      "note": "The 93,774 conceptual expansion pixels are not all eligible for a tunnel; hydrography, water, protected features, underground engineering and neighboring network are not yet checked."
+    }
   }
 }
