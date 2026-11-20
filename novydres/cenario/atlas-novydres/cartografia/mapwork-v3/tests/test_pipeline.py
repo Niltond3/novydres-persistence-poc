@@ -367,7 +367,7 @@ def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_pa
 def test_legacy_pois_cannot_be_omitted_from_new_spatial_plan(tmp_path):
     folder=tmp_path/"zone";folder.mkdir()
     core.save(folder/"spatial-plan.json",{"pois":[{"id":"POI-MUST-SURVIVE"}]})
-    with pytest.raises(core.Invalid,match="POIs missing spatial sites"):
+    with pytest.raises(core.Invalid,match="approved POI inventory differs"):
         pipeline.check_canonical_pois(folder/"zone.json",{"special_sites":[]})
 
 

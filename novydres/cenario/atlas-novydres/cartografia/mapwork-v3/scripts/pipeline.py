@@ -257,8 +257,6 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=base,
                            neighbor_manifests=load_verified_neighbors(plan))
-    core.fail(report["generation_ready"] and all(report["gates"].values()),
-              "composition contract blocked by urban/art gates")
     expected={u["id"] for u in report["work_units"]}
     core.fail(set(contract.get("design_sha256",{}))==expected,
               "composition contract incomplete work-unit design hashes")
@@ -268,6 +266,8 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
                   fingerprint(path)==contract["design_sha256"][uid],
                   uid+": stale/missing work-unit design in composition contract")
     validate_all_unit_designs(plan,report,design_root,cfg)
+    core.fail(report["generation_ready"] and all(report["gates"].values()),
+              "composition contract blocked by urban/art gates")
     bound=validate_work_unit_bindings(zone,report)
     verify_unit_art_masks(plan,report,bound,assets,cfg)
     core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),

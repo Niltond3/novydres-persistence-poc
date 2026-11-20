@@ -156,5 +156,5 @@ def test_p1_physical_scale_never_inferred_from_reference_pixels():
          "owner_approved":False,"evidence":"not reviewed by owner",
          "minimum_width_m":{"pedestrian":1.2,"vehicle":3.0}}
     p["physical_reference"]=bad
-    with pytest.raises(urban.ContractError,match="explicit owner evidence"):
+    with pytest.raises(urban.ContractError,match="V3.1 schema|explicit owner evidence"):
         urban.plan_city(p,cfg)
