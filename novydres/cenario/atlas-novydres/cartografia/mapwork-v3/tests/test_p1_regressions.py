@@ -61,20 +61,36 @@ def test_p1_poi_entrance_at_building_center_is_rejected():
         urban.plan_city(p,cfg)
 
 
-@pytest.mark.xfail(strict=True, reason="P1: last-commit-only push discovery silently skips intermediate requests")
 def test_p1_push_with_multiple_distinct_requests_cannot_silently_select_last(monkeypatch):
     monkeypatch.setenv("GITHUB_SHA","b"*40)
     monkeypatch.setenv("GITHUB_EVENT_BEFORE","a"*40)
     prefix="novydres/cenario/atlas-novydres/cartografia/mapwork-v3/web-requests/"
-    def fake_git(args,**kwargs):
-        if "rev-parse" in args:
-            return "b"*40+"\\n"
-        if "diff-tree" in args:
-            return prefix+"last.json\\n"
-        return prefix+"first.json\\n"+prefix+"last.json\\n"
-    monkeypatch.setattr(web_runner.subprocess,"check_output",fake_git)
+    def fake_git(*args):
+        if args[:2]==("rev-parse","HEAD"):return "b"*40
+        if args[0]=="merge-base":return "a"*40
+        if args[0]=="rev-list":return "c"*40+"\\n"+"b"*40
+        if args[0]=="diff-tree":
+            return prefix+("first.json" if args[-1]=="c"*40 else "last.json")
+        raise AssertionError(args)
+    monkeypatch.setattr(web_runner,"_git",fake_git)
     with pytest.raises(core.Invalid,match="multiple.*request"):
         web_runner.discover_request_from_push()
+
+
+def test_p1_push_intermediate_single_request_is_discovered(monkeypatch):
+    monkeypatch.setenv("GITHUB_SHA","b"*40)
+    monkeypatch.setenv("GITHUB_EVENT_BEFORE","a"*40)
+    prefix="novydres/cenario/atlas-novydres/cartografia/mapwork-v3/web-requests/"
+    def fake_git(*args):
+        if args[:2]==("rev-parse","HEAD"):return "b"*40
+        if args[0]=="merge-base":return "a"*40
+        if args[0]=="rev-list":return "c"*40+"\\n"+"b"*40
+        if args[0]=="diff-tree":
+            return prefix+"intermediate.json" if args[-1]=="c"*40 else ""
+        raise AssertionError(args)
+    monkeypatch.setattr(web_runner,"_git",fake_git)
+    assert web_runner.discover_request_from_push()=="web-requests/intermediate.json"
+
 
 
 def test_p1_fake_composition_contract_rejected(tmp_path):

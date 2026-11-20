@@ -16,6 +16,9 @@ on:
         required: false
 permissions:
   contents: read
+concurrency:
+  group: mapwork-v32-web-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   planning-checkpoint:
     runs-on: ubuntu-latest
@@ -23,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -32,6 +35,7 @@ jobs:
         env:
           MW_DISTRICT: "${{ inputs.district }}"
           MW_REQUEST: "${{ inputs.request }}"
+          GITHUB_EVENT_BEFORE: "${{ github.event.before }}"
         shell: bash
         run: |
           SCRIPT=novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/web_runner.py
