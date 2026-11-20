@@ -22,42 +22,9 @@ def _choose_building_use(mix, key):
     return sorted(mix)[-1]
 
 
-def _street_access(width,height,labels,editable,road):
-    """Multi-source BFS: each parcel must connect through its block to an at-grade street.
-
-    Grid corridors run between building setbacks. This proves topological ground access,
-    not physical vehicle clearance, legal easements, or scaled street widths.
-    """
-    parents={}
-    distance={}
-    q=collections.deque()
-    for i,allowed in enumerate(editable):
-        if not allowed:
-            continue
-        x,y=i%width,i//width
-        neighbors=[]
-        if x: neighbors.append(i-1)
-        if x<width-1: neighbors.append(i+1)
-        if y: neighbors.append(i-width)
-        if y<height-1: neighbors.append(i+width)
-        if any(road[j] for j in neighbors):
-            parents[i]=None
-            distance[i]=0
-            q.append(i)
-    while q:
-        i=q.popleft()
-        x,y=i%width,i//width
-        neigh=[]
-        if x: neigh.append(i-1)
-        if x<width-1: neigh.append(i+1)
-        if y: neigh.append(i-width)
-        if y<height-1: neigh.append(i+width)
-        for j in neigh:
-            if editable[j] and labels[i]==labels[j] and j not in parents:
-                parents[j]=i
-                distance[j]=distance[i]+1
-                q.append(j)
-    return parents,distance
+def _street_access(width, height, labels, editable, road):
+    # Shared authority; do not fork access semantics between planner and asset layout.
+    return urban._street_access(width, height, labels, editable, road)
 
 
 def design_context(plan):
@@ -95,6 +62,7 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
     editable=ctx["editable"]
     parents,distance=ctx["parents"],ctx["distance"]
     programs={b["block_id"]:b for b in report["block_programs"]}
+    sites={(int(s["point"][0]),int(s["point"][1])):s for s in plan["special_sites"]}
     target_block=next((b for i,b in enumerate(blocks,1)
                        if i==work["block_label"]),None)
     urban.require(target_block is not None,"work unit references absent city block")
@@ -112,19 +80,28 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
             profile=plan["morphology"][typ]
             target=profile["occupation_target"]
             inset=(1-math.sqrt(target))/2
+            special=sites.get((x,y))
+            footprint=special["footprint"] if special else [
+                round(x+inset,6),round(y+inset,6),
+                round(x+1-inset,6),round(y+1-inset,6)]
+            clearance=2*min(footprint[0]-x,footprint[1]-y,
+                            x+1-footprint[2],y+1-footprint[3])
             building_id=f"B-{work_unit_id}-{y:04d}-{x:04d}"
             band=profile["building_floors"]
             hash_value=int(hashlib.sha256(building_id.encode()).hexdigest()[:8],16)
             floors=band[0]+hash_value%(band[1]-band[0]+1)
-            if i not in parents:
+            if i not in parents or clearance+1e-8 < profile["access_clearance_units"]:
                 inaccessible.append(building_id)
             parent=parents.get(i)
             buildings.append({
                 "id":building_id,
                 "parcel":[x,y,x+1,y+1],
-                "footprint":[round(x+inset,6),round(y+inset,6),
-                             round(x+1-inset,6),round(y+1-inset,6)],
-                "use":_choose_building_use(profile["use_mix"],building_id),
+                "footprint":footprint,
+                "use":"special_site" if special else _choose_building_use(profile["use_mix"],building_id),
+                "site_id":special["id"] if special else None,
+                "entrance":special["entrance"] if special else None,
+                "access_mode":profile["access_mode"],
+                "clearance_units":round(clearance,6),
                 "floors":floors,
                 "landuse":typ,
                 "typology":profile["typology"],
@@ -141,13 +118,15 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
         "work_unit":work_unit_id,
         "city_block":target_block["id"],
         "landuse_program":program["urban_program"],
-        "poi_sites":program["poi_sites"],
+        "poi_sites":[s["id"] for s in sites.values() if
+                     s["block_id"]==target_block["id"] and
+                     x0<=s["point"][0]<x1 and y0<=s["point"][1]<y1],
         "building_count":len(buildings),
         "parcels_covered_exactly_once":True,
         "building_footprints_in_editable_area":True,
         "access_verified":not inaccessible,
         "inaccessible_buildings":inaccessible,
-        "access_semantics":"GRID_PEDESTRIAN_PATH_CANDIDATE_NOT_VEHICLE_CLEARANCE",
+        "access_semantics":"VERIFIED_ABSTRACT_U02_GROUND_CORRIDOR_NOT_METRIC_CERTIFICATION",
         "buildings":buildings,
         "owner_image_approval_inferred":False
     }

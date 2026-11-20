@@ -69,6 +69,98 @@ def checkpoint(*,district,zone_path=None,zone=None,phase,action,blockers=(),spat
     return result
 
 
+def load_verified_neighbors(plan):
+    """Read existing peer spatial manifests from Git; reservations are future-only."""
+    peers={}
+    for seam in plan["neighbor_seams"]:
+        neighbor=seam["to_zone"]
+        matches=[]
+        for path in (ROOT/"zones").glob("*/zone.json"):
+            item=core.load(path)
+            if item["id"]==neighbor:
+                matches.append((path,item))
+        if len(matches)>1:
+            raise core.Invalid("duplicate neighbor ownership: "+neighbor)
+        if not matches:
+            continue
+        zone_path,zone=matches[0]
+        spatial=zone_path.parent/"global-spatial-v31.json"
+        if not spatial.is_file():
+            if zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED","PUBLISHED"):
+                raise core.Invalid("active neighbor has no global spatial manifest: "+neighbor)
+            continue
+        other=core.load(spatial)
+        if other.get("zone",{}).get("id")!=neighbor or other.get("fixture_mode") is not False:
+            raise core.Invalid("invalid neighbor identity or fixture: "+neighbor)
+        if other.get("source_sha256")!=plan["source_sha256"]:
+            raise core.Invalid("neighbor U02 authority mismatch: "+neighbor)
+        digest=lambda network: hashlib.sha256(json.dumps(network,sort_keys=True,
+                    separators=(",",":")).encode("utf-8")).hexdigest()
+        if digest(other["transport"])!=digest(plan["transport"]):
+            raise core.Invalid("neighbor global transport differs: "+neighbor)
+        peers[neighbor]={"seams":other["neighbor_seams"]}
+    return peers
+
+
+def check_canonical_pois(zone_path,plan):
+    legacy=zone_path.parent/"spatial-plan.json"
+    if legacy.is_file():
+        source=core.load(legacy)
+        required={p["id"] for p in source.get("pois",[])}
+        found={p["id"] for p in plan["special_sites"]}
+        if required and not required.issubset(found):
+            raise core.Invalid("approved/planned POIs missing spatial sites: "+
+                               ", ".join(sorted(required-found)))
+
+
+def validate_work_unit_bindings(zone,report):
+    """Every planned unit must own exactly one atomic lot asset."""
+    expected={u["id"]:u for u in report["work_units"]}
+    bound={}
+    for e in zone["elements"]:
+        uid=e.get("work_unit_id")
+        if uid not in expected:
+            raise core.Invalid(e["id"]+": absent or invalid work_unit_id")
+        if e["kind"]=="lot":
+            if uid in bound:
+                raise core.Invalid(uid+": duplicate atomic lot asset")
+            if e["core"]!=expected[uid]["bbox"]:
+                raise core.Invalid(uid+": asset core differs from planned work unit")
+            bound[uid]=e
+    missing=expected.keys()-bound.keys()
+    if missing:
+        raise core.Invalid("planned work units lack bound art elements: "+", ".join(sorted(missing)[:6]))
+    return bound
+
+
+def verify_unit_art_masks(plan,report,elements,assets,cfg):
+    """A lot's decoded mask may paint only its own editable work-unit cells."""
+    from PIL import ImageChops, ImageDraw
+    context=content.design_context(plan)
+    w,h=context["w"],context["h"]
+    scale=cfg["detail_pixels_per_unit"]
+    for uid,e in elements.items():
+        if e["status"]!="VERIFIED":
+            continue
+        x0,y0,x1,y1=e["envelope"]
+        left,top=round(x0*scale),round(y0*scale)
+        mask_file=Path(assets)/e["mask"]["path"]
+        with Image.open(mask_file) as img:
+            m=img.convert("L")
+        allowed=Image.new("L",m.size,0)
+        draw=ImageDraw.Draw(allowed)
+        unit=next(u for u in report["work_units"] if u["id"]==uid)
+        bx0,by0,bx1,by1=unit["bbox"]
+        for y in range(by0,by1):
+            for x in range(bx0,bx1):
+                i=y*w+x
+                if context["editable"][i] and context["labels"][i]==unit["block_label"]:
+                    sx,sy=x*scale-left,y*scale-top
+                    draw.rectangle([sx,sy,sx+scale-1,sy+scale-1],fill=255)
+        if ImageChops.subtract(m,allowed).getbbox() is not None:
+            raise core.Invalid(uid+": art mask paints outside its assigned editable cells")
+
+
 def run(args):
     cfg=core.load(core.CONFIG)
     core.config_check(cfg)
@@ -110,12 +202,15 @@ def run(args):
     if plan.get("fixture_mode") is True:
         return state("SPATIAL_MODEL","REPLACE_SYNTHETIC_FIXTURE_WITH_REAL_GEOMETRY",
                      ["Synthetic fixtures never authorize real zone art."],spatial_path=spatial_path)
-    report=urban.plan_city(plan,cfg,reference_file=args.reference)
+    check_canonical_pois(zone_path,plan)
+    report=urban.plan_city(plan,cfg,reference_file=args.reference,
+                           neighbor_manifests=load_verified_neighbors(plan))
     # Urban design is a mandatory deterministic phase, not an image-side suggestion.
     prerequisites=("source_and_global_topology","source_bytes_verified",
                    "territory_classification","urban_morphology",
                    "quadrants_derived_from_transport","work_unit_coverage",
-                   "protected_network_coverage","neighbor_seams")
+                   "protected_network_coverage","neighbor_seams",
+                   "poi_sites_placed_and_accessible","ground_access_and_clearance")
     unresolved=[x for x in prerequisites if not report["gates"][x]]
     if unresolved:
         return state("SPATIAL_VALIDATION","VERIFY_GLOBAL_SPATIAL_FOUNDATION",
@@ -160,6 +255,8 @@ def run(args):
             nxt="FETCH_AND_VERIFY_ORIGINAL_U02"
         return state("SPATIAL_VALIDATION",nxt,blockers,spatial_path,report)
 
+    if zone["status"]!="SKETCH_APPROVED":
+        bound=validate_work_unit_bindings(zone,report)
     if zone["status"]=="SKETCH_APPROVED":
         return state("ART_AUTHORIZED","PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT",
                      ["Spatial contract passed; create verified generation jobs only, not a release."],
@@ -183,6 +280,8 @@ def run(args):
         raise core.Invalid("approved release exists: --before is mandatory to preserve its tiles")
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
+    core.audit_zone(zone,cfg,args.assets,strict=True)
+    verify_unit_art_masks(plan,report,bound,args.assets,cfg)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
                             approved_before=args.before,protected_u02=protection)
     comparison=out/"comparison.html"

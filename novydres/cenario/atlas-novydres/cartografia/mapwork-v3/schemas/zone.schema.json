@@ -2,31 +2,314 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Novydres Mapwork V3 zone",
   "type": "object",
-  "required": ["schema", "id", "owner_subject_id", "status", "bounds", "connectors", "elements", "decisions", "research", "sketch_approved", "source_commit"],
+  "required": [
+    "schema",
+    "id",
+    "owner_subject_id",
+    "status",
+    "bounds",
+    "connectors",
+    "elements",
+    "decisions",
+    "research",
+    "sketch_approved",
+    "source_commit"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schema": {"const": "NOVYDRES_MAPWORK_V3_ZONE_1"},
-    "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]+$"},
-    "owner_subject_id": {"type": "string", "minLength": 3},
-    "status": {"enum": ["PLANNING", "SKETCH_APPROVED", "GENERATING", "VISUAL_REVIEW", "OWNER_APPROVED", "PUBLISHED"]},
-    "bounds": {"$ref": "#/$defs/rect"},
-    "neighbors": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "connectors": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "x", "y", "width", "neighbor"], "additionalProperties": false, "properties": {"id": {"type": "string", "minLength": 1}, "kind": {"enum": ["road", "rail", "tram", "water", "ermo", "terrain", "urban_edge", "bridge"]}, "x": {"type": "number"}, "y": {"type": "number"}, "width": {"type": "number", "minimum": 0}, "neighbor": {"type": "string"}, "profile": {"type": "string"}}}},
-    "elements": {"type": "array", "items": {"$ref": "#/$defs/element"}},
-    "decisions": {"type": "array", "items": {"type": "object", "required": ["id", "question", "status"], "properties": {"id": {"type": "string"}, "question": {"type": "string"}, "status": {"enum": ["OPEN", "APPROVED", "REJECTED", "DEFERRED"]}, "answer": {"type": ["string", "null"]}}, "additionalProperties": false}},
-    "research": {"type": "array", "items": {"type": "object", "required": ["claim", "url", "accessed_on"], "properties": {"claim": {"type": "string"}, "url": {"type": "string", "pattern": "^https?://"}, "accessed_on": {"type": "string"}}, "additionalProperties": false}},
-    "sketch_approved": {"type": "boolean"},
-    "source_commit": {"type": "string", "minLength": 7},
-    "owner_approval": {"type": ["object", "null"], "properties": {"decision": {"const": "APPROVED"}, "evidence": {"type": "string", "minLength": 8}, "approved_on": {"type": "string"}}, "required": ["decision", "evidence", "approved_on"], "additionalProperties": false},
-    "checkpoint": {"type": ["object", "null"]}
+    "schema": {
+      "const": "NOVYDRES_MAPWORK_V3_ZONE_1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]+$"
+    },
+    "owner_subject_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "enum": [
+        "PLANNING",
+        "SKETCH_APPROVED",
+        "GENERATING",
+        "VISUAL_REVIEW",
+        "OWNER_APPROVED",
+        "PUBLISHED"
+      ]
+    },
+    "bounds": {
+      "$ref": "#/$defs/rect"
+    },
+    "neighbors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "connectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "x",
+          "y",
+          "width",
+          "neighbor"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "road",
+              "rail",
+              "tram",
+              "water",
+              "ermo",
+              "terrain",
+              "urban_edge",
+              "bridge"
+            ]
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "width": {
+            "type": "number",
+            "minimum": 0
+          },
+          "neighbor": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "elements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/element"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "question",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "APPROVED",
+              "REJECTED",
+              "DEFERRED"
+            ]
+          },
+          "answer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "research": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim",
+          "url",
+          "accessed_on"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://"
+          },
+          "accessed_on": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sketch_approved": {
+      "type": "boolean"
+    },
+    "source_commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "owner_approval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "decision": {
+          "const": "APPROVED"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 8
+        },
+        "approved_on": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "decision",
+        "evidence",
+        "approved_on"
+      ],
+      "additionalProperties": false
+    },
+    "checkpoint": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
   },
   "$defs": {
-    "rect": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
-    "element": {"type": "object", "required": ["id", "kind", "layer", "core", "envelope", "asset", "mask", "status"], "additionalProperties": false, "properties": {
-      "id": {"type": "string", "minLength": 1}, "kind": {"enum": ["lot", "special_building", "road", "rail", "tram", "water", "terrain", "ermo", "bridge", "poi", "finish"]}, "layer": {"enum": ["terrain", "water", "infrastructure", "lot", "special", "finish"]},
-      "core": {"$ref": "#/$defs/rect"}, "envelope": {"$ref": "#/$defs/rect"}, "asset": {"$ref": "#/$defs/file"}, "mask": {"$ref": "#/$defs/file"},
-      "status": {"enum": ["PENDING", "GENERATED", "VERIFIED"]}, "seed": {"type": "integer"}, "role": {"type": "string"}, "description": {"type": "string"}
-    }},
-    "file": {"type": ["object", "null"], "required": ["path", "sha256", "drive_file_id"], "additionalProperties": false, "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "drive_file_id": {"type": "string", "minLength": 6}}}
+    "rect": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "element": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "layer",
+        "core",
+        "envelope",
+        "asset",
+        "mask",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "lot",
+            "special_building",
+            "road",
+            "rail",
+            "tram",
+            "water",
+            "terrain",
+            "ermo",
+            "bridge",
+            "poi",
+            "finish"
+          ]
+        },
+        "layer": {
+          "enum": [
+            "terrain",
+            "water",
+            "infrastructure",
+            "lot",
+            "special",
+            "finish"
+          ]
+        },
+        "core": {
+          "$ref": "#/$defs/rect"
+        },
+        "envelope": {
+          "$ref": "#/$defs/rect"
+        },
+        "asset": {
+          "$ref": "#/$defs/file"
+        },
+        "mask": {
+          "$ref": "#/$defs/file"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "GENERATED",
+            "VERIFIED"
+          ]
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "role": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "work_unit_id": {
+          "type": "string",
+          "pattern": "^WU-[0-9]{5}-[0-9]{4}-[0-9]{4}$"
+        }
+      }
+    },
+    "file": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "path",
+        "sha256",
+        "drive_file_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "drive_file_id": {
+          "type": "string",
+          "minLength": 6
+        }
+      }
+    }
   }
 }

@@ -348,6 +348,74 @@ def spatial_protection_mask(plan):
     return Image.frombytes("L",(w,h),mask)
 
 
+def _street_access(width, height, labels, editable, road):
+    """Trace at-grade routes along the setbacks of parcels within one city block."""
+    parents, distance = {}, {}
+    queue = collections.deque()
+    for i, allowed in enumerate(editable):
+        if not allowed:
+            continue
+        x, y = i % width, i // width
+        neighbors = ([i - 1] if x else []) + ([i + 1] if x < width - 1 else [])
+        neighbors += ([i - width] if y else []) + ([i + width] if y < height - 1 else [])
+        if any(road[j] for j in neighbors):
+            parents[i] = None
+            distance[i] = 0
+            queue.append(i)
+    while queue:
+        i = queue.popleft()
+        x, y = i % width, i // width
+        neighbors = ([i - 1] if x else []) + ([i + 1] if x < width - 1 else [])
+        neighbors += ([i - width] if y else []) + ([i + width] if y < height - 1 else [])
+        for j in neighbors:
+            if editable[j] and labels[j] == labels[i] and j not in parents:
+                parents[j] = i
+                distance[j] = distance[i] + 1
+                queue.append(j)
+    return parents, distance
+
+
+def _validate_special_sites(plan, width, height, labels, blocks, editable, distance):
+    """POIs must occupy a real buildable parcel with a surveyed entrance and path."""
+    sites = plan["special_sites"]
+    require(isinstance(sites, list), "explicit special_sites inventory required")
+    ids, cells, verified = set(), set(), []
+    byblock = {b["id"]: i + 1 for i, b in enumerate(blocks)}
+    for s in sites:
+        sid = s["id"]
+        require(sid not in ids, f"{sid}: duplicate POI")
+        ids.add(sid)
+        block = byblock.get(s["block_id"])
+        require(block is not None, f"{sid}: POI references absent city block")
+        point, entrance, box = s["point"], s["entrance"], s["footprint"]
+        require(finite_xy(point) and finite_xy(entrance), f"{sid}: POI location/entrance required")
+        require(isinstance(box, list) and len(box) == 4 and
+                all(isinstance(v, (int, float)) and math.isfinite(v) for v in box) and
+                box[0] < box[2] and box[1] < box[3], f"{sid}: invalid footprint")
+        x, y = int(point[0]), int(point[1])
+        require(0 <= x < width and 0 <= y < height and
+                x < point[0] < x + 1 and y < point[1] < y + 1,
+                f"{sid}: POI point must be inside a parcel")
+        i = y * width + x
+        require(i not in cells and labels[i] == block and editable[i],
+                f"{sid}: POI parcel collides or is not editable within its block")
+        cells.add(i)
+        require(x < box[0] < box[2] < x + 1 and y < box[1] < box[3] < y + 1,
+                f"{sid}: POI footprint must preserve parcel perimeter clearance")
+        require(box[0] <= entrance[0] <= box[2] and box[1] <= entrance[1] <= box[3],
+                f"{sid}: entrance outside footprint")
+        require(i in distance, f"{sid}: no at-grade street path")
+        cls = next(key for key, value in
+                   {name: idx + 1 for idx, name in enumerate(sorted(LANDUSE_CLASSES))}.items()
+                   if value == plan["_site_class_ids"][i])
+        clearance = plan["morphology"][cls]["access_clearance_units"]
+        require(2 * min(box[0] - x, y + 1 - box[3], box[1] - y, x + 1 - box[2]) >= clearance - 1e-8,
+                f"{sid}: insufficient POI access corridor width")
+        verified.append({"id": sid, "block_id": s["block_id"], "point": point,
+                         "entrance": entrance, "footprint": box, "road_access_steps": distance[i]})
+    return verified
+
+
 def _morphology_rules(plan, class_counts):
     rules=plan.get("morphology",{})
     for cls in ("urban","industrial"):
@@ -366,6 +434,15 @@ def _morphology_rules(plan, class_counts):
         require(isinstance(mixes,dict) and len(mixes)>=1 and
                 all(isinstance(v,(int,float)) and v>=0 for v in mixes.values()) and
                 abs(sum(mixes.values())-1)<=1e-6,f"{cls}: use mix must sum to one")
+        required=r.get("access_clearance_units")
+        require(isinstance(required,(int,float)) and not isinstance(required,bool) and
+                math.isfinite(required) and 0<required<1,
+                f"{cls}: explicit at-grade access clearance in U02 units required")
+        require(r.get("access_mode") in ("pedestrian","vehicle"),
+                f"{cls}: pedestrian/vehicle access mode required")
+        gap=1-math.sqrt(r["occupation_target"])
+        require(gap+1e-8>=required,
+                f"{cls}: occupation leaves less clearance than the required access corridor")
 
 
 def _label_blocks(width,height,eligible,dividers,category_map):
@@ -499,6 +576,14 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     eligible_edit=bytearray(1 if (eligible[i] and not protected[i]) else 0 for i in range(w*h))
     require(all(not eligible_edit[i] or labels[i]>0 for i in range(w*h)),
             "editable pixel missing a road-bounded block")
+    roads=_line_mask((w,h),plan["transport"],lambda e:
+                     e["class"] in ROAD_CLASSES and e.get("level",e.get("level_from",0))==0).tobytes()
+    _,distance=_street_access(w,h,labels,eligible_edit,roads)
+    unreachable=sum(bool(allowed) and i not in distance for i,allowed in enumerate(eligible_edit))
+    require(unreachable==0,f"{unreachable} parcels lack at-grade street access")
+    # Local scratch mapping only; never added to the persisted spatial manifest.
+    site_plan=dict(plan,_site_class_ids=classes)
+    verified_sites=_validate_special_sites(site_plan,w,h,labels,blocks,eligible_edit,distance)
     tasksize=plan.get("work_policy",{}).get("max_units")
     tasks,pixels=derive_work_units(w,h,labels,eligible_edit,tasksize,cfg["detail_pixels_per_unit"])
     budget=plan["work_policy"].get("max_work_units")
@@ -526,7 +611,7 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     require(isinstance(declared_seams,list),"neighbor seam list required")
     require(len({s["id"] for s in declared_seams})==len(declared_seams),
             "duplicate shared connector identifiers")
-    counterparts=neighbor_manifests or {}
+    counterparts=neighbor_manifests if neighbor_manifests is not None else {}
     transport_digest=hashlib.sha256(
         json.dumps(plan["transport"],sort_keys=True,separators=(",",":")).encode("utf-8")
     ).hexdigest()
@@ -537,14 +622,14 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         require(seam.get("from_zone")==plan["zone"]["id"] and
                 seam.get("to_zone") and seam.get("id") and finite_xy(seam.get("point")),
                 "malformed bilateral seam contract")
-        peer=counterparts.get(seam["to_zone"],{})
-        mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None)
+        peer=counterparts.get(seam["to_zone"])
+        mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None) if peer is not None else None
         expected=("kind","width_units","profile")
         good=bool(mate) and mate.get("from_zone")==seam["to_zone"] and mate.get("to_zone")==seam["from_zone"]
         good=good and all(mate.get(k)==seam.get(k) for k in expected)
         good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
-        if mate is not None:
-            require(bool(good),f"{seam['id']}: existing neighbor seam differs from global authority")
+        if peer is not None:
+            require(bool(good),f"{seam['id']}: existing neighbor seam missing or differs from global authority")
             matched_seams+=1
         else:
             reservation=(seam.get("reservation_status")=="APPROVED_SCOPED" and
@@ -578,7 +663,9 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "protected_network_coverage":True,
         "neighbor_seams":seams_verified,
         "pixel_masks_verified":masks_verified,
-        "owner_art_authorized":owner_auth
+        "owner_art_authorized":owner_auth,
+        "poi_sites_placed_and_accessible":len(verified_sites)==len(plan["special_sites"]),
+        "ground_access_and_clearance":unreachable==0
     }
     ready=all(required_gates.values()) and plan.get("fixture_mode") is False
     # No claim that a synthetic fixture provides real city evidence.
@@ -595,8 +682,8 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
             "occupation_target":profile["occupation_target"],
             "building_floor_band":profile["building_floors"],
             "use_mix":profile["use_mix"],
-            "poi_sites":[site["id"] for site in plan.get("special_sites",[])
-                         if site.get("block_id")==b["id"]],
+            "poi_sites":[site["id"] for site in verified_sites
+                         if site["block_id"]==b["id"]],
             "buildings_generated":0
         })
     return {
@@ -613,6 +700,9 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
                     "work_unit_semantics":"ATOMIC_GENERATION_WINDOW"},
         "blocks":blocks,
         "block_programs":block_programs,
+        "poi_sites":verified_sites,
+        "access":{"connected_parcels":len(distance),"unreachable_parcels":unreachable,
+                  "semantics":"ABSTRACT_U02_CORRIDOR_NOT_METRIC_VEHICLE_CERTIFICATION"},
         "work_units":tasks,
         "generation_queue":{
             "batches":batches,
