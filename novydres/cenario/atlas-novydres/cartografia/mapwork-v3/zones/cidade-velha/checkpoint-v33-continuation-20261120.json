@@ -1,0 +1,47 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_INTEGRAL_AUDIT_CHECKPOINT_1",
+  "recorded_on": "2026-11-20",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "candidate_branch": "mapwork-v3/v33-agent-pipeline-20261120",
+  "master_source_sha": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "recovered_initial_checkpoint": "178f2179f43081d9eb34ac41747567257c390c04",
+  "target": "kingswell",
+  "subject_id": "district-chelsea",
+  "phase": "SPATIAL_MODEL",
+  "current_execution_outcome": "BLOCKED_PRE_ART",
+  "entrypoint": "scripts/pipeline.py run",
+  "pipeline_invoked_in_this_continuation": false,
+  "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
+  "recovered": "original U02 SHA-verified; 55 approved decisions, D56 deferred; five existing sketch POIs; three historical bridges; existing sketch owner approved",
+  "produced": {
+    "decisions_file": "zones/cidade-velha/decisions-v33-20261120.json",
+    "inventory_file": "zones/cidade-velha/inventory-v33-20261120.json",
+    "research_file": "zones/cidade-velha/research-v33-2026-11-20.json",
+    "spatial_audit_file": "zones/cidade-velha/spatial-audit-v33-20261120.json",
+    "real_external_sources_total": 6,
+    "registered_approved_sketch_pois": 5,
+    "newly_authorized_elements": 0,
+    "visual_assets_generated": 0,
+    "masks_generated": 0
+  },
+  "audit": {
+    "candidate_polygon_pixels": 272640,
+    "unclassified_pixels": 166755,
+    "overlap_pixels": 7274,
+    "coverage_of_illustrative_sectors_percent": 38.84
+  },
+  "outstanding": [
+    "Full audited global-spatial-v31.json and GIS-backed U02 road/water/rail/metro network missing",
+    "Exact lot-based 100% coverage, per-building designs, legitimate edit masks and neighbor seams missing",
+    "No native image unit receipts or visual reviews; no tiled composition and no final before/after",
+    "Unknown physical access in metres; U02 reference is abstract and cannot be assigned surveyed metre scale without source",
+    "Unresolved metro route/stop editorial policy; D56 ferry ice operation remains DEFERRED and non-blocking for technical study"
+  ],
+  "next_action": "RECOVER_EXISTING_U02_INFRASTRUCTURE_GEOMETRY_AND_RECONCILE_EXCLUSIVE_TERRITORY_BEFORE_RECIPE_OR_ART",
+  "canon_unchanged": true,
+  "master_unchanged": true,
+  "owner_final_approval": false,
+  "human_visual_review_not_requested": true,
+  "handoff_allowed": false,
+  "note": "This is a source-audited recovery checkpoint, not a successful pipeline.py execution receipt."
+}
