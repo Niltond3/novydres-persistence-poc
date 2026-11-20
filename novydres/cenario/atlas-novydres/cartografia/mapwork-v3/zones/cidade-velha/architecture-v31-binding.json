@@ -42,5 +42,28 @@
     "attach POIs / typology and generate work unit queue automatically",
     "validate protected masks and neighbor seams"
   ],
-  "no_new_user_questions_required_for_technical_details": true
+  "no_new_user_questions_required_for_technical_details": true,
+  "owner_definition_2026_11_20": {
+    "status": "OWNER_APPROVED_ARCHITECTURE_RULE",
+    "evidence": "As definições de estradas delimitam o tamanho dos lotes: um quadrante é um lote; o interior é ocupado por fábrica, quarteirão com edifícios ou ponto de interesse.",
+    "lot": "at-grade street / rail / water network bounded city block / quadrant",
+    "occupants": "buildings factories workshops yards special POIs inside lot",
+    "work_unit": "mask-bounded generation task inside city lot, never synonymous with city lot",
+    "infrastructure_first": true
+  },
+  "architecture_engine": {
+    "status": "IMPLEMENTED_AND_CI_TESTED",
+    "version": "V3.1",
+    "engine": "scripts/urban_architecture.py",
+    "audit_integration": "scripts/mapwork.py",
+    "last_tested_workflow": 44736967670,
+    "passed_tests": 65,
+    "proof_scope": "SYNTHETIC_CONTRACTS_AND_REAL_LEGACY_COVERAGE_AUDIT",
+    "real_geometry_data_complete": false
+  },
+  "migration_legacy": {
+    "keep_old_l01_l14_for_historical_readback": true,
+    "ignore_as_authoritative_lots": true,
+    "superseded_by": "NETWORK_DERIVED_BLOCKS_WHEN_REAL_NETWORK_MATERIALIZED"
+  }
 }
