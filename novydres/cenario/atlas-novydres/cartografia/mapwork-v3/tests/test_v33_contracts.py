@@ -1,0 +1,199 @@
+"""Positive, negative and regression contracts for the V3.3 transition."""
+from __future__ import annotations
+
+import copy
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+import pytest
+from PIL import Image
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"scripts"))
+import v33_contracts as c
+import v33_viewer as viewer
+import mapwork as core
+
+
+def _intent(**kwargs):
+    payload={
+        "schema":"NOVYDRES_MAPWORK_V33_INTENT_1",
+        "mode":"CREATE_REGION",
+        "original_request":"Vamos construir Sulfok",
+        "source_commit":"a"*40,
+        "target":{"id":"sulfok","subject_id":"district-sulfok","kind":"region"}
+    }
+    payload.update(kwargs)
+    return payload
+
+
+def _research():
+    return [
+        {"category":"TECHNICAL","url":"https://example.org/urbanism",
+         "accessed_on":"2026-10-01","observation":"Coastal logistics","relevance":"Cold-port city",
+         "adaptation":"Use existing permitted connectors","place":"Port Alpha",
+         "source_type":"REAL_WORLD"},
+        {"category":"TECHNICAL","url":"https://example.net/rail",
+         "accessed_on":"2026-10-02","observation":"Railyard typology","relevance":"Industrial cold climate",
+         "adaptation":"Research only; no new rail without consent","place":"Port Beta",
+         "source_type":"REAL_WORLD"}
+    ]
+
+
+def _register(status="APPROVED"):
+    return {"schema":"NOVYDRES_MAPWORK_V33_DECISIONS_1",
+            "region":"sulfok","source_commit":"a"*40,
+            "proposals":[{
+                "id":"SUL-PROP-014",
+                "description":"Transshipment yard",
+                "location":"Proposed industrial corridor",
+                "origin":"External researched analogy",
+                "rationale":"Transfers bulk freight",
+                "neighbor_impact":"Requires existing rail connectivity",
+                "status":status,
+                "authorized_ids":["sulfok-yard-1"],
+                "decision":{"by":"OWNER","decision":status,
+                            "source_commit":"a"*40,
+                            "evidence":"Explicit owner answer in phase 3"}
+            }]}
+
+
+def test_create_and_refine_are_canonical_and_mask_bounded():
+    targets={
+        "sulfok":{"subject_id":"district-sulfok","kind":"region"},
+        "tower":{"subject_id":"district-chelsea","kind":"landmark",
+                 "bounds":[1,2,9,10]}
+    }
+    assert c.validate_intent(_intent(),targets,[0,0,20,20])["target"]=="sulfok"
+    changed=_intent(mode="REFINE_AREA",target={
+        "id":"tower","subject_id":"district-chelsea","kind":"landmark"
+    },intervention={"bounds":[2,3,8,9],"source":"OWNER_APPROVED",
+                    "authority_ref":"Owner mask decision 14"})
+    assert c.validate_intent(changed,targets,[0,0,20,20])["mode"]=="REFINE_AREA"
+    changed["intervention"]["bounds"]=[0,0,8,9]
+    with pytest.raises(c.Blocked,match="outside known canonical target"):
+        c.validate_intent(changed,targets,[0,0,20,20])
+    changed=_intent(target={"id":"Torre Ventura","subject_id":"district-chelsea",
+                             "kind":"landmark"})
+    with pytest.raises(c.Blocked,match="not uniquely resolved"):
+        c.validate_intent(changed,targets,[0,0,20,20])
+
+
+def test_research_requires_multiple_real_domains_and_keeps_proposals_separate():
+    assert c.validate_research(_research())["real_world_domains"]==2
+    single=_research()[:1]
+    with pytest.raises(c.Blocked,match="at least two domains"):
+        c.validate_research(single)
+    invented=_research()
+    invented[0]["category"]="NEW_ELEMENT"
+    with pytest.raises(c.Blocked,match="editorial ID"):
+        c.validate_research(invented)
+
+
+def test_explicit_approval_exact_inventory_rejected_and_conditions():
+    reg=_register()
+    assert c.validate_proposals(reg,region="sulfok",commit="a"*40)["approved"]==["SUL-PROP-014"]
+    assert c.validate_inventory([{"id":"sulfok-yard-1","proposal_id":"SUL-PROP-014"}],reg)["elements"]==1
+    with pytest.raises(c.Blocked,match="does not enumerate"):
+        c.validate_inventory([{"id":"unlisted","proposal_id":"SUL-PROP-014"}],reg)
+    with pytest.raises(c.Blocked,match="lacks explicit"):
+        c.validate_inventory([{"id":"bridge-not-approved"}],reg)
+    pending=_register("PROPOSED")
+    pending["proposals"][0].pop("decision")
+    with pytest.raises(c.Blocked,match="pending substantive"):
+        c.validate_inventory([],pending)
+    conditional=_register("APPROVED_WITH_CONDITIONS")
+    conditional["proposals"][0]["decision"]["conditions"]="Preserve rail alignment"
+    with pytest.raises(c.Blocked,match="conditions have not been verified"):
+        c.validate_proposals(conditional,region="sulfok",commit="a"*40)
+    conditional["proposals"][0]["decision"].update(
+        conditions_verified=True, verification_evidence="Passed bilateral rail check")
+    c.validate_proposals(conditional,region="sulfok",commit="a"*40)
+
+
+def test_capability_fail_closed_and_native_image_must_materialize(tmp_path):
+    caps={"schema":"NOVYDRES_MAPWORK_V33_CAPABILITY_1"}
+    assert "native_image_materialization" in c.capability_preflight(caps)["missing"]
+    im=Image.new("RGBA",(8,8),(10,20,30,255))
+    path=tmp_path/"generated.png"
+    im.save(path)
+    receipt={
+        "schema":"NOVYDRES_MAPWORK_V33_IMAGE_RECEIPT_1",
+        "work_unit_id":"WU-TEST", "local_path":str(path),
+        "sha256":c.digest(path),"generator_evidence":"native image generation call #1"
+    }
+    assert c.image_receipt(receipt,expected_size=[8,8],work_unit_id="WU-TEST")["path"]==str(path)
+    receipt["sha256"]="0"*64
+    with pytest.raises(c.Blocked,match="SHA readback"):
+        c.image_receipt(receipt,expected_size=[8,8],work_unit_id="WU-TEST")
+
+
+def test_authorized_mask_allows_repainting_approved_pixels_but_only_inside(tmp_path):
+    before=Image.new("RGBA",(8,8),(20,20,20,255))
+    after=before.copy();after.putpixel((3,3),(250,20,20,255))
+    editable=Image.new("L",(8,8),0)
+    for x in range(2,5):
+        for y in range(2,5): editable.putpixel((x,y),255)
+    protected=Image.new("L",(8,8),0)
+    c.validate_edit_mask(editable,[2,2,5,5],protected)
+    assert c.verify_edit_pixels(before,after,editable,protected)["protected_unchanged"]
+    after.putpixel((7,7),(20,250,20,255))
+    with pytest.raises(c.Blocked,match="unapproved edit-area pixels"):
+        c.verify_edit_pixels(before,after,editable,protected)
+    protected.putpixel((3,3),255)
+    with pytest.raises(c.Blocked,match="overlaps protected"):
+        c.validate_edit_mask(editable,[2,2,5,5],protected)
+
+
+def test_resume_reuses_only_verified_hash_bound_units(tmp_path):
+    p=tmp_path/"unit.png";Image.new("RGB",(2,2)).save(p)
+    inputs={"canon":"a"*40}
+    cp={"schema":"NOVYDRES_MAPWORK_V33_UNITS_1",
+        "input_sha256":c.evidence_digest(inputs),
+        "units":[{"id":"x","status":"VERIFIED","local_path":str(p),"sha256":c.digest(p)},
+                 {"id":"y","status":"PENDING"}]}
+    assert c.resume_units(cp,expected_inputs=inputs)==["x"]
+    with pytest.raises(c.Blocked,match="input drift"):
+        c.resume_units(cp,expected_inputs={"canon":"b"*40})
+    p.write_bytes(b"corrupt")
+    with pytest.raises(c.Blocked,match="missing or altered"):
+        c.resume_units(cp,expected_inputs=inputs)
+
+
+def test_tile_compositor_permits_scoped_approved_replacement(tmp_path):
+    from test_pipeline import make_tile_inputs, element, mark_approved_tiles
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"first",[2,2,6,6],(200,30,30,255))]
+    first=tmp_path/"approved"
+    core._compose_tiles([zone],cfg,base,assets,first)
+    mark_approved_tiles(first)
+    zone["elements"]=[element(assets,"replacement",[2,2,6,6],(30,200,30,255))]
+    editable=Image.new("L",(32,16),0)
+    for y in range(2,6):
+        for x in range(2,6): editable.putpixel((x,y),255)
+    final=tmp_path/"candidate"
+    result=core._compose_tiles([zone],cfg,base,assets,final,
+                               approved_before=first,edit_mask_u02=editable)
+    assert result["tiles"]
+    with pytest.raises(core.Invalid,match="outside owner-authorized"):
+        wrong=Image.new("L",(32,16),0);wrong.putpixel((0,0),255)
+        core._compose_tiles([zone],cfg,base,assets,tmp_path/"wrong",
+                            approved_before=first,edit_mask_u02=wrong)
+
+
+def test_html_uses_lazy_external_tiles_and_integral_overview(tmp_path):
+    from test_pipeline import make_tile_inputs, element
+    cfg,base,assets,zone=make_tile_inputs(tmp_path)
+    zone["elements"]=[element(assets,"fresh",[2,2,6,6],(30,200,30,255))]
+    after=tmp_path/"tiles"
+    core._compose_tiles([zone],cfg,base,assets,after)
+    out=tmp_path/"comparison.html"
+    summary=viewer.build_comparison(None,after,base,out,cfg)
+    html=out.read_text(encoding="utf-8")
+    assert summary["after_tiles"]>0 and summary["before_tiles"]==0
+    assert "drawImage" in html and "ANTES" in html and "DEPOIS" in html
+    assert "base64" not in html and "getImage" in html
+    assert (tmp_path/"overview-before.png").is_file()
+    assert (tmp_path/"overview-after.png").is_file()
