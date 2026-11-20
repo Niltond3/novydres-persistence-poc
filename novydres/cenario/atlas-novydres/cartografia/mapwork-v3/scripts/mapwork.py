@@ -41,7 +41,7 @@ def config_check(cfg):
     fail(cfg['world_size_units']==[cfg['reference']['width'],cfg['reference']['height']],'base dimensions')
     fail(cfg['drive']['folder_id'] and cfg['reference']['drive_file_id'],'missing Drive storage')
 
-def audit_zone(z, cfg, assets=None, strict=False):
+def audit_zone(z, cfg, assets=None, strict=False, *, v33_verified=False):
     validator=Draft202012Validator(load(SCHEMA)); errors=list(validator.iter_errors(z))
     fail(not errors,'schema: '+('; '.join(e.message for e in errors[:4])))
     bounds=z['bounds']; fail(rect(bounds),'zone rectangle invalid')
@@ -50,7 +50,9 @@ def audit_zone(z, cfg, assets=None, strict=False):
     fail(len({e['id'] for e in z['elements']})==len(z['elements']),'duplicate element ids')
     fail(len({c['id'] for c in z['connectors']})==len(z['connectors']),'duplicate connector ids')
     fail(z['id'] not in z['neighbors'],'self neighbor')
-    fail(z['status'] not in ('GENERATING','VISUAL_REVIEW','OWNER_APPROVED','PUBLISHED') or z['sketch_approved'],'sketch not approved')
+    fail(z['status'] not in ('GENERATING','VISUAL_REVIEW','OWNER_APPROVED','PUBLISHED') or
+         z['sketch_approved'] or v33_verified,
+         'V3.2 requires sketch approval; V3.3 requires verified editorial register')
     fail(z['status'] not in ('OWNER_APPROVED','PUBLISHED') or z.get('owner_approval'),'owner approval missing')
     if z['status']!='PLANNING':
         fail(not any(d['status']=='OPEN' for d in z['decisions']),'open blocking decision')
@@ -100,7 +102,8 @@ def audit_zone(z, cfg, assets=None, strict=False):
         else:
             fail(any(abs(c['x']-bounds[i])<1e-9 for i in (0,2)) or any(abs(c['y']-bounds[i])<1e-9 for i in (1,3)),f"{c['id']}: connector not on boundary")
     if strict:
-        fail(z['sketch_approved'],'sketch needs owner approval')
+        fail(z['sketch_approved'] or v33_verified,
+             'missing V3.2 sketch or verified V3.3 decision authority')
         fail(all(e['status']=='VERIFIED' for e in z['elements']),'unverified element')
     return {'zone':z['id'],'elements':len(z['elements']),'connectors':len(z['connectors']),'mode':'strict' if strict else 'structural'}
 
