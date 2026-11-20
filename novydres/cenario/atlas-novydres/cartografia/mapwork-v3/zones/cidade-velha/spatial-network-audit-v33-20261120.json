@@ -3,7 +3,7 @@
   "date": "2026-11-20",
   "status": "PARTIAL_VALIDATED_OBSERVATIONS_ONLY",
   "observation_file": "zones/cidade-velha/spatial-observations-v33-20261120.json",
-  "observation_git_blob_sha": "1c08c6aac0729227bbcdcdc8fbdecd5dfff512c8",
+  "observation_git_blob_sha": "b3264358d7fd405e525694c8ad6980d4578d41ed",
   "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
   "source_sketch_blob_sha": "180f3a01ad40983b6ade2217cb488c7b591fa45d",
   "validation_method": "Source image bytes SHA/dimensions checked locally; Pillow and Shapely checks against 22 manually traced U02 corridor candidates and sketch bridge/river geometry. GitHub readback independently verified source arrays and bridge approaches.",
@@ -44,7 +44,11 @@
       "Out-of-bounds road point rejected",
       "Generation-ready flag falsification rejected",
       "Invented POI access certification rejected"
-    ]
+    ],
+    "persisted_regression_test_file": "tests/test_kingswell_spatial_observations_v33.py",
+    "regression_tests_executed_locally": 9,
+    "regression_tests_passed_locally": 9,
+    "runtime_python": "Python 3 with unittest and optional U02 SHA env"
   },
   "existing_road_river_crossings_pending": [
     {
