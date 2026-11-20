@@ -114,3 +114,5 @@ Adendo M2.04 em `../m204/adendo-c17-retorno-noturno-009.md` com cursor `../../es
 `c02-interacao-025.md` registra pedido de desculpas e explicação técnica de Bartolomeu sobre endereços divergentes de rede subterrânea e superfície. Rada aceita explicação, não solicita busca cega e começa a sair para consultar sua fonte, ainda ao alcance. Cursor `../../estado/recuperacao-c106.json`; C02 aberta sem novos testes ou informação sobrenatural.
 
 `c02-interacao-026.md` registra despedida simples de Rada e retorno de Bartolomeu ao trabalho sem diálogo adicional. M3.02 C02 encerrada sem nova trama ou salto temporal; cursor `../../estado/recuperacao-c107.json`, próxima cena relevante pendente de dramaturgia.
+
+`c03-abertura-001.md` inaugura M3.02 C03 com bilhete da escola sobre consulta familiar antes de eventual monitoria de Mikahel no maternal. Mary e Mikahel falam autonomamente; Bartolomeu não responde por presunção. Cursor `../../estado/recuperacao-c108.json`, cena aberta, sem gastos, teste ou transferência de informação de Rada/Setor VI.
