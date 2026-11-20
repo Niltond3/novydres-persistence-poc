@@ -1,7 +1,7 @@
 name: Mapwork V3 contracts and spatial regression
 on:
   pull_request:
-    branches: [master]
+    branches: [master, 'mapwork-v3/kingswell-planejamento-20261119']
     paths:
       - 'novydres/cenario/atlas-novydres/cartografia/mapwork-v3/**'
       - '.github/workflows/mapwork-v3-ci.yml'
@@ -26,5 +26,30 @@ jobs:
         run: python -m pip install -r novydres/cenario/atlas-novydres/cartografia/mapwork-v3/requirements.txt
       - name: Validate repository contracts and candidate manifests
         run: python novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/mapwork.py audit
+      - name: Run unified pipeline and prove no silent canon promotion
+        run: |
+          python novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/pipeline.py run --district kingswell --checkpoint /tmp/mapwork-v32-kingswell.json
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/mapwork-v32-kingswell.json',encoding='utf-8'))
+          assert p['schema']=='NOVYDRES_MAPWORK_V32_PIPELINE_CHECKPOINT_1'
+          assert p['publication_authorized'] is False
+          assert p['canonical_state_changed'] is False
+          assert p['next_action'] and p['phase']
+          print('unified pipeline checkpoint: PASS',p['phase'],p['next_action'])
+          PY
+      - name: Verify browser-compatible remote planning entry
+        run: |
+          python novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/web_runner.py --district sulfok --out /tmp/mapwork-v32-web
+          python - <<'PY'
+          import json
+          j=json.load(open('/tmp/mapwork-v32-web/checkpoint.json'))
+          assert j['checkpoint']['phase']=='BOOTSTRAP'
+          assert j['media_access']=='NOT_PROVISIONED'
+          assert j['checkpoint']['publication_authorized'] is False
+          print('hosted web runner smoke: PASS')
+          PY
+      - name: Compile planning and orchestration scripts
+        run: python -m compileall -q novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts
       - name: Run geometry, mask, tiles and before/after integration tests
         run: python -m pytest -q novydres/cenario/atlas-novydres/cartografia/mapwork-v3/tests

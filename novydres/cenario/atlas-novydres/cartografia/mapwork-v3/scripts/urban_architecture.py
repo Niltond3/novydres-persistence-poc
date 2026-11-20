@@ -29,8 +29,10 @@ ROAD_CLASSES = {"street", "collector", "avenue", "arterial", "expressway", "ramp
 RAIL_CLASSES = {"rail_main", "rail_freight", "rail_siding"}
 TRAM_CLASSES = {"tram"}
 WATER_CLASSES = {"river", "canal"}
-EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES
-JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass"}
+UNDERGROUND_CLASSES = {"metro", "heat_pipe", "gas_pipe", "utility_duct"}
+UTILITY_CLASSES = UNDERGROUND_CLASSES | {"aqueduct"}
+EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES | UTILITY_CLASSES
+JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass", "metro_station", "utility_hub", "aqueduct_gate", "heat_exchange", "gas_terminal"}
 CROSSING_CLASSES = {"at_grade", "grade_separated"}
 LANDUSE_CLASSES = {"urban", "industrial", "natural", "water", "protected"}
 MORPH_CLASSES = {"historic", "worker", "industrial", "technical", "mixed", "waterfront"}
@@ -66,6 +68,21 @@ def seg_cross(a, b, c, d):
     if -1e-8<=t<=1+1e-8 and -1e-8<=u<=1+1e-8:
         return [a[0]+t*v[0], a[1]+t*v[1]]
     return None
+
+
+def collinear_overlap(a,b,c,d):
+    """Return a representative interior point of a positive-length same-line overlap."""
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    def cross(p): return dx*(p[1]-a[1])-dy*(p[0]-a[0])
+    if abs(cross(c))>1e-8 or abs(cross(d))>1e-8:
+        return None
+    axis=0 if abs(dx)>=abs(dy) else 1
+    start=max(min(a[axis],b[axis]),min(c[axis],d[axis]))
+    end=min(max(a[axis],b[axis]),max(c[axis],d[axis]))
+    if end-start<=1e-8:
+        return None
+    t=((start+end)/2-a[axis])/(b[axis]-a[axis])
+    return [a[0]+t*dx,a[1]+t*dy]
 
 
 def _edge_level(edge, at_start=False):
@@ -133,6 +150,15 @@ def _validate_nodes_edges(transport, width, height):
                     f"{label}: elevated route cannot cut ground-level blocks")
         if e["class"] in WATER_CLASSES:
             require(e["separates_blocks"] is True,f"{label}: river/canal is a physical boundary")
+        if e["class"] in UNDERGROUND_CLASSES:
+            require(from_level<0 and to_level<0 and
+                    e.get("structure") in {"tunnel","underpass"},
+                    f"{label}: underground network requires negative level and tunnel")
+            require(e["separates_blocks"] is False,
+                    f"{label}: subsurface networks cannot split ground city blocks")
+        if e["class"]=="aqueduct":
+            require(e["separates_blocks"] is False,
+                    f"{label}: utility aqueduct cannot independently subdivide lots")
         incid[e["from"]]+=1;incid[e["to"]]+=1
     incident=collections.defaultdict(list)
     for e in edges:
@@ -213,7 +239,21 @@ def validate_transport(transport, width, height):
         if a["id"]==b["id"]:
             continue
         pt=seg_cross(pa,qa,pb,qb)
+        underground_grade=(a["class"] in UNDERGROUND_CLASSES or
+                           b["class"] in UNDERGROUND_CLASSES)
+        different_grade=a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from"))
+        if underground_grade and different_grade:
+            continue
         if pt is None:
+            overlap=collinear_overlap(pa,qa,pb,qb)
+            if overlap is None:
+                continue
+            same_corridor=(a["class"] in ROAD_CLASSES and b["class"] in TRAM_CLASSES and
+                           b.get("shared_with_road") is True) or (
+                           b["class"] in ROAD_CLASSES and a["class"] in TRAM_CLASSES and
+                           a.get("shared_with_road") is True)
+            require(same_corridor,
+                    f"undeclared collinear transport overlap {a['id']}/{b['id']}: {overlap}")
             continue
         # Shared endpoint is legal only when the edges share the actual node.
         endpoints={a["from"],a["to"]}&{b["from"],b["to"]}
@@ -241,6 +281,8 @@ def validate_transport(transport, width, height):
         "rails":sum(e["class"] in RAIL_CLASSES for e in byedge.values()),
         "trams":sum(e["class"] in TRAM_CLASSES for e in byedge.values()),
         "waterways":sum(e["class"] in WATER_CLASSES for e in byedge.values()),
+        "metro":sum(e["class"]=="metro" for e in byedge.values()),
+        "utilities":sum(e["class"] in UTILITY_CLASSES and e["class"]!="metro" for e in byedge.values()),
         "junctions":dict(collections.Counter(n["kind"] for n in bynode.values()))
     }
 
@@ -292,6 +334,91 @@ def classify_territory(plan):
     return zone,labels,categories,dict(ownership)
 
 
+def spatial_protection_mask(plan):
+    """Exact U02-grid protected cells; caller must first pass plan_city with real source."""
+    w,h=plan["grid"]["width"],plan["grid"]["height"]
+    zone,classes,names,_=classify_territory(plan)
+    corridors=_line_mask((w,h),plan["transport"],lambda e:
+                         e["class"] not in UNDERGROUND_CLASSES or
+                         e.get("surface_easement") is True).tobytes()
+    protected_categories={names["water"],names["natural"],names["protected"]}
+    mask=bytes(255 if zone[i] and
+               (classes[i] in protected_categories or corridors[i]) else 0
+               for i in range(w*h))
+    return Image.frombytes("L",(w,h),mask)
+
+
+def _street_access(width, height, labels, editable, road):
+    """Trace at-grade routes along the setbacks of parcels within one city block."""
+    parents, distance = {}, {}
+    queue = collections.deque()
+    for i, allowed in enumerate(editable):
+        if not allowed:
+            continue
+        x, y = i % width, i // width
+        neighbors = ([i - 1] if x else []) + ([i + 1] if x < width - 1 else [])
+        neighbors += ([i - width] if y else []) + ([i + width] if y < height - 1 else [])
+        if any(road[j] for j in neighbors):
+            parents[i] = None
+            distance[i] = 0
+            queue.append(i)
+    while queue:
+        i = queue.popleft()
+        x, y = i % width, i // width
+        neighbors = ([i - 1] if x else []) + ([i + 1] if x < width - 1 else [])
+        neighbors += ([i - width] if y else []) + ([i + width] if y < height - 1 else [])
+        for j in neighbors:
+            if editable[j] and labels[j] == labels[i] and j not in parents:
+                parents[j] = i
+                distance[j] = distance[i] + 1
+                queue.append(j)
+    return parents, distance
+
+
+def _validate_special_sites(plan, width, height, labels, blocks, editable, distance):
+    """POIs must occupy a real buildable parcel with a surveyed entrance and path."""
+    sites = plan["special_sites"]
+    require(isinstance(sites, list), "explicit special_sites inventory required")
+    ids, cells, verified = set(), set(), []
+    byblock = {b["id"]: i + 1 for i, b in enumerate(blocks)}
+    for s in sites:
+        sid = s["id"]
+        require(sid not in ids, f"{sid}: duplicate POI")
+        ids.add(sid)
+        block = byblock.get(s["block_id"])
+        require(block is not None, f"{sid}: POI references absent city block")
+        point, entrance, box = s["point"], s["entrance"], s["footprint"]
+        require(finite_xy(point) and finite_xy(entrance), f"{sid}: POI location/entrance required")
+        require(isinstance(box, list) and len(box) == 4 and
+                all(isinstance(v, (int, float)) and math.isfinite(v) for v in box) and
+                box[0] < box[2] and box[1] < box[3], f"{sid}: invalid footprint")
+        x, y = int(point[0]), int(point[1])
+        require(0 <= x < width and 0 <= y < height and
+                x < point[0] < x + 1 and y < point[1] < y + 1,
+                f"{sid}: POI point must be inside a parcel")
+        i = y * width + x
+        require(i not in cells and labels[i] == block and editable[i],
+                f"{sid}: POI parcel collides or is not editable within its block")
+        cells.add(i)
+        require(x < box[0] < box[2] < x + 1 and y < box[1] < box[3] < y + 1,
+                f"{sid}: POI footprint must preserve parcel perimeter clearance")
+        require(box[0] <= entrance[0] <= box[2] and box[1] <= entrance[1] <= box[3],
+                f"{sid}: entrance outside footprint")
+        require(min(abs(entrance[0]-box[0]),abs(entrance[0]-box[2]),
+                    abs(entrance[1]-box[1]),abs(entrance[1]-box[3]))<=1e-7,
+                f"{sid}: entrance must lie on accessible footprint boundary")
+        require(i in distance, f"{sid}: no at-grade street path")
+        cls = next(key for key, value in
+                   {name: idx + 1 for idx, name in enumerate(sorted(LANDUSE_CLASSES))}.items()
+                   if value == plan["_site_class_ids"][i])
+        clearance = plan["morphology"][cls]["access_clearance_units"]
+        require(2 * min(box[0] - x, y + 1 - box[3], box[1] - y, x + 1 - box[2]) >= clearance - 1e-8,
+                f"{sid}: insufficient POI access corridor width")
+        verified.append({"id": sid, "block_id": s["block_id"], "point": point,
+                         "entrance": entrance, "footprint": box, "road_access_steps": distance[i]})
+    return verified
+
+
 def _morphology_rules(plan, class_counts):
     rules=plan.get("morphology",{})
     for cls in ("urban","industrial"):
@@ -310,6 +437,15 @@ def _morphology_rules(plan, class_counts):
         require(isinstance(mixes,dict) and len(mixes)>=1 and
                 all(isinstance(v,(int,float)) and v>=0 for v in mixes.values()) and
                 abs(sum(mixes.values())-1)<=1e-6,f"{cls}: use mix must sum to one")
+        required=r.get("access_clearance_units")
+        require(isinstance(required,(int,float)) and not isinstance(required,bool) and
+                math.isfinite(required) and 0<required<1,
+                f"{cls}: explicit at-grade access clearance in U02 units required")
+        require(r.get("access_mode") in ("pedestrian","vehicle"),
+                f"{cls}: pedestrian/vehicle access mode required")
+        gap=1-math.sqrt(r["occupation_target"])
+        require(gap+1e-8>=required,
+                f"{cls}: occupation leaves less clearance than the required access corridor")
 
 
 def _label_blocks(width,height,eligible,dividers,category_map):
@@ -391,6 +527,169 @@ def derive_work_units(width,height,labels,allowed,max_units,scale):
     return result,sum(covered)
 
 
+def validated_physical_reference(plan,cfg):
+    """Never infer metres from the U02 raster. Missing survey is a pending gate."""
+    ref=plan.get("physical_reference")
+    if ref is None:
+        return None
+    require(isinstance(ref,dict) and ref.get("verification")=="SURVEYED_APPROVED" and
+            ref.get("source_sha256")==cfg["reference"]["sha256"] and
+            ref.get("owner_approved") is True and
+            isinstance(ref.get("evidence"),str) and len(ref["evidence"])>=16,
+            "physical scale requires surveyed reference and explicit owner evidence")
+    scale=ref.get("metres_per_unit")
+    require(isinstance(scale,(int,float)) and not isinstance(scale,bool) and
+            math.isfinite(scale) and scale>0,
+            "physical scale requires positive surveyed metres_per_unit")
+    for mode in ("pedestrian","vehicle"):
+        value=ref.get("minimum_width_m",{}).get(mode)
+        require(isinstance(value,(int,float)) and not isinstance(value,bool) and
+                math.isfinite(value) and value>0,
+                "physical circulation requires separate surveyed pedestrian/vehicle widths")
+    return ref
+
+
+def _segment_hits_box(a,b,rect):
+    """Exact intersection of a finite segment and an axis-aligned rectangle."""
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    t0,t1=0.0,1.0
+    for p,q in ((-dx,a[0]-rect[0]),(dx,rect[2]-a[0]),
+                (-dy,a[1]-rect[1]),(dy,rect[3]-a[1])):
+        if abs(p)<1e-12:
+            if q<0:return False
+        else:
+            t=q/p
+            if p<0:t0=max(t0,t)
+            else:t1=min(t1,t)
+            if t0>t1:return False
+    return True
+
+
+def validate_physical_route(route,*,entrance,footprint,mode,scale,
+                            minimum_width_m,ground_roads,obstacles=(),forbidden=()):
+    """Conservative vector corridor check: clearance along the WHOLE route.
+
+    Obstacles include other buildings/infra; forbidden includes water, protected
+    and ground-level rail cells. A road endpoint must be at level zero.
+    """
+    require(isinstance(route,dict) and route.get("mode")==mode,
+            "access route must declare its pedestrian/vehicle mode")
+    points=route.get("points")
+    require(isinstance(points,list) and 2<=len(points)<=128 and
+            all(finite_xy(p) for p in points) and point_close(points[0],entrance,1e-7),
+            "access route must begin at the building entrance")
+    width=route.get("width_m")
+    require(isinstance(width,(int,float)) and not isinstance(width,bool) and
+            math.isfinite(width) and width>=minimum_width_m-1e-8,
+            "access route has insufficient pedestrian/vehicle width")
+    rad=width/scale/2
+    require(0<rad<1,"access route width exceeds a single reference unit; local corridor invalid")
+    require(any(edge["class"] in ROAD_CLASSES and edge.get("level",edge.get("level_from"))==0 and
+                edge["width_units"]*scale>=width-1e-8 and
+                any(_on_segment(points[-1],a,b,0.01)
+                    for a,b in zip(edge["points"],edge["points"][1:]))
+                for edge in ground_roads),
+            "access route does not terminate on a suitable ground-level road")
+    left,right,top,bottom=footprint[0],footprint[2],footprint[1],footprint[3]
+    p0,p1=points[:2]
+    normals=[]
+    if abs(p0[0]-left)<1e-7:normals.append((-1,0))
+    if abs(p0[0]-right)<1e-7:normals.append((1,0))
+    if abs(p0[1]-top)<1e-7:normals.append((0,-1))
+    if abs(p0[1]-bottom)<1e-7:normals.append((0,1))
+    require(normals and any((p1[0]-p0[0])*nx+(p1[1]-p0[1])*ny>1e-8
+                            for nx,ny in normals),
+            "building entrance must be on an outward accessible footprint boundary")
+    reduced=[left+1e-7,top+1e-7,right-1e-7,bottom-1e-7]
+    for a,b in zip(points,points[1:]):
+        require(not point_close(a,b,1e-9),"access route contains zero-length segment")
+        require(not _segment_hits_box(a,b,reduced),
+                "access route cuts through its own building footprint")
+        for box in obstacles:
+            inflated=[box[0]-rad,box[1]-rad,box[2]+rad,box[3]+rad]
+            require(not _segment_hits_box(a,b,inflated),
+                    "access corridor intersects another building footprint or has insufficient width")
+        for box in forbidden:
+            inflated=[box[0]-rad,box[1]-rad,box[2]+rad,box[3]+rad]
+            require(not _segment_hits_box(a,b,inflated),
+                    "access corridor crosses protected terrain or ground-level transport barrier")
+    if mode=="vehicle":
+        # Sharp turns are not certified without swept-path/curvature geometry.
+        for a,b,c in zip(points,points[1:],points[2:]):
+            cross=(b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0])
+            require(abs(cross)<1e-8,
+                    "vehicle route has an uncertified sharp turn")
+    return True
+
+
+TRANSPORT_SEAM_CLASSES={
+    "road":ROAD_CLASSES, "rail":RAIL_CLASSES, "tram":TRAM_CLASSES,
+    "water":WATER_CLASSES, "bridge":ROAD_CLASSES | RAIL_CLASSES
+}
+
+
+def _on_segment(point,a,b,tol=0.01):
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    length=dx*dx+dy*dy
+    if length<1e-12:
+        return point_close(point,a,tol)
+    t=max(0.0,min(1.0,((point[0]-a[0])*dx+(point[1]-a[1])*dy)/length))
+    return point_close(point,[a[0]+t*dx,a[1]+t*dy],tol)
+
+
+def _on_polygon_boundary(point,polygon):
+    return any(_on_segment(point,polygon[i],polygon[(i+1)%len(polygon)])
+               for i in range(len(polygon)))
+
+
+def _on_shared_border(point,a,b):
+    for i in range(len(a)):
+        x,y=a[i],a[(i+1)%len(a)]
+        if not _on_segment(point,x,y):
+            continue
+        for j in range(len(b)):
+            u,v=b[j],b[(j+1)%len(b)]
+            if collinear_overlap(x,y,u,v) is not None and _on_segment(point,u,v):
+                return True
+    return False
+
+
+def _validate_seam_network(seam,transport):
+    kind=seam["kind"]
+    if kind not in TRANSPORT_SEAM_CLASSES:
+        # Non-transport seams are border agreements, not road certifications.
+        require(kind in ("ermo","terrain","urban_edge"),f"{seam['id']}: invalid seam kind")
+        return
+    edge_id=seam.get("network_edge_id")
+    edge=next((e for e in transport["edges"] if e["id"]==edge_id),None)
+    require(edge is not None and edge["class"] in TRANSPORT_SEAM_CLASSES[kind],
+            f"{seam['id']}: missing/mismatched transport edge")
+    require(any(_on_segment(seam["point"],a,b)
+                for a,b in zip(edge["points"],edge["points"][1:])),
+            f"{seam['id']}: seam is not on its transport edge")
+    require(abs(edge["width_units"]-seam["width_units"])<=1e-8,
+            f"{seam['id']}: transport width differs")
+    require(edge.get("profile")==seam["profile"],
+            f"{seam['id']}: transport profile differs")
+    level=seam.get("level")
+    require(type(level) is int,f"{seam['id']}: transport level required")
+    if edge["class"]=="ramp":
+        nodes={n["id"]:n for n in transport["nodes"]}
+        matches=((point_close(seam["point"],nodes[edge["from"]]["point"]) and
+                  level==edge["level_from"]) or
+                 (point_close(seam["point"],nodes[edge["to"]]["point"]) and
+                  level==edge["level_to"]))
+        require(matches,f"{seam['id']}: ramp seam level mismatches boundary endpoint")
+    else:
+        require(level==edge["level"],f"{seam['id']}: transport level differs")
+    node_id=seam.get("network_node_id")
+    if node_id is not None:
+        node=next((n for n in transport["nodes"] if n["id"]==node_id),None)
+        require(node is not None and node_id in (edge["from"],edge["to"]) and
+                point_close(node["point"],seam["point"],0.01) and node["level"]==level,
+                f"{seam['id']}: transport node does not meet border at grade")
+
+
 def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     """Fully materialize contracts for a declared synthetic/real spatial manifest."""
     require(plan.get("schema")==SCHEMA,"architecture schema mismatch")
@@ -434,7 +733,8 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     # Elevated rail/roads/viaducts are preserved as a second overlay, but they
     # do not connect ground roads or falsely split lots at an overpass.
     all_rails_roads=_line_mask((w,h),plan["transport"],lambda e:
-        e["class"] in EDGE_CLASSES).tobytes()
+        e["class"] not in UNDERGROUND_CLASSES or
+        e.get("surface_easement") is True).tobytes()
     landuse_protected={names["water"],names["natural"],names["protected"]}
     protected=bytearray(1 if (zone[i] and (classes[i] in landuse_protected or
                                            all_rails_roads[i])) else 0 for i in range(w*h))
@@ -442,8 +742,26 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     eligible_edit=bytearray(1 if (eligible[i] and not protected[i]) else 0 for i in range(w*h))
     require(all(not eligible_edit[i] or labels[i]>0 for i in range(w*h)),
             "editable pixel missing a road-bounded block")
+    roads=_line_mask((w,h),plan["transport"],lambda e:
+                     e["class"] in ROAD_CLASSES and e.get("level",e.get("level_from",0))==0).tobytes()
+    _,distance=_street_access(w,h,labels,eligible_edit,roads)
+    unreachable=sum(bool(allowed) and i not in distance for i,allowed in enumerate(eligible_edit))
+    require(unreachable==0,f"{unreachable} parcels lack at-grade street access")
+    # Local scratch mapping only; never added to the persisted spatial manifest.
+    site_plan=dict(plan,_site_class_ids=classes)
+    verified_sites=_validate_special_sites(site_plan,w,h,labels,blocks,eligible_edit,distance)
     tasksize=plan.get("work_policy",{}).get("max_units")
     tasks,pixels=derive_work_units(w,h,labels,eligible_edit,tasksize,cfg["detail_pixels_per_unit"])
+    for site in verified_sites:
+        x,y=map(int,site["point"])
+        i=y*w+x
+        owner=[u["id"] for u in tasks if
+               u["block_label"]==labels[i] and
+               u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3]]
+        require(len(owner)==1 and
+                next(s for s in plan["special_sites"] if s["id"]==site["id"]).get("work_unit_id")==owner[0],
+                f"{site['id']}: missing/mismatched POI work-unit ownership")
+        site["work_unit_id"]=owner[0]
     budget=plan["work_policy"].get("max_work_units")
     require(isinstance(budget,int) and budget>0,"work-unit budget missing")
     require(len(tasks)<=budget,
@@ -469,19 +787,44 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     require(isinstance(declared_seams,list),"neighbor seam list required")
     require(len({s["id"] for s in declared_seams})==len(declared_seams),
             "duplicate shared connector identifiers")
-    counterparts=neighbor_manifests or {}
+    counterparts=neighbor_manifests if neighbor_manifests is not None else {}
+    transport_digest=hashlib.sha256(
+        json.dumps(plan["transport"],sort_keys=True,separators=(",",":")).encode("utf-8")
+    ).hexdigest()
     seams_verified=bool(declared_seams)
+    matched_seams=0
+    reserved_seams=0
     for seam in declared_seams:
         require(seam.get("from_zone")==plan["zone"]["id"] and
                 seam.get("to_zone") and seam.get("id") and finite_xy(seam.get("point")),
                 "malformed bilateral seam contract")
-        peer=counterparts.get(seam["to_zone"],{})
-        mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None)
-        expected=("kind","width_units","profile")
+        require(_on_polygon_boundary(seam["point"],plan["zone"]["polygon"]),
+                f"{seam['id']}: seam point is not on this zone boundary")
+        _validate_seam_network(seam,plan["transport"])
+        peer=counterparts.get(seam["to_zone"])
+        mate=next((x for x in peer.get("seams",[]) if x.get("id")==seam["id"]),None) if peer is not None else None
+        expected=("kind","width_units","profile","level","network_edge_id","network_node_id")
         good=bool(mate) and mate.get("from_zone")==seam["to_zone"] and mate.get("to_zone")==seam["from_zone"]
         good=good and all(mate.get(k)==seam.get(k) for k in expected)
         good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
-        seams_verified=seams_verified and bool(good)
+        if peer is not None:
+            require(bool(good),f"{seam['id']}: existing neighbor seam differs or is missing from global authority")
+            require(_on_shared_border(seam["point"],plan["zone"]["polygon"],
+                                      peer.get("zone_polygon",[])),
+                    f"{seam['id']}: connector is not on a shared zone boundary")
+            _validate_seam_network(mate,peer["transport"])
+            matched_seams+=1
+        else:
+            reservation=(seam.get("reservation_status")=="APPROVED_SCOPED" and
+                         seam.get("authority_sha256")==transport_digest)
+            reserved_seams+=int(reservation)
+            seams_verified=seams_verified and reservation
+    for neighbor,peer in counterparts.items():
+        required_ids={s["id"] for s in declared_seams if s["to_zone"]==neighbor}
+        peer_ids=[s["id"] for s in peer.get("seams",[])
+                  if s.get("to_zone")==plan["zone"]["id"]]
+        require(set(peer_ids)==required_ids and len(peer_ids)==len(set(peer_ids)),
+                f"{neighbor}: asymmetric or extra existing neighbor connectors")
     receipt=plan.get("work_policy",{}).get("mask_receipt",{})
     masks_verified=(
         isinstance(receipt,dict) and
@@ -499,6 +842,7 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         isinstance(owner_approval.get("evidence"),str) and
         len(owner_approval["evidence"])>=8
     )
+    physical_ref=validated_physical_reference(plan,cfg)
     required_gates={
         "source_and_global_topology":True,
         "source_bytes_verified":source_verified,
@@ -509,7 +853,10 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "protected_network_coverage":True,
         "neighbor_seams":seams_verified,
         "pixel_masks_verified":masks_verified,
-        "owner_art_authorized":owner_auth
+        "owner_art_authorized":owner_auth,
+        "poi_sites_placed_and_accessible":len(verified_sites)==len(plan["special_sites"]),
+        "ground_access_and_clearance":unreachable==0,
+        "physical_access_certified":False  # set only after surveyed per-building vector routes
     }
     ready=all(required_gates.values()) and plan.get("fixture_mode") is False
     # No claim that a synthetic fixture provides real city evidence.
@@ -526,8 +873,8 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
             "occupation_target":profile["occupation_target"],
             "building_floor_band":profile["building_floors"],
             "use_mix":profile["use_mix"],
-            "poi_sites":[site["id"] for site in plan.get("special_sites",[])
-                         if site.get("block_id")==b["id"]],
+            "poi_sites":[site["id"] for site in verified_sites
+                         if site["block_id"]==b["id"]],
             "buildings_generated":0
         })
     return {
@@ -544,6 +891,11 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
                     "work_unit_semantics":"ATOMIC_GENERATION_WINDOW"},
         "blocks":blocks,
         "block_programs":block_programs,
+        "poi_sites":verified_sites,
+        "access":{"connected_parcels":len(distance),"unreachable_parcels":unreachable,
+                  "semantics":"ABSTRACT_U02_CORRIDOR_NOT_METRIC_VEHICLE_CERTIFICATION",
+                  "surveyed_scale_available":physical_ref is not None,
+                  "physical_access_status":"PENDING_PER_BUILDING_VECTOR_ROUTE_VALIDATION"},
         "work_units":tasks,
         "generation_queue":{
             "batches":batches,
@@ -555,6 +907,10 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "gates":required_gates,
         "generation_ready":ready,
         "blocking_gates":blocked,
+        "seam_status":{"matched":matched_seams,"reserved":reserved_seams,
+                       "declared":len(declared_seams),
+                       "pending_peer_verification":reserved_seams>0},
+        "transport_sha256":transport_digest,
         "mask_fingerprints":{
             "editable_sha256":hashlib.sha256(eligible_edit).hexdigest(),
             "protected_sha256":hashlib.sha256(protected).hexdigest()
@@ -599,20 +955,7 @@ def verify_no_protected_edits(original, modified, protected_indices):
 
 
 def cli():
-    p=argparse.ArgumentParser(description="Topology-first urban architecture V3.1")
-    p.add_argument("manifest",type=Path)
-    p.add_argument("--config",type=Path,required=True)
-    p.add_argument("--report",type=Path)
-    p.add_argument("--reference",type=Path,help="actual immutable U02 PNG; required for real generation readiness")
-    args=p.parse_args()
-    manifest=json.loads(args.manifest.read_text(encoding="utf-8"))
-    cfg=json.loads(args.config.read_text(encoding="utf-8"))
-    report=plan_city(manifest,cfg,reference_file=args.reference)
-    txt=json.dumps(report,ensure_ascii=False,indent=2)
-    if args.report:
-        args.report.parent.mkdir(parents=True,exist_ok=True)
-        args.report.write_text(txt+"\n",encoding="utf-8")
-    print(txt)
+    raise SystemExit("urban_architecture.py is internal only; use scripts/pipeline.py run")
 
 
 if __name__=="__main__":

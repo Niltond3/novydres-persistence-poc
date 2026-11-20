@@ -1,0 +1,56 @@
+name: Mapwork V3.2 Web checkpoint runner
+on:
+  push:
+    branches: ['mapwork-v3/**']
+    paths:
+      - 'novydres/cenario/atlas-novydres/cartografia/mapwork-v3/web-requests/**'
+      - '.github/workflows/mapwork-v3-web-runner.yml'
+  workflow_dispatch:
+    inputs:
+      district:
+        description: District for a diagnostic bootstrap (no private media)
+        required: false
+        default: kingswell
+      request:
+        description: Optional Git-versioned web-requests/*.json
+        required: false
+permissions:
+  contents: read
+concurrency:
+  group: mapwork-v32-web-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  planning-checkpoint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r novydres/cenario/atlas-novydres/cartografia/mapwork-v3/requirements.txt
+      - name: Execute versioned browser request on hosted runner
+        env:
+          MW_DISTRICT: "${{ inputs.district }}"
+          MW_REQUEST: "${{ inputs.request }}"
+          GITHUB_EVENT_BEFORE: "${{ github.event.before }}"
+        shell: bash
+        run: |
+          SCRIPT=novydres/cenario/atlas-novydres/cartografia/mapwork-v3/scripts/web_runner.py
+          if [[ -n "$MW_REQUEST" ]]; then
+            python "$SCRIPT" --request "$MW_REQUEST" --out "$RUNNER_TEMP/mapwork-checkpoint"
+          elif [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            python "$SCRIPT" --out "$RUNNER_TEMP/mapwork-checkpoint"
+          else
+            python "$SCRIPT" --district "${MW_DISTRICT:-kingswell}" --out "$RUNNER_TEMP/mapwork-checkpoint"
+          fi
+      - name: Publish read-only checkpoint and receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mapwork-v32-web-checkpoint
+          path: ${{ runner.temp }}/mapwork-checkpoint/
+          if-no-files-found: warn
+          retention-days: 30

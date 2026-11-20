@@ -203,7 +203,21 @@ def test_special_site_is_represented_as_content_not_new_city_lot():
     p,cfg=fixture()
     orig=urban.plan_city(p,cfg)
     block=orig["blocks"][0]["id"]
-    p["special_sites"]=[{"id":"CIVIC-01","block_id":block}]
+    zone,classes,names,_=urban.classify_territory(p)
+    eligible=bytearray(1 if zone[i] and classes[i] in (names["urban"],names["industrial"]) else 0
+                       for i in range(64*64))
+    dividers=urban._line_mask((64,64),p["transport"],lambda e:
+                e["separates_blocks"] and e.get("level",e.get("level_from",0))==0).tobytes()
+    labels,_=urban._label_blocks(64,64,eligible,dividers,classes)
+    protect=urban.spatial_protection_mask(p).tobytes()
+    cell=next(i for i,v in enumerate(labels) if v==1 and not protect[i])
+    x,y=cell%64,cell//64
+    owner=next(u["id"] for u in orig["work_units"] if u["block_label"]==labels[cell]
+               and u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3])
+    p["special_sites"]=[{"id":"CIVIC-01","block_id":block,
+                         "point":[x+0.5,y+0.5],"entrance":[x+0.2,y+0.5],
+                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8],
+                         "work_unit_id":owner}]
     report=urban.plan_city(p,cfg)
     assert report["geometry"]["urban_lots"]==orig["geometry"]["urban_lots"]
     assert report["block_programs"][0]["poi_sites"]==["CIVIC-01"]
@@ -255,4 +269,24 @@ def test_invalid_batch_size_cannot_authorize_any_art():
     p,cfg=fixture()
     p["work_policy"]["batch_size"]=201
     with pytest.raises(urban.ContractError,match="batch size"):
+        urban.plan_city(p,cfg)
+
+
+def test_poi_invalid_site_has_no_art_gate():
+    p,cfg=fixture()
+    report=urban.plan_city(p,cfg)
+    p["special_sites"]=[{"id":"MISSING-ENTRANCE","block_id":report["blocks"][0]["id"],
+                         "point":[10.5,10.5],"footprint":[10.2,10.2,10.8,10.8]}]
+    with pytest.raises(urban.ContractError,match="entrance"):
+        urban.plan_city(p,cfg)
+
+
+def test_explicit_clearance_and_access_mode_required_before_art():
+    p,cfg=fixture()
+    del p["morphology"]["urban"]["access_mode"]
+    with pytest.raises(urban.ContractError,match="access mode required"):
+        urban.plan_city(p,cfg)
+    p,cfg=fixture()
+    del p["morphology"]["urban"]["access_clearance_units"]
+    with pytest.raises(urban.ContractError,match="explicit at-grade"):
         urban.plan_city(p,cfg)
