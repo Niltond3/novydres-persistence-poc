@@ -8,7 +8,7 @@
   "target": "kingswell",
   "subject_id": "district-chelsea",
   "phase": "SPATIAL_MODEL",
-  "current_execution_outcome": "BLOCKED_SPATIAL_FOUNDATION_BEFORE_ART",
+  "current_execution_outcome": "SPATIAL_MODEL_INCOMPLETE_NO_GENERATION",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
@@ -39,13 +39,13 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "BUILD_GLOBAL_SPATIAL_V31_AND_VALIDATE_BILATERAL_SEAMS_USING_ACTUAL_U02",
+  "next_action": "BUILD_REAL_SPATIAL_V31_FROM_U02_WITH_EXCLUSIVE_TERRITORY_SURFACE_TRANSPORT_AND_WATER_THEN_VALIDATE",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
   "human_visual_review_not_requested": true,
   "handoff_allowed": false,
-  "note": "Metro option A incorporated and conceptual spatial exclusion audited. No global network, exclusive territory, work-unit designs, native image jobs or comparison was produced.",
+  "note": "Decision A and constraints persisted, conceptual expansion mask two disjoint components, and U02 candidate bridge points visually screened. Global-spatial-v31.json still absent. No candidate image or final composition generated.",
   "next_decision_id": null,
   "open_editorial_proposals": 0,
   "metro_decision": {
@@ -70,5 +70,15 @@
     "actual_metro_route_verified": false,
     "metro_tunnel_or_station_created": false,
     "source_plan": "zones/cidade-velha/spatial-plan.json"
+  },
+  "bridge_visual_screening": {
+    "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "inspected_ids": [
+      "KW-B01",
+      "KW-B02",
+      "KW-B03"
+    ],
+    "outcome": "PRELIMINARY_VISUAL_SITING_ONLY",
+    "network_topology_pass": false
   }
 }
