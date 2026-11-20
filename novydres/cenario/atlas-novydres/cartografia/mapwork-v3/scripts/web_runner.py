@@ -102,8 +102,13 @@ def run_request(*, district=None, request=None, out):
     digest=hashlib.sha256(saved.read_bytes()).hexdigest()
     core.save(root/"readback.json",{"checkpoint_sha256":digest,"source_head_sha":ref,
                                   "checkpoint_name":"checkpoint.json"})
+    # Browser agents without ZIP extraction can read this complete actionable
+    # handoff through ordinary GitHub Actions job logs.
     print(json.dumps({"status":"PASS_DIAGNOSTIC_NOT_IMAGE_AUTHORIZATION",
+                      "request_id":info["request_id"],"source_head_sha":ref,
+                      "requested_parent_sha":info["requested_parent_sha"],
                       "phase":result["phase"],"next_action":result["next_action"],
+                      "blockers":result["blockers"],"inputs":result["inputs"],
                       "checkpoint_sha256":digest},ensure_ascii=False))
     return info
 

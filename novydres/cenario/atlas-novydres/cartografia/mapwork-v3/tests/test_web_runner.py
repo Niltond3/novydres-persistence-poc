@@ -59,3 +59,15 @@ def test_push_request_rejects_mismatched_checkout(monkeypatch):
     monkeypatch.setattr(web_runner.subprocess,"check_output",lambda *a,**kw:"a"*40+"\n")
     with pytest.raises(core.Invalid,match="checkout differs"):
         web_runner.discover_request_from_push()
+
+
+def test_read_only_hosted_source_guard_still_blocks_image_generation():
+    import mapwork as core
+    import urban_architecture as urban
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    p["fixture_mode"]=False
+    cfg=core.load(ROOT/"config.json")
+    p["source_sha256"]=cfg["reference"]["sha256"]
+    r=urban.plan_city(p,cfg,reference_file=None)
+    assert r["gates"]["source_bytes_verified"] is False
+    assert r["generation_ready"] is False

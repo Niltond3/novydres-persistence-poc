@@ -206,7 +206,9 @@ def run(args):
     report=urban.plan_city(plan,cfg,reference_file=args.reference,
                            neighbor_manifests=load_verified_neighbors(plan))
     # Urban design is a mandatory deterministic phase, not an image-side suggestion.
-    prerequisites=("source_and_global_topology","source_bytes_verified",
+    # A real declarative map can be planned in a hosted runner without private U02
+    # bytes. Byte verification remains a hard gate before image generation/composition.
+    prerequisites=("source_and_global_topology",
                    "territory_classification","urban_morphology",
                    "quadrants_derived_from_transport","work_unit_coverage",
                    "protected_network_coverage","neighbor_seams",
