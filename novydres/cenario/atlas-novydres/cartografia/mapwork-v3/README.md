@@ -1,4 +1,10 @@
-# Novydres Mapwork V3 — infraestrutura de composição e arquitetura urbana V3.1 (não canônica)
+# Novydres Mapwork V3.2 — pipeline unificada, não canônica
+
+**Entrada única:** `python scripts/pipeline.py run --district sulfok` ou `--district kingswell`. Use `--checkpoint /tmp/state.json` para saída JSON reproduzível, `--spatial` + `--reference` para prova espacial, `--design-unit WU-...` para gerar um plano de edifícios (com `--out`) e `--execute` somente quando todas as unidades, máscaras, imagens e autorizações estiverem verificadas. Leia `PIPELINE.md` para a ordem obrigatória. As rotinas antigas abaixo permanecem como componentes técnicos de baixo nível, não como fluxos concorrentes.
+
+**Status real:** Kingswell segue bloqueado na vetorização de infraestrutura e classificação integral do terreno; Sulfok ainda exige bootstrap canônico. Testes de fixture não autorizam imagens. Geradores visuais, uploads no Drive, revisão humana e readback remoto dependem das ferramentas externas do agente; GitHub CI não possui automaticamente acesso às mídias privadas.
+
+## Referência de implementação V3.1 preservada
 
 **Propósito:** gerar arte 2D por lote (edifício individual só por exceção), compor mosaicos globais em alta resolução, preservar escala U02, checar conectores e entregar comparação ANTES/DEPOIS completa. Este pacote **não** gera arte com IA por conta própria: o agente no ChatGPT pesquisa, chama ferramenta de imagem quando autorizado, baixa e envia assets via Google Drive, confere o readback, atualiza manifestos no GitHub e só então usa o compositor local.
 
