@@ -383,7 +383,7 @@ def test_work_unit_mask_cannot_paint_outside_its_exact_editable_area(tmp_path):
     assets=tmp_path/"assets";assets.mkdir()
     mask=assets/"outside.png"
     Image.new("L",((env[2]-env[0])*scale,(env[3]-env[1])*scale),255).save(mask)
-    element={"id":"E","status":"VERIFIED","mask":{"path":"outside.png"},"envelope":env}
+    element={"id":"E","kind":"lot","status":"VERIFIED","mask":{"path":"outside.png"},"envelope":env}
     with pytest.raises(core.Invalid,match="outside its assigned editable cells"):
         pipeline.verify_unit_art_masks(p,report,{u["id"]:element},assets,cfg)
 
