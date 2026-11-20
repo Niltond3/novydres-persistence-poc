@@ -87,7 +87,9 @@
     "art_permitted": false,
     "candidate_before_after_generated": false,
     "metro_editorial_direction_resolved": true,
-    "metro_technical_alignment_validated": false
+    "metro_technical_alignment_validated": false,
+    "bridge_raster_candidate_sites_visually_screened": true,
+    "bridge_river_topology_verified": false
   },
   "user_approval": {
     "sketch": "APPROVED_U02_KW_SKETCH_02",
@@ -129,5 +131,48 @@
     "semantic_limit": "These are conceptual sketch polygons, not authorized metro centerlines, physical tunnel viability, validated neighbor seams or station siting.",
     "no_hydrography_or_actual_underground_rail_verified": true,
     "no_new_tunnel_station_portal_authorized": true
+  },
+  "visual_river_crossing_screening": {
+    "review_type": "PARTIAL_RASTER_VISUAL_SITING",
+    "by": "AGENT",
+    "model": "GPT-6",
+    "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "screenshot_policy": "Original U02 inspected at 1448x1086, each center cropped +/-90x60 and scaled for observation; no source pixels modified",
+    "inspected": [
+      {
+        "id": "KW-B01",
+        "point_px": [
+          520,
+          766
+        ],
+        "status": "APPARENT_ROAD_WATER_CROSSING_VISUALLY_MATCHES_SKETCH",
+        "note": "A roadway-shaped alignment crosses the horizontal river reach at the northern bend; grade and ends remain unchecked"
+      },
+      {
+        "id": "KW-B02",
+        "point_px": [
+          542,
+          811
+        ],
+        "status": "APPARENT_ROAD_WATER_CROSSING_VISUALLY_MATCHES_SKETCH",
+        "note": "A clear approximately west-east surface route spans the north-south reach at the central candidate"
+      },
+      {
+        "id": "KW-B03",
+        "point_px": [
+          541,
+          881
+        ],
+        "status": "APPARENT_ROAD_WATER_CROSSING_VISUALLY_MATCHES_SKETCH",
+        "note": "A broad street-shaped crossing joins both banks at the southern candidate"
+      }
+    ],
+    "limitations": [
+      "No formal mapping of bridge deck bounds, bank polygons and crossing levels",
+      "No automatic detection or enumeration of every apparent crossing elsewhere in Kingswell",
+      "No proof that the water segment is Rio Vasyl over its entire length",
+      "No bilateral street, metro, ferry or rail adjacency audits"
+    ],
+    "outcome": "PRELIMINARY_VISUAL_SITING_ONLY_NOT_TOPOLOGY_PASS"
   }
 }
