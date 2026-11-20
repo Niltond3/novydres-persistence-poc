@@ -13,6 +13,7 @@ import mapwork as core
 
 def test_hosted_bootstrap_emits_content_hashes_without_private_media(tmp_path,monkeypatch):
     monkeypatch.delenv("GITHUB_EVENT_NAME",raising=False)
+    monkeypatch.setenv("GITHUB_ACTIONS","false")
     result=web_runner.run_request(district="sulfok",out=tmp_path)
     assert result["checkpoint"]["phase"]=="BOOTSTRAP"
     assert result["media_access"]=="NOT_PROVISIONED"
