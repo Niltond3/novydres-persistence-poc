@@ -203,6 +203,16 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
     elements=[e for z in zones for e in z['elements']]
     elements.sort(key=lambda e:(layers[e['layer']],e['id']))
     coords=tiles_for(zones,cfg)
+    if edit_mask_u02 is not None:
+        # Only paint tiles actually intersecting owner-authorized pixels. Every
+        # untouched approved tile is inherited byte-for-byte, without re-encode.
+        box=edit_mask_u02.getbbox()
+        fail(box is not None,'empty edit area cannot produce candidate')
+        left,top,right,bottom=(box[0]*s,box[1]*s,box[2]*s,box[3]*s)
+        coords=[(tx,ty) for tx,ty in coords
+                if tx*t<right and (tx+1)*t>left and
+                   ty*t<bottom and (ty+1)*t>top]
+        fail(bool(coords),'no work units intersect the authorized edit area')
     with Image.open(base) as src:
         src=src.convert('RGBA'); entries=[]
         for tx,ty in coords:
@@ -218,6 +228,8 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
             else:
                 im=baseline.copy()
             before=im.copy()
+            edit_window=(_tile_protection_mask(edit_mask_u02,px,py,tw,th,s)
+                         if edit_mask_u02 is not None else None)
             for e in elements:
                 x0,y0,x1,y1=(round(v*s) for v in e['envelope'])
                 a0=max(px,x0);b0=max(py,y0);a1=min(px+tw,x1);b1=min(py+th,y1)
@@ -225,7 +237,13 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
                 with Image.open(Path(assets)/e['asset']['path']) as original, Image.open(Path(assets)/e['mask']['path']) as mm:
                     box=(a0-x0,b0-y0,a1-x0,b1-y0)
                     crop=original.convert('RGBA').crop(box); mask=mm.convert('L').crop(box)
-                    alpha=ImageChops.darker(crop.getchannel('A'),mask);crop.putalpha(alpha)
+                    alpha=ImageChops.darker(crop.getchannel('A'),mask)
+                    if edit_window is not None:
+                        window=edit_window.crop((a0-px,b0-py,a1-px,b1-py))
+                        alpha=ImageChops.darker(alpha,window)
+                    if alpha.getbbox() is None:
+                        continue
+                    crop.putalpha(alpha)
                     im.alpha_composite(crop,(a0-px,b0-py))
             delta=_changed_pixels(before,im)
             if protected_u02 is not None:
@@ -235,7 +253,6 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
             if edit_mask_u02 is not None:
                 # Explicitly authorized refinement supersedes prior art INSIDE edit mask;
                 # old art, territory and network stay byte-identical everywhere else.
-                edit_window=_tile_protection_mask(edit_mask_u02,px,py,tw,th,s)
                 fail(ImageChops.subtract(delta,edit_window).getbbox() is None,
                      f'changed pixels outside owner-authorized edit area in tile {tx},{ty}')
             elif previous_tile:
