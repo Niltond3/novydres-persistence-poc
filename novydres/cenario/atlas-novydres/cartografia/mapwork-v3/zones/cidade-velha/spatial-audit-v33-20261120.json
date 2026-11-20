@@ -1,0 +1,96 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_SPATIAL_SOURCE_AUDIT_1",
+  "recorded_on": "2026-11-20",
+  "target": "kingswell",
+  "subject_id": "district-chelsea",
+  "source_commit": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "examined_branch_base": "178f2179f43081d9eb34ac41747567257c390c04",
+  "reference": {
+    "file": "U02_APPROVED_REFERENCE.png",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "size": [
+      1448,
+      1086
+    ],
+    "byte_readback_verified": true,
+    "protected": true
+  },
+  "inputs": {
+    "sketch_path": "zones/cidade-velha/esboco-integral-u02-v2.json",
+    "sketch_blob_sha": "180f3a01ad40983b6ade2217cb488c7b591fa45d",
+    "zone_path": "zones/cidade-velha/zone.json",
+    "zone_blob_sha": "9bf67f653362e808e43534e54375068ed5affbc5",
+    "decisions_blob_sha": "293dbae3d18c7864fd27034be43eda3d2952c79f",
+    "inventory_blob_sha": "14eee8697bb5c18edec91f35a2dfe721eb70a0b8",
+    "research_blob_sha": "c04cb0d452a79d665d2f6c93c241c4f2a2ea3d79"
+  },
+  "method": "Independent read-only point-in-polygon sampling of preexisting U02 sketch geometry at integer pixel centers. Not a pipeline run, vectorization of observed U02 transport/water, or image audit. Sector overlap is not automatically a planning error because sketch sectors are illustrative.",
+  "pixel_classification": {
+    "candidate_polygon_pixels": 272640,
+    "covered_by_any_of_five_illustrative_sectors": 105885,
+    "not_covered_by_illustrative_sectors": 166755,
+    "coverage_percent": 38.84,
+    "missing_percent": 61.16,
+    "multiply_covered_pixels": 7274,
+    "sector_counts_within_polygon": {
+      "KW-HIST": 12111,
+      "KW-WEST": 22511,
+      "KW-WORKER": 37129,
+      "KW-EDGE": 20889,
+      "KW-TRANS": 20519
+    },
+    "sector_pixels_outside_candidate_polygon": 0,
+    "result": "ILLUSTRATIVE_ONLY_NOT_EXCLUSIVE_TERRITORY_CLASSIFICATION"
+  },
+  "points": {
+    "known_pois": [
+      "poi-14",
+      "poi-15",
+      "poi-16",
+      "poi-17",
+      "poi-32"
+    ],
+    "poi_centers_inside_candidate_polygon": 5,
+    "poi_footprints_and_access_verified": 0,
+    "bridge_centers_approach_sketch_centerline_px": {
+      "KW-B01": 0.71,
+      "KW-B02": 0.95,
+      "KW-B03": 1.26
+    },
+    "bridge_centerline_check": "Only internal agreement of sketch lines; no verification of river water pixels or actual U02 crossing structures",
+    "river_identification_u02_verified": false,
+    "bilateral_neighbor_seam_network_verified": false,
+    "old_macro_windows_are_blocks": false,
+    "old_macro_windows_coverage_percent": 16.32,
+    "legacy_macro_windows_count": 14,
+    "historical_bridge_count_approved": 3,
+    "new_bridges_authorized": 0,
+    "new_rail_stations_authorized": 0
+  },
+  "open_requirements": [
+    "Type water/river/bridges and existing surface transportation from actual U02 using auditable geometry, do not infer network from sketch strokes alone",
+    "Resolve 100% territorial classification with mutually exclusive land/water/protected polygons; preserve water and existing U02 roads/rail",
+    "Construct connected street/collector/arterial/rail/tram/metro graph with level/crossing semantics; underground lines require authorized routing",
+    "Replace 14 preliminary macro windows with real road-bounded blocks and atomically generated parcel/building footprints and verified access",
+    "Site all five already approved sketch POIs on actually accessible lots without creating new POIs",
+    "Check candidate seam endpoints against Sulfok and Drevnigrad from BOTH sides; unavailable neighbors are reservations only where contract permits",
+    "Derive and verify individual edit masks against U02 protected pixels and real work units",
+    "Only after technical/owner authorization gates: call ChatGPT native image generation, materialize bytes, generate hash-bound reviews, compose and review globally"
+  ],
+  "gates": {
+    "spatial_manifest_present": false,
+    "exclusive_territory_classified": false,
+    "transport_hydrography_u02_validated": false,
+    "neighbor_bilateral_verified": false,
+    "po_is_sited_and_accessible": false,
+    "unit_edit_masks_verified": false,
+    "art_permitted": false,
+    "candidate_before_after_generated": false
+  },
+  "user_approval": {
+    "sketch": "APPROVED_U02_KW_SKETCH_02",
+    "end_art": false,
+    "canon": false
+  },
+  "next_action": "BUILD_REAL_V33_GLOBAL_SPATIAL_MANIFEST_FROM_U02_AND_GROUNDED_NEIGHBOR_SEAMS"
+}
