@@ -49,8 +49,8 @@ def element(assets,name,bounds,color):
     return {
         "id":name,"kind":"lot","layer":"lot",
         "core":bounds,"envelope":bounds,"status":"VERIFIED",
-        "asset":{"path":asset.name,"sha256":core.sha(asset),"drive_file_id":"mock"},
-        "mask":{"path":mask.name,"sha256":core.sha(mask),"drive_file_id":"mock"}
+        "asset":{"path":asset.name,"sha256":core.sha(asset),"drive_file_id":"mock-drive-fixture"},
+        "mask":{"path":mask.name,"sha256":core.sha(mask),"drive_file_id":"mock-drive-fixture"}
     }
 
 
@@ -156,4 +156,4 @@ def test_protected_mask_matches_reference_dimensions():
     p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
     im=urban.spatial_protection_mask(p)
     assert im.mode=="L" and im.size==(64,64)
-    assert sum(1 for v in im.getdata() if v)>0
+    assert sum(1 for v in im.tobytes() if v)>0
