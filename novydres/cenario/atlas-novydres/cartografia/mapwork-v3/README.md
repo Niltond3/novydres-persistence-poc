@@ -26,17 +26,15 @@ python -m pip install -r novydres/cenario/atlas-novydres/cartografia/mapwork-v3/
 python -m pytest -q novydres/cenario/atlas-novydres/cartografia/mapwork-v3/tests
 ```
 
-## Comandos
+## Comando público e API interna
 
 ```bash
+python scripts/pipeline.py run --district sulfok --checkpoint /tmp/sulfok.json
+python scripts/pipeline.py run --district kingswell --checkpoint /tmp/kingswell.json
 python scripts/mapwork.py audit
-python scripts/mapwork.py next --zone zones/cidade-velha/zone.json
-python scripts/mapwork.py validate --zones zones/area-a/zone.json zones/area-b/zone.json --assets /working/assets --base /working/U02.png --strict
-python scripts/mapwork.py render --zones zones/area-a/zone.json zones/area-b/zone.json --assets /working/assets --base /working/U02.png --out /working/tiles-candidate
-python scripts/mapwork.py compare --before /working/tiles-approved --after /working/tiles-candidate --base /working/U02.png --out /working/comparacao.html
 ```
 
-Execute da pasta `mapwork-v3/`. `--before` pode ser omitido apenas na primeira versão, quando a U02 aprovada é a referência visual completa. Quando houver uma release, o agente deve baixar os tiles aprovados do Drive para montar a visão anterior. O manifesto `tiles.json` contém hashes e coordenadas; ao fazer upload de cada tile, preencher seu `drive_file_id` e confirmar metadados no Drive antes da publicação.
+`mapwork.py next` e `mapwork.py render` foram desativados: evitam que o agente contorne a pesquisa, os planos de edifícios, as máscaras ou a autorização de arte. `composite`, `validate` e `compare` são operações internas utilizadas pela pipeline e pela suíte de testes. Para cada release posterior, materialize todos os tiles aprovados (incluindo `inherited_tiles`) e verifique SHA/Drive ID; novas candidatas carregam apenas os tiles alterados e um catálogo de herança.
 
 ## Limites honestos
 
