@@ -60,15 +60,8 @@ def _street_access(width,height,labels,editable,road):
     return parents,distance
 
 
-def design_unit(plan, report, work_unit_id, *, max_buildings=512):
-    """Emit explicit parcel/building footprints for one atomic generation window.
-
-    Fail on inaccessible buildings or an oversize job. All footprint rectangles are
-    strictly within one eligible U02 pixel, leaving perimeter service circulation.
-    """
-    urban.require(report["zone"]==plan["zone"]["id"],"urban report/plan identity mismatch")
-    work=next((x for x in report["work_units"] if x["id"]==work_unit_id),None)
-    urban.require(work is not None,"unknown work unit")
+def design_context(plan):
+    """Build one reusable spatial index for all work-unit designs of a city."""
     w,h=plan["grid"]["width"],plan["grid"]["height"]
     zone,classes,names,_=urban.classify_territory(plan)
     eligible_classes={names["urban"],names["industrial"]}
@@ -82,6 +75,25 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512):
         e["class"] in urban.ROAD_CLASSES and
         e.get("level",e.get("level_from",0))==0).tobytes()
     parents,distance=_street_access(w,h,labels,editable,roads)
+    return dict(w=w,h=h,classes=classes,names=names,labels=labels,blocks=blocks,
+                editable=editable,parents=parents,distance=distance)
+
+
+def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
+    """Emit explicit parcel/building footprints for one atomic generation window.
+
+    Fail on inaccessible buildings or an oversize job. All footprint rectangles are
+    strictly within one eligible U02 pixel, leaving perimeter service circulation.
+    """
+    urban.require(report["zone"]==plan["zone"]["id"],"urban report/plan identity mismatch")
+    work=next((x for x in report["work_units"] if x["id"]==work_unit_id),None)
+    urban.require(work is not None,"unknown work unit")
+    ctx=context if context is not None else design_context(plan)
+    w,h=ctx["w"],ctx["h"]
+    classes,names=ctx["classes"],ctx["names"]
+    labels,blocks=ctx["labels"],ctx["blocks"]
+    editable=ctx["editable"]
+    parents,distance=ctx["parents"],ctx["distance"]
     programs={b["block_id"]:b for b in report["block_programs"]}
     target_block=next((b for i,b in enumerate(blocks,1)
                        if i==work["block_label"]),None)
