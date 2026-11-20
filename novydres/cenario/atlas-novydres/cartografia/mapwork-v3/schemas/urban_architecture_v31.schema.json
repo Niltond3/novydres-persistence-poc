@@ -167,7 +167,12 @@
                   "rail_siding",
                   "tram",
                   "river",
-                  "canal"
+                  "canal",
+                  "metro",
+                  "aqueduct",
+                  "heat_pipe",
+                  "gas_pipe",
+                  "utility_duct"
                 ]
               },
               "from": {
@@ -210,6 +215,12 @@
               },
               "reserved_right_of_way": {
                 "type": "boolean"
+              },
+              "surface_easement": {
+                "type": "boolean"
+              },
+              "route_id": {
+                "type": "string"
               }
             }
           }
@@ -287,6 +298,15 @@
           },
           "profile": {
             "type": "string"
+          },
+          "reservation_status": {
+            "enum": [
+              "APPROVED_SCOPED"
+            ]
+          },
+          "authority_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
           }
         }
       }
