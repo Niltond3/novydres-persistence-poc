@@ -48,16 +48,18 @@ def discover_request_from_push():
     changed={p[len(prefix):] for c in data.get("commits",[])
              for key in ("added","modified") for p in c.get(key,[])
              if p.startswith(prefix) and p.endswith(".json")}
-    if len(changed)!=1:
-        raise core.Invalid("web runner requires exactly one committed request per push")
-    return "web-requests/"+next(iter(changed))
+    if len(changed)>1:
+        raise core.Invalid("web runner requires at most one committed request per push")
+    return "web-requests/"+next(iter(changed)) if changed else None
 
 
 def run_request(*, district=None, request=None, out):
     root=Path(out)
     root.mkdir(parents=True,exist_ok=True)
-    if not request and os.environ.get("GITHUB_EVENT_NAME")=="push":
+    if not request and not district and os.environ.get("GITHUB_EVENT_NAME")=="push":
         request=discover_request_from_push()
+        if request is None:
+            district="kingswell"  # workflow-only push: safe diagnostic, no art
     payload=None
     if request:
         source=checked_path(request,prefix="web-requests")

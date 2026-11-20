@@ -599,7 +599,7 @@ def main():
             result=audit_repository(cfg,load(STATE))
             result['scope']='REPOSITORY_DIAGNOSTIC_ONLY_NOT_IMAGE_AUTHORIZATION'
         elif args.cmd in ('next','render','compare','validate'):
-            raise Invalid('legacy next/render/compare/validate CLI disabled; use scripts/pipeline.py run for all operational validations and composition')
+            raise Invalid('legacy next/render CLI disabled; compare/validate CLI disabled; use scripts/pipeline.py run for all operational validations and composition')
         else:
             raise Invalid('only read-only audit diagnostics are supported here')
         print(json.dumps({'status':'PASS','result':result},ensure_ascii=False,indent=2))
