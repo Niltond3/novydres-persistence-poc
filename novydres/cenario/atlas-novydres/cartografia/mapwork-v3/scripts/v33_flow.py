@@ -10,6 +10,8 @@ from __future__ import annotations
 from pathlib import Path
 
 import mapwork as core
+import urban_architecture as urban
+import urban_content as content
 import v33_contracts as v33
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -107,6 +109,100 @@ def run(args, v32_run):
                       ["No real zone geometry for "+target+"; preserve map, do not infer borders from U02 color"],
                       intent=intent,audit={"research":citations,"proposals":decisions,
                                           "inventory":installation})
+    if args.recipe_unit or args.audit_unit:
+        zone=core.load(zone_path)
+        path=Path(args.spatial) if args.spatial else zone_path.parent/"global-spatial-v31.json"
+        if not path.is_file():
+            return _state("SPATIAL_MODEL","BUILD_AND_AUDIT_REAL_NETWORK",
+                          ["global-spatial-v31.json absent; never generate from synthetic U02 fixtures"],
+                          intent=intent)
+        plan=core.load(path)
+        cfg=core.load(core.CONFIG)
+        core.config_check(cfg)
+        v33.require(plan.get("zone",{}).get("id")==target and
+                    plan.get("fixture_mode") is False,
+                    "V3.3 atomic work requires real, matching spatial authority")
+        if not args.reference or not Path(args.reference).is_file():
+            return _state("REFERENCE_BYTES","MATERIALIZE_ORIGINAL_U02",
+                          ["Original U02 PNG missing in local execution context"],
+                          intent=intent)
+        report=urban.plan_city(plan,cfg,reference_file=args.reference,
+                               neighbor_manifests=v32_run.__globals__["load_verified_neighbors"](plan))
+        required=("source_and_global_topology","source_bytes_verified",
+                  "territory_classification","neighbor_seams",
+                  "poi_sites_placed_and_accessible","ground_access_and_clearance")
+        v33.require(all(report["gates"][key] for key in required),
+                    "V3.3 spatial topology/access audits failed before image jobs")
+        uid=args.recipe_unit or args.audit_unit
+        unit=next((u for u in report["work_units"] if u["id"]==uid),None)
+        v33.require(unit is not None,"requested work unit not in current spatial plan")
+        if args.recipe_unit:
+            design_root=Path(args.design_root) if args.design_root else zone_path.parent/"urban-design"
+            design=design_root/(uid+".json")
+            v33.require(design.is_file(),"detailed per-building urban unit file missing")
+            expected=content.design_unit(plan,report,uid)
+            actual=core.load(design)
+            actual.pop("physical_routes",None)
+            v33.require(actual==expected,
+                        "recipe design differs from deterministic current spatial plan")
+            v33.require(expected["access_verified"],
+                        "unit building street accessibility audit failed")
+            recipe=v33.make_generation_recipe(
+                unit=unit,intent=intent,design_path=design,
+                reference_path=args.reference,proposal_register=register,
+                neighbor_digests={seam["id"]:report["transport_sha256"]
+                                  for seam in plan["neighbor_seams"]},
+                style={"projection":"TOP_DOWN_90",
+                       "lighting":cfg["projection"]["lighting"],
+                       "scale":cfg["detail_pixels_per_unit"],
+                       "preserve_outside_mask":True})
+            if not args.out:
+                return _state("IMAGE_RECIPE","SPECIFY_LOCAL_RECIPE_DESTINATION",
+                              ["--out required for versioned recipe write"],intent=intent)
+            location=Path(args.out)/"recipes"/(uid+".json")
+            core.save(location,recipe)
+            return _state("IMAGE_RECIPE","GENERATE_WITH_CHATGPT_NATIVE_IMAGE",
+                          ["Recipe saved. Generate image externally and materialize actual bytes before audit."],
+                          intent=intent,audit={"recipe":str(location),
+                                               "recipe_sha256":v33.digest(location)})
+        receipt=core.load(args.unit_receipt) if args.unit_receipt and Path(args.unit_receipt).is_file() else None
+        if not receipt:
+            return _state("IMAGE_MATERIALIZATION","FETCH_NATIVE_IMAGE_BYTES",
+                          ["Missing on-disk native image receipt for "+uid],intent=intent)
+        if not args.unit_mask:
+            return _state("IMAGE_AUDIT","MATERIALIZE_UNIT_MASK",
+                          ["Image mask file absent for "+uid],intent=intent)
+        audited=v33.audit_atomic_image(receipt,args.unit_mask,plan,report,uid,cfg)
+        reviewed=core.load(args.visual_review) if args.visual_review and Path(args.visual_review).is_file() else None
+        if not reviewed:
+            return _state("IMAGE_VISUAL_REVIEW","AGENT_INSPECT_IMAGE",
+                          ["Record lighting, geometry, roof, seams and visual continuity; technical audit is not aesthetic certification"],
+                          intent=intent,audit=audited)
+        v33.require(reviewed.get("by")=="AGENT","visual audit must be performed by the agent")
+        if args.ledger:
+            ledger=core.load(args.ledger) if Path(args.ledger).is_file() else {
+                "schema":"NOVYDRES_MAPWORK_V33_UNIT_LEDGER_1","units":{}}
+            if args.start_unit:
+                v33.unit_transition(ledger,uid,event="START",input_sha256=
+                                    v33.evidence_digest({"recipe":uid,"plan":report["transport_sha256"],
+                                                         "reference":v33.digest(args.reference)}))
+            input_hash=ledger.get("units",{}).get(uid,{}).get("input_sha256")
+            v33.require(bool(input_hash),"unit ledger has no active attempt; start with --start-unit")
+            record=v33.unit_transition(
+                ledger,uid,event="AUDIT_PASS" if reviewed.get("status")=="PASS" else "AUDIT_FAIL",
+                input_sha256=input_hash,receipt=audited if reviewed.get("status")=="PASS"
+                else {"failure":reviewed.get("reason","visual audit failed")},
+                visual_review=reviewed)
+            core.save(args.ledger,ledger)
+            return _state("IMAGE_AUDITED",
+                          "NEXT_WORK_UNIT" if record["status"]=="VERIFIED" else "CORRECT_AND_RETEST",
+                          [] if record["status"]=="VERIFIED" else [record["status"]],
+                          intent=intent,audit=record)
+        return _state("IMAGE_AUDITED",
+                      "PERSIST_VERIFIED_UNIT_LEDGER" if reviewed.get("status")=="PASS"
+                      else "CORRECT_AND_RETEST",
+                      [] if reviewed.get("status")=="PASS" else ["visual inspection failed"],
+                      intent=intent,audit={"technical":audited,"visual":reviewed})
     # Existing topology and renderer are reused, not forked. The old
     # SKETCH_APPROVED bit is NOT treated as owner approval of V3.3 art.
     args.v33_verified=True
