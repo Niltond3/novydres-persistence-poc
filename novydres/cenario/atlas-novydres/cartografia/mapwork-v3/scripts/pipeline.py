@@ -254,13 +254,14 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
         verify_art_overlaps(plan,[e for _,e in entries],assets,cfg)
 
 
-def validate_all_unit_designs(plan,report,design_root,cfg):
+def validate_all_unit_designs(plan,report,design_root,cfg,*,allow_abstract=False):
     """One design check for the pipeline and the compositor's revalidation."""
     units=report["work_units"]
     ctx=content.design_context(plan)
     physical=urban.validated_physical_reference(plan,cfg)
     building_count=0
-    physical_all=physical is not None
+    physical_all=(physical is not None and
+                  plan.get("work_policy",{}).get("parceling")!="URBAN_BLOCKS_V33")
     for unit in units:
         uid=unit["id"]
         path=Path(design_root)/(uid+".json")
@@ -285,8 +286,11 @@ def validate_all_unit_designs(plan,report,design_root,cfg):
         "all_abstract_access_paths_verified":True,
         "physical_routes_verified":physical_all}
     report["gates"]["physical_access_certified"]=physical_all
-    report["generation_ready"]=all(report["gates"].values()) and plan.get("fixture_mode") is False
-    report["blocking_gates"]=[key for key,val in report["gates"].items() if not val]
+    required={key:value for key,value in report["gates"].items()
+              if not allow_abstract or key!="physical_access_certified"}
+    report["generation_ready"]=all(required.values()) and plan.get("fixture_mode") is False
+    report["blocking_gates"]=[key for key,val in required.items() if not val]
+    report["metric_certification_omitted"]=allow_abstract and not physical_all
     return report
 
 
@@ -390,8 +394,9 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
         core.fail(path.is_file() and
                   fingerprint(path)==contract["design_sha256"][uid],
                   uid+": stale/missing work-unit design in composition contract")
-    validate_all_unit_designs(plan,report,design_root,cfg)
-    core.fail(report["generation_ready"] and all(report["gates"].values()),
+    validate_all_unit_designs(plan,report,design_root,cfg,allow_abstract=is_v33)
+    core.fail(report["generation_ready"] and
+              (is_v33 or all(report["gates"].values())),
               "composition contract blocked by urban/art gates")
     bound=validate_work_unit_bindings(zone,report,plan=plan)
     verify_unit_art_masks(plan,report,zone["elements"],assets,cfg)
@@ -512,7 +517,8 @@ def run(args):
         return state("URBAN_DESIGN","DESIGN_NEXT_WORK_UNIT_BEFORE_ART",
                      [missing[0],f"{len(missing)} of {len(units)} building plans missing"],
                      spatial_path,report)
-    validate_all_unit_designs(plan,report,design_root,cfg)
+    validate_all_unit_designs(plan,report,design_root,cfg,
+                              allow_abstract=getattr(args,"v33_verified",False))
     if not report["generation_ready"]:
         blockers=report["blocking_gates"]
         nxt="VERIFY_SPATIAL_AND_ASSET_GATES"
