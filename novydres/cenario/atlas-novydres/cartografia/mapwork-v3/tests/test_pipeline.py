@@ -395,9 +395,14 @@ def test_placed_poi_is_occupant_with_street_access_in_atomic_unit():
     cell=next(i for i,v in enumerate(context["editable"]) if v and i in context["distance"])
     x,y=cell%64,cell//64
     block_id=context["blocks"][context["labels"][cell]-1]["id"]
+    pre=urban.plan_city(p,cfg)
+    owner=next(u["id"] for u in pre["work_units"] if
+               u["block_label"]==context["labels"][cell] and
+               u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3])
     p["special_sites"]=[{"id":"POI-ACCESS","block_id":block_id,
-                         "point":[x+0.5,y+0.5],"entrance":[x+0.5,y+0.5],
-                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8]}]
+                         "point":[x+0.5,y+0.5],"entrance":[x+0.2,y+0.5],
+                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8],
+                         "work_unit_id":owner}]
     report=urban.plan_city(p,cfg)
     unit=next(u for u in report["work_units"]
               if u["block_label"]==context["labels"][cell]

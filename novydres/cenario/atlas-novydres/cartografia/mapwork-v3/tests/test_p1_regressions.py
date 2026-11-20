@@ -37,7 +37,6 @@ def test_p1_existing_approved_neighbor_without_spatial_manifest_fails(tmp_path,m
         pipeline.load_verified_neighbors(plan)
 
 
-@pytest.mark.xfail(strict=True, reason="P1: a POI's entrance is allowed in the building interior")
 def test_p1_poi_entrance_at_building_center_is_rejected():
     p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
     cfg=core.load(ROOT/"config.json")
@@ -51,10 +50,12 @@ def test_p1_poi_entrance_at_building_center_is_rejected():
     protected=urban.spatial_protection_mask(p).tobytes()
     i=next(i for i,v in enumerate(labels) if v==1 and not protected[i])
     x,y=i%64,i//64
+    owner=next(u["id"] for u in report["work_units"] if u["block_label"]==labels[i]
+               and u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3])
     p["special_sites"]=[{
         "id":"CENTER-DOOR","block_id":report["blocks"][0]["id"],
         "point":[x+.5,y+.5],"entrance":[x+.5,y+.5],
-        "footprint":[x+.2,y+.2,x+.8,y+.8]
+        "footprint":[x+.2,y+.2,x+.8,y+.8],"work_unit_id":owner
     }]
     with pytest.raises(urban.ContractError,match="entrance.*boundary"):
         urban.plan_city(p,cfg)
@@ -123,3 +124,37 @@ def test_p1_existing_peer_must_share_boundary_not_only_connector_id():
     peer["future"]["seams"].append({**mate,"id":"EXTRA"})
     with pytest.raises(urban.ContractError,match="asymmetric"):
         urban.plan_city(p,cfg,neighbor_manifests=peer)
+
+
+def test_p1_physical_corridor_geometry_width_and_ground_egress():
+    road={"class":"street","level":0,"width_units":1.0,
+          "points":[[1.5,0],[1.5,2]]}
+    args=dict(entrance=[.8,.5],footprint=[.2,.2,.8,.8],
+              mode="pedestrian",scale=10,minimum_width_m=1.2,
+              ground_roads=[road])
+    good={"mode":"pedestrian","width_m":1.5,
+          "points":[[.8,.5],[1.5,.5]]}
+    assert urban.validate_physical_route(good,**args)
+    with pytest.raises(urban.ContractError,match="insufficient"):
+        urban.validate_physical_route({**good,"width_m":.8},**args)
+    with pytest.raises(urban.ContractError,match="another building"):
+        urban.validate_physical_route(good,obstacles=[[.95,.3,1.1,.7]],**args)
+    with pytest.raises(urban.ContractError,match="ground-level"):
+        urban.validate_physical_route(good,**{**args,"ground_roads":[{**road,"level":-1}]})
+    with pytest.raises(urban.ContractError,match="entrance"):
+        urban.validate_physical_route(good,**{**args,"entrance":[.5,.5]})
+
+
+def test_p1_physical_scale_never_inferred_from_reference_pixels():
+    p=core.load(ROOT/"fixtures"/"topology-v31-synthetic.json")
+    cfg=core.load(ROOT/"config.json")
+    r=urban.plan_city(p,cfg)
+    assert r["gates"]["physical_access_certified"] is False
+    assert r["access"]["surveyed_scale_available"] is False
+    bad={"verification":"SURVEYED_APPROVED","metres_per_unit":1.0,
+         "source_sha256":cfg["reference"]["sha256"],
+         "owner_approved":False,"evidence":"not reviewed by owner",
+         "minimum_width_m":{"pedestrian":1.2,"vehicle":3.0}}
+    p["physical_reference"]=bad
+    with pytest.raises(urban.ContractError,match="explicit owner evidence"):
+        urban.plan_city(p,cfg)

@@ -109,9 +109,10 @@ def check_canonical_pois(zone_path,plan):
         source=core.load(legacy)
         required={p["id"] for p in source.get("pois",[])}
         found={p["id"] for p in plan["special_sites"]}
-        if required and not required.issubset(found):
-            raise core.Invalid("approved/planned POIs missing spatial sites: "+
-                               ", ".join(sorted(required-found)))
+        actual_ids=[p["id"] for p in plan["special_sites"]]
+        if len(actual_ids)!=len(set(actual_ids)) or found!=required:
+            raise core.Invalid("approved POI inventory differs (omitted, duplicate or unauthorized): "+
+                               ", ".join(sorted(required.symmetric_difference(found))))
 
 
 def validate_work_unit_bindings(zone,report):
@@ -160,6 +161,42 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
                     draw.rectangle([sx,sy,sx+scale-1,sy+scale-1],fill=255)
         if ImageChops.subtract(m,allowed).getbbox() is not None:
             raise core.Invalid(uid+": art mask paints outside its assigned editable cells")
+
+
+def validate_all_unit_designs(plan,report,design_root,cfg):
+    """One design check for the pipeline and the compositor's revalidation."""
+    units=report["work_units"]
+    ctx=content.design_context(plan)
+    physical=urban.validated_physical_reference(plan,cfg)
+    building_count=0
+    physical_all=physical is not None
+    for unit in units:
+        uid=unit["id"]
+        path=Path(design_root)/(uid+".json")
+        if not path.is_file():
+            raise core.Invalid(uid+": missing detailed building plan")
+        item=core.load(path)
+        expected=content.design_unit(plan,report,uid,context=ctx)
+        structural=dict(item)
+        structural.pop("physical_routes",None)
+        if structural!=expected:
+            raise core.Invalid(uid+": detailed building plan differs from validated urban geometry")
+        if not expected["access_verified"]:
+            raise core.Invalid(uid+": at least one building lacks abstract ground street access")
+        if physical_all:
+            try:
+                physical_all=content.validate_unit_physical_access(plan,expected,item,ctx,physical)
+            except urban.ContractError as exc:
+                raise core.Invalid(uid+": physical route invalid: "+str(exc)) from exc
+        building_count+=expected["building_count"]
+    report["urban_design"]={"work_units_verified":len(units),
+        "buildings_placed":building_count,"individual_footprints_verified":True,
+        "all_abstract_access_paths_verified":True,
+        "physical_routes_verified":physical_all}
+    report["gates"]["physical_access_certified"]=physical_all
+    report["generation_ready"]=all(report["gates"].values()) and plan.get("fixture_mode") is False
+    report["blocking_gates"]=[key for key,val in report["gates"].items() if not val]
+    return report
 
 
 def _asset_fingerprints(zone,assets):
@@ -225,16 +262,12 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     expected={u["id"] for u in report["work_units"]}
     core.fail(set(contract.get("design_sha256",{}))==expected,
               "composition contract incomplete work-unit design hashes")
-    ctx=content.design_context(plan)
     for uid in sorted(expected):
         path=design_root/(uid+".json")
         core.fail(path.is_file() and
                   fingerprint(path)==contract["design_sha256"][uid],
                   uid+": stale/missing work-unit design in composition contract")
-        candidate=core.load(path)
-        regenerated=content.design_unit(plan,report,uid,context=ctx)
-        core.fail(candidate==regenerated and regenerated["access_verified"],
-                  uid+": unverified detailed design at composition")
+    validate_all_unit_designs(plan,report,design_root,cfg)
     bound=validate_work_unit_bindings(zone,report)
     verify_unit_art_masks(plan,report,bound,assets,cfg)
     core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
@@ -327,18 +360,7 @@ def run(args):
         return state("URBAN_DESIGN","DESIGN_NEXT_WORK_UNIT_BEFORE_ART",
                      [missing[0],f"{len(missing)} of {len(units)} building plans missing"],
                      spatial_path,report)
-    context=content.design_context(plan)
-    building_count=0
-    for unit in units:
-        item=core.load(design_root/(unit["id"]+".json"))
-        expected=content.design_unit(plan,report,unit["id"],context=context)
-        if item!=expected:
-            raise core.Invalid(unit["id"]+": detailed building plan differs from validated urban geometry")
-        if not expected["access_verified"]:
-            raise core.Invalid(unit["id"]+": at least one building lacks ground street access")
-        building_count+=expected["building_count"]
-    report["urban_design"]={"work_units_verified":len(units),"buildings_placed":building_count,
-                            "individual_footprints_verified":True,"all_access_paths_verified":True}
+    validate_all_unit_designs(plan,report,design_root,cfg)
     if not report["generation_ready"]:
         blockers=report["blocking_gates"]
         nxt="VERIFY_SPATIAL_AND_ASSET_GATES"

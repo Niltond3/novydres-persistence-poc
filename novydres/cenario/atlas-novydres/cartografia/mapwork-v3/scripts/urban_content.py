@@ -42,8 +42,78 @@ def design_context(plan):
         e["class"] in urban.ROAD_CLASSES and
         e.get("level",e.get("level_from",0))==0).tobytes()
     parents,distance=_street_access(w,h,labels,editable,roads)
+    blocking=urban._line_mask((w,h),plan["transport"],lambda e:
+        (e["class"] in (urban.RAIL_CLASSES | urban.WATER_CLASSES) and
+         e.get("level",e.get("level_from",0))==0) or
+        (e.get("surface_easement") is True and e["class"] in urban.UNDERGROUND_CLASSES)).tobytes()
+    forbidden=bytearray(1 if classes[i] in
+        (names["water"],names["natural"],names["protected"]) or blocking[i] else 0
+        for i in range(w*h))
     return dict(w=w,h=h,classes=classes,names=names,labels=labels,blocks=blocks,
-                editable=editable,parents=parents,distance=distance)
+                editable=editable,parents=parents,distance=distance,
+                roads=roads,forbidden=forbidden)
+
+
+def _predicted_footprint(plan,ctx,x,y):
+    """Compute a neighboring parcel's real planned rectangle without global upscale."""
+    if x<0 or y<0 or x>=ctx["w"] or y>=ctx["h"]:
+        return None
+    i=y*ctx["w"]+x
+    if not ctx["editable"][i] or not ctx["labels"][i]:
+        return None
+    special=next((s for s in plan["special_sites"]
+                  if int(s["point"][0])==x and int(s["point"][1])==y),None)
+    if special:
+        return special["footprint"]
+    reverse={v:k for k,v in ctx["names"].items()}
+    profile=plan["morphology"][reverse[ctx["classes"][i]]]
+    inset=(1-math.sqrt(profile["occupation_target"]))/2
+    return [x+inset,y+inset,x+1-inset,y+1-inset]
+
+
+def validate_unit_physical_access(plan,design,authored,ctx,physical):
+    """Confirm individually authored, local vector corridors against all nearby parcels."""
+    if not physical:
+        return False
+    routes=authored.get("physical_routes")
+    buildings=design["buildings"]
+    if not isinstance(routes,dict) or set(routes)!={b["id"] for b in buildings}:
+        return False
+    roads=[e for e in plan["transport"]["edges"] if
+           e["class"] in urban.ROAD_CLASSES and
+           e.get("level",e.get("level_from"))==0]
+    for b in buildings:
+        route=routes[b["id"]]
+        pts=route.get("points") if isinstance(route,dict) else None
+        if not isinstance(pts,list) or not pts or not all(urban.finite_xy(p) for p in pts):
+            return False
+        rad=route.get("width_m",0)/physical["metres_per_unit"]/2
+        if not isinstance(rad,(int,float)) or not math.isfinite(rad) or rad<=0 or rad>=1:
+            return False
+        xs=[p[0] for p in pts];ys=[p[1] for p in pts]
+        left=max(0,int(math.floor(min(xs)-rad))-1)
+        right=min(ctx["w"],int(math.ceil(max(xs)+rad))+2)
+        top=max(0,int(math.floor(min(ys)-rad))-1)
+        bottom=min(ctx["h"],int(math.ceil(max(ys)+rad))+2)
+        if (right-left)*(bottom-top)>4096:
+            return False
+        obstacles,forbidden=[],[]
+        own=(int(b["parcel"][0]),int(b["parcel"][1]))
+        for y in range(top,bottom):
+            for x in range(left,right):
+                if (x,y)!=own:
+                    footprint=_predicted_footprint(plan,ctx,x,y)
+                    if footprint is not None:
+                        obstacles.append(footprint)
+                i=y*ctx["w"]+x
+                if ctx["forbidden"][i]:
+                    forbidden.append([x,y,x+1,y+1])
+        urban.validate_physical_route(
+            route,entrance=b["entrance"],footprint=b["footprint"],
+            mode=b["access_mode"],scale=physical["metres_per_unit"],
+            minimum_width_m=physical["minimum_width_m"][b["access_mode"]],
+            ground_roads=roads,obstacles=obstacles,forbidden=forbidden)
+    return True
 
 
 def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
@@ -93,13 +163,33 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
             if i not in parents or clearance+1e-8 < profile["access_clearance_units"]:
                 inaccessible.append(building_id)
             parent=parents.get(i)
+            if special:
+                entrance=special["entrance"]
+            else:
+                neighbor=parent
+                if neighbor is None:
+                    candidate=[]
+                    for dx,dy in ((-1,0),(1,0),(0,-1),(0,1)):
+                        nx,ny=x+dx,y+dy
+                        if 0<=nx<w and 0<=ny<h and ctx["roads"][ny*w+nx]:
+                            candidate.append((nx,ny))
+                    if candidate:
+                        nx,ny=candidate[0]
+                    else:
+                        nx,ny=x,y
+                else:
+                    nx,ny=neighbor%w,neighbor//w
+                entrance=([footprint[0],(footprint[1]+footprint[3])/2] if nx<x else
+                          [footprint[2],(footprint[1]+footprint[3])/2] if nx>x else
+                          [(footprint[0]+footprint[2])/2,footprint[1]] if ny<y else
+                          [(footprint[0]+footprint[2])/2,footprint[3]] if ny>y else None)
             buildings.append({
                 "id":building_id,
                 "parcel":[x,y,x+1,y+1],
                 "footprint":footprint,
                 "use":"special_site" if special else _choose_building_use(profile["use_mix"],building_id),
                 "site_id":special["id"] if special else None,
-                "entrance":special["entrance"] if special else None,
+                "entrance":entrance,
                 "access_mode":profile["access_mode"],
                 "clearance_units":round(clearance,6),
                 "floors":floors,

@@ -389,7 +389,8 @@
           "block_id",
           "point",
           "entrance",
-          "footprint"
+          "footprint",
+          "work_unit_id"
         ],
         "properties": {
           "id": {
@@ -411,10 +412,62 @@
             "items": {
               "type": "number"
             }
+          },
+          "work_unit_id": {
+            "type": "string",
+            "pattern": "^WU-[0-9]{5}-[0-9]{4}-[0-9]{4}$"
           }
         }
       },
       "minItems": 0
+    },
+    "physical_reference": {
+      "type": "object",
+      "required": [
+        "verification",
+        "source_sha256",
+        "owner_approved",
+        "evidence",
+        "metres_per_unit",
+        "minimum_width_m"
+      ],
+      "properties": {
+        "verification": {
+          "const": "SURVEYED_APPROVED"
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "owner_approved": {
+          "const": true
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 16
+        },
+        "metres_per_unit": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "minimum_width_m": {
+          "type": "object",
+          "required": [
+            "pedestrian",
+            "vehicle"
+          ],
+          "properties": {
+            "pedestrian": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "vehicle": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        }
+      }
     }
   },
   "$defs": {

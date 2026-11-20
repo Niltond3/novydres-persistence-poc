@@ -404,6 +404,9 @@ def _validate_special_sites(plan, width, height, labels, blocks, editable, dista
                 f"{sid}: POI footprint must preserve parcel perimeter clearance")
         require(box[0] <= entrance[0] <= box[2] and box[1] <= entrance[1] <= box[3],
                 f"{sid}: entrance outside footprint")
+        require(min(abs(entrance[0]-box[0]),abs(entrance[0]-box[2]),
+                    abs(entrance[1]-box[1]),abs(entrance[1]-box[3]))<=1e-7,
+                f"{sid}: entrance must lie on accessible footprint boundary")
         require(i in distance, f"{sid}: no at-grade street path")
         cls = next(key for key, value in
                    {name: idx + 1 for idx, name in enumerate(sorted(LANDUSE_CLASSES))}.items()
@@ -522,6 +525,101 @@ def derive_work_units(width,height,labels,allowed,max_units,scale):
         t["max_render_height_px"]=h*scale
         t["status"]="PENDING"
     return result,sum(covered)
+
+
+def validated_physical_reference(plan,cfg):
+    """Never infer metres from the U02 raster. Missing survey is a pending gate."""
+    ref=plan.get("physical_reference")
+    if ref is None:
+        return None
+    require(isinstance(ref,dict) and ref.get("verification")=="SURVEYED_APPROVED" and
+            ref.get("source_sha256")==cfg["reference"]["sha256"] and
+            ref.get("owner_approved") is True and
+            isinstance(ref.get("evidence"),str) and len(ref["evidence"])>=16,
+            "physical scale requires surveyed reference and explicit owner evidence")
+    scale=ref.get("metres_per_unit")
+    require(isinstance(scale,(int,float)) and not isinstance(scale,bool) and
+            math.isfinite(scale) and scale>0,
+            "physical scale requires positive surveyed metres_per_unit")
+    for mode in ("pedestrian","vehicle"):
+        value=ref.get("minimum_width_m",{}).get(mode)
+        require(isinstance(value,(int,float)) and not isinstance(value,bool) and
+                math.isfinite(value) and value>0,
+                "physical circulation requires separate surveyed pedestrian/vehicle widths")
+    return ref
+
+
+def _segment_hits_box(a,b,rect):
+    """Exact intersection of a finite segment and an axis-aligned rectangle."""
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    t0,t1=0.0,1.0
+    for p,q in ((-dx,a[0]-rect[0]),(dx,rect[2]-a[0]),
+                (-dy,a[1]-rect[1]),(dy,rect[3]-a[1])):
+        if abs(p)<1e-12:
+            if q<0:return False
+        else:
+            t=q/p
+            if p<0:t0=max(t0,t)
+            else:t1=min(t1,t)
+            if t0>t1:return False
+    return True
+
+
+def validate_physical_route(route,*,entrance,footprint,mode,scale,
+                            minimum_width_m,ground_roads,obstacles=(),forbidden=()):
+    """Conservative vector corridor check: clearance along the WHOLE route.
+
+    Obstacles include other buildings/infra; forbidden includes water, protected
+    and ground-level rail cells. A road endpoint must be at level zero.
+    """
+    require(isinstance(route,dict) and route.get("mode")==mode,
+            "access route must declare its pedestrian/vehicle mode")
+    points=route.get("points")
+    require(isinstance(points,list) and 2<=len(points)<=128 and
+            all(finite_xy(p) for p in points) and point_close(points[0],entrance,1e-7),
+            "access route must begin at the building entrance")
+    width=route.get("width_m")
+    require(isinstance(width,(int,float)) and not isinstance(width,bool) and
+            math.isfinite(width) and width>=minimum_width_m-1e-8,
+            "access route has insufficient pedestrian/vehicle width")
+    rad=width/scale/2
+    require(0<rad<1,"access route width exceeds a single reference unit; local corridor invalid")
+    require(any(edge["class"] in ROAD_CLASSES and edge.get("level",edge.get("level_from"))==0 and
+                edge["width_units"]*scale>=width-1e-8 and
+                any(_on_segment(points[-1],a,b,0.01)
+                    for a,b in zip(edge["points"],edge["points"][1:]))
+                for edge in ground_roads),
+            "access route does not terminate on a suitable ground-level road")
+    left,right,top,bottom=footprint[0],footprint[2],footprint[1],footprint[3]
+    p0,p1=points[:2]
+    normals=[]
+    if abs(p0[0]-left)<1e-7:normals.append((-1,0))
+    if abs(p0[0]-right)<1e-7:normals.append((1,0))
+    if abs(p0[1]-top)<1e-7:normals.append((0,-1))
+    if abs(p0[1]-bottom)<1e-7:normals.append((0,1))
+    require(normals and any((p1[0]-p0[0])*nx+(p1[1]-p0[1])*ny>1e-8
+                            for nx,ny in normals),
+            "building entrance must be on an outward accessible footprint boundary")
+    reduced=[left+1e-7,top+1e-7,right-1e-7,bottom-1e-7]
+    for a,b in zip(points,points[1:]):
+        require(not point_close(a,b,1e-9),"access route contains zero-length segment")
+        require(not _segment_hits_box(a,b,reduced),
+                "access route cuts through its own building footprint")
+        for box in obstacles:
+            inflated=[box[0]-rad,box[1]-rad,box[2]+rad,box[3]+rad]
+            require(not _segment_hits_box(a,b,inflated),
+                    "access corridor intersects another building footprint or has insufficient width")
+        for box in forbidden:
+            inflated=[box[0]-rad,box[1]-rad,box[2]+rad,box[3]+rad]
+            require(not _segment_hits_box(a,b,inflated),
+                    "access corridor crosses protected terrain or ground-level transport barrier")
+    if mode=="vehicle":
+        # Sharp turns are not certified without swept-path/curvature geometry.
+        for a,b,c in zip(points,points[1:],points[2:]):
+            cross=(b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0])
+            require(abs(cross)<1e-8,
+                    "vehicle route has an uncertified sharp turn")
+    return True
 
 
 TRANSPORT_SEAM_CLASSES={
@@ -654,6 +752,16 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     verified_sites=_validate_special_sites(site_plan,w,h,labels,blocks,eligible_edit,distance)
     tasksize=plan.get("work_policy",{}).get("max_units")
     tasks,pixels=derive_work_units(w,h,labels,eligible_edit,tasksize,cfg["detail_pixels_per_unit"])
+    for site in verified_sites:
+        x,y=map(int,site["point"])
+        i=y*w+x
+        owner=[u["id"] for u in tasks if
+               u["block_label"]==labels[i] and
+               u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3]]
+        require(len(owner)==1 and
+                next(s for s in plan["special_sites"] if s["id"]==site["id"]).get("work_unit_id")==owner[0],
+                f"{site['id']}: missing/mismatched POI work-unit ownership")
+        site["work_unit_id"]=owner[0]
     budget=plan["work_policy"].get("max_work_units")
     require(isinstance(budget,int) and budget>0,"work-unit budget missing")
     require(len(tasks)<=budget,
@@ -734,6 +842,7 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         isinstance(owner_approval.get("evidence"),str) and
         len(owner_approval["evidence"])>=8
     )
+    physical_ref=validated_physical_reference(plan,cfg)
     required_gates={
         "source_and_global_topology":True,
         "source_bytes_verified":source_verified,
@@ -746,7 +855,8 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "pixel_masks_verified":masks_verified,
         "owner_art_authorized":owner_auth,
         "poi_sites_placed_and_accessible":len(verified_sites)==len(plan["special_sites"]),
-        "ground_access_and_clearance":unreachable==0
+        "ground_access_and_clearance":unreachable==0,
+        "physical_access_certified":False  # set only after surveyed per-building vector routes
     }
     ready=all(required_gates.values()) and plan.get("fixture_mode") is False
     # No claim that a synthetic fixture provides real city evidence.
@@ -783,7 +893,9 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "block_programs":block_programs,
         "poi_sites":verified_sites,
         "access":{"connected_parcels":len(distance),"unreachable_parcels":unreachable,
-                  "semantics":"ABSTRACT_U02_CORRIDOR_NOT_METRIC_VEHICLE_CERTIFICATION"},
+                  "semantics":"ABSTRACT_U02_CORRIDOR_NOT_METRIC_VEHICLE_CERTIFICATION",
+                  "surveyed_scale_available":physical_ref is not None,
+                  "physical_access_status":"PENDING_PER_BUILDING_VECTOR_ROUTE_VALIDATION"},
         "work_units":tasks,
         "generation_queue":{
             "batches":batches,

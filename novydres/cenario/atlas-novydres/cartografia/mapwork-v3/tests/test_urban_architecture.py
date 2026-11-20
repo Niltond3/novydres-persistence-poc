@@ -212,9 +212,12 @@ def test_special_site_is_represented_as_content_not_new_city_lot():
     protect=urban.spatial_protection_mask(p).tobytes()
     cell=next(i for i,v in enumerate(labels) if v==1 and not protect[i])
     x,y=cell%64,cell//64
+    owner=next(u["id"] for u in orig["work_units"] if u["block_label"]==labels[cell]
+               and u["bbox"][0]<=x<u["bbox"][2] and u["bbox"][1]<=y<u["bbox"][3])
     p["special_sites"]=[{"id":"CIVIC-01","block_id":block,
-                         "point":[x+0.5,y+0.5],"entrance":[x+0.5,y+0.5],
-                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8]}]
+                         "point":[x+0.5,y+0.5],"entrance":[x+0.2,y+0.5],
+                         "footprint":[x+0.2,y+0.2,x+0.8,y+0.8],
+                         "work_unit_id":owner}]
     report=urban.plan_city(p,cfg)
     assert report["geometry"]["urban_lots"]==orig["geometry"]["urban_lots"]
     assert report["block_programs"][0]["poi_sites"]==["CIVIC-01"]
