@@ -68,6 +68,21 @@ def seg_cross(a, b, c, d):
     return None
 
 
+def collinear_overlap(a,b,c,d):
+    """Return a representative interior point of a positive-length same-line overlap."""
+    dx,dy=b[0]-a[0],b[1]-a[1]
+    def cross(p): return dx*(p[1]-a[1])-dy*(p[0]-a[0])
+    if abs(cross(c))>1e-8 or abs(cross(d))>1e-8:
+        return None
+    axis=0 if abs(dx)>=abs(dy) else 1
+    start=max(min(a[axis],b[axis]),min(c[axis],d[axis]))
+    end=min(max(a[axis],b[axis]),max(c[axis],d[axis]))
+    if end-start<=1e-8:
+        return None
+    t=((start+end)/2-a[axis])/(b[axis]-a[axis])
+    return [a[0]+t*dx,a[1]+t*dy]
+
+
 def _edge_level(edge, at_start=False):
     return edge["level_from"] if at_start and edge["class"]=="ramp" else (
         edge["level_to"] if edge["class"]=="ramp" else edge["level"])
@@ -214,6 +229,15 @@ def validate_transport(transport, width, height):
             continue
         pt=seg_cross(pa,qa,pb,qb)
         if pt is None:
+            overlap=collinear_overlap(pa,qa,pb,qb)
+            if overlap is None:
+                continue
+            same_corridor=(a["class"] in ROAD_CLASSES and b["class"] in TRAM_CLASSES and
+                           b.get("shared_with_road") is True) or (
+                           b["class"] in ROAD_CLASSES and a["class"] in TRAM_CLASSES and
+                           a.get("shared_with_road") is True)
+            require(same_corridor,
+                    f"undeclared collinear transport overlap {a['id']}/{b['id']}: {overlap}")
             continue
         # Shared endpoint is legal only when the edges share the actual node.
         endpoints={a["from"],a["to"]}&{b["from"],b["to"]}
@@ -290,6 +314,19 @@ def classify_territory(plan):
     missing=sum(1 for i,p in enumerate(zone) if p and not labels[i])
     require(missing==0,f"territorial coverage incomplete: {missing} unclassified reference pixels")
     return zone,labels,categories,dict(ownership)
+
+
+def spatial_protection_mask(plan):
+    """Exact U02-grid protected cells; caller must first pass plan_city with real source."""
+    w,h=plan["grid"]["width"],plan["grid"]["height"]
+    zone,classes,names,_=classify_territory(plan)
+    corridors=_line_mask((w,h),plan["transport"],lambda e:
+                         e["class"] in EDGE_CLASSES).tobytes()
+    protected_categories={names["water"],names["natural"],names["protected"]}
+    mask=bytes(255 if zone[i] and
+               (classes[i] in protected_categories or corridors[i]) else 0
+               for i in range(w*h))
+    return Image.frombytes("L",(w,h),mask)
 
 
 def _morphology_rules(plan, class_counts):
@@ -470,7 +507,12 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
     require(len({s["id"] for s in declared_seams})==len(declared_seams),
             "duplicate shared connector identifiers")
     counterparts=neighbor_manifests or {}
+    transport_digest=hashlib.sha256(
+        json.dumps(plan["transport"],sort_keys=True,separators=(",",":")).encode("utf-8")
+    ).hexdigest()
     seams_verified=bool(declared_seams)
+    matched_seams=0
+    reserved_seams=0
     for seam in declared_seams:
         require(seam.get("from_zone")==plan["zone"]["id"] and
                 seam.get("to_zone") and seam.get("id") and finite_xy(seam.get("point")),
@@ -481,7 +523,14 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         good=bool(mate) and mate.get("from_zone")==seam["to_zone"] and mate.get("to_zone")==seam["from_zone"]
         good=good and all(mate.get(k)==seam.get(k) for k in expected)
         good=good and point_close(mate.get("point",[float("inf"),float("inf")]),seam["point"],0.01)
-        seams_verified=seams_verified and bool(good)
+        if mate is not None:
+            require(bool(good),f"{seam['id']}: existing neighbor seam differs from global authority")
+            matched_seams+=1
+        else:
+            reservation=(seam.get("reservation_status")=="APPROVED_SCOPED" and
+                         seam.get("authority_sha256")==transport_digest)
+            reserved_seams+=int(reservation)
+            seams_verified=seams_verified and reservation
     receipt=plan.get("work_policy",{}).get("mask_receipt",{})
     masks_verified=(
         isinstance(receipt,dict) and
@@ -555,6 +604,10 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
         "gates":required_gates,
         "generation_ready":ready,
         "blocking_gates":blocked,
+        "seam_status":{"matched":matched_seams,"reserved":reserved_seams,
+                       "declared":len(declared_seams),
+                       "pending_peer_verification":reserved_seams>0},
+        "transport_sha256":transport_digest,
         "mask_fingerprints":{
             "editable_sha256":hashlib.sha256(eligible_edit).hexdigest(),
             "protected_sha256":hashlib.sha256(protected).hexdigest()
