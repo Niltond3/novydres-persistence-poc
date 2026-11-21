@@ -125,11 +125,26 @@
     },
     {
       "action": "RESEARCH_REAL_WORLD_ANALOGUES",
-      "artifacts": [],
-      "entry_sha256": "444ba5ba01797ea798035efde7ae52e600dc88b5cbb58567632d79803c0d1062",
+      "arg_updates": {
+        "research_file": "/mnt/data/agent3-recovery-evidence/agent3-live-second-research.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "fc2b5f89f3dc7042d43a9157fec17114892133ee",
+          "kind": "research",
+          "path": "/mnt/data/agent3-recovery-evidence/agent3-live-second-research.json",
+          "provider": "github",
+          "remote_id": "fc2b5f89f3dc7042d43a9157fec17114892133ee",
+          "sha256": "d1cd7a3f10a4fb292d09116405ddf235d52c1069123ffc29be57963dc7cb8e22"
+        }
+      ],
+      "entry_sha256": "c397fd779ef843bfbedae00bdc8ac75feb836429f46944396fcdabb24dd58239",
       "lease_head": "3348ac77ec078e1c7eee25982d042a67b6c0faf6",
+      "operation_head": "605824fa1ca31b93dc35f89f7e34ef7bf7b15747",
       "operation_id": "ad92752645d3a200bb23daa1877d0fd823690b3a6a503c5b4a687c04bda91203",
       "parent_sha256": "f869eba52931f7712c3f731c50dd2d9fd5c129eb5e8ef476aab6ab46c6082d25",
+      "pending_head": "b6ccf43fbacb763f5394282fdf10a47b344a731f",
+      "receipt_sha256": "c70037a9427bc4f8e67d45e9d1f7c8bd233e89b163cf96758bae6db7abc96c78",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -164,7 +179,7 @@
         "target": "sulfok"
       },
       "state_sha256": "03d16b7240619bfcf746d4b34d33f9ea9eb40ccf6193b5f3c101c31c0f44b57b",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
