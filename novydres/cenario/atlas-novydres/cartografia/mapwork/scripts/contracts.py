@@ -429,55 +429,85 @@ def audit_atomic_image(receipt, mask_file, plan, report, unit_id, cfg):
 
 
 def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
-                    visual_review=None, strategy_id=None, replan_evidence=None):
-    """One deterministic retry state transition; the *agent* performs corrections.
+                    visual_review=None, strategy_id=None, replan_evidence=None,
+                    request_id=None, improvement_evidence=None):
+    """Fail-closed, resumable image retry; a new attempt requires new generation.
 
-    No blind loop, no automatic approval, no silent skip after a failed render.
+    The host actually generates and inspects images between START and AUDIT.
+    Exhaustion triggers re-planning, never acceptance.
     """
     require(SHA64.fullmatch(input_sha256 or "") is not None,
             "unit ledger requires a SHA-256 input contract")
-    require(event in ("START","AUDIT_PASS","AUDIT_FAIL"),"unit event invalid")
-    require(isinstance(ledger,dict) and ledger.get("schema")==SCHEMA+"_UNIT_LEDGER_1",
+    require(event in ("START", "AUDIT_PASS", "AUDIT_FAIL"), "unit event invalid")
+    require(isinstance(ledger, dict) and ledger.get("schema") == SCHEMA+"_UNIT_LEDGER_1",
             "unit ledger schema missing")
-    units=ledger.setdefault("units",{})
-    record=units.setdefault(unit_id,{"attempts":0,"status":"PENDING",
-                                     "input_sha256":input_sha256})
-    require(record.get("input_sha256")==input_sha256,
-            "unit input changed: invalidate previous verified output")
-    if record["status"]=="VERIFIED":
-        require(event=="AUDIT_PASS" and receipt is not None and
-                record.get("image_sha256")==receipt.get("image_sha256"),
-                "verified unit immutable until a new owner-authorized intervention")
+    units = ledger.setdefault("units", {})
+    record = units.setdefault(unit_id, {
+        "attempts": 0, "status": "PENDING", "input_sha256": input_sha256,
+        "failure_history": [], "method_epoch_start": 0})
+    require(record.get("input_sha256") == input_sha256,
+            "unit input changed: invalidate dependent evidence, not accepted history")
+    if record["status"] == "VERIFIED":
+        require(event == "AUDIT_PASS" and isinstance(receipt, dict) and
+                record.get("image_sha256") == receipt.get("image_sha256"),
+                "verified unit immutable until owner-authorized change")
         return record
-    if event=="START":
-        if record["attempts"] >= 3 and record.get("status") in (
-                "REPLAN_REQUIRED", "METHOD_REASSESSMENT"):
-            require(isinstance(strategy_id,str) and strategy_id and
+    if event == "START":
+        if record["status"] == "GENERATING":
+            if request_id and request_id == record.get("active_request_id"):
+                return record
+            raise Blocked("unit already has an active image-generation attempt")
+        if record["status"] in ("REPLAN_REQUIRED", "METHOD_REASSESSMENT"):
+            require(isinstance(strategy_id, str) and bool(strategy_id.strip()) and
                     strategy_id != record.get("strategy_id") and
-                    isinstance(replan_evidence,str) and len(replan_evidence.strip()) >= 30,
-                    "unit requires materially different strategy and replan evidence")
+                    isinstance(replan_evidence, str) and
+                    len(replan_evidence.strip()) >= 30,
+                    "next image attempt requires new strategy and documented replan")
+            record["replan_evidence"] = replan_evidence
+            if record["status"] == "METHOD_REASSESSMENT":
+                record["method_epoch_start"] = record["attempts"]
+                record["method_reassessment_evidence"] = replan_evidence
+        require(not request_id or
+                all(request_id != entry.get("request_id") for entry in
+                    record.get("failure_history", [])),
+                "request_id already consumed by previous image attempt")
         record["strategy_id"] = strategy_id or record.get("strategy_id")
-        record["attempts"]+=1
-        record["status"]="GENERATING"
-    elif event=="AUDIT_FAIL":
-        require(record["status"]=="GENERATING","failed audit requires active attempt")
-        record["status"]=("METHOD_REASSESSMENT" if record["attempts"]>=6 else
-                          "REPLAN_REQUIRED" if record["attempts"]%3==0 else
-                          "REPAIR_REQUIRED")
-        record["failure"]=receipt.get("failure") if isinstance(receipt,dict) else "unspecified"
-    elif event=="AUDIT_PASS":
-        require(record["status"]=="GENERATING" and isinstance(receipt,dict) and
-                receipt.get("technical_status")=="PASS",
+        record["attempts"] += 1
+        record["active_request_id"] = request_id
+        record["status"] = "GENERATING"
+    elif event == "AUDIT_FAIL":
+        require(record["status"] == "GENERATING",
+                "failed audit requires active image-generation attempt")
+        failure = receipt.get("failure") if isinstance(receipt, dict) else None
+        require(isinstance(failure, str) and bool(failure.strip()),
+                "failure must contain a concrete technical or visual finding")
+        history = record.setdefault("failure_history", [])
+        history.append({"iteration": record["attempts"], "failure": failure,
+                        "strategy_id": record.get("strategy_id"),
+                        "request_id": record.get("active_request_id"),
+                        "improvement_evidence": improvement_evidence})
+        record["failure"] = failure
+        failures_since_method = record["attempts"] - record.get("method_epoch_start", 0)
+        stagnant = (len(history) >= 3 and
+                    all(x["failure"] == failure and not x.get("improvement_evidence")
+                        for x in history[-3:]))
+        record["status"] = ("METHOD_REASSESSMENT" if failures_since_method >= 6 else
+                            "REPLAN_REQUIRED" if stagnant else "REPAIR_REQUIRED")
+        record["active_request_id"] = None
+    else:
+        require(record["status"] == "GENERATING" and isinstance(receipt, dict) and
+                receipt.get("technical_status") == "PASS",
                 "unit cannot pass without deterministic technical audit")
-        require(isinstance(visual_review,dict) and
-                visual_review.get("schema")==SCHEMA+"_UNIT_VISUAL_REVIEW_1" and
-                visual_review.get("by")=="AGENT" and
-                visual_review.get("status")=="PASS" and
-                visual_review.get("image_sha256")==receipt["image_sha256"] and
-                visual_review.get("mask_sha256")==receipt["mask_sha256"],
+        require(isinstance(visual_review, dict) and
+                visual_review.get("schema") == SCHEMA+"_UNIT_VISUAL_REVIEW_1" and
+                visual_review.get("by") == "AGENT" and
+                visual_review.get("status") == "PASS" and
+                visual_review.get("image_sha256") == receipt.get("image_sha256") and
+                visual_review.get("mask_sha256") == receipt.get("mask_sha256"),
                 "agent visual report must be hash-bound before ledger PASS")
-        record["status"]="VERIFIED"
-        record["image_sha256"]=receipt["image_sha256"]
-        record["mask_sha256"]=receipt["mask_sha256"]
-        record["visual_review_sha256"]=evidence_digest(visual_review)
+        record["status"] = "VERIFIED"
+        record["image_sha256"] = receipt["image_sha256"]
+        record["mask_sha256"] = receipt["mask_sha256"]
+        record["visual_review_sha256"] = evidence_digest(visual_review)
+        record["active_request_id"] = None
     return record
