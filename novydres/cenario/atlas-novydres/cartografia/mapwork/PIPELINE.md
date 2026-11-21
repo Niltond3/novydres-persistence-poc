@@ -187,47 +187,53 @@ foi construído. A próxima ação deve ser calculada novamente após
 `SYNC_COMPLETED_JOURNAL` e `ACK_COMPLETE`, preservando o mesmo `operation_id`
 e todos os hashes históricos. `--synthetic-trial` não cria outro journal.
 
-## Entrega obrigatória da referência à geração nativa
+## Edição nativa, máscaras e correção incremental (mesma pipeline)
 
-Toda operação `GENERATE_WITH_CHATGPT_NATIVE_IMAGE`, `GENERATE_AND_AUDIT_CANDIDATE`
-no ensaio, ou ação de correção/regeneração, é uma **edição vinculada a
-referência visual**, nunca um pedido de relatório. O agente Web deve seguir o
-`native_edit_request` produzido pela entrada única `scripts/pipeline.py run`.
-Não reescreva esse pedido usando um resumo do diálogo: seu `prompt` determina
-imagem cartográfica como saída e proíbe relatório, infográfico e selo de PASS.
+A entrada única é `scripts/pipeline.py run`. A geração é feita exclusivamente pela
+ferramenta de imagens nativa do host ChatGPT Web; Python não a chama. O prompt
+do `native_edit_request` contém somente instruções visuais curtas; IDs,
+resultados de validação, hashes e comandos ficam fora dele.
 
-1. Recuperar de Google Drive os bytes da **imagem de referência** e da **máscara**
-   por GETs próprios; verificar SHA-256, formato PNG e dimensões iguais.
-   Quando a referência ou máscara ainda for local, enviá-la primeiro ao Drive
-   e então recuperá-la por GET distinto do arquivo original.
-2. Tornar ambas as imagens visualmente acessíveis ao gerador nativo, usando-as
-   como entradas da **mesma chamada de edição**. O agente deve executar a edição
-   com o `prompt` exato em `native_edit_request`, não simplesmente citar os
-   arquivos, seus caminhos ou seus hashes num prompt textual.
-3. Registrar um `NOVYDRES_MAPWORK_NATIVE_EDIT_HANDOFF` com `request` íntegro,
-   `request_sha256`, `operation_id` (nas operações Web), `inputs` nas funções
-   `reference-image` e `edit-mask`, `dispatch` da chamada nativa com
-   `generation_id`, `attached_inputs`, SHA do pedido/prompt e do resultado,
-   e `output` com ID/bytes locais + GET independente do Drive.
-4. Persistir também um parecer visual com hashes da **referência**, **máscara** e
-   **imagem gerada**. Na troca com o host, apresentar cinco artefatos: `image`,
-   `reference-image`, `edit-mask`, `native-edit-handoff` e `visual-review`.
-   A composição canônica exige, por unidade, a receita original e o handoff
-   recuperáveis com hashes reais no lote de imagens.
+1. Recuperar referência e máscara do Google Drive como PNGs materiais; validar
+   bytes, SHA-256 e dimensões. `--native-input-reference` e `--unit-mask`
+   apontam os arquivos localizados, não URLs. `--native-preparation-output`
+   recorta a menor região autorizada com contexto visual, devolve `bbox`
+   absoluto e dois PNGs. O contexto nunca amplia a permissão de escrita.
+2. Entregar a imagem de referência como **anexo visual efetivamente acessível**
+   ao gerador, com a máscara como guia visual quando a ferramenta permitir.
+   Não confundir arquivo baixado, link Drive, imagem exibida na conversa ou
+   SHA com anexo da chamada de edição. Não há parâmetro de máscara da API
+   disponibilizado ao pipeline Web. Se o host não puder anexar, registrar
+   `HOST_ATTACH_VERIFIED_VISUAL_INPUTS` bloqueado, sem fabricar `dispatch`.
+3. Invocar edição, não criação de gráfico. Manter `visual_input_evidence`
+   associado ao `generation_id` real: duas identidades `visual_file_id`
+   observadas pelo host e associadas aos PNGs verificados; registrar observação
+   factual. O host é responsável pela veracidade da observação: a pipeline
+   verifica seus vínculos, **não inspeciona o payload interno da ferramenta**.
+   `edit_op` não é exigência de aceite; o resultado visual incompatível reprova.
+4. A candidata nativa é `image`. Recompô-la pela máscara com
+   `--native-candidate`, `--native-composite-output` e, em caso de recorte,
+   `--native-crop-manifest`. O alinhamento precisa ser exato, sem reescalonar.
+   A composição determinística aplica **somente pixels autorizados**; testa
+   todas as bandas RGBA e reabre o PNG salvo. Uma divergência fora da máscara
+   é falha, independentemente de parecer visual.
+5. Persistir `composed-image` no Drive e fazer novo GET separado. O ensaio
+   exige `--native-composed-receipt`; recalcula os pixels esperados a partir
+   da referência, máscara e candidata. O parecer `visual-review` deve avaliar
+   **a imagem recomposta**, incluindo desnível, continuidade bilateral,
+   coerência e formato. Para completar a operação, o controlador exige seis
+   artefatos verificáveis: `reference-image`, `edit-mask`, `image`,
+   `composed-image`, `native-edit-handoff` e `visual-review`.
+6. A cada FAIL, registrar localização, gravidade, dependências e observação
+   concreta. `--native-approved-mask`, `--native-defects-file` e
+   `--native-repair-mask-output` produzem máscara **restrita** aos defeitos.
+   `--native-protected-mask` impede invasão de elementos já aprovados.
+   Repetir com referência na composição vigente; conferir os dois lados das
+   interfaces, a máscara e a ausência de regressões. Após falha persistente,
+   mudar estratégia local e registrar evidência, jamais reiniciar toda a imagem
+   ou reutilizar candidata como nova.
 
-`--native-handoff` indica o JSON materializado da operação. Sem esse arquivo,
-sem imagem/máscara baixadas independentemente, ou com imagens/IDs/hashes fora
-do pedido, a pipeline **não pode reconhecer PASS**. É legítimo reutilizar a
-mesma referência em outra tentativa; a nova candidata não pode reutilizar os
-bytes de uma tentativa anterior como se fossem nova geração.
-
-O módulo Python confirma os **bytes, o despacho declarado e seus vínculos**;
-não tem acesso interno ao payload secreto da ferramenta de imagem. A veracidade
-de `dispatch.attached_inputs` e `generation_id` é responsabilidade do host
-ChatGPT Web conectado, que deve efetivamente chamar a ferramenta com os dois
-anexos. Um JSON sem chamada real **não é demonstração operacional**.
-
-No ensaio não canônico, a fixture deve indicar `native_reference_sha256`,
-`native_mask_sha256` e `native_edit_goal` além da geometria e do journal já
-vinculados. A ausência desses campos produz
-`MATERIALIZE_SYNTHETIC_REFERENCE_AND_MASK`, não uma geração textual de imagem.
+Os recibos operacionais não autorizam cânone nem INF; apenas garantem que as
+evidências materiais estão aptas à avaliação visual real. Máscara por si só
+não prova que a ferramenta usou a imagem original. O antigo journal e seus
+`operation_id` permanecem imutáveis até a conclusão verdadeira.
