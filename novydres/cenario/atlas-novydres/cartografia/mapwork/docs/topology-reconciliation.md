@@ -9,6 +9,21 @@ Não substitui os 32 critérios de `docs/infra-acceptance.md`, não aprova INF-0
 3. O código compara cada registro a interseções reais, não inventa níveis, segmenta as polilinhas com nós conectados apenas quando autorizados e conserva vértices, extremidades, atributos e conectores. Os IDs das partes e sua origem são determinísticos; a fonte e os digests ficam no candidato. Aplicação repetida com a mesma classificação é idempotente; alteração posterior do grafo é rejeitada.
 4. A saída é **candidata**. `RECONCILED_NOT_ACCEPTED` não concede aceite; `BLOCKED` enumera cruzamentos pendentes individualmente e impede aprovação em `infra_checks.validate`. Etapas seguintes dependem de revisão visual, bytes reais, contrato Markdown, ledger e aceite independentes.
 
+## Descoberta sem classificação de Kingswell
+
+O diagnóstico `zones/cidade-velha/road-network-diagnostic.json` contém
+98 linhas candidatas, sem níveis certificados. A própria entrada única admite
+`--topology-source` apontando para esse diagnóstico, com
+`--district kingswell --topology-out <dir> --reference <U02-original>`.
+A fonte e a imagem são conferidas contra o SHA-256 oficial e suas dimensões.
+O resultado `topology-discovery.json` lista **todos os pontos geométricos
+detectados**, com `status: UNRESOLVED`, sem inferir `relation`, `levels`
+ou autorização. Esse inventário não equivale automaticamente aos 217
+cruzamentos do R5 (uma geometria candidata pode diferir entre rodadas).
+Somente depois do registro visual podem-se produzir um grafo completo
+de corredores com níveis verificados e o contrato de classificações para
+a reconciliação em lote; geometria não verificada não pode ser promovida.
+
 ## Operação
 
 ```text
