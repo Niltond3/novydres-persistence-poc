@@ -63,7 +63,7 @@ def _stage(stage, action, blockers, *, iteration=0, accepted=(), latest=None):
 
 
 def _verify_artifact(path_value, digest_value, *, base, image=False,
-                     source_sha256=None, expected_size=None):
+                     source_sha256=None, expected_size=None, stage=None):
     if not isinstance(path_value, str) or not path_value.strip():
         return "artifact path absent"
     if not isinstance(digest_value, str) or not _HEX.fullmatch(digest_value):
@@ -90,6 +90,12 @@ def _verify_artifact(path_value, digest_value, *, base, image=False,
             obj = json.loads(p.read_text(encoding="utf-8"))
             if not isinstance(obj, dict):
                 return "candidate geometry must be a JSON object"
+            if obj.get("stage") != stage or obj.get("source_sha256") != source_sha256:
+                return "candidate geometry stage/reference not bound"
+            if not any(bool(obj.get(k)) for k in (
+                    "transport", "territory", "vector_corridors",
+                    "features", "network", "layers")):
+                return "candidate geometry has no actual spatial objects"
         except (OSError, ValueError, UnicodeError) as exc:
             return "candidate geometry cannot be read as JSON: " + str(exc)
     return None
@@ -144,6 +150,7 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
         return _stage(required[0], "REPAIR_ACCEPTANCE_LEDGER",
                       ["stage map invalid or contains unrecognized stage"])
     accepted = []
+    accepted_candidate_pairs = set()
     for stage in required:
         block = groups.get(stage)
         attempts = block.get("attempts", []) if isinstance(block, dict) else []
@@ -170,11 +177,16 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
             prev = attempt
         last = attempts[-1]
         problems = []
+        if last.get("stage") != stage:
+            problems.append("attempt stage identity mismatch")
+        pair = (last.get("geometry_sha256"), last.get("preview_sha256"))
+        if pair in accepted_candidate_pairs:
+            problems.append("same candidate reused for a different accepted stage")
         for key, visual in (("geometry", False), ("preview", True)):
             reason = _verify_artifact(
                 last.get(key + "_path"), last.get(key + "_sha256"),
                 base=file.parent, image=visual, source_sha256=reference_sha256,
-                expected_size=expected_size
+                expected_size=expected_size, stage=stage
             )
             if reason:
                 problems.append(key + ": " + reason)
@@ -219,11 +231,20 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
                           problems, iteration=len(attempts), accepted=accepted,
                           latest={"verdict": verdict, "failed": failed})
         if verdict == "FAIL":
-            action = "REPLAN_STAGE" if len(attempts) >= 6 else "REPAIR_AND_REGENERATE"
+            latest_fail_ids = tuple(failed)
+            repeated_failures = len(attempts) >= 3 and all(
+                a.get("verdict") == "FAIL" and
+                tuple(sorted(k for k, c in a.get("checks", {}).items()
+                             if isinstance(c, dict) and c.get("status") == "FAIL"))
+                == tuple(sorted(latest_fail_ids))
+                for a in attempts[-3:])
+            action = ("REPLAN_STAGE" if len(attempts) >= 6 or repeated_failures
+                      else "REPAIR_AND_REGENERATE")
             return _stage(stage, action, failed, iteration=len(attempts),
                           accepted=accepted,
                           latest={"verdict": "FAIL", "repair_plan": last["repair_plan"],
                                   "findings": last["findings"]})
+        accepted_candidate_pairs.add(pair)
         accepted.append(stage)
     return _stage(required[-1], "ADVANCE_AFTER_ACCEPTANCE", [],
                   accepted=accepted)
