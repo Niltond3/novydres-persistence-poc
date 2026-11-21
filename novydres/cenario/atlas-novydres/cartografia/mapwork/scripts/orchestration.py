@@ -50,7 +50,8 @@ def progress_policy(attempts):
     if not attempts:
         return "GENERATE_AND_AUDIT_CANDIDATE"
     last = attempts[-1]
-    if last.get("verdict") == "PASS":
+    # A candidate's declaration is never a controller-verified acceptance.
+    if last.get("verified_verdict") == "PASS":
         return "ADVANCE_AFTER_ACCEPTANCE"
     if len(attempts) >= 6:
         # Six unsuccessful iterations require method/premise/decomposition audit.
@@ -66,7 +67,7 @@ def progress_policy(attempts):
 
 
 def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha256,
-                   schema, allowed_stages, active_stage):
+                   schema, allowed_stages, active_stage, accepted_stages=()):
     """Persist one candidate even when FAIL/incomplete; no false acceptance.
 
     Payloads must be real JSON files. A duplicate call is idempotent; changed
@@ -87,17 +88,10 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
         raise ValueError("attempt has wrong approved reference")
     if not isinstance(attempt.get("request_id"), str) or not attempt["request_id"]:
         raise ValueError("attempt request_id required for idempotency")
-    # Material evidence can be incomplete, but its deficit can never confer PASS.
-    if attempt.get("verdict") == "PASS":
-        for kind in ("geometry", "preview"):
-            p = attempt.get(kind + "_path")
-            if not isinstance(p, str) or not p:
-                raise ValueError("PASS candidate without " + kind + " bytes")
-            f = Path(p)
-            if not f.is_absolute():
-                f = ledger_path.parent / f
-            if not f.is_file() or hashlib.sha256(f.read_bytes()).hexdigest() != attempt.get(kind + "_sha256"):
-                raise ValueError("PASS candidate bytes unverified: " + kind)
+    # Invalid PASS declarations are evidence to audit, not authority to block
+    # future repair. Artifact bytes are independently evaluated downstream.
+    if attempt.get("verdict") not in ("PASS", "FAIL"):
+        raise ValueError("declared candidate verdict must be PASS/FAIL")
     ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.is_file() else {
         "schema": schema, "criteria_sha256": criteria_sha256,
         "reference_sha256": reference_sha256,
@@ -109,14 +103,32 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
         raise ValueError("ledger authority mismatch: migrate/reaudit before append")
     groups = ledger.setdefault("stages", {})
     for predecessor in list(allowed_stages)[:list(allowed_stages).index(stage)]:
-        previous = groups.get(predecessor, {}).get("attempts", [])
-        if not previous or previous[-1].get("verdict") != "PASS":
-            raise ValueError("cannot append to stage before predecessors accepted")
+        if predecessor not in accepted_stages:
+            raise ValueError("cannot append to stage before predecessors independently accepted")
+    # Validate the entire append-only chain before every mutation, including
+    # idempotent calls, so forged hashes and forked histories cannot be replayed.
+    for stage_id, group in groups.items():
+        previous_sha = None
+        for ordinal, old in enumerate(group.get("attempts", []), 1):
+            if (old.get("iteration") != ordinal or
+                old.get("parent_attempt_sha256") != previous_sha or
+                old.get("attempt_sha256") != digest({
+                    k:v for k,v in old.items() if k != "attempt_sha256"})):
+                raise ValueError("attempt hash chain corrupt: " + stage_id)
+            original = {k:v for k,v in old.items()
+                        if k not in ("iteration", "parent_attempt_sha256",
+                                     "attempt_sha256", "payload_sha256",
+                                     "verified_verdict")}
+            if old.get("payload_sha256") != digest(original):
+                raise ValueError("attempt original payload hash corrupt: " + stage_id)
+            previous_sha = old["attempt_sha256"]
     attempts = groups.setdefault(stage, {"attempts": []})["attempts"]
     raw = dict(attempt)
     raw.pop("iteration", None)
     raw.pop("parent_attempt_sha256", None)
     raw.pop("attempt_sha256", None)
+    raw.pop("payload_sha256", None)
+    raw.pop("verified_verdict", None)
     payload_digest = digest(raw)
     for earlier in attempts:
         if earlier.get("request_id") == attempt["request_id"]:
@@ -139,6 +151,7 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
                 raise ValueError("new construction strategy and evidence required")
     attempt["iteration"] = len(attempts) + 1
     attempt["payload_sha256"] = payload_digest
+    attempt["verified_verdict"] = "UNVERIFIED"
     attempt["parent_attempt_sha256"] = prior.get("attempt_sha256") if prior else None
     attempt["attempt_sha256"] = digest({k:v for k,v in attempt.items() if k != "attempt_sha256"})
     attempts.append(attempt)
