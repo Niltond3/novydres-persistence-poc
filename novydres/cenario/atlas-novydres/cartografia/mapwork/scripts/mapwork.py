@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Novydres Mapwork V3: deterministic geometry, isolated lot assets, tiles, offline comparison.
+"""Novydres Mapwork: deterministic geometry, isolated lot assets, tiles, offline comparison.
 No image generation, research, remote writes, credentials or automatic canonization here.
 The ChatGPT agent owns Drive/GitHub connector actions and approvals.
 """
@@ -297,26 +297,6 @@ def html_compare(before, after, base, out, cfg):
     return viewer.build_comparison(before,after,base,out,cfg)
 
 
-def next_action(z):
-    if z['status']=='PLANNING':
-        if not z['research']:return {'action':'RESEARCH','note':'Research world analogues first; cite sources, do not infer canon.'}
-        missing=[d for d in z['decisions'] if d['status']=='OPEN']
-        if missing:return {'action':'ASK_OWNER','questions':missing}
-        return {'action':'PRESENT_SKETCH','note':'Whole-region technical sketch and succinct decision packet; wait for explicit approval.'}
-    if not z['sketch_approved']:return {'action':'WAIT_SKETCH_APPROVAL'}
-    if z['status']=='SKETCH_APPROVED' and z['id']=='kingswell':
-        return {'action':'BUILD_GLOBAL_TRANSPORT_AND_TERRITORY',
-                'note':'Macro sketch U02_KW_SKETCH_02 approved. Vectorize global streets, avenues, interchanges, overpasses, rail, tram and water; classify full territory and derive quadrants bounded by at-grade networks before art.'}
-    if z['status']=='SKETCH_APPROVED':
-        if not z['elements'] or (z['neighbors'] and not z['connectors']):
-            return {'action':'PREPARE_DETAIL_GEOMETRY','note':'Sketch approved; derive lot geometry and shared boundary connectors before art.'}
-        return {'action':'SUBDIVIDE_ATOMIC_LOTS_AND_VERIFY_MASKS','note':'14 macro-lot windows exist but protected masks, atomic lots and bilateral seams remain unverified; never generate art in SKETCH_APPROVED.'}
-    pending=[e['id'] for e in z['elements'] if e['status']!='VERIFIED']
-    if pending:return {'action':'GENERATE_NEXT','element_id':pending[0],'remaining':len(pending)}
-    if not z.get('owner_approval'):return {'action':'SHOW_BEFORE_AFTER','note':'Render and deliver full comparison before asking for owner approval.'}
-    if z['status']!='PUBLISHED':return {'action':'VERIFY_AND_PUBLISH','note':'Owner-approved candidate; Git transaction with CAS, Drive receipts and readback.'}
-    return {'action':'COMPLETE','note':'No handoff until all closure gates and readback passed.'}
-
 def validate_spatial_plan(plan, z, cfg):
     """Validate real candidate anchors and gates; planning PASS never implies image readiness."""
     fail(plan.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_SPATIAL_PLAN','spatial plan schema')
@@ -464,7 +444,7 @@ def validate_integral_sketch(g,plan,z,cfg):
 def validate_detail_preparation(d, z, plan, sketch, cfg):
     """Fail closed on fictitious production readiness of candidate macro-lot rectangles."""
     fail(d.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_DETAIL_PREP','detail preparation schema')
-    fail(d.get('version')=='KW_DETAIL_PREP_V2' and d.get('status')=='GEOMETRY_SEEDED_PENDING_MASK_AND_SEAM_VERIFICATION','detail preparation must be geometry seeded')
+    fail(d.get('status')=='GEOMETRY_SEEDED_PENDING_MASK_AND_SEAM_VERIFICATION','detail preparation must be geometry seeded')
     src=d.get('approved_sketch_reference',{})
     fail(src.get('version')==sketch.get('version') and src.get('hash_reference')==cfg['reference']['sha256'] and src.get('owner_approved') is True,'detail preparation sketch reference mismatch')
     fail(src.get('excluded_marker_ids')==['X01','X02','X03'] and len(sketch.get('crossing_conflicts',[]))==0,'owner-excluded conflict overlays cannot return')
@@ -604,14 +584,14 @@ def audit_repository(cfg,state):
          arch_report['geometry']['eligible_coverage_pct']==100 and
          arch_report['geometry']['urban_lots']>=4,
          'architecture  synthetic coverage invalid')
-    real_legacy=architecture.audit_sketch_coverage(
+    incomplete_windows=architecture.audit_sketch_coverage(
         load(ROOT/'zones'/'cidade-velha'/'u02-sketch.json'),
         load(ROOT/'zones'/'cidade-velha'/'lot-connectors-diagnostic.json'),
         *cfg['world_size_units']
     )
-    fail(real_legacy['window_coverage_pct']<100,
-         'legacy Kingswell windows unexpectedly cover entire territory; update architecture checkpoint')
+    fail(incomplete_windows['window_coverage_pct']<100,
+         'unverified Kingswell windows unexpectedly cover entire territory; update architecture checkpoint')
     if state['last_approved_global_release'] is not None:
         pointer=state['last_approved_global_release']
         fail((ROOT/'releases'/pointer['manifest']).is_file(),'approved global release pointer missing')
-    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'SPATIAL_GATES_VERIFIED' if all(x['readiness']=='SPATIAL_GATES_VERIFIED' for x in required_zone_reports) else 'NOT_READY_FOR_ART_GENERATION','architecture':{'synthetic_contracts':'PASS','transport':arch_report['transport'],'quadrants':arch_report['geometry']['urban_lots'],'fixture_not_a_real_zone':True,'preliminary_sketch':real_legacy,'real_zone_generation_ready':False},'releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}
+    return {'repository':'PASS','zones_checked':len(list((ROOT/'zones').glob('*/zone.json'))),'required_zone_reports':required_zone_reports,'image_readiness':'SPATIAL_GATES_VERIFIED' if all(x['readiness']=='SPATIAL_GATES_VERIFIED' for x in required_zone_reports) else 'NOT_READY_FOR_ART_GENERATION','architecture':{'synthetic_contracts':'PASS','transport':arch_report['transport'],'quadrants':arch_report['geometry']['urban_lots'],'fixture_not_a_real_zone':True,'preliminary_sketch':incomplete_windows,'real_zone_generation_ready':False},'releases_checked':len(releases),'last_global_release':state['last_approved_global_release']}

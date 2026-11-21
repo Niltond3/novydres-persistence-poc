@@ -83,19 +83,6 @@ def test_bleed_fails(tmp_path):
     zones[0]['elements'][0]['core'][0]+=3
     with pytest.raises(m.Invalid,match='bleed too large'):m.audit_zone(zones[0],cfg,assets,True)
 
-def test_checkpoints_and_gates(tmp_path):
-    cfg,base,assets,zones=fixture(tmp_path)
-    z=zones[0];z['status']='PLANNING';z['decisions']=[{'id':'q1','question':'What density?','status':'OPEN'}]
-    assert m.next_action(z)['action']=='ASK_OWNER'
-    z['decisions'][0]['status']='APPROVED'
-    assert m.next_action(z)['action']=='PRESENT_SKETCH'
-    z['status']='GENERATING';z['elements'][0]['status']='PENDING'
-    assert m.next_action(z)['action']=='GENERATE_NEXT'
-    z['elements'][0]['status']='VERIFIED'
-    assert m.next_action(z)['action']=='SHOW_BEFORE_AFTER'
-    z['owner_approval']={'decision':'APPROVED','evidence':'explicit user acceptance','approved_on':'2026-11-19'}
-    assert m.next_action(z)['action']=='VERIFY_AND_PUBLISH'
-
 def test_source_sha_fails(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
     cfg['reference']['sha256']='0'*64
@@ -249,10 +236,8 @@ def test_sketch_source_image_preserved():
         m.validate_integral_sketch(g,plan,z,cfg)
 
 
-def test_next_after_approved_sketch_is_detail_geometry_not_art():
+def test_approved_u02_does_not_authorize_art():
     cfg,z,plan=planning_inputs()
-    nxt=m.next_action(z)
-    assert nxt['action']=='BUILD_GLOBAL_TRANSPORT_AND_TERRITORY'
     assert m.audit_zone(z,cfg,strict=False)['elements']==14
     assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
 
@@ -268,7 +253,6 @@ def test_detail_macrolots_and_seams_are_persisted_but_not_art_ready():
     assert r['macro_lots']==14
     assert r['border_reservations']==4 and r['internal_graph_connectors']==35
     assert r['image_readiness']=='NOT_READY_FOR_ART_GENERATION'
-    assert m.next_action(z)['action']=='BUILD_GLOBAL_TRANSPORT_AND_TERRITORY'
 
 def test_macrolot_overlap_is_rejected():
     cfg,z,plan,g,d=detail_inputs()

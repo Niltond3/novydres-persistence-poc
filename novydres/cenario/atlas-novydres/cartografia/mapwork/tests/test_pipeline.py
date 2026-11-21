@@ -86,14 +86,6 @@ def test_real_kingswell_has_a_real_blocker_not_fake_generation_ready():
     assert r["canonical_state_changed"] is False
 
 
-def test_research_always_precedes_open_owner_questions():
-    z={"status":"PLANNING","decisions":[{"id":"Q","status":"OPEN"}],
-       "research":[],"sketch_approved":False}
-    assert core.next_action(z)["action"]=="RESEARCH"
-    z["research"]=[{"claim":"historical analogy"}]
-    assert core.next_action(z)["action"]=="ASK_OWNER"
-
-
 def test_second_composition_preserves_old_art_in_same_tile(tmp_path):
     cfg,base,assets,zone=make_tile_inputs(tmp_path)
     zone["elements"]=[element(assets,"old",[2,2,6,6],(220,30,30,255))]
