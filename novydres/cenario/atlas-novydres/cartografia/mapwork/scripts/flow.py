@@ -41,6 +41,10 @@ def _state(phase, action, blockers, *, intent=None, audit=None, next_id=None):
     }
 
 
+def cfg_dimensions(config):
+    return [config["reference"]["width"],config["reference"]["height"]]
+
+
 def run(args, core_run):
     if not getattr(args, "intent", None):
         return _state("INTENT", "AGENT_RESOLVE_AND_RECORD_INTENT",
@@ -160,7 +164,8 @@ def run(args, core_run):
             reference_sha256=config["reference"]["sha256"],
             schema=acceptance.SCHEMA, allowed_stages=acceptance.STAGES,
             active_stage=pre_gate["stage"],
-            accepted_stages=pre_gate["accepted_stages"])
+            accepted_stages=pre_gate["accepted_stages"],
+            target=target,reference_size=cfg_dimensions(config))
     acceptance_gate=acceptance.evaluate(
         ledger_path,
         reference_file=getattr(args,"reference",None),

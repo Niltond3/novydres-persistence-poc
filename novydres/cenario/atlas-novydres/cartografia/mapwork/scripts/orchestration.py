@@ -69,7 +69,8 @@ def progress_policy(attempts):
 
 
 def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha256,
-                   schema, allowed_stages, active_stage, accepted_stages=()):
+                   schema, allowed_stages, active_stage, accepted_stages=(),
+                   target=None, reference_size=None):
     """Persist one candidate even when FAIL/incomplete; no false acceptance.
 
     Payloads must be real JSON files. A duplicate call is idempotent; changed
@@ -97,12 +98,17 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
     ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.is_file() else {
         "schema": schema, "criteria_sha256": criteria_sha256,
         "reference_sha256": reference_sha256,
+        **({"target":target,"reference_dimensions_px":list(reference_size)}
+           if target is not None and reference_size is not None else {}),
         "stages": {stage_id: {"attempts": []} for stage_id in allowed_stages}
     }
     if (ledger.get("schema") != schema or
         ledger.get("criteria_sha256") != criteria_sha256 or
-        ledger.get("reference_sha256") != reference_sha256):
-        raise ValueError("ledger authority mismatch: migrate/reaudit before append")
+        ledger.get("reference_sha256") != reference_sha256 or
+        (target is not None and
+         (ledger.get("target") != target or
+          ledger.get("reference_dimensions_px") != list(reference_size or [])))):
+        raise ValueError("ledger authority mismatch: reconcile/reaudit before append")
     groups = ledger.setdefault("stages", {})
     for predecessor in list(allowed_stages)[:list(allowed_stages).index(stage)]:
         if predecessor not in accepted_stages:

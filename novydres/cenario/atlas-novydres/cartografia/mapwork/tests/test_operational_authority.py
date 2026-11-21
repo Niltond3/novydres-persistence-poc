@@ -53,3 +53,20 @@ def test_single_pipeline_status_schema_has_no_operational_drawing_promotion():
         assert "sketch_approved" not in script
         assert "PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT" not in script
         assert "preflight_verified" not in script
+
+
+def test_new_candidate_ledger_records_target_and_reference_geometry(tmp_path):
+    import orchestration
+    from test_orchestration import failed
+    attempt=tmp_path/"attempt.json"
+    attempt.write_text(json.dumps(failed(1)),encoding="utf-8")
+    ledger=tmp_path/"ledger.json"
+    options=dict(criteria_sha256="c"*64,reference_sha256="a"*64,
+                 schema=acceptance.SCHEMA,allowed_stages=acceptance.STAGES,
+                 active_stage="INF-01",target="sulfok",reference_size=[32,32])
+    assert orchestration.record_attempt(ledger,attempt,**options)["status"]=="RECORDED"
+    stored=json.loads(ledger.read_text(encoding="utf-8"))
+    assert stored["target"]=="sulfok"
+    assert stored["reference_dimensions_px"]==[32,32]
+    with pytest.raises(ValueError,match="ledger authority mismatch"):
+        orchestration.record_attempt(ledger,attempt,**dict(options,target="kingswell"))
