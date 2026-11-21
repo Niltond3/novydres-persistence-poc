@@ -182,14 +182,17 @@ conclui ou repete a operação pendente por si só.
 
 ## Geração nativa com referência realmente visível
 
-O Web host entrega PNGs materializados por GETs do Google Drive ao ChatGPT
-Images **como entradas visuais**, não somente como caminhos, URLs, hashes ou
-visualizações anteriores. Para operações nativas a troca contém seis
-artefatos: `reference-image`, `edit-mask`, `image` (saída bruta),
-`composed-image` (saída mascarada), `native-edit-handoff` e
-`visual-review`. O `web_bridge.materialize_host_exchange` transporta
-todos esses tipos por bytes locais e readback, sem simular conectores.
+O ChatGPT Web pode reutilizar a imagem já visível na mesma conversa para
+tentar uma nova edição com máscara PNG, sem salvar cada candidata no Drive.
+Isso depende de a imagem e a máscara estarem realmente disponíveis à chamada;
+a galeria interna **não é uma API de recuperação garantida**. Não afirmar
+vinculação visual com base apenas na existência da imagem na conversa.
 
+Após PASS visual local, persistir os seis artefatos finais já contratados:
+`reference-image`, `edit-mask`, `image` (saída bruta),
+`composed-image`, `native-edit-handoff` e `visual-review`.
+O `web_bridge.materialize_host_exchange` comprova os bytes enviados e
+relidos do Drive/GitHub. Falhas locais não completam a operação pendente.
 `native_generation.verify_handoff` valida a identidade da referência,
 máscara, pedido, `generation_id` da resposta real, arquivos e observação
 `visual_input_evidence`. O ChatGPT Web não oferece os campos internos
