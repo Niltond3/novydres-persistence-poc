@@ -81,9 +81,13 @@ pode preencher o campo. O módulo valida bytes, hash, vínculos e cadeia;
 a autenticidade das chamadas é responsabilidade do host conectado.
 
 Se `head_chain` não estiver vazia, a pipeline devolve
-`RECONCILE_RECOVERED_REMOTE_WRITES` sem repetir upload/ação. Um commit
-concorrente ou uma gravação interrompida **não** autoriza avançar por
-suposição. Com journal PENDING e HEAD ainda no seu commit, a resposta é
+`RECONCILE_RECOVERED_REMOTE_WRITES` sem repetir upload/ação. A
+reconciliação de uploads já realizados aceita `COMPLETE_OPERATION` do
+`operation_id` original **somente** quando todo `head_chain[]` atribui
+cada commit àquela operação e confronta `{parent, head, files}` com
+`result.github_commits[]`, além dos bytes baixados dos provedores.
+Em caso de conflito de autoria, rejeite o recibo: um commit concorrente
+não pode ser apropriado como execução da operação. Com journal PENDING e HEAD ainda no seu commit, a resposta é
 `EXECUTE_RECOVERED_PENDING_OPERATION`: reutilize `operation_id` e
 `pending_sync` do commit verificado. Com journal COMPLETED e confirmação
 ainda pendente, `ACK_RECOVERED_COMPLETED_JOURNAL`: faça os GETs finais e
