@@ -200,13 +200,33 @@ def capability_preflight(receipts, *, reference=None, require_native=True):
     require(isinstance(receipts, dict) and receipts.get("schema") ==
             SCHEMA + "_CAPABILITY_1", "real capability receipt required")
     verified = {}
-    # Unrendered art cannot be an initial prerequisite; no API key handshake.
+    # Preflight never accepts verified:true + a prose claim as a capability.
+    # The host must actually perform connector read/write and materialize its
+    # readback bytes. This validates bytes; only the host can attest that the
+    # connector call itself took place (no in-Python network access).
     for item in ("github_read", "github_write", "web_research", "user_delivery"):
         data = receipts.get(item)
-        verified[item] = (isinstance(data, dict) and
-                          data.get("verified") is True and
-                          isinstance(data.get("evidence"), str) and
-                          len(data["evidence"]) >= 12)
+        proof = data.get("proof") if isinstance(data,dict) else None
+        ok = isinstance(proof,dict) and data.get("verified") is True
+        if ok:
+            p = Path(proof.get("local_path",""))
+            digest_claim = proof.get("sha256","")
+            ok = (p.is_file() and isinstance(digest_claim,str) and
+                  SHA64.fullmatch(digest_claim) is not None and
+                  digest(p) == digest_claim)
+        if ok and item in ("github_read","github_write"):
+            raw = p.read_bytes()
+            git_sha = hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
+            ok = (proof.get("blob_sha") == git_sha and
+                  bool(re.fullmatch(r"[0-9a-f]{40}",proof.get("commit_sha",""))))
+            if item == "github_write":
+                ok = ok and proof.get("readback") is True
+        if ok and item == "web_research":
+            ok = (isinstance(proof.get("source_url"),str) and
+                  urlparse(proof["source_url"]).scheme in ("http","https"))
+        if ok and item == "user_delivery":
+            ok = proof.get("delivered_to_chat") is True
+        verified[item] = bool(ok)
     if require_native:
         proof=receipts.get("native_image_proof")
         found=False
