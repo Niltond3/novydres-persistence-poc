@@ -12,7 +12,12 @@ urbanísticas próprias.
    Git blob SHA e que o cache corresponde à árvore efetivamente lida no GitHub.
    Cache divergente deve ser reconstruído; nunca usado como autoridade.
 3. Materializar no Python os bytes reais; usar `web_bridge.verify_files`
-   e `run_web(argv=[...], file_manifest=..., root=..., source_commit=...)`.
+   e `run_web(argv=[...], file_manifest=..., root=..., source_commit=..., remote_blobs=...)`.
+   `remote_blobs` é mapa independente `caminho → Git blob SHA` da árvore do
+   commit lida **pelo conector GitHub**; não aceitar cópia dos SHA do próprio
+   manifesto como prova de origem. Todos os `.py` locais, inclusive transitivos,
+   devem estar presentes e verificados. Recusar módulos Python pré-carregados
+   sem selo da mesma revisão e ZIP com arquivo faltante, extra ou duplicado.
    O Python não tem conexão direta ao GitHub/Drive; ações remotas cabem ao agente.
 4. Após cada ação, gravar/consultar recibos pelo conector e confirmar SHA
    por download. Para Git, usar escrita CAS com HEAD esperado, reler commit
