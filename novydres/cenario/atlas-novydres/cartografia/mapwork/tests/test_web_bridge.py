@@ -314,3 +314,22 @@ def test_host_exchange_supports_real_github_create_file_commit_only_response(tmp
             pending_sync={"branch":"mapwork/noncanon"},
             provider_results=[receipt],github_commits=github_commits,
             arg_updates={},output_path=tmp_path/"exchange.json")
+
+
+def test_host_exchange_materializer_does_not_preload_unverified_controller(tmp_path,monkeypatch):
+    source=tmp_path/"intent.json"; downloaded=tmp_path/"github-get.json"
+    body=b'{"test_only":true}'
+    source.write_bytes(body);downloaded.write_bytes(body)
+    blob=w.git_blob_sha(body)
+    monkeypatch.delitem(sys.modules,"orchestration",raising=False)
+    output=tmp_path/"exchange.json"
+    w.materialize_host_exchange(
+        operation={"operation_id":"independent","status":"PENDING",
+                   "action":"AGENT_RESOLVE_AND_RECORD_INTENT"},
+        pending_sync={"branch":"technical"},
+        provider_results=[{"provider":"github","path":str(source),
+            "readback_path":str(downloaded),"repo_path":"sessions/intent.json",
+            "upload":{"sha":blob},"readback":{"sha":blob}}],
+        github_commits=[],arg_updates={"intent":str(source)},output_path=output)
+    assert "orchestration" not in sys.modules
+    assert json.loads(output.read_text())["result"]["operation_id"]=="independent"
