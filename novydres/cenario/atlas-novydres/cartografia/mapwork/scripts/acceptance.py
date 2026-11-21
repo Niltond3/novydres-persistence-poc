@@ -194,10 +194,21 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
                 return _stage(stage, "REGENERATE_DIFFERENT_CANDIDATE",
                               ["geometry or preview was reused, not materially regenerated"],
                               iteration=ordinal, accepted=accepted)
-            if prev is not None and prev.get("verdict") == "PASS":
-                return _stage(stage, "REPAIR_ACCEPTANCE_LEDGER",
-                              ["no attempts allowed after accepted stage"], iteration=ordinal,
-                              accepted=accepted)
+            # Declared PASS is not independently verified. An invalid one
+            # must never prevent a later repaired candidate in the same stage.
+            if attempt.get("request_id"):
+                original={k:v for k,v in attempt.items()
+                          if k not in ("iteration","parent_attempt_sha256",
+                                      "attempt_sha256","payload_sha256",
+                                      "verified_verdict")}
+                expected_parent=prev.get("attempt_sha256") if prev else None
+                if (attempt.get("parent_attempt_sha256") != expected_parent or
+                    attempt.get("payload_sha256") != controller.digest(original) or
+                    attempt.get("attempt_sha256") != controller.digest({
+                       k:v for k,v in attempt.items() if k != "attempt_sha256"})):
+                    return _stage(stage,"REPAIR_ACCEPTANCE_LEDGER",
+                                  ["candidate hash chain or payload corrupted"],
+                                  iteration=ordinal,accepted=accepted)
             prev = attempt
         last = attempts[-1]
         problems = []
@@ -313,14 +324,20 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
                 len(last["repair_plan"].strip()) < 30):
             problems.append("FAIL must list failed checks, concrete findings and repair plan")
         if problems:
-            return _stage(stage, "REPAIR_UNVERIFIED_CANDIDATE",
+            action = controller.progress_policy(attempts)
+            if action == "REPAIR_AND_REGENERATE":
+                action = "REPAIR_UNVERIFIED_CANDIDATE"
+            return _stage(stage, action,
                           problems, iteration=len(attempts), accepted=accepted,
-                          latest={"verdict": verdict, "failed": failed})
+                          latest={"declared_verdict": verdict,
+                                  "verified_verdict": "FAIL", "failed": failed})
         if verdict == "FAIL":
             action = controller.progress_policy(attempts)
             return _stage(stage, action, failed, iteration=len(attempts),
                           accepted=accepted,
-                          latest={"verdict": "FAIL", "repair_plan": last["repair_plan"],
+                          latest={"declared_verdict": "FAIL",
+                                  "verified_verdict": "FAIL",
+                                  "repair_plan": last["repair_plan"],
                                   "findings": last["findings"]})
         accepted_candidate_pairs.add(pair)
         accepted.append(stage)
