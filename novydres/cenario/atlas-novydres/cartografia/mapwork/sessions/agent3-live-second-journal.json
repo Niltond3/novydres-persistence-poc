@@ -378,11 +378,42 @@
     },
     {
       "action": "RECONCILE_SYNTHETIC_TOPOLOGY",
-      "artifacts": [],
-      "entry_sha256": "413a8c6b48054541823a8ddb93aaf5c0daeb745f9faeeba7288ec315a1f773cf",
+      "arg_updates": {
+        "spatial": "/mnt/data/agent3-continue/topology-result/topology-candidate.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "4e31b2691bc189f392d912d5f41e4183f4e815e5",
+          "kind": "other",
+          "path": "/mnt/data/agent3-continue/topology-result/topology-candidate.json",
+          "provider": "github",
+          "remote_id": "4e31b2691bc189f392d912d5f41e4183f4e815e5",
+          "sha256": "48ecd8909578f8eadcdae4babd9f590dc5ab32494c36e24abab1ab78ed899ba9"
+        },
+        {
+          "blob_sha": "9a13271500525e9b7d59f609b0666a1badbf481e",
+          "kind": "other",
+          "path": "/mnt/data/agent3-continue/topology-result/topology-diagnostic.json",
+          "provider": "github",
+          "remote_id": "9a13271500525e9b7d59f609b0666a1badbf481e",
+          "sha256": "e5264b0894c3069091850f7350e6d8a944af7992a401896cddf684cc63b11ec4"
+        },
+        {
+          "blob_sha": "ef9ec5d18c36a3a4f2fd4ef64b1c4fa3a4e2ce64",
+          "kind": "other",
+          "path": "/mnt/data/agent3-continue/topology-result/topology-zone-mask.png",
+          "provider": "github",
+          "remote_id": "ef9ec5d18c36a3a4f2fd4ef64b1c4fa3a4e2ce64",
+          "sha256": "e7bdc527afd649f51950b4524b0c15aecaf7f484448a6cdfcdc2ecd9bba0f5a7"
+        }
+      ],
+      "entry_sha256": "08adf93ea73d0b7c8cbd00ba7f58457e56502a3dc1459ee01fc7d87a4da00ea5",
       "lease_head": "c801ac6e77482c362c7c904bdf04e2d7169732df",
+      "operation_head": "fdc92d28527c6fd364bc75a7c684482511eef10f",
       "operation_id": "471988aeada677f4695a45cb9d25919ab8715c6ab074cc76bed0b558600728a4",
       "parent_sha256": "d169d132161ac6cb951c83c4eea290a9064a0c0b12209e1f159ba4d783421385",
+      "pending_head": "caa12e978c302c63a6f32a63f789e5647a91a03f",
+      "receipt_sha256": "b1976b5ddf2da61c886a66cbcadc823032994b47f882fe912dfdfbcc50c71eb2",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -418,7 +449,7 @@
         "target": "synthetic-rail-overpass-agent3"
       },
       "state_sha256": "a55607faea02b260f33f2724f1ad511f7cfdb10d6260a72f92576d588656c1db",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
