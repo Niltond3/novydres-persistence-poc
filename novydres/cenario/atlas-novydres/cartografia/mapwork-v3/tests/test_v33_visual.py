@@ -95,6 +95,20 @@ def test_native_preflight_not_a_future_api_handshake(tmp_path):
     for k in ("github_read","github_write","web_research","user_delivery",
               "native_image_generation","native_image_materialization"):
         caps[k]={"verified":True,"evidence":"I affirm the image tool is ready"}
+    # Plain prose is deliberately NOT a real Web connector readback.
+    assert set(c.capability_preflight(caps,require_native=False)["missing"])=={
+        "github_read","github_write","web_research","user_delivery"}
+    import hashlib
+    source=tmp_path/"github-readback.bin"
+    source.write_bytes(b"bytes independently retrieved from host connector")
+    raw=source.read_bytes()
+    git_sha=hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
+    proof={"local_path":str(source),"sha256":c.digest(source),
+           "blob_sha":git_sha,"commit_sha":"a"*40,
+           "readback":True,"source_url":"https://example.org/source",
+           "delivered_to_chat":True}
+    for k in ("github_read","github_write","web_research","user_delivery"):
+        caps[k]={"verified":True,"proof":dict(proof)}
     assert c.capability_preflight(caps,require_native=False)["missing"]==[]
     assert set(c.capability_preflight(caps)["missing"])=={
         "native_image_generation","native_image_materialization"}
