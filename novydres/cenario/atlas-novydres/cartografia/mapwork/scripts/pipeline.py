@@ -24,6 +24,7 @@ import acceptance
 import visual
 import flow
 import orchestration as controller
+import topology
 
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT"
@@ -541,7 +542,33 @@ def verify_composition_contract(composition,zones,cfg,base,assets,before,protect
 
 
 def run(args):
-    """Only entrypoint: host/semantic orchestration first, shared urban core second."""
+    """One entrypoint: classified topology candidate repair or verified orchestration."""
+    if getattr(args, "topology_source", None):
+        if any((getattr(args,"execute",False),getattr(args,"record_attempt",None),
+                getattr(args,"recipe_unit",None),getattr(args,"audit_unit",None))):
+            raise core.Invalid("topology-only candidate operation cannot execute art or record acceptance")
+        if not all((args.topology_classifications,args.topology_out,args.district)):
+            raise core.Invalid("topology repair requires --district, --topology-classifications and --topology-out")
+        candidate=core.load(args.topology_source)
+        if candidate.get("fixture_mode") is not True:
+            core.fail(candidate.get("stage") in ("INF-01","INF-02") and
+                      candidate.get("target")==args.district,
+                      "topology candidate must identify district and INF-01/INF-02 stage")
+        cfg=core.load(core.CONFIG)
+        report=topology.reconcile_file(
+            args.topology_source,args.topology_classifications,args.topology_out,
+            expected_reference_sha=(None if candidate.get("fixture_mode") is True else
+                                    cfg["reference"]["sha256"]),
+            original_reference=args.reference)
+        return {"schema":SCHEMA,"phase":"TOPOLOGY_RECONCILIATION",
+                "target":args.district,"stage":candidate.get("stage"),
+                "status":report["status"],
+                "next_action":("CLASSIFY_AND_REVIEW_REMAINING_CROSSINGS" if
+                               report["unresolved_crossings"] else
+                               "BUILD_REAL_INFRA_CANDIDATE_AND_INDEPENDENTLY_AUDIT"),
+                "blockers":report["unresolved_crossings"],
+                "audit":report,"publication_authorized":False,
+                "canonical_state_changed":False}
     result = flow.run(args, _run_verified)
     result["execution"] = controller.execution_directive(result)
     return result
@@ -774,6 +801,9 @@ def main(argv=None):
     p.add_argument("--checkpoint",help="write deterministic resumable checkpoint JSON")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed  request JSON")
     p.add_argument("--record-attempt",help="record one real candidate, then evaluate the same stage")
+    p.add_argument("--topology-source",help="candidate spatial geometry/transport JSON; never an accepted stage")
+    p.add_argument("--topology-classifications",help="agent-reviewed per-crossing observations")
+    p.add_argument("--topology-out",help="candidate-only topology and diagnostic output directory")
     p.add_argument("--acceptance-ledger",
                    help="hash-bound, self-reviewed infrastructure candidate rounds; defaults to zone ledger")
     p.add_argument("--scope-index",help="exact canonical subject/index snapshot")
@@ -820,7 +850,8 @@ def main(argv=None):
                             ("RESTORE_REQUIRED_HOST_TOOLS", "ASK_OWNER_ONE_DECISION"),
                           "result":result},ensure_ascii=False,indent=2))
         return 2 if outcome == "FAIL" else 0
-    except (core.Invalid,urban.ContractError,contract.Blocked,KeyError,ValueError,OSError) as exc:
+    except (core.Invalid,urban.ContractError,contract.Blocked,
+            topology.TopologyInvalid,KeyError,ValueError,OSError) as exc:
         print(json.dumps({"status":"FAIL","error":str(exc)},ensure_ascii=False),file=sys.stderr)
         return 2
 
