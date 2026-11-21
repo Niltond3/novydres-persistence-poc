@@ -33,7 +33,7 @@ UNDERGROUND_CLASSES = {"metro", "heat_pipe", "gas_pipe", "utility_duct"}
 UTILITY_CLASSES = UNDERGROUND_CLASSES | {"aqueduct"}
 EDGE_CLASSES = ROAD_CLASSES | RAIL_CLASSES | TRAM_CLASSES | WATER_CLASSES | UTILITY_CLASSES
 JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing", "tram_junction", "tram_stop", "terminal", "portal", "rail_station", "freight_terminal", "overpass", "underpass", "metro_station", "utility_hub", "aqueduct_gate", "heat_exchange", "gas_terminal"}
-CROSSING_CLASSES = {"at_grade", "grade_separated"}
+CROSSING_CLASSES = {"at_grade", "grade_separated", "no_connection"}
 LANDUSE_CLASSES = {"urban", "industrial", "natural", "water", "protected"}
 MORPH_CLASSES = {"historic", "worker", "industrial", "technical", "mixed", "waterfront"}
 SCHEMA = "NOVYDRES_MAPWORK_TERRITORY_NETWORK"
@@ -190,6 +190,15 @@ def validate_transport(transport, width, height):
     shared endpoint node or a tram shares the exact carriageway corridor.
     """
     bynode,byedge=_validate_nodes_edges(transport,width,height)
+    topo=transport.get("topology_audit")
+    if topo is not None:
+        require(isinstance(topo,dict) and topo.get("status")=="RECONCILED_NOT_ACCEPTED",
+                "unresolved classified crossings block network promotion")
+        import topology
+        require(isinstance(transport.get("topology_source"),dict) and
+                topology.digest(transport["topology_source"])==topo.get("source_network_sha256") and
+                topology.digest({k:v for k,v in transport.items() if k!="topology_audit"})==
+                topo.get("result_network_sha256"),"topological audit evidence changed")
     crossings=transport.get("crossings",[])
     seen=set()
     for x in crossings:
@@ -203,9 +212,25 @@ def validate_transport(transport, width, height):
         if x["kind"]=="grade_separated":
             require(a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from")),
                     f"{x['id']}: grade separation requires distinct levels")
+        elif x["kind"]=="no_connection":
+            require(not ({a["from"],a["to"]}&{b["from"],b["to"]}),
+                    f"{x['id']}: disconnected crossing cannot share a node")
+            if a.get("level",a.get("level_from"))==b.get("level",b.get("level_from")):
+                require(isinstance(x.get("barrier_evidence"),str) and
+                        len(x["barrier_evidence"].strip())>=12,
+                        f"{x['id']}: no-connection at same level needs barrier evidence")
         else:
             require(a.get("level",a.get("level_from"))==b.get("level",b.get("level_from")),
                     f"{x['id']}: at-grade crossing must share level")
+            if ((a["class"] in RAIL_CLASSES|{"metro"} or b["class"] in RAIL_CLASSES|{"metro"}) or
+                a.get("protected_structure_id") or b.get("protected_structure_id")):
+                authority=x.get("authority")
+                require(isinstance(authority,dict) and authority.get("status")=="APPROVED" and
+                        isinstance(authority.get("decision_id"),str) and
+                        bool(authority["decision_id"].strip()) and
+                        isinstance(authority.get("evidence"),str) and
+                        len(authority["evidence"].strip())>=12,
+                        f"{x['id']}: rail/protected junction requires owner authority")
             require(x.get("junction_id") in bynode,f"{x['id']}: at-grade junction must have a node")
             require(point_close(x["point"],bynode[x["junction_id"]]["point"]),
                     f"{x['id']}: crossing does not align junction")
@@ -239,11 +264,6 @@ def validate_transport(transport, width, height):
         if a["id"]==b["id"]:
             continue
         pt=seg_cross(pa,qa,pb,qb)
-        underground_grade=(a["class"] in UNDERGROUND_CLASSES or
-                           b["class"] in UNDERGROUND_CLASSES)
-        different_grade=a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from"))
-        if underground_grade and different_grade:
-            continue
         if pt is None:
             overlap=collinear_overlap(pa,qa,pb,qb)
             if overlap is None:
@@ -274,6 +294,12 @@ def validate_transport(transport, width, height):
         if desc["kind"]=="at_grade":
             require(bynode[desc["junction_id"]]["level"]==a.get("level",a.get("level_from")),
                     f"{desc['id']}: junction level mismatch")
+        if desc["kind"]=="grade_separated":
+            require(a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from")),
+                    f"{desc['id']}: grade-separated crossing has identical levels")
+        if desc["kind"]=="no_connection":
+            require(not ({a["from"],a["to"]}&{b["from"],b["to"]}),
+                    f"{desc['id']}: disconnected crossing has shared node")
     return {
         "nodes":len(bynode),"edges":len(byedge),
         "declared_crossings":len(crossings),"detected_nonnode_crossings":len(actual),
