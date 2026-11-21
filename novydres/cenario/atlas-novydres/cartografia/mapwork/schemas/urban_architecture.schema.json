@@ -250,7 +250,8 @@
               "kind": {
                 "enum": [
                   "grade_separated",
-                  "at_grade"
+                  "at_grade",
+                  "no_connection"
                 ]
               },
               "point": {
@@ -258,6 +259,35 @@
               },
               "junction_id": {
                 "type": "string"
+              },
+              "barrier_evidence": {
+                "type": "string",
+                "minLength": 12
+              },
+              "classification_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "authority": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "decision_id",
+                  "evidence"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "APPROVED"
+                  },
+                  "decision_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 12
+                  }
+                }
               }
             }
           }
