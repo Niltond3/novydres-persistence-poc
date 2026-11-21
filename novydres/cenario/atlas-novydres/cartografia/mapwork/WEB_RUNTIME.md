@@ -103,3 +103,43 @@ foi demonstrado em `sessions/host-io-transport-evidence.json`. Esse ZIP
 é apenas um cache técnico opcional: **GitHub Actions não é requisito de
 execução**. O teste não constitui demonstração de imagem nativa, classificação
 visual, nem conclusão do ciclo autônomo.
+
+## Conversão operacional do retorno de conectores
+
+Após cada operação externa do ChatGPT Web, usar
+`web_bridge.materialize_host_exchange(operation=..., pending_sync=...,
+provider_results=..., github_commits=..., arg_updates=..., output_path=...)`
+para montar automaticamente o JSON de `--host-exchange`. O mesmo
+`operation_id` emitido pela entrada canônica deve ser mantido. O adaptador
+é **puro**: não chama conectores e não cria uma pipeline alternativa.
+
+Cada `provider_results[]` recebe `provider`, `path` (bytes originais),
+`readback_path` (outro arquivo produzido por um GET real),
+`upload` (resposta do provedor), `readback` (metadados do GET) e
+`kind` opcional. GitHub exige também `repo_path`, `upload.sha` e
+`readback.sha`. Drive exige `upload.success=true`,
+`upload.id=readback.id`. O adaptador extrai `remote_id`,
+Git blob e SHA-256 dos bytes reais em vez de aceitar hashes de recibos
+montados à mão. Geração exige PNG verdadeiro e inspeção visual separada;
+o controlador original faz as demais verificações.
+
+**Prova de transporte real:** a geração nativa produziu
+`mapwork-noncanon-native-io-test-20261121.png` (1536×1024,
+3.727.755 bytes, SHA-256
+`c00f079f312be5b987f24a3546df9ca73e761273975ca3dbbff0ff7baf7166cd`);
+o conector Google Drive aceitou o arquivo
+`1oC3mcjsYmQzqdAa3--rqfNDOCYlPCxf2` e um GET independente
+materializou bytes idênticos. Foi montada e validada no controlador uma
+troca técnica contendo esta imagem e um parecer visual FAIL vinculado ao
+mesmo hash, armazenado em
+`sessions/agent3-native-image-review.json`. A troca foi um
+**ensaio de transporte**, não um journal CAS remoto concluído nem um
+aceite de INF-01. Não imputar a este ensaio a passagem de gates.
+A pesquisa técnica em duas fontes reais está em
+`sessions/agent3-technical-research.json`, sem efeito editorial.
+
+Esta sessão não demonstrou retomada em outra conversa nem execução
+completa de pesquisa → classificação → topologia → geração → reprovação
+→ correção → replanejamento → aceite. Não transferir ao Agente 4
+enquanto esses passos não ocorrerem no próprio controlador com
+recibos de ferramentas reais e nova evidência material.
