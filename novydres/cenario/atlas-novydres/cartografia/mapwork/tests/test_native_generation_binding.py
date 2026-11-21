@@ -116,6 +116,10 @@ def test_synthetic_pipeline_blocks_without_reference_then_audits_bound_failure(t
     assert flow.run(args,None)["next_action"]=="MATERIALIZE_NATIVE_EDIT_HANDOFF"
     handoff_file=tmp_path/"handoff.json";handoff_file.write_text(json.dumps(h))
     args.native_handoff=str(handoff_file)
+    assert flow.run(args,None)["next_action"]=="RECOMPOSE_NATIVE_MASK"
+    composed_file=tmp_path/"composed.json"
+    composed_file.write_text(json.dumps(inputs["composed-image"]))
+    args.native_composed_receipt=str(composed_file)
     assert flow.run(args,None)["next_action"]=="AGENT_INSPECT_IMAGE"
     review_file=tmp_path/"review.json";review_file.write_text(json.dumps(review))
     args.visual_review=str(review_file)
