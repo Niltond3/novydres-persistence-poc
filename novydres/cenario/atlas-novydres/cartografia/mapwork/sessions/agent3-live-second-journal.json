@@ -67,11 +67,26 @@
     },
     {
       "action": "PROVE_HOST_CAPABILITIES",
-      "artifacts": [],
-      "entry_sha256": "27bf6b95d3f749b902e7d903ecd95ecdc4b1ca4b8556d1161a45683ccfae6a20",
+      "arg_updates": {
+        "capabilities": "/mnt/data/agent3-recovery-evidence/host-capabilities.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "bab6179084875181782b36213f964d34a1132ac6",
+          "kind": "capability",
+          "path": "/mnt/data/agent3-recovery-evidence/host-capabilities.json",
+          "provider": "github",
+          "remote_id": "bab6179084875181782b36213f964d34a1132ac6",
+          "sha256": "b3b171d30ac77069e172ac7ef8fc72accf829e4d284c299e59c3777ef7aa5994"
+        }
+      ],
+      "entry_sha256": "f869eba52931f7712c3f731c50dd2d9fd5c129eb5e8ef476aab6ab46c6082d25",
       "lease_head": "147e7fea54d233c4b9c0b04553115038b5af8aa4",
+      "operation_head": "06a33600785d3b9d3164eefd4c897876924e7a8e",
       "operation_id": "d79e3f155b9c69e132479dda9aa80600150ff78500eeb435500c414ff44baf97",
       "parent_sha256": "1ae2514295e1ab999b4188fb8919865a9fbf5f6fc98246935e112872a3b876c7",
+      "pending_head": "633cb6bfa60c972162063693ff2e3d7945a149ab",
+      "receipt_sha256": "375e7de5b12562f075f095fd9f9c5422c597c14cadacbcf3d3a0edeadeb302d9",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -106,7 +121,7 @@
         "target": "sulfok"
       },
       "state_sha256": "3e89b2ab44c8ba1067650eea0b504e96c8ec49a687901a6ea0a295fa7e59bd7c",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
