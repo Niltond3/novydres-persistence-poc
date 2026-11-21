@@ -5,14 +5,14 @@
   "stage": "INF-01",
   "status": "FAIL",
   "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE",
-  "latest_diagnostic": "R3",
+  "latest_diagnostic": "R5",
   "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
   "criteria_sha256": "d444640711857c8eb49aff18400b0bb431766b8402c946f0fccda888551785b3",
   "ledger_path": "zones/cidade-velha/acceptance-ledger.json",
   "official_accepted_stages": [],
   "official_attempt_count": 0,
-  "historical_diagnostic_count": 3,
-  "confirmed_failure": "untyped crossing/proximity: KW2-W01 / KW2-W13",
+  "historical_diagnostic_count": 5,
+  "confirmed_failure": "217 untyped crossings remain after two corrected junctions; provisional zone mask remains unapproved",
   "allowed_lots": false,
   "allowed_pois": false,
   "allowed_native_images": false,
@@ -20,5 +20,11 @@
   "publication_authorized": false,
   "canonical_state_changed": false,
   "source_commit": "8acdf79cdbc8a3a4622accdd5c43586a4371336e",
-  "resume_instructions": "Materialize current source+U02+R3 ZIP from GitHub/Drive, verify hashes, repair geometry and preview as R4, inspect mathematically/visually, record via pipeline --record-attempt and reenter."
+  "resume_instructions": "Read R3/R4/R5 diagnostics and Drive bundle, verify SHA. Continue INF-01 via official pipeline --record-attempt only after complete real gate evidence. No acceptance or INF-02.",
+  "last_remote_diagnostic_receipt": {
+    "drive_bundle_id": "1K6rVM8iEyYNL7peFzpeKxqAQZ1yXSMM6",
+    "bundle_sha256": "be9e4628500ceffbf02b0533c1856f9825dde2ec3012b2614b174584ebc3f936",
+    "readback_verified": true,
+    "official_attempt": false
+  }
 }
