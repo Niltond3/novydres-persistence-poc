@@ -96,7 +96,7 @@
     "end_art": false,
     "canon": false
   },
-  "next_action": "R2 street geometry requires physical roadbed and grade review; validate crossings, complete landuse/POI access/seams and use only official V31 pipeline before art",
+  "next_action": "INF-01 iterative candidate generation and self-reviewed repairs before network/city block promotion",
   "metro_v33_option_a": {
     "approval_id": "KW-PROP-006",
     "status": "APPROVED_EDITORIAL_WITH_TECHNICAL_RESTRICTIONS",
@@ -217,5 +217,31 @@
     "POI_point_radius_3px_conflicts": 0,
     "full_gis_validation_passed": false,
     "art_generation_authorized": false
+  },
+  "infrastructure_acceptance_v33": {
+    "contract": "docs/infra-acceptance-v33.md",
+    "contract_sha256": "6d43248f0ab8db3edfeb2d57276371de3538a9aca70d81eaa87ab5a24d02b1e9",
+    "validator": "scripts/v33_acceptance.py",
+    "integrated_in": "scripts/v33_flow.py via scripts/pipeline.py run",
+    "ledger": "zones/cidade-velha/acceptance-ledger-v33.json",
+    "planned_stages": [
+      "INF-01",
+      "INF-02",
+      "INF-03",
+      "INF-04",
+      "INF-05",
+      "INF-06",
+      "INF-07",
+      "URB-08"
+    ],
+    "criterion_count": 32,
+    "passing_stages": 0,
+    "current_stage": "INF-01",
+    "current_action": "GENERATE_AND_AUDIT_CANDIDATE",
+    "preserve_prior_R1_R2_as_rejected": true,
+    "owner_technical_approval_required": false,
+    "model_visual_audit_completed_for_new_criteria": false,
+    "completed_end_to_end_workflow_test": false,
+    "generation_of_lots_or_pois_authorized": false
   }
 }
