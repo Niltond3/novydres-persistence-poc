@@ -261,12 +261,18 @@ def run(args, core_run):
             if not set(peers).issubset(receipts):
                 return _state("IMAGE_VISUAL_REVIEW","MATERIALIZE_NEIGHBOR_IMAGES_AND_INSPECT",
                               sorted(set(peers)-set(receipts)),intent=intent,audit=audited)
-            visual.validate_unit_visual_review(
-                reviewed,unit_id=uid,image_sha256=audited["image_sha256"],
-                mask_sha256=audited["mask_sha256"],
-                reference_sha256=contract.digest(args.reference),
-                spatial_sha256=contract.digest(path),
-                work_units=report["work_units"],neighbor_receipts=receipts)
+            try:
+                visual.validate_unit_visual_review(
+                    reviewed,unit_id=uid,image_sha256=audited["image_sha256"],
+                    mask_sha256=audited["mask_sha256"],
+                    reference_sha256=contract.digest(args.reference),
+                    spatial_sha256=contract.digest(path),
+                    work_units=report["work_units"],neighbor_receipts=receipts)
+            except (contract.Blocked, ValueError, OSError) as exc:
+                # A declared PASS that failed verification is another failed
+                # candidate, not a permanent exception or stage acceptance.
+                audited={"technical_status":"FAIL",
+                         "failure":"invalid visual PASS: "+str(exc)}
         elif reviewed is not None:
             contract.require(reviewed.get("by")=="AGENT" and
                         reviewed.get("status") in ("PASS","FAIL"),
