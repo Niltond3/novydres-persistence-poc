@@ -599,6 +599,25 @@ def _verify_cold_recovery(path, session, evidence):
     lease = last.get("lease_head") if last["status"] == "PENDING" else last.get("operation_head")
     if proof.get("commit_parent") != lease:
         raise ValueError("cold recovery journal commit parent/lease mismatch")
+    # A commit containing the journal is not necessarily the *current* HEAD:
+    # uploads can advance the branch after PENDING, or a concurrent writer can
+    # move it. Require a second independent branch ref read and a chain of
+    # inspected Git commits. Do not silently interpret an old commit as HEAD.
+    current = proof["head"]
+    links = evidence.get("head_chain", [])
+    if not isinstance(links, list):
+        raise ValueError("cold recovery GitHub HEAD ancestry missing")
+    for link in links:
+        if (not isinstance(link, dict) or
+                link.get("parent") != current or
+                not HEX40.fullmatch(str(link.get("commit_sha", ""))) or
+                link.get("head") != link["commit_sha"] or
+                link["head"] == current or
+                link.get("journal_blob_sha") != expected_blob):
+            raise ValueError("cold recovery intervening Git HEAD chain invalid")
+        current = link["head"]
+    if evidence.get("current_ref_head") != current:
+        raise ValueError("cold recovery latest GitHub HEAD differs from verified chain")
     # Validate all previous completed material bytes. The original path in
     # the journal can point to a different computer/session and is NOT opened.
     receipts = evidence.get("artifact_readbacks")
@@ -652,6 +671,13 @@ def _verify_cold_recovery(path, session, evidence):
     if consumed != set(expected):
         raise ValueError("cold recovery incomplete: not all remote artifacts re-fetched")
     return aliases
+
+
+def _recovery_has_intervening_writes(recovery_path):
+    if recovery_path is None:
+        return False
+    proof = json.loads(Path(recovery_path).read_text(encoding="utf-8"))
+    return bool(proof.get("head_chain"))
 
 
 def _recovered_updates(updates, aliases):
@@ -730,6 +756,15 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
         if item.get("status") != "COMPLETED" or not HEX40.fullmatch(
                 str(item.get("pending_head", ""))):
             raise ValueError("unfinished predecessor or unconfirmed GitHub journal")
+    if _recovery_has_intervening_writes(recovery_path):
+        # A provider write may already exist for the original operation_id,
+        # or a concurrent writer may own the new HEAD. Neither replay nor
+        # a new journal CAS is safe until the host identifies those writes.
+        return {"status":"AWAITING_HOST_SYNC",
+                "next_action":"RECONCILE_RECOVERED_REMOTE_WRITES",
+                "operation_id":last["operation_id"],
+                "current_ref_head":recovery["current_ref_head"],
+                "publication_authorized":False}
     if last and last["status"] == "PENDING":
         if exchange is None:
             return {"status":"AWAITING_HOST_SYNC",
