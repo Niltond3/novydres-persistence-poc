@@ -211,3 +211,130 @@ def test_host_exchange_is_not_a_false_remote_checkpoint(capsys,tmp_path):
     assert payload["status"]=="BLOCKED"
     assert payload["next_action"]=="SYNC_PENDING_JOURNAL"
     assert payload["retryable"] is True
+
+
+def cold_proof(session, journal, readback_path, *, head, parent, artifacts=()):
+    return {"schema":"NOVYDRES_MAPWORK_COLD_RECOVERY",
+            "branch":session["branch"],
+            "journal_repo_path":session["journal_repo_path"],
+            "source_commit":session["source_commit"],
+            "initial_head":session["initial_head"],
+            "journal_readback_path":str(readback_path),
+            "journal_commit":{"branch":session["branch"],
+                "repo_path":session["journal_repo_path"],
+                "head":head,"ref_head":head,"commit_sha":head,
+                "commit_parent":parent,"tree_blob_sha":blob(journal.read_bytes()),
+                "blob_sha":blob(journal.read_bytes())},
+            "artifact_readbacks":list(artifacts)}
+
+
+def test_cold_recovery_pending_from_other_session_reuses_original_operation(tmp_path):
+    journal, artifact, invoke = setup(tmp_path)
+    op = invoke()["operation"]
+    second = tmp_path/"cold-host"
+    second.mkdir()
+    cold_journal = second/"restored-journal.json"
+    cold_journal.write_bytes(journal.read_bytes())
+    provider_get = second/"journal-provider-get.json"
+    provider_get.write_bytes(cold_journal.read_bytes())
+    doc = cold_proof(json.loads(cold_journal.read_text()),
+                     cold_journal,provider_get,head="b"*40,parent="a"*40)
+    recovery_file = second/"cold-proof.json"
+    recovery_file.write_text(json.dumps(doc))
+    def run():
+        return {"next_action":"MATERIALIZE_INTENT", "phase":"INTENT",
+                "publication_authorized":False,"canonical_state_changed":False}
+    def apply(updates, validate_only=False):
+        assert updates == {}
+    result = o.run_host_exchange(
+        run,cold_journal,session_key="fixed-session",source_commit="a"*40,
+        branch="mapwork/integration",expected_head="a"*40,
+        journal_repo_path="sessions/host-io-fixture.json",
+        recovery_path=recovery_file,apply_arguments=apply)
+    assert result["next_action"]=="EXECUTE_RECOVERED_PENDING_OPERATION"
+    assert result["operation"]["operation_id"]==op["operation_id"]
+    assert json.loads(cold_journal.read_text())["steps"][0]["status"]=="PENDING"
+    doc["journal_commit"]["commit_parent"]="f"*40
+    recovery_file.write_text(json.dumps(doc))
+    with pytest.raises(ValueError,match="parent/lease"):
+        o.run_host_exchange(
+            run,cold_journal,session_key="fixed-session",source_commit="a"*40,
+            branch="mapwork/integration",expected_head="a"*40,
+            journal_repo_path="sessions/host-io-fixture.json",
+            recovery_path=recovery_file,apply_arguments=apply)
+
+
+def test_cold_recovery_completed_restores_portable_artifact_arguments(tmp_path):
+    journal,artifact,invoke=setup(tmp_path)
+    op=invoke()["operation"]
+    pending=sync(tmp_path,journal,"a"*40,"b"*40)
+    evidence=receipt(tmp_path,artifact,op["operation_id"])
+    assert invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
+                   "pending_sync":pending,"result":evidence})["next_action"]=="SYNC_COMPLETED_JOURNAL"
+    second=tmp_path/"fresh-session"
+    second.mkdir()
+    cold=second/"journal.json"
+    cold.write_bytes(journal.read_bytes())
+    old=artifact.read_bytes()
+    artifact.unlink()  # The previous host filesystem is no longer available.
+    new_artifact=second/"restored-intent.json"
+    new_artifact.write_bytes(old)
+    get=second/"provider-get-intent.json"
+    get.write_bytes(old)
+    journal_get=second/"provider-get-journal.json"
+    journal_get.write_bytes(cold.read_bytes())
+    recovery=cold_proof(json.loads(cold.read_text()),cold,journal_get,
+        head="c"*40,parent="d"*40,artifacts=[{
+            "original_path":str(artifact),"materialized_path":str(new_artifact),
+            "readback_path":str(get),"provider":"github",
+            "remote_id":blob(old),"sha256":hashlib.sha256(old).hexdigest()}])
+    recovery_file=second/"recovery.json"
+    recovery_file.write_text(json.dumps(recovery))
+    state={"intent":None}
+    def run():
+        return {"next_action":"CHECKPOINT" if state["intent"] else "MATERIALIZE_INTENT",
+                "phase":"INTENT","publication_authorized":False,
+                "canonical_state_changed":False}
+    def apply(updates,validate_only=False):
+        if not validate_only:
+            state.update(updates)
+    def call(exchange=None):
+        exchange_path=None
+        if exchange is not None:
+            exchange_path=second/"exchange.json"
+            exchange_path.write_text(json.dumps(exchange))
+        return o.run_host_exchange(
+            run,cold,session_key="fixed-session",source_commit="a"*40,
+            branch="mapwork/integration",expected_head="a"*40,
+            journal_repo_path="sessions/host-io-fixture.json",
+            exchange_path=exchange_path,recovery_path=recovery_file,
+            apply_arguments=apply)
+    assert call()["next_action"]=="ACK_RECOVERED_COMPLETED_JOURNAL"
+    complete=sync(second,cold,"d"*40,"c"*40)
+    complete["repo_path"]="sessions/host-io-fixture.json"
+    result=call({"kind":"ACK_COMPLETE","operation_id":op["operation_id"],
+                 "completed_sync":complete,
+                 "recovery_readbacks":[{"provider":"github",
+                    "remote_id":blob(old),"readback_path":str(get)}]})
+    assert result["next_action"]=="CHECKPOINT"
+    assert state["intent"]==str(new_artifact)
+    assert result["publication_authorized"] is False
+    # An upload response or an unrelated GET is never enough for a cold restore.
+    get.write_bytes(b"fabricated provider response")
+    with pytest.raises(ValueError,match="artifact bytes differ"):
+        call()
+
+
+def test_cold_recovery_rejects_self_echoed_or_unbound_journal(tmp_path):
+    journal, artifact, invoke = setup(tmp_path)
+    invoke()
+    session=json.loads(journal.read_text())
+    proof=cold_proof(session,journal,journal,head="b"*40,parent="a"*40)
+    with pytest.raises(ValueError,match="independent GitHub GET"):
+        o._verify_cold_recovery(journal,session,proof)
+    remote=tmp_path/"fresh-journal-get.json"
+    remote.write_bytes(journal.read_bytes())
+    proof["journal_readback_path"]=str(remote)
+    proof["source_commit"]="f"*40
+    with pytest.raises(ValueError,match="authority mismatch"):
+        o._verify_cold_recovery(journal,session,proof)
