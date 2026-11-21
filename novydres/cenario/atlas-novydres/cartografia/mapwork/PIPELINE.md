@@ -103,3 +103,31 @@ Um registro histórico de desenho U02 não altera o estado do ledger.
 `reference_sha256`, `ledger_sha256`, `official_accepted_stages` e o alvo.
 Se qualquer vínculo divergir, reconciliar e reler GitHub antes de continuar.
 Nunca editar o critério para fazer uma candidata reprovada passar.
+
+
+## Sessão autônoma verificável
+
+A entrada única aceita `--request`, `--district`, `--session-key` e
+`--autonomous-journal`. No ChatGPT Web, `web_bridge.run_web` repassa ao
+mesmo `pipeline.py:main` três funções externas do host: `action_executor`,
+`remote_readback` e `journal_sync`. Sem todas as três, o modo falha fechado.
+O host interpreta a ação, usa ferramentas reais, inspeciona visualmente,
+produz arquivos e devolve caminhos e IDs; a pipeline repete a avaliação
+determinística depois de receber esses arquivos. Não existe gerador Python
+substituindo a LLM nem repetição de rótulos sem alteração material.
+
+O journal começa com operação `PENDING` persistida em GitHub com CAS
+e GET independente. A execução somente passa a `COMPLETED` depois de
+confrontar o SHA-256 dos arquivos locais contra downloads independentes;
+GitHub exige Git blob SHA, e geração de imagem exige PNG real no Drive.
+Retomadas repetem a mesma `operation_id` e exigem idempotência do host,
+não geram outra candidata com ID distinto. É obrigatório reidratar o
+journal GitHub antes da retomada e preservar a cadeia hash.
+`--max-operations` limita o trabalho por invocação, não libera aprovações.
+
+O callback `journal_sync` deve confirmar HEAD e lease no GitHub após
+persistir, nunca apenas relatar sucesso. `remote_readback` deve baixar
+bytes do provedor separadamente da resposta de upload. Sem conectores e
+callbacks verdadeiros, a capacidade não pode ser declarada funcional.
+Inspeção visual, protocolo Markdown e `acceptance.evaluate` permanecem gates
+independentes; este controlador não publica cânone.

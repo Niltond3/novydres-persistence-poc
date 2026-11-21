@@ -833,7 +833,7 @@ def _run_verified(args):
                  spatial_path,report,evidence)
 
 
-def main(argv=None):
+def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("command",choices=["run"])
     target=p.add_mutually_exclusive_group(required=False)
@@ -848,6 +848,11 @@ def main(argv=None):
     p.add_argument("--out",help="candidate output only; no canon write")
     p.add_argument("--execute",action="store_true",help="compose only if all planning and art gates pass")
     p.add_argument("--checkpoint",help="write deterministic resumable checkpoint JSON")
+    p.add_argument("--request",help="unresolved regional request supplied to semantic host")
+    p.add_argument("--autonomous-journal",help="durable GitHub-synchronized operations journal")
+    p.add_argument("--session-key",help="immutable session identity bound to request and source")
+    p.add_argument("--max-operations",type=int,default=16,
+                   help="bounded operations this invocation; never an acceptance shortcut")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed  request JSON")
     p.add_argument("--record-attempt",help="record one real candidate, then evaluate the same stage")
     p.add_argument("--topology-source",help="candidate spatial geometry/transport JSON; never an accepted stage")
@@ -880,6 +885,41 @@ def main(argv=None):
         p.error("--execute requires --intent and verified gates")
 
     try:
+        if args.autonomous_journal:
+            if not all(callable(f) for f in
+                       (action_executor, remote_readback, journal_sync)):
+                raise ValueError("autonomous mode needs real host tools, not text-only receipts")
+            if not args.session_key or not args.request:
+                raise ValueError("autonomous session must bind immutable key and real user request")
+            allowed = {"intent", "capabilities", "research_file", "decisions_file",
+                       "inventory_file", "record_attempt", "reference", "topology_source",
+                       "topology_classifications", "topology_out", "topology_prior",
+                       "spatial", "unit_receipt", "unit_mask", "visual_review",
+                       "image_receipts", "ledger", "strategy_id", "replan_evidence",
+                       "request_id", "improvement_evidence", "assets",
+                       "macro_review", "design_root", "design_unit",
+                       "recipe_unit", "audit_unit", "execute", "out"}
+            def apply_arguments(updates):
+                if set(updates) - allowed:
+                    raise ValueError("autonomous operation attempted forbidden pipeline arguments")
+                for key, value in updates.items():
+                    if value is not None and not isinstance(value, (str, bool)):
+                        raise ValueError("invalid autonomous pipeline argument type")
+                    setattr(args, key, value)
+            session = controller.run_autonomous(
+                lambda: run(args), action_executor, remote_readback,
+                journal_sync, args.autonomous_journal,
+                session_key=controller.digest({
+                    "key":args.session_key,"request":args.request,
+                    "district":args.district,"zone":args.zone}),
+                max_operations=args.max_operations,
+                apply_arguments=apply_arguments)
+            outcome = ("BLOCKED" if session["status"] ==
+                       "HALTED_FOR_OWNER_OR_CAPABILITY" else "CHECKPOINT")
+            print(json.dumps({"status":outcome,"next_action":session.get("next_action"),
+                              "retryable":False,"result":session},
+                              ensure_ascii=False,indent=2))
+            return 0
         result=run(args)
         if args.checkpoint:
             controller.atomic_json(args.checkpoint,result)

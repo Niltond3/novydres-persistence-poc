@@ -159,11 +159,14 @@ def _verify_import_graph(module_dir, listed):
                     raise WebBridgeError("unverified transitive import: " + name)
 
 
-def run_web(*, argv, file_manifest, root, source_commit, remote_blobs):
+def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
+            action_executor=None, remote_readback=None, journal_sync=None):
     """Run exact canonical pipeline.main WITHOUT invoking a terminal or clone.
 
     Caller must read real files using connectors and check their GitHub/Drive
     readbacks before calling; this adapter cannot authenticate those requests.
+    Autonomous callbacks must execute actual host actions, fetch provider bytes
+    independently, and perform lease-protected journal commits/readbacks.
     """
     verification = verify_files(file_manifest, root=root, expected_commit=source_commit)
     listed = {r["path"] for r in verification["files"]}
@@ -213,7 +216,10 @@ def run_web(*, argv, file_manifest, root, source_commit, remote_blobs):
         sys.modules["pipeline"] = pipeline
         spec.loader.exec_module(pipeline)
         with contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
-            exit_code = pipeline.main(["run", *list(argv)])
+            exit_code = pipeline.main(["run", *list(argv)],
+                                      action_executor=action_executor,
+                                      remote_readback=remote_readback,
+                                      journal_sync=journal_sync)
         for name in names:
             loaded = sys.modules.get(name)
             if loaded is not None and getattr(loaded, "__file__", None):
