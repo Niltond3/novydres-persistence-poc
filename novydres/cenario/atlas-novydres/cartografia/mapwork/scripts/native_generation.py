@@ -305,3 +305,38 @@ def localized_repair_mask(authorized_mask_path, defects, output_path, *,
     return {"path": str(path), "sha256": digest(path.read_bytes()),
             "bbox": list(local.getbbox()), "defect_ids": ids,
             "requires_agent_review": True}
+
+
+def verify_composed(reference_path, mask_path, candidate_path, composed_path, *,
+                    crop_bbox=None, protected_mask_path=None):
+    """Independently recompute masked pixels from material source/candidate.
+
+    No semantic claim is inferred. A matching hash alone cannot establish
+    geometry, grade separation, readability or seam continuity.
+    """
+    from PIL import Image, ImageChops
+    from tempfile import TemporaryDirectory
+    with TemporaryDirectory(prefix="mapwork-recomposition-") as folder:
+        expected = Path(folder) / "expected.png"
+        composition = compose_masked(reference_path, mask_path, candidate_path,
+                                     expected, crop_bbox=crop_bbox,
+                                     protected_mask_path=protected_mask_path)
+        with Image.open(expected) as reference_composed, Image.open(composed_path) as actual:
+            require(actual.format == "PNG" and
+                    actual.size == reference_composed.size,
+                    "composed Drive image encoding or dimensions invalid")
+            diff = ImageChops.difference(
+                reference_composed.convert("RGBA"), actual.convert("RGBA"))
+            require(not _changed_any_channel(diff),
+                    "composed Drive pixels differ from authorized deterministic result")
+    with Image.open(reference_path) as ref, Image.open(composed_path) as after:
+        before_pixels=ref.convert("RGBA")
+        after_pixels=after.convert("RGBA")
+        require(before_pixels.size == after_pixels.size,
+                "composed image differs from original size")
+        changed=sum(a != b for a,b in zip(before_pixels.getdata(), after_pixels.getdata()))
+    require(changed > 0, "native edit candidate changed no authorized pixels")
+    composition["composed_sha256"] = digest(Path(composed_path).read_bytes())
+    composition["composed_path"] = str(Path(composed_path))
+    composition["changed_pixels"] = changed
+    return composition
