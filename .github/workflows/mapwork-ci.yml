@@ -37,3 +37,14 @@ jobs:
           assert q['canonical_state_changed'] is False
           assert q['next_action'] == 'AGENT_RESOLVE_AND_RECORD_INTENT'
           PY
+      - name: Export source snapshot for connected Web integration verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: mapwork-source-verified-by-ci
+          path: |
+            novydres/cenario/atlas-novydres/cartografia/mapwork/
+            novydres/catalogo.json
+            novydres/cenario/geografia/district-chelsea/cidade-velha-2010.json
+            novydres/cenario/atlas-novydres/raions-oficiais-2010.json
+          if-no-files-found: error
+          retention-days: 1
