@@ -72,7 +72,7 @@ def verify_handoff(handoff, *, request, output_sha256, expected_operation_id=Non
     """Fail closed on missing reference, mask, dispatch binding or independent GET.
 
     A host tool invocation cannot be cryptographically authenticated by Python;
-    the explicit dispatch receipt must come from the connected host, never from
+    the explicit dispatch and attachment observation must come from the connected host, never from
     an unverified model-generated success paragraph.
     """
     require(isinstance(handoff, dict) and handoff.get("schema") == HANDOFF_SCHEMA,
@@ -117,13 +117,33 @@ def verify_handoff(handoff, *, request, output_sha256, expected_operation_id=Non
             dispatch.get("mode") == "EDIT_WITH_REFERENCE" and
             isinstance(dispatch.get("generation_id"), str) and dispatch["generation_id"] and
             dispatch.get("prompt_sha256") == request["prompt_sha256"] and
-            dispatch.get("request_sha256") == json_digest(request) and
-            dispatch.get("attached_inputs") == {
-                role: {"remote_id": inputs[role]["remote_id"],
-                       "sha256": request[sha_key]}
-                for role, sha_key in (("reference-image", "reference_sha256"),
-                                      ("edit-mask", "mask_sha256"))},
-            "native generator dispatch has no matching visual input attachments")
+            dispatch.get("request_sha256") == json_digest(request),
+            "native generator invocation identity or prompt differs")
+    # The Web UI does not expose an API-style inputs[] or edit_op receipt.
+    # These are independently recovered bytes plus an explicit HOST account of
+    # visual inputs actually displayed in the native invocation. Never infer
+    # attachment just from Drive IDs, hashes or a textual prompt.
+    evidence = handoff.get("visual_input_evidence")
+    require(isinstance(evidence, dict) and
+            evidence.get("source") == "CHATGPT_WEB_NATIVE_TOOL" and
+            evidence.get("generation_id") == dispatch["generation_id"] and
+            isinstance(evidence.get("observation"), str) and
+            len(evidence["observation"].strip()) >= 30,
+            "real visual attachment observation missing")
+    attached = evidence.get("inputs")
+    require(isinstance(attached, dict) and set(attached) ==
+            {"reference-image", "edit-mask"}, "reference and mask visual attachments missing")
+    seen = set()
+    for role, sha_key in (("reference-image", "reference_sha256"),
+                          ("edit-mask", "mask_sha256")):
+        item = attached[role]
+        require(isinstance(item, dict) and
+                isinstance(item.get("visual_file_id"), str) and
+                item["visual_file_id"].startswith("file_") and
+                item["visual_file_id"] not in seen and
+                item.get("sha256") == request[sha_key],
+                "native tool lacks observed " + role + " visual attachment")
+        seen.add(item["visual_file_id"])
     output = handoff.get("output")
     require(isinstance(output, dict) and output.get("provider") == "drive" and
             isinstance(output.get("remote_id"), str) and output["remote_id"] and
@@ -140,7 +160,7 @@ def verify_handoff(handoff, *, request, output_sha256, expected_operation_id=Non
     require(output_sha256 != request["reference_sha256"] and
             output_sha256 != request["mask_sha256"],
             "native image generation reused input bytes")
-    return {"status": "VERIFIED_INPUT_BINDINGS", "request_sha256": json_digest(request),
+    return {"status": "VERIFIED_INPUT_BYTES_AND_HOST_VISUAL_ATTESTATION", "request_sha256": json_digest(request),
             "reference_sha256": request["reference_sha256"],
             "mask_sha256": request["mask_sha256"],
             "image_sha256": output_sha256, "generation_id": dispatch["generation_id"]}
