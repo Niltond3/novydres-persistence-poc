@@ -14,6 +14,7 @@ import urban_architecture as urban
 import urban_content as content
 import v33_contracts as v33
 import v33_visual as visual
+import v33_acceptance as acceptance
 
 ROOT=Path(__file__).resolve().parents[1]
 CANON_CATALOG=ROOT.parents[3]/"catalogo.json"
@@ -110,6 +111,28 @@ def run(args, v32_run):
                       ["No real zone geometry for "+target+"; preserve map, do not infer borders from U02 color"],
                       intent=intent,audit={"research":citations,"proposals":decisions,
                                           "inventory":installation})
+    # Infrastructure acceptance is a mandatory V3.3 pre-lot gate.
+    # Even a syntactically valid V3.1 spatial JSON cannot bypass actual
+    # model-inspected U02 candidate rounds for roads, grade, rail, tram,
+    # metro, network integration and exclusive territory.
+    config=core.load(core.CONFIG)
+    core.config_check(config)
+    ledger_path=getattr(args,"acceptance_ledger",None) or (
+        zone_path.parent/"acceptance-ledger-v33.json")
+    acceptance_gate=acceptance.evaluate(
+        ledger_path,
+        reference_file=getattr(args,"reference",None),
+        reference_sha256=config["reference"]["sha256"],
+        reference_size=[config["reference"]["width"],config["reference"]["height"]],
+        require_urban=bool(
+            getattr(args,"recipe_unit",None) or
+            getattr(args,"audit_unit",None) or
+            getattr(args,"execute",False)))
+    if acceptance_gate["status"] != "PASS":
+        return _state(
+            "INFRASTRUCTURE_ACCEPTANCE",acceptance_gate["next_action"],
+            acceptance_gate["blockers"],intent=intent,audit=acceptance_gate)
+
     if args.recipe_unit or args.audit_unit:
         zone=core.load(zone_path)
         path=Path(args.spatial) if args.spatial else zone_path.parent/"global-spatial-v31.json"
