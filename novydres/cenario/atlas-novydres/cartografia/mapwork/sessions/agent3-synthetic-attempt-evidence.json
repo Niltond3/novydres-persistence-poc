@@ -1,0 +1,71 @@
+{
+  "schema": "NOVYDRES_MAPWORK_AGENT3_SYNTHETIC_ATTEMPT_EVIDENCE",
+  "scope": "NONCANONICAL_TEST_ONLY",
+  "status": "BLOCKED_NATIVE_CORRECTION",
+  "canon_changed": false,
+  "official_INF01_accepted": false,
+  "owner_authorization": "User approved synthetic test execution; never approves Sulfok or Kingswell",
+  "journal_operation_id": "03b242857d8e79b45ec9ac20347be4948d8fec291fad7aba8e18ff00a454328a",
+  "research_previous_operation": "RESEARCH_REAL_WORLD_ANALOGUES COMPLETED",
+  "criteria": "Continuous road over continuous rail with distinct grade and visible parapets; generated corrected candidate must be native.",
+  "attempts": [
+    {
+      "iteration": 1,
+      "source": "native-image-generator",
+      "verdict": "FAIL",
+      "reason": "at-grade crossing; required overpass absent",
+      "sha256": "285ff634b700ebb5a14ded684e0841b70c362bbd0a7a15e75bcc4e519732ac70",
+      "drive_id": "1rKtsaT4k3WetwSxo0UDFl91_mMNTWjKQ"
+    },
+    {
+      "iteration": 2,
+      "source": "native-image-generator",
+      "verdict": "FAIL",
+      "reason": "off-topic infographic, no crossing",
+      "sha256": "0badfc571c7702cc49af837fc2e6c8871ddfa8cfffa939471835afae30ecbdf9",
+      "drive_id": "1IhTmDkmVEDiZ8ef__5hFOuR9AFRJ7WLJ"
+    },
+    {
+      "iteration": 3,
+      "source": "native-image-generator",
+      "verdict": "FAIL",
+      "reason": "off-topic infographic, no crossing",
+      "sha256": "534032f83949318983c57db2801ea7015ce41e3b2b6b0e8f8d23061694cc2345",
+      "drive_id": "1vLbNQz4HINQZ7VKluIG6jZ77lcqQXyRx"
+    },
+    {
+      "iteration": 4,
+      "source": "PIL bounded material edit, not native generation",
+      "verdict": "FAIL",
+      "reason": "topology and local mask pass, native correction requirement not met",
+      "sha256": "9efbf3015cf91dfef17882c54eae186eca8d1625abcffa953b18e60e9fceefbd",
+      "drive_id": "18y-XDkzOSm2br3-qfvnKtqIqsUKeZtak"
+    }
+  ],
+  "topology": {
+    "reconciliation": "RECONCILED_NOT_ACCEPTED",
+    "infra_diagnostic": "PASS",
+    "geometry_sha256": "1c113822c850c2490b8d2015cafdc5932e827179ffd40b520de1f2033c619438",
+    "nodes_created": 2,
+    "edges_out": 4,
+    "canonical_authority": false
+  },
+  "material_edit": {
+    "changed_pixels": 58665,
+    "outside_mask_changed_pixels": 0,
+    "edit_mask_sha256": "30710e799b09a77e2883b65f2bbb5cc220a31e40a31bbd82c2ba4a186df152b8"
+  },
+  "retry_policy": {
+    "after_three_fails": "REPLAN_STAGE",
+    "after_deterministic_patch": "REPAIR_AND_REGENERATE",
+    "idempotent_retry": "PASS",
+    "request_id_collision": "REJECTED",
+    "tampered_hash_chain": "REJECTED",
+    "ledger_sha256": "eebfdbd84fe37d2025aebbad36a6b196cd86a3a8de90557e4e3bf027798d3b53"
+  },
+  "remaining": [
+    "New corrected image generated natively and inspected",
+    "Full synthetic operation host journal completion and recovery",
+    "All requested robustness, final CI and handoff"
+  ]
+}
