@@ -119,9 +119,9 @@ def test_no_artifact_or_receipt_only_is_never_an_autonomous_operation(tmp_path):
 
 
 def test_new_candidate_requires_real_drive_png_not_json_only(tmp_path):
-    _, _, _, _, _, fetch, sync = harness(tmp_path)
+    _, remote, _, _, _, fetch, sync = harness(tmp_path)
     p = tmp_path / "candidate.json"
-    remote = {("github", "candidate"): b'{"generated":true}'}
+    remote[("github", "candidate")] = b'{"generated":true}'
     p.write_bytes(remote[("github", "candidate")])
     data = p.read_bytes()
     blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
@@ -133,15 +133,16 @@ def test_new_candidate_requires_real_drive_png_not_json_only(tmp_path):
             {"path": str(p), "provider": "github", "remote_id": "candidate",
              "sha256": hashlib.sha256(data).hexdigest(), "blob_sha": blob}]}
     with pytest.raises(ValueError, match="Drive PNG bytes"):
-        o.run_autonomous(run, perform, lambda provider, identifier: remote[(provider, identifier)],
+        o.run_autonomous(run, perform, fetch,
                           sync, tmp_path / "journal.json", session_key="real-pixels")
 
 
 def test_no_progress_cannot_loop_on_text_state(tmp_path):
-    _, _, _, _, _, fetch, sync = harness(tmp_path)
+    _, remote, _, _, _, fetch, sync = harness(tmp_path)
     p = tmp_path / "a.json"
     body = b'{"changed":true}'
     p.write_bytes(body)
+    remote[("github", "a")] = body
     digest = hashlib.sha256(body).hexdigest()
     blob = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
     def run():
@@ -152,7 +153,7 @@ def test_no_progress_cannot_loop_on_text_state(tmp_path):
             {"path": str(p), "sha256": digest, "blob_sha": blob,
              "provider": "github", "remote_id": "a"}]}
     with pytest.raises(ValueError, match="no pipeline progress"):
-        o.run_autonomous(run, perform, lambda p, i: body,
+        o.run_autonomous(run, perform, fetch,
                           sync, tmp_path / "journal.json", session_key="stall")
 
 
