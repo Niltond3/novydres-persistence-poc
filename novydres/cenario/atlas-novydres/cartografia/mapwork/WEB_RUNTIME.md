@@ -32,3 +32,70 @@ urbanísticas próprias.
 **Limite verificável:** SHA prova identidade dos bytes; um parecer vinculado
 prova documentação de inspeção, não a veracidade da avaliação semântica da LLM.
 Nunca declarar imagem, transferência, correção ou aceitação que não ocorreu.
+
+## Retomada fria obrigatória
+
+Uma cópia local de `sessions/*.json` **não** é prova de sincronização. Em
+outro processo ChatGPT Web, obtenha novamente pelo conector GitHub a ref da
+branch, o commit que escreveu o journal, seu pai, sua árvore, o Git blob
+exatamente em `sessions/...` e os bytes desse blob. Materialize o journal
+em caminho novo e o GET em **outro** arquivo. Verifique também a árvore de
+código no `source_commit` fixado na sessão e todo artefato anterior por GET
+de GitHub/Drive, em arquivos distintos dos locais. Não herde os caminhos
+absolutos `/mnt/data` da sessão antiga.
+
+Passe `--host-recovery <arquivo.json>` junto da chamada normal, sem trocar
+`--host-head` inicial pelo HEAD novo. O arquivo é materializado pelo host:
+
+```json
+{
+  "schema": "NOVYDRES_MAPWORK_COLD_RECOVERY",
+  "branch": "<branch-fixada>",
+  "journal_repo_path": "sessions/<journal>.json",
+  "source_commit": "<commit-fixado-da-implementacao>",
+  "initial_head": "<HEAD-original-da-sessao>",
+  "journal_readback_path": "<arquivo-distinto-de-GET-do-GitHub>",
+  "journal_commit": {
+    "branch": "<branch-fixada>",
+    "repo_path": "sessions/<journal>.json",
+    "head": "<commit-que-gravou-journal>",
+    "ref_head": "<commit-que-gravou-journal>",
+    "commit_sha": "<commit-que-gravou-journal>",
+    "commit_parent": "<lease-da-ultima-operacao>",
+    "tree_blob_sha": "<blob-da-arvore-do-commit>",
+    "blob_sha": "<blob-do-journal>"
+  },
+  "current_ref_head": "<HEAD-atual-obtido-por-GET>",
+  "head_chain": [],
+  "artifact_readbacks": []
+}
+```
+
+`head_chain` lista os commits efetivamente inspecionados entre o commit do
+journal e o HEAD atual, na ordem: `{parent, head, commit_sha,
+journal_blob_sha}`. A cadeia precisa preservar o blob do journal.
+`artifact_readbacks` precisa cobrir **todos** os artefatos concluídos,
+com `{original_path, materialized_path, readback_path, provider, remote_id,
+sha256}`. Cada readback é um GET real separado; uma resposta de upload não
+pode preencher o campo. O módulo valida bytes, hash, vínculos e cadeia;
+a autenticidade das chamadas é responsabilidade do host conectado.
+
+Se `head_chain` não estiver vazia, a pipeline devolve
+`RECONCILE_RECOVERED_REMOTE_WRITES` sem repetir upload/ação. Um commit
+concorrente ou uma gravação interrompida **não** autoriza avançar por
+suposição. Com journal PENDING e HEAD ainda no seu commit, a resposta é
+`EXECUTE_RECOVERED_PENDING_OPERATION`: reutilize `operation_id` e
+`pending_sync` do commit verificado. Com journal COMPLETED e confirmação
+ainda pendente, `ACK_RECOVERED_COMPLETED_JOURNAL`: faça os GETs finais e
+confirme, sem escrever segundo commit de conclusão.
+
+Os caminhos históricos continuam inalterados no journal hash-chain;
+`artifact_readbacks` remapeia apenas argumentos referenciados por bytes
+reverificados. Diretórios ou caminhos sem artefato verificável continuam
+bloqueados até reconstrução explícita, nunca substituição automática.
+
+O transporte real GitHub Actions ZIP → conector Google Drive → GET do Drive
+foi demonstrado em `sessions/host-io-transport-evidence.json`. Esse ZIP
+é apenas um cache técnico opcional: **GitHub Actions não é requisito de
+execução**. O teste não constitui demonstração de imagem nativa, classificação
+visual, nem conclusão do ciclo autônomo.
