@@ -273,3 +273,89 @@ def test_pipeline_only_writes_candidate_without_acceptance(tmp_path,capsys):
     assert (out/"topology-candidate.json").is_file()
     assert (out/"topology-diagnostic.json").is_file()
     assert not (out/"acceptance-ledger.json").exists()
+
+
+def test_infra02_rejects_edits_to_accepted_prior_and_keeps_old_edges(tmp_path):
+    previous=geo([("H","road",(1,6),(14,6),0)])
+    previous["zone_mask"]={"path":"zone.png","sha256":"a"*64}
+    parent=tmp_path/"INF-01.json"
+    parent.write_text(json.dumps(previous),encoding="utf-8")
+    proposed=geo([("H","road",(1,6),(14,6),0),
+                  ("V","road",(6,1),(6,12),0)])
+    proposed["zone_mask"]=copy.deepcopy(previous["zone_mask"])
+    proposed["stage"]="INF-02"
+    proposed["previous_stage_sha256"]=infra_checks.sha(parent)
+    proposed["fixture_mode"]=True
+    source=tmp_path/"INF-02.json"
+    source.write_text(json.dumps(proposed),encoding="utf-8")
+    classes=tmp_path/"classes.json"
+    classes.write_text(json.dumps(classifications(proposed,crossing())))
+    with pytest.raises(topology.TopologyInvalid,match="protected"):
+        topology.reconcile_file(source,classes,tmp_path/"output",
+                                prior_accepted=parent)
+    assert json.loads(parent.read_text())==previous
+    assert not (tmp_path/"output"/"topology-candidate.json").exists()
+
+
+def test_infra02_adds_only_new_corridors_without_touching_prior(tmp_path):
+    previous=geo([("H","road",(1,2),(14,2),0)])
+    previous["zone_mask"]={"path":"zone.png","sha256":"a"*64}
+    parent=tmp_path/"INF-01.json"
+    parent.write_text(json.dumps(previous))
+    proposed=geo([("H","road",(1,2),(14,2),0),
+                  ("V","road",(6,5),(6,15),0),
+                  ("W","road",(1,9),(14,9),0)])
+    proposed["zone_mask"]=copy.deepcopy(previous["zone_mask"])
+    proposed["stage"]="INF-02"
+    proposed["previous_stage_sha256"]=infra_checks.sha(parent)
+    proposed["fixture_mode"]=True
+    source=tmp_path/"INF-02.json"
+    source.write_text(json.dumps(proposed))
+    classes=tmp_path/"classes.json"
+    classes.write_text(json.dumps(classifications(proposed,
+        crossing("V","W",point=(6,9)))))
+    result=topology.reconcile_file(source,classes,tmp_path/"output",prior_accepted=parent)
+    assert result["status"]=="RECONCILED_NOT_ACCEPTED"
+    candidate=json.loads((tmp_path/"output"/"topology-candidate.json").read_text())
+    old=next(e for e in candidate["network"]["edges"] if e["id"]=="H")
+    assert old==previous["network"]["edges"][0]
+    assert candidate["previous_stage_sha256"]==infra_checks.sha(parent)
+
+
+def test_urban_neighbor_seam_remaps_to_correct_segment_and_idempotent():
+    data=simple()
+    network=data.pop("network")
+    for node in network["nodes"]:
+        node["kind"]="portal"
+    for edge in network["edges"]:
+        edge["class"]="collector"
+        edge["owner"]="GLOBAL_NETWORK"
+        edge["separates_blocks"]=True
+        edge["profile"]="urban_at_grade"
+        del edge["mode"]
+    data.update(schema="NOVYDRES_MAPWORK_TERRITORY_NETWORK",
+                grid={"width":32,"height":32},
+                transport=network,
+                neighbor_seams=[{"id":"SEAM-W","kind":"road","point":[1,6],
+                                 "network_edge_id":"H","network_node_id":"H-A",
+                                 "width_units":1,"profile":"urban_at_grade","level":0}])
+    classes=classifications(data,crossing())
+    result,report=topology.reconcile(data,classes)
+    seam=result["neighbor_seams"][0]
+    assert seam["network_edge_id"]=="H~001"
+    urban._validate_seam_network(seam,result["transport"])
+    again,_=topology.reconcile(result,classes)
+    assert again==result
+    tampered=copy.deepcopy(result)
+    tampered["neighbor_seams"][0]["network_edge_id"]="H~002"
+    with pytest.raises(topology.TopologyInvalid,match="connector"):
+        topology.reconcile(tampered,classes)
+
+
+def test_transitive_junction_must_not_connect_unreviewed_third_corridor():
+    data=geo([("A","road",(1,6),(12,6),0),
+              ("B","road",(6,1),(6,12),0),
+              ("C","road",(1,1),(11,11),0)])
+    with pytest.raises(topology.TopologyInvalid,match="transitive"):
+        topology.reconcile(data,classifications(data,
+            crossing("A","B"),crossing("A","C")))
