@@ -673,6 +673,17 @@ def _verify_cold_recovery(path, session, evidence):
     return aliases
 
 
+# Process-local marker, never serialized or accepted as remote authority.
+# A different Python/Web session MUST supply fresh connector recovery proofs
+# even if it has an unmodified copy of the journal on disk.
+_HOST_KNOWN_JOURNALS = {}
+
+
+def _remember_host_journal(path):
+    _HOST_KNOWN_JOURNALS[str(Path(path).resolve())] = hashlib.sha256(
+        Path(path).read_bytes()).hexdigest()
+
+
 def _recovery_has_intervening_writes(recovery_path):
     if recovery_path is None:
         return False
@@ -736,6 +747,8 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                 not isinstance(session.get("steps"), list)):
             raise ValueError("host journal authority mismatch")
         _session_chain(session["steps"])
+        if recovery_path is None and _HOST_KNOWN_JOURNALS.get(str(path.resolve())) != hashlib.sha256(path.read_bytes()).hexdigest():
+            raise ValueError("preexisting host journal requires fresh connector cold recovery")
     else:
         if exchange is not None:
             raise ValueError("no host result without a previously persisted request")
@@ -790,6 +803,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                                            if k!="artifacts"}))
         last["entry_sha256"] = digest({k:v for k,v in last.items() if k!="entry_sha256"})
         atomic_json(path, session)
+        _remember_host_journal(path)
         return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
                 "operation_id":last["operation_id"],"lease_head":operation_head,
                 "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
@@ -871,6 +885,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
     operation["entry_sha256"] = digest({k:v for k,v in operation.items() if k!="entry_sha256"})
     steps.append(operation)
     atomic_json(path, session)
+    _remember_host_journal(path)
     return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_PENDING_JOURNAL",
             "operation":operation,"lease_head":next_head,
             "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
