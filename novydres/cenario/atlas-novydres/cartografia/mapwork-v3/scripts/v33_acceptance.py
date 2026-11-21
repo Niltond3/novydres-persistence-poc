@@ -14,6 +14,8 @@ from pathlib import Path
 
 from PIL import Image
 
+import v33_infra_checks as infra
+
 STAGES = (
     "INF-01", "INF-02", "INF-03", "INF-04",
     "INF-05", "INF-06", "INF-07", "URB-08"
@@ -46,12 +48,21 @@ def criteria_contract(doc_path=CRITERIA_DOC):
         if len(rule_ids) != 4 or len(set(rule_ids)) != len(rule_ids):
             raise ValueError(stage + ": acceptance Markdown must define 4 unique criteria")
         result[stage] = rule_ids
-    return {"stages": result, "sha256": sha_file(doc_path)}
+    matches = re.findall(r"```json\s*(\{.*?\})\s*```", raw, re.S)
+    profiles = [json.loads(s) for s in matches if
+                '"NOVYDRES_MAPWORK_V33_SPATIAL_PROFILE_1"' in s]
+    if len(profiles) != 1 or set(profiles[0]["stage_modes"]) != set(STAGES):
+        raise ValueError("Markdown executable spatial acceptance profile absent")
+    return {"stages": result, "sha256": sha_file(doc_path),"profile":profiles[0]}
 
 
 def _stage(stage, action, blockers, *, iteration=0, accepted=(), latest=None):
+    invalid = {"REPAIR_UNVERIFIED_CANDIDATE", "REPAIR_AND_REGENERATE", "REPLAN_STAGE",
+               "REGENERATE_DIFFERENT_CANDIDATE", "REPAIR_ACCEPTANCE_LEDGER",
+               "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE"}
     return {
-        "status": "PASS" if action == "ADVANCE_AFTER_ACCEPTANCE" else "BLOCKED",
+        "status": "PASS" if action == "ADVANCE_AFTER_ACCEPTANCE" else
+                  "FAIL" if action in invalid else "BLOCKED",
         "stage": stage,
         "next_action": action,
         "blockers": list(blockers),
@@ -190,6 +201,58 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
             )
             if reason:
                 problems.append(key + ": " + reason)
+        # Independent deterministic proof: bytes, entire cumulative multimodal
+        # network, grade crossings, target mask, territorial exclusivity and
+        # identity of the preceding approved stage. Agent text cannot replace it.
+        try:
+            geo = Path(last.get("geometry_path", ""))
+            if not geo.is_absolute():
+                geo = file.parent / geo
+            preceding = None
+            if accepted:
+                prev = groups[accepted[-1]]["attempts"][-1]
+                preceding = Path(prev["geometry_path"])
+                if not preceding.is_absolute():
+                    preceding = file.parent / preceding
+            spatial = infra.validate(geo, source_sha=reference_sha256,
+                                     dimensions=expected_size,
+                                     profile=spec["profile"], prior=preceding)
+            if spatial["stage"] != stage or spatial["geometry_sha256"] != last.get("geometry_sha256"):
+                problems.append("deterministic spatial audit bound to different candidate")
+        except (infra.InfraInvalid, OSError, ValueError, TypeError, KeyError) as exc:
+            problems.append("deterministic geometry audit failed: " + str(exc))
+        # Host visual reports are a separate semantic judgment. A naked boolean
+        # and long prose is never sufficient for a purported image inspection.
+        observation = last.get("visual_observations")
+        if (not isinstance(observation, dict) or
+                observation.get("preview_sha256") != last.get("preview_sha256") or
+                observation.get("geometry_sha256") != last.get("geometry_sha256")):
+            problems.append("visual inspection receipt missing or stale")
+        else:
+            seen = set()
+            region_checks = observation.get("regions", [])
+            if not isinstance(region_checks,list):
+                region_checks=[]
+            imgpath=Path(last.get("preview_path", ""))
+            if not imgpath.is_absolute():
+                imgpath=file.parent/imgpath
+            try:
+                with Image.open(imgpath) as im:
+                    for r in region_checks:
+                        cid=r.get("criterion_id") if isinstance(r,dict) else None
+                        box=r.get("bbox") if isinstance(r,dict) else None
+                        if (cid not in spec["stages"][stage] or cid in seen or
+                            not isinstance(box,list) or len(box)!=4 or
+                            not all(isinstance(n,int) for n in box) or
+                            not (0<=box[0]<box[2]<=im.width and 0<=box[1]<box[3]<=im.height)):
+                            continue
+                        digest=hashlib.sha256(im.crop(tuple(box)).tobytes()).hexdigest()
+                        if r.get("pixels_sha256")==digest:
+                            seen.add(cid)
+                if seen != set(spec["stages"][stage]):
+                    problems.append("visual inspection lacks real image-bound regions for all criteria")
+            except (OSError, ValueError) as exc:
+                problems.append("visual inspection image cannot be opened: " + str(exc))
         if (last.get("reviewed_by") != "AGENT" or
                 not isinstance(last.get("model"), str) or
                 len(last["model"].strip()) < 3 or
