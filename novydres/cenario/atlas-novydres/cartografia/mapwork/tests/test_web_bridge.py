@@ -79,3 +79,45 @@ def test_canonical_cli_propagates_fail_instead_of_blocked(monkeypatch,capsys):
     rc=pipeline.main(["run","--district","kingswell"])
     result=json.loads(capsys.readouterr().out)
     assert rc==2 and result["status"]=="FAIL"
+
+
+def _complete_manifest():
+    records=[]
+    for rel in sorted(["docs/infra-acceptance.md"] +
+                      ["scripts/"+p.name for p in (ROOT/"scripts").glob("*.py")]):
+        data=(ROOT/rel).read_bytes()
+        records.append({"path":rel,"provider":"github","sha256":w.sha256(data),
+                        "blob_sha":w.git_blob_sha(data),"size_bytes":len(data)})
+    return ({"schema":w.FILE_MANIFEST_SCHEMA,"source_commit":"1"*40,
+             "files":records},
+            {r["path"]:r["blob_sha"] for r in records})
+
+
+def test_remote_tree_mismatch_rejected_before_import():
+    manifest,remote=_complete_manifest()
+    remote["scripts/contracts.py"]="f"*40
+    with pytest.raises(w.WebBridgeError,match="remote Git commit blob"):
+        w.run_web(argv=["--district","kingswell"],
+                  file_manifest=manifest,root=ROOT,source_commit="1"*40,
+                  remote_blobs=remote)
+
+
+def test_stale_or_previously_loaded_local_module_rejected(monkeypatch):
+    import types
+    manifest,remote=_complete_manifest()
+    stale=types.ModuleType("contracts")
+    stale.__file__=str(ROOT/"scripts"/"contracts.py")
+    stale._mapwork_verified_sha256="0"*64
+    monkeypatch.setitem(sys.modules,"contracts",stale)
+    with pytest.raises(w.WebBridgeError,match="stale/unverified cached"):
+        w.run_web(argv=["--district","kingswell"],
+                  file_manifest=manifest,root=ROOT,source_commit="1"*40,
+                  remote_blobs=remote)
+
+
+def test_missing_independent_remote_tree_rejected():
+    manifest,_=_complete_manifest()
+    with pytest.raises(w.WebBridgeError,match="remote Git tree blob map required"):
+        w.run_web(argv=["--district","kingswell"],
+                  file_manifest=manifest,root=ROOT,source_commit="1"*40,
+                  remote_blobs={})
