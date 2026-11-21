@@ -634,6 +634,8 @@ def _verify_cold_recovery(path, session, evidence):
                 link["head"] == current or
                 link.get("journal_blob_sha") != expected_blob):
             raise ValueError("cold recovery intervening Git HEAD chain invalid")
+        if link.get("kind") == "VERIFIED_SOURCE_CHANGE" and not _source_only_link(link):
+            raise ValueError("cold recovery source-change proof includes non-source writes")
         current = link["head"]
     if evidence.get("current_ref_head") != current:
         raise ValueError("cold recovery latest GitHub HEAD differs from verified chain")
@@ -703,11 +705,48 @@ def _remember_host_journal(path):
         Path(path).read_bytes()).hexdigest()
 
 
+def _source_only_link(link):
+    """A source upgrade must not be mistaken for a pending operation upload.
+
+    `changed_paths` is taken from independent GitHub commit/diff GETs by the
+    host. The journal blob and per-commit parent/HEAD were checked separately.
+    A missing/ambiguous path, any data, canon or session write fails closed.
+    """
+    if (not isinstance(link, dict) or
+            link.get("kind") != "VERIFIED_SOURCE_CHANGE" or
+            link.get("operation_id") is not None or
+            link.get("files") is not None or
+            not isinstance(link.get("changed_paths"), list) or
+            not link["changed_paths"] or
+            len(link["changed_paths"]) != len(set(link["changed_paths"]))):
+        return False
+    def allowed(path):
+        if not isinstance(path, str) or not path or path.startswith("/") or ".." in Path(path).parts:
+            return False
+        if path in ("PIPELINE.md", "WEB_RUNTIME.md", "VISUAL_REVIEW_PROTOCOL.md"):
+            return True
+        if path.startswith("docs/") and path.endswith(".md"):
+            return True
+        return ((path.startswith("scripts/") or path.startswith("tests/"))
+                and path.endswith(".py") and len(Path(path).parts) == 2)
+    return all(allowed(path) for path in link["changed_paths"])
+
+
+def _verified_source_upgrade(recovery_path):
+    if recovery_path is None:
+        return False
+    proof = json.loads(Path(recovery_path).read_text(encoding="utf-8"))
+    links = proof.get("head_chain", [])
+    return (isinstance(links, list) and bool(links)
+            and all(_source_only_link(link) for link in links)
+            and proof.get("runtime_source_commit") == links[-1]["head"])
+
+
 def _recovery_has_intervening_writes(recovery_path):
     if recovery_path is None:
         return False
     proof = json.loads(Path(recovery_path).read_text(encoding="utf-8"))
-    return bool(proof.get("head_chain"))
+    return bool(proof.get("head_chain")) and not _verified_source_upgrade(recovery_path)
 
 
 def _recovered_updates(updates, aliases):
@@ -827,7 +866,12 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             path, exchange.get("pending_sync"), branch=branch,
             lease_head=last["lease_head"], repo_path=journal_repo_path)
         verified = _host_artifacts(last, exchange.get("result"), steps[:-1])
-        operation_head = _host_action_head(exchange["result"], pending_head, branch)
+        # Verified source-only commits may have advanced HEAD after PENDING.
+        # Host writes for this operation lease the *new* head, while the
+        # original PENDING journal/operation id remain untouched.
+        action_base = (json.loads(Path(recovery_path).read_text(encoding="utf-8"))["current_ref_head"]
+                       if _verified_source_upgrade(recovery_path) else pending_head)
+        operation_head = _host_action_head(exchange["result"], action_base, branch)
         updates = exchange["result"].get("arg_updates", {})
         if not isinstance(updates, dict):
             raise ValueError("host argument updates must be an object")
