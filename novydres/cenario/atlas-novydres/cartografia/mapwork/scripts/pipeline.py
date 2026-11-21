@@ -548,9 +548,42 @@ def run(args):
         if any((getattr(args,"execute",False),getattr(args,"record_attempt",None),
                 getattr(args,"recipe_unit",None),getattr(args,"audit_unit",None))):
             raise core.Invalid("topology-only candidate operation cannot execute art or record acceptance")
-        if not all((args.topology_classifications,args.topology_out,args.district)):
-            raise core.Invalid("topology repair requires --district, --topology-classifications and --topology-out")
+        if not all((args.topology_out,args.district)):
+            raise core.Invalid("topology operation requires --district and --topology-out")
         candidate=core.load(args.topology_source)
+        if candidate.get("schema")=="NOVYDRES_MAPWORK_U02_ROAD_CENTERLINE_CANDIDATE_R2":
+            cfg=core.load(core.CONFIG)
+            authority=candidate.get("authority",{})
+            expected=cfg["reference"]["sha256"]
+            core.fail(args.district==candidate.get("scope",{}).get("target") and
+                      authority.get("sha256")==expected and
+                      authority.get("dimensions_px")==[
+                        cfg["reference"]["width"],cfg["reference"]["height"]],
+                      "diagnostic discovery source/target/U02 authority mismatch")
+            core.fail(args.reference and Path(args.reference).is_file() and
+                      fingerprint(args.reference)==expected,
+                      "original U02 bytes required for real candidate discovery")
+            with Image.open(args.reference) as original:
+                core.fail(original.size==(cfg["reference"]["width"],cfg["reference"]["height"]),
+                          "original U02 dimensions mismatch")
+            discovery=topology.discover_candidates(candidate.get("candidates"))
+            discovery.update(reference_sha256=expected,
+                             source_diagnostic_sha256=fingerprint(args.topology_source),
+                             source_candidate_status=candidate.get("status"))
+            directory=Path(args.topology_out)
+            directory.mkdir(parents=True,exist_ok=True)
+            output=directory/"topology-discovery.json"
+            controller.atomic_json(output,discovery)
+            return {"schema":SCHEMA,"phase":"TOPOLOGY_DISCOVERY",
+                    "status":"BLOCKED","target":args.district,
+                    "stage":"INF-01","next_action":"AGENT_INSPECT_AND_CLASSIFY_U02_CROSSINGS",
+                    "blockers":["No candidate physical grade/connection is authorized by vector intersections"],
+                    "audit":{"crossing_count":discovery["crossing_count"],
+                             "discovery_path":str(output),
+                             "discovery_sha256":fingerprint(output)},
+                    "publication_authorized":False,"canonical_state_changed":False}
+        if not args.topology_classifications:
+            raise core.Invalid("topology reconciliation requires --topology-classifications")
         if candidate.get("fixture_mode") is not True:
             core.fail(candidate.get("stage") in ("INF-01","INF-02") and
                       candidate.get("target")==args.district,
