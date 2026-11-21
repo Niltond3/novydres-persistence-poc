@@ -269,7 +269,7 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as writer:
             json.dump(exchange, writer, ensure_ascii=False, sort_keys=True, indent=2)
-            writer.write("\\n")
+            writer.write("\n")
             writer.flush()
             os.fsync(writer.fileno())
         os.replace(name, output)
