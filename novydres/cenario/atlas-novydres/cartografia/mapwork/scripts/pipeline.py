@@ -25,6 +25,7 @@ import visual
 import flow
 import orchestration as controller
 import topology
+import infra_checks as infra
 
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT"
@@ -559,13 +560,28 @@ def run(args):
             args.topology_source,args.topology_classifications,args.topology_out,
             expected_reference_sha=(None if candidate.get("fixture_mode") is True else
                                     cfg["reference"]["sha256"]),
-            original_reference=args.reference)
+            original_reference=args.reference,prior_accepted=args.topology_prior)
+        try:
+            validation=infra.validate(
+                report["candidate_path"], source_sha=candidate["source_sha256"],
+                dimensions=tuple(candidate.get("reference_size",(
+                    candidate.get("grid",{}).get("width"),
+                    candidate.get("grid",{}).get("height")))),
+                profile=acceptance.criteria_contract()["profile"],
+                prior=args.topology_prior)
+        except (infra.InfraInvalid,ValueError,TypeError,KeyError,OSError) as exc:
+            validation={"status":"BLOCKED","reason":str(exc)}
+        # This is a candidate geometry diagnostic, never an INF stage verdict.
+        report["infra_audit"]=validation
+        controller.atomic_json(report["diagnostic_path"],report)
         return {"schema":SCHEMA,"phase":"TOPOLOGY_RECONCILIATION",
                 "target":args.district,"stage":candidate.get("stage"),
                 "status":report["status"],
                 "next_action":("CLASSIFY_AND_REVIEW_REMAINING_CROSSINGS" if
                                report["unresolved_crossings"] else
-                               "BUILD_REAL_INFRA_CANDIDATE_AND_INDEPENDENTLY_AUDIT"),
+                               "REPAIR_AND_REVALIDATE_INFRA_GEOMETRY" if
+                               validation["status"]!="PASS" else
+                               "RECORD_REAL_VISUAL_INF_ACCEPTANCE_ATTEMPT"),
                 "blockers":report["unresolved_crossings"],
                 "audit":report,"publication_authorized":False,
                 "canonical_state_changed":False}
@@ -804,6 +820,7 @@ def main(argv=None):
     p.add_argument("--topology-source",help="candidate spatial geometry/transport JSON; never an accepted stage")
     p.add_argument("--topology-classifications",help="agent-reviewed per-crossing observations")
     p.add_argument("--topology-out",help="candidate-only topology and diagnostic output directory")
+    p.add_argument("--topology-prior",help="immutable accepted INF-01 geometry required for INF-02")
     p.add_argument("--acceptance-ledger",
                    help="hash-bound, self-reviewed infrastructure candidate rounds; defaults to zone ledger")
     p.add_argument("--scope-index",help="exact canonical subject/index snapshot")
