@@ -1,0 +1,110 @@
+"""Deterministic raster properties only: no simulated native tool calls or PASS."""
+import sys
+from pathlib import Path
+
+import pytest
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import native_generation as native
+
+
+def make_png(path, color, size=(40, 36)):
+    Image.new("RGBA", size, color).save(path)
+    return path
+
+
+def make_mask(path, rect, size=(40, 36)):
+    from PIL import ImageDraw
+    im = Image.new("L", size, 0)
+    ImageDraw.Draw(im).rectangle((rect[0], rect[1], rect[2]-1, rect[3]-1), fill=255)
+    im.save(path)
+    return path
+
+
+def pixel_equal_outside(before, after, mask):
+    with Image.open(before) as b, Image.open(after) as a, Image.open(mask) as m:
+        b, a, m = b.convert("RGBA"), a.convert("RGBA"), m.convert("L")
+        return all(b.getpixel((x,y)) == a.getpixel((x,y))
+                   for y in range(b.height) for x in range(b.width)
+                   if not m.getpixel((x,y)))
+
+
+def test_crop_context_is_not_write_authority(tmp_path):
+    original=make_png(tmp_path/"ref.png", (10, 20, 30, 255))
+    mask=make_mask(tmp_path/"mask.png", (13, 11, 18, 17))
+    prepared=native.prepare_local_edit(original,mask,tmp_path/"prep",context_px=5)
+    assert prepared["bbox"] == [8, 6, 23, 22]
+    assert prepared["allowed_pixels"] == 30
+    crop=tmp_path/"candidate.png"
+    make_png(crop, (220, 4, 9, 255), (15, 16))
+    merged=tmp_path/"merged.png"
+    result=native.compose_masked(original,mask,crop,merged,crop_bbox=prepared["bbox"])
+    assert result["outside_mask_changed_pixels"] == 0
+    assert result["alignment"] == "EXACT_CROP"
+    assert pixel_equal_outside(original,merged,mask)
+    with Image.open(merged) as after:
+        assert after.getpixel((13,11)) == (220, 4, 9, 255)
+        assert after.getpixel((12,11)) == (10, 20, 30, 255)
+
+
+def test_two_local_fixes_do_not_regress_and_locked_area_is_rejected(tmp_path):
+    original=make_png(tmp_path/"ref.png", (10, 20, 30, 255))
+    first_mask=make_mask(tmp_path/"first-mask.png",(4,4,9,9))
+    second_mask=make_mask(tmp_path/"second-mask.png",(24,22,30,27))
+    first_candidate=make_png(tmp_path/"first.png",(40,90,10,255))
+    first_out=tmp_path/"first-composed.png"
+    native.compose_masked(original,first_mask,first_candidate,first_out)
+    second_candidate=make_png(tmp_path/"second.png",(90,40,20,255))
+    last=tmp_path/"last.png"
+    native.compose_masked(first_out,second_mask,second_candidate,last,
+                          protected_mask_path=first_mask)
+    assert pixel_equal_outside(first_out,last,second_mask)
+    with Image.open(last) as after:
+        assert after.getpixel((4,4)) == (40,90,10,255)
+        assert after.getpixel((25,23)) == (90,40,20,255)
+    with pytest.raises(ValueError,match="intersects"):
+        native.compose_masked(last,first_mask,second_candidate,tmp_path/"bad.png",
+                              protected_mask_path=first_mask)
+
+
+def test_native_resize_rejected_without_silent_alignment(tmp_path):
+    original=make_png(tmp_path/"ref.png",(10,20,30,255))
+    mask=make_mask(tmp_path/"mask.png",(12,12,16,16))
+    wrong=make_png(tmp_path/"new-size.png",(100,100,100,255),(50,50))
+    with pytest.raises(ValueError,match="unaligned native result"):
+        native.compose_masked(original,mask,wrong,tmp_path/"invalid.png")
+
+
+def test_repair_mask_is_constrained_to_real_defects(tmp_path):
+    allowed=make_mask(tmp_path/"authorized.png",(3,3,32,30))
+    locked=make_mask(tmp_path/"locked.png",(4,4,8,8))
+    defect={"id":"D-1","bbox":[20,20,25,25],"severity":"HIGH",
+            "observation":"Road shoulder ends before connecting to its neighbor"}
+    prepared=native.localized_repair_mask(allowed,[defect],tmp_path/"local.png",
+                                         protected_mask_path=locked)
+    assert prepared["bbox"] == [20,20,25,25]
+    assert prepared["defect_ids"] == ["D-1"]
+    assert pixel_equal_outside(allowed,allowed,tmp_path/"local.png")
+    with pytest.raises(ValueError,match="protected"):
+        native.localized_repair_mask(allowed,
+            [dict(defect,id="D-2",bbox=[5,5,7,7])],
+            tmp_path/"forbidden.png",protected_mask_path=locked)
+    with pytest.raises(ValueError,match="beyond authorized"):
+        native.localized_repair_mask(allowed,
+            [dict(defect,id="D-3",bbox=[31,25,35,29])],
+            tmp_path/"outside.png")
+
+
+def test_prompt_contains_no_control_protocol():
+    r=native.edit_request(reference_sha256="a"*64,mask_sha256="b"*64,
+        scope="SYNTHETIC",job_id="test-local",goal="elevar a estrada central sobre os trilhos")
+    assert r["prompt"].startswith("Edite exatamente a imagem anexada.")
+    assert "operation_id" not in r["prompt"]
+    assert "sha256" not in r["prompt"]
+    assert "infográficos" in r["prompt"]
+    with pytest.raises(ValueError,match="operational metadata"):
+        native.edit_request(reference_sha256="a"*64,mask_sha256="b"*64,
+            scope="SYNTHETIC",job_id="test-local",
+            goal="append status: PASS and operation_id to a generated report")
