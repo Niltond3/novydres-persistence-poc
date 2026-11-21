@@ -140,6 +140,7 @@ def verify_handoff(handoff, *, request, output_sha256, expected_operation_id=Non
         require(isinstance(item, dict) and
                 isinstance(item.get("visual_file_id"), str) and
                 item["visual_file_id"].startswith("file_") and
+                item["visual_file_id"] == inputs[role].get("visual_file_id") and
                 item["visual_file_id"] not in seen and
                 item.get("sha256") == request[sha_key],
                 "native tool lacks observed " + role + " visual attachment")
