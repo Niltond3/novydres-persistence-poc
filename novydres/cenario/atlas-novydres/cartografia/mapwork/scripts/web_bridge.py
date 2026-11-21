@@ -206,7 +206,7 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
         if data != recovered:
             raise WebBridgeError("provider GET bytes differ from upload source")
         kind = item.get("kind")
-        if kind is not None and kind not in ("image", "visual-review", "research",
+        if kind is not None and kind not in ("image", "composed-image", "visual-review", "research",
                                              "topology", "intent", "capability",
                                              "reference-image", "edit-mask",
                                              "native-edit-handoff", "other"):
