@@ -96,3 +96,28 @@ def test_invalid_pass_persisted_but_never_accepted_or_blocks_retry(tmp_path):
     ledger = json.loads((tmp_path/"ledger.json").read_text())
     assert ledger["stages"]["INF-01"]["attempts"][0]["verified_verdict"] == "UNVERIFIED"
     assert submit(tmp_path, failed(2))["iteration"] == 2
+
+
+def test_host_must_execute_next_action_instead_of_terminating_on_failure():
+    for action, expected in (
+        ("REPAIR_DIAGNOSTIC_AND_REGENERATE","REPAIRABLE_FAILURE"),
+        ("CORRECT_AND_REGENERATE_IMAGE","REPAIRABLE_FAILURE"),
+        ("REPLAN_STAGE","REPLANNING"),
+        ("REASSESS_METHOD_AND_REGENERATE_IMAGE","REPLANNING"),
+        ("GENERATE_AND_AUDIT_CANDIDATE","WORK_IN_PROGRESS"),
+    ):
+        directive=o.execution_directive({"next_action":action,"audit":{"status":"FAIL"}})
+        assert directive["classification"]==expected
+        assert directive["continue_same_session"]
+        assert directive["must_persist_and_readback"]
+        assert directive["may_promote_stage"] is False
+        assert directive["automatic_approval"] is False
+    for action, expected in (
+        ("ASK_OWNER_ONE_DECISION","EDITORIAL_DECISION"),
+        ("RESTORE_REQUIRED_HOST_TOOLS","TOOL_UNAVAILABLE"),
+        ("CHECKPOINT","CHECKPOINT"),
+    ):
+        directive=o.execution_directive({"next_action":action})
+        assert directive["classification"]==expected
+        assert not directive["continue_same_session"]
+        assert directive["automatic_approval"] is False
