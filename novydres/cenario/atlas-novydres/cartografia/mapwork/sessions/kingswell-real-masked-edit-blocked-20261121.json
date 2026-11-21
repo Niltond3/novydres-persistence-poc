@@ -1,0 +1,104 @@
+{
+  "schema": "NOVYDRES_MAPWORK_REAL_MASKED_EDIT_BLOCKER",
+  "status": "BLOCKED_NATIVE_VISUAL_ATTACHMENT_NOT_VERIFIED",
+  "trial_status": "FAIL",
+  "date": "2026-11-21",
+  "scope": "NONCANONICAL_ONLY",
+  "publication_authorized": false,
+  "canonical_state_changed": false,
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "mapwork/consolidated-autonomous-20261121",
+  "observed_source_head": "4988ae76e40ba50b4619f0af992478510ca9927e",
+  "pipeline_entrypoint": "scripts/pipeline.py run",
+  "pipeline_invoked": false,
+  "pipeline_invocation_blocker": "Current code not byte-materialized and import-graph verified against observed GitHub HEAD. Existing Drive runtime ZIP is older; no nonverified runtime executed.",
+  "u02": {
+    "drive_file_id": "1PrfWEcD07Gz5eX5r2qKGaRlecixVKh6r",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "dimensions": [
+      1448,
+      1086
+    ]
+  },
+  "selection": {
+    "kind": "VISUALLY_IDENTIFIED_NONCANONICAL_EXPERIMENTAL_AREA",
+    "lot_authority_verified": false,
+    "bounds_u02": [
+      696,
+      786,
+      824,
+      914
+    ],
+    "polygon_u02": [
+      [
+        753,
+        831
+      ],
+      [
+        766,
+        831
+      ],
+      [
+        768,
+        834
+      ],
+      [
+        768,
+        845
+      ],
+      [
+        755,
+        847
+      ],
+      [
+        753,
+        844
+      ]
+    ]
+  },
+  "local_inputs": {
+    "reference_sha256": "84a6964934432d962241c9c32bf8a756c38f78c8c3fc8d57adabb56be1fbd984",
+    "mask_sha256": "b2fb7acdd77e64bd798dea756c6954947f4bc89c7ec5a3b8684d2c814adf15af",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mask_writable_pixels": 14321
+  },
+  "native_attempts": [
+    {
+      "attempt": 1,
+      "gen_id": "416b1d2d-4013-43a6-bf45-3c2b27248613",
+      "edit_op": null,
+      "parent_gen_id": null,
+      "image_sha256": "d062ea12a637e3fc2043b74807a8e9e7a7cc9617eab8a1de17f04e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "verdict": "FAIL",
+      "reason": "Unrelated independent generation, not a masked edit. Attachment binding absent."
+    },
+    {
+      "attempt": 2,
+      "gen_id": "6997548c-15a1-4287-8ccd-0fc48231801f",
+      "edit_op": null,
+      "parent_gen_id": null,
+      "image_sha256": "71e626c9268aa6efd1d0d32167e762b0bb1f443222213e6f478873d833d50f4d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "verdict": "FAIL",
+      "reason": "False success infographic, not real image edit."
+    }
+  ],
+  "verified_visual_input_binding": false,
+  "correction_masked_rounds": 0,
+  "outside_mask_pixels_preserved": "NOT_VERIFIED",
+  "accepted_final_image": null,
+  "drive_uploaded_count": 0,
+  "previous_journal_modified": false,
+  "next_action": "BLOCKED_CAPABILITY",
+  "evidence_note": "Native tool exposed edit_op null twice. Do not promote either image; a real provider-bound reference/mask native edit and verified current runtime are required."
+}
