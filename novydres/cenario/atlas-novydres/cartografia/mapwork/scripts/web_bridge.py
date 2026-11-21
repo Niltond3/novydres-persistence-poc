@@ -159,6 +159,101 @@ def _verify_import_graph(module_dir, listed):
                     raise WebBridgeError("unverified transitive import: " + name)
 
 
+def materialize_host_exchange(*, operation, pending_sync, provider_results,
+                              github_commits, arg_updates, output_path):
+    """Translate actual Web connector receipts/GET files into pipeline exchange.
+
+    This is a pure adapter, not an executor or a second state controller.
+    The ChatGPT Web host invokes connected tools and supplies their original
+    response metadata plus separately materialized GET bytes. No Python
+    callback can call a Web connector. The canonical run_host_exchange validates
+    CAS ancestry, artifact uniqueness and the full journal hash chain.
+
+    A provider result has: provider, kind (optional), path, readback_path,
+    upload (provider result), readback (provider GET result), and, for GitHub,
+    repo_path. Hashes and remote IDs are derived here; never accepted from
+    caller-supplied artifact hashes.
+    """
+    if not isinstance(operation, dict) or not isinstance(operation.get("operation_id"), str):
+        raise WebBridgeError("host operation identity missing")
+    if operation.get("status") != "PENDING" or not isinstance(operation.get("action"), str):
+        raise WebBridgeError("host exchange requires original pending operation")
+    if (not isinstance(pending_sync, dict) or
+            not isinstance(provider_results, list) or not provider_results or
+            not isinstance(github_commits, list) or
+            not isinstance(arg_updates, dict)):
+        raise WebBridgeError("complete independent host handoff inputs required")
+    records = []
+    seen = set()
+    for item in provider_results:
+        if not isinstance(item, dict):
+            raise WebBridgeError("invalid provider result")
+        provider = item.get("provider")
+        local = item.get("path")
+        remote = item.get("readback_path")
+        upload = item.get("upload")
+        get = item.get("readback")
+        if (provider not in ("github", "drive") or
+                not isinstance(local, str) or not isinstance(remote, str) or
+                not isinstance(upload, dict) or not isinstance(get, dict) or
+                not Path(local).is_file() or not Path(remote).is_file() or
+                Path(local).resolve() == Path(remote).resolve()):
+            raise WebBridgeError("provider operation needs separate local and GET files")
+        data = Path(local).read_bytes()
+        recovered = Path(remote).read_bytes()
+        if data != recovered:
+            raise WebBridgeError("provider GET bytes differ from upload source")
+        kind = item.get("kind")
+        if kind is not None and kind not in ("image", "visual-review", "research",
+                                             "topology", "intent", "capability",
+                                             "other"):
+            raise WebBridgeError("unknown host artifact kind")
+        record = {"provider":provider,"path":local,"readback_path":remote,
+                  "sha256":sha256(data)}
+        if kind:
+            record["kind"] = kind
+        if provider == "drive":
+            uploaded_id = upload.get("id")
+            downloaded_id = get.get("id")
+            if (upload.get("success") is not True or
+                    not isinstance(uploaded_id, str) or not uploaded_id or
+                    downloaded_id != uploaded_id):
+                raise WebBridgeError("Drive upload/GET provider IDs differ")
+            record["remote_id"] = uploaded_id
+            if kind == "image":
+                from PIL import Image
+                with Image.open(local) as img:
+                    if img.format != "PNG":
+                        raise WebBridgeError("native host image must be a PNG")
+                    img.verify()
+        else:
+            blob = git_blob_sha(data)
+            if (upload.get("sha") != blob or get.get("sha") != blob or
+                    not isinstance(item.get("repo_path"), str) or
+                    item["repo_path"].startswith("/") or
+                    ".." in Path(item["repo_path"]).parts):
+                raise WebBridgeError("GitHub blob/readback or tree path inconsistent")
+            record.update(blob_sha=blob,remote_id=blob,repo_path=item["repo_path"])
+        identity = (record["provider"],record["remote_id"])
+        if identity in seen:
+            raise WebBridgeError("duplicate host provider artifact")
+        seen.add(identity)
+        records.append(record)
+    result = {"operation_id":operation["operation_id"],
+              "artifacts":records,"github_commits":github_commits,
+              "arg_updates":arg_updates}
+    exchange = {"kind":"COMPLETE_OPERATION",
+                "operation_id":operation["operation_id"],
+                "pending_sync":pending_sync,"result":result}
+    output = Path(output_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    from orchestration import atomic_json
+    atomic_json(output, exchange)
+    return {"kind":exchange["kind"],"operation_id":exchange["operation_id"],
+            "path":str(output),"sha256":sha256(output.read_bytes()),
+            "artifacts":len(records)}
+
+
 def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
             action_executor=None, remote_readback=None, journal_sync=None):
     """Run exact canonical pipeline.main WITHOUT invoking a terminal or clone.
