@@ -89,8 +89,10 @@ def test_partial_candidate_is_recorded_but_never_accepted(tmp_path):
     assert not ledger["stages"]["INF-02"]["attempts"]
 
 
-def test_forged_pass_without_bytes_rejected(tmp_path):
+def test_invalid_pass_persisted_but_never_accepted_or_blocks_retry(tmp_path):
     a = failed(1)
     a["verdict"] = "PASS"
-    with pytest.raises(ValueError, match="bytes"):
-        submit(tmp_path, a)
+    assert submit(tmp_path, a)["iteration"] == 1
+    ledger = json.loads((tmp_path/"ledger.json").read_text())
+    assert ledger["stages"]["INF-01"]["attempts"][0]["verified_verdict"] == "UNVERIFIED"
+    assert submit(tmp_path, failed(2))["iteration"] == 2
