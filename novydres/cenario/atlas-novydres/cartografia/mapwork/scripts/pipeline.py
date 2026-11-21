@@ -615,11 +615,29 @@ def run(args):
             args.native_candidate, args.native_composite_output,
             crop_bbox=manifest["bbox"] if manifest else None,
             protected_mask_path=getattr(args, "native_protected_mask", None))
+        next_action = "AGENT_INSPECT_RECOMPOSED_CANDIDATE"
+        blockers = ["Inspect the composed PNG and both neighboring seam sides."]
+        if getattr(args, "visual_review", None):
+            review = core.load(args.visual_review)
+            core.fail(isinstance(review, dict) and review.get("by") == "AGENT"
+                      and review.get("status") in ("PASS", "FAIL")
+                      and review.get("image_sha256") == output["composed_sha256"]
+                      and review.get("reference_sha256") == output["reference_sha256"]
+                      and review.get("mask_sha256") == output["mask_sha256"]
+                      and isinstance(review.get("observations"), list)
+                      and len(review["observations"]) >= 4
+                      and all(isinstance(note, str) and len(note.strip()) >= 12
+                              for note in review["observations"]),
+                      "local review lacks exact image/mask/reference or visual observations")
+            if review["status"] == "PASS":
+                next_action = "PERSIST_CANDIDATE_FOR_FULL_AUDIT"
+                blockers = []
+            else:
+                next_action = "REPAIR_LOCAL_CANDIDATE"
+                blockers = ["Regenerate using a smaller authorized mask and "
+                            "the previous valid reference; do not upload failed images."]
         return {"schema": SCHEMA, "phase": "NATIVE_MASKED_COMPOSITION",
-                "next_action": "AGENT_INSPECT_RECOMPOSED_CANDIDATE",
-                "blockers": ["Agent must inspect the actual composed PNG and both seam "
-                             "sides; then persist independent Drive readbacks and "
-                             "record the attempt in the original journal."],
+                "next_action": next_action, "blockers": blockers,
                 "audit": output, "publication_authorized": False,
                 "canonical_state_changed": False}
     if getattr(args, "synthetic_trial", None) and getattr(args, "topology_source", None):
