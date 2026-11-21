@@ -55,7 +55,7 @@ def crossing(a="H", b="V",relation="at_grade",point=(6,6),levels=(0,0),
 def classifications(data, *records):
     return {"schema":"NOVYDRES_MAPWORK_TOPOLOGY_CLASSIFICATIONS",
             "reference_sha256":data["source_sha256"],
-            "network_sha256":topology.digest(data["network"]),
+            "network_sha256":topology.digest(data.get("network",data.get("transport"))),
             "crossings":list(records),"protected_edge_ids":[]}
 
 
