@@ -354,11 +354,19 @@ def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_pa
         urban.plan_city(p,core.load(ROOT/"config.json"),neighbor_manifests=peers)
 
 
-def test_legacy_pois_cannot_be_omitted_from_new_spatial_plan(tmp_path):
+def test_canonical_inventory_pois_cannot_be_omitted(tmp_path):
     folder=tmp_path/"zone";folder.mkdir()
-    core.save(folder/"spatial-plan.json",{"pois":[{"id":"POI-MUST-SURVIVE"}]})
+    core.save(folder/"inventory.json",{"region":"region-1",
+              "elements":[{"id":"POI-MUST-SURVIVE"}]})
     with pytest.raises(core.Invalid,match="approved POI inventory differs"):
-        pipeline.check_canonical_pois(folder/"zone.json",{"special_sites":[]})
+        pipeline.check_canonical_pois(folder/"zone.json",
+                                     {"zone":{"id":"region-1"},"special_sites":[]})
+    with pytest.raises(core.Invalid,match="duplicate"):
+        pipeline.check_canonical_pois(folder/"zone.json",
+                                     {"zone":{"id":"region-1"},"special_sites":[
+                                        {"id":"POI-MUST-SURVIVE"},{"id":"POI-MUST-SURVIVE"}]})
+    assert pipeline.check_canonical_pois(folder/"zone.json",
+                 {"zone":{"id":"region-1"},"special_sites":[{"id":"POI-MUST-SURVIVE"}]}) is None
 
 
 def test_work_unit_mask_cannot_paint_outside_its_exact_editable_area(tmp_path):
