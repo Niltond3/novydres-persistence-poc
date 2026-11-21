@@ -303,6 +303,63 @@
       },
       "state_sha256": "9fc74a57ed34d0aebd47ad185a9e93b1ec01c2778fb3d640bb69394ca8b70552",
       "status": "COMPLETED"
+    },
+    {
+      "action": "BUILD_REGION_FROM_APPROVED_CANON",
+      "artifacts": [],
+      "entry_sha256": "6e585583a45dca9bdeee8b24a9776e64e68cd5a3df0b2817d9bf4aad0ad47553",
+      "lease_head": "b1c2bd96ee900043acb8e647e75634c3986bd461",
+      "operation_id": "6683c252f8da3e30b18c8cf539dadf8c60275a1c95b15bfdf1817b938f075d71",
+      "parent_sha256": "0ac34c9c229f5908585c894b0d3e153b8849d2108919fcdd7dc998a00d155680",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-recovery-evidence/intent-recovered.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-source-2342/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": {
+          "inventory": {
+            "elements": 0,
+            "proposals_used": []
+          },
+          "proposals": {
+            "approved": [],
+            "inventory": 0,
+            "pending": []
+          },
+          "research": {
+            "real_world_domains": 2,
+            "sources": 2
+          }
+        },
+        "blockers": [
+          "No real zone geometry for sulfok; preserve map, do not infer borders from U02 color"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "BUILD_REGION_FROM_APPROVED_CANON",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "BUILD_REGION_FROM_APPROVED_CANON",
+        "next_decision_id": null,
+        "phase": "SPATIAL_MODEL",
+        "publication_authorized": false,
+        "request_sha256": "877067966e16248b1387ab2b5ff0e05e64f7529eca11a127611b87b8f367a501",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "28f7618751145b855fa534752a9dcb87231f6b3ba70f351eca9f3d9351632862",
+      "status": "PENDING"
     }
   ]
 }
