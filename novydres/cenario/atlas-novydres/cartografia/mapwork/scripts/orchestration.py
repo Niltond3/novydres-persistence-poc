@@ -46,22 +46,24 @@ def failure_signature(attempt):
 
 
 def progress_policy(attempts):
-    """No unbounded repeats of one method; never return PASS by exhaustion."""
+    """Next action from actual unsuccessful attempts, never declared PASS text."""
     if not attempts:
         return "GENERATE_AND_AUDIT_CANDIDATE"
     last = attempts[-1]
-    # A candidate's declaration is never a controller-verified acceptance.
     if last.get("verified_verdict") == "PASS":
         return "ADVANCE_AFTER_ACCEPTANCE"
-    if len(attempts) >= 6:
-        # Six unsuccessful iterations require method/premise/decomposition audit.
-        # A subsequent attempt must declare a materially new method generation.
+    # A documented method reassessment starts a new six-failure epoch. The
+    # seventh attempt must be constructible instead of staying stuck forever.
+    epoch = max([0] + [i+1 for i, a in enumerate(attempts)
+                       if a.get("method_reassessment_evidence")])
+    if len(attempts) - epoch >= 6:
         return "REASSESS_METHOD"
-    if len(attempts) >= 3:
+    if len(attempts) - epoch >= 3:
         recent = attempts[-3:]
-        if all(a.get("verdict") != "PASS" and
-               failure_signature(a) == failure_signature(last) and
-               a.get("improvement_evidence") is None for a in recent):
+        if (all(a.get("verified_verdict") != "PASS" and
+                failure_signature(a) == failure_signature(last) and
+                a.get("improvement_evidence") is None for a in recent) and
+                len({a.get("strategy_id") for a in recent}) == 1):
             return "REPLAN_STAGE"
     return "REPAIR_AND_REGENERATE"
 
@@ -149,6 +151,10 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
                     len(str(attempt["replan_evidence"]).strip()) < 30 or
                     attempt.get("strategy_id") == prior.get("strategy_id")):
                 raise ValueError("new construction strategy and evidence required")
+            if action == "REASSESS_METHOD":
+                if not isinstance(attempt.get("method_reassessment_evidence"), str) or
+                   len(attempt["method_reassessment_evidence"].strip()) < 30:
+                    raise ValueError("explicit method reassessment required after six failures")
     attempt["iteration"] = len(attempts) + 1
     attempt["payload_sha256"] = payload_digest
     attempt["verified_verdict"] = "UNVERIFIED"
