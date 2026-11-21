@@ -228,12 +228,25 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
                     img.verify()
         else:
             blob = git_blob_sha(data)
-            if (upload.get("sha") != blob or get.get("sha") != blob or
-                    not isinstance(item.get("repo_path"), str) or
-                    item["repo_path"].startswith("/") or
-                    ".." in Path(item["repo_path"]).parts):
+            repo_path = item.get("repo_path")
+            upload_blob = upload.get("sha") or upload.get("content_sha")
+            # create_file returns only commit_sha; it is valid exclusively
+            # when a separately read back commit/tree binds this path/blob.
+            upload_commit = upload.get("commit_sha")
+            matching_commits = [c for c in github_commits if
+                isinstance(c, dict) and
+                isinstance(c.get("files"), dict) and
+                c["files"].get(repo_path) == blob and
+                c.get("commit_sha") == upload_commit]
+            if (get.get("sha") != blob or
+                    not isinstance(repo_path, str) or
+                    not repo_path or repo_path.startswith("/") or
+                    ".." in Path(repo_path).parts or
+                    (upload_blob != blob and not (
+                        isinstance(upload_commit, str) and
+                        SHA40.fullmatch(upload_commit) and matching_commits))):
                 raise WebBridgeError("GitHub blob/readback or tree path inconsistent")
-            record.update(blob_sha=blob,remote_id=blob,repo_path=item["repo_path"])
+            record.update(blob_sha=blob,remote_id=blob,repo_path=repo_path)
         identity = (record["provider"],record["remote_id"])
         if identity in seen:
             raise WebBridgeError("duplicate host provider artifact")
