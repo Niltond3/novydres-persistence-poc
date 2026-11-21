@@ -96,6 +96,45 @@ def evaluation(kw, **changes):
     return a.evaluate(**params)
 
 
+def test_wrong_target_or_reference_dimensions_never_authorizes(tmp_path):
+    path, record, kw = fixture(tmp_path, stages=8)
+    record["target"] = "kingswell"
+    record["reference_dimensions_px"] = [32,32]
+    write_json(path, record)
+    assert evaluation(kw, require_urban=True, expected_target="kingswell")["status"] == "PASS"
+    assert evaluation(kw, require_urban=True, expected_target="sulfok")["next_action"] == "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE"
+    record["reference_dimensions_px"] = [64,32]
+    write_json(path, record)
+    assert evaluation(kw, require_urban=True, expected_target="kingswell")["next_action"] == "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE"
+
+
+def test_checkpoint_rejects_stale_contract_and_unbacked_pass(tmp_path):
+    path, record, kw = fixture(tmp_path, stages=0)
+    record["target"] = "kingswell"
+    record["reference_dimensions_px"] = [32,32]
+    write_json(path, record)
+    checkpoint = {
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "kingswell", "criteria_sha256": a.criteria_contract()["sha256"],
+        "reference_sha256": kw["reference_sha256"],
+        "ledger_sha256": a.sha_file(path),
+        "official_accepted_stages": []
+    }
+    verify = lambda: a.checkpoint_issues(
+        checkpoint, ledger_path=path, reference_sha256=kw["reference_sha256"],
+        criteria_sha256=a.criteria_contract()["sha256"], expected_target="kingswell")
+    assert verify() == []
+    checkpoint["official_accepted_stages"] = ["INF-01"]
+    assert any("not backed" in s or "disagree" in s for s in verify())
+    checkpoint["official_accepted_stages"] = []
+    checkpoint["criteria_sha256"] = "0"*64
+    assert any("Markdown" in s for s in verify())
+    checkpoint["criteria_sha256"] = a.criteria_contract()["sha256"]
+    record["diagnostics"] = [{"stage":"INF-01","status":"FAIL"}]
+    write_json(path,record)
+    assert any("ledger SHA" in s for s in verify())
+
+
 def test_contract_reads_32_rules_and_order():
     spec = a.criteria_contract()
     assert tuple(spec["stages"]) == a.STAGES

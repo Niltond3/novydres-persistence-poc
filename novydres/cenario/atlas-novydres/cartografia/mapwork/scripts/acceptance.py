@@ -158,8 +158,9 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
     if (not isinstance(ledger, dict) or ledger.get("schema") != SCHEMA or
             ledger.get("criteria_sha256") != spec["sha256"] or
             ledger.get("reference_sha256") != reference_sha256 or
-            (expected_target is not None and ledger.get("target") != expected_target) or
-            ledger.get("reference_dimensions_px") != list(reference_size)):
+            (expected_target is not None and
+             (ledger.get("target") != expected_target or
+              ledger.get("reference_dimensions_px") != list(reference_size)))):
         return _stage(required[0], "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE",
                       ["ledger schema/criteria/reference digest mismatch"])
     groups = ledger.get("stages")
@@ -378,8 +379,17 @@ def checkpoint_issues(checkpoint, *, ledger_path, reference_sha256,
             for stage in accepted
         ):
             issues.append("checkpoint accepted stages not backed by ledger")
-        if isinstance(accepted, list) and accepted != list(STAGES[:len(accepted)]):
-            issues.append("checkpoint accepted stages out of order")
+        if isinstance(accepted, list):
+            if accepted != list(STAGES[:len(accepted)]):
+                issues.append("checkpoint accepted stages out of order")
+            recorded = []
+            for stage in STAGES:
+                attempts = stages.get(stage, {}).get("attempts", [])
+                if not attempts or attempts[-1].get("verdict") != "PASS":
+                    break
+                recorded.append(stage)
+            if accepted != recorded:
+                issues.append("checkpoint accepted stages disagree with ledger")
     except (ValueError, OSError, TypeError, AttributeError) as exc:
         issues.append("ledger unreadable: " + str(exc))
     return issues

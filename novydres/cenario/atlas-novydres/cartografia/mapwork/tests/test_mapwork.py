@@ -324,3 +324,10 @@ def test_real_kingswell_gate_reports_incomplete_coverage():
     assert v31['preliminary_sketch']['window_coverage_pct']<20
     assert v31['preliminary_sketch']['full_generation_area_coverage_proven'] is False
     assert v31['preliminary_sketch']['preliminary_windows_are_city_lots'] is False
+
+
+def test_legacy_operational_status_cannot_pass(tmp_path):
+    cfg,base,assets,zones=fixture(tmp_path)
+    zones[0]["status"]="SKETCH_APPROVED"
+    with pytest.raises(m.Invalid,match="is not one of"):
+        m.audit_zone(zones[0],cfg,assets,True)

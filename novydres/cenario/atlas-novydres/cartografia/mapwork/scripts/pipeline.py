@@ -441,12 +441,12 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     core.fail(is_verified_protocol,
               "composition requires independent editorial evidence")
     bound_gate=contract.get("acceptance_evidence",{})
-    core.fail(isinstance(bound_gate,dict) and
+    ledger_file=Path(bound_gate.get("ledger_path","")) if isinstance(bound_gate,dict) else None
+    core.fail(ledger_file is not None and ledger_file.is_file() and
               bound_gate.get("criteria_sha256")==acceptance.criteria_contract()["sha256"] and
               bound_gate.get("reference_sha256")==cfg["reference"]["sha256"] and
-              bound_gate.get("ledger_sha256")==fingerprint(bound_gate.get("ledger_path",""))
-              if isinstance(bound_gate,dict) and bound_gate.get("ledger_path") and
-                 Path(bound_gate["ledger_path"]).is_file() else False,
+              bound_gate.get("ledger_sha256")==fingerprint(ledger_file) and
+              bound_gate.get("accepted_stages")==list(acceptance.STAGES),
               "composition requires fresh SHA-bound acceptance ledger")
     gate=acceptance.evaluate(
         bound_gate["ledger_path"],reference_file=base,
@@ -556,9 +556,11 @@ def _run_verified(args):
     expected=acceptance.criteria_contract()["sha256"]
     core.fail(getattr(args,"_accepted_criteria_sha256",None)==expected,
               "renderer acceptance Markdown contract mismatch")
+    zone_path=resolve_zone(args.district,args.zone)
+    core.fail(zone_path is not None,"renderer zone manifest missing")
     gate=acceptance.evaluate(
         getattr(args,"acceptance_ledger",None) or
-        (resolve_zone(args.district,args.zone).parent/"acceptance-ledger.json"),
+        (zone_path.parent/"acceptance-ledger.json"),
         reference_file=getattr(args,"reference",None),
         reference_sha256=cfg["reference"]["sha256"],
         reference_size=cfg["world_size_units"],
@@ -570,11 +572,6 @@ def _run_verified(args):
     core.fail(gate["status"]=="PASS",
               "renderer blocked by independent infrastructure acceptance: "+
               gate["next_action"])
-    zone_path=resolve_zone(args.district,args.zone)
-    if zone_path is None:
-        return checkpoint(district=args.district,phase="BOOTSTRAP",
-                          action="CREATE_ZONE_MANIFEST_FROM_CANON",
-                          blockers=["Resolve district subject ID, canonical boundaries, neighbors and source SHA from GitHub master; do not invent geometry."])
     zone=core.load(zone_path)
     district=zone["id"]
     core.audit_zone(zone,cfg,strict=False)
