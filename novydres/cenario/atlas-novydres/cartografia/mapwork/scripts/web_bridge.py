@@ -6,7 +6,9 @@ is still scripts/pipeline.py: run_web invokes its main() in-process.
 """
 from __future__ import annotations
 
+import ast
 import contextlib
+import importlib
 import hashlib
 import io
 import importlib.util
@@ -86,19 +88,28 @@ def verify_files(manifest, *, root, expected_commit=None):
         else:
             raise WebBridgeError("file provider unsupported: " + str(rel))
         verified.append({"path":str(rel),"sha256":sha256(raw),"provider":provider})
+    local_modules = {p.relative_to(root).as_posix() for p in
+                     (root / "scripts").rglob("*.py") if p.is_file()}
+    unverified = local_modules - seen
+    if unverified:
+        raise WebBridgeError("unverified executable modules: " + ", ".join(sorted(unverified)))
     return {"status":"PASS","source_commit":commit,"files":verified,
             "file_count":len(verified)}
 
 
-def extract_verified_zip(archive, dest, *, max_bytes=200_000_000):
+def extract_verified_zip(archive, dest, *, max_bytes=200_000_000, manifest=None, source_commit=None):
     """Safe no-network ZIP extraction; file integrity checked by verify_files afterwards."""
     dest = Path(dest).resolve()
     dest.mkdir(parents=True, exist_ok=True)
     try:
         with ZipFile(archive) as z:
             total = 0
+            members = set()
             for member in z.infolist():
                 rel = checked_relative(member.filename.rstrip("/"))
+                if str(rel) in members:
+                    raise WebBridgeError("duplicate ZIP member")
+                members.add(str(rel))
                 total += member.file_size
                 if total > max_bytes or member.file_size > max_bytes:
                     raise WebBridgeError("oversized ZIP rejected")
@@ -114,7 +125,36 @@ def extract_verified_zip(archive, dest, *, max_bytes=200_000_000):
                     target.write_bytes(z.read(member))
     except (BadZipFile, OSError) as exc:
         raise WebBridgeError("source/archive bytes not readable") from exc
+    if manifest is not None:
+        verified = verify_files(manifest, root=dest, expected_commit=source_commit)
+        expected = {r["path"] for r in verified["files"]}
+        actual = {p.relative_to(dest).as_posix() for p in dest.rglob("*") if p.is_file()}
+        if actual != expected:
+            raise WebBridgeError("Drive ZIP inventory differs from verified manifest")
     return dest
+
+
+def _verify_import_graph(module_dir, listed):
+    """Every materialized local import target must be part of the verified set."""
+    names = {p.stem for p in module_dir.glob("*.py")}
+    for p in module_dir.rglob("*.py"):
+        rel = "scripts/" + p.relative_to(module_dir).as_posix()
+        if rel not in listed:
+            raise WebBridgeError("unverified Python import target: " + rel)
+        try:
+            tree = ast.parse(p.read_text(encoding="utf-8"), filename=str(p))
+        except (SyntaxError, UnicodeError) as exc:
+            raise WebBridgeError("invalid executable module: " + rel) from exc
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                dependencies = [n.name.split(".")[0] for n in node.names]
+            elif isinstance(node, ast.ImportFrom) and node.module:
+                dependencies = [node.module.split(".")[0]]
+            else:
+                continue
+            for name in dependencies:
+                if name in names and "scripts/" + name + ".py" not in listed:
+                    raise WebBridgeError("unverified transitive import: " + name)
 
 
 def run_web(*, argv, file_manifest, root, source_commit):
@@ -124,25 +164,51 @@ def run_web(*, argv, file_manifest, root, source_commit):
     readbacks before calling; this adapter cannot authenticate those requests.
     """
     verification = verify_files(file_manifest, root=root, expected_commit=source_commit)
-    required = {"scripts/pipeline.py", "scripts/mapwork.py", "scripts/flow.py",
-                "scripts/contracts.py", "scripts/acceptance.py",
-                "docs/infra-acceptance.md", "scripts/web_bridge.py"}
     listed = {r["path"] for r in verification["files"]}
+    required = {"docs/infra-acceptance.md", "scripts/pipeline.py", "scripts/web_bridge.py"}
     if not required.issubset(listed):
-        raise WebBridgeError("verified canonical pipeline or Markdown contract absent")
+        raise WebBridgeError("canonical pipeline or binding Markdown not verified")
     module_dir = (Path(root) / "scripts").resolve()
-    for name in ("pipeline", "mapwork", "flow", "contracts", "acceptance"):
-        loaded = sys.modules.get(name)
-        if loaded is not None and not Path(loaded.__file__).resolve().is_relative_to(module_dir):
-            raise WebBridgeError("stale Python module from another source checkout: " + name)
-    if str(module_dir) not in sys.path:
-        sys.path.insert(0, str(module_dir))
-    spec = importlib.util.spec_from_file_location("pipeline", module_dir / "pipeline.py")
-    pipeline = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(pipeline)  # exact, byte-verified canonical source
+    _verify_import_graph(module_dir, listed)
+    hashes = {r["path"]:r["sha256"] for r in verification["files"]}
+    names = {p.stem for p in module_dir.glob("*.py")}
+    # A module imported before this verification is untrusted even when it
+    # points into the current checkout, unless a previous invocation stamped
+    # the exact source SHA-256 after verified execution.
+    for name, loaded in tuple(sys.modules.items()):
+        if name not in names:
+            continue
+        rel = "scripts/" + name + ".py"
+        origin = getattr(loaded, "__file__", None)
+        if (not origin or Path(origin).resolve() != module_dir / (name + ".py") or
+                getattr(loaded, "_mapwork_verified_sha256", None) != hashes.get(rel)):
+            raise WebBridgeError("stale/unverified cached Python module: " + name)
+    # Do not trust an old timestamp-based bytecode cache.
+    for cached in module_dir.rglob("__pycache__/*.pyc"):
+        cached.unlink()
+    importlib.invalidate_caches()
+    original_path = list(sys.path)
+    old_bytecode = sys.dont_write_bytecode
+    sys.path.insert(0, str(module_dir))
+    sys.dont_write_bytecode = True
     output, errors = io.StringIO(), io.StringIO()
-    with contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
-        exit_code = pipeline.main(["run", *list(argv)])
+    try:
+        spec = importlib.util.spec_from_file_location("pipeline", module_dir / "pipeline.py")
+        pipeline = importlib.util.module_from_spec(spec)
+        sys.modules["pipeline"] = pipeline
+        spec.loader.exec_module(pipeline)
+        with contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
+            exit_code = pipeline.main(["run", *list(argv)])
+        for name in names:
+            loaded = sys.modules.get(name)
+            if loaded is not None and getattr(loaded, "__file__", None):
+                rel = "scripts/" + name + ".py"
+                if Path(loaded.__file__).resolve() != module_dir / (name + ".py"):
+                    raise WebBridgeError("runtime imported foreign module: " + name)
+                loaded._mapwork_verified_sha256 = hashes[rel]
+    finally:
+        sys.path[:] = original_path
+        sys.dont_write_bytecode = old_bytecode
     raw = output.getvalue().strip() or errors.getvalue().strip()
     try:
         result = json.loads(raw)
