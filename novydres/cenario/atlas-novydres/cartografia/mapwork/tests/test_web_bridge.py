@@ -48,7 +48,8 @@ def test_wrong_source_commit_never_passes(tmp_path):
 
 def test_canonical_pipeline_is_in_process_and_remains_blocked(tmp_path):
     files=[]
-    for rel in sorted(["docs/infra-acceptance.md"]+
+    for rel in sorted(["docs/infra-acceptance.md", "config.json", "scope-index.json",
+                       "VISUAL_REVIEW_PROTOCOL.md", "PIPELINE.md"]+
                       ["scripts/"+p.name for p in (ROOT/"scripts").glob("*.py")]):
         data=(ROOT/rel).read_bytes()
         files.append({"path":rel,"provider":"github","sha256":w.sha256(data),
@@ -83,7 +84,8 @@ def test_canonical_cli_propagates_fail_instead_of_blocked(monkeypatch,capsys):
 
 def _complete_manifest():
     records=[]
-    for rel in sorted(["docs/infra-acceptance.md"] +
+    for rel in sorted(["docs/infra-acceptance.md", "config.json", "scope-index.json",
+                       "VISUAL_REVIEW_PROTOCOL.md", "PIPELINE.md"] +
                       ["scripts/"+p.name for p in (ROOT/"scripts").glob("*.py")]):
         data=(ROOT/rel).read_bytes()
         records.append({"path":rel,"provider":"github","sha256":w.sha256(data),
@@ -134,6 +136,7 @@ def test_web_entrypoint_dispatches_real_material_action_without_canon(tmp_path):
     unchanged = hashlib.sha256(canonical.read_bytes()).hexdigest()
     def execute(action, state, operation_id):
         assert action == "AGENT_RESOLVE_AND_RECORD_INTENT"
+        assert state["agent_context"]["request"] == "Construa Kingswell"
         data = (ROOT / "zones" / "cidade-velha" / "intent.json").read_bytes()
         file.write_bytes(data)
         remote[("github", "material-intent")] = data
@@ -177,3 +180,22 @@ def test_web_entrypoint_dispatches_real_material_action_without_canon(tmp_path):
     assert journal.is_file() and file.is_file()
     assert hashlib.sha256(canonical.read_bytes()).hexdigest() == unchanged
     assert response["authorizes_canon"] is False
+
+
+def test_web_adapter_requires_verified_canonical_index_and_config():
+    manifest, remote = _complete_manifest()
+    manifest["files"] = [f for f in manifest["files"]
+                         if f["path"] != "scope-index.json"]
+    with pytest.raises(w.WebBridgeError, match="canonical pipeline or binding"):
+        w.run_web(argv=["--district", "kingswell"],
+                  file_manifest=manifest, root=ROOT, source_commit="1"*40,
+                  remote_blobs=remote)
+
+
+def test_web_adapter_rejects_github_authority_replacement():
+    manifest, remote = _complete_manifest()
+    remote["scope-index.json"] = "f"*40
+    with pytest.raises(w.WebBridgeError, match="remote Git commit blob"):
+        w.run_web(argv=["--district", "kingswell"],
+                  file_manifest=manifest, root=ROOT, source_commit="1"*40,
+                  remote_blobs=remote)

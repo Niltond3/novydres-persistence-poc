@@ -174,16 +174,24 @@ def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
     # supplied by the host connector. Python never calls GitHub directly.
     if not isinstance(remote_blobs, dict) or not remote_blobs:
         raise WebBridgeError("authenticated remote Git tree blob map required")
-    source = {r["path"] for r in verification["files"]
-              if r["path"].startswith("scripts/") and r["path"].endswith(".py")
-              or r["path"] == "docs/infra-acceptance.md"}
-    for rel in source:
-        content=(Path(root) / rel).read_bytes()
-        if remote_blobs.get(rel) != git_blob_sha(content):
-            raise WebBridgeError("verified source differs from remote Git commit blob: " + rel)
-    required = {"docs/infra-acceptance.md", "scripts/pipeline.py", "scripts/web_bridge.py"}
+    required = {"docs/infra-acceptance.md", "scripts/pipeline.py",
+                "scripts/web_bridge.py", "config.json", "scope-index.json",
+                "VISUAL_REVIEW_PROTOCOL.md", "PIPELINE.md"}
     if not required.issubset(listed):
         raise WebBridgeError("canonical pipeline or binding Markdown not verified")
+    for r in verification["files"]:
+        rel = r["path"]
+        if (rel in required or
+                rel.startswith("scripts/") and rel.endswith(".py")) and r["provider"] != "github":
+            raise WebBridgeError("canonical source authority must originate in GitHub: " + rel)
+    # Verify every declared GitHub-controlled input, not only Python modules:
+    # JSON authority and operational checkpoints may otherwise be silently
+    # substituted while the executable modules remain intact.
+    source = {r["path"] for r in verification["files"] if r["provider"] == "github"}
+    for rel in source:
+        content = (Path(root) / rel).read_bytes()
+        if remote_blobs.get(rel) != git_blob_sha(content):
+            raise WebBridgeError("verified source differs from remote Git commit blob: " + rel)
     module_dir = (Path(root) / "scripts").resolve()
     _verify_import_graph(module_dir, listed)
     hashes = {r["path"]:r["sha256"] for r in verification["files"]}

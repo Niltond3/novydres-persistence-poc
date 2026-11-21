@@ -906,8 +906,16 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                     if value is not None and not isinstance(value, (str, bool)):
                         raise ValueError("invalid autonomous pipeline argument type")
                     setattr(args, key, value)
+            def agent_snapshot():
+                result = run(args)
+                result["agent_context"] = {
+                    "request": args.request, "district": args.district,
+                    "zone": args.zone, "intent_path": args.intent,
+                    "scope_index_path": args.scope_index or str(ROOT / "scope-index.json")
+                }
+                return result
             session = controller.run_autonomous(
-                lambda: run(args), action_executor, remote_readback,
+                agent_snapshot, action_executor, remote_readback,
                 journal_sync, args.autonomous_journal,
                 session_key=controller.digest({
                     "key":args.session_key,"request":args.request,
