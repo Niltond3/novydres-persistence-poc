@@ -112,7 +112,9 @@ web_bridge.run_web. O Python não tem conectores; o ChatGPT executa ações
 reais, em etapas, e reentra na mesma pipeline para validação.
 
 Iniciar com --request, --district, --session-key, --autonomous-journal,
---host-branch, --host-head (HEAD inicial obtido por conector). web_bridge
+--host-branch, --host-head (HEAD inicial obtido por conector) e
+--host-journal-path (caminho relativo sessions/...json, não canônico).
+web_bridge
 injeta --source-commit da árvore Git efetivamente verificada. Preservar
 o HEAD inicial da sessão em retomadas, sem substituí-lo silenciosamente.
 
@@ -147,9 +149,10 @@ o HEAD inicial da sessão em retomadas, sem substituí-lo silenciosamente.
    legítima sem promoção do cânone. Reprovação é trabalho a corrigir,
    não motivo para declarar encerramento.
 
-pending_sync e completed_sync têm os campos branch, lease_head, head,
-ref_head, commit_sha, commit_parent, tree_blob_sha, blob_sha e
-readback_path. O modelo obtém ref_head, commit_sha, commit_parent,
+pending_sync e completed_sync têm os campos branch, repo_path,
+lease_head, head, ref_head, commit_sha, commit_parent, tree_blob_sha,
+blob_sha e readback_path. repo_path deve coincidir com
+--host-journal-path; o journal só é sincronizado dentro de sessions/. O modelo obtém ref_head, commit_sha, commit_parent,
 tree_blob_sha e bytes de chamadas independentes ao conector GitHub;
 o Python verifica coerência de bytes e relações de CAS. Python não
 consegue autenticar criptograficamente a origem de um resultado de

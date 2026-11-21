@@ -854,6 +854,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--source-commit",help="GitHub implementation snapshot verified by Web bridge")
     p.add_argument("--host-branch",help="existing GitHub branch used for CAS journal")
     p.add_argument("--host-head",help="initial branch HEAD pinned before first journal write")
+    p.add_argument("--host-journal-path",help="noncanonical sessions/...json Git tree path")
     p.add_argument("--host-exchange",help="materialized provider GET and host operation response JSON")
     p.add_argument("--max-operations",type=int,default=16,
                    help="bounded operations this invocation; never an acceptance shortcut")
@@ -924,12 +925,14 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                         "key":args.session_key,"request":args.request,
                         "district":args.district,"zone":args.zone}),
                     source_commit=args.source_commit, branch=args.host_branch,
-                    expected_head=args.host_head, exchange_path=args.host_exchange,
+                    expected_head=args.host_head, journal_repo_path=args.host_journal_path,
+                    exchange_path=args.host_exchange,
                     apply_arguments=apply_arguments)
                 print(json.dumps({
-                    "status":"CHECKPOINT" if session["status"]=="AWAITING_HOST_SYNC" else "BLOCKED",
+                    "status":"BLOCKED",
                     "next_action":session.get("next_action"),
-                    "retryable":False, "result":session},
+                    "retryable":session["status"]=="AWAITING_HOST_SYNC",
+                    "result":session},
                     ensure_ascii=False,indent=2))
                 return 0
             if not all(callable(f) for f in

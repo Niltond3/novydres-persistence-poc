@@ -447,7 +447,7 @@ def _git_blob(data):
                         b"\0" + data).hexdigest()
 
 
-def _host_sync_proof(path, proof, *, branch, lease_head):
+def _host_sync_proof(path, proof, *, branch, lease_head, repo_path):
     """Verify materialized independent journal GET and the Git CAS lineage.
 
     The Web host must obtain ref/commit/tree from connector GETs independently.
@@ -468,6 +468,7 @@ def _host_sync_proof(path, proof, *, branch, lease_head):
     blob = _git_blob(data)
     head = proof.get("head")
     if (proof.get("branch") != branch or
+            proof.get("repo_path") != repo_path or
             proof.get("lease_head") != lease_head or
             not HEX40.fullmatch(str(head or "")) or head == lease_head or
             proof.get("ref_head") != head or
@@ -557,7 +558,7 @@ def _host_action_head(result, pending_head, branch):
 
 
 def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
-                      branch, expected_head, exchange_path=None,
+                      branch, expected_head, journal_repo_path, exchange_path=None,
                       apply_arguments=None):
     """One connection-free transition per canonical pipeline.py invocation.
 
@@ -572,6 +573,12 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             not HEX40.fullmatch(str(expected_head or "")) or
             not callable(run_once) or not callable(apply_arguments)):
         raise ValueError("host exchange requires pinned source, branch, head and session")
+    relative = Path(journal_repo_path) if isinstance(journal_repo_path, str) else None
+    if (relative is None or relative.is_absolute() or
+            relative.suffix != ".json" or
+            not relative.parts or relative.parts[0] != "sessions" or
+            ".." in relative.parts):
+        raise ValueError("host journal Git path must remain under noncanonical sessions/")
     path = Path(journal_path)
     exchange = json.loads(Path(exchange_path).read_text(encoding="utf-8")) if exchange_path else None
     if exchange is not None and not isinstance(exchange, dict):
@@ -582,6 +589,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                 session.get("session_key") != session_key or
                 session.get("source_commit") != source_commit or
                 session.get("branch") != branch or
+                session.get("journal_repo_path") != journal_repo_path or
                 session.get("initial_head") != expected_head or
                 session.get("publication_authorized") is not False or
                 not isinstance(session.get("steps"), list)):
@@ -592,6 +600,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             raise ValueError("no host result without a previously persisted request")
         session = {"schema": AUTONOMY_SCHEMA, "session_key": session_key,
                    "source_commit": source_commit, "branch": branch,
+                   "journal_repo_path": journal_repo_path,
                    "initial_head": expected_head, "steps": [],
                    "publication_authorized": False}
     steps = session["steps"]
@@ -609,7 +618,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             raise ValueError("pending operation accepts only matching COMPLETE_OPERATION")
         pending_head = _host_sync_proof(
             path, exchange.get("pending_sync"), branch=branch,
-            lease_head=last["lease_head"])
+            lease_head=last["lease_head"], repo_path=journal_repo_path)
         verified = _host_artifacts(last, exchange.get("result"), steps[:-1])
         operation_head = _host_action_head(exchange["result"], pending_head, branch)
         updates = exchange["result"].get("arg_updates", {})
@@ -640,7 +649,8 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
         if exchange.get("kind") != "ACK_COMPLETE" or exchange.get("operation_id") != last["operation_id"]:
             raise ValueError("completed operation requires matching ACK_COMPLETE")
         head = _host_sync_proof(path, exchange.get("completed_sync"),
-                                branch=branch, lease_head=last["operation_head"])
+                                branch=branch, lease_head=last["operation_head"],
+                                repo_path=journal_repo_path)
         # Repeat GET evidence: a stale local upload receipt cannot validate recovery.
         recovery = exchange.get("recovery_readbacks")
         if not isinstance(recovery, list) or len(recovery) != len(last["artifacts"]):

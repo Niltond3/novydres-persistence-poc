@@ -19,7 +19,8 @@ urbanísticas próprias.
    devem estar presentes e verificados. Recusar módulos Python pré-carregados
    sem selo da mesma revisão e ZIP com arquivo faltante, extra ou duplicado.
    O Python não tem conexão direta ao GitHub/Drive; ações remotas cabem ao agente.
-4. Autonomia Web: passar --host-branch e --host-head inicial, deixando
+4. Autonomia Web: passar --host-branch, --host-head inicial e
+   --host-journal-path=sessions/<arquivo>.json, deixando
    web_bridge injetar --source-commit. Seguir SYNC_PENDING_JOURNAL,
    COMPLETE_OPERATION, SYNC_COMPLETED_JOURNAL e ACK_COMPLETE, conforme
    PIPELINE.md. O host usa o conector GitHub com CAS e GET de ref, commit,

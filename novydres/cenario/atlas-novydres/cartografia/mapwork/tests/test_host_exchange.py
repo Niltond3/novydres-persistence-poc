@@ -21,6 +21,7 @@ def sync(tmp_path, journal, lease, head):
     remote.write_bytes(payload)  # host GET response materialized separately
     return {"branch":"mapwork/integration","lease_head":lease,
             "head":head,"ref_head":head,"commit_sha":head,
+            "repo_path":"sessions/host-io-fixture.json",
             "commit_parent":lease,"tree_blob_sha":blob(payload),
             "blob_sha":blob(payload),"readback_path":str(remote)}
 
@@ -44,7 +45,9 @@ def setup(tmp_path, action="MATERIALIZE_INTENT"):
             f.write_text(json.dumps(payload))
         return o.run_host_exchange(run,journal,session_key="fixed-session",
                      source_commit="a"*40,branch="mapwork/integration",
-                     expected_head="a"*40,exchange_path=f if payload is not None else None,
+                     expected_head="a"*40,
+                     journal_repo_path="sessions/host-io-fixture.json",
+                     exchange_path=f if payload is not None else None,
                      apply_arguments=apply)
     return journal,artifact,exchange
 
@@ -174,3 +177,37 @@ def test_resume_denies_foreign_session_and_tampered_hash_chain(tmp_path):
     journal.write_text(json.dumps(data))
     with pytest.raises(ValueError,match="hash chain"):
         invoke()
+
+
+def test_host_journal_remote_path_is_bound_and_noncanonical(tmp_path):
+    journal,artifact,invoke=setup(tmp_path)
+    op=invoke()["operation"]
+    p=sync(tmp_path,journal,"a"*40,"b"*40)
+    p["repo_path"]="zones/cidade-velha/checkpoint.json"
+    r=receipt(tmp_path,artifact,op["operation_id"])
+    with pytest.raises(ValueError,match="CAS/head/tree/blob"):
+        invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
+                "pending_sync":p,"result":r})
+
+
+def test_pipeline_intent_cannot_pivot_to_different_district(capsys):
+    import pipeline
+    known=ROOT/"zones"/"cidade-velha"/"intent.json"
+    code=pipeline.main(["run","--district","sulfok","--intent",str(known)])
+    assert code==2
+    assert "requested district and resolved intent target mismatch" in capsys.readouterr().err
+
+
+def test_host_exchange_is_not_a_false_remote_checkpoint(capsys,tmp_path):
+    import pipeline
+    code=pipeline.main(["run","--request","Teste técnico sem mapa",
+        "--district","sulfok","--session-key","io-fixture",
+        "--autonomous-journal",str(tmp_path/"journal.json"),
+        "--source-commit","a"*40,
+        "--host-head","a"*40,"--host-branch","mapwork/integration",
+        "--host-journal-path","sessions/test-only.json"])
+    assert code==0
+    payload=json.loads(capsys.readouterr().out)
+    assert payload["status"]=="BLOCKED"
+    assert payload["next_action"]=="SYNC_PENDING_JOURNAL"
+    assert payload["retryable"] is True

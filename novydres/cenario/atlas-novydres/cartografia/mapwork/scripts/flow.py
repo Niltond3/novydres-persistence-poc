@@ -66,6 +66,8 @@ def run(args, core_run):
                     "scope index contains a noncanonical subject ID")
     scope = contract.validate_intent(intent,index["targets"],index["world_bounds"])
     target = scope["target"]
+    contract.require(not getattr(args,"district",None) or args.district==target,
+                     "requested district and resolved intent target mismatch")
     capabilities = _load(args.capabilities)
     if not capabilities:
         return _state("CAPABILITY_CHECK", "PROVE_HOST_CAPABILITIES",
