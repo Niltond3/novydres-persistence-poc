@@ -164,3 +164,45 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
     atomic_json(ledger_path, ledger)
     return {"status": "RECORDED", "stage": stage,
             "iteration": attempt["iteration"], "ledger_sha256": hashlib.sha256(ledger_path.read_bytes()).hexdigest()}
+
+
+# Host-facing executable instruction for the existing sole pipeline entrypoint.
+# This is metadata, not a second pipeline or an autonomous Python image loop.
+def execution_directive(result):
+    action=result.get("next_action")
+    if not isinstance(action,str) or not action.strip():
+        raise ValueError("pipeline checkpoint missing actionable next_action")
+    owner={"ASK_OWNER_ONE_DECISION","READY_FOR_OWNER_REVIEW"}
+    capability={"RESTORE_REQUIRED_HOST_TOOLS","BLOCKED_CAPABILITY"}
+    terminal={"CHECKPOINT","STOP_SESSION_CONFIRMED"}
+    repairs={"REPAIR_UNVERIFIED_CANDIDATE","REPAIR_AND_REGENERATE",
+             "REPAIR_DIAGNOSTIC_AND_REGENERATE","REGENERATE_DIFFERENT_CANDIDATE",
+             "CORRECT_AND_REGENERATE_IMAGE","CORRECT_AND_RETEST",
+             "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE"}
+    replans={"REPLAN_STAGE","REPLAN_AND_REGENERATE_IMAGE",
+             "REASSESS_METHOD","REASSESS_METHOD_AND_REGENERATE_IMAGE"}
+    if action in owner:
+        classification="EDITORIAL_DECISION";operation="ASK_OWNER";continue_session=False
+    elif action in capability:
+        classification="TOOL_UNAVAILABLE";operation="RESTORE_CAPABILITY";continue_session=False
+    elif action in terminal:
+        classification="CHECKPOINT";operation="PERSIST_AND_READBACK";continue_session=False
+    elif action in repairs or action.startswith(("REPAIR_","CORRECT_","REGENERATE_")):
+        classification="REPAIRABLE_FAILURE";operation="REPAIR_GENERATE_AUDIT_PERSIST";continue_session=True
+    elif action in replans:
+        classification="REPLANNING";operation="CHANGE_METHOD_GENERATE_AUDIT_PERSIST";continue_session=True
+    else:
+        classification="WORK_IN_PROGRESS";operation="EXECUTE_NEXT_ACTION_AND_REENTER";continue_session=True
+    # Saving a checkpoint never implies successful stage acceptance.
+    return {"classification":classification,
+            "operation":operation,
+            "action":action,
+            "continue_same_session":continue_session,
+            "rerun_entrypoint":"scripts/pipeline.py run" if continue_session else None,
+            "must_persist_and_readback":True,
+            "may_request_owner":classification=="EDITORIAL_DECISION",
+            "may_promote_stage":action=="ADVANCE_AFTER_ACCEPTANCE" and
+                isinstance(result.get("audit"),dict) and
+                result["audit"].get("status")=="PASS",
+            "automatic_approval":False}
+
