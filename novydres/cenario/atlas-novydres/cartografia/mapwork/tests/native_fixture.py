@@ -18,6 +18,14 @@ def fixture(tmp_path, operation_id="synthetic-operation", prefix="native"):
         remote.write_bytes(local.read_bytes())
         images[role]={"provider":"drive","remote_id":ids[role],"path":str(local),
                       "readback_path":str(remote),"sha256":native.digest(local.read_bytes())}
+    composed=tmp_path/f"{prefix}-composed-image.png"
+    proof=native.compose_masked(images["reference-image"]["path"],
+        images["edit-mask"]["path"],images["image"]["path"],composed)
+    composed_get=tmp_path/f"{prefix}-composed-image-GET.png"
+    composed_get.write_bytes(composed.read_bytes())
+    images["composed-image"]={"provider":"drive","remote_id":"composed-candidate-id",
+        "path":str(composed),"readback_path":str(composed_get),
+        "sha256":proof["composed_sha256"]}
     req=native.edit_request(reference_sha256=images["reference-image"]["sha256"],
         mask_sha256=images["edit-mask"]["sha256"],scope="SYNTHETIC",
         job_id="synthetic-rail-overpass",goal="Convert crossing into a road overpass, keeping rail and road continuous")
@@ -35,7 +43,7 @@ def fixture(tmp_path, operation_id="synthetic-operation", prefix="native"):
     hand.write_text(json.dumps(result, ensure_ascii=False))
     hand_get=tmp_path/f"{prefix}-handoff-GET.json"
     hand_get.write_bytes(hand.read_bytes())
-    review={"status":"FAIL","by":"AGENT","image_sha256":images["image"]["sha256"],
+    review={"status":"FAIL","by":"AGENT","image_sha256":images["composed-image"]["sha256"],
             "reference_sha256":req["reference_sha256"],"mask_sha256":req["mask_sha256"],
             "observations":[{"criterion":k,"status":"FAIL" if k=="grade" else "PASS",
                              "evidence":"Synthetic fixture observation for validation"}
@@ -46,6 +54,6 @@ def fixture(tmp_path, operation_id="synthetic-operation", prefix="native"):
              "path":str(hand),"readback_path":str(hand_get),"sha256":native.digest(hand.read_bytes())},
             "visual-review":{"provider":"drive","remote_id":"review-id",
              "path":str(visual),"readback_path":str(visual_get),"sha256":native.digest(visual.read_bytes())}}
-    artifacts=[dict(images[role],kind=role) for role in ("reference-image","edit-mask","image")]
+    artifacts=[dict(images[role],kind=role) for role in ("reference-image","edit-mask","image","composed-image")]
     artifacts.extend(dict(value,kind=role) for role,value in extras.items())
     return req,result,images,artifacts,review
