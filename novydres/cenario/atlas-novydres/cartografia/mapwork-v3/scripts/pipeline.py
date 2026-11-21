@@ -528,6 +528,14 @@ def run(args):
                           blockers=["Resolve district subject ID, canonical boundaries, neighbors and source SHA from GitHub master; do not invent geometry."])
     zone=core.load(zone_path)
     district=zone["id"]
+    # Kingswell V3.3 cannot fall back to the older entry mode to
+    # sidestep the Markdown/visual infrastructure acceptance contract.
+    if district=="kingswell" and not getattr(args,"v33_verified",False):
+        return checkpoint(
+            district=district,zone_path=zone_path,zone=zone,
+            phase="INFRASTRUCTURE_ACCEPTANCE",
+            action="USE_V33_INTENT_AND_ACCEPTANCE_LEDGER",
+            blockers=["Kingswell V3.3 requires --intent and all INF-01..INF-07 PASS before lots."])
     core.audit_zone(zone,cfg,strict=False,
                     v33_verified=getattr(args,"v33_verified",False))
     def state(phase,action,blockers=(),spatial_path=None,report=None,artifacts=None):
@@ -726,6 +734,8 @@ def main(argv=None):
     p.add_argument("--execute",action="store_true",help="compose only if all planning and art gates pass")
     p.add_argument("--checkpoint",help="write deterministic resumable checkpoint JSON")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed V3.3 request JSON")
+    p.add_argument("--acceptance-ledger",
+                   help="hash-bound, self-reviewed infrastructure candidate rounds; defaults to zone ledger")
     p.add_argument("--scope-index",help="exact canonical subject/index snapshot")
     p.add_argument("--capabilities",help="host capabilities with actual execution receipts")
     p.add_argument("--research-file",help="external analogues including two independent domains")
@@ -750,7 +760,15 @@ def main(argv=None):
         result=run(args)
         if args.checkpoint:
             core.save(args.checkpoint,result)
-        print(json.dumps({"status":"PASS","result":result},ensure_ascii=False,indent=2))
+        # PASS is reserved for verified criteria, not merely a successful
+        # command that returned an incomplete checkpoint or a handoff.
+        if result.get("blockers") or result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE":
+            outcome="BLOCKED"
+        elif result.get("phase") == "CANDIDATE_READY_FOR_OWNER_REVIEW":
+            outcome="READY_FOR_OWNER_REVIEW"
+        else:
+            outcome="CHECKPOINT"
+        print(json.dumps({"status":outcome,"result":result},ensure_ascii=False,indent=2))
         return 0
     except (core.Invalid,urban.ContractError,v33.Blocked,KeyError,ValueError,OSError) as exc:
         print(json.dumps({"status":"FAIL","error":str(exc)},ensure_ascii=False),file=sys.stderr)
