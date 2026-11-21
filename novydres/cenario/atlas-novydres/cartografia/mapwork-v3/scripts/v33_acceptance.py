@@ -35,13 +35,13 @@ def sha_file(path):
 def criteria_contract(doc_path=CRITERIA_DOC):
     """The Markdown is the binding source of rule IDs; Python never forks it."""
     raw = Path(doc_path).read_text(encoding="utf-8")
-    stages = tuple(re.findall(r"^### ((?:INF|URB)-\\d{2})\\b", raw, re.M))
+    stages = tuple(re.findall(r"^### ((?:INF|URB)-\d{2})\b", raw, re.M))
     if stages != STAGES:
         raise ValueError("acceptance Markdown has missing/reordered infrastructure stages")
     result = {}
     for stage in STAGES:
         rule_ids = tuple(re.findall(
-            r"^- \\[ \\] \\x60(" + re.escape(stage) + r"\\.\\d{2})\\x60", raw, re.M
+            r"^- \[ \] \x60(" + re.escape(stage) + r"\.\d{2})\x60", raw, re.M
         ))
         if len(rule_ids) != 4 or len(set(rule_ids)) != len(rule_ids):
             raise ValueError(stage + ": acceptance Markdown must define 4 unique criteria")
