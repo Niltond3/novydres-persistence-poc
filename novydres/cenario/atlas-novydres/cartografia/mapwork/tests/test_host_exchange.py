@@ -431,3 +431,63 @@ def test_cold_recovery_after_upload_before_receipt_reconciles_without_reupload(t
     saved=json.loads(cold.read_text())["steps"][-1]
     assert saved["operation_id"]==op["operation_id"] and saved["status"]=="COMPLETED"
     assert saved["operation_head"]=="d"*40
+
+
+def test_cold_resume_allows_verified_code_only_commits_without_replaying_operation(tmp_path):
+    journal, _, invoke = setup(tmp_path)
+    op = invoke()["operation"]
+    restored = tmp_path/"independent-journal-get.json"
+    restored.write_bytes(journal.read_bytes())
+    session = json.loads(journal.read_text())
+    proof = cold_proof(session, journal, restored, head="b"*40, parent="a"*40)
+    proof["current_ref_head"] = "d"*40
+    proof["runtime_source_commit"] = "d"*40
+    proof["head_chain"] = [{"parent":"b"*40, "head":"c"*40,
+        "commit_sha":"c"*40, "journal_blob_sha":blob(journal.read_bytes()),
+        "kind":"VERIFIED_SOURCE_CHANGE", "changed_paths":["scripts/pipeline.py"]},
+        {"parent":"c"*40, "head":"d"*40, "commit_sha":"d"*40,
+         "journal_blob_sha":blob(journal.read_bytes()),
+         "kind":"VERIFIED_SOURCE_CHANGE", "changed_paths":["tests/test_host_exchange.py","WEB_RUNTIME.md"]}]
+    proof_file = tmp_path/"verified-code-history.json"
+    proof_file.write_text(json.dumps(proof))
+    def run():
+        return {"next_action":"NEW_STATE","publication_authorized":False,
+                "canonical_state_changed":False}
+    def apply(updates, validate_only=False):
+        pass
+    def call():
+        return o.run_host_exchange(run, journal, session_key="fixed-session",
+            source_commit="a"*40, branch="mapwork/integration",
+            expected_head="a"*40, journal_repo_path="sessions/host-io-fixture.json",
+            recovery_path=proof_file, apply_arguments=apply)
+    fresh=call()
+    assert fresh["next_action"] == "EXECUTE_RECOVERED_PENDING_OPERATION"
+    assert fresh["operation"]["operation_id"] == op["operation_id"]
+    assert json.loads(journal.read_text()) == session
+    proof["head_chain"][-1]["changed_paths"].append("zones/kingswell/zone.json")
+    proof_file.write_text(json.dumps(proof))
+    with pytest.raises(ValueError, match="non-source writes"):
+        call()
+
+
+def test_cold_resume_rejects_fake_source_change_missing_runtime_pin(tmp_path):
+    journal, _, invoke = setup(tmp_path)
+    invoke()
+    restored = tmp_path/"external-get.json"
+    restored.write_bytes(journal.read_bytes())
+    session = json.loads(journal.read_text())
+    proof = cold_proof(session,journal,restored,head="b"*40,parent="a"*40)
+    proof["current_ref_head"]="c"*40
+    proof["head_chain"]=[{"parent":"b"*40,"head":"c"*40,"commit_sha":"c"*40,
+        "journal_blob_sha":blob(journal.read_bytes()),
+        "kind":"VERIFIED_SOURCE_CHANGE","changed_paths":["scripts/pipeline.py"]}]
+    recovery=tmp_path/"without-runtime-pin.json"
+    recovery.write_text(json.dumps(proof))
+    def run():
+        return {"next_action":"NEW_STATE","publication_authorized":False,
+                "canonical_state_changed":False}
+    got=o.run_host_exchange(run,journal,session_key="fixed-session",source_commit="a"*40,
+        branch="mapwork/integration",expected_head="a"*40,
+        journal_repo_path="sessions/host-io-fixture.json",
+        recovery_path=recovery,apply_arguments=lambda changes,validate_only=False:None)
+    assert got["next_action"] == "RECONCILE_RECOVERED_REMOTE_WRITES"
