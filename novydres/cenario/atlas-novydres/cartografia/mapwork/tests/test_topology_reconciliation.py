@@ -359,3 +359,33 @@ def test_transitive_junction_must_not_connect_unreviewed_third_corridor():
     with pytest.raises(topology.TopologyInvalid,match="transitive"):
         topology.reconcile(data,classifications(data,
             crossing("A","B"),crossing("A","C")))
+
+
+def test_real_kingswell_98_candidate_corridors_discovered_without_grades():
+    source=json.loads((ROOT/"zones/cidade-velha/road-network-diagnostic.json").read_text())
+    original=copy.deepcopy(source["candidates"])
+    inventory=topology.discover_candidates(source["candidates"])
+    assert inventory["schema"]=="NOVYDRES_MAPWORK_TOPOLOGY_DISCOVERY"
+    assert inventory["corridor_count"]==98
+    assert inventory["status"]=="BLOCKED"
+    assert inventory["semantic_authority"] is False
+    assert inventory["crossing_count"]>0
+    assert len({c["id"] for c in inventory["crossings"]})==inventory["crossing_count"]
+    assert all(c["status"]=="UNRESOLVED" and
+               "levels" not in c and "relation" not in c
+               for c in inventory["crossings"])
+    assert source["candidates"]==original
+    assert topology.discover_candidates(list(reversed(original)))==inventory
+
+
+def test_discovery_handles_multiple_geometry_hits_and_overlap_without_inventing_kind():
+    corridors=[{"id":"A","points":[[0,0],[10,0]]},
+               {"id":"B","points":[[3,-3],[3,3]]},
+               {"id":"C","points":[[8,-3],[8,3]]},
+               {"id":"D","points":[[5,0],[9,0]]}]
+    inventory=topology.discover_candidates(corridors)
+    assert inventory["status"]=="BLOCKED"
+    assert any(v["reason"]=="COLLINEAR_OVERLAP" for v in inventory["crossings"])
+    assert {"A","B"} in [set(x["corridors"]) for x in inventory["crossings"]]
+    assert {"A","C"} in [set(x["corridors"]) for x in inventory["crossings"]]
+    assert all(x["status"]=="UNRESOLVED" for x in inventory["crossings"])
