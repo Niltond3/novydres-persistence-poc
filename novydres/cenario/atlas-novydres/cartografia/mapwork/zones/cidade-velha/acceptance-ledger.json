@@ -1,0 +1,87 @@
+{
+  "schema": "NOVYDRES_MAPWORK_ACCEPTANCE_LEDGER_1",
+  "criteria_sha256": "d444640711857c8eb49aff18400b0bb431766b8402c946f0fccda888551785b3",
+  "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "target": "kingswell",
+  "reference_dimensions_px": [
+    1448,
+    1086
+  ],
+  "stages": {
+    "INF-01": {
+      "attempts": []
+    },
+    "INF-02": {
+      "attempts": []
+    },
+    "INF-03": {
+      "attempts": []
+    },
+    "INF-04": {
+      "attempts": []
+    },
+    "INF-05": {
+      "attempts": []
+    },
+    "INF-06": {
+      "attempts": []
+    },
+    "INF-07": {
+      "attempts": []
+    },
+    "URB-08": {
+      "attempts": []
+    }
+  },
+  "diagnostics": [
+    {
+      "id": "R1",
+      "stage": "INF-01",
+      "status": "FAIL",
+      "official_attempt": false,
+      "evidence": "zones/cidade-velha/spatial-observations.json",
+      "finding": "22 vias amostradas; cruzamentos e níveis não verificados"
+    },
+    {
+      "id": "R2",
+      "stage": "INF-01",
+      "status": "FAIL",
+      "official_attempt": false,
+      "evidence": "zones/cidade-velha/road-network-diagnostic.json",
+      "finding": "98 vias observadas, mas topologia, conexões externas e modais não validados"
+    },
+    {
+      "id": "R3",
+      "stage": "INF-01",
+      "status": "FAIL",
+      "official_attempt": false,
+      "origin_commit": "8acdf79cdbc8a3a4622accdd5c43586a4371336e",
+      "artifact_bundle": {
+        "provider": "drive",
+        "id": "18-EDUa73YRXT8MPikyorFgUfm9DILa5e",
+        "sha256": "585707494a01271304165edc471a991c0ff8143ee8483824f5d1cc3daf02a3d1"
+      },
+      "preview": {
+        "provider": "drive",
+        "id": "1mXJL5wsKRaLOzI7VPJArgCGsKiHfyfXm",
+        "sha256": "d68903318eb844191c26323188740c07702cfc06c55800b887244155d874796a"
+      },
+      "geometry_sha256": "1b49bb5734a99a024f2cbdc803e869d38303402ed437b789c18bebc441d35f41",
+      "zone_mask_sha256": "6e7e4430ba95380b2e0d817e3bfbe26f6dd67defe428160344edc0308533b664",
+      "failed_criteria": [
+        "INF-01.01",
+        "INF-01.02",
+        "INF-01.03",
+        "INF-01.04"
+      ],
+      "finding": "Cruzamento sem tipo KW2-W01 / KW2-W13; ausência de conexão e níveis certificados",
+      "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE",
+      "origin_blob_sha": "af4afc5dd2625f9f7892837071381ac90e76cbf4"
+    }
+  ],
+  "allow_lot_generation": false,
+  "allow_poi_final_siting": false,
+  "allow_native_images": false,
+  "status": "NONE_ACCEPTED",
+  "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE"
+}

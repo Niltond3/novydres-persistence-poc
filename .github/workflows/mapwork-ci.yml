@@ -1,0 +1,39 @@
+name: Mapwork contract and spatial regression
+on:
+  pull_request:
+    paths:
+      - 'novydres/cenario/atlas-novydres/cartografia/mapwork/**'
+      - '.github/workflows/mapwork-ci.yml'
+  push:
+    branches: [master, 'mapwork/**']
+    paths:
+      - 'novydres/cenario/atlas-novydres/cartografia/mapwork/**'
+      - '.github/workflows/mapwork-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install validation dependencies
+        run: python -m pip install -r novydres/cenario/atlas-novydres/cartografia/mapwork/requirements.txt
+      - name: Compile canonical pipeline
+        run: python -m compileall -q novydres/cenario/atlas-novydres/cartografia/mapwork/scripts
+      - name: Verify all invariants and 32 criteria
+        run: python -m pytest -q novydres/cenario/atlas-novydres/cartografia/mapwork/tests
+      - name: Refuse implicit publication
+        run: |
+          python novydres/cenario/atlas-novydres/cartografia/mapwork/scripts/pipeline.py run --checkpoint /tmp/mapwork-checkpoint.json
+          python - <<'PY'
+          import json
+          q=json.load(open('/tmp/mapwork-checkpoint.json'))
+          assert q['publication_authorized'] is False
+          assert q['canonical_state_changed'] is False
+          assert q['next_action'] == 'AGENT_RESOLVE_AND_RECORD_INTENT'
+          PY

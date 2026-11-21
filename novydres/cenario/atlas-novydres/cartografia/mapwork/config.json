@@ -1,0 +1,43 @@
+{
+  "schema": "NOVYDRES_MAPWORK_CONFIG_1",
+  "world_size_units": [
+    1448,
+    1086
+  ],
+  "units": "pixels of immutable approved U02 reference; no meter-per-pixel inferred",
+  "detail_pixels_per_unit": 64,
+  "tile_size_px": 512,
+  "max_bleed_units": 1.5,
+  "projection": {
+    "type": "illustrated_2d_topdown",
+    "global_north": "up",
+    "facade_direction": null,
+    "lighting": "cool_northwest_diffuse",
+    "floor_height_units": null,
+    "source_view": "U02 top-down 90 degrees; no oblique reinterpretation of baseline"
+  },
+  "layer_order": [
+    "terrain",
+    "water",
+    "infrastructure",
+    "lot",
+    "special",
+    "finish"
+  ],
+  "drive": {
+    "folder_id": "1DP7OtEmRuNl093HhQf1IjAA2vd1XPAWn",
+    "folder_name": "NOVYDRES_MAPWORK_ASSETS",
+    "privacy": "private",
+    "backend": "agent_google_drive_connector"
+  },
+  "reference": {
+    "name": "T03_U02_aprovada.png",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "drive_file_id": "1PrfWEcD07Gz5eX5r2qKGaRlecixVKh6r",
+    "width": 1448,
+    "height": 1086
+  },
+  "required_planning_zones": [
+    "cidade-velha"
+  ]
+}

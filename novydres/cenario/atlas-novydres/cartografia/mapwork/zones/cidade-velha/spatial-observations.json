@@ -1,0 +1,1489 @@
+{
+  "schema": "NOVYDRES_MAPWORK_U02_SPATIAL_OBSERVATIONS_1",
+  "region": "kingswell",
+  "subject_id": "district-chelsea",
+  "authority": "U02_APPROVED_RASTER_AND_OWNER_APPROVED_KW_SKETCH_02",
+  "status": "PARTIAL_RASTER_BACKED_VECTOR_TRACING_NOT_GLOBAL_SPATIAL",
+  "reference": {
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "width": 1448,
+    "height": 1086,
+    "projection": "TOP_DOWN_90",
+    "unchanged": true
+  },
+  "source": {
+    "sketch": "zones/cidade-velha/u02-sketch.json",
+    "sketch_blob_sha": "180f3a01ad40983b6ade2217cb488c7b591fa45d",
+    "owner_sketch_approved": true,
+    "sketch_boundary_gis_certified": false
+  },
+  "candidate_raion_polygon_px": [
+    [
+      365,
+      733
+    ],
+    [
+      425,
+      710
+    ],
+    [
+      488,
+      698
+    ],
+    [
+      546,
+      676
+    ],
+    [
+      610,
+      662
+    ],
+    [
+      696,
+      665
+    ],
+    [
+      782,
+      669
+    ],
+    [
+      845,
+      662
+    ],
+    [
+      923,
+      692
+    ],
+    [
+      989,
+      712
+    ],
+    [
+      1006,
+      761
+    ],
+    [
+      1013,
+      820
+    ],
+    [
+      1017,
+      900
+    ],
+    [
+      1023,
+      968
+    ],
+    [
+      1032,
+      1086
+    ],
+    [
+      363,
+      1086
+    ],
+    [
+      343,
+      1022
+    ],
+    [
+      306,
+      990
+    ],
+    [
+      321,
+      937
+    ],
+    [
+      339,
+      892
+    ],
+    [
+      329,
+      847
+    ],
+    [
+      336,
+      798
+    ],
+    [
+      351,
+      757
+    ]
+  ],
+  "hydrography": [
+    {
+      "id": "KW-VASYL-CANDIDATE",
+      "type": "river",
+      "geometry": "VISUALLY_INSPECTED_SKETCH_CENTERLINE",
+      "points_px": [
+        [
+          266,
+          712
+        ],
+        [
+          308,
+          734
+        ],
+        [
+          350,
+          754
+        ],
+        [
+          404,
+          771
+        ],
+        [
+          462,
+          770
+        ],
+        [
+          518,
+          765
+        ],
+        [
+          536,
+          783
+        ],
+        [
+          543,
+          811
+        ],
+        [
+          532,
+          846
+        ],
+        [
+          540,
+          880
+        ],
+        [
+          529,
+          913
+        ],
+        [
+          476,
+          947
+        ],
+        [
+          430,
+          963
+        ],
+        [
+          359,
+          957
+        ],
+        [
+          309,
+          986
+        ],
+        [
+          260,
+          1044
+        ]
+      ],
+      "bank_polygons_surveyed": false,
+      "identity_verified": false
+    }
+  ],
+  "historical_bridge_sites": [
+    {
+      "id": "KW-B01",
+      "center_px": [
+        520,
+        766
+      ],
+      "approved_sketch_span_px": [
+        [
+          519,
+          744
+        ],
+        [
+          523,
+          785
+        ]
+      ],
+      "status": "RASTER_CROSSING_VISUALLY_SCREENED_NOT_DECK_TOPOLOGY_CERTIFIED",
+      "owner_approved_schematic": true
+    },
+    {
+      "id": "KW-B02",
+      "center_px": [
+        542,
+        811
+      ],
+      "approved_sketch_span_px": [
+        [
+          510,
+          809
+        ],
+        [
+          569,
+          812
+        ]
+      ],
+      "status": "RASTER_CROSSING_VISUALLY_SCREENED_NOT_DECK_TOPOLOGY_CERTIFIED",
+      "owner_approved_schematic": true
+    },
+    {
+      "id": "KW-B03",
+      "center_px": [
+        541,
+        881
+      ],
+      "approved_sketch_span_px": [
+        [
+          503,
+          879
+        ],
+        [
+          574,
+          883
+        ]
+      ],
+      "status": "RASTER_CROSSING_VISUALLY_SCREENED_NOT_DECK_TOPOLOGY_CERTIFIED",
+      "owner_approved_schematic": true
+    }
+  ],
+  "observed_major_road_corridors": [
+    {
+      "id": "KW-R-01",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Northern built-up coastal frontage",
+      "points_px": [
+        [
+          352,
+          735
+        ],
+        [
+          388,
+          721
+        ],
+        [
+          439,
+          723
+        ],
+        [
+          487,
+          731
+        ],
+        [
+          526,
+          744
+        ],
+        [
+          566,
+          737
+        ],
+        [
+          615,
+          726
+        ],
+        [
+          663,
+          733
+        ],
+        [
+          718,
+          733
+        ],
+        [
+          783,
+          741
+        ],
+        [
+          839,
+          749
+        ],
+        [
+          899,
+          752
+        ],
+        [
+          948,
+          764
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-02",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Old northbank waterfront street",
+      "points_px": [
+        [
+          337,
+          767
+        ],
+        [
+          381,
+          779
+        ],
+        [
+          423,
+          786
+        ],
+        [
+          474,
+          792
+        ],
+        [
+          510,
+          789
+        ],
+        [
+          536,
+          784
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-03",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "West-side east-west bridge approach",
+      "points_px": [
+        [
+          348,
+          811
+        ],
+        [
+          398,
+          811
+        ],
+        [
+          448,
+          806
+        ],
+        [
+          493,
+          810
+        ],
+        [
+          510,
+          811
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-04",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "South west-bank dense urban corridor",
+      "points_px": [
+        [
+          340,
+          851
+        ],
+        [
+          382,
+          863
+        ],
+        [
+          420,
+          880
+        ],
+        [
+          467,
+          885
+        ],
+        [
+          503,
+          880
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-05",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Southern bank arterial and southwest bend",
+      "points_px": [
+        [
+          321,
+          882
+        ],
+        [
+          355,
+          901
+        ],
+        [
+          402,
+          916
+        ],
+        [
+          441,
+          906
+        ],
+        [
+          480,
+          898
+        ],
+        [
+          503,
+          881
+        ]
+      ],
+      "visual_confidence": "high",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-06",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "West bank north-south avenue",
+      "points_px": [
+        [
+          371,
+          741
+        ],
+        [
+          363,
+          785
+        ],
+        [
+          354,
+          818
+        ],
+        [
+          344,
+          853
+        ],
+        [
+          337,
+          891
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-07",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Western inner vertical grid",
+      "points_px": [
+        [
+          449,
+          782
+        ],
+        [
+          453,
+          814
+        ],
+        [
+          456,
+          846
+        ],
+        [
+          463,
+          884
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-08",
+      "mode": "surface_road",
+      "candidate_class": "avenue",
+      "name": "Geothermal west crossing northern approach",
+      "points_px": [
+        [
+          519,
+          711
+        ],
+        [
+          518,
+          744
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-09",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Geothermal west crossing south approach",
+      "points_px": [
+        [
+          523,
+          785
+        ],
+        [
+          520,
+          800
+        ],
+        [
+          510,
+          809
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-10",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "B02 crossing eastern inner access",
+      "points_px": [
+        [
+          569,
+          812
+        ],
+        [
+          603,
+          817
+        ],
+        [
+          643,
+          821
+        ],
+        [
+          681,
+          823
+        ],
+        [
+          730,
+          823
+        ],
+        [
+          777,
+          824
+        ],
+        [
+          830,
+          828
+        ]
+      ],
+      "visual_confidence": "high",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-11",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "B03 crossing eastern arterial access",
+      "points_px": [
+        [
+          574,
+          883
+        ],
+        [
+          622,
+          874
+        ],
+        [
+          663,
+          861
+        ],
+        [
+          703,
+          847
+        ],
+        [
+          751,
+          838
+        ],
+        [
+          805,
+          836
+        ],
+        [
+          861,
+          838
+        ]
+      ],
+      "visual_confidence": "high",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-12",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "B03 crossing western east-west approach",
+      "points_px": [
+        [
+          444,
+          881
+        ],
+        [
+          474,
+          878
+        ],
+        [
+          503,
+          879
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-13",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Southern express road in built-up basin",
+      "points_px": [
+        [
+          330,
+          919
+        ],
+        [
+          369,
+          928
+        ],
+        [
+          410,
+          942
+        ],
+        [
+          453,
+          943
+        ],
+        [
+          491,
+          934
+        ],
+        [
+          521,
+          921
+        ],
+        [
+          548,
+          929
+        ],
+        [
+          592,
+          939
+        ],
+        [
+          648,
+          940
+        ],
+        [
+          702,
+          952
+        ],
+        [
+          756,
+          967
+        ],
+        [
+          816,
+          982
+        ],
+        [
+          858,
+          985
+        ]
+      ],
+      "visual_confidence": "high",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-14",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Eastern north-south monumental grid",
+      "points_px": [
+        [
+          755,
+          746
+        ],
+        [
+          753,
+          776
+        ],
+        [
+          752,
+          809
+        ],
+        [
+          751,
+          838
+        ],
+        [
+          750,
+          880
+        ],
+        [
+          749,
+          920
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-15",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Central north-south grid",
+      "points_px": [
+        [
+          650,
+          747
+        ],
+        [
+          656,
+          779
+        ],
+        [
+          653,
+          816
+        ],
+        [
+          663,
+          861
+        ],
+        [
+          662,
+          896
+        ],
+        [
+          660,
+          928
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-16",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Eastern north-south city grid",
+      "points_px": [
+        [
+          825,
+          755
+        ],
+        [
+          828,
+          780
+        ],
+        [
+          830,
+          828
+        ],
+        [
+          829,
+          869
+        ],
+        [
+          830,
+          907
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-17",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Eastern outer district ring",
+      "points_px": [
+        [
+          906,
+          754
+        ],
+        [
+          905,
+          788
+        ],
+        [
+          896,
+          820
+        ],
+        [
+          875,
+          847
+        ],
+        [
+          867,
+          877
+        ],
+        [
+          850,
+          901
+        ],
+        [
+          827,
+          919
+        ],
+        [
+          807,
+          935
+        ],
+        [
+          796,
+          963
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-18",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Lower-right inner district boulevard",
+      "points_px": [
+        [
+          669,
+          927
+        ],
+        [
+          709,
+          922
+        ],
+        [
+          750,
+          912
+        ],
+        [
+          800,
+          902
+        ],
+        [
+          848,
+          888
+        ],
+        [
+          884,
+          870
+        ],
+        [
+          912,
+          852
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-19",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Upper center grid approach to civic area",
+      "points_px": [
+        [
+          628,
+          766
+        ],
+        [
+          660,
+          776
+        ],
+        [
+          688,
+          791
+        ],
+        [
+          724,
+          793
+        ],
+        [
+          757,
+          792
+        ],
+        [
+          798,
+          793
+        ],
+        [
+          832,
+          795
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-20",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Southern historical religious grid",
+      "points_px": [
+        [
+          639,
+          896
+        ],
+        [
+          683,
+          895
+        ],
+        [
+          714,
+          898
+        ],
+        [
+          741,
+          915
+        ],
+        [
+          776,
+          921
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-21",
+      "mode": "surface_road",
+      "candidate_class": "collector",
+      "name": "Eastern northeast edge street",
+      "points_px": [
+        [
+          907,
+          802
+        ],
+        [
+          932,
+          802
+        ],
+        [
+          958,
+          807
+        ],
+        [
+          985,
+          823
+        ]
+      ],
+      "visual_confidence": "medium",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    },
+    {
+      "id": "KW-R-22",
+      "mode": "surface_road",
+      "candidate_class": "arterial",
+      "name": "Southwest external regional connector edge",
+      "points_px": [
+        [
+          311,
+          916
+        ],
+        [
+          344,
+          946
+        ],
+        [
+          376,
+          967
+        ],
+        [
+          409,
+          975
+        ],
+        [
+          445,
+          960
+        ],
+        [
+          475,
+          942
+        ]
+      ],
+      "visual_confidence": "low",
+      "level": "UNVERIFIED_FOR_GRADE",
+      "geometry_status": "TRACED_ON_U02_NOT_NETWORK_CERTIFIED"
+    }
+  ],
+  "other_modes": {
+    "rail": {
+      "new_geometry_authorized": false,
+      "western_heavy_trunk_observed_outside_zone_candidate": true,
+      "in_region_alignment_verified": false
+    },
+    "tram": {
+      "raster_track_identification_verified": false,
+      "new_geometry_authorized": false
+    },
+    "metro": {
+      "proposal": "KW-PROP-006",
+      "owner_approved_option": "A",
+      "core_exclusion": "KW-HIST",
+      "alignment": null,
+      "stations": [],
+      "portals": [],
+      "bilateral_joins": []
+    }
+  },
+  "poi_sketch_anchors": [
+    {
+      "id": "poi-14",
+      "center_px": [
+        689,
+        792
+      ],
+      "site_access_verified": false,
+      "footprint_surveyed": false
+    },
+    {
+      "id": "poi-15",
+      "center_px": [
+        868,
+        929
+      ],
+      "site_access_verified": false,
+      "footprint_surveyed": false
+    },
+    {
+      "id": "poi-16",
+      "center_px": [
+        713,
+        897
+      ],
+      "site_access_verified": false,
+      "footprint_surveyed": false
+    },
+    {
+      "id": "poi-17",
+      "center_px": [
+        830,
+        828
+      ],
+      "site_access_verified": false,
+      "footprint_surveyed": false
+    },
+    {
+      "id": "poi-32",
+      "center_px": [
+        741,
+        915
+      ],
+      "site_access_verified": false,
+      "footprint_surveyed": false
+    }
+  ],
+  "validation": {
+    "source_sha256_verified": true,
+    "image_dimensions_verified": true,
+    "observed_surface_corridors": 22,
+    "provisional_road_road_intersections": 24,
+    "historical_bridges_count": 3,
+    "approach_endpoints_within_2_5_px": 6,
+    "bridge_spans_cross_candidate_river": 3,
+    "unidentified_existing_road_river_crossings": 4,
+    "spatial_network_topology_certified": false,
+    "landuse_100_percent_classified": false,
+    "metro_alignment_verified": false,
+    "neighbor_seams_verified": false,
+    "poi_siting_and_access_verified": false,
+    "generation_ready": false,
+    "nonnode_crossings_claimed_connected": 0
+  },
+  "next_action": "SNAP_ROAD_CENTERLINES_TO_U02_SURFACE_WITH_INTERSECTION_GRADE_AUDIT_AND_FULL_WATER_LANDUSE_MASK; DO NOT CREATE GLOBAL-SPATIAL.JSON UNTIL GATES",
+  "intersection_candidates": [
+    {
+      "id": "KW-X-001",
+      "road_a": "KW-R-01",
+      "road_b": "KW-R-08",
+      "candidate_points_px": [
+        [
+          518.08,
+          741.36
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-002",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          364.89,
+          774.606
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-003",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-07",
+      "candidate_points_px": [
+        [
+          449.896,
+          789.164
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-004",
+      "road_a": "KW-R-02",
+      "road_b": "KW-R-09",
+      "candidate_points_px": [
+        [
+          522.688,
+          786.56
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-005",
+      "road_a": "KW-R-03",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          355.909,
+          811
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-006",
+      "road_a": "KW-R-03",
+      "road_b": "KW-R-07",
+      "candidate_points_px": [
+        [
+          452.045,
+          806.36
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-007",
+      "road_a": "KW-R-04",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          344.226,
+          852.208
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-008",
+      "road_a": "KW-R-05",
+      "road_b": "KW-R-06",
+      "candidate_points_px": [
+        [
+          337.01,
+          890.947
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-009",
+      "road_a": "KW-R-07",
+      "road_b": "KW-R-12",
+      "candidate_points_px": [
+        [
+          462.114,
+          879.189
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-010",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-14",
+      "candidate_points_px": [
+        [
+          751.501,
+          823.457
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-011",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-15",
+      "candidate_points_px": [
+        [
+          654.243,
+          821.592
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-012",
+      "road_a": "KW-R-10",
+      "road_b": "KW-R-16",
+      "candidate_points_px": [
+        [
+          830,
+          828
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-013",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-14",
+      "candidate_points_px": [
+        [
+          751,
+          838
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-014",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-15",
+      "candidate_points_px": [
+        [
+          663,
+          861
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-015",
+      "road_a": "KW-R-11",
+      "road_b": "KW-R-16",
+      "candidate_points_px": [
+        [
+          829.783,
+          836.885
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-016",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          749.195,
+          912.196
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-017",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          752.511,
+          792.136
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-018",
+      "road_a": "KW-R-14",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          749.09,
+          916.387
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-019",
+      "road_a": "KW-R-15",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          655.154,
+          774.485
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-020",
+      "road_a": "KW-R-15",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          662.015,
+          895.477
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-021",
+      "road_a": "KW-R-16",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          829.641,
+          893.355
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-022",
+      "road_a": "KW-R-16",
+      "road_b": "KW-R-19",
+      "candidate_points_px": [
+        [
+          828.617,
+          794.801
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-023",
+      "road_a": "KW-R-17",
+      "road_b": "KW-R-18",
+      "candidate_points_px": [
+        [
+          865.355,
+          879.323
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    },
+    {
+      "id": "KW-X-024",
+      "road_a": "KW-R-18",
+      "road_b": "KW-R-20",
+      "candidate_points_px": [
+        [
+          740.079,
+          914.42
+        ]
+      ],
+      "grade": "UNRESOLVED",
+      "graph_connectivity": "NOT_ASSERTED",
+      "note": "Visual U02 grade/junction audit required before splitting network edges"
+    }
+  ],
+  "additional_road_river_intersections": [
+    {
+      "road_id": "KW-R-06",
+      "point_px": [
+        367.627,
+        759.549
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-13",
+      "point_px": [
+        507.224,
+        926.97
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-22",
+      "point_px": [
+        361.022,
+        957.171
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    },
+    {
+      "road_id": "KW-R-22",
+      "point_px": [
+        453.793,
+        954.724
+      ],
+      "status": "EXISTING_RASTER_CROSSING_PENDING_CLASSIFICATION",
+      "is_new_bridge": false
+    }
+  ]
+}

@@ -1,0 +1,999 @@
+{
+  "schema": "NOVYDRES_MAPWORK_KINGSWELL_DETAIL_PREP_1",
+  "version": "KW_DETAIL_PREP_V1",
+  "status": "CANDIDATE_DETAIL_PREPARATION",
+  "source": {
+    "approved_sketch": "U02_KW_SKETCH_02",
+    "approved_on": "2026-11-19",
+    "zone_status": "SKETCH_APPROVED",
+    "u02_pixels_changed": false,
+    "art_generation_authorized": false
+  },
+  "scope": {
+    "zone_id": "kingswell",
+    "owner_subject_id": "district-chelsea",
+    "identity": "Kingswell = Cidade Velha = raion inteiro",
+    "notes": [
+      "O microcentro termal é apenas subárea morfológica.",
+      "Os marcadores X01-X03 permanecem excluídos do esboço aprovado e não reabrem a entrevista.",
+      "Esta preparação não autoriza geração artística; prepara lotes, conectores e sequência técnica."
+    ]
+  },
+  "preparation_plan": {
+    "families": [
+      {
+        "id": "KW-FAM-A",
+        "name": "Núcleo histórico / termal",
+        "purpose": "Microcentro termal, frentes cívicas, ruas estreitas irregulares, pátios e largos principais."
+      },
+      {
+        "id": "KW-FAM-B",
+        "name": "Margem histórica expandida",
+        "purpose": "Tecido histórico consolidado fora do miolo termal, com moradia densa, térreos mistos e oficinas dispersas."
+      },
+      {
+        "id": "KW-FAM-C",
+        "name": "Tecido operário e misto",
+        "purpose": "Cortiços, pátios coletivos, passagens internas, serviços pulverizados e oficinas."
+      },
+      {
+        "id": "KW-FAM-D",
+        "name": "Franja técnica / geotérmica",
+        "purpose": "Instalações técnicas, acessos de manutenção e equipamentos de utilidade."
+      },
+      {
+        "id": "KW-FAM-E",
+        "name": "Transição industrial para Sulfok",
+        "purpose": "Galpões, pátios murados, portões de carga e contraste com moradia."
+      },
+      {
+        "id": "KW-FAM-F",
+        "name": "Frentes ribeirinhas, pontes e balsas",
+        "purpose": "Cais, cabeceiras das pontes, terminais de balsa e ruas de aproximação."
+      }
+    ],
+    "gates_before_art": [
+      "KW-G1: todos os lotes definidos com core e envelope.",
+      "KW-G2: todos os conectores internos e externos definidos.",
+      "KW-G3: dependências de POIs, pontes e balsas resolvidas.",
+      "KW-G4: contratos de borda com Sulfok e Drevnigrad preparados.",
+      "KW-G5: ordem de geração por grupo fechada.",
+      "KW-G6: não reintroduzir os marcadores X01-X03."
+    ]
+  },
+  "lots": [
+    {
+      "id": "KW-L01",
+      "name": "Cabeceira Norte-Oeste / frente cívica antiga",
+      "family": "KW-FAM-F",
+      "type": "bridgehead_block",
+      "group": "KW-GEN-01",
+      "special": false,
+      "contains": [
+        "KW-B01-west-approach"
+      ],
+      "depends_on": [],
+      "neighbors": [
+        "KW-L02",
+        "KW-L03",
+        "KW-L05"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-B01",
+        "KW-CON-ST01",
+        "KW-CON-RIV01"
+      ],
+      "visual_rules": [
+        "Frente ribeirinha histórica com rua de aproximação visível.",
+        "Mistura de fachadas antigas, pavimento remendado e acesso misto pedestre/veículo.",
+        "Sem criar grande vazio monumental."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L02",
+      "name": "Cabeceira Norte-Leste / quadra cívica",
+      "family": "KW-FAM-A",
+      "type": "special_poi_block",
+      "group": "KW-GEN-01",
+      "special": true,
+      "contains": [
+        "poi-14",
+        "KW-B01-east-approach"
+      ],
+      "depends_on": [
+        "KW-L01"
+      ],
+      "neighbors": [
+        "KW-L01",
+        "KW-L03",
+        "KW-L04",
+        "KW-L06"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-B01",
+        "KW-CON-ST02",
+        "KW-CON-RIV01"
+      ],
+      "visual_rules": [
+        "Abriga o Salão do Conselho em quadra cívica reaproveitada.",
+        "Praça/abertura discreta e orgânica, sem recorte excessivo.",
+        "Conectar à malha histórica por ruas locais e passagens."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L03",
+      "name": "Microcentro termal ocidental",
+      "family": "KW-FAM-A",
+      "type": "historic_block",
+      "group": "KW-GEN-02",
+      "special": false,
+      "contains": [],
+      "depends_on": [
+        "KW-L01",
+        "KW-L02"
+      ],
+      "neighbors": [
+        "KW-L01",
+        "KW-L02",
+        "KW-L04",
+        "KW-L05",
+        "KW-L07"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-ST03",
+        "KW-CON-PED01",
+        "KW-CON-RIV02"
+      ],
+      "visual_rules": [
+        "Núcleo histórico irregular adaptado ao vale termal.",
+        "Largos pequenos, vielas estreitas e pátios coletivos.",
+        "Materiais envelhecidos: pedra, tijolo, anexos de madeira e metal."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L04",
+      "name": "Microcentro termal oriental / assembleia",
+      "family": "KW-FAM-A",
+      "type": "special_poi_block",
+      "group": "KW-GEN-02",
+      "special": true,
+      "contains": [
+        "poi-17",
+        "KW-B02-east-approach"
+      ],
+      "depends_on": [
+        "KW-L02",
+        "KW-L03"
+      ],
+      "neighbors": [
+        "KW-L02",
+        "KW-L03",
+        "KW-L06",
+        "KW-L08",
+        "KW-L09"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-B02",
+        "KW-CON-ST04",
+        "KW-CON-PED02"
+      ],
+      "visual_rules": [
+        "Abriga a Assembleia dos Estados Livres em quadra central mista.",
+        "Mantém malha histórica sem eixo monumental artificial.",
+        "Conexão clara a ruas mais largas e acessos pedonais internos."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L05",
+      "name": "Margem histórica ocidental expandida",
+      "family": "KW-FAM-B",
+      "type": "mixed_residential_block",
+      "group": "KW-GEN-03",
+      "special": false,
+      "contains": [],
+      "depends_on": [
+        "KW-L03"
+      ],
+      "neighbors": [
+        "KW-L01",
+        "KW-L03",
+        "KW-L07",
+        "KW-L11",
+        "KW-L13"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-ST05",
+        "KW-CON-PED03",
+        "KW-CON-RIV03"
+      ],
+      "visual_rules": [
+        "Tecido misto com moradias densas, térreos ativos e oficinas pulverizadas.",
+        "Pátios pequenos conectados por passagens descobertas.",
+        "Iluminação esparsa e neve irregular."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L06",
+      "name": "Capelas e quarteirões internos",
+      "family": "KW-FAM-C",
+      "type": "special_poi_block",
+      "group": "KW-GEN-03",
+      "special": true,
+      "contains": [
+        "poi-16"
+      ],
+      "depends_on": [
+        "KW-L04"
+      ],
+      "neighbors": [
+        "KW-L02",
+        "KW-L04",
+        "KW-L08",
+        "KW-L09"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-ST06",
+        "KW-CON-PED04",
+        "KW-CON-PED05"
+      ],
+      "visual_rules": [
+        "Capelas pequenas e dispersas entre cortiços e oficinas.",
+        "Não criar catedral única nem praça desproporcional.",
+        "Passagens internas devem permanecer legíveis."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L07",
+      "name": "Frente de balsa central e margem ribeirinha",
+      "family": "KW-FAM-F",
+      "type": "ferry_terminal_block",
+      "group": "KW-GEN-01",
+      "special": false,
+      "contains": [
+        "KW-F01-west",
+        "KW-F01-east"
+      ],
+      "depends_on": [
+        "KW-L03",
+        "KW-L04"
+      ],
+      "neighbors": [
+        "KW-L03",
+        "KW-L05",
+        "KW-L08",
+        "KW-L11"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-F01",
+        "KW-CON-RIV04",
+        "KW-CON-ST07"
+      ],
+      "visual_rules": [
+        "Separação funcional entre pedestres e veículos no terminal de balsa.",
+        "Manter pequenos cais e armazéns antigos sem sobreindustrializar o trecho.",
+        "Acessos viários modestos e coerentes com a margem urbana."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L08",
+      "name": "Quarteirões operários centrais / sinagoga",
+      "family": "KW-FAM-C",
+      "type": "special_poi_block",
+      "group": "KW-GEN-03",
+      "special": true,
+      "contains": [
+        "poi-32"
+      ],
+      "depends_on": [
+        "KW-L04",
+        "KW-L06"
+      ],
+      "neighbors": [
+        "KW-L04",
+        "KW-L06",
+        "KW-L07",
+        "KW-L09",
+        "KW-L10",
+        "KW-L12"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-ST08",
+        "KW-CON-PED06"
+      ],
+      "visual_rules": [
+        "Grande Sinagoga inserida em tecido habitado e não isolada em vazio.",
+        "Cortiços e moradias subdivididas com anexos irregulares.",
+        "Manter atmosfera de comunidade antiga e densa."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L09",
+      "name": "Franja geotérmica periférica",
+      "family": "KW-FAM-D",
+      "type": "special_poi_block",
+      "group": "KW-GEN-04",
+      "special": true,
+      "contains": [
+        "poi-15"
+      ],
+      "depends_on": [
+        "KW-L04",
+        "KW-L06",
+        "KW-L08"
+      ],
+      "neighbors": [
+        "KW-L04",
+        "KW-L06",
+        "KW-L08",
+        "KW-L10",
+        "KW-L12"
+      ],
+      "external_edges": [
+        "KW-EXT-DRE-02"
+      ],
+      "internal_connectors": [
+        "KW-CON-ST09",
+        "KW-CON-TECH01"
+      ],
+      "visual_rules": [
+        "Instalação geotérmica periférica integrada ao tecido urbano técnico.",
+        "Pátios de manutenção compactos e sem grande planta industrial aberta.",
+        "Poucas estruturas visíveis de aquecimento; rede majoritariamente subterrânea."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L10",
+      "name": "Tecido operário oriental",
+      "family": "KW-FAM-C",
+      "type": "worker_courtyard_block",
+      "group": "KW-GEN-03",
+      "special": false,
+      "contains": [],
+      "depends_on": [
+        "KW-L08",
+        "KW-L09"
+      ],
+      "neighbors": [
+        "KW-L08",
+        "KW-L09",
+        "KW-L12"
+      ],
+      "external_edges": [
+        "KW-EXT-DRE-01"
+      ],
+      "internal_connectors": [
+        "KW-CON-ST10",
+        "KW-CON-PED07"
+      ],
+      "visual_rules": [
+        "Quadras densas com pátios internos e circulação pedonal capilar.",
+        "Uso misto pulverizado no térreo.",
+        "Contraste moderado entre moradia e técnica."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L11",
+      "name": "Cabeceira Sul-Oeste / balsa sul",
+      "family": "KW-FAM-F",
+      "type": "bridgehead_block",
+      "group": "KW-GEN-04",
+      "special": false,
+      "contains": [
+        "KW-B03-west-approach",
+        "KW-F02-west"
+      ],
+      "depends_on": [
+        "KW-L05",
+        "KW-L07"
+      ],
+      "neighbors": [
+        "KW-L05",
+        "KW-L07",
+        "KW-L12",
+        "KW-L13",
+        "KW-L14"
+      ],
+      "external_edges": [],
+      "internal_connectors": [
+        "KW-CON-B03",
+        "KW-CON-F02",
+        "KW-CON-ST11"
+      ],
+      "visual_rules": [
+        "Cabeceira mista de ponte e balsa com acessos modestos.",
+        "Mistura de armazéns antigos, borda ribeirinha e tecido popular.",
+        "Não expandir o terminal além do que o traçado suporta."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L12",
+      "name": "Cabeceira Sul-Leste / transição técnica",
+      "family": "KW-FAM-D",
+      "type": "riverfront_block",
+      "group": "KW-GEN-04",
+      "special": false,
+      "contains": [
+        "KW-B03-east-approach",
+        "KW-F02-east"
+      ],
+      "depends_on": [
+        "KW-L08",
+        "KW-L09",
+        "KW-L10",
+        "KW-L11"
+      ],
+      "neighbors": [
+        "KW-L08",
+        "KW-L09",
+        "KW-L10",
+        "KW-L11",
+        "KW-L14"
+      ],
+      "external_edges": [
+        "KW-EXT-DRE-02"
+      ],
+      "internal_connectors": [
+        "KW-CON-B03",
+        "KW-CON-F02",
+        "KW-CON-ST12",
+        "KW-CON-TECH02"
+      ],
+      "visual_rules": [
+        "Ribeirinho técnico com transição para infraestrutura e borda urbana.",
+        "Acessos mistos controlados e sem criar nova ponte.",
+        "Manter leitura de margem funcional e construída."
+      ],
+      "bleed_risk": "high"
+    },
+    {
+      "id": "KW-L13",
+      "name": "Transição industrial norte",
+      "family": "KW-FAM-E",
+      "type": "industrial_edge_block",
+      "group": "KW-GEN-05",
+      "special": false,
+      "contains": [],
+      "depends_on": [
+        "KW-L05",
+        "KW-L11"
+      ],
+      "neighbors": [
+        "KW-L05",
+        "KW-L11",
+        "KW-L14"
+      ],
+      "external_edges": [
+        "KW-EXT-SUL-01",
+        "KW-EXT-SUL-02"
+      ],
+      "internal_connectors": [
+        "KW-CON-IND01",
+        "KW-CON-ST13"
+      ],
+      "visual_rules": [
+        "Muros altos, fundos fabris, portões de carga e contraste com ruas residenciais estreitas.",
+        "Galpões baixos/médios e pátios internos.",
+        "Não transformar em vazio urbano."
+      ],
+      "bleed_risk": "medium"
+    },
+    {
+      "id": "KW-L14",
+      "name": "Transição industrial sul / borda ferroviária",
+      "family": "KW-FAM-E",
+      "type": "industrial_edge_block",
+      "group": "KW-GEN-05",
+      "special": false,
+      "contains": [
+        "EXT-RAIL-FREIGHT-S"
+      ],
+      "depends_on": [
+        "KW-L11",
+        "KW-L12",
+        "KW-L13"
+      ],
+      "neighbors": [
+        "KW-L11",
+        "KW-L12",
+        "KW-L13"
+      ],
+      "external_edges": [
+        "KW-EXT-SUL-01",
+        "KW-EXT-RAIL-01"
+      ],
+      "internal_connectors": [
+        "KW-CON-IND02",
+        "KW-CON-RAIL01",
+        "KW-CON-ST14"
+      ],
+      "visual_rules": [
+        "Borda de carga, galpões e continuidade ferroviária regional sem nova estação.",
+        "Permitir a leitura de logística para fora do quadro (ouro/diamantes).",
+        "Natural gas prioritariamente por dutos; não criar terminal ferroviário de gás."
+      ],
+      "bleed_risk": "medium"
+    }
+  ],
+  "external_connectors": [
+    {
+      "id": "KW-EXT-SUL-01",
+      "type": "industrial_corridor",
+      "target_zone": "sulfok",
+      "served_lots": [
+        "KW-L13",
+        "KW-L14"
+      ],
+      "purpose": "Continuidade do corredor industrial/logístico de borda.",
+      "requirements": [
+        "Compatibilizar muros, portões, galpões e pavimento pesado.",
+        "Não abrir vazio artificial entre Kingswell e Sulfok."
+      ]
+    },
+    {
+      "id": "KW-EXT-SUL-02",
+      "type": "mixed_edge_seam",
+      "target_zone": "sulfok",
+      "served_lots": [
+        "KW-L13"
+      ],
+      "purpose": "Costura entre ruas residenciais estreitas e fundos fabris.",
+      "requirements": [
+        "Preservar contraste direto aprovado entre habitação e indústria.",
+        "Sem criar transição ajardinada ou boulevard."
+      ]
+    },
+    {
+      "id": "KW-EXT-DRE-01",
+      "type": "urban_edge",
+      "target_zone": "drevnigrad",
+      "served_lots": [
+        "KW-L10"
+      ],
+      "purpose": "Continuidade de tecido urbano denso para a borda oriental.",
+      "requirements": [
+        "Alinhar ruas principais e massa construída.",
+        "Não inventar travessia nova sobre água."
+      ]
+    },
+    {
+      "id": "KW-EXT-DRE-02",
+      "type": "technical_edge",
+      "target_zone": "drevnigrad",
+      "served_lots": [
+        "KW-L09",
+        "KW-L12"
+      ],
+      "purpose": "Articulação da franja técnica e da margem leste com a borda oriental futura.",
+      "requirements": [
+        "Manter leitura funcional de infraestrutura e borda urbana.",
+        "Conservar coerência com o canal/margem visível na U02."
+      ]
+    },
+    {
+      "id": "KW-EXT-RAIL-01",
+      "type": "regional_freight_exit",
+      "target_zone": "off-map-regional-network",
+      "served_lots": [
+        "KW-L14"
+      ],
+      "purpose": "Saída ferroviária regional existente rumo às áreas extrativas fora do quadro.",
+      "requirements": [
+        "Não criar estação internacional nem novo pátio fora do aprovado.",
+        "Usar apenas continuidade do eixo já existente."
+      ]
+    }
+  ],
+  "internal_connectors": [
+    {
+      "id": "KW-CON-B01",
+      "type": "historic_bridge",
+      "links": [
+        "KW-L01",
+        "KW-L02"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "KW-CON-B02",
+      "type": "historic_bridge",
+      "links": [
+        "KW-L03",
+        "KW-L04"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "KW-CON-B03",
+      "type": "historic_bridge",
+      "links": [
+        "KW-L11",
+        "KW-L12"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "KW-CON-F01",
+      "type": "ferry_terminal",
+      "links": [
+        "KW-L07"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-F02",
+      "type": "ferry_terminal",
+      "links": [
+        "KW-L11",
+        "KW-L12"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-RIV01",
+      "type": "riverfront_seam",
+      "links": [
+        "KW-L01",
+        "KW-L02"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-RIV02",
+      "type": "riverfront_seam",
+      "links": [
+        "KW-L03",
+        "KW-L07"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-RIV03",
+      "type": "riverfront_seam",
+      "links": [
+        "KW-L05",
+        "KW-L11"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-RIV04",
+      "type": "riverfront_seam",
+      "links": [
+        "KW-L07",
+        "KW-L08"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST01",
+      "type": "main_street",
+      "links": [
+        "KW-L01",
+        "KW-L05"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST02",
+      "type": "main_street",
+      "links": [
+        "KW-L02",
+        "KW-L04"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST03",
+      "type": "historic_street",
+      "links": [
+        "KW-L03",
+        "KW-L05"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST04",
+      "type": "historic_street",
+      "links": [
+        "KW-L04",
+        "KW-L08"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST05",
+      "type": "local_street",
+      "links": [
+        "KW-L05",
+        "KW-L13"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST06",
+      "type": "local_street",
+      "links": [
+        "KW-L06",
+        "KW-L09"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST07",
+      "type": "local_street",
+      "links": [
+        "KW-L07",
+        "KW-L11"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST08",
+      "type": "main_street",
+      "links": [
+        "KW-L08",
+        "KW-L10"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST09",
+      "type": "service_street",
+      "links": [
+        "KW-L09",
+        "KW-L12"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST10",
+      "type": "local_street",
+      "links": [
+        "KW-L10",
+        "KW-L12"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST11",
+      "type": "local_street",
+      "links": [
+        "KW-L11",
+        "KW-L14"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST12",
+      "type": "service_street",
+      "links": [
+        "KW-L12",
+        "KW-L14"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-ST13",
+      "type": "industrial_street",
+      "links": [
+        "KW-L13",
+        "KW-L14"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-ST14",
+      "type": "industrial_street",
+      "links": [
+        "KW-L14"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-PED01",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L03"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-PED02",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L04",
+        "KW-L06"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-PED03",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L05",
+        "KW-L07"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-PED04",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L06",
+        "KW-L08"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-PED05",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L06"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "KW-CON-PED06",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L08"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-PED07",
+      "type": "pedestrian_passage",
+      "links": [
+        "KW-L10"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "KW-CON-TECH01",
+      "type": "technical_service",
+      "links": [
+        "KW-L09"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-TECH02",
+      "type": "technical_service",
+      "links": [
+        "KW-L12"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "KW-CON-IND01",
+      "type": "industrial_service",
+      "links": [
+        "KW-L13"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-IND02",
+      "type": "industrial_service",
+      "links": [
+        "KW-L14"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "KW-CON-RAIL01",
+      "type": "freight_rail_seam",
+      "links": [
+        "KW-L14",
+        "KW-EXT-RAIL-01"
+      ],
+      "priority": "critical"
+    }
+  ],
+  "generation_groups": [
+    {
+      "id": "KW-GEN-00",
+      "name": "Infraestrutura-mãe e contratos",
+      "sequence": 0,
+      "includes": [
+        "todos os external_connectors",
+        "KW-CON-B01",
+        "KW-CON-B02",
+        "KW-CON-B03",
+        "KW-CON-F01",
+        "KW-CON-F02",
+        "KW-CON-RAIL01"
+      ],
+      "goal": "Fechar seam contracts, cabeceiras, eixos críticos e preparação de máscara/bleed."
+    },
+    {
+      "id": "KW-GEN-01",
+      "name": "Pontes, balsa central e frente cívica",
+      "sequence": 1,
+      "includes": [
+        "KW-L01",
+        "KW-L02",
+        "KW-L07"
+      ],
+      "goal": "Estabelecer linguagem do rio, pontes, balsa e quadra cívica."
+    },
+    {
+      "id": "KW-GEN-02",
+      "name": "Microcentro termal",
+      "sequence": 2,
+      "includes": [
+        "KW-L03",
+        "KW-L04"
+      ],
+      "goal": "Fixar textura do núcleo histórico e da assembleia."
+    },
+    {
+      "id": "KW-GEN-03",
+      "name": "Tecido misto e religioso",
+      "sequence": 3,
+      "includes": [
+        "KW-L05",
+        "KW-L06",
+        "KW-L08",
+        "KW-L10"
+      ],
+      "goal": "Propagar cortiços, oficinas, sinagoga e capelas com continuidade de pátios/passagens."
+    },
+    {
+      "id": "KW-GEN-04",
+      "name": "Franja técnica e balsa sul",
+      "sequence": 4,
+      "includes": [
+        "KW-L09",
+        "KW-L11",
+        "KW-L12"
+      ],
+      "goal": "Estabelecer linguagem técnica/geotérmica e segundo terminal de balsa."
+    },
+    {
+      "id": "KW-GEN-05",
+      "name": "Transição industrial e borda ferroviária",
+      "sequence": 5,
+      "includes": [
+        "KW-L13",
+        "KW-L14"
+      ],
+      "goal": "Fechar costura com Sulfok e o corredor ferroviário externo."
+    },
+    {
+      "id": "KW-GEN-06",
+      "name": "Revisão e mosaico",
+      "sequence": 6,
+      "includes": [
+        "todos os lotes e conectores"
+      ],
+      "goal": "Readback de bordas, continuidade de neve, pavimento, iluminação e conectores."
+    }
+  ],
+  "immediate_next_actions": [
+    "Materializar geometrias core/envelope por lote no manifesto da zona.",
+    "Declarar conectores de borda no zone.json e contratos compartilhados com Sulfok e Drevnigrad.",
+    "Criar inventário de dependências por lote (POIs, pontes, balsas, ferrovia).",
+    "Preparar masks e bleed controlado por grupo de geração.",
+    "Executar auditoria técnica antes de qualquer prompt de geração visual."
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "schema": "NOVYDRES_MAPWORK_SPATIAL_VISUAL_REVIEW_1",
+  "date": "2026-11-20",
+  "review_by": "AGENT",
+  "global_result": "FAIL_FOR_TOPOLOGY_PROMOTION",
+  "reference": {
+    "source": "ORIGINAL_U02_T03",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "width": 1448,
+    "height": 1086,
+    "pixels_modified": 0
+  },
+  "evidence": {
+    "method": "Viewed 24 original U02 raster crops centered at computed line intersections, 96x96 U02 pixels enlarged 3x; independently reviewed candidate road-to-road alignment. Source raster unchanged. Photos are session QA material, not a canon image.",
+    "contact_sheet_1_sha256": "9e4a487615b04ea697f25b9ef1457371abb9d8038774a4c79af3347874d09712",
+    "contact_sheet_2_sha256": "60276a5e4b322f8175e3b69dedd710cc89bfa518a02ce277a24d7788a889d0b8",
+    "regenerate_from": "U02_APPROVED_REFERENCE.png; for each intersection point crop 96x96 centered at nearest pixel; enlarge 3x for visual inspection.",
+    "observations_git_blob_sha": "b3264358d7fd405e525694c8ad6980d4578d41ed"
+  },
+  "junctions": [
+    {
+      "id": "KW-X-001",
+      "roads": [
+        "KW-R-01",
+        "KW-R-08"
+      ],
+      "center_px": [
+        518.08,
+        741.36
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-002",
+      "roads": [
+        "KW-R-02",
+        "KW-R-06"
+      ],
+      "center_px": [
+        364.89,
+        774.606
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-003",
+      "roads": [
+        "KW-R-02",
+        "KW-R-07"
+      ],
+      "center_px": [
+        449.896,
+        789.164
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-004",
+      "roads": [
+        "KW-R-02",
+        "KW-R-09"
+      ],
+      "center_px": [
+        522.688,
+        786.56
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-005",
+      "roads": [
+        "KW-R-03",
+        "KW-R-06"
+      ],
+      "center_px": [
+        355.909,
+        811
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-006",
+      "roads": [
+        "KW-R-03",
+        "KW-R-07"
+      ],
+      "center_px": [
+        452.045,
+        806.36
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-007",
+      "roads": [
+        "KW-R-04",
+        "KW-R-06"
+      ],
+      "center_px": [
+        344.226,
+        852.208
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-008",
+      "roads": [
+        "KW-R-05",
+        "KW-R-06"
+      ],
+      "center_px": [
+        337.01,
+        890.947
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-009",
+      "roads": [
+        "KW-R-07",
+        "KW-R-12"
+      ],
+      "center_px": [
+        462.114,
+        879.189
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-010",
+      "roads": [
+        "KW-R-10",
+        "KW-R-14"
+      ],
+      "center_px": [
+        751.501,
+        823.457
+      ],
+      "source_visual_status": "POSSIBLE_VISIBLE_SURFACE_JUNCTION_UNCONFIRMED",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-011",
+      "roads": [
+        "KW-R-10",
+        "KW-R-15"
+      ],
+      "center_px": [
+        654.243,
+        821.592
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-012",
+      "roads": [
+        "KW-R-10",
+        "KW-R-16"
+      ],
+      "center_px": [
+        830,
+        828
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-013",
+      "roads": [
+        "KW-R-11",
+        "KW-R-14"
+      ],
+      "center_px": [
+        751,
+        838
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-014",
+      "roads": [
+        "KW-R-11",
+        "KW-R-15"
+      ],
+      "center_px": [
+        663,
+        861
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-015",
+      "roads": [
+        "KW-R-11",
+        "KW-R-16"
+      ],
+      "center_px": [
+        829.783,
+        836.885
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-016",
+      "roads": [
+        "KW-R-14",
+        "KW-R-18"
+      ],
+      "center_px": [
+        749.195,
+        912.196
+      ],
+      "source_visual_status": "POSSIBLE_VISIBLE_SURFACE_JUNCTION_UNCONFIRMED",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-017",
+      "roads": [
+        "KW-R-14",
+        "KW-R-19"
+      ],
+      "center_px": [
+        752.511,
+        792.136
+      ],
+      "source_visual_status": "POSSIBLE_VISIBLE_SURFACE_JUNCTION_UNCONFIRMED",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-018",
+      "roads": [
+        "KW-R-14",
+        "KW-R-20"
+      ],
+      "center_px": [
+        749.09,
+        916.387
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-019",
+      "roads": [
+        "KW-R-15",
+        "KW-R-19"
+      ],
+      "center_px": [
+        655.154,
+        774.485
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-020",
+      "roads": [
+        "KW-R-15",
+        "KW-R-20"
+      ],
+      "center_px": [
+        662.015,
+        895.477
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-021",
+      "roads": [
+        "KW-R-16",
+        "KW-R-18"
+      ],
+      "center_px": [
+        829.641,
+        893.355
+      ],
+      "source_visual_status": "POSSIBLE_VISIBLE_SURFACE_JUNCTION_UNCONFIRMED",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-022",
+      "roads": [
+        "KW-R-16",
+        "KW-R-19"
+      ],
+      "center_px": [
+        828.617,
+        794.801
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-023",
+      "roads": [
+        "KW-R-17",
+        "KW-R-18"
+      ],
+      "center_px": [
+        865.355,
+        879.323
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    },
+    {
+      "id": "KW-X-024",
+      "roads": [
+        "KW-R-18",
+        "KW-R-20"
+      ],
+      "center_px": [
+        740.079,
+        914.42
+      ],
+      "source_visual_status": "ALIGNMENT_OR_GRADE_INDETERMINATE",
+      "grade": "UNKNOWN",
+      "graph_connection_approved": false,
+      "resolution": "Re-snap candidate axes to visible road beds and inspect if junction at grade, overpass or spurious route crossing; never assume connectivity"
+    }
+  ],
+  "conclusions": {
+    "count_reviewed": 24,
+    "possible_junctions_not_certified": 4,
+    "alignment_or_grade_indeterminate": 20,
+    "grade_verified": 0,
+    "graph_connections_verified": 0,
+    "bridge_grade_verified": 0,
+    "metro_segments_verified": 0,
+    "result": "All 24 candidate pairs remain blocked for topology. No false passing of graph connectivity."
+  },
+  "action": "ALIGN_SURFACE_NETWORK_TO_ROADS_PIXEL_BY_PIXEL_AND_REVIEW_CROSSINGS; KEEP CANON AND ART GATED"
+}

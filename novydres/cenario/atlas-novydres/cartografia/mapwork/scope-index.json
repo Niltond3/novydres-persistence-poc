@@ -1,0 +1,64 @@
+{
+  "schema": "NOVYDRES_MAPWORK_SCOPE_INDEX_1",
+  "source_commit": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "source_description": "Canonical subject IDs from master catalogo.json. This index is a candidate locator, not geometry/canon.",
+  "targets": {
+    "kingswell": {
+      "kind": "region",
+      "subject_id": "district-chelsea",
+      "bounds": [
+        306,
+        650,
+        1050,
+        1086
+      ],
+      "status": "SCOPED_FROM_EXISTING_ZONE"
+    },
+    "sulfok": {
+      "kind": "region",
+      "subject_id": "district-sulfok",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "bukovie": {
+      "kind": "region",
+      "subject_id": "district-bukovie",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "new-london": {
+      "kind": "region",
+      "subject_id": "district-new-london",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "dunwich": {
+      "kind": "region",
+      "subject_id": "district-dunwich",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "alexandria": {
+      "kind": "region",
+      "subject_id": "district-alexandria",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "levi": {
+      "kind": "region",
+      "subject_id": "district-levi",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "drevnigrad": {
+      "kind": "region",
+      "subject_id": "district-drevnigrad",
+      "status": "GEOMETRY_UNRESOLVED"
+    },
+    "vasyl-bay": {
+      "kind": "region",
+      "subject_id": "district-vasyl-bay",
+      "status": "GEOMETRY_UNRESOLVED"
+    }
+  },
+  "world_bounds": [
+    0,
+    0,
+    1448,
+    1086
+  ]
+}
