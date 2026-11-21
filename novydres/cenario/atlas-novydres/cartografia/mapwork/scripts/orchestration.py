@@ -770,14 +770,31 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                 str(item.get("pending_head", ""))):
             raise ValueError("unfinished predecessor or unconfirmed GitHub journal")
     if _recovery_has_intervening_writes(recovery_path):
-        # A provider write may already exist for the original operation_id,
-        # or a concurrent writer may own the new HEAD. Neither replay nor
-        # a new journal CAS is safe until the host identifies those writes.
-        return {"status":"AWAITING_HOST_SYNC",
-                "next_action":"RECONCILE_RECOVERED_REMOTE_WRITES",
-                "operation_id":last["operation_id"],
-                "current_ref_head":recovery["current_ref_head"],
-                "publication_authorized":False}
+        # A connector upload may have advanced HEAD after the PENDING journal.
+        # Do not redo the operation; accept only the original operation_id with
+        # all intervening commits identified and independently read back.
+        if exchange is None or last["status"] != "PENDING":
+            return {"status":"AWAITING_HOST_SYNC",
+                    "next_action":"RECONCILE_RECOVERED_REMOTE_WRITES",
+                    "operation_id":last["operation_id"],
+                    "current_ref_head":recovery["current_ref_head"],
+                    "publication_authorized":False}
+        result = exchange.get("result") if isinstance(exchange, dict) else None
+        commits = result.get("github_commits") if isinstance(result, dict) else None
+        chain = recovery["head_chain"]
+        if (exchange.get("kind") != "COMPLETE_OPERATION" or
+                exchange.get("operation_id") != last["operation_id"] or
+                not isinstance(commits, list) or len(commits) != len(chain)):
+            raise ValueError("cold recovery requires original operation and exact upload history")
+        for link, commit in zip(chain, commits):
+            if (link.get("operation_id") != last["operation_id"] or
+                    not isinstance(link.get("files"), dict) or
+                    link.get("head") != commit.get("head") or
+                    link.get("parent") != commit.get("commit_parent") or
+                    link["files"] != commit.get("files")):
+                raise ValueError("cold recovery cannot attribute external writes to operation")
+        if commits[-1]["head"] != recovery["current_ref_head"]:
+            raise ValueError("cold recovery artifact uploads do not reach current HEAD")
     if last and last["status"] == "PENDING":
         if exchange is None:
             return {"status":"AWAITING_HOST_SYNC",
