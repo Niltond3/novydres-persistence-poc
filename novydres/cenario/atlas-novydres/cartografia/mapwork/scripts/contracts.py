@@ -490,7 +490,8 @@ def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
         failures_since_method = record["attempts"] - record.get("method_epoch_start", 0)
         stagnant = (len(history) >= 3 and
                     all(x["failure"] == failure and not x.get("improvement_evidence")
-                        for x in history[-3:]))
+                        for x in history[-3:]) and
+                    len({x.get("strategy_id") for x in history[-3:]}) == 1)
         record["status"] = ("METHOD_REASSESSMENT" if failures_since_method >= 6 else
                             "REPLAN_REQUIRED" if stagnant else "REPAIR_REQUIRED")
         record["active_request_id"] = None
