@@ -297,7 +297,7 @@ def _verify_operation(operation, receipt, remote_readback, old_entries):
         if (provider, remote_id, value) in old or (provider, value) in old_content:
             if item.get("kind") not in ("reference-image", "edit-mask"):
                 raise ValueError("completed artifact replayed as a new operation")
-        if item.get("kind") == "image":
+        if item.get("kind") in ("image", "composed-image"):
             if provider != "drive":
                 raise ValueError("binary image must reside in Drive")
             from PIL import Image
@@ -509,10 +509,10 @@ def _host_artifacts(operation, receipt, previous):
     if any(a.get("kind") == "image" for a in checked):
         import native_generation as native
         by_kind = {kind:[a for a in checked if a.get("kind") == kind]
-                   for kind in ("image", "reference-image", "edit-mask",
+                   for kind in ("image", "composed-image", "reference-image", "edit-mask",
                                 "native-edit-handoff", "visual-review")}
         if any(len(by_kind[k]) != 1 for k in by_kind):
-            raise ValueError("native generation needs unique image, reference, mask, handoff and review")
+            raise ValueError("native generation needs unique image, composed-image, reference, mask, handoff and review")
         h = json.loads(Path(by_kind["native-edit-handoff"][0]["path"]).read_text(encoding="utf-8"))
         request = h.get("request")
         binding = native.verify_handoff(h, request=request,
@@ -528,9 +528,18 @@ def _host_artifacts(operation, receipt, previous):
         image = by_kind["image"][0]
         if image["remote_id"] != h["output"]["remote_id"]:
             raise ValueError("native generator output ID differs from Drive image")
+        composed = by_kind["composed-image"][0]
+        if composed["provider"] != "drive":
+            raise ValueError("masked composition requires real Drive PNG")
+        proof = native.verify_composed(
+            h["inputs"]["reference-image"]["path"], h["inputs"]["edit-mask"]["path"],
+            h["output"]["path"], composed["path"],
+            crop_bbox=h.get("composition", {}).get("crop_bbox"))
+        if proof["composed_sha256"] != composed["sha256"]:
+            raise ValueError("composed image differs from verified Drive bytes")
         review = json.loads(Path(by_kind["visual-review"][0]["path"]).read_text(encoding="utf-8"))
         if not (isinstance(review, dict) and
-                review.get("image_sha256") == binding["image_sha256"] and
+                review.get("image_sha256") == proof["composed_sha256"] and
                 review.get("reference_sha256") == binding["reference_sha256"] and
                 review.get("mask_sha256") == binding["mask_sha256"] and
                 isinstance(review.get("observations"), list) and
