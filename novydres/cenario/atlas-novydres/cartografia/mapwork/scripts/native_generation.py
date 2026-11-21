@@ -57,7 +57,9 @@ def edit_request(*, reference_sha256, mask_sha256, goal, scope, job_id):
     require(not any(word in visual_goal.lower() for word in (
         "sha256", "operation_id", "journal", "dispatch", "receipt", "github",
         "google drive", "status: pass", "edit_op")), "operational metadata in visual goal")
-    prompt = ("Edite exatamente a imagem anexada. Altere somente " +
+    prompt = ("Edite exatamente a imagem anexada. Use a máscara PNG fornecida "
+              "somente para delimitar os pixels editáveis; preserve todo o "
+              "restante da imagem como contexto intacto. Altere somente " +
               visual_goal + ". Mantenha todo o resto idêntico. "
               "Não crie nova composição. Não adicione texto, legendas, "
               "painéis, diagramas ou infográficos. Saída: apenas a imagem editada.")
@@ -209,6 +211,26 @@ def prepare_local_edit(reference_path, mask_path, output_dir, *, context_px=64):
             "full_size": list(reference.size),
             "allowed_pixels": sum(1 for v in mask.getdata() if v),
             "context_not_editable": True}
+
+
+def prepare_unit_reference(source_path, bbox, scale, output_path):
+    """Create a detailed local reference without changing the approved map."""
+    require(isinstance(bbox, (list, tuple)) and len(bbox) == 4 and
+            all(type(v) is int for v in bbox), "unit bbox invalid")
+    require(type(scale) is int and 1 <= scale <= 256, "detail scale invalid")
+    with Image.open(source_path) as img:
+        require(img.format == "PNG", "unit source must be PNG")
+        x0, y0, x1, y1 = bbox
+        require(0 <= x0 < x1 <= img.width and
+                0 <= y0 < y1 <= img.height, "unit outside reference")
+        detail = img.convert("RGBA").crop((x0, y0, x1, y1)).resize(
+            ((x1-x0)*scale, (y1-y0)*scale), Image.Resampling.NEAREST)
+    target = Path(output_path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    detail.save(target, format="PNG")
+    return {"path":str(target), "sha256":digest(target.read_bytes()),
+            "source_sha256":digest(Path(source_path).read_bytes()),
+            "bbox":list(bbox), "scale":scale, "size":list(detail.size)}
 
 
 def _changed_any_channel(diff):
