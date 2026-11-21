@@ -281,3 +281,36 @@ def test_host_connector_adapter_rejects_fake_github_blob_claim(tmp_path):
             operation={"operation_id":"op","status":"PENDING","action":"RESEARCH_REAL_WORLD_ANALOGUES"},
             pending_sync={"branch":"mapwork/noncanon"},provider_results=[record],
             github_commits=[],arg_updates={},output_path=tmp_path/"exchange.json")
+
+
+def test_host_exchange_supports_real_github_create_file_commit_only_response(tmp_path):
+    source=tmp_path/"research.json"
+    fetched=tmp_path/"research-get.json"
+    raw=b'{"observations":["verified source"],"test_only":true}'
+    source.write_bytes(raw)
+    fetched.write_bytes(raw)
+    path="novydres/cenario/atlas-novydres/cartografia/mapwork/sessions/research.json"
+    blob=w.git_blob_sha(raw)
+    receipt={"provider":"github","kind":"research",
+             "path":str(source),"readback_path":str(fetched),
+             "repo_path":path,
+             "upload":{"commit_sha":"a"*40},  # GitHub create_file action
+             "readback":{"sha":blob}}  # independent fetch_file action
+    github_commits=[{"commit_sha":"a"*40,"files":{path:blob}}]
+    result=w.materialize_host_exchange(
+        operation={"operation_id":"op","status":"PENDING",
+                   "action":"RESEARCH_REAL_WORLD_ANALOGUES"},
+        pending_sync={"branch":"mapwork/noncanon"},
+        provider_results=[receipt],github_commits=github_commits,
+        arg_updates={"research_file":str(source)},
+        output_path=tmp_path/"exchange.json")
+    saved=json.loads(Path(result["path"]).read_text())
+    assert saved["result"]["artifacts"][0]["blob_sha"]==blob
+    github_commits[0]["files"][path]="f"*40
+    with pytest.raises(w.WebBridgeError,match="GitHub blob/readback"):
+        w.materialize_host_exchange(
+            operation={"operation_id":"op","status":"PENDING",
+                       "action":"RESEARCH_REAL_WORLD_ANALOGUES"},
+            pending_sync={"branch":"mapwork/noncanon"},
+            provider_results=[receipt],github_commits=github_commits,
+            arg_updates={},output_path=tmp_path/"exchange.json")
