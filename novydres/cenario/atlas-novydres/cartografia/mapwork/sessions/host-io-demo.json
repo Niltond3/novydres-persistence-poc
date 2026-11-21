@@ -120,6 +120,49 @@
       },
       "state_sha256": "30090bb952b9b0253777b8c97aaa04a95de1f6a6e2b1e44e1a8058d63a926e6c",
       "status": "COMPLETED"
+    },
+    {
+      "action": "RESEARCH_REAL_WORLD_ANALOGUES",
+      "artifacts": [],
+      "entry_sha256": "fb81b22417e46801bc95a82ba4207bfb446fb1ead29f29fbd3a56ea41f7d04bd",
+      "lease_head": "8f2b9faab202bb15853fc438a6b37a7ce420773b",
+      "operation_id": "7b89934ec671a053c44b45436d8b6acbf58c9bb0a6b7caf1de4bf72a11edc4b4",
+      "parent_sha256": "49d04d50f22b494e6460a0075d2f3a24c192286741b619d7f14b8a74ebd9c30d",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/mapwork-final/demo-intent.json",
+          "request": "Teste isolado de integracao de ferramentas sem construir Sulfok",
+          "scope_index_path": "/mnt/data/mapwork-final/novydres/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": null,
+        "blockers": [
+          "At least two independent real-world domains; record observations, adaptations, dates, and URLs"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "RESEARCH_REAL_WORLD_ANALOGUES",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "RESEARCH_REAL_WORLD_ANALOGUES",
+        "next_decision_id": null,
+        "phase": "EXTERNAL_RESEARCH",
+        "publication_authorized": false,
+        "request_sha256": "1e3273b50af1e42de6cd48630b53ead8f879239a204af4baf0a0f74b7d20cf49",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "6c8c2b22f255868f17c6d867ec509b68372f14c6823af82d93d3927bd1ec96cc",
+      "status": "PENDING"
     }
   ]
 }
