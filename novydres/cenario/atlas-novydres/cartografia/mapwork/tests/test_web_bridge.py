@@ -222,7 +222,7 @@ def test_host_connector_results_are_translated_without_callbacks(tmp_path):
         "image","composed-image","reference-image","edit-mask","native-edit-handoff","visual-review"}
     import orchestration
     checked=orchestration._host_artifacts(operation,data["result"],[])
-    assert len(checked)==5 and any(a.get("kind")=="image" for a in checked)
+    assert len(checked)==6 and any(a.get("kind")=="image" for a in checked)
 
 
 def test_host_connector_adapter_rejects_forged_provider_ids_and_bytes(tmp_path):
