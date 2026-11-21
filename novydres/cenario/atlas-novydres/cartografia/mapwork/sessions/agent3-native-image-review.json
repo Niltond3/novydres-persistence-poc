@@ -1,0 +1,22 @@
+{
+  "schema": "NOVYDRES_MAPWORK_NATIVE_IMAGE_TECHNICAL_REVIEW",
+  "test_only": true,
+  "canonical_state_changed": false,
+  "publication_authorized": false,
+  "provider": "image_gen",
+  "drive_file_id": "1oC3mcjsYmQzqdAa3--rqfNDOCYlPCxf2",
+  "image_sha256": "c00f079f312be5b987f24a3546df9ca73e761273975ca3dbbff0ff7baf7166cd",
+  "image_dimensions_px": [
+    1536,
+    1024
+  ],
+  "image_format": "PNG",
+  "status": "FAIL",
+  "observations": [
+    "Two horizontal rail corridors visibly intersect a north-south roadway at apparent grade; no bridge or underpass is depicted.",
+    "Red signal heads and horizontal crossing gates are shown on both road approaches; markings align with the tracks in this isolated illustration.",
+    "Sidewalks and pedestrian crossings are visible, but the pedestrian gate arrangement and traversable edge connections cannot be certified from a single image.",
+    "Industrial roofs, fenced yards and snow deposits frame the intersection; continuity to adjacent tiles and original U02 protected pixels cannot be examined."
+  ],
+  "reason": "Technical I/O test only: no accepted U02 reference, mask, rail grade classification, adjacent work units or independent INF-01 contract are bound; FAIL is intentional and cannot promote canon."
+}
