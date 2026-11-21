@@ -149,6 +149,51 @@ def _observations(network, model):
     return events, byedge, bynode
 
 
+def discover_candidates(corridors):
+    """Geometry-only inventory from actual traced candidate lines, *without* levels.
+
+    In particular, this routine does NOT interpret rail crossings, bridge
+    decks, street junctions or owner approval. All reported sites are blocked.
+    """
+    require(isinstance(corridors,list) and bool(corridors),
+            "candidate corridors required")
+    indexed={}
+    for edge in corridors:
+        require(isinstance(edge,dict) and isinstance(edge.get("id"),str) and
+                edge["id"] and edge["id"] not in indexed and
+                isinstance(edge.get("points"),list) and len(edge["points"])>=2 and
+                all(xy(p) for p in edge["points"]) and
+                all(math.dist(p,q)>EPS for p,q in
+                    zip(edge["points"],edge["points"][1:])),
+                "invalid candidate centerline geometry")
+        indexed[edge["id"]]=edge["points"]
+    events={}
+    ids=sorted(indexed)
+    for i,a in enumerate(ids):
+        for b in ids[i+1:]:
+            for v,w in zip(indexed[a],indexed[a][1:]):
+                for x,y in zip(indexed[b],indexed[b][1:]):
+                    pt=_intersect(v,w,x,y)
+                    if pt is None:
+                        continue
+                    if pt=="OVERLAP":
+                        key=(a,b,"OVERLAP")
+                        events[key]={"id":"TC-"+digest(key)[:14],
+                                     "corridors":[a,b],"point":None,
+                                     "status":"UNRESOLVED","reason":"COLLINEAR_OVERLAP"}
+                    else:
+                        key=_key(a,b,pt)
+                        events[key]={"id":"TC-"+digest(key)[:14],
+                                     "corridors":[a,b],"point":pt,
+                                     "status":"UNRESOLVED",
+                                     "reason":"VISUAL_GRADE_AND_CONNECTIVITY_NOT_CLASSIFIED"}
+    return {"schema":"NOVYDRES_MAPWORK_TOPOLOGY_DISCOVERY",
+            "status":"BLOCKED","semantic_authority":False,
+            "crossings":[events[k] for k in sorted(events,key=str)],
+            "corridor_count":len(indexed),
+            "crossing_count":len(events)}
+
+
 def _check_record(record, event, byedge, model, reference_sha):
     ids = event["corridors"]
     pt = event["point"]
