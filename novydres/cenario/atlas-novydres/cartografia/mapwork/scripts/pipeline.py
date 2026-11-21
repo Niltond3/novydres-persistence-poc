@@ -519,7 +519,9 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
 
 def run(args):
     """Only entrypoint: host/semantic orchestration first, shared urban core second."""
-    return flow.run(args, _run_verified)
+    result = flow.run(args, _run_verified)
+    result["execution"] = controller.execution_directive(result)
+    return result
 
 
 def _run_verified(args):
