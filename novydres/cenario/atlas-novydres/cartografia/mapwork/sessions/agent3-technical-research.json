@@ -1,0 +1,26 @@
+{
+  "schema": "NOVYDRES_MAPWORK_TECHNICAL_RESEARCH",
+  "test_only": true,
+  "canonical_state_changed": false,
+  "publication_authorized": false,
+  "date": "2026-11-21",
+  "subject": "noncanonical synthetic road-rail grade crossing",
+  "sources": [
+    {
+      "url": "https://railroads.dot.gov/program-areas/highway-rail-grade-crossing/highway-rail-grade-crossings-overview",
+      "domain": "railroads.dot.gov",
+      "observation": "Active warning and traffic control at road-rail level crossings inform a technical visual checklist.",
+      "adaptation": "Inspect barrier signal placement and road-rail intersection; do not import any unapproved world feature."
+    },
+    {
+      "url": "https://tc.canada.ca/en/rail-transportation/grade-crossings/grade-crossings-handbook",
+      "domain": "tc.canada.ca",
+      "observation": "Crossing safety includes road approaches and adjacent land, so inspection should not stop at tracks alone.",
+      "adaptation": "Require nearby sidewalk and approach context plus cross-tile continuity before visual acceptance."
+    }
+  ],
+  "limitations": [
+    "External sources are analogues only; no editorial element or Kingswell grade classification approved.",
+    "Does not turn test PNG into real Mapwork candidate; required reference and neighbor masks missing."
+  ]
+}
