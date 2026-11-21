@@ -122,6 +122,49 @@
       },
       "state_sha256": "3e89b2ab44c8ba1067650eea0b504e96c8ec49a687901a6ea0a295fa7e59bd7c",
       "status": "COMPLETED"
+    },
+    {
+      "action": "RESEARCH_REAL_WORLD_ANALOGUES",
+      "artifacts": [],
+      "entry_sha256": "444ba5ba01797ea798035efde7ae52e600dc88b5cbb58567632d79803c0d1062",
+      "lease_head": "3348ac77ec078e1c7eee25982d042a67b6c0faf6",
+      "operation_id": "ad92752645d3a200bb23daa1877d0fd823690b3a6a503c5b4a687c04bda91203",
+      "parent_sha256": "f869eba52931f7712c3f731c50dd2d9fd5c129eb5e8ef476aab6ab46c6082d25",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-recovery-evidence/intent-recovered.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-source-2342/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": null,
+        "blockers": [
+          "At least two independent real-world domains; record observations, adaptations, dates, and URLs"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "RESEARCH_REAL_WORLD_ANALOGUES",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "RESEARCH_REAL_WORLD_ANALOGUES",
+        "next_decision_id": null,
+        "phase": "EXTERNAL_RESEARCH",
+        "publication_authorized": false,
+        "request_sha256": "877067966e16248b1387ab2b5ff0e05e64f7529eca11a127611b87b8f367a501",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "03d16b7240619bfcf746d4b34d33f9ea9eb40ccf6193b5f3c101c31c0f44b57b",
+      "status": "PENDING"
     }
   ]
 }
