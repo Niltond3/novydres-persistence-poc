@@ -387,3 +387,63 @@ def test_new_web_process_cannot_resume_from_local_journal_alone(tmp_path, monkey
     with pytest.raises(ValueError,match="fresh connector cold recovery"):
         invoke()
     assert json.loads(journal.read_text())["steps"][0]["operation_id"]==first["operation"]["operation_id"]
+
+
+def test_cold_recovery_after_upload_before_receipt_reconciles_without_reupload(tmp_path):
+    journal,artifact,invoke=setup(tmp_path)
+    op=invoke()["operation"]
+    pending=sync(tmp_path,journal,"a"*40,"b"*40)
+    result=receipt(tmp_path,artifact,op["operation_id"])
+    # The GitHub artifact commit exists, but the original Web session crashed
+    # before it could send COMPLETE_OPERATION to the canonical pipeline.
+    second=tmp_path/"cold-after-upload"
+    second.mkdir()
+    cold=second/"journal.json"
+    cold.write_bytes(journal.read_bytes())
+    journal_get=second/"journal-provider-get.json"
+    journal_get.write_bytes(cold.read_bytes())
+    recovery=cold_proof(json.loads(cold.read_text()),cold,journal_get,
+                         head="b"*40,parent="a"*40)
+    recovery["current_ref_head"]="d"*40
+    recovery["head_chain"]=[{
+        "parent":"b"*40,"head":"d"*40,"commit_sha":"d"*40,
+        "journal_blob_sha":blob(cold.read_bytes()),
+        "operation_id":op["operation_id"],
+        "files":result["github_commits"][0]["files"]}]
+    proof_file=second/"recovery.json"
+    proof_file.write_text(json.dumps(recovery))
+    state={}
+    def run():
+        return {"next_action":"CHECKPOINT" if state.get("intent") else "MATERIALIZE_INTENT",
+                "phase":"INTENT","publication_authorized":False,
+                "canonical_state_changed":False}
+    def apply(updates,validate_only=False):
+        if not validate_only:
+            state.update(updates)
+    def call(exchange=None):
+        exchanged=None
+        if exchange:
+            exchanged=second/"result.json"
+            exchanged.write_text(json.dumps(exchange))
+        return o.run_host_exchange(
+            run,cold,session_key="fixed-session",source_commit="a"*40,
+            branch="mapwork/integration",expected_head="a"*40,
+            journal_repo_path="sessions/host-io-fixture.json",
+            exchange_path=exchanged,recovery_path=proof_file,
+            apply_arguments=apply)
+    assert call()["next_action"]=="RECONCILE_RECOVERED_REMOTE_WRITES"
+    invalid=json.loads(json.dumps(recovery))
+    invalid["head_chain"][0]["operation_id"]="not-our-operation"
+    proof_file.write_text(json.dumps(invalid))
+    with pytest.raises(ValueError,match="cannot attribute external writes"):
+        call({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
+              "pending_sync":pending,"result":result})
+    assert json.loads(cold.read_text())["steps"][-1]["status"]=="PENDING"
+    proof_file.write_text(json.dumps(recovery))
+    accepted=call({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
+                   "pending_sync":pending,"result":result})
+    assert accepted["next_action"]=="SYNC_COMPLETED_JOURNAL"
+    assert accepted["lease_head"]=="d"*40
+    saved=json.loads(cold.read_text())["steps"][-1]
+    assert saved["operation_id"]==op["operation_id"] and saved["status"]=="COMPLETED"
+    assert saved["operation_head"]=="d"*40
