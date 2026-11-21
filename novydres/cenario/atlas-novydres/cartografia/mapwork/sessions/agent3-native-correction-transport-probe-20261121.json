@@ -1,0 +1,74 @@
+{
+  "schema": "NOVYDRES_MAPWORK_NATIVE_CORRECTION_TRANSPORT_PROBE",
+  "test_only": true,
+  "canonical_state_changed": false,
+  "publication_authorized": false,
+  "status": "BLOCKED_NATIVE_VISUAL_ATTACHMENT_NOT_VERIFIED",
+  "operation_id": "6bb1c106d7036a29bf79f96b765b0f6e7ae149a82f0ed197829a171587b491a9",
+  "journal_unchanged": true,
+  "input_reference": {
+    "drive_id": "1anrozhRc3Q1ZNkc9fLvT41a0PJ5dzGgL",
+    "sha256": "41c1c53671732b4a6d711cdf0e94ec0cf07c3218c6756e3492a0650e4539f1f2",
+    "dimensions_px": [
+      1024,
+      1024
+    ],
+    "readback_verified": true
+  },
+  "input_mask": {
+    "drive_id": "18dJpl9_JNZ3huQtyqLYOC87N6DlTXw2w",
+    "sha256": "1dcf99a61835981f38f55e513a9b8623a2e1c335caa28040708fd761b7bcef92",
+    "dimensions_px": [
+      1024,
+      1024
+    ],
+    "readback_verified": true
+  },
+  "observed_attempts": [
+    {
+      "attempt": 1,
+      "native_generation_id": "db4d51c5-d162-4ef4-bd07-391842b47403",
+      "edit_op": null,
+      "provider": "CHATGPT_NATIVE_IMAGE",
+      "output": {
+        "drive_id": "1NPdZIHrRayE3h4VOMzga6BOlyaO3Sx6t",
+        "sha256": "ea999a9472fc9a6de32cfd511e8b36f90cbcbf59ec0e13483d30310b1176e385",
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "drive_readback_verified": true
+      },
+      "verdict": "FAIL",
+      "reason": "New green landscape and bridge unlike gray synthetic reference; size differs; no attachment binding; exact outside-mask preservation not established"
+    },
+    {
+      "attempt": 2,
+      "native_generation_id": "7ed46efa-334d-4071-9f03-0e12ce6900de",
+      "edit_op": null,
+      "provider": "CHATGPT_NATIVE_IMAGE",
+      "output": {
+        "drive_id": "18MKs0WSHx0Yw5MEWNCImB0sZOsnoGzLN",
+        "sha256": "40aad217b1500a68759f1270ec107a6d2efb3a99f238e6177fc4f69804ea55de",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "drive_readback_verified": true
+      },
+      "verdict": "FAIL",
+      "reason": "Generated false-completion infographic, not native correction of rail/road intersection; no attachment binding"
+    }
+  ],
+  "binding_evidence": {
+    "reference_image_attached_to_native_tool": false,
+    "mask_attached_to_native_tool": false,
+    "tool_provided_input_binding_receipt": false
+  },
+  "composition": {
+    "performed": false,
+    "reason": "Native outputs cannot be aligned to selected reference crop and are semantically unrelated"
+  },
+  "journal_next_action": "REPLAN_NATIVE_INPUT_BINDING",
+  "note": "Operational failure evidence only. No synthetic trial acceptance, no canon mutation and no journal completion."
+}
