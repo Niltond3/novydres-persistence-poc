@@ -375,6 +375,50 @@
       },
       "state_sha256": "28f7618751145b855fa534752a9dcb87231f6b3ba70f351eca9f3d9351632862",
       "status": "COMPLETED"
+    },
+    {
+      "action": "RECONCILE_SYNTHETIC_TOPOLOGY",
+      "artifacts": [],
+      "entry_sha256": "413a8c6b48054541823a8ddb93aaf5c0daeb745f9faeeba7288ec315a1f773cf",
+      "lease_head": "c801ac6e77482c362c7c904bdf04e2d7169732df",
+      "operation_id": "471988aeada677f4695a45cb9d25919ab8715c6ab074cc76bed0b558600728a4",
+      "parent_sha256": "d169d132161ac6cb951c83c4eea290a9064a0c0b12209e1f159ba4d783421385",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-ack-get-0/cenario/atlas-novydres/cartografia/mapwork/sessions/agent3-live-second-intent.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-head919d/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": null,
+        "blockers": [
+          "Produce fixture-only topology by the existing pipeline; no U02, zone or INF acceptance"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "RECONCILE_SYNTHETIC_TOPOLOGY",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "SYNTHETIC_TRIAL",
+        "next_action": "RECONCILE_SYNTHETIC_TOPOLOGY",
+        "next_decision_id": null,
+        "phase": "SYNTHETIC_TOPOLOGY",
+        "publication_authorized": false,
+        "request_sha256": "4519be1d35c558677f04be65d1c84262f4c05028d95b6d4be2f5e893bf3ffac4",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "synthetic_test_only": true,
+        "target": "synthetic-rail-overpass-agent3"
+      },
+      "state_sha256": "a55607faea02b260f33f2724f1ad511f7cfdb10d6260a72f92576d588656c1db",
+      "status": "PENDING"
     }
   ]
 }
