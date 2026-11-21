@@ -73,6 +73,25 @@ def _intersection(a,b,c,d):
     return -EPS<=t<=1+EPS and -EPS<=u<=1+EPS
 
 
+def _intersection_xy(a,b,c,d):
+    denominator=_cross(a,b,c,d)
+    if abs(denominator)<EPS:
+        return None
+    t=_cross(a,c,c,d)/denominator
+    return (a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1]))
+
+
+def _same_point(a,b):
+    return math.dist(a,b)<=EPS
+
+
+def _authority(c):
+    value=c.get("authority")
+    return (isinstance(value,dict) and value.get("status")=="APPROVED" and
+            isinstance(value.get("decision_id"),str) and bool(value["decision_id"].strip()) and
+            isinstance(value.get("evidence"),str) and len(value["evidence"].strip())>=12)
+
+
 def _as_binary(item,root,dimensions):
     p=_safe_file(item,root)
     with Image.open(p) as image:
@@ -109,7 +128,7 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
     nd={}
     for n in nodes:
         demand(isinstance(n,dict) and isinstance(n.get("id"),str) and n["id"] not in nd and
-               _point(n.get("point"),w,h) and isinstance(n.get("level"),int),
+               _point(n.get("point"),w,h) and type(n.get("level")) is int,
                "invalid/duplicate network node, coordinate or grade")
         nd[n["id"]]=n
     byid={}
@@ -119,7 +138,7 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
         a=edge.get("from"); b=edge.get("to"); level=edge.get("level")
         pts=edge.get("points")
         demand(edge.get("mode") in MODES and a in nd and b in nd and a!=b and
-               isinstance(level,int) and isinstance(edge.get("width_units"),(int,float)) and
+               type(level) is int and isinstance(edge.get("width_units"),(int,float)) and
                math.isfinite(edge["width_units"]) and edge["width_units"]>0 and
                isinstance(pts,list) and len(pts)>=2 and all(_point(pt,w,h) for pt in pts),
                "invalid mode, width, grade or corridor geometry")
@@ -140,36 +159,77 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
                "invalid explicit crossing")
         pair=tuple(sorted((c["a"],c["b"])))
         demand(pair not in cx,"duplicate crossing relation")
+        first,second=byid[c["a"]],byid[c["b"]]
+        shared={first["from"],first["to"]} & {second["from"],second["to"]}
         if c["kind"]=="at_grade":
-            demand(byid[c["a"]]["level"]==byid[c["b"]]["level"],
-                   "at-grade crossing contradicts corridor levels")
+            junction=c.get("authorized_junction_id")
+            demand(isinstance(junction,str) and junction in nd,
+                   "at-grade junction must identify an existing node")
+            demand(junction in shared,
+                   "at-grade junction edges must be split at the actual shared node")
+            demand(first["level"]==second["level"]==nd[junction]["level"],
+                   "at-grade junction level mismatch")
+            demand(_same_point(nd[junction]["point"],first["points"][0]) or
+                   _same_point(nd[junction]["point"],first["points"][-1]),
+                   "junction not incident to first segment")
+            demand(_same_point(nd[junction]["point"],second["points"][0]) or
+                   _same_point(nd[junction]["point"],second["points"][-1]),
+                   "junction not incident to second segment")
+        else:
+            demand(not shared,"non-connected crossing cannot share a graph node")
         if c["kind"]=="grade_separated":
-            demand(byid[c["a"]]["level"]!=byid[c["b"]]["level"],
+            demand(first["level"]!=second["level"],
                    "claimed flyover/tunnel has identical levels")
+        if c["kind"]=="no_connection" and first["level"]==second["level"]:
+            demand(isinstance(c.get("barrier_evidence"),str) and
+                   len(c["barrier_evidence"].strip())>=12,
+                   "same-level nonconnection needs physical separation evidence")
+        if (c["kind"]=="at_grade" and
+            (first["mode"] in ("rail","metro") or second["mode"] in ("rail","metro")
+             or first.get("protected_structure_id") or second.get("protected_structure_id"))):
+            demand(_authority(c),
+                   "rail/metro/protected at-grade junction requires specific owner authority")
         cx[pair]=c
     detected=0
+    observed_pairs=set()
     all_edges=list(byid.values())
     for i,edge in enumerate(all_edges):
         for peer in all_edges[i+1:]:
-            crossed=False
+            intersection_points=[]
             for a,b in _segments(edge):
                 for c,d in _segments(peer):
                     result=_intersection(a,b,c,d)
                     if result=="OVERLAP":
                         raise InfraInvalid("two corridors overlap without separate authorized lane/track geometry")
                     if result:
-                        crossed=True
-            if not crossed: continue
+                        xy=_intersection_xy(a,b,c,d)
+                        if xy is not None:
+                            intersection_points.append(xy)
+            if not intersection_points:
+                continue
             detected+=1
             pair=tuple(sorted((edge["id"],peer["id"])))
+            observed_pairs.add(pair)
             shared={edge["from"],edge["to"]} & {peer["from"],peer["to"]}
+            relation=cx.get(pair)
             if shared:
                 demand(edge["level"]==peer["level"],"shared node crosses different levels")
+                for xy in intersection_points:
+                    demand(any(_same_point(xy,nd[node]["point"]) for node in shared),
+                           "unsplit extra intersection away from shared graph node")
+                if relation is not None:
+                    demand(relation["kind"]=="at_grade",
+                           "same graph node falsely declared disconnected")
             else:
-                demand(pair in cx,"untyped crossing/proximity is not a connection: "+str(pair))
-                demand(cx[pair]["kind"]!="at_grade" or
-                       bool(cx[pair].get("authorized_junction_id")),
-                       "at-grade crossing requires authoritative junction identity")
+                demand(relation is not None,
+                       "untyped crossing/proximity is not a connection: "+str(pair))
+                demand(relation["kind"]!="at_grade",
+                       "at-grade connection without real split incident node: "+str(pair))
+                if relation["kind"]=="grade_separated":
+                    demand(edge["level"]!=peer["level"],
+                           "grade-separated geometry has identical levels")
+    demand(set(cx).issubset(observed_pairs),
+           "declared crossing does not intersect actual geometry")
     # Fail-closed cumulative model: preceding stage geometry is a required parent.
     if prior is not None:
         previous=json.loads(Path(prior).read_text(encoding="utf-8"))
