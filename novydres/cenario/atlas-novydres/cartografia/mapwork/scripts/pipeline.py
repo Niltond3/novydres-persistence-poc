@@ -107,16 +107,20 @@ def load_verified_neighbors(plan):
     return peers
 
 
-def check_canonical_pois(zone_path,plan):
-    legacy=zone_path.parent/"spatial-plan.json"
-    if legacy.is_file():
-        source=core.load(legacy)
-        required={p["id"] for p in source.get("pois",[])}
-        found={p["id"] for p in plan["special_sites"]}
-        actual_ids=[p["id"] for p in plan["special_sites"]]
-        if len(actual_ids)!=len(set(actual_ids)) or found!=required:
-            raise core.Invalid("approved POI inventory differs (omitted, duplicate or unauthorized): "+
-                               ", ".join(sorted(required.symmetric_difference(found))))
+def check_canonical_pois(zone_path, plan):
+    # Exact approved identities come from the authoritative installation
+    # inventory already verified by flow.run, never from a retired sketch path.
+    inventory_path=zone_path.parent/"inventory.json"
+    if not inventory_path.is_file():
+        raise core.Invalid("authoritative approved POI inventory missing")
+    inventory=core.load(inventory_path)
+    if inventory.get("region")!=plan["zone"]["id"]:
+        raise core.Invalid("approved POI inventory zone mismatch")
+    ids=[p["id"] for p in inventory["elements"]]
+    found=[p["id"] for p in plan["special_sites"]]
+    if len(ids)!=len(set(ids)) or len(found)!=len(set(found)) or set(ids)!=set(found):
+        raise core.Invalid("approved POI inventory differs (omitted, duplicate or unauthorized): "+
+                           ", ".join(sorted(set(ids).symmetric_difference(set(found)))))
 
 
 def affected_unit_ids(report,editable_u02=None):
