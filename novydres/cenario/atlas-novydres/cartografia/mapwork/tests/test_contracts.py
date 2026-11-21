@@ -264,6 +264,15 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
             "output":{"provider":"drive","remote_id":"fixture-output",
                 "path":receipt["local_path"],"readback_path":str(output_get),
                 "sha256":receipt["sha256"]}}
+    for role in ("reference-image","edit-mask"):
+        r_inputs[role]["visual_file_id"]="file_fixture_"+role.replace("-","_")
+    handoff["visual_input_evidence"]={
+        "source":"CHATGPT_WEB_NATIVE_TOOL",
+        "generation_id":"synthetic-fixture-generation",
+        "observation":"Synthetic canonical test fixture only, not proof of a real native tool call",
+        "inputs":{role:{"visual_file_id":r_inputs[role]["visual_file_id"],
+                        "sha256":r_inputs[role]["sha256"]}
+                  for role in ("reference-image","edit-mask")}}
     handoff_file=tmp_path/"handoff.json";handoff_file.write_text(json.dumps(handoff))
     receipt.update(native_recipe_path=str(recipe_file),
                    native_recipe_sha256=c.digest(recipe_file),
