@@ -968,6 +968,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--native-candidate",help="native candidate PNG bytes downloaded from Drive")
     p.add_argument("--native-crop-manifest",help="verified JSON returned by local native input preparation")
     p.add_argument("--native-composite-output",help="write mask-recomposed candidate PNG, never canon")
+    p.add_argument("--native-composed-receipt",help="independently read-backed Drive receipt for final masked PNG")
     p.add_argument("--native-protected-mask",help="locked accepted pixels that must not intersect edit mask")
     p.add_argument("--native-approved-mask",help="existing owner/canon-approved write authority")
     p.add_argument("--native-defects-file",help="agent-inspected defect records, with precise boxes")
@@ -995,7 +996,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                        "spatial", "unit_receipt", "unit_mask", "native_handoff", "visual_review",
                         "native_input_reference", "native_preparation_output",
                         "native_candidate", "native_crop_manifest",
-                        "native_composite_output", "native_protected_mask",
+                        "native_composite_output", "native_composed_receipt", "native_protected_mask",
                         "native_approved_mask", "native_defects_file",
                         "native_repair_mask_output",
                        "image_receipts", "ledger", "strategy_id", "replan_evidence",
