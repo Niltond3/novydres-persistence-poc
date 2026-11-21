@@ -48,6 +48,36 @@ composição técnica pronta, ainda sem canonização. Somente essas condições
 justificam interrupção sem aceite. Reprovação, erro técnico corrigível e
 incapacidade externa têm causas e estados distintos.
 
+## Continuidade obrigatória pelo agente
+
+Após cada retorno, o agente **executa** a operação; não resume um diagnóstico
+como se fosse trabalho concluído. O agente é responsável pelo ciclo externo
+entre invocações da mesma entrada; Python não gera imagens nem executa um
+laço que repete validadores sem alterar os arquivos.
+
+| Classe de retorno | Operação efetiva antes da próxima invocação |
+| --- | --- |
+| `GENERATE_AND_AUDIT_CANDIDATE` | Criar geometria e PNG originais, auditar e persistir |
+| `REPAIR_*`, `REGENERATE_*`, `CORRECT_AND_REGENERATE_IMAGE` | Corrigir a causa, gerar **novos bytes**, reexaminar e persistir |
+| `REPLAN_STAGE`, `REPLAN_AND_REGENERATE_IMAGE` | Alterar estratégia e guardar evidência; gerar outra candidata |
+| `REASSESS_METHOD`, `REASSESS_METHOD_AND_REGENERATE_IMAGE` | Reexaminar método após seis falhas, declarar nova estratégia e reiniciar tentativas |
+| `ASK_OWNER_ONE_DECISION` | Parar somente pela decisão editorial genuína e específica |
+| `RESTORE_REQUIRED_HOST_TOOLS` | Registrar incapacidade comprovada da ferramenta, sem inventar prova |
+| `ADVANCE_AFTER_ACCEPTANCE`, `NEXT_WORK_UNIT` | Avançar somente após aceite matemático **e** visual, e readback remoto |
+| `CHECKPOINT` | Persistir e reler o estado exato, retomando a mesma etapa em outra sessão |
+
+`PASS` escrito pelo gerador é apenas um **parecer declarado**. O veredito
+da pipeline depende da conferência independente dos bytes, topologia,
+recibos e critérios Markdown. Candidata reprovada é registro imutável, não
+gatilho para bloqueio permanente. A retomada exige ler o último ledger e
+checkpoint pelo GitHub, verificar SHA e ler arquivos reais do Drive; erro de
+persistência exige readback/CAS antes de nova gravação. Não saltar fase nem
+declarar etapa terminada apenas por salvar checkpoint.
+
+Para `--audit-unit`, passar `--start-unit --request-id` e, após
+replanejamento, também `--strategy-id --replan-evidence`; o sexto fracasso
+não impõe limite de aprovação e a sétima tentativa é legítima com novo método.
+
 ## Evidências e recuperação
 
 Cada tentativa identifica `request_id`, etapa, estratégia, geometria e PNG
