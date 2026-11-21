@@ -53,10 +53,15 @@ def receipt(tmp_path, artifact, op_id, body=b'{"intent":"real bytes"}'):
     artifact.write_bytes(body)
     remote=tmp_path/"provider-download.json"
     remote.write_bytes(body)
-    return {"operation_id":op_id,"artifacts":[{
+    return {"operation_id":op_id,"github_commits":[{
+        "branch":"mapwork/integration","lease_head":"b"*40,
+        "commit_parent":"b"*40,"head":"d"*40,"ref_head":"d"*40,
+        "commit_sha":"d"*40,
+        "files":{"candidates/intent.json":blob(body)}}],
+        "artifacts":[{
         "path":str(artifact),"readback_path":str(remote),
         "provider":"github","remote_id":blob(body),
-        "blob_sha":blob(body),"sha256":hashlib.sha256(body).hexdigest()}],
+        "repo_path":"candidates/intent.json","blob_sha":blob(body),"sha256":hashlib.sha256(body).hexdigest()}],
         "arg_updates":{"intent":str(artifact)}}
 
 
@@ -75,7 +80,7 @@ def test_material_operation_sync_and_recovery(tmp_path):
     # Lost response is idempotent: no second provider upload / new id.
     repeated=invoke({"kind":"COMPLETE_OPERATION","operation_id":operation["operation_id"]})
     assert repeated["next_action"]=="SYNC_COMPLETED_JOURNAL"
-    complete=sync(tmp_path,journal,"b"*40,"c"*40)
+    complete=sync(tmp_path,journal,"d"*40,"c"*40)
     fresh=tmp_path/"fresh-provider-download.json"
     fresh.write_bytes(artifact.read_bytes())
     done=invoke({"kind":"ACK_COMPLETE","operation_id":operation["operation_id"],
@@ -111,7 +116,7 @@ def test_fake_provider_receipt_or_replayed_bytes_rejected(tmp_path):
     p=sync(tmp_path,journal,"a"*40,"b"*40)
     r=receipt(tmp_path,artifact,op["operation_id"])
     Path(r["artifacts"][0]["readback_path"]).write_bytes(b"corrupt provider data")
-    with pytest.raises(ValueError,match="remote artifact readback differs"):
+    with pytest.raises(ValueError,match="GitHub remote artifact must use"):
         invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
                 "pending_sync":p,"result":r})
     r=receipt(tmp_path,artifact,op["operation_id"])
@@ -150,7 +155,8 @@ def test_generation_requires_real_png_and_hash_bound_review(tmp_path):
     vr.write_bytes(vb)
     r["artifacts"].append({"path":str(visual),"readback_path":str(vr),
         "provider":"github","remote_id":blob(vb),"blob_sha":blob(vb),
-        "kind":"visual-review","sha256":hashlib.sha256(vb).hexdigest()})
+        "repo_path":"candidates/visual.json","kind":"visual-review","sha256":hashlib.sha256(vb).hexdigest()})
+    r["github_commits"][0]["files"]["candidates/visual.json"]=blob(vb)
     assert invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
                    "pending_sync":p,"result":r})["next_action"]=="SYNC_COMPLETED_JOURNAL"
 

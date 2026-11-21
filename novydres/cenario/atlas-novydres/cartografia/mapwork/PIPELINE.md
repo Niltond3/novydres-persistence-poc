@@ -129,12 +129,17 @@ o HEAD inicial da sessão em retomadas, sem substituí-lo silenciosamente.
    COMPLETE_OPERATION, operation_id, pending_sync e result.
    result.artifacts[] exige path local, readback_path separado vindo de
    GET do provedor, sha256, provider, remote_id e blob_sha para GitHub.
+   Para artefatos GitHub exigir repo_path e result.github_commits[]:
+   cada commit informa branch, lease_head, commit_parent, head, ref_head,
+   commit_sha e files (caminho → Git blob SHA). A cadeia começa no HEAD
+   do journal PENDING e registra cada avanço CAS da mesma branch.
    result.arg_updates só pode alterar argumentos permitidos, nunca
    injetar aprovação editorial ou de infraestrutura. Imagem nova exige
    PNG verdadeiro em Drive e outro arquivo JSON kind=visual-review,
    associado ao image_sha256 e quatro observações verificáveis.
 4. SYNC_COMPLETED_JOURNAL: fazer outro commit Git CAS com lease no HEAD
-   confirmado na primeira gravação. Novos GETs independentes, e depois
+   confirmado da última gravação de artefato, ou no HEAD do journal
+   PENDING quando não houve gravações adicionais na branch. Novos GETs independentes, e depois
    enviar kind ACK_COMPLETE, operation_id, completed_sync e
    recovery_readbacks[] para todos os artefatos concluídos.
 5. A pipeline só então aplica argumentos e reavalia critérios. Se ainda

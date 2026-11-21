@@ -519,6 +519,43 @@ def _host_artifacts(operation, receipt, previous):
     return checked
 
 
+def _host_action_head(result, pending_head, branch):
+    """Verify CAS continuity for GitHub artifacts committed during host work.
+
+    A host can persist research or topology JSON to this SAME branch between
+    the two journal commits. The completion journal must lease the real latest
+    head, not the earlier PENDING head.
+    """
+    history = result.get("github_commits", [])
+    if not isinstance(history, list):
+        raise ValueError("host GitHub commit history must be a list")
+    head = pending_head
+    committed_blobs = {}
+    for proof in history:
+        if (not isinstance(proof, dict) or proof.get("branch") != branch or
+                proof.get("lease_head") != head or
+                proof.get("commit_parent") != head or
+                not HEX40.fullmatch(str(proof.get("head", ""))) or
+                proof["head"] == head or
+                proof.get("ref_head") != proof["head"] or
+                proof.get("commit_sha") != proof["head"] or
+                not isinstance(proof.get("files"), dict)):
+            raise ValueError("external GitHub artifact CAS chain invalid")
+        for path, blob in proof["files"].items():
+            if (not isinstance(path, str) or not path or path.startswith("/") or
+                    ".." in Path(path).parts or not HEX40.fullmatch(str(blob))):
+                raise ValueError("invalid committed GitHub artifact path/blob")
+            committed_blobs[path] = blob
+        head = proof["head"]
+    for item in result.get("artifacts", []):
+        if item.get("provider") == "github":
+            repo_path = item.get("repo_path")
+            if (not isinstance(repo_path, str) or
+                    committed_blobs.get(repo_path) != item.get("blob_sha")):
+                raise ValueError("GitHub artifact not present in proven committed tree")
+    return head
+
+
 def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                       branch, expected_head, exchange_path=None,
                       apply_arguments=None):
@@ -574,6 +611,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             path, exchange.get("pending_sync"), branch=branch,
             lease_head=last["lease_head"])
         verified = _host_artifacts(last, exchange.get("result"), steps[:-1])
+        operation_head = _host_action_head(exchange["result"], pending_head, branch)
         updates = exchange["result"].get("arg_updates", {})
         if not isinstance(updates, dict):
             raise ValueError("host argument updates must be an object")
@@ -581,28 +619,28 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
         apply_arguments(updates, validate_only=True)
         last.update(status="COMPLETED", artifacts=verified,
                     arg_updates=updates, pending_head=pending_head,
-                    receipt_sha256=digest({k:v for k,v in exchange["result"].items()
+                    operation_head=operation_head, receipt_sha256=digest({k:v for k,v in exchange["result"].items()
                                            if k!="artifacts"}))
         last["entry_sha256"] = digest({k:v for k,v in last.items() if k!="entry_sha256"})
         atomic_json(path, session)
         return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
-                "operation_id":last["operation_id"],"lease_head":pending_head,
+                "operation_id":last["operation_id"],"lease_head":operation_head,
                 "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
     if last and last["status"] == "COMPLETED" and not last.get("confirmed_head"):
         if exchange is None:
             return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
-                    "operation_id":last["operation_id"],"lease_head":last["pending_head"],
+                    "operation_id":last["operation_id"],"lease_head":last["operation_head"],
                     "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
         if (exchange.get("kind") == "COMPLETE_OPERATION" and
                 exchange.get("operation_id") == last["operation_id"]):
             # Lost reply after recording completion: do not run the host twice.
             return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
-                    "operation_id":last["operation_id"],"lease_head":last["pending_head"],
+                    "operation_id":last["operation_id"],"lease_head":last["operation_head"],
                     "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
         if exchange.get("kind") != "ACK_COMPLETE" or exchange.get("operation_id") != last["operation_id"]:
             raise ValueError("completed operation requires matching ACK_COMPLETE")
         head = _host_sync_proof(path, exchange.get("completed_sync"),
-                                branch=branch, lease_head=last["pending_head"])
+                                branch=branch, lease_head=last["operation_head"])
         # Repeat GET evidence: a stale local upload receipt cannot validate recovery.
         recovery = exchange.get("recovery_readbacks")
         if not isinstance(recovery, list) or len(recovery) != len(last["artifacts"]):
