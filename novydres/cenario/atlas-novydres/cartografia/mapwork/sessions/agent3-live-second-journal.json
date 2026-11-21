@@ -450,6 +450,68 @@
       },
       "state_sha256": "a55607faea02b260f33f2724f1ad511f7cfdb10d6260a72f92576d588656c1db",
       "status": "COMPLETED"
+    },
+    {
+      "action": "GENERATE_AND_AUDIT_CANDIDATE",
+      "artifacts": [],
+      "entry_sha256": "c75f62cef6938693b6d86906307a924d982e97619905a229b232cfb5a47b7a88",
+      "lease_head": "ef272a01459073d2369dd80998e96abf4bc842e1",
+      "operation_id": "6bb1c106d7036a29bf79f96b765b0f6e7ae149a82f0ed197829a171587b491a9",
+      "parent_sha256": "08adf93ea73d0b7c8cbd00ba7f58457e56502a3dc1459ee01fc7d87a4da00ea5",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-gen-remote0/cenario/atlas-novydres/cartografia/mapwork/sessions/agent3-live-second-intent.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-head919d/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": {
+          "geometry_sha256": "48ecd8909578f8eadcdae4babd9f590dc5ab32494c36e24abab1ab78ed899ba9",
+          "native_edit_request": {
+            "job_id": "synthetic-rail-overpass-agent3",
+            "mask_sha256": "1dcf99a61835981f38f55e513a9b8623a2e1c335caa28040708fd761b7bcef92",
+            "mode": "EDIT_WITH_REFERENCE",
+            "prompt": "EDITAR A IMAGEM FORNECIDA COMO REFERÊNCIA VISUAL. Use a máscara fornecida para delimitar exclusivamente os pixels editáveis. Preserve a composição e os pixels fora da máscara. Objetivo visual: Transformar somente o cruzamento central de passagem em nivel em um viaduto rodoviario claramente elevado sobre a ferrovia, mantendo ambas as conexoes continuas, trilhos desobstruidos e pixel fora da mascara inalterado. SAÍDA: somente a imagem cartográfica editada, sem legendas, relatórios, tabelas, painéis, banners, infográficos, títulos ou marcas de aprovação. Não inventar elementos fora do objetivo autorizado.",
+            "prompt_sha256": "7e7846573c7ac6ef722cb71a8a770e5d4a45db3dbc18a7b1861094a6a031e73b",
+            "reference_sha256": "41c1c53671732b4a6d711cdf0e94ec0cf07c3218c6756e3492a0650e4539f1f2",
+            "required_input_roles": [
+              "reference-image",
+              "edit-mask"
+            ],
+            "schema": "NOVYDRES_MAPWORK_NATIVE_EDIT_REQUEST",
+            "scope": "SYNTHETIC"
+          },
+          "native_edit_request_sha256": "dd323e8656db530a1b58ee394698f751646a14d7622bc8777be0465171b5ea09",
+          "topology_status": "PASS"
+        },
+        "blockers": [
+          "Host must independently GET reference and mask from Drive, attach both as native edit visual inputs; never send a textual infographic prompt"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "GENERATE_AND_AUDIT_CANDIDATE",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "SYNTHETIC_TRIAL",
+        "next_action": "GENERATE_AND_AUDIT_CANDIDATE",
+        "next_decision_id": null,
+        "phase": "SYNTHETIC_IMAGE",
+        "publication_authorized": false,
+        "request_sha256": "4519be1d35c558677f04be65d1c84262f4c05028d95b6d4be2f5e893bf3ffac4",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "synthetic_test_only": true,
+        "target": "synthetic-rail-overpass-agent3"
+      },
+      "state_sha256": "edeab77574d9377a6274e5e4c446ca20445dc2ce3395dcc60c2aa302bbea77c8",
+      "status": "PENDING"
     }
   ]
 }
