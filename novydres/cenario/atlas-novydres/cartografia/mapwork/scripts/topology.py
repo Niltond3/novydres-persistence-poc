@@ -104,7 +104,9 @@ def _observations(network, model):
         require(close(pts[0], bynode[edge["from"]]["point"]) and
                 close(pts[-1], bynode[edge["to"]]["point"]),
                 "source edge endpoints mismatch")
-        require(_level(edge, model) is None or type(_level(edge, model)) is int,
+        require((_level(edge, model) is None and model=="urban" and edge.get("class")=="ramp" and
+                 type(edge.get("level_from")) is int and type(edge.get("level_to")) is int) or
+                type(_level(edge, model)) is int,
                 "source edge level missing")
         byedge[edge["id"]] = edge
     # One event per exact point/pair; a pair can have multiple independent events.
@@ -120,6 +122,17 @@ def _observations(network, model):
                     if pt is None:
                         continue
                     if pt == "OVERLAP":
+                        # A tram may explicitly share a road carriageway.
+                        shared = ((a.get("mode")=="road" or a.get("class") in
+                                   ("street","collector","avenue","arterial","expressway","service")) and
+                                  (b.get("mode")=="tram" or b.get("class")=="tram") and
+                                   b.get("shared_with_road") is True) or (
+                                  (b.get("mode")=="road" or b.get("class") in
+                                   ("street","collector","avenue","arterial","expressway","service")) and
+                                  (a.get("mode")=="tram" or a.get("class")=="tram") and
+                                   a.get("shared_with_road") is True)
+                        if shared:
+                            continue
                         key = (ia, ib, "OVERLAP")
                         events[key] = {"corridors": [ia, ib], "point": None,
                                        "reason": "COLLINEAR_OVERLAP"}
@@ -137,6 +150,8 @@ def _observations(network, model):
 def _check_record(record, event, byedge, model, reference_sha):
     ids = event["corridors"]
     pt = event["point"]
+    require(isinstance(record.get("id"),str) and bool(record["id"].strip()),
+            "classification requires a stable identity")
     require(record.get("status") == "RESOLVED" and record.get("relation") in RELATIONS,
             "unresolved crossing cannot authorize geometry")
     require(record.get("corridors") == ids and xy(record.get("point")) and
@@ -304,9 +319,11 @@ def reconcile(data, classifications, *, protected_edges=()):
             continue
         pt = event["point"]
         k = (round(pt[0],8), round(pt[1],8), record["levels"][event["corridors"][0]])
-        connected.setdefault(k, set()).update(event["corridors"])
-    for k, ids in connected.items():
-        pt = [k[0], k[1]]
+        entry=connected.setdefault(k, {"ids":set(),"point":pt})
+        entry["ids"].update(event["corridors"])
+    for k, entry in list(connected.items()):
+        ids=entry["ids"]
+        pt=entry["point"]
         # At the same XY, a path through A-B and A-C implies B-C; no
         # unreviewed transitive connection is permitted.
         for i, ea in enumerate(sorted(ids)):
@@ -317,6 +334,8 @@ def reconcile(data, classifications, *, protected_edges=()):
         endpoint_ids = sorted({nid for eid in ids for nid in
             (edges[eid]["from"],edges[eid]["to"]) if close(nodes[nid]["point"],pt)})
         winner = endpoint_ids[0] if endpoint_ids else "TJ-"+digest([sorted(ids),pt])[:14]
+        if endpoint_ids:
+            pt=nodes[winner]["point"]
         if not endpoint_ids:
             additions[winner] = {"id":winner,"point":pt,"level":k[2]}
             if model == "urban":
@@ -329,14 +348,14 @@ def reconcile(data, classifications, *, protected_edges=()):
                 require(nodes[nid]["level"] == k[2],
                         "cannot join different-level coincident nodes")
                 rewrites[nid] = winner
-        connected[k] = (ids, winner)
+        connected[k] = (ids, winner, pt)
     # Do not turn non-connected pair into a junction through a shared
     # canonical node selected by another crossing at the same location.
     for ident, (event, record, auth) in resolved.items():
         if record["relation"] == "at_grade":
             continue
         ids = event["corridors"]
-        if any(set(ids) <= participants for participants, winner in connected.values()):
+        if any(set(ids) <= participants for participants, winner, p in connected.values()):
             raise TopologyInvalid("disconnected classification conflicts with connected junction")
     for ident, (event, record, auth) in resolved.items():
         pt = event["point"]
@@ -344,6 +363,7 @@ def reconcile(data, classifications, *, protected_edges=()):
             if record["relation"] == "at_grade":
                 k=(round(pt[0],8),round(pt[1],8),record["levels"][eid])
                 node_id=connected[k][1]
+                pt=connected[k][2]
             else:
                 edge=edges[eid]
                 existing = [nid for nid in (edge["from"],edge["to"])
@@ -365,14 +385,24 @@ def reconcile(data, classifications, *, protected_edges=()):
     updated_nodes.update(additions)
     changed_edges = copy.deepcopy(edges)
     for edge in changed_edges.values():
+        before=(edge["from"],edge["to"])
         edge["from"] = rewrites.get(edge["from"],edge["from"])
         edge["to"] = rewrites.get(edge["to"],edge["to"])
+        require(edge["id"] not in protected or before==(edge["from"],edge["to"]),
+                "protected/approved graph edge endpoint may not be rewritten")
     parts = {}
     for eid in sorted(edges):
         parts[eid] = _segment(changed_edges[eid],cuts[eid],None,updated_nodes)
     all_edges = [e for eid in sorted(parts) for e in parts[eid]]
     require(len({e["id"] for e in all_edges}) == len(all_edges),"duplicate resulting segment ID")
     require(all(e["from"] != e["to"] for e in all_edges),"degenerate resulting graph edge")
+    signatures=set()
+    for e in all_edges:
+        line=tuple(tuple(v) for v in e["points"])
+        mode=e.get("mode",e.get("class"))
+        signature=(mode,e.get("level",e.get("level_from")),min(line,tuple(reversed(line))))
+        require(signature not in signatures,"duplicate co-located segment of same mode/level")
+        signatures.add(signature)
     result_crossings = []
     seen = set()
     for ident,(event,rec,auth) in resolved.items():
@@ -417,8 +447,9 @@ def reconcile(data, classifications, *, protected_edges=()):
     for prior in network.get("crossings",[]):
         a,b=(prior.get("a"),prior.get("b")) if model=="infra" else (
             prior.get("edge_a"),prior.get("edge_b"))
+        consumed={tuple(x["corridors"]) for x,_,_ in resolved.values()}
         if a in parts and b in parts and len(parts[a])==len(parts[b])==1 and (
-            a,b not in {(x["corridors"][0],x["corridors"][1]) for x,_,_ in resolved.values()}):
+            tuple(sorted((a,b))) not in consumed):
             if not any((x.get("a",x.get("edge_a")),x.get("b",x.get("edge_b")))==(a,b)
                        for x in result_crossings):
                 result_crossings.append(copy.deepcopy(prior))
