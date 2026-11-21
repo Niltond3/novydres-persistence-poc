@@ -23,6 +23,7 @@ import contracts as contract
 import acceptance
 import visual
 import flow
+import synthetic_trial
 import orchestration as controller
 import topology
 import infra_checks as infra
@@ -544,6 +545,12 @@ def verify_composition_contract(composition,zones,cfg,base,assets,before,protect
 
 def run(args):
     """One entrypoint: classified topology candidate repair or verified orchestration."""
+    if getattr(args, "synthetic_trial", None) and getattr(args, "topology_source", None):
+        synthetic_trial.synthetic_contract(args.synthetic_trial, args)
+        if getattr(args, "topology_out", None):
+            synthetic_trial.synthetic_output_path(args.topology_out)
+        if not core.load(args.topology_source).get("fixture_mode") is True:
+            raise core.Invalid("synthetic trial cannot reconcile real canonical geometry")
     if getattr(args, "topology_source", None):
         if any((getattr(args,"execute",False),getattr(args,"record_attempt",None),
                 getattr(args,"recipe_unit",None),getattr(args,"audit_unit",None))):
@@ -859,6 +866,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--host-recovery",help="fresh GitHub journal and provider GET evidence for cold resume")
     p.add_argument("--max-operations",type=int,default=16,
                    help="bounded operations this invocation; never an acceptance shortcut")
+    p.add_argument("--synthetic-trial",help="explicit noncanonical fixture trial bound to the existing journal")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed  request JSON")
     p.add_argument("--record-attempt",help="record one real candidate, then evaluate the same stage")
     p.add_argument("--topology-source",help="candidate spatial geometry/transport JSON; never an accepted stage")
@@ -894,7 +902,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
         if args.autonomous_journal:
             if not args.session_key or not args.request:
                 raise ValueError("autonomous session must bind immutable key and real user request")
-            allowed = {"intent", "capabilities", "research_file", "decisions_file",
+            allowed = {"intent", "synthetic_trial", "capabilities", "research_file", "decisions_file",
                        "inventory_file", "record_attempt", "reference", "topology_source",
                        "topology_classifications", "topology_out", "topology_prior",
                        "spatial", "unit_receipt", "unit_mask", "visual_review",
@@ -908,6 +916,8 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                 for key, value in updates.items():
                     if value is not None and not isinstance(value, (str, bool)):
                         raise ValueError("invalid autonomous pipeline argument type")
+                    if key == "synthetic_trial" and value is not None:
+                        synthetic_trial.synthetic_contract(value, args)
                     if not validate_only:
                         setattr(args, key, value)
             def agent_snapshot():

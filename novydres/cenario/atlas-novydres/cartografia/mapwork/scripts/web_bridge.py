@@ -286,6 +286,72 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
             "artifacts":len(records)}
 
 
+def _cli_value(args, name):
+    if args.count(name) > 1:
+        raise WebBridgeError("duplicate host argument: " + name)
+    if name not in args:
+        return None
+    pos = args.index(name)
+    if pos + 1 >= len(args) or args[pos + 1].startswith("--"):
+        raise WebBridgeError("missing host argument: " + name)
+    return args[pos + 1]
+
+
+def _verify_synthetic_runtime_upgrade(args, runtime_source, journal_source):
+    """Preserve immutable journal pin when intentionally switching runtime code.
+
+    The new implementation is byte-verified at runtime_source. The old journal
+    source_commit is NOT rewritten, and no canonical execution can use this
+    exception. Host must retrieve Git ancestry by a separate connector call.
+    """
+    trial_file = _cli_value(args, "--synthetic-trial")
+    recovery_file = _cli_value(args, "--host-recovery")
+    proof_file = _cli_value(args, "--host-runtime-upgrade-proof")
+    journal_file = _cli_value(args, "--autonomous-journal")
+    branch = _cli_value(args, "--host-branch")
+    repo_path = _cli_value(args, "--host-journal-path")
+    if (not all((trial_file, recovery_file, proof_file, journal_file, branch, repo_path))
+            or "--execute" in args or any(_cli_value(args, opt) for opt in
+                ("--zone", "--reference", "--before", "--editable-mask", "--assets"))):
+        raise WebBridgeError("runtime source transition allowed for isolated synthetic recovery only")
+    try:
+        journal_bytes = Path(journal_file).read_bytes()
+        journal = json.loads(journal_bytes)
+        trial = json.loads(Path(trial_file).read_text(encoding="utf-8"))
+        recovery = json.loads(Path(recovery_file).read_text(encoding="utf-8"))
+        proof = json.loads(Path(proof_file).read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError) as exc:
+        raise WebBridgeError("synthetic runtime transition lacks materialized proofs") from exc
+    entries = journal.get("steps", [])
+    ancestry = proof.get("github_compare", {})
+    if (proof.get("schema") != "NOVYDRES_MAPWORK_SYNTHETIC_RUNTIME_UPGRADE"
+            or proof.get("test_only") is not True
+            or proof.get("journal_sha256") != sha256(journal_bytes)
+            or proof.get("journal_source_commit") != journal_source
+            or proof.get("runtime_source_commit") != runtime_source
+            or proof.get("branch") != branch
+            or proof.get("journal_repo_path") != repo_path
+            or journal.get("source_commit") != journal_source
+            or journal.get("branch") != branch
+            or journal.get("journal_repo_path") != repo_path
+            or journal.get("publication_authorized") is not False
+            or not entries
+            or trial.get("schema") != "NOVYDRES_MAPWORK_SYNTHETIC_TRIAL"
+            or trial.get("test_only") is not True
+            or trial.get("canonical_target", "NON_NULL") is not None
+            or trial.get("resume_operation_id") != entries[-1].get("operation_id")
+            or recovery.get("schema") != "NOVYDRES_MAPWORK_COLD_RECOVERY"
+            or recovery.get("source_commit") != journal_source
+            or recovery.get("branch") != branch
+            or recovery.get("journal_repo_path") != repo_path
+            or ancestry.get("base") != journal_source
+            or ancestry.get("head") != runtime_source
+            or ancestry.get("status") != "ahead"
+            or not isinstance(ancestry.get("ahead_by"), int)
+            or ancestry["ahead_by"] < 1):
+        raise WebBridgeError("synthetic runtime transition authority/ancestry mismatch")
+
+
 def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
             action_executor=None, remote_readback=None, journal_sync=None):
     """Run exact canonical pipeline.main WITHOUT invoking a terminal or clone.
@@ -348,12 +414,19 @@ def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
     # source pin to the same Git commit whose blobs were independently checked.
     args_list = list(argv)
     if "--autonomous-journal" in args_list:
-        if "--source-commit" in args_list:
-            pos = args_list.index("--source-commit")
-            if pos+1 >= len(args_list) or args_list[pos+1] != source_commit:
-                raise WebBridgeError("host source commit differs from verified tree")
-        else:
+        session_source = _cli_value(args_list, "--source-commit")
+        if session_source and session_source != source_commit:
+            _verify_synthetic_runtime_upgrade(args_list, source_commit, session_source)
+        elif session_source is None:
             args_list += ["--source-commit", source_commit]
+    # Runtime upgrade proof belongs only to the transport guard, never to the
+    # canonical pipeline arguments or its persisted session identity.
+    upgrade_path = _cli_value(args_list, "--host-runtime-upgrade-proof")
+    if upgrade_path is not None:
+        if "--autonomous-journal" not in args_list or _cli_value(args_list, "--source-commit") == source_commit:
+            raise WebBridgeError("runtime proof without source transition")
+        pos = args_list.index("--host-runtime-upgrade-proof")
+        del args_list[pos:pos+2]
     output, errors = io.StringIO(), io.StringIO()
     try:
         spec = importlib.util.spec_from_file_location("pipeline", module_dir / "pipeline.py")

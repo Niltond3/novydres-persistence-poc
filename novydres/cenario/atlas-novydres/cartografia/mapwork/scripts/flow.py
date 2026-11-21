@@ -16,6 +16,7 @@ import contracts as contract
 import visual
 import acceptance as acceptance
 import orchestration as controller
+import synthetic_trial
 
 ROOT=Path(__file__).resolve().parents[1]
 CANON_CATALOG=ROOT.parents[3]/"catalogo.json"
@@ -46,6 +47,8 @@ def cfg_dimensions(config):
 
 
 def run(args, core_run):
+    if getattr(args, "synthetic_trial", None):
+        return synthetic_trial.run(args)
     if not getattr(args, "intent", None):
         return _state("INTENT", "AGENT_RESOLVE_AND_RECORD_INTENT",
                       ["Provide --intent JSON produced by semantic agent; scripts never guess place names"])

@@ -163,3 +163,26 @@ não é necessário para o agente ChatGPT Web. GitHub mantém código,
 contratos e checkpoints; Google Drive guarda imagens e arquivos.
 Nenhum registro da sessão publica cânone nem substitui o aceite
 independente de INF-01 a URB-08.
+
+## Ensaio sintético isolado no controlador existente
+
+O parâmetro `--synthetic-trial <arquivo.json>` ativa exclusivamente uma fixture
+`NOVYDRES_MAPWORK_SYNTHETIC_TRIAL` no mesmo `scripts/pipeline.py run`.
+A fixture deve ter `test_only=true`, `canonical_target=null`,
+`publication_authorized=false`, `canonical_state_changed=false`, identidade
+`synthetic-*`, SHA-256 dos critérios de `docs/infra-acceptance.md` e vínculo
+com a branch, o journal e o `operation_id` **já existentes**.
+
+Este escopo não utiliza zona real, U02, renderizador canônico nem os aceites
+INF-01/URB-08. O próprio controlador exige topologia sintética validada,
+PNG nativo com bytes enviados ao Drive e relidos, inspeção visual vinculada
+à imagem (desnível, continuidade, coerência e formato) e ledger idempotente.
+Reprovações seguem a política de reparo/replanejamento já implementada.
+Um checkpoint `SYNTHETIC_ACCEPTANCE` **nunca** publica cânone, autoriza INF-01
+ou implica que as outras operações do Agente 3 estejam concluídas.
+
+A operação pendente `BUILD_REGION_FROM_APPROVED_CANON` do ensaio anterior só
+pode receber um recibo de **mudança de escopo sintético**, sem alegar que Sulfok
+foi construído. A próxima ação deve ser calculada novamente após
+`SYNC_COMPLETED_JOURNAL` e `ACK_COMPLETE`, preservando o mesmo `operation_id`
+e todos os hashes históricos. `--synthetic-trial` não cria outro journal.

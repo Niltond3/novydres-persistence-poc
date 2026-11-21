@@ -143,3 +143,39 @@ completa de pesquisa → classificação → topologia → geração → reprova
 → correção → replanejamento → aceite. Não transferir ao Agente 4
 enquanto esses passos não ocorrerem no próprio controlador com
 recibos de ferramentas reais e nova evidência material.
+
+## Troca controlada da revisão executável durante ensaio sintético
+
+Um journal recuperado preserva seu `source_commit` histórico. Quando há nova
+implementação da pipeline, `web_bridge.run_web` exige verificação completa dos
+Git blobs na **revisão executável nova** e rejeita divergência da referência
+do journal por padrão. A exceção restringe-se a `--synthetic-trial` com
+`--host-recovery` e `--host-runtime-upgrade-proof`; não é permitida com U02,
+renderizador canônico, `--execute`, assets ou zona real.
+
+O host deve consultar separadamente a comparação GitHub entre a revisão
+histórica e a revisão executável e persistir a prova:
+
+```json
+{
+  "schema": "NOVYDRES_MAPWORK_SYNTHETIC_RUNTIME_UPGRADE",
+  "test_only": true,
+  "journal_sha256": "<sha256-do-journal-existente>",
+  "journal_source_commit": "<commit-historico-imutavel>",
+  "runtime_source_commit": "<commit-novo-verificado>",
+  "branch": "<branch-do-journal>",
+  "journal_repo_path": "sessions/<journal>.json",
+  "github_compare": {
+    "base": "<commit-historico-imutavel>",
+    "head": "<commit-novo-verificado>",
+    "status": "ahead",
+    "ahead_by": 1
+  }
+}
+```
+
+`ahead_by` precisa refletir a leitura real do conector GitHub. Este JSON não
+substitui essa leitura nem validação dos blobs; só vincula os resultados ao
+mesmo journal e à fixture sintética. A referência histórica e os
+`operation_id` não são alterados. A troca da implementação não valida,
+conclui ou repete a operação pendente por si só.
