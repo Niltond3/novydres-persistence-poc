@@ -277,13 +277,19 @@ def reconcile(data, classifications, *, protected_edges=(), protected_nodes=()):
     if "topology_source" in network:
         original = network["topology_source"]
         stripped = {k:v for k,v in original.items() if k not in ("topology_source", "topology_audit")}
-        expected, report = reconcile({**data, key:stripped}, classifications,
+        raw={**data,key:stripped}
+        if model=="urban":
+            raw["neighbor_seams"]=network.get("topology_source_seams",data.get("neighbor_seams",[]))
+        expected, report = reconcile(raw, classifications,
                                      protected_edges=protected_edges,protected_nodes=protected_nodes)
         require({k:v for k,v in network.items() if k not in ("topology_source","topology_audit")} ==
                 {k:v for k,v in expected[key].items() if k not in ("topology_source","topology_audit")},
                 "reconciled graph drifted from immutable source")
         require(network.get("topology_audit") == expected[key].get("topology_audit"),
                 "topology audit digest/diagnostics altered")
+        if model=="urban":
+            require(data.get("neighbor_seams",[])==expected.get("neighbor_seams",[]),
+                    "neighbor connector was modified after reconciliation")
         return copy.deepcopy(data), report
     require(classifications.get("network_sha256") == digest(network),
             "source network changed; stale crossing classification")
@@ -480,12 +486,31 @@ def reconcile(data, classifications, *, protected_edges=(), protected_nodes=()):
             "created_nodes":len(additions),"source_network_sha256":digest(network),
             "classification_sha256":digest(classifications)}
     out_network["topology_source"]=copy.deepcopy(network)
+    if model=="urban":
+        out_network["topology_source_seams"]=copy.deepcopy(data.get("neighbor_seams",[]))
     out_network["topology_audit"]={"status":report["status"],
                                    "source_network_sha256":report["source_network_sha256"],
                                    "classification_sha256":report["classification_sha256"],
                                    "result_network_sha256":digest(out_network)}
     result=copy.deepcopy(data)
     result[key]=out_network
+    if model=="urban":
+        for seam in result.get("neighbor_seams",[]):
+            source_id=seam.get("network_edge_id")
+            if source_id not in parts:
+                continue
+            candidates=[]
+            for piece in parts[source_id]:
+                try:
+                    _distance_along(piece,seam["point"])
+                except (TopologyInvalid,KeyError,TypeError):
+                    continue
+                candidates.append(piece)
+            require(len(candidates)==1,
+                    "neighbor connector must resolve to exactly one segmented edge")
+            seam["network_edge_id"]=candidates[0]["id"]
+            if seam.get("network_node_id") in rewrites:
+                seam["network_node_id"]=rewrites[seam["network_node_id"]]
     return result, report
 
 
