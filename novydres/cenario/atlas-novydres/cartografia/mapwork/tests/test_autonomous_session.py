@@ -184,3 +184,33 @@ def test_host_cannot_inject_pipeline_canonical_authority(tmp_path, monkeypatch):
         o.run_autonomous(run, malicious, fetch, sync,
                           tmp_path / "journal.json", session_key="guard",
                           apply_arguments=forbid)
+
+
+def test_resume_after_upload_before_receipt_when_pipeline_already_advanced(tmp_path):
+    local, remote, calls, run, perform, fetch, sync = harness(tmp_path)
+    journal = tmp_path / "journal.json"
+    def interrupted_after_upload(action, state, operation_id):
+        perform(action, state, operation_id)
+        raise ConnectionError("crash after GitHub upload before recorded receipt")
+    with pytest.raises(ConnectionError):
+        o.run_autonomous(run, interrupted_after_upload, fetch, sync, journal,
+                          session_key="crash-after-write")
+    assert local.is_file()
+    assert json.loads(journal.read_text())["steps"][-1]["status"] == "PENDING"
+    # run() already sees the new intent artifact, but the controller must
+    # reconcile the earlier operation before it can honor CHECKPOINT.
+    restored = o.run_autonomous(run, perform, fetch, sync, journal,
+                                session_key="crash-after-write")
+    assert restored["next_action"] == "CHECKPOINT"
+    assert len(set(calls)) == 1
+    assert json.loads(journal.read_text())["steps"][0]["status"] == "COMPLETED"
+
+
+def test_resume_refuses_stale_completed_drive_or_git_receipt(tmp_path):
+    _, remote, _, run, perform, fetch, sync = harness(tmp_path)
+    journal = tmp_path / "journal.json"
+    o.run_autonomous(run, perform, fetch, sync, journal, session_key="readback-recovery")
+    remote[("github", "intent-blob")] = b"deleted-or-tampered-after-original-readback"
+    with pytest.raises(ValueError, match="remote artifact readback differs"):
+        o.run_autonomous(run, perform, fetch, sync, journal,
+                          session_key="readback-recovery")

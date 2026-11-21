@@ -339,6 +339,15 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
     else:
         session = {"schema": AUTONOMY_SCHEMA, "session_key": session_key, "steps": [],
                    "publication_authorized": False}
+    # A completed step is not authoritative merely because its local journal
+    # says so. Re-open every retained file and fetch its provider bytes again.
+    for ordinal, entry in enumerate(session["steps"]):
+        if entry["status"] == "COMPLETED":
+            _verify_operation(entry, {"operation_id": entry["operation_id"],
+                                     "artifacts": entry["artifacts"]},
+                              remote_readback, session["steps"][:ordinal])
+        elif entry["status"] != "PENDING" or ordinal != len(session["steps"]) - 1:
+            raise ValueError("orphaned or invalid pending operation")
     completed_this_call = 0
     while completed_this_call < max_operations:
         state = run_once()
@@ -348,15 +357,17 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
             raise ValueError("pipeline state lacks independent fail-closed authority")
         directive = execution_directive(state)
         action = state["next_action"]
-        if directive["classification"] in ("EDITORIAL_DECISION", "TOOL_UNAVAILABLE",
-                                           "CHECKPOINT") or action == "SHOW_COMPLETE_BEFORE_AFTER":
+        pending = bool(session["steps"] and session["steps"][-1]["status"] == "PENDING")
+        if not pending and (directive["classification"] in (
+                "EDITORIAL_DECISION", "TOOL_UNAVAILABLE", "CHECKPOINT")
+                or action == "SHOW_COMPLETE_BEFORE_AFTER"):
             return {"status": "HALTED_FOR_OWNER_OR_CAPABILITY",
                     "next_action": action, "state": state,
                     "completed_operations": completed_this_call,
                     "journal_sha256": hashlib.sha256(journal_path.read_bytes()).hexdigest()
                         if journal_path.is_file() else None}
         # A stage may only be promoted by the independent acceptance evaluator.
-        if action == "ADVANCE_AFTER_ACCEPTANCE" and not directive["may_promote_stage"]:
+        if not pending and action == "ADVANCE_AFTER_ACCEPTANCE" and not directive["may_promote_stage"]:
             raise ValueError("unverified stage promotion refused")
         state_sha = digest(state)
         previous = session["steps"][-1] if session["steps"] else None
@@ -372,8 +383,9 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
                     continue
             raise ValueError("no pipeline progress after material action")
         if previous and previous["status"] == "PENDING":
-            if previous["state_sha256"] != state_sha or previous["action"] != action:
-                raise ValueError("pending operation conflicts with resumed pipeline state")
+            # External tools may have written the candidate before crashing.
+            # Reconcile with the ORIGINAL operation id and request, never
+            # treat the pipeline's newly visible files as completed receipt.
             operation = previous
         else:
             operation = {
@@ -381,6 +393,7 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
                                         "state_sha256": state_sha,
                                         "parent": previous["entry_sha256"] if previous else None}),
                 "action": action, "state_sha256": state_sha,
+                "request_state": state,
                 "status": "PENDING", "artifacts": [],
                 "parent_sha256": previous["entry_sha256"] if previous else None
             }
@@ -390,7 +403,8 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
             _persist_session(journal_path, session, sync_journal)
         # A pending operation may already have uploaded before a crash.
         # Calling the host with the same operation_id is an idempotent replay.
-        receipt = execute_action(action, state, operation["operation_id"])
+        receipt = execute_action(operation["action"], operation["request_state"],
+                                 operation["operation_id"])
         artifacts = _verify_operation(operation, receipt, remote_readback,
                                       session["steps"][:-1])
         updates = receipt.get("arg_updates", {})
