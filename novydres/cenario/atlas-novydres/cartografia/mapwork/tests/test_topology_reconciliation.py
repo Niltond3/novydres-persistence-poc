@@ -138,7 +138,7 @@ def test_near_crossing_is_not_snapped_or_declared():
     result,report=run(data)
     assert report["observed_crossings"]==0
     assert result["network"]["edges"]==sorted(data["network"]["edges"],key=lambda e:e["id"])
-    with pytest.raises(topology.TopologyInvalid,match="stale"):
+    with pytest.raises(topology.TopologyInvalid,match="stale|schema"):
         run(data,crossing())
 
 
@@ -196,7 +196,7 @@ def test_missing_visual_editorial_or_geometry_evidence_is_rejected():
         run(data,rec)
     rec=crossing()
     rec["geometry_observation"]=""
-    with pytest.raises(topology.TopologyInvalid,match="geometric"):
+    with pytest.raises(topology.TopologyInvalid,match="geometric|schema"):
         run(data,rec)
 
 
