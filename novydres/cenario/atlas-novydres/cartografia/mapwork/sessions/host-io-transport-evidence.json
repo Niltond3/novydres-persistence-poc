@@ -1,0 +1,31 @@
+{
+  "schema": "NOVYDRES_MAPWORK_HOST_IO_TRANSPORT_EVIDENCE",
+  "test_only": true,
+  "canonical_state_changed": false,
+  "publication_authorized": false,
+  "purpose": "Demonstrate provider-native GitHub artifact download -> Google Drive upload -> independent Drive raw GET; no Mapwork candidate/image/canon",
+  "github": {
+    "repository": "Niltond3/novydres-persistence-poc",
+    "workflow_run_id": 44918032927,
+    "workflow_artifact_id": 14712294185,
+    "source_commit": "7c00dd28d7ce06bc3c4f8210e737608f90d8319f",
+    "artifact_name": "mapwork-source-verified-by-ci"
+  },
+  "drive": {
+    "folder_id": "1DP7OtEmRuNl093HhQf1IjAA2vd1XPAWn",
+    "file_id": "1cfYeFU_ijlyZGL-kR9t1joD_4HHo66gO",
+    "name": "host-io-source-7c00dd28-technical.zip"
+  },
+  "readback": {
+    "file_size_bytes": 341023,
+    "sha256": "653a0ee0c0939d805a934125533f91e07ff654f7ea168aad267a673e3a856be1",
+    "github_download_sha256": "653a0ee0c0939d805a934125533f91e07ff654f7ea168aad267a673e3a856be1",
+    "drive_get_sha256": "653a0ee0c0939d805a934125533f91e07ff654f7ea168aad267a673e3a856be1",
+    "matched": true
+  },
+  "limits": [
+    "Tests cross-connector material-byte transfer only",
+    "Not a proof of native image generation, autonomous connector invocation inside Python, visual classification, topology correction, or end-to-end recovery",
+    "GitHub Actions artifact is optional observed transport, not a mandatory Mapwork execution dependency"
+  ]
+}
