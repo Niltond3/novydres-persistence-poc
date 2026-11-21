@@ -58,7 +58,7 @@ def contained(inner, outer):
 
 def validate_intent(request, known_targets, world_bounds):
     """No fuzzy matching, unknown landmarks, fabricated geometry or implicit ADD."""
-    require(isinstance(request, dict) and request.get("schema") == SCHEMA + "_INTENT_1",
+    require(isinstance(request, dict) and request.get("schema") == SCHEMA + "_INTENT",
             "invalid  intent contract")
     require(request.get("mode") in MODES, "invalid intervention mode")
     require(isinstance(request.get("original_request"), str) and
@@ -129,7 +129,7 @@ def validate_research(records, *, required=True):
 
 def validate_proposals(register, *, region, commit, referenced=None):
     require(isinstance(register, dict) and register.get("schema") ==
-            SCHEMA + "_DECISIONS_1", "proposal register required")
+            SCHEMA + "_DECISIONS", "proposal register required")
     require(register.get("region") == region and register.get("source_commit") == commit,
             "proposal register authority/region mismatch")
     items = register.get("proposals")
@@ -198,7 +198,7 @@ def validate_inventory(elements, register, *, canonical_element_ids=()):
 def capability_preflight(receipts, *, reference=None, require_native=True):
     """Only on-disk SHA readback is technical proof; host features need real receipts."""
     require(isinstance(receipts, dict) and receipts.get("schema") ==
-            SCHEMA + "_CAPABILITY_1", "real capability receipt required")
+            SCHEMA + "_CAPABILITY", "real capability receipt required")
     verified = {}
     # Preflight never accepts verified:true + a prose claim as a capability.
     # The host must actually perform connector read/write and materialize its
@@ -255,7 +255,7 @@ def capability_preflight(receipts, *, reference=None, require_native=True):
 def image_receipt(receipt, *, expected_size, work_unit_id):
     """Reject host-provided IDs without actual on-disk readback."""
     require(isinstance(receipt, dict) and receipt.get("schema") ==
-            SCHEMA + "_IMAGE_RECEIPT_1", "native image receipt required")
+            SCHEMA + "_IMAGE_RECEIPT", "native image receipt required")
     require(receipt.get("work_unit_id") == work_unit_id,
             "image receipt bound to a different work unit")
     path = Path(receipt.get("local_path", ""))
@@ -326,7 +326,7 @@ def make_generation_recipe(*, unit, intent, design_path, reference_path,
     require(isinstance(style, dict) and style.get("projection") == "TOP_DOWN_90",
             "image recipe must fix top-down perspective")
     return {
-        "schema": SCHEMA + "_RECIPE_1",
+        "schema": SCHEMA + "_RECIPE",
         "work_unit_id": unit["id"],
         "bbox": unit["bbox"],
         "reference_sha256": digest(reference_path),
@@ -350,7 +350,7 @@ def make_generation_recipe(*, unit, intent, design_path, reference_path,
 
 def resume_units(checkpoint, *, expected_inputs):
     """No source drift accepted; only hash-bound verified outputs can be skipped."""
-    require(checkpoint.get("schema") == SCHEMA + "_UNITS_1",
+    require(checkpoint.get("schema") == SCHEMA + "_UNITS",
             "invalid resume checkpoint")
     require(checkpoint.get("input_sha256") == evidence_digest(expected_inputs),
             "resume input drift: invalidate dependent units")
@@ -422,7 +422,7 @@ def audit_atomic_image(receipt, mask_file, plan, report, unit_id, cfg):
     require(coverage.getbbox() is not None,"atomic image cannot have an empty edit mask")
     require(ImageChops.subtract(coverage,expected).getbbox() is None,
             "native image unit mask paints outside canonical editable cells")
-    return {"schema":SCHEMA+"_IMAGE_AUDIT_1",
+    return {"schema":SCHEMA+"_IMAGE_AUDIT",
             "unit":unit_id,"technical_status":"PASS",
             "image_sha256":native["sha256"],"mask_sha256":digest(path),
             "visual_status":"NOT_MATHEMATICALLY_CERTIFIED"}
@@ -439,7 +439,7 @@ def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
     require(SHA64.fullmatch(input_sha256 or "") is not None,
             "unit ledger requires a SHA-256 input contract")
     require(event in ("START", "AUDIT_PASS", "AUDIT_FAIL"), "unit event invalid")
-    require(isinstance(ledger, dict) and ledger.get("schema") == SCHEMA+"_UNIT_LEDGER_1",
+    require(isinstance(ledger, dict) and ledger.get("schema") == SCHEMA+"_UNIT_LEDGER",
             "unit ledger schema missing")
     units = ledger.setdefault("units", {})
     record = units.setdefault(unit_id, {
@@ -500,7 +500,7 @@ def unit_transition(ledger, unit_id, *, event, input_sha256, receipt=None,
                 receipt.get("technical_status") == "PASS",
                 "unit cannot pass without deterministic technical audit")
         require(isinstance(visual_review, dict) and
-                visual_review.get("schema") == SCHEMA+"_UNIT_VISUAL_REVIEW_1" and
+                visual_review.get("schema") == SCHEMA+"_UNIT_VISUAL_REVIEW" and
                 visual_review.get("by") == "AGENT" and
                 visual_review.get("status") == "PASS" and
                 visual_review.get("image_sha256") == receipt.get("image_sha256") and

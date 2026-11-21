@@ -16,7 +16,7 @@ import acceptance as acceptance
 def scene(tmp_path):
     zone=tmp_path/"zone.png"
     Image.new("L",(16,16),255).save(zone)
-    data={"schema":"NOVYDRES_MAPWORK_INFRA_GEOMETRY_2",
+    data={"schema":"NOVYDRES_MAPWORK_INFRA_GEOMETRY",
           "stage":"INF-01","source_sha256":"a"*64,"reference_size":[16,16],
           "zone_mask":{"path":zone.name,"sha256":infra.sha(zone)},
           "network":{"nodes":[{"id":"A","point":[1,1],"level":0},

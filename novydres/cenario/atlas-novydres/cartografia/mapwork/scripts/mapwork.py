@@ -29,7 +29,7 @@ def fail(condition, message):
     if not condition: raise Invalid(message)
 
 def config_check(cfg):
-    fail(cfg['schema']=='NOVYDRES_MAPWORK_CONFIG_1','config schema')
+    fail(cfg['schema']=='NOVYDRES_MAPWORK_CONFIG','config schema')
     w,h=cfg['world_size_units']; scale=cfg['detail_pixels_per_unit']; tile=cfg['tile_size_px']
     fail(w>0 and h>0 and isinstance(scale,int) and scale>0 and scale<=256,'invalid scale')
     fail(isinstance(tile,int) and tile>=128 and tile<=2048 and tile & (tile-1)==0,'invalid tile size')
@@ -161,7 +161,7 @@ def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,
     renderer for unit tests; it must never be exposed as an operational CLI.
     """
     fail(isinstance(contract,dict) and contract.get('schema')==
-         'NOVYDRES_MAPWORK_COMPOSITION_CONTRACT_1',
+         'NOVYDRES_MAPWORK_COMPOSITION_CONTRACT',
          'pipeline composition contract required')
     import pipeline
     pipeline.verify_composition_contract(
@@ -264,7 +264,7 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
     modified={(item['x'],item['y']) for item in entries}
     inherited=[item for point,item in sorted(previous.items()) if point not in modified]
     zone_ids=sorted(set((old or {}).get('zone_ids',[]))|{z['id'] for z in zones})
-    manifest={'schema':'NOVYDRES_MAPWORK_TILES_1',
+    manifest={'schema':'NOVYDRES_MAPWORK_TILES',
               'world_size_units':cfg['world_size_units'],'detail_pixels_per_unit':s,
               'tile_size_px':t,'zone_ids':zone_ids,'tiles':entries,
               'inherited_tiles':inherited,
@@ -273,7 +273,7 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
     save(output/'tiles.json',manifest);return manifest
 
 def verify_tiles(manifest,root,cfg,inherited_root=None):
-    fail(manifest['schema']=='NOVYDRES_MAPWORK_TILES_1','tile schema')
+    fail(manifest['schema']=='NOVYDRES_MAPWORK_TILES','tile schema')
     fail(manifest['detail_pixels_per_unit']==cfg['detail_pixels_per_unit'],'tile scale')
     inherited=manifest.get('inherited_tiles',[])
     current=manifest['tiles']
@@ -319,7 +319,7 @@ def next_action(z):
 
 def validate_spatial_plan(plan, z, cfg):
     """Validate real candidate anchors and gates; planning PASS never implies image readiness."""
-    fail(plan.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_SPATIAL_PLAN_1','spatial plan schema')
+    fail(plan.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_SPATIAL_PLAN','spatial plan schema')
     fail(plan.get('status') in ('PLANNING_CANDIDATE','SKETCH_OWNER_APPROVED_SPATIAL_PREP_PENDING'),'invalid spatial plan planning/approval state')
     owner=plan.get('owner_decision',{})
     fail(owner.get('same_extent') is True and owner.get('owner_subject_id')=='district-chelsea','Kingswell must equal entire Cidade Velha raion')
@@ -400,7 +400,7 @@ def _line_distance(p,coords):
 
 def validate_integral_sketch(g,plan,z,cfg):
     """Validate editable candidate topology; never interpret a planning PASS as owner approval."""
-    fail(g.get('schema')=='NOVYDRES_KINGSWELL_U02_INTEGRAL_SKETCH_1','integral sketch schema')
+    fail(g.get('schema')=='NOVYDRES_KINGSWELL_U02_INTEGRAL_SKETCH','integral sketch schema')
     if z['status']=='PLANNING':
         fail(g.get('state')=='CANDIDATE_FULL_MAP_NOT_OWNER_APPROVED','planning sketch cannot silently promote status')
     else:
@@ -463,7 +463,7 @@ def validate_integral_sketch(g,plan,z,cfg):
 
 def validate_detail_preparation(d, z, plan, sketch, cfg):
     """Fail closed on fictitious production readiness of candidate macro-lot rectangles."""
-    fail(d.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_DETAIL_PREP_1','detail preparation schema')
+    fail(d.get('schema')=='NOVYDRES_MAPWORK_KINGSWELL_DETAIL_PREP','detail preparation schema')
     fail(d.get('version')=='KW_DETAIL_PREP_V2' and d.get('status')=='GEOMETRY_SEEDED_PENDING_MASK_AND_SEAM_VERIFICATION','detail preparation must be geometry seeded')
     src=d.get('approved_sketch_reference',{})
     fail(src.get('version')==sketch.get('version') and src.get('hash_reference')==cfg['reference']['sha256'] and src.get('owner_approved') is True,'detail preparation sketch reference mismatch')
@@ -572,14 +572,14 @@ def audit_required_planning_zones(cfg):
 
 def audit_repository(cfg,state):
     config_check(cfg)
-    fail(state['schema']=='NOVYDRES_MAPWORK_WORLD_STATE_1','world state schema')
+    fail(state['schema']=='NOVYDRES_MAPWORK_WORLD_STATE','world state schema')
     fail(state['last_approved_global_release'] is None or isinstance(state['last_approved_global_release'],dict),'global release pointer')
     for p in (ROOT/'zones').glob('*/zone.json'):
         z=load(p);audit_zone(z,cfg,strict=False)
     releases=list((ROOT/'releases').glob('*.json'))
     for p in releases:
         r=load(p)
-        fail(r.get('schema')=='NOVYDRES_MAPWORK_RELEASE_1',str(p)+': schema')
+        fail(r.get('schema')=='NOVYDRES_MAPWORK_RELEASE',str(p)+': schema')
         fail(r.get('owner_approval',{}).get('decision')=='APPROVED',str(p)+': missing explicit approval')
         fail(bool(r.get('source_global_approved')),str(p)+': missing global base')
         fail(bool(r.get('local_verified_at')),str(p)+': missing local byte verification receipt')

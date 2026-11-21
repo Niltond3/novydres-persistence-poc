@@ -1,4 +1,4 @@
-"""Positive, negative and regression contracts for the V3.3 transition."""
+"""Positive, negative and regression contracts for the consolidated transition."""
 from __future__ import annotations
 
 import copy
@@ -19,7 +19,7 @@ import mapwork as core
 
 def _intent(**kwargs):
     payload={
-        "schema":"NOVYDRES_MAPWORK_INTENT_1",
+        "schema":"NOVYDRES_MAPWORK_INTENT",
         "mode":"CREATE_REGION",
         "original_request":"Vamos construir Sulfok",
         "source_commit":"a"*40,
@@ -43,7 +43,7 @@ def _research():
 
 
 def _register(status="APPROVED"):
-    return {"schema":"NOVYDRES_MAPWORK_DECISIONS_1",
+    return {"schema":"NOVYDRES_MAPWORK_DECISIONS",
             "region":"sulfok","source_commit":"a"*40,
             "proposals":[{
                 "id":"SUL-PROP-014",
@@ -114,13 +114,13 @@ def test_explicit_approval_exact_inventory_rejected_and_conditions():
 
 
 def test_capability_fail_closed_and_native_image_must_materialize(tmp_path):
-    caps={"schema":"NOVYDRES_MAPWORK_CAPABILITY_1"}
+    caps={"schema":"NOVYDRES_MAPWORK_CAPABILITY"}
     assert "native_image_materialization" in c.capability_preflight(caps)["missing"]
     im=Image.new("RGBA",(8,8),(10,20,30,255))
     path=tmp_path/"generated.png"
     im.save(path)
     receipt={
-        "schema":"NOVYDRES_MAPWORK_IMAGE_RECEIPT_1",
+        "schema":"NOVYDRES_MAPWORK_IMAGE_RECEIPT",
         "work_unit_id":"WU-TEST", "local_path":str(path),
         "sha256":c.digest(path),"generator_evidence":"native image generation call #1"
     }
@@ -150,7 +150,7 @@ def test_authorized_mask_allows_repainting_approved_pixels_but_only_inside(tmp_p
 def test_resume_reuses_only_verified_hash_bound_units(tmp_path):
     p=tmp_path/"unit.png";Image.new("RGB",(2,2)).save(p)
     inputs={"canon":"a"*40}
-    cp={"schema":"NOVYDRES_MAPWORK_UNITS_1",
+    cp={"schema":"NOVYDRES_MAPWORK_UNITS",
         "input_sha256":c.evidence_digest(inputs),
         "units":[{"id":"x","status":"VERIFIED","local_path":str(p),"sha256":c.digest(p)},
                  {"id":"y","status":"PENDING"}]}
@@ -213,13 +213,13 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
     zone["elements"]=[e]
     unit={"id":uid,"bbox":[2,2,6,6]}
     receipt={
-        "schema":"NOVYDRES_MAPWORK_IMAGE_RECEIPT_1",
+        "schema":"NOVYDRES_MAPWORK_IMAGE_RECEIPT",
         "work_unit_id":uid,"local_path":str(assets/e["asset"]["path"]),
         "sha256":e["asset"]["sha256"],
         "mask_sha256":e["mask"]["sha256"],
         "generator_evidence":"Actual native tool receipt #12345",
         "visual_review":{
-            "schema":"NOVYDRES_MAPWORK_UNIT_VISUAL_REVIEW_1",
+            "schema":"NOVYDRES_MAPWORK_UNIT_VISUAL_REVIEW",
             "by":"AGENT","model":"GPT-6","status":"PASS",
             "work_unit_id":uid,"image_sha256":e["asset"]["sha256"],
             "mask_sha256":e["mask"]["sha256"],
@@ -230,7 +230,7 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
             "neighbors":[],"summary":"Agent visually inspected current unit image"
         }
     }
-    batch={"schema":"NOVYDRES_MAPWORK_IMAGE_BATCH_1","images":[receipt]}
+    batch={"schema":"NOVYDRES_MAPWORK_IMAGE_BATCH","images":[receipt]}
     assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
                                            reference_sha256="a"*64,spatial_sha256="b"*64)==1
     more={"id":"WU-UNCHANGED","bbox":[11,2,15,6]}
@@ -279,11 +279,11 @@ def test_offline_comparison_zip_contains_html_tiles_and_overviews(tmp_path):
         assert "novydres-comparison.zip" not in names
 
 
-def test_v33_pipeline_enters_capability_gate_without_fabricated_data(tmp_path):
+def test_pipeline_enters_capability_gate_without_fabricated_data(tmp_path):
     import pipeline
     intent=_intent(source_commit="a"*40)
     index={
-        "schema":"NOVYDRES_MAPWORK_SCOPE_INDEX_1",
+        "schema":"NOVYDRES_MAPWORK_SCOPE_INDEX",
         "source_commit":"a"*40,
         "targets":{"sulfok":{"subject_id":"district-sulfok","kind":"region"}},
         "world_bounds":[0,0,1448,1086]

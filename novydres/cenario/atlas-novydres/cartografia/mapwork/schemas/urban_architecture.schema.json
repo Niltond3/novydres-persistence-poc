@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Novydres Mapwork V3.1 global network territory and morphological blocks",
+  "title": "Novydres Mapwork global network territory and morphological blocks",
   "type": "object",
   "required": [
     "schema",
@@ -17,7 +17,7 @@
   ],
   "properties": {
     "schema": {
-      "const": "NOVYDRES_MAPWORK_TERRITORY_NETWORK_1"
+      "const": "NOVYDRES_MAPWORK_TERRITORY_NETWORK"
     },
     "source_sha256": {
       "type": "string",

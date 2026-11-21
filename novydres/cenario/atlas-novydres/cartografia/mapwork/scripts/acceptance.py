@@ -21,7 +21,7 @@ STAGES = (
     "INF-01", "INF-02", "INF-03", "INF-04",
     "INF-05", "INF-06", "INF-07", "URB-08"
 )
-SCHEMA = "NOVYDRES_MAPWORK_ACCEPTANCE_LEDGER_1"
+SCHEMA = "NOVYDRES_MAPWORK_ACCEPTANCE_LEDGER"
 ROOT = Path(__file__).resolve().parents[1]
 CRITERIA_DOC = ROOT / "docs" / "infra-acceptance.md"
 _HEX = re.compile(r"^[0-9a-f]{64}$")
@@ -51,7 +51,7 @@ def criteria_contract(doc_path=CRITERIA_DOC):
         result[stage] = rule_ids
     matches = re.findall(r"```json\s*(\{.*?\})\s*```", raw, re.S)
     profiles = [json.loads(s) for s in matches if
-                '"NOVYDRES_MAPWORK_SPATIAL_PROFILE_1"' in s]
+                '"NOVYDRES_MAPWORK_SPATIAL_PROFILE"' in s]
     if len(profiles) != 1 or set(profiles[0]["stage_modes"]) != set(STAGES):
         raise ValueError("Markdown executable spatial acceptance profile absent")
     return {"stages": result, "sha256": sha_file(doc_path),"profile":profiles[0]}

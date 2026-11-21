@@ -30,7 +30,7 @@ def make_tile_inputs(tmp):
     cfg["reference"]["sha256"]=core.sha(base)
     assets=tmp/"assets";assets.mkdir()
     zone={
-        "schema":"NOVYDRES_MAPWORK_ZONE_1","id":"test","owner_subject_id":"district-test",
+        "schema":"NOVYDRES_MAPWORK_ZONE","id":"test","owner_subject_id":"district-test",
         "status":"VISUAL_REVIEW","bounds":[0,0,32,16],
         "neighbors":[],"connectors":[],"decisions":[],
         "research":[{"claim":"synthetic","url":"https://example.org","accessed_on":"2026-11-20"}],

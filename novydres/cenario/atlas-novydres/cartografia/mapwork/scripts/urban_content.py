@@ -207,7 +207,7 @@ def design_unit(plan, report, work_unit_id, *, max_buildings=512, context=None):
     urban.require(len(buildings)<=max_buildings,
                   "too many buildings for one job; reduce max_units and regenerate planning queue")
     return {
-        "schema":"NOVYDRES_MAPWORK_URBAN_DESIGN_UNIT_1",
+        "schema":"NOVYDRES_MAPWORK_URBAN_DESIGN_UNIT",
         "zone":plan["zone"]["id"],
         "work_unit":work_unit_id,
         "city_block":target_block["id"],

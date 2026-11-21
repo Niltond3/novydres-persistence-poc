@@ -31,7 +31,7 @@ def submit(tmp_path, data):
     a.write_text(json.dumps(data), encoding="utf-8")
     return o.record_attempt(tmp_path / "ledger.json", a,
         criteria_sha256="c"*64, reference_sha256="a"*64,
-        schema="ACCEPTANCE_LEDGER_1", allowed_stages=("INF-01", "INF-02"),
+        schema="ACCEPTANCE_LEDGER", allowed_stages=("INF-01", "INF-02"),
         active_stage="INF-01" if data.get("stage")=="INF-01" else "INF-02")
 
 

@@ -1,4 +1,4 @@
-"""V3.2 P1 red tests: freeze verified baseline before closing bypasses.
+"""consolidated P1 red tests: freeze verified baseline before closing bypasses.
 
 Baseline: 2b7016976efd360d9e773b1d8a8db4237a284ff6
 GitHub Actions run 44784288668, job 136454880161: 98 passed.
@@ -72,7 +72,7 @@ def test_p1_fake_composition_contract_rejected(tmp_path):
     zone["elements"]=[element(assets,"fake",[2,2,6,6],(240,20,20,255))]
     with pytest.raises(core.Invalid,match="contract"):
         core.composite([zone],cfg,base,assets,tmp_path/"denied",
-                       contract={"schema":"NOVYDRES_MAPWORK_COMPOSITION_CONTRACT_1"})
+                       contract={"schema":"NOVYDRES_MAPWORK_COMPOSITION_CONTRACT"})
 
 
 def test_p1_seam_must_touch_real_edge_with_matching_width_level_profile():

@@ -1,4 +1,4 @@
-"""V3.3 Kingswell candidate U02 vectors: regression guards, not an art-ready schema."""
+"""consolidated Kingswell candidate U02 vectors: regression guards, not an art-ready schema."""
 import copy
 import hashlib
 import json
@@ -27,7 +27,7 @@ def line_intersects(a,b):
     return any(proper_cross(a[i],a[i+1],b[j],b[j+1]) for i in range(len(a)-1) for j in range(len(b)-1))
 
 def assert_guards(o):
-    assert o['schema']=='NOVYDRES_MAPWORK_U02_SPATIAL_OBSERVATIONS_1'
+    assert o['schema']=='NOVYDRES_MAPWORK_U02_SPATIAL_OBSERVATIONS'
     assert o['reference']['sha256']==SHA_U02
     assert [o['reference']['width'],o['reference']['height']]==[1448,1086]
     assert o['source']['sketch_blob_sha']==SHA_SKETCH

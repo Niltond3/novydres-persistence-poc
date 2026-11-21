@@ -21,7 +21,7 @@ def fixture(tmp_path):
         a=assets/(el+'.png'); mask=assets/(el+'.mask.png')
         Image.new('RGBA',(64,64),(145+i*40,120,110,255)).save(a)
         Image.new('L',(64,64),255).save(mask)
-        zone={'schema':'NOVYDRES_MAPWORK_ZONE_1','id':name,'owner_subject_id':'district-test',
+        zone={'schema':'NOVYDRES_MAPWORK_ZONE','id':name,'owner_subject_id':'district-test',
         'status':'VISUAL_REVIEW','bounds':bounds,'neighbors':['east' if name=='west' else 'west'],
         'connectors':[{'id':'main-road','kind':'road','x':32,'y':16,'width':2,'neighbor':'east' if name=='west' else 'west','profile':'at_grade'}],
         'decisions':[],'research':[{'claim':'synthetic fixture','url':'https://example.org/test','accessed_on':'2026-11-19'}],
@@ -114,7 +114,7 @@ def test_strict_requires_both_neighbors(tmp_path):
 def test_release_rejects_missing_receipts(tmp_path, monkeypatch):
     cfg=m.load(ROOT/'config.json');st=m.load(ROOT/'world-state.json')
     fake=tmp_path/'mapwork';(fake/'zones').mkdir(parents=True);(fake/'releases').mkdir()
-    bad={'schema':'NOVYDRES_MAPWORK_RELEASE_1','source_global_approved':'U02',
+    bad={'schema':'NOVYDRES_MAPWORK_RELEASE','source_global_approved':'U02',
          'owner_approval':{'decision':'APPROVED'},'local_verified_at':'2026-11-19',
          'tiles':[{'drive_file_id':None,'sha256':'0'*64}]}
     m.save(fake/'releases'/'r.json',bad)

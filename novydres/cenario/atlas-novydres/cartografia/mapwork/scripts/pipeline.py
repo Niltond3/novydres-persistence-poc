@@ -25,7 +25,7 @@ import flow
 import orchestration as controller
 
 ROOT=Path(__file__).resolve().parents[1]
-SCHEMA="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT_1"
+SCHEMA="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT"
 
 
 def fingerprint(path):
@@ -329,7 +329,7 @@ def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None,
                            reference_sha256=None,spatial_sha256=None):
     """Bind actual generated and reviewed image bytes to the exact composited lots."""
     core.fail(isinstance(images,dict) and
-              images.get("schema")=="NOVYDRES_MAPWORK_IMAGE_BATCH_1" and
+              images.get("schema")=="NOVYDRES_MAPWORK_IMAGE_BATCH" and
               isinstance(images.get("images"),list),
               " native-image batch missing or malformed")
     index={}
@@ -394,7 +394,7 @@ def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
                               base,assets,before):
     """Content-addressed capability description; never just a boolean pass flag."""
     return {
-        "schema":"NOVYDRES_MAPWORK_COMPOSITION_CONTRACT_1",
+        "schema":"NOVYDRES_MAPWORK_COMPOSITION_CONTRACT",
         "zone_path":str(zone_path),
         "zone_sha256":fingerprint(zone_path),
         "spatial_path":str(spatial_path),
@@ -411,7 +411,7 @@ def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
 
 def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_u02):
     """Rebuild all authorization gates at use time, then verify input hash binding."""
-    core.fail(contract.get("schema")=="NOVYDRES_MAPWORK_COMPOSITION_CONTRACT_1",
+    core.fail(contract.get("schema")=="NOVYDRES_MAPWORK_COMPOSITION_CONTRACT",
               "invalid composition contract schema")
     core.fail(len(zones)==1 and cfg==core.load(core.CONFIG),
               "composition contract requires the current repository configuration and one zone")

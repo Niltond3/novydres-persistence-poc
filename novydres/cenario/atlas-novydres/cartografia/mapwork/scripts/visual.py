@@ -67,7 +67,7 @@ def validate_unit_visual_review(review,*,unit_id,image_sha256,mask_sha256,
                                 reference_sha256,spatial_sha256,work_units,
                                 neighbor_receipts):
     """Bind semantic judgment to current unit+mask+U02+plan and every touching peer."""
-    _base(review,"_UNIT_VISUAL_REVIEW_1")
+    _base(review,"_UNIT_VISUAL_REVIEW")
     contract.require(review.get("work_unit_id")==unit_id,
                 "visual review references a different work unit")
     for key,val in (("image_sha256",image_sha256),("mask_sha256",mask_sha256),
@@ -109,7 +109,7 @@ def validate_unit_visual_review(review,*,unit_id,image_sha256,mask_sha256,
 def validate_global_visual_review(review,*,tiles,before_overview,after_overview,
                                   original_reference,image_receipts):
     """The agent checks full assembled image; code checks report vs actual files."""
-    _base(review,"_GLOBAL_VISUAL_REVIEW_1")
+    _base(review,"_GLOBAL_VISUAL_REVIEW")
     paths={"tiles_sha256":tiles,"before_sha256":before_overview,
            "after_sha256":after_overview,"reference_sha256":original_reference,
            "image_receipts_sha256":image_receipts}

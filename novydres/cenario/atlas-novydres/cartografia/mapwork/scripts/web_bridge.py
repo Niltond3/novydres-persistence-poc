@@ -20,7 +20,7 @@ from zipfile import ZipFile, BadZipFile
 
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 SHA64 = re.compile(r"^[0-9a-f]{64}$")
-FILE_MANIFEST_SCHEMA = "NOVYDRES_MAPWORK_WEB_FILES_1"
+FILE_MANIFEST_SCHEMA = "NOVYDRES_MAPWORK_WEB_FILES"
 
 
 class WebBridgeError(ValueError):

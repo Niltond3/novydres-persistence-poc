@@ -107,7 +107,7 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
     """Recompute geometry on actual candidate bytes; no trust in asserted metrics."""
     path=Path(geometry_file)
     data=json.loads(path.read_text(encoding="utf-8"))
-    demand(isinstance(data,dict) and data.get("schema")=="NOVYDRES_MAPWORK_INFRA_GEOMETRY_2",
+    demand(isinstance(data,dict) and data.get("schema")=="NOVYDRES_MAPWORK_INFRA_GEOMETRY",
            "strict spatial geometry schema absent")
     stage=data.get("stage")
     demand(stage in profile["stage_modes"],"unknown infrastructure stage")

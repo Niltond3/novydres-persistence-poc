@@ -1,4 +1,4 @@
-"""V3.3 block-parcel planner tests; synthetic grid is never real city canon."""
+"""consolidated block-parcel planner tests; synthetic grid is never real city canon."""
 import copy
 import sys
 from pathlib import Path
@@ -43,4 +43,4 @@ def test_urban_is_deterministic_and_inherits_site_identity():
     two=urban_content.design_unit(copy.deepcopy(plan),copy.deepcopy(report),uid)
     assert one==two
     assert one["physical_scale_certified"] is False
-    assert one["schema"]=="NOVYDRES_MAPWORK_URBAN_DESIGN_UNIT_1"
+    assert one["schema"]=="NOVYDRES_MAPWORK_URBAN_DESIGN_UNIT"

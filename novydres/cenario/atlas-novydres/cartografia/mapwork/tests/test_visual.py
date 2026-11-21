@@ -1,4 +1,4 @@
-"""V3.3 positive and negative evidence tests: no fake model API handshake."""
+"""consolidated positive and negative evidence tests: no fake model API handshake."""
 import copy
 import json
 import sys
@@ -23,7 +23,7 @@ def _png(path):
 
 
 def _unit_review(uid,img,mask,peers=()):
-    return {"schema":"NOVYDRES_MAPWORK_UNIT_VISUAL_REVIEW_1",
+    return {"schema":"NOVYDRES_MAPWORK_UNIT_VISUAL_REVIEW",
             "by":"AGENT","model":"GPT-6","status":"PASS",
             "work_unit_id":uid,"image_sha256":img,"mask_sha256":mask,
             "reference_sha256":"a"*64,"spatial_sha256":"b"*64,
@@ -65,7 +65,7 @@ def test_global_visual_report_binds_tiles_overviews_and_every_unit(tmp_path):
     batch=tmp_path/"batch.json"
     batch.write_text(json.dumps({"images":[{"work_unit_id":"WU-0001"}]}))
     inputs["images"]=batch
-    report={"schema":"NOVYDRES_MAPWORK_GLOBAL_VISUAL_REVIEW_1",
+    report={"schema":"NOVYDRES_MAPWORK_GLOBAL_VISUAL_REVIEW",
             "by":"AGENT","model":"GPT-6","status":"PASS",
             "tiles_sha256":c.digest(inputs["tiles"]),
             "before_sha256":c.digest(inputs["before"]),
@@ -91,7 +91,7 @@ def test_global_visual_report_binds_tiles_overviews_and_every_unit(tmp_path):
 
 
 def test_native_preflight_not_a_future_api_handshake(tmp_path):
-    caps={"schema":"NOVYDRES_MAPWORK_CAPABILITY_1"}
+    caps={"schema":"NOVYDRES_MAPWORK_CAPABILITY"}
     for k in ("github_read","github_write","web_research","user_delivery",
               "native_image_generation","native_image_materialization"):
         caps[k]={"verified":True,"evidence":"I affirm the image tool is ready"}
@@ -120,7 +120,7 @@ def test_native_preflight_not_a_future_api_handshake(tmp_path):
 
 
 def test_unit_ledger_rejects_old_pass_text():
-    ledger={"schema":"NOVYDRES_MAPWORK_UNIT_LEDGER_1","units":{}}
+    ledger={"schema":"NOVYDRES_MAPWORK_UNIT_LEDGER","units":{}}
     uid="WU-0001";inp="a"*64
     c.unit_transition(ledger,uid,event="START",input_sha256=inp)
     receipt={"technical_status":"PASS",

@@ -79,7 +79,7 @@ de rede já aprovada exige reabrir/revalidar as etapas dependentes.
 
 ```json
 {
-  "schema":"NOVYDRES_MAPWORK_SPATIAL_PROFILE_1",
+  "schema":"NOVYDRES_MAPWORK_SPATIAL_PROFILE",
   "stage_modes":{
     "INF-01":["road"],
     "INF-02":["road"],
@@ -97,7 +97,7 @@ de rede já aprovada exige reabrir/revalidar as etapas dependentes.
 
 As máscaras referenciadas pela geometria são PNGs binários exatamente nas
 mesmas dimensões da U02, vinculadas a SHA-256. A geometria tem schema
-`NOVYDRES_MAPWORK_INFRA_GEOMETRY_2`, `zone_mask`, `network.nodes`,
+`NOVYDRES_MAPWORK_INFRA_GEOMETRY`, `zone_mask`, `network.nodes`,
 `network.edges`, `network.crossings`, `reference_size`, `source_sha256` e
 `previous_stage_sha256` (exceto INF-01). A revisão visual exige observações
 regionais com hashes calculados sobre os pixels dos recortes da prévia.

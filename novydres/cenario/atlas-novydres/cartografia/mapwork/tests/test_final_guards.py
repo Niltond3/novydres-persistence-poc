@@ -83,7 +83,7 @@ def test_declared_grade_separation_must_have_actual_crossing(tmp_path):
 
 def test_image_fourth_and_seventh_attempt_not_deadlocked():
     h="a"*64
-    data={"schema":"NOVYDRES_MAPWORK_UNIT_LEDGER_1","units":{}}
+    data={"schema":"NOVYDRES_MAPWORK_UNIT_LEDGER","units":{}}
     def start(strategy=None,evidence=None,request=None):
         return contracts.unit_transition(data,"u",event="START",input_sha256=h,
                     strategy_id=strategy,replan_evidence=evidence,request_id=request)

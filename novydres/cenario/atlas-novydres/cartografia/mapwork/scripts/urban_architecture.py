@@ -36,7 +36,7 @@ JUNCTION_CLASSES = {"intersection", "roundabout", "interchange", "rail_crossing"
 CROSSING_CLASSES = {"at_grade", "grade_separated"}
 LANDUSE_CLASSES = {"urban", "industrial", "natural", "water", "protected"}
 MORPH_CLASSES = {"historic", "worker", "industrial", "technical", "mixed", "waterfront"}
-SCHEMA = "NOVYDRES_MAPWORK_TERRITORY_NETWORK_1"
+SCHEMA = "NOVYDRES_MAPWORK_TERRITORY_NETWORK"
 
 
 def require(test, reason):
@@ -878,7 +878,7 @@ def plan_city(plan, cfg, *, reference_file=None, neighbor_manifests=None):
             "buildings_generated":0
         })
     return {
-        "schema":"NOVYDRES_MAPWORK_AUDIT_REPORT_1",
+        "schema":"NOVYDRES_MAPWORK_AUDIT_REPORT",
         "zone":plan["zone"]["id"],
         "fixture":plan.get("fixture_mode") is True,
         "transport":transport_stats,

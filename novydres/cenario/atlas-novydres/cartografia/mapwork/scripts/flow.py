@@ -27,7 +27,7 @@ def _load(path):
 
 def _state(phase, action, blockers, *, intent=None, audit=None, next_id=None):
     return {
-        "schema":"NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT_1",
+        "schema":"NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
         "phase":phase,
         "next_action":action,
         "blockers":list(blockers),
@@ -51,7 +51,7 @@ def run(args, core_run):
                       ["Intent file absent; host agent must write and read it back"])
     index = _load(args.scope_index or ROOT/"scope-index.json")
     contract.require(isinstance(index,dict) and
-                index.get("schema")=="NOVYDRES_MAPWORK_SCOPE_INDEX_1",
+                index.get("schema")=="NOVYDRES_MAPWORK_SCOPE_INDEX",
                 "canonical scope index missing")
     contract.require(index.get("source_commit")==intent.get("source_commit"),
                 "canonical scope index and intent commit differ; rebootstrap master")
@@ -93,7 +93,7 @@ def run(args, core_run):
                       ["Record exact installed IDs and identify previously canonical elements"],
                       intent=intent, audit=decisions)
     contract.require(isinstance(inventory,dict) and inventory.get("schema")==
-                "NOVYDRES_MAPWORK_INVENTORY_1" and
+                "NOVYDRES_MAPWORK_INVENTORY" and
                 inventory.get("region")==target and
                 inventory.get("source_commit")==intent["source_commit"],
                 "inventory authority mismatch")
@@ -279,7 +279,7 @@ def run(args, core_run):
                         "visual review receipt must be recorded by the agent")
         if args.ledger:
             ledger=core.load(args.ledger) if Path(args.ledger).is_file() else {
-                "schema":"NOVYDRES_MAPWORK_UNIT_LEDGER_1","units":{}}
+                "schema":"NOVYDRES_MAPWORK_UNIT_LEDGER","units":{}}
             plan_file=Path(args.design_root) if args.design_root else zone_path.parent/"urban-design"
             design_file=plan_file/(uid+".json")
             contract.require(design_file.is_file(),"unit ledger cannot omit detailed spatial design")
@@ -332,7 +332,7 @@ def run(args, core_run):
     args.district=target
     args.zone=None
     result=core_run(args)
-    result["schema"]="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT_1"
+    result["schema"]="NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT"
     result["intent_sha256"]=contract.evidence_digest(intent)
     result["research_sources"]=citations
     result["editorial_decisions"]=decisions

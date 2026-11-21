@@ -1,4 +1,4 @@
-"""Tests for fail-closed iterative infrastructure acceptance in the single V3.3 pipeline."""
+"""Tests for fail-closed iterative infrastructure acceptance in the single consolidated pipeline."""
 import copy
 import hashlib
 import json
@@ -49,7 +49,7 @@ def fixture(tmp_path, *, stages=7):
         geometry = tmp_path / (stage + ".json")
         preview = tmp_path / (stage + ".png")
         geo_data = {
-            "schema":"NOVYDRES_MAPWORK_INFRA_GEOMETRY_2",
+            "schema":"NOVYDRES_MAPWORK_INFRA_GEOMETRY",
             "stage":stage,"source_sha256":source_sha,"reference_size":[32,32],
             "zone_mask":{"path":zone.name,"sha256":a.sha_file(zone)},
             "network":{"nodes":nodes,"edges":roads,"crossings":[]},
