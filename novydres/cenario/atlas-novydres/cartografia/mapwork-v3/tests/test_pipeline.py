@@ -80,8 +80,8 @@ def test_real_kingswell_has_a_real_blocker_not_fake_generation_ready():
         "before":None,"out":None,"execute":False
     })()
     r=pipeline.run(args)
-    assert r["phase"]=="SPATIAL_MODEL"
-    assert r["next_action"]=="BUILD_GLOBAL_TRANSPORT_AND_TERRITORY"
+    assert r["phase"]=="INFRASTRUCTURE_ACCEPTANCE"
+    assert r["next_action"]=="USE_V33_INTENT_AND_ACCEPTANCE_LEDGER"
     assert r["publication_authorized"] is False
     assert r["canonical_state_changed"] is False
 
