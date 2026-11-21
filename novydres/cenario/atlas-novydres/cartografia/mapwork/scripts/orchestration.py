@@ -152,8 +152,8 @@ def record_attempt(ledger_path, attempt_path, *, criteria_sha256, reference_sha2
                     attempt.get("strategy_id") == prior.get("strategy_id")):
                 raise ValueError("new construction strategy and evidence required")
             if action == "REASSESS_METHOD":
-                if not isinstance(attempt.get("method_reassessment_evidence"), str) or
-                   len(attempt["method_reassessment_evidence"].strip()) < 30:
+                if (not isinstance(attempt.get("method_reassessment_evidence"), str) or
+                    len(attempt["method_reassessment_evidence"].strip()) < 30):
                     raise ValueError("explicit method reassessment required after six failures")
     attempt["iteration"] = len(attempts) + 1
     attempt["payload_sha256"] = payload_digest
