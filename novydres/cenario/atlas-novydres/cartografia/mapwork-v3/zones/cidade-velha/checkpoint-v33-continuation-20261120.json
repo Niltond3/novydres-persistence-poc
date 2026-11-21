@@ -8,7 +8,7 @@
   "target": "kingswell",
   "subject_id": "district-chelsea",
   "phase": "INFRASTRUCTURE_ACCEPTANCE",
-  "current_execution_outcome": "BLOCKED_CAPABILITY_OFFICIAL_RUNTIME_NOT_MATERIALIZED_INF01_PENDING",
+  "current_execution_outcome": "BLOCKED_CAPABILITY_LOCAL_NETWORK_UNAVAILABLE_GITHUB_CONNECTOR_WORKING",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "Verified local git retrieval failed: could not resolve github.com. GitHub connector reads/writes source but no complete exact-V3.3 checkout was materialized in execution runtime. No GitHub Actions substitution permitted.",
@@ -42,7 +42,7 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "RESTORE_LOCAL_OFFICIAL_V33_SOURCE_THEN_RUN_PIPELINE_AND_GENERATE_INF01_FULL_U02_CANDIDATE",
+  "next_action": "OBTAIN_EXECUTOR_WITH_GITHUB_REACHABILITY_THEN_RUN_OFFICIAL_PIPELINE_INF01",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
@@ -165,5 +165,25 @@
     "new_candidate_created": false,
     "owner_decision_required": false,
     "code_execution_blocker": "GitHub network unavailable in local execution runtime; independent repository tool has no Python runner"
+  },
+  "last_connection_retry": {
+    "date": "2026-11-20",
+    "github_connector": "CONNECTED_AND_READ_VERIFIED",
+    "candidate_branch_head_before_retry": "fc19e14578e1e492d1227b02ea7070be3af804ef",
+    "canonical_master_head": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+    "local_git": "BLOCKED_BY_RUNTIME_NETWORK",
+    "network_evidence": [
+      "getent hosts github.com did not resolve",
+      "curl https://github.com failed: Could not resolve host",
+      "git ls-remote failed: Could not resolve host github.com",
+      "Direct HTTPS to known IP addresses was blocked"
+    ],
+    "github_platform_status": "All Systems Operational on official GitHub Status (external informational check, does not restore local network)",
+    "pipeline_invoked": false,
+    "pipeline_reason": "The complete official V3.3 source tree cannot be checked out in this local runtime; GitHub connector is read/write but cannot run scripts/pipeline.py.",
+    "next_action": "OBTAIN_EXECUTOR_WITH_GITHUB_REACHABILITY_THEN_RUN_OFFICIAL_PIPELINE_INF01",
+    "changes_to_canon": false,
+    "acceptance_ledger_unchanged": true,
+    "owner_decision_required": false
   }
 }
