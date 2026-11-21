@@ -1,3 +1,41 @@
+**ChatGPT Web V3.3:** antes de chamar qualquer comando Shell ou alegar que `pipeline.py` não pode rodar, leia [`WEB_RUNTIME_V33.md`](WEB_RUNTIME_V33.md). Recupere o cache de código do Drive, compare cada Git blob ao HEAD no GitHub e use `v33_web_bridge.run_web` em Python, chamando exatamente a pipeline canônica. Não considere declaração textual como evidência; não peça decisões editoriais para resolver falhas de ferramentas. O gate INF-01 de Kingswell permanece bloqueado.
+
+## V3.3 — protocolo visual obrigatório (candidato)
+
+Antes de seguir as etapas abaixo, consulte [VISUAL_REVIEW_PROTOCOL_V33.md](VISUAL_REVIEW_PROTOCOL_V33.md). A imagem é gerada nativamente pelo agente, sem API. A pipeline confere artefatos e comprovantes com SHA, enquanto o agente analisa visualmente cada máscara e seus pares, e depois o atlas completo; sem parecer de unidade e parecer macro reais, não se solicita aprovação. O preflight não exige imagem ainda não gerada. A correção não cria cânone nem dispensa planejamento urbano prévio.
+
+# NOVYDRES MAPWORK V3.3 — CONTRATO PRIORITÁRIO DO AGENTE
+
+**Este bloco V3.3 prevalece sobre as instruções V3.2/V3.1 mantidas abaixo para histórico e regressão.**
+**Estado: CANDIDATO / SEM CANONIZAÇÃO.** Não alegar que foi validada geração artística real até existir prova de transferência e composição no executor ChatGPT Web.
+
+### Fluxo que o agente DEVE executar
+0. Fazer bootstrap do HEAD atual de `master`: `novydres/AGENTS.md`, `CONTEXT.md`, `catalogo.json` no MESMO commit, mais ADR-002, PRD-ATLAS-001 e `cartografia/guide.md`. Validar referencial U02 em SHA. Não usar snapshot candidato como fonte canônica.
+1. Interpretar entrada livre com identidade exata e produzir `NOVYDRES_MAPWORK_V33_INTENT_1`. Os quatro modos são `CREATE_REGION`, `REFINE_AREA`, `EDIT_ELEMENT`, `ADD_ELEMENT`. Se Torre Ventura (ou outro marco) não existir na fonte resolvida, NÃO inventar suas coordenadas.
+2. Provar ferramentas reais: GitHub leitura/escrita e readback, Web, geração nativa ChatGPT, acesso local à imagem gerada, entrega de arquivos no chat. Se faltar capacidade, checkpoint BLOCKED. Nunca chamar Actions como runner obrigatório.
+3. Pesquisar regiões análogas do mundo real com fontes independentes, URL, data, observação, relevância e adaptação. Pesquisa enriquece; nunca altera cânone por analogia.
+4. Produzir registro versionado de propostas por ID, localização, impacto e origem. Perguntar UMA decisão substantiva ainda aberta por vez. Nenhum equipamento, ponte, rua, POI, novo prédio singular ou programa ordinário pode ser criado sem ID aprovado ou inventário/conjunto delimitado expressamente. `APPROVED_WITH_CONDITIONS` exige comprovar condições antes da arte. Rejeitado não volta como arte.
+5. Derivar rede, quadras, parcelas, edifícios e máscaras no planejador existente com `pipeline.py`. Auditar vizinhos dos DOIS lados. U02 é abstrata; não prometer largura em metros sem medição autorizada. **Não solicitar aprovação do esboço técnico**: decisões vêm antes; projeto técnico é auditado internamente.
+6. Criar receita de imagem para unidade autorizada, chamar ferramenta nativa ChatGPT, materializar bytes no executor, verificar SHA-256, dimensões, máscara, pixels protegidos, vias, continuidade, estética. Registrar inspeção visual separada; até três tentativas de reparo por unidade, depois bloquear. Nunca usar imagem simulada como prova de transferência.
+7. Compor via `pipeline.py --execute --intent ...`. Todos os receipts DEVEM corresponder exatamente ao PNG e à máscara do asset aplicado; verificar novamente na entrada do compositor. Para `REFINE_AREA`, alteração aprovada só dentro da máscara editável; proteger o resto, inclusive arte já aprovada.
+8. Entregar mapa integral ANTES/DEPOIS com zoom real e tiles on demand. Distribuir pelo próprio chat o pacote ZIP portátil, não um HTML isolado sem as imagens. No celular, apresentar visões gerais PNG juntamente com o ZIP quando disponíveis.
+9. **Só após aprovação explícita da composição final:** persistir assets privados/IDs no backend aprovado, atualizar registros por Git CAS com expected HEAD e readback remoto; canonização exige autorização editorial adicional. Sem merge automático, sem handoff prematuro.
+
+**Entrada de negócio única:** `python scripts/pipeline.py run ...`. `v33_flow.py`, `v33_contracts.py`, `v33_urban.py`, `v33_viewer.py`, `urban_content.py` e `mapwork.py` são bibliotecas internas. O uso legado `--district` permanece somente como diagnóstico regressivo, não autoriza `--execute`.
+
+### Contratos materiais
+- `--intent`: JSON de intenção com SHA de `master`, `scope-index.json` recomposto para o mesmo SHA e limites reais autorizados.
+- `--capabilities`: receipts host reais; `--research-file`: evidências externas datadas; `--decisions-file`: decisões explícitas; `--inventory-file`: IDs exatos e sua fonte de autoridade.
+- `--design-unit`: gera plano técnico; `--recipe-unit`: receita nativa a partir de plano assinado; `--audit-unit`: auditoria raster e visual; `--ledger`: tentativas e checkpoints.
+- `--image-receipts`: um comprovante com imagem, máscara e aprovação visual do agente por work unit; `--editable-mask`: obrigatório para refinamento; `--reference`: U02 original com SHA.
+- Falha de digest, proposta não autorizada, geometria não canônica, fixture, fonte sem readback ou transferência não comprovada = FAIL/BLOCKED. Não prometer completar mais tarde sem execução concreta.
+
+**Limites atuais da candidata:** Sulfok ainda não tem geometria real nem decisões V3.3 da intervenção; Torre Ventura ainda requer localização canônica inequívoca. Sem os dois testes reais de aceitação não declarar V3.3 totalmente implementada.
+
+---
+
+## Histórico V3.2 abaixo (não usar gate de esboço na V3.3)
+
 # Mapwork V3 — contrato do agente ChatGPT Web
 
 ## V3.2 — caminho obrigatório único

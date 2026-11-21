@@ -41,7 +41,7 @@ def config_check(cfg):
     fail(cfg['world_size_units']==[cfg['reference']['width'],cfg['reference']['height']],'base dimensions')
     fail(cfg['drive']['folder_id'] and cfg['reference']['drive_file_id'],'missing Drive storage')
 
-def audit_zone(z, cfg, assets=None, strict=False):
+def audit_zone(z, cfg, assets=None, strict=False, *, v33_verified=False):
     validator=Draft202012Validator(load(SCHEMA)); errors=list(validator.iter_errors(z))
     fail(not errors,'schema: '+('; '.join(e.message for e in errors[:4])))
     bounds=z['bounds']; fail(rect(bounds),'zone rectangle invalid')
@@ -50,7 +50,9 @@ def audit_zone(z, cfg, assets=None, strict=False):
     fail(len({e['id'] for e in z['elements']})==len(z['elements']),'duplicate element ids')
     fail(len({c['id'] for c in z['connectors']})==len(z['connectors']),'duplicate connector ids')
     fail(z['id'] not in z['neighbors'],'self neighbor')
-    fail(z['status'] not in ('GENERATING','VISUAL_REVIEW','OWNER_APPROVED','PUBLISHED') or z['sketch_approved'],'sketch not approved')
+    fail(z['status'] not in ('GENERATING','VISUAL_REVIEW','OWNER_APPROVED','PUBLISHED') or
+         z['sketch_approved'] or v33_verified,
+         'V3.2 requires sketch approval; V3.3 requires verified editorial register')
     fail(z['status'] not in ('OWNER_APPROVED','PUBLISHED') or z.get('owner_approval'),'owner approval missing')
     if z['status']!='PLANNING':
         fail(not any(d['status']=='OPEN' for d in z['decisions']),'open blocking decision')
@@ -100,7 +102,8 @@ def audit_zone(z, cfg, assets=None, strict=False):
         else:
             fail(any(abs(c['x']-bounds[i])<1e-9 for i in (0,2)) or any(abs(c['y']-bounds[i])<1e-9 for i in (1,3)),f"{c['id']}: connector not on boundary")
     if strict:
-        fail(z['sketch_approved'],'sketch needs owner approval')
+        fail(z['sketch_approved'] or v33_verified,
+             'missing V3.2 sketch or verified V3.3 decision authority')
         fail(all(e['status']=='VERIFIED' for e in z['elements']),'unverified element')
     return {'zone':z['id'],'elements':len(z['elements']),'connectors':len(z['connectors']),'mode':'strict' if strict else 'structural'}
 
@@ -151,7 +154,7 @@ def _tile_protection_mask(protected_u02,px,py,tw,th,scale):
     expanded=part.resize((part.width*scale,part.height*scale),Image.Resampling.NEAREST)
     return expanded.crop((px-u0*scale,py-v0*scale,px-u0*scale+tw,py-v0*scale+th))
 
-def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,*,contract=None):
+def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,*,contract=None,edit_mask_u02=None):
     """Production entry point: fail closed unless pipeline revalidates all bound inputs.
 
     Python internals are not a security sandbox. _compose_tiles is an internal
@@ -164,10 +167,11 @@ def composite(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,
     pipeline.verify_composition_contract(
         contract,zones,cfg,base,assets,approved_before,protected_u02)
     return _compose_tiles(zones,cfg,base,assets,out,
-                          approved_before=approved_before,protected_u02=protected_u02)
+                          approved_before=approved_before,protected_u02=protected_u02,
+                          edit_mask_u02=edit_mask_u02)
 
 
-def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=None):
+def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=None,edit_mask_u02=None):
     source_check(base,cfg)
     for z in zones:audit_zone(z,cfg,assets,strict=True)
     # Neighbor zones may be reserved but not yet rendered; spatial planner owns the seam gate.
@@ -175,6 +179,13 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
     if protected_u02 is not None:
         fail(protected_u02.size==tuple(cfg['world_size_units']) and protected_u02.mode=='L',
              'protected U02 mask must be an L image matching immutable reference')
+    if edit_mask_u02 is not None:
+        fail(edit_mask_u02.mode=='L' and
+             edit_mask_u02.size==tuple(cfg['world_size_units']),
+             'edit mask must be L image on original U02 geometry')
+        if protected_u02 is not None:
+            fail(ImageChops.darker(edit_mask_u02,protected_u02).getbbox() is None,
+                 'approved edit area intersects protected infrastructure')
     previous={}
     old=None
     if approved_before is not None:
@@ -192,6 +203,16 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
     elements=[e for z in zones for e in z['elements']]
     elements.sort(key=lambda e:(layers[e['layer']],e['id']))
     coords=tiles_for(zones,cfg)
+    if edit_mask_u02 is not None:
+        # Only paint tiles actually intersecting owner-authorized pixels. Every
+        # untouched approved tile is inherited byte-for-byte, without re-encode.
+        box=edit_mask_u02.getbbox()
+        fail(box is not None,'empty edit area cannot produce candidate')
+        left,top,right,bottom=(box[0]*s,box[1]*s,box[2]*s,box[3]*s)
+        coords=[(tx,ty) for tx,ty in coords
+                if tx*t<right and (tx+1)*t>left and
+                   ty*t<bottom and (ty+1)*t>top]
+        fail(bool(coords),'no work units intersect the authorized edit area')
     with Image.open(base) as src:
         src=src.convert('RGBA'); entries=[]
         for tx,ty in coords:
@@ -207,6 +228,8 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
             else:
                 im=baseline.copy()
             before=im.copy()
+            edit_window=(_tile_protection_mask(edit_mask_u02,px,py,tw,th,s)
+                         if edit_mask_u02 is not None else None)
             for e in elements:
                 x0,y0,x1,y1=(round(v*s) for v in e['envelope'])
                 a0=max(px,x0);b0=max(py,y0);a1=min(px+tw,x1);b1=min(py+th,y1)
@@ -214,14 +237,25 @@ def _compose_tiles(zones,cfg,base,assets,out,approved_before=None,protected_u02=
                 with Image.open(Path(assets)/e['asset']['path']) as original, Image.open(Path(assets)/e['mask']['path']) as mm:
                     box=(a0-x0,b0-y0,a1-x0,b1-y0)
                     crop=original.convert('RGBA').crop(box); mask=mm.convert('L').crop(box)
-                    alpha=ImageChops.darker(crop.getchannel('A'),mask);crop.putalpha(alpha)
+                    alpha=ImageChops.darker(crop.getchannel('A'),mask)
+                    if edit_window is not None:
+                        window=edit_window.crop((a0-px,b0-py,a1-px,b1-py))
+                        alpha=ImageChops.darker(alpha,window)
+                    if alpha.getbbox() is None:
+                        continue
+                    crop.putalpha(alpha)
                     im.alpha_composite(crop,(a0-px,b0-py))
             delta=_changed_pixels(before,im)
             if protected_u02 is not None:
                 protection=_tile_protection_mask(protected_u02,px,py,tw,th,s)
                 fail(ImageChops.darker(delta,protection).getbbox() is None,
                      f'protected network/territory pixels changed in tile {tx},{ty}')
-            if previous_tile:
+            if edit_mask_u02 is not None:
+                # Explicitly authorized refinement supersedes prior art INSIDE edit mask;
+                # old art, territory and network stay byte-identical everywhere else.
+                fail(ImageChops.subtract(delta,edit_window).getbbox() is None,
+                     f'changed pixels outside owner-authorized edit area in tile {tx},{ty}')
+            elif previous_tile:
                 old_changes=_changed_pixels(baseline,before)
                 fail(ImageChops.darker(delta,old_changes).getbbox() is None,
                      f'previously approved content overwritten in tile {tx},{ty}')
@@ -258,29 +292,10 @@ def image_uri(image):
     return 'data:image/png;base64,'+base64.b64encode(b.getvalue()).decode()
 
 def html_compare(before, after, base, out, cfg):
-    source_check(base,cfg)
-    with Image.open(base) as im: ref=image_uri(im.convert('RGBA'))
-    before_json=load(Path(before)/'tiles.json') if before else None
-    after_json=load(Path(after)/'tiles.json')
-    verify_tiles(after_json,after,cfg,inherited_root=before)
-    if before_json: verify_tiles(before_json,before,cfg)
-    def image_tiles(m,folder):
-        if not m:return []
-        result=[]
-        for entry in m.get('inherited_tiles',[])+m['tiles']:
-            with Image.open(Path(folder)/entry['filename']) as im: uri=image_uri(im.convert('RGBA'))
-            result.append({'x':entry['x'],'y':entry['y'],'src':uri})
-        return result
-    prior=image_tiles(before_json,before) if before else []
-    # Changed tiles replace matching tiles of the previous release. All coordinates are global.
-    merged={(e['x'],e['y']):e for e in prior}
-    for entry in after_json['tiles']:
-        with Image.open(Path(after)/entry['filename']) as im: uri=image_uri(im.convert('RGBA'))
-        merged[(entry['x'],entry['y'])]={'x':entry['x'],'y':entry['y'],'src':uri}
-    data=json.dumps({'base':ref,'before':prior,'after':list(merged.values()),'s':cfg['detail_pixels_per_unit'],'tile':cfg['tile_size_px'],'w':cfg['world_size_units'][0],'h':cfg['world_size_units'][1]},separators=(',',':'))
-    template='''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Novydres — ANTES / DEPOIS</title><style>body{background:#101820;color:#e8e7e3;font:14px system-ui;margin:10px}header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}button{padding:8px;background:#303b48;color:white;border:1px solid #64778a;border-radius:6px}.views{display:grid;grid-template-columns:1fr 1fr;gap:8px}.frame{overflow:hidden;border:1px solid #64778a;border-radius:8px}canvas{display:block;width:100%;height:70vh;touch-action:none;background:#26333d}small{opacity:.8}@media(max-width:680px){.views{grid-template-columns:1fr}canvas{height:37vh}}</style><header><b>Novydres • mapa integral</b><button onclick="zoom(1.6)">Ampliar +</button><button onclick="zoom(1/1.6)">Reduzir −</button><button onclick="reset()">Ver tudo</button><small>Arraste para mover. Zoom sincronizado nas duas vistas.</small></header><div class="views"><section><h3>ANTES — última versão aprovada</h3><div class="frame"><canvas id="b"></canvas></div></section><section><h3>DEPOIS — candidata</h3><div class="frame"><canvas id="a"></canvas></div></section></div><script>const D=__DATA__;const canv=[document.querySelector('#b'),document.querySelector('#a')];let z=1,dx=0,dy=0,drag=null;let base=new Image();base.src=D.base;const make=(entries)=>entries.map(e=>{let im=new Image();im.src=e.src;return {...e,im}});let before=make(D.before),after=make(D.after);function fit(){return Math.min(canv[0].clientWidth/D.w,canv[0].clientHeight/D.h)}function draw(){canv.forEach((c,i)=>{const dpr=window.devicePixelRatio||1;c.width=Math.round(c.clientWidth*dpr);c.height=Math.round(c.clientHeight*dpr);let ctx=c.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,c.clientWidth,c.clientHeight);let k=fit()*z,ox=(c.clientWidth-D.w*k)/2+dx,oy=(c.clientHeight-D.h*k)/2+dy;ctx.imageSmoothingEnabled=true;if(base.complete)ctx.drawImage(base,ox,oy,D.w*k,D.h*k);const tiles=i===0?before:after;for(const t of tiles)if(t.im.complete)ctx.drawImage(t.im,ox+(t.x*D.tile/D.s)*k,oy+(t.y*D.tile/D.s)*k,t.im.naturalWidth/D.s*k,t.im.naturalHeight/D.s*k)})}function zoom(q){z=Math.max(1,Math.min(D.s*2,z*q));draw()}function reset(){z=1;dx=dy=0;draw()}canv.forEach(c=>{c.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};c.setPointerCapture(e.pointerId)});c.addEventListener('pointermove',e=>{if(!drag)return;dx+=e.clientX-drag.x;dy+=e.clientY-drag.y;drag={x:e.clientX,y:e.clientY};draw()});c.addEventListener('pointerup',()=>drag=null);c.addEventListener('pointercancel',()=>drag=null);c.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?1.2:1/1.2)},{passive:false})});base.onload=draw;[...before,...after].forEach(t=>t.im.onload=draw);window.addEventListener('resize',draw);draw()</script></html>'''
-    p=Path(out);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(template.replace('__DATA__',data),encoding='utf-8')
-    return {'path':str(p),'before_tiles':len(prior),'after_tiles':len(merged),'bytes':p.stat().st_size}
+    """V3.3 portable lazy-tile viewer; HTML does not contain embedded atlas tiles."""
+    import v33_viewer
+    return v33_viewer.build_comparison(before,after,base,out,cfg)
+
 
 def next_action(z):
     if z['status']=='PLANNING':

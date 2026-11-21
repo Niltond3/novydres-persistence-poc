@@ -19,6 +19,9 @@ from PIL import Image
 import mapwork as core
 import urban_architecture as urban
 import urban_content as content
+import v33_contracts as v33
+import v33_visual as visual
+import v33_flow
 
 ROOT=Path(__file__).resolve().parents[1]
 SCHEMA="NOVYDRES_MAPWORK_V32_PIPELINE_CHECKPOINT_1"
@@ -115,7 +118,21 @@ def check_canonical_pois(zone_path,plan):
                                ", ".join(sorted(required.symmetric_difference(found))))
 
 
-def validate_work_unit_bindings(zone,report,plan=None):
+def affected_unit_ids(report,editable_u02=None):
+    """Only raster work units crossing owner-authorized pixels require new art."""
+    units={u["id"]:u for u in report["work_units"]}
+    if editable_u02 is None:
+        return set(units)
+    affected=set()
+    for uid,unit in units.items():
+        bbox=unit["bbox"]
+        if editable_u02.crop(tuple(bbox)).getbbox() is not None:
+            affected.add(uid)
+    core.fail(bool(affected),"refinement has no planned work-unit coverage")
+    return affected
+
+
+def validate_work_unit_bindings(zone,report,plan=None,required_units=None):
     """Every rendered asset belongs to one work unit and no global network layer."""
     expected={u["id"]:u for u in report["work_units"]}
     bound={}
@@ -152,7 +169,9 @@ def validate_work_unit_bindings(zone,report,plan=None):
             if e["kind"]=="poi" and (not building["site_id"] or
                 e.get("site_id")!=building["site_id"]):
                 raise core.Invalid(e["id"]+": POI asset lacks approved site identity")
-    missing=expected.keys()-bound.keys()
+    required=set(expected) if required_units is None else set(required_units)
+    core.fail(required.issubset(expected),"unknown required native work unit")
+    missing=required-set(bound)
     if missing:
         raise core.Invalid("planned work units lack bound art elements: "+", ".join(sorted(missing)[:6]))
     return bound
@@ -252,13 +271,14 @@ def verify_unit_art_masks(plan,report,elements,assets,cfg):
         verify_art_overlaps(plan,[e for _,e in entries],assets,cfg)
 
 
-def validate_all_unit_designs(plan,report,design_root,cfg):
+def validate_all_unit_designs(plan,report,design_root,cfg,*,allow_abstract=False):
     """One design check for the pipeline and the compositor's revalidation."""
     units=report["work_units"]
     ctx=content.design_context(plan)
     physical=urban.validated_physical_reference(plan,cfg)
     building_count=0
-    physical_all=physical is not None
+    physical_all=(physical is not None and
+                  plan.get("work_policy",{}).get("parceling")!="URBAN_BLOCKS_V33")
     for unit in units:
         uid=unit["id"]
         path=Path(design_root)/(uid+".json")
@@ -283,8 +303,11 @@ def validate_all_unit_designs(plan,report,design_root,cfg):
         "all_abstract_access_paths_verified":True,
         "physical_routes_verified":physical_all}
     report["gates"]["physical_access_certified"]=physical_all
-    report["generation_ready"]=all(report["gates"].values()) and plan.get("fixture_mode") is False
-    report["blocking_gates"]=[key for key,val in report["gates"].items() if not val]
+    required={key:value for key,value in report["gates"].items()
+              if not allow_abstract or key!="physical_access_certified"}
+    report["generation_ready"]=all(required.values()) and plan.get("fixture_mode") is False
+    report["blocking_gates"]=[key for key,val in required.items() if not val]
+    report["metric_certification_omitted"]=allow_abstract and not physical_all
     return report
 
 
@@ -299,6 +322,71 @@ def _asset_fingerprints(zone,assets):
             "mask":fingerprint(Path(assets)/e["mask"]["path"])
         }
     return result
+
+
+def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None,
+                           reference_sha256=None,spatial_sha256=None):
+    """Bind actual generated and reviewed image bytes to the exact composited lots."""
+    core.fail(isinstance(images,dict) and
+              images.get("schema")=="NOVYDRES_MAPWORK_V33_IMAGE_BATCH_1" and
+              isinstance(images.get("images"),list),
+              "V3.3 native-image batch missing or malformed")
+    index={}
+    for receipt in images["images"]:
+        core.fail(isinstance(receipt,dict) and
+                  receipt.get("work_unit_id") not in index and
+                  isinstance(receipt.get("work_unit_id"),str),
+                  "V3.3 duplicate or invalid native-image work unit")
+        index[receipt["work_unit_id"]]=receipt
+    units={u["id"]:u for u in report["work_units"]}
+    active=set(units) if active_units is None else set(active_units)
+    core.fail(bool(active) and active.issubset(units) and set(index)==active,
+              "V3.3 native images must cover exactly the changed work units")
+    bound={}
+    for element in zone["elements"]:
+        if element["kind"]=="lot":
+            uid=element.get("work_unit_id")
+            core.fail(uid not in bound and uid in units,
+                      "V3.3 duplicate/unknown lot asset per unit")
+            bound[uid]=element
+    core.fail(active.issubset(bound),
+              "V3.3 every changed unit must have a bound lot asset")
+    context={r["work_unit_id"]:r for r in images.get("context_images",[])}
+    core.fail(not (set(context)&set(index)) and
+              all(k in units for k in context),
+              "V3.3 peer context overlaps generated units or is unknown")
+    all_receipts={**context,**index}
+    for uid in sorted(active):
+        unit=units[uid]
+        receipt=index[uid]
+        bbox=unit["bbox"];scale=cfg["detail_pixels_per_unit"]
+        v33.image_receipt(receipt,expected_size=[
+            (bbox[2]-bbox[0])*scale,(bbox[3]-bbox[1])*scale
+        ],work_unit_id=uid)
+        element=bound[uid]
+        core.fail(element["status"]=="VERIFIED" and
+                  element["asset"]["sha256"]==receipt["sha256"] and
+                  fingerprint(Path(assets)/element["asset"]["path"])==receipt["sha256"],
+                  uid+": native image provenance is not the composited lot asset")
+        core.fail(element["mask"]["sha256"]==receipt.get("mask_sha256") and
+                  fingerprint(Path(assets)/element["mask"]["path"])==receipt["mask_sha256"],
+                  uid+": native image receipt not bound to composited mask")
+        peer_images={}
+        for peer in visual.neighbor_sides(report["work_units"],uid):
+            core.fail(peer in all_receipts,uid+": neighbor image receipt missing: "+peer)
+            b=units[peer]["bbox"]
+            v33.image_receipt(all_receipts[peer],expected_size=[
+                (b[2]-b[0])*scale,(b[3]-b[1])*scale
+            ],work_unit_id=peer)
+            peer_images[peer]=all_receipts[peer]
+        core.fail(reference_sha256 is not None and spatial_sha256 is not None,
+                  "V3.3 visual review requires reference and spatial file SHA")
+        visual.validate_unit_visual_review(
+            receipt.get("visual_review"),unit_id=uid,
+            image_sha256=receipt["sha256"],mask_sha256=receipt["mask_sha256"],
+            reference_sha256=reference_sha256,spatial_sha256=spatial_sha256,
+            work_units=report["work_units"],neighbor_receipts=peer_images)
+    return len(active)
 
 
 def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
@@ -342,10 +430,44 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               plan.get("fixture_mode") is False and
               zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED"),
               "composition contract zone/plan authority mismatch")
-    core.audit_zone(zone,cfg,assets,strict=True)
+    is_v33=bool(contract.get("v33"))
+    if is_v33:
+        receipt=contract["v33"]
+        required={
+            "intent_path":"intent_sha256",
+            "decisions_path":"decisions_sha256",
+            "inventory_path":"inventory_sha256",
+            "scope_index_path":"scope_index_sha256",
+            "research_path":"research_sha256",
+            "capabilities_path":"capabilities_sha256",
+            "image_receipts_path":"image_receipts_sha256"
+        }
+        for key,sha_key in required.items():
+            path=Path(receipt.get(key,""))
+            core.fail(path.is_file() and fingerprint(path)==receipt.get(sha_key),
+                      "V3.3 composition authority drift: "+key)
+        intent=core.load(receipt["intent_path"])
+        index=core.load(receipt["scope_index_path"])
+        core.fail(index["source_commit"]==intent["source_commit"],
+                  "V3.3 source commit mismatch")
+        v33.validate_intent(intent,index["targets"],index["world_bounds"])
+        register=core.load(receipt["decisions_path"])
+        approvals=v33.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
+        core.fail(not approvals["pending"],"V3.3 has pending editorial decisions")
+        inventory=core.load(receipt["inventory_path"])
+        canon=set(index["targets"][zone["id"]].get("approved_element_ids",[]))
+        core.fail(set(inventory.get("canonical_elements",[])).issubset(canon),
+                  "V3.3 asserted unsupported existing elements")
+        v33.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
+        v33.validate_research(core.load(receipt["research_path"]))
+        caps=v33.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
+        core.fail(not caps["missing"],"V3.3 required host capability not evidenced")
+    core.audit_zone(zone,cfg,assets,strict=True,v33_verified=is_v33)
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=base,
                            neighbor_manifests=load_verified_neighbors(plan))
+    if is_v33:
+        report["gates"]["owner_art_authorized"]=True
     expected={u["id"] for u in report["work_units"]}
     core.fail(set(contract.get("design_sha256",{}))==expected,
               "composition contract incomplete work-unit design hashes")
@@ -354,10 +476,18 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
         core.fail(path.is_file() and
                   fingerprint(path)==contract["design_sha256"][uid],
                   uid+": stale/missing work-unit design in composition contract")
-    validate_all_unit_designs(plan,report,design_root,cfg)
-    core.fail(report["generation_ready"] and all(report["gates"].values()),
+    validate_all_unit_designs(plan,report,design_root,cfg,allow_abstract=is_v33)
+    core.fail(report["generation_ready"] and
+              (is_v33 or all(report["gates"].values())),
               "composition contract blocked by urban/art gates")
-    bound=validate_work_unit_bindings(zone,report,plan=plan)
+    affected=set(expected)
+    if is_v33 and intent["mode"]!="CREATE_REGION":
+        mask_path=Path(contract["v33"].get("edit_mask_path",""))
+        core.fail(mask_path.is_file(),"V3.3 edit mask missing before artwork binding")
+        with Image.open(mask_path) as im:
+            affected=affected_unit_ids(report,im.convert("L"))
+    bound=validate_work_unit_bindings(zone,report,plan=plan,
+                                     required_units=affected if is_v33 else None)
     verify_unit_art_masks(plan,report,zone["elements"],assets,cfg)
     core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
               "composition contract asset hash or ownership mismatch")
@@ -372,9 +502,23 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               protected_u02.mode=="L" and protected_u02.size==protection.size and
               protected_u02.tobytes()==protection.tobytes(),
               "composition contract requires the exact validated U02 protection mask")
+    if is_v33:
+        receipt=contract["v33"]
+        if intent["mode"]!="CREATE_REGION":
+            p=Path(receipt.get("edit_mask_path",""))
+            core.fail(p.is_file() and fingerprint(p)==receipt.get("edit_mask_sha256"),
+                      "V3.3 edit mask is missing or changed")
+            with Image.open(p) as im:
+                v33.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
+        images=core.load(receipt["image_receipts_path"])
+        verify_native_manifest(images,zone,report,cfg,assets,active_units=affected,
+                               reference_sha256=fingerprint(base),
+                               spatial_sha256=fingerprint(spatial_path))
 
 
 def run(args):
+    if getattr(args,"intent",None) and not getattr(args,"v33_verified",False):
+        return v33_flow.run(args,run)
     cfg=core.load(core.CONFIG)
     core.config_check(cfg)
     zone_path=resolve_zone(args.district,args.zone)
@@ -384,13 +528,22 @@ def run(args):
                           blockers=["Resolve district subject ID, canonical boundaries, neighbors and source SHA from GitHub master; do not invent geometry."])
     zone=core.load(zone_path)
     district=zone["id"]
-    core.audit_zone(zone,cfg,strict=False)
+    # Kingswell V3.3 cannot fall back to the older entry mode to
+    # sidestep the Markdown/visual infrastructure acceptance contract.
+    if district=="kingswell" and not getattr(args,"v33_verified",False):
+        return checkpoint(
+            district=district,zone_path=zone_path,zone=zone,
+            phase="INFRASTRUCTURE_ACCEPTANCE",
+            action="USE_V33_INTENT_AND_ACCEPTANCE_LEDGER",
+            blockers=["Kingswell V3.3 requires --intent and all INF-01..INF-07 PASS before lots."])
+    core.audit_zone(zone,cfg,strict=False,
+                    v33_verified=getattr(args,"v33_verified",False))
     def state(phase,action,blockers=(),spatial_path=None,report=None,artifacts=None):
         return checkpoint(district=district,zone_path=zone_path,zone=zone,
                           phase=phase,action=action,blockers=blockers,
                           spatial_path=spatial_path,architectural_report=report,artifacts=artifacts)
 
-    if zone["status"]=="PLANNING":
+    if zone["status"]=="PLANNING" and not getattr(args,"v33_verified",False):
         if not zone.get("research"):
             return state("RESEARCH","RESEARCH_ANALOGUES",
                          ["Record dated URLs and architecture/urbanism analogues before decisions."])
@@ -401,7 +554,7 @@ def run(args):
             return state("TECHNICAL_SKETCH","PRESENT_INTEGRAL_SKETCH_FOR_OWNER_APPROVAL",
                          ["Include global transport, water, urban blocks, buildings, POIs and neighboring zones."])
 
-    if not zone["sketch_approved"]:
+    if not zone["sketch_approved"] and not getattr(args,"v33_verified",False):
         return state("TECHNICAL_SKETCH","WAIT_EXPLICIT_SKETCH_APPROVAL")
 
     spatial_path=Path(args.spatial) if args.spatial else zone_path.parent/"global-spatial-v31.json"
@@ -418,6 +571,11 @@ def run(args):
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=args.reference,
                            neighbor_manifests=load_verified_neighbors(plan))
+    if getattr(args,"v33_verified",False):
+        # V3.3 proposal register + exact installation inventory were validated
+        # BEFORE calling this legacy spatial engine. The old blanket owner-art
+        # approval is no longer an additional approval ceremony.
+        report["gates"]["owner_art_authorized"]=True
     # Urban design is a mandatory deterministic phase, not an image-side suggestion.
     # A real declarative map can be planned in a hosted runner without private U02
     # bytes. Byte verification remains a hard gate before image generation/composition.
@@ -449,7 +607,8 @@ def run(args):
         return state("URBAN_DESIGN","DESIGN_NEXT_WORK_UNIT_BEFORE_ART",
                      [missing[0],f"{len(missing)} of {len(units)} building plans missing"],
                      spatial_path,report)
-    validate_all_unit_designs(plan,report,design_root,cfg)
+    validate_all_unit_designs(plan,report,design_root,cfg,
+                              allow_abstract=getattr(args,"v33_verified",False))
     if not report["generation_ready"]:
         blockers=report["blocking_gates"]
         nxt="VERIFY_SPATIAL_AND_ASSET_GATES"
@@ -460,7 +619,15 @@ def run(args):
         return state("SPATIAL_VALIDATION",nxt,blockers,spatial_path,report)
 
     if zone["status"]!="SKETCH_APPROVED":
-        bound=validate_work_unit_bindings(zone,report,plan=plan)
+        required=None
+        if getattr(args,"v33_verified",False):
+            request=core.load(args.intent)
+            if request["mode"]!="CREATE_REGION":
+                if not args.editable_mask or not Path(args.editable_mask).is_file():
+                    raise core.Invalid("refinement requires materialized --editable-mask")
+                with Image.open(args.editable_mask) as im:
+                    required=affected_unit_ids(report,im.convert("L"))
+        bound=validate_work_unit_bindings(zone,report,plan=plan,required_units=required)
     if zone["status"]=="SKETCH_APPROVED":
         return state("ART_AUTHORIZED","PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT",
                      ["Spatial contract passed; create verified generation jobs only, not a release."],
@@ -484,25 +651,77 @@ def run(args):
         raise core.Invalid("approved release exists: --before is mandatory to preserve its tiles")
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
-    core.audit_zone(zone,cfg,args.assets,strict=True)
+    core.audit_zone(zone,cfg,args.assets,strict=True,
+                    v33_verified=getattr(args,"v33_verified",False))
     verify_unit_art_masks(plan,report,zone["elements"],args.assets,cfg)
     contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
                                        report,args.reference,args.assets,args.before)
+    edit_mask=None
+    if getattr(args,"v33_verified",False):
+        intent=core.load(args.intent)
+        registration={
+            "intent_path":str(Path(args.intent).resolve()),
+            "intent_sha256":fingerprint(args.intent),
+            "decisions_path":str(Path(args.decisions_file).resolve()),
+            "decisions_sha256":fingerprint(args.decisions_file),
+            "inventory_path":str(Path(args.inventory_file).resolve()),
+            "inventory_sha256":fingerprint(args.inventory_file),
+            "scope_index_path":str(Path(args.scope_index or ROOT/"scope-index.json").resolve()),
+            "scope_index_sha256":fingerprint(args.scope_index or ROOT/"scope-index.json"),
+            "research_path":str(Path(args.research_file).resolve()),
+            "research_sha256":fingerprint(args.research_file),
+            "capabilities_path":str(Path(args.capabilities).resolve()),
+            "capabilities_sha256":fingerprint(args.capabilities)
+        }
+        contract["v33"]=registration
+        if intent["mode"]!="CREATE_REGION":
+            if not args.editable_mask:
+                raise core.Invalid("V3.3 refinement requires --editable-mask")
+            with Image.open(args.editable_mask) as im:
+                edit_mask=im.convert("L")
+            v33.validate_edit_mask(edit_mask,intent["intervention"]["bounds"],protection)
+            registration["edit_mask_sha256"]=fingerprint(args.editable_mask)
+            registration["edit_mask_path"]=str(Path(args.editable_mask).resolve())
+        if not args.image_receipts:
+            raise core.Invalid("V3.3 native-image provenance receipts required")
+        receipts=core.load(args.image_receipts)
+        active=affected_unit_ids(report,edit_mask)
+        verify_native_manifest(receipts,zone,report,cfg,args.assets,active_units=active,
+                               reference_sha256=fingerprint(args.reference),
+                               spatial_sha256=fingerprint(spatial_path))
+        registration["image_receipts_path"]=str(Path(args.image_receipts).resolve())
+        registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
                             approved_before=args.before,protected_u02=protection,
-                            contract=contract)
+                            edit_mask_u02=edit_mask,contract=contract)
     comparison=out/"comparison.html"
     result=core.html_compare(args.before,tiles,args.reference,comparison,cfg)
+    evidence={"tiles":len(manifest["tiles"]),"comparison":str(comparison),
+              "comparison_bytes":result["bytes"],"manifest":str(tiles/"tiles.json"),
+              "tiles_sha256":fingerprint(tiles/"tiles.json"),
+              "before_sha256":fingerprint(out/"overview-before.png"),
+              "after_sha256":fingerprint(out/"overview-after.png"),
+              "image_receipts_sha256":fingerprint(args.image_receipts)}
+    if getattr(args,"v33_verified",False):
+        if not args.macro_review or not Path(args.macro_review).is_file():
+            return state("GLOBAL_VISUAL_REVIEW","AGENT_INSPECT_COMPOSED_ATLAS",
+                         ["Inspect real before/after overviews, tiles, unit interfaces and macro/micro coherence; record hash-bound global report."],
+                         spatial_path,report,evidence)
+        review=core.load(args.macro_review)
+        evidence["global_visual_review"]=visual.validate_global_visual_review(
+            review,tiles=tiles/"tiles.json",
+            before_overview=out/"overview-before.png",
+            after_overview=out/"overview-after.png",
+            original_reference=args.reference,image_receipts=args.image_receipts)
     return state("CANDIDATE_READY_FOR_OWNER_REVIEW","SHOW_COMPLETE_BEFORE_AFTER",
                  ["Owner must explicitly approve candidate; GitHub/Drive readback and editorial gate remain mandatory."],
-                 spatial_path,report,{"tiles":len(manifest["tiles"]),"comparison":str(comparison),
-                                      "comparison_bytes":result["bytes"],"manifest":str(tiles/"tiles.json")})
+                 spatial_path,report,evidence)
 
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("command",choices=["run"])
-    target=p.add_mutually_exclusive_group(required=True)
+    target=p.add_mutually_exclusive_group(required=False)
     target.add_argument("--district")
     target.add_argument("--zone")
     p.add_argument("--spatial",help="approved candidate territorial/network manifest")
@@ -514,14 +733,48 @@ def main(argv=None):
     p.add_argument("--out",help="candidate output only; no canon write")
     p.add_argument("--execute",action="store_true",help="compose only if all planning and art gates pass")
     p.add_argument("--checkpoint",help="write deterministic resumable checkpoint JSON")
+    p.add_argument("--intent",help="agent-resolved and canonical-indexed V3.3 request JSON")
+    p.add_argument("--acceptance-ledger",
+                   help="hash-bound, self-reviewed infrastructure candidate rounds; defaults to zone ledger")
+    p.add_argument("--scope-index",help="exact canonical subject/index snapshot")
+    p.add_argument("--capabilities",help="host capabilities with actual execution receipts")
+    p.add_argument("--research-file",help="external analogues including two independent domains")
+    p.add_argument("--decisions-file",help="owner-signed proposal and decision register")
+    p.add_argument("--inventory-file",help="full approved installation inventory")
+    p.add_argument("--image-receipts",help="materialized native image receipts per work unit")
+    p.add_argument("--editable-mask",help="owner-scoped U02 intervention mask for refinement")
+    p.add_argument("--recipe-unit",help="prepare generator recipe for a single planned unit")
+    p.add_argument("--audit-unit",help="audit native asset materialization and mask per unit")
+    p.add_argument("--unit-receipt",help="one actual generated image receipt")
+    p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
+    p.add_argument("--visual-review",help="hash-bound agent inspection of unit image/mask and face-neighbors")
+    p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
+    p.add_argument("--ledger",help="SHA-bound per-unit progress/repair ledger")
+    p.add_argument("--start-unit",action="store_true",help="start one audit attempt in the ledger")
     args=p.parse_args(argv)
+    if args.execute and not args.intent:
+        p.error("V3.3 composition requires --intent and owner decision/inventory receipts")
+    if not args.intent and not (args.district or args.zone):
+        p.error("legacy calls need --district/--zone; V3.3 calls need --intent")
     try:
         result=run(args)
         if args.checkpoint:
             core.save(args.checkpoint,result)
-        print(json.dumps({"status":"PASS","result":result},ensure_ascii=False,indent=2))
-        return 0
-    except (core.Invalid,urban.ContractError,KeyError,ValueError,OSError) as exc:
+        # PASS is reserved for verified criteria, not merely a successful
+        # command that returned an incomplete checkpoint or a handoff.
+        if (result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE" and
+                isinstance(result.get("audit"),dict) and
+                result["audit"].get("status")=="FAIL"):
+            outcome="FAIL"
+        elif result.get("blockers") or result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE":
+            outcome="BLOCKED"
+        elif result.get("phase") == "CANDIDATE_READY_FOR_OWNER_REVIEW":
+            outcome="READY_FOR_OWNER_REVIEW"
+        else:
+            outcome="CHECKPOINT"
+        print(json.dumps({"status":outcome,"result":result},ensure_ascii=False,indent=2))
+        return 2 if outcome == "FAIL" else 0
+    except (core.Invalid,urban.ContractError,v33.Blocked,KeyError,ValueError,OSError) as exc:
         print(json.dumps({"status":"FAIL","error":str(exc)},ensure_ascii=False),file=sys.stderr)
         return 2
 

@@ -1,0 +1,58 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_ACCEPTANCE_LEDGER_1",
+  "criteria_sha256": "e0129f2d14545d64e2aaeabde670430f2c7f6c6b9b5d06bf50247d10d1f17213",
+  "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+  "target": "kingswell",
+  "reference_dimensions_px": [
+    1448,
+    1086
+  ],
+  "status": "NONE_ACCEPTED",
+  "progress": "INF-01_AWAITING_REAL_SPATIAL_GEOMETRY_AND_HOST_VISUAL_AUDIT",
+  "stages": {
+    "INF-01": {
+      "attempts": []
+    },
+    "INF-02": {
+      "attempts": []
+    },
+    "INF-03": {
+      "attempts": []
+    },
+    "INF-04": {
+      "attempts": []
+    },
+    "INF-05": {
+      "attempts": []
+    },
+    "INF-06": {
+      "attempts": []
+    },
+    "INF-07": {
+      "attempts": []
+    },
+    "URB-08": {
+      "attempts": []
+    }
+  },
+  "previously_rejected_precontract_candidates": [
+    {
+      "id": "R1",
+      "file": "zones/cidade-velha/spatial-observations-v33-20261120.json",
+      "reason": "22 streets too sparse; crossings physically unverified"
+    },
+    {
+      "id": "R2",
+      "file": "zones/cidade-velha/road-network-candidate-v33-r2.json",
+      "reason": "98 corridors still missing expressway, bridges/viaduct/grade railway/tram/metro integration and unaccepted connectivity"
+    }
+  ],
+  "allow_lot_generation": false,
+  "allow_poi_final_siting": false,
+  "allow_native_images": false,
+  "next_action": "GENERATE_INF_01_CANDIDATE_AND_PERFORM_NEW_DETERMINISTIC_AUDIT",
+  "migration_note": {
+    "from_criteria_sha256": "6d43248f0ab8db3edfeb2d57276371de3538a9aca70d81eaa87ab5a24d02b1e9",
+    "reason": "V3.3 Web deterministic profile added; no previously PASS stages or attempts; U02/canon unchanged"
+  }
+}

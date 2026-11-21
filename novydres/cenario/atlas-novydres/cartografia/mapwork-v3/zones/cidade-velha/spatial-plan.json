@@ -212,5 +212,90 @@
     ],
     "base_raster_unchanged": true,
     "not_gis_topology_certification": true
+  },
+  "metro_policy_v33": {
+    "status": "APPROVED_EDITORIAL_DIRECTIVE_PENDING_REAL_GEOMETRY",
+    "proposal_id": "KW-PROP-006",
+    "selected_choice": "A",
+    "decision_register": "decisions-v33-20261120.json",
+    "reference_u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "source_sketch": "esboco-integral-u02-v2.json",
+    "constraints": {
+      "required_functional_relationship": "O metrô atravessa setores de expansão do raion Kingswell, contornando o microcentro histórico termal",
+      "mandatory_avoidance_sketch_sector_id": "KW-HIST",
+      "historical_core_interpretation": "Morphological sketch sector; not a second raion or surveyed underground exclusion volume",
+      "expansion_sector_candidate_ids": [
+        "KW-WEST",
+        "KW-WORKER",
+        "KW-EDGE",
+        "KW-TRANS"
+      ],
+      "expansion_ids_note": "These are sectors of the approved conceptual sketch, not an approval of each sector as a route corridor",
+      "no_surface_network_changes_implied": true,
+      "no_station_or_portal_inferred": true,
+      "underground_level_not_surveyed": true,
+      "bilateral_neighbor_contract_required": true,
+      "exclusion_precedence": "KW-HIST overrides any overlapping expansion-sector designations, notably KW-WORKER. Intersection is excluded from all candidate metro corridors."
+    },
+    "forbidden_inferences": [
+      "Any newly approved station, access or ventilation point",
+      "Exact centerline, tunnel depth, direction, number of lines or metric buffer",
+      "A new portal/metro seam into Sulfok or Drevnigrad without matching neighbors",
+      "Automatically widening historic streets or removing an existing U02 feature"
+    ],
+    "geometry": null,
+    "station_points": [],
+    "neighbor_seam_points": [],
+    "mask_status": "NOT_DERIVED",
+    "next_technical_step": "Derive possible underground routing graph from U02-grounded surface/water/terrain constraints, exclude KW-HIST, audit actual portal seams; do not introduce unapproved stations.",
+    "constraint_audit": {
+      "method": "Integer pixel centers in U02 sketch polygons, independent candidate geometry check; not U02 tunnel/road survey",
+      "source": "esboco-integral-u02-v2.json",
+      "source_blob_sha": "180f3a01ad40983b6ade2217cb488c7b591fa45d",
+      "thermal_core_pixels": 12111,
+      "thermal_core_outside_raion_pixels": 0,
+      "core_and_worker_expansion_overlap_pixels": 2079,
+      "other_core_and_expansion_overlap_pixels": 0,
+      "expansion_sectors_union_pixels": 95853,
+      "expansion_sectors_excluding_thermal_core_pixels": 93774,
+      "geometry_status": "SKETCH_POLYGONS_NOT_METRO_ALIGNMENT",
+      "note": "The 93,774 conceptual expansion pixels are not all eligible for a tunnel; hydrography, water, protected features, underground engineering and neighboring network are not yet checked.",
+      "conceptual_expansion_mask_connectivity": {
+        "connectivity": "4_NEIGHBOR_U02_PIXEL_CENTERS",
+        "component_count": 2,
+        "components": [
+          {
+            "area_pixels": 53065,
+            "bbox_px": [
+              644,
+              762,
+              990,
+              960
+            ],
+            "sectors": [
+              "KW-WORKER",
+              "KW-EDGE"
+            ]
+          },
+          {
+            "area_pixels": 40709,
+            "bbox_px": [
+              333,
+              774,
+              616,
+              1002
+            ],
+            "sectors": [
+              "KW-WEST",
+              "KW-TRANS"
+            ]
+          }
+        ],
+        "joins_permitted_by_this_audit": 0,
+        "required_validation": "A real, separately authorized underground route must be grounded in water and topography, actual rail access and bilateral neighbors; conceptual polygon adjacency does not create a tunnel.",
+        "no_new_river_crossing_inferred": true,
+        "topology_stage": "NONMETRIC_CANDIDATE_EXPANSION_MASK_ONLY"
+      }
+    }
   }
 }

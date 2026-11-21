@@ -1,3 +1,34 @@
+# Mapwork V3.3 — Contrato operacional prioritário
+
+> **Execução no ChatGPT Web (V3.3):** o exemplo `python scripts/pipeline.py` é a forma CLI para hosts com terminal, **não** requisito de ChatGPT Web. No Web usar `scripts/v33_web_bridge.py::run_web`, que invoca a mesma `scripts/pipeline.py::main` dentro do interpretador após verificar bytes, Git blob e contratos Markdown. Recuperação de código via GitHub (verdade) e cache verificado do Drive (bytes); imagens pelo Drive. Instruções obrigatórias em [`WEB_RUNTIME_V33.md`](WEB_RUNTIME_V33.md). `BLOCKED`/`FAIL` são resultados de execução, não decisões para o usuário.
+
+
+**Prevalência:** este trecho V3.3 substitui gates V3.2 contraditórios descritos mais abaixo. A fonte da verdade permanece `master`; esta branch é apenas implementação candidata.
+
+## Entrada única, sem arquitetura paralela
+
+`python scripts/pipeline.py run --intent /tmp/intent.json --scope-index /tmp/index.json --capabilities /tmp/capabilities.json --research-file /tmp/research.json --decisions-file /tmp/decisions.json --inventory-file /tmp/inventory.json --checkpoint /tmp/progress.json`
+
+O agente resolve semântica e baixa dados reais; `pipeline.py` valida e devolve apenas `phase`, `next_action`, `blockers`, e auditoria. Repetir depois de executar a ação externa. `--district` é diagnóstico V3.2, não uma rota de produção V3.3. `--execute` sem `--intent` é recusado. GitHub Actions é teste adicional, **nunca executor obrigatório**.
+
+## Ordem dos gates
+0. `BASELINE`: preservar SHA/tree da V3.2.
+1. `INTENT/CAPABILITY_CHECK`: identificar região ou objeto sem aproximação e comprovar todas as ferramentas e a transferência de imagem ao disco. Não marcar ferramentas como disponíveis só por existirem no menu.
+2. `EXTERNAL_RESEARCH`: pelo menos duas fontes reais independentes em domínios diferentes, data, local, observação, relação e proposta.
+3. `EDITORIAL_DECISIONS`: uma pergunta pendente por vez. Registro de propostas separa `PROPOSED`, `APPROVED`, `REJECTED`, `APPROVED_WITH_CONDITIONS`. A aprovação deve identificar cada `authorized_id` ou conjunto limitado. Propostas novas não aprovadas impedem arte.
+4. `SPATIAL_MODEL/URBAN_DESIGN`: rede mundial, limites, contatos bilaterais, acesso de edifícios, máscara editável e máscara protegida. `work_policy.parceling=URBAN_BLOCKS_V33` habilita parcelas multicélula e morfologias, conservando o motor V3.2 e a semântica abstrata U02. Nenhum novo gate humano para o esboço.
+5. `IMAGE_RECIPE/IMAGE_AUDIT`: receita por `--recipe-unit WU-...` com `--reference`, `--design-root`, `--out`; gerar fora do Python pela ferramenta nativa, materializar pixels, registrar comprovante SHA+work unit e PNG de máscara; validar por `--audit-unit`, `--unit-receipt`, `--unit-mask`, `--visual-review`, `--ledger`. Reparo de unidade afetada até três tentativas; não autorizar passando por cima de FAIL.
+6. `COMPOSITION`: `--execute` + `--assets` + `--image-receipts` + `--reference` + `--before` quando houver release aprovada. Cada receipt precisa corresponder exatamente aos bytes de PNG/máscara usados pelo compositor. Uma máscara de refinamento (`--editable-mask`) permite trocar arte anterior **somente** dentro da área aprovada. Conectores/rios/trilhos protegidos não mudam.
+7. `OWNER_REVIEW`: comparador incremental gera pasta `comparison.html`, `viewer-assets/`, visão geral ANTES e DEPOIS e `novydres-comparison.zip`, com zoom real e leitura de tiles visíveis; oferecer o ZIP/PNGs diretamente no chat, nunca pedir download via GitHub.
+8. `PERSISTENCE`: somente depois de aceite final expresso, commit Git CAS com verificação remota + upload/readback privado; não atualizar cânone por inferência. Unidade fechada só com critérios de `guide.md`.
+
+## Limitações explicitamente bloqueantes
+Esta candidata ainda não tem prova de transferência real de imagem nativa ChatGPT ao compositor, nem testes end-to-end Sulfok + Torre Ventura com geometria e assets reais. Teste de fixture de Python e um recibo JSON alegando uso de ferramenta **não** são evidência suficiente. A pipeline deve parar onde faltar um recurso, sem fazer publicidade de PASS integral.
+
+---
+
+## Histórico V3.2 abaixo (gates de esboço e base64 revogados na V3.3)
+
 # Mapwork V3.2 — execução única, validação obrigatória e retomada
 
 **Status em 20/11/2026:** infraestrutura executável implementada em branch candidata; **não é uma cidade gerada e não é cânone**. O fluxo falha fechado quando faltam dados reais, bytes, decisões ou conectores. A validação da fixture só prova o motor; não prova a cidade real.

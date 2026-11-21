@@ -1,0 +1,53 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_WEB_RESUME_CHECKPOINT_1",
+  "recorded_on": "2026-11-20",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "mapwork-v3/v33-agent-pipeline-20261120",
+  "reference": {
+    "drive_id": "1PrfWEcD07Gz5eX5r2qKGaRlecixVKh6r",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "width": 1448,
+    "height": 1086
+  },
+  "phase": "INFRASTRUCTURE_ACCEPTANCE",
+  "status": "BLOCKED",
+  "stage": "INF-01",
+  "accepted_stages": [],
+  "official_acceptance_ledger": "zones/cidade-velha/acceptance-ledger-v33.json",
+  "official_attempts": 0,
+  "diagnostic_archive_drive_id": "1sbrl9utMPZFDVFe5nx0_dw2PYYhD3tcd",
+  "evidence_file": "zones/cidade-velha/web-execution-validation-v33-20261120.json",
+  "constraints": [
+    "No real accepted INF-01 road network; INF-02..INF-07 pending",
+    "Lots/POIs/image generation forbidden while infrastructure incomplete",
+    "Native image bytes to compositor not proven",
+    "U02 and canon unchanged; no artistic generation"
+  ],
+  "next_action": "RETRACE_KINGSWELL_REAL_ROADS_REPAIR_INF01_AND_RUN_OFFICIAL_PIPELINE",
+  "instructions": "WEB_RUNTIME_V33.md",
+  "allows_lots": false,
+  "allows_pois": false,
+  "publication_authorized": false,
+  "canonical_state_changed": false,
+  "owner_decision_required_now": false,
+  "source_head_last_revalidated": "4cf6967c5b94ba1a251f521c2deea47ac4c4282c",
+  "last_diag": "zones/cidade-velha/inf01-r3-web-diagnostic-20261120.json",
+  "last_diagnostic_result": "FAIL_REPAIR_UNVERIFIED_CANDIDATE",
+  "last_diagnostic_geometry_sha256": "1b49bb5734a99a024f2cbdc803e869d38303402ed437b789c18bebc441d35f41",
+  "last_diagnostic_preview_sha256": "d68903318eb844191c26323188740c07702cfc06c55800b887244155d874796a",
+  "source_rehydration": "PASS_SCOPED_91_SOURCE_BLOBS_MATCH_CURRENT_HEAD",
+  "python_pipeline_exec": "EXECUTED_REAL",
+  "python_pipeline_phase": "INFRASTRUCTURE_ACCEPTANCE",
+  "driver_artifacts": {
+    "diagnostic_zip_drive_id": "18-EDUa73YRXT8MPikyorFgUfm9DILa5e",
+    "preview_drive_id": "1mXJL5wsKRaLOzI7VPJArgCGsKiHfyfXm",
+    "mask_drive_id": "1XLm4Ymdz2vKmPg4e6vcH9KzsAkRuoXoH",
+    "drive_readback_sha_verified": true
+  },
+  "regression": {
+    "pytest_passed": 169,
+    "pytest_skipped": 1,
+    "pytest_failed": 1,
+    "reason": "Canonical sources outside cached ZIP not wholly materialized; GEO-004.1 in master is_entire_raion false while current test expects true. No fake test PASS."
+  }
+}

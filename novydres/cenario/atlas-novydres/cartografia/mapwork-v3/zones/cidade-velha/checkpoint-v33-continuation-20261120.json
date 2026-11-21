@@ -1,0 +1,189 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_INTEGRAL_AUDIT_CHECKPOINT_1",
+  "recorded_on": "2026-11-20",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "candidate_branch": "mapwork-v3/v33-agent-pipeline-20261120",
+  "master_source_sha": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "recovered_initial_checkpoint": "178f2179f43081d9eb34ac41747567257c390c04",
+  "target": "kingswell",
+  "subject_id": "district-chelsea",
+  "phase": "INFRASTRUCTURE_ACCEPTANCE",
+  "current_execution_outcome": "BLOCKED_CAPABILITY_LOCAL_NETWORK_UNAVAILABLE_GITHUB_CONNECTOR_WORKING",
+  "entrypoint": "scripts/pipeline.py run",
+  "pipeline_invoked_in_this_continuation": false,
+  "reason_pipeline_not_invoked": "Verified local git retrieval failed: could not resolve github.com. GitHub connector reads/writes source but no complete exact-V3.3 checkout was materialized in execution runtime. No GitHub Actions substitution permitted.",
+  "recovered": "original U02 SHA-verified; 55 approved decisions, D56 deferred; five existing sketch POIs; three historical bridges; existing sketch owner approved",
+  "produced": {
+    "decisions_file": "zones/cidade-velha/decisions-v33-20261120.json",
+    "inventory_file": "zones/cidade-velha/inventory-v33-20261120.json",
+    "research_file": "zones/cidade-velha/research-v33-2026-11-20.json",
+    "spatial_audit_file": "zones/cidade-velha/spatial-audit-v33-20261120.json",
+    "real_external_sources_total": 6,
+    "registered_approved_sketch_pois": 5,
+    "newly_authorized_elements": 0,
+    "visual_assets_generated": 0,
+    "masks_generated": 0,
+    "spatial_observations_file": "zones/cidade-velha/spatial-observations-v33-20261120.json",
+    "spatial_road_audit_file": "zones/cidade-velha/spatial-network-audit-v33-20261120.json",
+    "regression_test_file": "tests/test_kingswell_spatial_observations_v33.py"
+  },
+  "audit": {
+    "candidate_polygon_pixels": 272640,
+    "unclassified_pixels": 166755,
+    "overlap_pixels": 7274,
+    "coverage_of_illustrative_sectors_percent": 38.84
+  },
+  "outstanding": [
+    "Full audited global-spatial-v31.json and GIS-backed U02 road/water/rail/metro network missing",
+    "Exact lot-based 100% coverage, per-building designs, legitimate edit masks and neighbor seams missing",
+    "No native image unit receipts or visual reviews; no tiled composition and no final before/after",
+    "Unknown physical access in metres; U02 reference is abstract and cannot be assigned surveyed metre scale without source",
+    "Unresolved metro route/stop editorial policy; D56 ferry ice operation remains DEFERRED and non-blocking for technical study",
+    "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
+    "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
+  ],
+  "next_action": "OBTAIN_EXECUTOR_WITH_GITHUB_REACHABILITY_THEN_RUN_OFFICIAL_PIPELINE_INF01",
+  "canon_unchanged": true,
+  "master_unchanged": true,
+  "owner_final_approval": false,
+  "human_visual_review_not_requested": true,
+  "handoff_allowed": false,
+  "note": "Acceptance files and source gate were modified through GitHub connector; no local V3.3 source checkout or end-to-end Python test was possible in this session, so no PASS claimed.",
+  "next_decision_id": null,
+  "open_editorial_proposals": 0,
+  "metro_decision": {
+    "proposal_id": "KW-PROP-006",
+    "status": "APPROVED",
+    "choice": "A",
+    "meaning": "O metrô atravessa os setores de expansão, contornando o núcleo histórico termal",
+    "constraints_file": "zones/cidade-velha/spatial-plan.json",
+    "no_new_stations": true,
+    "no_new_rail_links": true,
+    "no_line_geometry": true,
+    "decision_commit": "699acba49000b5a80f5d9d88c6e58ca4761f326a",
+    "plan_commit": "e79604dff385d91cf27dbe2cef7044b68e36d068"
+  },
+  "master_latest_readback": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+  "master_unchanged_since_last_checkpoint": true,
+  "metro_spatial_audit": {
+    "thermal_core_pixels": 12111,
+    "thermal_worker_overlap_pixels": 2079,
+    "eligible_conceptual_sector_union_excluding_core_pixels": 93774,
+    "conceptual_four_neighbor_components": 2,
+    "actual_metro_route_verified": false,
+    "metro_tunnel_or_station_created": false,
+    "source_plan": "zones/cidade-velha/spatial-plan.json"
+  },
+  "bridge_visual_screening": {
+    "reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "inspected_ids": [
+      "KW-B01",
+      "KW-B02",
+      "KW-B03"
+    ],
+    "outcome": "PRELIMINARY_VISUAL_SITING_ONLY",
+    "network_topology_pass": false
+  },
+  "road_network_progress": {
+    "candidate_road_corridors": 22,
+    "pending_at_grade_or_grade_separated_road_crossings": 24,
+    "unknown_existing_road_water_crossing_points": 4,
+    "historical_bridge_span_crosses_river": 3,
+    "bridge_approach_endpoints_in_range": 6,
+    "tests_locally_passed": 9,
+    "image_source_sha256_checked": true,
+    "final_spatial_manifest_generated": false,
+    "first_pass_only": true,
+    "visual_review": {
+      "path": "zones/cidade-velha/spatial-visual-review-v33-20261120.json",
+      "blob_sha": "f246b44b8d9c7a2e9e060f7b81e7df721fe9e4ce",
+      "result": "FAIL_FOR_TOPOLOGY_PROMOTION",
+      "crossings_inspected": 24,
+      "grades_verified": 0,
+      "road_alignments_gis_certified": 0
+    },
+    "previous_first_pass_retained": true
+  },
+  "road_network_r2": {
+    "file": "zones/cidade-velha/road-network-candidate-v33-r2.json",
+    "source": "zones/cidade-velha/road-network-v33-r2-source.vct",
+    "git_blob_sha": "022586c5f1d3b128762171a28c718bfad82845f8",
+    "source_blob_sha": "3024c55e97b5e0b8f3a5dd2d594e330b02397d58",
+    "status": "NON_CANON_SPATIAL_CANDIDATE",
+    "candidate_road_corridors": 98,
+    "locally_noded_intersection_hypotheses": 171,
+    "endpoint_snaps_under_2px": 47,
+    "grade_unresolved_arterial_crossings": 39,
+    "historical_river_crossings_only": 3,
+    "local_graph_components": 6,
+    "POI_point_radius_3px_conflicts": 0,
+    "full_gis_validation_passed": false,
+    "art_generation_authorized": false
+  },
+  "infrastructure_acceptance": {
+    "contract": "docs/infra-acceptance-v33.md",
+    "contract_sha256": "6d43248f0ab8db3edfeb2d57276371de3538a9aca70d81eaa87ab5a24d02b1e9",
+    "validator": "scripts/v33_acceptance.py",
+    "integrated_in": "scripts/v33_flow.py via scripts/pipeline.py run",
+    "ledger": "zones/cidade-velha/acceptance-ledger-v33.json",
+    "planned_stages": [
+      "INF-01",
+      "INF-02",
+      "INF-03",
+      "INF-04",
+      "INF-05",
+      "INF-06",
+      "INF-07",
+      "URB-08"
+    ],
+    "criterion_count": 32,
+    "passing_stages": 0,
+    "current_stage": "INF-01",
+    "current_action": "GENERATE_AND_AUDIT_CANDIDATE",
+    "preserve_prior_R1_R2_as_rejected": true,
+    "owner_technical_approval_required": false,
+    "model_visual_audit_completed_for_new_criteria": false,
+    "completed_end_to_end_workflow_test": false,
+    "generation_of_lots_or_pois_authorized": false
+  },
+  "latest_independent_diagnostic": {
+    "path": "zones/cidade-velha/infra-inf01-independent-recovery-20261120.json",
+    "source_head_examined": "020d1f8bd69c7b6937625751d4326d9305420c7d",
+    "reference_sha256_rechecked": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "reference_dimensions_px": [
+      1448,
+      1086
+    ],
+    "r2_overlay_sha256_checked": "1fd57cee740a5d34dc87c7fa9aaf4ce723fdf414a59e352852d6b4ebb4158f3a",
+    "r2_overlay_dimensions_px": [
+      1478,
+      716
+    ],
+    "inf01_four_criteria": "FAIL_DIAGNOSTIC_ONLY",
+    "acceptance_ledger_unchanged": true,
+    "official_pipeline_run": false,
+    "new_candidate_created": false,
+    "owner_decision_required": false,
+    "code_execution_blocker": "GitHub network unavailable in local execution runtime; independent repository tool has no Python runner"
+  },
+  "last_connection_retry": {
+    "date": "2026-11-20",
+    "github_connector": "CONNECTED_AND_READ_VERIFIED",
+    "candidate_branch_head_before_retry": "fc19e14578e1e492d1227b02ea7070be3af804ef",
+    "canonical_master_head": "cd33c18e90d190e625939e9bd8808b12af3c8315",
+    "local_git": "BLOCKED_BY_RUNTIME_NETWORK",
+    "network_evidence": [
+      "getent hosts github.com did not resolve",
+      "curl https://github.com failed: Could not resolve host",
+      "git ls-remote failed: Could not resolve host github.com",
+      "Direct HTTPS to known IP addresses was blocked"
+    ],
+    "github_platform_status": "All Systems Operational on official GitHub Status (external informational check, does not restore local network)",
+    "pipeline_invoked": false,
+    "pipeline_reason": "The complete official V3.3 source tree cannot be checked out in this local runtime; GitHub connector is read/write but cannot run scripts/pipeline.py.",
+    "next_action": "OBTAIN_EXECUTOR_WITH_GITHUB_REACHABILITY_THEN_RUN_OFFICIAL_PIPELINE_INF01",
+    "changes_to_canon": false,
+    "acceptance_ledger_unchanged": true,
+    "owner_decision_required": false
+  }
+}
