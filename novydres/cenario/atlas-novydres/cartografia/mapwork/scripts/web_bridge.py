@@ -176,7 +176,9 @@ def run_web(*, argv, file_manifest, root, source_commit):
     # points into the current checkout, unless a previous invocation stamped
     # the exact source SHA-256 after verified execution.
     for name, loaded in tuple(sys.modules.items()):
-        if name not in names:
+        if name not in names or name == "web_bridge":
+            # The adapter is the bootstrap module; its on-disk bytes are
+            # verified above but it is not imported by canonical pipeline.
             continue
         rel = "scripts/" + name + ".py"
         origin = getattr(loaded, "__file__", None)
