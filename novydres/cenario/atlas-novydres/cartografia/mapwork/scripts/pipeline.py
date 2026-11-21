@@ -856,6 +856,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--host-head",help="initial branch HEAD pinned before first journal write")
     p.add_argument("--host-journal-path",help="noncanonical sessions/...json Git tree path")
     p.add_argument("--host-exchange",help="materialized provider GET and host operation response JSON")
+    p.add_argument("--host-recovery",help="fresh GitHub journal and provider GET evidence for cold resume")
     p.add_argument("--max-operations",type=int,default=16,
                    help="bounded operations this invocation; never an acceptance shortcut")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed  request JSON")
@@ -927,6 +928,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                     source_commit=args.source_commit, branch=args.host_branch,
                     expected_head=args.host_head, journal_repo_path=args.host_journal_path,
                     exchange_path=args.host_exchange,
+                    recovery_path=args.host_recovery,
                     apply_arguments=apply_arguments)
                 print(json.dumps({
                     "status":"BLOCKED",
