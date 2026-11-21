@@ -566,6 +566,23 @@ def run(args):
     # grounded image inputs and perform the deterministic, mask-restricted merge.
     # Neither stage can declare visual PASS, edit a canonical source or advance
     # the existing operation journal on its own.
+    if getattr(args, "native_repair_mask_output", None):
+        import native_generation as native
+        core.fail(getattr(args, "native_approved_mask", None) and
+                  getattr(args, "native_defects_file", None),
+                  "localized repair requires an approved mask and observed defects")
+        defects = core.load(args.native_defects_file)
+        core.fail(isinstance(defects, list), "repair defects must be a concrete list")
+        evidence = native.localized_repair_mask(
+            args.native_approved_mask, defects, args.native_repair_mask_output,
+            protected_mask_path=getattr(args, "native_protected_mask", None))
+        return {"schema": SCHEMA, "phase": "LOCAL_REPAIR_MASK",
+                "next_action": "PREPARE_LOCAL_NATIVE_EDIT",
+                "blockers": ["Inspect both sides of each affected interface; "
+                             "use the current composed image as the next reference. "
+                             "No new pixels may be authorized outside this mask."],
+                "audit": evidence, "publication_authorized": False,
+                "canonical_state_changed": False}
     if getattr(args, "native_preparation_output", None):
         import native_generation as native
         core.fail(getattr(args, "native_input_reference", None) and
@@ -952,6 +969,9 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--native-crop-manifest",help="verified JSON returned by local native input preparation")
     p.add_argument("--native-composite-output",help="write mask-recomposed candidate PNG, never canon")
     p.add_argument("--native-protected-mask",help="locked accepted pixels that must not intersect edit mask")
+    p.add_argument("--native-approved-mask",help="existing owner/canon-approved write authority")
+    p.add_argument("--native-defects-file",help="agent-inspected defect records, with precise boxes")
+    p.add_argument("--native-repair-mask-output",help="new localized correction mask, not a widened permission")
     p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
     p.add_argument("--visual-review",help="hash-bound agent inspection of unit image/mask and face-neighbors")
     p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
@@ -976,6 +996,8 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                         "native_input_reference", "native_preparation_output",
                         "native_candidate", "native_crop_manifest",
                         "native_composite_output", "native_protected_mask",
+                        "native_approved_mask", "native_defects_file",
+                        "native_repair_mask_output",
                        "image_receipts", "ledger", "strategy_id", "replan_evidence",
                        "request_id", "improvement_evidence", "assets",
                        "macro_review", "design_root", "design_unit",
