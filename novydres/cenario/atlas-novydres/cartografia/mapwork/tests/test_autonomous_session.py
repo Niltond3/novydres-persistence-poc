@@ -175,7 +175,7 @@ def test_pipeline_autonomous_mode_refuses_missing_connector_hooks(capsys, tmp_pa
                           "--district", "sulfok", "--session-key", "s1",
                           "--autonomous-journal", str(tmp_path / "log.json")])
     assert code == 2
-    assert "needs real host tools" in capsys.readouterr().err
+    assert "requires pinned source" in capsys.readouterr().err
 
 
 def test_host_cannot_inject_pipeline_canonical_authority(tmp_path, monkeypatch):

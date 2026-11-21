@@ -217,6 +217,16 @@ def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
     old_bytecode = sys.dont_write_bytecode
     sys.path.insert(0, str(module_dir))
     sys.dont_write_bytecode = True
+    # The model-facing exchange has no Python connector callbacks. Bind its
+    # source pin to the same Git commit whose blobs were independently checked.
+    args_list = list(argv)
+    if "--autonomous-journal" in args_list:
+        if "--source-commit" in args_list:
+            pos = args_list.index("--source-commit")
+            if pos+1 >= len(args_list) or args_list[pos+1] != source_commit:
+                raise WebBridgeError("host source commit differs from verified tree")
+        else:
+            args_list += ["--source-commit", source_commit]
     output, errors = io.StringIO(), io.StringIO()
     try:
         spec = importlib.util.spec_from_file_location("pipeline", module_dir / "pipeline.py")
@@ -224,7 +234,7 @@ def run_web(*, argv, file_manifest, root, source_commit, remote_blobs,
         sys.modules["pipeline"] = pipeline
         spec.loader.exec_module(pipeline)
         with contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
-            exit_code = pipeline.main(["run", *list(argv)],
+            exit_code = pipeline.main(["run", *args_list],
                                       action_executor=action_executor,
                                       remote_readback=remote_readback,
                                       journal_sync=journal_sync)

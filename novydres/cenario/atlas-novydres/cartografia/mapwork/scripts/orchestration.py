@@ -436,3 +436,233 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
             "completed_operations": completed_this_call,
             "journal_sha256": hashlib.sha256(journal_path.read_bytes()).hexdigest(),
             "publication_authorized": False}
+
+
+# Tool handoff for ChatGPT Web. Python NEVER invokes a connector: a persisted
+# request is returned to the host, whose next invocation supplies materialized
+# provider GETs. This is a paused transport for the same pipeline, not a
+# second state engine. Receipts do not authorize editorial or INF acceptance.
+def _git_blob(data):
+    return hashlib.sha1(b"blob " + str(len(data)).encode() +
+                        b"\0" + data).hexdigest()
+
+
+def _host_sync_proof(path, proof, *, branch, lease_head):
+    """Verify materialized independent journal GET and the Git CAS lineage.
+
+    The Web host must obtain ref/commit/tree from connector GETs independently.
+    Python can verify consistency of their recorded content, but cannot
+    authenticate the origin of a claimed host tool call.
+    """
+    if not isinstance(proof, dict):
+        raise ValueError("independent GitHub journal sync evidence required")
+    remote_file = proof.get("readback_path")
+    if not isinstance(remote_file, str) or not remote_file:
+        raise ValueError("journal readback file required")
+    remote_path = Path(remote_file)
+    if not remote_path.is_file() or remote_path.resolve() == Path(path).resolve():
+        raise ValueError("journal readback must be separately materialized")
+    data = Path(path).read_bytes()
+    if remote_path.read_bytes() != data:
+        raise ValueError("journal readback bytes differ")
+    blob = _git_blob(data)
+    head = proof.get("head")
+    if (proof.get("branch") != branch or
+            proof.get("lease_head") != lease_head or
+            not HEX40.fullmatch(str(head or "")) or head == lease_head or
+            proof.get("ref_head") != head or
+            proof.get("commit_sha") != head or
+            proof.get("commit_parent") != lease_head or
+            proof.get("tree_blob_sha") != blob or
+            proof.get("blob_sha") != blob):
+        raise ValueError("GitHub journal CAS/head/tree/blob evidence mismatch")
+    return head
+
+
+def _host_artifacts(operation, receipt, previous):
+    """Byte-level proof from host-materialized provider GETs, not upload claims."""
+    if not isinstance(receipt, dict) or not isinstance(receipt.get("artifacts"), list):
+        raise ValueError("material host operation receipt required")
+    reads = {}
+    for artifact in receipt["artifacts"]:
+        if not isinstance(artifact, dict):
+            raise ValueError("invalid host artifact")
+        path, readback = artifact.get("path"), artifact.get("readback_path")
+        if not isinstance(path, str) or not isinstance(readback, str):
+            raise ValueError("local and provider GET paths required")
+        if not Path(readback).is_file() or Path(path).resolve() == Path(readback).resolve():
+            raise ValueError("independent provider readback file required")
+        key = (artifact.get("provider"), artifact.get("remote_id"))
+        if key in reads:
+            raise ValueError("duplicate remote artifact receipt")
+        reads[key] = Path(readback).read_bytes()
+        if key[0] == "github" and (key[1] != artifact.get("blob_sha")
+                                   or key[1] != _git_blob(reads[key])):
+            raise ValueError("GitHub remote artifact must use its verified blob SHA")
+    def readback(provider, remote_id):
+        if (provider, remote_id) not in reads:
+            raise ValueError("provider GET missing for artifact")
+        return reads[(provider, remote_id)]
+    checked = _verify_operation(operation, receipt, readback, previous)
+    if any(a.get("kind") == "image" for a in checked):
+        reviews = [a for a in checked if a.get("kind") == "visual-review"]
+        if not reviews:
+            raise ValueError("generated PNG needs a separate hash-bound visual inspection")
+        image_hashes = {a["sha256"] for a in checked if a.get("kind") == "image"}
+        if not any(isinstance(report, dict) and
+                   report.get("image_sha256") in image_hashes and
+                   isinstance(report.get("observations"), list) and
+                   len(report["observations"]) >= 4
+                   for a in reviews
+                   for report in [json.loads(Path(a["path"]).read_text(encoding="utf-8"))]):
+            raise ValueError("visual inspection not bound to image and four observations")
+    return checked
+
+
+def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
+                      branch, expected_head, exchange_path=None,
+                      apply_arguments=None):
+    """One connection-free transition per canonical pipeline.py invocation.
+
+    SYNC_PENDING -> execute native host operation -> COMPLETE -> SYNC_COMPLETE
+    -> re-evaluate canonical pipeline. Durable journal synchronization is a
+    prerequisite to dispatch, never a claimed successful action. Every retry
+    retains the same operation_id. No canonical changes are made here.
+    """
+    if (not isinstance(session_key, str) or not session_key or
+            not HEX40.fullmatch(str(source_commit or "")) or
+            not isinstance(branch, str) or not branch or
+            not HEX40.fullmatch(str(expected_head or "")) or
+            not callable(run_once) or not callable(apply_arguments)):
+        raise ValueError("host exchange requires pinned source, branch, head and session")
+    path = Path(journal_path)
+    exchange = json.loads(Path(exchange_path).read_text(encoding="utf-8")) if exchange_path else None
+    if exchange is not None and not isinstance(exchange, dict):
+        raise ValueError("host exchange must be an object")
+    if path.is_file():
+        session = json.loads(path.read_text(encoding="utf-8"))
+        if (session.get("schema") != AUTONOMY_SCHEMA or
+                session.get("session_key") != session_key or
+                session.get("source_commit") != source_commit or
+                session.get("branch") != branch or
+                session.get("initial_head") != expected_head or
+                session.get("publication_authorized") is not False or
+                not isinstance(session.get("steps"), list)):
+            raise ValueError("host journal authority mismatch")
+        _session_chain(session["steps"])
+    else:
+        if exchange is not None:
+            raise ValueError("no host result without a previously persisted request")
+        session = {"schema": AUTONOMY_SCHEMA, "session_key": session_key,
+                   "source_commit": source_commit, "branch": branch,
+                   "initial_head": expected_head, "steps": [],
+                   "publication_authorized": False}
+    steps = session["steps"]
+    last = steps[-1] if steps else None
+    for item in steps[:-1]:
+        if item.get("status") != "COMPLETED" or not HEX40.fullmatch(
+                str(item.get("pending_head", ""))):
+            raise ValueError("unfinished predecessor or unconfirmed GitHub journal")
+    if last and last["status"] == "PENDING":
+        if exchange is None:
+            return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_PENDING_JOURNAL",
+                    "operation":last,"lease_head":last["lease_head"],
+                    "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
+        if exchange.get("kind") != "COMPLETE_OPERATION" or exchange.get("operation_id") != last["operation_id"]:
+            raise ValueError("pending operation accepts only matching COMPLETE_OPERATION")
+        pending_head = _host_sync_proof(
+            path, exchange.get("pending_sync"), branch=branch,
+            lease_head=last["lease_head"])
+        verified = _host_artifacts(last, exchange.get("result"), steps[:-1])
+        updates = exchange["result"].get("arg_updates", {})
+        if not isinstance(updates, dict):
+            raise ValueError("host argument updates must be an object")
+        # Validate before changing the durable journal or allowing a rerun.
+        apply_arguments(updates, validate_only=True)
+        last.update(status="COMPLETED", artifacts=verified,
+                    arg_updates=updates, pending_head=pending_head,
+                    receipt_sha256=digest({k:v for k,v in exchange["result"].items()
+                                           if k!="artifacts"}))
+        last["entry_sha256"] = digest({k:v for k,v in last.items() if k!="entry_sha256"})
+        atomic_json(path, session)
+        return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
+                "operation_id":last["operation_id"],"lease_head":pending_head,
+                "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
+    if last and last["status"] == "COMPLETED" and not last.get("confirmed_head"):
+        if exchange is None:
+            return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
+                    "operation_id":last["operation_id"],"lease_head":last["pending_head"],
+                    "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
+        if (exchange.get("kind") == "COMPLETE_OPERATION" and
+                exchange.get("operation_id") == last["operation_id"]):
+            # Lost reply after recording completion: do not run the host twice.
+            return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
+                    "operation_id":last["operation_id"],"lease_head":last["pending_head"],
+                    "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
+        if exchange.get("kind") != "ACK_COMPLETE" or exchange.get("operation_id") != last["operation_id"]:
+            raise ValueError("completed operation requires matching ACK_COMPLETE")
+        head = _host_sync_proof(path, exchange.get("completed_sync"),
+                                branch=branch, lease_head=last["pending_head"])
+        # Repeat GET evidence: a stale local upload receipt cannot validate recovery.
+        recovery = exchange.get("recovery_readbacks")
+        if not isinstance(recovery, list) or len(recovery) != len(last["artifacts"]):
+            raise ValueError("fresh provider GETs required for all completed artifacts")
+        remote = {}
+        for item in recovery:
+            if not isinstance(item, dict) or not isinstance(item.get("readback_path"), str):
+                raise ValueError("invalid recovery GET entry")
+            key = (item.get("provider"), item.get("remote_id"))
+            if key in remote or not Path(item["readback_path"]).is_file():
+                raise ValueError("duplicate or missing recovery readback")
+            remote[key] = Path(item["readback_path"]).read_bytes()
+        for artifact in last["artifacts"]:
+            key = (artifact["provider"],artifact["remote_id"])
+            if key not in remote or hashlib.sha256(remote[key]).hexdigest() != artifact["sha256"]:
+                raise ValueError("recovered provider artifact is stale or missing")
+        for entry in steps:
+            if entry["status"] == "COMPLETED":
+                apply_arguments(entry.get("arg_updates", {}), validate_only=False)
+        state = run_once()
+        if (state.get("publication_authorized") is not False or
+                state.get("canonical_state_changed") is not False or
+                not isinstance(state.get("next_action"), str) or
+                digest(state) == last["state_sha256"]):
+            raise ValueError("no verified canonical pipeline progress or unsafe promotion")
+        # Record the new lease in the *next* operation, not the completed
+        # journal. This prevents self-referential journal hashing.
+        next_head = head
+    else:
+        if exchange is not None:
+            raise ValueError("unexpected host response without an outstanding request")
+        if last:
+            raise ValueError("invalid journal step status")
+        state = run_once()
+        next_head = expected_head
+    if (not isinstance(state, dict) or
+            state.get("publication_authorized") is not False or
+            state.get("canonical_state_changed") is not False):
+        raise ValueError("unsafe canonical pipeline state")
+    directive = execution_directive(state)
+    if (directive["classification"] in
+            ("EDITORIAL_DECISION","TOOL_UNAVAILABLE","CHECKPOINT") or
+            state["next_action"] == "SHOW_COMPLETE_BEFORE_AFTER"):
+        return {"status":"HALTED_FOR_OWNER_OR_CAPABILITY",
+                "next_action":state["next_action"],"state":state,
+                "publication_authorized":False}
+    if state["next_action"] == "ADVANCE_AFTER_ACCEPTANCE" and not directive["may_promote_stage"]:
+        raise ValueError("unverified stage promotion refused")
+    previous = steps[-1] if steps else None
+    operation = {
+        "operation_id":digest({"session":session_key,"action":state["next_action"],
+                               "state_sha256":digest(state),
+                               "parent":previous["entry_sha256"] if previous else None}),
+        "action":state["next_action"],"state_sha256":digest(state),
+        "request_state":state,"status":"PENDING","artifacts":[],
+        "lease_head":next_head,
+        "parent_sha256":previous["entry_sha256"] if previous else None}
+    operation["entry_sha256"] = digest({k:v for k,v in operation.items() if k!="entry_sha256"})
+    steps.append(operation)
+    atomic_json(path, session)
+    return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_PENDING_JOURNAL",
+            "operation":operation,"lease_head":next_head,
+            "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}

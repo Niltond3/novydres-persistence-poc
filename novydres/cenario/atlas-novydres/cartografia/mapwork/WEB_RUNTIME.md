@@ -19,13 +19,14 @@ urbanísticas próprias.
    devem estar presentes e verificados. Recusar módulos Python pré-carregados
    sem selo da mesma revisão e ZIP com arquivo faltante, extra ou duplicado.
    O Python não tem conexão direta ao GitHub/Drive; ações remotas cabem ao agente.
-4. Após cada ação, gravar/consultar recibos pelo conector e confirmar SHA
-   por download. Para Git, usar escrita CAS com HEAD esperado, reler commit
-   e blob e jamais descartar mudanças concorrentes. Drive armazena imagens;
-   GitHub mantém links, hashes, estados, tentativas e checkpoints.
-5. Em `FAIL`, executar `next_action` e repetir a entrada na mesma sessão;
-   em interrupção operacional, persistir checkpoint e restaurar em novo chat.
-   Não transferir erro técnico corrigível ao proprietário.
+4. Autonomia Web: passar --host-branch e --host-head inicial, deixando
+   web_bridge injetar --source-commit. Seguir SYNC_PENDING_JOURNAL,
+   COMPLETE_OPERATION, SYNC_COMPLETED_JOURNAL e ACK_COMPLETE, conforme
+   PIPELINE.md. O host usa o conector GitHub com CAS e GET de ref, commit,
+   tree e blob; imagens passam pelo Google Drive e GET de bytes.
+5. Na retomada reler journal GitHub, operação original e artefatos por
+   GET independente. Não reiniciar uma operação com novo ID. FAIL corrigível
+   exige correção material e reentrada na mesma pipeline; sem canonização.
 
 **Limite verificável:** SHA prova identidade dos bytes; um parecer vinculado
 prova documentação de inspeção, não a veracidade da avaliação semântica da LLM.

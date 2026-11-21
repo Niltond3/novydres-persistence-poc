@@ -851,6 +851,10 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--request",help="unresolved regional request supplied to semantic host")
     p.add_argument("--autonomous-journal",help="durable GitHub-synchronized operations journal")
     p.add_argument("--session-key",help="immutable session identity bound to request and source")
+    p.add_argument("--source-commit",help="GitHub implementation snapshot verified by Web bridge")
+    p.add_argument("--host-branch",help="existing GitHub branch used for CAS journal")
+    p.add_argument("--host-head",help="initial branch HEAD pinned before first journal write")
+    p.add_argument("--host-exchange",help="materialized provider GET and host operation response JSON")
     p.add_argument("--max-operations",type=int,default=16,
                    help="bounded operations this invocation; never an acceptance shortcut")
     p.add_argument("--intent",help="agent-resolved and canonical-indexed  request JSON")
@@ -886,9 +890,6 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
 
     try:
         if args.autonomous_journal:
-            if not all(callable(f) for f in
-                       (action_executor, remote_readback, journal_sync)):
-                raise ValueError("autonomous mode needs real host tools, not text-only receipts")
             if not args.session_key or not args.request:
                 raise ValueError("autonomous session must bind immutable key and real user request")
             allowed = {"intent", "capabilities", "research_file", "decisions_file",
@@ -899,13 +900,14 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                        "request_id", "improvement_evidence", "assets",
                        "macro_review", "design_root", "design_unit",
                        "recipe_unit", "audit_unit", "execute", "out"}
-            def apply_arguments(updates):
+            def apply_arguments(updates, validate_only=False):
                 if set(updates) - allowed:
                     raise ValueError("autonomous operation attempted forbidden pipeline arguments")
                 for key, value in updates.items():
                     if value is not None and not isinstance(value, (str, bool)):
                         raise ValueError("invalid autonomous pipeline argument type")
-                    setattr(args, key, value)
+                    if not validate_only:
+                        setattr(args, key, value)
             def agent_snapshot():
                 result = run(args)
                 result["agent_context"] = {
@@ -914,6 +916,25 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                     "scope_index_path": args.scope_index or str(ROOT / "scope-index.json")
                 }
                 return result
+            if not any(f is not None for f in
+                       (action_executor, remote_readback, journal_sync)):
+                session = controller.run_host_exchange(
+                    agent_snapshot, args.autonomous_journal,
+                    session_key=controller.digest({
+                        "key":args.session_key,"request":args.request,
+                        "district":args.district,"zone":args.zone}),
+                    source_commit=args.source_commit, branch=args.host_branch,
+                    expected_head=args.host_head, exchange_path=args.host_exchange,
+                    apply_arguments=apply_arguments)
+                print(json.dumps({
+                    "status":"CHECKPOINT" if session["status"]=="AWAITING_HOST_SYNC" else "BLOCKED",
+                    "next_action":session.get("next_action"),
+                    "retryable":False, "result":session},
+                    ensure_ascii=False,indent=2))
+                return 0
+            if not all(callable(f) for f in
+                       (action_executor, remote_readback, journal_sync)):
+                raise ValueError("autonomous mode needs complete host tool callbacks")
             session = controller.run_autonomous(
                 agent_snapshot, action_executor, remote_readback,
                 journal_sync, args.autonomous_journal,

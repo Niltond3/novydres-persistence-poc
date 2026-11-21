@@ -105,29 +105,53 @@ Se qualquer vínculo divergir, reconciliar e reler GitHub antes de continuar.
 Nunca editar o critério para fazer uma candidata reprovada passar.
 
 
-## Sessão autônoma verificável
+## Sessão autônoma verificável pelo ChatGPT Web
 
-A entrada única aceita `--request`, `--district`, `--session-key` e
-`--autonomous-journal`. No ChatGPT Web, `web_bridge.run_web` repassa ao
-mesmo `pipeline.py:main` três funções externas do host: `action_executor`,
-`remote_readback` e `journal_sync`. Sem todas as três, o modo falha fechado.
-O host interpreta a ação, usa ferramentas reais, inspeciona visualmente,
-produz arquivos e devolve caminhos e IDs; a pipeline repete a avaliação
-determinística depois de receber esses arquivos. Não existe gerador Python
-substituindo a LLM nem repetição de rótulos sem alteração material.
+Entrada única: scripts/pipeline.py run, materializada e verificada por
+web_bridge.run_web. O Python não tem conectores; o ChatGPT executa ações
+reais, em etapas, e reentra na mesma pipeline para validação.
 
-O journal começa com operação `PENDING` persistida em GitHub com CAS
-e GET independente. A execução somente passa a `COMPLETED` depois de
-confrontar o SHA-256 dos arquivos locais contra downloads independentes;
-GitHub exige Git blob SHA, e geração de imagem exige PNG real no Drive.
-Retomadas repetem a mesma `operation_id` e exigem idempotência do host,
-não geram outra candidata com ID distinto. É obrigatório reidratar o
-journal GitHub antes da retomada e preservar a cadeia hash.
-`--max-operations` limita o trabalho por invocação, não libera aprovações.
+Iniciar com --request, --district, --session-key, --autonomous-journal,
+--host-branch, --host-head (HEAD inicial obtido por conector). web_bridge
+injeta --source-commit da árvore Git efetivamente verificada. Preservar
+o HEAD inicial da sessão em retomadas, sem substituí-lo silenciosamente.
 
-O callback `journal_sync` deve confirmar HEAD e lease no GitHub após
-persistir, nunca apenas relatar sucesso. `remote_readback` deve baixar
-bytes do provedor separadamente da resposta de upload. Sem conectores e
-callbacks verdadeiros, a capacidade não pode ser declarada funcional.
-Inspeção visual, protocolo Markdown e `acceptance.evaluate` permanecem gates
-independentes; este controlador não publica cânone.
+1. SYNC_PENDING_JOURNAL: journal local PENDING, operação e lease_head emitidos.
+   Antes de agir, commitar journal em GitHub via CAS e fazer novos GETs
+   de ref, commit, tree e blob por conector. Materializar bytes de
+   download em arquivo separado. Em commit com resposta perdida, reler
+   HEAD/journal antes de tentar novamente.
+2. O ChatGPT Web executa pesquisa, classificação, correção topológica,
+   geração nativa, inspeção visual, replanejamento e persistência com
+   ferramentas conectadas. operation_id é chave estável. Em recuperação,
+   localizar uploads anteriores com a mesma chave, sem duplicar operações.
+3. Reentrar com --host-exchange apontando para JSON de kind
+   COMPLETE_OPERATION, operation_id, pending_sync e result.
+   result.artifacts[] exige path local, readback_path separado vindo de
+   GET do provedor, sha256, provider, remote_id e blob_sha para GitHub.
+   result.arg_updates só pode alterar argumentos permitidos, nunca
+   injetar aprovação editorial ou de infraestrutura. Imagem nova exige
+   PNG verdadeiro em Drive e outro arquivo JSON kind=visual-review,
+   associado ao image_sha256 e quatro observações verificáveis.
+4. SYNC_COMPLETED_JOURNAL: fazer outro commit Git CAS com lease no HEAD
+   confirmado na primeira gravação. Novos GETs independentes, e depois
+   enviar kind ACK_COMPLETE, operation_id, completed_sync e
+   recovery_readbacks[] para todos os artefatos concluídos.
+5. A pipeline só então aplica argumentos e reavalia critérios. Se ainda
+   houver trabalho, emite outro PENDING; caso contrário retorna parada
+   legítima sem promoção do cânone. Reprovação é trabalho a corrigir,
+   não motivo para declarar encerramento.
+
+pending_sync e completed_sync têm os campos branch, lease_head, head,
+ref_head, commit_sha, commit_parent, tree_blob_sha, blob_sha e
+readback_path. O modelo obtém ref_head, commit_sha, commit_parent,
+tree_blob_sha e bytes de chamadas independentes ao conector GitHub;
+o Python verifica coerência de bytes e relações de CAS. Python não
+consegue autenticar criptograficamente a origem de um resultado de
+ferramenta, portanto jamais inventar GET, imagem ou parecer.
+
+O caminho antigo de callbacks é apenas suporte a testes in-process;
+não é necessário para o agente ChatGPT Web. GitHub mantém código,
+contratos e checkpoints; Google Drive guarda imagens e arquivos.
+Nenhum registro da sessão publica cânone nem substitui o aceite
+independente de INF-01 a URB-08.
