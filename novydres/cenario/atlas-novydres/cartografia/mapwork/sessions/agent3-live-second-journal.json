@@ -9,11 +9,26 @@
   "steps": [
     {
       "action": "AGENT_RESOLVE_AND_RECORD_INTENT",
-      "artifacts": [],
-      "entry_sha256": "3bca3dc55bab239c212317ed732c9e2132aa5eeecb5336fd88a04ba0bbe4909e",
+      "arg_updates": {
+        "intent": "/mnt/data/agent3-live-second-intent.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "6e3dfe49963ffb7e5eca628ee99a576aceda505d",
+          "kind": "intent",
+          "path": "/mnt/data/agent3-live-second-intent.json",
+          "provider": "github",
+          "remote_id": "6e3dfe49963ffb7e5eca628ee99a576aceda505d",
+          "sha256": "767f45ac12fb75fd63a78e61534dc426e9e8186512ef88906bf34b1613abe55a"
+        }
+      ],
+      "entry_sha256": "1ae2514295e1ab999b4188fb8919865a9fbf5f6fc98246935e112872a3b876c7",
       "lease_head": "7f49427f5d84086400ed732cb7b586742d653c9d",
+      "operation_head": "9df0c561c2b14e883b39b22eb9753fb308591fc5",
       "operation_id": "4f7bba55f08686e5fe4d46eba117a96d233ca0740fcb449eff379affac94805b",
       "parent_sha256": null,
+      "pending_head": "b0c554a4ee57b9f8fe19b422c12842f28a0135c3",
+      "receipt_sha256": "56d9b6c157a78cdaae069752a063aa754c0e0e3dbff16247686491cefeb43a96",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -48,7 +63,7 @@
         "target": null
       },
       "state_sha256": "3176f80c042488f8126ca8ab766391437a54092046fb4691b18abb53291a796c",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
