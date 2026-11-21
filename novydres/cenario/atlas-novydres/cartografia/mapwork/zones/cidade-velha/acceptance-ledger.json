@@ -77,6 +77,61 @@
       "finding": "Cruzamento sem tipo KW2-W01 / KW2-W13; ausência de conexão e níveis certificados",
       "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE",
       "origin_blob_sha": "af4afc5dd2625f9f7892837071381ac90e76cbf4"
+    },
+    {
+      "stage": "INF-01",
+      "status": "FAIL",
+      "official_attempt": false,
+      "authority": "NONCANON_DIAGNOSTIC_ONLY",
+      "source_reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+      "zone_mask_sha256": "6e7e4430ba95380b2e0d817e3bfbe26f6dd67defe428160344edc0308533b664",
+      "artifact_bundle": {
+        "provider": "drive",
+        "id": "1K6rVM8iEyYNL7peFzpeKxqAQZ1yXSMM6",
+        "sha256": "be9e4628500ceffbf02b0533c1856f9825dde2ec3012b2614b174584ebc3f936"
+      },
+      "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE",
+      "u02_untouched": true,
+      "id": "R4",
+      "preview": {
+        "provider": "drive",
+        "id": "1EeQ7UFxjgUHoeLhyrzCmI5wLOcv4GthS",
+        "sha256": "e2693a34560e660141faeec591f1e83d989bc332f5da4d0d21c68602dd49a6a0"
+      },
+      "geometry_sha256": "242ed4e6687470cbdc575eaf80dfd559021ec44c68f15de04739b279af7896a1",
+      "corrected_junctions": [
+        "KW2-J-W01-W13"
+      ],
+      "remaining_untyped_crossings": 218,
+      "finding": "Segmentos viarios efetivamente divididos no cruzamento W01/W13; 218 pares ainda sem tipagem, limite territorial ainda nao aprovado"
+    },
+    {
+      "stage": "INF-01",
+      "status": "FAIL",
+      "official_attempt": false,
+      "authority": "NONCANON_DIAGNOSTIC_ONLY",
+      "source_reference_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+      "zone_mask_sha256": "6e7e4430ba95380b2e0d817e3bfbe26f6dd67defe428160344edc0308533b664",
+      "artifact_bundle": {
+        "provider": "drive",
+        "id": "1K6rVM8iEyYNL7peFzpeKxqAQZ1yXSMM6",
+        "sha256": "be9e4628500ceffbf02b0533c1856f9825dde2ec3012b2614b174584ebc3f936"
+      },
+      "next_action": "REPAIR_DIAGNOSTIC_AND_REGENERATE",
+      "u02_untouched": true,
+      "id": "R5",
+      "preview": {
+        "provider": "drive",
+        "id": "1k4eOJy032J8y21Ri-hP4NbFZg8fDvCOv",
+        "sha256": "b43a4b7e4735da0e6a12f4e9b308c25edf557668a5ff0ae6a7678f8089dd6fa6"
+      },
+      "geometry_sha256": "e3636f311720061346332cf57058ed22732e168466f56dc31c3d9e6c89b10e93",
+      "corrected_junctions": [
+        "KW2-J-W01-W13",
+        "KW2-J-W01-W14"
+      ],
+      "remaining_untyped_crossings": 217,
+      "finding": "Novo ciclo de reparo e reauditoria geometrica no cruzamento W01/W14; remanescem 217 cruzamentos sem tipagem e limite territorial provisório"
     }
   ],
   "allow_lot_generation": false,
