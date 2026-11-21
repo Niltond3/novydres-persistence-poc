@@ -562,6 +562,49 @@ def verify_composition_contract(composition,zones,cfg,base,assets,before,protect
 
 def run(args):
     """One entrypoint: classified topology candidate repair or verified orchestration."""
+    # The host owns the actual native tool call. These two stages only prepare
+    # grounded image inputs and perform the deterministic, mask-restricted merge.
+    # Neither stage can declare visual PASS, edit a canonical source or advance
+    # the existing operation journal on its own.
+    if getattr(args, "native_preparation_output", None):
+        import native_generation as native
+        core.fail(getattr(args, "native_input_reference", None) and
+                  getattr(args, "unit_mask", None),
+                  "native input preparation requires actual reference and mask PNGs")
+        prepared = native.prepare_local_edit(
+            args.native_input_reference, args.unit_mask, args.native_preparation_output)
+        return {"schema": SCHEMA, "phase": "NATIVE_INPUT_HANDOFF",
+                "next_action": "HOST_ATTACH_VERIFIED_VISUAL_INPUTS",
+                "blockers": ["Attach the real reference crop and mask crop to the native "
+                             "image tool. A Drive URL, SHA or tool-output preview is not "
+                             "a visual attachment. Record a real missing-capability blocker."],
+                "audit": prepared, "publication_authorized": False,
+                "canonical_state_changed": False}
+    if getattr(args, "native_composite_output", None):
+        import native_generation as native
+        core.fail(getattr(args, "native_input_reference", None) and
+                  getattr(args, "unit_mask", None) and
+                  getattr(args, "native_candidate", None),
+                  "native composition needs real reference, mask and candidate bytes")
+        manifest = None
+        if getattr(args, "native_crop_manifest", None):
+            manifest = core.load(args.native_crop_manifest)
+            core.fail(manifest.get("reference_sha256") ==
+                      fingerprint(args.native_input_reference) and
+                      manifest.get("mask_sha256") == fingerprint(args.unit_mask),
+                      "crop manifest is stale or not bound to current visual inputs")
+        output = native.compose_masked(
+            args.native_input_reference, args.unit_mask,
+            args.native_candidate, args.native_composite_output,
+            crop_bbox=manifest["bbox"] if manifest else None,
+            protected_mask_path=getattr(args, "native_protected_mask", None))
+        return {"schema": SCHEMA, "phase": "NATIVE_MASKED_COMPOSITION",
+                "next_action": "AGENT_INSPECT_RECOMPOSED_CANDIDATE",
+                "blockers": ["Agent must inspect the actual composed PNG and both seam "
+                             "sides; then persist independent Drive readbacks and "
+                             "record the attempt in the original journal."],
+                "audit": output, "publication_authorized": False,
+                "canonical_state_changed": False}
     if getattr(args, "synthetic_trial", None) and getattr(args, "topology_source", None):
         synthetic_trial.synthetic_contract(args.synthetic_trial, args)
         if getattr(args, "topology_out", None):
@@ -903,6 +946,12 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--audit-unit",help="audit native asset materialization and mask per unit")
     p.add_argument("--unit-receipt",help="one actual generated image receipt")
     p.add_argument("--native-handoff",help="verified reference/mask input and native edit tool dispatch evidence")
+    p.add_argument("--native-input-reference",help="materialized full-resolution reference PNG")
+    p.add_argument("--native-preparation-output",help="directory for native reference/mask crop handoff")
+    p.add_argument("--native-candidate",help="native candidate PNG bytes downloaded from Drive")
+    p.add_argument("--native-crop-manifest",help="verified JSON returned by local native input preparation")
+    p.add_argument("--native-composite-output",help="write mask-recomposed candidate PNG, never canon")
+    p.add_argument("--native-protected-mask",help="locked accepted pixels that must not intersect edit mask")
     p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
     p.add_argument("--visual-review",help="hash-bound agent inspection of unit image/mask and face-neighbors")
     p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
@@ -924,6 +973,9 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
                        "inventory_file", "record_attempt", "reference", "topology_source",
                        "topology_classifications", "topology_out", "topology_prior",
                        "spatial", "unit_receipt", "unit_mask", "native_handoff", "visual_review",
+                        "native_input_reference", "native_preparation_output",
+                        "native_candidate", "native_crop_manifest",
+                        "native_composite_output", "native_protected_mask",
                        "image_receipts", "ledger", "strategy_id", "replan_evidence",
                        "request_id", "improvement_evidence", "assets",
                        "macro_review", "design_root", "design_unit",
