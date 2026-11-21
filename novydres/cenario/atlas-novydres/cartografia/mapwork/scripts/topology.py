@@ -11,6 +11,8 @@ import json
 import math
 from pathlib import Path
 
+from jsonschema import Draft202012Validator
+
 EPS = 1e-7
 RELATIONS = {"at_grade", "grade_separated", "no_connection"}
 
@@ -254,7 +256,7 @@ def _segment(edge, cuts, node_for, original_nodes):
     return parts
 
 
-def reconcile(data, classifications, *, protected_edges=()):
+def reconcile(data, classifications, *, protected_edges=(), protected_nodes=()):
     """Return (candidate, diagnostic), never an acceptance PASS.
 
     UNRESOLVED/missing entries are individually reported and cannot be promoted.
@@ -264,6 +266,10 @@ def reconcile(data, classifications, *, protected_edges=()):
     require(isinstance(classifications, dict) and
             classifications.get("schema") == "NOVYDRES_MAPWORK_TOPOLOGY_CLASSIFICATIONS",
             "semantic classification contract missing")
+    schema=json.loads((Path(__file__).resolve().parents[1]/
+                      "schemas/topology-classifications.schema.json").read_text(encoding="utf-8"))
+    errors=list(Draft202012Validator(schema).iter_errors(classifications))
+    require(not errors,"semantic classification schema: "+("; ".join(e.message for e in errors[:3])))
     reference_sha = data.get("source_sha256")
     require(classifications.get("reference_sha256") == reference_sha,
             "classifications refer to another U02")
@@ -272,7 +278,7 @@ def reconcile(data, classifications, *, protected_edges=()):
         original = network["topology_source"]
         stripped = {k:v for k,v in original.items() if k not in ("topology_source", "topology_audit")}
         expected, report = reconcile({**data, key:stripped}, classifications,
-                                     protected_edges=protected_edges)
+                                     protected_edges=protected_edges,protected_nodes=protected_nodes)
         require({k:v for k,v in network.items() if k not in ("topology_source","topology_audit")} ==
                 {k:v for k,v in expected[key].items() if k not in ("topology_source","topology_audit")},
                 "reconciled graph drifted from immutable source")
@@ -307,7 +313,9 @@ def reconcile(data, classifications, *, protected_edges=()):
         authority = _check_record(record, event, edges, model, reference_sha)
         resolved[ident] = (event, record, authority)
     protected = set(protected_edges)
+    fixed_nodes = set(protected_nodes)
     require(protected <= set(edges), "protected geometry identifier unknown")
+    require(fixed_nodes <= set(nodes), "protected node identifier unknown")
     cuts = {eid:[] for eid in edges}
     additions = {}
     rewrites = {}
@@ -329,7 +337,11 @@ def reconcile(data, classifications, *, protected_edges=()):
         for i, ea in enumerate(sorted(ids)):
             for eb in sorted(ids)[i+1:]:
                 ident = _key(ea,eb,pt)
-                require(ident in resolved and resolved[ident][1]["relation"]=="at_grade",
+                pre_shared={edges[ea]["from"],edges[ea]["to"]} & {
+                    edges[eb]["from"],edges[eb]["to"]}
+                already_connected=any(close(nodes[n]["point"],pt) for n in pre_shared)
+                require(already_connected or (ident in resolved and
+                        resolved[ident][1]["relation"]=="at_grade"),
                         "unreviewed transitive junction at "+str(pt))
         endpoint_ids = sorted({nid for eid in ids for nid in
             (edges[eid]["from"],edges[eid]["to"]) if close(nodes[nid]["point"],pt)})
@@ -347,6 +359,8 @@ def reconcile(data, classifications, *, protected_edges=()):
             for nid in endpoint_ids[1:]:
                 require(nodes[nid]["level"] == k[2],
                         "cannot join different-level coincident nodes")
+                require(nid not in fixed_nodes,
+                        "previously accepted node cannot be merged or removed")
                 rewrites[nid] = winner
         connected[k] = (ids, winner, pt)
     # Do not turn non-connected pair into a junction through a shared
@@ -476,7 +490,7 @@ def reconcile(data, classifications, *, protected_edges=()):
 
 
 def reconcile_file(source, classification_file, output, *, expected_reference_sha=None,
-                   original_reference=None):
+                   original_reference=None, prior_accepted=None):
     """Materialize a *candidate*, never mutate source, U02, ledger or canon."""
     import os
     source = Path(source)
@@ -490,8 +504,34 @@ def reconcile_file(source, classification_file, output, *, expected_reference_sh
         require(original_reference is not None and Path(original_reference).is_file() and
                 hashlib.sha256(Path(original_reference).read_bytes()).hexdigest() ==
                 data.get("source_sha256"), "original U02 bytes missing or changed")
+    protected_edges=set(classification.get("protected_edge_ids",[]))
+    protected_nodes=set()
+    prior=None
+    if data.get("stage")=="INF-02" and data.get("fixture_mode") is not True:
+        require(prior_accepted is not None, "INF-02 requires accepted INF-01 geometry")
+    if prior_accepted is not None:
+        path=Path(prior_accepted)
+        require(path.is_file(),"accepted previous geometry missing")
+        prior=json.loads(path.read_text(encoding="utf-8"))
+        require(prior.get("stage")=="INF-01" and data.get("stage")=="INF-02" and
+                prior.get("source_sha256")==data.get("source_sha256") and
+                data.get("previous_stage_sha256")==
+                hashlib.sha256(path.read_bytes()).hexdigest(),
+                "previous accepted INF-01 bytes/stage mismatch")
+        prev=prior.get("network",{})
+        current=data.get("network",{})
+        old_edges={e["id"]:e for e in prev.get("edges",[])}
+        new_edges={e["id"]:e for e in current.get("edges",[])}
+        old_nodes={n["id"]:n for n in prev.get("nodes",[])}
+        new_nodes={n["id"]:n for n in current.get("nodes",[])}
+        require(all(eid in new_edges and new_edges[eid]==e for eid,e in old_edges.items()) and
+                all(nid in new_nodes and new_nodes[nid]==n for nid,n in old_nodes.items()) and
+                prior.get("zone_mask")==data.get("zone_mask"),
+                "previous accepted network/zone mask cannot be changed")
+        protected_edges.update(old_edges)
+        protected_nodes.update(old_nodes)
     reconciled, report=reconcile(data,classification,
-        protected_edges=classification.get("protected_edge_ids",[]))
+        protected_edges=protected_edges,protected_nodes=protected_nodes)
     destination=Path(output)
     destination.mkdir(parents=True,exist_ok=True)
     target=destination/"topology-candidate.json"
