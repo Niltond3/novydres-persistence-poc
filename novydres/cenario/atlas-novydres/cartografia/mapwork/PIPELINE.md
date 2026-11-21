@@ -194,11 +194,11 @@ ferramenta de imagens nativa do host ChatGPT Web; Python não a chama. O prompt
 do `native_edit_request` contém somente instruções visuais curtas; IDs,
 resultados de validação, hashes e comandos ficam fora dele.
 
-1. Recuperar referência e máscara do Google Drive como PNGs materiais; validar
-   bytes, SHA-256 e dimensões. `--native-input-reference` e `--unit-mask`
-   apontam os arquivos localizados, não URLs. `--native-preparation-output`
-   recorta a menor região autorizada com contexto visual, devolve `bbox`
-   absoluto e dois PNGs. O contexto nunca amplia a permissão de escrita.
+1. Obter uma vez o mapa de referência aprovado (U02 ou último mosaico validado).
+   Preparar o recorte na escala da unidade e a máscara PNG com exatamente as
+   mesmas dimensões. Reutilizar arquivos locais na mesma sessão; em retomada
+   fria, recuperar a versão aprovada do Drive. `--native-preparation-output`
+   mantém bbox e contexto. O contexto nunca amplia a autorização de escrita.
 2. Entregar a imagem de referência como **anexo visual efetivamente acessível**
    ao gerador, com a máscara como guia visual quando a ferramenta permitir.
    Não confundir arquivo baixado, link Drive, imagem exibida na conversa ou
@@ -217,13 +217,16 @@ resultados de validação, hashes e comandos ficam fora dele.
    A composição determinística aplica **somente pixels autorizados**; testa
    todas as bandas RGBA e reabre o PNG salvo. Uma divergência fora da máscara
    é falha, independentemente de parecer visual.
-5. Persistir `composed-image` no Drive e fazer novo GET separado. O ensaio
-   exige `--native-composed-receipt`; recalcula os pixels esperados a partir
-   da referência, máscara e candidata. O parecer `visual-review` deve avaliar
-   **a imagem recomposta**, incluindo desnível, continuidade bilateral,
-   coerência e formato. Para completar a operação, o controlador exige seis
-   artefatos verificáveis: `reference-image`, `edit-mask`, `image`,
-   `composed-image`, `native-edit-handoff` e `visual-review`.
+5. **Antes de persistir**, gerar, recompor e inspecionar cada candidata local
+   na mesma conversa, reutilizando a imagem anterior quando o gerador realmente
+   conseguir acessá-la. `--visual-review` com hashes da composição e quatro
+   observações permite retornar `REPAIR_LOCAL_CANDIDATE` (FAIL) ou
+   `PERSIST_CANDIDATE_FOR_FULL_AUDIT` (PASS local, não canônico).
+   Não enviar imagens reprovadas ao Drive. Após PASS local, persistir a unidade,
+   conferir GET independente e executar o fluxo existente de auditoria remota
+   com recibos `reference-image`, `edit-mask`, `image`, `composed-image`,
+   `native-edit-handoff` e `visual-review`. O Git guarda o journal/checkpoint,
+   não bytes de imagem por tentativa.
 6. A cada FAIL, registrar localização, gravidade, dependências e observação
    concreta. `--native-approved-mask`, `--native-defects-file` e
    `--native-repair-mask-output` produzem máscara **restrita** aos defeitos.
@@ -237,3 +240,10 @@ Os recibos operacionais não autorizam cânone nem INF; apenas garantem que as
 evidências materiais estão aptas à avaliação visual real. Máscara por si só
 não prova que a ferramenta usou a imagem original. O antigo journal e seus
 `operation_id` permanecem imutáveis até a conclusão verdadeira.
+
+A galeria de imagens do ChatGPT facilita a reutilização dentro da conversa,
+mas **não é uma API garantida de recuperação ou associação de máscaras**.
+Em outra sessão, o último checkpoint efetivamente aceito vem do Drive/GitHub;
+rascunhos locais reprovados podem ser descartados. O modelo pode desobedecer
+a máscara visual: somente o compositor determinístico garante a preservação
+dos pixels externos.
