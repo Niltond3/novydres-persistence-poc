@@ -28,7 +28,7 @@ def test_reference_bound_request_is_edit_only_and_concrete(tmp_path):
     assert "infográficos" in req["prompt"]
     assert native.json_digest(req)==h["request_sha256"]
     assert native.verify_handoff(h,request=req,
-        output_sha256=inputs["image"]["sha256"])["status"]=="VERIFIED_INPUT_BINDINGS"
+        output_sha256=inputs["image"]["sha256"])["status"]=="VERIFIED_INPUT_BYTES_AND_HOST_VISUAL_ATTESTATION"
 
 
 @pytest.mark.parametrize("fault, match", [
@@ -37,10 +37,10 @@ def test_reference_bound_request_is_edit_only_and_concrete(tmp_path):
     ("fake_mask_get", "edit-mask input differs"),
     ("fake_reference_get", "reference-image input differs"),
     ("same_reference_get", "reference-image independent Drive GET missing"),
-    ("fake_source_id", "dispatch has no matching visual input attachments"),
-    ("missing_generation_id", "dispatch has no matching visual input attachments"),
-    ("different_prompt", "dispatch has no matching visual input attachments"),
-    ("missing_dispatch", "dispatch has no matching visual input attachments"),
+    ("fake_source_id", "native tool lacks observed reference-image visual attachment"),
+    ("missing_generation_id", "native generator invocation identity or prompt differs"),
+    ("different_prompt", "native generator invocation identity or prompt differs"),
+    ("missing_dispatch", "native generator invocation identity or prompt differs"),
     ("fake_output", "generated image receipt/output mismatch"),
     ("fake_request_hash", "request fingerprint mismatch"),
 ])
@@ -58,7 +58,7 @@ def test_tampered_or_unattached_visual_inputs_fail_closed(tmp_path, fault, match
     elif fault=="same_reference_get":
         h["inputs"]["reference-image"]["readback_path"]=h["inputs"]["reference-image"]["path"]
     elif fault=="fake_source_id":
-        h["dispatch"]["attached_inputs"]["reference-image"]["remote_id"]="another-source"
+        h["visual_input_evidence"]["inputs"]["reference-image"]["visual_file_id"]="file_other"
     elif fault=="missing_generation_id":
         h["dispatch"].pop("generation_id")
     elif fault=="different_prompt":
