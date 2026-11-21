@@ -190,6 +190,12 @@ def prepare_local_edit(reference_path, mask_path, output_dir, *, context_px=64):
             "context_not_editable": True}
 
 
+def _changed_any_channel(diff):
+    # Pillow RGBA.getbbox() defaults to alpha_only=True. Pixel RGB edits with
+    # unchanged opacity would otherwise be incorrectly reported as identical.
+    return any(band.getbbox() is not None for band in diff.split())
+
+
 def compose_masked(reference_path, mask_path, candidate_path, output_path, *,
                    crop_bbox=None, protected_mask_path=None):
     """Apply only authorized pixels. Resize and fuzzy alignment are forbidden.
@@ -233,7 +239,7 @@ def compose_masked(reference_path, mask_path, candidate_path, output_path, *,
     composed = Image.composite(aligned, original, allowed)
     outside_differences = ImageChops.difference(composed, original)
     outside_differences.paste((0,0,0,0), mask=allowed)
-    require(outside_differences.getbbox() is None, "outside-mask regression")
+    require(not _changed_any_channel(outside_differences), "outside-mask regression")
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
     composed.save(output, format="PNG")
@@ -241,7 +247,7 @@ def compose_masked(reference_path, mask_path, candidate_path, output_path, *,
     with Image.open(output) as saved:
         check = ImageChops.difference(saved.convert("RGBA"), original)
     check.paste((0,0,0,0), mask=allowed)
-    require(check.getbbox() is None, "persisted PNG changed protected pixels")
+    require(not _changed_any_channel(check), "persisted PNG changed protected pixels")
     return {"schema": "NOVYDRES_MAPWORK_MASKED_COMPOSITION",
             "reference_sha256": digest(Path(reference_path).read_bytes()),
             "mask_sha256": digest(Path(mask_path).read_bytes()),
