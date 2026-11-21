@@ -1,0 +1,128 @@
+{
+  "agent3_complete": false,
+  "agent4_transfer_authorized": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "edit_op": null,
+      "native_generation_id": "501e24be-f212-4993-b6e4-969ab43e0b5b",
+      "observations": [
+        {
+          "criterion": "grade",
+          "evidence": "Viaduto visivel em composicao nova, mas sem vinculo com a referencia original.",
+          "status": "NOT_VERIFIED"
+        },
+        {
+          "criterion": "continuity",
+          "evidence": "Tamanho difere da referencia (1254x1254 versus 1024x1024); pixels externos a mascara nao foram preservados.",
+          "status": "FAIL"
+        },
+        {
+          "criterion": "coherence",
+          "evidence": "Campos, rio, casas e vegetacao nao pertencem a referencia sintetica fornecida.",
+          "status": "FAIL"
+        },
+        {
+          "criterion": "format",
+          "evidence": "Arquivo PNG genuino e independentemente relido do Google Drive.",
+          "status": "PASS"
+        }
+      ],
+      "output": {
+        "drive_id": "1uSFrwOqjBUeM47uOl1wmArDUpGoqKnfr",
+        "format": "PNG",
+        "provider_readback_verified": true,
+        "sha256": "97430e21b9441f30b7c4b8e7b40600d792019d51422970d3a36b24e190671727",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "parent_gen_id": null,
+      "verdict": "FAIL"
+    },
+    {
+      "attempt": 2,
+      "edit_op": null,
+      "native_generation_id": "b30c0b03-d8f4-4a39-8f74-976c071986ad",
+      "observations": [
+        {
+          "criterion": "grade",
+          "evidence": "Saida e um infografico de pipeline e nao um mapa editado com rodovia elevada.",
+          "status": "FAIL"
+        },
+        {
+          "criterion": "continuity",
+          "evidence": "Resolucao 1536x1024 e layout de paineis nao preservam pixels da referencia original.",
+          "status": "FAIL"
+        },
+        {
+          "criterion": "coherence",
+          "evidence": "Imagem possui alegacoes falsas de PASS e autorizacao de transferencia, sem qualquer evidencia no journal.",
+          "status": "FAIL"
+        },
+        {
+          "criterion": "format",
+          "evidence": "Arquivo PNG genuino e independentemente relido do Google Drive.",
+          "status": "PASS"
+        }
+      ],
+      "output": {
+        "drive_id": "1-Nq2owrAK3j1Vn3QOFNAwBkBwkZc_524",
+        "format": "PNG",
+        "provider_readback_verified": true,
+        "sha256": "b2f19f7cd2026db8f03826b69de748677eae27bcf624ae778ccd67bcb48bddfe",
+        "size": [
+          1536,
+          1024
+        ]
+      },
+      "parent_gen_id": null,
+      "verdict": "FAIL"
+    }
+  ],
+  "branch": "mapwork/consolidated-autonomous-20261121",
+  "canonical_state_changed": false,
+  "generation_pending_head": "6074da4bdabfab10890d62e002a372cdef60d4d9",
+  "handoff": {
+    "generation_dispatch_attached_inputs": null,
+    "native_edit_attestation_valid": false,
+    "native_input_binding_verified": false,
+    "status": "MISSING"
+  },
+  "mask": {
+    "drive_id": "18dJpl9_JNZ3huQtyqLYOC87N6DlTXw2w",
+    "provider_readback_verified": true,
+    "sha256": "1dcf99a61835981f38f55e513a9b8623a2e1c335caa28040708fd761b7bcef92",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "native_edit_request_sha256": "dd323e8656db530a1b58ee394698f751646a14d7622bc8777be0465171b5ea09",
+  "native_prompt_sha256": "7e7846573c7ac6ef722cb71a8a770e5d4a45db3dbc18a7b1861094a6a031e73b",
+  "next_action": "REPLAN_NATIVE_INPUT_BINDING",
+  "operation_id": "6bb1c106d7036a29bf79f96b765b0f6e7ae149a82f0ed197829a171587b491a9",
+  "operation_progress": "PENDING",
+  "publication_authorized": false,
+  "reference": {
+    "drive_id": "1anrozhRc3Q1ZNkc9fLvT41a0PJ5dzGgL",
+    "provider_readback_verified": true,
+    "sha256": "41c1c53671732b4a6d711cdf0e94ec0cf07c3218c6756e3492a0650e4539f1f2",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "replan": {
+    "automatic_progress_blocked": true,
+    "cause": "Native image tool produced fresh generations with edit_op null; source PNG and mask PNG were not verifiably attached in same call.",
+    "requires_new_pipeline": false,
+    "strategy": "Bind both independently retrieved Google Drive PNG assets as actual native visual input attachments; require a real native edit invocation and provider generation metadata; regenerate and audit new bytes before any journal COMPLETE_OPERATION."
+  },
+  "schema": "NOVYDRES_MAPWORK_SYNTHETIC_NATIVE_FAILURE_AUDIT",
+  "source_runtime_commit": "919d764934a70ee14590e73d9460ca4d6b294231",
+  "status": "BLOCKED_UNVERIFIED_NATIVE_EDIT",
+  "synthetic_target": "synthetic-rail-overpass-agent3",
+  "test_only": true
+}
