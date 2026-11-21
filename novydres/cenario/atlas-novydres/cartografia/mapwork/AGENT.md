@@ -11,3 +11,7 @@
    a respeito de novos elementos/conflitos editoriais e da composição final.
 5. Não falsificar ferramentas, imagens, auditorias ou estado. GitHub guarda
    código, decisões e checkpoints; Drive guarda bytes de imagens e artefatos.
+
+A transição para geração depende dos aceites auditados INF-01 a URB-08,
+com hash do contrato Markdown, ledger e checkpoint reconciliados.
+Referências visuais e aprovações históricas da U02 não são gates operacionais.

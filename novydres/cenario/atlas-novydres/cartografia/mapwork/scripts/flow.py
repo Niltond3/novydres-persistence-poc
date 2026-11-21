@@ -120,20 +120,41 @@ def run(args, core_run):
     core.config_check(config)
     ledger_path=getattr(args,"acceptance_ledger",None) or (
         zone_path.parent/"acceptance-ledger.json")
+    spec = acceptance.criteria_contract()
+    prior_checkpoint = _load(zone_path.parent/"checkpoint.json")
+    if prior_checkpoint is not None:
+        problems = acceptance.checkpoint_issues(
+            prior_checkpoint, ledger_path=ledger_path,
+            reference_sha256=config["reference"]["sha256"],
+            criteria_sha256=spec["sha256"], expected_target=target)
+        if problems:
+            return _state("INFRASTRUCTURE_ACCEPTANCE",
+                          "RECONCILE_CHECKPOINT_AND_LEDGER", problems,
+                          intent=intent)
+    def accepted_checkpoint(action, blockers, audit):
+        result = _state("INFRASTRUCTURE_ACCEPTANCE", action, blockers,
+                        intent=intent, audit=audit)
+        result.update(
+            stage=audit["stage"],
+            official_accepted_stages=audit["accepted_stages"],
+            criteria_sha256=spec["sha256"],
+            reference_sha256=config["reference"]["sha256"],
+            ledger_sha256=acceptance.sha_file(ledger_path)
+                          if Path(ledger_path).is_file() else None)
+        return result
     registered_attempt = None
     if getattr(args, "record_attempt", None):
         pre_gate=acceptance.evaluate(
             ledger_path, reference_file=getattr(args,"reference",None),
             reference_sha256=config["reference"]["sha256"],
             reference_size=[config["reference"]["width"],config["reference"]["height"]],
-            require_urban=True, require_remote=True)
+            require_urban=True, require_remote=True, expected_target=target)
         if pre_gate["next_action"] in (
             "REPAIR_ACCEPTANCE_LEDGER", "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE",
             "FIX_ACCEPTANCE_CONTRACT", "RESTORE_REFERENCE_AUTHORITY",
             "MATERIALIZE_ORIGINAL_REFERENCE", "RESTORE_ORIGINAL_REFERENCE"):
-            return _state("INFRASTRUCTURE_ACCEPTANCE", pre_gate["next_action"],
-                          pre_gate["blockers"],intent=intent,audit=pre_gate)
-        spec = acceptance.criteria_contract()
+            return accepted_checkpoint(pre_gate["next_action"],
+                                       pre_gate["blockers"], pre_gate)
         registered_attempt = controller.record_attempt(
             ledger_path, args.record_attempt, criteria_sha256=spec["sha256"],
             reference_sha256=config["reference"]["sha256"],
@@ -146,16 +167,16 @@ def run(args, core_run):
         reference_sha256=config["reference"]["sha256"],
         reference_size=[config["reference"]["width"],config["reference"]["height"]],
         require_remote=True,
+        expected_target=target,
         require_urban=bool(
             getattr(args,"record_attempt",None) or
             getattr(args,"recipe_unit",None) or
             getattr(args,"audit_unit",None) or
             getattr(args,"execute",False)))
     if acceptance_gate["status"] != "PASS":
-        return _state(
-            "INFRASTRUCTURE_ACCEPTANCE",acceptance_gate["next_action"],
-            acceptance_gate["blockers"],intent=intent,
-            audit={**acceptance_gate, "recorded_attempt": registered_attempt})
+        return accepted_checkpoint(
+            acceptance_gate["next_action"], acceptance_gate["blockers"],
+            {**acceptance_gate, "recorded_attempt": registered_attempt})
 
     if args.recipe_unit or args.audit_unit:
         zone=core.load(zone_path)
@@ -326,9 +347,10 @@ def run(args, core_run):
                       audited.get("technical_status")=="PASS" else
                       [audited.get("failure","visual inspection failed")],
                       intent=intent,audit={"technical":audited,"visual":reviewed})
-    # Existing topology and renderer are reused, not forked. The old
-    # SKETCH_APPROVED bit is NOT treated as owner approval of  art.
-    args.preflight_verified=True
+    # The unique pipeline renderer is reached only after independent
+    # Markdown-defined acceptance and semantic/editorial checks.
+    args._editorial_verified=True
+    args._accepted_criteria_sha256=spec["sha256"]
     args.district=target
     args.zone=None
     result=core_run(args)
@@ -338,6 +360,12 @@ def run(args, core_run):
     result["editorial_decisions"]=decisions
     result["installation_inventory"]=installation
     result["authorization_verified"]=True
+    result["target"]=target
+    result["stage"]=acceptance_gate["stage"]
+    result["official_accepted_stages"]=acceptance_gate["accepted_stages"]
+    result["criteria_sha256"]=spec["sha256"]
+    result["reference_sha256"]=config["reference"]["sha256"]
+    result["ledger_sha256"]=acceptance.sha_file(ledger_path)
     result["publication_authorized"]=False
     result["canonical_state_changed"]=False
     return result

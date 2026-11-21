@@ -116,7 +116,8 @@ def _verify_artifact(path_value, digest_value, *, base, image=False,
 
 
 def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
-             require_urban=False, require_remote=False, criteria_path=CRITERIA_DOC):
+             require_urban=False, require_remote=False, criteria_path=CRITERIA_DOC,
+             expected_target=None):
     """Read most recent attempt for each stage, in mandatory dependency order.
 
     No record, stale file, fabricated hash, missing check or FAIL can authorize
@@ -156,7 +157,9 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
         return _stage(required[0], "REPAIR_ACCEPTANCE_LEDGER", [str(exc)])
     if (not isinstance(ledger, dict) or ledger.get("schema") != SCHEMA or
             ledger.get("criteria_sha256") != spec["sha256"] or
-            ledger.get("reference_sha256") != reference_sha256):
+            ledger.get("reference_sha256") != reference_sha256 or
+            (expected_target is not None and ledger.get("target") != expected_target) or
+            ledger.get("reference_dimensions_px") != list(reference_size)):
         return _stage(required[0], "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE",
                       ["ledger schema/criteria/reference digest mismatch"])
     groups = ledger.get("stages")
@@ -343,3 +346,40 @@ def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
         accepted.append(stage)
     return _stage(required[-1], "ADVANCE_AFTER_ACCEPTANCE", [],
                   accepted=accepted)
+
+def checkpoint_issues(checkpoint, *, ledger_path, reference_sha256,
+                      criteria_sha256, expected_target):
+    """Check exact remote-resumable state, not self-declared approval flags."""
+    issues = []
+    if not isinstance(checkpoint, dict):
+        return ["checkpoint missing or unreadable"]
+    if checkpoint.get("schema") != "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT":
+        issues.append("checkpoint schema mismatch")
+    if checkpoint.get("target") != expected_target:
+        issues.append("checkpoint target mismatch")
+    if checkpoint.get("criteria_sha256") != criteria_sha256:
+        issues.append("checkpoint Markdown contract SHA mismatch")
+    if checkpoint.get("reference_sha256") != reference_sha256:
+        issues.append("checkpoint original U02 SHA mismatch")
+    ledger_file = Path(ledger_path)
+    if not ledger_file.is_file():
+        return issues + ["acceptance ledger bytes absent"]
+    if checkpoint.get("ledger_sha256") != sha_file(ledger_file):
+        issues.append("checkpoint and ledger SHA mismatch")
+    try:
+        ledger = json.loads(ledger_file.read_text(encoding="utf-8"))
+        stages = ledger.get("stages", {})
+        # Claiming an accepted stage without a recorded PASS is never evidence.
+        accepted = checkpoint.get("official_accepted_stages")
+        if not isinstance(accepted, list) or any(
+            stage not in stages or not isinstance(stages[stage], dict) or
+            not stages[stage].get("attempts") or
+            stages[stage]["attempts"][-1].get("verdict") != "PASS"
+            for stage in accepted
+        ):
+            issues.append("checkpoint accepted stages not backed by ledger")
+        if isinstance(accepted, list) and accepted != list(STAGES[:len(accepted)]):
+            issues.append("checkpoint accepted stages out of order")
+    except (ValueError, OSError, TypeError, AttributeError) as exc:
+        issues.append("ledger unreadable: " + str(exc))
+    return issues

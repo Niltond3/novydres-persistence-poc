@@ -92,3 +92,13 @@ operacional; jamais manter versões de contratos ou conversores legados.
 Os critérios 32 e topologia detalhada pertencem exclusivamente a
 `docs/infra-acceptance.md`; inspeção de imagens, adjacências, máscaras e
 composição pertence exclusivamente a `VISUAL_REVIEW_PROTOCOL.md`.
+
+### Estado autoritativo e retomada
+
+O contrato executável é `docs/infra-acceptance.md`. Infraestrutura exige
+aceite independente sequencial INF-01 a INF-07; URB-08 precede arte/composição.
+Um registro histórico de desenho U02 não altera o estado do ledger.
+`zones/<alvo>/checkpoint.json` vincula `criteria_sha256`,
+`reference_sha256`, `ledger_sha256`, `official_accepted_stages` e o alvo.
+Se qualquer vínculo divergir, reconciliar e reler GitHub antes de continuar.
+Nunca editar o critério para fazer uma candidata reprovada passar.

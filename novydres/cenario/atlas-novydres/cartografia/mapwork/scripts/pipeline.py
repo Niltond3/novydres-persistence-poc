@@ -20,6 +20,8 @@ import mapwork as core
 import urban_architecture as urban
 import urban_content as content
 import contracts as contract
+import contracts as validation_contract
+import acceptance
 import visual
 import flow
 import orchestration as controller
@@ -90,7 +92,7 @@ def load_verified_neighbors(plan):
         zone_path,zone=matches[0]
         spatial=zone_path.parent/"global-spatial.json"
         if not spatial.is_file():
-            # An existing approved sketch is not a future reservation.
+            # An existing visual reference is not a bilateral seam contract.
             raise core.Invalid("existing neighbor has no spatial manifest: "+neighbor)
         other=core.load(spatial)
         if other.get("zone",{}).get("id")!=neighbor or other.get("fixture_mode") is not False:
@@ -109,7 +111,7 @@ def load_verified_neighbors(plan):
 
 def check_canonical_pois(zone_path, plan):
     # Exact approved identities come from the authoritative installation
-    # inventory already verified by flow.run, never from a retired sketch path.
+    # Canonical POI identity is established by the verified installation inventory.
     inventory_path=zone_path.parent/"inventory.json"
     if not inventory_path.is_file():
         raise core.Invalid("authoritative approved POI inventory missing")
@@ -436,6 +438,24 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED"),
               "composition contract zone/plan authority mismatch")
     is_verified_protocol=bool(contract.get("execution_evidence"))
+    core.fail(is_verified_protocol,
+              "composition requires independent editorial evidence")
+    bound_gate=contract.get("acceptance_evidence",{})
+    core.fail(isinstance(bound_gate,dict) and
+              bound_gate.get("criteria_sha256")==acceptance.criteria_contract()["sha256"] and
+              bound_gate.get("reference_sha256")==cfg["reference"]["sha256"] and
+              bound_gate.get("ledger_sha256")==fingerprint(bound_gate.get("ledger_path",""))
+              if isinstance(bound_gate,dict) and bound_gate.get("ledger_path") and
+                 Path(bound_gate["ledger_path"]).is_file() else False,
+              "composition requires fresh SHA-bound acceptance ledger")
+    gate=acceptance.evaluate(
+        bound_gate["ledger_path"],reference_file=base,
+        reference_sha256=cfg["reference"]["sha256"],
+        reference_size=cfg["world_size_units"],require_urban=True,
+        require_remote=True,expected_target=zone["id"])
+    core.fail(gate["status"]=="PASS" and
+              gate["accepted_stages"]==list(acceptance.STAGES),
+              "composition requires independent INF-01 through URB-08 PASS")
     if is_verified_protocol:
         receipt=contract["execution_evidence"]
         required={
@@ -455,19 +475,19 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
         index=core.load(receipt["scope_index_path"])
         core.fail(index["source_commit"]==intent["source_commit"],
                   " source commit mismatch")
-        contract.validate_intent(intent,index["targets"],index["world_bounds"])
+        validation_contract.validate_intent(intent,index["targets"],index["world_bounds"])
         register=core.load(receipt["decisions_path"])
-        approvals=contract.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
+        approvals=validation_contract.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
         core.fail(not approvals["pending"]," has pending editorial decisions")
         inventory=core.load(receipt["inventory_path"])
         canon=set(index["targets"][zone["id"]].get("approved_element_ids",[]))
         core.fail(set(inventory.get("canonical_elements",[])).issubset(canon),
                   " asserted unsupported existing elements")
-        contract.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
-        contract.validate_research(core.load(receipt["research_path"]))
-        caps=contract.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
+        validation_contract.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
+        validation_contract.validate_research(core.load(receipt["research_path"]))
+        caps=validation_contract.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
         core.fail(not caps["missing"]," required host capability not evidenced")
-    core.audit_zone(zone,cfg,assets,strict=True,preflight_verified=is_verified_protocol)
+    core.audit_zone(zone,cfg,assets,strict=True)
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=base,
                            neighbor_manifests=load_verified_neighbors(plan))
@@ -514,7 +534,7 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
             core.fail(p.is_file() and fingerprint(p)==receipt.get("edit_mask_sha256"),
                       " edit mask is missing or changed")
             with Image.open(p) as im:
-                contract.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
+                validation_contract.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
         images=core.load(receipt["image_receipts_path"])
         verify_native_manifest(images,zone,report,cfg,assets,active_units=affected,
                                reference_sha256=fingerprint(base),
@@ -529,10 +549,27 @@ def run(args):
 
 
 def _run_verified(args):
-    if not getattr(args, "preflight_verified", False):
+    if not getattr(args, "_editorial_verified", False):
         raise core.Invalid("urban renderer requires verified pipeline gate")
     cfg=core.load(core.CONFIG)
     core.config_check(cfg)
+    expected=acceptance.criteria_contract()["sha256"]
+    core.fail(getattr(args,"_accepted_criteria_sha256",None)==expected,
+              "renderer acceptance Markdown contract mismatch")
+    gate=acceptance.evaluate(
+        getattr(args,"acceptance_ledger",None) or
+        (resolve_zone(args.district,args.zone).parent/"acceptance-ledger.json"),
+        reference_file=getattr(args,"reference",None),
+        reference_sha256=cfg["reference"]["sha256"],
+        reference_size=cfg["world_size_units"],
+        require_urban=bool(getattr(args,"execute",False) or
+                           getattr(args,"recipe_unit",None) or
+                           getattr(args,"audit_unit",None)),
+        require_remote=True,
+        expected_target=args.district)
+    core.fail(gate["status"]=="PASS",
+              "renderer blocked by independent infrastructure acceptance: "+
+              gate["next_action"])
     zone_path=resolve_zone(args.district,args.zone)
     if zone_path is None:
         return checkpoint(district=args.district,phase="BOOTSTRAP",
@@ -540,8 +577,7 @@ def _run_verified(args):
                           blockers=["Resolve district subject ID, canonical boundaries, neighbors and source SHA from GitHub master; do not invent geometry."])
     zone=core.load(zone_path)
     district=zone["id"]
-    core.audit_zone(zone,cfg,strict=False,
-                    preflight_verified=getattr(args,"preflight_verified",False))
+    core.audit_zone(zone,cfg,strict=False)
     def state(phase,action,blockers=(),spatial_path=None,report=None,artifacts=None):
         return checkpoint(district=district,zone_path=zone_path,zone=zone,
                           phase=phase,action=action,blockers=blockers,
@@ -561,10 +597,9 @@ def _run_verified(args):
     check_canonical_pois(zone_path,plan)
     report=urban.plan_city(plan,cfg,reference_file=args.reference,
                            neighbor_manifests=load_verified_neighbors(plan))
-    if getattr(args,"preflight_verified",False):
-        #  proposal register + exact installation inventory were validated
-        # BEFORE calling this legacy spatial engine. The old blanket owner-art
-        # approval is no longer an additional approval ceremony.
+    if getattr(args,"_editorial_verified",False):
+        # Verified proposal register and inventory authorize review of candidate
+        # work only; the independent infrastructure stages remain mandatory.
         report["gates"]["owner_art_authorized"]=True
     # Urban design is a mandatory deterministic phase, not an image-side suggestion.
     # A real declarative map can be planned in a hosted runner without private U02
@@ -598,7 +633,7 @@ def _run_verified(args):
                      [missing[0],f"{len(missing)} of {len(units)} building plans missing"],
                      spatial_path,report)
     validate_all_unit_designs(plan,report,design_root,cfg,
-                              allow_abstract=getattr(args,"preflight_verified",False))
+                              allow_abstract=getattr(args,"_editorial_verified",False))
     if not report["generation_ready"]:
         blockers=report["blocking_gates"]
         nxt="VERIFY_SPATIAL_AND_ASSET_GATES"
@@ -608,20 +643,30 @@ def _run_verified(args):
             nxt="FETCH_AND_VERIFY_ORIGINAL_U02"
         return state("SPATIAL_VALIDATION",nxt,blockers,spatial_path,report)
 
-    if zone["status"]!="SKETCH_APPROVED":
-        required=None
-        if getattr(args,"preflight_verified",False):
-            request=core.load(args.intent)
-            if request["mode"]!="CREATE_REGION":
-                if not args.editable_mask or not Path(args.editable_mask).is_file():
-                    raise core.Invalid("refinement requires materialized --editable-mask")
-                with Image.open(args.editable_mask) as im:
-                    required=affected_unit_ids(report,im.convert("L"))
-        bound=validate_work_unit_bindings(zone,report,plan=plan,required_units=required)
-    if zone["status"]=="SKETCH_APPROVED":
-        return state("ART_AUTHORIZED","PROMOTE_ZONE_TO_GENERATING_WITH_AUDIT",
-                     ["Spatial contract passed; create verified generation jobs only, not a release."],
+    if zone["status"]=="PLANNING":
+        urban_gate=acceptance.evaluate(
+            getattr(args,"acceptance_ledger",None) or
+                (zone_path.parent/"acceptance-ledger.json"),
+            reference_file=args.reference,
+            reference_sha256=cfg["reference"]["sha256"],
+            reference_size=cfg["world_size_units"],
+            require_urban=True,require_remote=True,expected_target=district)
+        if urban_gate["status"]!="PASS":
+            return state("INFRASTRUCTURE_ACCEPTANCE",
+                         urban_gate["next_action"],urban_gate["blockers"],
+                         spatial_path,report)
+        return state("ART_AUTHORIZATION","ACTIVATE_GENERATION_FROM_ACCEPTED_GATES",
+                     ["Record the stage-bound generation transition and verified work-unit IDs; no drawing approval is a substitute."],
                      spatial_path,report)
+    required=None
+    if getattr(args,"_editorial_verified",False):
+        request=core.load(args.intent)
+        if request["mode"]!="CREATE_REGION":
+            if not args.editable_mask or not Path(args.editable_mask).is_file():
+                raise core.Invalid("refinement requires materialized --editable-mask")
+            with Image.open(args.editable_mask) as im:
+                required=affected_unit_ids(report,im.convert("L"))
+    bound=validate_work_unit_bindings(zone,report,plan=plan,required_units=required)
     pending=[x["id"] for x in zone["elements"] if x["status"]!="VERIFIED"]
     if pending:
         return state("ART_GENERATION","GENERATE_AND_VERIFY_NEXT_ATOMIC_ASSET",
@@ -642,12 +687,21 @@ def _run_verified(args):
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
     core.audit_zone(zone,cfg,args.assets,strict=True,
-                    preflight_verified=getattr(args,"preflight_verified",False))
+                    preflight_verified=getattr(args,"_editorial_verified",False))
     verify_unit_art_masks(plan,report,zone["elements"],args.assets,cfg)
     contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
                                        report,args.reference,args.assets,args.before)
+    ledger_path=getattr(args,"acceptance_ledger",None) or (
+        zone_path.parent/"acceptance-ledger.json")
+    contract["acceptance_evidence"]={
+        "ledger_path":str(ledger_path),
+        "ledger_sha256":fingerprint(ledger_path),
+        "criteria_sha256":acceptance.criteria_contract()["sha256"],
+        "reference_sha256":cfg["reference"]["sha256"],
+        "accepted_stages":list(acceptance.STAGES)
+    }
     edit_mask=None
-    if getattr(args,"preflight_verified",False):
+    if getattr(args,"_editorial_verified",False):
         intent=core.load(args.intent)
         registration={
             "intent_path":str(Path(args.intent).resolve()),
@@ -692,7 +746,7 @@ def _run_verified(args):
               "before_sha256":fingerprint(out/"overview-before.png"),
               "after_sha256":fingerprint(out/"overview-after.png"),
               "image_receipts_sha256":fingerprint(args.image_receipts)}
-    if getattr(args,"preflight_verified",False):
+    if getattr(args,"_editorial_verified",False):
         if not args.macro_review or not Path(args.macro_review).is_file():
             return state("GLOBAL_VISUAL_REVIEW","AGENT_INSPECT_COMPOSED_ATLAS",
                          ["Inspect real before/after overviews, tiles, unit interfaces and macro/micro coherence; record hash-bound global report."],
