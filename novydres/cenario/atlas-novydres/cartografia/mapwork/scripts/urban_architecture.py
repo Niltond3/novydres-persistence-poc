@@ -222,6 +222,12 @@ def validate_transport(transport, width, height):
         else:
             require(a.get("level",a.get("level_from"))==b.get("level",b.get("level_from")),
                     f"{x['id']}: at-grade crossing must share level")
+            require(x.get("junction_id") in bynode,f"{x['id']}: at-grade junction must have a node")
+            require(point_close(x["point"],bynode[x["junction_id"]]["point"]),
+                    f"{x['id']}: crossing does not align junction")
+            require(x["junction_id"] in (a["from"],a["to"]) and
+                    x["junction_id"] in (b["from"],b["to"]),
+                    f"{x['id']}: at-grade crossing must split both edge geometries at junction")
             if ((a["class"] in RAIL_CLASSES|{"metro"} or b["class"] in RAIL_CLASSES|{"metro"}) or
                 a.get("protected_structure_id") or b.get("protected_structure_id")):
                 authority=x.get("authority")
@@ -231,12 +237,6 @@ def validate_transport(transport, width, height):
                         isinstance(authority.get("evidence"),str) and
                         len(authority["evidence"].strip())>=12,
                         f"{x['id']}: rail/protected junction requires owner authority")
-            require(x.get("junction_id") in bynode,f"{x['id']}: at-grade junction must have a node")
-            require(point_close(x["point"],bynode[x["junction_id"]]["point"]),
-                    f"{x['id']}: crossing does not align junction")
-            require(x["junction_id"] in (a["from"],a["to"]) and
-                    x["junction_id"] in (b["from"],b["to"]),
-                    f"{x['id']}: at-grade crossing must split both edge geometries at junction")
     # Spatial hash to avoid checking every network segment against every other.
     bucket=16
     cells=collections.defaultdict(list)
@@ -264,6 +264,12 @@ def validate_transport(transport, width, height):
         if a["id"]==b["id"]:
             continue
         pt=seg_cross(pa,qa,pb,qb)
+        if ((a["class"] in UNDERGROUND_CLASSES or b["class"] in UNDERGROUND_CLASSES) and
+            a.get("level",a.get("level_from"))!=b.get("level",b.get("level_from")) and
+            topo is None):
+            # Non-canonical planning examples may omit subway crossing reports;
+            # the independent INF audit never exempts them from classification.
+            continue
         if pt is None:
             overlap=collinear_overlap(pa,qa,pb,qb)
             if overlap is None:
