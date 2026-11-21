@@ -17,7 +17,9 @@ def fixture(tmp_path, operation_id="synthetic-operation", prefix="native"):
         Image.new("RGB",(16,16),color).save(local)
         remote.write_bytes(local.read_bytes())
         images[role]={"provider":"drive","remote_id":ids[role],"path":str(local),
-                      "readback_path":str(remote),"sha256":native.digest(local.read_bytes())}
+                      "readback_path":str(remote),"sha256":native.digest(local.read_bytes()),
+                      **({"visual_file_id":"file_fixture_"+role.replace("-","_")}
+                         if role in ("reference-image","edit-mask") else {})}
     composed=tmp_path/f"{prefix}-composed-image.png"
     proof=native.compose_masked(images["reference-image"]["path"],
         images["edit-mask"]["path"],images["image"]["path"],composed)
@@ -38,7 +40,14 @@ def fixture(tmp_path, operation_id="synthetic-operation", prefix="native"):
                 "attached_inputs":{role:{"remote_id":images[role]["remote_id"],
                                          "sha256":images[role]["sha256"]}
                                    for role in ("reference-image","edit-mask")}},
-            "output":images["image"]}
+            "output":images["image"],
+            # The test-only fixture is NOT evidence of a real native call.
+            "visual_input_evidence":{"source":"CHATGPT_WEB_NATIVE_TOOL",
+                "generation_id":"test-tool-result-001",
+                "observation":"Synthetic test fixture: both visible inputs are only locally simulated",
+                "inputs":{role:{"visual_file_id":images[role]["visual_file_id"],
+                                "sha256":images[role]["sha256"]}
+                          for role in ("reference-image","edit-mask")}}}
     hand=tmp_path/f"{prefix}-handoff.json"
     hand.write_text(json.dumps(result, ensure_ascii=False))
     hand_get=tmp_path/f"{prefix}-handoff-GET.json"
