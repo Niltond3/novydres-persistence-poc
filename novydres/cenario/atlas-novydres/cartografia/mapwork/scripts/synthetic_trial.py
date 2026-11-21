@@ -176,16 +176,41 @@ def run(args):
             ["Native input dispatch, reference/mask Drive GET and image result must be bound"])
     bound=native.verify_handoff(_load(args.native_handoff),request=request,
         output_sha256=receipt["sha256"])
-    contract.require(receipt["remote_id"] == _load(args.native_handoff)["output"]["remote_id"],
+    handoff = _load(args.native_handoff)
+    contract.require(receipt["remote_id"] == handoff["output"]["remote_id"],
         "native image Drive receipt identity differs from handoff")
+    if not getattr(args, "native_composed_receipt", None):
+        return _synthetic_state(trial, "SYNTHETIC_IMAGE",
+            "RECOMPOSE_NATIVE_MASK", ["Recompose native candidate over real reference "
+             "using the authorized mask; upload PNG to Drive and independently GET it. "
+             "Native candidate alone is never a pixel-preserving result."])
+    composed = _load(args.native_composed_receipt)
+    contract.require(isinstance(composed,dict) and
+        composed.get("provider") == "drive" and
+        isinstance(composed.get("remote_id"),str) and composed["remote_id"],
+        "composed Drive receipt missing")
+    composed_path=Path(composed.get("path",""))
+    composed_readback=Path(composed.get("readback_path",""))
+    contract.require(composed_path.is_file() and composed_readback.is_file() and
+        composed_path.resolve()!=composed_readback.resolve() and
+        composed_path.read_bytes()==composed_readback.read_bytes() and
+        composed.get("sha256")==hashlib.sha256(composed_path.read_bytes()).hexdigest(),
+        "composed image independent Drive readback mismatch")
+    proof=native.verify_composed(
+        handoff["inputs"]["reference-image"]["path"],
+        handoff["inputs"]["edit-mask"]["path"],
+        handoff["output"]["path"], composed_path,
+        crop_bbox=composed.get("crop_bbox"))
+    contract.require(proof["composed_sha256"] == composed["sha256"],
+                     "masked composition identity mismatch")
     review = _load(getattr(args, "visual_review", None))
     if not review:
         return _synthetic_state(trial, "SYNTHETIC_IMAGE",
-            "AGENT_INSPECT_IMAGE", ["Inspect actual PNG, grade, interfaces and scene, not a text PASS"])
+            "AGENT_INSPECT_IMAGE", ["Inspect the recomposed PNG, grade, interfaces and scene, not a text PASS"])
     observations = review.get("observations", [])
     required = {"grade", "continuity", "coherence", "format"}
     contract.require(review.get("by") == "AGENT"
-        and review.get("image_sha256") == receipt["sha256"]
+        and review.get("image_sha256") == composed["sha256"]
         and review.get("reference_sha256") == bound["reference_sha256"]
         and review.get("mask_sha256") == bound["mask_sha256"]
         and review.get("status") in ("PASS", "FAIL")
@@ -205,7 +230,7 @@ def run(args):
         and attempt.get("stage") == "SYNTHETIC"
         and attempt.get("reference_sha256") == trial["reference_sha256"]
         and attempt.get("geometry_sha256") == hashlib.sha256(spatial_file.read_bytes()).hexdigest()
-        and attempt.get("preview_sha256") == receipt["sha256"]
+        and attempt.get("preview_sha256") == composed["sha256"]
         and attempt.get("verdict") == review["status"],
         "synthetic attempt differs from material geometry, pixels or visual verdict")
     synthetic_output_path(args.ledger)
@@ -226,7 +251,7 @@ def run(args):
     # model review. This cannot promote any INF or canonical stage.
     return _synthetic_state(trial, "SYNTHETIC_ACCEPTANCE", "CHECKPOINT",
         audit={"status": "PASS", "record": recorded,
-               "topology_status": "PASS", "image_sha256": receipt["sha256"],
+               "topology_status": "PASS", "image_sha256": composed["sha256"],
                "canonical_acceptance": False})
 
 
