@@ -48,15 +48,23 @@ def test_wrong_source_commit_never_passes(tmp_path):
 
 def test_canonical_pipeline_is_in_process_and_remains_blocked(tmp_path):
     files=[]
-    for rel in ("scripts/pipeline.py", "scripts/mapwork.py", "scripts/flow.py",
-                "scripts/contracts.py", "scripts/acceptance.py",
-                "docs/infra-acceptance.md", "scripts/web_bridge.py"):
+    for rel in sorted(["docs/infra-acceptance.md"]+
+                      ["scripts/"+p.name for p in (ROOT/"scripts").glob("*.py")]):
         data=(ROOT/rel).read_bytes()
         files.append({"path":rel,"provider":"github","sha256":w.sha256(data),
                       "blob_sha":w.git_blob_sha(data),"size_bytes":len(data)})
     manifest={"schema":w.FILE_MANIFEST_SCHEMA,"source_commit":"1"*40,"files":files}
-    result=w.run_web(argv=["--district","kingswell"],file_manifest=manifest,
-                     root=ROOT,source_commit="1"*40)
+    # A collection-time import from an unverified module cache is forbidden.
+    local_names={p.stem for p in (ROOT/"scripts").glob("*.py")}
+    saved={k:sys.modules.pop(k) for k in tuple(sys.modules)
+           if k in local_names and k != "web_bridge"}
+    try:
+        result=w.run_web(argv=["--district","kingswell"],file_manifest=manifest,
+                         root=ROOT,source_commit="1"*40)
+    finally:
+        for k in local_names-{"web_bridge"}:
+            sys.modules.pop(k,None)
+        sys.modules.update(saved)
     assert result["status"]=="BLOCKED"
     assert result["pipeline"]["result"]["phase"]=="INTENT"
     assert not result["authorizes_canon"]
