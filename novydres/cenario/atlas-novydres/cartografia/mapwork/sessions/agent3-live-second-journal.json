@@ -241,6 +241,53 @@
       },
       "state_sha256": "353c6e6fd2aad93e657a570eac985b9696e5b013ed17ea1a5f2d263706d86afd",
       "status": "COMPLETED"
+    },
+    {
+      "action": "RECONCILE_APPROVED_ELEMENTS",
+      "artifacts": [],
+      "entry_sha256": "bda96f1fbdb26597f46869154592719b91b1c5ee1688b174d11c602c248cc434",
+      "lease_head": "cba85db7bfe65734d9e6a9b74d083c795f44d3a1",
+      "operation_id": "dea3d9d56c22350940aa6e874ef1ade08df166117a67a0bf58440ed63e1982b1",
+      "parent_sha256": "b3455813e3495fe67c5376fd21aecdffba6ac5c883d622e4c60b944800a12f65",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-recovery-evidence/intent-recovered.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-source-2342/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": {
+          "approved": [],
+          "inventory": 0,
+          "pending": []
+        },
+        "blockers": [
+          "Record exact installed IDs and identify previously canonical elements"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "RECONCILE_APPROVED_ELEMENTS",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "RECONCILE_APPROVED_ELEMENTS",
+        "next_decision_id": null,
+        "phase": "INSTALLATION_INVENTORY",
+        "publication_authorized": false,
+        "request_sha256": "877067966e16248b1387ab2b5ff0e05e64f7529eca11a127611b87b8f367a501",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "9fc74a57ed34d0aebd47ad185a9e93b1ec01c2778fb3d640bb69394ca8b70552",
+      "status": "PENDING"
     }
   ]
 }
