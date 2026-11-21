@@ -12,4 +12,6 @@ Fonte de verdade: `master` SHA <sha>, owner <subject_id>.
 
 **Pesquisa requerida:** <arquitetura, densidade, redes, equipamentos, clima, períodos históricos>
 
-**Próxima ação:** <RESEARCH | ASK_OWNER | PRESENT_SKETCH>
+**Próxima ação:** <RESEARCH | ASK_OWNER | INF-01>
+
+Sem liberação por esboço: usar `scripts/pipeline.py run` e os critérios independentes de `docs/infra-acceptance.md` antes de avançar.

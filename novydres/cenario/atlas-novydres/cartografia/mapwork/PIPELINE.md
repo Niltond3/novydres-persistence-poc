@@ -12,7 +12,8 @@ espacial e conexões vizinhas → INF-01 a INF-07 → URB-08 → gerar imagens p
 unidade → auditar cada imagem e seus vizinhos → compor tiles → revisão macro
 ANTES/DEPOIS → solicitar aprovação final ao proprietário.
 
-Uma aprovação libera **somente** a sucessora. Falha em qualquer dependência
+A aprovação documental histórica de um desenho não libera nenhuma etapa.
+Uma aprovação verificável por critérios independentes libera **somente** a sucessora. Falha em qualquer dependência
 (incluindo bytes, máscara, U02, conexões, plano ou hash) invalida as aprovações
 descendentes. Não gerar quadras, lotes, edifícios, POIs ou arte antes dos gates
 previstos. Nenhum comando desta pipeline publica cânone.

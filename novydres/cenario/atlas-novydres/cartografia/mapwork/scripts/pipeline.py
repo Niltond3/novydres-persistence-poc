@@ -20,7 +20,6 @@ import mapwork as core
 import urban_architecture as urban
 import urban_content as content
 import contracts as contract
-import contracts as validation_contract
 import acceptance
 import visual
 import flow
@@ -415,21 +414,21 @@ def make_composition_contract(zone_path,spatial_path,design_root,zone,report,
     }
 
 
-def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_u02):
+def verify_composition_contract(composition,zones,cfg,base,assets,before,protected_u02):
     """Rebuild all authorization gates at use time, then verify input hash binding."""
-    core.fail(contract.get("schema")=="NOVYDRES_MAPWORK_COMPOSITION_CONTRACT",
+    core.fail(composition.get("schema")=="NOVYDRES_MAPWORK_COMPOSITION_CONTRACT",
               "invalid composition contract schema")
     core.fail(len(zones)==1 and cfg==core.load(core.CONFIG),
               "composition contract requires the current repository configuration and one zone")
-    zone_path=Path(contract["zone_path"])
-    spatial_path=Path(contract["spatial_path"])
-    design_root=Path(contract["design_root"])
+    zone_path=Path(composition["zone_path"])
+    spatial_path=Path(composition["spatial_path"])
+    design_root=Path(composition["design_root"])
     core.fail(zone_path.is_file() and spatial_path.is_file(),
               "composition contract source files missing")
-    core.fail(fingerprint(zone_path)==contract.get("zone_sha256") and
-              fingerprint(spatial_path)==contract.get("spatial_sha256") and
-              fingerprint(base)==contract.get("reference_sha256") and
-              fingerprint(core.STATE)==contract.get("world_state_sha256"),
+    core.fail(fingerprint(zone_path)==composition.get("zone_sha256") and
+              fingerprint(spatial_path)==composition.get("spatial_sha256") and
+              fingerprint(base)==composition.get("reference_sha256") and
+              fingerprint(core.STATE)==composition.get("world_state_sha256"),
               "stale pipeline composition contract: source hash changed")
     zone=core.load(zone_path)
     plan=core.load(spatial_path)
@@ -437,10 +436,10 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               plan.get("fixture_mode") is False and
               zone["status"] in ("GENERATING","VISUAL_REVIEW","OWNER_APPROVED"),
               "composition contract zone/plan authority mismatch")
-    is_verified_protocol=bool(contract.get("execution_evidence"))
+    is_verified_protocol=bool(composition.get("execution_evidence"))
     core.fail(is_verified_protocol,
               "composition requires independent editorial evidence")
-    bound_gate=contract.get("acceptance_evidence",{})
+    bound_gate=composition.get("acceptance_evidence",{})
     ledger_file=Path(bound_gate.get("ledger_path","")) if isinstance(bound_gate,dict) else None
     core.fail(ledger_file is not None and ledger_file.is_file() and
               bound_gate.get("criteria_sha256")==acceptance.criteria_contract()["sha256"] and
@@ -457,7 +456,7 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               gate["accepted_stages"]==list(acceptance.STAGES),
               "composition requires independent INF-01 through URB-08 PASS")
     if is_verified_protocol:
-        receipt=contract["execution_evidence"]
+        receipt=composition["execution_evidence"]
         required={
             "intent_path":"intent_sha256",
             "decisions_path":"decisions_sha256",
@@ -475,17 +474,17 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
         index=core.load(receipt["scope_index_path"])
         core.fail(index["source_commit"]==intent["source_commit"],
                   " source commit mismatch")
-        validation_contract.validate_intent(intent,index["targets"],index["world_bounds"])
+        contract.validate_intent(intent,index["targets"],index["world_bounds"])
         register=core.load(receipt["decisions_path"])
-        approvals=validation_contract.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
+        approvals=contract.validate_proposals(register,region=zone["id"],commit=intent["source_commit"])
         core.fail(not approvals["pending"]," has pending editorial decisions")
         inventory=core.load(receipt["inventory_path"])
         canon=set(index["targets"][zone["id"]].get("approved_element_ids",[]))
         core.fail(set(inventory.get("canonical_elements",[])).issubset(canon),
                   " asserted unsupported existing elements")
-        validation_contract.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
-        validation_contract.validate_research(core.load(receipt["research_path"]))
-        caps=validation_contract.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
+        contract.validate_inventory(inventory["elements"],register,canonical_element_ids=canon)
+        contract.validate_research(core.load(receipt["research_path"]))
+        caps=contract.capability_preflight(core.load(receipt["capabilities_path"]),require_native=False)
         core.fail(not caps["missing"]," required host capability not evidenced")
     core.audit_zone(zone,cfg,assets,strict=True)
     check_canonical_pois(zone_path,plan)
@@ -494,12 +493,12 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
     if is_verified_protocol:
         report["gates"]["owner_art_authorized"]=True
     expected={u["id"] for u in report["work_units"]}
-    core.fail(set(contract.get("design_sha256",{}))==expected,
+    core.fail(set(composition.get("design_sha256",{}))==expected,
               "composition contract incomplete work-unit design hashes")
     for uid in sorted(expected):
         path=design_root/(uid+".json")
         core.fail(path.is_file() and
-                  fingerprint(path)==contract["design_sha256"][uid],
+                  fingerprint(path)==composition["design_sha256"][uid],
                   uid+": stale/missing work-unit design in composition contract")
     validate_all_unit_designs(plan,report,design_root,cfg,allow_abstract=is_verified_protocol)
     core.fail(report["generation_ready"] and
@@ -507,16 +506,16 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               "composition contract blocked by urban/art gates")
     affected=set(expected)
     if is_verified_protocol and intent["mode"]!="CREATE_REGION":
-        mask_path=Path(contract["execution_evidence"].get("edit_mask_path",""))
+        mask_path=Path(composition["execution_evidence"].get("edit_mask_path",""))
         core.fail(mask_path.is_file()," edit mask missing before artwork binding")
         with Image.open(mask_path) as im:
             affected=affected_unit_ids(report,im.convert("L"))
     bound=validate_work_unit_bindings(zone,report,plan=plan,
                                      required_units=affected if is_verified_protocol else None)
     verify_unit_art_masks(plan,report,zone["elements"],assets,cfg)
-    core.fail(_asset_fingerprints(zone,assets)==contract.get("asset_sha256"),
+    core.fail(_asset_fingerprints(zone,assets)==composition.get("asset_sha256"),
               "composition contract asset hash or ownership mismatch")
-    core.fail(contract.get("before_manifest_sha256")==(
+    core.fail(composition.get("before_manifest_sha256")==(
         fingerprint(Path(before)/"tiles.json") if before else None),
         "stale composition contract: approved-before manifest changed")
     world=core.load(core.STATE)
@@ -528,13 +527,13 @@ def verify_composition_contract(contract,zones,cfg,base,assets,before,protected_
               protected_u02.tobytes()==protection.tobytes(),
               "composition contract requires the exact validated U02 protection mask")
     if is_verified_protocol:
-        receipt=contract["execution_evidence"]
+        receipt=composition["execution_evidence"]
         if intent["mode"]!="CREATE_REGION":
             p=Path(receipt.get("edit_mask_path",""))
             core.fail(p.is_file() and fingerprint(p)==receipt.get("edit_mask_sha256"),
                       " edit mask is missing or changed")
             with Image.open(p) as im:
-                validation_contract.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
+                contract.validate_edit_mask(im.convert("L"),intent["intervention"]["bounds"],protection)
         images=core.load(receipt["image_receipts_path"])
         verify_native_manifest(images,zone,report,cfg,assets,active_units=affected,
                                reference_sha256=fingerprint(base),
@@ -683,14 +682,13 @@ def _run_verified(args):
         raise core.Invalid("approved release exists: --before is mandatory to preserve its tiles")
     protection=urban.spatial_protection_mask(plan)
     out=Path(args.out); tiles=out/"tiles"
-    core.audit_zone(zone,cfg,args.assets,strict=True,
-                    preflight_verified=getattr(args,"_editorial_verified",False))
+    core.audit_zone(zone,cfg,args.assets,strict=True)
     verify_unit_art_masks(plan,report,zone["elements"],args.assets,cfg)
-    contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
+    composition_contract=make_composition_contract(zone_path,spatial_path,design_root,zone,
                                        report,args.reference,args.assets,args.before)
     ledger_path=getattr(args,"acceptance_ledger",None) or (
         zone_path.parent/"acceptance-ledger.json")
-    contract["acceptance_evidence"]={
+    composition_contract["acceptance_evidence"]={
         "ledger_path":str(ledger_path),
         "ledger_sha256":fingerprint(ledger_path),
         "criteria_sha256":acceptance.criteria_contract()["sha256"],
@@ -714,7 +712,7 @@ def _run_verified(args):
             "capabilities_path":str(Path(args.capabilities).resolve()),
             "capabilities_sha256":fingerprint(args.capabilities)
         }
-        contract["execution_evidence"]=registration
+        composition_contract["execution_evidence"]=registration
         if intent["mode"]!="CREATE_REGION":
             if not args.editable_mask:
                 raise core.Invalid(" refinement requires --editable-mask")
@@ -734,7 +732,7 @@ def _run_verified(args):
         registration["image_receipts_sha256"]=fingerprint(args.image_receipts)
     manifest=core.composite([zone],cfg,args.reference,args.assets,tiles,
                             approved_before=args.before,protected_u02=protection,
-                            edit_mask_u02=edit_mask,contract=contract)
+                            edit_mask_u02=edit_mask,contract=composition_contract)
     comparison=out/"comparison.html"
     result=core.html_compare(args.before,tiles,args.reference,comparison,cfg)
     evidence={"tiles":len(manifest["tiles"]),"comparison":str(comparison),

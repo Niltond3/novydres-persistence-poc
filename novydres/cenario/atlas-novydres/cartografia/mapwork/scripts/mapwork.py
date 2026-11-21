@@ -412,7 +412,7 @@ def validate_integral_sketch(g,plan,z,cfg):
         fail(poi.get('status')==('SKETCH_SITE_APPROVED_NOT_GIS_CANON' if archived_approval else 'CANDIDATE_VISUAL_INSPECTION_REQUIRED'),poi['id']+': POI site status mismatches sketch stage')
     conflicts=g.get('crossing_conflicts',[])
     if not archived_approval:
-        fail(len(conflicts)==3 and len({c.get('id') for c in conflicts})==3,'three observed crossing discrepancies must remain traceable in legacy draft')
+        fail(len(conflicts)==3 and len({c.get('id') for c in conflicts})==3,'three observed crossing discrepancies must remain traceable in source record')
         fail(g.get('validation',{}).get('conflicts_unresolved')==3,'draft must retain unresolved marker count')
     else:
         fail(len(conflicts)==0,'approved sketch must not carry conflict markers excluded by owner')
