@@ -215,11 +215,11 @@ def test_host_connector_results_are_translated_without_callbacks(tmp_path):
         provider_results=providers,github_commits=[],arg_updates={},
         output_path=tmp_path/"host-exchange.json")
     data=json.loads((tmp_path/"host-exchange.json").read_text())
-    assert result["artifacts"]==5
+    assert result["artifacts"]==6
     assert data["kind"]=="COMPLETE_OPERATION"
     assert data["result"]["operation_id"]==operation["operation_id"]
     assert {a["kind"] for a in data["result"]["artifacts"]}=={
-        "image","reference-image","edit-mask","native-edit-handoff","visual-review"}
+        "image","composed-image","reference-image","edit-mask","native-edit-handoff","visual-review"}
     import orchestration
     checked=orchestration._host_artifacts(operation,data["result"],[])
     assert len(checked)==5 and any(a.get("kind")=="image" for a in checked)
