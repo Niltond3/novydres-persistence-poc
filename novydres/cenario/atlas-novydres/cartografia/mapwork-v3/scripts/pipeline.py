@@ -762,14 +762,18 @@ def main(argv=None):
             core.save(args.checkpoint,result)
         # PASS is reserved for verified criteria, not merely a successful
         # command that returned an incomplete checkpoint or a handoff.
-        if result.get("blockers") or result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE":
+        if (result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE" and
+                isinstance(result.get("audit"),dict) and
+                result["audit"].get("status")=="FAIL"):
+            outcome="FAIL"
+        elif result.get("blockers") or result.get("phase") == "INFRASTRUCTURE_ACCEPTANCE":
             outcome="BLOCKED"
         elif result.get("phase") == "CANDIDATE_READY_FOR_OWNER_REVIEW":
             outcome="READY_FOR_OWNER_REVIEW"
         else:
             outcome="CHECKPOINT"
         print(json.dumps({"status":outcome,"result":result},ensure_ascii=False,indent=2))
-        return 0
+        return 2 if outcome == "FAIL" else 0
     except (core.Invalid,urban.ContractError,v33.Blocked,KeyError,ValueError,OSError) as exc:
         print(json.dumps({"status":"FAIL","error":str(exc)},ensure_ascii=False),file=sys.stderr)
         return 2

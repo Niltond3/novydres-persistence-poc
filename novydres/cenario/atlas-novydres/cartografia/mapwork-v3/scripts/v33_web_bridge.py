@@ -143,7 +143,7 @@ def run_web(*, argv, file_manifest, root, source_commit):
     output, errors = io.StringIO(), io.StringIO()
     with contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
         exit_code = pipeline.main(["run", *list(argv)])
-    raw = output.getvalue().strip() if exit_code == 0 else errors.getvalue().strip()
+    raw = output.getvalue().strip() or errors.getvalue().strip()
     try:
         result = json.loads(raw)
     except json.JSONDecodeError as exc:

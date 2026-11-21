@@ -35,3 +35,7 @@ A suíte `tests/test_v33_contracts.py` e `tests/test_v33_urban.py` cobre autoriz
 ## Ajuste de auditoria visual (candidato)
 
 Foi adicionado o validador interno `scripts/v33_visual.py`, invocado exclusivamente pela entrada `pipeline.py run`. Pareceres de unidade vinculam os SHA de PNG, máscara, U02, plano e imagens de vizinhos em borda; o parecer global, posterior à composição, vincula SHA de tiles, overviews ANTES/DEPOIS, U02 e recibos de imagem. O modelo deve analisar os pixels; o código verifica documentação, cobertura e integridade, não a estética. Teste de imagens sem geração real não demonstra execução ponta a ponta. Kingswell ainda depende de rede espacial e máscaras reais.
+
+## Corte de compatibilidade Web — 20/11/2026
+
+Adaptador de execução in-process, prova de transferência U02 e ida-e-volta de máscaras/previews no Drive, validador matemático de redes e máscaras, revisão de hash regional, e teste real de bloqueio em Kingswell foram concluídos na branch candidata. A suíte de regressão foi ajustada para exigir recibos de capacidades reais e status FAIL distinto de BLOCKED. Ver `WEB_RUNTIME_V33.md` e `WEB_EXECUTION_AUDIT_20261120.md`. **Não** eleva V3.3 a conformidade integral: ainda faltam geração nativa → compositor real, autocorreção artística real, composição global e retomada em novo chat com os mesmos bytes.

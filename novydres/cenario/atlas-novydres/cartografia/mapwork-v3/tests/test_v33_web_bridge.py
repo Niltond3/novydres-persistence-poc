@@ -60,3 +60,13 @@ def test_canonical_pipeline_is_in_process_and_remains_blocked(tmp_path):
     assert result["status"]=="BLOCKED"
     assert result["pipeline"]["result"]["phase"]=="INFRASTRUCTURE_ACCEPTANCE"
     assert not result["authorizes_canon"]
+
+
+def test_canonical_cli_propagates_fail_instead_of_blocked(monkeypatch,capsys):
+    import pipeline
+    monkeypatch.setattr(pipeline,"run",lambda _: {
+        "phase":"INFRASTRUCTURE_ACCEPTANCE", "audit":{"status":"FAIL"},
+        "blockers":["candidate geometry failed mathematical audit"]})
+    rc=pipeline.main(["run","--district","kingswell"])
+    result=json.loads(capsys.readouterr().out)
+    assert rc==2 and result["status"]=="FAIL"

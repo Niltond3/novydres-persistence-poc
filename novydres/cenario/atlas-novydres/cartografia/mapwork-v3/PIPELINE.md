@@ -1,5 +1,8 @@
 # Mapwork V3.3 — Contrato operacional prioritário
 
+> **Execução no ChatGPT Web (V3.3):** o exemplo `python scripts/pipeline.py` é a forma CLI para hosts com terminal, **não** requisito de ChatGPT Web. No Web usar `scripts/v33_web_bridge.py::run_web`, que invoca a mesma `scripts/pipeline.py::main` dentro do interpretador após verificar bytes, Git blob e contratos Markdown. Recuperação de código via GitHub (verdade) e cache verificado do Drive (bytes); imagens pelo Drive. Instruções obrigatórias em [`WEB_RUNTIME_V33.md`](WEB_RUNTIME_V33.md). `BLOCKED`/`FAIL` são resultados de execução, não decisões para o usuário.
+
+
 **Prevalência:** este trecho V3.3 substitui gates V3.2 contraditórios descritos mais abaixo. A fonte da verdade permanece `master`; esta branch é apenas implementação candidata.
 
 ## Entrada única, sem arquitetura paralela

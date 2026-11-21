@@ -1,0 +1,194 @@
+{
+  "schema": "NOVYDRES_MAPWORK_V33_WEB_EXECUTION_EVIDENCE_1",
+  "recorded_on": "2026-11-20",
+  "repo": "Niltond3/novydres-persistence-poc",
+  "branch": "mapwork-v3/v33-agent-pipeline-20261120",
+  "source_commit_used_in_probed_web_executor": "d9c20042598110ebb3e78a622cb70837f8741db1",
+  "source_files_sha_git_verified": 10,
+  "original_reference": {
+    "drive_id": "1PrfWEcD07Gz5eX5r2qKGaRlecixVKh6r",
+    "sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "width": 1448,
+    "height": 1086
+  },
+  "real_python_web_no_shell": {
+    "status": "PASS_SCOPED",
+    "entry": "scripts/v33_web_bridge.py:run_web -> scripts/pipeline.py:main",
+    "result": {
+      "schema": "NOVYDRES_MAPWORK_V33_PIPELINE_CHECKPOINT_1",
+      "phase": "INFRASTRUCTURE_ACCEPTANCE",
+      "next_action": "GENERATE_AND_AUDIT_CANDIDATE",
+      "blockers": [
+        "no candidate yet for INF-01"
+      ],
+      "target": "kingswell",
+      "mode": "CREATE_REGION",
+      "request_sha256": "e7d5999382c8e10872e363be13a86d7833035ad73c48e8ad50e62d95139fa851",
+      "audit": {
+        "status": "BLOCKED",
+        "stage": "INF-01",
+        "next_action": "GENERATE_AND_AUDIT_CANDIDATE",
+        "blockers": [
+          "no candidate yet for INF-01"
+        ],
+        "attempts": 0,
+        "accepted_stages": [],
+        "latest": null,
+        "allows_lots": false
+      },
+      "next_decision_id": null,
+      "publication_authorized": false,
+      "canonical_state_changed": false
+    }
+  },
+  "drive_byte_roundtrip": {
+    "mask": {
+      "drive_id": "15HFZQVv1_SreukomcOtJP4bH_fPpCgsZ",
+      "sha256": "7426c307ca53953130c0777f0c474bf67ffacd18a6accdf50ab47de605a80f73"
+    },
+    "r2_overlay": {
+      "drive_id": "1lRP4dvRhqgoIOB3v01rjsum9meSCJbbS",
+      "sha256": "20dd2c731d9cb81e42734ca218a87d871b72bdb0fb882174c53686d06f61a7b4"
+    },
+    "diagnostic_archive": {
+      "drive_id": "1sbrl9utMPZFDVFe5nx0_dw2PYYhD3tcd",
+      "sha256": "13ba001228b8f97ad13116445d056c8925401293a206cd84c5d8ad2020caf576"
+    }
+  },
+  "diagnostic_attempts": {
+    "schema": "NOVYDRES_MAPWORK_V33_WEB_DIAGNOSTIC_E2E_1",
+    "note": "Diagnostic candidates from approved U02; neither is accepted as Kingswell infrastructure",
+    "u02_sha256": "9d55965f45181e3b943552e32df0e8ad41b63c8974ffd6e670f447ffd36eb9a0",
+    "attempt1": {
+      "road_count": 98,
+      "geometry_sha256": "c8e0d602b1eb388ea2200698e7281904548ed41cbbffd0cee359f4cf6f147a24",
+      "preview_sha256": "152a55cb661371ffc23b7832d9729307142d7439ccddc30a8480417aec5302f9",
+      "outcome": {
+        "status": "FAIL",
+        "stage": "INF-01",
+        "next_action": "REPAIR_UNVERIFIED_CANDIDATE",
+        "blockers": [
+          "deterministic geometry audit failed: untyped crossing/proximity is not a connection: ('KW2-W01', 'KW2-W13')"
+        ],
+        "attempts": 1,
+        "accepted_stages": [],
+        "latest": {
+          "verdict": "FAIL",
+          "failed": [
+            "INF-01.01",
+            "INF-01.02",
+            "INF-01.03",
+            "INF-01.04"
+          ]
+        },
+        "allows_lots": false
+      }
+    },
+    "attempt2": {
+      "road_count": 2,
+      "geometry_sha256": "7e844b6705dbdefcee0180521dd61cd7b7a1d774cacf1776721b9042b39c1fea",
+      "preview_sha256": "db6268b0a7e4449638ea1959e6ba8136e972fd0501a88d5b4a5343cb3b486151",
+      "technical": {
+        "status": "PASS",
+        "stage": "INF-01",
+        "geometry_sha256": "7e844b6705dbdefcee0180521dd61cd7b7a1d774cacf1776721b9042b39c1fea",
+        "zone_pixels": 324384,
+        "road_edges": 2,
+        "modals": [
+          "road"
+        ],
+        "node_count": 4,
+        "edge_count": 2,
+        "crossings_detected": 0,
+        "crossing_relations": 0,
+        "territory_pixels": null,
+        "previous_stage_sha256": null
+      },
+      "outcome": {
+        "status": "FAIL",
+        "stage": "INF-01",
+        "next_action": "REPAIR_AND_REGENERATE",
+        "blockers": [
+          "INF-01.01",
+          "INF-01.02",
+          "INF-01.03",
+          "INF-01.04"
+        ],
+        "attempts": 2,
+        "accepted_stages": [],
+        "latest": {
+          "verdict": "FAIL",
+          "repair_plan": "Retornar ao desenho por setores com junções certificadas, incluir malha regional completa e nova prévia integral.",
+          "findings": [
+            "O recorte contém duas vias consistentes matematicamente, mas cobertura regional insuficiente."
+          ]
+        },
+        "allows_lots": false
+      }
+    },
+    "negative_forged_hash": {
+      "outcome": {
+        "status": "FAIL",
+        "stage": "INF-01",
+        "next_action": "REPAIR_UNVERIFIED_CANDIDATE",
+        "blockers": [
+          "preview: artifact SHA-256 differs from actual bytes: INF01-attempt2-preview.png",
+          "visual inspection receipt missing or stale"
+        ],
+        "attempts": 2,
+        "accepted_stages": [],
+        "latest": {
+          "verdict": "FAIL",
+          "failed": [
+            "INF-01.01",
+            "INF-01.02",
+            "INF-01.03",
+            "INF-01.04"
+          ]
+        },
+        "allows_lots": false
+      }
+    },
+    "negative_fake_visual_report": {
+      "outcome": {
+        "status": "FAIL",
+        "stage": "INF-01",
+        "next_action": "REPAIR_UNVERIFIED_CANDIDATE",
+        "blockers": [
+          "visual inspection receipt missing or stale"
+        ],
+        "attempts": 2,
+        "accepted_stages": [],
+        "latest": {
+          "verdict": "FAIL",
+          "failed": [
+            "INF-01.01",
+            "INF-01.02",
+            "INF-01.03",
+            "INF-01.04"
+          ]
+        },
+        "allows_lots": false
+      }
+    },
+    "canonical_ledger_modified": false,
+    "lots_allowed": false,
+    "poi_allowed": false
+  },
+  "result": {
+    "source_verification": "PASS_SCOPED",
+    "drive_roundtrip": "PASS_SCOPED",
+    "kingswell_inf01": "BLOCKED",
+    "native_image_to_compositor": "BLOCKED_NOT_TESTED",
+    "real_artistic_selfrepair": "BLOCKED_NOT_TESTED",
+    "canonical_writes": 0,
+    "lot_or_poi_release": false
+  },
+  "falsification_test": {
+    "forged_sha_result": "FAIL",
+    "text_only_visual_result": "FAIL",
+    "topology_crossings_result": "FAIL",
+    "stage_gate": "NO_ADVANCE"
+  },
+  "warning": "Diagnostic reference-zone rectangle is NOT an approved territorial boundary; diagnostic candidates cannot count as Kingswell spatial acceptance."
+}

@@ -1,3 +1,5 @@
+**ChatGPT Web V3.3:** antes de chamar qualquer comando Shell ou alegar que `pipeline.py` não pode rodar, leia [`WEB_RUNTIME_V33.md`](WEB_RUNTIME_V33.md). Recupere o cache de código do Drive, compare cada Git blob ao HEAD no GitHub e use `v33_web_bridge.run_web` em Python, chamando exatamente a pipeline canônica. Não considere declaração textual como evidência; não peça decisões editoriais para resolver falhas de ferramentas. O gate INF-01 de Kingswell permanece bloqueado.
+
 ## V3.3 — protocolo visual obrigatório (candidato)
 
 Antes de seguir as etapas abaixo, consulte [VISUAL_REVIEW_PROTOCOL_V33.md](VISUAL_REVIEW_PROTOCOL_V33.md). A imagem é gerada nativamente pelo agente, sem API. A pipeline confere artefatos e comprovantes com SHA, enquanto o agente analisa visualmente cada máscara e seus pares, e depois o atlas completo; sem parecer de unidade e parecer macro reais, não se solicita aprovação. O preflight não exige imagem ainda não gerada. A correção não cria cânone nem dispensa planejamento urbano prévio.
