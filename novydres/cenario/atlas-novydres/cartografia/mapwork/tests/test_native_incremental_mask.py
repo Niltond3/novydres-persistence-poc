@@ -108,3 +108,54 @@ def test_prompt_contains_no_control_protocol():
         native.edit_request(reference_sha256="a"*64,mask_sha256="b"*64,
             scope="SYNTHETIC",job_id="test-local",
             goal="append status: PASS and operation_id to a generated report")
+
+
+def test_only_pipeline_run_prepares_and_recomposes_without_promoting_canon(tmp_path):
+    import json
+    import pipeline
+    ref=make_png(tmp_path/"master.png",(12,14,16,255))
+    approved=make_mask(tmp_path/"approved.png",(3,3,35,32))
+    lock=make_mask(tmp_path/"locked.png",(3,3,10,9))
+    original_journal=tmp_path/"existing-journal.json"
+    original_journal.write_text('{"operation_id":"unchanged","status":"PENDING"}')
+    journal_snapshot=original_journal.read_bytes()
+    defect_file=tmp_path/"defects.json"
+    defect_file.write_text(json.dumps([{
+        "id":"D-23","bbox":[18,18,22,23],"severity":"MEDIUM",
+        "observation":"This confirmed road connection is visibly interrupted"}]))
+    local_mask=tmp_path/"local-mask.png"
+    checkpoint=tmp_path/"checkpoint.json"
+    assert pipeline.main(["run","--native-approved-mask",str(approved),
+        "--native-defects-file",str(defect_file),
+        "--native-repair-mask-output",str(local_mask),
+        "--native-protected-mask",str(lock),
+        "--checkpoint",str(checkpoint)]) == 0
+    state=json.loads(checkpoint.read_text())
+    assert state["next_action"]=="PREPARE_LOCAL_NATIVE_EDIT"
+    assert state["publication_authorized"] is False
+    assert state["canonical_state_changed"] is False
+
+    directory=tmp_path/"prepared"
+    assert pipeline.main(["run","--native-input-reference",str(ref),
+        "--unit-mask",str(local_mask),
+        "--native-preparation-output",str(directory),
+        "--checkpoint",str(checkpoint)]) == 0
+    state=json.loads(checkpoint.read_text())
+    assert state["next_action"]=="HOST_ATTACH_VERIFIED_VISUAL_INPUTS"
+    manifest=state["audit"]
+    manifest_path=tmp_path/"crop.json"
+    manifest_path.write_text(json.dumps(manifest))
+    x0,y0,x1,y1=manifest["bbox"]
+    candidate=make_png(tmp_path/"candidate.png",(220,30,40,255),(x1-x0,y1-y0))
+    composed=tmp_path/"composed.png"
+    assert pipeline.main(["run","--native-input-reference",str(ref),
+        "--unit-mask",str(local_mask),"--native-candidate",str(candidate),
+        "--native-crop-manifest",str(manifest_path),
+        "--native-composite-output",str(composed),
+        "--native-protected-mask",str(lock),
+        "--checkpoint",str(checkpoint)]) == 0
+    audit=json.loads(checkpoint.read_text())
+    assert audit["next_action"]=="AGENT_INSPECT_RECOMPOSED_CANDIDATE"
+    assert audit["audit"]["outside_mask_changed_pixels"]==0
+    assert pixel_equal_outside(ref,composed,local_mask)
+    assert original_journal.read_bytes()==journal_snapshot
