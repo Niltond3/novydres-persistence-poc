@@ -30,7 +30,7 @@ def test_p1_direct_composite_requires_verified_pipeline_contract(tmp_path):
 def test_p1_existing_approved_neighbor_without_spatial_manifest_fails(tmp_path,monkeypatch):
     monkeypatch.setattr(pipeline,"ROOT",tmp_path)
     folder=tmp_path/"zones"/"neighbor";folder.mkdir(parents=True)
-    core.save(folder/"zone.json",{"id":"neighbor","status":"SKETCH_APPROVED"})
+    core.save(folder/"zone.json",{"id":"neighbor","status":"PLANNING"})
     plan={"neighbor_seams":[{"to_zone":"neighbor"}]}
     with pytest.raises(core.Invalid,match="neighbor.*manifest"):
         pipeline.load_verified_neighbors(plan)

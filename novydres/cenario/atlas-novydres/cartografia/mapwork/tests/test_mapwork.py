@@ -25,7 +25,7 @@ def fixture(tmp_path):
         'status':'VISUAL_REVIEW','bounds':bounds,'neighbors':['east' if name=='west' else 'west'],
         'connectors':[{'id':'main-road','kind':'road','x':32,'y':16,'width':2,'neighbor':'east' if name=='west' else 'west','profile':'at_grade'}],
         'decisions':[],'research':[{'claim':'synthetic fixture','url':'https://example.org/test','accessed_on':'2026-11-19'}],
-        'sketch_approved':True,'source_commit':'432609e642c6569da6a64e302dc8272dd4b4a47f',
+        'source_commit':'432609e642c6569da6a64e302dc8272dd4b4a47f',
         'elements':[{'id':el,'kind':'lot','layer':'lot','core':core,'envelope':env,
         'asset':{'path':a.name,'sha256':m.sha(a),'drive_file_id':'mock-drive-asset'},
         'mask':{'path':mask.name,'sha256':m.sha(mask),'drive_file_id':'mock-drive-mask'},'status':'VERIFIED'}]}
@@ -38,7 +38,7 @@ def test_repository_contract():
     assert result['required_zone_reports'][0]['historical_bridges']==3
     assert result['required_zone_reports'][0]['pois']==5
     assert result['image_readiness']=='NOT_READY_FOR_ART_GENERATION'
-    assert result['required_zone_reports'][0]['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
+    assert result['required_zone_reports'][0]['readiness']=='INFRASTRUCTURE_ACCEPTANCE_REQUIRED'
 
 def test_e2e_tiles_compare(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
@@ -55,10 +55,11 @@ def test_seam_mismatch_fails(tmp_path):
     zones[1]['connectors'][0]['width']=2.1
     with pytest.raises(m.Invalid,match='seam mismatch'):m.connector_match(zones)
 
-def test_unapproved_sketch_fails(tmp_path):
+def test_legacy_approval_bit_is_rejected_by_schema(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
-    zones[0]['sketch_approved']=False
-    with pytest.raises(m.Invalid,match='sketch'):m.audit_zone(zones[0],cfg,assets,True)
+    zones[0]['sketch_approved']=True
+    with pytest.raises(m.Invalid,match='Additional properties'):
+        m.audit_zone(zones[0],cfg,assets,True)
 
 def test_scale_mismatch_fails(tmp_path):
     cfg,base,assets,zones=fixture(tmp_path)
@@ -117,8 +118,8 @@ def planning_inputs():
 
 def test_kingswell_identity_spatial_gate():
     cfg,z,plan=planning_inputs()
-    assert z['sketch_approved'] is True
-    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
+    assert z['status']=='PLANNING' and 'sketch_approved' not in z
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='INFRASTRUCTURE_ACCEPTANCE_REQUIRED'
 
 def test_bridge_exact_count_and_uniqueness():
     cfg,z,plan=planning_inputs()
@@ -150,10 +151,12 @@ def test_offframe_resources_and_transport_are_checked():
     with pytest.raises(m.Invalid,match='natural gas primary transport'):
         m.validate_spatial_plan(plan,z,cfg)
 
-def test_no_unapproved_spatial_promotion():
+def test_historical_plan_cannot_promote_generation():
     cfg,z,plan=planning_inputs()
     z['status']='GENERATING'
-    with pytest.raises(m.Invalid,match='unresolved spatial'):
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='INFRASTRUCTURE_ACCEPTANCE_REQUIRED'
+    plan['gates']['image_generation_authorized']=True
+    with pytest.raises(m.Invalid,match='cannot authorize image'):
         m.validate_spatial_plan(plan,z,cfg)
 
 def test_missing_real_zone_is_not_false_pass(tmp_path,monkeypatch):
@@ -201,7 +204,7 @@ def integral_sketch_inputs():
 def test_integral_sketch_matches_spatial_plan():
     cfg,z,plan,g=integral_sketch_inputs()
     result=m.validate_integral_sketch(g,plan,z,cfg)
-    assert result['validity']=='OWNER_APPROVED_VISUAL_SKETCH'
+    assert result['validity']=='HISTORICAL_REFERENCE_ONLY'
     assert result['bridges']==3 and result['pois']==5
     assert result['crossing_conflicts']==0
 
@@ -239,7 +242,7 @@ def test_sketch_source_image_preserved():
 def test_approved_u02_does_not_authorize_art():
     cfg,z,plan=planning_inputs()
     assert m.audit_zone(z,cfg,strict=False)['elements']==14
-    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='SKETCH_APPROVED_DETAIL_PREP_REQUIRED'
+    assert m.validate_spatial_plan(plan,z,cfg)['readiness']=='INFRASTRUCTURE_ACCEPTANCE_REQUIRED'
 
 
 def detail_inputs():

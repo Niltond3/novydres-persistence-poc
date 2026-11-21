@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Novydres Mapwork V3 zone",
+  "title": "Novydres Mapwork zone",
   "type": "object",
   "required": [
     "schema",
@@ -12,7 +12,6 @@
     "elements",
     "decisions",
     "research",
-    "sketch_approved",
     "source_commit"
   ],
   "additionalProperties": false,
@@ -31,7 +30,6 @@
     "status": {
       "enum": [
         "PLANNING",
-        "SKETCH_APPROVED",
         "GENERATING",
         "VISUAL_REVIEW",
         "OWNER_APPROVED",
@@ -160,9 +158,6 @@
         },
         "additionalProperties": false
       }
-    },
-    "sketch_approved": {
-      "type": "boolean"
     },
     "source_commit": {
       "type": "string",

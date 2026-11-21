@@ -34,7 +34,6 @@ def make_tile_inputs(tmp):
         "status":"VISUAL_REVIEW","bounds":[0,0,32,16],
         "neighbors":[],"connectors":[],"decisions":[],
         "research":[{"claim":"synthetic","url":"https://example.org","accessed_on":"2026-11-20"}],
-        "sketch_approved":True,
         "source_commit":"de9da452fcc8a808b04519ee6e21f218d2a12314",
         "elements":[]
     }
@@ -329,7 +328,7 @@ def test_existing_peer_loader_never_silently_reserves_missing_counterpart(tmp_pa
     p["source_sha256"]=core.load(ROOT/"config.json")["reference"]["sha256"]
     fake=tmp_path/"mapwork"
     path=fake/"zones"/"peer";path.mkdir(parents=True)
-    core.save(path/"zone.json",{"id":"peer","status":"SKETCH_APPROVED"})
+    core.save(path/"zone.json",{"id":"peer","status":"PLANNING"})
     other=copy.deepcopy(p)
     other["zone"]["id"]="peer"
     other["neighbor_seams"]=[]
