@@ -180,6 +180,52 @@
       },
       "state_sha256": "03d16b7240619bfcf746d4b34d33f9ea9eb40ccf6193b5f3c101c31c0f44b57b",
       "status": "COMPLETED"
+    },
+    {
+      "action": "PROPOSE_AND_ASK_OWNER",
+      "artifacts": [],
+      "entry_sha256": "2808e2bb8809de2a48d53f4d46cd1bceedb6703fdf52da7e94eec81d7003dfc2",
+      "lease_head": "89a603ec25177407278495acd3247c3a939bc354",
+      "operation_id": "03b242857d8e79b45ec9ac20347be4948d8fec291fad7aba8e18ff00a454328a",
+      "parent_sha256": "c397fd779ef843bfbedae00bdc8ac75feb836429f46944396fcdabb24dd58239",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-recovery-evidence/intent-recovered.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/agent3-source-2342/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": {
+          "real_world_domains": 2,
+          "sources": 2
+        },
+        "blockers": [
+          "Propose all new elements from research and canon, then request one decision at a time"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "PROPOSE_AND_ASK_OWNER",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "PROPOSE_AND_ASK_OWNER",
+        "next_decision_id": null,
+        "phase": "EDITORIAL_DECISIONS",
+        "publication_authorized": false,
+        "request_sha256": "877067966e16248b1387ab2b5ff0e05e64f7529eca11a127611b87b8f367a501",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "353c6e6fd2aad93e657a570eac985b9696e5b013ed17ea1a5f2d263706d86afd",
+      "status": "PENDING"
     }
   ]
 }
