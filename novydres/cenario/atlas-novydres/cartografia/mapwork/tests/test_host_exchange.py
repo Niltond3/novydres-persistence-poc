@@ -219,6 +219,7 @@ def cold_proof(session, journal, readback_path, *, head, parent, artifacts=()):
             "journal_repo_path":session["journal_repo_path"],
             "source_commit":session["source_commit"],
             "initial_head":session["initial_head"],
+            "current_ref_head":head, "head_chain":[],
             "journal_readback_path":str(readback_path),
             "journal_commit":{"branch":session["branch"],
                 "repo_path":session["journal_repo_path"],
@@ -338,3 +339,39 @@ def test_cold_recovery_rejects_self_echoed_or_unbound_journal(tmp_path):
     proof["source_commit"]="f"*40
     with pytest.raises(ValueError,match="authority mismatch"):
         o._verify_cold_recovery(journal,session,proof)
+
+
+def test_cold_recovery_rejects_head_move_without_verified_commit_chain(tmp_path):
+    journal, _, invoke=setup(tmp_path)
+    invoke()
+    restored=tmp_path/"remote-journal.json"
+    restored.write_bytes(journal.read_bytes())
+    session=json.loads(journal.read_text())
+    evidence=cold_proof(session,journal,restored,head="b"*40,parent="a"*40)
+    evidence["current_ref_head"]="f"*40
+    with pytest.raises(ValueError,match="latest GitHub HEAD"):
+        o._verify_cold_recovery(journal,session,evidence)
+    evidence["head_chain"]=[{"parent":"b"*40,"head":"f"*40,
+                             "commit_sha":"f"*40,
+                             "journal_blob_sha":blob(journal.read_bytes())}]
+    aliases=o._verify_cold_recovery(journal,session,evidence)
+    assert aliases=={}
+    recovery_file=tmp_path/"recovery-with-upload.json"
+    recovery_file.write_text(json.dumps(evidence))
+    def run():
+        return {"next_action":"MATERIALIZE_INTENT","publication_authorized":False,
+                "canonical_state_changed":False}
+    def apply(updates,validate_only=False):
+        pass
+    result=o.run_host_exchange(
+        run,journal,session_key="fixed-session",source_commit="a"*40,
+        branch="mapwork/integration",expected_head="a"*40,
+        journal_repo_path="sessions/host-io-fixture.json",
+        recovery_path=recovery_file,apply_arguments=apply)
+    assert result["next_action"]=="RECONCILE_RECOVERED_REMOTE_WRITES"
+    assert result["operation_id"]==session["steps"][-1]["operation_id"]
+    assert result["current_ref_head"]=="f"*40
+    assert json.loads(journal.read_text())==session
+    evidence["head_chain"][0]["parent"]="e"*40
+    with pytest.raises(ValueError,match="intervening Git HEAD chain"):
+        o._verify_cold_recovery(journal,session,evidence)
