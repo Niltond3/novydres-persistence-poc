@@ -15,6 +15,8 @@ import synthetic_trial as trial
 import topology
 import infra_checks as infra
 import web_bridge
+import native_generation as native
+from native_fixture import fixture as native_fixture
 
 
 OP = "a" * 64
@@ -107,6 +109,14 @@ def test_topology_recomputed_and_native_png_required(tmp_path):
     args, _, _ = prepared(tmp_path)
     file = geometry(tmp_path,args)
     state = flow.run(args,None)
+    assert state["next_action"] == "MATERIALIZE_SYNTHETIC_REFERENCE_AND_MASK"
+    req,h,inputs,artifacts,review=native_fixture(tmp_path,OP)
+    spec=json.loads(Path(args.synthetic_trial).read_text())
+    spec.update(native_reference_sha256=req["reference_sha256"],
+                native_mask_sha256=req["mask_sha256"],
+                native_edit_goal="Convert crossing into a road overpass, keeping rail and road continuous")
+    Path(args.synthetic_trial).write_text(json.dumps(spec))
+    state=flow.run(args,None)
     assert state["audit"]["topology_status"] == "PASS"
     assert state["next_action"] == "GENERATE_AND_AUDIT_CANDIDATE"
     data = json.loads(file.read_text())
@@ -118,6 +128,12 @@ def test_topology_recomputed_and_native_png_required(tmp_path):
 def test_png_readback_mismatch_refuses_visual_progress(tmp_path):
     args, _, _ = prepared(tmp_path)
     geometry(tmp_path,args)
+    req,h,inputs,artifacts,review=native_fixture(tmp_path,OP)
+    spec=json.loads(Path(args.synthetic_trial).read_text())
+    spec.update(native_reference_sha256=req["reference_sha256"],
+                native_mask_sha256=req["mask_sha256"],
+                native_edit_goal="Convert crossing into a road overpass, keeping rail and road continuous")
+    Path(args.synthetic_trial).write_text(json.dumps(spec))
     source=tmp_path/"native.png"
     Image.new("RGB",(32,32),(20,40,60)).save(source)
     remote=tmp_path/"get.png"

@@ -15,6 +15,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from PIL import Image, ImageChops
+import native_generation as native
 
 SCHEMA = "NOVYDRES_MAPWORK"
 MODES = {"CREATE_REGION", "REFINE_AREA", "EDIT_ELEMENT", "ADD_ELEMENT"}
@@ -325,8 +326,20 @@ def make_generation_recipe(*, unit, intent, design_path, reference_path,
     require(not approved["pending"], "pending decisions block generation recipes")
     require(isinstance(style, dict) and style.get("projection") == "TOP_DOWN_90",
             "image recipe must fix top-down perspective")
+    native_reference = native.png(reference_path, kind="canonical reference")
+    native_mask = native.png(mask_file, kind="native edit mask")
+    require(native_reference["size"] == native_mask["size"],
+            "reference and edit mask must share pixel dimensions")
+    generation_request = native.edit_request(
+        reference_sha256=native_reference["sha256"],
+        mask_sha256=native_mask["sha256"], scope="CANONICAL", job_id=unit["id"],
+        goal=("Representar apenas a unidade " + unit["id"] +
+              " conforme desenho urbanistico verificado e infraestrutura protegida"))
     return {
         "schema": SCHEMA + "_RECIPE",
+        "native_edit_request": generation_request,
+        "native_reference_image_path": str(Path(reference_path).resolve()),
+        "native_reference_image_size": native_reference["size"],
         "work_unit_id": unit["id"],
         "bbox": unit["bbox"],
         "reference_sha256": digest(reference_path),

@@ -179,3 +179,21 @@ substitui essa leitura nem validação dos blobs; só vincula os resultados ao
 mesmo journal e à fixture sintética. A referência histórica e os
 `operation_id` não são alterados. A troca da implementação não valida,
 conclui ou repete a operação pendente por si só.
+
+## Geração nativa com entradas visuais vinculadas
+
+A conversão `web_bridge.materialize_host_exchange` aceita agora os tipos
+`reference-image`, `edit-mask` e `native-edit-handoff` além de `image` e
+`visual-review`. Para qualquer operação de geração/regeneração, a verificação
+do controlador exige **exatamente um de cada**; associa as identidades de Drive
+à chamada nativa e recusa ausência, adulteração de qualquer GET, mismatch de
+`operation_id`, prompt diferente, reuso de imagem de saída ou parecer visual
+sem referência/máscara. `arg_updates.native_handoff` deve apontar ao artefato
+local materializado e verificado; sua recuperação fria usa o mapeamento por
+bytes existente. Nenhuma chamada de imagem ocorre dentro do Python nem via
+GitHub Actions. A entrada operacional continua `scripts/pipeline.py run`.
+
+O recibo de execução é um testemunho do **host**, não uma assinatura fornecida
+pela ferramenta: sem um evento de geração nativa real, não registrar um
+`generation_id` fabricado nem declarar a edição aprovada. O resumo da conversa
+não substitui o anexo visual nem o GET independente do Drive.

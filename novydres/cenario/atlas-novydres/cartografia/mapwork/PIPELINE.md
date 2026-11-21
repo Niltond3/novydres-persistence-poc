@@ -186,3 +186,48 @@ pode receber um recibo de **mudança de escopo sintético**, sem alegar que Sulf
 foi construído. A próxima ação deve ser calculada novamente após
 `SYNC_COMPLETED_JOURNAL` e `ACK_COMPLETE`, preservando o mesmo `operation_id`
 e todos os hashes históricos. `--synthetic-trial` não cria outro journal.
+
+## Entrega obrigatória da referência à geração nativa
+
+Toda operação `GENERATE_WITH_CHATGPT_NATIVE_IMAGE`, `GENERATE_AND_AUDIT_CANDIDATE`
+no ensaio, ou ação de correção/regeneração, é uma **edição vinculada a
+referência visual**, nunca um pedido de relatório. O agente Web deve seguir o
+`native_edit_request` produzido pela entrada única `scripts/pipeline.py run`.
+Não reescreva esse pedido usando um resumo do diálogo: seu `prompt` determina
+imagem cartográfica como saída e proíbe relatório, infográfico e selo de PASS.
+
+1. Recuperar de Google Drive os bytes da **imagem de referência** e da **máscara**
+   por GETs próprios; verificar SHA-256, formato PNG e dimensões iguais.
+   Quando a referência ou máscara ainda for local, enviá-la primeiro ao Drive
+   e então recuperá-la por GET distinto do arquivo original.
+2. Tornar ambas as imagens visualmente acessíveis ao gerador nativo, usando-as
+   como entradas da **mesma chamada de edição**. O agente deve executar a edição
+   com o `prompt` exato em `native_edit_request`, não simplesmente citar os
+   arquivos, seus caminhos ou seus hashes num prompt textual.
+3. Registrar um `NOVYDRES_MAPWORK_NATIVE_EDIT_HANDOFF` com `request` íntegro,
+   `request_sha256`, `operation_id` (nas operações Web), `inputs` nas funções
+   `reference-image` e `edit-mask`, `dispatch` da chamada nativa com
+   `generation_id`, `attached_inputs`, SHA do pedido/prompt e do resultado,
+   e `output` com ID/bytes locais + GET independente do Drive.
+4. Persistir também um parecer visual com hashes da **referência**, **máscara** e
+   **imagem gerada**. Na troca com o host, apresentar cinco artefatos: `image`,
+   `reference-image`, `edit-mask`, `native-edit-handoff` e `visual-review`.
+   A composição canônica exige, por unidade, a receita original e o handoff
+   recuperáveis com hashes reais no lote de imagens.
+
+`--native-handoff` indica o JSON materializado da operação. Sem esse arquivo,
+sem imagem/máscara baixadas independentemente, ou com imagens/IDs/hashes fora
+do pedido, a pipeline **não pode reconhecer PASS**. É legítimo reutilizar a
+mesma referência em outra tentativa; a nova candidata não pode reutilizar os
+bytes de uma tentativa anterior como se fossem nova geração.
+
+O módulo Python confirma os **bytes, o despacho declarado e seus vínculos**;
+não tem acesso interno ao payload secreto da ferramenta de imagem. A veracidade
+de `dispatch.attached_inputs` e `generation_id` é responsabilidade do host
+ChatGPT Web conectado, que deve efetivamente chamar a ferramenta com os dois
+anexos. Um JSON sem chamada real **não é demonstração operacional**.
+
+No ensaio não canônico, a fixture deve indicar `native_reference_sha256`,
+`native_mask_sha256` e `native_edit_goal` além da geometria e do journal já
+vinculados. A ausência desses campos produz
+`MATERIALIZE_SYNTHETIC_REFERENCE_AND_MASK`, não uma geração textual de imagem.

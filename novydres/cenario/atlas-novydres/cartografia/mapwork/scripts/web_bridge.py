@@ -208,7 +208,8 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
         kind = item.get("kind")
         if kind is not None and kind not in ("image", "visual-review", "research",
                                              "topology", "intent", "capability",
-                                             "other"):
+                                             "reference-image", "edit-mask",
+                                             "native-edit-handoff", "other"):
             raise WebBridgeError("unknown host artifact kind")
         record = {"provider":provider,"path":local,"readback_path":remote,
                   "sha256":sha256(data)}

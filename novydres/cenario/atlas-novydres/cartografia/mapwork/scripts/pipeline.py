@@ -372,6 +372,23 @@ def verify_native_manifest(images,zone,report,cfg,assets,*,active_units=None,
         contract.image_receipt(receipt,expected_size=[
             (bbox[2]-bbox[0])*scale,(bbox[3]-bbox[1])*scale
         ],work_unit_id=uid)
+        recipe_file=Path(receipt.get("native_recipe_path", ""))
+        handoff_file=Path(receipt.get("native_handoff_path", ""))
+        core.fail(recipe_file.is_file() and handoff_file.is_file() and
+                  fingerprint(recipe_file)==receipt.get("native_recipe_sha256") and
+                  fingerprint(handoff_file)==receipt.get("native_handoff_sha256"),
+                  uid+": native edit request/handoff bytes missing or changed")
+        recipe=core.load(recipe_file)
+        request=recipe.get("native_edit_request")
+        core.fail(recipe.get("work_unit_id")==uid and
+                  isinstance(request,dict) and
+                  request.get("reference_sha256")==reference_sha256 and
+                  recipe.get("urban_design_sha256")==fingerprint(recipe["urban_design_path"]),
+                  uid+": native edit recipe lost its design/source authority")
+        bound_native=contract.native.verify_handoff(core.load(handoff_file),
+                           request=request,output_sha256=receipt["sha256"])
+        core.fail(bound_native["image_sha256"]==receipt["sha256"],
+                  uid+": native edit image not bound to composited unit")
         element=bound[uid]
         core.fail(element["status"]=="VERIFIED" and
                   element["asset"]["sha256"]==receipt["sha256"] and
@@ -885,6 +902,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
     p.add_argument("--recipe-unit",help="prepare generator recipe for a single planned unit")
     p.add_argument("--audit-unit",help="audit native asset materialization and mask per unit")
     p.add_argument("--unit-receipt",help="one actual generated image receipt")
+    p.add_argument("--native-handoff",help="verified reference/mask input and native edit tool dispatch evidence")
     p.add_argument("--unit-mask",help="local mask PNG at full atomic resolution")
     p.add_argument("--visual-review",help="hash-bound agent inspection of unit image/mask and face-neighbors")
     p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
@@ -905,7 +923,7 @@ def main(argv=None, *, action_executor=None, remote_readback=None, journal_sync=
             allowed = {"intent", "synthetic_trial", "capabilities", "research_file", "decisions_file",
                        "inventory_file", "record_attempt", "reference", "topology_source",
                        "topology_classifications", "topology_out", "topology_prior",
-                       "spatial", "unit_receipt", "unit_mask", "visual_review",
+                       "spatial", "unit_receipt", "unit_mask", "native_handoff", "visual_review",
                        "image_receipts", "ledger", "strategy_id", "replan_evidence",
                        "request_id", "improvement_evidence", "assets",
                        "macro_review", "design_root", "design_unit",

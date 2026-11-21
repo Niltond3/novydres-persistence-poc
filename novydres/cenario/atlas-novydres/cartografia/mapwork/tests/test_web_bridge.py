@@ -9,6 +9,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT / "scripts"))
 import web_bridge as w
+from native_fixture import fixture as native_fixture
 
 
 def fake_source(tmp_path):
@@ -202,44 +203,26 @@ def test_web_adapter_rejects_github_authority_replacement():
 
 
 def test_host_connector_results_are_translated_without_callbacks(tmp_path):
-    from PIL import Image
-    img = tmp_path/"native-original.png"
-    Image.new("RGB", (16, 16), (15, 25, 35)).save(img)
-    downloaded = tmp_path/"drive-get-independent.png"
-    downloaded.write_bytes(img.read_bytes())
-    review = tmp_path/"review.json"
-    review.write_text(json.dumps({
-        "image_sha256": w.sha256(img.read_bytes()),
-        "observations": ["source region checked","road crossings checked",
-                         "rail grade checked","peer continuity checked"],
-        "by":"AGENT","status":"FAIL"
-    }))
-    review_get = tmp_path/"review-drive-get.json"
-    review_get.write_bytes(review.read_bytes())
-    operation = {"operation_id":"op-real-image-transport","action":"GENERATE_AND_AUDIT_CANDIDATE",
+    operation = {"operation_id":"op-real-image-transport", "action":"GENERATE_AND_AUDIT_CANDIDATE",
                  "status":"PENDING"}
-    result = w.materialize_host_exchange(
+    request,handoff,images,artifacts,review=native_fixture(tmp_path,operation["operation_id"])
+    providers=[{"provider":a["provider"],"kind":a["kind"],"path":a["path"],
+                "readback_path":a["readback_path"],
+                "upload":{"success":True,"id":a["remote_id"]},
+                "readback":{"id":a["remote_id"]}} for a in artifacts]
+    result=w.materialize_host_exchange(
         operation=operation,pending_sync={"branch":"mapwork/noncanon"},
-        provider_results=[
-            {"provider":"drive","kind":"image","path":str(img),
-             "readback_path":str(downloaded),
-             "upload":{"success":True,"id":"actual-provider-id"},
-             "readback":{"id":"actual-provider-id"}},
-            {"provider":"drive","kind":"visual-review","path":str(review),
-             "readback_path":str(review_get),
-             "upload":{"success":True,"id":"independent-review-id"},
-             "readback":{"id":"independent-review-id"}}
-        ],github_commits=[],arg_updates={},
+        provider_results=providers,github_commits=[],arg_updates={},
         output_path=tmp_path/"host-exchange.json")
     data=json.loads((tmp_path/"host-exchange.json").read_text())
-    assert result["artifacts"]==2
+    assert result["artifacts"]==5
     assert data["kind"]=="COMPLETE_OPERATION"
-    assert data["result"]["operation_id"]=="op-real-image-transport"
-    assert data["result"]["artifacts"][0]["sha256"]==w.sha256(img.read_bytes())
-    assert data["result"]["artifacts"][0]["remote_id"]=="actual-provider-id"
+    assert data["result"]["operation_id"]==operation["operation_id"]
+    assert {a["kind"] for a in data["result"]["artifacts"]}=={
+        "image","reference-image","edit-mask","native-edit-handoff","visual-review"}
     import orchestration
     checked=orchestration._host_artifacts(operation,data["result"],[])
-    assert len(checked)==2 and any(a.get("kind")=="image" for a in checked)
+    assert len(checked)==5 and any(a.get("kind")=="image" for a in checked)
 
 
 def test_host_connector_adapter_rejects_forged_provider_ids_and_bytes(tmp_path):

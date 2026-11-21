@@ -9,6 +9,7 @@ import pytest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 import orchestration as o
+from native_fixture import fixture as native_fixture
 
 
 def blob(data):
@@ -137,29 +138,12 @@ def test_generation_requires_real_png_and_hash_bound_review(tmp_path):
     with pytest.raises(ValueError,match="Drive PNG bytes"):
         invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
                 "pending_sync":p,"result":r})
-    from PIL import Image
-    image=tmp_path/"actual-image.png"
-    Image.new("RGB",(16,16),(22,33,44)).save(image)
-    remote=tmp_path/"downloaded-image.png"
-    remote.write_bytes(image.read_bytes())
-    body=image.read_bytes()
-    r["artifacts"].append({"path":str(image),"readback_path":str(remote),
-        "provider":"drive","remote_id":"drive-file-example","kind":"image",
-        "sha256":hashlib.sha256(body).hexdigest()})
-    with pytest.raises(ValueError,match="visual inspection"):
+    req,h,images,artifacts,review=native_fixture(tmp_path,op["operation_id"])
+    r["artifacts"].append(next(a for a in artifacts if a["kind"]=="image"))
+    with pytest.raises(ValueError,match="reference, mask, handoff and review"):
         invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
                 "pending_sync":p,"result":r})
-    visual=tmp_path/"visual.json"
-    visual.write_text(json.dumps({"image_sha256":hashlib.sha256(body).hexdigest(),
-                   "observations":["source inspected","bounds inspected",
-                                   "connections inspected","grade inspected"]}))
-    vb=visual.read_bytes()
-    vr=tmp_path/"downloaded-visual.json"
-    vr.write_bytes(vb)
-    r["artifacts"].append({"path":str(visual),"readback_path":str(vr),
-        "provider":"github","remote_id":blob(vb),"blob_sha":blob(vb),
-        "repo_path":"candidates/visual.json","kind":"visual-review","sha256":hashlib.sha256(vb).hexdigest()})
-    r["github_commits"][0]["files"]["candidates/visual.json"]=blob(vb)
+    r["artifacts"].extend(a for a in artifacts if a["kind"]!="image")
     assert invoke({"kind":"COMPLETE_OPERATION","operation_id":op["operation_id"],
                    "pending_sync":p,"result":r})["next_action"]=="SYNC_COMPLETED_JOURNAL"
 

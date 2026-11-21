@@ -16,6 +16,7 @@ import contracts as contract
 import acceptance
 import orchestration as controller
 import infra_checks as infra
+import native_generation as native
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -136,12 +137,25 @@ def run(args):
         return _synthetic_state(trial, "SYNTHETIC_TOPOLOGY",
             "REPAIR_SYNTHETIC_TOPOLOGY", [technical.get("reason", "fixture topology failed")],
             audit=technical)
+    image_ref=trial.get("native_reference_sha256")
+    edit_mask=trial.get("native_mask_sha256")
+    goal=trial.get("native_edit_goal")
+    if not all((image_ref,edit_mask,goal)):
+        return _synthetic_state(trial, "SYNTHETIC_IMAGE",
+            "MATERIALIZE_SYNTHETIC_REFERENCE_AND_MASK",
+            ["Provide a real image reference from Drive, edit mask and explicit edit goal; "
+             "topological source hash alone is not a native image reference"])
+    request=native.edit_request(reference_sha256=image_ref,mask_sha256=edit_mask,
+        goal=goal,scope="SYNTHETIC",job_id=trial["scenario_id"])
     if not getattr(args, "unit_receipt", None):
         return _synthetic_state(trial, "SYNTHETIC_IMAGE",
             "GENERATE_AND_AUDIT_CANDIDATE",
-            ["Create a new native PNG, Drive readback, and independent hash-bound visual review"],
+            ["Host must independently GET reference and mask from Drive, attach both "
+             "as native edit visual inputs; never send a textual infographic prompt"],
             audit={"topology_status": "PASS", "geometry_sha256":
-                   hashlib.sha256(spatial_file.read_bytes()).hexdigest()})
+                   hashlib.sha256(spatial_file.read_bytes()).hexdigest(),
+                   "native_edit_request":request,
+                   "native_edit_request_sha256":native.json_digest(request)})
     receipt = _load(args.unit_receipt)
     contract.require(isinstance(receipt, dict) and receipt.get("provider") == "drive"
         and isinstance(receipt.get("remote_id"), str) and receipt["remote_id"]
@@ -156,6 +170,14 @@ def run(args):
     with Image.open(raw) as image:
         contract.require(image.format == "PNG", "native candidate is not PNG")
         image.verify()
+    if not getattr(args, "native_handoff", None):
+        return _synthetic_state(trial, "SYNTHETIC_IMAGE",
+            "MATERIALIZE_NATIVE_EDIT_HANDOFF",
+            ["Native input dispatch, reference/mask Drive GET and image result must be bound"])
+    bound=native.verify_handoff(_load(args.native_handoff),request=request,
+        output_sha256=receipt["sha256"])
+    contract.require(receipt["remote_id"] == _load(args.native_handoff)["output"]["remote_id"],
+        "native image Drive receipt identity differs from handoff")
     review = _load(getattr(args, "visual_review", None))
     if not review:
         return _synthetic_state(trial, "SYNTHETIC_IMAGE",
@@ -164,6 +186,8 @@ def run(args):
     required = {"grade", "continuity", "coherence", "format"}
     contract.require(review.get("by") == "AGENT"
         and review.get("image_sha256") == receipt["sha256"]
+        and review.get("reference_sha256") == bound["reference_sha256"]
+        and review.get("mask_sha256") == bound["mask_sha256"]
         and review.get("status") in ("PASS", "FAIL")
         and isinstance(observations, list) and len(observations) == 4
         and all(isinstance(item, dict) and item.get("criterion") in required

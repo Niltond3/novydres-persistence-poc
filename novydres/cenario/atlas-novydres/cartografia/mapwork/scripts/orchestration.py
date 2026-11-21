@@ -295,7 +295,8 @@ def _verify_operation(operation, receipt, remote_readback, old_entries):
             if item.get("blob_sha") != blob:
                 raise ValueError("Git blob identity not independently verified")
         if (provider, remote_id, value) in old or (provider, value) in old_content:
-            raise ValueError("completed artifact replayed as a new operation")
+            if item.get("kind") not in ("reference-image", "edit-mask"):
+                raise ValueError("completed artifact replayed as a new operation")
         if item.get("kind") == "image":
             if provider != "drive":
                 raise ValueError("binary image must reside in Drive")
@@ -506,17 +507,35 @@ def _host_artifacts(operation, receipt, previous):
         return reads[(provider, remote_id)]
     checked = _verify_operation(operation, receipt, readback, previous)
     if any(a.get("kind") == "image" for a in checked):
-        reviews = [a for a in checked if a.get("kind") == "visual-review"]
-        if not reviews:
-            raise ValueError("generated PNG needs a separate hash-bound visual inspection")
-        image_hashes = {a["sha256"] for a in checked if a.get("kind") == "image"}
-        if not any(isinstance(report, dict) and
-                   report.get("image_sha256") in image_hashes and
-                   isinstance(report.get("observations"), list) and
-                   len(report["observations"]) >= 4
-                   for a in reviews
-                   for report in [json.loads(Path(a["path"]).read_text(encoding="utf-8"))]):
-            raise ValueError("visual inspection not bound to image and four observations")
+        import native_generation as native
+        by_kind = {kind:[a for a in checked if a.get("kind") == kind]
+                   for kind in ("image", "reference-image", "edit-mask",
+                                "native-edit-handoff", "visual-review")}
+        if any(len(by_kind[k]) != 1 for k in by_kind):
+            raise ValueError("native generation needs unique image, reference, mask, handoff and review")
+        h = json.loads(Path(by_kind["native-edit-handoff"][0]["path"]).read_text(encoding="utf-8"))
+        request = h.get("request")
+        binding = native.verify_handoff(h, request=request,
+            output_sha256=by_kind["image"][0]["sha256"],
+            expected_operation_id=operation["operation_id"])
+        for role in ("reference-image", "edit-mask"):
+            artifact = by_kind[role][0]
+            declared = h["inputs"][role]
+            if (artifact["provider"] != "drive" or
+                    artifact["sha256"] != declared["sha256"] or
+                    artifact["remote_id"] != declared["remote_id"]):
+                raise ValueError("native generator input artifact does not match Drive GET")
+        image = by_kind["image"][0]
+        if image["remote_id"] != h["output"]["remote_id"]:
+            raise ValueError("native generator output ID differs from Drive image")
+        review = json.loads(Path(by_kind["visual-review"][0]["path"]).read_text(encoding="utf-8"))
+        if not (isinstance(review, dict) and
+                review.get("image_sha256") == binding["image_sha256"] and
+                review.get("reference_sha256") == binding["reference_sha256"] and
+                review.get("mask_sha256") == binding["mask_sha256"] and
+                isinstance(review.get("observations"), list) and
+                len(review["observations"]) >= 4):
+            raise ValueError("visual inspection not bound to image, reference, mask and four observations")
     return checked
 
 
@@ -696,7 +715,7 @@ def _recovered_updates(updates, aliases):
     path_keys = {"intent","capabilities","research_file","decisions_file",
                  "inventory_file","record_attempt","reference","topology_source",
                  "topology_classifications","topology_out","topology_prior",
-                 "spatial","unit_receipt","unit_mask","visual_review",
+                 "spatial","unit_receipt","unit_mask","native_handoff","visual_review",
                  "image_receipts","ledger","assets","macro_review",
                  "design_root","design_unit","recipe_unit","audit_unit","out"}
     mapped = dict(updates)

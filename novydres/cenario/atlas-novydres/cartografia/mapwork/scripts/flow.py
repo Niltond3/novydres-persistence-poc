@@ -262,11 +262,14 @@ def run(args, core_run):
             location=Path(args.out)/"recipes"/(uid+".json")
             core.save(location,recipe)
             return _state("IMAGE_RECIPE","GENERATE_WITH_CHATGPT_NATIVE_IMAGE",
-                          ["Recipe saved. Generate image externally and materialize actual bytes before audit."],
+                          ["Upload reference and mask to Drive, obtain independent GET bytes, "
+                           "attach BOTH images to native image EDIT, retain tool dispatch receipt; "
+                           "reject infographics and unmatched native input handoff."],
                           intent=intent,audit={"recipe":str(location),
                                                "recipe_sha256":contract.digest(location),
                                                "mask_file":str(mask_path),
-                                               "mask_sha256":contract.digest(mask_path)})
+                                               "mask_sha256":contract.digest(mask_path),
+                                               "native_edit_request":recipe["native_edit_request"]})
         receipt=core.load(args.unit_receipt) if args.unit_receipt and Path(args.unit_receipt).is_file() else None
         if not receipt:
             return _state("IMAGE_MATERIALIZATION","FETCH_NATIVE_IMAGE_BYTES",
@@ -274,8 +277,26 @@ def run(args, core_run):
         if not args.unit_mask:
             return _state("IMAGE_AUDIT","MATERIALIZE_UNIT_MASK",
                           ["Image mask file absent for "+uid],intent=intent)
+        if not getattr(args,"native_handoff",None):
+            return _state("IMAGE_AUDIT","MATERIALIZE_NATIVE_EDIT_HANDOFF",
+                          ["Reference and mask must be attached to native generator, "
+                           "with independently fetched Drive input bytes and tool receipt"],intent=intent)
         try:
+            recipe_file=(Path(args.out)/"recipes"/(uid+".json") if args.out else None)
+            contract.require(recipe_file is not None and recipe_file.is_file(),
+                             "verified native edit recipe required for unit audit")
+            recipe=core.load(recipe_file)
+            expected=recipe.get("native_edit_request")
+            contract.require(isinstance(expected,dict)
+                             and expected.get("reference_sha256")==contract.digest(args.reference)
+                             and expected.get("mask_sha256")==contract.digest(args.unit_mask)
+                             and recipe.get("work_unit_id")==uid,
+                             "native edit recipe/reference/mask authority mismatch")
+            native_generation_evidence=contract.native.verify_handoff(
+                core.load(args.native_handoff),request=expected,
+                output_sha256=receipt.get("sha256"))
             audited=contract.audit_atomic_image(receipt,args.unit_mask,plan,report,uid,cfg)
+            audited["native_edit_handoff"]=native_generation_evidence
         except (contract.Blocked, ValueError, OSError) as exc:
             audited={"technical_status":"FAIL","failure":str(exc)}
         reviewed=core.load(args.visual_review) if args.visual_review and Path(args.visual_review).is_file() else None

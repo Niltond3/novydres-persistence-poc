@@ -230,34 +230,73 @@ def test_native_batch_must_be_the_actual_composited_png_and_mask(tmp_path):
             "neighbors":[],"summary":"Agent visually inspected current unit image"
         }
     }
+    import native_generation as native
+    reference_sha=c.digest(base)
+    receipt["visual_review"]["reference_sha256"]=reference_sha
+    full_mask=tmp_path/"canonical-edit-mask.png"
+    Image.new("L",(32,16),255).save(full_mask)
+    reference_get=tmp_path/"source-drive-GET.png"
+    reference_get.write_bytes(base.read_bytes())
+    mask_get=tmp_path/"mask-drive-GET.png"
+    mask_get.write_bytes(full_mask.read_bytes())
+    output_get=tmp_path/"output-drive-GET.png"
+    output_get.write_bytes((assets/e["asset"]["path"]).read_bytes())
+    req=native.edit_request(reference_sha256=reference_sha,mask_sha256=c.digest(full_mask),
+        scope="CANONICAL",job_id=uid,
+        goal="Draw the approved synthetic unit from the exact reference and mask")
+    design=tmp_path/"design.json";design.write_text('{"buildings": []}')
+    recipe={"work_unit_id":uid,"urban_design_path":str(design),
+            "urban_design_sha256":c.digest(design),"native_edit_request":req}
+    recipe_file=tmp_path/"recipe.json";recipe_file.write_text(json.dumps(recipe))
+    r_inputs={"reference-image":{"provider":"drive","remote_id":"fixture-ref",
+            "path":str(base),"readback_path":str(reference_get),"sha256":reference_sha},
+        "edit-mask":{"provider":"drive","remote_id":"fixture-mask",
+            "path":str(full_mask),"readback_path":str(mask_get),"sha256":c.digest(full_mask)}}
+    handoff={"schema":native.HANDOFF_SCHEMA,"request":req,
+            "request_sha256":native.json_digest(req),"inputs":r_inputs,
+            "dispatch":{"provider":"CHATGPT_NATIVE_IMAGE","mode":"EDIT_WITH_REFERENCE",
+                "generation_id":"synthetic-fixture-generation",
+                "request_sha256":native.json_digest(req),
+                "prompt_sha256":req["prompt_sha256"],
+                "result_sha256":receipt["sha256"],
+                "attached_inputs":{k:{"sha256":v["sha256"],"remote_id":v["remote_id"]}
+                                   for k,v in r_inputs.items()}},
+            "output":{"provider":"drive","remote_id":"fixture-output",
+                "path":receipt["local_path"],"readback_path":str(output_get),
+                "sha256":receipt["sha256"]}}
+    handoff_file=tmp_path/"handoff.json";handoff_file.write_text(json.dumps(handoff))
+    receipt.update(native_recipe_path=str(recipe_file),
+                   native_recipe_sha256=c.digest(recipe_file),
+                   native_handoff_path=str(handoff_file),
+                   native_handoff_sha256=c.digest(handoff_file))
     batch={"schema":"NOVYDRES_MAPWORK_IMAGE_BATCH","images":[receipt]}
     assert pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
-                                           reference_sha256="a"*64,spatial_sha256="b"*64)==1
+                                           reference_sha256=reference_sha,spatial_sha256="b"*64)==1
     more={"id":"WU-UNCHANGED","bbox":[11,2,15,6]}
     assert pipeline.verify_native_manifest(
         batch,zone,{"work_units":[unit,more]},cfg,assets,
-        active_units={uid},reference_sha256="a"*64,spatial_sha256="b"*64)==1
+        active_units={uid},reference_sha256=reference_sha,spatial_sha256="b"*64)==1
     with pytest.raises(core.Invalid,match="changed work units"):
         pipeline.verify_native_manifest(
             batch,zone,{"work_units":[unit,more]},cfg,assets,
-            reference_sha256="a"*64,spatial_sha256="b"*64)
+            reference_sha256=reference_sha,spatial_sha256="b"*64)
     batch["images"][0]["visual_review"]["status"]="NOT_CHECKED"
     with pytest.raises(c.Blocked,match="agent visual review"):
         pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
-                                        reference_sha256="a"*64,spatial_sha256="b"*64)
+                                        reference_sha256=reference_sha,spatial_sha256="b"*64)
     batch["images"][0]["visual_review"]["status"]="PASS"
     batch["images"][0]["mask_sha256"]="0"*64
     with pytest.raises(core.Invalid,match="not bound to composited mask"):
         pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
-                                        reference_sha256="a"*64,spatial_sha256="b"*64)
+                                        reference_sha256=reference_sha,spatial_sha256="b"*64)
     batch["images"][0]["mask_sha256"]=e["mask"]["sha256"]
     other=assets/"other.png"
     Image.new("RGBA",(32,32),(30,200,30,255)).save(other)
     receipt["sha256"]=core.sha(other)
     receipt["local_path"]=str(other)
-    with pytest.raises(core.Invalid,match="provenance is not the composited lot asset"):
+    with pytest.raises(ValueError,match="native generated image receipt/output mismatch"):
         pipeline.verify_native_manifest(batch,zone,{"work_units":[unit]},cfg,assets,
-                                        reference_sha256="a"*64,spatial_sha256="b"*64)
+                                        reference_sha256=reference_sha,spatial_sha256="b"*64)
 
 
 def test_offline_comparison_zip_contains_html_tiles_and_overviews(tmp_path):
