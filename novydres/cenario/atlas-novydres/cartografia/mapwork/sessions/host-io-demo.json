@@ -1,0 +1,54 @@
+{
+  "branch": "mapwork/consolidated-autonomous-20261121",
+  "initial_head": "c1ad7ff3bdfe8797a6bf42f93e4d6fa34a14918e",
+  "journal_repo_path": "sessions/host-io-demo.json",
+  "publication_authorized": false,
+  "schema": "NOVYDRES_MAPWORK_AUTONOMOUS_SESSION",
+  "session_key": "8dcf2d7243fe2ca426a4168aa69c9cd5530e70bec781de13fe5f2740367910db",
+  "source_commit": "c1ad7ff3bdfe8797a6bf42f93e4d6fa34a14918e",
+  "steps": [
+    {
+      "action": "AGENT_RESOLVE_AND_RECORD_INTENT",
+      "artifacts": [],
+      "entry_sha256": "cdf432d3bb260e28bcc34dab6effdc713d2bfa9f0a88e5da7859dbbca10d341e",
+      "lease_head": "c1ad7ff3bdfe8797a6bf42f93e4d6fa34a14918e",
+      "operation_id": "293ea05e0d3022c6fabf4f4276c8f87617b2806c67733a71a3283937462f9302",
+      "parent_sha256": null,
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": null,
+          "request": "Teste isolado de integracao de ferramentas sem construir Sulfok",
+          "scope_index_path": "/mnt/data/mapwork-final/novydres/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": null,
+        "blockers": [
+          "Provide --intent JSON produced by semantic agent; scripts never guess place names"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "AGENT_RESOLVE_AND_RECORD_INTENT",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": null,
+        "next_action": "AGENT_RESOLVE_AND_RECORD_INTENT",
+        "next_decision_id": null,
+        "phase": "INTENT",
+        "publication_authorized": false,
+        "request_sha256": null,
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": null
+      },
+      "state_sha256": "25a8431d7925076c4acce82fd118f4c7a2640562155893958af3d3d303c72f4f",
+      "status": "PENDING"
+    }
+  ]
+}
