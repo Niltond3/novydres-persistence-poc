@@ -66,11 +66,25 @@
     },
     {
       "action": "PROVE_HOST_CAPABILITIES",
-      "artifacts": [],
-      "entry_sha256": "879b1e0ffa1124bf0af535f3ab4f98f9e5782ba200ac2d72832dd72e18e6ccfe",
+      "arg_updates": {
+        "capabilities": "/mnt/data/mapwork-final/demo-capabilities.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "9fed612f6e7f06d48afc8311dcefc209a786bf35",
+          "path": "/mnt/data/mapwork-final/demo-capabilities.json",
+          "provider": "github",
+          "remote_id": "9fed612f6e7f06d48afc8311dcefc209a786bf35",
+          "sha256": "2476553679deaea273805b2cbb54fba2281390fd9ea17f16492ee5e69f2a6856"
+        }
+      ],
+      "entry_sha256": "49d04d50f22b494e6460a0075d2f3a24c192286741b619d7f14b8a74ebd9c30d",
       "lease_head": "cbf03af83a4541e60381318c5ca6cd0cbb2318a2",
+      "operation_head": "36175effc0ed9b9d7aca2b7d3b33831a0b030171",
       "operation_id": "82e9bcee598c8865c1e375e131ff983668a7be6fac0407c9d006c146f7baf6eb",
       "parent_sha256": "b20349f9eebb84fc7e30e5eed2f637dec1a0eb9943d873d86ed971897c2dc08f",
+      "pending_head": "0b0e596f5d7824eefe4dffd694d2ded9a6edc062",
+      "receipt_sha256": "c32e2b52c8121f46abcf8b8ac1ba3c3fc5870547bcbd23d8467696304ca096e7",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -105,7 +119,7 @@
         "target": "sulfok"
       },
       "state_sha256": "30090bb952b9b0253777b8c97aaa04a95de1f6a6e2b1e44e1a8058d63a926e6c",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
