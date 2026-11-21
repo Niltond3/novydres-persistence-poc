@@ -178,8 +178,8 @@ def test_missing_real_zone_is_not_false_pass(tmp_path,monkeypatch):
 
 
 def test_canonical_sources_follow_entire_raion_correction():
-    if not (ROOT.parents[3]/'geografia'/'district-chelsea'/'cidade-velha-2010.json').is_file():
-        pytest.skip('isolated runtime cache lacks external canon; test runs in complete Git checkout')
+    assert (ROOT.parents[2]/'geografia'/'district-chelsea'/'cidade-velha-2010.json').is_file(), (
+        "canonical raion identity file missing from checkout")
     cenario=ROOT.parents[2]
     city=json.loads((cenario/'geografia/district-chelsea/cidade-velha-2010.json').read_text())
     raions=json.loads((cenario/'atlas-novydres/raions-oficiais-2010.json').read_text())
