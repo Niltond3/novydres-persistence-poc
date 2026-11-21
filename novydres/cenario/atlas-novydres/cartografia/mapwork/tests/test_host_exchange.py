@@ -375,3 +375,15 @@ def test_cold_recovery_rejects_head_move_without_verified_commit_chain(tmp_path)
     evidence["head_chain"][0]["parent"]="e"*40
     with pytest.raises(ValueError,match="intervening Git HEAD chain"):
         o._verify_cold_recovery(journal,session,evidence)
+
+
+def test_new_web_process_cannot_resume_from_local_journal_alone(tmp_path, monkeypatch):
+    journal,artifact,invoke=setup(tmp_path)
+    first=invoke()
+    assert first["next_action"]=="SYNC_PENDING_JOURNAL"
+    # This simulates a new isolated Python interpreter/Web host. A copied
+    # local journal is not proof that it is GitHub's latest committed blob.
+    monkeypatch.setattr(o,"_HOST_KNOWN_JOURNALS",{})
+    with pytest.raises(ValueError,match="fresh connector cold recovery"):
+        invoke()
+    assert json.loads(journal.read_text())["steps"][0]["operation_id"]==first["operation"]["operation_id"]
