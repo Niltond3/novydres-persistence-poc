@@ -1,0 +1,229 @@
+#!/usr/bin/env python3
+"""Fail-closed, hash-bound semantic+deterministic acceptance for Mapwork V3.3.
+
+This module NEVER generates images or pretends to inspect them. The external
+host agent must render and visually inspect each full-reference candidate,
+record FAIL/PASS evidence, repair failed stages, and re-invoke pipeline.py.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from pathlib import Path
+
+from PIL import Image
+
+STAGES = (
+    "INF-01", "INF-02", "INF-03", "INF-04",
+    "INF-05", "INF-06", "INF-07", "URB-08"
+)
+SCHEMA = "NOVYDRES_MAPWORK_V33_ACCEPTANCE_LEDGER_1"
+ROOT = Path(__file__).resolve().parents[1]
+CRITERIA_DOC = ROOT / "docs" / "infra-acceptance-v33.md"
+_HEX = re.compile(r"^[0-9a-f]{64}$")
+
+
+def sha_file(path):
+    h = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def criteria_contract(doc_path=CRITERIA_DOC):
+    """The Markdown is the binding source of rule IDs; Python never forks it."""
+    raw = Path(doc_path).read_text(encoding="utf-8")
+    stages = tuple(re.findall(r"^### ((?:INF|URB)-\\d{2})\\b", raw, re.M))
+    if stages != STAGES:
+        raise ValueError("acceptance Markdown has missing/reordered infrastructure stages")
+    result = {}
+    for stage in STAGES:
+        rule_ids = tuple(re.findall(
+            r"^- \\[ \\] \\x60(" + re.escape(stage) + r"\\.\\d{2})\\x60", raw, re.M
+        ))
+        if len(rule_ids) != 4 or len(set(rule_ids)) != len(rule_ids):
+            raise ValueError(stage + ": acceptance Markdown must define 4 unique criteria")
+        result[stage] = rule_ids
+    return {"stages": result, "sha256": sha_file(doc_path)}
+
+
+def _stage(stage, action, blockers, *, iteration=0, accepted=(), latest=None):
+    return {
+        "status": "PASS" if action == "ADVANCE_AFTER_ACCEPTANCE" else "BLOCKED",
+        "stage": stage,
+        "next_action": action,
+        "blockers": list(blockers),
+        "attempts": iteration,
+        "accepted_stages": list(accepted),
+        "latest": latest,
+        "allows_lots": action == "ADVANCE_AFTER_ACCEPTANCE" and stage == "INF-07",
+    }
+
+
+def _verify_artifact(path_value, digest_value, *, base, image=False,
+                     source_sha256=None, expected_size=None):
+    if not isinstance(path_value, str) or not path_value.strip():
+        return "artifact path absent"
+    if not isinstance(digest_value, str) or not _HEX.fullmatch(digest_value):
+        return "artifact SHA-256 absent or invalid"
+    p = Path(path_value)
+    if not p.is_absolute():
+        p = base / p
+    if not p.is_file() or not p.is_file():
+        return "artifact bytes not materialized: " + path_value
+    if sha_file(p) != digest_value:
+        return "artifact SHA-256 differs from actual bytes: " + path_value
+    if image:
+        if digest_value == source_sha256:
+            return "candidate is identical to approved reference"
+        try:
+            with Image.open(p) as im:
+                if im.size != tuple(expected_size or ()):
+                    return "candidate preview is not full reference dimensions"
+                im.verify()
+        except (OSError, SyntaxError, ValueError) as exc:
+            return "candidate preview is not a valid image: " + str(exc)
+    else:
+        try:
+            obj = json.loads(p.read_text(encoding="utf-8"))
+            if not isinstance(obj, dict):
+                return "candidate geometry must be a JSON object"
+        except (OSError, ValueError, UnicodeError) as exc:
+            return "candidate geometry cannot be read as JSON: " + str(exc)
+    return None
+
+
+def evaluate(ledger_path, *, reference_file, reference_sha256, reference_size,
+             require_urban=False, criteria_path=CRITERIA_DOC):
+    """Read most recent attempt for each stage, in mandatory dependency order.
+
+    No record, stale file, fabricated hash, missing check or FAIL can authorize
+    downstream planning. Failed attempts trigger agent repair, not owner review.
+    """
+    try:
+        spec = criteria_contract(criteria_path)
+    except (OSError, ValueError) as exc:
+        return _stage("INF-01", "FIX_ACCEPTANCE_CONTRACT", [str(exc)])
+    required = STAGES if require_urban else STAGES[:-1]
+    expected_size = tuple(reference_size)
+    if not isinstance(reference_sha256, str) or not _HEX.fullmatch(reference_sha256):
+        return _stage(required[0], "RESTORE_REFERENCE_AUTHORITY",
+                      ["approved reference SHA-256 missing"])
+    if not reference_file or not Path(reference_file).is_file():
+        return _stage(required[0], "MATERIALIZE_ORIGINAL_REFERENCE",
+                      ["U02 PNG must be local for self-review"])
+    if sha_file(reference_file) != reference_sha256:
+        return _stage(required[0], "RESTORE_ORIGINAL_REFERENCE",
+                      ["reference byte SHA-256 mismatch"])
+    try:
+        with Image.open(reference_file) as im:
+            if im.size != expected_size:
+                return _stage(required[0], "RESTORE_ORIGINAL_REFERENCE",
+                              ["reference pixel dimensions mismatch"])
+            im.verify()
+    except (OSError, ValueError) as exc:
+        return _stage(required[0], "RESTORE_ORIGINAL_REFERENCE", [str(exc)])
+
+    file = Path(ledger_path) if ledger_path else None
+    if file is None or not file.is_file():
+        return _stage(required[0], "GENERATE_AND_AUDIT_CANDIDATE",
+                      ["versioned acceptance ledger absent; start first independent candidate"])
+    try:
+        ledger = json.loads(file.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as exc:
+        return _stage(required[0], "REPAIR_ACCEPTANCE_LEDGER", [str(exc)])
+    if (not isinstance(ledger, dict) or ledger.get("schema") != SCHEMA or
+            ledger.get("criteria_sha256") != spec["sha256"] or
+            ledger.get("reference_sha256") != reference_sha256):
+        return _stage(required[0], "INVALIDATE_AND_REAUDIT_STALE_EVIDENCE",
+                      ["ledger schema/criteria/reference digest mismatch"])
+    groups = ledger.get("stages")
+    if not isinstance(groups, dict) or set(groups) - set(STAGES):
+        return _stage(required[0], "REPAIR_ACCEPTANCE_LEDGER",
+                      ["stage map invalid or contains unrecognized stage"])
+    accepted = []
+    for stage in required:
+        block = groups.get(stage)
+        attempts = block.get("attempts", []) if isinstance(block, dict) else []
+        if not isinstance(attempts, list):
+            return _stage(stage, "REPAIR_ACCEPTANCE_LEDGER",
+                          ["attempts must be an ordered array"], accepted=accepted)
+        if not attempts:
+            return _stage(stage, "GENERATE_AND_AUDIT_CANDIDATE",
+                          ["no candidate yet for " + stage], accepted=accepted)
+        prev = None
+        for ordinal, attempt in enumerate(attempts, 1):
+            if not isinstance(attempt, dict) or attempt.get("iteration") != ordinal:
+                return _stage(stage, "REPAIR_ACCEPTANCE_LEDGER",
+                              ["attempt order mismatch"], iteration=ordinal, accepted=accepted)
+            if prev is not None and (prev.get("geometry_sha256"), prev.get("preview_sha256")) == (
+                    attempt.get("geometry_sha256"), attempt.get("preview_sha256")):
+                return _stage(stage, "REGENERATE_DIFFERENT_CANDIDATE",
+                              ["identical geometry and preview were resubmitted"],
+                              iteration=ordinal, accepted=accepted)
+            if prev is not None and prev.get("verdict") == "PASS":
+                return _stage(stage, "REPAIR_ACCEPTANCE_LEDGER",
+                              ["no attempts allowed after accepted stage"], iteration=ordinal,
+                              accepted=accepted)
+            prev = attempt
+        last = attempts[-1]
+        problems = []
+        for key, visual in (("geometry", False), ("preview", True)):
+            reason = _verify_artifact(
+                last.get(key + "_path"), last.get(key + "_sha256"),
+                base=file.parent, image=visual, source_sha256=reference_sha256,
+                expected_size=expected_size
+            )
+            if reason:
+                problems.append(key + ": " + reason)
+        if (last.get("reviewed_by") != "AGENT" or
+                not isinstance(last.get("model"), str) or
+                len(last["model"].strip()) < 3 or
+                last.get("full_image_visually_inspected") is not True):
+            problems.append("real host-agent full-image review evidence missing")
+        if last.get("reference_sha256") != reference_sha256:
+            problems.append("attempt not bound to original reference")
+        checks = last.get("checks")
+        expected_ids = set(spec["stages"][stage])
+        if not isinstance(checks, dict) or set(checks) != expected_ids:
+            problems.append("per-criterion review absent, extra or incomplete")
+            checks = {}
+        failed = []
+        for cid in spec["stages"][stage]:
+            check = checks.get(cid)
+            if not isinstance(check, dict) or check.get("status") not in ("PASS", "FAIL"):
+                problems.append(cid + ": PASS/FAIL decision absent")
+                failed.append(cid)
+                continue
+            evidence = check.get("evidence")
+            if not isinstance(evidence, str) or len(evidence.strip()) < 30:
+                problems.append(cid + ": concrete visual/technical evidence required")
+            if check["status"] == "FAIL":
+                failed.append(cid)
+        verdict = last.get("verdict")
+        if verdict not in ("PASS", "FAIL"):
+            problems.append("final verdict must be PASS/FAIL")
+        if verdict == "PASS" and (
+                failed or last.get("findings") != [] or last.get("repair_plan") not in (None, "")):
+            problems.append("PASS conflicts with failing checks/open findings")
+        if verdict == "FAIL" and (
+                not failed or
+                not isinstance(last.get("findings"), list) or not last["findings"] or
+                not isinstance(last.get("repair_plan"), str) or
+                len(last["repair_plan"].strip()) < 30):
+            problems.append("FAIL must list failed checks, concrete findings and repair plan")
+        if problems:
+            return _stage(stage, "REPAIR_UNVERIFIED_CANDIDATE",
+                          problems, iteration=len(attempts), accepted=accepted,
+                          latest={"verdict": verdict, "failed": failed})
+        if verdict == "FAIL":
+            action = "REPLAN_STAGE" if len(attempts) >= 6 else "REPAIR_AND_REGENERATE"
+            return _stage(stage, action, failed, iteration=len(attempts),
+                          accepted=accepted,
+                          latest={"verdict": "FAIL", "repair_plan": last["repair_plan"],
+                                  "findings": last["findings"]})
+        accepted.append(stage)
+    return _stage(required[-1], "ADVANCE_AFTER_ACCEPTANCE", [],
+                  accepted=accepted)
