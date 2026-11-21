@@ -121,3 +121,59 @@ def test_missing_independent_remote_tree_rejected():
         w.run_web(argv=["--district","kingswell"],
                   file_manifest=manifest,root=ROOT,source_commit="1"*40,
                   remote_blobs={})
+
+
+def test_web_entrypoint_dispatches_real_material_action_without_canon(tmp_path):
+    """Full bridge -> pipeline.main -> controller -> file/readback -> next gate."""
+    manifest, remote_blobs = _complete_manifest()
+    remote = {}
+    heads = [0]
+    file = tmp_path / "intent.json"
+    journal = tmp_path / "journal.json"
+    canonical = (ROOT / "zones" / "cidade-velha" / "acceptance-ledger.json")
+    unchanged = hashlib.sha256(canonical.read_bytes()).hexdigest()
+    def execute(action, state, operation_id):
+        assert action == "AGENT_RESOLVE_AND_RECORD_INTENT"
+        data = (ROOT / "zones" / "cidade-velha" / "intent.json").read_bytes()
+        file.write_bytes(data)
+        remote[("github", "material-intent")] = data
+        blob = w.git_blob_sha(data)
+        return {"operation_id": operation_id, "artifacts": [{
+            "path": str(file), "sha256": w.sha256(data), "provider": "github",
+            "remote_id": "material-intent", "blob_sha": blob
+        }], "arg_updates": {"intent": str(file)}}
+    def fetch(provider, identifier):
+        return remote[(provider, identifier)]
+    def sync(path, digest):
+        data = path.read_bytes()
+        assert w.sha256(data) == digest
+        blob = w.git_blob_sha(data)
+        old = f"{heads[0]:040x}"
+        heads[0] += 1
+        new = f"{heads[0]:040x}"
+        remote[("github", blob)] = data
+        remote[("github-ref", "mapwork/integration-test")] = new
+        return {"provider": "github", "branch": "mapwork/integration-test",
+                "blob_sha": blob, "head": new, "lease_head": old}
+    local_names = {p.stem for p in (ROOT / "scripts").glob("*.py")}
+    saved = {k: sys.modules.pop(k) for k in tuple(sys.modules)
+             if k in local_names and k != "web_bridge"}
+    try:
+        response = w.run_web(
+            argv=["--request", "Construa Kingswell", "--district", "kingswell",
+                  "--session-key", "kingswell-source-commit",
+                  "--autonomous-journal", str(journal),
+                  "--max-operations", "1"],
+            file_manifest=manifest, root=ROOT, source_commit="1"*40,
+            remote_blobs=remote_blobs, action_executor=execute,
+            remote_readback=fetch, journal_sync=sync)
+    finally:
+        for module in local_names - {"web_bridge"}:
+            sys.modules.pop(module, None)
+        sys.modules.update(saved)
+    assert response["status"] == "CHECKPOINT"
+    assert response["pipeline"]["result"]["completed_operations"] == 1
+    assert response["pipeline"]["next_action"] == "PROVE_HOST_CAPABILITIES"
+    assert journal.is_file() and file.is_file()
+    assert hashlib.sha256(canonical.read_bytes()).hexdigest() == unchanged
+    assert response["authorizes_canon"] is False
