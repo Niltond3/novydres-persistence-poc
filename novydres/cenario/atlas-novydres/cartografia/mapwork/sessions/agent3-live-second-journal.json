@@ -244,11 +244,26 @@
     },
     {
       "action": "RECONCILE_APPROVED_ELEMENTS",
-      "artifacts": [],
-      "entry_sha256": "bda96f1fbdb26597f46869154592719b91b1c5ee1688b174d11c602c248cc434",
+      "arg_updates": {
+        "inventory_file": "/mnt/data/agent3-synthetic-20261121/agent3-live-second-synthetic-inventory.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "e7d48fb18f5d522c74d8a2abe74519a22fe4b355",
+          "kind": "other",
+          "path": "/mnt/data/agent3-synthetic-20261121/agent3-live-second-synthetic-inventory.json",
+          "provider": "github",
+          "remote_id": "e7d48fb18f5d522c74d8a2abe74519a22fe4b355",
+          "sha256": "e3afa6cda3d91f5178582105823d48c54215b4dd2ddc79382f4c58e2e7125aff"
+        }
+      ],
+      "entry_sha256": "0ac34c9c229f5908585c894b0d3e153b8849d2108919fcdd7dc998a00d155680",
       "lease_head": "cba85db7bfe65734d9e6a9b74d083c795f44d3a1",
+      "operation_head": "156a6eafe2c94ef3d9017b4009e279e4618c3988",
       "operation_id": "dea3d9d56c22350940aa6e874ef1ade08df166117a67a0bf58440ed63e1982b1",
       "parent_sha256": "b3455813e3495fe67c5376fd21aecdffba6ac5c883d622e4c60b944800a12f65",
+      "pending_head": "bb4bf45866a9d48f1e093d8acaef0e4a3d43a014",
+      "receipt_sha256": "0d1c63f350f70bead4dded10a7c7dd403374579529c6b3ed69a09cda52b73f4d",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -287,7 +302,7 @@
         "target": "sulfok"
       },
       "state_sha256": "9fc74a57ed34d0aebd47ad185a9e93b1ec01c2778fb3d640bb69394ca8b70552",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
