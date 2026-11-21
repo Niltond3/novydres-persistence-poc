@@ -125,6 +125,8 @@ def extract_verified_zip(archive, dest, *, max_bytes=200_000_000, manifest=None,
                     target.write_bytes(z.read(member))
     except (BadZipFile, OSError) as exc:
         raise WebBridgeError("source/archive bytes not readable") from exc
+    if manifest is None or source_commit is None:
+        raise WebBridgeError("Drive ZIP requires complete verified file manifest and commit")
     if manifest is not None:
         verified = verify_files(manifest, root=dest, expected_commit=source_commit)
         expected = {r["path"] for r in verified["files"]}
@@ -157,7 +159,7 @@ def _verify_import_graph(module_dir, listed):
                     raise WebBridgeError("unverified transitive import: " + name)
 
 
-def run_web(*, argv, file_manifest, root, source_commit):
+def run_web(*, argv, file_manifest, root, source_commit, remote_blobs):
     """Run exact canonical pipeline.main WITHOUT invoking a terminal or clone.
 
     Caller must read real files using connectors and check their GitHub/Drive
@@ -165,6 +167,17 @@ def run_web(*, argv, file_manifest, root, source_commit):
     """
     verification = verify_files(file_manifest, root=root, expected_commit=source_commit)
     listed = {r["path"] for r in verification["files"]}
+    # This is an independent readback of the exact GitHub tree for the commit,
+    # supplied by the host connector. Python never calls GitHub directly.
+    if not isinstance(remote_blobs, dict) or not remote_blobs:
+        raise WebBridgeError("authenticated remote Git tree blob map required")
+    source = {r["path"] for r in verification["files"]
+              if r["path"].startswith("scripts/") and r["path"].endswith(".py")
+              or r["path"] == "docs/infra-acceptance.md"}
+    for rel in source:
+        content=(Path(root) / rel).read_bytes()
+        if remote_blobs.get(rel) != git_blob_sha(content):
+            raise WebBridgeError("verified source differs from remote Git commit blob: " + rel)
     required = {"docs/infra-acceptance.md", "scripts/pipeline.py", "scripts/web_bridge.py"}
     if not required.issubset(listed):
         raise WebBridgeError("canonical pipeline or binding Markdown not verified")
