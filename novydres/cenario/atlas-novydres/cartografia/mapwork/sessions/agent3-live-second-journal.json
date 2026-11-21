@@ -64,6 +64,49 @@
       },
       "state_sha256": "3176f80c042488f8126ca8ab766391437a54092046fb4691b18abb53291a796c",
       "status": "COMPLETED"
+    },
+    {
+      "action": "PROVE_HOST_CAPABILITIES",
+      "artifacts": [],
+      "entry_sha256": "27bf6b95d3f749b902e7d903ecd95ecdc4b1ca4b8556d1161a45683ccfae6a20",
+      "lease_head": "147e7fea54d233c4b9c0b04553115038b5af8aa4",
+      "operation_id": "d79e3f155b9c69e132479dda9aa80600150ff78500eeb435500c414ff44baf97",
+      "parent_sha256": "1ae2514295e1ab999b4188fb8919865a9fbf5f6fc98246935e112872a3b876c7",
+      "request_state": {
+        "agent_context": {
+          "district": "sulfok",
+          "intent_path": "/mnt/data/agent3-live2-restored-intent.json",
+          "request": "Segundo ensaio tecnico isolado de integracao; nao construir Sulfok",
+          "scope_index_path": "/mnt/data/novydres-agent3-2342/cenario/atlas-novydres/cartografia/mapwork/scope-index.json",
+          "zone": null
+        },
+        "audit": null,
+        "blockers": [
+          "GitHub read/write, research and user delivery require receipts; native PNGs are verified when generated"
+        ],
+        "canonical_state_changed": false,
+        "execution": {
+          "action": "PROVE_HOST_CAPABILITIES",
+          "automatic_approval": false,
+          "classification": "WORK_IN_PROGRESS",
+          "continue_same_session": true,
+          "may_promote_stage": false,
+          "may_request_owner": false,
+          "must_persist_and_readback": true,
+          "operation": "EXECUTE_NEXT_ACTION_AND_REENTER",
+          "rerun_entrypoint": "scripts/pipeline.py run"
+        },
+        "mode": "CREATE_REGION",
+        "next_action": "PROVE_HOST_CAPABILITIES",
+        "next_decision_id": null,
+        "phase": "CAPABILITY_CHECK",
+        "publication_authorized": false,
+        "request_sha256": "877067966e16248b1387ab2b5ff0e05e64f7529eca11a127611b87b8f367a501",
+        "schema": "NOVYDRES_MAPWORK_PIPELINE_CHECKPOINT",
+        "target": "sulfok"
+      },
+      "state_sha256": "3e89b2ab44c8ba1067650eea0b504e96c8ec49a687901a6ea0a295fa7e59bd7c",
+      "status": "PENDING"
     }
   ]
 }
