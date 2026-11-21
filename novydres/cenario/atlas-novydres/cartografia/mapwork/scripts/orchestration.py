@@ -234,18 +234,28 @@ def _session_chain(steps):
         previous = entry["entry_sha256"]
 
 
-def _persist_session(journal_path, session, sync_journal):
-    """The connector must CAS-write this file to GitHub and fetch it again."""
+def _persist_session(journal_path, session, sync_journal, remote_readback):
+    """CAS commit then independently GET both Git blob and branch HEAD."""
     atomic_json(journal_path, session)
     payload = Path(journal_path).read_bytes()
     proof = sync_journal(Path(journal_path), hashlib.sha256(payload).hexdigest())
+    expected_blob = hashlib.sha1(b"blob " + str(len(payload)).encode() +
+                                 b"\0" + payload).hexdigest()
     if (not isinstance(proof, dict) or proof.get("provider") != "github"
-            or not isinstance(proof.get("readback"), bytes)
-            or proof["readback"] != payload
+            or proof.get("blob_sha") != expected_blob
+            or not isinstance(proof.get("branch"), str) or not proof["branch"]
             or not HEX40.fullmatch(str(proof.get("head", "")))
             or not HEX40.fullmatch(str(proof.get("lease_head", "")))
             or proof["head"] == proof["lease_head"]):
-        raise ValueError("GitHub CAS write and independent journal readback required")
+        raise ValueError("GitHub CAS receipt missing expected blob or lease authority")
+    try:
+        readback = remote_readback("github", expected_blob)
+        branch_head = remote_readback("github-ref", proof["branch"])
+    except (LookupError, OSError) as exc:
+        raise ValueError("independent GitHub blob/ref readback unavailable") from exc
+    if (not isinstance(readback, bytes) or readback != payload
+            or branch_head != proof["head"]):
+        raise ValueError("independent GitHub blob/ref readback contradicts CAS receipt")
 
 
 def _verify_operation(operation, receipt, remote_readback, old_entries):
@@ -400,7 +410,7 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
             operation["entry_sha256"] = digest({
                 k:v for k,v in operation.items() if k != "entry_sha256"})
             session["steps"].append(operation)
-            _persist_session(journal_path, session, sync_journal)
+            _persist_session(journal_path, session, sync_journal, remote_readback)
         # A pending operation may already have uploaded before a crash.
         # Calling the host with the same operation_id is an idempotent replay.
         receipt = execute_action(operation["action"], operation["request_state"],
@@ -416,7 +426,7 @@ def run_autonomous(run_once, execute_action, remote_readback, sync_journal,
                          arg_updates=updates)
         operation["entry_sha256"] = digest({
             k:v for k,v in operation.items() if k != "entry_sha256"})
-        _persist_session(journal_path, session, sync_journal)
+        _persist_session(journal_path, session, sync_journal, remote_readback)
         if updates:
             if not callable(apply_arguments):
                 raise ValueError("host must apply verified pipeline argument changes")

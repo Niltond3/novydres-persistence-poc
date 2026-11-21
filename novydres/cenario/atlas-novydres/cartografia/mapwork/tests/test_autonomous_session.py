@@ -45,8 +45,12 @@ def harness(tmp_path):
         previous = f"{heads[0]:040x}"
         heads[0] += 1
         written = path.read_bytes()
-        remote[("github", "journal")] = written
-        return {"provider": "github", "readback": remote[("github", "journal")],
+        blob = hashlib.sha1(b"blob " + str(len(written)).encode() +
+                            b"\0" + written).hexdigest()
+        remote[("github", blob)] = written
+        remote[("github-ref", "mapwork-branch")] = f"{heads[0]:040x}"
+        return {"provider": "github", "blob_sha": blob,
+                "branch": "mapwork-branch",
                 "lease_head": previous, "head": f"{heads[0]:040x}"}
     return local, remote, calls, pipeline_state, perform, fetch, sync
 
@@ -62,7 +66,10 @@ def test_real_material_action_and_independent_git_readback(tmp_path):
     saved = json.loads(journal.read_text())
     assert saved["steps"][0]["status"] == "COMPLETED"
     assert saved["publication_authorized"] is False
-    assert remote[("github", "journal")] == journal.read_bytes()
+    journal_bytes = journal.read_bytes()
+    journal_blob = hashlib.sha1(b"blob " + str(len(journal_bytes)).encode() +
+                                b"\0" + journal_bytes).hexdigest()
+    assert remote[("github", journal_blob)] == journal_bytes
     # A new session does not redo work or allocate an unverified second attempt.
     again = o.run_autonomous(run, perform, fetch, sync, journal,
                              session_key="kingswell-source")
@@ -214,3 +221,25 @@ def test_resume_refuses_stale_completed_drive_or_git_receipt(tmp_path):
     with pytest.raises(ValueError, match="remote artifact readback differs"):
         o.run_autonomous(run, perform, fetch, sync, journal,
                           session_key="readback-recovery")
+
+
+def test_git_journal_declared_readback_without_separate_ref_get_rejected(tmp_path):
+    _, remote, _, run, perform, fetch, sync = harness(tmp_path)
+    def forged_sync(path, sha):
+        data = sync(path, sha)
+        remote.pop(("github-ref", data["branch"]), None)
+        return data
+    with pytest.raises(ValueError, match="independent GitHub blob/ref readback"):
+        o.run_autonomous(run, perform, fetch, forged_sync,
+                          tmp_path / "journal.json", session_key="no-forged-cas")
+
+
+def test_git_journal_wrong_branch_head_is_rejected(tmp_path):
+    _, remote, _, run, perform, fetch, sync = harness(tmp_path)
+    def forged_sync(path, sha):
+        data = sync(path, sha)
+        remote[("github-ref", data["branch"])] = "f" * 40
+        return data
+    with pytest.raises(ValueError, match="contradicts CAS receipt"):
+        o.run_autonomous(run, perform, fetch, forged_sync,
+                          tmp_path / "journal.json", session_key="wrong-head")
