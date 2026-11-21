@@ -9,11 +9,25 @@
   "steps": [
     {
       "action": "AGENT_RESOLVE_AND_RECORD_INTENT",
-      "artifacts": [],
-      "entry_sha256": "cdf432d3bb260e28bcc34dab6effdc713d2bfa9f0a88e5da7859dbbca10d341e",
+      "arg_updates": {
+        "intent": "/mnt/data/mapwork-final/demo-intent.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "ef8432219d07b42666bd2d9d6540f5d1c845eae6",
+          "path": "/mnt/data/mapwork-final/demo-intent.json",
+          "provider": "github",
+          "remote_id": "ef8432219d07b42666bd2d9d6540f5d1c845eae6",
+          "sha256": "98112ba3e5c5fa590cc2633be345b8118986f8d366ee08996656d21600382b73"
+        }
+      ],
+      "entry_sha256": "b20349f9eebb84fc7e30e5eed2f637dec1a0eb9943d873d86ed971897c2dc08f",
       "lease_head": "c1ad7ff3bdfe8797a6bf42f93e4d6fa34a14918e",
+      "operation_head": "ccc958baf0c5cd46af57b0bb520c665b981e82bb",
       "operation_id": "293ea05e0d3022c6fabf4f4276c8f87617b2806c67733a71a3283937462f9302",
       "parent_sha256": null,
+      "pending_head": "483ee54284b22ee0ab0dd93c30f85c24060c0207",
+      "receipt_sha256": "e3289a23b0305c62942d7353714919dff6757569d692fbb79f342dc6a0b6edd4",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -48,7 +62,7 @@
         "target": null
       },
       "state_sha256": "25a8431d7925076c4acce82fd118f4c7a2640562155893958af3d3d303c72f4f",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
