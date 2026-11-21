@@ -7,8 +7,8 @@
   "recovered_initial_checkpoint": "178f2179f43081d9eb34ac41747567257c390c04",
   "target": "kingswell",
   "subject_id": "district-chelsea",
-  "phase": "SPATIAL_MODEL",
-  "current_execution_outcome": "R2_98_CORRIDOR_CANDIDATE_PERSISTED; 47_ENDPOINT_SNAP_AND_171_LOCAL_NODE_CANDIDATES; STILL_UNSURVEYED",
+  "phase": "INFRASTRUCTURE_ACCEPTANCE",
+  "current_execution_outcome": "V33_INFRASTRUCTURE_ACCEPTANCE_GATES_INSTALLED_R1_R2_NOT_ACCEPTED",
   "entrypoint": "scripts/pipeline.py run",
   "pipeline_invoked_in_this_continuation": false,
   "reason_pipeline_not_invoked": "GitHub connector provides source and Git writes, but local executor has U02 PNG only, not the checked-out V3.3 source tree; no V3.3 GitHub Actions as substitute. Missing real spatial manifest remains a hard gate.",
@@ -42,13 +42,13 @@
     "Metro directive approved but specific subsurface network alignment and bilateral interfaces not yet verified against actual U02; this is a technical gate, not new editorial approval",
     "Two disconnected conceptual expansion-sector components remain after excluding KW-HIST; do not silently connect them with an unapproved metro tunnel"
   ],
-  "next_action": "R2 visual grade/roadbed review; source U02 raster unchanged. Complete full street and physical territory and official V31 validations before generating images.",
+  "next_action": "AGENT_GENERATE_FULL_U02_INF_01_CANDIDATE_VALIDATE_4_CRITERIA_REPAIR_WITHOUT_OWNER_AND_REPEAT",
   "canon_unchanged": true,
   "master_unchanged": true,
   "owner_final_approval": false,
   "human_visual_review_not_requested": true,
   "handoff_allowed": false,
-  "note": "Native V3.3 pipeline did not run; local independently executed regression suite on source-bound candidate observations. Existing U02 SHA verified, no image generation, no canon.",
+  "note": "Acceptance files and source gate were modified through GitHub connector; no local V3.3 source checkout or end-to-end Python test was possible in this session, so no PASS claimed.",
   "next_decision_id": null,
   "open_editorial_proposals": 0,
   "metro_decision": {
@@ -119,5 +119,31 @@
     "POI_point_radius_3px_conflicts": 0,
     "full_gis_validation_passed": false,
     "art_generation_authorized": false
+  },
+  "infrastructure_acceptance": {
+    "contract": "docs/infra-acceptance-v33.md",
+    "contract_sha256": "6d43248f0ab8db3edfeb2d57276371de3538a9aca70d81eaa87ab5a24d02b1e9",
+    "validator": "scripts/v33_acceptance.py",
+    "integrated_in": "scripts/v33_flow.py via scripts/pipeline.py run",
+    "ledger": "zones/cidade-velha/acceptance-ledger-v33.json",
+    "planned_stages": [
+      "INF-01",
+      "INF-02",
+      "INF-03",
+      "INF-04",
+      "INF-05",
+      "INF-06",
+      "INF-07",
+      "URB-08"
+    ],
+    "criterion_count": 32,
+    "passing_stages": 0,
+    "current_stage": "INF-01",
+    "current_action": "GENERATE_AND_AUDIT_CANDIDATE",
+    "preserve_prior_R1_R2_as_rejected": true,
+    "owner_technical_approval_required": false,
+    "model_visual_audit_completed_for_new_criteria": false,
+    "completed_end_to_end_workflow_test": false,
+    "generation_of_lots_or_pois_authorized": false
   }
 }
