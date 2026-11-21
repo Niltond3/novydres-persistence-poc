@@ -11,6 +11,8 @@ import contextlib
 import importlib
 import hashlib
 import io
+import os
+import tempfile
 import importlib.util
 import json
 import re
@@ -260,8 +262,25 @@ def materialize_host_exchange(*, operation, pending_sync, provider_results,
                 "pending_sync":pending_sync,"result":result}
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
-    from orchestration import atomic_json
-    atomic_json(output, exchange)
+    # Do not import orchestration before run_web verifies its Git blob:
+    # importing it from this transport helper would trip the source guard
+    # (or, worse, allow stale Python modules to affect the canonical run).
+    fd, name = tempfile.mkstemp(prefix="." + output.name + ".", dir=output.parent)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as writer:
+            json.dump(exchange, writer, ensure_ascii=False, sort_keys=True, indent=2)
+            writer.write("\\n")
+            writer.flush()
+            os.fsync(writer.fileno())
+        os.replace(name, output)
+        dfd = os.open(output.parent, os.O_RDONLY)
+        try:
+            os.fsync(dfd)
+        finally:
+            os.close(dfd)
+    finally:
+        if os.path.exists(name):
+            os.unlink(name)
     return {"kind":exchange["kind"],"operation_id":exchange["operation_id"],
             "path":str(output),"sha256":sha256(output.read_bytes()),
             "artifacts":len(records)}
