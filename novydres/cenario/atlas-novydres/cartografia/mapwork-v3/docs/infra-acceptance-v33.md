@@ -105,3 +105,41 @@ O programa percorre o registro **na ordem do documento**, exige evidência de re
 ```
 
 **Atenção:** o Markdown é um contrato de aceite do agente, não uma garantia matemática da coerência visual. A verificação programática comprova que a inspeção foi registrada para arquivos reais; o agente precisa fazer a análise semântica e corrigir aquilo que visualiza. Não existem resultados `PASS` implícitos, nem modo de aprovação manual de infraestrutura incompleta.
+
+
+## Perfil executável dos dados espaciais (vinculante)
+
+O agente continua seguindo os 32 critérios acima. A estrutura mínima de dados
+abaixo torna **matematicamente verificáveis** seus requisitos de modal e
+cobertura, sem substituir a inspeção semântica. Cada rodada precisa do mesmo
+modelo cumulativo, dos pixels reais da máscara de zona e de geometria
+individual de nós, arestas, cruzamentos e níveis; até existir modelo suficiente,
+FAIL. A aprovação da etapa anterior vincula a geometria por SHA-256. Alteração
+de rede já aprovada exige reabrir/revalidar as etapas dependentes.
+
+```json
+{
+  "schema":"NOVYDRES_MAPWORK_V33_SPATIAL_PROFILE_1",
+  "stage_modes":{
+    "INF-01":["road"],
+    "INF-02":["road"],
+    "INF-03":["road","rail"],
+    "INF-04":["road","rail","tram"],
+    "INF-05":["road","rail","tram","metro"],
+    "INF-06":["road","rail","tram","metro"],
+    "INF-07":["road","rail","tram","metro"],
+    "URB-08":["road","rail","tram","metro"]
+  },
+  "coverage_stages":["INF-07","URB-08"],
+  "territory_classes":["urban","industrial","natural","water","protected"]
+}
+```
+
+As máscaras referenciadas pela geometria são PNGs binários exatamente nas
+mesmas dimensões da U02, vinculadas a SHA-256. A geometria tem schema
+`NOVYDRES_MAPWORK_V33_INFRA_GEOMETRY_2`, `zone_mask`, `network.nodes`,
+`network.edges`, `network.crossings`, `reference_size`, `source_sha256` e
+`previous_stage_sha256` (exceto INF-01). A revisão visual exige observações
+regionais com hashes calculados sobre os pixels dos recortes da prévia.
+Essas provas atestam consistência de bytes e cobertura de inspeção, **não** que
+o modelo humano/LLM avaliou corretamente a estética ou o planejamento urbano.
