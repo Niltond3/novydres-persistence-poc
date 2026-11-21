@@ -37,6 +37,9 @@ jobs:
           assert q['canonical_state_changed'] is False
           assert q['next_action'] == 'AGENT_RESOLVE_AND_RECORD_INTENT'
           PY
+      - name: Remove execution-generated Python caches from transport archive
+        run: find novydres/cenario/atlas-novydres/cartografia/mapwork -type d -name '__pycache__' -prune -exec rm -rf {} +
+
       - name: Export source snapshot for connected Web integration verification
         uses: actions/upload-artifact@v4
         with:
