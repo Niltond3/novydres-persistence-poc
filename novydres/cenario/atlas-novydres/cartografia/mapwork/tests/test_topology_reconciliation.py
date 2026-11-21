@@ -389,3 +389,35 @@ def test_discovery_handles_multiple_geometry_hits_and_overlap_without_inventing_
     assert {"A","B"} in [set(x["corridors"]) for x in inventory["crossings"]]
     assert {"A","C"} in [set(x["corridors"]) for x in inventory["crossings"]]
     assert all(x["status"]=="UNRESOLVED" for x in inventory["crossings"])
+
+
+def test_pipeline_discovery_checks_real_bytes_and_cannot_publish(tmp_path,monkeypatch,capsys):
+    original=tmp_path/"ref.png"
+    Image.new("RGB",(32,32),(12,22,32)).save(original)
+    sha=infra_checks.sha(original)
+    cfg=tmp_path/"config.json"
+    cfg.write_text(json.dumps({"reference":{"sha256":sha,"width":32,"height":32}}))
+    monkeypatch.setattr(pipeline.core,"CONFIG",cfg)
+    data={"schema":"NOVYDRES_MAPWORK_U02_ROAD_CENTERLINE_CANDIDATE_R2",
+          "scope":{"target":"kingswell"},
+          "authority":{"sha256":sha,"dimensions_px":[32,32]},
+          "status":"CANDIDATE_NOT_APPROVED_FOR_CANON_OR_IMAGE_GENERATION",
+          "candidates":[{"id":"A","points":[[1,6],[12,6]]},
+                        {"id":"B","points":[[6,1],[6,12]]}]}
+    source=tmp_path/"diagnostic.json"
+    source.write_text(json.dumps(data))
+    out=tmp_path/"out"
+    argv=["run","--district","kingswell","--topology-source",str(source),
+          "--topology-out",str(out),"--reference",str(original)]
+    assert pipeline.main(argv)==0
+    printed=json.loads(capsys.readouterr().out)["result"]
+    assert printed["phase"]=="TOPOLOGY_DISCOVERY"
+    assert printed["status"]=="BLOCKED"
+    assert not printed["publication_authorized"]
+    report=json.loads((out/"topology-discovery.json").read_text())
+    assert report["crossing_count"]==1
+    assert report["crossings"][0]["status"]=="UNRESOLVED"
+    assert not (out/"acceptance-ledger.json").exists()
+    original.write_bytes(b"NOT A PNG")
+    assert pipeline.main(argv)==2
+    assert json.loads((out/"topology-discovery.json").read_text())==report
