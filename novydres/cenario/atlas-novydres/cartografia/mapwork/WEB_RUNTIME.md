@@ -180,20 +180,32 @@ mesmo journal e à fixture sintética. A referência histórica e os
 `operation_id` não são alterados. A troca da implementação não valida,
 conclui ou repete a operação pendente por si só.
 
-## Geração nativa com entradas visuais vinculadas
+## Geração nativa com referência realmente visível
 
-A conversão `web_bridge.materialize_host_exchange` aceita agora os tipos
-`reference-image`, `edit-mask` e `native-edit-handoff` além de `image` e
-`visual-review`. Para qualquer operação de geração/regeneração, a verificação
-do controlador exige **exatamente um de cada**; associa as identidades de Drive
-à chamada nativa e recusa ausência, adulteração de qualquer GET, mismatch de
-`operation_id`, prompt diferente, reuso de imagem de saída ou parecer visual
-sem referência/máscara. `arg_updates.native_handoff` deve apontar ao artefato
-local materializado e verificado; sua recuperação fria usa o mapeamento por
-bytes existente. Nenhuma chamada de imagem ocorre dentro do Python nem via
-GitHub Actions. A entrada operacional continua `scripts/pipeline.py run`.
+O Web host entrega PNGs materializados por GETs do Google Drive ao ChatGPT
+Images **como entradas visuais**, não somente como caminhos, URLs, hashes ou
+visualizações anteriores. Para operações nativas a troca contém seis
+artefatos: `reference-image`, `edit-mask`, `image` (saída bruta),
+`composed-image` (saída mascarada), `native-edit-handoff` e
+`visual-review`. O `web_bridge.materialize_host_exchange` transporta
+todos esses tipos por bytes locais e readback, sem simular conectores.
 
-O recibo de execução é um testemunho do **host**, não uma assinatura fornecida
-pela ferramenta: sem um evento de geração nativa real, não registrar um
-`generation_id` fabricado nem declarar a edição aprovada. O resumo da conversa
-não substitui o anexo visual nem o GET independente do Drive.
+`native_generation.verify_handoff` valida a identidade da referência,
+máscara, pedido, `generation_id` da resposta real, arquivos e observação
+`visual_input_evidence`. O ChatGPT Web não oferece os campos internos
+`dispatch.attached_inputs` nem um parâmetro programático de máscara
+equivalente ao da API; não os invente. O `visual_input_evidence` é uma
+atestação do host, não um selo criptográfico de anexo. Na ausência de entrada
+real, a operação permanece `PENDING` por bloqueio de capacidade.
+
+A composição é determinística e independente da geração; nunca escalar
+automaticamente resultado desalinhado. O código verifica também os pixels
+externos e o conteúdo recomposto relido do Drive. A avaliação semântica
+permanece tarefa do agente, com imagens acessíveis e observações concretas.
+O `edit_op` da ferramenta não determina PASS/FAIL por si só. Não se completa
+uma operação somente porque o CI, o checksum ou um relatório visual disse
+`PASS` sem vínculo com a imagem corrigida. O journal não é reescrito.
+
+Os comandos de preparação, máscara de reparo e composição continuam
+subetapas da entrada `scripts/pipeline.py run`: não há pipeline paralela,
+API externa nem necessidade de GitHub Actions para execução no Web.
