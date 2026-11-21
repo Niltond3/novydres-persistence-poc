@@ -29,14 +29,40 @@ def fixture(tmp_path, *, stages=7):
         "reference_sha256": source_sha,
         "stages": {}
     }
+    zone = tmp_path / "zone-mask.png"
+    Image.new("L",(32,32),255).save(zone)
+    territory = {}
+    for label in a.criteria_contract()["profile"]["territory_classes"]:
+        file = tmp_path / ("territory-"+label+".png")
+        Image.new("L",(32,32),255 if label == "urban" else 0).save(file)
+        territory[label]={"path":file.name,"sha256":a.sha_file(file)}
+    roads=[]
+    nodes=[]
+    for mode,y,level in (("road",1,0),("rail",5,0),("tram",9,0),("metro",13,-1)):
+        left, right = mode+"-start",mode+"-end"
+        nodes.extend([{"id":left,"point":[1,y],"level":level},
+                      {"id":right,"point":[10,y],"level":level}])
+        roads.append({"id":mode,"from":left,"to":right,"points":[[1,y],[10,y]],
+                      "mode":mode,"level":level,"width_units":1})
+    prior = None
     for i, stage in enumerate(a.STAGES[:stages]):
         geometry = tmp_path / (stage + ".json")
         preview = tmp_path / (stage + ".png")
-        geo_sha = write_json(geometry, {
-            "stage": stage, "source_sha256": source_sha,
-            "features": [{"id": "actual-u02-feature-%02d" % i, "coordinates": [[5, 6], [8, 9]]}]
-        })
+        geo_data = {
+            "schema":"NOVYDRES_MAPWORK_V33_INFRA_GEOMETRY_2",
+            "stage":stage,"source_sha256":source_sha,"reference_size":[32,32],
+            "zone_mask":{"path":zone.name,"sha256":a.sha_file(zone)},
+            "network":{"nodes":nodes,"edges":roads,"crossings":[]},
+            "territory":{"class_masks":territory},
+        }
+        if prior is not None:
+            geo_data["previous_stage_sha256"]=a.sha_file(prior)
+        geo_sha=write_json(geometry,geo_data)
         Image.new("RGB", (32, 32), (i * 18 + 1, 55, 72)).save(preview)
+        with Image.open(preview) as im:
+            regions=[{"criterion_id":cid,"bbox":[0,0,8,8],
+                      "pixels_sha256":hashlib.sha256(im.crop((0,0,8,8)).tobytes()).hexdigest()}
+                     for cid in spec["stages"][stage]]
         record["stages"][stage] = {"attempts": [{
             "stage": stage, "iteration": 1,
             "geometry_path": geometry.name, "geometry_sha256": geo_sha,
@@ -44,6 +70,8 @@ def fixture(tmp_path, *, stages=7):
             "reference_sha256": source_sha,
             "reviewed_by": "AGENT", "model": "GPT-6",
             "full_image_visually_inspected": True,
+            "visual_observations":{"preview_sha256":a.sha_file(preview),
+                                   "geometry_sha256":geo_sha,"regions":regions},
             "checks": {
                 cid: {
                     "status": "PASS",
@@ -53,6 +81,7 @@ def fixture(tmp_path, *, stages=7):
             },
             "verdict": "PASS", "findings": [], "repair_plan": ""
         }]}
+        prior=geometry
     path = tmp_path / "acceptance-ledger-v33.json"
     write_json(path, record)
     kwargs = {
@@ -106,7 +135,7 @@ def test_negative_forged_image_hash_never_pass(tmp_path):
     path, record, kw = fixture(tmp_path)
     record["stages"]["INF-01"]["attempts"][0]["preview_sha256"] = "a" * 64
     write_json(path, record)
-    assert evaluation(kw)["status"] == "BLOCKED"
+    assert evaluation(kw)["status"] == "FAIL"
 
 
 def test_negative_missing_one_rule_never_pass(tmp_path):
@@ -120,7 +149,7 @@ def test_negative_generic_evidence_never_pass(tmp_path):
     path, record, kw = fixture(tmp_path)
     record["stages"]["INF-01"]["attempts"][0]["checks"]["INF-01.01"]["evidence"] = "ok"
     write_json(path, record)
-    assert evaluation(kw)["status"] == "BLOCKED"
+    assert evaluation(kw)["status"] == "FAIL"
 
 
 def test_negative_repeated_unsuccessful_candidate_never_pass(tmp_path):
@@ -177,7 +206,7 @@ def test_negative_misbound_geometry_stage_rejected(tmp_path):
     record["stages"]["INF-03"]["attempts"][0]["geometry_sha256"] = new_sha
     write_json(path, record)
     assert evaluation(kw)["stage"] == "INF-03"
-    assert evaluation(kw)["status"] == "BLOCKED"
+    assert evaluation(kw)["status"] == "FAIL"
 
 
 def test_negative_missing_reference_file_blocks_everything(tmp_path):
@@ -203,11 +232,17 @@ def test_three_stagnant_rejections_replan_instead_of_owner_override(tmp_path):
         new["preview_path"] = preview.name
         new["preview_sha256"] = a.sha_file(preview)
         new["geometry_path"] = geometry.name
-        new["geometry_sha256"] = write_json(geometry, {
-            "stage": "INF-01",
-            "source_sha256": kw["reference_sha256"],
-            "features": [{"id": "road-%d" % i}]
-        })
+        original = json.loads((tmp_path / "INF-01.json").read_text())
+        original["test_attempt_unique"] = i
+        new["geometry_sha256"] = write_json(geometry, original)
+        with Image.open(preview) as im:
+            pix=hashlib.sha256(im.crop((0,0,8,8)).tobytes()).hexdigest()
+        new["visual_observations"] = {
+            "preview_sha256":new["preview_sha256"],
+            "geometry_sha256":new["geometry_sha256"],
+            "regions":[{"criterion_id":cid,"bbox":[0,0,8,8],"pixels_sha256":pix}
+                       for cid in a.criteria_contract()["stages"]["INF-01"]]
+        }
         attempts.append(new)
     write_json(path, record)
     result = evaluation(kw)
@@ -223,4 +258,4 @@ def test_negative_reuse_same_preview_across_stages(tmp_path):
         other[key] = original[key]
     write_json(path, record)
     assert evaluation(kw)["stage"] == "INF-02"
-    assert evaluation(kw)["status"] == "BLOCKED"
+    assert evaluation(kw)["status"] == "FAIL"
