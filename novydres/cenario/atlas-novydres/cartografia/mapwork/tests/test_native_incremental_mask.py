@@ -159,3 +159,58 @@ def test_only_pipeline_run_prepares_and_recomposes_without_promoting_canon(tmp_p
     assert audit["audit"]["outside_mask_changed_pixels"]==0
     assert pixel_equal_outside(ref,composed,local_mask)
     assert original_journal.read_bytes()==journal_snapshot
+
+
+def test_local_detail_reference_matches_grid_without_changing_master(tmp_path):
+    original = make_png(tmp_path/"u02.png", (50,60,70,255), size=(8,6))
+    saved = original.read_bytes()
+    detail = native.prepare_unit_reference(original, [2,1,5,4], 4,
+                                           tmp_path/"detail.png")
+    assert detail["size"] == [12,12]
+    assert original.read_bytes() == saved
+    with pytest.raises(ValueError, match="outside reference"):
+        native.prepare_unit_reference(original, [2,1,9,4], 4, tmp_path/"bad.png")
+
+
+def test_local_review_can_repair_before_any_drive_upload(tmp_path):
+    import json
+    import pipeline
+    reference = make_png(tmp_path/"reference.png", (30,40,50,255))
+    mask = make_mask(tmp_path/"mask.png", (10,10,20,20))
+    candidate = make_png(tmp_path/"candidate.png", (100,110,120,255))
+    composed, checkpoint = tmp_path/"composed.png", tmp_path/"checkpoint.json"
+    args = ["run", "--native-input-reference", str(reference),
+            "--unit-mask", str(mask), "--native-candidate", str(candidate),
+            "--native-composite-output", str(composed),
+            "--checkpoint", str(checkpoint)]
+    assert pipeline.main(args) == 0
+    metadata = json.loads(checkpoint.read_text())["audit"]
+    review = {"by":"AGENT", "status":"FAIL",
+              "image_sha256": metadata["composed_sha256"],
+              "reference_sha256": metadata["reference_sha256"],
+              "mask_sha256": metadata["mask_sha256"],
+              "observations": [
+                "Rail does not cross the eastern boundary correctly",
+                "One building footprint interrupts the street axis",
+                "The northern interface fails to align with nearby buildings",
+                "The southern interface has disconnected street geometry"]}
+    review_file = tmp_path/"review.json"
+    review_file.write_text(json.dumps(review))
+    assert pipeline.main(args + ["--visual-review", str(review_file)]) == 0
+    result = json.loads(checkpoint.read_text())
+    assert result["next_action"] == "REPAIR_LOCAL_CANDIDATE"
+    assert result["publication_authorized"] is False
+    review["status"] = "PASS"
+    review["observations"] = [
+        "Rail continuity matches the eastern adjacent edge",
+        "All building footprints stay within the assigned lots",
+        "Northern interfaces align with previously accepted structures",
+        "Southern streets connect without visible discontinuities"]
+    review_file.write_text(json.dumps(review))
+    assert pipeline.main(args + ["--visual-review", str(review_file)]) == 0
+    result = json.loads(checkpoint.read_text())
+    assert result["next_action"] == "PERSIST_CANDIDATE_FOR_FULL_AUDIT"
+    assert result["canonical_state_changed"] is False
+    review["image_sha256"] = "0"*64
+    review_file.write_text(json.dumps(review))
+    assert pipeline.main(args + ["--visual-review", str(review_file)]) == 2
