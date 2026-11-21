@@ -557,8 +557,123 @@ def _host_action_head(result, pending_head, branch):
     return head
 
 
+
+def _verify_cold_recovery(path, session, evidence):
+    """Verify a separately materialized GitHub journal and all prior provider GETs.
+
+    Recovery evidence is assembled from real connector GET results by the Web
+    host. It is never sufficient to pass an upload response or journal JSON
+    alone. Old absolute file paths remain part of the immutable hash chain;
+    aliases point to new verified files without rewriting historical entries.
+    """
+    if not isinstance(evidence, dict) or evidence.get("schema") != "NOVYDRES_MAPWORK_COLD_RECOVERY":
+        raise ValueError("cold recovery requires explicit connector evidence")
+    for field, value in (("branch", session["branch"]),
+                         ("journal_repo_path", session["journal_repo_path"]),
+                         ("source_commit", session["source_commit"]),
+                         ("initial_head", session["initial_head"])):
+        if evidence.get(field) != value:
+            raise ValueError("cold recovery authority mismatch: " + field)
+    journal_get = evidence.get("journal_readback_path")
+    if not isinstance(journal_get, str) or not journal_get:
+        raise ValueError("cold recovery GitHub journal GET missing")
+    source = Path(path).resolve()
+    downloaded = Path(journal_get).resolve()
+    if source == downloaded or not downloaded.is_file() or downloaded.read_bytes() != source.read_bytes():
+        raise ValueError("cold recovery journal must match independent GitHub GET")
+    proof = evidence.get("journal_commit")
+    expected_blob = _git_blob(source.read_bytes())
+    if (not isinstance(proof, dict) or
+            proof.get("branch") != session["branch"] or
+            proof.get("repo_path") != session["journal_repo_path"] or
+            not HEX40.fullmatch(str(proof.get("head", ""))) or
+            not HEX40.fullmatch(str(proof.get("commit_parent", ""))) or
+            proof.get("commit_sha") != proof.get("head") or
+            proof.get("tree_blob_sha") != expected_blob or
+            proof.get("blob_sha") != expected_blob or
+            proof.get("ref_head") != proof.get("head")):
+        raise ValueError("cold recovery GitHub ref/commit/tree/blob mismatch")
+    last = session["steps"][-1] if session["steps"] else None
+    if not last:
+        raise ValueError("cold recovery requires a remotely persisted operation")
+    lease = last.get("lease_head") if last["status"] == "PENDING" else last.get("operation_head")
+    if proof.get("commit_parent") != lease:
+        raise ValueError("cold recovery journal commit parent/lease mismatch")
+    # Validate all previous completed material bytes. The original path in
+    # the journal can point to a different computer/session and is NOT opened.
+    receipts = evidence.get("artifact_readbacks")
+    if not isinstance(receipts, list):
+        raise ValueError("cold recovery artifact inventory missing")
+    expected = {}
+    for step in session["steps"]:
+        if step["status"] != "COMPLETED":
+            continue
+        for artifact in step.get("artifacts", []):
+            key = (artifact["provider"], artifact["remote_id"], artifact["sha256"],
+                   artifact["path"])
+            if key in expected:
+                raise ValueError("duplicate completed recovery artifact")
+            expected[key] = artifact
+    aliases = {}
+    consumed = set()
+    for item in receipts:
+        if not isinstance(item, dict):
+            raise ValueError("cold recovery artifact receipt invalid")
+        key = (item.get("provider"), item.get("remote_id"),
+               item.get("sha256"), item.get("original_path"))
+        if key not in expected or key in consumed:
+            raise ValueError("unrecognized or duplicate recovered artifact")
+        consumed.add(key)
+        material = item.get("materialized_path")
+        readback = item.get("readback_path")
+        if not isinstance(material, str) or not isinstance(readback, str):
+            raise ValueError("cold recovery needs materialized bytes and provider GET")
+        material_path = Path(material).resolve()
+        remote_path = Path(readback).resolve()
+        if (material_path == remote_path or not material_path.is_file() or
+                not remote_path.is_file()):
+            raise ValueError("cold recovery independent artifact GET missing")
+        data = material_path.read_bytes()
+        if data != remote_path.read_bytes() or hashlib.sha256(data).hexdigest() != key[2]:
+            raise ValueError("cold recovery artifact bytes differ from provider GET")
+        artifact = expected[key]
+        if artifact["provider"] == "github" and _git_blob(data) != artifact.get("blob_sha"):
+            raise ValueError("cold recovery GitHub artifact blob mismatch")
+        if artifact.get("kind") == "image":
+            from PIL import Image
+            with Image.open(material_path) as image:
+                if image.format != "PNG":
+                    raise ValueError("cold recovery image is not PNG")
+                image.verify()
+        prior = aliases.get(artifact["path"])
+        if prior is not None and prior != str(material_path):
+            raise ValueError("ambiguous recovered original path")
+        aliases[artifact["path"]] = str(material_path)
+    if consumed != set(expected):
+        raise ValueError("cold recovery incomplete: not all remote artifacts re-fetched")
+    return aliases
+
+
+def _recovered_updates(updates, aliases):
+    """Resolve immutable old journal paths only through verified SHA-bound GETs."""
+    path_keys = {"intent","capabilities","research_file","decisions_file",
+                 "inventory_file","record_attempt","reference","topology_source",
+                 "topology_classifications","topology_out","topology_prior",
+                 "spatial","unit_receipt","unit_mask","visual_review",
+                 "image_receipts","ledger","assets","macro_review",
+                 "design_root","design_unit","recipe_unit","audit_unit","out"}
+    mapped = dict(updates)
+    for key, value in updates.items():
+        if key in path_keys and isinstance(value, str):
+            if value in aliases:
+                mapped[key] = aliases[value]
+            elif Path(value).is_absolute() and not Path(value).exists():
+                raise ValueError("cold recovery lacks verified materialization for " + key)
+    return mapped
+
+
 def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
-                      branch, expected_head, journal_repo_path, exchange_path=None,
+                      branch, expected_head, journal_repo_path, exchange_path=None, recovery_path=None,
                       apply_arguments=None):
     """One connection-free transition per canonical pipeline.py invocation.
 
@@ -603,6 +718,12 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                    "journal_repo_path": journal_repo_path,
                    "initial_head": expected_head, "steps": [],
                    "publication_authorized": False}
+    aliases = {}
+    if recovery_path is not None:
+        if not path.is_file():
+            raise ValueError("cold recovery journal must be materialized first")
+        recovery = json.loads(Path(recovery_path).read_text(encoding="utf-8"))
+        aliases = _verify_cold_recovery(path, session, recovery)
     steps = session["steps"]
     last = steps[-1] if steps else None
     for item in steps[:-1]:
@@ -611,7 +732,9 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
             raise ValueError("unfinished predecessor or unconfirmed GitHub journal")
     if last and last["status"] == "PENDING":
         if exchange is None:
-            return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_PENDING_JOURNAL",
+            return {"status":"AWAITING_HOST_SYNC",
+                    "next_action":("EXECUTE_RECOVERED_PENDING_OPERATION"
+                                   if recovery_path is not None else "SYNC_PENDING_JOURNAL"),
                     "operation":last,"lease_head":last["lease_head"],
                     "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
         if exchange.get("kind") != "COMPLETE_OPERATION" or exchange.get("operation_id") != last["operation_id"]:
@@ -637,7 +760,9 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                 "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
     if last and last["status"] == "COMPLETED" and not last.get("confirmed_head"):
         if exchange is None:
-            return {"status":"AWAITING_HOST_SYNC","next_action":"SYNC_COMPLETED_JOURNAL",
+            return {"status":"AWAITING_HOST_SYNC",
+                    "next_action":("ACK_RECOVERED_COMPLETED_JOURNAL"
+                                   if recovery_path is not None else "SYNC_COMPLETED_JOURNAL"),
                     "operation_id":last["operation_id"],"lease_head":last["operation_head"],
                     "journal_sha256":hashlib.sha256(path.read_bytes()).hexdigest()}
         if (exchange.get("kind") == "COMPLETE_OPERATION" and
@@ -669,7 +794,7 @@ def run_host_exchange(run_once, journal_path, *, session_key, source_commit,
                 raise ValueError("recovered provider artifact is stale or missing")
         for entry in steps:
             if entry["status"] == "COMPLETED":
-                apply_arguments(entry.get("arg_updates", {}), validate_only=False)
+                apply_arguments(_recovered_updates(entry.get("arg_updates", {}), aliases), validate_only=False)
         state = run_once()
         if (state.get("publication_authorized") is not False or
                 state.get("canonical_state_changed") is not False or
