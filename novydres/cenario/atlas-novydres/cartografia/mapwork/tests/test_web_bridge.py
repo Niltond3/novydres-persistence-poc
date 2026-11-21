@@ -59,8 +59,9 @@ def test_canonical_pipeline_is_in_process_and_remains_blocked(tmp_path):
     saved={k:sys.modules.pop(k) for k in tuple(sys.modules)
            if k in local_names and k != "web_bridge"}
     try:
+        remote_blobs={row["path"]:row["blob_sha"] for row in files}
         result=w.run_web(argv=["--district","kingswell"],file_manifest=manifest,
-                         root=ROOT,source_commit="1"*40)
+                         root=ROOT,source_commit="1"*40,remote_blobs=remote_blobs)
     finally:
         for k in local_names-{"web_bridge"}:
             sys.modules.pop(k,None)
