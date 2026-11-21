@@ -138,7 +138,8 @@ def run(args, core_run):
             ledger_path, args.record_attempt, criteria_sha256=spec["sha256"],
             reference_sha256=config["reference"]["sha256"],
             schema=acceptance.SCHEMA, allowed_stages=acceptance.STAGES,
-            active_stage=pre_gate["stage"])
+            active_stage=pre_gate["stage"],
+            accepted_stages=pre_gate["accepted_stages"])
     acceptance_gate=acceptance.evaluate(
         ledger_path,
         reference_file=getattr(args,"reference",None),
@@ -242,13 +243,16 @@ def run(args, core_run):
         if not args.unit_mask:
             return _state("IMAGE_AUDIT","MATERIALIZE_UNIT_MASK",
                           ["Image mask file absent for "+uid],intent=intent)
-        audited=contract.audit_atomic_image(receipt,args.unit_mask,plan,report,uid,cfg)
+        try:
+            audited=contract.audit_atomic_image(receipt,args.unit_mask,plan,report,uid,cfg)
+        except (contract.Blocked, ValueError, OSError) as exc:
+            audited={"technical_status":"FAIL","failure":str(exc)}
         reviewed=core.load(args.visual_review) if args.visual_review and Path(args.visual_review).is_file() else None
-        if not reviewed:
+        if not reviewed and audited.get("technical_status")=="PASS":
             return _state("IMAGE_VISUAL_REVIEW","AGENT_INSPECT_IMAGE",
                           ["Record lighting, geometry, roof, seams and visual continuity; technical audit is not aesthetic certification"],
                           intent=intent,audit=audited)
-        if reviewed.get("status")=="PASS":
+        if reviewed and reviewed.get("status")=="PASS" and audited.get("technical_status")=="PASS":
             peers=visual.neighbor_sides(report["work_units"],uid)
             batch=_load(args.image_receipts)
             receipts={r["work_unit_id"]:r for r in batch.get("images",[])} if batch else {}
@@ -263,10 +267,10 @@ def run(args, core_run):
                 reference_sha256=contract.digest(args.reference),
                 spatial_sha256=contract.digest(path),
                 work_units=report["work_units"],neighbor_receipts=receipts)
-        else:
+        elif reviewed is not None:
             contract.require(reviewed.get("by")=="AGENT" and
-                        reviewed.get("status")=="FAIL",
-                        "failed visual review must be recorded by the agent")
+                        reviewed.get("status") in ("PASS","FAIL"),
+                        "visual review receipt must be recorded by the agent")
         if args.ledger:
             ledger=core.load(args.ledger) if Path(args.ledger).is_file() else {
                 "schema":"NOVYDRES_MAPWORK_UNIT_LEDGER_1","units":{}}
@@ -287,23 +291,34 @@ def run(args, core_run):
             }
             input_hash=contract.evidence_digest(fingerprints)
             if args.start_unit:
-                contract.unit_transition(ledger,uid,event="START",input_sha256=input_hash)
+                contract.unit_transition(ledger,uid,event="START",input_sha256=input_hash,
+                    strategy_id=args.strategy_id,replan_evidence=args.replan_evidence,
+                    request_id=args.request_id)
             contract.require(uid in ledger.get("units",{}),
                         "unit ledger has no active attempt; start with --start-unit")
+            successful=bool(reviewed and reviewed.get("status")=="PASS"
+                            and audited.get("technical_status")=="PASS")
             record=contract.unit_transition(
-                ledger,uid,event="AUDIT_PASS" if reviewed.get("status")=="PASS" else "AUDIT_FAIL",
-                input_sha256=input_hash,receipt=audited if reviewed.get("status")=="PASS"
-                else {"failure":reviewed.get("reason","visual audit failed")},
-                visual_review=reviewed)
+                ledger,uid,event="AUDIT_PASS" if successful else "AUDIT_FAIL",
+                input_sha256=input_hash,receipt=audited if successful else {
+                    "failure":audited.get("failure") or
+                              (reviewed or {}).get("reason","visual audit failed")},
+                visual_review=reviewed,improvement_evidence=args.improvement_evidence)
             core.save(args.ledger,ledger)
             return _state("IMAGE_AUDITED",
-                          "NEXT_WORK_UNIT" if record["status"]=="VERIFIED" else "CORRECT_AND_RETEST",
+                          {"VERIFIED":"NEXT_WORK_UNIT",
+                           "REPAIR_REQUIRED":"CORRECT_AND_REGENERATE_IMAGE",
+                           "REPLAN_REQUIRED":"REPLAN_AND_REGENERATE_IMAGE",
+                           "METHOD_REASSESSMENT":"REASSESS_METHOD_AND_REGENERATE_IMAGE"}[record["status"]],
                           [] if record["status"]=="VERIFIED" else [record["status"]],
                           intent=intent,audit=record)
         return _state("IMAGE_AUDITED",
-                      "PERSIST_VERIFIED_UNIT_LEDGER" if reviewed.get("status")=="PASS"
-                      else "CORRECT_AND_RETEST",
-                      [] if reviewed.get("status")=="PASS" else ["visual inspection failed"],
+                      "PERSIST_VERIFIED_UNIT_LEDGER" if reviewed and
+                      reviewed.get("status")=="PASS" and audited.get("technical_status")=="PASS"
+                      else "CORRECT_AND_REGENERATE_IMAGE",
+                      [] if reviewed and reviewed.get("status")=="PASS" and
+                      audited.get("technical_status")=="PASS" else
+                      [audited.get("failure","visual inspection failed")],
                       intent=intent,audit={"technical":audited,"visual":reviewed})
     # Existing topology and renderer are reused, not forked. The old
     # SKETCH_APPROVED bit is NOT treated as owner approval of  art.
