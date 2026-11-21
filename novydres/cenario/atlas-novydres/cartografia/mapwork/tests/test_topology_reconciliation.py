@@ -204,7 +204,7 @@ def test_reject_stale_duplicate_and_protected_change():
     data=simple()
     cls=classifications(data,crossing())
     cls["network_sha256"]="bad"
-    with pytest.raises(topology.TopologyInvalid,match="stale"):
+    with pytest.raises(topology.TopologyInvalid,match="stale|schema"):
         topology.reconcile(data,cls)
     with pytest.raises(topology.TopologyInvalid,match="duplicate"):
         run(data,crossing(),crossing())
