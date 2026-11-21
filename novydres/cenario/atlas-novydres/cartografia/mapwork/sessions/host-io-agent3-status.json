@@ -1,0 +1,48 @@
+{
+  "schema": "NOVYDRES_MAPWORK_AGENT3_INTEGRATION_STATUS",
+  "scope": "NONCANONICAL_TECHNICAL_INTEGRATION",
+  "status": "AGENT_3_INCOMPLETE_NO_HANDOFF",
+  "repository": "Niltond3/novydres-persistence-poc",
+  "branch": "mapwork/consolidated-autonomous-20261121",
+  "source_checkpoint": "a15bbbb3b5fbd9cb21631f30a1ac92e62080ad4d",
+  "validated_implementation_head": "7731ded80e13757364b227022f84cfb09a7308d2",
+  "validations": {
+    "remote_ci_run_id": 44918869634,
+    "pytest": {
+      "passed": 235,
+      "skipped": 1
+    },
+    "python_compilation": true,
+    "remote_modified_blobs_independently_read_back": true,
+    "source_pin": "7befc146eb4806c0ac0efa69f44e097308ea1108",
+    "source_git_tree": "2f21d6902585eaa12ae0d002e11c33d97debcac8",
+    "source_files_byte_verified": 78,
+    "single_pipeline_web_bridge_smoke": "SYNC_PENDING_JOURNAL",
+    "provider_zip_transfer": {
+      "provider_pair": "github_to_google_drive",
+      "independent_drive_readback": true,
+      "file_id": "1cfYeFU_ijlyZGL-kR9t1joD_4HHo66gO",
+      "sha256": "653a0ee0c0939d805a934125533f91e07ff654f7ea168aad267a673e3a856be1"
+    }
+  },
+  "implemented": [
+    "Host cold recovery validates journal and artifact bytes against independent provider readback representations, source commit, branch, tree, blob and current HEAD chain",
+    "Old absolute paths in a completed journal are mapped to independently verified materialized artifacts without editing the journal hash chain",
+    "New Web/Python process requires cold recovery evidence for a preexisting journal",
+    "Interrupted GitHub uploads can be reconciled by original operation_id and matching commit chain",
+    "Conflicting or un-attributable head advances fail closed"
+  ],
+  "blockers": [
+    "A full cold restart with connected GitHub and Drive provider GETs for a live journal has not been demonstrated across two real ChatGPT Web sessions",
+    "The host has not completed automatic per-operation connector results to canonical --host-exchange for all research, topology, image generation, visual inspection and repair stages",
+    "No new genuine native-generated PNG was transferred to Drive and independently audited as part of an end-to-end Mapwork action",
+    "No full real fail-repair-replan loop with fresh geometry/image bytes and independent readbacks has been completed",
+    "Kingswell remains INF-01; 217 R5 crossings await visual classification and no acceptance evidence can be asserted"
+  ],
+  "invariants": {
+    "u02_unchanged": true,
+    "canon_published": false,
+    "kingwell_infrastructure_stage": "INF-01",
+    "agent4_handoff_authorized": false
+  }
+}
