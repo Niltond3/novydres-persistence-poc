@@ -249,9 +249,14 @@ def run(args, core_run):
             mask_path=Path(args.out)/"masks"/(uid+".png")
             mask_path.parent.mkdir(parents=True,exist_ok=True)
             mask.save(mask_path)
+            unit_reference=Path(args.out)/"references"/(uid+".png")
+            detail=contract.native.prepare_unit_reference(
+                args.reference,unit["bbox"],cfg["detail_pixels_per_unit"],unit_reference)
+            contract.require(detail["size"]==list(mask.size),
+                             "native unit reference and mask detail grids differ")
             recipe=contract.make_generation_recipe(
                 unit=unit,intent=intent,design_path=design,
-                reference_path=args.reference,mask_file=mask_path,
+                reference_path=unit_reference,mask_file=mask_path,
                 proposal_register=register,
                 neighbor_digests={seam["id"]:report["transport_sha256"]
                                   for seam in plan["neighbor_seams"]},
@@ -262,9 +267,9 @@ def run(args, core_run):
             location=Path(args.out)/"recipes"/(uid+".json")
             core.save(location,recipe)
             return _state("IMAGE_RECIPE","GENERATE_WITH_CHATGPT_NATIVE_IMAGE",
-                          ["Upload reference and mask to Drive, obtain independent GET bytes, "
-                           "attach BOTH images to native image EDIT, retain tool dispatch receipt; "
-                           "reject infographics and unmatched native input handoff."],
+                          ["Reuse the local reference and mask as native visual inputs in this chat; "
+                           "repair rejected candidates locally before Drive upload; "
+                           "fail closed if actual visual inputs cannot be observed."],
                           intent=intent,audit={"recipe":str(location),
                                                "recipe_sha256":contract.digest(location),
                                                "mask_file":str(mask_path),
@@ -288,7 +293,7 @@ def run(args, core_run):
             recipe=core.load(recipe_file)
             expected=recipe.get("native_edit_request")
             contract.require(isinstance(expected,dict)
-                             and expected.get("reference_sha256")==contract.digest(args.reference)
+                             and expected.get("reference_sha256")==contract.digest(recipe["native_reference_image_path"])
                              and expected.get("mask_sha256")==contract.digest(args.unit_mask)
                              and recipe.get("work_unit_id")==uid,
                              "native edit recipe/reference/mask authority mismatch")
