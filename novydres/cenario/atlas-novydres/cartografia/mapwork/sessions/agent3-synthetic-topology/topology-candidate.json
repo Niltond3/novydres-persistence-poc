@@ -1,0 +1,268 @@
+{
+  "schema": "NOVYDRES_MAPWORK_INFRA_GEOMETRY",
+  "stage": "INF-01",
+  "fixture_mode": true,
+  "source_sha256": "0a3e215db28d416c917634f63227b76ccf5d923b0419abde45f75549af945a22",
+  "reference_size": [
+    32,
+    32
+  ],
+  "target": "synthetic-rail-overpass-agent3",
+  "zone_mask": {
+    "path": "topology-zone-mask.png",
+    "sha256": "e7bdc527afd649f51950b4524b0c15aecaf7f484448a6cdfcdc2ecd9bba0f5a7"
+  },
+  "network": {
+    "nodes": [
+      {
+        "id": "E",
+        "point": [
+          30,
+          16
+        ],
+        "level": 1
+      },
+      {
+        "id": "N",
+        "point": [
+          16,
+          2
+        ],
+        "level": 0
+      },
+      {
+        "id": "S",
+        "point": [
+          16,
+          30
+        ],
+        "level": 0
+      },
+      {
+        "id": "TP-141bfd7b0c681b",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "level": 0
+      },
+      {
+        "id": "TP-f84faf67eef5ff",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "level": 1
+      },
+      {
+        "id": "W",
+        "point": [
+          2,
+          16
+        ],
+        "level": 1
+      }
+    ],
+    "edges": [
+      {
+        "id": "RAIL~001",
+        "from": "N",
+        "to": "TP-141bfd7b0c681b",
+        "points": [
+          [
+            16,
+            2
+          ],
+          [
+            16.0,
+            16.0
+          ]
+        ],
+        "mode": "rail",
+        "level": 0,
+        "width_units": 1,
+        "source_edge_id": "RAIL"
+      },
+      {
+        "id": "RAIL~002",
+        "from": "TP-141bfd7b0c681b",
+        "to": "S",
+        "points": [
+          [
+            16.0,
+            16.0
+          ],
+          [
+            16,
+            30
+          ]
+        ],
+        "mode": "rail",
+        "level": 0,
+        "width_units": 1,
+        "source_edge_id": "RAIL"
+      },
+      {
+        "id": "ROAD~001",
+        "from": "W",
+        "to": "TP-f84faf67eef5ff",
+        "points": [
+          [
+            2,
+            16
+          ],
+          [
+            16.0,
+            16.0
+          ]
+        ],
+        "mode": "road",
+        "level": 1,
+        "width_units": 1,
+        "source_edge_id": "ROAD"
+      },
+      {
+        "id": "ROAD~002",
+        "from": "TP-f84faf67eef5ff",
+        "to": "E",
+        "points": [
+          [
+            16.0,
+            16.0
+          ],
+          [
+            30,
+            16
+          ]
+        ],
+        "mode": "road",
+        "level": 1,
+        "width_units": 1,
+        "source_edge_id": "ROAD"
+      }
+    ],
+    "crossings": [
+      {
+        "a": "RAIL~001",
+        "b": "ROAD~001",
+        "kind": "grade_separated",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "classification_id": "X"
+      },
+      {
+        "a": "RAIL~001",
+        "b": "ROAD~002",
+        "kind": "grade_separated",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "classification_id": "X"
+      },
+      {
+        "a": "RAIL~002",
+        "b": "ROAD~001",
+        "kind": "grade_separated",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "classification_id": "X"
+      },
+      {
+        "a": "RAIL~002",
+        "b": "ROAD~002",
+        "kind": "grade_separated",
+        "point": [
+          16.0,
+          16.0
+        ],
+        "classification_id": "X"
+      }
+    ],
+    "topology_source": {
+      "nodes": [
+        {
+          "id": "W",
+          "point": [
+            2,
+            16
+          ],
+          "level": 1
+        },
+        {
+          "id": "E",
+          "point": [
+            30,
+            16
+          ],
+          "level": 1
+        },
+        {
+          "id": "N",
+          "point": [
+            16,
+            2
+          ],
+          "level": 0
+        },
+        {
+          "id": "S",
+          "point": [
+            16,
+            30
+          ],
+          "level": 0
+        }
+      ],
+      "edges": [
+        {
+          "id": "ROAD",
+          "from": "W",
+          "to": "E",
+          "points": [
+            [
+              2,
+              16
+            ],
+            [
+              30,
+              16
+            ]
+          ],
+          "mode": "road",
+          "level": 1,
+          "width_units": 1
+        },
+        {
+          "id": "RAIL",
+          "from": "N",
+          "to": "S",
+          "points": [
+            [
+              16,
+              2
+            ],
+            [
+              16,
+              30
+            ]
+          ],
+          "mode": "rail",
+          "level": 0,
+          "width_units": 1
+        }
+      ],
+      "crossings": []
+    },
+    "topology_audit": {
+      "status": "RECONCILED_NOT_ACCEPTED",
+      "source_network_sha256": "e66f0416fee64ea157d6f6b0e1bf47b97626d50cd997e81c2bf02587e521bea1",
+      "classification_sha256": "f169c38d7eb4477b54d5a2e406c37c95469e2f57c71505393d476d27729a46a3",
+      "result_network_sha256": "f3dae9d8ffc3d12d2916786bbd4d9219bacf7ad3a8b04a04d457c115cfc89fd1"
+    }
+  }
+}

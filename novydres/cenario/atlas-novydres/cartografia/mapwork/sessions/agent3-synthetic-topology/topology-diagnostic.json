@@ -1,0 +1,31 @@
+{
+  "candidate_path": "/mnt/data/agent3-continue/topology-result/topology-candidate.json",
+  "candidate_sha256": "48ecd8909578f8eadcdae4babd9f590dc5ab32494c36e24abab1ab78ed899ba9",
+  "classification_sha256": "f169c38d7eb4477b54d5a2e406c37c95469e2f57c71505393d476d27729a46a3",
+  "created_nodes": 2,
+  "diagnostic_path": "/mnt/data/agent3-continue/topology-result/topology-diagnostic.json",
+  "infra_audit": {
+    "crossing_relations": 4,
+    "crossings_detected": 4,
+    "edge_count": 4,
+    "geometry_sha256": "48ecd8909578f8eadcdae4babd9f590dc5ab32494c36e24abab1ab78ed899ba9",
+    "modals": [
+      "rail",
+      "road"
+    ],
+    "node_count": 6,
+    "previous_stage_sha256": null,
+    "road_edges": 2,
+    "stage": "INF-01",
+    "status": "PASS",
+    "territory_pixels": null,
+    "zone_pixels": 1024
+  },
+  "observed_crossings": 1,
+  "resolved_crossings": 1,
+  "result_edge_count": 4,
+  "source_edge_count": 2,
+  "source_network_sha256": "e66f0416fee64ea157d6f6b0e1bf47b97626d50cd997e81c2bf02587e521bea1",
+  "status": "RECONCILED_NOT_ACCEPTED",
+  "unresolved_crossings": []
+}
