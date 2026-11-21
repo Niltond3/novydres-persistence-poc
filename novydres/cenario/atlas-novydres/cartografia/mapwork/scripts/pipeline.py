@@ -736,6 +736,10 @@ def main(argv=None):
     p.add_argument("--macro-review",help="agent inspection of real assembled tiles and before/after overviews")
     p.add_argument("--ledger",help="SHA-bound per-unit progress/repair ledger")
     p.add_argument("--start-unit",action="store_true",help="start one audit attempt in the ledger")
+    p.add_argument("--strategy-id",help="new image-generation strategy for replan")
+    p.add_argument("--replan-evidence",help="concrete evidence for image replanning")
+    p.add_argument("--request-id",help="idempotent image attempt identifier")
+    p.add_argument("--improvement-evidence",help="observable improvement since previous image failure")
     args=p.parse_args(argv)
     if args.execute and not args.intent:
         p.error("--execute requires --intent and verified gates")
