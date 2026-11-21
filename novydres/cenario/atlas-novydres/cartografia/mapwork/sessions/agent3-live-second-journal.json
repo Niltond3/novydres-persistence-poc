@@ -306,11 +306,26 @@
     },
     {
       "action": "BUILD_REGION_FROM_APPROVED_CANON",
-      "artifacts": [],
-      "entry_sha256": "6e585583a45dca9bdeee8b24a9776e64e68cd5a3df0b2817d9bf4aad0ad47553",
+      "arg_updates": {
+        "synthetic_trial": "/mnt/data/agent3-continue/synthetic-trial.json"
+      },
+      "artifacts": [
+        {
+          "blob_sha": "734afee41410c0af896b41acac13c85ae16af5a2",
+          "kind": "other",
+          "path": "/mnt/data/agent3-continue/synthetic-trial.json",
+          "provider": "github",
+          "remote_id": "734afee41410c0af896b41acac13c85ae16af5a2",
+          "sha256": "6ee054acaecb17d765e9204ecf1c61a6dbb9e7b205732d8b8ff53c0405b2d178"
+        }
+      ],
+      "entry_sha256": "d169d132161ac6cb951c83c4eea290a9064a0c0b12209e1f159ba4d783421385",
       "lease_head": "b1c2bd96ee900043acb8e647e75634c3986bd461",
+      "operation_head": "4086f94a0fedaef0e82bb38e8b4e2e8293ed5837",
       "operation_id": "6683c252f8da3e30b18c8cf539dadf8c60275a1c95b15bfdf1817b938f075d71",
       "parent_sha256": "0ac34c9c229f5908585c894b0d3e153b8849d2108919fcdd7dc998a00d155680",
+      "pending_head": "ade161152fa8e81421bb8c0393bbbc7893901409",
+      "receipt_sha256": "3cf9af5b2276279b8bf8778d925016010bb8bc530072ef5e1df28cb27ec6cde5",
       "request_state": {
         "agent_context": {
           "district": "sulfok",
@@ -359,7 +374,7 @@
         "target": "sulfok"
       },
       "state_sha256": "28f7618751145b855fa534752a9dcb87231f6b3ba70f351eca9f3d9351632862",
-      "status": "PENDING"
+      "status": "COMPLETED"
     }
   ]
 }
