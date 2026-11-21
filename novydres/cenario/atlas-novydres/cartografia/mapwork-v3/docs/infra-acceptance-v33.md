@@ -80,3 +80,28 @@ A execução nativa continua dentro da entrada única V3.3 e dos contratos exist
 O agente grava `acceptance-ledger-v33.json` com `criteria_sha256`, `reference_sha256` e, para cada estágio, `attempts[]`. Cada tentativa inclui os dois arquivos reais (`geometry_path`, `preview_path`), seus hashes, modelo revisor, um parecer por ID acima, resultado geral, falhas e plano de correção. **Os arquivos devem existir e seus bytes bater com o SHA declarado** na execução; SHA escrito em JSON sem arquivo não é comprovação.
 
 O programa percorre o registro **na ordem do documento**, exige evidência de revisão por item, e retorna a ação `GENERATE_AND_AUDIT_CANDIDATE`, `REPAIR_AND_REGENERATE`, `REPLAN_STAGE` ou `ADVANCE_AFTER_ACCEPTANCE`. Nenhum resultado automatizado implica que a LLM esteja infalível: o processo só é autojulgador se o agente realmente visualizar os pixels, registrar a crítica e refazer a candidata até satisfazer cada critério.
+
+
+## Formato mínimo de uma rodada para o agente ChatGPT Web
+
+1. `scripts/pipeline.py run --intent <intent.json> --reference <U02.png> --acceptance-ledger <zona/acceptance-ledger-v33.json> ...` devolve a primeira etapa não aprovada. `--intent` mantém o mesmo contrato de pesquisa, inventário e decisões da V3.3. A ausência de `--acceptance-ledger` usa o registro padrão dentro da zona.
+2. Quando a ação for `GENERATE_AND_AUDIT_CANDIDATE` ou `REPAIR_AND_REGENERATE`, construir geometria JSON real para o estágio e uma **prévia completa** (para U02, 1448×1086) sobre cópia do raster. A prévia não pode ser apenas uma descrição ou uma hash sem pixels. Utilizar as ferramentas nativas de edição/composição disponíveis no agente e transferir os bytes reais ao ambiente de validação.
+3. O JSON candidato deve conter `stage`, `source_sha256` idêntico ao U02, e ao menos uma estrutura não vazia dentre `transport`, `territory`, `vector_corridors`, `features`, `network` ou `layers`. O relatório vincula o hash desse JSON e o hash da imagem já materializada.
+4. Inspecionar a imagem de verdade (panorama + recortes das falhas), analisar **cada critério do estágio**, registrar evidência concreta de no mínimo 30 caracteres por critério, e marcar `verdict: PASS` apenas se todos forem `PASS` e `findings: []`. Em `FAIL`, listar os achados e um plano concreto de correção, de no mínimo 30 caracteres.
+5. Cada tentativa contém `stage`, `iteration` (sequencial desde 1), `geometry_path`, `geometry_sha256`, `preview_path`, `preview_sha256`, `reference_sha256`, `reviewed_by: AGENT`, `model`, `full_image_visually_inspected: true`, `checks` (objeto indexado exatamente pelos quatro IDs da etapa, cada um com `status` e `evidence`), `verdict`, `findings`, `repair_plan`. Hashes são de conteúdo real em disco. Caminhos relativos ao diretório do ledger ou absolutos no ambiente atual.
+6. **Executar a mesma entrada novamente na própria sessão**, ler o resultado e obedecer `next_action`: corrigir/gerar/inspecionar novamente até `ADVANCE_AFTER_ACCEPTANCE`, depois executar a próxima etapa. Nunca devolver o bloqueio técnico ao proprietário como se fosse uma questão editorial. Se o modelo não consegue realmente chamar as ferramentas de geração ou ler os pixels, registrar `BLOCKED_CAPABILITY`, sem simular execução.
+
+`acceptance-ledger-v33.json` inicial:
+
+```json
+{
+  "schema": "NOVYDRES_MAPWORK_V33_ACCEPTANCE_LEDGER_1",
+  "criteria_sha256": "<SHA256 exato deste arquivo Markdown>",
+  "reference_sha256": "<SHA256 da imagem-mestre aprovada>",
+  "stages": {
+    "INF-01": {"attempts": []}
+  }
+}
+```
+
+**Atenção:** o Markdown é um contrato de aceite do agente, não uma garantia matemática da coerência visual. A verificação programática comprova que a inspeção foi registrada para arquivos reais; o agente precisa fazer a análise semântica e corrigir aquilo que visualiza. Não existem resultados `PASS` implícitos, nem modo de aprovação manual de infraestrutura incompleta.
