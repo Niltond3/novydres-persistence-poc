@@ -13,6 +13,8 @@ from pathlib import Path
 
 from PIL import Image
 
+import topology
+
 EPS=1e-7
 MODES={"road", "rail", "tram", "metro", "water"}
 CLASSES=("urban", "industrial", "natural", "water", "protected")
@@ -118,6 +120,15 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
     area=sum(p==255 for p in mask)
     demand(area>0,"target zone mask empty")
     network=data.get("network",{})
+    topo=network.get("topology_audit")
+    if topo is not None:
+        demand(isinstance(topo,dict) and topo.get("status")=="RECONCILED_NOT_ACCEPTED",
+               "unresolved classified crossings block infrastructure acceptance")
+        demand(isinstance(network.get("topology_source"),dict) and
+               topology.digest(network["topology_source"])==topo.get("source_network_sha256") and
+               topology.digest({k:v for k,v in network.items() if k!="topology_audit"})==
+               topo.get("result_network_sha256"),
+               "topology reconstruction evidence changed")
     nodes=network.get("nodes")
     edges=network.get("edges")
     crossings=network.get("crossings")
@@ -200,7 +211,13 @@ def validate(geometry_file, *, source_sha, dimensions, profile, prior=None):
                 for c,d in _segments(peer):
                     result=_intersection(a,b,c,d)
                     if result=="OVERLAP":
-                        raise InfraInvalid("two corridors overlap without separate authorized lane/track geometry")
+                        shared=((edge["mode"]=="road" and peer["mode"]=="tram" and
+                                 peer.get("shared_with_road") is True) or
+                                (peer["mode"]=="road" and edge["mode"]=="tram" and
+                                 edge.get("shared_with_road") is True))
+                        if not shared:
+                            raise InfraInvalid("two corridors overlap without separate authorized lane/track geometry")
+                        continue
                     if result:
                         xy=_intersection_xy(a,b,c,d)
                         if xy is not None:
